@@ -160,7 +160,7 @@ object ServiceRegistry {
      *  providers matching an arbitrary criterion.
      */
     @stub
-    val ServiceRegistry.Filter: trait = ???
+    trait Filter extends ServiceRegistry.Filter
 
     /** Locates and incrementally instantiates the available providers
      *  of a given service using the context class loader.

@@ -260,15 +260,15 @@ class KeyStore extends Object {
 object KeyStore {
     /** A description of a to-be-instantiated KeyStore object. */
     @stub
-    object Builder extends KeyStore.Builder
+    class Builder extends KeyStore.Builder
 
     /** A ProtectionParameter encapsulating a CallbackHandler. */
     @stub
-    object CallbackHandlerProtection extends KeyStore.CallbackHandlerProtection
+    class CallbackHandlerProtection extends KeyStore.CallbackHandlerProtection
 
     /** A marker interface for KeyStore entry types. */
     @stub
-    val KeyStore.Entry: trait = ???
+    trait Entry extends KeyStore.Entry
 
     /** A marker interface for KeyStore
      *  load
@@ -277,31 +277,31 @@ object KeyStore {
      *  parameters.
      */
     @stub
-    val KeyStore.LoadStoreParameter: trait = ???
+    trait LoadStoreParameter extends KeyStore.LoadStoreParameter
 
     /** A password-based implementation of ProtectionParameter. */
     @stub
-    object PasswordProtection extends KeyStore.PasswordProtection
+    class PasswordProtection extends KeyStore.PasswordProtection
 
     /** A KeyStore entry that holds a PrivateKey
      *  and corresponding certificate chain.
      */
     @stub
-    object PrivateKeyEntry extends KeyStore.PrivateKeyEntry
+    class PrivateKeyEntry extends KeyStore.PrivateKeyEntry
 
     /** A marker interface for keystore protection parameters. */
     @stub
-    val KeyStore.ProtectionParameter: trait = ???
+    trait ProtectionParameter extends KeyStore.ProtectionParameter
 
     /** A KeyStore entry that holds a SecretKey. */
     @stub
-    object SecretKeyEntry extends KeyStore.SecretKeyEntry
+    class SecretKeyEntry extends KeyStore.SecretKeyEntry
 
     /** A KeyStore entry that holds a trusted
      *  Certificate.
      */
     @stub
-    object TrustedCertificateEntry extends KeyStore.TrustedCertificateEntry
+    class TrustedCertificateEntry extends KeyStore.TrustedCertificateEntry
 
     /** Returns the default keystore type as specified by the
      *  keystore.type security property, or the string

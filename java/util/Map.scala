@@ -229,5 +229,5 @@ trait Map[K, V] {
 object Map {
     /** A map entry (key-value pair). */
     @stub
-    val Map.Entry[K, V]: trait = ???
+    trait Entry[K, V] extends Map.Entry[K, V]
 }

@@ -221,7 +221,7 @@ trait LongStream extends BaseStream[Long, LongStream] {
 object LongStream {
     /** A mutable builder for a LongStream. */
     @stub
-    val LongStream.Builder: trait = ???
+    trait Builder extends LongStream.Builder
 
     /** Returns a builder for a LongStream. */
     @stub

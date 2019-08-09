@@ -424,7 +424,7 @@ object CompletableFuture {
      *  async methods.
      */
     @stub
-    val CompletableFuture.AsynchronousCompletionTask: trait = ???
+    trait AsynchronousCompletionTask extends CompletableFuture.AsynchronousCompletionTask
 
     /** Returns a new CompletableFuture that is completed when all of
      *  the given CompletableFutures complete.

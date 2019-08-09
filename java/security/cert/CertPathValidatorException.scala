@@ -87,9 +87,9 @@ object CertPathValidatorException {
      *  path of any type may be invalid.
      */
     @stub
-    object BasicReason extends CertPathValidatorException.BasicReason
+    class BasicReason extends CertPathValidatorException.BasicReason
 
     /** The reason the validation algorithm failed. */
     @stub
-    val CertPathValidatorException.Reason: trait = ???
+    trait Reason extends CertPathValidatorException.Reason
 }

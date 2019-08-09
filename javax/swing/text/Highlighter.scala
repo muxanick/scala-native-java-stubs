@@ -51,9 +51,9 @@ trait Highlighter {
 object Highlighter {
     /**  */
     @stub
-    val Highlighter.Highlight: trait = ???
+    trait Highlight extends Highlighter.Highlight
 
     /** Highlight renderer. */
     @stub
-    val Highlighter.HighlightPainter: trait = ???
+    trait HighlightPainter extends Highlighter.HighlightPainter
 }

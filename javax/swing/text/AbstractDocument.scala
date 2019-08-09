@@ -77,20 +77,20 @@ abstract class AbstractDocument extends Object with Document with Serializable {
     protected def this(data: AbstractDocument.Content, context: AbstractDocument.AttributeContext) = ???
 
     /** Implements the abstract part of an element. */
-    object AbstractElement extends AbstractDocument.AbstractElement
+    class AbstractElement extends AbstractDocument.AbstractElement
 
     /** Implements a composite element that contains other elements. */
-    object BranchElement extends AbstractDocument.BranchElement
+    class BranchElement extends AbstractDocument.BranchElement
 
     /** Stores document changes as the document is being
      *  modified.
      */
-    object DefaultDocumentEvent extends AbstractDocument.DefaultDocumentEvent
+    class DefaultDocumentEvent extends AbstractDocument.DefaultDocumentEvent
 
     /** Implements an element that directly represents content of
      *  some kind.
      */
-    object LeafElement extends AbstractDocument.LeafElement
+    class LeafElement extends AbstractDocument.LeafElement
 
     /** The event listener list for the document. */
     protected val listenerList: EventListenerList
@@ -274,19 +274,19 @@ object AbstractDocument {
      *  techniques.
      */
     @stub
-    val AbstractDocument.AttributeContext: trait = ???
+    trait AttributeContext extends AbstractDocument.AttributeContext
 
     /** Interface to describe a sequence of character content that
      *  can be edited.
      */
     @stub
-    val AbstractDocument.Content: trait = ???
+    trait Content extends AbstractDocument.Content
 
     /** An implementation of ElementChange that can be added to the document
      *  event.
      */
     @stub
-    object ElementEdit extends AbstractDocument.ElementEdit
+    class ElementEdit extends AbstractDocument.ElementEdit
 
     /** Error message to indicate a bad location. */
     @stub

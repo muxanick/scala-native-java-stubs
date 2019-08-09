@@ -172,7 +172,7 @@ abstract class Configuration extends Object {
 object Configuration {
     /** This represents a marker interface for Configuration parameters. */
     @stub
-    val Configuration.Parameters: trait = ???
+    trait Parameters extends Configuration.Parameters
 
     /** Get the installed login Configuration. */
     @stub

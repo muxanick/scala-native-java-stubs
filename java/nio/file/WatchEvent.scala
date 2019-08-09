@@ -31,11 +31,11 @@ trait WatchEvent[T] {
 object WatchEvent {
     /** An event kind, for the purposes of identification. */
     @stub
-    val WatchEvent.Kind[T]: trait = ???
+    trait Kind[T] extends WatchEvent.Kind[T]
 
     /** An event modifier that qualifies how a Watchable is registered
      *  with a WatchService.
      */
     @stub
-    val WatchEvent.Modifier: trait = ???
+    trait Modifier extends WatchEvent.Modifier
 }

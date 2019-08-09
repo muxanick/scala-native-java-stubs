@@ -227,7 +227,7 @@ trait IntStream extends BaseStream[Integer, IntStream] {
 object IntStream {
     /** A mutable builder for an IntStream. */
     @stub
-    val IntStream.Builder: trait = ???
+    trait Builder extends IntStream.Builder
 
     /** Returns a builder for an IntStream. */
     @stub

@@ -8,7 +8,7 @@ object trait KeyStore.Entry {
 
     /** An attribute associated with a keystore entry. */
     @stub
-    val KeyStore.Entry.Attribute: trait = ???
+    trait Attribute extends KeyStore.Entry.Attribute
 
     /** Retrieves the attributes associated with an entry. */
     @stub

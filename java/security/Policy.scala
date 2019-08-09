@@ -81,7 +81,7 @@ abstract class Policy extends Object {
 object Policy {
     /** This represents a marker interface for Policy parameters. */
     @stub
-    val Policy.Parameters: trait = ???
+    trait Parameters extends Policy.Parameters
 
     /** A read-only empty PermissionCollection instance. */
     @stub

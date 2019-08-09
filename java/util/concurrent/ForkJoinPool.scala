@@ -308,13 +308,13 @@ class ForkJoinPool extends AbstractExecutorService {
 object ForkJoinPool {
     /** Factory for creating new ForkJoinWorkerThreads. */
     @stub
-    val ForkJoinPool.ForkJoinWorkerThreadFactory: trait = ???
+    trait ForkJoinWorkerThreadFactory extends ForkJoinPool.ForkJoinWorkerThreadFactory
 
     /** Interface for extending managed parallelism for tasks running
      *  in ForkJoinPools.
      */
     @stub
-    val ForkJoinPool.ManagedBlocker: trait = ???
+    trait ManagedBlocker extends ForkJoinPool.ManagedBlocker
 
     /** Creates a new ForkJoinWorkerThread. */
     @stub

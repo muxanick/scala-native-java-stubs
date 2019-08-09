@@ -216,7 +216,7 @@ trait DoubleStream extends BaseStream[Double, DoubleStream] {
 object DoubleStream {
     /** A mutable builder for a DoubleStream. */
     @stub
-    val DoubleStream.Builder: trait = ???
+    trait Builder extends DoubleStream.Builder
 
     /** Returns a builder for a DoubleStream. */
     @stub

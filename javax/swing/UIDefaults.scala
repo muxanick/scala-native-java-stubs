@@ -233,26 +233,26 @@ object UIDefaults {
      *  the getXXX(key) methods.
      */
     @stub
-    val UIDefaults.ActiveValue: trait = ???
+    trait ActiveValue extends UIDefaults.ActiveValue
 
     /** LazyInputMap will create a InputMap
      *  in its createValue
      *  method.
      */
     @stub
-    object LazyInputMap extends UIDefaults.LazyInputMap
+    class LazyInputMap extends UIDefaults.LazyInputMap
 
     /** This class enables one to store an entry in the defaults
      *  table that isn't constructed until the first time it's
      *  looked up with one of the getXXX(key) methods.
      */
     @stub
-    val UIDefaults.LazyValue: trait = ???
+    trait LazyValue extends UIDefaults.LazyValue
 
     /** This class provides an implementation of LazyValue
      *  which can be
      *  used to delay loading of the Class for the instance to be created.
      */
     @stub
-    object ProxyLazyValue extends UIDefaults.ProxyLazyValue
+    class ProxyLazyValue extends UIDefaults.ProxyLazyValue
 }

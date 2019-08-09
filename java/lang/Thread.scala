@@ -353,13 +353,13 @@ class Thread extends Object with Runnable {
 object Thread {
     /** A thread state. */
     @stub
-    object State extends Thread.State
+    class State extends Thread.State
 
     /** Interface for handlers invoked when a Thread abruptly
      *  terminates due to an uncaught exception.
      */
     @stub
-    val Thread.UncaughtExceptionHandler: trait = ???
+    trait UncaughtExceptionHandler extends Thread.UncaughtExceptionHandler
 
     /** The maximum priority that a thread can have. */
     @stub

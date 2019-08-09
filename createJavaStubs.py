@@ -308,8 +308,8 @@ def requestParseAndSave(classname, args, all_classes):
             line += 'final val ' + name + ' = new ' + classshortname + '(' + name + ', ' + str(enum_value[0]) + ')'
             enum_value_line = True
             enum_value[0] += 1
-        elif lineType == 'class':
-            line += 'object ' + name.split('.')[-1] + ' extends ' + name
+        elif lineType == 'class' or lineType == 'trait':
+            line += lineType + ' ' + name.split('.')[-1] + ' extends ' + name
             lineType = None
             abstract = True
         else:

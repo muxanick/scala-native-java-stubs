@@ -79,11 +79,11 @@ object Pack200 {
      *  gzip or zip.
      */
     @stub
-    val Pack200.Packer: trait = ???
+    trait Packer extends Pack200.Packer
 
     /** The unpacker engine converts the packed stream to a JAR file. */
     @stub
-    val Pack200.Unpacker: trait = ???
+    trait Unpacker extends Pack200.Unpacker
 
     /** Obtain new instance of a class that implements Packer. */
     @stub

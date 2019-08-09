@@ -85,7 +85,7 @@ object XMLSignature {
      *  W3C Recommendation for XML-Signature Syntax and Processing.
      */
     @stub
-    val XMLSignature.SignatureValue: trait = ???
+    trait SignatureValue extends XMLSignature.SignatureValue
 
     /** The XML Namespace URI of the W3C Recommendation for XML-Signature
      *  Syntax and Processing.

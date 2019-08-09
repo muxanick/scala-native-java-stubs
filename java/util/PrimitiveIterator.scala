@@ -35,13 +35,13 @@ trait PrimitiveIterator[T, T_CONS] extends Iterator[T] {
 object PrimitiveIterator {
     /** An Iterator specialized for double values. */
     @stub
-    val PrimitiveIterator.OfDouble: trait = ???
+    trait OfDouble extends PrimitiveIterator.OfDouble
 
     /** An Iterator specialized for int values. */
     @stub
-    val PrimitiveIterator.OfInt: trait = ???
+    trait OfInt extends PrimitiveIterator.OfInt
 
     /** An Iterator specialized for long values. */
     @stub
-    val PrimitiveIterator.OfLong: trait = ???
+    trait OfLong extends PrimitiveIterator.OfLong
 }

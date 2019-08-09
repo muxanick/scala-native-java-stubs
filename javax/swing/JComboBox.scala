@@ -62,7 +62,7 @@ class JComboBox[E] extends JComponent with ItemSelectable with ListDataListener 
      *  JComboBox class.
      */
     @stub
-    protected object AccessibleJComboBox extends JComboBox.AccessibleJComboBox
+    protected class AccessibleJComboBox extends JComboBox.AccessibleJComboBox
 
     /** This protected field is implementation specific. */
     @stub
@@ -456,5 +456,5 @@ class JComboBox[E] extends JComponent with ItemSelectable with ListDataListener 
 object JComboBox {
     /** The interface that defines a KeySelectionManager. */
     @stub
-    val JComboBox.KeySelectionManager: trait = ???
+    trait KeySelectionManager extends JComboBox.KeySelectionManager
 }

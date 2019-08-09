@@ -96,5 +96,5 @@ object DirectoryStream {
      *  entry should be accepted or filtered.
      */
     @stub
-    val DirectoryStream.Filter[T]: trait = ???
+    trait Filter[T] extends DirectoryStream.Filter[T]
 }

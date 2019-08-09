@@ -74,14 +74,14 @@ object AttributeSet {
      *  character level presentation.
      */
     @stub
-    val AttributeSet.CharacterAttribute: trait = ???
+    trait CharacterAttribute extends AttributeSet.CharacterAttribute
 
     /** This interface is the type signature that is expected
      *  to be present on any attribute key that contributes to
      *  presentation of color.
      */
     @stub
-    val AttributeSet.ColorAttribute: trait = ???
+    trait ColorAttribute extends AttributeSet.ColorAttribute
 
     /** This interface is the type signature that is expected
      *  to be present on any attribute key that contributes to
@@ -89,14 +89,14 @@ object AttributeSet {
      *  text.
      */
     @stub
-    val AttributeSet.FontAttribute: trait = ???
+    trait FontAttribute extends AttributeSet.FontAttribute
 
     /** This interface is the type signature that is expected
      *  to be present on any attribute key that contributes to
      *  the paragraph level presentation.
      */
     @stub
-    val AttributeSet.ParagraphAttribute: trait = ???
+    trait ParagraphAttribute extends AttributeSet.ParagraphAttribute
 
     /** Attribute name used to name the collection of
      *  attributes.

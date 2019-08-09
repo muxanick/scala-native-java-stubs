@@ -38,9 +38,9 @@ trait DocumentEvent {
 object DocumentEvent {
     /** Describes changes made to a specific element. */
     @stub
-    val DocumentEvent.ElementChange: trait = ???
+    trait ElementChange extends DocumentEvent.ElementChange
 
     /** Enumeration for document event types */
     @stub
-    object EventType extends DocumentEvent.EventType
+    class EventType extends DocumentEvent.EventType
 }

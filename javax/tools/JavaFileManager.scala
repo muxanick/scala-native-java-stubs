@@ -141,5 +141,5 @@ trait JavaFileManager extends Closeable with Flushable with OptionChecker {
 object JavaFileManager {
     /** Interface for locations of file objects. */
     @stub
-    val JavaFileManager.Location: trait = ???
+    trait Location extends JavaFileManager.Location
 }
