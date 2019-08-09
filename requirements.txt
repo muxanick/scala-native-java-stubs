@@ -1,0 +1,2 @@
+AdvancedHTMLParser==8.1.8
+urllib3==1.24.2
