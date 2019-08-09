@@ -8,7 +8,11 @@ pip install -r requirements.txt
 
 For instance, you run it as:
 ```
-python createJavaStub --java 8 --outputFolder javacorelib --classname java.security.SecureClassLoader
+python createJavaStubs.py --all
+```
+It will download all classes it could reach, but you also can specify area of your interest like that:
+```
+python createJavaStubs.py --java 8 --outputFolder javacorelib --classname java.security.SecureClassLoader
 ```
 it will download this page: https://docs.oracle.com/javase/8/docs/api/java/security/SecureClassLoader.html
 then parses it and saves into `javacorelib/java/security/SecureClassLoader.scala` file (if not exists):
