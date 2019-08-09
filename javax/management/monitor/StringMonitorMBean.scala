@@ -3,46 +3,48 @@ package javax.management.monitor
 import java.lang.String
 import javax.management.ObjectName
 
-// Exposes the remote management interface of the string monitor MBean.
+/** Exposes the remote management interface of the string monitor MBean. */
 trait StringMonitorMBean extends MonitorMBean {
 
+    /** Deprecated. 
+     * As of JMX 1.2, replaced by getDerivedGauge(ObjectName)
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JMX 1.2, replaced by getDerivedGauge(ObjectName)
-    //
     def getDerivedGauge(): String = ???
 
+    /** Gets the derived gauge for the specified MBean. */
     @stub
-    // Gets the derived gauge for the specified MBean.
     def getDerivedGauge(object: ObjectName): String = ???
 
+    /** Deprecated. 
+     * As of JMX 1.2, replaced by getDerivedGaugeTimeStamp(ObjectName)
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JMX 1.2, replaced by getDerivedGaugeTimeStamp(ObjectName)
-    //
     def getDerivedGaugeTimeStamp(): Long = ???
 
+    /** Gets the derived gauge timestamp for the specified MBean. */
     @stub
-    // Gets the derived gauge timestamp for the specified MBean.
     def getDerivedGaugeTimeStamp(object: ObjectName): Long = ???
 
+    /** Gets the differing notification's on/off switch value. */
     @stub
-    // Gets the differing notification's on/off switch value.
     def getNotifyDiffer(): Boolean = ???
 
+    /** Gets the matching notification's on/off switch value. */
     @stub
-    // Gets the matching notification's on/off switch value.
     def getNotifyMatch(): Boolean = ???
 
+    /** Gets the string to compare with the observed attribute. */
     @stub
-    // Gets the string to compare with the observed attribute.
     def getStringToCompare(): String = ???
 
+    /** Sets the differing notification's on/off switch value. */
     @stub
-    // Sets the differing notification's on/off switch value.
     def setNotifyDiffer(value: Boolean): Unit = ???
 
+    /** Sets the matching notification's on/off switch value. */
     @stub
-    // Sets the matching notification's on/off switch value.
     def setNotifyMatch(value: Boolean): Unit = ???
 }

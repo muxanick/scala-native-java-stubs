@@ -7,79 +7,80 @@ import java.util.Vector
 import javax.swing.AbstractListModel
 import javax.swing.event.ListDataEvent
 
-// Basic implementation of a file list.
+/** Basic implementation of a file list. */
 class BasicDirectoryModel extends AbstractListModel[Object] with PropertyChangeListener {
 
+    /** Adds a PropertyChangeListener to the listener list. */
     @stub
-    // Adds a PropertyChangeListener to the listener list.
     def addPropertyChangeListener(listener: PropertyChangeListener): Unit = ???
 
+    /**  */
     @stub
-    // 
     def contains(o: Object): Boolean = ???
 
+    /**  */
     @stub
-    // 
     def fireContentsChanged(): Unit = ???
 
+    /** Support for reporting bound property changes for boolean properties. */
     @stub
-    // Support for reporting bound property changes for boolean properties.
     protected def firePropertyChange(propertyName: String, oldValue: Object, newValue: Object): Unit = ???
 
+    /**  */
     @stub
-    // 
     def getDirectories(): Vector[File] = ???
 
+    /** Returns the value at the specified index. */
     @stub
-    // Returns the value at the specified index.
     def getElementAt(index: Int): Object = ???
 
+    /**  */
     @stub
-    // 
     def getFiles(): Vector[File] = ???
 
+    /** Returns an array of all the property change listeners
+     *  registered on this component.
+     */
     @stub
-    // Returns an array of all the property change listeners
-    // registered on this component.
     def getPropertyChangeListeners(): Array[PropertyChangeListener] = ???
 
+    /** Returns the length of the list. */
     @stub
-    // Returns the length of the list.
     def getSize(): Int = ???
 
+    /**  */
     @stub
-    // 
     def indexOf(o: Object): Int = ???
 
+    /** Obsolete - not used. */
     @stub
-    // Obsolete - not used.
     def intervalAdded(e: ListDataEvent): Unit = ???
 
+    /** Obsolete - not used. */
     @stub
-    // Obsolete - not used.
     def intervalRemoved(e: ListDataEvent): Unit = ???
 
+    /** This method is used to interrupt file loading thread. */
     @stub
-    // This method is used to interrupt file loading thread.
     def invalidateFileCache(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def lt(a: File, b: File): Boolean = ???
 
+    /** This method gets called when a bound property is changed. */
     @stub
-    // This method gets called when a bound property is changed.
     def propertyChange(e: PropertyChangeEvent): Unit = ???
 
+    /** Removes a PropertyChangeListener from the listener list. */
     @stub
-    // Removes a PropertyChangeListener from the listener list.
     def removePropertyChangeListener(listener: PropertyChangeListener): Unit = ???
 
+    /** Renames a file in the underlying file system. */
     @stub
-    // Renames a file in the underlying file system.
     def renameFile(oldFile: File, newFile: File): Boolean = ???
 
+    /**  */
     @stub
-    // 
     protected def sort(v: Vector[_ <: File]): Unit = ???
 }

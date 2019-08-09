@@ -4,86 +4,96 @@ import java.awt.{AWTEvent, ActiveEvent}
 import java.lang.{Exception, Object, Runnable, Throwable}
 import java.util.EventObject
 
-// An event which executes the run() method on a Runnable
-//  when dispatched by the AWT event dispatcher thread. This class can
-// be used as a reference implementation of ActiveEvent rather
-// than declaring a new class and defining dispatch().
-//
-// Instances of this class are placed on the EventQueue by calls
-// to invokeLater and invokeAndWait. Client code
-// can use this fact to write replacement functions for invokeLater
-//  and invokeAndWait without writing special-case code
-// in any AWTEventListener objects.
-// 
-// An unspecified behavior will be caused if the id parameter
-// of any particular InvocationEvent instance is not
-// in the range from INVOCATION_FIRST to INVOCATION_LAST.
+/** An event which executes the run() method on a Runnable
+ *   when dispatched by the AWT event dispatcher thread. This class can
+ *  be used as a reference implementation of ActiveEvent rather
+ *  than declaring a new class and defining dispatch().
+ * 
+ *  Instances of this class are placed on the EventQueue by calls
+ *  to invokeLater and invokeAndWait. Client code
+ *  can use this fact to write replacement functions for invokeLater
+ *   and invokeAndWait without writing special-case code
+ *  in any AWTEventListener objects.
+ *  
+ *  An unspecified behavior will be caused if the id parameter
+ *  of any particular InvocationEvent instance is not
+ *  in the range from INVOCATION_FIRST to INVOCATION_LAST.
+ */
 class InvocationEvent extends AWTEvent with ActiveEvent {
 
+    /** Constructs an InvocationEvent with the specified
+     *  source and ID which will execute the runnable's run
+     *  method when dispatched.
+     */
     @stub
-    // Constructs an InvocationEvent with the specified
-    // source and ID which will execute the runnable's run
-    // method when dispatched.
     protected def this(source: Object, id: Int, runnable: Runnable, notifier: Object, catchThrowables: Boolean) = ???
 
+    /** Constructs an InvocationEvent with the specified
+     *  source which will execute the runnable's run
+     *  method when dispatched.
+     */
     @stub
-    // Constructs an InvocationEvent with the specified
-    // source which will execute the runnable's run
-    // method when dispatched.
     def this(source: Object, runnable: Runnable) = ???
 
+    /** Constructs an InvocationEvent with the specified
+     *  source which will execute the runnable's run
+     *  method when dispatched.
+     */
     @stub
-    // Constructs an InvocationEvent with the specified
-    // source which will execute the runnable's run
-    // method when dispatched.
     def this(source: Object, runnable: Runnable, notifier: Object, catchThrowables: Boolean) = ???
 
+    /** Set to true if dispatch() catches Throwable and stores it in the
+     *  exception instance variable.
+     */
     @stub
-    // Set to true if dispatch() catches Throwable and stores it in the
-    // exception instance variable.
-    protected def catchExceptions: Boolean = ???
+    protected val catchExceptions: Boolean = ???
 
+    /** The (potentially null) Object whose notifyAll() method will be called
+     *  immediately after the Runnable.run() method has returned or thrown an exception
+     *  or after the event was disposed.
+     */
     @stub
-    // The (potentially null) Object whose notifyAll() method will be called
-    // immediately after the Runnable.run() method has returned or thrown an exception
-    // or after the event was disposed.
-    protected def notifier: Object = ???
+    protected val notifier: Object = ???
 
+    /** Executes the Runnable's run() method and notifies the
+     *  notifier (if any) when run() has returned or thrown an exception.
+     */
     @stub
-    // Executes the Runnable's run() method and notifies the
-    // notifier (if any) when run() has returned or thrown an exception.
     def dispatch(): Unit = ???
 
+    /** Returns any Exception caught while executing the Runnable's run()
+     *   method.
+     */
     @stub
-    // Returns any Exception caught while executing the Runnable's run()
-    //  method.
     def getException(): Exception = ???
 
+    /** Returns any Throwable caught while executing the Runnable's run()
+     *   method.
+     */
     @stub
-    // Returns any Throwable caught while executing the Runnable's run()
-    //  method.
     def getThrowable(): Throwable = ???
 
+    /** Returns the timestamp of when this event occurred. */
     @stub
-    // Returns the timestamp of when this event occurred.
     def getWhen(): Long = ???
 
+    /** Returns true if the event is dispatched or any exception is
+     *  thrown while dispatching, false otherwise.
+     */
     @stub
-    // Returns true if the event is dispatched or any exception is
-    // thrown while dispatching, false otherwise.
     def isDispatched(): Boolean = ???
 }
 
 object InvocationEvent {
+    /** The default id for all InvocationEvents. */
     @stub
-    // The default id for all InvocationEvents.
-    def INVOCATION_DEFAULT: Int = ???
+    val INVOCATION_DEFAULT: Int = ???
 
+    /** Marks the first integer id for the range of invocation event ids. */
     @stub
-    // Marks the first integer id for the range of invocation event ids.
-    def INVOCATION_FIRST: Int = ???
+    val INVOCATION_FIRST: Int = ???
 
+    /** Marks the last integer id for the range of invocation event ids. */
     @stub
-    // Marks the last integer id for the range of invocation event ids.
-    def INVOCATION_LAST: Int = ???
+    val INVOCATION_LAST: Int = ???
 }

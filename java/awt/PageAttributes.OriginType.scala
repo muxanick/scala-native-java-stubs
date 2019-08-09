@@ -2,14 +2,14 @@ package java.awt
 
 import java.lang.Object
 
-// A type-safe enumeration of possible origins.
-object final PageAttributes.OriginType extends Object {
+/** A type-safe enumeration of possible origins. */
+final object PageAttributes.OriginType extends Object {
 
+    /** The OriginType instance to use for specifying a physical origin. */
     @stub
-    // The OriginType instance to use for specifying a physical origin.
-    def PHYSICAL: PageAttributes.OriginType = ???
+    val PHYSICAL: PageAttributes.OriginType = ???
 
+    /** Returns a hash code value for the object. */
     @stub
-    // Returns a hash code value for the object.
     def hashCode(): Int = ???
 }

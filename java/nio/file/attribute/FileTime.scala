@@ -4,52 +4,55 @@ import java.lang.{Comparable, Object}
 import java.time.Instant
 import java.util.concurrent.TimeUnit
 
-// Represents the value of a file's time stamp attribute. For example, it may
-// represent the time that the file was last
-// modified,
-// accessed,
-// or created.
-//
-//  Instances of this class are immutable.
+/** Represents the value of a file's time stamp attribute. For example, it may
+ *  represent the time that the file was last
+ *  modified,
+ *  accessed,
+ *  or created.
+ * 
+ *   Instances of this class are immutable.
+ */
 final class FileTime extends Object with Comparable[FileTime] {
 
+    /** Compares the value of two FileTime objects for order. */
     @stub
-    // Compares the value of two FileTime objects for order.
     def compareTo(other: FileTime): Int = ???
 
+    /** Tests this FileTime for equality with the given object. */
     @stub
-    // Tests this FileTime for equality with the given object.
     def equals(obj: Object): Boolean = ???
 
+    /** Computes a hash code for this file time. */
     @stub
-    // Computes a hash code for this file time.
     def hashCode(): Int = ???
 
+    /** Returns the value at the given unit of granularity. */
     @stub
-    // Returns the value at the given unit of granularity.
     def to(unit: TimeUnit): Long = ???
 
+    /** Converts this FileTime object to an Instant. */
     @stub
-    // Converts this FileTime object to an Instant.
     def toInstant(): Instant = ???
 
+    /** Returns the value in milliseconds. */
     @stub
-    // Returns the value in milliseconds.
     def toMillis(): Long = ???
 }
 
 object FileTime {
+    /** Returns a FileTime representing the same point of time value
+     *  on the time-line as the provided Instant object.
+     */
     @stub
-    // Returns a FileTime representing the same point of time value
-    // on the time-line as the provided Instant object.
     def from(instant: Instant): FileTime = ???
 
+    /** Returns a FileTime representing a value at the given unit of
+     *  granularity.
+     */
     @stub
-    // Returns a FileTime representing a value at the given unit of
-    // granularity.
     def from(value: Long, unit: TimeUnit): FileTime = ???
 
+    /** Returns a FileTime representing the given value in milliseconds. */
     @stub
-    // Returns a FileTime representing the given value in milliseconds.
     def fromMillis(value: Long): FileTime = ???
 }

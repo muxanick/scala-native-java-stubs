@@ -3,51 +3,56 @@ package javax.xml.ws
 import java.lang.{Class, Object, String}
 import java.util.Map
 
-// The BindingProvider interface provides access to the
-// protocol binding and associated context objects for request and
-// response message processing.
+/** The BindingProvider interface provides access to the
+ *  protocol binding and associated context objects for request and
+ *  response message processing.
+ */
 trait BindingProvider {
 
+    /** Get the Binding for this binding provider. */
     @stub
-    // Get the Binding for this binding provider.
     def getBinding(): Binding = ???
 
+    /** Returns the EndpointReference associated with
+     *  this BindingProvider instance.
+     */
     @stub
-    // Returns the EndpointReference associated with
-    // this BindingProvider instance.
     def getEndpointReference(): EndpointReference = ???
 
+    /** Returns the EndpointReference associated with
+     *  this BindingProvider instance.
+     */
     @stub
-    // Returns the EndpointReference associated with
-    // this BindingProvider instance.
-    def T: [T <: EndpointReference] = ???
+    def getEndpointReference[T <: EndpointReference](clazz: Class[T]): T = ???
 
+    /** Get the context that is used to initialize the message context
+     *  for request messages.
+     */
     @stub
-    // Get the context that is used to initialize the message context
-    // for request messages.
     def getRequestContext(): Map[String, Object] = ???
 }
 
 object BindingProvider {
+    /** Standard property: Target service endpoint address. */
     @stub
-    // Standard property: Target service endpoint address.
-    def ENDPOINT_ADDRESS_PROPERTY: String = ???
+    val ENDPOINT_ADDRESS_PROPERTY: String = ???
 
+    /** Standard property: Password for authentication. */
     @stub
-    // Standard property: Password for authentication.
-    def PASSWORD_PROPERTY: String = ???
+    val PASSWORD_PROPERTY: String = ???
 
+    /** Standard property: This boolean property is used by a service
+     *  client to indicate whether or not it wants to participate in
+     *  a session with a service endpoint.
+     */
     @stub
-    // Standard property: This boolean property is used by a service
-    // client to indicate whether or not it wants to participate in
-    // a session with a service endpoint.
-    def SESSION_MAINTAIN_PROPERTY: String = ???
+    val SESSION_MAINTAIN_PROPERTY: String = ???
 
+    /** Standard property for SOAPAction. */
     @stub
-    // Standard property for SOAPAction.
-    def SOAPACTION_URI_PROPERTY: String = ???
+    val SOAPACTION_URI_PROPERTY: String = ???
 
+    /** Standard property for SOAPAction. */
     @stub
-    // Standard property for SOAPAction.
-    def SOAPACTION_USE_PROPERTY: String = ???
+    val SOAPACTION_USE_PROPERTY: String = ???
 }

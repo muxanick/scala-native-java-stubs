@@ -3,57 +3,64 @@ package javax.xml.bind
 import java.io.{PrintStream, PrintWriter}
 import java.lang.{Exception, Object, String, Throwable}
 
-// This is the root exception class for all JAXB exceptions.
+/** This is the root exception class for all JAXB exceptions. */
 class JAXBException extends Exception {
 
+    /** Construct a JAXBException with the specified detail message. */
     @stub
-    // Construct a JAXBException with the specified detail message.
     def this(message: String) = ???
 
+    /** Construct a JAXBException with the specified detail message and vendor
+     *  specific errorCode.
+     */
     @stub
-    // Construct a JAXBException with the specified detail message and vendor
-    // specific errorCode.
     def this(message: String, errorCode: String) = ???
 
+    /** Construct a JAXBException with the specified detail message, vendor
+     *  specific errorCode, and linkedException.
+     */
     @stub
-    // Construct a JAXBException with the specified detail message, vendor
-    // specific errorCode, and linkedException.
     def this(message: String, errorCode: String, exception: Throwable) = ???
 
+    /** Construct a JAXBException with the specified detail message and
+     *  linkedException.
+     */
     @stub
-    // Construct a JAXBException with the specified detail message and
-    // linkedException.
     def this(message: String, exception: Throwable) = ???
 
+    /** Returns the cause of this throwable or null if the
+     *  cause is nonexistent or unknown.
+     */
     @stub
-    // Returns the cause of this throwable or null if the
-    // cause is nonexistent or unknown.
     def getCause(): Throwable = ???
 
+    /** Get the vendor specific error code */
     @stub
-    // Get the vendor specific error code
     def getErrorCode(): String = ???
 
+    /** Get the linked exception */
     @stub
-    // Get the linked exception
     def getLinkedException(): Throwable = ???
 
+    /** Prints this JAXBException and its stack trace (including the stack trace
+     *  of the linkedException if it is non-null) to System.err.
+     */
     @stub
-    // Prints this JAXBException and its stack trace (including the stack trace
-    // of the linkedException if it is non-null) to System.err.
     def printStackTrace(): Unit = ???
 
+    /** Prints this JAXBException and its stack trace (including the stack trace
+     *  of the linkedException if it is non-null) to the PrintStream.
+     */
     @stub
-    // Prints this JAXBException and its stack trace (including the stack trace
-    // of the linkedException if it is non-null) to the PrintStream.
     def printStackTrace(s: PrintStream): Unit = ???
 
+    /** Prints this JAXBException and its stack trace (including the stack trace
+     *  of the linkedException if it is non-null) to the PrintWriter.
+     */
     @stub
-    // Prints this JAXBException and its stack trace (including the stack trace
-    // of the linkedException if it is non-null) to the PrintWriter.
     def printStackTrace(s: PrintWriter): Unit = ???
 
+    /** Add a linked Exception. */
     @stub
-    // Add a linked Exception.
     def setLinkedException(exception: Throwable): Unit = ???
 }

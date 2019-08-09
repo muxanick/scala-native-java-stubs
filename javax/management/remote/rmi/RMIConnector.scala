@@ -7,61 +7,68 @@ import javax.management.{MBeanServerConnection, NotificationFilter, Notification
 import javax.management.remote.{JMXAddressable, JMXConnector, JMXServiceURL}
 import javax.security.auth.Subject
 
-// A connection to a remote RMI connector.  Usually, such
-// connections are made using JMXConnectorFactory.
-// However, specialized applications can use this class directly, for
-// example with an RMIServer stub obtained without going
-// through JNDI.
-class RMIConnector extends Object with JMXConnector, with Serializable, with JMXAddressable {
+/** A connection to a remote RMI connector.  Usually, such
+ *  connections are made using JMXConnectorFactory.
+ *  However, specialized applications can use this class directly, for
+ *  example with an RMIServer stub obtained without going
+ *  through JNDI.
+ */
+class RMIConnector extends Object with JMXConnector with Serializable with JMXAddressable {
 
+    /** Constructs an RMIConnector that will connect
+     *  the RMI connector server with the given address.
+     */
     @stub
-    // Constructs an RMIConnector that will connect
-    // the RMI connector server with the given address.
     def this(url: JMXServiceURL, environment: Map[String, _]) = ???
 
+    /** Adds a listener to be informed of changes in connection
+     *  status.
+     */
     @stub
-    // Adds a listener to be informed of changes in connection
-    // status.
     def addConnectionNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
 
+    /** Closes the client connection to its server. */
     @stub
-    // Closes the client connection to its server.
     def close(): Unit = ???
 
+    /** Establishes the connection to the connector server. */
     @stub
-    // Establishes the connection to the connector server.
     def connect(): Unit = ???
 
+    /** Establishes the connection to the connector server. */
     @stub
-    // Establishes the connection to the connector server.
     def connect(environment: Map[String, _]): Unit = ???
 
+    /** The address of this connector. */
     @stub
-    // The address of this connector.
     def getAddress(): JMXServiceURL = ???
 
+    /** Gets this connection's ID from the connector server. */
     @stub
-    // Gets this connection's ID from the connector server.
     def getConnectionId(): String = ???
 
+    /** Returns an MBeanServerConnection object
+     *  representing a remote MBean server.
+     */
     @stub
-    // Returns an MBeanServerConnection object
-    // representing a remote MBean server.
     def getMBeanServerConnection(): MBeanServerConnection = ???
 
+    /** Returns an MBeanServerConnection object representing
+     *  a remote MBean server on which operations are performed on behalf of
+     *  the supplied delegation subject.
+     */
     @stub
-    // Returns an MBeanServerConnection object representing
-    // a remote MBean server on which operations are performed on behalf of
-    // the supplied delegation subject.
     def getMBeanServerConnection(delegationSubject: Subject): MBeanServerConnection = ???
 
+    /** Removes a listener from the list to be informed of changes
+     *  in status.
+     */
     @stub
-    // Removes a listener from the list to be informed of changes
-    // in status.
     def removeConnectionNotificationListener(listener: NotificationListener): Unit = ???
 
+    /** Removes a listener from the list to be informed of changes
+     *  in status.
+     */
     @stub
-    // Removes a listener from the list to be informed of changes
-    // in status.
     def removeConnectionNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
 }

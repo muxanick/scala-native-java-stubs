@@ -3,51 +3,52 @@ package javax.swing
 import java.io.Serializable
 import java.lang.Object
 
-// The default model for combo boxes.
-class DefaultComboBoxModel[E] extends AbstractListModel[E] with MutableComboBoxModel[E], with Serializable {
+/** The default model for combo boxes. */
+class DefaultComboBoxModel[E] extends AbstractListModel[E] with MutableComboBoxModel[E] with Serializable {
 
+    /** Constructs an empty DefaultComboBoxModel object. */
     @stub
-    // Constructs an empty DefaultComboBoxModel object.
     def this() = ???
 
+    /** Constructs a DefaultComboBoxModel object initialized with
+     *  an array of objects.
+     */
     @stub
-    // Constructs a DefaultComboBoxModel object initialized with
-    // an array of objects.
     def this(items: Array[E]) = ???
 
+    /** Adds an item at the end of the model. */
     @stub
-    // Adds an item at the end of the model.
     def addElement(anObject: E): Unit = ???
 
+    /** Returns the value at the specified index. */
     @stub
-    // Returns the value at the specified index.
     def getElementAt(index: Int): E = ???
 
+    /** Returns the index-position of the specified object in the list. */
     @stub
-    // Returns the index-position of the specified object in the list.
     def getIndexOf(anObject: Object): Int = ???
 
+    /** Returns the selected item */
     @stub
-    // Returns the selected item
     def getSelectedItem(): Object = ???
 
+    /** Returns the length of the list. */
     @stub
-    // Returns the length of the list.
     def getSize(): Int = ???
 
+    /** Adds an item at a specific index. */
     @stub
-    // Adds an item at a specific index.
     def insertElementAt(anObject: E, index: Int): Unit = ???
 
+    /** Empties the list. */
     @stub
-    // Empties the list.
     def removeAllElements(): Unit = ???
 
+    /** Removes an item from the model. */
     @stub
-    // Removes an item from the model.
     def removeElement(anObject: Object): Unit = ???
 
+    /** Removes an item at a specific index. */
     @stub
-    // Removes an item at a specific index.
     def removeElementAt(index: Int): Unit = ???
 }

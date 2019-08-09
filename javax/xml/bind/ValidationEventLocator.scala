@@ -3,35 +3,36 @@ package javax.xml.bind
 import java.lang.Object
 import org.w3c.dom.Node
 
-// Encapsulate the location of a ValidationEvent.
-//
-// 
-// The ValidationEventLocator indicates where the ValidationEvent
-//  occurred.  Different fields will be set depending on the type of
-// validation that was being performed when the error or warning was detected.
-// For example, on-demand validation would produce locators that contained
-// references to objects in the Java content tree while unmarshal-time
-// validation would produce locators containing information appropriate to the
-// source of the XML data (file, url, Node, etc).
+/** Encapsulate the location of a ValidationEvent.
+ * 
+ *  
+ *  The ValidationEventLocator indicates where the ValidationEvent
+ *   occurred.  Different fields will be set depending on the type of
+ *  validation that was being performed when the error or warning was detected.
+ *  For example, on-demand validation would produce locators that contained
+ *  references to objects in the Java content tree while unmarshal-time
+ *  validation would produce locators containing information appropriate to the
+ *  source of the XML data (file, url, Node, etc).
+ */
 trait ValidationEventLocator {
 
+    /** Return the column number if available */
     @stub
-    // Return the column number if available
     def getColumnNumber(): Int = ???
 
+    /** Return the line number if available */
     @stub
-    // Return the line number if available
     def getLineNumber(): Int = ???
 
+    /** Return a reference to the DOM Node if available */
     @stub
-    // Return a reference to the DOM Node if available
     def getNode(): Node = ???
 
+    /** Return a reference to the object in the Java content tree if available */
     @stub
-    // Return a reference to the object in the Java content tree if available
     def getObject(): Object = ???
 
+    /** Return the byte offset if available */
     @stub
-    // Return the byte offset if available
     def getOffset(): Int = ???
 }

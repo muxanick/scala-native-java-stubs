@@ -3,25 +3,27 @@ package javax.security.auth.callback
 import java.io.Serializable
 import java.lang.{Object, String}
 
-//  Underlying security services instantiate and pass a
-// PasswordCallback to the handle
-// method of a CallbackHandler to retrieve password information.
-class PasswordCallback extends Object with Callback, with Serializable {
+/**  Underlying security services instantiate and pass a
+ *  PasswordCallback to the handle
+ *  method of a CallbackHandler to retrieve password information.
+ */
+class PasswordCallback extends Object with Callback with Serializable {
 
+    /** Clear the retrieved password. */
     @stub
-    // Clear the retrieved password.
     def clearPassword(): Unit = ???
 
+    /** Get the retrieved password. */
     @stub
-    // Get the retrieved password.
     def getPassword(): Array[Char] = ???
 
+    /** Get the prompt. */
     @stub
-    // Get the prompt.
     def getPrompt(): String = ???
 
+    /** Return whether the password
+     *  should be displayed as it is being typed.
+     */
     @stub
-    // Return whether the password
-    // should be displayed as it is being typed.
     def isEchoOn(): Boolean = ???
 }

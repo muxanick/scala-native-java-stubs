@@ -4,10 +4,10 @@ import java.io.File
 import java.lang.Object
 import javax.swing.filechooser.FileFilter
 
-// 
+/**  */
 protected class BasicFileChooserUI.AcceptAllFileFilter extends FileFilter {
 
+    /** Whether the given file is accepted by this filter. */
     @stub
-    // Whether the given file is accepted by this filter.
     def accept(f: File): Boolean = ???
 }

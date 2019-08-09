@@ -1,9 +1,9 @@
 package java.lang
 
-// Signals that the class doesn't have a field of a specified name.
+/** Signals that the class doesn't have a field of a specified name. */
 class NoSuchFieldException extends ReflectiveOperationException {
 
+    /** Constructor. */
     @stub
-    // Constructor.
     def this() = ???
 }

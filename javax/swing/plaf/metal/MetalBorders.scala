@@ -3,76 +3,76 @@ package javax.swing.plaf.metal
 import java.lang.Object
 import javax.swing.border.Border
 
-// Factory object that can vend Borders appropriate for the metal L & F.
+/** Factory object that can vend Borders appropriate for the metal L & F. */
 class MetalBorders extends Object {
 }
 
 object MetalBorders {
+    /**  */
     @stub
-    // 
-    def MetalBorders.ButtonBorder: class = ???
+    object ButtonBorder extends MetalBorders.ButtonBorder
 
+    /**  */
     @stub
-    // 
-    def MetalBorders.Flush3DBorder: class = ???
+    object Flush3DBorder extends MetalBorders.Flush3DBorder
 
+    /**  */
     @stub
-    // 
-    def MetalBorders.InternalFrameBorder: class = ???
+    object InternalFrameBorder extends MetalBorders.InternalFrameBorder
 
+    /**  */
     @stub
-    // 
-    def MetalBorders.MenuBarBorder: class = ???
+    object MenuBarBorder extends MetalBorders.MenuBarBorder
 
+    /**  */
     @stub
-    // 
-    def MetalBorders.MenuItemBorder: class = ???
+    object MenuItemBorder extends MetalBorders.MenuItemBorder
 
+    /**  */
     @stub
-    // 
-    def MetalBorders.OptionDialogBorder: class = ???
+    object OptionDialogBorder extends MetalBorders.OptionDialogBorder
 
+    /** Border for a Palette. */
     @stub
-    // Border for a Palette.
-    def MetalBorders.PaletteBorder: class = ???
+    object PaletteBorder extends MetalBorders.PaletteBorder
 
+    /**  */
     @stub
-    // 
-    def MetalBorders.PopupMenuBorder: class = ???
+    object PopupMenuBorder extends MetalBorders.PopupMenuBorder
 
+    /**  */
     @stub
-    // 
-    def MetalBorders.RolloverButtonBorder: class = ???
+    object RolloverButtonBorder extends MetalBorders.RolloverButtonBorder
 
+    /**  */
     @stub
-    // 
-    def MetalBorders.ScrollPaneBorder: class = ???
+    object ScrollPaneBorder extends MetalBorders.ScrollPaneBorder
 
+    /** Border for a Table Header */
     @stub
-    // Border for a Table Header
-    def MetalBorders.TableHeaderBorder: class = ???
+    object TableHeaderBorder extends MetalBorders.TableHeaderBorder
 
+    /**  */
     @stub
-    // 
-    def MetalBorders.TextFieldBorder: class = ???
+    object TextFieldBorder extends MetalBorders.TextFieldBorder
 
+    /**  */
     @stub
-    // 
-    def MetalBorders.ToggleButtonBorder: class = ???
+    object ToggleButtonBorder extends MetalBorders.ToggleButtonBorder
 
+    /** Returns a border instance for a JButton */
     @stub
-    // Returns a border instance for a JButton
     def getButtonBorder(): Border = ???
 
+    /** Returns a border instance for a Desktop Icon */
     @stub
-    // Returns a border instance for a Desktop Icon
     def getDesktopIconBorder(): Border = ???
 
+    /** Returns a border instance for a text component */
     @stub
-    // Returns a border instance for a text component
     def getTextBorder(): Border = ???
 
+    /** Returns a border instance for a JTextField */
     @stub
-    // Returns a border instance for a JTextField
     def getTextFieldBorder(): Border = ???
 }

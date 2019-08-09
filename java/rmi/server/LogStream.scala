@@ -3,65 +3,74 @@ package java.rmi.server
 import java.io.{FilterOutputStream, OutputStream, PrintStream}
 import java.lang.{Deprecated, Object, String}
 
-// LogStream provides a mechanism for logging errors that are
-// of possible interest to those monitoring a system.
+/** LogStream provides a mechanism for logging errors that are
+ *  of possible interest to those monitoring a system.
+ */
 @Deprecated class LogStream extends PrintStream {
 
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
     @stub
-    // Deprecated. 
-    //no replacement
-    //
     def getOutputStream(): OutputStream = ???
 
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
     @stub
-    // Deprecated. 
-    //no replacement
-    //
     def setOutputStream(out: OutputStream): Unit = ???
 
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
     @stub
-    // Deprecated. 
-    //no replacement
-    //
     def toString(): String = ???
 
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
     @stub
-    // Deprecated. 
-    //no replacement
-    //
     def write(b: Array[Byte], off: Int, len: Int): Unit = ???
 }
 
 object LogStream {
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
-    def BRIEF: Int = ???
+    val BRIEF: Int = ???
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
-    def SILENT: Int = ???
+    val SILENT: Int = ???
 
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
     @stub
-    // Deprecated. 
-    //no replacement
-    //
     def getDefaultStream(): PrintStream = ???
 
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
     @stub
-    // Deprecated. 
-    //no replacement
-    //
     def log(name: String): LogStream = ???
 
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
     @stub
-    // Deprecated. 
-    //no replacement
-    //
     def parseLevel(s: String): Int = ???
 
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
     @stub
-    // Deprecated. 
-    //no replacement
-    //
     def setDefaultStream(newDefault: PrintStream): Unit = ???
 }

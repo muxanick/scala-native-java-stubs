@@ -6,166 +6,180 @@ import java.lang.{Object, String}
 import java.util.Enumeration
 import javax.swing.event.ChangeListener
 
-// A pool of styles and their associated resources.  This class determines
-// the lifetime of a group of resources by being a container that holds
-// caches for various resources such as font and color that get reused
-// by the various style definitions.  This can be shared by multiple
-// documents if desired to maximize the sharing of related resources.
-// 
-// This class also provides efficient support for small sets of attributes
-// and compresses them by sharing across uses and taking advantage of
-// their immutable nature.  Since many styles are replicated, the potential
-// for sharing is significant, and copies can be extremely cheap.
-// Larger sets reduce the possibility of sharing, and therefore revert
-// automatically to a less space-efficient implementation.
-// 
-// Warning:
-// Serialized objects of this class will not be compatible with
-// future Swing releases. The current serialization support is
-// appropriate for short term storage or RMI between applications running
-// the same version of Swing.  As of 1.4, support for long term storage
-// of all JavaBeans™
-// has been added to the java.beans package.
-// Please see XMLEncoder.
-class StyleContext extends Object with Serializable, with AbstractDocument.AttributeContext {
+/** A pool of styles and their associated resources.  This class determines
+ *  the lifetime of a group of resources by being a container that holds
+ *  caches for various resources such as font and color that get reused
+ *  by the various style definitions.  This can be shared by multiple
+ *  documents if desired to maximize the sharing of related resources.
+ *  
+ *  This class also provides efficient support for small sets of attributes
+ *  and compresses them by sharing across uses and taking advantage of
+ *  their immutable nature.  Since many styles are replicated, the potential
+ *  for sharing is significant, and copies can be extremely cheap.
+ *  Larger sets reduce the possibility of sharing, and therefore revert
+ *  automatically to a less space-efficient implementation.
+ *  
+ *  Warning:
+ *  Serialized objects of this class will not be compatible with
+ *  future Swing releases. The current serialization support is
+ *  appropriate for short term storage or RMI between applications running
+ *  the same version of Swing.  As of 1.4, support for long term storage
+ *  of all JavaBeans™
+ *  has been added to the java.beans package.
+ *  Please see XMLEncoder.
+ */
+class StyleContext extends Object with Serializable with AbstractDocument.AttributeContext {
 
+    /** A collection of attributes, typically used to represent
+     *  character and paragraph styles.
+     */
     @stub
-    // A collection of attributes, typically used to represent
-    // character and paragraph styles.
-    def StyleContext.NamedStyle: class = ???
+    object NamedStyle extends StyleContext.NamedStyle
 
+    /** Adds an attribute to the given set, and returns
+     *  the new representative set.
+     */
     @stub
-    // Adds an attribute to the given set, and returns
-    // the new representative set.
     def addAttribute(old: AttributeSet, name: Object, value: Object): AttributeSet = ???
 
+    /** Adds a set of attributes to the element. */
     @stub
-    // Adds a set of attributes to the element.
     def addAttributes(old: AttributeSet, attr: AttributeSet): AttributeSet = ???
 
+    /** Adds a listener to track when styles are added
+     *  or removed.
+     */
     @stub
-    // Adds a listener to track when styles are added
-    // or removed.
     def addChangeListener(l: ChangeListener): Unit = ???
 
+    /** Adds a new style into the style hierarchy. */
     @stub
-    // Adds a new style into the style hierarchy.
     def addStyle(nm: String, parent: Style): Style = ???
 
+    /** Create a large set of attributes that should trade off
+     *  space for time.
+     */
     @stub
-    // Create a large set of attributes that should trade off
-    // space for time.
     protected def createLargeAttributeSet(a: AttributeSet): MutableAttributeSet = ???
 
+    /** Create a compact set of attributes that might be shared. */
     @stub
-    // Create a compact set of attributes that might be shared.
     protected def createSmallAttributeSet(a: AttributeSet): StyleContext.SmallAttributeSet = ???
 
+    /** Takes a set of attributes and turn it into a background color
+     *  specification.
+     */
     @stub
-    // Takes a set of attributes and turn it into a background color
-    // specification.
     def getBackground(attr: AttributeSet): Color = ???
 
+    /** Returns an array of all the ChangeListeners added
+     *  to this StyleContext with addChangeListener().
+     */
     @stub
-    // Returns an array of all the ChangeListeners added
-    // to this StyleContext with addChangeListener().
     def getChangeListeners(): Array[ChangeListener] = ???
 
+    /** Returns the maximum number of key/value pairs to try and
+     *  compress into unique/immutable sets.
+     */
     @stub
-    // Returns the maximum number of key/value pairs to try and
-    // compress into unique/immutable sets.
     protected def getCompressionThreshold(): Int = ???
 
+    /** Fetches an empty AttributeSet. */
     @stub
-    // Fetches an empty AttributeSet.
     def getEmptySet(): AttributeSet = ???
 
+    /** Gets the font from an attribute set. */
     @stub
-    // Gets the font from an attribute set.
     def getFont(attr: AttributeSet): Font = ???
 
+    /** Gets a new font. */
     @stub
-    // Gets a new font.
     def getFont(family: String, style: Int, size: Int): Font = ???
 
+    /** Returns font metrics for a font. */
     @stub
-    // Returns font metrics for a font.
     def getFontMetrics(f: Font): FontMetrics = ???
 
+    /** Takes a set of attributes and turn it into a foreground color
+     *  specification.
+     */
     @stub
-    // Takes a set of attributes and turn it into a foreground color
-    // specification.
     def getForeground(attr: AttributeSet): Color = ???
 
+    /** Fetches a named style previously added to the document */
     @stub
-    // Fetches a named style previously added to the document
     def getStyle(nm: String): Style = ???
 
+    /** Fetches the names of the styles defined. */
     @stub
-    // Fetches the names of the styles defined.
     def getStyleNames(): Enumeration[_] = ???
 
+    /** Context-specific handling of reading in attributes */
     @stub
-    // Context-specific handling of reading in attributes
     def readAttributes(in: ObjectInputStream, a: MutableAttributeSet): Unit = ???
 
+    /** Returns a set no longer needed by the MutableAttributeSet implementation. */
     @stub
-    // Returns a set no longer needed by the MutableAttributeSet implementation.
     def reclaim(a: AttributeSet): Unit = ???
 
+    /** Removes an attribute from the set. */
     @stub
-    // Removes an attribute from the set.
     def removeAttribute(old: AttributeSet, name: Object): AttributeSet = ???
 
+    /** Removes a set of attributes for the element. */
     @stub
-    // Removes a set of attributes for the element.
     def removeAttributes(old: AttributeSet, attrs: AttributeSet): AttributeSet = ???
 
+    /** Removes a set of attributes for the element. */
     @stub
-    // Removes a set of attributes for the element.
     def removeAttributes(old: AttributeSet, names: Enumeration[_]): AttributeSet = ???
 
+    /** Removes a listener that was tracking styles being
+     *  added or removed.
+     */
     @stub
-    // Removes a listener that was tracking styles being
-    // added or removed.
     def removeChangeListener(l: ChangeListener): Unit = ???
 
+    /** Removes a named style previously added to the document. */
     @stub
-    // Removes a named style previously added to the document.
     def removeStyle(nm: String): Unit = ???
 
+    /** Converts a StyleContext to a String. */
     @stub
-    // Converts a StyleContext to a String.
     def toString(): String = ???
 
+    /** Context-specific handling of writing out attributes */
     @stub
-    // Context-specific handling of writing out attributes
     def writeAttributes(out: ObjectOutputStream, a: AttributeSet): Unit = ???
 }
 
 object StyleContext {
+    /** Returns default AttributeContext shared by all documents that
+     *  don't bother to define/supply their own context.
+     */
     @stub
-    // Returns default AttributeContext shared by all documents that
-    // don't bother to define/supply their own context.
     def getDefaultStyleContext(): StyleContext = ???
 
+    /** Returns the object previously registered with
+     *  registerStaticAttributeKey.
+     */
     @stub
-    // Returns the object previously registered with
-    // registerStaticAttributeKey.
     def getStaticAttribute(key: Object): Object = ???
 
+    /** Returns the String that key will be registered with */
     @stub
-    // Returns the String that key will be registered with
     def getStaticAttributeKey(key: Object): Object = ???
 
+    /** Reads a set of attributes from the given object input
+     *  stream that have been previously written out with
+     *  writeAttributeSet.
+     */
     @stub
-    // Reads a set of attributes from the given object input
-    // stream that have been previously written out with
-    // writeAttributeSet.
     def readAttributeSet(in: ObjectInputStream, a: MutableAttributeSet): Unit = ???
 
+    /** Registers an object as a static object that is being
+     *  used as a key in attribute sets.
+     */
     @stub
-    // Registers an object as a static object that is being
-    // used as a key in attribute sets.
     def registerStaticAttributeKey(key: Object): Unit = ???
 }

@@ -3,60 +3,65 @@ package java.util.zip
 import java.io.{FilterInputStream, InputStream}
 import java.lang.Object
 
-// This class implements a stream filter for uncompressing data in the
-// "deflate" compression format. It is also used as the basis for other
-// decompression filters, such as GZIPInputStream.
+/** This class implements a stream filter for uncompressing data in the
+ *  "deflate" compression format. It is also used as the basis for other
+ *  decompression filters, such as GZIPInputStream.
+ */
 class InflaterInputStream extends FilterInputStream {
 
+    /** Creates a new input stream with a default decompressor and buffer size. */
     @stub
-    // Creates a new input stream with a default decompressor and buffer size.
     def this(in: InputStream) = ???
 
+    /** Creates a new input stream with the specified decompressor and a
+     *  default buffer size.
+     */
     @stub
-    // Creates a new input stream with the specified decompressor and a
-    // default buffer size.
     def this(in: InputStream, inf: Inflater) = ???
 
+    /** Input buffer for decompression. */
     @stub
-    // Input buffer for decompression.
-    protected def buf: Array[Byte] = ???
+    protected val buf: Array[Byte] = ???
 
+    /** Decompressor for this stream. */
     @stub
-    // Decompressor for this stream.
-    protected def inf: Inflater = ???
+    protected val inf: Inflater = ???
 
+    /** Returns 0 after EOF has been reached, otherwise always return 1. */
     @stub
-    // Returns 0 after EOF has been reached, otherwise always return 1.
     def available(): Int = ???
 
+    /** Closes this input stream and releases any system resources associated
+     *  with the stream.
+     */
     @stub
-    // Closes this input stream and releases any system resources associated
-    // with the stream.
     def close(): Unit = ???
 
+    /** Fills input buffer with more data to decompress. */
     @stub
-    // Fills input buffer with more data to decompress.
     protected def fill(): Unit = ???
 
+    /** Marks the current position in this input stream. */
     @stub
-    // Marks the current position in this input stream.
     def mark(readlimit: Int): Unit = ???
 
+    /** Tests if this input stream supports the mark and
+     *  reset methods.
+     */
     @stub
-    // Tests if this input stream supports the mark and
-    // reset methods.
     def markSupported(): Boolean = ???
 
+    /** Reads a byte of uncompressed data. */
     @stub
-    // Reads a byte of uncompressed data.
     def read(): Int = ???
 
+    /** Reads uncompressed data into an array of bytes. */
     @stub
-    // Reads uncompressed data into an array of bytes.
     def read(b: Array[Byte], off: Int, len: Int): Int = ???
 
+    /** Repositions this stream to the position at the time the
+     *  mark method was last called on this input stream.
+     */
     @stub
-    // Repositions this stream to the position at the time the
-    // mark method was last called on this input stream.
     def reset(): Unit = ???
 }

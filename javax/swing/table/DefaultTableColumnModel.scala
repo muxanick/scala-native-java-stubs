@@ -7,174 +7,190 @@ import java.util.{Enumeration, EventListener, Vector}
 import javax.swing.ListSelectionModel
 import javax.swing.event.{ChangeEvent, EventListenerList, ListSelectionEvent, ListSelectionListener, TableColumnModelEvent, TableColumnModelListener}
 
-// The standard column-handler for a JTable.
-// 
-// Warning:
-// Serialized objects of this class will not be compatible with
-// future Swing releases. The current serialization support is
-// appropriate for short term storage or RMI between applications running
-// the same version of Swing.  As of 1.4, support for long term storage
-// of all JavaBeans™
-// has been added to the java.beans package.
-// Please see XMLEncoder.
-class DefaultTableColumnModel extends Object with TableColumnModel, with PropertyChangeListener, with ListSelectionListener, with Serializable {
+/** The standard column-handler for a JTable.
+ *  
+ *  Warning:
+ *  Serialized objects of this class will not be compatible with
+ *  future Swing releases. The current serialization support is
+ *  appropriate for short term storage or RMI between applications running
+ *  the same version of Swing.  As of 1.4, support for long term storage
+ *  of all JavaBeans™
+ *  has been added to the java.beans package.
+ *  Please see XMLEncoder.
+ */
+class DefaultTableColumnModel extends Object with TableColumnModel with PropertyChangeListener with ListSelectionListener with Serializable {
 
+    /** Change event (only one needed) */
     @stub
-    // Change event (only one needed)
-    protected def changeEvent: ChangeEvent = ???
+    protected val changeEvent: ChangeEvent = ???
 
+    /** Width margin between each column */
     @stub
-    // Width margin between each column
-    protected def columnMargin: Int = ???
+    protected val columnMargin: Int = ???
 
+    /** Column selection allowed in this column model */
     @stub
-    // Column selection allowed in this column model
-    protected def columnSelectionAllowed: Boolean = ???
+    protected val columnSelectionAllowed: Boolean = ???
 
+    /** List of TableColumnModelListener */
     @stub
-    // List of TableColumnModelListener
-    protected def listenerList: EventListenerList = ???
+    protected val listenerList: EventListenerList = ???
 
+    /** Model for keeping track of column selections */
     @stub
-    // Model for keeping track of column selections
-    protected def selectionModel: ListSelectionModel = ???
+    protected val selectionModel: ListSelectionModel = ???
 
+    /** Array of TableColumn objects in this model */
     @stub
-    // Array of TableColumn objects in this model
-    protected def tableColumns: Vector[TableColumn] = ???
+    protected val tableColumns: Vector[TableColumn] = ???
 
+    /** Appends aColumn to the end of the
+     *   tableColumns array.
+     */
     @stub
-    // Appends aColumn to the end of the
-    //  tableColumns array.
     def addColumn(aColumn: TableColumn): Unit = ???
 
+    /** Adds a listener for table column model events. */
     @stub
-    // Adds a listener for table column model events.
     def addColumnModelListener(x: TableColumnModelListener): Unit = ???
 
+    /** Creates a new default list selection model. */
     @stub
-    // Creates a new default list selection model.
     protected def createSelectionModel(): ListSelectionModel = ???
 
+    /** Notifies all listeners that have registered interest for
+     *  notification on this event type.
+     */
     @stub
-    // Notifies all listeners that have registered interest for
-    // notification on this event type.
     protected def fireColumnAdded(e: TableColumnModelEvent): Unit = ???
 
+    /** Notifies all listeners that have registered interest for
+     *  notification on this event type.
+     */
     @stub
-    // Notifies all listeners that have registered interest for
-    // notification on this event type.
     protected def fireColumnMarginChanged(): Unit = ???
 
+    /** Notifies all listeners that have registered interest for
+     *  notification on this event type.
+     */
     @stub
-    // Notifies all listeners that have registered interest for
-    // notification on this event type.
     protected def fireColumnMoved(e: TableColumnModelEvent): Unit = ???
 
+    /** Notifies all listeners that have registered interest for
+     *  notification on this event type.
+     */
     @stub
-    // Notifies all listeners that have registered interest for
-    // notification on this event type.
     protected def fireColumnRemoved(e: TableColumnModelEvent): Unit = ???
 
+    /** Notifies all listeners that have registered interest for
+     *  notification on this event type.
+     */
     @stub
-    // Notifies all listeners that have registered interest for
-    // notification on this event type.
     protected def fireColumnSelectionChanged(e: ListSelectionEvent): Unit = ???
 
+    /** Returns the TableColumn object for the column
+     *  at columnIndex.
+     */
     @stub
-    // Returns the TableColumn object for the column
-    // at columnIndex.
     def getColumn(columnIndex: Int): TableColumn = ???
 
+    /** Returns the number of columns in the tableColumns array. */
     @stub
-    // Returns the number of columns in the tableColumns array.
     def getColumnCount(): Int = ???
 
+    /** Returns the index of the first column in the tableColumns
+     *  array whose identifier is equal to identifier,
+     *  when compared using equals.
+     */
     @stub
-    // Returns the index of the first column in the tableColumns
-    // array whose identifier is equal to identifier,
-    // when compared using equals.
     def getColumnIndex(identifier: Object): Int = ???
 
+    /** Returns the index of the column that lies at position x,
+     *  or -1 if no column covers this point.
+     */
     @stub
-    // Returns the index of the column that lies at position x,
-    // or -1 if no column covers this point.
     def getColumnIndexAtX(x: Int): Int = ???
 
+    /** Returns the width margin for TableColumn. */
     @stub
-    // Returns the width margin for TableColumn.
     def getColumnMargin(): Int = ???
 
+    /** Returns an array of all the column model listeners
+     *  registered on this model.
+     */
     @stub
-    // Returns an array of all the column model listeners
-    // registered on this model.
     def getColumnModelListeners(): Array[TableColumnModelListener] = ???
 
+    /** Returns an Enumeration of all the columns in the model. */
     @stub
-    // Returns an Enumeration of all the columns in the model.
     def getColumns(): Enumeration[TableColumn] = ???
 
+    /** Returns true if column selection is allowed, otherwise false. */
     @stub
-    // Returns true if column selection is allowed, otherwise false.
     def getColumnSelectionAllowed(): Boolean = ???
 
+    /** Returns an array of all the objects currently registered
+     *  as FooListeners
+     *  upon this model.
+     */
     @stub
-    // Returns an array of all the objects currently registered
-    // as FooListeners
-    // upon this model.
-    def Array[T]: [T <: EventListener] = ???
+    def getListeners[T <: EventListener](listenerType: Class[T]): Array[T] = ???
 
+    /** Returns the number of columns selected. */
     @stub
-    // Returns the number of columns selected.
     def getSelectedColumnCount(): Int = ???
 
+    /** Returns an array of selected columns. */
     @stub
-    // Returns an array of selected columns.
     def getSelectedColumns(): Array[Int] = ???
 
+    /** Returns the ListSelectionModel that is used to
+     *  maintain column selection state.
+     */
     @stub
-    // Returns the ListSelectionModel that is used to
-    // maintain column selection state.
     def getSelectionModel(): ListSelectionModel = ???
 
+    /** Returns the total combined width of all columns. */
     @stub
-    // Returns the total combined width of all columns.
     def getTotalColumnWidth(): Int = ???
 
+    /** Moves the column and heading at columnIndex to
+     *  newIndex.
+     */
     @stub
-    // Moves the column and heading at columnIndex to
-    // newIndex.
     def moveColumn(columnIndex: Int, newIndex: Int): Unit = ???
 
+    /** Property Change Listener change method. */
     @stub
-    // Property Change Listener change method.
     def propertyChange(evt: PropertyChangeEvent): Unit = ???
 
+    /** Recalculates the total combined width of all columns. */
     @stub
-    // Recalculates the total combined width of all columns.
     protected def recalcWidthCache(): Unit = ???
 
+    /** Deletes the column from the
+     *   tableColumns array.
+     */
     @stub
-    // Deletes the column from the
-    //  tableColumns array.
     def removeColumn(column: TableColumn): Unit = ???
 
+    /** Removes a listener for table column model events. */
     @stub
-    // Removes a listener for table column model events.
     def removeColumnModelListener(x: TableColumnModelListener): Unit = ???
 
+    /** Sets the column margin to newMargin. */
     @stub
-    // Sets the column margin to newMargin.
     def setColumnMargin(newMargin: Int): Unit = ???
 
+    /** Sets whether column selection is allowed. */
     @stub
-    // Sets whether column selection is allowed.
     def setColumnSelectionAllowed(flag: Boolean): Unit = ???
 
+    /** Sets the selection model for this TableColumnModel
+     *   to newModel
+     *   and registers for listener notifications from the new selection
+     *   model.
+     */
     @stub
-    // Sets the selection model for this TableColumnModel
-    //  to newModel
-    //  and registers for listener notifications from the new selection
-    //  model.
     def setSelectionModel(newModel: ListSelectionModel): Unit = ???
 }

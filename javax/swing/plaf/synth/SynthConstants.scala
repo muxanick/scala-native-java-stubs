@@ -1,36 +1,37 @@
 package javax.swing.plaf.synth
 
-// Constants used by Synth. Not all Components support all states. A
-// Component will at least be in one of the primary states. That is, the
-// return value from SynthContext.getComponentState() will at
-// least be one of ENABLED, MOUSE_OVER,
-// PRESSED or DISABLED, and may also contain
-// FOCUSED, SELECTED or DEFAULT.
+/** Constants used by Synth. Not all Components support all states. A
+ *  Component will at least be in one of the primary states. That is, the
+ *  return value from SynthContext.getComponentState() will at
+ *  least be one of ENABLED, MOUSE_OVER,
+ *  PRESSED or DISABLED, and may also contain
+ *  FOCUSED, SELECTED or DEFAULT.
+ */
 trait SynthConstants {
 }
 
 object SynthConstants {
+    /** Indicates the region is the default. */
     @stub
-    // Indicates the region is the default.
-    def DEFAULT: Int = ???
+    val DEFAULT: Int = ???
 
+    /** Primary state indicating the region is not enabled. */
     @stub
-    // Primary state indicating the region is not enabled.
-    def DISABLED: Int = ???
+    val DISABLED: Int = ???
 
+    /** Primary state indicating the component is enabled. */
     @stub
-    // Primary state indicating the component is enabled.
-    def ENABLED: Int = ???
+    val ENABLED: Int = ???
 
+    /** Indicates the region has focus. */
     @stub
-    // Indicates the region has focus.
-    def FOCUSED: Int = ???
+    val FOCUSED: Int = ???
 
+    /** Primary state indicating the mouse is over the region. */
     @stub
-    // Primary state indicating the mouse is over the region.
-    def MOUSE_OVER: Int = ???
+    val MOUSE_OVER: Int = ???
 
+    /** Primary state indicating the region is in a pressed state. */
     @stub
-    // Primary state indicating the region is in a pressed state.
-    def PRESSED: Int = ???
+    val PRESSED: Int = ???
 }

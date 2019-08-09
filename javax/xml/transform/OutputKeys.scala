@@ -2,47 +2,48 @@ package javax.xml.transform
 
 import java.lang.{Object, String}
 
-// Provides string constants that can be used to set
-// output properties for a Transformer, or to retrieve
-// output properties from a Transformer or Templates object.
-// All the fields in this class are read-only.
+/** Provides string constants that can be used to set
+ *  output properties for a Transformer, or to retrieve
+ *  output properties from a Transformer or Templates object.
+ *  All the fields in this class are read-only.
+ */
 class OutputKeys extends Object {
 }
 
 object OutputKeys {
+    /** cdata-section-elements = expanded names. */
     @stub
-    // cdata-section-elements = expanded names.
-    def CDATA_SECTION_ELEMENTS: String = ???
+    val CDATA_SECTION_ELEMENTS: String = ???
 
+    /** doctype-public = string. */
     @stub
-    // doctype-public = string.
-    def DOCTYPE_PUBLIC: String = ???
+    val DOCTYPE_PUBLIC: String = ???
 
+    /** doctype-system = string. */
     @stub
-    // doctype-system = string.
-    def DOCTYPE_SYSTEM: String = ???
+    val DOCTYPE_SYSTEM: String = ???
 
+    /** encoding = string. */
     @stub
-    // encoding = string.
-    def ENCODING: String = ???
+    val ENCODING: String = ???
 
+    /** indent = "yes" | "no". */
     @stub
-    // indent = "yes" | "no".
-    def INDENT: String = ???
+    val INDENT: String = ???
 
+    /** media-type = string. */
     @stub
-    // media-type = string.
-    def MEDIA_TYPE: String = ???
+    val MEDIA_TYPE: String = ???
 
+    /** method = "xml" | "html" | "text" | expanded name. */
     @stub
-    // method = "xml" | "html" | "text" | expanded name.
-    def METHOD: String = ???
+    val METHOD: String = ???
 
+    /** omit-xml-declaration = "yes" | "no". */
     @stub
-    // omit-xml-declaration = "yes" | "no".
-    def OMIT_XML_DECLARATION: String = ???
+    val OMIT_XML_DECLARATION: String = ???
 
+    /** standalone = "yes" | "no". */
     @stub
-    // standalone = "yes" | "no".
-    def STANDALONE: String = ???
+    val STANDALONE: String = ???
 }

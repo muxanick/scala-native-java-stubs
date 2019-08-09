@@ -4,19 +4,20 @@ import java.lang.Object
 import javax.swing.JMenu
 import javax.swing.event.ChangeListener
 
-// As of Java 2 platform 1.4, this previously undocumented class
-// is now obsolete. KeyBindings are now managed by the popup menu.
+/** As of Java 2 platform 1.4, this previously undocumented class
+ *  is now obsolete. KeyBindings are now managed by the popup menu.
+ */
 class BasicMenuUI.ChangeHandler extends Object with ChangeListener {
 
+    /**  */
     @stub
-    // 
-    def isSelected: Boolean = ???
+    val isSelected: Boolean = ???
 
+    /**  */
     @stub
-    // 
-    def menu: JMenu = ???
+    val menu: JMenu = ???
 
+    /**  */
     @stub
-    // 
-    def ui: BasicMenuUI = ???
+    val ui: BasicMenuUI = ???
 }

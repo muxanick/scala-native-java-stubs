@@ -4,107 +4,116 @@ import java.io.Serializable
 import java.lang.{Number, Object, String}
 import java.util.function.{IntBinaryOperator, IntUnaryOperator}
 
-// An int value that may be updated atomically.  See the
-// java.util.concurrent.atomic package specification for
-// description of the properties of atomic variables. An
-// AtomicInteger is used in applications such as atomically
-// incremented counters, and cannot be used as a replacement for an
-// Integer. However, this class does extend
-// Number to allow uniform access by tools and utilities that
-// deal with numerically-based classes.
+/** An int value that may be updated atomically.  See the
+ *  java.util.concurrent.atomic package specification for
+ *  description of the properties of atomic variables. An
+ *  AtomicInteger is used in applications such as atomically
+ *  incremented counters, and cannot be used as a replacement for an
+ *  Integer. However, this class does extend
+ *  Number to allow uniform access by tools and utilities that
+ *  deal with numerically-based classes.
+ */
 class AtomicInteger extends Number with Serializable {
 
+    /** Creates a new AtomicInteger with initial value 0. */
     @stub
-    // Creates a new AtomicInteger with initial value 0.
     def this() = ???
 
+    /** Atomically updates the current value with the results of
+     *  applying the given function to the current and given values,
+     *  returning the updated value.
+     */
     @stub
-    // Atomically updates the current value with the results of
-    // applying the given function to the current and given values,
-    // returning the updated value.
     def accumulateAndGet(x: Int, accumulatorFunction: IntBinaryOperator): Int = ???
 
+    /** Atomically adds the given value to the current value. */
     @stub
-    // Atomically adds the given value to the current value.
     def addAndGet(delta: Int): Int = ???
 
+    /** Atomically sets the value to the given updated value
+     *  if the current value == the expected value.
+     */
     @stub
-    // Atomically sets the value to the given updated value
-    // if the current value == the expected value.
     def compareAndSet(expect: Int, update: Int): Boolean = ???
 
+    /** Atomically decrements by one the current value. */
     @stub
-    // Atomically decrements by one the current value.
     def decrementAndGet(): Int = ???
 
+    /** Returns the value of this AtomicInteger as a double
+     *  after a widening primitive conversion.
+     */
     @stub
-    // Returns the value of this AtomicInteger as a double
-    // after a widening primitive conversion.
-    def doubleValue(): double = ???
+    def doubleValue(): Double = ???
 
+    /** Returns the value of this AtomicInteger as a float
+     *  after a widening primitive conversion.
+     */
     @stub
-    // Returns the value of this AtomicInteger as a float
-    // after a widening primitive conversion.
-    def floatValue(): float = ???
+    def floatValue(): Float = ???
 
+    /** Gets the current value. */
     @stub
-    // Gets the current value.
     def get(): Int = ???
 
+    /** Atomically updates the current value with the results of
+     *  applying the given function to the current and given values,
+     *  returning the previous value.
+     */
     @stub
-    // Atomically updates the current value with the results of
-    // applying the given function to the current and given values,
-    // returning the previous value.
     def getAndAccumulate(x: Int, accumulatorFunction: IntBinaryOperator): Int = ???
 
+    /** Atomically adds the given value to the current value. */
     @stub
-    // Atomically adds the given value to the current value.
     def getAndAdd(delta: Int): Int = ???
 
+    /** Atomically decrements by one the current value. */
     @stub
-    // Atomically decrements by one the current value.
     def getAndDecrement(): Int = ???
 
+    /** Atomically increments by one the current value. */
     @stub
-    // Atomically increments by one the current value.
     def getAndIncrement(): Int = ???
 
+    /** Atomically sets to the given value and returns the old value. */
     @stub
-    // Atomically sets to the given value and returns the old value.
     def getAndSet(newValue: Int): Int = ???
 
+    /** Atomically updates the current value with the results of
+     *  applying the given function, returning the previous value.
+     */
     @stub
-    // Atomically updates the current value with the results of
-    // applying the given function, returning the previous value.
     def getAndUpdate(updateFunction: IntUnaryOperator): Int = ???
 
+    /** Atomically increments by one the current value. */
     @stub
-    // Atomically increments by one the current value.
     def incrementAndGet(): Int = ???
 
+    /** Returns the value of this AtomicInteger as an int. */
     @stub
-    // Returns the value of this AtomicInteger as an int.
     def intValue(): Int = ???
 
+    /** Eventually sets to the given value. */
     @stub
-    // Eventually sets to the given value.
     def lazySet(newValue: Int): Unit = ???
 
+    /** Returns the value of this AtomicInteger as a long
+     *  after a widening primitive conversion.
+     */
     @stub
-    // Returns the value of this AtomicInteger as a long
-    // after a widening primitive conversion.
     def longValue(): Long = ???
 
+    /** Sets to the given value. */
     @stub
-    // Sets to the given value.
     def set(newValue: Int): Unit = ???
 
+    /** Returns the String representation of the current value. */
     @stub
-    // Returns the String representation of the current value.
     def toString(): String = ???
 
+    /** Atomically updates the current value with the results of
+     *  applying the given function, returning the updated value.
+     */
     @stub
-    // Atomically updates the current value with the results of
-    // applying the given function, returning the updated value.
     def updateAndGet(updateFunction: IntUnaryOperator): Int = ???
 }

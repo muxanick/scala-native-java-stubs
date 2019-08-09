@@ -3,209 +3,213 @@ package java.util.zip
 import java.io.{FilterOutputStream, OutputStream}
 import java.lang.{Object, String}
 
-// This class implements an output stream filter for writing files in the
-// ZIP file format. Includes support for both compressed and uncompressed
-// entries.
+/** This class implements an output stream filter for writing files in the
+ *  ZIP file format. Includes support for both compressed and uncompressed
+ *  entries.
+ */
 class ZipOutputStream extends DeflaterOutputStream {
 
+    /** Creates a new ZIP output stream. */
     @stub
-    // Creates a new ZIP output stream.
     def this(out: OutputStream) = ???
 
+    /** Closes the ZIP output stream as well as the stream being filtered. */
     @stub
-    // Closes the ZIP output stream as well as the stream being filtered.
     def close(): Unit = ???
 
+    /** Closes the current ZIP entry and positions the stream for writing
+     *  the next entry.
+     */
     @stub
-    // Closes the current ZIP entry and positions the stream for writing
-    // the next entry.
     def closeEntry(): Unit = ???
 
+    /** Finishes writing the contents of the ZIP output stream without closing
+     *  the underlying stream.
+     */
     @stub
-    // Finishes writing the contents of the ZIP output stream without closing
-    // the underlying stream.
     def finish(): Unit = ???
 
+    /** Begins writing a new ZIP file entry and positions the stream to the
+     *  start of the entry data.
+     */
     @stub
-    // Begins writing a new ZIP file entry and positions the stream to the
-    // start of the entry data.
     def putNextEntry(e: ZipEntry): Unit = ???
 
+    /** Sets the ZIP file comment. */
     @stub
-    // Sets the ZIP file comment.
     def setComment(comment: String): Unit = ???
 
+    /** Sets the compression level for subsequent entries which are DEFLATED. */
     @stub
-    // Sets the compression level for subsequent entries which are DEFLATED.
     def setLevel(level: Int): Unit = ???
 
+    /** Sets the default compression method for subsequent entries. */
     @stub
-    // Sets the default compression method for subsequent entries.
     def setMethod(method: Int): Unit = ???
 }
 
 object ZipOutputStream {
+    /**  */
     @stub
-    // 
-    def CENATT: Int = ???
+    val CENATT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENATX: Int = ???
+    val CENATX: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENCOM: Int = ???
+    val CENCOM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENCRC: Int = ???
+    val CENCRC: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENDSK: Int = ???
+    val CENDSK: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENEXT: Int = ???
+    val CENEXT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENFLG: Int = ???
+    val CENFLG: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENHDR: Int = ???
+    val CENHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENHOW: Int = ???
+    val CENHOW: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENLEN: Int = ???
+    val CENLEN: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENNAM: Int = ???
+    val CENNAM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENOFF: Int = ???
+    val CENOFF: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENSIG: Long = ???
+    val CENSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def CENSIZ: Int = ???
+    val CENSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENTIM: Int = ???
+    val CENTIM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENVEM: Int = ???
+    val CENVEM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENVER: Int = ???
+    val CENVER: Int = ???
 
+    /** Compression method for compressed (DEFLATED) entries. */
     @stub
-    // Compression method for compressed (DEFLATED) entries.
-    def DEFLATED: Int = ???
+    val DEFLATED: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDCOM: Int = ???
+    val ENDCOM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDHDR: Int = ???
+    val ENDHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDOFF: Int = ???
+    val ENDOFF: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDSIG: Long = ???
+    val ENDSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def ENDSIZ: Int = ???
+    val ENDSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDSUB: Int = ???
+    val ENDSUB: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDTOT: Int = ???
+    val ENDTOT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTCRC: Int = ???
+    val EXTCRC: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTHDR: Int = ???
+    val EXTHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTLEN: Int = ???
+    val EXTLEN: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTSIG: Long = ???
+    val EXTSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def EXTSIZ: Int = ???
+    val EXTSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCCRC: Int = ???
+    val LOCCRC: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCEXT: Int = ???
+    val LOCEXT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCFLG: Int = ???
+    val LOCFLG: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCHDR: Int = ???
+    val LOCHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCHOW: Int = ???
+    val LOCHOW: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCLEN: Int = ???
+    val LOCLEN: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCNAM: Int = ???
+    val LOCNAM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCSIG: Long = ???
+    val LOCSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def LOCSIZ: Int = ???
+    val LOCSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCTIM: Int = ???
+    val LOCTIM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCVER: Int = ???
+    val LOCVER: Int = ???
 }

@@ -4,749 +4,845 @@ import java.lang.{Class, Comparable, Object, String}
 import java.util.function.{BinaryOperator, DoubleBinaryOperator, IntBinaryOperator, IntFunction, IntToDoubleFunction, IntToLongFunction, IntUnaryOperator, LongBinaryOperator}
 import java.util.stream.{DoubleStream, IntStream, LongStream, Stream}
 
-// This class contains various methods for manipulating arrays (such as
-// sorting and searching). This class also contains a static factory
-// that allows arrays to be viewed as lists.
-//
-// The methods in this class all throw a NullPointerException,
-// if the specified array reference is null, except where noted.
-//
-// The documentation for the methods contained in this class includes
-// briefs description of the implementations. Such descriptions should
-// be regarded as implementation notes, rather than parts of the
-// specification. Implementors should feel free to substitute other
-// algorithms, so long as the specification itself is adhered to. (For
-// example, the algorithm used by sort(Object[]) does not have to be
-// a MergeSort, but it does have to be stable.)
-//
-// This class is a member of the
-// 
-// Java Collections Framework.
+/** This class contains various methods for manipulating arrays (such as
+ *  sorting and searching). This class also contains a static factory
+ *  that allows arrays to be viewed as lists.
+ * 
+ *  The methods in this class all throw a NullPointerException,
+ *  if the specified array reference is null, except where noted.
+ * 
+ *  The documentation for the methods contained in this class includes
+ *  briefs description of the implementations. Such descriptions should
+ *  be regarded as implementation notes, rather than parts of the
+ *  specification. Implementors should feel free to substitute other
+ *  algorithms, so long as the specification itself is adhered to. (For
+ *  example, the algorithm used by sort(Object[]) does not have to be
+ *  a MergeSort, but it does have to be stable.)
+ * 
+ *  This class is a member of the
+ *  
+ *  Java Collections Framework.
+ */
 class Arrays extends Object {
 }
 
 object Arrays {
+    /** Returns a fixed-size list backed by the specified array. */
     @stub
-    // Returns a fixed-size list backed by the specified array.
-    def List[T]: [T] = ???
+    def asList[T](a: T*): List[T] = ???
 
+    /** Searches the specified array of bytes for the specified value using the
+     *  binary search algorithm.
+     */
     @stub
-    // Searches the specified array of bytes for the specified value using the
-    // binary search algorithm.
     def binarySearch(a: Array[Byte], key: Byte): Int = ???
 
+    /** Searches a range of
+     *  the specified array of bytes for the specified value using the
+     *  binary search algorithm.
+     */
     @stub
-    // Searches a range of
-    // the specified array of bytes for the specified value using the
-    // binary search algorithm.
     def binarySearch(a: Array[Byte], fromIndex: Int, toIndex: Int, key: Byte): Int = ???
 
+    /** Searches the specified array of chars for the specified value using the
+     *  binary search algorithm.
+     */
     @stub
-    // Searches the specified array of chars for the specified value using the
-    // binary search algorithm.
     def binarySearch(a: Array[Char], key: Char): Int = ???
 
+    /** Searches a range of
+     *  the specified array of chars for the specified value using the
+     *  binary search algorithm.
+     */
     @stub
-    // Searches a range of
-    // the specified array of chars for the specified value using the
-    // binary search algorithm.
     def binarySearch(a: Array[Char], fromIndex: Int, toIndex: Int, key: Char): Int = ???
 
+    /** Searches the specified array of doubles for the specified value using
+     *  the binary search algorithm.
+     */
     @stub
-    // Searches the specified array of doubles for the specified value using
-    // the binary search algorithm.
-    def binarySearch(a: Array[double], key: double): Int = ???
+    def binarySearch(a: Array[Double], key: Double): Int = ???
 
+    /** Searches a range of
+     *  the specified array of doubles for the specified value using
+     *  the binary search algorithm.
+     */
     @stub
-    // Searches a range of
-    // the specified array of doubles for the specified value using
-    // the binary search algorithm.
-    def binarySearch(a: Array[double], fromIndex: Int, toIndex: Int, key: double): Int = ???
+    def binarySearch(a: Array[Double], fromIndex: Int, toIndex: Int, key: Double): Int = ???
 
+    /** Searches the specified array of floats for the specified value using
+     *  the binary search algorithm.
+     */
     @stub
-    // Searches the specified array of floats for the specified value using
-    // the binary search algorithm.
-    def binarySearch(a: Array[float], key: float): Int = ???
+    def binarySearch(a: Array[Float], key: Float): Int = ???
 
+    /** Searches a range of
+     *  the specified array of floats for the specified value using
+     *  the binary search algorithm.
+     */
     @stub
-    // Searches a range of
-    // the specified array of floats for the specified value using
-    // the binary search algorithm.
-    def binarySearch(a: Array[float], fromIndex: Int, toIndex: Int, key: float): Int = ???
+    def binarySearch(a: Array[Float], fromIndex: Int, toIndex: Int, key: Float): Int = ???
 
+    /** Searches the specified array of ints for the specified value using the
+     *  binary search algorithm.
+     */
     @stub
-    // Searches the specified array of ints for the specified value using the
-    // binary search algorithm.
     def binarySearch(a: Array[Int], key: Int): Int = ???
 
+    /** Searches a range of
+     *  the specified array of ints for the specified value using the
+     *  binary search algorithm.
+     */
     @stub
-    // Searches a range of
-    // the specified array of ints for the specified value using the
-    // binary search algorithm.
     def binarySearch(a: Array[Int], fromIndex: Int, toIndex: Int, key: Int): Int = ???
 
+    /** Searches a range of
+     *  the specified array of longs for the specified value using the
+     *  binary search algorithm.
+     */
     @stub
-    // Searches a range of
-    // the specified array of longs for the specified value using the
-    // binary search algorithm.
     def binarySearch(a: Array[Long], fromIndex: Int, toIndex: Int, key: Long): Int = ???
 
+    /** Searches the specified array of longs for the specified value using the
+     *  binary search algorithm.
+     */
     @stub
-    // Searches the specified array of longs for the specified value using the
-    // binary search algorithm.
     def binarySearch(a: Array[Long], key: Long): Int = ???
 
+    /** Searches a range of
+     *  the specified array for the specified object using the binary
+     *  search algorithm.
+     */
     @stub
-    // Searches a range of
-    // the specified array for the specified object using the binary
-    // search algorithm.
     def binarySearch(a: Array[Object], fromIndex: Int, toIndex: Int, key: Object): Int = ???
 
+    /** Searches the specified array for the specified object using the binary
+     *  search algorithm.
+     */
     @stub
-    // Searches the specified array for the specified object using the binary
-    // search algorithm.
     def binarySearch(a: Array[Object], key: Object): Int = ???
 
+    /** Searches a range of
+     *  the specified array of shorts for the specified value using
+     *  the binary search algorithm.
+     */
     @stub
-    // Searches a range of
-    // the specified array of shorts for the specified value using
-    // the binary search algorithm.
     def binarySearch(a: Array[Short], fromIndex: Int, toIndex: Int, key: Short): Int = ???
 
+    /** Searches the specified array of shorts for the specified value using
+     *  the binary search algorithm.
+     */
     @stub
-    // Searches the specified array of shorts for the specified value using
-    // the binary search algorithm.
     def binarySearch(a: Array[Short], key: Short): Int = ???
 
+    /** Searches a range of
+     *  the specified array for the specified object using the binary
+     *  search algorithm.
+     */
     @stub
-    // Searches a range of
-    // the specified array for the specified object using the binary
-    // search algorithm.
-    def Int: [T] = ???
+    def binarySearch[T](a: Array[T], fromIndex: Int, toIndex: Int, key: T, c: Comparator[_ >: T]): Int = ???
 
+    /** Searches the specified array for the specified object using the binary
+     *  search algorithm.
+     */
     @stub
-    // Searches the specified array for the specified object using the binary
-    // search algorithm.
-    def Int: [T] = ???
+    def binarySearch[T](a: Array[T], key: T, c: Comparator[_ >: T]): Int = ???
 
+    /** Copies the specified array, truncating or padding with false (if necessary)
+     *  so the copy has the specified length.
+     */
     @stub
-    // Copies the specified array, truncating or padding with false (if necessary)
-    // so the copy has the specified length.
     def copyOf(original: Array[Boolean], newLength: Int): Array[Boolean] = ???
 
+    /** Copies the specified array, truncating or padding with zeros (if necessary)
+     *  so the copy has the specified length.
+     */
     @stub
-    // Copies the specified array, truncating or padding with zeros (if necessary)
-    // so the copy has the specified length.
     def copyOf(original: Array[Byte], newLength: Int): Array[Byte] = ???
 
+    /** Copies the specified array, truncating or padding with null characters (if necessary)
+     *  so the copy has the specified length.
+     */
     @stub
-    // Copies the specified array, truncating or padding with null characters (if necessary)
-    // so the copy has the specified length.
     def copyOf(original: Array[Char], newLength: Int): Array[Char] = ???
 
+    /** Copies the specified array, truncating or padding with zeros (if necessary)
+     *  so the copy has the specified length.
+     */
     @stub
-    // Copies the specified array, truncating or padding with zeros (if necessary)
-    // so the copy has the specified length.
-    def copyOf(original: Array[double], newLength: Int): Array[double] = ???
+    def copyOf(original: Array[Double], newLength: Int): Array[Double] = ???
 
+    /** Copies the specified array, truncating or padding with zeros (if necessary)
+     *  so the copy has the specified length.
+     */
     @stub
-    // Copies the specified array, truncating or padding with zeros (if necessary)
-    // so the copy has the specified length.
-    def copyOf(original: Array[float], newLength: Int): Array[float] = ???
+    def copyOf(original: Array[Float], newLength: Int): Array[Float] = ???
 
+    /** Copies the specified array, truncating or padding with zeros (if necessary)
+     *  so the copy has the specified length.
+     */
     @stub
-    // Copies the specified array, truncating or padding with zeros (if necessary)
-    // so the copy has the specified length.
     def copyOf(original: Array[Int], newLength: Int): Array[Int] = ???
 
+    /** Copies the specified array, truncating or padding with zeros (if necessary)
+     *  so the copy has the specified length.
+     */
     @stub
-    // Copies the specified array, truncating or padding with zeros (if necessary)
-    // so the copy has the specified length.
     def copyOf(original: Array[Long], newLength: Int): Array[Long] = ???
 
+    /** Copies the specified array, truncating or padding with zeros (if necessary)
+     *  so the copy has the specified length.
+     */
     @stub
-    // Copies the specified array, truncating or padding with zeros (if necessary)
-    // so the copy has the specified length.
     def copyOf(original: Array[Short], newLength: Int): Array[Short] = ???
 
+    /** Copies the specified array, truncating or padding with nulls (if necessary)
+     *  so the copy has the specified length.
+     */
     @stub
-    // Copies the specified array, truncating or padding with nulls (if necessary)
-    // so the copy has the specified length.
-    def Array[T]: [T] = ???
+    def copyOf[T](original: Array[T], newLength: Int): Array[T] = ???
 
+    /** Copies the specified array, truncating or padding with nulls (if necessary)
+     *  so the copy has the specified length.
+     */
     @stub
-    // Copies the specified array, truncating or padding with nulls (if necessary)
-    // so the copy has the specified length.
-    def Array[T]: [T, U] = ???
+    def copyOf[T, U](original: Array[U], newLength: Int, newType: Class[_ <: Array[T]]): Array[T] = ???
 
+    /** Copies the specified range of the specified array into a new array. */
     @stub
-    // Copies the specified range of the specified array into a new array.
     def copyOfRange(original: Array[Boolean], from: Int, to: Int): Array[Boolean] = ???
 
+    /** Copies the specified range of the specified array into a new array. */
     @stub
-    // Copies the specified range of the specified array into a new array.
     def copyOfRange(original: Array[Byte], from: Int, to: Int): Array[Byte] = ???
 
+    /** Copies the specified range of the specified array into a new array. */
     @stub
-    // Copies the specified range of the specified array into a new array.
     def copyOfRange(original: Array[Char], from: Int, to: Int): Array[Char] = ???
 
+    /** Copies the specified range of the specified array into a new array. */
     @stub
-    // Copies the specified range of the specified array into a new array.
-    def copyOfRange(original: Array[double], from: Int, to: Int): Array[double] = ???
+    def copyOfRange(original: Array[Double], from: Int, to: Int): Array[Double] = ???
 
+    /** Copies the specified range of the specified array into a new array. */
     @stub
-    // Copies the specified range of the specified array into a new array.
-    def copyOfRange(original: Array[float], from: Int, to: Int): Array[float] = ???
+    def copyOfRange(original: Array[Float], from: Int, to: Int): Array[Float] = ???
 
+    /** Copies the specified range of the specified array into a new array. */
     @stub
-    // Copies the specified range of the specified array into a new array.
     def copyOfRange(original: Array[Int], from: Int, to: Int): Array[Int] = ???
 
+    /** Copies the specified range of the specified array into a new array. */
     @stub
-    // Copies the specified range of the specified array into a new array.
     def copyOfRange(original: Array[Long], from: Int, to: Int): Array[Long] = ???
 
+    /** Copies the specified range of the specified array into a new array. */
     @stub
-    // Copies the specified range of the specified array into a new array.
     def copyOfRange(original: Array[Short], from: Int, to: Int): Array[Short] = ???
 
+    /** Copies the specified range of the specified array into a new array. */
     @stub
-    // Copies the specified range of the specified array into a new array.
-    def Array[T]: [T] = ???
+    def copyOfRange[T](original: Array[T], from: Int, to: Int): Array[T] = ???
 
+    /** Copies the specified range of the specified array into a new array. */
     @stub
-    // Copies the specified range of the specified array into a new array.
-    def Array[T]: [T, U] = ???
+    def copyOfRange[T, U](original: Array[U], from: Int, to: Int, newType: Class[_ <: Array[T]]): Array[T] = ???
 
+    /** Returns true if the two specified arrays are deeply
+     *  equal to one another.
+     */
     @stub
-    // Returns true if the two specified arrays are deeply
-    // equal to one another.
     def deepEquals(a1: Array[Object], a2: Array[Object]): Boolean = ???
 
+    /** Returns a hash code based on the "deep contents" of the specified
+     *  array.
+     */
     @stub
-    // Returns a hash code based on the "deep contents" of the specified
-    // array.
     def deepHashCode(a: Array[Object]): Int = ???
 
+    /** Returns a string representation of the "deep contents" of the specified
+     *  array.
+     */
     @stub
-    // Returns a string representation of the "deep contents" of the specified
-    // array.
     def deepToString(a: Array[Object]): String = ???
 
+    /** Returns true if the two specified arrays of booleans are
+     *  equal to one another.
+     */
     @stub
-    // Returns true if the two specified arrays of booleans are
-    // equal to one another.
     def equals(a: Array[Boolean], a2: Array[Boolean]): Boolean = ???
 
+    /** Returns true if the two specified arrays of bytes are
+     *  equal to one another.
+     */
     @stub
-    // Returns true if the two specified arrays of bytes are
-    // equal to one another.
     def equals(a: Array[Byte], a2: Array[Byte]): Boolean = ???
 
+    /** Returns true if the two specified arrays of chars are
+     *  equal to one another.
+     */
     @stub
-    // Returns true if the two specified arrays of chars are
-    // equal to one another.
     def equals(a: Array[Char], a2: Array[Char]): Boolean = ???
 
+    /** Returns true if the two specified arrays of doubles are
+     *  equal to one another.
+     */
     @stub
-    // Returns true if the two specified arrays of doubles are
-    // equal to one another.
-    def equals(a: Array[double], a2: Array[double]): Boolean = ???
+    def equals(a: Array[Double], a2: Array[Double]): Boolean = ???
 
+    /** Returns true if the two specified arrays of floats are
+     *  equal to one another.
+     */
     @stub
-    // Returns true if the two specified arrays of floats are
-    // equal to one another.
-    def equals(a: Array[float], a2: Array[float]): Boolean = ???
+    def equals(a: Array[Float], a2: Array[Float]): Boolean = ???
 
+    /** Returns true if the two specified arrays of ints are
+     *  equal to one another.
+     */
     @stub
-    // Returns true if the two specified arrays of ints are
-    // equal to one another.
     def equals(a: Array[Int], a2: Array[Int]): Boolean = ???
 
+    /** Returns true if the two specified arrays of longs are
+     *  equal to one another.
+     */
     @stub
-    // Returns true if the two specified arrays of longs are
-    // equal to one another.
     def equals(a: Array[Long], a2: Array[Long]): Boolean = ???
 
+    /** Returns true if the two specified arrays of Objects are
+     *  equal to one another.
+     */
     @stub
-    // Returns true if the two specified arrays of Objects are
-    // equal to one another.
     def equals(a: Array[Object], a2: Array[Object]): Boolean = ???
 
+    /** Returns true if the two specified arrays of shorts are
+     *  equal to one another.
+     */
     @stub
-    // Returns true if the two specified arrays of shorts are
-    // equal to one another.
     def equals(a: Array[Short], a2: Array[Short]): Boolean = ???
 
+    /** Assigns the specified boolean value to each element of the specified
+     *  array of booleans.
+     */
     @stub
-    // Assigns the specified boolean value to each element of the specified
-    // array of booleans.
     def fill(a: Array[Boolean], val: Boolean): Unit = ???
 
+    /** Assigns the specified boolean value to each element of the specified
+     *  range of the specified array of booleans.
+     */
     @stub
-    // Assigns the specified boolean value to each element of the specified
-    // range of the specified array of booleans.
     def fill(a: Array[Boolean], fromIndex: Int, toIndex: Int, val: Boolean): Unit = ???
 
+    /** Assigns the specified byte value to each element of the specified array
+     *  of bytes.
+     */
     @stub
-    // Assigns the specified byte value to each element of the specified array
-    // of bytes.
     def fill(a: Array[Byte], val: Byte): Unit = ???
 
+    /** Assigns the specified byte value to each element of the specified
+     *  range of the specified array of bytes.
+     */
     @stub
-    // Assigns the specified byte value to each element of the specified
-    // range of the specified array of bytes.
     def fill(a: Array[Byte], fromIndex: Int, toIndex: Int, val: Byte): Unit = ???
 
+    /** Assigns the specified char value to each element of the specified array
+     *  of chars.
+     */
     @stub
-    // Assigns the specified char value to each element of the specified array
-    // of chars.
     def fill(a: Array[Char], val: Char): Unit = ???
 
+    /** Assigns the specified char value to each element of the specified
+     *  range of the specified array of chars.
+     */
     @stub
-    // Assigns the specified char value to each element of the specified
-    // range of the specified array of chars.
     def fill(a: Array[Char], fromIndex: Int, toIndex: Int, val: Char): Unit = ???
 
+    /** Assigns the specified double value to each element of the specified
+     *  array of doubles.
+     */
     @stub
-    // Assigns the specified double value to each element of the specified
-    // array of doubles.
-    def fill(a: Array[double], val: double): Unit = ???
+    def fill(a: Array[Double], val: Double): Unit = ???
 
+    /** Assigns the specified double value to each element of the specified
+     *  range of the specified array of doubles.
+     */
     @stub
-    // Assigns the specified double value to each element of the specified
-    // range of the specified array of doubles.
-    def fill(a: Array[double], fromIndex: Int, toIndex: Int, val: double): Unit = ???
+    def fill(a: Array[Double], fromIndex: Int, toIndex: Int, val: Double): Unit = ???
 
+    /** Assigns the specified float value to each element of the specified array
+     *  of floats.
+     */
     @stub
-    // Assigns the specified float value to each element of the specified array
-    // of floats.
-    def fill(a: Array[float], val: float): Unit = ???
+    def fill(a: Array[Float], val: Float): Unit = ???
 
+    /** Assigns the specified float value to each element of the specified
+     *  range of the specified array of floats.
+     */
     @stub
-    // Assigns the specified float value to each element of the specified
-    // range of the specified array of floats.
-    def fill(a: Array[float], fromIndex: Int, toIndex: Int, val: float): Unit = ???
+    def fill(a: Array[Float], fromIndex: Int, toIndex: Int, val: Float): Unit = ???
 
+    /** Assigns the specified int value to each element of the specified array
+     *  of ints.
+     */
     @stub
-    // Assigns the specified int value to each element of the specified array
-    // of ints.
     def fill(a: Array[Int], val: Int): Unit = ???
 
+    /** Assigns the specified int value to each element of the specified
+     *  range of the specified array of ints.
+     */
     @stub
-    // Assigns the specified int value to each element of the specified
-    // range of the specified array of ints.
     def fill(a: Array[Int], fromIndex: Int, toIndex: Int, val: Int): Unit = ???
 
+    /** Assigns the specified long value to each element of the specified
+     *  range of the specified array of longs.
+     */
     @stub
-    // Assigns the specified long value to each element of the specified
-    // range of the specified array of longs.
     def fill(a: Array[Long], fromIndex: Int, toIndex: Int, val: Long): Unit = ???
 
+    /** Assigns the specified long value to each element of the specified array
+     *  of longs.
+     */
     @stub
-    // Assigns the specified long value to each element of the specified array
-    // of longs.
     def fill(a: Array[Long], val: Long): Unit = ???
 
+    /** Assigns the specified Object reference to each element of the specified
+     *  range of the specified array of Objects.
+     */
     @stub
-    // Assigns the specified Object reference to each element of the specified
-    // range of the specified array of Objects.
     def fill(a: Array[Object], fromIndex: Int, toIndex: Int, val: Object): Unit = ???
 
+    /** Assigns the specified Object reference to each element of the specified
+     *  array of Objects.
+     */
     @stub
-    // Assigns the specified Object reference to each element of the specified
-    // array of Objects.
     def fill(a: Array[Object], val: Object): Unit = ???
 
+    /** Assigns the specified short value to each element of the specified
+     *  range of the specified array of shorts.
+     */
     @stub
-    // Assigns the specified short value to each element of the specified
-    // range of the specified array of shorts.
     def fill(a: Array[Short], fromIndex: Int, toIndex: Int, val: Short): Unit = ???
 
+    /** Assigns the specified short value to each element of the specified array
+     *  of shorts.
+     */
     @stub
-    // Assigns the specified short value to each element of the specified array
-    // of shorts.
     def fill(a: Array[Short], val: Short): Unit = ???
 
+    /** Returns a hash code based on the contents of the specified array. */
     @stub
-    // Returns a hash code based on the contents of the specified array.
     def hashCode(a: Array[Boolean]): Int = ???
 
+    /** Returns a hash code based on the contents of the specified array. */
     @stub
-    // Returns a hash code based on the contents of the specified array.
     def hashCode(a: Array[Byte]): Int = ???
 
+    /** Returns a hash code based on the contents of the specified array. */
     @stub
-    // Returns a hash code based on the contents of the specified array.
     def hashCode(a: Array[Char]): Int = ???
 
+    /** Returns a hash code based on the contents of the specified array. */
     @stub
-    // Returns a hash code based on the contents of the specified array.
-    def hashCode(a: Array[double]): Int = ???
+    def hashCode(a: Array[Double]): Int = ???
 
+    /** Returns a hash code based on the contents of the specified array. */
     @stub
-    // Returns a hash code based on the contents of the specified array.
-    def hashCode(a: Array[float]): Int = ???
+    def hashCode(a: Array[Float]): Int = ???
 
+    /** Returns a hash code based on the contents of the specified array. */
     @stub
-    // Returns a hash code based on the contents of the specified array.
     def hashCode(a: Array[Int]): Int = ???
 
+    /** Returns a hash code based on the contents of the specified array. */
     @stub
-    // Returns a hash code based on the contents of the specified array.
     def hashCode(a: Array[Long]): Int = ???
 
+    /** Returns a hash code based on the contents of the specified array. */
     @stub
-    // Returns a hash code based on the contents of the specified array.
     def hashCode(a: Array[Object]): Int = ???
 
+    /** Returns a hash code based on the contents of the specified array. */
     @stub
-    // Returns a hash code based on the contents of the specified array.
     def hashCode(a: Array[Short]): Int = ???
 
+    /** Cumulates, in parallel, each element of the given array in place,
+     *  using the supplied function.
+     */
     @stub
-    // Cumulates, in parallel, each element of the given array in place,
-    // using the supplied function.
-    def parallelPrefix(array: Array[double], op: DoubleBinaryOperator): Unit = ???
+    def parallelPrefix(array: Array[Double], op: DoubleBinaryOperator): Unit = ???
 
+    /** Performs parallelPrefix(double[], DoubleBinaryOperator)
+     *  for the given subrange of the array.
+     */
     @stub
-    // Performs parallelPrefix(double[], DoubleBinaryOperator)
-    // for the given subrange of the array.
-    def parallelPrefix(array: Array[double], fromIndex: Int, toIndex: Int, op: DoubleBinaryOperator): Unit = ???
+    def parallelPrefix(array: Array[Double], fromIndex: Int, toIndex: Int, op: DoubleBinaryOperator): Unit = ???
 
+    /** Cumulates, in parallel, each element of the given array in place,
+     *  using the supplied function.
+     */
     @stub
-    // Cumulates, in parallel, each element of the given array in place,
-    // using the supplied function.
     def parallelPrefix(array: Array[Int], op: IntBinaryOperator): Unit = ???
 
+    /** Performs parallelPrefix(int[], IntBinaryOperator)
+     *  for the given subrange of the array.
+     */
     @stub
-    // Performs parallelPrefix(int[], IntBinaryOperator)
-    // for the given subrange of the array.
     def parallelPrefix(array: Array[Int], fromIndex: Int, toIndex: Int, op: IntBinaryOperator): Unit = ???
 
+    /** Performs parallelPrefix(long[], LongBinaryOperator)
+     *  for the given subrange of the array.
+     */
     @stub
-    // Performs parallelPrefix(long[], LongBinaryOperator)
-    // for the given subrange of the array.
     def parallelPrefix(array: Array[Long], fromIndex: Int, toIndex: Int, op: LongBinaryOperator): Unit = ???
 
+    /** Cumulates, in parallel, each element of the given array in place,
+     *  using the supplied function.
+     */
     @stub
-    // Cumulates, in parallel, each element of the given array in place,
-    // using the supplied function.
     def parallelPrefix(array: Array[Long], op: LongBinaryOperator): Unit = ???
 
+    /** Cumulates, in parallel, each element of the given array in place,
+     *  using the supplied function.
+     */
     @stub
-    // Cumulates, in parallel, each element of the given array in place,
-    // using the supplied function.
-    def Unit: [T] = ???
+    def parallelPrefix[T](array: Array[T], op: BinaryOperator[T]): Unit = ???
 
+    /** Performs parallelPrefix(Object[], BinaryOperator)
+     *  for the given subrange of the array.
+     */
     @stub
-    // Performs parallelPrefix(Object[], BinaryOperator)
-    // for the given subrange of the array.
-    def Unit: [T] = ???
+    def parallelPrefix[T](array: Array[T], fromIndex: Int, toIndex: Int, op: BinaryOperator[T]): Unit = ???
 
+    /** Set all elements of the specified array, in parallel, using the
+     *  provided generator function to compute each element.
+     */
     @stub
-    // Set all elements of the specified array, in parallel, using the
-    // provided generator function to compute each element.
-    def parallelSetAll(array: Array[double], generator: IntToDoubleFunction): Unit = ???
+    def parallelSetAll(array: Array[Double], generator: IntToDoubleFunction): Unit = ???
 
+    /** Set all elements of the specified array, in parallel, using the
+     *  provided generator function to compute each element.
+     */
     @stub
-    // Set all elements of the specified array, in parallel, using the
-    // provided generator function to compute each element.
     def parallelSetAll(array: Array[Int], generator: IntUnaryOperator): Unit = ???
 
+    /** Set all elements of the specified array, in parallel, using the
+     *  provided generator function to compute each element.
+     */
     @stub
-    // Set all elements of the specified array, in parallel, using the
-    // provided generator function to compute each element.
     def parallelSetAll(array: Array[Long], generator: IntToLongFunction): Unit = ???
 
+    /** Set all elements of the specified array, in parallel, using the
+     *  provided generator function to compute each element.
+     */
     @stub
-    // Set all elements of the specified array, in parallel, using the
-    // provided generator function to compute each element.
-    def Unit: [T] = ???
+    def parallelSetAll[T](array: Array[T], generator: IntFunction[_ <: T]): Unit = ???
 
+    /** Sorts the specified array into ascending numerical order. */
     @stub
-    // Sorts the specified array into ascending numerical order.
     def parallelSort(a: Array[Byte]): Unit = ???
 
+    /** Sorts the specified range of the array into ascending numerical order. */
     @stub
-    // Sorts the specified range of the array into ascending numerical order.
     def parallelSort(a: Array[Byte], fromIndex: Int, toIndex: Int): Unit = ???
 
+    /** Sorts the specified array into ascending numerical order. */
     @stub
-    // Sorts the specified array into ascending numerical order.
     def parallelSort(a: Array[Char]): Unit = ???
 
+    /** Sorts the specified range of the array into ascending numerical order. */
     @stub
-    // Sorts the specified range of the array into ascending numerical order.
     def parallelSort(a: Array[Char], fromIndex: Int, toIndex: Int): Unit = ???
 
+    /** Sorts the specified array into ascending numerical order. */
     @stub
-    // Sorts the specified array into ascending numerical order.
-    def parallelSort(a: Array[double]): Unit = ???
+    def parallelSort(a: Array[Double]): Unit = ???
 
+    /** Sorts the specified range of the array into ascending numerical order. */
     @stub
-    // Sorts the specified range of the array into ascending numerical order.
-    def parallelSort(a: Array[double], fromIndex: Int, toIndex: Int): Unit = ???
+    def parallelSort(a: Array[Double], fromIndex: Int, toIndex: Int): Unit = ???
 
+    /** Sorts the specified array into ascending numerical order. */
     @stub
-    // Sorts the specified array into ascending numerical order.
-    def parallelSort(a: Array[float]): Unit = ???
+    def parallelSort(a: Array[Float]): Unit = ???
 
+    /** Sorts the specified range of the array into ascending numerical order. */
     @stub
-    // Sorts the specified range of the array into ascending numerical order.
-    def parallelSort(a: Array[float], fromIndex: Int, toIndex: Int): Unit = ???
+    def parallelSort(a: Array[Float], fromIndex: Int, toIndex: Int): Unit = ???
 
+    /** Sorts the specified array into ascending numerical order. */
     @stub
-    // Sorts the specified array into ascending numerical order.
     def parallelSort(a: Array[Int]): Unit = ???
 
+    /** Sorts the specified range of the array into ascending numerical order. */
     @stub
-    // Sorts the specified range of the array into ascending numerical order.
     def parallelSort(a: Array[Int], fromIndex: Int, toIndex: Int): Unit = ???
 
+    /** Sorts the specified array into ascending numerical order. */
     @stub
-    // Sorts the specified array into ascending numerical order.
     def parallelSort(a: Array[Long]): Unit = ???
 
+    /** Sorts the specified range of the array into ascending numerical order. */
     @stub
-    // Sorts the specified range of the array into ascending numerical order.
     def parallelSort(a: Array[Long], fromIndex: Int, toIndex: Int): Unit = ???
 
+    /** Sorts the specified array into ascending numerical order. */
     @stub
-    // Sorts the specified array into ascending numerical order.
     def parallelSort(a: Array[Short]): Unit = ???
 
+    /** Sorts the specified range of the array into ascending numerical order. */
     @stub
-    // Sorts the specified range of the array into ascending numerical order.
     def parallelSort(a: Array[Short], fromIndex: Int, toIndex: Int): Unit = ???
 
+    /** Sorts the specified array of objects into ascending order, according
+     *  to the natural ordering of its elements.
+     */
     @stub
-    // Sorts the specified array of objects into ascending order, according
-    // to the natural ordering of its elements.
-    def Unit: [T <: Comparable[_ >: T]] = ???
+    def parallelSort[T <: Comparable[_ >: T]](a: Array[T]): Unit = ???
 
+    /** Sorts the specified array of objects according to the order induced by
+     *  the specified comparator.
+     */
     @stub
-    // Sorts the specified array of objects according to the order induced by
-    // the specified comparator.
-    def Unit: [T] = ???
+    def parallelSort[T](a: Array[T], cmp: Comparator[_ >: T]): Unit = ???
 
+    /** Sorts the specified range of the specified array of objects into
+     *  ascending order, according to the
+     *  natural ordering of its
+     *  elements.
+     */
     @stub
-    // Sorts the specified range of the specified array of objects into
-    // ascending order, according to the
-    // natural ordering of its
-    // elements.
-    def Unit: [T <: Comparable[_ >: T]] = ???
+    def parallelSort[T <: Comparable[_ >: T]](a: Array[T], fromIndex: Int, toIndex: Int): Unit = ???
 
+    /** Sorts the specified range of the specified array of objects according
+     *  to the order induced by the specified comparator.
+     */
     @stub
-    // Sorts the specified range of the specified array of objects according
-    // to the order induced by the specified comparator.
-    def Unit: [T] = ???
+    def parallelSort[T](a: Array[T], fromIndex: Int, toIndex: Int, cmp: Comparator[_ >: T]): Unit = ???
 
+    /** Set all elements of the specified array, using the provided
+     *  generator function to compute each element.
+     */
     @stub
-    // Set all elements of the specified array, using the provided
-    // generator function to compute each element.
-    def setAll(array: Array[double], generator: IntToDoubleFunction): Unit = ???
+    def setAll(array: Array[Double], generator: IntToDoubleFunction): Unit = ???
 
+    /** Set all elements of the specified array, using the provided
+     *  generator function to compute each element.
+     */
     @stub
-    // Set all elements of the specified array, using the provided
-    // generator function to compute each element.
     def setAll(array: Array[Int], generator: IntUnaryOperator): Unit = ???
 
+    /** Set all elements of the specified array, using the provided
+     *  generator function to compute each element.
+     */
     @stub
-    // Set all elements of the specified array, using the provided
-    // generator function to compute each element.
     def setAll(array: Array[Long], generator: IntToLongFunction): Unit = ???
 
+    /** Set all elements of the specified array, using the provided
+     *  generator function to compute each element.
+     */
     @stub
-    // Set all elements of the specified array, using the provided
-    // generator function to compute each element.
-    def Unit: [T] = ???
+    def setAll[T](array: Array[T], generator: IntFunction[_ <: T]): Unit = ???
 
+    /** Sorts the specified array into ascending numerical order. */
     @stub
-    // Sorts the specified array into ascending numerical order.
     def sort(a: Array[Byte]): Unit = ???
 
+    /** Sorts the specified range of the array into ascending order. */
     @stub
-    // Sorts the specified range of the array into ascending order.
     def sort(a: Array[Byte], fromIndex: Int, toIndex: Int): Unit = ???
 
+    /** Sorts the specified array into ascending numerical order. */
     @stub
-    // Sorts the specified array into ascending numerical order.
     def sort(a: Array[Char]): Unit = ???
 
+    /** Sorts the specified range of the array into ascending order. */
     @stub
-    // Sorts the specified range of the array into ascending order.
     def sort(a: Array[Char], fromIndex: Int, toIndex: Int): Unit = ???
 
+    /** Sorts the specified array into ascending numerical order. */
     @stub
-    // Sorts the specified array into ascending numerical order.
-    def sort(a: Array[double]): Unit = ???
+    def sort(a: Array[Double]): Unit = ???
 
+    /** Sorts the specified range of the array into ascending order. */
     @stub
-    // Sorts the specified range of the array into ascending order.
-    def sort(a: Array[double], fromIndex: Int, toIndex: Int): Unit = ???
+    def sort(a: Array[Double], fromIndex: Int, toIndex: Int): Unit = ???
 
+    /** Sorts the specified array into ascending numerical order. */
     @stub
-    // Sorts the specified array into ascending numerical order.
-    def sort(a: Array[float]): Unit = ???
+    def sort(a: Array[Float]): Unit = ???
 
+    /** Sorts the specified range of the array into ascending order. */
     @stub
-    // Sorts the specified range of the array into ascending order.
-    def sort(a: Array[float], fromIndex: Int, toIndex: Int): Unit = ???
+    def sort(a: Array[Float], fromIndex: Int, toIndex: Int): Unit = ???
 
+    /** Sorts the specified array into ascending numerical order. */
     @stub
-    // Sorts the specified array into ascending numerical order.
     def sort(a: Array[Int]): Unit = ???
 
+    /** Sorts the specified range of the array into ascending order. */
     @stub
-    // Sorts the specified range of the array into ascending order.
     def sort(a: Array[Int], fromIndex: Int, toIndex: Int): Unit = ???
 
+    /** Sorts the specified array into ascending numerical order. */
     @stub
-    // Sorts the specified array into ascending numerical order.
     def sort(a: Array[Long]): Unit = ???
 
+    /** Sorts the specified range of the array into ascending order. */
     @stub
-    // Sorts the specified range of the array into ascending order.
     def sort(a: Array[Long], fromIndex: Int, toIndex: Int): Unit = ???
 
+    /** Sorts the specified array of objects into ascending order, according
+     *  to the natural ordering of its elements.
+     */
     @stub
-    // Sorts the specified array of objects into ascending order, according
-    // to the natural ordering of its elements.
     def sort(a: Array[Object]): Unit = ???
 
+    /** Sorts the specified range of the specified array of objects into
+     *  ascending order, according to the
+     *  natural ordering of its
+     *  elements.
+     */
     @stub
-    // Sorts the specified range of the specified array of objects into
-    // ascending order, according to the
-    // natural ordering of its
-    // elements.
     def sort(a: Array[Object], fromIndex: Int, toIndex: Int): Unit = ???
 
+    /** Sorts the specified array into ascending numerical order. */
     @stub
-    // Sorts the specified array into ascending numerical order.
     def sort(a: Array[Short]): Unit = ???
 
+    /** Sorts the specified range of the array into ascending order. */
     @stub
-    // Sorts the specified range of the array into ascending order.
     def sort(a: Array[Short], fromIndex: Int, toIndex: Int): Unit = ???
 
+    /** Sorts the specified array of objects according to the order induced by
+     *  the specified comparator.
+     */
     @stub
-    // Sorts the specified array of objects according to the order induced by
-    // the specified comparator.
-    def Unit: [T] = ???
+    def sort[T](a: Array[T], c: Comparator[_ >: T]): Unit = ???
 
+    /** Sorts the specified range of the specified array of objects according
+     *  to the order induced by the specified comparator.
+     */
     @stub
-    // Sorts the specified range of the specified array of objects according
-    // to the order induced by the specified comparator.
-    def Unit: [T] = ???
+    def sort[T](a: Array[T], fromIndex: Int, toIndex: Int, c: Comparator[_ >: T]): Unit = ???
 
+    /** Returns a Spliterator.OfDouble covering all of the specified
+     *  array.
+     */
     @stub
-    // Returns a Spliterator.OfDouble covering all of the specified
-    // array.
-    def spliterator(array: Array[double]): Spliterator.OfDouble = ???
+    def spliterator(array: Array[Double]): Spliterator.OfDouble = ???
 
+    /** Returns a Spliterator.OfDouble covering the specified range of
+     *  the specified array.
+     */
     @stub
-    // Returns a Spliterator.OfDouble covering the specified range of
-    // the specified array.
-    def spliterator(array: Array[double], startInclusive: Int, endExclusive: Int): Spliterator.OfDouble = ???
+    def spliterator(array: Array[Double], startInclusive: Int, endExclusive: Int): Spliterator.OfDouble = ???
 
+    /** Returns a Spliterator.OfInt covering all of the specified array. */
     @stub
-    // Returns a Spliterator.OfInt covering all of the specified array.
     def spliterator(array: Array[Int]): Spliterator.OfInt = ???
 
+    /** Returns a Spliterator.OfInt covering the specified range of the
+     *  specified array.
+     */
     @stub
-    // Returns a Spliterator.OfInt covering the specified range of the
-    // specified array.
     def spliterator(array: Array[Int], startInclusive: Int, endExclusive: Int): Spliterator.OfInt = ???
 
+    /** Returns a Spliterator.OfLong covering all of the specified array. */
     @stub
-    // Returns a Spliterator.OfLong covering all of the specified array.
     def spliterator(array: Array[Long]): Spliterator.OfLong = ???
 
+    /** Returns a Spliterator.OfLong covering the specified range of the
+     *  specified array.
+     */
     @stub
-    // Returns a Spliterator.OfLong covering the specified range of the
-    // specified array.
     def spliterator(array: Array[Long], startInclusive: Int, endExclusive: Int): Spliterator.OfLong = ???
 
+    /** Returns a Spliterator covering all of the specified array. */
     @stub
-    // Returns a Spliterator covering all of the specified array.
-    def Spliterator[T]: [T] = ???
+    def spliterator[T](array: Array[T]): Spliterator[T] = ???
 
+    /** Returns a Spliterator covering the specified range of the
+     *  specified array.
+     */
     @stub
-    // Returns a Spliterator covering the specified range of the
-    // specified array.
-    def Spliterator[T]: [T] = ???
+    def spliterator[T](array: Array[T], startInclusive: Int, endExclusive: Int): Spliterator[T] = ???
 
+    /** Returns a sequential DoubleStream with the specified array as its
+     *  source.
+     */
     @stub
-    // Returns a sequential DoubleStream with the specified array as its
-    // source.
-    def stream(array: Array[double]): DoubleStream = ???
+    def stream(array: Array[Double]): DoubleStream = ???
 
+    /** Returns a sequential DoubleStream with the specified range of the
+     *  specified array as its source.
+     */
     @stub
-    // Returns a sequential DoubleStream with the specified range of the
-    // specified array as its source.
-    def stream(array: Array[double], startInclusive: Int, endExclusive: Int): DoubleStream = ???
+    def stream(array: Array[Double], startInclusive: Int, endExclusive: Int): DoubleStream = ???
 
+    /** Returns a sequential IntStream with the specified array as its
+     *  source.
+     */
     @stub
-    // Returns a sequential IntStream with the specified array as its
-    // source.
     def stream(array: Array[Int]): IntStream = ???
 
+    /** Returns a sequential IntStream with the specified range of the
+     *  specified array as its source.
+     */
     @stub
-    // Returns a sequential IntStream with the specified range of the
-    // specified array as its source.
     def stream(array: Array[Int], startInclusive: Int, endExclusive: Int): IntStream = ???
 
+    /** Returns a sequential LongStream with the specified array as its
+     *  source.
+     */
     @stub
-    // Returns a sequential LongStream with the specified array as its
-    // source.
     def stream(array: Array[Long]): LongStream = ???
 
+    /** Returns a sequential LongStream with the specified range of the
+     *  specified array as its source.
+     */
     @stub
-    // Returns a sequential LongStream with the specified range of the
-    // specified array as its source.
     def stream(array: Array[Long], startInclusive: Int, endExclusive: Int): LongStream = ???
 
+    /** Returns a sequential Stream with the specified array as its
+     *  source.
+     */
     @stub
-    // Returns a sequential Stream with the specified array as its
-    // source.
-    def Stream[T]: [T] = ???
+    def stream[T](array: Array[T]): Stream[T] = ???
 
+    /** Returns a sequential Stream with the specified range of the
+     *  specified array as its source.
+     */
     @stub
-    // Returns a sequential Stream with the specified range of the
-    // specified array as its source.
-    def Stream[T]: [T] = ???
+    def stream[T](array: Array[T], startInclusive: Int, endExclusive: Int): Stream[T] = ???
 
+    /** Returns a string representation of the contents of the specified array. */
     @stub
-    // Returns a string representation of the contents of the specified array.
     def toString(a: Array[Boolean]): String = ???
 
+    /** Returns a string representation of the contents of the specified array. */
     @stub
-    // Returns a string representation of the contents of the specified array.
     def toString(a: Array[Byte]): String = ???
 
+    /** Returns a string representation of the contents of the specified array. */
     @stub
-    // Returns a string representation of the contents of the specified array.
     def toString(a: Array[Char]): String = ???
 
+    /** Returns a string representation of the contents of the specified array. */
     @stub
-    // Returns a string representation of the contents of the specified array.
-    def toString(a: Array[double]): String = ???
+    def toString(a: Array[Double]): String = ???
 
+    /** Returns a string representation of the contents of the specified array. */
     @stub
-    // Returns a string representation of the contents of the specified array.
-    def toString(a: Array[float]): String = ???
+    def toString(a: Array[Float]): String = ???
 
+    /** Returns a string representation of the contents of the specified array. */
     @stub
-    // Returns a string representation of the contents of the specified array.
     def toString(a: Array[Int]): String = ???
 
+    /** Returns a string representation of the contents of the specified array. */
     @stub
-    // Returns a string representation of the contents of the specified array.
     def toString(a: Array[Long]): String = ???
 
+    /** Returns a string representation of the contents of the specified array. */
     @stub
-    // Returns a string representation of the contents of the specified array.
     def toString(a: Array[Object]): String = ???
 }

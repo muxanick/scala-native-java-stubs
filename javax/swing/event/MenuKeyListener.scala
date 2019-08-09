@@ -2,14 +2,14 @@ package javax.swing.event
 
 import java.util.EventListener
 
-// MenuKeyListener
+/** MenuKeyListener */
 trait MenuKeyListener extends EventListener {
 
+    /** Invoked when a key has been pressed. */
     @stub
-    // Invoked when a key has been pressed.
     def menuKeyPressed(e: MenuKeyEvent): Unit = ???
 
+    /** Invoked when a key has been released. */
     @stub
-    // Invoked when a key has been released.
     def menuKeyReleased(e: MenuKeyEvent): Unit = ???
 }

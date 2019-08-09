@@ -3,34 +3,37 @@ package javax.imageio.event
 import java.util.EventListener
 import javax.imageio.ImageWriter
 
-// An interface used by ImageWriter implementations to notify
-// callers of their image writing methods of progress.
+/** An interface used by ImageWriter implementations to notify
+ *  callers of their image writing methods of progress.
+ */
 trait IIOWriteProgressListener extends EventListener {
 
+    /** Reports that the image write operation has completed. */
     @stub
-    // Reports that the image write operation has completed.
     def imageComplete(source: ImageWriter): Unit = ???
 
+    /** Reports the approximate degree of completion of the current
+     *  write call within the associated
+     *  ImageWriter.
+     */
     @stub
-    // Reports the approximate degree of completion of the current
-    // write call within the associated
-    // ImageWriter.
-    def imageProgress(source: ImageWriter, percentageDone: float): Unit = ???
+    def imageProgress(source: ImageWriter, percentageDone: Float): Unit = ???
 
+    /** Reports that an image write operation is beginning. */
     @stub
-    // Reports that an image write operation is beginning.
     def imageStarted(source: ImageWriter, imageIndex: Int): Unit = ???
 
+    /** Reports that a thumbnail write operation has completed. */
     @stub
-    // Reports that a thumbnail write operation has completed.
     def thumbnailComplete(source: ImageWriter): Unit = ???
 
+    /** Reports the approximate degree of completion of the current
+     *  thumbnail write within the associated ImageWriter.
+     */
     @stub
-    // Reports the approximate degree of completion of the current
-    // thumbnail write within the associated ImageWriter.
-    def thumbnailProgress(source: ImageWriter, percentageDone: float): Unit = ???
+    def thumbnailProgress(source: ImageWriter, percentageDone: Float): Unit = ???
 
+    /** Reports that a thumbnail write operation is beginning. */
     @stub
-    // Reports that a thumbnail write operation is beginning.
     def thumbnailStarted(source: ImageWriter, imageIndex: Int, thumbnailIndex: Int): Unit = ???
 }

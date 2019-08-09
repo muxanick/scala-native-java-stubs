@@ -3,36 +3,42 @@ package java.awt.geom
 import java.io.Serializable
 import java.lang.Object
 
-// The Float class defines a point specified in float
-// precision.
+/** The Float class defines a point specified in float
+ *  precision.
+ */
 object Point2D.Float extends Point2D with Serializable {
 
+    /** Constructs and initializes a Point2D with
+     *  coordinates (0, 0).
+     */
     @stub
-    // Constructs and initializes a Point2D with
-    // coordinates (0, 0).
     def Float() = ???
 
+    /** The X coordinate of this Point2D. */
     @stub
-    // The X coordinate of this Point2D.
-    def x: float = ???
+    val x: Float = ???
 
+    /** Returns the X coordinate of this Point2D in
+     *  double precision.
+     */
     @stub
-    // Returns the X coordinate of this Point2D in
-    // double precision.
-    def getX(): double = ???
+    def getX(): Double = ???
 
+    /** Returns the Y coordinate of this Point2D in
+     *  double precision.
+     */
     @stub
-    // Returns the Y coordinate of this Point2D in
-    // double precision.
-    def getY(): double = ???
+    def getY(): Double = ???
 
+    /** Sets the location of this Point2D to the
+     *  specified double coordinates.
+     */
     @stub
-    // Sets the location of this Point2D to the
-    // specified double coordinates.
-    def setLocation(x: double, y: double): Unit = ???
+    def setLocation(x: Double, y: Double): Unit = ???
 
+    /** Sets the location of this Point2D to the
+     *  specified float coordinates.
+     */
     @stub
-    // Sets the location of this Point2D to the
-    // specified float coordinates.
-    def setLocation(x: float, y: float): Unit = ???
+    def setLocation(x: Float, y: Float): Unit = ???
 }

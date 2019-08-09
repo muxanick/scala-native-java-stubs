@@ -3,51 +3,56 @@ package java.util.zip
 import java.io.{FilterInputStream, InputStream}
 import java.lang.Object
 
-// Implements an input stream filter for compressing data in the "deflate"
-// compression format.
+/** Implements an input stream filter for compressing data in the "deflate"
+ *  compression format.
+ */
 class DeflaterInputStream extends FilterInputStream {
 
+    /** Creates a new input stream with a default compressor and buffer
+     *  size.
+     */
     @stub
-    // Creates a new input stream with a default compressor and buffer
-    // size.
     def this(in: InputStream) = ???
 
+    /** Creates a new input stream with the specified compressor and a
+     *  default buffer size.
+     */
     @stub
-    // Creates a new input stream with the specified compressor and a
-    // default buffer size.
     def this(in: InputStream, defl: Deflater) = ???
 
+    /** Input buffer for reading compressed data. */
     @stub
-    // Input buffer for reading compressed data.
-    protected def buf: Array[Byte] = ???
+    protected val buf: Array[Byte] = ???
 
+    /** Returns 0 after EOF has been reached, otherwise always return 1. */
     @stub
-    // Returns 0 after EOF has been reached, otherwise always return 1.
     def available(): Int = ???
 
+    /** Closes this input stream and its underlying input stream, discarding
+     *  any pending uncompressed data.
+     */
     @stub
-    // Closes this input stream and its underlying input stream, discarding
-    // any pending uncompressed data.
     def close(): Unit = ???
 
+    /** This operation is not supported. */
     @stub
-    // This operation is not supported.
     def mark(limit: Int): Unit = ???
 
+    /** Always returns false because this input stream does not support
+     *  the mark() and reset() methods.
+     */
     @stub
-    // Always returns false because this input stream does not support
-    // the mark() and reset() methods.
     def markSupported(): Boolean = ???
 
+    /** Reads a single byte of compressed data from the input stream. */
     @stub
-    // Reads a single byte of compressed data from the input stream.
     def read(): Int = ???
 
+    /** Reads compressed data into a byte array. */
     @stub
-    // Reads compressed data into a byte array.
     def read(b: Array[Byte], off: Int, len: Int): Int = ???
 
+    /** This operation is not supported. */
     @stub
-    // This operation is not supported.
     def reset(): Unit = ???
 }

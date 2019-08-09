@@ -3,272 +3,272 @@ package java.util.zip
 import java.lang.{Cloneable, Object, String}
 import java.nio.file.attribute.FileTime
 
-// This class is used to represent a ZIP file entry.
+/** This class is used to represent a ZIP file entry. */
 class ZipEntry extends Object with Cloneable {
 
+    /** Creates a new zip entry with the specified name. */
     @stub
-    // Creates a new zip entry with the specified name.
     def this(name: String) = ???
 
+    /** Returns a copy of this entry. */
     @stub
-    // Returns a copy of this entry.
     def clone(): Object = ???
 
+    /** Returns the comment string for the entry. */
     @stub
-    // Returns the comment string for the entry.
     def getComment(): String = ???
 
+    /** Returns the size of the compressed entry data. */
     @stub
-    // Returns the size of the compressed entry data.
     def getCompressedSize(): Long = ???
 
+    /** Returns the CRC-32 checksum of the uncompressed entry data. */
     @stub
-    // Returns the CRC-32 checksum of the uncompressed entry data.
     def getCrc(): Long = ???
 
+    /** Returns the creation time of the entry. */
     @stub
-    // Returns the creation time of the entry.
     def getCreationTime(): FileTime = ???
 
+    /** Returns the extra field data for the entry. */
     @stub
-    // Returns the extra field data for the entry.
     def getExtra(): Array[Byte] = ???
 
+    /** Returns the last access time of the entry. */
     @stub
-    // Returns the last access time of the entry.
     def getLastAccessTime(): FileTime = ???
 
+    /** Returns the last modification time of the entry. */
     @stub
-    // Returns the last modification time of the entry.
     def getLastModifiedTime(): FileTime = ???
 
+    /** Returns the compression method of the entry. */
     @stub
-    // Returns the compression method of the entry.
     def getMethod(): Int = ???
 
+    /** Returns the name of the entry. */
     @stub
-    // Returns the name of the entry.
     def getName(): String = ???
 
+    /** Returns the uncompressed size of the entry data. */
     @stub
-    // Returns the uncompressed size of the entry data.
     def getSize(): Long = ???
 
+    /** Returns the last modification time of the entry. */
     @stub
-    // Returns the last modification time of the entry.
     def getTime(): Long = ???
 
+    /** Returns the hash code value for this entry. */
     @stub
-    // Returns the hash code value for this entry.
     def hashCode(): Int = ???
 
+    /** Returns true if this is a directory entry. */
     @stub
-    // Returns true if this is a directory entry.
     def isDirectory(): Boolean = ???
 
+    /** Sets the optional comment string for the entry. */
     @stub
-    // Sets the optional comment string for the entry.
     def setComment(comment: String): Unit = ???
 
+    /** Sets the size of the compressed entry data. */
     @stub
-    // Sets the size of the compressed entry data.
     def setCompressedSize(csize: Long): Unit = ???
 
+    /** Sets the CRC-32 checksum of the uncompressed entry data. */
     @stub
-    // Sets the CRC-32 checksum of the uncompressed entry data.
     def setCrc(crc: Long): Unit = ???
 
+    /** Sets the creation time of the entry. */
     @stub
-    // Sets the creation time of the entry.
     def setCreationTime(time: FileTime): ZipEntry = ???
 
+    /** Sets the optional extra field data for the entry. */
     @stub
-    // Sets the optional extra field data for the entry.
     def setExtra(extra: Array[Byte]): Unit = ???
 
+    /** Sets the last access time of the entry. */
     @stub
-    // Sets the last access time of the entry.
     def setLastAccessTime(time: FileTime): ZipEntry = ???
 
+    /** Sets the last modification time of the entry. */
     @stub
-    // Sets the last modification time of the entry.
     def setLastModifiedTime(time: FileTime): ZipEntry = ???
 
+    /** Sets the compression method for the entry. */
     @stub
-    // Sets the compression method for the entry.
     def setMethod(method: Int): Unit = ???
 
+    /** Sets the uncompressed size of the entry data. */
     @stub
-    // Sets the uncompressed size of the entry data.
     def setSize(size: Long): Unit = ???
 
+    /** Sets the last modification time of the entry. */
     @stub
-    // Sets the last modification time of the entry.
     def setTime(time: Long): Unit = ???
 }
 
 object ZipEntry {
+    /**  */
     @stub
-    // 
-    def CENATT: Int = ???
+    val CENATT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENATX: Int = ???
+    val CENATX: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENCOM: Int = ???
+    val CENCOM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENCRC: Int = ???
+    val CENCRC: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENDSK: Int = ???
+    val CENDSK: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENEXT: Int = ???
+    val CENEXT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENFLG: Int = ???
+    val CENFLG: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENHDR: Int = ???
+    val CENHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENHOW: Int = ???
+    val CENHOW: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENLEN: Int = ???
+    val CENLEN: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENNAM: Int = ???
+    val CENNAM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENOFF: Int = ???
+    val CENOFF: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENSIG: Long = ???
+    val CENSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def CENSIZ: Int = ???
+    val CENSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENTIM: Int = ???
+    val CENTIM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENVEM: Int = ???
+    val CENVEM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENVER: Int = ???
+    val CENVER: Int = ???
 
+    /** Compression method for compressed (deflated) entries. */
     @stub
-    // Compression method for compressed (deflated) entries.
-    def DEFLATED: Int = ???
+    val DEFLATED: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDCOM: Int = ???
+    val ENDCOM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDHDR: Int = ???
+    val ENDHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDOFF: Int = ???
+    val ENDOFF: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDSIG: Long = ???
+    val ENDSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def ENDSIZ: Int = ???
+    val ENDSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDSUB: Int = ???
+    val ENDSUB: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDTOT: Int = ???
+    val ENDTOT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTCRC: Int = ???
+    val EXTCRC: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTHDR: Int = ???
+    val EXTHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTLEN: Int = ???
+    val EXTLEN: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTSIG: Long = ???
+    val EXTSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def EXTSIZ: Int = ???
+    val EXTSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCCRC: Int = ???
+    val LOCCRC: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCEXT: Int = ???
+    val LOCEXT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCFLG: Int = ???
+    val LOCFLG: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCHDR: Int = ???
+    val LOCHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCHOW: Int = ???
+    val LOCHOW: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCLEN: Int = ???
+    val LOCLEN: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCNAM: Int = ???
+    val LOCNAM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCSIG: Long = ???
+    val LOCSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def LOCSIZ: Int = ???
+    val LOCSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCTIM: Int = ???
+    val LOCTIM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCVER: Int = ???
+    val LOCVER: Int = ???
 }

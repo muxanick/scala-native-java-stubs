@@ -2,55 +2,63 @@ package java.awt.datatransfer
 
 import java.lang.{Object, String}
 
-// A class that implements a mechanism to transfer data using
-// cut/copy/paste operations.
-// 
-// FlavorListeners may be registered on an instance of the
-// Clipboard class to be notified about changes to the set of
-// DataFlavors available on this clipboard (see
-// addFlavorListener(java.awt.datatransfer.FlavorListener)).
+/** A class that implements a mechanism to transfer data using
+ *  cut/copy/paste operations.
+ *  
+ *  FlavorListeners may be registered on an instance of the
+ *  Clipboard class to be notified about changes to the set of
+ *  DataFlavors available on this clipboard (see
+ *  addFlavorListener(java.awt.datatransfer.FlavorListener)).
+ */
 class Clipboard extends Object {
 
+    /**  */
     @stub
-    // 
-    protected def contents: Transferable = ???
+    protected val contents: Transferable = ???
 
+    /** Registers the specified FlavorListener to receive
+     *  FlavorEvents from this clipboard.
+     */
     @stub
-    // Registers the specified FlavorListener to receive
-    // FlavorEvents from this clipboard.
     def addFlavorListener(listener: FlavorListener): Unit = ???
 
+    /** Returns an array of DataFlavors in which the current
+     *  contents of this clipboard can be provided.
+     */
     @stub
-    // Returns an array of DataFlavors in which the current
-    // contents of this clipboard can be provided.
     def getAvailableDataFlavors(): Array[DataFlavor] = ???
 
+    /** Returns a transferable object representing the current contents
+     *  of the clipboard.
+     */
     @stub
-    // Returns a transferable object representing the current contents
-    // of the clipboard.
     def getContents(requestor: Object): Transferable = ???
 
+    /** Returns an object representing the current contents of this clipboard
+     *  in the specified DataFlavor.
+     */
     @stub
-    // Returns an object representing the current contents of this clipboard
-    // in the specified DataFlavor.
     def getData(flavor: DataFlavor): Object = ???
 
+    /** Returns an array of all the FlavorListeners currently
+     *  registered on this Clipboard.
+     */
     @stub
-    // Returns an array of all the FlavorListeners currently
-    // registered on this Clipboard.
     def getFlavorListeners(): Array[FlavorListener] = ???
 
+    /** Returns the name of this clipboard object. */
     @stub
-    // Returns the name of this clipboard object.
     def getName(): String = ???
 
+    /** Returns whether or not the current contents of this clipboard can be
+     *  provided in the specified DataFlavor.
+     */
     @stub
-    // Returns whether or not the current contents of this clipboard can be
-    // provided in the specified DataFlavor.
     def isDataFlavorAvailable(flavor: DataFlavor): Boolean = ???
 
+    /** Removes the specified FlavorListener so that it no longer
+     *  receives FlavorEvents from this Clipboard.
+     */
     @stub
-    // Removes the specified FlavorListener so that it no longer
-    // receives FlavorEvents from this Clipboard.
     def removeFlavorListener(listener: FlavorListener): Unit = ???
 }

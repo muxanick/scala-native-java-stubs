@@ -2,6 +2,6 @@ package javax.swing.event
 
 import java.util.EventListener
 
-// HyperlinkListener
+/** HyperlinkListener */
 trait HyperlinkListener extends EventListener {
 }

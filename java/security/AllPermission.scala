@@ -2,36 +2,38 @@ package java.security
 
 import java.lang.{Object, String}
 
-// The AllPermission is a permission that implies all other permissions.
-// 
-// Note: Granting AllPermission should be done with extreme care,
-// as it implies all other permissions. Thus, it grants code the ability
-// to run with security
-// disabled.  Extreme caution should be taken before granting such
-// a permission to code.  This permission should be used only during testing,
-// or in extremely rare cases where an application or applet is
-// completely trusted and adding the necessary permissions to the policy
-// is prohibitively cumbersome.
+/** The AllPermission is a permission that implies all other permissions.
+ *  
+ *  Note: Granting AllPermission should be done with extreme care,
+ *  as it implies all other permissions. Thus, it grants code the ability
+ *  to run with security
+ *  disabled.  Extreme caution should be taken before granting such
+ *  a permission to code.  This permission should be used only during testing,
+ *  or in extremely rare cases where an application or applet is
+ *  completely trusted and adding the necessary permissions to the policy
+ *  is prohibitively cumbersome.
+ */
 final class AllPermission extends Permission {
 
+    /** Creates a new AllPermission object. */
     @stub
-    // Creates a new AllPermission object.
     def this() = ???
 
+    /** Checks two AllPermission objects for equality. */
     @stub
-    // Checks two AllPermission objects for equality.
     def equals(obj: Object): Boolean = ???
 
+    /** Returns the canonical string representation of the actions. */
     @stub
-    // Returns the canonical string representation of the actions.
     def getActions(): String = ???
 
+    /** Returns the hash code value for this object. */
     @stub
-    // Returns the hash code value for this object.
     def hashCode(): Int = ???
 
+    /** Checks if the specified permission is "implied" by
+     *  this object.
+     */
     @stub
-    // Checks if the specified permission is "implied" by
-    // this object.
     def implies(p: Permission): Boolean = ???
 }

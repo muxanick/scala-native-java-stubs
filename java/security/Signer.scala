@@ -2,25 +2,26 @@ package java.security
 
 import java.lang.{Deprecated, Object, String}
 
-// This class is used to represent an Identity that can also digitally
-// sign data.
-//
-// The management of a signer's private keys is an important and
-// sensitive issue that should be handled by subclasses as appropriate
-// to their intended use.
+/** This class is used to represent an Identity that can also digitally
+ *  sign data.
+ * 
+ *  The management of a signer's private keys is an important and
+ *  sensitive issue that should be handled by subclasses as appropriate
+ *  to their intended use.
+ */
 @Deprecated abstract class Signer extends Identity {
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
     protected def this() = ???
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
     def this(name: String) = ???
 
-    // Deprecated. 
+    /** Deprecated.  */
     def getPrivateKey(): PrivateKey
 
-    // Deprecated. 
+    /** Deprecated.  */
     def setKeyPair(pair: KeyPair): Unit
 }

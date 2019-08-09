@@ -5,141 +5,148 @@ import java.lang.{Object, String}
 import java.util.Enumeration
 import javax.swing.event.DocumentListener
 
-// A document that can be marked up with character and paragraph
-// styles in a manner similar to the Rich Text Format.  The element
-// structure for this document represents style crossings for
-// style runs.  These style runs are mapped into a paragraph element
-// structure (which may reside in some other structure).  The
-// style runs break at paragraph boundaries since logical styles are
-// assigned to paragraph boundaries.
-// 
-// Warning:
-// Serialized objects of this class will not be compatible with
-// future Swing releases. The current serialization support is
-// appropriate for short term storage or RMI between applications running
-// the same version of Swing.  As of 1.4, support for long term storage
-// of all JavaBeans™
-// has been added to the java.beans package.
-// Please see XMLEncoder.
+/** A document that can be marked up with character and paragraph
+ *  styles in a manner similar to the Rich Text Format.  The element
+ *  structure for this document represents style crossings for
+ *  style runs.  These style runs are mapped into a paragraph element
+ *  structure (which may reside in some other structure).  The
+ *  style runs break at paragraph boundaries since logical styles are
+ *  assigned to paragraph boundaries.
+ *  
+ *  Warning:
+ *  Serialized objects of this class will not be compatible with
+ *  future Swing releases. The current serialization support is
+ *  appropriate for short term storage or RMI between applications running
+ *  the same version of Swing.  As of 1.4, support for long term storage
+ *  of all JavaBeans™
+ *  has been added to the java.beans package.
+ *  Please see XMLEncoder.
+ */
 class DefaultStyledDocument extends AbstractDocument with StyledDocument {
 
+    /** Constructs a default styled document. */
     @stub
-    // Constructs a default styled document.
     def this() = ???
 
+    /** Constructs a styled document. */
     @stub
-    // Constructs a styled document.
     def this(c: AbstractDocument.Content, styles: StyleContext) = ???
 
+    /** Class to manage changes to the element
+     *  hierarchy.
+     */
     @stub
-    // Class to manage changes to the element
-    // hierarchy.
-    def DefaultStyledDocument.ElementBuffer: class = ???
+    object ElementBuffer extends DefaultStyledDocument.ElementBuffer
 
+    /**  */
     @stub
-    // 
-    protected def buffer: DefaultStyledDocument.ElementBuffer = ???
+    protected val buffer: DefaultStyledDocument.ElementBuffer = ???
 
+    /** Adds a document listener for notification of any changes. */
     @stub
-    // Adds a document listener for notification of any changes.
     def addDocumentListener(listener: DocumentListener): Unit = ???
 
+    /** Adds a new style into the logical style hierarchy. */
     @stub
-    // Adds a new style into the logical style hierarchy.
     def addStyle(nm: String, parent: Style): Style = ???
 
+    /** Initialize the document to reflect the given element
+     *  structure (i.e.
+     */
     @stub
-    // Initialize the document to reflect the given element
-    // structure (i.e.
     protected def create(data: Array[DefaultStyledDocument.ElementSpec]): Unit = ???
 
+    /** Creates the root element to be used to represent the
+     *  default document structure.
+     */
     @stub
-    // Creates the root element to be used to represent the
-    // default document structure.
     protected def createDefaultRoot(): AbstractDocument.AbstractElement = ???
 
+    /** Gets the background color from an attribute set. */
     @stub
-    // Gets the background color from an attribute set.
     def getBackground(attr: AttributeSet): Color = ???
 
+    /** Gets a character element based on a position. */
     @stub
-    // Gets a character element based on a position.
     def getCharacterElement(pos: Int): Element = ???
 
+    /** Gets the default root element. */
     @stub
-    // Gets the default root element.
     def getDefaultRootElement(): Element = ???
 
+    /** Gets the font from an attribute set. */
     @stub
-    // Gets the font from an attribute set.
     def getFont(attr: AttributeSet): Font = ???
 
+    /** Gets the foreground color from an attribute set. */
     @stub
-    // Gets the foreground color from an attribute set.
     def getForeground(attr: AttributeSet): Color = ???
 
+    /** Fetches the logical style assigned to the paragraph
+     *  represented by the given position.
+     */
     @stub
-    // Fetches the logical style assigned to the paragraph
-    // represented by the given position.
     def getLogicalStyle(p: Int): Style = ???
 
+    /** Gets the paragraph element at the offset pos. */
     @stub
-    // Gets the paragraph element at the offset pos.
     def getParagraphElement(pos: Int): Element = ???
 
+    /** Fetches a named style previously added. */
     @stub
-    // Fetches a named style previously added.
     def getStyle(nm: String): Style = ???
 
+    /** Fetches the list of of style names. */
     @stub
-    // Fetches the list of of style names.
     def getStyleNames(): Enumeration[_] = ???
 
+    /** Inserts new elements in bulk. */
     @stub
-    // Inserts new elements in bulk.
     protected def insert(offset: Int, data: Array[DefaultStyledDocument.ElementSpec]): Unit = ???
 
+    /** Updates document structure as a result of text insertion. */
     @stub
-    // Updates document structure as a result of text insertion.
     protected def insertUpdate(chng: AbstractDocument.DefaultDocumentEvent, attr: AttributeSet): Unit = ???
 
+    /** Removes a document listener. */
     @stub
-    // Removes a document listener.
     def removeDocumentListener(listener: DocumentListener): Unit = ???
 
+    /** Removes an element from this document. */
     @stub
-    // Removes an element from this document.
     def removeElement(elem: Element): Unit = ???
 
+    /** Removes a named style previously added to the document. */
     @stub
-    // Removes a named style previously added to the document.
     def removeStyle(nm: String): Unit = ???
 
+    /** Updates document structure as a result of text removal. */
     @stub
-    // Updates document structure as a result of text removal.
     protected def removeUpdate(chng: AbstractDocument.DefaultDocumentEvent): Unit = ???
 
+    /** Sets attributes for some part of the document. */
     @stub
-    // Sets attributes for some part of the document.
     def setCharacterAttributes(offset: Int, length: Int, s: AttributeSet, replace: Boolean): Unit = ???
 
+    /** Sets the logical style to use for the paragraph at the
+     *  given position.
+     */
     @stub
-    // Sets the logical style to use for the paragraph at the
-    // given position.
     def setLogicalStyle(pos: Int, s: Style): Unit = ???
 
+    /** Sets attributes for a paragraph. */
     @stub
-    // Sets attributes for a paragraph.
     def setParagraphAttributes(offset: Int, length: Int, s: AttributeSet, replace: Boolean): Unit = ???
 }
 
 object DefaultStyledDocument {
+    /** An UndoableEdit used to remember AttributeSet changes to an
+     *  Element.
+     */
     @stub
-    // An UndoableEdit used to remember AttributeSet changes to an
-    // Element.
-    def DefaultStyledDocument.AttributeUndoableEdit: class = ???
+    object AttributeUndoableEdit extends DefaultStyledDocument.AttributeUndoableEdit
 
+    /** Specification for building elements. */
     @stub
-    // Specification for building elements.
-    def DefaultStyledDocument.ElementSpec: class = ???
+    object ElementSpec extends DefaultStyledDocument.ElementSpec
 }

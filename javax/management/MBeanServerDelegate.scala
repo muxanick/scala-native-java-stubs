@@ -2,57 +2,62 @@ package javax.management
 
 import java.lang.{Object, String}
 
-// Represents  the MBean server from the management point of view.
-// The MBeanServerDelegate MBean emits the MBeanServerNotifications when
-// an MBean is registered/unregistered in the MBean server.
-class MBeanServerDelegate extends Object with MBeanServerDelegateMBean, with NotificationEmitter {
+/** Represents  the MBean server from the management point of view.
+ *  The MBeanServerDelegate MBean emits the MBeanServerNotifications when
+ *  an MBean is registered/unregistered in the MBean server.
+ */
+class MBeanServerDelegate extends Object with MBeanServerDelegateMBean with NotificationEmitter {
 
+    /** Adds a listener to this MBean. */
     @stub
-    // Adds a listener to this MBean.
     def addNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
 
+    /** Returns the JMX implementation name (the name of this product). */
     @stub
-    // Returns the JMX implementation name (the name of this product).
     def getImplementationName(): String = ???
 
+    /** Returns the JMX implementation vendor (the vendor of this product). */
     @stub
-    // Returns the JMX implementation vendor (the vendor of this product).
     def getImplementationVendor(): String = ???
 
+    /** Returns the JMX implementation version (the version of this product). */
     @stub
-    // Returns the JMX implementation version (the version of this product).
     def getImplementationVersion(): String = ???
 
+    /** Returns the MBean server agent identity. */
     @stub
-    // Returns the MBean server agent identity.
     def getMBeanServerId(): String = ???
 
+    /** Returns an array indicating, for each notification this
+     *  MBean may send, the name of the Java class of the notification
+     *  and the notification type.
+     */
     @stub
-    // Returns an array indicating, for each notification this
-    // MBean may send, the name of the Java class of the notification
-    // and the notification type.
     def getNotificationInfo(): Array[MBeanNotificationInfo] = ???
 
+    /** Returns the full name of the JMX specification implemented
+     *  by this product.
+     */
     @stub
-    // Returns the full name of the JMX specification implemented
-    // by this product.
     def getSpecificationName(): String = ???
 
+    /** Returns the vendor of the JMX specification implemented
+     *  by this product.
+     */
     @stub
-    // Returns the vendor of the JMX specification implemented
-    // by this product.
     def getSpecificationVendor(): String = ???
 
+    /** Returns the version of the JMX specification implemented
+     *  by this product.
+     */
     @stub
-    // Returns the version of the JMX specification implemented
-    // by this product.
     def getSpecificationVersion(): String = ???
 
+    /** Removes a listener from this MBean. */
     @stub
-    // Removes a listener from this MBean.
     def removeNotificationListener(listener: NotificationListener): Unit = ???
 
+    /** Removes a listener from this MBean. */
     @stub
-    // Removes a listener from this MBean.
     def removeNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
 }

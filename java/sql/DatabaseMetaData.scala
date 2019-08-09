@@ -2,1153 +2,1287 @@ package java.sql
 
 import java.lang.String
 
-// Comprehensive information about the database as a whole.
-// 
-// This interface is implemented by driver vendors to let users know the capabilities
-// of a Database Management System (DBMS) in combination with
-// the driver based on JDBC™ technology
-// ("JDBC driver") that is used with it.  Different relational DBMSs often support
-// different features, implement features in different ways, and use different
-// data types.  In addition, a driver may implement a feature on top of what the
-// DBMS offers.  Information returned by methods in this interface applies
-// to the capabilities of a particular driver and a particular DBMS working
-// together. Note that as used in this documentation, the term "database" is
-// used generically to refer to both the driver and DBMS.
-// 
-// A user for this interface is commonly a tool that needs to discover how to
-// deal with the underlying DBMS.  This is especially true for applications
-// that are intended to be used with more than one DBMS. For example, a tool might use the method
-// getTypeInfo to find out what data types can be used in a
-// CREATE TABLE statement.  Or a user might call the method
-// supportsCorrelatedSubqueries to see if it is possible to use
-// a correlated subquery or supportsBatchUpdates to see if it is
-// possible to use batch updates.
-// 
-// Some DatabaseMetaData methods return lists of information
-// in the form of ResultSet objects.
-// Regular ResultSet methods, such as
-// getString and getInt, can be used
-// to retrieve the data from these ResultSet objects.  If
-// a given form of metadata is not available, an empty ResultSet
-// will be returned. Additional columns beyond the columns defined to be
-// returned by the ResultSet object for a given method
-// can be defined by the JDBC driver vendor and must be accessed
-// by their column label.
-// 
-// Some DatabaseMetaData methods take arguments that are
-// String patterns.  These arguments all have names such as fooPattern.
-// Within a pattern String, "%" means match any substring of 0 or more
-// characters, and "_" means match any one character. Only metadata
-// entries matching the search pattern are returned. If a search pattern
-// argument is set to null, that argument's criterion will
-// be dropped from the search.
+/** Comprehensive information about the database as a whole.
+ *  
+ *  This interface is implemented by driver vendors to let users know the capabilities
+ *  of a Database Management System (DBMS) in combination with
+ *  the driver based on JDBC™ technology
+ *  ("JDBC driver") that is used with it.  Different relational DBMSs often support
+ *  different features, implement features in different ways, and use different
+ *  data types.  In addition, a driver may implement a feature on top of what the
+ *  DBMS offers.  Information returned by methods in this interface applies
+ *  to the capabilities of a particular driver and a particular DBMS working
+ *  together. Note that as used in this documentation, the term "database" is
+ *  used generically to refer to both the driver and DBMS.
+ *  
+ *  A user for this interface is commonly a tool that needs to discover how to
+ *  deal with the underlying DBMS.  This is especially true for applications
+ *  that are intended to be used with more than one DBMS. For example, a tool might use the method
+ *  getTypeInfo to find out what data types can be used in a
+ *  CREATE TABLE statement.  Or a user might call the method
+ *  supportsCorrelatedSubqueries to see if it is possible to use
+ *  a correlated subquery or supportsBatchUpdates to see if it is
+ *  possible to use batch updates.
+ *  
+ *  Some DatabaseMetaData methods return lists of information
+ *  in the form of ResultSet objects.
+ *  Regular ResultSet methods, such as
+ *  getString and getInt, can be used
+ *  to retrieve the data from these ResultSet objects.  If
+ *  a given form of metadata is not available, an empty ResultSet
+ *  will be returned. Additional columns beyond the columns defined to be
+ *  returned by the ResultSet object for a given method
+ *  can be defined by the JDBC driver vendor and must be accessed
+ *  by their column label.
+ *  
+ *  Some DatabaseMetaData methods take arguments that are
+ *  String patterns.  These arguments all have names such as fooPattern.
+ *  Within a pattern String, "%" means match any substring of 0 or more
+ *  characters, and "_" means match any one character. Only metadata
+ *  entries matching the search pattern are returned. If a search pattern
+ *  argument is set to null, that argument's criterion will
+ *  be dropped from the search.
+ */
 trait DatabaseMetaData extends Wrapper {
 
+    /** Retrieves whether the current user can call all the procedures
+     *  returned by the method getProcedures.
+     */
     @stub
-    // Retrieves whether the current user can call all the procedures
-    // returned by the method getProcedures.
     def allProceduresAreCallable(): Boolean = ???
 
+    /** Retrieves whether the current user can use all the tables returned
+     *  by the method getTables in a SELECT
+     *  statement.
+     */
     @stub
-    // Retrieves whether the current user can use all the tables returned
-    // by the method getTables in a SELECT
-    // statement.
     def allTablesAreSelectable(): Boolean = ???
 
+    /** Retrieves whether a SQLException while autoCommit is true indicates
+     *  that all open ResultSets are closed, even ones that are holdable.
+     */
     @stub
-    // Retrieves whether a SQLException while autoCommit is true indicates
-    // that all open ResultSets are closed, even ones that are holdable.
     def autoCommitFailureClosesAllResultSets(): Boolean = ???
 
+    /** Retrieves whether a data definition statement within a transaction forces
+     *  the transaction to commit.
+     */
     @stub
-    // Retrieves whether a data definition statement within a transaction forces
-    // the transaction to commit.
     def dataDefinitionCausesTransactionCommit(): Boolean = ???
 
+    /** Retrieves whether this database ignores a data definition statement
+     *  within a transaction.
+     */
     @stub
-    // Retrieves whether this database ignores a data definition statement
-    // within a transaction.
     def dataDefinitionIgnoredInTransactions(): Boolean = ???
 
+    /** Retrieves whether or not a visible row delete can be detected by
+     *  calling the method ResultSet.rowDeleted.
+     */
     @stub
-    // Retrieves whether or not a visible row delete can be detected by
-    // calling the method ResultSet.rowDeleted.
     def deletesAreDetected(type: Int): Boolean = ???
 
+    /** Retrieves whether the return value for the method
+     *  getMaxRowSize includes the SQL data types
+     *  LONGVARCHAR and LONGVARBINARY.
+     */
     @stub
-    // Retrieves whether the return value for the method
-    // getMaxRowSize includes the SQL data types
-    // LONGVARCHAR and LONGVARBINARY.
     def doesMaxRowSizeIncludeBlobs(): Boolean = ???
 
+    /** Retrieves whether a generated key will always be returned if the column
+     *  name(s) or index(es) specified for the auto generated key column(s)
+     *  are valid and the statement succeeds.
+     */
     @stub
-    // Retrieves whether a generated key will always be returned if the column
-    // name(s) or index(es) specified for the auto generated key column(s)
-    // are valid and the statement succeeds.
     def generatedKeyAlwaysReturned(): Boolean = ???
 
+    /** Retrieves a description of the given attribute of the given type
+     *  for a user-defined type (UDT) that is available in the given schema
+     *  and catalog.
+     */
     @stub
-    // Retrieves a description of the given attribute of the given type
-    // for a user-defined type (UDT) that is available in the given schema
-    // and catalog.
     def getAttributes(catalog: String, schemaPattern: String, typeNamePattern: String, attributeNamePattern: String): ResultSet = ???
 
+    /** Retrieves a description of a table's optimal set of columns that
+     *  uniquely identifies a row.
+     */
     @stub
-    // Retrieves a description of a table's optimal set of columns that
-    // uniquely identifies a row.
     def getBestRowIdentifier(catalog: String, schema: String, table: String, scope: Int, nullable: Boolean): ResultSet = ???
 
+    /** Retrieves the catalog names available in this database. */
     @stub
-    // Retrieves the catalog names available in this database.
     def getCatalogs(): ResultSet = ???
 
+    /** Retrieves the String that this database uses as the
+     *  separator between a catalog and table name.
+     */
     @stub
-    // Retrieves the String that this database uses as the
-    // separator between a catalog and table name.
     def getCatalogSeparator(): String = ???
 
+    /** Retrieves the database vendor's preferred term for "catalog". */
     @stub
-    // Retrieves the database vendor's preferred term for "catalog".
     def getCatalogTerm(): String = ???
 
+    /** Retrieves a list of the client info properties
+     *  that the driver supports.
+     */
     @stub
-    // Retrieves a list of the client info properties
-    // that the driver supports.
     def getClientInfoProperties(): ResultSet = ???
 
+    /** Retrieves a description of the access rights for a table's columns. */
     @stub
-    // Retrieves a description of the access rights for a table's columns.
     def getColumnPrivileges(catalog: String, schema: String, table: String, columnNamePattern: String): ResultSet = ???
 
+    /** Retrieves a description of table columns available in
+     *  the specified catalog.
+     */
     @stub
-    // Retrieves a description of table columns available in
-    // the specified catalog.
     def getColumns(catalog: String, schemaPattern: String, tableNamePattern: String, columnNamePattern: String): ResultSet = ???
 
+    /** Retrieves the connection that produced this metadata object. */
     @stub
-    // Retrieves the connection that produced this metadata object.
     def getConnection(): Connection = ???
 
+    /** Retrieves a description of the foreign key columns in the given foreign key
+     *  table that reference the primary key or the columns representing a unique constraint of the  parent table (could be the same or a different table).
+     */
     @stub
-    // Retrieves a description of the foreign key columns in the given foreign key
-    // table that reference the primary key or the columns representing a unique constraint of the  parent table (could be the same or a different table).
     def getCrossReference(parentCatalog: String, parentSchema: String, parentTable: String, foreignCatalog: String, foreignSchema: String, foreignTable: String): ResultSet = ???
 
+    /** Retrieves the major version number of the underlying database. */
     @stub
-    // Retrieves the major version number of the underlying database.
     def getDatabaseMajorVersion(): Int = ???
 
+    /** Retrieves the minor version number of the underlying database. */
     @stub
-    // Retrieves the minor version number of the underlying database.
     def getDatabaseMinorVersion(): Int = ???
 
+    /** Retrieves the name of this database product. */
     @stub
-    // Retrieves the name of this database product.
     def getDatabaseProductName(): String = ???
 
+    /** Retrieves the version number of this database product. */
     @stub
-    // Retrieves the version number of this database product.
     def getDatabaseProductVersion(): String = ???
 
+    /** Retrieves this database's default transaction isolation level. */
     @stub
-    // Retrieves this database's default transaction isolation level.
     def getDefaultTransactionIsolation(): Int = ???
 
+    /** Retrieves this JDBC driver's major version number. */
     @stub
-    // Retrieves this JDBC driver's major version number.
     def getDriverMajorVersion(): Int = ???
 
+    /** Retrieves this JDBC driver's minor version number. */
     @stub
-    // Retrieves this JDBC driver's minor version number.
     def getDriverMinorVersion(): Int = ???
 
+    /** Retrieves the name of this JDBC driver. */
     @stub
-    // Retrieves the name of this JDBC driver.
     def getDriverName(): String = ???
 
+    /** Retrieves the version number of this JDBC driver as a String. */
     @stub
-    // Retrieves the version number of this JDBC driver as a String.
     def getDriverVersion(): String = ???
 
+    /** Retrieves a description of the foreign key columns that reference the
+     *  given table's primary key columns (the foreign keys exported by a
+     *  table).
+     */
     @stub
-    // Retrieves a description of the foreign key columns that reference the
-    // given table's primary key columns (the foreign keys exported by a
-    // table).
     def getExportedKeys(catalog: String, schema: String, table: String): ResultSet = ???
 
+    /** Retrieves all the "extra" characters that can be used in unquoted
+     *  identifier names (those beyond a-z, A-Z, 0-9 and _).
+     */
     @stub
-    // Retrieves all the "extra" characters that can be used in unquoted
-    // identifier names (those beyond a-z, A-Z, 0-9 and _).
     def getExtraNameCharacters(): String = ???
 
+    /** Retrieves a description of the given catalog's system or user
+     *  function parameters and return type.
+     */
     @stub
-    // Retrieves a description of the given catalog's system or user
-    // function parameters and return type.
     def getFunctionColumns(catalog: String, schemaPattern: String, functionNamePattern: String, columnNamePattern: String): ResultSet = ???
 
+    /** Retrieves a description of the  system and user functions available
+     *  in the given catalog.
+     */
     @stub
-    // Retrieves a description of the  system and user functions available
-    // in the given catalog.
     def getFunctions(catalog: String, schemaPattern: String, functionNamePattern: String): ResultSet = ???
 
+    /** Retrieves the string used to quote SQL identifiers. */
     @stub
-    // Retrieves the string used to quote SQL identifiers.
     def getIdentifierQuoteString(): String = ???
 
+    /** Retrieves a description of the primary key columns that are
+     *  referenced by the given table's foreign key columns (the primary keys
+     *  imported by a table).
+     */
     @stub
-    // Retrieves a description of the primary key columns that are
-    // referenced by the given table's foreign key columns (the primary keys
-    // imported by a table).
     def getImportedKeys(catalog: String, schema: String, table: String): ResultSet = ???
 
+    /** Retrieves a description of the given table's indices and statistics. */
     @stub
-    // Retrieves a description of the given table's indices and statistics.
     def getIndexInfo(catalog: String, schema: String, table: String, unique: Boolean, approximate: Boolean): ResultSet = ???
 
+    /** Retrieves the major JDBC version number for this
+     *  driver.
+     */
     @stub
-    // Retrieves the major JDBC version number for this
-    // driver.
     def getJDBCMajorVersion(): Int = ???
 
+    /** Retrieves the minor JDBC version number for this
+     *  driver.
+     */
     @stub
-    // Retrieves the minor JDBC version number for this
-    // driver.
     def getJDBCMinorVersion(): Int = ???
 
+    /** Retrieves the maximum number of hex characters this database allows in an
+     *  inline binary literal.
+     */
     @stub
-    // Retrieves the maximum number of hex characters this database allows in an
-    // inline binary literal.
     def getMaxBinaryLiteralLength(): Int = ???
 
+    /** Retrieves the maximum number of characters that this database allows in a
+     *  catalog name.
+     */
     @stub
-    // Retrieves the maximum number of characters that this database allows in a
-    // catalog name.
     def getMaxCatalogNameLength(): Int = ???
 
+    /** Retrieves the maximum number of characters this database allows
+     *  for a character literal.
+     */
     @stub
-    // Retrieves the maximum number of characters this database allows
-    // for a character literal.
     def getMaxCharLiteralLength(): Int = ???
 
+    /** Retrieves the maximum number of characters this database allows
+     *  for a column name.
+     */
     @stub
-    // Retrieves the maximum number of characters this database allows
-    // for a column name.
     def getMaxColumnNameLength(): Int = ???
 
+    /** Retrieves the maximum number of columns this database allows in a
+     *  GROUP BY clause.
+     */
     @stub
-    // Retrieves the maximum number of columns this database allows in a
-    // GROUP BY clause.
     def getMaxColumnsInGroupBy(): Int = ???
 
+    /** Retrieves the maximum number of columns this database allows in an index. */
     @stub
-    // Retrieves the maximum number of columns this database allows in an index.
     def getMaxColumnsInIndex(): Int = ???
 
+    /** Retrieves the maximum number of columns this database allows in an
+     *  ORDER BY clause.
+     */
     @stub
-    // Retrieves the maximum number of columns this database allows in an
-    // ORDER BY clause.
     def getMaxColumnsInOrderBy(): Int = ???
 
+    /** Retrieves the maximum number of columns this database allows in a
+     *  SELECT list.
+     */
     @stub
-    // Retrieves the maximum number of columns this database allows in a
-    // SELECT list.
     def getMaxColumnsInSelect(): Int = ???
 
+    /** Retrieves the maximum number of columns this database allows in a table. */
     @stub
-    // Retrieves the maximum number of columns this database allows in a table.
     def getMaxColumnsInTable(): Int = ???
 
+    /** Retrieves the maximum number of concurrent connections to this
+     *  database that are possible.
+     */
     @stub
-    // Retrieves the maximum number of concurrent connections to this
-    // database that are possible.
     def getMaxConnections(): Int = ???
 
+    /** Retrieves the maximum number of characters that this database allows in a
+     *  cursor name.
+     */
     @stub
-    // Retrieves the maximum number of characters that this database allows in a
-    // cursor name.
     def getMaxCursorNameLength(): Int = ???
 
+    /** Retrieves the maximum number of bytes this database allows for an
+     *  index, including all of the parts of the index.
+     */
     @stub
-    // Retrieves the maximum number of bytes this database allows for an
-    // index, including all of the parts of the index.
     def getMaxIndexLength(): Int = ???
 
+    /** Retrieves the maximum number of bytes this database allows for
+     *  the logical size for a LOB.
+     */
     @stub
-    // Retrieves the maximum number of bytes this database allows for
-    // the logical size for a LOB.
-    def Long: default = ???
+    val Long: default = ???
 
+    /** Retrieves the maximum number of characters that this database allows in a
+     *  procedure name.
+     */
     @stub
-    // Retrieves the maximum number of characters that this database allows in a
-    // procedure name.
     def getMaxProcedureNameLength(): Int = ???
 
+    /** Retrieves the maximum number of bytes this database allows in
+     *  a single row.
+     */
     @stub
-    // Retrieves the maximum number of bytes this database allows in
-    // a single row.
     def getMaxRowSize(): Int = ???
 
+    /** Retrieves the maximum number of characters that this database allows in a
+     *  schema name.
+     */
     @stub
-    // Retrieves the maximum number of characters that this database allows in a
-    // schema name.
     def getMaxSchemaNameLength(): Int = ???
 
+    /** Retrieves the maximum number of characters this database allows in
+     *  an SQL statement.
+     */
     @stub
-    // Retrieves the maximum number of characters this database allows in
-    // an SQL statement.
     def getMaxStatementLength(): Int = ???
 
+    /** Retrieves the maximum number of active statements to this database
+     *  that can be open at the same time.
+     */
     @stub
-    // Retrieves the maximum number of active statements to this database
-    // that can be open at the same time.
     def getMaxStatements(): Int = ???
 
+    /** Retrieves the maximum number of characters this database allows in
+     *  a table name.
+     */
     @stub
-    // Retrieves the maximum number of characters this database allows in
-    // a table name.
     def getMaxTableNameLength(): Int = ???
 
+    /** Retrieves the maximum number of tables this database allows in a
+     *  SELECT statement.
+     */
     @stub
-    // Retrieves the maximum number of tables this database allows in a
-    // SELECT statement.
     def getMaxTablesInSelect(): Int = ???
 
+    /** Retrieves the maximum number of characters this database allows in
+     *  a user name.
+     */
     @stub
-    // Retrieves the maximum number of characters this database allows in
-    // a user name.
     def getMaxUserNameLength(): Int = ???
 
+    /** Retrieves a comma-separated list of math functions available with
+     *  this database.
+     */
     @stub
-    // Retrieves a comma-separated list of math functions available with
-    // this database.
     def getNumericFunctions(): String = ???
 
+    /** Retrieves a description of the given table's primary key columns. */
     @stub
-    // Retrieves a description of the given table's primary key columns.
     def getPrimaryKeys(catalog: String, schema: String, table: String): ResultSet = ???
 
+    /** Retrieves a description of the given catalog's stored procedure parameter
+     *  and result columns.
+     */
     @stub
-    // Retrieves a description of the given catalog's stored procedure parameter
-    // and result columns.
     def getProcedureColumns(catalog: String, schemaPattern: String, procedureNamePattern: String, columnNamePattern: String): ResultSet = ???
 
+    /** Retrieves a description of the stored procedures available in the given
+     *  catalog.
+     */
     @stub
-    // Retrieves a description of the stored procedures available in the given
-    // catalog.
     def getProcedures(catalog: String, schemaPattern: String, procedureNamePattern: String): ResultSet = ???
 
+    /** Retrieves the database vendor's preferred term for "procedure". */
     @stub
-    // Retrieves the database vendor's preferred term for "procedure".
     def getProcedureTerm(): String = ???
 
+    /** Retrieves a description of the pseudo or hidden columns available
+     *  in a given table within the specified catalog and schema.
+     */
     @stub
-    // Retrieves a description of the pseudo or hidden columns available
-    // in a given table within the specified catalog and schema.
     def getPseudoColumns(catalog: String, schemaPattern: String, tableNamePattern: String, columnNamePattern: String): ResultSet = ???
 
+    /** Retrieves this database's default holdability for ResultSet
+     *  objects.
+     */
     @stub
-    // Retrieves this database's default holdability for ResultSet
-    // objects.
     def getResultSetHoldability(): Int = ???
 
+    /** Indicates whether or not this data source supports the SQL ROWID type,
+     *  and if so  the lifetime for which a RowId object remains valid.
+     */
     @stub
-    // Indicates whether or not this data source supports the SQL ROWID type,
-    // and if so  the lifetime for which a RowId object remains valid.
     def getRowIdLifetime(): RowIdLifetime = ???
 
+    /** Retrieves the schema names available in this database. */
     @stub
-    // Retrieves the schema names available in this database.
     def getSchemas(): ResultSet = ???
 
+    /** Retrieves the schema names available in this database. */
     @stub
-    // Retrieves the schema names available in this database.
     def getSchemas(catalog: String, schemaPattern: String): ResultSet = ???
 
+    /** Retrieves the database vendor's preferred term for "schema". */
     @stub
-    // Retrieves the database vendor's preferred term for "schema".
     def getSchemaTerm(): String = ???
 
+    /** Retrieves the string that can be used to escape wildcard characters. */
     @stub
-    // Retrieves the string that can be used to escape wildcard characters.
     def getSearchStringEscape(): String = ???
 
+    /** Retrieves a comma-separated list of all of this database's SQL keywords
+     *  that are NOT also SQL:2003 keywords.
+     */
     @stub
-    // Retrieves a comma-separated list of all of this database's SQL keywords
-    // that are NOT also SQL:2003 keywords.
     def getSQLKeywords(): String = ???
 
+    /** Indicates whether the SQLSTATE returned by SQLException.getSQLState
+     *  is X/Open (now known as Open Group) SQL CLI or SQL:2003.
+     */
     @stub
-    // Indicates whether the SQLSTATE returned by SQLException.getSQLState
-    // is X/Open (now known as Open Group) SQL CLI or SQL:2003.
     def getSQLStateType(): Int = ???
 
+    /** Retrieves a comma-separated list of string functions available with
+     *  this database.
+     */
     @stub
-    // Retrieves a comma-separated list of string functions available with
-    // this database.
     def getStringFunctions(): String = ???
 
+    /** Retrieves a description of the table hierarchies defined in a particular
+     *  schema in this database.
+     */
     @stub
-    // Retrieves a description of the table hierarchies defined in a particular
-    // schema in this database.
     def getSuperTables(catalog: String, schemaPattern: String, tableNamePattern: String): ResultSet = ???
 
+    /** Retrieves a description of the user-defined type (UDT) hierarchies defined in a
+     *  particular schema in this database.
+     */
     @stub
-    // Retrieves a description of the user-defined type (UDT) hierarchies defined in a
-    // particular schema in this database.
     def getSuperTypes(catalog: String, schemaPattern: String, typeNamePattern: String): ResultSet = ???
 
+    /** Retrieves a comma-separated list of system functions available with
+     *  this database.
+     */
     @stub
-    // Retrieves a comma-separated list of system functions available with
-    // this database.
     def getSystemFunctions(): String = ???
 
+    /** Retrieves a description of the access rights for each table available
+     *  in a catalog.
+     */
     @stub
-    // Retrieves a description of the access rights for each table available
-    // in a catalog.
     def getTablePrivileges(catalog: String, schemaPattern: String, tableNamePattern: String): ResultSet = ???
 
+    /** Retrieves a description of the tables available in the given catalog. */
     @stub
-    // Retrieves a description of the tables available in the given catalog.
     def getTables(catalog: String, schemaPattern: String, tableNamePattern: String, types: Array[String]): ResultSet = ???
 
+    /** Retrieves the table types available in this database. */
     @stub
-    // Retrieves the table types available in this database.
     def getTableTypes(): ResultSet = ???
 
+    /** Retrieves a comma-separated list of the time and date functions available
+     *  with this database.
+     */
     @stub
-    // Retrieves a comma-separated list of the time and date functions available
-    // with this database.
     def getTimeDateFunctions(): String = ???
 
+    /** Retrieves a description of all the data types supported by
+     *  this database.
+     */
     @stub
-    // Retrieves a description of all the data types supported by
-    // this database.
     def getTypeInfo(): ResultSet = ???
 
+    /** Retrieves a description of the user-defined types (UDTs) defined
+     *  in a particular schema.
+     */
     @stub
-    // Retrieves a description of the user-defined types (UDTs) defined
-    // in a particular schema.
     def getUDTs(catalog: String, schemaPattern: String, typeNamePattern: String, types: Array[Int]): ResultSet = ???
 
+    /** Retrieves the URL for this DBMS. */
     @stub
-    // Retrieves the URL for this DBMS.
     def getURL(): String = ???
 
+    /** Retrieves the user name as known to this database. */
     @stub
-    // Retrieves the user name as known to this database.
     def getUserName(): String = ???
 
+    /** Retrieves a description of a table's columns that are automatically
+     *  updated when any value in a row is updated.
+     */
     @stub
-    // Retrieves a description of a table's columns that are automatically
-    // updated when any value in a row is updated.
     def getVersionColumns(catalog: String, schema: String, table: String): ResultSet = ???
 
+    /** Retrieves whether or not a visible row insert can be detected
+     *  by calling the method ResultSet.rowInserted.
+     */
     @stub
-    // Retrieves whether or not a visible row insert can be detected
-    // by calling the method ResultSet.rowInserted.
     def insertsAreDetected(type: Int): Boolean = ???
 
+    /** Retrieves whether a catalog appears at the start of a fully qualified
+     *  table name.
+     */
     @stub
-    // Retrieves whether a catalog appears at the start of a fully qualified
-    // table name.
     def isCatalogAtStart(): Boolean = ???
 
+    /** Retrieves whether this database is in read-only mode. */
     @stub
-    // Retrieves whether this database is in read-only mode.
     def isReadOnly(): Boolean = ???
 
+    /** Indicates whether updates made to a LOB are made on a copy or directly
+     *  to the LOB.
+     */
     @stub
-    // Indicates whether updates made to a LOB are made on a copy or directly
-    // to the LOB.
     def locatorsUpdateCopy(): Boolean = ???
 
+    /** Retrieves whether this database supports concatenations between
+     *  NULL and non-NULL values being
+     *  NULL.
+     */
     @stub
-    // Retrieves whether this database supports concatenations between
-    // NULL and non-NULL values being
-    // NULL.
     def nullPlusNonNullIsNull(): Boolean = ???
 
+    /** Retrieves whether NULL values are sorted at the end regardless of
+     *  sort order.
+     */
     @stub
-    // Retrieves whether NULL values are sorted at the end regardless of
-    // sort order.
     def nullsAreSortedAtEnd(): Boolean = ???
 
+    /** Retrieves whether NULL values are sorted at the start regardless
+     *  of sort order.
+     */
     @stub
-    // Retrieves whether NULL values are sorted at the start regardless
-    // of sort order.
     def nullsAreSortedAtStart(): Boolean = ???
 
+    /** Retrieves whether NULL values are sorted high. */
     @stub
-    // Retrieves whether NULL values are sorted high.
     def nullsAreSortedHigh(): Boolean = ???
 
+    /** Retrieves whether NULL values are sorted low. */
     @stub
-    // Retrieves whether NULL values are sorted low.
     def nullsAreSortedLow(): Boolean = ???
 
+    /** Retrieves whether deletes made by others are visible. */
     @stub
-    // Retrieves whether deletes made by others are visible.
     def othersDeletesAreVisible(type: Int): Boolean = ???
 
+    /** Retrieves whether inserts made by others are visible. */
     @stub
-    // Retrieves whether inserts made by others are visible.
     def othersInsertsAreVisible(type: Int): Boolean = ???
 
+    /** Retrieves whether updates made by others are visible. */
     @stub
-    // Retrieves whether updates made by others are visible.
     def othersUpdatesAreVisible(type: Int): Boolean = ???
 
+    /** Retrieves whether a result set's own deletes are visible. */
     @stub
-    // Retrieves whether a result set's own deletes are visible.
     def ownDeletesAreVisible(type: Int): Boolean = ???
 
+    /** Retrieves whether a result set's own inserts are visible. */
     @stub
-    // Retrieves whether a result set's own inserts are visible.
     def ownInsertsAreVisible(type: Int): Boolean = ???
 
+    /** Retrieves whether for the given type of ResultSet object,
+     *  the result set's own updates are visible.
+     */
     @stub
-    // Retrieves whether for the given type of ResultSet object,
-    // the result set's own updates are visible.
     def ownUpdatesAreVisible(type: Int): Boolean = ???
 
+    /** Retrieves whether this database treats mixed case unquoted SQL identifiers as
+     *  case insensitive and stores them in lower case.
+     */
     @stub
-    // Retrieves whether this database treats mixed case unquoted SQL identifiers as
-    // case insensitive and stores them in lower case.
     def storesLowerCaseIdentifiers(): Boolean = ???
 
+    /** Retrieves whether this database treats mixed case quoted SQL identifiers as
+     *  case insensitive and stores them in lower case.
+     */
     @stub
-    // Retrieves whether this database treats mixed case quoted SQL identifiers as
-    // case insensitive and stores them in lower case.
     def storesLowerCaseQuotedIdentifiers(): Boolean = ???
 
+    /** Retrieves whether this database treats mixed case unquoted SQL identifiers as
+     *  case insensitive and stores them in mixed case.
+     */
     @stub
-    // Retrieves whether this database treats mixed case unquoted SQL identifiers as
-    // case insensitive and stores them in mixed case.
     def storesMixedCaseIdentifiers(): Boolean = ???
 
+    /** Retrieves whether this database treats mixed case quoted SQL identifiers as
+     *  case insensitive and stores them in mixed case.
+     */
     @stub
-    // Retrieves whether this database treats mixed case quoted SQL identifiers as
-    // case insensitive and stores them in mixed case.
     def storesMixedCaseQuotedIdentifiers(): Boolean = ???
 
+    /** Retrieves whether this database treats mixed case unquoted SQL identifiers as
+     *  case insensitive and stores them in upper case.
+     */
     @stub
-    // Retrieves whether this database treats mixed case unquoted SQL identifiers as
-    // case insensitive and stores them in upper case.
     def storesUpperCaseIdentifiers(): Boolean = ???
 
+    /** Retrieves whether this database treats mixed case quoted SQL identifiers as
+     *  case insensitive and stores them in upper case.
+     */
     @stub
-    // Retrieves whether this database treats mixed case quoted SQL identifiers as
-    // case insensitive and stores them in upper case.
     def storesUpperCaseQuotedIdentifiers(): Boolean = ???
 
+    /** Retrieves whether this database supports ALTER TABLE
+     *  with add column.
+     */
     @stub
-    // Retrieves whether this database supports ALTER TABLE
-    // with add column.
     def supportsAlterTableWithAddColumn(): Boolean = ???
 
+    /** Retrieves whether this database supports ALTER TABLE
+     *  with drop column.
+     */
     @stub
-    // Retrieves whether this database supports ALTER TABLE
-    // with drop column.
     def supportsAlterTableWithDropColumn(): Boolean = ???
 
+    /** Retrieves whether this database supports the ANSI92 entry level SQL
+     *  grammar.
+     */
     @stub
-    // Retrieves whether this database supports the ANSI92 entry level SQL
-    // grammar.
     def supportsANSI92EntryLevelSQL(): Boolean = ???
 
+    /** Retrieves whether this database supports the ANSI92 full SQL grammar supported. */
     @stub
-    // Retrieves whether this database supports the ANSI92 full SQL grammar supported.
     def supportsANSI92FullSQL(): Boolean = ???
 
+    /** Retrieves whether this database supports the ANSI92 intermediate SQL grammar supported. */
     @stub
-    // Retrieves whether this database supports the ANSI92 intermediate SQL grammar supported.
     def supportsANSI92IntermediateSQL(): Boolean = ???
 
+    /** Retrieves whether this database supports batch updates. */
     @stub
-    // Retrieves whether this database supports batch updates.
     def supportsBatchUpdates(): Boolean = ???
 
+    /** Retrieves whether a catalog name can be used in a data manipulation statement. */
     @stub
-    // Retrieves whether a catalog name can be used in a data manipulation statement.
     def supportsCatalogsInDataManipulation(): Boolean = ???
 
+    /** Retrieves whether a catalog name can be used in an index definition statement. */
     @stub
-    // Retrieves whether a catalog name can be used in an index definition statement.
     def supportsCatalogsInIndexDefinitions(): Boolean = ???
 
+    /** Retrieves whether a catalog name can be used in a privilege definition statement. */
     @stub
-    // Retrieves whether a catalog name can be used in a privilege definition statement.
     def supportsCatalogsInPrivilegeDefinitions(): Boolean = ???
 
+    /** Retrieves whether a catalog name can be used in a procedure call statement. */
     @stub
-    // Retrieves whether a catalog name can be used in a procedure call statement.
     def supportsCatalogsInProcedureCalls(): Boolean = ???
 
+    /** Retrieves whether a catalog name can be used in a table definition statement. */
     @stub
-    // Retrieves whether a catalog name can be used in a table definition statement.
     def supportsCatalogsInTableDefinitions(): Boolean = ???
 
+    /** Retrieves whether this database supports column aliasing. */
     @stub
-    // Retrieves whether this database supports column aliasing.
     def supportsColumnAliasing(): Boolean = ???
 
+    /** Retrieves whether this database supports the JDBC scalar function
+     *  CONVERT for the conversion of one JDBC type to another.
+     */
     @stub
-    // Retrieves whether this database supports the JDBC scalar function
-    // CONVERT for the conversion of one JDBC type to another.
     def supportsConvert(): Boolean = ???
 
+    /** Retrieves whether this database supports the JDBC scalar function
+     *  CONVERT for conversions between the JDBC types fromType
+     *  and toType.
+     */
     @stub
-    // Retrieves whether this database supports the JDBC scalar function
-    // CONVERT for conversions between the JDBC types fromType
-    // and toType.
     def supportsConvert(fromType: Int, toType: Int): Boolean = ???
 
+    /** Retrieves whether this database supports the ODBC Core SQL grammar. */
     @stub
-    // Retrieves whether this database supports the ODBC Core SQL grammar.
     def supportsCoreSQLGrammar(): Boolean = ???
 
+    /** Retrieves whether this database supports correlated subqueries. */
     @stub
-    // Retrieves whether this database supports correlated subqueries.
     def supportsCorrelatedSubqueries(): Boolean = ???
 
+    /** Retrieves whether this database supports both data definition and
+     *  data manipulation statements within a transaction.
+     */
     @stub
-    // Retrieves whether this database supports both data definition and
-    // data manipulation statements within a transaction.
     def supportsDataDefinitionAndDataManipulationTransactions(): Boolean = ???
 
+    /** Retrieves whether this database supports only data manipulation
+     *  statements within a transaction.
+     */
     @stub
-    // Retrieves whether this database supports only data manipulation
-    // statements within a transaction.
     def supportsDataManipulationTransactionsOnly(): Boolean = ???
 
+    /** Retrieves whether, when table correlation names are supported, they
+     *  are restricted to being different from the names of the tables.
+     */
     @stub
-    // Retrieves whether, when table correlation names are supported, they
-    // are restricted to being different from the names of the tables.
     def supportsDifferentTableCorrelationNames(): Boolean = ???
 
+    /** Retrieves whether this database supports expressions in
+     *  ORDER BY lists.
+     */
     @stub
-    // Retrieves whether this database supports expressions in
-    // ORDER BY lists.
     def supportsExpressionsInOrderBy(): Boolean = ???
 
+    /** Retrieves whether this database supports the ODBC Extended SQL grammar. */
     @stub
-    // Retrieves whether this database supports the ODBC Extended SQL grammar.
     def supportsExtendedSQLGrammar(): Boolean = ???
 
+    /** Retrieves whether this database supports full nested outer joins. */
     @stub
-    // Retrieves whether this database supports full nested outer joins.
     def supportsFullOuterJoins(): Boolean = ???
 
+    /** Retrieves whether auto-generated keys can be retrieved after
+     *  a statement has been executed
+     */
     @stub
-    // Retrieves whether auto-generated keys can be retrieved after
-    // a statement has been executed
     def supportsGetGeneratedKeys(): Boolean = ???
 
+    /** Retrieves whether this database supports some form of
+     *  GROUP BY clause.
+     */
     @stub
-    // Retrieves whether this database supports some form of
-    // GROUP BY clause.
     def supportsGroupBy(): Boolean = ???
 
+    /** Retrieves whether this database supports using columns not included in
+     *  the SELECT statement in a GROUP BY clause
+     *  provided that all of the columns in the SELECT statement
+     *  are included in the GROUP BY clause.
+     */
     @stub
-    // Retrieves whether this database supports using columns not included in
-    // the SELECT statement in a GROUP BY clause
-    // provided that all of the columns in the SELECT statement
-    // are included in the GROUP BY clause.
     def supportsGroupByBeyondSelect(): Boolean = ???
 
+    /** Retrieves whether this database supports using a column that is
+     *  not in the SELECT statement in a
+     *  GROUP BY clause.
+     */
     @stub
-    // Retrieves whether this database supports using a column that is
-    // not in the SELECT statement in a
-    // GROUP BY clause.
     def supportsGroupByUnrelated(): Boolean = ???
 
+    /** Retrieves whether this database supports the SQL Integrity
+     *  Enhancement Facility.
+     */
     @stub
-    // Retrieves whether this database supports the SQL Integrity
-    // Enhancement Facility.
     def supportsIntegrityEnhancementFacility(): Boolean = ???
 
+    /** Retrieves whether this database supports specifying a
+     *  LIKE escape clause.
+     */
     @stub
-    // Retrieves whether this database supports specifying a
-    // LIKE escape clause.
     def supportsLikeEscapeClause(): Boolean = ???
 
+    /** Retrieves whether this database provides limited support for outer
+     *  joins.
+     */
     @stub
-    // Retrieves whether this database provides limited support for outer
-    // joins.
     def supportsLimitedOuterJoins(): Boolean = ???
 
+    /** Retrieves whether this database supports the ODBC Minimum SQL grammar. */
     @stub
-    // Retrieves whether this database supports the ODBC Minimum SQL grammar.
     def supportsMinimumSQLGrammar(): Boolean = ???
 
+    /** Retrieves whether this database treats mixed case unquoted SQL identifiers as
+     *  case sensitive and as a result stores them in mixed case.
+     */
     @stub
-    // Retrieves whether this database treats mixed case unquoted SQL identifiers as
-    // case sensitive and as a result stores them in mixed case.
     def supportsMixedCaseIdentifiers(): Boolean = ???
 
+    /** Retrieves whether this database treats mixed case quoted SQL identifiers as
+     *  case sensitive and as a result stores them in mixed case.
+     */
     @stub
-    // Retrieves whether this database treats mixed case quoted SQL identifiers as
-    // case sensitive and as a result stores them in mixed case.
     def supportsMixedCaseQuotedIdentifiers(): Boolean = ???
 
+    /** Retrieves whether it is possible to have multiple ResultSet objects
+     *  returned from a CallableStatement object
+     *  simultaneously.
+     */
     @stub
-    // Retrieves whether it is possible to have multiple ResultSet objects
-    // returned from a CallableStatement object
-    // simultaneously.
     def supportsMultipleOpenResults(): Boolean = ???
 
+    /** Retrieves whether this database supports getting multiple
+     *  ResultSet objects from a single call to the
+     *  method execute.
+     */
     @stub
-    // Retrieves whether this database supports getting multiple
-    // ResultSet objects from a single call to the
-    // method execute.
     def supportsMultipleResultSets(): Boolean = ???
 
+    /** Retrieves whether this database allows having multiple
+     *  transactions open at once (on different connections).
+     */
     @stub
-    // Retrieves whether this database allows having multiple
-    // transactions open at once (on different connections).
     def supportsMultipleTransactions(): Boolean = ???
 
+    /** Retrieves whether this database supports named parameters to callable
+     *  statements.
+     */
     @stub
-    // Retrieves whether this database supports named parameters to callable
-    // statements.
     def supportsNamedParameters(): Boolean = ???
 
+    /** Retrieves whether columns in this database may be defined as non-nullable. */
     @stub
-    // Retrieves whether columns in this database may be defined as non-nullable.
     def supportsNonNullableColumns(): Boolean = ???
 
+    /** Retrieves whether this database supports keeping cursors open
+     *  across commits.
+     */
     @stub
-    // Retrieves whether this database supports keeping cursors open
-    // across commits.
     def supportsOpenCursorsAcrossCommit(): Boolean = ???
 
+    /** Retrieves whether this database supports keeping cursors open
+     *  across rollbacks.
+     */
     @stub
-    // Retrieves whether this database supports keeping cursors open
-    // across rollbacks.
     def supportsOpenCursorsAcrossRollback(): Boolean = ???
 
+    /** Retrieves whether this database supports keeping statements open
+     *  across commits.
+     */
     @stub
-    // Retrieves whether this database supports keeping statements open
-    // across commits.
     def supportsOpenStatementsAcrossCommit(): Boolean = ???
 
+    /** Retrieves whether this database supports keeping statements open
+     *  across rollbacks.
+     */
     @stub
-    // Retrieves whether this database supports keeping statements open
-    // across rollbacks.
     def supportsOpenStatementsAcrossRollback(): Boolean = ???
 
+    /** Retrieves whether this database supports using a column that is
+     *  not in the SELECT statement in an
+     *  ORDER BY clause.
+     */
     @stub
-    // Retrieves whether this database supports using a column that is
-    // not in the SELECT statement in an
-    // ORDER BY clause.
     def supportsOrderByUnrelated(): Boolean = ???
 
+    /** Retrieves whether this database supports some form of outer join. */
     @stub
-    // Retrieves whether this database supports some form of outer join.
     def supportsOuterJoins(): Boolean = ???
 
+    /** Retrieves whether this database supports positioned DELETE
+     *  statements.
+     */
     @stub
-    // Retrieves whether this database supports positioned DELETE
-    // statements.
     def supportsPositionedDelete(): Boolean = ???
 
+    /** Retrieves whether this database supports positioned UPDATE
+     *  statements.
+     */
     @stub
-    // Retrieves whether this database supports positioned UPDATE
-    // statements.
     def supportsPositionedUpdate(): Boolean = ???
 
+    /** Retrieves whether this database supports REF CURSOR. */
     @stub
-    // Retrieves whether this database supports REF CURSOR.
-    def Boolean: default = ???
+    val Boolean: default = ???
 
+    /** Retrieves whether this database supports the given concurrency type
+     *  in combination with the given result set type.
+     */
     @stub
-    // Retrieves whether this database supports the given concurrency type
-    // in combination with the given result set type.
     def supportsResultSetConcurrency(type: Int, concurrency: Int): Boolean = ???
 
+    /** Retrieves whether this database supports the given result set holdability. */
     @stub
-    // Retrieves whether this database supports the given result set holdability.
     def supportsResultSetHoldability(holdability: Int): Boolean = ???
 
+    /** Retrieves whether this database supports the given result set type. */
     @stub
-    // Retrieves whether this database supports the given result set type.
     def supportsResultSetType(type: Int): Boolean = ???
 
+    /** Retrieves whether this database supports savepoints. */
     @stub
-    // Retrieves whether this database supports savepoints.
     def supportsSavepoints(): Boolean = ???
 
+    /** Retrieves whether a schema name can be used in a data manipulation statement. */
     @stub
-    // Retrieves whether a schema name can be used in a data manipulation statement.
     def supportsSchemasInDataManipulation(): Boolean = ???
 
+    /** Retrieves whether a schema name can be used in an index definition statement. */
     @stub
-    // Retrieves whether a schema name can be used in an index definition statement.
     def supportsSchemasInIndexDefinitions(): Boolean = ???
 
+    /** Retrieves whether a schema name can be used in a privilege definition statement. */
     @stub
-    // Retrieves whether a schema name can be used in a privilege definition statement.
     def supportsSchemasInPrivilegeDefinitions(): Boolean = ???
 
+    /** Retrieves whether a schema name can be used in a procedure call statement. */
     @stub
-    // Retrieves whether a schema name can be used in a procedure call statement.
     def supportsSchemasInProcedureCalls(): Boolean = ???
 
+    /** Retrieves whether a schema name can be used in a table definition statement. */
     @stub
-    // Retrieves whether a schema name can be used in a table definition statement.
     def supportsSchemasInTableDefinitions(): Boolean = ???
 
+    /** Retrieves whether this database supports SELECT FOR UPDATE
+     *  statements.
+     */
     @stub
-    // Retrieves whether this database supports SELECT FOR UPDATE
-    // statements.
     def supportsSelectForUpdate(): Boolean = ???
 
+    /** Retrieves whether this database supports statement pooling. */
     @stub
-    // Retrieves whether this database supports statement pooling.
     def supportsStatementPooling(): Boolean = ???
 
+    /** Retrieves whether this database supports invoking user-defined or vendor functions
+     *  using the stored procedure escape syntax.
+     */
     @stub
-    // Retrieves whether this database supports invoking user-defined or vendor functions
-    // using the stored procedure escape syntax.
     def supportsStoredFunctionsUsingCallSyntax(): Boolean = ???
 
+    /** Retrieves whether this database supports stored procedure calls
+     *  that use the stored procedure escape syntax.
+     */
     @stub
-    // Retrieves whether this database supports stored procedure calls
-    // that use the stored procedure escape syntax.
     def supportsStoredProcedures(): Boolean = ???
 
+    /** Retrieves whether this database supports subqueries in comparison
+     *  expressions.
+     */
     @stub
-    // Retrieves whether this database supports subqueries in comparison
-    // expressions.
     def supportsSubqueriesInComparisons(): Boolean = ???
 
+    /** Retrieves whether this database supports subqueries in
+     *  EXISTS expressions.
+     */
     @stub
-    // Retrieves whether this database supports subqueries in
-    // EXISTS expressions.
     def supportsSubqueriesInExists(): Boolean = ???
 
+    /** Retrieves whether this database supports subqueries in
+     *  IN expressions.
+     */
     @stub
-    // Retrieves whether this database supports subqueries in
-    // IN expressions.
     def supportsSubqueriesInIns(): Boolean = ???
 
+    /** Retrieves whether this database supports subqueries in quantified
+     *  expressions.
+     */
     @stub
-    // Retrieves whether this database supports subqueries in quantified
-    // expressions.
     def supportsSubqueriesInQuantifieds(): Boolean = ???
 
+    /** Retrieves whether this database supports table correlation names. */
     @stub
-    // Retrieves whether this database supports table correlation names.
     def supportsTableCorrelationNames(): Boolean = ???
 
+    /** Retrieves whether this database supports the given transaction isolation level. */
     @stub
-    // Retrieves whether this database supports the given transaction isolation level.
     def supportsTransactionIsolationLevel(level: Int): Boolean = ???
 
+    /** Retrieves whether this database supports transactions. */
     @stub
-    // Retrieves whether this database supports transactions.
     def supportsTransactions(): Boolean = ???
 
+    /** Retrieves whether this database supports SQL UNION. */
     @stub
-    // Retrieves whether this database supports SQL UNION.
     def supportsUnion(): Boolean = ???
 
+    /** Retrieves whether this database supports SQL UNION ALL. */
     @stub
-    // Retrieves whether this database supports SQL UNION ALL.
     def supportsUnionAll(): Boolean = ???
 
+    /** Retrieves whether or not a visible row update can be detected by
+     *  calling the method ResultSet.rowUpdated.
+     */
     @stub
-    // Retrieves whether or not a visible row update can be detected by
-    // calling the method ResultSet.rowUpdated.
     def updatesAreDetected(type: Int): Boolean = ???
 
+    /** Retrieves whether this database uses a file for each table. */
     @stub
-    // Retrieves whether this database uses a file for each table.
     def usesLocalFilePerTable(): Boolean = ???
 }
 
 object DatabaseMetaData {
+    /** Indicates that NULL values might not be allowed. */
     @stub
-    // Indicates that NULL values might not be allowed.
-    def attributeNoNulls: Short = ???
+    val attributeNoNulls: Short = ???
 
+    /** Indicates that NULL values are definitely allowed. */
     @stub
-    // Indicates that NULL values are definitely allowed.
-    def attributeNullable: Short = ???
+    val attributeNullable: Short = ???
 
+    /** Indicates that whether NULL values are allowed is not
+     *  known.
+     */
     @stub
-    // Indicates that whether NULL values are allowed is not
-    // known.
-    def attributeNullableUnknown: Short = ???
+    val attributeNullableUnknown: Short = ???
 
+    /** Indicates that the best row identifier is NOT a pseudo column. */
     @stub
-    // Indicates that the best row identifier is NOT a pseudo column.
-    def bestRowNotPseudo: Int = ???
+    val bestRowNotPseudo: Int = ???
 
+    /** Indicates that the best row identifier is a pseudo column. */
     @stub
-    // Indicates that the best row identifier is a pseudo column.
-    def bestRowPseudo: Int = ???
+    val bestRowPseudo: Int = ???
 
+    /** Indicates that the scope of the best row identifier is
+     *  the remainder of the current session.
+     */
     @stub
-    // Indicates that the scope of the best row identifier is
-    // the remainder of the current session.
-    def bestRowSession: Int = ???
+    val bestRowSession: Int = ???
 
+    /** Indicates that the scope of the best row identifier is
+     *  very temporary, lasting only while the
+     *  row is being used.
+     */
     @stub
-    // Indicates that the scope of the best row identifier is
-    // very temporary, lasting only while the
-    // row is being used.
-    def bestRowTemporary: Int = ???
+    val bestRowTemporary: Int = ???
 
+    /** Indicates that the scope of the best row identifier is
+     *  the remainder of the current transaction.
+     */
     @stub
-    // Indicates that the scope of the best row identifier is
-    // the remainder of the current transaction.
-    def bestRowTransaction: Int = ???
+    val bestRowTransaction: Int = ???
 
+    /** Indicates that the best row identifier may or may not be a pseudo column. */
     @stub
-    // Indicates that the best row identifier may or may not be a pseudo column.
-    def bestRowUnknown: Int = ???
+    val bestRowUnknown: Int = ???
 
+    /** Indicates that the column might not allow NULL values. */
     @stub
-    // Indicates that the column might not allow NULL values.
-    def columnNoNulls: Int = ???
+    val columnNoNulls: Int = ???
 
+    /** Indicates that the column definitely allows NULL values. */
     @stub
-    // Indicates that the column definitely allows NULL values.
-    def columnNullable: Int = ???
+    val columnNullable: Int = ???
 
+    /** Indicates that the nullability of columns is unknown. */
     @stub
-    // Indicates that the nullability of columns is unknown.
-    def columnNullableUnknown: Int = ???
+    val columnNullableUnknown: Int = ???
 
+    /** Indicates that the parameter or column is an IN parameter. */
     @stub
-    // Indicates that the parameter or column is an IN parameter.
-    def functionColumnIn: Int = ???
+    val functionColumnIn: Int = ???
 
+    /** Indicates that the parameter or column is an INOUT parameter. */
     @stub
-    // Indicates that the parameter or column is an INOUT parameter.
-    def functionColumnInOut: Int = ???
+    val functionColumnInOut: Int = ???
 
+    /** Indicates that the parameter or column is an OUT parameter. */
     @stub
-    // Indicates that the parameter or column is an OUT parameter.
-    def functionColumnOut: Int = ???
+    val functionColumnOut: Int = ???
 
+    /** Indicates that the parameter or column is a column in a result set. */
     @stub
-    // Indicates that the parameter or column is a column in a result set.
-    def functionColumnResult: Int = ???
+    val functionColumnResult: Int = ???
 
+    /** Indicates that type of the parameter or column is unknown. */
     @stub
-    // Indicates that type of the parameter or column is unknown.
-    def functionColumnUnknown: Int = ???
+    val functionColumnUnknown: Int = ???
 
+    /** Indicates that NULL values are not allowed. */
     @stub
-    // Indicates that NULL values are not allowed.
-    def functionNoNulls: Int = ???
+    val functionNoNulls: Int = ???
 
+    /** Indicates that the function  does not return a table. */
     @stub
-    // Indicates that the function  does not return a table.
-    def functionNoTable: Int = ???
+    val functionNoTable: Int = ???
 
+    /** Indicates that NULL values are allowed. */
     @stub
-    // Indicates that NULL values are allowed.
-    def functionNullable: Int = ???
+    val functionNullable: Int = ???
 
+    /** Indicates that whether NULL values are allowed
+     *  is unknown.
+     */
     @stub
-    // Indicates that whether NULL values are allowed
-    // is unknown.
-    def functionNullableUnknown: Int = ???
+    val functionNullableUnknown: Int = ???
 
+    /** Indicates that it is not known whether the function returns
+     *  a result or a table.
+     */
     @stub
-    // Indicates that it is not known whether the function returns
-    // a result or a table.
-    def functionResultUnknown: Int = ???
+    val functionResultUnknown: Int = ???
 
+    /** Indicates that the parameter or column is a return value. */
     @stub
-    // Indicates that the parameter or column is a return value.
-    def functionReturn: Int = ???
+    val functionReturn: Int = ???
 
+    /** Indicates that the function  returns a table. */
     @stub
-    // Indicates that the function  returns a table.
-    def functionReturnsTable: Int = ???
+    val functionReturnsTable: Int = ???
 
+    /** For the column UPDATE_RULE,
+     *  indicates that
+     *  when the primary key is updated, the foreign key (imported key)
+     *  is changed to agree with it.
+     */
     @stub
-    // For the column UPDATE_RULE,
-    // indicates that
-    // when the primary key is updated, the foreign key (imported key)
-    // is changed to agree with it.
-    def importedKeyCascade: Int = ???
+    val importedKeyCascade: Int = ???
 
+    /** Indicates deferrability. */
     @stub
-    // Indicates deferrability.
-    def importedKeyInitiallyDeferred: Int = ???
+    val importedKeyInitiallyDeferred: Int = ???
 
+    /** Indicates deferrability. */
     @stub
-    // Indicates deferrability.
-    def importedKeyInitiallyImmediate: Int = ???
+    val importedKeyInitiallyImmediate: Int = ???
 
+    /** For the columns UPDATE_RULE
+     *  and DELETE_RULE, indicates that
+     *  if the primary key has been imported, it cannot be updated or deleted.
+     */
     @stub
-    // For the columns UPDATE_RULE
-    // and DELETE_RULE, indicates that
-    // if the primary key has been imported, it cannot be updated or deleted.
-    def importedKeyNoAction: Int = ???
+    val importedKeyNoAction: Int = ???
 
+    /** Indicates deferrability. */
     @stub
-    // Indicates deferrability.
-    def importedKeyNotDeferrable: Int = ???
+    val importedKeyNotDeferrable: Int = ???
 
+    /** For the column UPDATE_RULE, indicates that
+     *  a primary key may not be updated if it has been imported by
+     *  another table as a foreign key.
+     */
     @stub
-    // For the column UPDATE_RULE, indicates that
-    // a primary key may not be updated if it has been imported by
-    // another table as a foreign key.
-    def importedKeyRestrict: Int = ???
+    val importedKeyRestrict: Int = ???
 
+    /** For the columns UPDATE_RULE
+     *  and DELETE_RULE, indicates that
+     *  if the primary key is updated or deleted, the foreign key (imported key)
+     *  is set to the default value.
+     */
     @stub
-    // For the columns UPDATE_RULE
-    // and DELETE_RULE, indicates that
-    // if the primary key is updated or deleted, the foreign key (imported key)
-    // is set to the default value.
-    def importedKeySetDefault: Int = ???
+    val importedKeySetDefault: Int = ???
 
+    /** For the columns UPDATE_RULE
+     *  and DELETE_RULE, indicates that
+     *  when the primary key is updated or deleted, the foreign key (imported key)
+     *  is changed to NULL.
+     */
     @stub
-    // For the columns UPDATE_RULE
-    // and DELETE_RULE, indicates that
-    // when the primary key is updated or deleted, the foreign key (imported key)
-    // is changed to NULL.
-    def importedKeySetNull: Int = ???
+    val importedKeySetNull: Int = ???
 
+    /** Indicates that the column stores IN parameters. */
     @stub
-    // Indicates that the column stores IN parameters.
-    def procedureColumnIn: Int = ???
+    val procedureColumnIn: Int = ???
 
+    /** Indicates that the column stores INOUT parameters. */
     @stub
-    // Indicates that the column stores INOUT parameters.
-    def procedureColumnInOut: Int = ???
+    val procedureColumnInOut: Int = ???
 
+    /** Indicates that the column stores OUT parameters. */
     @stub
-    // Indicates that the column stores OUT parameters.
-    def procedureColumnOut: Int = ???
+    val procedureColumnOut: Int = ???
 
+    /** Indicates that the column stores results. */
     @stub
-    // Indicates that the column stores results.
-    def procedureColumnResult: Int = ???
+    val procedureColumnResult: Int = ???
 
+    /** Indicates that the column stores return values. */
     @stub
-    // Indicates that the column stores return values.
-    def procedureColumnReturn: Int = ???
+    val procedureColumnReturn: Int = ???
 
+    /** Indicates that type of the column is unknown. */
     @stub
-    // Indicates that type of the column is unknown.
-    def procedureColumnUnknown: Int = ???
+    val procedureColumnUnknown: Int = ???
 
+    /** Indicates that NULL values are not allowed. */
     @stub
-    // Indicates that NULL values are not allowed.
-    def procedureNoNulls: Int = ???
+    val procedureNoNulls: Int = ???
 
+    /** Indicates that the procedure does not return a result. */
     @stub
-    // Indicates that the procedure does not return a result.
-    def procedureNoResult: Int = ???
+    val procedureNoResult: Int = ???
 
+    /** Indicates that NULL values are allowed. */
     @stub
-    // Indicates that NULL values are allowed.
-    def procedureNullable: Int = ???
+    val procedureNullable: Int = ???
 
+    /** Indicates that whether NULL values are allowed
+     *  is unknown.
+     */
     @stub
-    // Indicates that whether NULL values are allowed
-    // is unknown.
-    def procedureNullableUnknown: Int = ???
+    val procedureNullableUnknown: Int = ???
 
+    /** Indicates that it is not known whether the procedure returns
+     *  a result.
+     */
     @stub
-    // Indicates that it is not known whether the procedure returns
-    // a result.
-    def procedureResultUnknown: Int = ???
+    val procedureResultUnknown: Int = ???
 
+    /** Indicates that the procedure returns a result. */
     @stub
-    // Indicates that the procedure returns a result.
-    def procedureReturnsResult: Int = ???
+    val procedureReturnsResult: Int = ???
 
+    /** A possible return value for the method
+     *  DatabaseMetaData.getSQLStateType which is used to indicate
+     *  whether the value returned by the method
+     *  SQLException.getSQLState is an SQLSTATE value.
+     */
     @stub
-    // A possible return value for the method
-    // DatabaseMetaData.getSQLStateType which is used to indicate
-    // whether the value returned by the method
-    // SQLException.getSQLState is an SQLSTATE value.
-    def sqlStateSQL: Int = ???
+    val sqlStateSQL: Int = ???
 
+    /** A possible return value for the method
+     *  DatabaseMetaData.getSQLStateType which is used to indicate
+     *  whether the value returned by the method
+     *  SQLException.getSQLState is an SQL99 SQLSTATE value.
+     */
     @stub
-    // A possible return value for the method
-    // DatabaseMetaData.getSQLStateType which is used to indicate
-    // whether the value returned by the method
-    // SQLException.getSQLState is an SQL99 SQLSTATE value.
-    def sqlStateSQL99: Int = ???
+    val sqlStateSQL99: Int = ???
 
+    /** A possible return value for the method
+     *  DatabaseMetaData.getSQLStateType which is used to indicate
+     *  whether the value returned by the method
+     *  SQLException.getSQLState is an
+     *  X/Open (now know as Open Group) SQL CLI SQLSTATE value.
+     */
     @stub
-    // A possible return value for the method
-    // DatabaseMetaData.getSQLStateType which is used to indicate
-    // whether the value returned by the method
-    // SQLException.getSQLState is an
-    // X/Open (now know as Open Group) SQL CLI SQLSTATE value.
-    def sqlStateXOpen: Int = ???
+    val sqlStateXOpen: Int = ???
 
+    /** Indicates that this table index is a clustered index. */
     @stub
-    // Indicates that this table index is a clustered index.
-    def tableIndexClustered: Short = ???
+    val tableIndexClustered: Short = ???
 
+    /** Indicates that this table index is a hashed index. */
     @stub
-    // Indicates that this table index is a hashed index.
-    def tableIndexHashed: Short = ???
+    val tableIndexHashed: Short = ???
 
+    /** Indicates that this table index is not a clustered
+     *  index, a hashed index, or table statistics;
+     *  it is something other than these.
+     */
     @stub
-    // Indicates that this table index is not a clustered
-    // index, a hashed index, or table statistics;
-    // it is something other than these.
-    def tableIndexOther: Short = ???
+    val tableIndexOther: Short = ???
 
+    /** Indicates that this column contains table statistics that
+     *  are returned in conjunction with a table's index descriptions.
+     */
     @stub
-    // Indicates that this column contains table statistics that
-    // are returned in conjunction with a table's index descriptions.
-    def tableIndexStatistic: Short = ???
+    val tableIndexStatistic: Short = ???
 
+    /** Indicates that a NULL value is NOT allowed for this
+     *  data type.
+     */
     @stub
-    // Indicates that a NULL value is NOT allowed for this
-    // data type.
-    def typeNoNulls: Int = ???
+    val typeNoNulls: Int = ???
 
+    /** Indicates that a NULL value is allowed for this
+     *  data type.
+     */
     @stub
-    // Indicates that a NULL value is allowed for this
-    // data type.
-    def typeNullable: Int = ???
+    val typeNullable: Int = ???
 
+    /** Indicates that it is not known whether a NULL value
+     *  is allowed for this data type.
+     */
     @stub
-    // Indicates that it is not known whether a NULL value
-    // is allowed for this data type.
-    def typeNullableUnknown: Int = ???
+    val typeNullableUnknown: Int = ???
 
+    /** Indicates that the data type can be only be used in WHERE
+     *  search clauses
+     *  that do not use LIKE predicates.
+     */
     @stub
-    // Indicates that the data type can be only be used in WHERE
-    // search clauses
-    // that do not use LIKE predicates.
-    def typePredBasic: Int = ???
+    val typePredBasic: Int = ???
 
+    /** Indicates that the data type
+     *  can be only be used in WHERE search clauses
+     *  that  use LIKE predicates.
+     */
     @stub
-    // Indicates that the data type
-    // can be only be used in WHERE search clauses
-    // that  use LIKE predicates.
-    def typePredChar: Int = ???
+    val typePredChar: Int = ???
 
+    /** Indicates that WHERE search clauses are not supported
+     *  for this type.
+     */
     @stub
-    // Indicates that WHERE search clauses are not supported
-    // for this type.
-    def typePredNone: Int = ???
+    val typePredNone: Int = ???
 
+    /** Indicates that all WHERE search clauses can be
+     *  based on this type.
+     */
     @stub
-    // Indicates that all WHERE search clauses can be
-    // based on this type.
-    def typeSearchable: Int = ???
+    val typeSearchable: Int = ???
 
+    /** Indicates that this version column is NOT a pseudo column. */
     @stub
-    // Indicates that this version column is NOT a pseudo column.
-    def versionColumnNotPseudo: Int = ???
+    val versionColumnNotPseudo: Int = ???
 
+    /** Indicates that this version column is a pseudo column. */
     @stub
-    // Indicates that this version column is a pseudo column.
-    def versionColumnPseudo: Int = ???
+    val versionColumnPseudo: Int = ???
 }

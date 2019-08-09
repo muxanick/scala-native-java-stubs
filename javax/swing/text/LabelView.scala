@@ -4,73 +4,80 @@ import java.awt.{Color, Font, FontMetrics, Shape}
 import java.lang.Object
 import javax.swing.event.DocumentEvent
 
-// A LabelView is a styled chunk of text
-// that represents a view mapped over an element in the
-// text model.  It caches the character level attributes
-// used for rendering.
+/** A LabelView is a styled chunk of text
+ *  that represents a view mapped over an element in the
+ *  text model.  It caches the character level attributes
+ *  used for rendering.
+ */
 class LabelView extends GlyphView with TabableView {
 
+    /** Gives notification from the document that attributes were changed
+     *  in a location that this view is responsible for.
+     */
     @stub
-    // Gives notification from the document that attributes were changed
-    // in a location that this view is responsible for.
     def changedUpdate(e: DocumentEvent, a: Shape, f: ViewFactory): Unit = ???
 
+    /** Fetches the background color to use to render the glyphs. */
     @stub
-    // Fetches the background color to use to render the glyphs.
     def getBackground(): Color = ???
 
+    /** Fetches the font that the glyphs should be based upon. */
     @stub
-    // Fetches the font that the glyphs should be based upon.
     def getFont(): Font = ???
 
+    /** Deprecated. 
+     * FontMetrics are not used for glyph rendering
+     *   when running in the JDK.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //FontMetrics are not used for glyph rendering
-    //  when running in the JDK.
-    //
     protected def getFontMetrics(): FontMetrics = ???
 
+    /** Fetches the foreground color to use to render the glyphs. */
     @stub
-    // Fetches the foreground color to use to render the glyphs.
     def getForeground(): Color = ???
 
+    /** Determines if the glyphs should have a strikethrough
+     *  line.
+     */
     @stub
-    // Determines if the glyphs should have a strikethrough
-    // line.
     def isStrikeThrough(): Boolean = ???
 
+    /** Determines if the glyphs should be rendered as superscript. */
     @stub
-    // Determines if the glyphs should be rendered as superscript.
     def isSubscript(): Boolean = ???
 
+    /** Determines if the glyphs should be rendered as subscript. */
     @stub
-    // Determines if the glyphs should be rendered as subscript.
     def isSuperscript(): Boolean = ???
 
+    /** Determines if the glyphs should be underlined. */
     @stub
-    // Determines if the glyphs should be underlined.
     def isUnderline(): Boolean = ???
 
+    /** Sets the background color for the view. */
     @stub
-    // Sets the background color for the view.
     protected def setBackground(bg: Color): Unit = ???
 
+    /** Sets the cached properties from the attributes. */
     @stub
-    // Sets the cached properties from the attributes.
     protected def setPropertiesFromAttributes(): Unit = ???
 
+    /** Sets whether or not the view has a strike/line
+     *  through it.
+     */
     @stub
-    // Sets whether or not the view has a strike/line
-    // through it.
     protected def setStrikeThrough(s: Boolean): Unit = ???
 
+    /** Sets whether or not the view represents a
+     *  subscript.
+     */
     @stub
-    // Sets whether or not the view represents a
-    // subscript.
     protected def setSubscript(s: Boolean): Unit = ???
 
+    /** Sets whether or not the view represents a
+     *  superscript.
+     */
     @stub
-    // Sets whether or not the view represents a
-    // superscript.
     protected def setSuperscript(s: Boolean): Unit = ???
 }

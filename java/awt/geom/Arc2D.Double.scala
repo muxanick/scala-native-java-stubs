@@ -3,93 +3,106 @@ package java.awt.geom
 import java.io.Serializable
 import java.lang.Object
 
-// This class defines an arc specified in double precision.
+/** This class defines an arc specified in double precision. */
 object Arc2D.Double extends Arc2D with Serializable {
 
+    /** Constructs a new OPEN arc, initialized to location (0, 0),
+     *  size (0, 0), angular extents (start = 0, extent = 0).
+     */
     @stub
-    // Constructs a new OPEN arc, initialized to location (0, 0),
-    // size (0, 0), angular extents (start = 0, extent = 0).
     def Double() = ???
 
+    /** Constructs a new arc, initialized to the specified location,
+     *  size, angular extents, and closure type.
+     */
     @stub
-    // Constructs a new arc, initialized to the specified location,
-    // size, angular extents, and closure type.
-    def Double(x: double, y: double, w: double, h: double, start: double, extent: double, type: Int) = ???
+    def Double(x: Double, y: Double, w: Double, h: Double, start: Double, extent: Double, type: Int) = ???
 
+    /** Constructs a new arc, initialized to location (0, 0),
+     *  size (0, 0), angular extents (start = 0, extent = 0), and
+     *  the specified closure type.
+     */
     @stub
-    // Constructs a new arc, initialized to location (0, 0),
-    // size (0, 0), angular extents (start = 0, extent = 0), and
-    // the specified closure type.
     def Double(type: Int) = ???
 
+    /** The angular extent of the arc in degrees. */
     @stub
-    // The angular extent of the arc in degrees.
-    def extent: double = ???
+    val extent: Double = ???
 
+    /** The overall height of the full ellipse of which this arc is
+     *  a partial section (not considering the angular extents).
+     */
     @stub
-    // The overall height of the full ellipse of which this arc is
-    // a partial section (not considering the angular extents).
-    def height: double = ???
+    val height: Double = ???
 
+    /** The starting angle of the arc in degrees. */
     @stub
-    // The starting angle of the arc in degrees.
-    def start: double = ???
+    val start: Double = ???
 
+    /** The overall width of the full ellipse of which this arc is
+     *  a partial section (not considering the angular extents).
+     */
     @stub
-    // The overall width of the full ellipse of which this arc is
-    // a partial section (not considering the angular extents).
-    def width: double = ???
+    val width: Double = ???
 
+    /** The X coordinate of the upper-left corner of the framing
+     *  rectangle of the arc.
+     */
     @stub
-    // The X coordinate of the upper-left corner of the framing
-    // rectangle of the arc.
-    def x: double = ???
+    val x: Double = ???
 
+    /** Returns the angular extent of the arc. */
     @stub
-    // Returns the angular extent of the arc.
-    def getAngleExtent(): double = ???
+    def getAngleExtent(): Double = ???
 
+    /** Returns the starting angle of the arc. */
     @stub
-    // Returns the starting angle of the arc.
-    def getAngleStart(): double = ???
+    def getAngleStart(): Double = ???
 
+    /** Returns the height of the framing rectangle
+     *  in double precision.
+     */
     @stub
-    // Returns the height of the framing rectangle
-    // in double precision.
-    def getHeight(): double = ???
+    def getHeight(): Double = ???
 
+    /** Returns the width of the framing rectangle in
+     *  double precision.
+     */
     @stub
-    // Returns the width of the framing rectangle in
-    // double precision.
-    def getWidth(): double = ???
+    def getWidth(): Double = ???
 
+    /** Returns the X coordinate of the upper-left corner of
+     *  the framing rectangle in double precision.
+     */
     @stub
-    // Returns the X coordinate of the upper-left corner of
-    // the framing rectangle in double precision.
-    def getX(): double = ???
+    def getX(): Double = ???
 
+    /** Returns the Y coordinate of the upper-left corner of
+     *  the framing rectangle in double precision.
+     */
     @stub
-    // Returns the Y coordinate of the upper-left corner of
-    // the framing rectangle in double precision.
-    def getY(): double = ???
+    def getY(): Double = ???
 
+    /** Determines whether the RectangularShape is empty. */
     @stub
-    // Determines whether the RectangularShape is empty.
     def isEmpty(): Boolean = ???
 
+    /** Constructs a Rectangle2D of the appropriate precision
+     *  to hold the parameters calculated to be the framing rectangle
+     *  of this arc.
+     */
     @stub
-    // Constructs a Rectangle2D of the appropriate precision
-    // to hold the parameters calculated to be the framing rectangle
-    // of this arc.
-    protected def makeBounds(x: double, y: double, w: double, h: double): Rectangle2D = ???
+    protected def makeBounds(x: Double, y: Double, w: Double, h: Double): Rectangle2D = ???
 
+    /** Sets the angular extent of this arc to the specified double
+     *  value.
+     */
     @stub
-    // Sets the angular extent of this arc to the specified double
-    // value.
-    def setAngleExtent(angExt: double): Unit = ???
+    def setAngleExtent(angExt: Double): Unit = ???
 
+    /** Sets the starting angle of this arc to the specified double
+     *  value.
+     */
     @stub
-    // Sets the starting angle of this arc to the specified double
-    // value.
-    def setAngleStart(angSt: double): Unit = ???
+    def setAngleStart(angSt: Double): Unit = ???
 }

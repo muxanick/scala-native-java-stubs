@@ -2,76 +2,89 @@ package javax.swing.undo
 
 import java.lang.{Object, String}
 
-// A concrete subclass of AbstractUndoableEdit, used to assemble little
-// UndoableEdits into great big ones.
+/** A concrete subclass of AbstractUndoableEdit, used to assemble little
+ *  UndoableEdits into great big ones.
+ */
 class CompoundEdit extends AbstractUndoableEdit {
 
+    /** If this edit is inProgress,
+     *  accepts anEdit and returns true.
+     */
     @stub
-    // If this edit is inProgress,
-    // accepts anEdit and returns true.
     def addEdit(anEdit: UndoableEdit): Boolean = ???
 
+    /** Returns false if isInProgress or if super
+     *  returns false.
+     */
     @stub
-    // Returns false if isInProgress or if super
-    // returns false.
     def canRedo(): Boolean = ???
 
+    /** Returns false if isInProgress or if super
+     *  returns false.
+     */
     @stub
-    // Returns false if isInProgress or if super
-    // returns false.
     def canUndo(): Boolean = ???
 
+    /** Sends die to each subedit,
+     *  in the reverse of the order that they were added.
+     */
     @stub
-    // Sends die to each subedit,
-    // in the reverse of the order that they were added.
     def die(): Unit = ???
 
+    /** Sets inProgress to false. */
     @stub
-    // Sets inProgress to false.
     def end(): Unit = ???
 
+    /** Returns getPresentationName from the
+     *  last UndoableEdit added to
+     *  edits.
+     */
     @stub
-    // Returns getPresentationName from the
-    // last UndoableEdit added to
-    // edits.
     def getPresentationName(): String = ???
 
+    /** Returns getRedoPresentationName
+     *  from the last UndoableEdit
+     *  added to edits.
+     */
     @stub
-    // Returns getRedoPresentationName
-    // from the last UndoableEdit
-    // added to edits.
     def getRedoPresentationName(): String = ???
 
+    /** Returns getUndoPresentationName
+     *  from the last UndoableEdit
+     *  added to edits.
+     */
     @stub
-    // Returns getUndoPresentationName
-    // from the last UndoableEdit
-    // added to edits.
     def getUndoPresentationName(): String = ???
 
+    /** Returns true if this edit is in progress--that is, it has not
+     *  received end.
+     */
     @stub
-    // Returns true if this edit is in progress--that is, it has not
-    // received end.
     def isInProgress(): Boolean = ???
 
+    /** Returns true if any of the UndoableEdits
+     *  in edits do.
+     */
     @stub
-    // Returns true if any of the UndoableEdits
-    // in edits do.
     def isSignificant(): Boolean = ???
 
+    /** Returns the last UndoableEdit in
+     *  edits, or null
+     *  if edits is empty.
+     */
     @stub
-    // Returns the last UndoableEdit in
-    // edits, or null
-    // if edits is empty.
     protected def lastEdit(): UndoableEdit = ???
 
+    /** Sends redo to all contained
+     *  UndoableEdits in the order in
+     *  which they were added.
+     */
     @stub
-    // Sends redo to all contained
-    // UndoableEdits in the order in
-    // which they were added.
     def redo(): Unit = ???
 
+    /** Returns a string that displays and identifies this
+     *  object's properties.
+     */
     @stub
-    // Returns a string that displays and identifies this
-    // object's properties.
     def toString(): String = ???
 }

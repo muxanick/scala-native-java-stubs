@@ -5,39 +5,40 @@ import java.awt.event.{ActionListener, FocusEvent, FocusListener}
 import java.lang.Object
 import javax.swing.{ComboBoxEditor, JTextField}
 
-// The default editor for editable combo boxes. The editor is implemented as a JTextField.
-class BasicComboBoxEditor extends Object with ComboBoxEditor, with FocusListener {
+/** The default editor for editable combo boxes. The editor is implemented as a JTextField. */
+class BasicComboBoxEditor extends Object with ComboBoxEditor with FocusListener {
 
+    /** Add an ActionListener. */
     @stub
-    // Add an ActionListener.
     def addActionListener(l: ActionListener): Unit = ???
 
+    /** Creates the internal editor component. */
     @stub
-    // Creates the internal editor component.
     protected def createEditorComponent(): JTextField = ???
 
+    /** Invoked when a component gains the keyboard focus. */
     @stub
-    // Invoked when a component gains the keyboard focus.
     def focusGained(e: FocusEvent): Unit = ???
 
+    /** Invoked when a component loses the keyboard focus. */
     @stub
-    // Invoked when a component loses the keyboard focus.
     def focusLost(e: FocusEvent): Unit = ???
 
+    /** Return the component that should be added to the tree hierarchy for
+     *  this editor
+     */
     @stub
-    // Return the component that should be added to the tree hierarchy for
-    // this editor
     def getEditorComponent(): Component = ???
 
+    /** Return the edited item */
     @stub
-    // Return the edited item
     def getItem(): Object = ???
 
+    /** Remove an ActionListener */
     @stub
-    // Remove an ActionListener
     def removeActionListener(l: ActionListener): Unit = ???
 
+    /** Ask the editor to start editing and to select everything */
     @stub
-    // Ask the editor to start editing and to select everything
     def selectAll(): Unit = ???
 }

@@ -4,136 +4,154 @@ import java.lang.String
 import java.util.{Iterator, Locale}
 import javax.xml.namespace.QName
 
-// An element in the SOAPBody object that contains
-// error and/or status information. This information may relate to
-// errors in the SOAPMessage object or to problems
-// that are not related to the content in the message itself. Problems
-// not related to the message itself are generally errors in
-// processing, such as the inability to communicate with an upstream
-// server.
-// 
-// Depending on the protocol specified while creating the
-// MessageFactory instance,  a SOAPFault has
-// sub-elements as defined in the SOAP 1.1/SOAP 1.2 specification.
+/** An element in the SOAPBody object that contains
+ *  error and/or status information. This information may relate to
+ *  errors in the SOAPMessage object or to problems
+ *  that are not related to the content in the message itself. Problems
+ *  not related to the message itself are generally errors in
+ *  processing, such as the inability to communicate with an upstream
+ *  server.
+ *  
+ *  Depending on the protocol specified while creating the
+ *  MessageFactory instance,  a SOAPFault has
+ *  sub-elements as defined in the SOAP 1.1/SOAP 1.2 specification.
+ */
 trait SOAPFault extends SOAPBodyElement {
 
+    /** Creates an optional Detail object and sets it as the
+     *  Detail object for this SOAPFault
+     *  object.
+     */
     @stub
-    // Creates an optional Detail object and sets it as the
-    // Detail object for this SOAPFault
-    // object.
     def addDetail(): Detail = ???
 
+    /** Appends or replaces a Reason Text item containing the specified
+     *  text message and an xml:lang derived from
+     *  locale.
+     */
     @stub
-    // Appends or replaces a Reason Text item containing the specified
-    // text message and an xml:lang derived from
-    // locale.
     def addFaultReasonText(text: String, locale: Locale): Unit = ???
 
+    /** Adds a Subcode to the end of the sequence of Subcodes contained by this
+     *  SOAPFault.
+     */
     @stub
-    // Adds a Subcode to the end of the sequence of Subcodes contained by this
-    // SOAPFault.
     def appendFaultSubcode(subcode: QName): Unit = ???
 
+    /** Returns the optional detail element for this SOAPFault
+     *  object.
+     */
     @stub
-    // Returns the optional detail element for this SOAPFault
-    // object.
     def getDetail(): Detail = ???
 
+    /** Gets the fault actor for this SOAPFault object. */
     @stub
-    // Gets the fault actor for this SOAPFault object.
     def getFaultActor(): String = ???
 
+    /** Gets the fault code for this SOAPFault object. */
     @stub
-    // Gets the fault code for this SOAPFault object.
     def getFaultCode(): String = ???
 
+    /** Gets the mandatory SOAP 1.1 fault code for this
+     *  SOAPFault object as a SAAJ Name object.
+     */
     @stub
-    // Gets the mandatory SOAP 1.1 fault code for this
-    // SOAPFault object as a SAAJ Name object.
     def getFaultCodeAsName(): Name = ???
 
+    /** Gets the fault code for this
+     *  SOAPFault object as a QName object.
+     */
     @stub
-    // Gets the fault code for this
-    // SOAPFault object as a QName object.
     def getFaultCodeAsQName(): QName = ???
 
+    /** Returns the optional Node element value for this
+     *  SOAPFault object.
+     */
     @stub
-    // Returns the optional Node element value for this
-    // SOAPFault object.
     def getFaultNode(): String = ???
 
+    /** Returns an Iterator over a distinct sequence of
+     *  Locales for which there are associated Reason Text items.
+     */
     @stub
-    // Returns an Iterator over a distinct sequence of
-    // Locales for which there are associated Reason Text items.
     def getFaultReasonLocales(): Iterator = ???
 
+    /** Returns the Reason Text associated with the given Locale. */
     @stub
-    // Returns the Reason Text associated with the given Locale.
     def getFaultReasonText(locale: Locale): String = ???
 
+    /** Returns an Iterator over a sequence of
+     *  String objects containing all of the Reason Text items for
+     *  this SOAPFault.
+     */
     @stub
-    // Returns an Iterator over a sequence of
-    // String objects containing all of the Reason Text items for
-    // this SOAPFault.
     def getFaultReasonTexts(): Iterator = ???
 
+    /** Returns the optional Role element value for this
+     *  SOAPFault object.
+     */
     @stub
-    // Returns the optional Role element value for this
-    // SOAPFault object.
     def getFaultRole(): String = ???
 
+    /** Gets the fault string for this SOAPFault object. */
     @stub
-    // Gets the fault string for this SOAPFault object.
     def getFaultString(): String = ???
 
+    /** Gets the locale of the fault string for this SOAPFault
+     *  object.
+     */
     @stub
-    // Gets the locale of the fault string for this SOAPFault
-    // object.
     def getFaultStringLocale(): Locale = ???
 
+    /** Gets the Subcodes for this SOAPFault as an iterator over
+     *  QNames.
+     */
     @stub
-    // Gets the Subcodes for this SOAPFault as an iterator over
-    // QNames.
     def getFaultSubcodes(): Iterator = ???
 
+    /** Returns true if this SOAPFault has a Detail
+     *  subelement and false otherwise.
+     */
     @stub
-    // Returns true if this SOAPFault has a Detail
-    // subelement and false otherwise.
     def hasDetail(): Boolean = ???
 
+    /** Removes any Subcodes that may be contained by this
+     *  SOAPFault.
+     */
     @stub
-    // Removes any Subcodes that may be contained by this
-    // SOAPFault.
     def removeAllFaultSubcodes(): Unit = ???
 
+    /** Sets this SOAPFault object with the given fault actor. */
     @stub
-    // Sets this SOAPFault object with the given fault actor.
     def setFaultActor(faultActor: String): Unit = ???
 
+    /** Sets this SOAPFault object with the given fault code. */
     @stub
-    // Sets this SOAPFault object with the given fault code.
     def setFaultCode(faultCodeQName: Name): Unit = ???
 
+    /** Sets this SOAPFault object with the given fault code. */
     @stub
-    // Sets this SOAPFault object with the given fault code.
     def setFaultCode(faultCodeQName: QName): Unit = ???
 
+    /** Sets this SOAPFault object with the give fault code. */
     @stub
-    // Sets this SOAPFault object with the give fault code.
     def setFaultCode(faultCode: String): Unit = ???
 
+    /** Creates or replaces any existing Node element value for
+     *  this SOAPFault object.
+     */
     @stub
-    // Creates or replaces any existing Node element value for
-    // this SOAPFault object.
     def setFaultNode(uri: String): Unit = ???
 
+    /** Creates or replaces any existing Role element value for
+     *  this SOAPFault object.
+     */
     @stub
-    // Creates or replaces any existing Role element value for
-    // this SOAPFault object.
     def setFaultRole(uri: String): Unit = ???
 
+    /** Sets the fault string for this SOAPFault object
+     *  to the given string.
+     */
     @stub
-    // Sets the fault string for this SOAPFault object
-    // to the given string.
     def setFaultString(faultString: String): Unit = ???
 }

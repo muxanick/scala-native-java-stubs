@@ -1,20 +1,23 @@
 package java.lang
 
-// Common superclass of exceptions thrown by reflective operations in
-// core reflection.
+/** Common superclass of exceptions thrown by reflective operations in
+ *  core reflection.
+ */
 class ReflectiveOperationException extends Exception {
 
+    /** Constructs a new exception with null as its detail
+     *  message.
+     */
     @stub
-    // Constructs a new exception with null as its detail
-    // message.
     def this() = ???
 
+    /** Constructs a new exception with the specified detail message. */
     @stub
-    // Constructs a new exception with the specified detail message.
     def this(message: String) = ???
 
+    /** Constructs a new exception with the specified detail message
+     *  and cause.
+     */
     @stub
-    // Constructs a new exception with the specified detail message
-    // and cause.
     def this(message: String, cause: Throwable) = ???
 }

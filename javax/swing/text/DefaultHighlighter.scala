@@ -3,50 +3,54 @@ package javax.swing.text
 import java.awt.{Graphics, Shape}
 import java.lang.Object
 
-// Implements the Highlighter interfaces.  Implements a simple highlight
-// painter that renders in a solid color.
+/** Implements the Highlighter interfaces.  Implements a simple highlight
+ *  painter that renders in a solid color.
+ */
 class DefaultHighlighter extends LayeredHighlighter {
 
+    /** Adds a highlight to the view. */
     @stub
-    // Adds a highlight to the view.
     def addHighlight(p0: Int, p1: Int, p: Highlighter.HighlightPainter): Object = ???
 
+    /** Changes a highlight. */
     @stub
-    // Changes a highlight.
     def changeHighlight(tag: Object, p0: Int, p1: Int): Unit = ???
 
+    /** Called when the UI is being removed from the interface of
+     *  a JTextComponent.
+     */
     @stub
-    // Called when the UI is being removed from the interface of
-    // a JTextComponent.
     def deinstall(c: JTextComponent): Unit = ???
 
+    /**  */
     @stub
-    // 
     def getDrawsLayeredHighlights(): Boolean = ???
 
+    /** Makes a copy of the highlights. */
     @stub
-    // Makes a copy of the highlights.
     def getHighlights(): Array[Highlighter.Highlight] = ???
 
+    /** Called when the UI is being installed into the
+     *  interface of a JTextComponent.
+     */
     @stub
-    // Called when the UI is being installed into the
-    // interface of a JTextComponent.
     def install(c: JTextComponent): Unit = ???
 
+    /** Renders the highlights. */
     @stub
-    // Renders the highlights.
     def paint(g: Graphics): Unit = ???
 
+    /** When leaf Views (such as LabelView) are rendering they should
+     *  call into this method.
+     */
     @stub
-    // When leaf Views (such as LabelView) are rendering they should
-    // call into this method.
     def paintLayeredHighlights(g: Graphics, p0: Int, p1: Int, viewBounds: Shape, editor: JTextComponent, view: View): Unit = ???
 
+    /** Removes all highlights. */
     @stub
-    // Removes all highlights.
     def removeAllHighlights(): Unit = ???
 
+    /** Removes a highlight from the view. */
     @stub
-    // Removes a highlight from the view.
     def removeHighlight(tag: Object): Unit = ???
 }

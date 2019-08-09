@@ -3,573 +3,580 @@ package java.awt.color
 import java.io.{InputStream, OutputStream, Serializable}
 import java.lang.{Object, String}
 
-// A representation of color profile data for device independent and
-// device dependent color spaces based on the International Color
-// Consortium Specification ICC.1:2001-12, File Format for Color Profiles,
-// (see  http://www.color.org).
-// 
-// An ICC_ColorSpace object can be constructed from an appropriate
-// ICC_Profile.
-// Typically, an ICC_ColorSpace would be associated with an ICC
-// Profile which is either an input, display, or output profile (see
-// the ICC specification).  There are also device link, abstract,
-// color space conversion, and named color profiles.  These are less
-// useful for tagging a color or image, but are useful for other
-// purposes (in particular device link profiles can provide improved
-// performance for converting from one device's color space to
-// another's).
-// 
-// ICC Profiles represent transformations from the color space of
-// the profile (e.g. a monitor) to a Profile Connection Space (PCS).
-// Profiles of interest for tagging images or colors have a PCS
-// which is one of the two specific device independent
-// spaces (one CIEXYZ space and one CIELab space) defined in the
-// ICC Profile Format Specification.  Most profiles of interest
-// either have invertible transformations or explicitly specify
-// transformations going both directions.
+/** A representation of color profile data for device independent and
+ *  device dependent color spaces based on the International Color
+ *  Consortium Specification ICC.1:2001-12, File Format for Color Profiles,
+ *  (see  http://www.color.org).
+ *  
+ *  An ICC_ColorSpace object can be constructed from an appropriate
+ *  ICC_Profile.
+ *  Typically, an ICC_ColorSpace would be associated with an ICC
+ *  Profile which is either an input, display, or output profile (see
+ *  the ICC specification).  There are also device link, abstract,
+ *  color space conversion, and named color profiles.  These are less
+ *  useful for tagging a color or image, but are useful for other
+ *  purposes (in particular device link profiles can provide improved
+ *  performance for converting from one device's color space to
+ *  another's).
+ *  
+ *  ICC Profiles represent transformations from the color space of
+ *  the profile (e.g. a monitor) to a Profile Connection Space (PCS).
+ *  Profiles of interest for tagging images or colors have a PCS
+ *  which is one of the two specific device independent
+ *  spaces (one CIEXYZ space and one CIELab space) defined in the
+ *  ICC Profile Format Specification.  Most profiles of interest
+ *  either have invertible transformations or explicitly specify
+ *  transformations going both directions.
+ */
 class ICC_Profile extends Object with Serializable {
 
+    /** Frees the resources associated with an ICC_Profile object. */
     @stub
-    // Frees the resources associated with an ICC_Profile object.
     protected def finalize(): Unit = ???
 
+    /** Returns the color space type. */
     @stub
-    // Returns the color space type.
     def getColorSpaceType(): Int = ???
 
+    /** Returns a byte array corresponding to the data of this ICC_Profile. */
     @stub
-    // Returns a byte array corresponding to the data of this ICC_Profile.
     def getData(): Array[Byte] = ???
 
+    /** Returns a particular tagged data element from the profile as
+     *  a byte array.
+     */
     @stub
-    // Returns a particular tagged data element from the profile as
-    // a byte array.
     def getData(tagSignature: Int): Array[Byte] = ???
 
+    /** Returns profile major version. */
     @stub
-    // Returns profile major version.
     def getMajorVersion(): Int = ???
 
+    /** Returns profile minor version. */
     @stub
-    // Returns profile minor version.
     def getMinorVersion(): Int = ???
 
+    /** Returns the number of color components in the "input" color
+     *  space of this profile.
+     */
     @stub
-    // Returns the number of color components in the "input" color
-    // space of this profile.
     def getNumComponents(): Int = ???
 
+    /** Returns the color space type of the Profile Connection Space (PCS). */
     @stub
-    // Returns the color space type of the Profile Connection Space (PCS).
     def getPCSType(): Int = ???
 
+    /** Returns the profile class. */
     @stub
-    // Returns the profile class.
     def getProfileClass(): Int = ???
 
+    /** Resolves instances being deserialized into instances registered
+     *  with CMM.
+     */
     @stub
-    // Resolves instances being deserialized into instances registered
-    // with CMM.
     protected def readResolve(): Object = ???
 
+    /** Sets a particular tagged data element in the profile from
+     *  a byte array.
+     */
     @stub
-    // Sets a particular tagged data element in the profile from
-    // a byte array.
     def setData(tagSignature: Int, tagData: Array[Byte]): Unit = ???
 
+    /** Write this ICC_Profile to an OutputStream. */
     @stub
-    // Write this ICC_Profile to an OutputStream.
     def write(s: OutputStream): Unit = ???
 }
 
 object ICC_Profile {
+    /** Profile class is abstract. */
     @stub
-    // Profile class is abstract.
-    def CLASS_ABSTRACT: Int = ???
+    val CLASS_ABSTRACT: Int = ???
 
+    /** Profile class is color space conversion. */
     @stub
-    // Profile class is color space conversion.
-    def CLASS_COLORSPACECONVERSION: Int = ???
+    val CLASS_COLORSPACECONVERSION: Int = ???
 
+    /** Profile class is device link. */
     @stub
-    // Profile class is device link.
-    def CLASS_DEVICELINK: Int = ???
+    val CLASS_DEVICELINK: Int = ???
 
+    /** Profile class is display. */
     @stub
-    // Profile class is display.
-    def CLASS_DISPLAY: Int = ???
+    val CLASS_DISPLAY: Int = ???
 
+    /** Profile class is input. */
     @stub
-    // Profile class is input.
-    def CLASS_INPUT: Int = ???
+    val CLASS_INPUT: Int = ???
 
+    /** Profile class is named color. */
     @stub
-    // Profile class is named color.
-    def CLASS_NAMEDCOLOR: Int = ???
+    val CLASS_NAMEDCOLOR: Int = ???
 
+    /** Profile class is output. */
     @stub
-    // Profile class is output.
-    def CLASS_OUTPUT: Int = ???
+    val CLASS_OUTPUT: Int = ???
 
+    /** ICC Profile Rendering Intent: AbsoluteColorimetric. */
     @stub
-    // ICC Profile Rendering Intent: AbsoluteColorimetric.
-    def icAbsoluteColorimetric: Int = ???
+    val icAbsoluteColorimetric: Int = ???
 
+    /** ICC Profile Constant: curveType count. */
     @stub
-    // ICC Profile Constant: curveType count.
-    def icCurveCount: Int = ???
+    val icCurveCount: Int = ???
 
+    /** ICC Profile Constant: curveType data. */
     @stub
-    // ICC Profile Constant: curveType data.
-    def icCurveData: Int = ???
+    val icCurveData: Int = ???
 
+    /** ICC Profile Header Location: device attributes. */
     @stub
-    // ICC Profile Header Location: device attributes.
-    def icHdrAttributes: Int = ???
+    val icHdrAttributes: Int = ???
 
+    /** ICC Profile Header Location: CMM for this profile. */
     @stub
-    // ICC Profile Header Location: CMM for this profile.
-    def icHdrCmmId: Int = ???
+    val icHdrCmmId: Int = ???
 
+    /** ICC Profile Header Location: color space of data. */
     @stub
-    // ICC Profile Header Location: color space of data.
-    def icHdrColorSpace: Int = ???
+    val icHdrColorSpace: Int = ???
 
+    /** ICC Profile Header Location: profile creator. */
     @stub
-    // ICC Profile Header Location: profile creator.
-    def icHdrCreator: Int = ???
+    val icHdrCreator: Int = ???
 
+    /** ICC Profile Header Location: date profile was created. */
     @stub
-    // ICC Profile Header Location: date profile was created.
-    def icHdrDate: Int = ???
+    val icHdrDate: Int = ???
 
+    /** ICC Profile Header Location: type of profile. */
     @stub
-    // ICC Profile Header Location: type of profile.
-    def icHdrDeviceClass: Int = ???
+    val icHdrDeviceClass: Int = ???
 
+    /** ICC Profile Header Location: various bit settings. */
     @stub
-    // ICC Profile Header Location: various bit settings.
-    def icHdrFlags: Int = ???
+    val icHdrFlags: Int = ???
 
+    /** ICC Profile Header Location: profile illuminant. */
     @stub
-    // ICC Profile Header Location: profile illuminant.
-    def icHdrIlluminant: Int = ???
+    val icHdrIlluminant: Int = ???
 
+    /** ICC Profile Header Location: icMagicNumber. */
     @stub
-    // ICC Profile Header Location: icMagicNumber.
-    def icHdrMagic: Int = ???
+    val icHdrMagic: Int = ???
 
+    /** ICC Profile Header Location: device manufacturer. */
     @stub
-    // ICC Profile Header Location: device manufacturer.
-    def icHdrManufacturer: Int = ???
+    val icHdrManufacturer: Int = ???
 
+    /** ICC Profile Header Location: device model number. */
     @stub
-    // ICC Profile Header Location: device model number.
-    def icHdrModel: Int = ???
+    val icHdrModel: Int = ???
 
+    /** ICC Profile Header Location: PCS - XYZ or Lab only. */
     @stub
-    // ICC Profile Header Location: PCS - XYZ or Lab only.
-    def icHdrPcs: Int = ???
+    val icHdrPcs: Int = ???
 
+    /** ICC Profile Header Location: primary platform. */
     @stub
-    // ICC Profile Header Location: primary platform.
-    def icHdrPlatform: Int = ???
+    val icHdrPlatform: Int = ???
 
+    /** ICC Profile Header Location: profile's ID. */
     @stub
-    // ICC Profile Header Location: profile's ID.
-    def icHdrProfileID: Int = ???
+    val icHdrProfileID: Int = ???
 
+    /** ICC Profile Header Location: rendering intent. */
     @stub
-    // ICC Profile Header Location: rendering intent.
-    def icHdrRenderingIntent: Int = ???
+    val icHdrRenderingIntent: Int = ???
 
+    /** ICC Profile Header Location: profile size in bytes. */
     @stub
-    // ICC Profile Header Location: profile size in bytes.
-    def icHdrSize: Int = ???
+    val icHdrSize: Int = ???
 
+    /** ICC Profile Header Location: format version number. */
     @stub
-    // ICC Profile Header Location: format version number.
-    def icHdrVersion: Int = ???
+    val icHdrVersion: Int = ???
 
+    /** ICC Profile Rendering Intent: ICC-AbsoluteColorimetric. */
     @stub
-    // ICC Profile Rendering Intent: ICC-AbsoluteColorimetric.
-    def icICCAbsoluteColorimetric: Int = ???
+    val icICCAbsoluteColorimetric: Int = ???
 
+    /** ICC Profile Rendering Intent: Media-RelativeColorimetric. */
     @stub
-    // ICC Profile Rendering Intent: Media-RelativeColorimetric.
-    def icMediaRelativeColorimetric: Int = ???
+    val icMediaRelativeColorimetric: Int = ???
 
+    /** ICC Profile Rendering Intent: Perceptual. */
     @stub
-    // ICC Profile Rendering Intent: Perceptual.
-    def icPerceptual: Int = ???
+    val icPerceptual: Int = ???
 
+    /** ICC Profile Rendering Intent: RelativeColorimetric. */
     @stub
-    // ICC Profile Rendering Intent: RelativeColorimetric.
-    def icRelativeColorimetric: Int = ???
+    val icRelativeColorimetric: Int = ???
 
+    /** ICC Profile Rendering Intent: Saturation. */
     @stub
-    // ICC Profile Rendering Intent: Saturation.
-    def icSaturation: Int = ???
+    val icSaturation: Int = ???
 
+    /** ICC Profile Class Signature: 'abst'. */
     @stub
-    // ICC Profile Class Signature: 'abst'.
-    def icSigAbstractClass: Int = ???
+    val icSigAbstractClass: Int = ???
 
+    /** ICC Profile Tag Signature: 'A2B0'. */
     @stub
-    // ICC Profile Tag Signature: 'A2B0'.
-    def icSigAToB0Tag: Int = ???
+    val icSigAToB0Tag: Int = ???
 
+    /** ICC Profile Tag Signature: 'A2B1'. */
     @stub
-    // ICC Profile Tag Signature: 'A2B1'.
-    def icSigAToB1Tag: Int = ???
+    val icSigAToB1Tag: Int = ???
 
+    /** ICC Profile Tag Signature: 'A2B2'. */
     @stub
-    // ICC Profile Tag Signature: 'A2B2'.
-    def icSigAToB2Tag: Int = ???
+    val icSigAToB2Tag: Int = ???
 
+    /** ICC Profile Tag Signature: 'bXYZ'. */
     @stub
-    // ICC Profile Tag Signature: 'bXYZ'.
-    def icSigBlueColorantTag: Int = ???
+    val icSigBlueColorantTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'bXYZ'. */
     @stub
-    // ICC Profile Tag Signature: 'bXYZ'.
-    def icSigBlueMatrixColumnTag: Int = ???
+    val icSigBlueMatrixColumnTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'bTRC'. */
     @stub
-    // ICC Profile Tag Signature: 'bTRC'.
-    def icSigBlueTRCTag: Int = ???
+    val icSigBlueTRCTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'B2A0'. */
     @stub
-    // ICC Profile Tag Signature: 'B2A0'.
-    def icSigBToA0Tag: Int = ???
+    val icSigBToA0Tag: Int = ???
 
+    /** ICC Profile Tag Signature: 'B2A1'. */
     @stub
-    // ICC Profile Tag Signature: 'B2A1'.
-    def icSigBToA1Tag: Int = ???
+    val icSigBToA1Tag: Int = ???
 
+    /** ICC Profile Tag Signature: 'B2A2'. */
     @stub
-    // ICC Profile Tag Signature: 'B2A2'.
-    def icSigBToA2Tag: Int = ???
+    val icSigBToA2Tag: Int = ???
 
+    /** ICC Profile Tag Signature: 'calt'. */
     @stub
-    // ICC Profile Tag Signature: 'calt'.
-    def icSigCalibrationDateTimeTag: Int = ???
+    val icSigCalibrationDateTimeTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'targ'. */
     @stub
-    // ICC Profile Tag Signature: 'targ'.
-    def icSigCharTargetTag: Int = ???
+    val icSigCharTargetTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'chad'. */
     @stub
-    // ICC Profile Tag Signature: 'chad'.
-    def icSigChromaticAdaptationTag: Int = ???
+    val icSigChromaticAdaptationTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'chrm'. */
     @stub
-    // ICC Profile Tag Signature: 'chrm'.
-    def icSigChromaticityTag: Int = ???
+    val icSigChromaticityTag: Int = ???
 
+    /** ICC Profile Color Space Type Signature: 'CMY '. */
     @stub
-    // ICC Profile Color Space Type Signature: 'CMY '.
-    def icSigCmyData: Int = ???
+    val icSigCmyData: Int = ???
 
+    /** ICC Profile Color Space Type Signature: 'CMYK'. */
     @stub
-    // ICC Profile Color Space Type Signature: 'CMYK'.
-    def icSigCmykData: Int = ???
+    val icSigCmykData: Int = ???
 
+    /** ICC Profile Tag Signature: 'clro'. */
     @stub
-    // ICC Profile Tag Signature: 'clro'.
-    def icSigColorantOrderTag: Int = ???
+    val icSigColorantOrderTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'clrt'. */
     @stub
-    // ICC Profile Tag Signature: 'clrt'.
-    def icSigColorantTableTag: Int = ???
+    val icSigColorantTableTag: Int = ???
 
+    /** ICC Profile Class Signature: 'spac'. */
     @stub
-    // ICC Profile Class Signature: 'spac'.
-    def icSigColorSpaceClass: Int = ???
+    val icSigColorSpaceClass: Int = ???
 
+    /** ICC Profile Tag Signature: 'cprt'. */
     @stub
-    // ICC Profile Tag Signature: 'cprt'.
-    def icSigCopyrightTag: Int = ???
+    val icSigCopyrightTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'crdi'. */
     @stub
-    // ICC Profile Tag Signature: 'crdi'.
-    def icSigCrdInfoTag: Int = ???
+    val icSigCrdInfoTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'dmnd'. */
     @stub
-    // ICC Profile Tag Signature: 'dmnd'.
-    def icSigDeviceMfgDescTag: Int = ???
+    val icSigDeviceMfgDescTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'dmdd'. */
     @stub
-    // ICC Profile Tag Signature: 'dmdd'.
-    def icSigDeviceModelDescTag: Int = ???
+    val icSigDeviceModelDescTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'devs'. */
     @stub
-    // ICC Profile Tag Signature: 'devs'.
-    def icSigDeviceSettingsTag: Int = ???
+    val icSigDeviceSettingsTag: Int = ???
 
+    /** ICC Profile Class Signature: 'mntr'. */
     @stub
-    // ICC Profile Class Signature: 'mntr'.
-    def icSigDisplayClass: Int = ???
+    val icSigDisplayClass: Int = ???
 
+    /** ICC Profile Tag Signature: 'gamt'. */
     @stub
-    // ICC Profile Tag Signature: 'gamt'.
-    def icSigGamutTag: Int = ???
+    val icSigGamutTag: Int = ???
 
+    /** ICC Profile Color Space Type Signature: 'GRAY'. */
     @stub
-    // ICC Profile Color Space Type Signature: 'GRAY'.
-    def icSigGrayData: Int = ???
+    val icSigGrayData: Int = ???
 
+    /** ICC Profile Tag Signature: 'kTRC'. */
     @stub
-    // ICC Profile Tag Signature: 'kTRC'.
-    def icSigGrayTRCTag: Int = ???
+    val icSigGrayTRCTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'gXYZ'. */
     @stub
-    // ICC Profile Tag Signature: 'gXYZ'.
-    def icSigGreenColorantTag: Int = ???
+    val icSigGreenColorantTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'gXYZ'. */
     @stub
-    // ICC Profile Tag Signature: 'gXYZ'.
-    def icSigGreenMatrixColumnTag: Int = ???
+    val icSigGreenMatrixColumnTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'gTRC'. */
     @stub
-    // ICC Profile Tag Signature: 'gTRC'.
-    def icSigGreenTRCTag: Int = ???
+    val icSigGreenTRCTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'head' - special. */
     @stub
-    // ICC Profile Tag Signature: 'head' - special.
-    def icSigHead: Int = ???
+    val icSigHead: Int = ???
 
+    /** ICC Profile Color Space Type Signature: 'HLS'. */
     @stub
-    // ICC Profile Color Space Type Signature: 'HLS'.
-    def icSigHlsData: Int = ???
+    val icSigHlsData: Int = ???
 
+    /** ICC Profile Color Space Type Signature: 'HSV'. */
     @stub
-    // ICC Profile Color Space Type Signature: 'HSV'.
-    def icSigHsvData: Int = ???
+    val icSigHsvData: Int = ???
 
+    /** ICC Profile Class Signature: 'scnr'. */
     @stub
-    // ICC Profile Class Signature: 'scnr'.
-    def icSigInputClass: Int = ???
+    val icSigInputClass: Int = ???
 
+    /** ICC Profile Color Space Type Signature: 'Lab '. */
     @stub
-    // ICC Profile Color Space Type Signature: 'Lab '.
-    def icSigLabData: Int = ???
+    val icSigLabData: Int = ???
 
+    /** ICC Profile Class Signature: 'link'. */
     @stub
-    // ICC Profile Class Signature: 'link'.
-    def icSigLinkClass: Int = ???
+    val icSigLinkClass: Int = ???
 
+    /** ICC Profile Tag Signature: 'lumi'. */
     @stub
-    // ICC Profile Tag Signature: 'lumi'.
-    def icSigLuminanceTag: Int = ???
+    val icSigLuminanceTag: Int = ???
 
+    /** ICC Profile Color Space Type Signature: 'Luv '. */
     @stub
-    // ICC Profile Color Space Type Signature: 'Luv '.
-    def icSigLuvData: Int = ???
+    val icSigLuvData: Int = ???
 
+    /** ICC Profile Tag Signature: 'meas'. */
     @stub
-    // ICC Profile Tag Signature: 'meas'.
-    def icSigMeasurementTag: Int = ???
+    val icSigMeasurementTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'bkpt'. */
     @stub
-    // ICC Profile Tag Signature: 'bkpt'.
-    def icSigMediaBlackPointTag: Int = ???
+    val icSigMediaBlackPointTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'wtpt'. */
     @stub
-    // ICC Profile Tag Signature: 'wtpt'.
-    def icSigMediaWhitePointTag: Int = ???
+    val icSigMediaWhitePointTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'ncl2'. */
     @stub
-    // ICC Profile Tag Signature: 'ncl2'.
-    def icSigNamedColor2Tag: Int = ???
+    val icSigNamedColor2Tag: Int = ???
 
+    /** ICC Profile Class Signature: 'nmcl'. */
     @stub
-    // ICC Profile Class Signature: 'nmcl'.
-    def icSigNamedColorClass: Int = ???
+    val icSigNamedColorClass: Int = ???
 
+    /** ICC Profile Class Signature: 'prtr'. */
     @stub
-    // ICC Profile Class Signature: 'prtr'.
-    def icSigOutputClass: Int = ???
+    val icSigOutputClass: Int = ???
 
+    /** ICC Profile Tag Signature: 'resp'. */
     @stub
-    // ICC Profile Tag Signature: 'resp'.
-    def icSigOutputResponseTag: Int = ???
+    val icSigOutputResponseTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'pre0'. */
     @stub
-    // ICC Profile Tag Signature: 'pre0'.
-    def icSigPreview0Tag: Int = ???
+    val icSigPreview0Tag: Int = ???
 
+    /** ICC Profile Tag Signature: 'pre1'. */
     @stub
-    // ICC Profile Tag Signature: 'pre1'.
-    def icSigPreview1Tag: Int = ???
+    val icSigPreview1Tag: Int = ???
 
+    /** ICC Profile Tag Signature: 'pre2'. */
     @stub
-    // ICC Profile Tag Signature: 'pre2'.
-    def icSigPreview2Tag: Int = ???
+    val icSigPreview2Tag: Int = ???
 
+    /** ICC Profile Tag Signature: 'desc'. */
     @stub
-    // ICC Profile Tag Signature: 'desc'.
-    def icSigProfileDescriptionTag: Int = ???
+    val icSigProfileDescriptionTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'pseq'. */
     @stub
-    // ICC Profile Tag Signature: 'pseq'.
-    def icSigProfileSequenceDescTag: Int = ???
+    val icSigProfileSequenceDescTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'psd0'. */
     @stub
-    // ICC Profile Tag Signature: 'psd0'.
-    def icSigPs2CRD0Tag: Int = ???
+    val icSigPs2CRD0Tag: Int = ???
 
+    /** ICC Profile Tag Signature: 'psd1'. */
     @stub
-    // ICC Profile Tag Signature: 'psd1'.
-    def icSigPs2CRD1Tag: Int = ???
+    val icSigPs2CRD1Tag: Int = ???
 
+    /** ICC Profile Tag Signature: 'psd2'. */
     @stub
-    // ICC Profile Tag Signature: 'psd2'.
-    def icSigPs2CRD2Tag: Int = ???
+    val icSigPs2CRD2Tag: Int = ???
 
+    /** ICC Profile Tag Signature: 'psd3'. */
     @stub
-    // ICC Profile Tag Signature: 'psd3'.
-    def icSigPs2CRD3Tag: Int = ???
+    val icSigPs2CRD3Tag: Int = ???
 
+    /** ICC Profile Tag Signature: 'ps2s'. */
     @stub
-    // ICC Profile Tag Signature: 'ps2s'.
-    def icSigPs2CSATag: Int = ???
+    val icSigPs2CSATag: Int = ???
 
+    /** ICC Profile Tag Signature: 'ps2i'. */
     @stub
-    // ICC Profile Tag Signature: 'ps2i'.
-    def icSigPs2RenderingIntentTag: Int = ???
+    val icSigPs2RenderingIntentTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'rXYZ'. */
     @stub
-    // ICC Profile Tag Signature: 'rXYZ'.
-    def icSigRedColorantTag: Int = ???
+    val icSigRedColorantTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'rXYZ'. */
     @stub
-    // ICC Profile Tag Signature: 'rXYZ'.
-    def icSigRedMatrixColumnTag: Int = ???
+    val icSigRedMatrixColumnTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'rTRC'. */
     @stub
-    // ICC Profile Tag Signature: 'rTRC'.
-    def icSigRedTRCTag: Int = ???
+    val icSigRedTRCTag: Int = ???
 
+    /** ICC Profile Color Space Type Signature: 'RGB '. */
     @stub
-    // ICC Profile Color Space Type Signature: 'RGB '.
-    def icSigRgbData: Int = ???
+    val icSigRgbData: Int = ???
 
+    /** ICC Profile Tag Signature: 'scrd'. */
     @stub
-    // ICC Profile Tag Signature: 'scrd'.
-    def icSigScreeningDescTag: Int = ???
+    val icSigScreeningDescTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'scrn'. */
     @stub
-    // ICC Profile Tag Signature: 'scrn'.
-    def icSigScreeningTag: Int = ???
+    val icSigScreeningTag: Int = ???
 
+    /** ICC Profile Color Space Type Signature: '2CLR'. */
     @stub
-    // ICC Profile Color Space Type Signature: '2CLR'.
-    def icSigSpace2CLR: Int = ???
+    val icSigSpace2CLR: Int = ???
 
+    /** ICC Profile Color Space Type Signature: '3CLR'. */
     @stub
-    // ICC Profile Color Space Type Signature: '3CLR'.
-    def icSigSpace3CLR: Int = ???
+    val icSigSpace3CLR: Int = ???
 
+    /** ICC Profile Color Space Type Signature: '4CLR'. */
     @stub
-    // ICC Profile Color Space Type Signature: '4CLR'.
-    def icSigSpace4CLR: Int = ???
+    val icSigSpace4CLR: Int = ???
 
+    /** ICC Profile Color Space Type Signature: '5CLR'. */
     @stub
-    // ICC Profile Color Space Type Signature: '5CLR'.
-    def icSigSpace5CLR: Int = ???
+    val icSigSpace5CLR: Int = ???
 
+    /** ICC Profile Color Space Type Signature: '6CLR'. */
     @stub
-    // ICC Profile Color Space Type Signature: '6CLR'.
-    def icSigSpace6CLR: Int = ???
+    val icSigSpace6CLR: Int = ???
 
+    /** ICC Profile Color Space Type Signature: '7CLR'. */
     @stub
-    // ICC Profile Color Space Type Signature: '7CLR'.
-    def icSigSpace7CLR: Int = ???
+    val icSigSpace7CLR: Int = ???
 
+    /** ICC Profile Color Space Type Signature: '8CLR'. */
     @stub
-    // ICC Profile Color Space Type Signature: '8CLR'.
-    def icSigSpace8CLR: Int = ???
+    val icSigSpace8CLR: Int = ???
 
+    /** ICC Profile Color Space Type Signature: '9CLR'. */
     @stub
-    // ICC Profile Color Space Type Signature: '9CLR'.
-    def icSigSpace9CLR: Int = ???
+    val icSigSpace9CLR: Int = ???
 
+    /** ICC Profile Color Space Type Signature: 'ACLR'. */
     @stub
-    // ICC Profile Color Space Type Signature: 'ACLR'.
-    def icSigSpaceACLR: Int = ???
+    val icSigSpaceACLR: Int = ???
 
+    /** ICC Profile Color Space Type Signature: 'BCLR'. */
     @stub
-    // ICC Profile Color Space Type Signature: 'BCLR'.
-    def icSigSpaceBCLR: Int = ???
+    val icSigSpaceBCLR: Int = ???
 
+    /** ICC Profile Color Space Type Signature: 'CCLR'. */
     @stub
-    // ICC Profile Color Space Type Signature: 'CCLR'.
-    def icSigSpaceCCLR: Int = ???
+    val icSigSpaceCCLR: Int = ???
 
+    /** ICC Profile Color Space Type Signature: 'DCLR'. */
     @stub
-    // ICC Profile Color Space Type Signature: 'DCLR'.
-    def icSigSpaceDCLR: Int = ???
+    val icSigSpaceDCLR: Int = ???
 
+    /** ICC Profile Color Space Type Signature: 'ECLR'. */
     @stub
-    // ICC Profile Color Space Type Signature: 'ECLR'.
-    def icSigSpaceECLR: Int = ???
+    val icSigSpaceECLR: Int = ???
 
+    /** ICC Profile Color Space Type Signature: 'FCLR'. */
     @stub
-    // ICC Profile Color Space Type Signature: 'FCLR'.
-    def icSigSpaceFCLR: Int = ???
+    val icSigSpaceFCLR: Int = ???
 
+    /** ICC Profile Tag Signature: 'tech'. */
     @stub
-    // ICC Profile Tag Signature: 'tech'.
-    def icSigTechnologyTag: Int = ???
+    val icSigTechnologyTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'bfd '. */
     @stub
-    // ICC Profile Tag Signature: 'bfd '.
-    def icSigUcrBgTag: Int = ???
+    val icSigUcrBgTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'vued'. */
     @stub
-    // ICC Profile Tag Signature: 'vued'.
-    def icSigViewingCondDescTag: Int = ???
+    val icSigViewingCondDescTag: Int = ???
 
+    /** ICC Profile Tag Signature: 'view'. */
     @stub
-    // ICC Profile Tag Signature: 'view'.
-    def icSigViewingConditionsTag: Int = ???
+    val icSigViewingConditionsTag: Int = ???
 
+    /** ICC Profile Color Space Type Signature: 'XYZ '. */
     @stub
-    // ICC Profile Color Space Type Signature: 'XYZ '.
-    def icSigXYZData: Int = ???
+    val icSigXYZData: Int = ???
 
+    /** ICC Profile Color Space Type Signature: 'YCbr'. */
     @stub
-    // ICC Profile Color Space Type Signature: 'YCbr'.
-    def icSigYCbCrData: Int = ???
+    val icSigYCbCrData: Int = ???
 
+    /** ICC Profile Color Space Type Signature: 'Yxy '. */
     @stub
-    // ICC Profile Color Space Type Signature: 'Yxy '.
-    def icSigYxyData: Int = ???
+    val icSigYxyData: Int = ???
 
+    /** ICC Profile Constant: reserved. */
     @stub
-    // ICC Profile Constant: reserved.
-    def icTagReserved: Int = ???
+    val icTagReserved: Int = ???
 
+    /** ICC Profile Constant: tag type signaturE. */
     @stub
-    // ICC Profile Constant: tag type signaturE.
-    def icTagType: Int = ???
+    val icTagType: Int = ???
 
+    /** Constructs an ICC_Profile object corresponding to the data in
+     *  a byte array.
+     */
     @stub
-    // Constructs an ICC_Profile object corresponding to the data in
-    // a byte array.
     def getInstance(data: Array[Byte]): ICC_Profile = ???
 
+    /** Constructs an ICC_Profile corresponding to the data in an InputStream. */
     @stub
-    // Constructs an ICC_Profile corresponding to the data in an InputStream.
     def getInstance(s: InputStream): ICC_Profile = ???
 
+    /** Constructs an ICC_Profile corresponding to one of the specific color
+     *  spaces defined by the ColorSpace class (for example CS_sRGB).
+     */
     @stub
-    // Constructs an ICC_Profile corresponding to one of the specific color
-    // spaces defined by the ColorSpace class (for example CS_sRGB).
     def getInstance(cspace: Int): ICC_Profile = ???
 
+    /** Constructs an ICC_Profile corresponding to the data in a file. */
     @stub
-    // Constructs an ICC_Profile corresponding to the data in a file.
     def getInstance(fileName: String): ICC_Profile = ???
 }

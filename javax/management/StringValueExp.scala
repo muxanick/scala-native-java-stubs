@@ -2,24 +2,26 @@ package javax.management
 
 import java.lang.{Object, String}
 
-// Represents strings that are arguments to relational constraints.
-// A StringValueExp may be used anywhere a ValueExp is required.
+/** Represents strings that are arguments to relational constraints.
+ *  A StringValueExp may be used anywhere a ValueExp is required.
+ */
 class StringValueExp extends Object with ValueExp {
 
+    /** Basic constructor. */
     @stub
-    // Basic constructor.
     def this() = ???
 
+    /** Applies the ValueExp on a MBean. */
     @stub
-    // Applies the ValueExp on a MBean.
     def apply(name: ObjectName): ValueExp = ???
 
+    /** Returns the string represented by the
+     *  StringValueExp instance.
+     */
     @stub
-    // Returns the string represented by the
-    // StringValueExp instance.
     def getValue(): String = ???
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
     def setMBeanServer(s: MBeanServer): Unit = ???
 }

@@ -2,31 +2,33 @@ package java.nio.charset
 
 import java.lang.Object
 
-// Constant definitions for the standard Charsets. These
-// charsets are guaranteed to be available on every implementation of the Java
-// platform.
+/** Constant definitions for the standard Charsets. These
+ *  charsets are guaranteed to be available on every implementation of the Java
+ *  platform.
+ */
 final class StandardCharsets extends Object {
 }
 
 object StandardCharsets {
+    /** ISO Latin Alphabet No. */
     @stub
-    // ISO Latin Alphabet No.
-    def ISO_8859_1: Charset = ???
+    val ISO_8859_1: Charset = ???
 
+    /** Seven-bit ASCII, a.k.a. */
     @stub
-    // Seven-bit ASCII, a.k.a.
-    def US_ASCII: Charset = ???
+    val US_ASCII: Charset = ???
 
+    /** Sixteen-bit UCS Transformation Format, byte order identified by an
+     *  optional byte-order mark
+     */
     @stub
-    // Sixteen-bit UCS Transformation Format, byte order identified by an
-    // optional byte-order mark
-    def UTF_16: Charset = ???
+    val UTF_16: Charset = ???
 
+    /** Sixteen-bit UCS Transformation Format, big-endian byte order */
     @stub
-    // Sixteen-bit UCS Transformation Format, big-endian byte order
-    def UTF_16BE: Charset = ???
+    val UTF_16BE: Charset = ???
 
+    /** Sixteen-bit UCS Transformation Format, little-endian byte order */
     @stub
-    // Sixteen-bit UCS Transformation Format, little-endian byte order
-    def UTF_16LE: Charset = ???
+    val UTF_16LE: Charset = ???
 }

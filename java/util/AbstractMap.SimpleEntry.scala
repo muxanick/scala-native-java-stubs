@@ -3,37 +3,40 @@ package java.util
 import java.io.Serializable
 import java.lang.Object
 
-// An Entry maintaining a key and a value.  The value may be
-// changed using the setValue method.  This class
-// facilitates the process of building custom map
-// implementations. For example, it may be convenient to return
-// arrays of SimpleEntry instances in method
-// Map.entrySet().toArray.
-object AbstractMap.SimpleEntry[K, V] extends Object with Map.Entry[K, V], with Serializable {
+/** An Entry maintaining a key and a value.  The value may be
+ *  changed using the setValue method.  This class
+ *  facilitates the process of building custom map
+ *  implementations. For example, it may be convenient to return
+ *  arrays of SimpleEntry instances in method
+ *  Map.entrySet().toArray.
+ */
+object AbstractMap.SimpleEntry[K, V] extends Object with Map.Entry[K, V] with Serializable {
 
+    /** Creates an entry representing a mapping from the specified
+     *  key to the specified value.
+     */
     @stub
-    // Creates an entry representing a mapping from the specified
-    // key to the specified value.
     def SimpleEntry(key: K, value: V) = ???
 
+    /** Compares the specified object with this entry for equality. */
     @stub
-    // Compares the specified object with this entry for equality.
     def equals(o: Object): Boolean = ???
 
+    /** Returns the key corresponding to this entry. */
     @stub
-    // Returns the key corresponding to this entry.
     def getKey(): K = ???
 
+    /** Returns the value corresponding to this entry. */
     @stub
-    // Returns the value corresponding to this entry.
     def getValue(): V = ???
 
+    /** Returns the hash code value for this map entry. */
     @stub
-    // Returns the hash code value for this map entry.
     def hashCode(): Int = ???
 
+    /** Replaces the value corresponding to this entry with the specified
+     *  value.
+     */
     @stub
-    // Replaces the value corresponding to this entry with the specified
-    // value.
     def setValue(value: V): V = ???
 }

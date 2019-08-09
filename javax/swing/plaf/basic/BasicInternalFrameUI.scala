@@ -8,274 +8,279 @@ import javax.swing.{DesktopManager, JComponent, JInternalFrame, KeyStroke}
 import javax.swing.event.{MouseInputAdapter, MouseInputListener}
 import javax.swing.plaf.{ComponentUI, InternalFrameUI}
 
-// A basic L&F implementation of JInternalFrame.
+/** A basic L&F implementation of JInternalFrame. */
 class BasicInternalFrameUI extends InternalFrameUI {
 
+    /**  */
     @stub
-    // 
-    protected def BasicInternalFrameUI.BasicInternalFrameListener: class = ???
+    protected object BasicInternalFrameListener extends BasicInternalFrameUI.BasicInternalFrameListener
 
+    /** Listens for border adjustments. */
     @stub
-    // Listens for border adjustments.
-    protected def BasicInternalFrameUI.BorderListener: class = ???
+    protected object BorderListener extends BasicInternalFrameUI.BorderListener
 
+    /**  */
     @stub
-    // 
-    protected def BasicInternalFrameUI.ComponentHandler: class = ???
+    protected object ComponentHandler extends BasicInternalFrameUI.ComponentHandler
 
+    /**  */
     @stub
-    // 
-    protected def BasicInternalFrameUI.GlassPaneDispatcher: class = ???
+    protected object GlassPaneDispatcher extends BasicInternalFrameUI.GlassPaneDispatcher
 
+    /**  */
     @stub
-    // 
-    def BasicInternalFrameUI.InternalFrameLayout: class = ???
+    object InternalFrameLayout extends BasicInternalFrameUI.InternalFrameLayout
 
+    /**  */
     @stub
-    // 
-    protected def borderListener: MouseInputAdapter = ???
+    protected val borderListener: MouseInputAdapter = ???
 
+    /**  */
     @stub
-    // 
-    protected def componentListener: ComponentListener = ???
+    protected val componentListener: ComponentListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def eastPane: JComponent = ???
+    protected val eastPane: JComponent = ???
 
+    /**  */
     @stub
-    // 
-    protected def frame: JInternalFrame = ???
+    protected val frame: JInternalFrame = ???
 
+    /**  */
     @stub
-    // 
-    protected def glassPaneDispatcher: MouseInputListener = ???
+    protected val glassPaneDispatcher: MouseInputListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def internalFrameLayout: LayoutManager = ???
+    protected val internalFrameLayout: LayoutManager = ???
 
+    /**  */
     @stub
-    // 
-    protected def northPane: JComponent = ???
+    protected val northPane: JComponent = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
-    protected def openMenuKey: KeyStroke = ???
+    protected val openMenuKey: KeyStroke = ???
 
+    /**  */
     @stub
-    // 
-    protected def propertyChangeListener: PropertyChangeListener = ???
+    protected val propertyChangeListener: PropertyChangeListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def southPane: JComponent = ???
+    protected val southPane: JComponent = ???
 
+    /**  */
     @stub
-    // 
-    protected def titlePane: BasicInternalFrameTitlePane = ???
+    protected val titlePane: BasicInternalFrameTitlePane = ???
 
+    /** This method is called when the frame becomes selected. */
     @stub
-    // This method is called when the frame becomes selected.
     protected def activateFrame(f: JInternalFrame): Unit = ???
 
+    /** This method is called when the user wants to close the frame. */
     @stub
-    // This method is called when the user wants to close the frame.
     protected def closeFrame(f: JInternalFrame): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def createBorderListener(w: JInternalFrame): MouseInputAdapter = ???
 
+    /**  */
     @stub
-    // 
     protected def createComponentListener(): ComponentListener = ???
 
+    /**  */
     @stub
-    // 
     protected def createDesktopManager(): DesktopManager = ???
 
+    /**  */
     @stub
-    // 
     protected def createEastPane(w: JInternalFrame): JComponent = ???
 
+    /**  */
     @stub
-    // 
     protected def createGlassPaneDispatcher(): MouseInputListener = ???
 
+    /**  */
     @stub
-    // 
     protected def createInternalFrameListener(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def createLayoutManager(): LayoutManager = ???
 
+    /**  */
     @stub
-    // 
     protected def createNorthPane(w: JInternalFrame): JComponent = ???
 
+    /**  */
     @stub
-    // 
     protected def createPropertyChangeListener(): PropertyChangeListener = ???
 
+    /**  */
     @stub
-    // 
     protected def createSouthPane(w: JInternalFrame): JComponent = ???
 
+    /**  */
     @stub
-    // 
     protected def createWestPane(w: JInternalFrame): JComponent = ???
 
+    /** This method is called when the frame is no longer selected. */
     @stub
-    // This method is called when the frame is no longer selected.
     protected def deactivateFrame(f: JInternalFrame): Unit = ???
 
+    /** This method is called when the user wants to deiconify the frame. */
     @stub
-    // This method is called when the user wants to deiconify the frame.
     protected def deiconifyFrame(f: JInternalFrame): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def deinstallMouseHandlers(c: JComponent): Unit = ???
 
+    /** Returns the proper DesktopManager. */
     @stub
-    // Returns the proper DesktopManager.
     protected def getDesktopManager(): DesktopManager = ???
 
+    /**  */
     @stub
-    // 
     def getEastPane(): JComponent = ???
 
+    /** Returns the specified component's maximum size appropriate for
+     *  the look and feel.
+     */
     @stub
-    // Returns the specified component's maximum size appropriate for
-    // the look and feel.
     def getMaximumSize(x: JComponent): Dimension = ???
 
+    /** Returns the specified component's minimum size appropriate for
+     *  the look and feel.
+     */
     @stub
-    // Returns the specified component's minimum size appropriate for
-    // the look and feel.
     def getMinimumSize(x: JComponent): Dimension = ???
 
+    /**  */
     @stub
-    // 
     def getNorthPane(): JComponent = ???
 
+    /** Returns the specified component's preferred size appropriate for
+     *  the look and feel.
+     */
     @stub
-    // Returns the specified component's preferred size appropriate for
-    // the look and feel.
     def getPreferredSize(x: JComponent): Dimension = ???
 
+    /**  */
     @stub
-    // 
     def getSouthPane(): JComponent = ???
 
+    /**  */
     @stub
-    // 
     def getWestPane(): JComponent = ???
 
+    /** This method is called when the user wants to iconify the frame. */
     @stub
-    // This method is called when the user wants to iconify the frame.
     protected def iconifyFrame(f: JInternalFrame): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installComponents(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installDefaults(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installKeyboardActions(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installListeners(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installMouseHandlers(c: JComponent): Unit = ???
 
+    /** Configures the specified component appropriately for the look and feel. */
     @stub
-    // Configures the specified component appropriately for the look and feel.
     def installUI(c: JComponent): Unit = ???
 
+    /**  */
     @stub
-    // 
     def isKeyBindingActive(): Boolean = ???
 
+    /**  */
     @stub
-    // 
     protected def isKeyBindingRegistered(): Boolean = ???
 
+    /** This method is called when the user wants to maximize the frame. */
     @stub
-    // This method is called when the user wants to maximize the frame.
     protected def maximizeFrame(f: JInternalFrame): Unit = ???
 
+    /** This method is called when the user wants to minimize the frame. */
     @stub
-    // This method is called when the user wants to minimize the frame.
     protected def minimizeFrame(f: JInternalFrame): Unit = ???
 
+    /** Installs necessary mouse handlers on newPane
+     *  and adds it to the frame.
+     */
     @stub
-    // Installs necessary mouse handlers on newPane
-    // and adds it to the frame.
     protected def replacePane(currentPane: JComponent, newPane: JComponent): Unit = ???
 
+    /**  */
     @stub
-    // 
     def setEastPane(c: JComponent): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def setKeyBindingActive(b: Boolean): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def setKeyBindingRegistered(b: Boolean): Unit = ???
 
+    /**  */
     @stub
-    // 
     def setNorthPane(c: JComponent): Unit = ???
 
+    /**  */
     @stub
-    // 
     def setSouthPane(c: JComponent): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def setupMenuCloseKey(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def setupMenuOpenKey(): Unit = ???
 
+    /**  */
     @stub
-    // 
     def setWestPane(c: JComponent): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallComponents(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallDefaults(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallKeyboardActions(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallListeners(): Unit = ???
 }
 
 object BasicInternalFrameUI {
+    /**  */
     @stub
-    // 
     def createUI(b: JComponent): ComponentUI = ???
 }

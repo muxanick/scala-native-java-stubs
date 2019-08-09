@@ -4,100 +4,114 @@ import java.lang.{Comparable, Object, String}
 import java.util.Set
 import javax.management.{Descriptor, MBeanAttributeInfo, MBeanFeatureInfo}
 
-// Describes an attribute of an open MBean.
+/** Describes an attribute of an open MBean. */
 class OpenMBeanAttributeInfoSupport extends MBeanAttributeInfo with OpenMBeanAttributeInfo {
 
+    /** Constructs an OpenMBeanAttributeInfoSupport instance,
+     *  which describes the attribute of an open MBean with the
+     *  specified name, openType and description, and the specified read/write access properties.
+     */
     @stub
-    // Constructs an OpenMBeanAttributeInfoSupport instance,
-    // which describes the attribute of an open MBean with the
-    // specified name, openType and description, and the specified read/write access properties.
     def this(name: String, description: String, openType: OpenType[_], isReadable: Boolean, isWritable: Boolean, isIs: Boolean) = ???
 
+    /** Constructs an OpenMBeanAttributeInfoSupport instance,
+     *  which describes the attribute of an open MBean with the
+     *  specified name, openType, description, read/write access properties, and Descriptor.
+     */
     @stub
-    // Constructs an OpenMBeanAttributeInfoSupport instance,
-    // which describes the attribute of an open MBean with the
-    // specified name, openType, description, read/write access properties, and Descriptor.
     def this(name: String, description: String, openType: OpenType[_], isReadable: Boolean, isWritable: Boolean, isIs: Boolean, descriptor: Descriptor) = ???
 
+    /** Constructs an OpenMBeanAttributeInfoSupport instance,
+     *  which describes the attribute of an open MBean with the
+     *  specified name, openType, description
+     *  and defaultValue, and the specified read/write access
+     *  properties.
+     */
     @stub
-    // Constructs an OpenMBeanAttributeInfoSupport instance,
-    // which describes the attribute of an open MBean with the
-    // specified name, openType, description
-    // and defaultValue, and the specified read/write access
-    // properties.
     def this(name: String, description: String, openType: OpenType[T], isReadable: Boolean, isWritable: Boolean, isIs: Boolean, defaultValue: T) = ???
 
+    /** Constructs an OpenMBeanAttributeInfoSupport instance,
+     *  which describes the attribute of an open MBean, with the
+     *  specified name, openType, description,
+     *  defaultValue, minValue and maxValue.
+     */
     @stub
-    // Constructs an OpenMBeanAttributeInfoSupport instance,
-    // which describes the attribute of an open MBean, with the
-    // specified name, openType, description,
-    // defaultValue, minValue and maxValue.
     def this(name: String, description: String, openType: OpenType[T], isReadable: Boolean, isWritable: Boolean, isIs: Boolean, defaultValue: T, minValue: Comparable[T], maxValue: Comparable[T]) = ???
 
+    /** Compares the specified obj parameter with this OpenMBeanAttributeInfoSupport instance for equality. */
     @stub
-    // Compares the specified obj parameter with this OpenMBeanAttributeInfoSupport instance for equality.
     def equals(obj: Object): Boolean = ???
 
+    /** Returns the default value for the attribute described by this
+     *  OpenMBeanAttributeInfoSupport instance, if specified,
+     *  or null otherwise.
+     */
     @stub
-    // Returns the default value for the attribute described by this
-    // OpenMBeanAttributeInfoSupport instance, if specified,
-    // or null otherwise.
     def getDefaultValue(): Object = ???
 
+    /** Returns an unmodifiable Set of legal values for the attribute
+     *  described by this OpenMBeanAttributeInfoSupport
+     *  instance, if specified, or null otherwise.
+     */
     @stub
-    // Returns an unmodifiable Set of legal values for the attribute
-    // described by this OpenMBeanAttributeInfoSupport
-    // instance, if specified, or null otherwise.
     def getLegalValues(): Set[_] = ???
 
+    /** Returns the maximal value for the attribute described by this
+     *  OpenMBeanAttributeInfoSupport instance, if specified,
+     *  or null otherwise.
+     */
     @stub
-    // Returns the maximal value for the attribute described by this
-    // OpenMBeanAttributeInfoSupport instance, if specified,
-    // or null otherwise.
     def getMaxValue(): Comparable[_] = ???
 
+    /** Returns the minimal value for the attribute described by this
+     *  OpenMBeanAttributeInfoSupport instance, if specified,
+     *  or null otherwise.
+     */
     @stub
-    // Returns the minimal value for the attribute described by this
-    // OpenMBeanAttributeInfoSupport instance, if specified,
-    // or null otherwise.
     def getMinValue(): Comparable[_] = ???
 
+    /** Returns the open type for the values of the attribute described
+     *  by this OpenMBeanAttributeInfoSupport instance.
+     */
     @stub
-    // Returns the open type for the values of the attribute described
-    // by this OpenMBeanAttributeInfoSupport instance.
     def getOpenType(): OpenType[_] = ???
 
+    /** Returns true if this OpenMBeanAttributeInfoSupport instance specifies a non-null
+     *  default value for the described attribute, false
+     *  otherwise.
+     */
     @stub
-    // Returns true if this OpenMBeanAttributeInfoSupport instance specifies a non-null
-    // default value for the described attribute, false
-    // otherwise.
     def hasDefaultValue(): Boolean = ???
 
+    /** Returns the hash code value for this OpenMBeanAttributeInfoSupport instance. */
     @stub
-    // Returns the hash code value for this OpenMBeanAttributeInfoSupport instance.
     def hashCode(): Int = ???
 
+    /** Returns true if this OpenMBeanAttributeInfoSupport instance specifies a non-null
+     *  set of legal values for the described attribute, false
+     *  otherwise.
+     */
     @stub
-    // Returns true if this OpenMBeanAttributeInfoSupport instance specifies a non-null
-    // set of legal values for the described attribute, false
-    // otherwise.
     def hasLegalValues(): Boolean = ???
 
+    /** Returns true if this OpenMBeanAttributeInfoSupport instance specifies a non-null
+     *  maximal value for the described attribute, false
+     *  otherwise.
+     */
     @stub
-    // Returns true if this OpenMBeanAttributeInfoSupport instance specifies a non-null
-    // maximal value for the described attribute, false
-    // otherwise.
     def hasMaxValue(): Boolean = ???
 
+    /** Returns true if this OpenMBeanAttributeInfoSupport instance specifies a non-null
+     *  minimal value for the described attribute, false
+     *  otherwise.
+     */
     @stub
-    // Returns true if this OpenMBeanAttributeInfoSupport instance specifies a non-null
-    // minimal value for the described attribute, false
-    // otherwise.
     def hasMinValue(): Boolean = ???
 
+    /** Tests whether obj is a valid value for the attribute
+     *  described by this OpenMBeanAttributeInfoSupport
+     *  instance.
+     */
     @stub
-    // Tests whether obj is a valid value for the attribute
-    // described by this OpenMBeanAttributeInfoSupport
-    // instance.
     def isValue(obj: Object): Boolean = ???
 }

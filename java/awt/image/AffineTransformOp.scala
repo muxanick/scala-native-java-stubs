@@ -4,79 +4,86 @@ import java.awt.RenderingHints
 import java.awt.geom.{AffineTransform, Point2D, Rectangle2D}
 import java.lang.Object
 
-// This class uses an affine transform to perform a linear mapping from
-// 2D coordinates in the source image or Raster to 2D coordinates
-// in the destination image or Raster.
-// The type of interpolation that is used is specified through a constructor,
-// either by a RenderingHints object or by one of the integer
-// interpolation types defined in this class.
-// 
-// If a RenderingHints object is specified in the constructor, the
-// interpolation hint and the rendering quality hint are used to set
-// the interpolation type for this operation.  The color rendering hint
-// and the dithering hint can be used when color conversion is required.
-// 
-// Note that the following constraints have to be met:
-// 
-// The source and destination must be different.
-// For Raster objects, the number of bands in the source must
-// be equal to the number of bands in the destination.
-// 
-class AffineTransformOp extends Object with BufferedImageOp, with RasterOp {
+/** This class uses an affine transform to perform a linear mapping from
+ *  2D coordinates in the source image or Raster to 2D coordinates
+ *  in the destination image or Raster.
+ *  The type of interpolation that is used is specified through a constructor,
+ *  either by a RenderingHints object or by one of the integer
+ *  interpolation types defined in this class.
+ *  
+ *  If a RenderingHints object is specified in the constructor, the
+ *  interpolation hint and the rendering quality hint are used to set
+ *  the interpolation type for this operation.  The color rendering hint
+ *  and the dithering hint can be used when color conversion is required.
+ *  
+ *  Note that the following constraints have to be met:
+ *  
+ *  The source and destination must be different.
+ *  For Raster objects, the number of bands in the source must
+ *  be equal to the number of bands in the destination.
+ *  
+ */
+class AffineTransformOp extends Object with BufferedImageOp with RasterOp {
 
+    /** Constructs an AffineTransformOp given an affine transform
+     *  and the interpolation type.
+     */
     @stub
-    // Constructs an AffineTransformOp given an affine transform
-    // and the interpolation type.
     def this(xform: AffineTransform, interpolationType: Int) = ???
 
+    /** Creates a zeroed destination image with the correct size and number of
+     *  bands.
+     */
     @stub
-    // Creates a zeroed destination image with the correct size and number of
-    // bands.
     def createCompatibleDestImage(src: BufferedImage, destCM: ColorModel): BufferedImage = ???
 
+    /** Creates a zeroed destination Raster with the correct size
+     *  and number of bands.
+     */
     @stub
-    // Creates a zeroed destination Raster with the correct size
-    // and number of bands.
     def createCompatibleDestRaster(src: Raster): WritableRaster = ???
 
+    /** Transforms the source BufferedImage and stores the results
+     *  in the destination BufferedImage.
+     */
     @stub
-    // Transforms the source BufferedImage and stores the results
-    // in the destination BufferedImage.
     def filter(src: BufferedImage, dst: BufferedImage): BufferedImage = ???
 
+    /** Transforms the source Raster and stores the results in
+     *  the destination Raster.
+     */
     @stub
-    // Transforms the source Raster and stores the results in
-    // the destination Raster.
     def filter(src: Raster, dst: WritableRaster): WritableRaster = ???
 
+    /** Returns the bounding box of the transformed destination. */
     @stub
-    // Returns the bounding box of the transformed destination.
     def getBounds2D(src: BufferedImage): Rectangle2D = ???
 
+    /** Returns the bounding box of the transformed destination. */
     @stub
-    // Returns the bounding box of the transformed destination.
     def getBounds2D(src: Raster): Rectangle2D = ???
 
+    /** Returns the interpolation type used by this op. */
     @stub
-    // Returns the interpolation type used by this op.
     def getInterpolationType(): Int = ???
 
+    /** Returns the location of the corresponding destination point given a
+     *  point in the source.
+     */
     @stub
-    // Returns the location of the corresponding destination point given a
-    // point in the source.
     def getPoint2D(srcPt: Point2D, dstPt: Point2D): Point2D = ???
 
+    /** Returns the rendering hints used by this transform operation. */
     @stub
-    // Returns the rendering hints used by this transform operation.
     def getRenderingHints(): RenderingHints = ???
 }
 
 object AffineTransformOp {
+    /** Bicubic interpolation type. */
     @stub
-    // Bicubic interpolation type.
-    def TYPE_BICUBIC: Int = ???
+    val TYPE_BICUBIC: Int = ???
 
+    /** Bilinear interpolation type. */
     @stub
-    // Bilinear interpolation type.
-    def TYPE_BILINEAR: Int = ???
+    val TYPE_BILINEAR: Int = ???
 }

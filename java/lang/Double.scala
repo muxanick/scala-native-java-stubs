@@ -1,202 +1,231 @@
 package java.lang
 
-// The Double class wraps a value of the primitive type
-// double in an object. An object of type
-// Double contains a single field whose type is
-// double.
-//
-// In addition, this class provides several methods for converting a
-// double to a String and a
-// String to a double, as well as other
-// constants and methods useful when dealing with a
-// double.
+/** The Double class wraps a value of the primitive type
+ *  double in an object. An object of type
+ *  Double contains a single field whose type is
+ *  double.
+ * 
+ *  In addition, this class provides several methods for converting a
+ *  double to a String and a
+ *  String to a double, as well as other
+ *  constants and methods useful when dealing with a
+ *  double.
+ */
 final class Double extends Number with Comparable[Double] {
 
+    /** Constructs a newly allocated Double object that
+     *  represents the primitive double argument.
+     */
     @stub
-    // Constructs a newly allocated Double object that
-    // represents the primitive double argument.
-    def this(value: double) = ???
+    def this(value: Double) = ???
 
+    /** Returns the value of this Double as a byte
+     *  after a narrowing primitive conversion.
+     */
     @stub
-    // Returns the value of this Double as a byte
-    // after a narrowing primitive conversion.
     def byteValue(): Byte = ???
 
+    /** Compares two Double objects numerically. */
     @stub
-    // Compares two Double objects numerically.
     def compareTo(anotherDouble: Double): Int = ???
 
+    /** Returns the double value of this Double object. */
     @stub
-    // Returns the double value of this Double object.
-    def doubleValue(): double = ???
+    def doubleValue(): Double = ???
 
+    /** Compares this object against the specified object. */
     @stub
-    // Compares this object against the specified object.
     def equals(obj: Object): Boolean = ???
 
+    /** Returns the value of this Double as a float
+     *  after a narrowing primitive conversion.
+     */
     @stub
-    // Returns the value of this Double as a float
-    // after a narrowing primitive conversion.
-    def floatValue(): float = ???
+    def floatValue(): Float = ???
 
+    /** Returns a hash code for this Double object. */
     @stub
-    // Returns a hash code for this Double object.
     def hashCode(): Int = ???
 
+    /** Returns the value of this Double as an int
+     *  after a narrowing primitive conversion.
+     */
     @stub
-    // Returns the value of this Double as an int
-    // after a narrowing primitive conversion.
     def intValue(): Int = ???
 
+    /** Returns true if this Double value is
+     *  infinitely large in magnitude, false otherwise.
+     */
     @stub
-    // Returns true if this Double value is
-    // infinitely large in magnitude, false otherwise.
     def isInfinite(): Boolean = ???
 
+    /** Returns true if this Double value is
+     *  a Not-a-Number (NaN), false otherwise.
+     */
     @stub
-    // Returns true if this Double value is
-    // a Not-a-Number (NaN), false otherwise.
     def isNaN(): Boolean = ???
 
+    /** Returns the value of this Double as a long
+     *  after a narrowing primitive conversion.
+     */
     @stub
-    // Returns the value of this Double as a long
-    // after a narrowing primitive conversion.
     def longValue(): Long = ???
 
+    /** Returns the value of this Double as a short
+     *  after a narrowing primitive conversion.
+     */
     @stub
-    // Returns the value of this Double as a short
-    // after a narrowing primitive conversion.
     def shortValue(): Short = ???
 
+    /** Returns a string representation of this Double object. */
     @stub
-    // Returns a string representation of this Double object.
     def toString(): String = ???
 }
 
 object Double {
+    /** The number of bytes used to represent a double value. */
     @stub
-    // The number of bytes used to represent a double value.
-    def BYTES: Int = ???
+    val BYTES: Int = ???
 
+    /** Maximum exponent a finite double variable may have. */
     @stub
-    // Maximum exponent a finite double variable may have.
-    def MAX_EXPONENT: Int = ???
+    val MAX_EXPONENT: Int = ???
 
+    /** A constant holding the largest positive finite value of type
+     *  double,
+     *  (2-2-52)·21023.
+     */
     @stub
-    // A constant holding the largest positive finite value of type
-    // double,
-    // (2-2-52)·21023.
-    def MAX_VALUE: double = ???
+    val MAX_VALUE: Double = ???
 
+    /** Minimum exponent a normalized double variable may
+     *  have.
+     */
     @stub
-    // Minimum exponent a normalized double variable may
-    // have.
-    def MIN_EXPONENT: Int = ???
+    val MIN_EXPONENT: Int = ???
 
+    /** A constant holding the smallest positive normal value of type
+     *  double, 2-1022.
+     */
     @stub
-    // A constant holding the smallest positive normal value of type
-    // double, 2-1022.
-    def MIN_NORMAL: double = ???
+    val MIN_NORMAL: Double = ???
 
+    /** A constant holding the smallest positive nonzero value of type
+     *  double, 2-1074.
+     */
     @stub
-    // A constant holding the smallest positive nonzero value of type
-    // double, 2-1074.
-    def MIN_VALUE: double = ???
+    val MIN_VALUE: Double = ???
 
+    /** A constant holding a Not-a-Number (NaN) value of type
+     *  double.
+     */
     @stub
-    // A constant holding a Not-a-Number (NaN) value of type
-    // double.
-    def NaN: double = ???
+    val NaN: Double = ???
 
+    /** A constant holding the negative infinity of type
+     *  double.
+     */
     @stub
-    // A constant holding the negative infinity of type
-    // double.
-    def NEGATIVE_INFINITY: double = ???
+    val NEGATIVE_INFINITY: Double = ???
 
+    /** A constant holding the positive infinity of type
+     *  double.
+     */
     @stub
-    // A constant holding the positive infinity of type
-    // double.
-    def POSITIVE_INFINITY: double = ???
+    val POSITIVE_INFINITY: Double = ???
 
+    /** The number of bits used to represent a double value. */
     @stub
-    // The number of bits used to represent a double value.
-    def SIZE: Int = ???
+    val SIZE: Int = ???
 
+    /** Compares the two specified double values. */
     @stub
-    // Compares the two specified double values.
-    def compare(d1: double, d2: double): Int = ???
+    def compare(d1: Double, d2: Double): Int = ???
 
+    /** Returns a representation of the specified floating-point value
+     *  according to the IEEE 754 floating-point "double
+     *  format" bit layout.
+     */
     @stub
-    // Returns a representation of the specified floating-point value
-    // according to the IEEE 754 floating-point "double
-    // format" bit layout.
-    def doubleToLongBits(value: double): Long = ???
+    def doubleToLongBits(value: Double): Long = ???
 
+    /** Returns a representation of the specified floating-point value
+     *  according to the IEEE 754 floating-point "double
+     *  format" bit layout, preserving Not-a-Number (NaN) values.
+     */
     @stub
-    // Returns a representation of the specified floating-point value
-    // according to the IEEE 754 floating-point "double
-    // format" bit layout, preserving Not-a-Number (NaN) values.
-    def doubleToRawLongBits(value: double): Long = ???
+    def doubleToRawLongBits(value: Double): Long = ???
 
+    /** Returns a hash code for a double value; compatible with
+     *  Double.hashCode().
+     */
     @stub
-    // Returns a hash code for a double value; compatible with
-    // Double.hashCode().
-    def hashCode(value: double): Int = ???
+    def hashCode(value: Double): Int = ???
 
+    /** Returns true if the argument is a finite floating-point
+     *  value; returns false otherwise (for NaN and infinity
+     *  arguments).
+     */
     @stub
-    // Returns true if the argument is a finite floating-point
-    // value; returns false otherwise (for NaN and infinity
-    // arguments).
-    def isFinite(d: double): Boolean = ???
+    def isFinite(d: Double): Boolean = ???
 
+    /** Returns true if the specified number is infinitely
+     *  large in magnitude, false otherwise.
+     */
     @stub
-    // Returns true if the specified number is infinitely
-    // large in magnitude, false otherwise.
-    def isInfinite(v: double): Boolean = ???
+    def isInfinite(v: Double): Boolean = ???
 
+    /** Returns true if the specified number is a
+     *  Not-a-Number (NaN) value, false otherwise.
+     */
     @stub
-    // Returns true if the specified number is a
-    // Not-a-Number (NaN) value, false otherwise.
-    def isNaN(v: double): Boolean = ???
+    def isNaN(v: Double): Boolean = ???
 
+    /** Returns the double value corresponding to a given
+     *  bit representation.
+     */
     @stub
-    // Returns the double value corresponding to a given
-    // bit representation.
-    def longBitsToDouble(bits: Long): double = ???
+    def longBitsToDouble(bits: Long): Double = ???
 
+    /** Returns the greater of two double values
+     *  as if by calling Math.max.
+     */
     @stub
-    // Returns the greater of two double values
-    // as if by calling Math.max.
-    def max(a: double, b: double): double = ???
+    def max(a: Double, b: Double): Double = ???
 
+    /** Returns the smaller of two double values
+     *  as if by calling Math.min.
+     */
     @stub
-    // Returns the smaller of two double values
-    // as if by calling Math.min.
-    def min(a: double, b: double): double = ???
+    def min(a: Double, b: Double): Double = ???
 
+    /** Returns a new double initialized to the value
+     *  represented by the specified String, as performed
+     *  by the valueOf method of class
+     *  Double.
+     */
     @stub
-    // Returns a new double initialized to the value
-    // represented by the specified String, as performed
-    // by the valueOf method of class
-    // Double.
-    def parseDouble(s: String): double = ???
+    def parseDouble(s: String): Double = ???
 
+    /** Adds two double values together as per the + operator. */
     @stub
-    // Adds two double values together as per the + operator.
-    def sum(a: double, b: double): double = ???
+    def sum(a: Double, b: Double): Double = ???
 
+    /** Returns a hexadecimal string representation of the
+     *  double argument.
+     */
     @stub
-    // Returns a hexadecimal string representation of the
-    // double argument.
-    def toHexString(d: double): String = ???
+    def toHexString(d: Double): String = ???
 
+    /** Returns a string representation of the double
+     *  argument.
+     */
     @stub
-    // Returns a string representation of the double
-    // argument.
-    def toString(d: double): String = ???
+    def toString(d: Double): String = ???
 
+    /** Returns a Double instance representing the specified
+     *  double value.
+     */
     @stub
-    // Returns a Double instance representing the specified
-    // double value.
-    def valueOf(d: double): Double = ???
+    def valueOf(d: Double): Double = ???
 }

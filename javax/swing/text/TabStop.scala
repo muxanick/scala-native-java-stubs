@@ -3,90 +3,95 @@ package javax.swing.text
 import java.io.Serializable
 import java.lang.Object
 
-// This class encapsulates a single tab stop (basically as tab stops
-// are thought of by RTF). A tab stop is at a specified distance from the
-// left margin, aligns text in a specified way, and has a specified leader.
-// TabStops are immutable, and usually contained in TabSets.
-// 
-// Warning:
-// Serialized objects of this class will not be compatible with
-// future Swing releases. The current serialization support is
-// appropriate for short term storage or RMI between applications running
-// the same version of Swing.  As of 1.4, support for long term storage
-// of all JavaBeans™
-// has been added to the java.beans package.
-// Please see XMLEncoder.
+/** This class encapsulates a single tab stop (basically as tab stops
+ *  are thought of by RTF). A tab stop is at a specified distance from the
+ *  left margin, aligns text in a specified way, and has a specified leader.
+ *  TabStops are immutable, and usually contained in TabSets.
+ *  
+ *  Warning:
+ *  Serialized objects of this class will not be compatible with
+ *  future Swing releases. The current serialization support is
+ *  appropriate for short term storage or RMI between applications running
+ *  the same version of Swing.  As of 1.4, support for long term storage
+ *  of all JavaBeans™
+ *  has been added to the java.beans package.
+ *  Please see XMLEncoder.
+ */
 class TabStop extends Object with Serializable {
 
+    /** Creates a tab at position pos with a default alignment
+     *  and default leader.
+     */
     @stub
-    // Creates a tab at position pos with a default alignment
-    // and default leader.
-    def this(pos: float) = ???
+    def this(pos: Float) = ???
 
+    /** Returns true if the tabs are equal. */
     @stub
-    // Returns true if the tabs are equal.
     def equals(other: Object): Boolean = ???
 
+    /** Returns the alignment, as an integer, of the tab. */
     @stub
-    // Returns the alignment, as an integer, of the tab.
     def getAlignment(): Int = ???
 
+    /** Returns the leader of the tab. */
     @stub
-    // Returns the leader of the tab.
     def getLeader(): Int = ???
 
+    /** Returns the position, as a float, of the tab. */
     @stub
-    // Returns the position, as a float, of the tab.
-    def getPosition(): float = ???
+    def getPosition(): Float = ???
 
+    /** Returns the hashCode for the object. */
     @stub
-    // Returns the hashCode for the object.
     def hashCode(): Int = ???
 }
 
 object TabStop {
+    /**  */
     @stub
-    // 
-    def ALIGN_BAR: Int = ???
+    val ALIGN_BAR: Int = ???
 
+    /** Characters following tab are positioned such that all following
+     *  characters up to next tab/newline are centered around the tabs
+     *  location.
+     */
     @stub
-    // Characters following tab are positioned such that all following
-    // characters up to next tab/newline are centered around the tabs
-    // location.
-    def ALIGN_CENTER: Int = ???
+    val ALIGN_CENTER: Int = ???
 
+    /** Characters following tab are aligned such that next
+     *  decimal/tab/newline is at the tab location, very similar to
+     *  RIGHT_TAB, just includes decimal as additional character to look for.
+     */
     @stub
-    // Characters following tab are aligned such that next
-    // decimal/tab/newline is at the tab location, very similar to
-    // RIGHT_TAB, just includes decimal as additional character to look for.
-    def ALIGN_DECIMAL: Int = ???
+    val ALIGN_DECIMAL: Int = ???
 
+    /** Character following tab is positioned at location. */
     @stub
-    // Character following tab is positioned at location.
-    def ALIGN_LEFT: Int = ???
+    val ALIGN_LEFT: Int = ???
 
+    /** Characters following tab are positioned such that all following
+     *  characters up to next tab/newline end at location.
+     */
     @stub
-    // Characters following tab are positioned such that all following
-    // characters up to next tab/newline end at location.
-    def ALIGN_RIGHT: Int = ???
+    val ALIGN_RIGHT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LEAD_DOTS: Int = ???
+    val LEAD_DOTS: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LEAD_EQUALS: Int = ???
+    val LEAD_EQUALS: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LEAD_HYPHENS: Int = ???
+    val LEAD_HYPHENS: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LEAD_NONE: Int = ???
+    val LEAD_NONE: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LEAD_THICKLINE: Int = ???
+    val LEAD_THICKLINE: Int = ???
 }

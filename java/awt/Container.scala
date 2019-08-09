@@ -6,358 +6,396 @@ import java.io.{PrintStream, PrintWriter}
 import java.lang.{Class, Object, String}
 import java.util.{EventListener, Set}
 
-// A generic Abstract Window Toolkit(AWT) container object is a component
-// that can contain other AWT components.
-// 
-// Components added to a container are tracked in a list.  The order
-// of the list will define the components' front-to-back stacking order
-// within the container.  If no index is specified when adding a
-// component to a container, it will be added to the end of the list
-// (and hence to the bottom of the stacking order).
-// 
-// Note: For details on the focus subsystem, see
-// 
-// How to Use the Focus Subsystem,
-// a section in The Java Tutorial, and the
-// Focus Specification
-// for more information.
+/** A generic Abstract Window Toolkit(AWT) container object is a component
+ *  that can contain other AWT components.
+ *  
+ *  Components added to a container are tracked in a list.  The order
+ *  of the list will define the components' front-to-back stacking order
+ *  within the container.  If no index is specified when adding a
+ *  component to a container, it will be added to the end of the list
+ *  (and hence to the bottom of the stacking order).
+ *  
+ *  Note: For details on the focus subsystem, see
+ *  
+ *  How to Use the Focus Subsystem,
+ *  a section in The Java Tutorial, and the
+ *  Focus Specification
+ *  for more information.
+ */
 class Container extends Component {
 
+    /** Appends the specified component to the end of this container. */
     @stub
-    // Appends the specified component to the end of this container.
     def add(comp: Component): Component = ???
 
+    /** Adds the specified component to this container at the given
+     *  position.
+     */
     @stub
-    // Adds the specified component to this container at the given
-    // position.
     def add(comp: Component, index: Int): Component = ???
 
+    /** Adds the specified component to the end of this container. */
     @stub
-    // Adds the specified component to the end of this container.
     def add(comp: Component, constraints: Object): Unit = ???
 
+    /** Adds the specified component to this container with the specified
+     *  constraints at the specified index.
+     */
     @stub
-    // Adds the specified component to this container with the specified
-    // constraints at the specified index.
     def add(comp: Component, constraints: Object, index: Int): Unit = ???
 
+    /** Adds the specified component to this container. */
     @stub
-    // Adds the specified component to this container.
     def add(name: String, comp: Component): Component = ???
 
+    /** Adds the specified container listener to receive container events
+     *  from this container.
+     */
     @stub
-    // Adds the specified container listener to receive container events
-    // from this container.
     def addContainerListener(l: ContainerListener): Unit = ???
 
+    /** Adds the specified component to this container at the specified
+     *  index.
+     */
     @stub
-    // Adds the specified component to this container at the specified
-    // index.
     protected def addImpl(comp: Component, constraints: Object, index: Int): Unit = ???
 
+    /** Makes this Container displayable by connecting it to
+     *  a native screen resource.
+     */
     @stub
-    // Makes this Container displayable by connecting it to
-    // a native screen resource.
     def addNotify(): Unit = ???
 
+    /** Adds a PropertyChangeListener to the listener list. */
     @stub
-    // Adds a PropertyChangeListener to the listener list.
     def addPropertyChangeListener(listener: PropertyChangeListener): Unit = ???
 
+    /** Adds a PropertyChangeListener to the listener list for a specific
+     *  property.
+     */
     @stub
-    // Adds a PropertyChangeListener to the listener list for a specific
-    // property.
     def addPropertyChangeListener(propertyName: String, listener: PropertyChangeListener): Unit = ???
 
+    /** Sets the ComponentOrientation property of this container
+     *  and all components contained within it.
+     */
     @stub
-    // Sets the ComponentOrientation property of this container
-    // and all components contained within it.
     def applyComponentOrientation(o: ComponentOrientation): Unit = ???
 
+    /** Returns whether the Set of focus traversal keys for the given focus
+     *  traversal operation has been explicitly defined for this Container.
+     */
     @stub
-    // Returns whether the Set of focus traversal keys for the given focus
-    // traversal operation has been explicitly defined for this Container.
     def areFocusTraversalKeysSet(id: Int): Boolean = ???
 
+    /** Deprecated. 
+     * As of JDK version 1.1,
+     *  replaced by getComponentCount().
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JDK version 1.1,
-    // replaced by getComponentCount().
-    //
     def countComponents(): Int = ???
 
+    /** Deprecated. 
+     * As of JDK version 1.1,
+     *  replaced by dispatchEvent(AWTEvent e)
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JDK version 1.1,
-    // replaced by dispatchEvent(AWTEvent e)
-    //
     def deliverEvent(e: Event): Unit = ???
 
+    /** Causes this container to lay out its components. */
     @stub
-    // Causes this container to lay out its components.
     def doLayout(): Unit = ???
 
+    /** Locates the visible child component that contains the specified
+     *  position.
+     */
     @stub
-    // Locates the visible child component that contains the specified
-    // position.
     def findComponentAt(x: Int, y: Int): Component = ???
 
+    /** Locates the visible child component that contains the specified
+     *  point.
+     */
     @stub
-    // Locates the visible child component that contains the specified
-    // point.
     def findComponentAt(p: Point): Component = ???
 
+    /** Returns the alignment along the x axis. */
     @stub
-    // Returns the alignment along the x axis.
-    def getAlignmentX(): float = ???
+    def getAlignmentX(): Float = ???
 
+    /** Returns the alignment along the y axis. */
     @stub
-    // Returns the alignment along the y axis.
-    def getAlignmentY(): float = ???
+    def getAlignmentY(): Float = ???
 
+    /** Gets the nth component in this container. */
     @stub
-    // Gets the nth component in this container.
     def getComponent(n: Int): Component = ???
 
+    /** Locates the component that contains the x,y position. */
     @stub
-    // Locates the component that contains the x,y position.
     def getComponentAt(x: Int, y: Int): Component = ???
 
+    /** Gets the component that contains the specified point. */
     @stub
-    // Gets the component that contains the specified point.
     def getComponentAt(p: Point): Component = ???
 
+    /** Gets the number of components in this panel. */
     @stub
-    // Gets the number of components in this panel.
     def getComponentCount(): Int = ???
 
+    /** Gets all the components in this container. */
     @stub
-    // Gets all the components in this container.
     def getComponents(): Array[Component] = ???
 
+    /** Returns the z-order index of the component inside the container. */
     @stub
-    // Returns the z-order index of the component inside the container.
     def getComponentZOrder(comp: Component): Int = ???
 
+    /** Returns an array of all the container listeners
+     *  registered on this container.
+     */
     @stub
-    // Returns an array of all the container listeners
-    // registered on this container.
     def getContainerListeners(): Array[ContainerListener] = ???
 
+    /** Returns the Set of focus traversal keys for a given traversal operation
+     *  for this Container.
+     */
     @stub
-    // Returns the Set of focus traversal keys for a given traversal operation
-    // for this Container.
     def getFocusTraversalKeys(id: Int): Set[AWTKeyStroke] = ???
 
+    /** Returns the focus traversal policy that will manage keyboard traversal
+     *  of this Container's children, or null if this Container is not a focus
+     *  cycle root.
+     */
     @stub
-    // Returns the focus traversal policy that will manage keyboard traversal
-    // of this Container's children, or null if this Container is not a focus
-    // cycle root.
     def getFocusTraversalPolicy(): FocusTraversalPolicy = ???
 
+    /** Determines the insets of this container, which indicate the size
+     *  of the container's border.
+     */
     @stub
-    // Determines the insets of this container, which indicate the size
-    // of the container's border.
     def getInsets(): Insets = ???
 
+    /** Gets the layout manager for this container. */
     @stub
-    // Gets the layout manager for this container.
     def getLayout(): LayoutManager = ???
 
+    /** Returns an array of all the objects currently registered
+     *  as FooListeners
+     *  upon this Container.
+     */
     @stub
-    // Returns an array of all the objects currently registered
-    // as FooListeners
-    // upon this Container.
-    def Array[T]: [T <: EventListener] = ???
+    def getListeners[T <: EventListener](listenerType: Class[T]): Array[T] = ???
 
+    /** Returns the maximum size of this container. */
     @stub
-    // Returns the maximum size of this container.
     def getMaximumSize(): Dimension = ???
 
+    /** Returns the minimum size of this container. */
     @stub
-    // Returns the minimum size of this container.
     def getMinimumSize(): Dimension = ???
 
+    /** Returns the position of the mouse pointer in this Container's
+     *  coordinate space if the Container is under the mouse pointer,
+     *  otherwise returns null.
+     */
     @stub
-    // Returns the position of the mouse pointer in this Container's
-    // coordinate space if the Container is under the mouse pointer,
-    // otherwise returns null.
     def getMousePosition(allowChildren: Boolean): Point = ???
 
+    /** Returns the preferred size of this container. */
     @stub
-    // Returns the preferred size of this container.
     def getPreferredSize(): Dimension = ???
 
+    /** Deprecated. 
+     * As of JDK version 1.1,
+     *  replaced by getInsets().
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JDK version 1.1,
-    // replaced by getInsets().
-    //
     def insets(): Insets = ???
 
+    /** Invalidates the container. */
     @stub
-    // Invalidates the container.
     def invalidate(): Unit = ???
 
+    /** Checks if the component is contained in the component hierarchy of
+     *  this container.
+     */
     @stub
-    // Checks if the component is contained in the component hierarchy of
-    // this container.
     def isAncestorOf(c: Component): Boolean = ???
 
+    /** Returns whether this Container is the root of a focus traversal cycle. */
     @stub
-    // Returns whether this Container is the root of a focus traversal cycle.
     def isFocusCycleRoot(): Boolean = ???
 
+    /** Returns whether the specified Container is the focus cycle root of this
+     *  Container's focus traversal cycle.
+     */
     @stub
-    // Returns whether the specified Container is the focus cycle root of this
-    // Container's focus traversal cycle.
     def isFocusCycleRoot(container: Container): Boolean = ???
 
+    /** Returns whether this container provides focus traversal
+     *  policy.
+     */
     @stub
-    // Returns whether this container provides focus traversal
-    // policy.
     def isFocusTraversalPolicyProvider(): Boolean = ???
 
+    /** Returns whether the focus traversal policy has been explicitly set for
+     *  this Container.
+     */
     @stub
-    // Returns whether the focus traversal policy has been explicitly set for
-    // this Container.
     def isFocusTraversalPolicySet(): Boolean = ???
 
+    /** Indicates if this container is a validate root. */
     @stub
-    // Indicates if this container is a validate root.
     def isValidateRoot(): Boolean = ???
 
+    /** Deprecated. 
+     * As of JDK version 1.1,
+     *  replaced by doLayout().
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JDK version 1.1,
-    // replaced by doLayout().
-    //
     def layout(): Unit = ???
 
+    /** Prints a listing of this container to the specified output
+     *  stream.
+     */
     @stub
-    // Prints a listing of this container to the specified output
-    // stream.
     def list(out: PrintStream, indent: Int): Unit = ???
 
+    /** Prints out a list, starting at the specified indentation,
+     *  to the specified print writer.
+     */
     @stub
-    // Prints out a list, starting at the specified indentation,
-    // to the specified print writer.
     def list(out: PrintWriter, indent: Int): Unit = ???
 
+    /** Deprecated. 
+     * As of JDK version 1.1,
+     *  replaced by getComponentAt(int, int).
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JDK version 1.1,
-    // replaced by getComponentAt(int, int).
-    //
     def locate(x: Int, y: Int): Component = ???
 
+    /** Deprecated. 
+     * As of JDK version 1.1,
+     *  replaced by getMinimumSize().
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JDK version 1.1,
-    // replaced by getMinimumSize().
-    //
     def minimumSize(): Dimension = ???
 
+    /** Paints the container. */
     @stub
-    // Paints the container.
     def paint(g: Graphics): Unit = ???
 
+    /** Paints each of the components in this container. */
     @stub
-    // Paints each of the components in this container.
     def paintComponents(g: Graphics): Unit = ???
 
+    /** Returns a string representing the state of this Container. */
     @stub
-    // Returns a string representing the state of this Container.
     protected def paramString(): String = ???
 
+    /** Deprecated. 
+     * As of JDK version 1.1,
+     *  replaced by getPreferredSize().
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JDK version 1.1,
-    // replaced by getPreferredSize().
-    //
     def preferredSize(): Dimension = ???
 
+    /** Prints the container. */
     @stub
-    // Prints the container.
     def print(g: Graphics): Unit = ???
 
+    /** Prints each of the components in this container. */
     @stub
-    // Prints each of the components in this container.
     def printComponents(g: Graphics): Unit = ???
 
+    /** Processes container events occurring on this container by
+     *  dispatching them to any registered ContainerListener objects.
+     */
     @stub
-    // Processes container events occurring on this container by
-    // dispatching them to any registered ContainerListener objects.
     protected def processContainerEvent(e: ContainerEvent): Unit = ???
 
+    /** Processes events on this container. */
     @stub
-    // Processes events on this container.
     protected def processEvent(e: AWTEvent): Unit = ???
 
+    /** Removes the specified component from this container. */
     @stub
-    // Removes the specified component from this container.
     def remove(comp: Component): Unit = ???
 
+    /** Removes the component, specified by index,
+     *  from this container.
+     */
     @stub
-    // Removes the component, specified by index,
-    // from this container.
     def remove(index: Int): Unit = ???
 
+    /** Removes all the components from this container. */
     @stub
-    // Removes all the components from this container.
     def removeAll(): Unit = ???
 
+    /** Removes the specified container listener so it no longer receives
+     *  container events from this container.
+     */
     @stub
-    // Removes the specified container listener so it no longer receives
-    // container events from this container.
     def removeContainerListener(l: ContainerListener): Unit = ???
 
+    /** Makes this Container undisplayable by removing its connection
+     *  to its native screen resource.
+     */
     @stub
-    // Makes this Container undisplayable by removing its connection
-    // to its native screen resource.
     def removeNotify(): Unit = ???
 
+    /** Moves the specified component to the specified z-order index in
+     *  the container.
+     */
     @stub
-    // Moves the specified component to the specified z-order index in
-    // the container.
     def setComponentZOrder(comp: Component, index: Int): Unit = ???
 
+    /** Sets whether this Container is the root of a focus traversal cycle. */
     @stub
-    // Sets whether this Container is the root of a focus traversal cycle.
     def setFocusCycleRoot(focusCycleRoot: Boolean): Unit = ???
 
+    /** Sets the focus traversal keys for a given traversal operation for this
+     *  Container.
+     */
     @stub
-    // Sets the focus traversal keys for a given traversal operation for this
-    // Container.
     def setFocusTraversalKeys(id: Int, keystrokes: Set[_ <: AWTKeyStroke]): Unit = ???
 
+    /** Sets the focus traversal policy that will manage keyboard traversal of
+     *  this Container's children, if this Container is a focus cycle root.
+     */
     @stub
-    // Sets the focus traversal policy that will manage keyboard traversal of
-    // this Container's children, if this Container is a focus cycle root.
     def setFocusTraversalPolicy(policy: FocusTraversalPolicy): Unit = ???
 
+    /** Sets whether this container will be used to provide focus
+     *  traversal policy.
+     */
     @stub
-    // Sets whether this container will be used to provide focus
-    // traversal policy.
     def setFocusTraversalPolicyProvider(provider: Boolean): Unit = ???
 
+    /** Sets the font of this container. */
     @stub
-    // Sets the font of this container.
     def setFont(f: Font): Unit = ???
 
+    /** Sets the layout manager for this container. */
     @stub
-    // Sets the layout manager for this container.
     def setLayout(mgr: LayoutManager): Unit = ???
 
+    /** Transfers the focus down one focus traversal cycle. */
     @stub
-    // Transfers the focus down one focus traversal cycle.
     def transferFocusDownCycle(): Unit = ???
 
+    /** Updates the container. */
     @stub
-    // Updates the container.
     def update(g: Graphics): Unit = ???
 
+    /** Validates this container and all of its subcomponents. */
     @stub
-    // Validates this container and all of its subcomponents.
     def validate(): Unit = ???
 }

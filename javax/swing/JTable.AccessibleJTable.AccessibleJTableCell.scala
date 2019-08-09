@@ -7,211 +7,225 @@ import java.lang.{Object, String}
 import java.util.Locale
 import javax.accessibility.{Accessible, AccessibleAction, AccessibleComponent, AccessibleContext, AccessibleRole, AccessibleSelection, AccessibleStateSet, AccessibleText, AccessibleValue}
 
-// The class provides an implementation of the Java Accessibility
-// API appropriate to table cells.
-protected class JTable.AccessibleJTable.AccessibleJTableCell extends AccessibleContext with Accessible, with AccessibleComponent {
+/** The class provides an implementation of the Java Accessibility
+ *  API appropriate to table cells.
+ */
+protected class JTable.AccessibleJTable.AccessibleJTableCell extends AccessibleContext with Accessible with AccessibleComponent {
 
+    /** Adds the specified focus listener to receive focus events from this
+     *  component.
+     */
     @stub
-    // Adds the specified focus listener to receive focus events from this
-    // component.
     def addFocusListener(l: FocusListener): Unit = ???
 
+    /** Adds a PropertyChangeListener to the listener list. */
     @stub
-    // Adds a PropertyChangeListener to the listener list.
     def addPropertyChangeListener(l: PropertyChangeListener): Unit = ???
 
+    /** Checks whether the specified point is within this
+     *  object's bounds, where the point's x and y coordinates
+     *  are defined to be relative to the coordinate system of
+     *  the object.
+     */
     @stub
-    // Checks whether the specified point is within this
-    // object's bounds, where the point's x and y coordinates
-    // are defined to be relative to the coordinate system of
-    // the object.
     def contains(p: Point): Boolean = ???
 
+    /** Gets the AccessibleAction associated with this
+     *  object if one exists.
+     */
     @stub
-    // Gets the AccessibleAction associated with this
-    // object if one exists.
     def getAccessibleAction(): AccessibleAction = ???
 
+    /** Returns the Accessible child, if one exists, contained at the local
+     *  coordinate Point.
+     */
     @stub
-    // Returns the Accessible child, if one exists, contained at the local
-    // coordinate Point.
     def getAccessibleAt(p: Point): Accessible = ???
 
+    /** Returns the specified Accessible child of the
+     *  object.
+     */
     @stub
-    // Returns the specified Accessible child of the
-    // object.
     def getAccessibleChild(i: Int): Accessible = ???
 
+    /** Returns the number of accessible children in the object. */
     @stub
-    // Returns the number of accessible children in the object.
     def getAccessibleChildrenCount(): Int = ???
 
+    /** Gets the AccessibleComponent associated with
+     *  this object if one exists.
+     */
     @stub
-    // Gets the AccessibleComponent associated with
-    // this object if one exists.
     def getAccessibleComponent(): AccessibleComponent = ???
 
+    /** Gets the AccessibleContext associated with this
+     *  component.
+     */
     @stub
-    // Gets the AccessibleContext associated with this
-    // component.
     def getAccessibleContext(): AccessibleContext = ???
 
+    /** Gets the accessible description of this object. */
     @stub
-    // Gets the accessible description of this object.
     def getAccessibleDescription(): String = ???
 
+    /** Gets the index of this object in its accessible parent. */
     @stub
-    // Gets the index of this object in its accessible parent.
     def getAccessibleIndexInParent(): Int = ???
 
+    /** Gets the accessible name of this object. */
     @stub
-    // Gets the accessible name of this object.
     def getAccessibleName(): String = ???
 
+    /** Gets the Accessible parent of this object. */
     @stub
-    // Gets the Accessible parent of this object.
     def getAccessibleParent(): Accessible = ???
 
+    /** Gets the role of this object. */
     @stub
-    // Gets the role of this object.
     def getAccessibleRole(): AccessibleRole = ???
 
+    /** Gets the AccessibleSelection associated with
+     *  this object if one exists.
+     */
     @stub
-    // Gets the AccessibleSelection associated with
-    // this object if one exists.
     def getAccessibleSelection(): AccessibleSelection = ???
 
+    /** Gets the state set of this object. */
     @stub
-    // Gets the state set of this object.
     def getAccessibleStateSet(): AccessibleStateSet = ???
 
+    /** Gets the AccessibleText associated with this
+     *  object if one exists.
+     */
     @stub
-    // Gets the AccessibleText associated with this
-    // object if one exists.
     def getAccessibleText(): AccessibleText = ???
 
+    /** Gets the AccessibleValue associated with
+     *  this object if one exists.
+     */
     @stub
-    // Gets the AccessibleValue associated with
-    // this object if one exists.
     def getAccessibleValue(): AccessibleValue = ???
 
+    /** Gets the background color of this object. */
     @stub
-    // Gets the background color of this object.
     def getBackground(): Color = ???
 
+    /** Gets the bounds of this object in the form of a Rectangle object. */
     @stub
-    // Gets the bounds of this object in the form of a Rectangle object.
     def getBounds(): Rectangle = ???
 
+    /** Gets the AccessibleContext for the table cell renderer. */
     @stub
-    // Gets the AccessibleContext for the table cell renderer.
     protected def getCurrentAccessibleContext(): AccessibleContext = ???
 
+    /** Gets the table cell renderer component. */
     @stub
-    // Gets the table cell renderer component.
     protected def getCurrentComponent(): Component = ???
 
+    /** Gets the Cursor of this object. */
     @stub
-    // Gets the Cursor of this object.
     def getCursor(): Cursor = ???
 
+    /** Gets the Font of this object. */
     @stub
-    // Gets the Font of this object.
     def getFont(): Font = ???
 
+    /** Gets the FontMetrics of this object. */
     @stub
-    // Gets the FontMetrics of this object.
     def getFontMetrics(f: Font): FontMetrics = ???
 
+    /** Gets the foreground color of this object. */
     @stub
-    // Gets the foreground color of this object.
     def getForeground(): Color = ???
 
+    /** Gets the locale of the component. */
     @stub
-    // Gets the locale of the component.
     def getLocale(): Locale = ???
 
+    /** Gets the location of the object relative to the parent
+     *  in the form of a point specifying the object's
+     *  top-left corner in the screen's coordinate space.
+     */
     @stub
-    // Gets the location of the object relative to the parent
-    // in the form of a point specifying the object's
-    // top-left corner in the screen's coordinate space.
     def getLocation(): Point = ???
 
+    /** Returns the location of the object on the screen. */
     @stub
-    // Returns the location of the object on the screen.
     def getLocationOnScreen(): Point = ???
 
+    /** Returns the size of this object in the form of a Dimension object. */
     @stub
-    // Returns the size of this object in the form of a Dimension object.
     def getSize(): Dimension = ???
 
+    /** Determines if the object is enabled. */
     @stub
-    // Determines if the object is enabled.
     def isEnabled(): Boolean = ???
 
+    /** Returns whether this object can accept focus or not. */
     @stub
-    // Returns whether this object can accept focus or not.
     def isFocusTraversable(): Boolean = ???
 
+    /** Determines if the object is showing. */
     @stub
-    // Determines if the object is showing.
     def isShowing(): Boolean = ???
 
+    /** Determines if this object is visible. */
     @stub
-    // Determines if this object is visible.
     def isVisible(): Boolean = ???
 
+    /** Removes the specified focus listener so it no longer receives focus
+     *  events from this component.
+     */
     @stub
-    // Removes the specified focus listener so it no longer receives focus
-    // events from this component.
     def removeFocusListener(l: FocusListener): Unit = ???
 
+    /** Removes a PropertyChangeListener from the
+     *  listener list.
+     */
     @stub
-    // Removes a PropertyChangeListener from the
-    // listener list.
     def removePropertyChangeListener(l: PropertyChangeListener): Unit = ???
 
+    /** Requests focus for this object. */
     @stub
-    // Requests focus for this object.
     def requestFocus(): Unit = ???
 
+    /** Sets the accessible description of this object. */
     @stub
-    // Sets the accessible description of this object.
     def setAccessibleDescription(s: String): Unit = ???
 
+    /** Sets the localized accessible name of this object. */
     @stub
-    // Sets the localized accessible name of this object.
     def setAccessibleName(s: String): Unit = ???
 
+    /** Sets the background color of this object. */
     @stub
-    // Sets the background color of this object.
     def setBackground(c: Color): Unit = ???
 
+    /** Sets the bounds of this object in the form of a Rectangle object. */
     @stub
-    // Sets the bounds of this object in the form of a Rectangle object.
     def setBounds(r: Rectangle): Unit = ???
 
+    /** Sets the Cursor of this object. */
     @stub
-    // Sets the Cursor of this object.
     def setCursor(c: Cursor): Unit = ???
 
+    /** Sets the enabled state of the object. */
     @stub
-    // Sets the enabled state of the object.
     def setEnabled(b: Boolean): Unit = ???
 
+    /** Sets the Font of this object. */
     @stub
-    // Sets the Font of this object.
     def setFont(f: Font): Unit = ???
 
+    /** Sets the foreground color of this object. */
     @stub
-    // Sets the foreground color of this object.
     def setForeground(c: Color): Unit = ???
 
+    /** Sets the location of the object relative to the parent. */
     @stub
-    // Sets the location of the object relative to the parent.
     def setLocation(p: Point): Unit = ???
 
+    /** Resizes this object so that it has width and height. */
     @stub
-    // Resizes this object so that it has width and height.
     def setSize(d: Dimension): Unit = ???
 }

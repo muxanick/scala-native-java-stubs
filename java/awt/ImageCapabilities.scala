@@ -2,16 +2,17 @@ package java.awt
 
 import java.lang.{Cloneable, Object}
 
-// Capabilities and properties of images.
+/** Capabilities and properties of images. */
 class ImageCapabilities extends Object with Cloneable {
 
+    /** Creates and returns a copy of this object. */
     @stub
-    // Creates and returns a copy of this object.
     def clone(): Object = ???
 
+    /** Returns true if the object whose capabilities are
+     *  encapsulated in this ImageCapabilities can be or is
+     *  accelerated.
+     */
     @stub
-    // Returns true if the object whose capabilities are
-    // encapsulated in this ImageCapabilities can be or is
-    // accelerated.
     def isAccelerated(): Boolean = ???
 }

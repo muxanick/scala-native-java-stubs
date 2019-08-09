@@ -5,101 +5,117 @@ import java.math.{BigDecimal, BigInteger}
 import java.util.Date
 import javax.management.ObjectName
 
-// The SimpleType class is the open type class whose instances describe
-// all open data values which are neither arrays,
-// nor CompositeData values,
-// nor TabularData values.
-// It predefines all its possible instances as static fields, and has no public constructor.
-// 
-// Given a SimpleType instance describing values whose Java class name is className,
-// the internal fields corresponding to the name and description of this SimpleType instance
-// are also set to className.
-// In other words, its methods getClassName, getTypeName and getDescription
-// all return the same string value className.
+/** The SimpleType class is the open type class whose instances describe
+ *  all open data values which are neither arrays,
+ *  nor CompositeData values,
+ *  nor TabularData values.
+ *  It predefines all its possible instances as static fields, and has no public constructor.
+ *  
+ *  Given a SimpleType instance describing values whose Java class name is className,
+ *  the internal fields corresponding to the name and description of this SimpleType instance
+ *  are also set to className.
+ *  In other words, its methods getClassName, getTypeName and getDescription
+ *  all return the same string value className.
+ */
 final class SimpleType[T] extends OpenType[T] {
 
+    /** Compares the specified obj parameter with this SimpleType instance for equality. */
     @stub
-    // Compares the specified obj parameter with this SimpleType instance for equality.
     def equals(obj: Object): Boolean = ???
 
+    /** Returns the hash code value for this SimpleType instance. */
     @stub
-    // Returns the hash code value for this SimpleType instance.
     def hashCode(): Int = ???
 
+    /** Tests whether obj is a value for this
+     *  SimpleType instance.
+     */
     @stub
-    // Tests whether obj is a value for this
-    // SimpleType instance.
     def isValue(obj: Object): Boolean = ???
 
+    /** Replace an object read from an ObjectInputStream with the unique instance for that
+     *  value.
+     */
     @stub
-    // Replace an object read from an ObjectInputStream with the unique instance for that
-    // value.
     def readResolve(): Object = ???
 }
 
 object SimpleType {
+    /** The SimpleType instance describing values whose
+     *  Java class name is java.math.BigDecimal.
+     */
     @stub
-    // The SimpleType instance describing values whose
-    // Java class name is java.math.BigDecimal.
-    def BIGDECIMAL: SimpleType[BigDecimal] = ???
+    val BIGDECIMAL: SimpleType[BigDecimal] = ???
 
+    /** The SimpleType instance describing values whose
+     *  Java class name is java.math.BigInteger.
+     */
     @stub
-    // The SimpleType instance describing values whose
-    // Java class name is java.math.BigInteger.
-    def BIGINTEGER: SimpleType[BigInteger] = ???
+    val BIGINTEGER: SimpleType[BigInteger] = ???
 
+    /** The SimpleType instance describing values whose
+     *  Java class name is java.lang.Boolean.
+     */
     @stub
-    // The SimpleType instance describing values whose
-    // Java class name is java.lang.Boolean.
-    def BOOLEAN: SimpleType[Boolean] = ???
+    val BOOLEAN: SimpleType[Boolean] = ???
 
+    /** The SimpleType instance describing values whose
+     *  Java class name is java.lang.Byte.
+     */
     @stub
-    // The SimpleType instance describing values whose
-    // Java class name is java.lang.Byte.
-    def BYTE: SimpleType[Byte] = ???
+    val BYTE: SimpleType[Byte] = ???
 
+    /** The SimpleType instance describing values whose
+     *  Java class name is java.lang.Character.
+     */
     @stub
-    // The SimpleType instance describing values whose
-    // Java class name is java.lang.Character.
-    def CHARACTER: SimpleType[Character] = ???
+    val CHARACTER: SimpleType[Character] = ???
 
+    /** The SimpleType instance describing values whose
+     *  Java class name is java.util.Date.
+     */
     @stub
-    // The SimpleType instance describing values whose
-    // Java class name is java.util.Date.
-    def DATE: SimpleType[Date] = ???
+    val DATE: SimpleType[Date] = ???
 
+    /** The SimpleType instance describing values whose
+     *  Java class name is java.lang.Double.
+     */
     @stub
-    // The SimpleType instance describing values whose
-    // Java class name is java.lang.Double.
-    def DOUBLE: SimpleType[Double] = ???
+    val DOUBLE: SimpleType[Double] = ???
 
+    /** The SimpleType instance describing values whose
+     *  Java class name is java.lang.Float.
+     */
     @stub
-    // The SimpleType instance describing values whose
-    // Java class name is java.lang.Float.
-    def FLOAT: SimpleType[Float] = ???
+    val FLOAT: SimpleType[Float] = ???
 
+    /** The SimpleType instance describing values whose
+     *  Java class name is java.lang.Integer.
+     */
     @stub
-    // The SimpleType instance describing values whose
-    // Java class name is java.lang.Integer.
-    def INTEGER: SimpleType[Integer] = ???
+    val INTEGER: SimpleType[Integer] = ???
 
+    /** The SimpleType instance describing values whose
+     *  Java class name is java.lang.Long.
+     */
     @stub
-    // The SimpleType instance describing values whose
-    // Java class name is java.lang.Long.
-    def LONG: SimpleType[Long] = ???
+    val LONG: SimpleType[Long] = ???
 
+    /** The SimpleType instance describing values whose
+     *  Java class name is javax.management.ObjectName.
+     */
     @stub
-    // The SimpleType instance describing values whose
-    // Java class name is javax.management.ObjectName.
-    def OBJECTNAME: SimpleType[ObjectName] = ???
+    val OBJECTNAME: SimpleType[ObjectName] = ???
 
+    /** The SimpleType instance describing values whose
+     *  Java class name is java.lang.Short.
+     */
     @stub
-    // The SimpleType instance describing values whose
-    // Java class name is java.lang.Short.
-    def SHORT: SimpleType[Short] = ???
+    val SHORT: SimpleType[Short] = ???
 
+    /** The SimpleType instance describing values whose
+     *  Java class name is java.lang.String.
+     */
     @stub
-    // The SimpleType instance describing values whose
-    // Java class name is java.lang.String.
-    def STRING: SimpleType[String] = ???
+    val STRING: SimpleType[String] = ???
 }

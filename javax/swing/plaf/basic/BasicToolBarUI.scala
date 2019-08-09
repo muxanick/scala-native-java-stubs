@@ -9,273 +9,282 @@ import javax.swing.border.Border
 import javax.swing.event.MouseInputListener
 import javax.swing.plaf.{ComponentUI, ToolBarUI}
 
-// A Basic L&F implementation of ToolBarUI.  This implementation
-// is a "combined" view/controller.
-// 
+/** A Basic L&F implementation of ToolBarUI.  This implementation
+ *  is a "combined" view/controller.
+ *  
+ */
 class BasicToolBarUI extends ToolBarUI with SwingConstants {
 
+    /** This class should be treated as a "protected" inner class. */
     @stub
-    // This class should be treated as a "protected" inner class.
-    def BasicToolBarUI.DockingListener: class = ???
+    object DockingListener extends BasicToolBarUI.DockingListener
 
+    /**  */
     @stub
-    // 
-    protected def BasicToolBarUI.DragWindow: class = ???
+    protected object DragWindow extends BasicToolBarUI.DragWindow
 
+    /**  */
     @stub
-    // 
-    protected def BasicToolBarUI.FrameListener: class = ???
+    protected object FrameListener extends BasicToolBarUI.FrameListener
 
+    /**  */
     @stub
-    // 
-    protected def BasicToolBarUI.PropertyListener: class = ???
+    protected object PropertyListener extends BasicToolBarUI.PropertyListener
 
+    /**  */
     @stub
-    // 
-    protected def BasicToolBarUI.ToolBarContListener: class = ???
+    protected object ToolBarContListener extends BasicToolBarUI.ToolBarContListener
 
+    /**  */
     @stub
-    // 
-    protected def constraintBeforeFloating: String = ???
+    protected val constraintBeforeFloating: String = ???
 
+    /**  */
     @stub
-    // 
-    protected def dockingBorderColor: Color = ???
+    protected val dockingBorderColor: Color = ???
 
+    /**  */
     @stub
-    // 
-    protected def dockingColor: Color = ???
+    protected val dockingColor: Color = ???
 
+    /**  */
     @stub
-    // 
-    protected def dockingListener: MouseInputListener = ???
+    protected val dockingListener: MouseInputListener = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
-    protected def downKey: KeyStroke = ???
+    protected val downKey: KeyStroke = ???
 
+    /**  */
     @stub
-    // 
-    protected def dragWindow: BasicToolBarUI.DragWindow = ???
+    protected val dragWindow: BasicToolBarUI.DragWindow = ???
 
+    /**  */
     @stub
-    // 
-    protected def floatingBorderColor: Color = ???
+    protected val floatingBorderColor: Color = ???
 
+    /**  */
     @stub
-    // 
-    protected def floatingColor: Color = ???
+    protected val floatingColor: Color = ???
 
+    /**  */
     @stub
-    // 
-    protected def focusedCompIndex: Int = ???
+    protected val focusedCompIndex: Int = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
-    protected def leftKey: KeyStroke = ???
+    protected val leftKey: KeyStroke = ???
 
+    /**  */
     @stub
-    // 
-    protected def propertyListener: PropertyChangeListener = ???
+    protected val propertyListener: PropertyChangeListener = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
-    protected def rightKey: KeyStroke = ???
+    protected val rightKey: KeyStroke = ???
 
+    /**  */
     @stub
-    // 
-    protected def toolBar: JToolBar = ???
+    protected val toolBar: JToolBar = ???
 
+    /**  */
     @stub
-    // 
-    protected def toolBarContListener: ContainerListener = ???
+    protected val toolBarContListener: ContainerListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def toolBarFocusListener: FocusListener = ???
+    protected val toolBarFocusListener: FocusListener = ???
 
+    /**  */
     @stub
-    // 
     def canDock(c: Component, p: Point): Boolean = ???
 
+    /**  */
     @stub
-    // 
     protected def createDockingListener(): MouseInputListener = ???
 
+    /**  */
     @stub
-    // 
     protected def createDragWindow(toolbar: JToolBar): BasicToolBarUI.DragWindow = ???
 
+    /** No longer used, use BasicToolBarUI.createFloatingWindow(JToolBar) */
     @stub
-    // No longer used, use BasicToolBarUI.createFloatingWindow(JToolBar)
     protected def createFloatingFrame(toolbar: JToolBar): JFrame = ???
 
+    /** Creates a window which contains the toolbar after it has been
+     *  dragged out from its container
+     */
     @stub
-    // Creates a window which contains the toolbar after it has been
-    // dragged out from its container
     protected def createFloatingWindow(toolbar: JToolBar): RootPaneContainer = ???
 
+    /**  */
     @stub
-    // 
     protected def createFrameListener(): WindowListener = ???
 
+    /** Creates the non rollover border for toolbar components. */
     @stub
-    // Creates the non rollover border for toolbar components.
     protected def createNonRolloverBorder(): Border = ???
 
+    /**  */
     @stub
-    // 
     protected def createPropertyListener(): PropertyChangeListener = ???
 
+    /** Creates a rollover border for toolbar components. */
     @stub
-    // Creates a rollover border for toolbar components.
     protected def createRolloverBorder(): Border = ???
 
+    /**  */
     @stub
-    // 
     protected def createToolBarContListener(): ContainerListener = ???
 
+    /**  */
     @stub
-    // 
     protected def createToolBarFocusListener(): FocusListener = ???
 
+    /**  */
     @stub
-    // 
     protected def dragTo(position: Point, origin: Point): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def floatAt(position: Point, origin: Point): Unit = ???
 
+    /** Gets the color displayed when over a docking area */
     @stub
-    // Gets the color displayed when over a docking area
     def getDockingColor(): Color = ???
 
+    /** Gets the color displayed when over a floating area */
     @stub
-    // Gets the color displayed when over a floating area
     def getFloatingColor(): Color = ???
 
+    /** Returns a non-rollover border for the button. */
     @stub
-    // Returns a non-rollover border for the button.
     protected def getNonRolloverBorder(b: AbstractButton): Border = ???
 
+    /** Returns a rollover border for the button. */
     @stub
-    // Returns a rollover border for the button.
     protected def getRolloverBorder(b: AbstractButton): Border = ???
 
+    /**  */
     @stub
-    // 
     protected def installComponents(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installDefaults(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installKeyboardActions(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installListeners(): Unit = ???
 
+    /** Installs non-rollover borders on all the child components of the JComponent. */
     @stub
-    // Installs non-rollover borders on all the child components of the JComponent.
     protected def installNonRolloverBorders(c: JComponent): Unit = ???
 
+    /** Installs normal borders on all the child components of the JComponent. */
     @stub
-    // Installs normal borders on all the child components of the JComponent.
     protected def installNormalBorders(c: JComponent): Unit = ???
 
+    /** Installs rollover borders on all the child components of the JComponent. */
     @stub
-    // Installs rollover borders on all the child components of the JComponent.
     protected def installRolloverBorders(c: JComponent): Unit = ???
 
+    /** Configures the specified component appropriately for the look and feel. */
     @stub
-    // Configures the specified component appropriately for the look and feel.
     def installUI(c: JComponent): Unit = ???
 
+    /**  */
     @stub
-    // 
     def isFloating(): Boolean = ???
 
+    /** Returns a flag to determine whether rollover button borders
+     *  are enabled.
+     */
     @stub
-    // Returns a flag to determine whether rollover button borders
-    // are enabled.
     def isRolloverBorders(): Boolean = ???
 
+    /**  */
     @stub
-    // 
     protected def navigateFocusedComp(direction: Int): Unit = ???
 
+    /** Paints the contents of the window used for dragging. */
     @stub
-    // Paints the contents of the window used for dragging.
     protected def paintDragWindow(g: Graphics): Unit = ???
 
+    /** Sets the border of the component to have a non-rollover border which
+     *  was created by the createNonRolloverBorder() method.
+     */
     @stub
-    // Sets the border of the component to have a non-rollover border which
-    // was created by the createNonRolloverBorder() method.
     protected def setBorderToNonRollover(c: Component): Unit = ???
 
+    /** Sets the border of the component to have a normal border. */
     @stub
-    // Sets the border of the component to have a normal border.
     protected def setBorderToNormal(c: Component): Unit = ???
 
+    /** Sets the border of the component to have a rollover border which
+     *  was created by the createRolloverBorder() method.
+     */
     @stub
-    // Sets the border of the component to have a rollover border which
-    // was created by the createRolloverBorder() method.
     protected def setBorderToRollover(c: Component): Unit = ???
 
+    /** Sets the color displayed when over a docking area */
     @stub
-    // Sets the color displayed when over a docking area
     def setDockingColor(c: Color): Unit = ???
 
+    /**  */
     @stub
-    // 
     def setFloating(b: Boolean, p: Point): Unit = ???
 
+    /** Sets the color displayed when over a floating area */
     @stub
-    // Sets the color displayed when over a floating area
     def setFloatingColor(c: Color): Unit = ???
 
+    /**  */
     @stub
-    // 
     def setFloatingLocation(x: Int, y: Int): Unit = ???
 
+    /**  */
     @stub
-    // 
     def setOrientation(orientation: Int): Unit = ???
 
+    /** Sets the flag for enabling rollover borders on the toolbar and it will
+     *  also install the appropriate border depending on the state of the flag.
+     */
     @stub
-    // Sets the flag for enabling rollover borders on the toolbar and it will
-    // also install the appropriate border depending on the state of the flag.
     def setRolloverBorders(rollover: Boolean): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallComponents(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallDefaults(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallKeyboardActions(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallListeners(): Unit = ???
 }
 
 object BasicToolBarUI {
+    /**  */
     @stub
-    // 
     def createUI(c: JComponent): ComponentUI = ???
 }

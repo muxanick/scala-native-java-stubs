@@ -5,48 +5,54 @@ import java.lang.{Object, String}
 import java.net.URL
 import java.util.{Enumeration, Set}
 
-// Exposes the remote management interface of the MLet
-// MBean.
+/** Exposes the remote management interface of the MLet
+ *  MBean.
+ */
 trait MLetMBean {
 
+    /** Appends the specified URL to the list of URLs to search for classes and
+     *  resources.
+     */
     @stub
-    // Appends the specified URL to the list of URLs to search for classes and
-    // resources.
     def addURL(url: String): Unit = ???
 
+    /** Appends the specified URL to the list of URLs to search for classes and
+     *  resources.
+     */
     @stub
-    // Appends the specified URL to the list of URLs to search for classes and
-    // resources.
     def addURL(url: URL): Unit = ???
 
+    /** Gets the current directory used by the library loader for
+     *  storing native libraries before they are loaded into memory.
+     */
     @stub
-    // Gets the current directory used by the library loader for
-    // storing native libraries before they are loaded into memory.
     def getLibraryDirectory(): String = ???
 
+    /** Loads a text file containing MLET tags that define the MBeans
+     *  to be added to the MBean server.
+     */
     @stub
-    // Loads a text file containing MLET tags that define the MBeans
-    // to be added to the MBean server.
     def getMBeansFromURL(url: String): Set[Object] = ???
 
+    /** Loads a text file containing MLET tags that define the MBeans
+     *  to be added to the MBean server.
+     */
     @stub
-    // Loads a text file containing MLET tags that define the MBeans
-    // to be added to the MBean server.
     def getMBeansFromURL(url: URL): Set[Object] = ???
 
+    /** Finds the resource with the given name. */
     @stub
-    // Finds the resource with the given name.
     def getResource(name: String): URL = ???
 
+    /** Returns an input stream for reading the specified resource. */
     @stub
-    // Returns an input stream for reading the specified resource.
     def getResourceAsStream(name: String): InputStream = ???
 
+    /** Finds all the resources with the given name. */
     @stub
-    // Finds all the resources with the given name.
     def getResources(name: String): Enumeration[URL] = ???
 
+    /** Returns the search path of URLs for loading classes and resources. */
     @stub
-    // Returns the search path of URLs for loading classes and resources.
     def getURLs(): Array[URL] = ???
 }

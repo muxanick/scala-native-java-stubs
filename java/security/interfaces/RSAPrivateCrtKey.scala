@@ -2,27 +2,28 @@ package java.security.interfaces
 
 import java.math.BigInteger
 
-// The interface to an RSA private key, as defined in the PKCS#1 standard,
-// using the Chinese Remainder Theorem (CRT) information values.
+/** The interface to an RSA private key, as defined in the PKCS#1 standard,
+ *  using the Chinese Remainder Theorem (CRT) information values.
+ */
 trait RSAPrivateCrtKey extends RSAPrivateKey {
 
+    /** Returns the crtCoefficient. */
     @stub
-    // Returns the crtCoefficient.
     def getCrtCoefficient(): BigInteger = ???
 
+    /** Returns the primeExponentP. */
     @stub
-    // Returns the primeExponentP.
     def getPrimeExponentP(): BigInteger = ???
 
+    /** Returns the primeExponentQ. */
     @stub
-    // Returns the primeExponentQ.
     def getPrimeExponentQ(): BigInteger = ???
 
+    /** Returns the primeP. */
     @stub
-    // Returns the primeP.
     def getPrimeP(): BigInteger = ???
 
+    /** Returns the primeQ. */
     @stub
-    // Returns the primeQ.
     def getPrimeQ(): BigInteger = ???
 }

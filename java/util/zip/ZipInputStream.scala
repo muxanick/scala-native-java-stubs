@@ -3,199 +3,205 @@ package java.util.zip
 import java.io.{FilterInputStream, InputStream}
 import java.lang.{Object, String}
 
-// This class implements an input stream filter for reading files in the
-// ZIP file format. Includes support for both compressed and uncompressed
-// entries.
+/** This class implements an input stream filter for reading files in the
+ *  ZIP file format. Includes support for both compressed and uncompressed
+ *  entries.
+ */
 class ZipInputStream extends InflaterInputStream {
 
+    /** Creates a new ZIP input stream. */
     @stub
-    // Creates a new ZIP input stream.
     def this(in: InputStream) = ???
 
+    /** Returns 0 after EOF has reached for the current entry data,
+     *  otherwise always return 1.
+     */
     @stub
-    // Returns 0 after EOF has reached for the current entry data,
-    // otherwise always return 1.
     def available(): Int = ???
 
+    /** Closes this input stream and releases any system resources associated
+     *  with the stream.
+     */
     @stub
-    // Closes this input stream and releases any system resources associated
-    // with the stream.
     def close(): Unit = ???
 
+    /** Closes the current ZIP entry and positions the stream for reading the
+     *  next entry.
+     */
     @stub
-    // Closes the current ZIP entry and positions the stream for reading the
-    // next entry.
     def closeEntry(): Unit = ???
 
+    /** Creates a new ZipEntry object for the specified
+     *  entry name.
+     */
     @stub
-    // Creates a new ZipEntry object for the specified
-    // entry name.
     protected def createZipEntry(name: String): ZipEntry = ???
 
+    /** Reads the next ZIP file entry and positions the stream at the
+     *  beginning of the entry data.
+     */
     @stub
-    // Reads the next ZIP file entry and positions the stream at the
-    // beginning of the entry data.
     def getNextEntry(): ZipEntry = ???
 
+    /** Reads from the current ZIP entry into an array of bytes. */
     @stub
-    // Reads from the current ZIP entry into an array of bytes.
     def read(b: Array[Byte], off: Int, len: Int): Int = ???
 }
 
 object ZipInputStream {
+    /**  */
     @stub
-    // 
-    def CENATT: Int = ???
+    val CENATT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENATX: Int = ???
+    val CENATX: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENCOM: Int = ???
+    val CENCOM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENCRC: Int = ???
+    val CENCRC: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENDSK: Int = ???
+    val CENDSK: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENEXT: Int = ???
+    val CENEXT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENFLG: Int = ???
+    val CENFLG: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENHDR: Int = ???
+    val CENHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENHOW: Int = ???
+    val CENHOW: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENLEN: Int = ???
+    val CENLEN: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENNAM: Int = ???
+    val CENNAM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENOFF: Int = ???
+    val CENOFF: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENSIG: Long = ???
+    val CENSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def CENSIZ: Int = ???
+    val CENSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENTIM: Int = ???
+    val CENTIM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENVEM: Int = ???
+    val CENVEM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENVER: Int = ???
+    val CENVER: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDCOM: Int = ???
+    val ENDCOM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDHDR: Int = ???
+    val ENDHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDOFF: Int = ???
+    val ENDOFF: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDSIG: Long = ???
+    val ENDSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def ENDSIZ: Int = ???
+    val ENDSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDSUB: Int = ???
+    val ENDSUB: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDTOT: Int = ???
+    val ENDTOT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTCRC: Int = ???
+    val EXTCRC: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTHDR: Int = ???
+    val EXTHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTLEN: Int = ???
+    val EXTLEN: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTSIG: Long = ???
+    val EXTSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def EXTSIZ: Int = ???
+    val EXTSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCCRC: Int = ???
+    val LOCCRC: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCEXT: Int = ???
+    val LOCEXT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCFLG: Int = ???
+    val LOCFLG: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCHDR: Int = ???
+    val LOCHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCHOW: Int = ???
+    val LOCHOW: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCLEN: Int = ???
+    val LOCLEN: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCNAM: Int = ???
+    val LOCNAM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCSIG: Long = ???
+    val LOCSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def LOCSIZ: Int = ???
+    val LOCSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCTIM: Int = ???
+    val LOCTIM: Int = ???
 }

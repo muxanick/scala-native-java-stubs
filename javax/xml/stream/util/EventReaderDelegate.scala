@@ -4,58 +4,61 @@ import java.lang.{Object, String}
 import javax.xml.stream.XMLEventReader
 import javax.xml.stream.events.XMLEvent
 
-// This is the base class for deriving an XMLEventReader
-// filter.
-//
-// This class is designed to sit between an XMLEventReader and an
-// application's XMLEventReader.  By default each method
-// does nothing but call the corresponding method on the
-// parent interface.
+/** This is the base class for deriving an XMLEventReader
+ *  filter.
+ * 
+ *  This class is designed to sit between an XMLEventReader and an
+ *  application's XMLEventReader.  By default each method
+ *  does nothing but call the corresponding method on the
+ *  parent interface.
+ */
 class EventReaderDelegate extends Object with XMLEventReader {
 
+    /** Construct an empty filter with no parent. */
     @stub
-    // Construct an empty filter with no parent.
     def this() = ???
 
+    /** Frees any resources associated with this Reader. */
     @stub
-    // Frees any resources associated with this Reader.
     def close(): Unit = ???
 
+    /** Reads the content of a text-only element. */
     @stub
-    // Reads the content of a text-only element.
     def getElementText(): String = ???
 
+    /** Get the parent of this instance. */
     @stub
-    // Get the parent of this instance.
     def getParent(): XMLEventReader = ???
 
+    /** Get the value of a feature/property from the underlying implementation */
     @stub
-    // Get the value of a feature/property from the underlying implementation
     def getProperty(name: String): Object = ???
 
+    /** Check if there are more events. */
     @stub
-    // Check if there are more events.
     def hasNext(): Boolean = ???
 
+    /** Returns the next element in the iteration. */
     @stub
-    // Returns the next element in the iteration.
     def next(): Object = ???
 
+    /** Get the next XMLEvent */
     @stub
-    // Get the next XMLEvent
     def nextEvent(): XMLEvent = ???
 
+    /** Skips any insignificant space events until a START_ELEMENT or
+     *  END_ELEMENT is reached.
+     */
     @stub
-    // Skips any insignificant space events until a START_ELEMENT or
-    // END_ELEMENT is reached.
     def nextTag(): XMLEvent = ???
 
+    /** Check the next XMLEvent without reading it from the stream. */
     @stub
-    // Check the next XMLEvent without reading it from the stream.
     def peek(): XMLEvent = ???
 
+    /** Removes from the underlying collection the last element returned
+     *  by this iterator (optional operation).
+     */
     @stub
-    // Removes from the underlying collection the last element returned
-    // by this iterator (optional operation).
     def remove(): Unit = ???
 }

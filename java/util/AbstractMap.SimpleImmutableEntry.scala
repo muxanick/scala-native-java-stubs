@@ -3,35 +3,38 @@ package java.util
 import java.io.Serializable
 import java.lang.Object
 
-// An Entry maintaining an immutable key and value.  This class
-// does not support method setValue.  This class may be
-// convenient in methods that return thread-safe snapshots of
-// key-value mappings.
-object AbstractMap.SimpleImmutableEntry[K, V] extends Object with Map.Entry[K, V], with Serializable {
+/** An Entry maintaining an immutable key and value.  This class
+ *  does not support method setValue.  This class may be
+ *  convenient in methods that return thread-safe snapshots of
+ *  key-value mappings.
+ */
+object AbstractMap.SimpleImmutableEntry[K, V] extends Object with Map.Entry[K, V] with Serializable {
 
+    /** Creates an entry representing a mapping from the specified
+     *  key to the specified value.
+     */
     @stub
-    // Creates an entry representing a mapping from the specified
-    // key to the specified value.
     def SimpleImmutableEntry(key: K, value: V) = ???
 
+    /** Compares the specified object with this entry for equality. */
     @stub
-    // Compares the specified object with this entry for equality.
     def equals(o: Object): Boolean = ???
 
+    /** Returns the key corresponding to this entry. */
     @stub
-    // Returns the key corresponding to this entry.
     def getKey(): K = ???
 
+    /** Returns the value corresponding to this entry. */
     @stub
-    // Returns the value corresponding to this entry.
     def getValue(): V = ???
 
+    /** Returns the hash code value for this map entry. */
     @stub
-    // Returns the hash code value for this map entry.
     def hashCode(): Int = ???
 
+    /** Replaces the value corresponding to this entry with the specified
+     *  value (optional operation).
+     */
     @stub
-    // Replaces the value corresponding to this entry with the specified
-    // value (optional operation).
     def setValue(value: V): V = ???
 }

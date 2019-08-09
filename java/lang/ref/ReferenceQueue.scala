@@ -2,16 +2,18 @@ package java.lang.ref
 
 import java.lang.Object
 
-// Reference queues, to which registered reference objects are appended by the
-// garbage collector after the appropriate reachability changes are detected.
+/** Reference queues, to which registered reference objects are appended by the
+ *  garbage collector after the appropriate reachability changes are detected.
+ */
 class ReferenceQueue[T] extends Object {
 
+    /** Polls this queue to see if a reference object is available. */
     @stub
-    // Polls this queue to see if a reference object is available.
     def poll(): Reference[_ <: T] = ???
 
+    /** Removes the next reference object in this queue, blocking until one
+     *  becomes available.
+     */
     @stub
-    // Removes the next reference object in this queue, blocking until one
-    // becomes available.
     def remove(): Reference[_ <: T] = ???
 }

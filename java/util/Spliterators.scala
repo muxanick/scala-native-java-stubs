@@ -2,147 +2,170 @@ package java.util
 
 import java.lang.Object
 
-// Static classes and methods for operating on or creating instances of
-// Spliterator and its primitive specializations
-// Spliterator.OfInt, Spliterator.OfLong, and
-// Spliterator.OfDouble.
+/** Static classes and methods for operating on or creating instances of
+ *  Spliterator and its primitive specializations
+ *  Spliterator.OfInt, Spliterator.OfLong, and
+ *  Spliterator.OfDouble.
+ */
 final class Spliterators extends Object {
 }
 
 object Spliterators {
+    /** An abstract Spliterator.OfDouble that implements
+     *  trySplit to permit limited parallelism.
+     */
     @stub
-    // An abstract Spliterator.OfDouble that implements
-    // trySplit to permit limited parallelism.
-    def Spliterators.AbstractDoubleSpliterator: class = ???
+    object AbstractDoubleSpliterator extends Spliterators.AbstractDoubleSpliterator
 
+    /** An abstract Spliterator.OfInt that implements trySplit to
+     *  permit limited parallelism.
+     */
     @stub
-    // An abstract Spliterator.OfInt that implements trySplit to
-    // permit limited parallelism.
-    def Spliterators.AbstractIntSpliterator: class = ???
+    object AbstractIntSpliterator extends Spliterators.AbstractIntSpliterator
 
+    /** An abstract Spliterator.OfLong that implements trySplit
+     *  to permit limited parallelism.
+     */
     @stub
-    // An abstract Spliterator.OfLong that implements trySplit
-    // to permit limited parallelism.
-    def Spliterators.AbstractLongSpliterator: class = ???
+    object AbstractLongSpliterator extends Spliterators.AbstractLongSpliterator
 
+    /** Creates an empty Spliterator.OfDouble */
     @stub
-    // Creates an empty Spliterator.OfDouble
     def emptyDoubleSpliterator(): Spliterator.OfDouble = ???
 
+    /** Creates an empty Spliterator.OfInt */
     @stub
-    // Creates an empty Spliterator.OfInt
     def emptyIntSpliterator(): Spliterator.OfInt = ???
 
+    /** Creates an empty Spliterator.OfLong */
     @stub
-    // Creates an empty Spliterator.OfLong
     def emptyLongSpliterator(): Spliterator.OfLong = ???
 
+    /** Creates an empty Spliterator */
     @stub
-    // Creates an empty Spliterator
-    def Spliterator[T]: [T] = ???
+    def emptySpliterator[T](): Spliterator[T] = ???
 
+    /** Creates an PrimitiveIterator.OfDouble from a
+     *  Spliterator.OfDouble.
+     */
     @stub
-    // Creates an PrimitiveIterator.OfDouble from a
-    // Spliterator.OfDouble.
     def iterator(spliterator: Spliterator.OfDouble): PrimitiveIterator.OfDouble = ???
 
+    /** Creates an PrimitiveIterator.OfInt from a
+     *  Spliterator.OfInt.
+     */
     @stub
-    // Creates an PrimitiveIterator.OfInt from a
-    // Spliterator.OfInt.
     def iterator(spliterator: Spliterator.OfInt): PrimitiveIterator.OfInt = ???
 
+    /** Creates an PrimitiveIterator.OfLong from a
+     *  Spliterator.OfLong.
+     */
     @stub
-    // Creates an PrimitiveIterator.OfLong from a
-    // Spliterator.OfLong.
     def iterator(spliterator: Spliterator.OfLong): PrimitiveIterator.OfLong = ???
 
+    /** Creates an Iterator from a Spliterator. */
     @stub
-    // Creates an Iterator from a Spliterator.
-    def Iterator[T]: [T] = ???
+    def iterator[T](spliterator: Spliterator[_ <: T]): Iterator[T] = ???
 
+    /** Creates a Spliterator using the given collection's
+     *  Collection.iterator() as the source of elements, and
+     *  reporting its Collection.size() as its initial size.
+     */
     @stub
-    // Creates a Spliterator using the given collection's
-    // Collection.iterator() as the source of elements, and
-    // reporting its Collection.size() as its initial size.
-    def Spliterator[T]: [T] = ???
+    def spliterator[T](c: Collection[_ <: T], characteristics: Int): Spliterator[T] = ???
 
+    /** Creates a Spliterator.OfDouble covering the elements of a given array,
+     *  using a customized set of spliterator characteristics.
+     */
     @stub
-    // Creates a Spliterator.OfDouble covering the elements of a given array,
-    // using a customized set of spliterator characteristics.
-    def spliterator(array: Array[double], additionalCharacteristics: Int): Spliterator.OfDouble = ???
+    def spliterator(array: Array[Double], additionalCharacteristics: Int): Spliterator.OfDouble = ???
 
+    /** Creates a Spliterator.OfDouble covering a range of elements of a
+     *  given array, using a customized set of spliterator characteristics.
+     */
     @stub
-    // Creates a Spliterator.OfDouble covering a range of elements of a
-    // given array, using a customized set of spliterator characteristics.
-    def spliterator(array: Array[double], fromIndex: Int, toIndex: Int, additionalCharacteristics: Int): Spliterator.OfDouble = ???
+    def spliterator(array: Array[Double], fromIndex: Int, toIndex: Int, additionalCharacteristics: Int): Spliterator.OfDouble = ???
 
+    /** Creates a Spliterator.OfInt covering the elements of a given array,
+     *  using a customized set of spliterator characteristics.
+     */
     @stub
-    // Creates a Spliterator.OfInt covering the elements of a given array,
-    // using a customized set of spliterator characteristics.
     def spliterator(array: Array[Int], additionalCharacteristics: Int): Spliterator.OfInt = ???
 
+    /** Creates a Spliterator.OfInt covering a range of elements of a
+     *  given array, using a customized set of spliterator characteristics.
+     */
     @stub
-    // Creates a Spliterator.OfInt covering a range of elements of a
-    // given array, using a customized set of spliterator characteristics.
     def spliterator(array: Array[Int], fromIndex: Int, toIndex: Int, additionalCharacteristics: Int): Spliterator.OfInt = ???
 
+    /** Creates a Spliterator using a given Iterator
+     *  as the source of elements, and with a given initially reported size.
+     */
     @stub
-    // Creates a Spliterator using a given Iterator
-    // as the source of elements, and with a given initially reported size.
-    def Spliterator[T]: [T] = ???
+    def spliterator[T](iterator: Iterator[_ <: T], size: Long, characteristics: Int): Spliterator[T] = ???
 
+    /** Creates a Spliterator.OfLong covering the elements of a given array,
+     *  using a customized set of spliterator characteristics.
+     */
     @stub
-    // Creates a Spliterator.OfLong covering the elements of a given array,
-    // using a customized set of spliterator characteristics.
     def spliterator(array: Array[Long], additionalCharacteristics: Int): Spliterator.OfLong = ???
 
+    /** Creates a Spliterator.OfLong covering a range of elements of a
+     *  given array, using a customized set of spliterator characteristics.
+     */
     @stub
-    // Creates a Spliterator.OfLong covering a range of elements of a
-    // given array, using a customized set of spliterator characteristics.
     def spliterator(array: Array[Long], fromIndex: Int, toIndex: Int, additionalCharacteristics: Int): Spliterator.OfLong = ???
 
+    /** Creates a Spliterator covering the elements of a given array,
+     *  using a customized set of spliterator characteristics.
+     */
     @stub
-    // Creates a Spliterator covering the elements of a given array,
-    // using a customized set of spliterator characteristics.
-    def Spliterator[T]: [T] = ???
+    def spliterator[T](array: Array[Object], additionalCharacteristics: Int): Spliterator[T] = ???
 
+    /** Creates a Spliterator covering a range of elements of a given
+     *  array, using a customized set of spliterator characteristics.
+     */
     @stub
-    // Creates a Spliterator covering a range of elements of a given
-    // array, using a customized set of spliterator characteristics.
-    def Spliterator[T]: [T] = ???
+    def spliterator[T](array: Array[Object], fromIndex: Int, toIndex: Int, additionalCharacteristics: Int): Spliterator[T] = ???
 
+    /** Creates a Spliterator.OfDouble using a given
+     *  DoubleStream.DoubleIterator as the source of elements, and with a
+     *  given initially reported size.
+     */
     @stub
-    // Creates a Spliterator.OfDouble using a given
-    // DoubleStream.DoubleIterator as the source of elements, and with a
-    // given initially reported size.
     def spliterator(iterator: PrimitiveIterator.OfDouble, size: Long, characteristics: Int): Spliterator.OfDouble = ???
 
+    /** Creates a Spliterator.OfInt using a given
+     *  IntStream.IntIterator as the source of elements, and with a given
+     *  initially reported size.
+     */
     @stub
-    // Creates a Spliterator.OfInt using a given
-    // IntStream.IntIterator as the source of elements, and with a given
-    // initially reported size.
     def spliterator(iterator: PrimitiveIterator.OfInt, size: Long, characteristics: Int): Spliterator.OfInt = ???
 
+    /** Creates a Spliterator.OfLong using a given
+     *  LongStream.LongIterator as the source of elements, and with a
+     *  given initially reported size.
+     */
     @stub
-    // Creates a Spliterator.OfLong using a given
-    // LongStream.LongIterator as the source of elements, and with a
-    // given initially reported size.
     def spliterator(iterator: PrimitiveIterator.OfLong, size: Long, characteristics: Int): Spliterator.OfLong = ???
 
+    /** Creates a Spliterator using a given Iterator
+     *  as the source of elements, with no initial size estimate.
+     */
     @stub
-    // Creates a Spliterator using a given Iterator
-    // as the source of elements, with no initial size estimate.
-    def Spliterator[T]: [T] = ???
+    def spliteratorUnknownSize[T](iterator: Iterator[_ <: T], characteristics: Int): Spliterator[T] = ???
 
+    /** Creates a Spliterator.OfDouble using a given
+     *  DoubleStream.DoubleIterator as the source of elements, with no
+     *  initial size estimate.
+     */
     @stub
-    // Creates a Spliterator.OfDouble using a given
-    // DoubleStream.DoubleIterator as the source of elements, with no
-    // initial size estimate.
     def spliteratorUnknownSize(iterator: PrimitiveIterator.OfDouble, characteristics: Int): Spliterator.OfDouble = ???
 
+    /** Creates a Spliterator.OfInt using a given
+     *  IntStream.IntIterator as the source of elements, with no initial
+     *  size estimate.
+     */
     @stub
-    // Creates a Spliterator.OfInt using a given
-    // IntStream.IntIterator as the source of elements, with no initial
-    // size estimate.
     def spliteratorUnknownSize(iterator: PrimitiveIterator.OfInt, characteristics: Int): Spliterator.OfInt = ???
 }

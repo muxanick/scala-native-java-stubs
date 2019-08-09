@@ -3,46 +3,50 @@ package javax.activation
 import java.io.{File, InputStream, OutputStream}
 import java.lang.{Object, String}
 
-// The FileDataSource class implements a simple DataSource object
-// that encapsulates a file. It provides data typing services via
-// a FileTypeMap object. 
-//
-// FileDataSource Typing Semantics
-//
-// The FileDataSource class delegates data typing of files
-// to an object subclassed from the FileTypeMap class.
-// The setFileTypeMap method can be used to explicitly
-// set the FileTypeMap for an instance of FileDataSource. If no
-// FileTypeMap is set, the FileDataSource will call the FileTypeMap's
-// getDefaultFileTypeMap method to get the System's default FileTypeMap.
+/** The FileDataSource class implements a simple DataSource object
+ *  that encapsulates a file. It provides data typing services via
+ *  a FileTypeMap object. 
+ * 
+ *  FileDataSource Typing Semantics
+ * 
+ *  The FileDataSource class delegates data typing of files
+ *  to an object subclassed from the FileTypeMap class.
+ *  The setFileTypeMap method can be used to explicitly
+ *  set the FileTypeMap for an instance of FileDataSource. If no
+ *  FileTypeMap is set, the FileDataSource will call the FileTypeMap's
+ *  getDefaultFileTypeMap method to get the System's default FileTypeMap.
+ */
 class FileDataSource extends Object with DataSource {
 
+    /** Creates a FileDataSource from a File object. */
     @stub
-    // Creates a FileDataSource from a File object.
     def this(file: File) = ???
 
+    /** This method returns the MIME type of the data in the form of a
+     *  string.
+     */
     @stub
-    // This method returns the MIME type of the data in the form of a
-    // string.
     def getContentType(): String = ???
 
+    /** Return the File object that corresponds to this FileDataSource. */
     @stub
-    // Return the File object that corresponds to this FileDataSource.
     def getFile(): File = ???
 
+    /** This method will return an InputStream representing the
+     *  the data and will throw an IOException if it can
+     *  not do so.
+     */
     @stub
-    // This method will return an InputStream representing the
-    // the data and will throw an IOException if it can
-    // not do so.
     def getInputStream(): InputStream = ???
 
+    /** Return the name of this object. */
     @stub
-    // Return the name of this object.
     def getName(): String = ???
 
+    /** This method will return an OutputStream representing the
+     *  the data and will throw an IOException if it can
+     *  not do so.
+     */
     @stub
-    // This method will return an OutputStream representing the
-    // the data and will throw an IOException if it can
-    // not do so.
     def getOutputStream(): OutputStream = ???
 }

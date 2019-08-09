@@ -4,61 +4,65 @@ import java.lang.{Object, String}
 import javax.swing.event.{DocumentEvent, DocumentEvent.ElementChange, DocumentEvent.EventType}
 import javax.swing.undo.{AbstractUndoableEdit, CompoundEdit, UndoableEdit}
 
-// Stores document changes as the document is being
-// modified.  Can subsequently be used for change notification
-// when done with the document modification transaction.
-// This is used by the AbstractDocument class and its extensions
-// for broadcasting change information to the document listeners.
+/** Stores document changes as the document is being
+ *  modified.  Can subsequently be used for change notification
+ *  when done with the document modification transaction.
+ *  This is used by the AbstractDocument class and its extensions
+ *  for broadcasting change information to the document listeners.
+ */
 class AbstractDocument.DefaultDocumentEvent extends CompoundEdit with DocumentEvent {
 
+    /** Adds a document edit. */
     @stub
-    // Adds a document edit.
     def addEdit(anEdit: UndoableEdit): Boolean = ???
 
+    /** Gets the changes for an element. */
     @stub
-    // Gets the changes for an element.
     def getChange(elem: Element): DocumentEvent.ElementChange = ???
 
+    /** Gets the document that sourced the change event. */
     @stub
-    // Gets the document that sourced the change event.
     def getDocument(): Document = ???
 
+    /** Returns the length of the change. */
     @stub
-    // Returns the length of the change.
     def getLength(): Int = ???
 
+    /** Returns the offset within the document of the start of the change. */
     @stub
-    // Returns the offset within the document of the start of the change.
     def getOffset(): Int = ???
 
+    /** Provides a localized, human readable description of this edit
+     *  suitable for use in, say, a change log.
+     */
     @stub
-    // Provides a localized, human readable description of this edit
-    // suitable for use in, say, a change log.
     def getPresentationName(): String = ???
 
+    /** Provides a localized, human readable description of the redoable
+     *  form of this edit, e.g.
+     */
     @stub
-    // Provides a localized, human readable description of the redoable
-    // form of this edit, e.g.
     def getRedoPresentationName(): String = ???
 
+    /** Returns the type of event. */
     @stub
-    // Returns the type of event.
     def getType(): DocumentEvent.EventType = ???
 
+    /** Provides a localized, human readable description of the undoable
+     *  form of this edit, e.g.
+     */
     @stub
-    // Provides a localized, human readable description of the undoable
-    // form of this edit, e.g.
     def getUndoPresentationName(): String = ???
 
+    /** DefaultDocument events are significant. */
     @stub
-    // DefaultDocument events are significant.
     def isSignificant(): Boolean = ???
 
+    /** Redoes a change. */
     @stub
-    // Redoes a change.
     def redo(): Unit = ???
 
+    /** Returns a string description of the change event. */
     @stub
-    // Returns a string description of the change event.
     def toString(): String = ???
 }

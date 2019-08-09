@@ -4,49 +4,51 @@ import java.io.{File, OutputStream, Writer}
 import java.lang.{Object, String}
 import javax.xml.transform.Result
 
-// Acts as an holder for a transformation result,
-// which may be XML, plain Text, HTML, or some other form of markup.
+/** Acts as an holder for a transformation result,
+ *  which may be XML, plain Text, HTML, or some other form of markup.
+ */
 class StreamResult extends Object with Result {
 
+    /** Zero-argument default constructor. */
     @stub
-    // Zero-argument default constructor.
     def this() = ???
 
+    /** Construct a StreamResult from a File. */
     @stub
-    // Construct a StreamResult from a File.
     def this(f: File) = ???
 
+    /** Construct a StreamResult from a byte stream. */
     @stub
-    // Construct a StreamResult from a byte stream.
     def this(outputStream: OutputStream) = ???
 
+    /** Construct a StreamResult from a URL. */
     @stub
-    // Construct a StreamResult from a URL.
     def this(systemId: String) = ???
 
+    /** Get the byte stream that was set with setOutputStream. */
     @stub
-    // Get the byte stream that was set with setOutputStream.
     def getOutputStream(): OutputStream = ???
 
+    /** Get the system identifier that was set with setSystemId. */
     @stub
-    // Get the system identifier that was set with setSystemId.
     def getSystemId(): String = ???
 
+    /** Get the character stream that was set with setWriter. */
     @stub
-    // Get the character stream that was set with setWriter.
     def getWriter(): Writer = ???
 
+    /** Set the ByteStream that is to be written to. */
     @stub
-    // Set the ByteStream that is to be written to.
     def setOutputStream(outputStream: OutputStream): Unit = ???
 
+    /** Set the system ID from a File reference. */
     @stub
-    // Set the system ID from a File reference.
     def setSystemId(f: File): Unit = ???
 
+    /** Set the systemID that may be used in association
+     *  with the byte or character stream, or, if neither is set, use
+     *  this value as a writeable URI (probably a file name).
+     */
     @stub
-    // Set the systemID that may be used in association
-    // with the byte or character stream, or, if neither is set, use
-    // this value as a writeable URI (probably a file name).
     def setSystemId(systemId: String): Unit = ???
 }

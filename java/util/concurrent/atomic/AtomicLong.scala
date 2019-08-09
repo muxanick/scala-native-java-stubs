@@ -4,107 +4,116 @@ import java.io.Serializable
 import java.lang.{Number, Object, String}
 import java.util.function.{LongBinaryOperator, LongUnaryOperator}
 
-// A long value that may be updated atomically.  See the
-// java.util.concurrent.atomic package specification for
-// description of the properties of atomic variables. An
-// AtomicLong is used in applications such as atomically
-// incremented sequence numbers, and cannot be used as a replacement
-// for a Long. However, this class does extend
-// Number to allow uniform access by tools and utilities that
-// deal with numerically-based classes.
+/** A long value that may be updated atomically.  See the
+ *  java.util.concurrent.atomic package specification for
+ *  description of the properties of atomic variables. An
+ *  AtomicLong is used in applications such as atomically
+ *  incremented sequence numbers, and cannot be used as a replacement
+ *  for a Long. However, this class does extend
+ *  Number to allow uniform access by tools and utilities that
+ *  deal with numerically-based classes.
+ */
 class AtomicLong extends Number with Serializable {
 
+    /** Creates a new AtomicLong with initial value 0. */
     @stub
-    // Creates a new AtomicLong with initial value 0.
     def this() = ???
 
+    /** Atomically updates the current value with the results of
+     *  applying the given function to the current and given values,
+     *  returning the updated value.
+     */
     @stub
-    // Atomically updates the current value with the results of
-    // applying the given function to the current and given values,
-    // returning the updated value.
     def accumulateAndGet(x: Long, accumulatorFunction: LongBinaryOperator): Long = ???
 
+    /** Atomically adds the given value to the current value. */
     @stub
-    // Atomically adds the given value to the current value.
     def addAndGet(delta: Long): Long = ???
 
+    /** Atomically sets the value to the given updated value
+     *  if the current value == the expected value.
+     */
     @stub
-    // Atomically sets the value to the given updated value
-    // if the current value == the expected value.
     def compareAndSet(expect: Long, update: Long): Boolean = ???
 
+    /** Atomically decrements by one the current value. */
     @stub
-    // Atomically decrements by one the current value.
     def decrementAndGet(): Long = ???
 
+    /** Returns the value of this AtomicLong as a double
+     *  after a widening primitive conversion.
+     */
     @stub
-    // Returns the value of this AtomicLong as a double
-    // after a widening primitive conversion.
-    def doubleValue(): double = ???
+    def doubleValue(): Double = ???
 
+    /** Returns the value of this AtomicLong as a float
+     *  after a widening primitive conversion.
+     */
     @stub
-    // Returns the value of this AtomicLong as a float
-    // after a widening primitive conversion.
-    def floatValue(): float = ???
+    def floatValue(): Float = ???
 
+    /** Gets the current value. */
     @stub
-    // Gets the current value.
     def get(): Long = ???
 
+    /** Atomically updates the current value with the results of
+     *  applying the given function to the current and given values,
+     *  returning the previous value.
+     */
     @stub
-    // Atomically updates the current value with the results of
-    // applying the given function to the current and given values,
-    // returning the previous value.
     def getAndAccumulate(x: Long, accumulatorFunction: LongBinaryOperator): Long = ???
 
+    /** Atomically adds the given value to the current value. */
     @stub
-    // Atomically adds the given value to the current value.
     def getAndAdd(delta: Long): Long = ???
 
+    /** Atomically decrements by one the current value. */
     @stub
-    // Atomically decrements by one the current value.
     def getAndDecrement(): Long = ???
 
+    /** Atomically increments by one the current value. */
     @stub
-    // Atomically increments by one the current value.
     def getAndIncrement(): Long = ???
 
+    /** Atomically sets to the given value and returns the old value. */
     @stub
-    // Atomically sets to the given value and returns the old value.
     def getAndSet(newValue: Long): Long = ???
 
+    /** Atomically updates the current value with the results of
+     *  applying the given function, returning the previous value.
+     */
     @stub
-    // Atomically updates the current value with the results of
-    // applying the given function, returning the previous value.
     def getAndUpdate(updateFunction: LongUnaryOperator): Long = ???
 
+    /** Atomically increments by one the current value. */
     @stub
-    // Atomically increments by one the current value.
     def incrementAndGet(): Long = ???
 
+    /** Returns the value of this AtomicLong as an int
+     *  after a narrowing primitive conversion.
+     */
     @stub
-    // Returns the value of this AtomicLong as an int
-    // after a narrowing primitive conversion.
     def intValue(): Int = ???
 
+    /** Eventually sets to the given value. */
     @stub
-    // Eventually sets to the given value.
     def lazySet(newValue: Long): Unit = ???
 
+    /** Returns the value of this AtomicLong as a long. */
     @stub
-    // Returns the value of this AtomicLong as a long.
     def longValue(): Long = ???
 
+    /** Sets to the given value. */
     @stub
-    // Sets to the given value.
     def set(newValue: Long): Unit = ???
 
+    /** Returns the String representation of the current value. */
     @stub
-    // Returns the String representation of the current value.
     def toString(): String = ???
 
+    /** Atomically updates the current value with the results of
+     *  applying the given function, returning the updated value.
+     */
     @stub
-    // Atomically updates the current value with the results of
-    // applying the given function, returning the updated value.
     def updateAndGet(updateFunction: LongUnaryOperator): Long = ???
 }

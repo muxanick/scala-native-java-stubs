@@ -2,37 +2,42 @@ package javax.management.relation
 
 import java.lang.Object
 
-// This class describes the various problems which can be encountered when
-// accessing a role.
+/** This class describes the various problems which can be encountered when
+ *  accessing a role.
+ */
 class RoleStatus extends Object {
 }
 
 object RoleStatus {
+    /** Problem type when trying to set a role value with less ObjectNames than
+     *  the minimum expected cardinality.
+     */
     @stub
-    // Problem type when trying to set a role value with less ObjectNames than
-    // the minimum expected cardinality.
-    def LESS_THAN_MIN_ROLE_DEGREE: Int = ???
+    val LESS_THAN_MIN_ROLE_DEGREE: Int = ???
 
+    /** Problem type when trying to set a role value with more ObjectNames than
+     *  the maximum expected cardinality.
+     */
     @stub
-    // Problem type when trying to set a role value with more ObjectNames than
-    // the maximum expected cardinality.
-    def MORE_THAN_MAX_ROLE_DEGREE: Int = ???
+    val MORE_THAN_MAX_ROLE_DEGREE: Int = ???
 
+    /** Problem type when trying to access an unknown role. */
     @stub
-    // Problem type when trying to access an unknown role.
-    def NO_ROLE_WITH_NAME: Int = ???
+    val NO_ROLE_WITH_NAME: Int = ???
 
+    /** Problem type when trying to set a role value including the ObjectName of
+     *  a MBean not registered in the MBean Server.
+     */
     @stub
-    // Problem type when trying to set a role value including the ObjectName of
-    // a MBean not registered in the MBean Server.
-    def REF_MBEAN_NOT_REGISTERED: Int = ???
+    val REF_MBEAN_NOT_REGISTERED: Int = ???
 
+    /** Problem type when trying to set a role value including the ObjectName of
+     *  a MBean not of the class expected for that role.
+     */
     @stub
-    // Problem type when trying to set a role value including the ObjectName of
-    // a MBean not of the class expected for that role.
-    def REF_MBEAN_OF_INCORRECT_CLASS: Int = ???
+    val REF_MBEAN_OF_INCORRECT_CLASS: Int = ???
 
+    /** Problem type when trying to read a non-readable attribute. */
     @stub
-    // Problem type when trying to read a non-readable attribute.
-    def ROLE_NOT_READABLE: Int = ???
+    val ROLE_NOT_READABLE: Int = ???
 }

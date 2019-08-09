@@ -2,45 +2,47 @@ package javax.accessibility
 
 import java.lang.{Object, String}
 
-// Class AccessibleRelationSet determines a component's relation set.  The
-// relation set of a component is a set of AccessibleRelation objects that
-// describe the component's relationships with other components.
+/** Class AccessibleRelationSet determines a component's relation set.  The
+ *  relation set of a component is a set of AccessibleRelation objects that
+ *  describe the component's relationships with other components.
+ */
 class AccessibleRelationSet extends Object {
 
+    /** Creates a new empty relation set. */
     @stub
-    // Creates a new empty relation set.
     def this() = ???
 
+    /** Adds a new relation to the current relation set. */
     @stub
-    // Adds a new relation to the current relation set.
     def add(relation: AccessibleRelation): Boolean = ???
 
+    /** Adds all of the relations to the existing relation set. */
     @stub
-    // Adds all of the relations to the existing relation set.
     def addAll(relations: Array[AccessibleRelation]): Unit = ???
 
+    /** Removes all the relations from the current relation set. */
     @stub
-    // Removes all the relations from the current relation set.
     def clear(): Unit = ???
 
+    /** Returns whether the relation set contains a relation
+     *  that matches the specified key.
+     */
     @stub
-    // Returns whether the relation set contains a relation
-    // that matches the specified key.
     def contains(key: String): Boolean = ???
 
+    /** Returns the relation that matches the specified key. */
     @stub
-    // Returns the relation that matches the specified key.
     def get(key: String): AccessibleRelation = ???
 
+    /** Removes a relation from the current relation set. */
     @stub
-    // Removes a relation from the current relation set.
     def remove(relation: AccessibleRelation): Boolean = ???
 
+    /** Returns the number of relations in the relation set. */
     @stub
-    // Returns the number of relations in the relation set.
     def size(): Int = ???
 
+    /** Returns the current relation set as an array of AccessibleRelation */
     @stub
-    // Returns the current relation set as an array of AccessibleRelation
     def toArray(): Array[AccessibleRelation] = ???
 }

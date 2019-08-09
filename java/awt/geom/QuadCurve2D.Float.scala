@@ -3,89 +3,104 @@ package java.awt.geom
 import java.io.Serializable
 import java.lang.Object
 
-// A quadratic parametric curve segment specified with
-// float coordinates.
+/** A quadratic parametric curve segment specified with
+ *  float coordinates.
+ */
 object QuadCurve2D.Float extends QuadCurve2D with Serializable {
 
+    /** Constructs and initializes a QuadCurve2D with
+     *  coordinates (0, 0, 0, 0, 0, 0).
+     */
     @stub
-    // Constructs and initializes a QuadCurve2D with
-    // coordinates (0, 0, 0, 0, 0, 0).
     def Float() = ???
 
+    /** The X coordinate of the control point of the quadratic curve
+     *  segment.
+     */
     @stub
-    // The X coordinate of the control point of the quadratic curve
-    // segment.
-    def ctrlx: float = ???
+    val ctrlx: Float = ???
 
+    /** The Y coordinate of the control point of the quadratic curve
+     *  segment.
+     */
     @stub
-    // The Y coordinate of the control point of the quadratic curve
-    // segment.
-    def ctrly: float = ???
+    val ctrly: Float = ???
 
+    /** The X coordinate of the start point of the quadratic curve
+     *  segment.
+     */
     @stub
-    // The X coordinate of the start point of the quadratic curve
-    // segment.
-    def x1: float = ???
+    val x1: Float = ???
 
+    /** The X coordinate of the end point of the quadratic curve
+     *  segment.
+     */
     @stub
-    // The X coordinate of the end point of the quadratic curve
-    // segment.
-    def x2: float = ???
+    val x2: Float = ???
 
+    /** The Y coordinate of the start point of the quadratic curve
+     *  segment.
+     */
     @stub
-    // The Y coordinate of the start point of the quadratic curve
-    // segment.
-    def y1: float = ???
+    val y1: Float = ???
 
+    /** Returns a high precision and more accurate bounding box of
+     *  the Shape than the getBounds method.
+     */
     @stub
-    // Returns a high precision and more accurate bounding box of
-    // the Shape than the getBounds method.
     def getBounds2D(): Rectangle2D = ???
 
+    /** Returns the control point. */
     @stub
-    // Returns the control point.
     def getCtrlPt(): Point2D = ???
 
+    /** Returns the X coordinate of the control point in
+     *  double precision.
+     */
     @stub
-    // Returns the X coordinate of the control point in
-    // double precision.
-    def getCtrlX(): double = ???
+    def getCtrlX(): Double = ???
 
+    /** Returns the Y coordinate of the control point in
+     *  double precision.
+     */
     @stub
-    // Returns the Y coordinate of the control point in
-    // double precision.
-    def getCtrlY(): double = ???
+    def getCtrlY(): Double = ???
 
+    /** Returns the start point. */
     @stub
-    // Returns the start point.
     def getP1(): Point2D = ???
 
+    /** Returns the end point. */
     @stub
-    // Returns the end point.
     def getP2(): Point2D = ???
 
+    /** Returns the X coordinate of the start point in
+     *  double in precision.
+     */
     @stub
-    // Returns the X coordinate of the start point in
-    // double in precision.
-    def getX1(): double = ???
+    def getX1(): Double = ???
 
+    /** Returns the X coordinate of the end point in
+     *  double precision.
+     */
     @stub
-    // Returns the X coordinate of the end point in
-    // double precision.
-    def getX2(): double = ???
+    def getX2(): Double = ???
 
+    /** Returns the Y coordinate of the start point in
+     *  double precision.
+     */
     @stub
-    // Returns the Y coordinate of the start point in
-    // double precision.
-    def getY1(): double = ???
+    def getY1(): Double = ???
 
+    /** Returns the Y coordinate of the end point in
+     *  double precision.
+     */
     @stub
-    // Returns the Y coordinate of the end point in
-    // double precision.
-    def getY2(): double = ???
+    def getY2(): Double = ???
 
+    /** Sets the location of the end points and control point of this curve
+     *  to the specified double coordinates.
+     */
     @stub
-    // Sets the location of the end points and control point of this curve
-    // to the specified double coordinates.
-    def setCurve(x1: double, y1: double, ctrlx: double, ctrly: double, x2: double, y2: double): Unit = ???
+    def setCurve(x1: Double, y1: Double, ctrlx: Double, ctrly: Double, x2: Double, y2: Double): Unit = ???
 }

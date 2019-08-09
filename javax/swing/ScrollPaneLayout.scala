@@ -4,138 +4,143 @@ import java.awt.{Component, Container, Dimension, LayoutManager, Rectangle}
 import java.io.Serializable
 import java.lang.{Object, String}
 
-// The layout manager used by JScrollPane.
-// JScrollPaneLayout is
-// responsible for nine components: a viewport, two scrollbars,
-// a row header, a column header, and four "corner" components.
-// 
-// Warning:
-// Serialized objects of this class will not be compatible with
-// future Swing releases. The current serialization support is
-// appropriate for short term storage or RMI between applications running
-// the same version of Swing.  As of 1.4, support for long term storage
-// of all JavaBeans™
-// has been added to the java.beans package.
-// Please see XMLEncoder.
-class ScrollPaneLayout extends Object with LayoutManager, with ScrollPaneConstants, with Serializable {
+/** The layout manager used by JScrollPane.
+ *  JScrollPaneLayout is
+ *  responsible for nine components: a viewport, two scrollbars,
+ *  a row header, a column header, and four "corner" components.
+ *  
+ *  Warning:
+ *  Serialized objects of this class will not be compatible with
+ *  future Swing releases. The current serialization support is
+ *  appropriate for short term storage or RMI between applications running
+ *  the same version of Swing.  As of 1.4, support for long term storage
+ *  of all JavaBeans™
+ *  has been added to the java.beans package.
+ *  Please see XMLEncoder.
+ */
+class ScrollPaneLayout extends Object with LayoutManager with ScrollPaneConstants with Serializable {
 
+    /** The column header child. */
     @stub
-    // The column header child.
-    protected def colHead: JViewport = ???
+    protected val colHead: JViewport = ???
 
+    /** The scrollpane's horizontal scrollbar child. */
     @stub
-    // The scrollpane's horizontal scrollbar child.
-    protected def hsb: JScrollBar = ???
+    protected val hsb: JScrollBar = ???
 
+    /** The display policy for the horizontal scrollbar. */
     @stub
-    // The display policy for the horizontal scrollbar.
-    protected def hsbPolicy: Int = ???
+    protected val hsbPolicy: Int = ???
 
+    /** The component to display in the lower left corner. */
     @stub
-    // The component to display in the lower left corner.
-    protected def lowerLeft: Component = ???
+    protected val lowerLeft: Component = ???
 
+    /** The component to display in the lower right corner. */
     @stub
-    // The component to display in the lower right corner.
-    protected def lowerRight: Component = ???
+    protected val lowerRight: Component = ???
 
+    /** The row header child. */
     @stub
-    // The row header child.
-    protected def rowHead: JViewport = ???
+    protected val rowHead: JViewport = ???
 
+    /** The component to display in the upper left corner. */
     @stub
-    // The component to display in the upper left corner.
-    protected def upperLeft: Component = ???
+    protected val upperLeft: Component = ???
 
+    /** The component to display in the upper right corner. */
     @stub
-    // The component to display in the upper right corner.
-    protected def upperRight: Component = ???
+    protected val upperRight: Component = ???
 
+    /** The scrollpane's viewport child. */
     @stub
-    // The scrollpane's viewport child.
-    protected def viewport: JViewport = ???
+    protected val viewport: JViewport = ???
 
+    /** The scrollpane's vertical scrollbar child. */
     @stub
-    // The scrollpane's vertical scrollbar child.
-    protected def vsb: JScrollBar = ???
+    protected val vsb: JScrollBar = ???
 
+    /** Adds the specified component to the layout. */
     @stub
-    // Adds the specified component to the layout.
     def addLayoutComponent(s: String, c: Component): Unit = ???
 
+    /** Removes an existing component. */
     @stub
-    // Removes an existing component.
     protected def addSingletonComponent(oldC: Component, newC: Component): Component = ???
 
+    /** Returns the JViewport object that is the column header. */
     @stub
-    // Returns the JViewport object that is the column header.
     def getColumnHeader(): JViewport = ???
 
+    /** Returns the Component at the specified corner. */
     @stub
-    // Returns the Component at the specified corner.
     def getCorner(key: String): Component = ???
 
+    /** Returns the JScrollBar object that handles horizontal scrolling. */
     @stub
-    // Returns the JScrollBar object that handles horizontal scrolling.
     def getHorizontalScrollBar(): JScrollBar = ???
 
+    /** Returns the horizontal scrollbar-display policy. */
     @stub
-    // Returns the horizontal scrollbar-display policy.
     def getHorizontalScrollBarPolicy(): Int = ???
 
+    /** Returns the JViewport object that is the row header. */
     @stub
-    // Returns the JViewport object that is the row header.
     def getRowHeader(): JViewport = ???
 
+    /** Returns the JScrollBar object that handles vertical scrolling. */
     @stub
-    // Returns the JScrollBar object that handles vertical scrolling.
     def getVerticalScrollBar(): JScrollBar = ???
 
+    /** Returns the vertical scrollbar-display policy. */
     @stub
-    // Returns the vertical scrollbar-display policy.
     def getVerticalScrollBarPolicy(): Int = ???
 
+    /** Returns the JViewport object that displays the
+     *  scrollable contents.
+     */
     @stub
-    // Returns the JViewport object that displays the
-    // scrollable contents.
     def getViewport(): JViewport = ???
 
+    /** Deprecated. 
+     * As of JDK version Swing1.1
+     *     replaced by JScrollPane.getViewportBorderBounds().
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JDK version Swing1.1
-    //    replaced by JScrollPane.getViewportBorderBounds().
-    //
     def getViewportBorderBounds(scrollpane: JScrollPane): Rectangle = ???
 
+    /** Lays out the scrollpane. */
     @stub
-    // Lays out the scrollpane.
     def layoutContainer(parent: Container): Unit = ???
 
+    /** The minimum size of a ScrollPane is the size of the insets
+     *  plus minimum size of the viewport, plus the scrollpane's
+     *  viewportBorder insets, plus the minimum size
+     *  of the visible headers, plus the minimum size of the
+     *  scrollbars whose displayPolicy isn't NEVER.
+     */
     @stub
-    // The minimum size of a ScrollPane is the size of the insets
-    // plus minimum size of the viewport, plus the scrollpane's
-    // viewportBorder insets, plus the minimum size
-    // of the visible headers, plus the minimum size of the
-    // scrollbars whose displayPolicy isn't NEVER.
     def minimumLayoutSize(parent: Container): Dimension = ???
 
+    /** The preferred size of a ScrollPane is the size of the insets,
+     *  plus the preferred size of the viewport, plus the preferred size of
+     *  the visible headers, plus the preferred size of the scrollbars
+     *  that will appear given the current view and the current
+     *  scrollbar displayPolicies.
+     */
     @stub
-    // The preferred size of a ScrollPane is the size of the insets,
-    // plus the preferred size of the viewport, plus the preferred size of
-    // the visible headers, plus the preferred size of the scrollbars
-    // that will appear given the current view and the current
-    // scrollbar displayPolicies.
     def preferredLayoutSize(parent: Container): Dimension = ???
 
+    /** Removes the specified component from the layout. */
     @stub
-    // Removes the specified component from the layout.
     def removeLayoutComponent(c: Component): Unit = ???
 
+    /** Sets the horizontal scrollbar-display policy. */
     @stub
-    // Sets the horizontal scrollbar-display policy.
     def setHorizontalScrollBarPolicy(x: Int): Unit = ???
 
+    /** Sets the vertical scrollbar-display policy. */
     @stub
-    // Sets the vertical scrollbar-display policy.
     def setVerticalScrollBarPolicy(x: Int): Unit = ???
 }

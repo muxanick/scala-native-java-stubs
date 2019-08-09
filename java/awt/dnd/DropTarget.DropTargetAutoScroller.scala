@@ -3,14 +3,14 @@ package java.awt.dnd
 import java.awt.event.{ActionEvent, ActionListener}
 import java.lang.Object
 
-// this protected nested class implements autoscrolling
+/** this protected nested class implements autoscrolling */
 object protected DropTarget.DropTargetAutoScroller extends Object with ActionListener {
 
+    /** cause autoscroll to occur */
     @stub
-    // cause autoscroll to occur
     def actionPerformed(e: ActionEvent): Unit = ???
 
+    /** cause autoscrolling to stop */
     @stub
-    // cause autoscrolling to stop
     protected def stop(): Unit = ???
 }

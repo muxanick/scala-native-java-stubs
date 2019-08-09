@@ -2,33 +2,35 @@ package java.net
 
 import java.util.List
 
-// A CookieStore object represents a storage for cookie. Can store and retrieve
-// cookies.
-//
-// CookieManager will call CookieStore.add to save cookies
-// for every incoming HTTP response, and call CookieStore.get to
-// retrieve cookie for every outgoing HTTP request. A CookieStore
-// is responsible for removing HttpCookie instances which have expired.
+/** A CookieStore object represents a storage for cookie. Can store and retrieve
+ *  cookies.
+ * 
+ *  CookieManager will call CookieStore.add to save cookies
+ *  for every incoming HTTP response, and call CookieStore.get to
+ *  retrieve cookie for every outgoing HTTP request. A CookieStore
+ *  is responsible for removing HttpCookie instances which have expired.
+ */
 trait CookieStore {
 
+    /** Adds one HTTP cookie to the store. */
     @stub
-    // Adds one HTTP cookie to the store.
     def add(uri: URI, cookie: HttpCookie): Unit = ???
 
+    /** Retrieve cookies associated with given URI, or whose domain matches the
+     *  given URI.
+     */
     @stub
-    // Retrieve cookies associated with given URI, or whose domain matches the
-    // given URI.
     def get(uri: URI): List[HttpCookie] = ???
 
+    /** Get all not-expired cookies in cookie store. */
     @stub
-    // Get all not-expired cookies in cookie store.
     def getCookies(): List[HttpCookie] = ???
 
+    /** Get all URIs which identify the cookies in this cookie store. */
     @stub
-    // Get all URIs which identify the cookies in this cookie store.
     def getURIs(): List[URI] = ???
 
+    /** Remove a cookie from store. */
     @stub
-    // Remove a cookie from store.
     def remove(uri: URI, cookie: HttpCookie): Boolean = ???
 }

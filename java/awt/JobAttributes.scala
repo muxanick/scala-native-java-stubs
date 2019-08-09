@@ -2,224 +2,255 @@ package java.awt
 
 import java.lang.{Cloneable, Object, String}
 
-// A set of attributes which control a print job.
-// 
-// Instances of this class control the number of copies, default selection,
-// destination, print dialog, file and printer names, page ranges, multiple
-// document handling (including collation), and multi-page imposition (such
-// as duplex) of every print job which uses the instance. Attribute names are
-// compliant with the Internet Printing Protocol (IPP) 1.1 where possible.
-// Attribute values are partially compliant where possible.
-// 
-// To use a method which takes an inner class type, pass a reference to
-// one of the constant fields of the inner class. Client code cannot create
-// new instances of the inner class types because none of those classes
-// has a public constructor. For example, to set the print dialog type to
-// the cross-platform, pure Java print dialog, use the following code:
-// 
-// import java.awt.JobAttributes;
-//
-// public class PureJavaPrintDialogExample {
-//     public void setPureJavaPrintDialog(JobAttributes jobAttributes) {
-//         jobAttributes.setDialog(JobAttributes.DialogType.COMMON);
-//     }
-// }
-// 
-// 
-// Every IPP attribute which supports an attributeName-default value
-// has a corresponding setattributeNameToDefault method.
-// Default value fields are not provided.
+/** A set of attributes which control a print job.
+ *  
+ *  Instances of this class control the number of copies, default selection,
+ *  destination, print dialog, file and printer names, page ranges, multiple
+ *  document handling (including collation), and multi-page imposition (such
+ *  as duplex) of every print job which uses the instance. Attribute names are
+ *  compliant with the Internet Printing Protocol (IPP) 1.1 where possible.
+ *  Attribute values are partially compliant where possible.
+ *  
+ *  To use a method which takes an inner class type, pass a reference to
+ *  one of the constant fields of the inner class. Client code cannot create
+ *  new instances of the inner class types because none of those classes
+ *  has a public constructor. For example, to set the print dialog type to
+ *  the cross-platform, pure Java print dialog, use the following code:
+ *  
+ *  import java.awt.JobAttributes;
+ * 
+ *  public class PureJavaPrintDialogExample {
+ *      public void setPureJavaPrintDialog(JobAttributes jobAttributes) {
+ *          jobAttributes.setDialog(JobAttributes.DialogType.COMMON);
+ *      }
+ *  }
+ *  
+ *  
+ *  Every IPP attribute which supports an attributeName-default value
+ *  has a corresponding setattributeNameToDefault method.
+ *  Default value fields are not provided.
+ */
 final class JobAttributes extends Object with Cloneable {
 
+    /** Constructs a JobAttributes instance with default
+     *  values for every attribute.
+     */
     @stub
-    // Constructs a JobAttributes instance with default
-    // values for every attribute.
     def this() = ???
 
+    /** Constructs a JobAttributes instance with the
+     *  specified values for every attribute.
+     */
     @stub
-    // Constructs a JobAttributes instance with the
-    // specified values for every attribute.
     def this(copies: Int, defaultSelection: JobAttributes.DefaultSelectionType, destination: JobAttributes.DestinationType, dialog: JobAttributes.DialogType, fileName: String, maxPage: Int, minPage: Int, multipleDocumentHandling: JobAttributes.MultipleDocumentHandlingType, pageRanges: Array[Array[Int]], printer: String, sides: JobAttributes.SidesType) = ???
 
+    /** Creates and returns a copy of this JobAttributes. */
     @stub
-    // Creates and returns a copy of this JobAttributes.
     def clone(): Object = ???
 
+    /** Determines whether two JobAttributes are equal to each other. */
     @stub
-    // Determines whether two JobAttributes are equal to each other.
     def equals(obj: Object): Boolean = ???
 
+    /** Returns the number of copies the application should render for jobs
+     *  using these attributes.
+     */
     @stub
-    // Returns the number of copies the application should render for jobs
-    // using these attributes.
     def getCopies(): Int = ???
 
+    /** Specifies whether, for jobs using these attributes, the application
+     *  should print all pages, the range specified by the return value of
+     *  getPageRanges, or the current selection.
+     */
     @stub
-    // Specifies whether, for jobs using these attributes, the application
-    // should print all pages, the range specified by the return value of
-    // getPageRanges, or the current selection.
     def getDefaultSelection(): JobAttributes.DefaultSelectionType = ???
 
+    /** Specifies whether output will be to a printer or a file for jobs using
+     *  these attributes.
+     */
     @stub
-    // Specifies whether output will be to a printer or a file for jobs using
-    // these attributes.
     def getDestination(): JobAttributes.DestinationType = ???
 
+    /** Returns whether, for jobs using these attributes, the user should see
+     *  a print dialog in which to modify the print settings, and which type of
+     *  print dialog should be displayed.
+     */
     @stub
-    // Returns whether, for jobs using these attributes, the user should see
-    // a print dialog in which to modify the print settings, and which type of
-    // print dialog should be displayed.
     def getDialog(): JobAttributes.DialogType = ???
 
+    /** Specifies the file name for the output file for jobs using these
+     *  attributes.
+     */
     @stub
-    // Specifies the file name for the output file for jobs using these
-    // attributes.
     def getFileName(): String = ???
 
+    /** Returns, for jobs using these attributes, the first page to be
+     *  printed, if a range of pages is to be printed.
+     */
     @stub
-    // Returns, for jobs using these attributes, the first page to be
-    // printed, if a range of pages is to be printed.
     def getFromPage(): Int = ???
 
+    /** Specifies the maximum value the user can specify as the last page to
+     *  be printed for jobs using these attributes.
+     */
     @stub
-    // Specifies the maximum value the user can specify as the last page to
-    // be printed for jobs using these attributes.
     def getMaxPage(): Int = ???
 
+    /** Specifies the minimum value the user can specify as the first page to
+     *  be printed for jobs using these attributes.
+     */
     @stub
-    // Specifies the minimum value the user can specify as the first page to
-    // be printed for jobs using these attributes.
     def getMinPage(): Int = ???
 
+    /** Specifies the handling of multiple copies, including collation, for
+     *  jobs using these attributes.
+     */
     @stub
-    // Specifies the handling of multiple copies, including collation, for
-    // jobs using these attributes.
     def getMultipleDocumentHandling(): JobAttributes.MultipleDocumentHandlingType = ???
 
+    /** Specifies, for jobs using these attributes, the ranges of pages to be
+     *  printed, if a range of pages is to be printed.
+     */
     @stub
-    // Specifies, for jobs using these attributes, the ranges of pages to be
-    // printed, if a range of pages is to be printed.
     def getPageRanges(): Array[Array[Int]] = ???
 
+    /** Returns the destination printer for jobs using these attributes. */
     @stub
-    // Returns the destination printer for jobs using these attributes.
     def getPrinter(): String = ???
 
+    /** Returns how consecutive pages should be imposed upon the sides of the
+     *  print medium for jobs using these attributes.
+     */
     @stub
-    // Returns how consecutive pages should be imposed upon the sides of the
-    // print medium for jobs using these attributes.
     def getSides(): JobAttributes.SidesType = ???
 
+    /** Returns, for jobs using these attributes, the last page (inclusive)
+     *  to be printed, if a range of pages is to be printed.
+     */
     @stub
-    // Returns, for jobs using these attributes, the last page (inclusive)
-    // to be printed, if a range of pages is to be printed.
     def getToPage(): Int = ???
 
+    /** Returns a hash code value for this JobAttributes. */
     @stub
-    // Returns a hash code value for this JobAttributes.
     def hashCode(): Int = ???
 
+    /** Sets all of the attributes of this JobAttributes to
+     *  the same values as the attributes of obj.
+     */
     @stub
-    // Sets all of the attributes of this JobAttributes to
-    // the same values as the attributes of obj.
     def set(obj: JobAttributes): Unit = ???
 
+    /** Specifies the number of copies the application should render for jobs
+     *  using these attributes.
+     */
     @stub
-    // Specifies the number of copies the application should render for jobs
-    // using these attributes.
     def setCopies(copies: Int): Unit = ???
 
+    /** Sets the number of copies the application should render for jobs using
+     *  these attributes to the default.
+     */
     @stub
-    // Sets the number of copies the application should render for jobs using
-    // these attributes to the default.
     def setCopiesToDefault(): Unit = ???
 
+    /** Specifies whether, for jobs using these attributes, the application
+     *  should print all pages, the range specified by the return value of
+     *  getPageRanges, or the current selection.
+     */
     @stub
-    // Specifies whether, for jobs using these attributes, the application
-    // should print all pages, the range specified by the return value of
-    // getPageRanges, or the current selection.
     def setDefaultSelection(defaultSelection: JobAttributes.DefaultSelectionType): Unit = ???
 
+    /** Specifies whether output will be to a printer or a file for jobs using
+     *  these attributes.
+     */
     @stub
-    // Specifies whether output will be to a printer or a file for jobs using
-    // these attributes.
     def setDestination(destination: JobAttributes.DestinationType): Unit = ???
 
+    /** Specifies whether, for jobs using these attributes, the user should see
+     *  a print dialog in which to modify the print settings, and which type of
+     *  print dialog should be displayed.
+     */
     @stub
-    // Specifies whether, for jobs using these attributes, the user should see
-    // a print dialog in which to modify the print settings, and which type of
-    // print dialog should be displayed.
     def setDialog(dialog: JobAttributes.DialogType): Unit = ???
 
+    /** Specifies the file name for the output file for jobs using these
+     *  attributes.
+     */
     @stub
-    // Specifies the file name for the output file for jobs using these
-    // attributes.
     def setFileName(fileName: String): Unit = ???
 
+    /** Specifies, for jobs using these attributes, the first page to be
+     *  printed, if a range of pages is to be printed.
+     */
     @stub
-    // Specifies, for jobs using these attributes, the first page to be
-    // printed, if a range of pages is to be printed.
     def setFromPage(fromPage: Int): Unit = ???
 
+    /** Specifies the maximum value the user can specify as the last page to
+     *  be printed for jobs using these attributes.
+     */
     @stub
-    // Specifies the maximum value the user can specify as the last page to
-    // be printed for jobs using these attributes.
     def setMaxPage(maxPage: Int): Unit = ???
 
+    /** Specifies the minimum value the user can specify as the first page to
+     *  be printed for jobs using these attributes.
+     */
     @stub
-    // Specifies the minimum value the user can specify as the first page to
-    // be printed for jobs using these attributes.
     def setMinPage(minPage: Int): Unit = ???
 
+    /** Specifies the handling of multiple copies, including collation, for
+     *  jobs using these attributes.
+     */
     @stub
-    // Specifies the handling of multiple copies, including collation, for
-    // jobs using these attributes.
     def setMultipleDocumentHandling(multipleDocumentHandling: JobAttributes.MultipleDocumentHandlingType): Unit = ???
 
+    /** Sets the handling of multiple copies, including collation, for jobs
+     *  using these attributes to the default.
+     */
     @stub
-    // Sets the handling of multiple copies, including collation, for jobs
-    // using these attributes to the default.
     def setMultipleDocumentHandlingToDefault(): Unit = ???
 
+    /** Specifies, for jobs using these attributes, the ranges of pages to be
+     *  printed, if a range of pages is to be printed.
+     */
     @stub
-    // Specifies, for jobs using these attributes, the ranges of pages to be
-    // printed, if a range of pages is to be printed.
     def setPageRanges(pageRanges: Array[Array[Int]]): Unit = ???
 
+    /** Specifies the destination printer for jobs using these attributes. */
     @stub
-    // Specifies the destination printer for jobs using these attributes.
     def setPrinter(printer: String): Unit = ???
 
+    /** Specifies how consecutive pages should be imposed upon the sides of the
+     *  print medium for jobs using these attributes.
+     */
     @stub
-    // Specifies how consecutive pages should be imposed upon the sides of the
-    // print medium for jobs using these attributes.
     def setSides(sides: JobAttributes.SidesType): Unit = ???
 
+    /** Sets how consecutive pages should be imposed upon the sides of the
+     *  print medium for jobs using these attributes to the default.
+     */
     @stub
-    // Sets how consecutive pages should be imposed upon the sides of the
-    // print medium for jobs using these attributes to the default.
     def setSidesToDefault(): Unit = ???
 
+    /** Specifies, for jobs using these attributes, the last page (inclusive)
+     *  to be printed, if a range of pages is to be printed.
+     */
     @stub
-    // Specifies, for jobs using these attributes, the last page (inclusive)
-    // to be printed, if a range of pages is to be printed.
     def setToPage(toPage: Int): Unit = ???
 }
 
 object JobAttributes {
+    /** A type-safe enumeration of possible default selection states. */
     @stub
-    // A type-safe enumeration of possible default selection states.
-    def JobAttributes.DefaultSelectionType: class = ???
+    object DefaultSelectionType extends JobAttributes.DefaultSelectionType
 
+    /** A type-safe enumeration of possible job destinations. */
     @stub
-    // A type-safe enumeration of possible job destinations.
-    def JobAttributes.DestinationType: class = ???
+    object DestinationType extends JobAttributes.DestinationType
 
+    /** A type-safe enumeration of possible dialogs to display to the user. */
     @stub
-    // A type-safe enumeration of possible dialogs to display to the user.
-    def JobAttributes.DialogType: class = ???
+    object DialogType extends JobAttributes.DialogType
 
+    /** A type-safe enumeration of possible multiple copy handling states. */
     @stub
-    // A type-safe enumeration of possible multiple copy handling states.
-    def JobAttributes.MultipleDocumentHandlingType: class = ???
+    object MultipleDocumentHandlingType extends JobAttributes.MultipleDocumentHandlingType
 }

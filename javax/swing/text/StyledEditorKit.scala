@@ -3,81 +3,90 @@ package javax.swing.text
 import java.lang.Object
 import javax.swing.{Action, JEditorPane}
 
-// This is the set of things needed by a text component
-// to be a reasonably functioning editor for some type
-// of text document.  This implementation provides a default
-// implementation which treats text as styled text and
-// provides a minimal set of actions for editing styled text.
+/** This is the set of things needed by a text component
+ *  to be a reasonably functioning editor for some type
+ *  of text document.  This implementation provides a default
+ *  implementation which treats text as styled text and
+ *  provides a minimal set of actions for editing styled text.
+ */
 class StyledEditorKit extends DefaultEditorKit {
 
+    /** Creates a copy of the editor kit. */
     @stub
-    // Creates a copy of the editor kit.
     def clone(): Object = ???
 
+    /** Creates an uninitialized text storage model
+     *  that is appropriate for this type of editor.
+     */
     @stub
-    // Creates an uninitialized text storage model
-    // that is appropriate for this type of editor.
     def createDefaultDocument(): Document = ???
 
+    /** Copies the key/values in elements AttributeSet into
+     *  set.
+     */
     @stub
-    // Copies the key/values in elements AttributeSet into
-    // set.
     protected def createInputAttributes(element: Element, set: MutableAttributeSet): Unit = ???
 
+    /** Called when the kit is being removed from the
+     *  JEditorPane.
+     */
     @stub
-    // Called when the kit is being removed from the
-    // JEditorPane.
     def deinstall(c: JEditorPane): Unit = ???
 
+    /** Fetches the command list for the editor. */
     @stub
-    // Fetches the command list for the editor.
     def getActions(): Array[Action] = ???
 
+    /** Fetches the element representing the current
+     *  run of character attributes for the caret.
+     */
     @stub
-    // Fetches the element representing the current
-    // run of character attributes for the caret.
     def getCharacterAttributeRun(): Element = ???
 
+    /** Gets the input attributes for the pane. */
     @stub
-    // Gets the input attributes for the pane.
     def getInputAttributes(): MutableAttributeSet = ???
 
+    /** Fetches a factory that is suitable for producing
+     *  views of any models that are produced by this
+     *  kit.
+     */
     @stub
-    // Fetches a factory that is suitable for producing
-    // views of any models that are produced by this
-    // kit.
     def getViewFactory(): ViewFactory = ???
 }
 
 object StyledEditorKit {
+    /** An action to set paragraph alignment. */
     @stub
-    // An action to set paragraph alignment.
-    def StyledEditorKit.AlignmentAction: class = ???
+    object AlignmentAction extends StyledEditorKit.AlignmentAction
 
+    /** An action to toggle the bold attribute. */
     @stub
-    // An action to toggle the bold attribute.
-    def StyledEditorKit.BoldAction: class = ???
+    object BoldAction extends StyledEditorKit.BoldAction
 
+    /** An action to set the font family in the associated
+     *  JEditorPane.
+     */
     @stub
-    // An action to set the font family in the associated
-    // JEditorPane.
-    def StyledEditorKit.FontFamilyAction: class = ???
+    object FontFamilyAction extends StyledEditorKit.FontFamilyAction
 
+    /** An action to set the font size in the associated
+     *  JEditorPane.
+     */
     @stub
-    // An action to set the font size in the associated
-    // JEditorPane.
-    def StyledEditorKit.FontSizeAction: class = ???
+    object FontSizeAction extends StyledEditorKit.FontSizeAction
 
+    /** An action to set foreground color. */
     @stub
-    // An action to set foreground color.
-    def StyledEditorKit.ForegroundAction: class = ???
+    object ForegroundAction extends StyledEditorKit.ForegroundAction
 
+    /** An action to toggle the italic attribute. */
     @stub
-    // An action to toggle the italic attribute.
-    def StyledEditorKit.ItalicAction: class = ???
+    object ItalicAction extends StyledEditorKit.ItalicAction
 
+    /** An action that assumes it's being fired on a JEditorPane
+     *  with a StyledEditorKit (or subclass) installed.
+     */
     @stub
-    // An action that assumes it's being fired on a JEditorPane
-    // with a StyledEditorKit (or subclass) installed.
-    def StyledEditorKit.StyledTextAction: class = ???
+    object StyledTextAction extends StyledEditorKit.StyledTextAction
 }

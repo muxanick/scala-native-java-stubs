@@ -2,21 +2,24 @@ package java.util.concurrent
 
 import java.lang.{Exception, Object, RuntimeException, String, Throwable}
 
-// Exception thrown by an Executor when a task cannot be
-// accepted for execution.
+/** Exception thrown by an Executor when a task cannot be
+ *  accepted for execution.
+ */
 class RejectedExecutionException extends RuntimeException {
 
+    /** Constructs a RejectedExecutionException with no detail message. */
     @stub
-    // Constructs a RejectedExecutionException with no detail message.
     def this() = ???
 
+    /** Constructs a RejectedExecutionException with the
+     *  specified detail message.
+     */
     @stub
-    // Constructs a RejectedExecutionException with the
-    // specified detail message.
     def this(message: String) = ???
 
+    /** Constructs a RejectedExecutionException with the
+     *  specified detail message and cause.
+     */
     @stub
-    // Constructs a RejectedExecutionException with the
-    // specified detail message and cause.
     def this(message: String, cause: Throwable) = ???
 }

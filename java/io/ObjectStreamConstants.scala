@@ -1,120 +1,121 @@
 package java.io
 
-// Constants written into the Object Serialization Stream.
+/** Constants written into the Object Serialization Stream. */
 trait ObjectStreamConstants {
 }
 
 object ObjectStreamConstants {
+    /** First wire handle to be assigned. */
     @stub
-    // First wire handle to be assigned.
-    def baseWireHandle: Int = ???
+    val baseWireHandle: Int = ???
 
+    /** A Stream Protocol Version. */
     @stub
-    // A Stream Protocol Version.
-    def PROTOCOL_VERSION_1: Int = ???
+    val PROTOCOL_VERSION_1: Int = ???
 
+    /** A Stream Protocol Version. */
     @stub
-    // A Stream Protocol Version.
-    def PROTOCOL_VERSION_2: Int = ???
+    val PROTOCOL_VERSION_2: Int = ???
 
+    /** Bit mask for ObjectStreamClass flag. */
     @stub
-    // Bit mask for ObjectStreamClass flag.
-    def SC_BLOCK_DATA: Byte = ???
+    val SC_BLOCK_DATA: Byte = ???
 
+    /** Bit mask for ObjectStreamClass flag. */
     @stub
-    // Bit mask for ObjectStreamClass flag.
-    def SC_ENUM: Byte = ???
+    val SC_ENUM: Byte = ???
 
+    /** Bit mask for ObjectStreamClass flag. */
     @stub
-    // Bit mask for ObjectStreamClass flag.
-    def SC_EXTERNALIZABLE: Byte = ???
+    val SC_EXTERNALIZABLE: Byte = ???
 
+    /** Bit mask for ObjectStreamClass flag. */
     @stub
-    // Bit mask for ObjectStreamClass flag.
-    def SC_SERIALIZABLE: Byte = ???
+    val SC_SERIALIZABLE: Byte = ???
 
+    /** Bit mask for ObjectStreamClass flag. */
     @stub
-    // Bit mask for ObjectStreamClass flag.
-    def SC_WRITE_METHOD: Byte = ???
+    val SC_WRITE_METHOD: Byte = ???
 
+    /** Magic number that is written to the stream header. */
     @stub
-    // Magic number that is written to the stream header.
-    def STREAM_MAGIC: Short = ???
+    val STREAM_MAGIC: Short = ???
 
+    /** Version number that is written to the stream header. */
     @stub
-    // Version number that is written to the stream header.
-    def STREAM_VERSION: Short = ???
+    val STREAM_VERSION: Short = ???
 
+    /** Enable overriding of readObject and writeObject. */
     @stub
-    // Enable overriding of readObject and writeObject.
-    def SUBCLASS_IMPLEMENTATION_PERMISSION: SerializablePermission = ???
+    val SUBCLASS_IMPLEMENTATION_PERMISSION: SerializablePermission = ???
 
+    /** Enable substitution of one object for another during
+     *  serialization/deserialization.
+     */
     @stub
-    // Enable substitution of one object for another during
-    // serialization/deserialization.
-    def SUBSTITUTION_PERMISSION: SerializablePermission = ???
+    val SUBSTITUTION_PERMISSION: SerializablePermission = ???
 
+    /** new Array. */
     @stub
-    // new Array.
-    def TC_ARRAY: Byte = ???
+    val TC_ARRAY: Byte = ???
 
+    /** First tag value. */
     @stub
-    // First tag value.
-    def TC_BASE: Byte = ???
+    val TC_BASE: Byte = ???
 
+    /** Block of optional data. */
     @stub
-    // Block of optional data.
-    def TC_BLOCKDATA: Byte = ???
+    val TC_BLOCKDATA: Byte = ???
 
+    /** long Block data. */
     @stub
-    // long Block data.
-    def TC_BLOCKDATALONG: Byte = ???
+    val TC_BLOCKDATALONG: Byte = ???
 
+    /** Reference to Class. */
     @stub
-    // Reference to Class.
-    def TC_CLASS: Byte = ???
+    val TC_CLASS: Byte = ???
 
+    /** new Class Descriptor. */
     @stub
-    // new Class Descriptor.
-    def TC_CLASSDESC: Byte = ???
+    val TC_CLASSDESC: Byte = ???
 
+    /** End of optional block data blocks for an object. */
     @stub
-    // End of optional block data blocks for an object.
-    def TC_ENDBLOCKDATA: Byte = ???
+    val TC_ENDBLOCKDATA: Byte = ???
 
+    /** new Enum constant. */
     @stub
-    // new Enum constant.
-    def TC_ENUM: Byte = ???
+    val TC_ENUM: Byte = ???
 
+    /** Exception during write. */
     @stub
-    // Exception during write.
-    def TC_EXCEPTION: Byte = ???
+    val TC_EXCEPTION: Byte = ???
 
+    /** Long string. */
     @stub
-    // Long string.
-    def TC_LONGSTRING: Byte = ???
+    val TC_LONGSTRING: Byte = ???
 
+    /** Last tag value. */
     @stub
-    // Last tag value.
-    def TC_MAX: Byte = ???
+    val TC_MAX: Byte = ???
 
+    /** Null object reference. */
     @stub
-    // Null object reference.
-    def TC_NULL: Byte = ???
+    val TC_NULL: Byte = ???
 
+    /** new Object. */
     @stub
-    // new Object.
-    def TC_OBJECT: Byte = ???
+    val TC_OBJECT: Byte = ???
 
+    /** new Proxy Class Descriptor. */
     @stub
-    // new Proxy Class Descriptor.
-    def TC_PROXYCLASSDESC: Byte = ???
+    val TC_PROXYCLASSDESC: Byte = ???
 
+    /** Reference to an object already written into the stream. */
     @stub
-    // Reference to an object already written into the stream.
-    def TC_REFERENCE: Byte = ???
+    val TC_REFERENCE: Byte = ???
 
+    /** Reset stream context. */
     @stub
-    // Reset stream context.
-    def TC_RESET: Byte = ???
+    val TC_RESET: Byte = ???
 }

@@ -3,76 +3,85 @@ package java.beans
 import java.lang.{Class, Object, String}
 import java.lang.reflect.Method
 
-// A PropertyDescriptor describes one property that a Java Bean
-// exports via a pair of accessor methods.
+/** A PropertyDescriptor describes one property that a Java Bean
+ *  exports via a pair of accessor methods.
+ */
 class PropertyDescriptor extends FeatureDescriptor {
 
+    /** Constructs a PropertyDescriptor for a property that follows
+     *  the standard Java convention by having getFoo and setFoo
+     *  accessor methods.
+     */
     @stub
-    // Constructs a PropertyDescriptor for a property that follows
-    // the standard Java convention by having getFoo and setFoo
-    // accessor methods.
     def this(propertyName: String, beanClass: Class[_]) = ???
 
+    /** This constructor takes the name of a simple property, and method
+     *  names for reading and writing the property.
+     */
     @stub
-    // This constructor takes the name of a simple property, and method
-    // names for reading and writing the property.
     def this(propertyName: String, beanClass: Class[_], readMethodName: String, writeMethodName: String) = ???
 
+    /** Constructs an instance of a property editor using the current
+     *  property editor class.
+     */
     @stub
-    // Constructs an instance of a property editor using the current
-    // property editor class.
     def createPropertyEditor(bean: Object): PropertyEditor = ???
 
+    /** Compares this PropertyDescriptor against the specified object. */
     @stub
-    // Compares this PropertyDescriptor against the specified object.
     def equals(obj: Object): Boolean = ???
 
+    /** Gets any explicit PropertyEditor Class that has been registered
+     *  for this property.
+     */
     @stub
-    // Gets any explicit PropertyEditor Class that has been registered
-    // for this property.
     def getPropertyEditorClass(): Class[_] = ???
 
+    /** Returns the Java type info for the property. */
     @stub
-    // Returns the Java type info for the property.
     def getPropertyType(): Class[_] = ???
 
+    /** Gets the method that should be used to read the property value. */
     @stub
-    // Gets the method that should be used to read the property value.
     def getReadMethod(): Method = ???
 
+    /** Gets the method that should be used to write the property value. */
     @stub
-    // Gets the method that should be used to write the property value.
     def getWriteMethod(): Method = ???
 
+    /** Returns a hash code value for the object. */
     @stub
-    // Returns a hash code value for the object.
     def hashCode(): Int = ???
 
+    /** Updates to "bound" properties will cause a "PropertyChange" event to
+     *  get fired when the property is changed.
+     */
     @stub
-    // Updates to "bound" properties will cause a "PropertyChange" event to
-    // get fired when the property is changed.
     def isBound(): Boolean = ???
 
+    /** Attempted updates to "Constrained" properties will cause a "VetoableChange"
+     *  event to get fired when the property is changed.
+     */
     @stub
-    // Attempted updates to "Constrained" properties will cause a "VetoableChange"
-    // event to get fired when the property is changed.
     def isConstrained(): Boolean = ???
 
+    /** Updates to "bound" properties will cause a "PropertyChange" event to
+     *  get fired when the property is changed.
+     */
     @stub
-    // Updates to "bound" properties will cause a "PropertyChange" event to
-    // get fired when the property is changed.
     def setBound(bound: Boolean): Unit = ???
 
+    /** Attempted updates to "Constrained" properties will cause a "VetoableChange"
+     *  event to get fired when the property is changed.
+     */
     @stub
-    // Attempted updates to "Constrained" properties will cause a "VetoableChange"
-    // event to get fired when the property is changed.
     def setConstrained(constrained: Boolean): Unit = ???
 
+    /** Normally PropertyEditors will be found using the PropertyEditorManager. */
     @stub
-    // Normally PropertyEditors will be found using the PropertyEditorManager.
     def setPropertyEditorClass(propertyEditorClass: Class[_]): Unit = ???
 
+    /** Sets the method that should be used to read the property value. */
     @stub
-    // Sets the method that should be used to read the property value.
     def setReadMethod(readMethod: Method): Unit = ???
 }

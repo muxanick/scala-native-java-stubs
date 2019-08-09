@@ -3,65 +3,69 @@ package javax.script
 import java.lang.{Object, String}
 import java.util.List
 
-// The ScriptEngineManager implements a discovery and instantiation
-// mechanism for ScriptEngine classes and also maintains a
-// collection of key/value pairs storing state shared by all engines created
-// by the Manager. This class uses the service provider mechanism to enumerate all the
-// implementations of ScriptEngineFactory. 
-// The ScriptEngineManager provides a method to return a list of all these factories
-// as well as utility methods which look up factories on the basis of language name, file extension
-// and mime type.
-// 
-// The Bindings of key/value pairs, referred to as the "Global Scope"  maintained
-// by the manager is available to all instances of ScriptEngine created
-// by the ScriptEngineManager.  The values in the Bindings are
-// generally exposed in all scripts.
+/** The ScriptEngineManager implements a discovery and instantiation
+ *  mechanism for ScriptEngine classes and also maintains a
+ *  collection of key/value pairs storing state shared by all engines created
+ *  by the Manager. This class uses the service provider mechanism to enumerate all the
+ *  implementations of ScriptEngineFactory. 
+ *  The ScriptEngineManager provides a method to return a list of all these factories
+ *  as well as utility methods which look up factories on the basis of language name, file extension
+ *  and mime type.
+ *  
+ *  The Bindings of key/value pairs, referred to as the "Global Scope"  maintained
+ *  by the manager is available to all instances of ScriptEngine created
+ *  by the ScriptEngineManager.  The values in the Bindings are
+ *  generally exposed in all scripts.
+ */
 class ScriptEngineManager extends Object {
 
+    /** The effect of calling this constructor is the same as calling
+     *  ScriptEngineManager(Thread.currentThread().getContextClassLoader()).
+     */
     @stub
-    // The effect of calling this constructor is the same as calling
-    // ScriptEngineManager(Thread.currentThread().getContextClassLoader()).
     def this() = ???
 
+    /** Gets the value for the specified key in the Global Scope */
     @stub
-    // Gets the value for the specified key in the Global Scope
     def get(key: String): Object = ???
 
+    /** getBindings returns the value of the globalScope field. */
     @stub
-    // getBindings returns the value of the globalScope field.
     def getBindings(): Bindings = ???
 
+    /** Look up and create a ScriptEngine for a given extension. */
     @stub
-    // Look up and create a ScriptEngine for a given extension.
     def getEngineByExtension(extension: String): ScriptEngine = ???
 
+    /** Look up and create a ScriptEngine for a given mime type. */
     @stub
-    // Look up and create a ScriptEngine for a given mime type.
     def getEngineByMimeType(mimeType: String): ScriptEngine = ???
 
+    /** Looks up and creates a ScriptEngine for a given  name. */
     @stub
-    // Looks up and creates a ScriptEngine for a given  name.
     def getEngineByName(shortName: String): ScriptEngine = ???
 
+    /** Returns a list whose elements are instances of all the ScriptEngineFactory classes
+     *  found by the discovery mechanism.
+     */
     @stub
-    // Returns a list whose elements are instances of all the ScriptEngineFactory classes
-    // found by the discovery mechanism.
     def getEngineFactories(): List[ScriptEngineFactory] = ???
 
+    /** Sets the specified key/value pair in the Global Scope. */
     @stub
-    // Sets the specified key/value pair in the Global Scope.
     def put(key: String, value: Object): Unit = ???
 
+    /** Registers a ScriptEngineFactory to handle an extension. */
     @stub
-    // Registers a ScriptEngineFactory to handle an extension.
     def registerEngineExtension(extension: String, factory: ScriptEngineFactory): Unit = ???
 
+    /** Registers a ScriptEngineFactory to handle a mime type. */
     @stub
-    // Registers a ScriptEngineFactory to handle a mime type.
     def registerEngineMimeType(type: String, factory: ScriptEngineFactory): Unit = ???
 
+    /** Registers a ScriptEngineFactory to handle a language
+     *  name.
+     */
     @stub
-    // Registers a ScriptEngineFactory to handle a language
-    // name.
     def registerEngineName(name: String, factory: ScriptEngineFactory): Unit = ???
 }

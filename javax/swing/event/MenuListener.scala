@@ -2,14 +2,14 @@ package javax.swing.event
 
 import java.util.EventListener
 
-// Defines a listener for menu events.
+/** Defines a listener for menu events. */
 trait MenuListener extends EventListener {
 
+    /** Invoked when the menu is canceled. */
     @stub
-    // Invoked when the menu is canceled.
     def menuCanceled(e: MenuEvent): Unit = ???
 
+    /** Invoked when the menu is deselected. */
     @stub
-    // Invoked when the menu is deselected.
     def menuDeselected(e: MenuEvent): Unit = ???
 }

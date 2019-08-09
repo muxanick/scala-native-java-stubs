@@ -2,158 +2,188 @@ package java.lang.reflect
 
 import java.lang.Object
 
-// The Modifier class provides static methods and
-// constants to decode class and member access modifiers.  The sets of
-// modifiers are represented as integers with distinct bit positions
-// representing different modifiers.  The values for the constants
-// representing the modifiers are taken from the tables in sections 4.1, 4.4, 4.5, and 4.7 of
-// The Java™ Virtual Machine Specification.
+/** The Modifier class provides static methods and
+ *  constants to decode class and member access modifiers.  The sets of
+ *  modifiers are represented as integers with distinct bit positions
+ *  representing different modifiers.  The values for the constants
+ *  representing the modifiers are taken from the tables in sections 4.1, 4.4, 4.5, and 4.7 of
+ *  The Java™ Virtual Machine Specification.
+ */
 class Modifier extends Object {
 }
 
 object Modifier {
+    /** The int value representing the abstract
+     *  modifier.
+     */
     @stub
-    // The int value representing the abstract
-    // modifier.
-    def ABSTRACT: Int = ???
+    val ABSTRACT: Int = ???
 
+    /** The int value representing the final
+     *  modifier.
+     */
     @stub
-    // The int value representing the final
-    // modifier.
-    def FINAL: Int = ???
+    val FINAL: Int = ???
 
+    /** The int value representing the interface
+     *  modifier.
+     */
     @stub
-    // The int value representing the interface
-    // modifier.
-    def INTERFACE: Int = ???
+    val INTERFACE: Int = ???
 
+    /** The int value representing the native
+     *  modifier.
+     */
     @stub
-    // The int value representing the native
-    // modifier.
-    def NATIVE: Int = ???
+    val NATIVE: Int = ???
 
+    /** The int value representing the private
+     *  modifier.
+     */
     @stub
-    // The int value representing the private
-    // modifier.
-    def PRIVATE: Int = ???
+    val PRIVATE: Int = ???
 
+    /** The int value representing the protected
+     *  modifier.
+     */
     @stub
-    // The int value representing the protected
-    // modifier.
-    def PROTECTED: Int = ???
+    val PROTECTED: Int = ???
 
+    /** The int value representing the public
+     *  modifier.
+     */
     @stub
-    // The int value representing the public
-    // modifier.
-    def PUBLIC: Int = ???
+    val PUBLIC: Int = ???
 
+    /** The int value representing the static
+     *  modifier.
+     */
     @stub
-    // The int value representing the static
-    // modifier.
-    def STATIC: Int = ???
+    val STATIC: Int = ???
 
+    /** The int value representing the strictfp
+     *  modifier.
+     */
     @stub
-    // The int value representing the strictfp
-    // modifier.
-    def STRICT: Int = ???
+    val STRICT: Int = ???
 
+    /** The int value representing the synchronized
+     *  modifier.
+     */
     @stub
-    // The int value representing the synchronized
-    // modifier.
-    def SYNCHRONIZED: Int = ???
+    val SYNCHRONIZED: Int = ???
 
+    /** The int value representing the transient
+     *  modifier.
+     */
     @stub
-    // The int value representing the transient
-    // modifier.
-    def TRANSIENT: Int = ???
+    val TRANSIENT: Int = ???
 
+    /** Return an int value OR-ing together the source language
+     *  modifiers that can be applied to a class.
+     */
     @stub
-    // Return an int value OR-ing together the source language
-    // modifiers that can be applied to a class.
     def classModifiers(): Int = ???
 
+    /** Return an int value OR-ing together the source language
+     *  modifiers that can be applied to a constructor.
+     */
     @stub
-    // Return an int value OR-ing together the source language
-    // modifiers that can be applied to a constructor.
     def constructorModifiers(): Int = ???
 
+    /** Return an int value OR-ing together the source language
+     *  modifiers that can be applied to a field.
+     */
     @stub
-    // Return an int value OR-ing together the source language
-    // modifiers that can be applied to a field.
     def fieldModifiers(): Int = ???
 
+    /** Return an int value OR-ing together the source language
+     *  modifiers that can be applied to an interface.
+     */
     @stub
-    // Return an int value OR-ing together the source language
-    // modifiers that can be applied to an interface.
     def interfaceModifiers(): Int = ???
 
+    /** Return true if the integer argument includes the
+     *  abstract modifier, false otherwise.
+     */
     @stub
-    // Return true if the integer argument includes the
-    // abstract modifier, false otherwise.
     def isAbstract(mod: Int): Boolean = ???
 
+    /** Return true if the integer argument includes the
+     *  final modifier, false otherwise.
+     */
     @stub
-    // Return true if the integer argument includes the
-    // final modifier, false otherwise.
     def isFinal(mod: Int): Boolean = ???
 
+    /** Return true if the integer argument includes the
+     *  interface modifier, false otherwise.
+     */
     @stub
-    // Return true if the integer argument includes the
-    // interface modifier, false otherwise.
     def isInterface(mod: Int): Boolean = ???
 
+    /** Return true if the integer argument includes the
+     *  native modifier, false otherwise.
+     */
     @stub
-    // Return true if the integer argument includes the
-    // native modifier, false otherwise.
     def isNative(mod: Int): Boolean = ???
 
+    /** Return true if the integer argument includes the
+     *  private modifier, false otherwise.
+     */
     @stub
-    // Return true if the integer argument includes the
-    // private modifier, false otherwise.
     def isPrivate(mod: Int): Boolean = ???
 
+    /** Return true if the integer argument includes the
+     *  protected modifier, false otherwise.
+     */
     @stub
-    // Return true if the integer argument includes the
-    // protected modifier, false otherwise.
     def isProtected(mod: Int): Boolean = ???
 
+    /** Return true if the integer argument includes the
+     *  public modifier, false otherwise.
+     */
     @stub
-    // Return true if the integer argument includes the
-    // public modifier, false otherwise.
     def isPublic(mod: Int): Boolean = ???
 
+    /** Return true if the integer argument includes the
+     *  static modifier, false otherwise.
+     */
     @stub
-    // Return true if the integer argument includes the
-    // static modifier, false otherwise.
     def isStatic(mod: Int): Boolean = ???
 
+    /** Return true if the integer argument includes the
+     *  strictfp modifier, false otherwise.
+     */
     @stub
-    // Return true if the integer argument includes the
-    // strictfp modifier, false otherwise.
     def isStrict(mod: Int): Boolean = ???
 
+    /** Return true if the integer argument includes the
+     *  synchronized modifier, false otherwise.
+     */
     @stub
-    // Return true if the integer argument includes the
-    // synchronized modifier, false otherwise.
     def isSynchronized(mod: Int): Boolean = ???
 
+    /** Return true if the integer argument includes the
+     *  transient modifier, false otherwise.
+     */
     @stub
-    // Return true if the integer argument includes the
-    // transient modifier, false otherwise.
     def isTransient(mod: Int): Boolean = ???
 
+    /** Return true if the integer argument includes the
+     *  volatile modifier, false otherwise.
+     */
     @stub
-    // Return true if the integer argument includes the
-    // volatile modifier, false otherwise.
     def isVolatile(mod: Int): Boolean = ???
 
+    /** Return an int value OR-ing together the source language
+     *  modifiers that can be applied to a method.
+     */
     @stub
-    // Return an int value OR-ing together the source language
-    // modifiers that can be applied to a method.
     def methodModifiers(): Int = ???
 
+    /** Return an int value OR-ing together the source language
+     *  modifiers that can be applied to a parameter.
+     */
     @stub
-    // Return an int value OR-ing together the source language
-    // modifiers that can be applied to a parameter.
     def parameterModifiers(): Int = ???
 }

@@ -2,231 +2,270 @@ package java.sql
 
 import java.lang.Object
 
-// The class that defines the constants that are used to identify generic
-// SQL types, called JDBC types.
-// 
-// This class is never instantiated.
+/** The class that defines the constants that are used to identify generic
+ *  SQL types, called JDBC types.
+ *  
+ *  This class is never instantiated.
+ */
 class Types extends Object {
 }
 
 object Types {
+    /** The constant in the Java programming language, sometimes referred to
+     *  as a type code, that identifies the generic SQL type
+     *  ARRAY.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred to
-    // as a type code, that identifies the generic SQL type
-    // ARRAY.
-    def ARRAY: Int = ???
+    val ARRAY: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  BIGINT.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred
-    // to as a type code, that identifies the generic SQL type
-    // BIGINT.
-    def BIGINT: Int = ???
+    val BIGINT: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  BINARY.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred
-    // to as a type code, that identifies the generic SQL type
-    // BINARY.
-    def BINARY: Int = ???
+    val BINARY: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  BIT.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred
-    // to as a type code, that identifies the generic SQL type
-    // BIT.
-    def BIT: Int = ???
+    val BIT: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred to
+     *  as a type code, that identifies the generic SQL type
+     *  BLOB.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred to
-    // as a type code, that identifies the generic SQL type
-    // BLOB.
-    def BLOB: Int = ???
+    val BLOB: Int = ???
 
+    /** The constant in the Java programming language, somtimes referred to
+     *  as a type code, that identifies the generic SQL type BOOLEAN.
+     */
     @stub
-    // The constant in the Java programming language, somtimes referred to
-    // as a type code, that identifies the generic SQL type BOOLEAN.
-    def BOOLEAN: Int = ???
+    val BOOLEAN: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  CHAR.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred
-    // to as a type code, that identifies the generic SQL type
-    // CHAR.
-    def CHAR: Int = ???
+    val CHAR: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred to
+     *  as a type code, that identifies the generic SQL type
+     *  CLOB.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred to
-    // as a type code, that identifies the generic SQL type
-    // CLOB.
-    def CLOB: Int = ???
+    val CLOB: Int = ???
 
+    /** The constant in the Java programming language, somtimes referred to
+     *  as a type code, that identifies the generic SQL type DATALINK.
+     */
     @stub
-    // The constant in the Java programming language, somtimes referred to
-    // as a type code, that identifies the generic SQL type DATALINK.
-    def DATALINK: Int = ???
+    val DATALINK: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  DATE.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred
-    // to as a type code, that identifies the generic SQL type
-    // DATE.
-    def DATE: Int = ???
+    val DATE: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  DECIMAL.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred
-    // to as a type code, that identifies the generic SQL type
-    // DECIMAL.
-    def DECIMAL: Int = ???
+    val DECIMAL: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred to
+     *  as a type code, that identifies the generic SQL type
+     *  DISTINCT.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred to
-    // as a type code, that identifies the generic SQL type
-    // DISTINCT.
-    def DISTINCT: Int = ???
+    val DISTINCT: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  DOUBLE.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred
-    // to as a type code, that identifies the generic SQL type
-    // DOUBLE.
-    def DOUBLE: Int = ???
+    val DOUBLE: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  FLOAT.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred
-    // to as a type code, that identifies the generic SQL type
-    // FLOAT.
-    def FLOAT: Int = ???
+    val FLOAT: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  INTEGER.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred
-    // to as a type code, that identifies the generic SQL type
-    // INTEGER.
-    def INTEGER: Int = ???
+    val INTEGER: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred to
+     *  as a type code, that identifies the generic SQL type
+     *  JAVA_OBJECT.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred to
-    // as a type code, that identifies the generic SQL type
-    // JAVA_OBJECT.
-    def JAVA_OBJECT: Int = ???
+    val JAVA_OBJECT: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred to
+     *  as a type code, that identifies the generic SQL type LONGNVARCHAR.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred to
-    // as a type code, that identifies the generic SQL type LONGNVARCHAR.
-    def LONGNVARCHAR: Int = ???
+    val LONGNVARCHAR: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  LONGVARBINARY.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred
-    // to as a type code, that identifies the generic SQL type
-    // LONGVARBINARY.
-    def LONGVARBINARY: Int = ???
+    val LONGVARBINARY: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  LONGVARCHAR.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred
-    // to as a type code, that identifies the generic SQL type
-    // LONGVARCHAR.
-    def LONGVARCHAR: Int = ???
+    val LONGVARCHAR: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred to
+     *  as a type code, that identifies the generic SQL type NCHAR
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred to
-    // as a type code, that identifies the generic SQL type NCHAR
-    def NCHAR: Int = ???
+    val NCHAR: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred to
+     *  as a type code, that identifies the generic SQL type NCLOB.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred to
-    // as a type code, that identifies the generic SQL type NCLOB.
-    def NCLOB: Int = ???
+    val NCLOB: Int = ???
 
+    /** The constant in the Java programming language
+     *  that identifies the generic SQL value
+     *  NULL.
+     */
     @stub
-    // The constant in the Java programming language
-    // that identifies the generic SQL value
-    // NULL.
-    def NULL: Int = ???
+    val NULL: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  NUMERIC.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred
-    // to as a type code, that identifies the generic SQL type
-    // NUMERIC.
-    def NUMERIC: Int = ???
+    val NUMERIC: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred to
+     *  as a type code, that identifies the generic SQL type NVARCHAR.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred to
-    // as a type code, that identifies the generic SQL type NVARCHAR.
-    def NVARCHAR: Int = ???
+    val NVARCHAR: Int = ???
 
+    /** The constant in the Java programming language that indicates
+     *  that the SQL type is database-specific and
+     *  gets mapped to a Java object that can be accessed via
+     *  the methods getObject and setObject.
+     */
     @stub
-    // The constant in the Java programming language that indicates
-    // that the SQL type is database-specific and
-    // gets mapped to a Java object that can be accessed via
-    // the methods getObject and setObject.
-    def OTHER: Int = ???
+    val OTHER: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  REAL.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred
-    // to as a type code, that identifies the generic SQL type
-    // REAL.
-    def REAL: Int = ???
+    val REAL: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred to
+     *  as a type code, that identifies the generic SQL type
+     *  REF.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred to
-    // as a type code, that identifies the generic SQL type
-    // REF.
-    def REF: Int = ???
+    val REF: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred to
+     *  as a type code, that identifies the generic SQL type REF CURSOR.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred to
-    // as a type code, that identifies the generic SQL type REF CURSOR.
-    def REF_CURSOR: Int = ???
+    val REF_CURSOR: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred to
+     *  as a type code, that identifies the generic SQL type ROWID
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred to
-    // as a type code, that identifies the generic SQL type ROWID
-    def ROWID: Int = ???
+    val ROWID: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  SMALLINT.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred
-    // to as a type code, that identifies the generic SQL type
-    // SMALLINT.
-    def SMALLINT: Int = ???
+    val SMALLINT: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred to
+     *  as a type code, that identifies the generic SQL type XML.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred to
-    // as a type code, that identifies the generic SQL type XML.
-    def SQLXML: Int = ???
+    val SQLXML: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred to
+     *  as a type code, that identifies the generic SQL type
+     *  STRUCT.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred to
-    // as a type code, that identifies the generic SQL type
-    // STRUCT.
-    def STRUCT: Int = ???
+    val STRUCT: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  TIME.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred
-    // to as a type code, that identifies the generic SQL type
-    // TIME.
-    def TIME: Int = ???
+    val TIME: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred to
+     *  as a type code, that identifies the generic SQL type
+     *  TIME WITH TIMEZONE.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred to
-    // as a type code, that identifies the generic SQL type
-    // TIME WITH TIMEZONE.
-    def TIME_WITH_TIMEZONE: Int = ???
+    val TIME_WITH_TIMEZONE: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  TIMESTAMP.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred
-    // to as a type code, that identifies the generic SQL type
-    // TIMESTAMP.
-    def TIMESTAMP: Int = ???
+    val TIMESTAMP: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred to
+     *  as a type code, that identifies the generic SQL type
+     *  TIMESTAMP WITH TIMEZONE.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred to
-    // as a type code, that identifies the generic SQL type
-    // TIMESTAMP WITH TIMEZONE.
-    def TIMESTAMP_WITH_TIMEZONE: Int = ???
+    val TIMESTAMP_WITH_TIMEZONE: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  TINYINT.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred
-    // to as a type code, that identifies the generic SQL type
-    // TINYINT.
-    def TINYINT: Int = ???
+    val TINYINT: Int = ???
 
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  VARBINARY.
+     */
     @stub
-    // The constant in the Java programming language, sometimes referred
-    // to as a type code, that identifies the generic SQL type
-    // VARBINARY.
-    def VARBINARY: Int = ???
+    val VARBINARY: Int = ???
 }

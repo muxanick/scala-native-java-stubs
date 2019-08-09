@@ -3,99 +3,118 @@ package javax.xml.parsers
 import java.lang.{ClassLoader, Object, String}
 import javax.xml.validation.Schema
 
-// Defines a factory API that enables applications to obtain a
-// parser that produces DOM object trees from XML documents.
+/** Defines a factory API that enables applications to obtain a
+ *  parser that produces DOM object trees from XML documents.
+ */
 abstract class DocumentBuilderFactory extends Object {
 
-    // Allows the user to retrieve specific attributes on the underlying
-    // implementation.
+    /** Allows the user to retrieve specific attributes on the underlying
+     *  implementation.
+     */
     def getAttribute(name: String): Object
 
-    // Get the state of the named feature.
+    /** Get the state of the named feature. */
     def getFeature(name: String): Boolean
 
-    // Gets the Schema object specified through
-    // the setSchema(Schema schema) method.
+    /** Gets the Schema object specified through
+     *  the setSchema(Schema schema) method.
+     */
     def getSchema(): Schema
 
-    // Indicates whether or not the factory is configured to produce
-    // parsers which converts CDATA nodes to Text nodes and appends it to
-    // the adjacent (if any) Text node.
+    /** Indicates whether or not the factory is configured to produce
+     *  parsers which converts CDATA nodes to Text nodes and appends it to
+     *  the adjacent (if any) Text node.
+     */
     def isCoalescing(): Boolean
 
-    // Indicates whether or not the factory is configured to produce
-    // parsers which expand entity reference nodes.
+    /** Indicates whether or not the factory is configured to produce
+     *  parsers which expand entity reference nodes.
+     */
     def isExpandEntityReferences(): Boolean
 
-    // Indicates whether or not the factory is configured to produce
-    // parsers which ignores comments.
+    /** Indicates whether or not the factory is configured to produce
+     *  parsers which ignores comments.
+     */
     def isIgnoringComments(): Boolean
 
-    // Indicates whether or not the factory is configured to produce
-    // parsers which ignore ignorable whitespace in element content.
+    /** Indicates whether or not the factory is configured to produce
+     *  parsers which ignore ignorable whitespace in element content.
+     */
     def isIgnoringElementContentWhitespace(): Boolean
 
-    // Indicates whether or not the factory is configured to produce
-    // parsers which are namespace aware.
+    /** Indicates whether or not the factory is configured to produce
+     *  parsers which are namespace aware.
+     */
     def isNamespaceAware(): Boolean
 
-    // Indicates whether or not the factory is configured to produce
-    // parsers which validate the XML content during parse.
+    /** Indicates whether or not the factory is configured to produce
+     *  parsers which validate the XML content during parse.
+     */
     def isValidating(): Boolean
 
-    // Get state of XInclude processing.
+    /** Get state of XInclude processing. */
     def isXIncludeAware(): Boolean
 
-    // Creates a new instance of a DocumentBuilder
-    // using the currently configured parameters.
+    /** Creates a new instance of a DocumentBuilder
+     *  using the currently configured parameters.
+     */
     def newDocumentBuilder(): DocumentBuilder
 
-    // Allows the user to set specific attributes on the underlying
-    // implementation.
+    /** Allows the user to set specific attributes on the underlying
+     *  implementation.
+     */
     def setAttribute(name: String, value: Object): Unit
 
-    // Specifies that the parser produced by this code will
-    // convert CDATA nodes to Text nodes and append it to the
-    // adjacent (if any) text node.
+    /** Specifies that the parser produced by this code will
+     *  convert CDATA nodes to Text nodes and append it to the
+     *  adjacent (if any) text node.
+     */
     def setCoalescing(coalescing: Boolean): Unit
 
-    // Specifies that the parser produced by this code will
-    // expand entity reference nodes.
+    /** Specifies that the parser produced by this code will
+     *  expand entity reference nodes.
+     */
     def setExpandEntityReferences(expandEntityRef: Boolean): Unit
 
-    // Set a feature for this DocumentBuilderFactory and DocumentBuilders created by this factory.
+    /** Set a feature for this DocumentBuilderFactory and DocumentBuilders created by this factory. */
     def setFeature(name: String, value: Boolean): Unit
 
-    // Specifies that the parser produced by this code will
-    // ignore comments.
+    /** Specifies that the parser produced by this code will
+     *  ignore comments.
+     */
     def setIgnoringComments(ignoreComments: Boolean): Unit
 
-    // Specifies that the parsers created by this  factory must eliminate
-    // whitespace in element content (sometimes known loosely as
-    // 'ignorable whitespace') when parsing XML documents (see XML Rec
-    // 2.10).
+    /** Specifies that the parsers created by this  factory must eliminate
+     *  whitespace in element content (sometimes known loosely as
+     *  'ignorable whitespace') when parsing XML documents (see XML Rec
+     *  2.10).
+     */
     def setIgnoringElementContentWhitespace(whitespace: Boolean): Unit
 
-    // Specifies that the parser produced by this code will
-    // provide support for XML namespaces.
+    /** Specifies that the parser produced by this code will
+     *  provide support for XML namespaces.
+     */
     def setNamespaceAware(awareness: Boolean): Unit
 
-    // Set the Schema to be used by parsers created
-    // from this factory.
+    /** Set the Schema to be used by parsers created
+     *  from this factory.
+     */
     def setSchema(schema: Schema): Unit
 
-    // Specifies that the parser produced by this code will
-    // validate documents as they are parsed.
+    /** Specifies that the parser produced by this code will
+     *  validate documents as they are parsed.
+     */
     def setValidating(validating: Boolean): Unit
 }
 
 object DocumentBuilderFactory {
+    /** Obtain a new instance of a
+     *  DocumentBuilderFactory.
+     */
     @stub
-    // Obtain a new instance of a
-    // DocumentBuilderFactory.
     def newInstance(): DocumentBuilderFactory = ???
 
+    /** Obtain a new instance of a DocumentBuilderFactory from class name. */
     @stub
-    // Obtain a new instance of a DocumentBuilderFactory from class name.
     def newInstance(factoryClassName: String, classLoader: ClassLoader): DocumentBuilderFactory = ???
 }

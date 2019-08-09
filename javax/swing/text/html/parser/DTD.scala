@@ -4,136 +4,138 @@ import java.io.DataInputStream
 import java.lang.{Object, String}
 import java.util.{BitSet, Hashtable, Vector}
 
-// The representation of an SGML DTD.  DTD describes a document
-// syntax and is used in parsing of HTML documents.  It contains
-// a list of elements and their attributes as well as a list of
-// entities defined in the DTD.
+/** The representation of an SGML DTD.  DTD describes a document
+ *  syntax and is used in parsing of HTML documents.  It contains
+ *  a list of elements and their attributes as well as a list of
+ *  entities defined in the DTD.
+ */
 class DTD extends Object with DTDConstants {
 
+    /**  */
     @stub
-    // 
-    def applet: Element = ???
+    val applet: Element = ???
 
+    /**  */
     @stub
-    // 
-    def base: Element = ???
+    val base: Element = ???
 
+    /**  */
     @stub
-    // 
-    def body: Element = ???
+    val body: Element = ???
 
+    /**  */
     @stub
-    // 
-    def elementHash: Hashtable[String, Element] = ???
+    val elementHash: Hashtable[String, Element] = ???
 
+    /**  */
     @stub
-    // 
-    def elements: Vector[Element] = ???
+    val elements: Vector[Element] = ???
 
+    /**  */
     @stub
-    // 
-    def entityHash: Hashtable[Object, Entity] = ???
+    val entityHash: Hashtable[Object, Entity] = ???
 
+    /**  */
     @stub
-    // 
-    def head: Element = ???
+    val head: Element = ???
 
+    /**  */
     @stub
-    // 
-    def html: Element = ???
+    val html: Element = ???
 
+    /**  */
     @stub
-    // 
-    def isindex: Element = ???
+    val isindex: Element = ???
 
+    /**  */
     @stub
-    // 
-    def meta: Element = ???
+    val meta: Element = ???
 
+    /**  */
     @stub
-    // 
-    def name: String = ???
+    val name: String = ???
 
+    /**  */
     @stub
-    // 
-    def p: Element = ???
+    val p: Element = ???
 
+    /**  */
     @stub
-    // 
-    def param: Element = ???
+    val param: Element = ???
 
+    /**  */
     @stub
-    // 
-    def pcdata: Element = ???
+    val pcdata: Element = ???
 
+    /** Creates and returns an AttributeList. */
     @stub
-    // Creates and returns an AttributeList.
     protected def defAttributeList(name: String, type: Int, modifier: Int, value: String, values: String, atts: AttributeList): AttributeList = ???
 
+    /** Creates and returns a new content model. */
     @stub
-    // Creates and returns a new content model.
     protected def defContentModel(type: Int, obj: Object, next: ContentModel): ContentModel = ???
 
+    /** Creates and returns an Element. */
     @stub
-    // Creates and returns an Element.
     protected def defElement(name: String, type: Int, omitStart: Boolean, omitEnd: Boolean, content: ContentModel, exclusions: Array[String], inclusions: Array[String], atts: AttributeList): Element = ???
 
+    /** Creates and returns a character Entity. */
     @stub
-    // Creates and returns a character Entity.
     def defEntity(name: String, type: Int, ch: Int): Entity = ???
 
+    /** Creates and returns an Entity. */
     @stub
-    // Creates and returns an Entity.
     protected def defEntity(name: String, type: Int, str: String): Entity = ???
 
+    /** Defines attributes for an Element. */
     @stub
-    // Defines attributes for an Element.
     def defineAttributes(name: String, atts: AttributeList): Unit = ???
 
+    /** Returns the Element which matches the
+     *  specified parameters.
+     */
     @stub
-    // Returns the Element which matches the
-    // specified parameters.
     def defineElement(name: String, type: Int, omitStart: Boolean, omitEnd: Boolean, content: ContentModel, exclusions: BitSet, inclusions: BitSet, atts: AttributeList): Element = ???
 
+    /** Defines an entity. */
     @stub
-    // Defines an entity.
     def defineEntity(name: String, type: Int, data: Array[Char]): Entity = ???
 
+    /** Gets an element by index. */
     @stub
-    // Gets an element by index.
     def getElement(index: Int): Element = ???
 
+    /** Gets an element by name. */
     @stub
-    // Gets an element by name.
     def getElement(name: String): Element = ???
 
+    /** Gets a character entity. */
     @stub
-    // Gets a character entity.
     def getEntity(ch: Int): Entity = ???
 
+    /** Gets an entity by name. */
     @stub
-    // Gets an entity by name.
     def getEntity(name: String): Entity = ???
 
+    /** Gets the name of the DTD. */
     @stub
-    // Gets the name of the DTD.
     def getName(): String = ???
 
+    /** Recreates a DTD from an archived format. */
     @stub
-    // Recreates a DTD from an archived format.
     def read(in: DataInputStream): Unit = ???
 }
 
 object DTD {
+    /**  */
     @stub
-    // 
-    def FILE_VERSION: Int = ???
+    val FILE_VERSION: Int = ???
 
+    /** Returns a DTD with the specified name. */
     @stub
-    // Returns a DTD with the specified name.
     def getDTD(name: String): DTD = ???
 
+    /**  */
     @stub
-    // 
     def putDTDHash(name: String, dtd: DTD): Unit = ???
 }

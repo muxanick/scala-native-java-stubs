@@ -3,28 +3,28 @@ package javax.xml.xpath
 import java.lang.{Object, String}
 import javax.xml.namespace.QName
 
-// XPath constants.
+/** XPath constants. */
 class XPathConstants extends Object {
 }
 
 object XPathConstants {
+    /** The XPath 1.0 boolean data type. */
     @stub
-    // The XPath 1.0 boolean data type.
-    def BOOLEAN: QName = ???
+    val BOOLEAN: QName = ???
 
+    /** The URI for the DOM object model, "http://java.sun.com/jaxp/xpath/dom". */
     @stub
-    // The URI for the DOM object model, "http://java.sun.com/jaxp/xpath/dom".
-    def DOM_OBJECT_MODEL: String = ???
+    val DOM_OBJECT_MODEL: String = ???
 
+    /** The XPath 1.0 NodeSet data type. */
     @stub
-    // The XPath 1.0 NodeSet data type.
-    def NODE: QName = ???
+    val NODE: QName = ???
 
+    /** The XPath 1.0 NodeSet data type. */
     @stub
-    // The XPath 1.0 NodeSet data type.
-    def NODESET: QName = ???
+    val NODESET: QName = ???
 
+    /** The XPath 1.0 number data type. */
     @stub
-    // The XPath 1.0 number data type.
-    def NUMBER: QName = ???
+    val NUMBER: QName = ???
 }

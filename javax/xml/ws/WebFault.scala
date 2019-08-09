@@ -2,21 +2,26 @@ package javax.xml.ws
 
 import java.lang.String
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
+import scala.annotation.StaticAnnotation
 
-// Used to annotate service specific exception classes to customize
-// to the local and namespace name of the fault element and the name
-// of the fault bean.
-@Target ( value = TYPE ) @Retention ( value = RUNTIME ) @Documented @interface WebFault {
+/** Used to annotate service specific exception classes to customize
+ *  to the local and namespace name of the fault element and the name
+ *  of the fault bean.
+ */
+@Target ( value = TYPE ) 
+@Retention ( value = RUNTIME ) 
+@Documented 
+ final class WebFault extends StaticAnnotation {
 
+    /** Fault bean name. */
     @stub
-    // Fault bean name.
-    def faultBean: String = ???
+    val faultBean: String = ???
 
+    /** wsdl:Message's name. */
     @stub
-    // wsdl:Message's name.
-    def messageName: String = ???
+    val messageName: String = ???
 
+    /** Element's local name. */
     @stub
-    // Element's local name.
-    def name: String = ???
+    val name: String = ???
 }

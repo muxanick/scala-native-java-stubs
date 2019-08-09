@@ -2,119 +2,122 @@ package javax.transaction.xa
 
 import java.lang.{Exception, Object, Throwable}
 
-// The XAException is thrown by the Resource Manager (RM) to inform the
-// Transaction Manager of an error encountered by the involved transaction.
+/** The XAException is thrown by the Resource Manager (RM) to inform the
+ *  Transaction Manager of an error encountered by the involved transaction.
+ */
 class XAException extends Exception {
 
+    /** Create an XAException. */
     @stub
-    // Create an XAException.
     def this() = ???
 
+    /** Create an XAException with a given error code. */
     @stub
-    // Create an XAException with a given error code.
     def this(errcode: Int) = ???
 
+    /** The error code with which to create the SystemException. */
     @stub
-    // The error code with which to create the SystemException.
-    def errorCode: Int = ???
+    val errorCode: Int = ???
 }
 
 object XAException {
+    /** The transaction branch has been heuristically committed. */
     @stub
-    // The transaction branch has been heuristically committed.
-    def XA_HEURCOM: Int = ???
+    val XA_HEURCOM: Int = ???
 
+    /** The transaction branch may have been heuristically completed. */
     @stub
-    // The transaction branch may have been heuristically completed.
-    def XA_HEURHAZ: Int = ???
+    val XA_HEURHAZ: Int = ???
 
+    /** The transaction branch has been heuristically committed and
+     *  rolled back.
+     */
     @stub
-    // The transaction branch has been heuristically committed and
-    // rolled back.
-    def XA_HEURMIX: Int = ???
+    val XA_HEURMIX: Int = ???
 
+    /** The transaction branch has been heuristically rolled back. */
     @stub
-    // The transaction branch has been heuristically rolled back.
-    def XA_HEURRB: Int = ???
+    val XA_HEURRB: Int = ???
 
+    /** Resumption must occur where the suspension occurred. */
     @stub
-    // Resumption must occur where the suspension occurred.
-    def XA_NOMIGRATE: Int = ???
+    val XA_NOMIGRATE: Int = ???
 
+    /** The inclusive lower bound of the rollback codes. */
     @stub
-    // The inclusive lower bound of the rollback codes.
-    def XA_RBBASE: Int = ???
+    val XA_RBBASE: Int = ???
 
+    /** Indicates that the rollback was caused by a communication failure. */
     @stub
-    // Indicates that the rollback was caused by a communication failure.
-    def XA_RBCOMMFAIL: Int = ???
+    val XA_RBCOMMFAIL: Int = ???
 
+    /** A deadlock was detected. */
     @stub
-    // A deadlock was detected.
-    def XA_RBDEADLOCK: Int = ???
+    val XA_RBDEADLOCK: Int = ???
 
+    /** The inclusive upper bound of the rollback error code. */
     @stub
-    // The inclusive upper bound of the rollback error code.
-    def XA_RBEND: Int = ???
+    val XA_RBEND: Int = ???
 
+    /** A condition that violates the integrity of the resource was detected. */
     @stub
-    // A condition that violates the integrity of the resource was detected.
-    def XA_RBINTEGRITY: Int = ???
+    val XA_RBINTEGRITY: Int = ???
 
+    /** The resource manager rolled back the transaction branch for a reason
+     *  not on this list.
+     */
     @stub
-    // The resource manager rolled back the transaction branch for a reason
-    // not on this list.
-    def XA_RBOTHER: Int = ???
+    val XA_RBOTHER: Int = ???
 
+    /** A protocol error occurred in the resource manager. */
     @stub
-    // A protocol error occurred in the resource manager.
-    def XA_RBPROTO: Int = ???
+    val XA_RBPROTO: Int = ???
 
+    /** Indicates that the rollback was caused by an unspecified reason. */
     @stub
-    // Indicates that the rollback was caused by an unspecified reason.
-    def XA_RBROLLBACK: Int = ???
+    val XA_RBROLLBACK: Int = ???
 
+    /** A transaction branch took too long. */
     @stub
-    // A transaction branch took too long.
-    def XA_RBTIMEOUT: Int = ???
+    val XA_RBTIMEOUT: Int = ???
 
+    /** May retry the transaction branch. */
     @stub
-    // May retry the transaction branch.
-    def XA_RBTRANSIENT: Int = ???
+    val XA_RBTRANSIENT: Int = ???
 
+    /** The transaction branch was read-only and has been committed. */
     @stub
-    // The transaction branch was read-only and has been committed.
-    def XA_RDONLY: Int = ???
+    val XA_RDONLY: Int = ???
 
+    /** Routine returned with no effect and may be reissued. */
     @stub
-    // Routine returned with no effect and may be reissued.
-    def XA_RETRY: Int = ???
+    val XA_RETRY: Int = ???
 
+    /** There is an asynchronous operation already outstanding. */
     @stub
-    // There is an asynchronous operation already outstanding.
-    def XAER_ASYNC: Int = ???
+    val XAER_ASYNC: Int = ???
 
+    /** The XID already exists. */
     @stub
-    // The XID already exists.
-    def XAER_DUPID: Int = ???
+    val XAER_DUPID: Int = ???
 
+    /** Invalid arguments were given. */
     @stub
-    // Invalid arguments were given.
-    def XAER_INVAL: Int = ???
+    val XAER_INVAL: Int = ???
 
+    /** The XID is not valid. */
     @stub
-    // The XID is not valid.
-    def XAER_NOTA: Int = ???
+    val XAER_NOTA: Int = ???
 
+    /** The resource manager is doing work outside a global transaction. */
     @stub
-    // The resource manager is doing work outside a global transaction.
-    def XAER_OUTSIDE: Int = ???
+    val XAER_OUTSIDE: Int = ???
 
+    /** Routine was invoked in an inproper context. */
     @stub
-    // Routine was invoked in an inproper context.
-    def XAER_PROTO: Int = ???
+    val XAER_PROTO: Int = ???
 
+    /** A resource manager error has occurred in the transaction branch. */
     @stub
-    // A resource manager error has occurred in the transaction branch.
-    def XAER_RMERR: Int = ???
+    val XAER_RMERR: Int = ???
 }

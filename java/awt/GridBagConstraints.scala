@@ -3,216 +3,240 @@ package java.awt
 import java.io.Serializable
 import java.lang.{Cloneable, Object}
 
-// The GridBagConstraints class specifies constraints
-// for components that are laid out using the
-// GridBagLayout class.
-class GridBagConstraints extends Object with Cloneable, with Serializable {
+/** The GridBagConstraints class specifies constraints
+ *  for components that are laid out using the
+ *  GridBagLayout class.
+ */
+class GridBagConstraints extends Object with Cloneable with Serializable {
 
+    /** Creates a GridBagConstraint object with
+     *  all of its fields set to their default value.
+     */
     @stub
-    // Creates a GridBagConstraint object with
-    // all of its fields set to their default value.
     def this() = ???
 
+    /** This field is used when the component is smaller than its
+     *  display area.
+     */
     @stub
-    // This field is used when the component is smaller than its
-    // display area.
-    def anchor: Int = ???
+    val anchor: Int = ???
 
+    /** This field is used when the component's display area is larger
+     *  than the component's requested size.
+     */
     @stub
-    // This field is used when the component's display area is larger
-    // than the component's requested size.
-    def fill: Int = ???
+    val fill: Int = ???
 
+    /** Specifies the number of cells in a column for the component's
+     *  display area.
+     */
     @stub
-    // Specifies the number of cells in a column for the component's
-    // display area.
-    def gridheight: Int = ???
+    val gridheight: Int = ???
 
+    /** Specifies the number of cells in a row for the component's
+     *  display area.
+     */
     @stub
-    // Specifies the number of cells in a row for the component's
-    // display area.
-    def gridwidth: Int = ???
+    val gridwidth: Int = ???
 
+    /** Specifies the cell containing the leading edge of the component's
+     *  display area, where the first cell in a row has gridx=0.
+     */
     @stub
-    // Specifies the cell containing the leading edge of the component's
-    // display area, where the first cell in a row has gridx=0.
-    def gridx: Int = ???
+    val gridx: Int = ???
 
+    /** Specifies the cell at the top of the component's display area,
+     *  where the topmost cell has gridy=0.
+     */
     @stub
-    // Specifies the cell at the top of the component's display area,
-    // where the topmost cell has gridy=0.
-    def gridy: Int = ???
+    val gridy: Int = ???
 
+    /** This field specifies the external padding of the component, the
+     *  minimum amount of space between the component and the edges of its
+     *  display area.
+     */
     @stub
-    // This field specifies the external padding of the component, the
-    // minimum amount of space between the component and the edges of its
-    // display area.
-    def insets: Insets = ???
+    val insets: Insets = ???
 
+    /** This field specifies the internal padding of the component, how much
+     *  space to add to the minimum width of the component.
+     */
     @stub
-    // This field specifies the internal padding of the component, how much
-    // space to add to the minimum width of the component.
-    def ipadx: Int = ???
+    val ipadx: Int = ???
 
+    /** This field specifies the internal padding, that is, how much
+     *  space to add to the minimum height of the component.
+     */
     @stub
-    // This field specifies the internal padding, that is, how much
-    // space to add to the minimum height of the component.
-    def ipady: Int = ???
+    val ipady: Int = ???
 
+    /** Specifies how to distribute extra horizontal space. */
     @stub
-    // Specifies how to distribute extra horizontal space.
-    def weightx: double = ???
+    val weightx: Double = ???
 
+    /** Specifies how to distribute extra vertical space. */
     @stub
-    // Specifies how to distribute extra vertical space.
-    def weighty: double = ???
+    val weighty: Double = ???
 }
 
 object GridBagConstraints {
+    /** Possible value for the anchor field. */
     @stub
-    // Possible value for the anchor field.
-    def ABOVE_BASELINE: Int = ???
+    val ABOVE_BASELINE: Int = ???
 
+    /** Possible value for the anchor field. */
     @stub
-    // Possible value for the anchor field.
-    def ABOVE_BASELINE_LEADING: Int = ???
+    val ABOVE_BASELINE_LEADING: Int = ???
 
+    /** Possible value for the anchor field. */
     @stub
-    // Possible value for the anchor field.
-    def ABOVE_BASELINE_TRAILING: Int = ???
+    val ABOVE_BASELINE_TRAILING: Int = ???
 
+    /** Possible value for the anchor field. */
     @stub
-    // Possible value for the anchor field.
-    def BASELINE: Int = ???
+    val BASELINE: Int = ???
 
+    /** Possible value for the anchor field. */
     @stub
-    // Possible value for the anchor field.
-    def BASELINE_LEADING: Int = ???
+    val BASELINE_LEADING: Int = ???
 
+    /** Possible value for the anchor field. */
     @stub
-    // Possible value for the anchor field.
-    def BASELINE_TRAILING: Int = ???
+    val BASELINE_TRAILING: Int = ???
 
+    /** Possible value for the anchor field. */
     @stub
-    // Possible value for the anchor field.
-    def BELOW_BASELINE: Int = ???
+    val BELOW_BASELINE: Int = ???
 
+    /** Possible value for the anchor field. */
     @stub
-    // Possible value for the anchor field.
-    def BELOW_BASELINE_LEADING: Int = ???
+    val BELOW_BASELINE_LEADING: Int = ???
 
+    /** Possible value for the anchor field. */
     @stub
-    // Possible value for the anchor field.
-    def BELOW_BASELINE_TRAILING: Int = ???
+    val BELOW_BASELINE_TRAILING: Int = ???
 
+    /** Resize the component both horizontally and vertically. */
     @stub
-    // Resize the component both horizontally and vertically.
-    def BOTH: Int = ???
+    val BOTH: Int = ???
 
+    /** Put the component in the center of its display area. */
     @stub
-    // Put the component in the center of its display area.
-    def CENTER: Int = ???
+    val CENTER: Int = ???
 
+    /** Put the component on the right side of its display area,
+     *  centered vertically.
+     */
     @stub
-    // Put the component on the right side of its display area,
-    // centered vertically.
-    def EAST: Int = ???
+    val EAST: Int = ???
 
+    /** Place the component in the corner of its display area where
+     *  the first line of text on a page would normally end for the current
+     *  ComponentOrientation.
+     */
     @stub
-    // Place the component in the corner of its display area where
-    // the first line of text on a page would normally end for the current
-    // ComponentOrientation.
-    def FIRST_LINE_END: Int = ???
+    val FIRST_LINE_END: Int = ???
 
+    /** Place the component in the corner of its display area where
+     *  the first line of text on a page would normally begin for the current
+     *  ComponentOrientation.
+     */
     @stub
-    // Place the component in the corner of its display area where
-    // the first line of text on a page would normally begin for the current
-    // ComponentOrientation.
-    def FIRST_LINE_START: Int = ???
+    val FIRST_LINE_START: Int = ???
 
+    /** Resize the component horizontally but not vertically. */
     @stub
-    // Resize the component horizontally but not vertically.
-    def HORIZONTAL: Int = ???
+    val HORIZONTAL: Int = ???
 
+    /** Place the component in the corner of its display area where
+     *  the last line of text on a page would normally end for the current
+     *  ComponentOrientation.
+     */
     @stub
-    // Place the component in the corner of its display area where
-    // the last line of text on a page would normally end for the current
-    // ComponentOrientation.
-    def LAST_LINE_END: Int = ???
+    val LAST_LINE_END: Int = ???
 
+    /** Place the component in the corner of its display area where
+     *  the last line of text on a page would normally start for the current
+     *  ComponentOrientation.
+     */
     @stub
-    // Place the component in the corner of its display area where
-    // the last line of text on a page would normally start for the current
-    // ComponentOrientation.
-    def LAST_LINE_START: Int = ???
+    val LAST_LINE_START: Int = ???
 
+    /** Place the component centered along the edge of its display area where
+     *  lines of text would normally end for the current
+     *  ComponentOrientation.
+     */
     @stub
-    // Place the component centered along the edge of its display area where
-    // lines of text would normally end for the current
-    // ComponentOrientation.
-    def LINE_END: Int = ???
+    val LINE_END: Int = ???
 
+    /** Place the component centered along the edge of its display area where
+     *  lines of text would normally begin for the current
+     *  ComponentOrientation.
+     */
     @stub
-    // Place the component centered along the edge of its display area where
-    // lines of text would normally begin for the current
-    // ComponentOrientation.
-    def LINE_START: Int = ???
+    val LINE_START: Int = ???
 
+    /** Do not resize the component. */
     @stub
-    // Do not resize the component.
-    def NONE: Int = ???
+    val NONE: Int = ???
 
+    /** Put the component at the top of its display area,
+     *  centered horizontally.
+     */
     @stub
-    // Put the component at the top of its display area,
-    // centered horizontally.
-    def NORTH: Int = ???
+    val NORTH: Int = ???
 
+    /** Put the component at the top-right corner of its display area. */
     @stub
-    // Put the component at the top-right corner of its display area.
-    def NORTHEAST: Int = ???
+    val NORTHEAST: Int = ???
 
+    /** Put the component at the top-left corner of its display area. */
     @stub
-    // Put the component at the top-left corner of its display area.
-    def NORTHWEST: Int = ???
+    val NORTHWEST: Int = ???
 
+    /** Place the component centered along the edge of its display area
+     *  associated with the end of a page for the current
+     *  ComponentOrientation.
+     */
     @stub
-    // Place the component centered along the edge of its display area
-    // associated with the end of a page for the current
-    // ComponentOrientation.
-    def PAGE_END: Int = ???
+    val PAGE_END: Int = ???
 
+    /** Place the component centered along the edge of its display area
+     *  associated with the start of a page for the current
+     *  ComponentOrientation.
+     */
     @stub
-    // Place the component centered along the edge of its display area
-    // associated with the start of a page for the current
-    // ComponentOrientation.
-    def PAGE_START: Int = ???
+    val PAGE_START: Int = ???
 
+    /** Specifies that this component is the next-to-last component in its
+     *  column or row (gridwidth, gridheight),
+     *  or that this component be placed next to the previously added
+     *  component (gridx, gridy).
+     */
     @stub
-    // Specifies that this component is the next-to-last component in its
-    // column or row (gridwidth, gridheight),
-    // or that this component be placed next to the previously added
-    // component (gridx, gridy).
-    def RELATIVE: Int = ???
+    val RELATIVE: Int = ???
 
+    /** Specifies that this component is the
+     *  last component in its column or row.
+     */
     @stub
-    // Specifies that this component is the
-    // last component in its column or row.
-    def REMAINDER: Int = ???
+    val REMAINDER: Int = ???
 
+    /** Put the component at the bottom of its display area, centered
+     *  horizontally.
+     */
     @stub
-    // Put the component at the bottom of its display area, centered
-    // horizontally.
-    def SOUTH: Int = ???
+    val SOUTH: Int = ???
 
+    /** Put the component at the bottom-right corner of its display area. */
     @stub
-    // Put the component at the bottom-right corner of its display area.
-    def SOUTHEAST: Int = ???
+    val SOUTHEAST: Int = ???
 
+    /** Put the component at the bottom-left corner of its display area. */
     @stub
-    // Put the component at the bottom-left corner of its display area.
-    def SOUTHWEST: Int = ???
+    val SOUTHWEST: Int = ???
 
+    /** Resize the component vertically but not horizontally. */
     @stub
-    // Resize the component vertically but not horizontally.
-    def VERTICAL: Int = ???
+    val VERTICAL: Int = ???
 }

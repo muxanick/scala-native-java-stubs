@@ -3,19 +3,20 @@ package java.awt
 import java.awt.event.{ComponentEvent, ComponentListener}
 import java.lang.Object
 
-// Fire PropertyChange listener, if one is registered,
-// when shown/hidden..
+/** Fire PropertyChange listener, if one is registered,
+ *  when shown/hidden..
+ */
 protected class Component.AccessibleAWTComponent.AccessibleAWTComponentHandler extends Object with ComponentListener {
 
+    /** Invoked when the component has been made invisible. */
     @stub
-    // Invoked when the component has been made invisible.
     def componentHidden(e: ComponentEvent): Unit = ???
 
+    /** Invoked when the component's position changes. */
     @stub
-    // Invoked when the component's position changes.
     def componentMoved(e: ComponentEvent): Unit = ???
 
+    /** Invoked when the component's size changes. */
     @stub
-    // Invoked when the component's size changes.
     def componentResized(e: ComponentEvent): Unit = ???
 }

@@ -3,64 +3,66 @@ package java.awt
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 
-// A Label object is a component for placing text in a
-// container. A label displays a single line of read-only text.
-// The text can be changed by the application, but a user cannot edit it
-// directly.
-// 
-// For example, the code . . .
-//
-// 
-// setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10));
-// add(new Label("Hi There!"));
-// add(new Label("Another Label"));
-// 
-// 
-// produces the following labels:
-// 
-// 
+/** A Label object is a component for placing text in a
+ *  container. A label displays a single line of read-only text.
+ *  The text can be changed by the application, but a user cannot edit it
+ *  directly.
+ *  
+ *  For example, the code . . .
+ * 
+ *  
+ *  setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10));
+ *  add(new Label("Hi There!"));
+ *  add(new Label("Another Label"));
+ *  
+ *  
+ *  produces the following labels:
+ *  
+ *  
+ */
 class Label extends Component with Accessible {
 
+    /** Constructs an empty label. */
     @stub
-    // Constructs an empty label.
     def this() = ???
 
+    /** Constructs a new label with the specified string of text,
+     *  left justified.
+     */
     @stub
-    // Constructs a new label with the specified string of text,
-    // left justified.
     def this(text: String) = ???
 
+    /** Creates the peer for this label. */
     @stub
-    // Creates the peer for this label.
     def addNotify(): Unit = ???
 
+    /** Gets the AccessibleContext associated with this Label. */
     @stub
-    // Gets the AccessibleContext associated with this Label.
     def getAccessibleContext(): AccessibleContext = ???
 
+    /** Gets the current alignment of this label. */
     @stub
-    // Gets the current alignment of this label.
     def getAlignment(): Int = ???
 
+    /** Gets the text of this label. */
     @stub
-    // Gets the text of this label.
     def getText(): String = ???
 
+    /** Returns a string representing the state of this Label. */
     @stub
-    // Returns a string representing the state of this Label.
     protected def paramString(): String = ???
 
+    /** Sets the alignment for this label to the specified alignment. */
     @stub
-    // Sets the alignment for this label to the specified alignment.
     def setAlignment(alignment: Int): Unit = ???
 }
 
 object Label {
+    /** Indicates that the label should be centered. */
     @stub
-    // Indicates that the label should be centered.
-    def CENTER: Int = ???
+    val CENTER: Int = ???
 
+    /** Indicates that the label should be left justified. */
     @stub
-    // Indicates that the label should be left justified.
-    def LEFT: Int = ???
+    val LEFT: Int = ???
 }

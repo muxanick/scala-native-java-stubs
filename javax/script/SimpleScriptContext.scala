@@ -4,79 +4,84 @@ import java.io.{Reader, Writer}
 import java.lang.{Integer, Object, String}
 import java.util.List
 
-// Simple implementation of ScriptContext.
+/** Simple implementation of ScriptContext. */
 class SimpleScriptContext extends Object with ScriptContext {
 
+    /** This is the engine scope bindings. */
     @stub
-    // This is the engine scope bindings.
-    protected def engineScope: Bindings = ???
+    protected val engineScope: Bindings = ???
 
+    /** This is the writer to be used to output errors from scripts. */
     @stub
-    // This is the writer to be used to output errors from scripts.
-    protected def errorWriter: Writer = ???
+    protected val errorWriter: Writer = ???
 
+    /** This is the global scope bindings. */
     @stub
-    // This is the global scope bindings.
-    protected def globalScope: Bindings = ???
+    protected val globalScope: Bindings = ???
 
+    /** This is the reader to be used for input from scripts. */
     @stub
-    // This is the reader to be used for input from scripts.
-    protected def reader: Reader = ???
+    protected val reader: Reader = ???
 
+    /** Retrieves the value of the attribute with the given name in
+     *  the scope occurring earliest in the search order.
+     */
     @stub
-    // Retrieves the value of the attribute with the given name in
-    // the scope occurring earliest in the search order.
     def getAttribute(name: String): Object = ???
 
+    /** Gets the value of an attribute in a given scope. */
     @stub
-    // Gets the value of an attribute in a given scope.
     def getAttribute(name: String, scope: Int): Object = ???
 
+    /** Get the lowest scope in which an attribute is defined. */
     @stub
-    // Get the lowest scope in which an attribute is defined.
     def getAttributesScope(name: String): Int = ???
 
+    /** Returns the value of the engineScope field if specified scope is
+     *  ENGINE_SCOPE.
+     */
     @stub
-    // Returns the value of the engineScope field if specified scope is
-    // ENGINE_SCOPE.
     def getBindings(scope: Int): Bindings = ???
 
+    /** Returns the Writer used to display error output. */
     @stub
-    // Returns the Writer used to display error output.
     def getErrorWriter(): Writer = ???
 
+    /** Returns a Reader to be used by the script to read
+     *  input.
+     */
     @stub
-    // Returns a Reader to be used by the script to read
-    // input.
     def getReader(): Reader = ???
 
+    /** Returns immutable List of all the valid values for
+     *  scope in the ScriptContext.
+     */
     @stub
-    // Returns immutable List of all the valid values for
-    // scope in the ScriptContext.
     def getScopes(): List[Integer] = ???
 
+    /** Returns the Writer for scripts to use when displaying output. */
     @stub
-    // Returns the Writer for scripts to use when displaying output.
     def getWriter(): Writer = ???
 
+    /** Remove an attribute in a given scope. */
     @stub
-    // Remove an attribute in a given scope.
     def removeAttribute(name: String, scope: Int): Object = ???
 
+    /** Sets the value of an attribute in a given scope. */
     @stub
-    // Sets the value of an attribute in a given scope.
     def setAttribute(name: String, value: Object, scope: Int): Unit = ???
 
+    /** Sets a Bindings of attributes for the given scope. */
     @stub
-    // Sets a Bindings of attributes for the given scope.
     def setBindings(bindings: Bindings, scope: Int): Unit = ???
 
+    /** Sets the Writer used to display error output. */
     @stub
-    // Sets the Writer used to display error output.
     def setErrorWriter(writer: Writer): Unit = ???
 
+    /** Sets the Reader for scripts to read input
+     *  .
+     */
     @stub
-    // Sets the Reader for scripts to read input
-    // .
     def setReader(reader: Reader): Unit = ???
 }

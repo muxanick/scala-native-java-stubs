@@ -6,558 +6,616 @@ import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.event.InternalFrameListener
 import javax.swing.plaf.InternalFrameUI
 
-// A lightweight object that provides many of the features of
-// a native frame, including dragging, closing, becoming an icon,
-// resizing, title display, and support for a menu bar.
-// For task-oriented documentation and examples of using internal frames,
-// see How to Use Internal Frames,
-// a section in The Java Tutorial.
-//
-// 
-//
-// Generally,
-// you add JInternalFrames to a JDesktopPane. The UI
-// delegates the look-and-feel-specific actions to the
-// DesktopManager
-// object maintained by the JDesktopPane.
-// 
-// The JInternalFrame content pane
-// is where you add child components.
-// As a convenience, the add, remove, and setLayout
-// methods of this class are overridden, so that they delegate calls
-// to the corresponding methods of the ContentPane.
-// For example, you can add a child component to an internal frame as follows:
-// 
-//       internalFrame.add(child);
-// 
-// And the child will be added to the contentPane.
-// The content pane is actually managed by an instance of
-// JRootPane,
-// which also manages a layout pane, glass pane, and
-// optional menu bar for the internal frame. Please see the
-// JRootPane
-// documentation for a complete description of these components.
-// Refer to RootPaneContainer
-// for details on adding, removing and setting the LayoutManager
-// of a JInternalFrame.
-// 
-// Warning: Swing is not thread safe. For more
-// information see Swing's Threading
-// Policy.
-// 
-// Warning:
-// Serialized objects of this class will not be compatible with
-// future Swing releases. The current serialization support is
-// appropriate for short term storage or RMI between applications running
-// the same version of Swing.  As of 1.4, support for long term storage
-// of all JavaBeans™
-// has been added to the java.beans package.
-// Please see XMLEncoder.
-class JInternalFrame extends JComponent with Accessible, with WindowConstants, with RootPaneContainer {
+/** A lightweight object that provides many of the features of
+ *  a native frame, including dragging, closing, becoming an icon,
+ *  resizing, title display, and support for a menu bar.
+ *  For task-oriented documentation and examples of using internal frames,
+ *  see How to Use Internal Frames,
+ *  a section in The Java Tutorial.
+ * 
+ *  
+ * 
+ *  Generally,
+ *  you add JInternalFrames to a JDesktopPane. The UI
+ *  delegates the look-and-feel-specific actions to the
+ *  DesktopManager
+ *  object maintained by the JDesktopPane.
+ *  
+ *  The JInternalFrame content pane
+ *  is where you add child components.
+ *  As a convenience, the add, remove, and setLayout
+ *  methods of this class are overridden, so that they delegate calls
+ *  to the corresponding methods of the ContentPane.
+ *  For example, you can add a child component to an internal frame as follows:
+ *  
+ *        internalFrame.add(child);
+ *  
+ *  And the child will be added to the contentPane.
+ *  The content pane is actually managed by an instance of
+ *  JRootPane,
+ *  which also manages a layout pane, glass pane, and
+ *  optional menu bar for the internal frame. Please see the
+ *  JRootPane
+ *  documentation for a complete description of these components.
+ *  Refer to RootPaneContainer
+ *  for details on adding, removing and setting the LayoutManager
+ *  of a JInternalFrame.
+ *  
+ *  Warning: Swing is not thread safe. For more
+ *  information see Swing's Threading
+ *  Policy.
+ *  
+ *  Warning:
+ *  Serialized objects of this class will not be compatible with
+ *  future Swing releases. The current serialization support is
+ *  appropriate for short term storage or RMI between applications running
+ *  the same version of Swing.  As of 1.4, support for long term storage
+ *  of all JavaBeans™
+ *  has been added to the java.beans package.
+ *  Please see XMLEncoder.
+ */
+class JInternalFrame extends JComponent with Accessible with WindowConstants with RootPaneContainer {
 
+    /** Creates a non-resizable, non-closable, non-maximizable,
+     *  non-iconifiable JInternalFrame with no title.
+     */
     @stub
-    // Creates a non-resizable, non-closable, non-maximizable,
-    // non-iconifiable JInternalFrame with no title.
     def this() = ???
 
+    /** Creates a non-resizable, non-closable, non-maximizable,
+     *  non-iconifiable JInternalFrame with the specified title.
+     */
     @stub
-    // Creates a non-resizable, non-closable, non-maximizable,
-    // non-iconifiable JInternalFrame with the specified title.
     def this(title: String) = ???
 
+    /** Creates a non-closable, non-maximizable, non-iconifiable
+     *  JInternalFrame with the specified title
+     *  and resizability.
+     */
     @stub
-    // Creates a non-closable, non-maximizable, non-iconifiable
-    // JInternalFrame with the specified title
-    // and resizability.
     def this(title: String, resizable: Boolean) = ???
 
+    /** Creates a non-maximizable, non-iconifiable JInternalFrame
+     *  with the specified title, resizability, and
+     *  closability.
+     */
     @stub
-    // Creates a non-maximizable, non-iconifiable JInternalFrame
-    // with the specified title, resizability, and
-    // closability.
     def this(title: String, resizable: Boolean, closable: Boolean) = ???
 
+    /** Creates a non-iconifiable JInternalFrame
+     *  with the specified title,
+     *  resizability, closability, and maximizability.
+     */
     @stub
-    // Creates a non-iconifiable JInternalFrame
-    // with the specified title,
-    // resizability, closability, and maximizability.
     def this(title: String, resizable: Boolean, closable: Boolean, maximizable: Boolean) = ???
 
+    /** This class implements accessibility support for the
+     *  JInternalFrame class.
+     */
     @stub
-    // This class implements accessibility support for the
-    // JInternalFrame class.
-    protected def JInternalFrame.AccessibleJInternalFrame: class = ???
+    protected object AccessibleJInternalFrame extends JInternalFrame.AccessibleJInternalFrame
 
+    /** The frame can be closed. */
     @stub
-    // The frame can be closed.
-    protected def closable: Boolean = ???
+    protected val closable: Boolean = ???
 
+    /** The icon that is displayed when this internal frame is iconified. */
     @stub
-    // The icon that is displayed when this internal frame is iconified.
-    protected def desktopIcon: JInternalFrame.JDesktopIcon = ???
+    protected val desktopIcon: JInternalFrame.JDesktopIcon = ???
 
+    /** The icon shown in the top-left corner of this internal frame. */
     @stub
-    // The icon shown in the top-left corner of this internal frame.
-    protected def frameIcon: Icon = ???
+    protected val frameIcon: Icon = ???
 
+    /** The frame can "iconified" (shrunk down and displayed as
+     *  an icon-image).
+     */
     @stub
-    // The frame can "iconified" (shrunk down and displayed as
-    // an icon-image).
-    protected def iconable: Boolean = ???
+    protected val iconable: Boolean = ???
 
+    /** The frame has been closed. */
     @stub
-    // The frame has been closed.
-    protected def isClosed: Boolean = ???
+    protected val isClosed: Boolean = ???
 
+    /** The frame has been iconified. */
     @stub
-    // The frame has been iconified.
-    protected def isIcon: Boolean = ???
+    protected val isIcon: Boolean = ???
 
+    /** The frame has been expanded to its maximum size. */
     @stub
-    // The frame has been expanded to its maximum size.
-    protected def isMaximum: Boolean = ???
+    protected val isMaximum: Boolean = ???
 
+    /** The frame is currently selected. */
     @stub
-    // The frame is currently selected.
-    protected def isSelected: Boolean = ???
+    protected val isSelected: Boolean = ???
 
+    /** The frame can be expanded to the size of the desktop pane. */
     @stub
-    // The frame can be expanded to the size of the desktop pane.
-    protected def maximizable: Boolean = ???
+    protected val maximizable: Boolean = ???
 
+    /** The frame's size can be changed. */
     @stub
-    // The frame's size can be changed.
-    protected def resizable: Boolean = ???
+    protected val resizable: Boolean = ???
 
+    /** The JRootPane instance that manages the
+     *  content pane
+     *  and optional menu bar for this internal frame, as well as the
+     *  glass pane.
+     */
     @stub
-    // The JRootPane instance that manages the
-    // content pane
-    // and optional menu bar for this internal frame, as well as the
-    // glass pane.
-    protected def rootPane: JRootPane = ???
+    protected val rootPane: JRootPane = ???
 
+    /** If true then calls to add and setLayout
+     *  will be forwarded to the contentPane.
+     */
     @stub
-    // If true then calls to add and setLayout
-    // will be forwarded to the contentPane.
-    protected def rootPaneCheckingEnabled: Boolean = ???
+    protected val rootPaneCheckingEnabled: Boolean = ???
 
+    /** The title displayed in this internal frame's title bar. */
     @stub
-    // The title displayed in this internal frame's title bar.
-    protected def title: String = ???
+    protected val title: String = ???
 
+    /** Adds the specified child Component. */
     @stub
-    // Adds the specified child Component.
     protected def addImpl(comp: Component, constraints: Object, index: Int): Unit = ???
 
+    /** Adds the specified listener to receive internal
+     *  frame events from this internal frame.
+     */
     @stub
-    // Adds the specified listener to receive internal
-    // frame events from this internal frame.
     def addInternalFrameListener(l: InternalFrameListener): Unit = ???
 
+    /** Called by the constructor to set up the JRootPane. */
     @stub
-    // Called by the constructor to set up the JRootPane.
     protected def createRootPane(): JRootPane = ???
 
+    /** Makes this internal frame
+     *  invisible, unselected, and closed.
+     */
     @stub
-    // Makes this internal frame
-    // invisible, unselected, and closed.
     def dispose(): Unit = ???
 
+    /** Fires an
+     *  INTERNAL_FRAME_CLOSING event
+     *  and then performs the action specified by
+     *  the internal frame's default close operation.
+     */
     @stub
-    // Fires an
-    // INTERNAL_FRAME_CLOSING event
-    // and then performs the action specified by
-    // the internal frame's default close operation.
     def doDefaultCloseAction(): Unit = ???
 
+    /** Fires an internal frame event. */
     @stub
-    // Fires an internal frame event.
     protected def fireInternalFrameEvent(id: Int): Unit = ???
 
+    /** Gets the AccessibleContext associated with this
+     *  JInternalFrame.
+     */
     @stub
-    // Gets the AccessibleContext associated with this
-    // JInternalFrame.
     def getAccessibleContext(): AccessibleContext = ???
 
+    /** Returns the content pane for this internal frame. */
     @stub
-    // Returns the content pane for this internal frame.
     def getContentPane(): Container = ???
 
+    /** Returns the default operation that occurs when the user
+     *  initiates a "close" on this internal frame.
+     */
     @stub
-    // Returns the default operation that occurs when the user
-    // initiates a "close" on this internal frame.
     def getDefaultCloseOperation(): Int = ???
 
+    /** Returns the JDesktopIcon used when this
+     *  JInternalFrame is iconified.
+     */
     @stub
-    // Returns the JDesktopIcon used when this
-    // JInternalFrame is iconified.
     def getDesktopIcon(): JInternalFrame.JDesktopIcon = ???
 
+    /** Convenience method that searches the ancestor hierarchy for a
+     *  JDesktop instance.
+     */
     @stub
-    // Convenience method that searches the ancestor hierarchy for a
-    // JDesktop instance.
     def getDesktopPane(): JDesktopPane = ???
 
+    /** Always returns null because JInternalFrames
+     *  must always be roots of a focus
+     *  traversal cycle.
+     */
     @stub
-    // Always returns null because JInternalFrames
-    // must always be roots of a focus
-    // traversal cycle.
     def getFocusCycleRootAncestor(): Container = ???
 
+    /** If this JInternalFrame is active,
+     *  returns the child that has focus.
+     */
     @stub
-    // If this JInternalFrame is active,
-    // returns the child that has focus.
     def getFocusOwner(): Component = ???
 
+    /** Returns the image displayed in the title bar of this internal frame (usually
+     *  in the top-left corner).
+     */
     @stub
-    // Returns the image displayed in the title bar of this internal frame (usually
-    // in the top-left corner).
     def getFrameIcon(): Icon = ???
 
+    /** Returns the glass pane for this internal frame. */
     @stub
-    // Returns the glass pane for this internal frame.
     def getGlassPane(): Component = ???
 
+    /** Returns an array of all the InternalFrameListeners added
+     *  to this JInternalFrame with
+     *  addInternalFrameListener.
+     */
     @stub
-    // Returns an array of all the InternalFrameListeners added
-    // to this JInternalFrame with
-    // addInternalFrameListener.
     def getInternalFrameListeners(): Array[InternalFrameListener] = ???
 
+    /** Returns the current JMenuBar for this
+     *  JInternalFrame, or null
+     *  if no menu bar has been set.
+     */
     @stub
-    // Returns the current JMenuBar for this
-    // JInternalFrame, or null
-    // if no menu bar has been set.
     def getJMenuBar(): JMenuBar = ???
 
+    /** Returns the last Cursor that was set by the
+     *  setCursor method that is not a resizable
+     *  Cursor.
+     */
     @stub
-    // Returns the last Cursor that was set by the
-    // setCursor method that is not a resizable
-    // Cursor.
     def getLastCursor(): Cursor = ???
 
+    /** Convenience method for getting the layer attribute of this component. */
     @stub
-    // Convenience method for getting the layer attribute of this component.
     def getLayer(): Int = ???
 
+    /** Returns the layered pane for this internal frame. */
     @stub
-    // Returns the layered pane for this internal frame.
     def getLayeredPane(): JLayeredPane = ???
 
+    /** Deprecated. 
+     * As of Swing version 1.0.3,
+     *  replaced by getJMenuBar().
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Swing version 1.0.3,
-    // replaced by getJMenuBar().
-    //
     def getMenuBar(): JMenuBar = ???
 
+    /** Returns the child component of this JInternalFrame
+     *  that will receive the
+     *  focus when this JInternalFrame is selected.
+     */
     @stub
-    // Returns the child component of this JInternalFrame
-    // that will receive the
-    // focus when this JInternalFrame is selected.
     def getMostRecentFocusOwner(): Component = ???
 
+    /** If the JInternalFrame is not in maximized state, returns
+     *  getBounds(); otherwise, returns the bounds that the
+     *  JInternalFrame would be restored to.
+     */
     @stub
-    // If the JInternalFrame is not in maximized state, returns
-    // getBounds(); otherwise, returns the bounds that the
-    // JInternalFrame would be restored to.
     def getNormalBounds(): Rectangle = ???
 
+    /** Returns the rootPane object for this internal frame. */
     @stub
-    // Returns the rootPane object for this internal frame.
     def getRootPane(): JRootPane = ???
 
+    /** Returns the title of the JInternalFrame. */
     @stub
-    // Returns the title of the JInternalFrame.
     def getTitle(): String = ???
 
+    /** Returns the look-and-feel object that renders this component. */
     @stub
-    // Returns the look-and-feel object that renders this component.
     def getUI(): InternalFrameUI = ???
 
+    /** Returns the name of the look-and-feel
+     *  class that renders this component.
+     */
     @stub
-    // Returns the name of the look-and-feel
-    // class that renders this component.
     def getUIClassID(): String = ???
 
+    /** Gets the warning string that is displayed with this internal frame. */
     @stub
-    // Gets the warning string that is displayed with this internal frame.
     def getWarningString(): String = ???
 
+    /**  */
     @stub
-    // 
     def hide(): Unit = ???
 
+    /** Returns whether this JInternalFrame can be closed by
+     *  some user action.
+     */
     @stub
-    // Returns whether this JInternalFrame can be closed by
-    // some user action.
     def isClosable(): Boolean = ???
 
+    /** Returns whether this JInternalFrame is currently closed. */
     @stub
-    // Returns whether this JInternalFrame is currently closed.
     def isClosed(): Boolean = ???
 
+    /** Always returns true because all JInternalFrames must be
+     *  roots of a focus traversal cycle.
+     */
     @stub
-    // Always returns true because all JInternalFrames must be
-    // roots of a focus traversal cycle.
     def isFocusCycleRoot(): Boolean = ???
 
+    /** Returns whether the JInternalFrame is currently iconified. */
     @stub
-    // Returns whether the JInternalFrame is currently iconified.
     def isIcon(): Boolean = ???
 
+    /** Gets the iconable property,
+     *  which by default is false.
+     */
     @stub
-    // Gets the iconable property,
-    // which by default is false.
     def isIconifiable(): Boolean = ???
 
+    /** Gets the value of the maximizable property. */
     @stub
-    // Gets the value of the maximizable property.
     def isMaximizable(): Boolean = ???
 
+    /** Returns whether the JInternalFrame is currently maximized. */
     @stub
-    // Returns whether the JInternalFrame is currently maximized.
     def isMaximum(): Boolean = ???
 
+    /** Returns whether the JInternalFrame can be resized
+     *  by some user action.
+     */
     @stub
-    // Returns whether the JInternalFrame can be resized
-    // by some user action.
     def isResizable(): Boolean = ???
 
+    /** Returns whether calls to add and
+     *  setLayout are forwarded to the contentPane.
+     */
     @stub
-    // Returns whether calls to add and
-    // setLayout are forwarded to the contentPane.
     protected def isRootPaneCheckingEnabled(): Boolean = ???
 
+    /** Returns whether the JInternalFrame is the
+     *  currently "selected" or active frame.
+     */
     @stub
-    // Returns whether the JInternalFrame is the
-    // currently "selected" or active frame.
     def isSelected(): Boolean = ???
 
+    /** Convenience method that moves this component to position -1 if its
+     *  parent is a JLayeredPane.
+     */
     @stub
-    // Convenience method that moves this component to position -1 if its
-    // parent is a JLayeredPane.
     def moveToBack(): Unit = ???
 
+    /** Convenience method that moves this component to position 0 if its
+     *  parent is a JLayeredPane.
+     */
     @stub
-    // Convenience method that moves this component to position 0 if its
-    // parent is a JLayeredPane.
     def moveToFront(): Unit = ???
 
+    /** Causes subcomponents of this JInternalFrame
+     *  to be laid out at their preferred size.
+     */
     @stub
-    // Causes subcomponents of this JInternalFrame
-    // to be laid out at their preferred size.
     def pack(): Unit = ???
 
+    /** Overridden to allow optimized painting when the
+     *  internal frame is being dragged.
+     */
     @stub
-    // Overridden to allow optimized painting when the
-    // internal frame is being dragged.
     protected def paintComponent(g: Graphics): Unit = ???
 
+    /** Returns a string representation of this JInternalFrame. */
     @stub
-    // Returns a string representation of this JInternalFrame.
     protected def paramString(): String = ???
 
+    /** Removes the specified component from the container. */
     @stub
-    // Removes the specified component from the container.
     def remove(comp: Component): Unit = ???
 
+    /** Removes the specified internal frame listener so that it no longer
+     *  receives internal frame events from this internal frame.
+     */
     @stub
-    // Removes the specified internal frame listener so that it no longer
-    // receives internal frame events from this internal frame.
     def removeInternalFrameListener(l: InternalFrameListener): Unit = ???
 
+    /** Moves and resizes this component. */
     @stub
-    // Moves and resizes this component.
     def reshape(x: Int, y: Int, width: Int, height: Int): Unit = ???
 
+    /** Requests the internal frame to restore focus to the
+     *  last subcomponent that had focus.
+     */
     @stub
-    // Requests the internal frame to restore focus to the
-    // last subcomponent that had focus.
     def restoreSubcomponentFocus(): Unit = ???
 
+    /** Sets whether this JInternalFrame can be closed by
+     *  some user action.
+     */
     @stub
-    // Sets whether this JInternalFrame can be closed by
-    // some user action.
     def setClosable(b: Boolean): Unit = ???
 
+    /** Closes this internal frame if the argument is true. */
     @stub
-    // Closes this internal frame if the argument is true.
     def setClosed(b: Boolean): Unit = ???
 
+    /** Sets this JInternalFrame's contentPane
+     *  property.
+     */
     @stub
-    // Sets this JInternalFrame's contentPane
-    // property.
     def setContentPane(c: Container): Unit = ???
 
+    /** Sets the cursor image to the specified cursor. */
     @stub
-    // Sets the cursor image to the specified cursor.
     def setCursor(cursor: Cursor): Unit = ???
 
+    /** Sets the operation that will happen by default when
+     *  the user initiates a "close" on this internal frame.
+     */
     @stub
-    // Sets the operation that will happen by default when
-    // the user initiates a "close" on this internal frame.
     def setDefaultCloseOperation(operation: Int): Unit = ???
 
+    /** Sets the JDesktopIcon associated with this
+     *  JInternalFrame.
+     */
     @stub
-    // Sets the JDesktopIcon associated with this
-    // JInternalFrame.
     def setDesktopIcon(d: JInternalFrame.JDesktopIcon): Unit = ???
 
+    /** Does nothing because JInternalFrames must always be roots of a focus
+     *  traversal cycle.
+     */
     @stub
-    // Does nothing because JInternalFrames must always be roots of a focus
-    // traversal cycle.
     def setFocusCycleRoot(focusCycleRoot: Boolean): Unit = ???
 
+    /** Sets an image to be displayed in the titlebar of this internal frame (usually
+     *  in the top-left corner).
+     */
     @stub
-    // Sets an image to be displayed in the titlebar of this internal frame (usually
-    // in the top-left corner).
     def setFrameIcon(icon: Icon): Unit = ???
 
+    /** Sets this JInternalFrame's
+     *  glassPane property.
+     */
     @stub
-    // Sets this JInternalFrame's
-    // glassPane property.
     def setGlassPane(glass: Component): Unit = ???
 
+    /** Iconifies or de-iconifies this internal frame,
+     *  if the look and feel supports iconification.
+     */
     @stub
-    // Iconifies or de-iconifies this internal frame,
-    // if the look and feel supports iconification.
     def setIcon(b: Boolean): Unit = ???
 
+    /** Sets the iconable property,
+     *  which must be true
+     *  for the user to be able to
+     *  make the JInternalFrame an icon.
+     */
     @stub
-    // Sets the iconable property,
-    // which must be true
-    // for the user to be able to
-    // make the JInternalFrame an icon.
     def setIconifiable(b: Boolean): Unit = ???
 
+    /** Sets the menuBar property for this JInternalFrame. */
     @stub
-    // Sets the menuBar property for this JInternalFrame.
     def setJMenuBar(m: JMenuBar): Unit = ???
 
+    /** Convenience method for setting the layer attribute of this component. */
     @stub
-    // Convenience method for setting the layer attribute of this component.
     def setLayer(layer: Int): Unit = ???
 
+    /** Convenience method for setting the layer attribute of this component. */
     @stub
-    // Convenience method for setting the layer attribute of this component.
     def setLayer(layer: Integer): Unit = ???
 
+    /** Sets this JInternalFrame's
+     *  layeredPane property.
+     */
     @stub
-    // Sets this JInternalFrame's
-    // layeredPane property.
     def setLayeredPane(layered: JLayeredPane): Unit = ???
 
+    /** Ensures that, by default, the layout of this component cannot be set. */
     @stub
-    // Ensures that, by default, the layout of this component cannot be set.
     def setLayout(manager: LayoutManager): Unit = ???
 
+    /** Sets the maximizable property,
+     *  which determines whether the JInternalFrame
+     *  can be maximized by
+     *  some user action.
+     */
     @stub
-    // Sets the maximizable property,
-    // which determines whether the JInternalFrame
-    // can be maximized by
-    // some user action.
     def setMaximizable(b: Boolean): Unit = ???
 
+    /** Maximizes and restores this internal frame. */
     @stub
-    // Maximizes and restores this internal frame.
     def setMaximum(b: Boolean): Unit = ???
 
+    /** Deprecated. 
+     * As of Swing version 1.0.3
+     *   replaced by setJMenuBar(JMenuBar m).
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Swing version 1.0.3
-    //  replaced by setJMenuBar(JMenuBar m).
-    //
     def setMenuBar(m: JMenuBar): Unit = ???
 
+    /** Sets the normal bounds for this internal frame, the bounds that
+     *  this internal frame would be restored to from its maximized state.
+     */
     @stub
-    // Sets the normal bounds for this internal frame, the bounds that
-    // this internal frame would be restored to from its maximized state.
     def setNormalBounds(r: Rectangle): Unit = ???
 
+    /** Sets whether the JInternalFrame can be resized by some
+     *  user action.
+     */
     @stub
-    // Sets whether the JInternalFrame can be resized by some
-    // user action.
     def setResizable(b: Boolean): Unit = ???
 
+    /** Sets the rootPane property
+     *  for this JInternalFrame.
+     */
     @stub
-    // Sets the rootPane property
-    // for this JInternalFrame.
     protected def setRootPane(root: JRootPane): Unit = ???
 
+    /** Sets whether calls to add and
+     *  setLayout are forwarded to the contentPane.
+     */
     @stub
-    // Sets whether calls to add and
-    // setLayout are forwarded to the contentPane.
     protected def setRootPaneCheckingEnabled(enabled: Boolean): Unit = ???
 
+    /** Selects or deselects the internal frame
+     *  if it's showing.
+     */
     @stub
-    // Selects or deselects the internal frame
-    // if it's showing.
     def setSelected(selected: Boolean): Unit = ???
 
+    /** Sets the JInternalFrame title. */
     @stub
-    // Sets the JInternalFrame title.
     def setTitle(title: String): Unit = ???
 
+    /** Sets the UI delegate for this JInternalFrame. */
     @stub
-    // Sets the UI delegate for this JInternalFrame.
     def setUI(ui: InternalFrameUI): Unit = ???
 
+    /** If the internal frame is not visible,
+     *  brings the internal frame to the front,
+     *  makes it visible,
+     *  and attempts to select it.
+     */
     @stub
-    // If the internal frame is not visible,
-    // brings the internal frame to the front,
-    // makes it visible,
-    // and attempts to select it.
     def show(): Unit = ???
 
+    /** Sends this internal frame to the back. */
     @stub
-    // Sends this internal frame to the back.
     def toBack(): Unit = ???
 
+    /** Brings this internal frame to the front. */
     @stub
-    // Brings this internal frame to the front.
     def toFront(): Unit = ???
 }
 
 object JInternalFrame {
+    /** Bound property name. */
     @stub
-    // Bound property name.
-    def CONTENT_PANE_PROPERTY: String = ???
+    val CONTENT_PANE_PROPERTY: String = ???
 
+    /** Bound property name. */
     @stub
-    // Bound property name.
-    def FRAME_ICON_PROPERTY: String = ???
+    val FRAME_ICON_PROPERTY: String = ???
 
+    /** Bound property name. */
     @stub
-    // Bound property name.
-    def GLASS_PANE_PROPERTY: String = ???
+    val GLASS_PANE_PROPERTY: String = ???
 
+    /** Constrained property name indicating that the internal frame is closed. */
     @stub
-    // Constrained property name indicating that the internal frame is closed.
-    def IS_CLOSED_PROPERTY: String = ???
+    val IS_CLOSED_PROPERTY: String = ???
 
+    /** Constrained property name indicating that the internal frame is iconified. */
     @stub
-    // Constrained property name indicating that the internal frame is iconified.
-    def IS_ICON_PROPERTY: String = ???
+    val IS_ICON_PROPERTY: String = ???
 
+    /** Constrained property name indicating that the internal frame is maximized. */
     @stub
-    // Constrained property name indicating that the internal frame is maximized.
-    def IS_MAXIMUM_PROPERTY: String = ???
+    val IS_MAXIMUM_PROPERTY: String = ???
 
+    /** Constrained property name indicated that this frame has
+     *  selected status.
+     */
     @stub
-    // Constrained property name indicated that this frame has
-    // selected status.
-    def IS_SELECTED_PROPERTY: String = ???
+    val IS_SELECTED_PROPERTY: String = ???
 
+    /** Bound property name. */
     @stub
-    // Bound property name.
-    def LAYERED_PANE_PROPERTY: String = ???
+    val LAYERED_PANE_PROPERTY: String = ???
 
+    /** Bound property name. */
     @stub
-    // Bound property name.
-    def MENU_BAR_PROPERTY: String = ???
+    val MENU_BAR_PROPERTY: String = ???
 
+    /** Bound property name. */
     @stub
-    // Bound property name.
-    def ROOT_PANE_PROPERTY: String = ???
+    val ROOT_PANE_PROPERTY: String = ???
 }

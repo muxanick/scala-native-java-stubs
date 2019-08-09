@@ -3,28 +3,32 @@ package java.util
 import java.lang.Long
 import java.util.function.{Consumer, LongConsumer}
 
-// A Spliterator specialized for long values.
+/** A Spliterator specialized for long values. */
 object trait Spliterator.OfLong extends Spliterator.OfPrimitive[Long, LongConsumer, Spliterator.OfLong] {
 
+    /** Performs the given action for each remaining element, sequentially in
+     *  the current thread, until all elements have been processed or the action
+     *  throws an exception.
+     */
     @stub
-    // Performs the given action for each remaining element, sequentially in
-    // the current thread, until all elements have been processed or the action
-    // throws an exception.
-    def Unit: default = ???
+    val Unit: default = ???
 
+    /** Performs the given action for each remaining element, sequentially in
+     *  the current thread, until all elements have been processed or the
+     *  action throws an exception.
+     */
     @stub
-    // Performs the given action for each remaining element, sequentially in
-    // the current thread, until all elements have been processed or the
-    // action throws an exception.
-    def Unit: default = ???
+    val Unit: default = ???
 
+    /** If a remaining element exists, performs the given action on it,
+     *  returning true; else returns false.
+     */
     @stub
-    // If a remaining element exists, performs the given action on it,
-    // returning true; else returns false.
-    def Boolean: default = ???
+    val Boolean: default = ???
 
+    /** If a remaining element exists, performs the given action on it,
+     *  returning true; else returns false.
+     */
     @stub
-    // If a remaining element exists, performs the given action on it,
-    // returning true; else returns false.
     def tryAdvance(action: LongConsumer): Boolean = ???
 }

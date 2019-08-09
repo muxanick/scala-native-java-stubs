@@ -2,53 +2,54 @@ package java.net
 
 import java.lang.{Boolean, Integer, Object}
 
-// Defines the standard socket options.
-//
-//  The name of each socket option defined by this
-// class is its field name.
-//
-//  In this release, the socket options defined here are used by network channels in the channels package.
+/** Defines the standard socket options.
+ * 
+ *   The name of each socket option defined by this
+ *  class is its field name.
+ * 
+ *   In this release, the socket options defined here are used by network channels in the channels package.
+ */
 final class StandardSocketOptions extends Object {
 }
 
 object StandardSocketOptions {
+    /** The network interface for Internet Protocol (IP) multicast datagrams. */
     @stub
-    // The network interface for Internet Protocol (IP) multicast datagrams.
-    def IP_MULTICAST_IF: SocketOption[NetworkInterface] = ???
+    val IP_MULTICAST_IF: SocketOption[NetworkInterface] = ???
 
+    /** Loopback for Internet Protocol (IP) multicast datagrams. */
     @stub
-    // Loopback for Internet Protocol (IP) multicast datagrams.
-    def IP_MULTICAST_LOOP: SocketOption[Boolean] = ???
+    val IP_MULTICAST_LOOP: SocketOption[Boolean] = ???
 
+    /** The time-to-live for Internet Protocol (IP) multicast datagrams. */
     @stub
-    // The time-to-live for Internet Protocol (IP) multicast datagrams.
-    def IP_MULTICAST_TTL: SocketOption[Integer] = ???
+    val IP_MULTICAST_TTL: SocketOption[Integer] = ???
 
+    /** The Type of Service (ToS) octet in the Internet Protocol (IP) header. */
     @stub
-    // The Type of Service (ToS) octet in the Internet Protocol (IP) header.
-    def IP_TOS: SocketOption[Integer] = ???
+    val IP_TOS: SocketOption[Integer] = ???
 
+    /** Allow transmission of broadcast datagrams. */
     @stub
-    // Allow transmission of broadcast datagrams.
-    def SO_BROADCAST: SocketOption[Boolean] = ???
+    val SO_BROADCAST: SocketOption[Boolean] = ???
 
+    /** Keep connection alive. */
     @stub
-    // Keep connection alive.
-    def SO_KEEPALIVE: SocketOption[Boolean] = ???
+    val SO_KEEPALIVE: SocketOption[Boolean] = ???
 
+    /** Linger on close if data is present. */
     @stub
-    // Linger on close if data is present.
-    def SO_LINGER: SocketOption[Integer] = ???
+    val SO_LINGER: SocketOption[Integer] = ???
 
+    /** The size of the socket receive buffer. */
     @stub
-    // The size of the socket receive buffer.
-    def SO_RCVBUF: SocketOption[Integer] = ???
+    val SO_RCVBUF: SocketOption[Integer] = ???
 
+    /** Re-use address. */
     @stub
-    // Re-use address.
-    def SO_REUSEADDR: SocketOption[Boolean] = ???
+    val SO_REUSEADDR: SocketOption[Boolean] = ???
 
+    /** The size of the socket send buffer. */
     @stub
-    // The size of the socket send buffer.
-    def SO_SNDBUF: SocketOption[Integer] = ???
+    val SO_SNDBUF: SocketOption[Integer] = ???
 }

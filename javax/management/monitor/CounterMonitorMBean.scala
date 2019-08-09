@@ -3,76 +3,79 @@ package javax.management.monitor
 import java.lang.Number
 import javax.management.ObjectName
 
-// Exposes the remote management interface of the counter monitor MBean.
+/** Exposes the remote management interface of the counter monitor MBean. */
 trait CounterMonitorMBean extends MonitorMBean {
 
+    /** Deprecated. 
+     * As of JMX 1.2, replaced by getDerivedGauge(ObjectName)
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JMX 1.2, replaced by getDerivedGauge(ObjectName)
-    //
     def getDerivedGauge(): Number = ???
 
+    /** Gets the derived gauge for the specified MBean. */
     @stub
-    // Gets the derived gauge for the specified MBean.
     def getDerivedGauge(object: ObjectName): Number = ???
 
+    /** Deprecated. 
+     * As of JMX 1.2, replaced by getDerivedGaugeTimeStamp(ObjectName)
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JMX 1.2, replaced by getDerivedGaugeTimeStamp(ObjectName)
-    //
     def getDerivedGaugeTimeStamp(): Long = ???
 
+    /** Gets the derived gauge timestamp for the specified MBean. */
     @stub
-    // Gets the derived gauge timestamp for the specified MBean.
     def getDerivedGaugeTimeStamp(object: ObjectName): Long = ???
 
+    /** Gets the difference mode flag value. */
     @stub
-    // Gets the difference mode flag value.
     def getDifferenceMode(): Boolean = ???
 
+    /** Gets the initial threshold value common to all observed objects. */
     @stub
-    // Gets the initial threshold value common to all observed objects.
     def getInitThreshold(): Number = ???
 
+    /** Gets the modulus value. */
     @stub
-    // Gets the modulus value.
     def getModulus(): Number = ???
 
+    /** Gets the notification's on/off switch value. */
     @stub
-    // Gets the notification's on/off switch value.
     def getNotify(): Boolean = ???
 
+    /** Gets the offset value. */
     @stub
-    // Gets the offset value.
     def getOffset(): Number = ???
 
+    /** Deprecated. 
+     * As of JMX 1.2, replaced by getThreshold(ObjectName)
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JMX 1.2, replaced by getThreshold(ObjectName)
-    //
     def getThreshold(): Number = ???
 
+    /** Gets the threshold value for the specified MBean. */
     @stub
-    // Gets the threshold value for the specified MBean.
     def getThreshold(object: ObjectName): Number = ???
 
+    /** Sets the difference mode flag value. */
     @stub
-    // Sets the difference mode flag value.
     def setDifferenceMode(value: Boolean): Unit = ???
 
+    /** Sets the initial threshold value common to all observed MBeans. */
     @stub
-    // Sets the initial threshold value common to all observed MBeans.
     def setInitThreshold(value: Number): Unit = ???
 
+    /** Sets the modulus value. */
     @stub
-    // Sets the modulus value.
     def setModulus(value: Number): Unit = ???
 
+    /** Sets the notification's on/off switch value. */
     @stub
-    // Sets the notification's on/off switch value.
     def setNotify(value: Boolean): Unit = ???
 
+    /** Sets the offset value. */
     @stub
-    // Sets the offset value.
     def setOffset(value: Number): Unit = ???
 }

@@ -4,45 +4,51 @@ import java.io.Serializable
 import java.lang.{Object, String}
 import java.util.concurrent.TimeUnit
 
-// The lock returned by method ReentrantReadWriteLock.writeLock().
-object ReentrantReadWriteLock.WriteLock extends Object with Lock, with Serializable {
+/** The lock returned by method ReentrantReadWriteLock.writeLock(). */
+object ReentrantReadWriteLock.WriteLock extends Object with Lock with Serializable {
 
+    /** Queries the number of holds on this write lock by the current
+     *  thread.
+     */
     @stub
-    // Queries the number of holds on this write lock by the current
-    // thread.
     def getHoldCount(): Int = ???
 
+    /** Queries if this write lock is held by the current thread. */
     @stub
-    // Queries if this write lock is held by the current thread.
     def isHeldByCurrentThread(): Boolean = ???
 
+    /** Acquires the write lock. */
     @stub
-    // Acquires the write lock.
     def lock(): Unit = ???
 
+    /** Acquires the write lock unless the current thread is
+     *  interrupted.
+     */
     @stub
-    // Acquires the write lock unless the current thread is
-    // interrupted.
     def lockInterruptibly(): Unit = ???
 
+    /** Returns a Condition instance for use with this
+     *  Lock instance.
+     */
     @stub
-    // Returns a Condition instance for use with this
-    // Lock instance.
     def newCondition(): Condition = ???
 
+    /** Returns a string identifying this lock, as well as its lock
+     *  state.
+     */
     @stub
-    // Returns a string identifying this lock, as well as its lock
-    // state.
     def toString(): String = ???
 
+    /** Acquires the write lock only if it is not held by another thread
+     *  at the time of invocation.
+     */
     @stub
-    // Acquires the write lock only if it is not held by another thread
-    // at the time of invocation.
     def tryLock(): Boolean = ???
 
+    /** Acquires the write lock if it is not held by another thread
+     *  within the given waiting time and the current thread has
+     *  not been interrupted.
+     */
     @stub
-    // Acquires the write lock if it is not held by another thread
-    // within the given waiting time and the current thread has
-    // not been interrupted.
     def tryLock(timeout: Long, unit: TimeUnit): Boolean = ???
 }

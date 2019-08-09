@@ -1,308 +1,339 @@
 package javax.imageio.metadata
 
 import java.lang.{Object, String}
-import org.w3c.dom.{Attr, Document, Element, NamedNodeMap, Node, NodeList, TypeInfo, UserDataHandler}
 
-// A class representing a node in a meta-data tree, which implements
-// the 
-// org.w3c.dom.Element interface and additionally allows
-// for the storage of non-textual objects via the
-// getUserObject and setUserObject methods.
-//
-//  This class is not intended to be used for general XML
-// processing. In particular, Element nodes created
-// within the Image I/O API are not compatible with those created by
-// Sun's standard implementation of the org.w3.dom API.
-// In particular, the implementation is tuned for simple uses and may
-// not perform well for intensive processing.
-//
-//  Namespaces are ignored in this implementation.  The terms "tag
-// name" and "node name" are always considered to be synonymous.
-//
-// Note:
-// The DOM Level 3 specification added a number of new methods to the
-// Node, Element and Attr interfaces that are not
-// of value to the IIOMetadataNode implementation or specification.
-//
-// Calling such methods on an IIOMetadataNode, or an Attr
-// instance returned from an IIOMetadataNode will result in a
-// DOMException being thrown.
-class IIOMetadataNode extends Object with Element, with NodeList {
+/** A class representing a node in a meta-data tree, which implements
+ *  the 
+ *  org.w3c.dom.Element interface and additionally allows
+ *  for the storage of non-textual objects via the
+ *  getUserObject and setUserObject methods.
+ * 
+ *   This class is not intended to be used for general XML
+ *  processing. In particular, Element nodes created
+ *  within the Image I/O API are not compatible with those created by
+ *  Sun's standard implementation of the org.w3.dom API.
+ *  In particular, the implementation is tuned for simple uses and may
+ *  not perform well for intensive processing.
+ * 
+ *   Namespaces are ignored in this implementation.  The terms "tag
+ *  name" and "node name" are always considered to be synonymous.
+ * 
+ *  Note:
+ *  The DOM Level 3 specification added a number of new methods to the
+ *  Node, Element and Attr interfaces that are not
+ *  of value to the IIOMetadataNode implementation or specification.
+ * 
+ *  Calling such methods on an IIOMetadataNode, or an Attr
+ *  instance returned from an IIOMetadataNode will result in a
+ *  DOMException being thrown.
+ */
+class IIOMetadataNode extends Object with Element with NodeList {
 
+    /** Constructs an empty IIOMetadataNode. */
     @stub
-    // Constructs an empty IIOMetadataNode.
     def this() = ???
 
+    /** Adds the node newChild to the end of the list of
+     *  children of this node.
+     */
     @stub
-    // Adds the node newChild to the end of the list of
-    // children of this node.
     def appendChild(newChild: Node): Node = ???
 
+    /** Returns a duplicate of this node. */
     @stub
-    // Returns a duplicate of this node.
     def cloneNode(deep: Boolean): Node = ???
 
+    /** This DOM Level 3 method is not supported for IIOMetadataNode
+     *  and will throw a DOMException.
+     */
     @stub
-    // This DOM Level 3 method is not supported for IIOMetadataNode
-    // and will throw a DOMException.
     def compareDocumentPosition(other: Node): Short = ???
 
+    /** Retrieves an attribute value by name. */
     @stub
-    // Retrieves an attribute value by name.
     def getAttribute(name: String): String = ???
 
+    /** Retrieves an attribute node by name. */
     @stub
-    // Retrieves an attribute node by name.
     def getAttributeNode(name: String): Attr = ???
 
+    /** Equivalent to getAttributeNode(localName). */
     @stub
-    // Equivalent to getAttributeNode(localName).
     def getAttributeNodeNS(namespaceURI: String, localName: String): Attr = ???
 
+    /** Equivalent to getAttribute(localName). */
     @stub
-    // Equivalent to getAttribute(localName).
     def getAttributeNS(namespaceURI: String, localName: String): String = ???
 
+    /** Returns a NamedNodeMap containing the attributes of
+     *  this node.
+     */
     @stub
-    // Returns a NamedNodeMap containing the attributes of
-    // this node.
     def getAttributes(): NamedNodeMap = ???
 
+    /** This DOM Level 3 method is not supported for IIOMetadataNode
+     *  and will throw a DOMException.
+     */
     @stub
-    // This DOM Level 3 method is not supported for IIOMetadataNode
-    // and will throw a DOMException.
     def getBaseURI(): String = ???
 
+    /** Returns a NodeList that contains all children of this node. */
     @stub
-    // Returns a NodeList that contains all children of this node.
     def getChildNodes(): NodeList = ???
 
+    /** Returns a NodeList of all descendant Elements
+     *  with a given tag name, in document order.
+     */
     @stub
-    // Returns a NodeList of all descendant Elements
-    // with a given tag name, in document order.
     def getElementsByTagName(name: String): NodeList = ???
 
+    /** Equivalent to getElementsByTagName(localName). */
     @stub
-    // Equivalent to getElementsByTagName(localName).
     def getElementsByTagNameNS(namespaceURI: String, localName: String): NodeList = ???
 
+    /** This DOM Level 3 method is not supported for IIOMetadataNode
+     *  and will throw a DOMException.
+     */
     @stub
-    // This DOM Level 3 method is not supported for IIOMetadataNode
-    // and will throw a DOMException.
     def getFeature(feature: String, version: String): Object = ???
 
+    /** Returns the first child of this node, or null if
+     *  the node has no children.
+     */
     @stub
-    // Returns the first child of this node, or null if
-    // the node has no children.
     def getFirstChild(): Node = ???
 
+    /** Returns the last child of this node, or null if
+     *  the node has no children.
+     */
     @stub
-    // Returns the last child of this node, or null if
-    // the node has no children.
     def getLastChild(): Node = ???
 
+    /** The number of nodes in the list. */
     @stub
-    // The number of nodes in the list.
     def getLength(): Int = ???
 
+    /** Equivalent to getNodeName. */
     @stub
-    // Equivalent to getNodeName.
     def getLocalName(): String = ???
 
+    /** Returns null, since namespaces are not supported. */
     @stub
-    // Returns null, since namespaces are not supported.
     def getNamespaceURI(): String = ???
 
+    /** Returns the next sibling of this node, or null if
+     *  the node has no next sibling.
+     */
     @stub
-    // Returns the next sibling of this node, or null if
-    // the node has no next sibling.
     def getNextSibling(): Node = ???
 
+    /** Returns the node name associated with this node. */
     @stub
-    // Returns the node name associated with this node.
     def getNodeName(): String = ???
 
+    /** Returns the node type, which is always
+     *  ELEMENT_NODE.
+     */
     @stub
-    // Returns the node type, which is always
-    // ELEMENT_NODE.
     def getNodeType(): Short = ???
 
+    /** Returns the value associated with this node. */
     @stub
-    // Returns the value associated with this node.
     def getNodeValue(): String = ???
 
+    /** Returns null, since IIOMetadataNodes
+     *  do not belong to any Document.
+     */
     @stub
-    // Returns null, since IIOMetadataNodes
-    // do not belong to any Document.
     def getOwnerDocument(): Document = ???
 
+    /** Returns the parent of this node. */
     @stub
-    // Returns the parent of this node.
     def getParentNode(): Node = ???
 
+    /** Returns null, since namespaces are not supported. */
     @stub
-    // Returns null, since namespaces are not supported.
     def getPrefix(): String = ???
 
+    /** Returns the previous sibling of this node, or null
+     *  if this node has no previous sibling.
+     */
     @stub
-    // Returns the previous sibling of this node, or null
-    // if this node has no previous sibling.
     def getPreviousSibling(): Node = ???
 
+    /** This DOM Level 3 method is not supported for IIOMetadataNode
+     *  and will throw a DOMException.
+     */
     @stub
-    // This DOM Level 3 method is not supported for IIOMetadataNode
-    // and will throw a DOMException.
     def getSchemaTypeInfo(): TypeInfo = ???
 
+    /** Equivalent to getNodeName. */
     @stub
-    // Equivalent to getNodeName.
     def getTagName(): String = ???
 
+    /** This DOM Level 3 method is not supported for IIOMetadataNode
+     *  and will throw a DOMException.
+     */
     @stub
-    // This DOM Level 3 method is not supported for IIOMetadataNode
-    // and will throw a DOMException.
     def getTextContent(): String = ???
 
+    /** This DOM Level 3 method is not supported for IIOMetadataNode
+     *  and will throw a DOMException.
+     */
     @stub
-    // This DOM Level 3 method is not supported for IIOMetadataNode
-    // and will throw a DOMException.
     def getUserData(key: String): Object = ???
 
+    /** Returns the Object value associated with this node. */
     @stub
-    // Returns the Object value associated with this node.
     def getUserObject(): Object = ???
 
+    /** Returns true when an attribute with a given name is
+     *  specified on this element or has a default value, false
+     *  otherwise.
+     */
     @stub
-    // Returns true when an attribute with a given name is
-    // specified on this element or has a default value, false
-    // otherwise.
     def hasAttribute(name: String): Boolean = ???
 
+    /** Equivalent to hasAttribute(localName). */
     @stub
-    // Equivalent to hasAttribute(localName).
     def hasAttributeNS(namespaceURI: String, localName: String): Boolean = ???
 
+    /** Returns whether this node (if it is an element) has any attributes. */
     @stub
-    // Returns whether this node (if it is an element) has any attributes.
     def hasAttributes(): Boolean = ???
 
+    /** Returns true if this node has child nodes. */
     @stub
-    // Returns true if this node has child nodes.
     def hasChildNodes(): Boolean = ???
 
+    /** Inserts the node newChild before the existing
+     *  child node refChild.
+     */
     @stub
-    // Inserts the node newChild before the existing
-    // child node refChild.
     def insertBefore(newChild: Node, refChild: Node): Node = ???
 
+    /** This DOM Level 3 method is not supported for IIOMetadataNode
+     *  and will throw a DOMException.
+     */
     @stub
-    // This DOM Level 3 method is not supported for IIOMetadataNode
-    // and will throw a DOMException.
     def isDefaultNamespace(namespaceURI: String): Boolean = ???
 
+    /** This DOM Level 3 method is not supported for IIOMetadataNode
+     *  and will throw a DOMException.
+     */
     @stub
-    // This DOM Level 3 method is not supported for IIOMetadataNode
-    // and will throw a DOMException.
     def isEqualNode(node: Node): Boolean = ???
 
+    /** This DOM Level 3 method is not supported for IIOMetadataNode
+     *  and will throw a DOMException.
+     */
     @stub
-    // This DOM Level 3 method is not supported for IIOMetadataNode
-    // and will throw a DOMException.
     def isSameNode(node: Node): Boolean = ???
 
+    /** Returns false since DOM features are not
+     *  supported.
+     */
     @stub
-    // Returns false since DOM features are not
-    // supported.
     def isSupported(feature: String, version: String): Boolean = ???
 
+    /** Returns the indexth item in the collection. */
     @stub
-    // Returns the indexth item in the collection.
     def item(index: Int): Node = ???
 
+    /** This DOM Level 3 method is not supported for IIOMetadataNode
+     *  and will throw a DOMException.
+     */
     @stub
-    // This DOM Level 3 method is not supported for IIOMetadataNode
-    // and will throw a DOMException.
     def lookupNamespaceURI(prefix: String): String = ???
 
+    /** This DOM Level 3 method is not supported for IIOMetadataNode
+     *  and will throw a DOMException.
+     */
     @stub
-    // This DOM Level 3 method is not supported for IIOMetadataNode
-    // and will throw a DOMException.
     def lookupPrefix(namespaceURI: String): String = ???
 
+    /** Does nothing, since IIOMetadataNodes do not
+     *  contain Text children.
+     */
     @stub
-    // Does nothing, since IIOMetadataNodes do not
-    // contain Text children.
     def normalize(): Unit = ???
 
+    /** Removes an attribute by name. */
     @stub
-    // Removes an attribute by name.
     def removeAttribute(name: String): Unit = ???
 
+    /** Removes the specified attribute node. */
     @stub
-    // Removes the specified attribute node.
     def removeAttributeNode(oldAttr: Attr): Attr = ???
 
+    /** Equivalent to removeAttribute(localName). */
     @stub
-    // Equivalent to removeAttribute(localName).
     def removeAttributeNS(namespaceURI: String, localName: String): Unit = ???
 
+    /** Removes the child node indicated by oldChild from
+     *  the list of children, and returns it.
+     */
     @stub
-    // Removes the child node indicated by oldChild from
-    // the list of children, and returns it.
     def removeChild(oldChild: Node): Node = ???
 
+    /** Replaces the child node oldChild with
+     *  newChild in the list of children, and returns the
+     *  oldChild node.
+     */
     @stub
-    // Replaces the child node oldChild with
-    // newChild in the list of children, and returns the
-    // oldChild node.
     def replaceChild(newChild: Node, oldChild: Node): Node = ???
 
+    /** Adds a new attribute. */
     @stub
-    // Adds a new attribute.
     def setAttribute(name: String, value: String): Unit = ???
 
+    /** Adds a new attribute node. */
     @stub
-    // Adds a new attribute node.
     def setAttributeNode(newAttr: Attr): Attr = ???
 
+    /** Equivalent to setAttributeNode(newAttr). */
     @stub
-    // Equivalent to setAttributeNode(newAttr).
     def setAttributeNodeNS(newAttr: Attr): Attr = ???
 
+    /** Equivalent to setAttribute(qualifiedName, value). */
     @stub
-    // Equivalent to setAttribute(qualifiedName, value).
     def setAttributeNS(namespaceURI: String, qualifiedName: String, value: String): Unit = ???
 
+    /** This DOM Level 3 method is not supported for IIOMetadataNode
+     *  and will throw a DOMException.
+     */
     @stub
-    // This DOM Level 3 method is not supported for IIOMetadataNode
-    // and will throw a DOMException.
     def setIdAttribute(name: String, isId: Boolean): Unit = ???
 
+    /** This DOM Level 3 method is not supported for IIOMetadataNode
+     *  and will throw a DOMException.
+     */
     @stub
-    // This DOM Level 3 method is not supported for IIOMetadataNode
-    // and will throw a DOMException.
     def setIdAttributeNode(idAttr: Attr, isId: Boolean): Unit = ???
 
+    /** This DOM Level 3 method is not supported for IIOMetadataNode
+     *  and will throw a DOMException.
+     */
     @stub
-    // This DOM Level 3 method is not supported for IIOMetadataNode
-    // and will throw a DOMException.
     def setIdAttributeNS(namespaceURI: String, localName: String, isId: Boolean): Unit = ???
 
+    /** Sets the String value associated with this node. */
     @stub
-    // Sets the String value associated with this node.
     def setNodeValue(nodeValue: String): Unit = ???
 
+    /** Does nothing, since namespaces are not supported. */
     @stub
-    // Does nothing, since namespaces are not supported.
     def setPrefix(prefix: String): Unit = ???
 
+    /** This DOM Level 3 method is not supported for IIOMetadataNode
+     *  and will throw a DOMException.
+     */
     @stub
-    // This DOM Level 3 method is not supported for IIOMetadataNode
-    // and will throw a DOMException.
     def setTextContent(textContent: String): Unit = ???
 
+    /** This DOM Level 3 method is not supported for IIOMetadataNode
+     *  and will throw a DOMException.
+     */
     @stub
-    // This DOM Level 3 method is not supported for IIOMetadataNode
-    // and will throw a DOMException.
     def setUserData(key: String, data: Object, handler: UserDataHandler): Object = ???
 }

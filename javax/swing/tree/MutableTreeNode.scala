@@ -1,27 +1,28 @@
 package javax.swing.tree
 
-// Defines the requirements for a tree node object that can change --
-// by adding or removing child nodes, or by changing the contents
-// of a user object stored in the node.
+/** Defines the requirements for a tree node object that can change --
+ *  by adding or removing child nodes, or by changing the contents
+ *  of a user object stored in the node.
+ */
 trait MutableTreeNode extends TreeNode {
 
+    /** Adds child to the receiver at index. */
     @stub
-    // Adds child to the receiver at index.
     def insert(child: MutableTreeNode, index: Int): Unit = ???
 
+    /** Removes the child at index from the receiver. */
     @stub
-    // Removes the child at index from the receiver.
     def remove(index: Int): Unit = ???
 
+    /** Removes node from the receiver. */
     @stub
-    // Removes node from the receiver.
     def remove(node: MutableTreeNode): Unit = ???
 
+    /** Removes the receiver from its parent. */
     @stub
-    // Removes the receiver from its parent.
     def removeFromParent(): Unit = ???
 
+    /** Sets the parent of the receiver to newParent. */
     @stub
-    // Sets the parent of the receiver to newParent.
     def setParent(newParent: MutableTreeNode): Unit = ???
 }

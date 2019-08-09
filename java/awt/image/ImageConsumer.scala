@@ -1,79 +1,89 @@
 package java.awt.image
 
-// The interface for objects expressing interest in image data through
-// the ImageProducer interfaces.  When a consumer is added to an image
-// producer, the producer delivers all of the data about the image
-// using the method calls defined in this interface.
+/** The interface for objects expressing interest in image data through
+ *  the ImageProducer interfaces.  When a consumer is added to an image
+ *  producer, the producer delivers all of the data about the image
+ *  using the method calls defined in this interface.
+ */
 trait ImageConsumer {
 
+    /** The imageComplete method is called when the ImageProducer is
+     *  finished delivering all of the pixels that the source image
+     *  contains, or when a single frame of a multi-frame animation has
+     *  been completed, or when an error in loading or producing the
+     *  image has occurred.
+     */
     @stub
-    // The imageComplete method is called when the ImageProducer is
-    // finished delivering all of the pixels that the source image
-    // contains, or when a single frame of a multi-frame animation has
-    // been completed, or when an error in loading or producing the
-    // image has occurred.
     def imageComplete(status: Int): Unit = ???
 
+    /** Sets the ColorModel object used for the majority of
+     *  the pixels reported using the setPixels method
+     *  calls.
+     */
     @stub
-    // Sets the ColorModel object used for the majority of
-    // the pixels reported using the setPixels method
-    // calls.
     def setColorModel(model: ColorModel): Unit = ???
 
+    /** The dimensions of the source image are reported using the
+     *  setDimensions method call.
+     */
     @stub
-    // The dimensions of the source image are reported using the
-    // setDimensions method call.
     def setDimensions(width: Int, height: Int): Unit = ???
 
+    /** Sets the hints that the ImageConsumer uses to process the
+     *  pixels delivered by the ImageProducer.
+     */
     @stub
-    // Sets the hints that the ImageConsumer uses to process the
-    // pixels delivered by the ImageProducer.
     def setHints(hintflags: Int): Unit = ???
 
+    /** Delivers the pixels of the image with one or more calls
+     *  to this method.
+     */
     @stub
-    // Delivers the pixels of the image with one or more calls
-    // to this method.
     def setPixels(x: Int, y: Int, w: Int, h: Int, model: ColorModel, pixels: Array[Byte], off: Int, scansize: Int): Unit = ???
 
+    /** The pixels of the image are delivered using one or more calls
+     *  to the setPixels method.
+     */
     @stub
-    // The pixels of the image are delivered using one or more calls
-    // to the setPixels method.
     def setPixels(x: Int, y: Int, w: Int, h: Int, model: ColorModel, pixels: Array[Int], off: Int, scansize: Int): Unit = ???
 }
 
 object ImageConsumer {
+    /** The pixels will be delivered in (multiples of) complete scanlines
+     *  at a time.
+     */
     @stub
-    // The pixels will be delivered in (multiples of) complete scanlines
-    // at a time.
-    def COMPLETESCANLINES: Int = ???
+    val COMPLETESCANLINES: Int = ???
 
+    /** The image creation process was deliberately aborted. */
     @stub
-    // The image creation process was deliberately aborted.
-    def IMAGEABORTED: Int = ???
+    val IMAGEABORTED: Int = ???
 
+    /** An error was encountered while producing the image. */
     @stub
-    // An error was encountered while producing the image.
-    def IMAGEERROR: Int = ???
+    val IMAGEERROR: Int = ???
 
+    /** The pixels will be delivered in a random order. */
     @stub
-    // The pixels will be delivered in a random order.
-    def RANDOMPIXELORDER: Int = ???
+    val RANDOMPIXELORDER: Int = ???
 
+    /** The image contain a single static image. */
     @stub
-    // The image contain a single static image.
-    def SINGLEFRAME: Int = ???
+    val SINGLEFRAME: Int = ???
 
+    /** One frame of the image is complete but there are more frames
+     *  to be delivered.
+     */
     @stub
-    // One frame of the image is complete but there are more frames
-    // to be delivered.
-    def SINGLEFRAMEDONE: Int = ???
+    val SINGLEFRAMEDONE: Int = ???
 
+    /** The pixels will be delivered in a single pass. */
     @stub
-    // The pixels will be delivered in a single pass.
-    def SINGLEPASS: Int = ???
+    val SINGLEPASS: Int = ???
 
+    /** The image is complete and there are no more pixels or frames
+     *  to be delivered.
+     */
     @stub
-    // The image is complete and there are no more pixels or frames
-    // to be delivered.
-    def STATICIMAGEDONE: Int = ???
+    val STATICIMAGEDONE: Int = ???
 }

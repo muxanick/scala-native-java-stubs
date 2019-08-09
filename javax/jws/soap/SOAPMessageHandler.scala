@@ -1,19 +1,21 @@
 package javax.jws.soap
 
 import java.lang.{Deprecated, String}
+import scala.annotation.StaticAnnotation
 
-// 
-@Deprecated @interface SOAPMessageHandler {
+/**  */
+@Deprecated 
+ final class SOAPMessageHandler extends StaticAnnotation {
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
-    def headers: Array[String] = ???
+    val headers: Array[String] = ???
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
-    def initParams: Array[InitParam] = ???
+    val initParams: Array[InitParam] = ???
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
-    def name: String = ???
+    val name: String = ???
 }

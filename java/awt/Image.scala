@@ -3,65 +3,70 @@ package java.awt
 import java.awt.image.{ImageObserver, ImageProducer}
 import java.lang.{Object, String}
 
-// The abstract class Image is the superclass of all
-// classes that represent graphical images. The image must be
-// obtained in a platform-specific manner.
+/** The abstract class Image is the superclass of all
+ *  classes that represent graphical images. The image must be
+ *  obtained in a platform-specific manner.
+ */
 abstract class Image extends Object {
 
-    // Priority for accelerating this image.
-    protected def accelerationPriority: float
+    /** Priority for accelerating this image. */
+    protected val accelerationPriority: Float
 
-    // Flushes all reconstructable resources being used by this Image object.
+    /** Flushes all reconstructable resources being used by this Image object. */
     def flush(): Unit
 
-    // Returns the current value of the acceleration priority hint.
-    def getAccelerationPriority(): float
+    /** Returns the current value of the acceleration priority hint. */
+    def getAccelerationPriority(): Float
 
-    // Returns an ImageCapabilities object which can be
-    // inquired as to the capabilities of this
-    // Image on the specified GraphicsConfiguration.
+    /** Returns an ImageCapabilities object which can be
+     *  inquired as to the capabilities of this
+     *  Image on the specified GraphicsConfiguration.
+     */
     def getCapabilities(gc: GraphicsConfiguration): ImageCapabilities
 
-    // Creates a graphics context for drawing to an off-screen image.
+    /** Creates a graphics context for drawing to an off-screen image. */
     def getGraphics(): Graphics
 
-    // Determines the height of the image.
+    /** Determines the height of the image. */
     def getHeight(observer: ImageObserver): Int
 
-    // Gets a property of this image by name.
+    /** Gets a property of this image by name. */
     def getProperty(name: String, observer: ImageObserver): Object
 
-    // Creates a scaled version of this image.
+    /** Creates a scaled version of this image. */
     def getScaledInstance(width: Int, height: Int, hints: Int): Image
 
-    // Gets the object that produces the pixels for the image.
+    /** Gets the object that produces the pixels for the image. */
     def getSource(): ImageProducer
 
-    // Determines the width of the image.
+    /** Determines the width of the image. */
     def getWidth(observer: ImageObserver): Int
 }
 
 object Image {
+    /** Use the Area Averaging image scaling algorithm. */
     @stub
-    // Use the Area Averaging image scaling algorithm.
-    def SCALE_AREA_AVERAGING: Int = ???
+    val SCALE_AREA_AVERAGING: Int = ???
 
+    /** Use the default image-scaling algorithm. */
     @stub
-    // Use the default image-scaling algorithm.
-    def SCALE_DEFAULT: Int = ???
+    val SCALE_DEFAULT: Int = ???
 
+    /** Choose an image-scaling algorithm that gives higher priority
+     *  to scaling speed than smoothness of the scaled image.
+     */
     @stub
-    // Choose an image-scaling algorithm that gives higher priority
-    // to scaling speed than smoothness of the scaled image.
-    def SCALE_FAST: Int = ???
+    val SCALE_FAST: Int = ???
 
+    /** Use the image scaling algorithm embodied in the
+     *  ReplicateScaleFilter class.
+     */
     @stub
-    // Use the image scaling algorithm embodied in the
-    // ReplicateScaleFilter class.
-    def SCALE_REPLICATE: Int = ???
+    val SCALE_REPLICATE: Int = ???
 
+    /** Choose an image-scaling algorithm that gives higher priority
+     *  to image smoothness than scaling speed.
+     */
     @stub
-    // Choose an image-scaling algorithm that gives higher priority
-    // to image smoothness than scaling speed.
-    def SCALE_SMOOTH: Int = ???
+    val SCALE_SMOOTH: Int = ???
 }

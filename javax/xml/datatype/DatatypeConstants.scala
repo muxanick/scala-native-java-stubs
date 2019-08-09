@@ -3,148 +3,148 @@ package javax.xml.datatype
 import java.lang.Object
 import javax.xml.namespace.QName
 
-// Utility class to contain basic Datatype values as constants.
+/** Utility class to contain basic Datatype values as constants. */
 final class DatatypeConstants extends Object {
 }
 
 object DatatypeConstants {
+    /** Value for fourth month of year. */
     @stub
-    // Value for fourth month of year.
-    def APRIL: Int = ???
+    val APRIL: Int = ???
 
+    /** Value for eighth month of year. */
     @stub
-    // Value for eighth month of year.
-    def AUGUST: Int = ???
+    val AUGUST: Int = ???
 
+    /** Fully qualified name for W3C XML Schema 1.0 datatype date. */
     @stub
-    // Fully qualified name for W3C XML Schema 1.0 datatype date.
-    def DATE: QName = ???
+    val DATE: QName = ???
 
+    /** Fully qualified name for W3C XML Schema 1.0 datatype dateTime. */
     @stub
-    // Fully qualified name for W3C XML Schema 1.0 datatype dateTime.
-    def DATETIME: QName = ???
+    val DATETIME: QName = ???
 
+    /** A constant that represents the days field. */
     @stub
-    // A constant that represents the days field.
-    def DAYS: DatatypeConstants.Field = ???
+    val DAYS: DatatypeConstants.Field = ???
 
+    /** Value for twelve month of year. */
     @stub
-    // Value for twelve month of year.
-    def DECEMBER: Int = ???
+    val DECEMBER: Int = ???
 
+    /** Fully qualified name for W3C XML Schema datatype duration. */
     @stub
-    // Fully qualified name for W3C XML Schema datatype duration.
-    def DURATION: QName = ???
+    val DURATION: QName = ???
 
+    /** Fully qualified name for XQuery 1.0 and XPath 2.0 datatype dayTimeDuration. */
     @stub
-    // Fully qualified name for XQuery 1.0 and XPath 2.0 datatype dayTimeDuration.
-    def DURATION_DAYTIME: QName = ???
+    val DURATION_DAYTIME: QName = ???
 
+    /** Fully qualified name for XQuery 1.0 and XPath 2.0 datatype yearMonthDuration. */
     @stub
-    // Fully qualified name for XQuery 1.0 and XPath 2.0 datatype yearMonthDuration.
-    def DURATION_YEARMONTH: QName = ???
+    val DURATION_YEARMONTH: QName = ???
 
+    /** Comparison result. */
     @stub
-    // Comparison result.
-    def EQUAL: Int = ???
+    val EQUAL: Int = ???
 
+    /** Value for second month of year. */
     @stub
-    // Value for second month of year.
-    def FEBRUARY: Int = ???
+    val FEBRUARY: Int = ???
 
+    /** Designation that an "int" field is not set. */
     @stub
-    // Designation that an "int" field is not set.
-    def FIELD_UNDEFINED: Int = ???
+    val FIELD_UNDEFINED: Int = ???
 
+    /** Fully qualified name for W3C XML Schema 1.0 datatype gDay. */
     @stub
-    // Fully qualified name for W3C XML Schema 1.0 datatype gDay.
-    def GDAY: QName = ???
+    val GDAY: QName = ???
 
+    /** Fully qualified name for W3C XML Schema 1.0 datatype gMonth. */
     @stub
-    // Fully qualified name for W3C XML Schema 1.0 datatype gMonth.
-    def GMONTH: QName = ???
+    val GMONTH: QName = ???
 
+    /** Fully qualified name for W3C XML Schema 1.0 datatype gMonthDay. */
     @stub
-    // Fully qualified name for W3C XML Schema 1.0 datatype gMonthDay.
-    def GMONTHDAY: QName = ???
+    val GMONTHDAY: QName = ???
 
+    /** Comparison result. */
     @stub
-    // Comparison result.
-    def GREATER: Int = ???
+    val GREATER: Int = ???
 
+    /** Fully qualified name for W3C XML Schema 1.0 datatype gYear. */
     @stub
-    // Fully qualified name for W3C XML Schema 1.0 datatype gYear.
-    def GYEAR: QName = ???
+    val GYEAR: QName = ???
 
+    /** Fully qualified name for W3C XML Schema 1.0 datatype gYearMonth. */
     @stub
-    // Fully qualified name for W3C XML Schema 1.0 datatype gYearMonth.
-    def GYEARMONTH: QName = ???
+    val GYEARMONTH: QName = ???
 
+    /** A constant that represents the hours field. */
     @stub
-    // A constant that represents the hours field.
-    def HOURS: DatatypeConstants.Field = ???
+    val HOURS: DatatypeConstants.Field = ???
 
+    /** Comparison result. */
     @stub
-    // Comparison result.
-    def INDETERMINATE: Int = ???
+    val INDETERMINATE: Int = ???
 
+    /** Value for first month of year. */
     @stub
-    // Value for first month of year.
-    def JANUARY: Int = ???
+    val JANUARY: Int = ???
 
+    /** Value for seventh month of year. */
     @stub
-    // Value for seventh month of year.
-    def JULY: Int = ???
+    val JULY: Int = ???
 
+    /** Value for sixth month of year. */
     @stub
-    // Value for sixth month of year.
-    def JUNE: Int = ???
+    val JUNE: Int = ???
 
+    /** Comparison result. */
     @stub
-    // Comparison result.
-    def LESSER: Int = ???
+    val LESSER: Int = ???
 
+    /** Value for third month of year. */
     @stub
-    // Value for third month of year.
-    def MARCH: Int = ???
+    val MARCH: Int = ???
 
+    /** W3C XML Schema max timezone offset is -14:00. */
     @stub
-    // W3C XML Schema max timezone offset is -14:00.
-    def MAX_TIMEZONE_OFFSET: Int = ???
+    val MAX_TIMEZONE_OFFSET: Int = ???
 
+    /** Value for fifth month of year. */
     @stub
-    // Value for fifth month of year.
-    def MAY: Int = ???
+    val MAY: Int = ???
 
+    /** W3C XML Schema min timezone offset is +14:00. */
     @stub
-    // W3C XML Schema min timezone offset is +14:00.
-    def MIN_TIMEZONE_OFFSET: Int = ???
+    val MIN_TIMEZONE_OFFSET: Int = ???
 
+    /** A constant that represents the minutes field. */
     @stub
-    // A constant that represents the minutes field.
-    def MINUTES: DatatypeConstants.Field = ???
+    val MINUTES: DatatypeConstants.Field = ???
 
+    /** A constant that represents the months field. */
     @stub
-    // A constant that represents the months field.
-    def MONTHS: DatatypeConstants.Field = ???
+    val MONTHS: DatatypeConstants.Field = ???
 
+    /** Value for eleven month of year. */
     @stub
-    // Value for eleven month of year.
-    def NOVEMBER: Int = ???
+    val NOVEMBER: Int = ???
 
+    /** Value for tenth month of year. */
     @stub
-    // Value for tenth month of year.
-    def OCTOBER: Int = ???
+    val OCTOBER: Int = ???
 
+    /** A constant that represents the seconds field. */
     @stub
-    // A constant that represents the seconds field.
-    def SECONDS: DatatypeConstants.Field = ???
+    val SECONDS: DatatypeConstants.Field = ???
 
+    /** Value for ninth month of year. */
     @stub
-    // Value for ninth month of year.
-    def SEPTEMBER: Int = ???
+    val SEPTEMBER: Int = ???
 
+    /** Fully qualified name for W3C XML Schema 1.0 datatype time. */
     @stub
-    // Fully qualified name for W3C XML Schema 1.0 datatype time.
-    def TIME: QName = ???
+    val TIME: QName = ???
 }

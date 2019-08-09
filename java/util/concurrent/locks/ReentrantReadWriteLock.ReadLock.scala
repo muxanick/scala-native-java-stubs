@@ -4,35 +4,39 @@ import java.io.Serializable
 import java.lang.{Object, String}
 import java.util.concurrent.TimeUnit
 
-// The lock returned by method ReentrantReadWriteLock.readLock().
-object ReentrantReadWriteLock.ReadLock extends Object with Lock, with Serializable {
+/** The lock returned by method ReentrantReadWriteLock.readLock(). */
+object ReentrantReadWriteLock.ReadLock extends Object with Lock with Serializable {
 
+    /** Acquires the read lock. */
     @stub
-    // Acquires the read lock.
     def lock(): Unit = ???
 
+    /** Acquires the read lock unless the current thread is
+     *  interrupted.
+     */
     @stub
-    // Acquires the read lock unless the current thread is
-    // interrupted.
     def lockInterruptibly(): Unit = ???
 
+    /** Throws UnsupportedOperationException because
+     *  ReadLocks do not support conditions.
+     */
     @stub
-    // Throws UnsupportedOperationException because
-    // ReadLocks do not support conditions.
     def newCondition(): Condition = ???
 
+    /** Returns a string identifying this lock, as well as its lock state. */
     @stub
-    // Returns a string identifying this lock, as well as its lock state.
     def toString(): String = ???
 
+    /** Acquires the read lock only if the write lock is not held by
+     *  another thread at the time of invocation.
+     */
     @stub
-    // Acquires the read lock only if the write lock is not held by
-    // another thread at the time of invocation.
     def tryLock(): Boolean = ???
 
+    /** Acquires the read lock if the write lock is not held by
+     *  another thread within the given waiting time and the
+     *  current thread has not been interrupted.
+     */
     @stub
-    // Acquires the read lock if the write lock is not held by
-    // another thread within the given waiting time and the
-    // current thread has not been interrupted.
     def tryLock(timeout: Long, unit: TimeUnit): Boolean = ???
 }

@@ -3,47 +3,48 @@ package javax.tools
 import java.io.{InputStream, OutputStream, Reader, Writer}
 import java.lang.{CharSequence, String}
 
-// File abstraction for tools.  In this context, file means
-// an abstraction of regular files and other sources of data.  For
-// example, a file object can be used to represent regular files,
-// memory cache, or data in databases.
-//
-// All methods in this interface might throw a SecurityException if
-// a security exception occurs.
-//
-// Unless explicitly allowed, all methods in this interface might
-// throw a NullPointerException if given a null argument.
+/** File abstraction for tools.  In this context, file means
+ *  an abstraction of regular files and other sources of data.  For
+ *  example, a file object can be used to represent regular files,
+ *  memory cache, or data in databases.
+ * 
+ *  All methods in this interface might throw a SecurityException if
+ *  a security exception occurs.
+ * 
+ *  Unless explicitly allowed, all methods in this interface might
+ *  throw a NullPointerException if given a null argument.
+ */
 trait FileObject {
 
+    /** Deletes this file object. */
     @stub
-    // Deletes this file object.
     def delete(): Boolean = ???
 
+    /** Gets the character content of this file object, if available. */
     @stub
-    // Gets the character content of this file object, if available.
     def getCharContent(ignoreEncodingErrors: Boolean): CharSequence = ???
 
+    /** Gets the time this file object was last modified. */
     @stub
-    // Gets the time this file object was last modified.
     def getLastModified(): Long = ???
 
+    /** Gets a user-friendly name for this file object. */
     @stub
-    // Gets a user-friendly name for this file object.
     def getName(): String = ???
 
+    /** Gets an InputStream for this file object. */
     @stub
-    // Gets an InputStream for this file object.
     def openInputStream(): InputStream = ???
 
+    /** Gets an OutputStream for this file object. */
     @stub
-    // Gets an OutputStream for this file object.
     def openOutputStream(): OutputStream = ???
 
+    /** Gets a reader for this object. */
     @stub
-    // Gets a reader for this object.
     def openReader(ignoreEncodingErrors: Boolean): Reader = ???
 
+    /** Gets a Writer for this file object. */
     @stub
-    // Gets a Writer for this file object.
     def openWriter(): Writer = ???
 }

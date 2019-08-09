@@ -2,162 +2,174 @@ package java.awt
 
 import java.lang.{Cloneable, Object}
 
-// A set of attributes which control the output of a printed page.
-// 
-// Instances of this class control the color state, paper size (media type),
-// orientation, logical origin, print quality, and resolution of every
-// page which uses the instance. Attribute names are compliant with the
-// Internet Printing Protocol (IPP) 1.1 where possible. Attribute values
-// are partially compliant where possible.
-// 
-// To use a method which takes an inner class type, pass a reference to
-// one of the constant fields of the inner class. Client code cannot create
-// new instances of the inner class types because none of those classes
-// has a public constructor. For example, to set the color state to
-// monochrome, use the following code:
-// 
-// import java.awt.PageAttributes;
-//
-// public class MonochromeExample {
-//     public void setMonochrome(PageAttributes pageAttributes) {
-//         pageAttributes.setColor(PageAttributes.ColorType.MONOCHROME);
-//     }
-// }
-// 
-// 
-// Every IPP attribute which supports an attributeName-default value
-// has a corresponding setattributeNameToDefault method.
-// Default value fields are not provided.
+/** A set of attributes which control the output of a printed page.
+ *  
+ *  Instances of this class control the color state, paper size (media type),
+ *  orientation, logical origin, print quality, and resolution of every
+ *  page which uses the instance. Attribute names are compliant with the
+ *  Internet Printing Protocol (IPP) 1.1 where possible. Attribute values
+ *  are partially compliant where possible.
+ *  
+ *  To use a method which takes an inner class type, pass a reference to
+ *  one of the constant fields of the inner class. Client code cannot create
+ *  new instances of the inner class types because none of those classes
+ *  has a public constructor. For example, to set the color state to
+ *  monochrome, use the following code:
+ *  
+ *  import java.awt.PageAttributes;
+ * 
+ *  public class MonochromeExample {
+ *      public void setMonochrome(PageAttributes pageAttributes) {
+ *          pageAttributes.setColor(PageAttributes.ColorType.MONOCHROME);
+ *      }
+ *  }
+ *  
+ *  
+ *  Every IPP attribute which supports an attributeName-default value
+ *  has a corresponding setattributeNameToDefault method.
+ *  Default value fields are not provided.
+ */
 final class PageAttributes extends Object with Cloneable {
 
+    /** Constructs a PageAttributes instance with default values for every
+     *  attribute.
+     */
     @stub
-    // Constructs a PageAttributes instance with default values for every
-    // attribute.
     def this() = ???
 
+    /** Constructs a PageAttributes instance with the specified values for
+     *  every attribute.
+     */
     @stub
-    // Constructs a PageAttributes instance with the specified values for
-    // every attribute.
     def this(color: PageAttributes.ColorType, media: PageAttributes.MediaType, orientationRequested: PageAttributes.OrientationRequestedType, origin: PageAttributes.OriginType, printQuality: PageAttributes.PrintQualityType, printerResolution: Array[Int]) = ???
 
+    /** Creates and returns a copy of this PageAttributes. */
     @stub
-    // Creates and returns a copy of this PageAttributes.
     def clone(): Object = ???
 
+    /** Determines whether two PageAttributes are equal to each other. */
     @stub
-    // Determines whether two PageAttributes are equal to each other.
     def equals(obj: Object): Boolean = ???
 
+    /** Returns whether pages using these attributes will be rendered in
+     *  color or monochrome.
+     */
     @stub
-    // Returns whether pages using these attributes will be rendered in
-    // color or monochrome.
     def getColor(): PageAttributes.ColorType = ???
 
+    /** Returns the paper size for pages using these attributes. */
     @stub
-    // Returns the paper size for pages using these attributes.
     def getMedia(): PageAttributes.MediaType = ???
 
+    /** Returns the print orientation for pages using these attributes. */
     @stub
-    // Returns the print orientation for pages using these attributes.
     def getOrientationRequested(): PageAttributes.OrientationRequestedType = ???
 
+    /** Returns whether drawing at (0, 0) to pages using these attributes
+     *  draws at the upper-left corner of the physical page, or at the
+     *  upper-left corner of the printable area.
+     */
     @stub
-    // Returns whether drawing at (0, 0) to pages using these attributes
-    // draws at the upper-left corner of the physical page, or at the
-    // upper-left corner of the printable area.
     def getOrigin(): PageAttributes.OriginType = ???
 
+    /** Returns the print resolution for pages using these attributes. */
     @stub
-    // Returns the print resolution for pages using these attributes.
     def getPrinterResolution(): Array[Int] = ???
 
+    /** Returns the print quality for pages using these attributes. */
     @stub
-    // Returns the print quality for pages using these attributes.
     def getPrintQuality(): PageAttributes.PrintQualityType = ???
 
+    /** Returns a hash code value for this PageAttributes. */
     @stub
-    // Returns a hash code value for this PageAttributes.
     def hashCode(): Int = ???
 
+    /** Sets all of the attributes of this PageAttributes to the same values as
+     *  the attributes of obj.
+     */
     @stub
-    // Sets all of the attributes of this PageAttributes to the same values as
-    // the attributes of obj.
     def set(obj: PageAttributes): Unit = ???
 
+    /** Specifies whether pages using these attributes will be rendered in
+     *  color or monochrome.
+     */
     @stub
-    // Specifies whether pages using these attributes will be rendered in
-    // color or monochrome.
     def setColor(color: PageAttributes.ColorType): Unit = ???
 
+    /** Specifies the desired paper size for pages using these attributes. */
     @stub
-    // Specifies the desired paper size for pages using these attributes.
     def setMedia(media: PageAttributes.MediaType): Unit = ???
 
+    /** Sets the paper size for pages using these attributes to the default
+     *  size for the default locale.
+     */
     @stub
-    // Sets the paper size for pages using these attributes to the default
-    // size for the default locale.
     def setMediaToDefault(): Unit = ???
 
+    /** Specifies the print orientation for pages using these attributes. */
     @stub
-    // Specifies the print orientation for pages using these attributes.
     def setOrientationRequested(orientationRequested: Int): Unit = ???
 
+    /** Specifies the print orientation for pages using these attributes. */
     @stub
-    // Specifies the print orientation for pages using these attributes.
     def setOrientationRequested(orientationRequested: PageAttributes.OrientationRequestedType): Unit = ???
 
+    /** Sets the print orientation for pages using these attributes to the
+     *  default.
+     */
     @stub
-    // Sets the print orientation for pages using these attributes to the
-    // default.
     def setOrientationRequestedToDefault(): Unit = ???
 
+    /** Specifies whether drawing at (0, 0) to pages using these attributes
+     *  draws at the upper-left corner of the physical page, or at the
+     *  upper-left corner of the printable area.
+     */
     @stub
-    // Specifies whether drawing at (0, 0) to pages using these attributes
-    // draws at the upper-left corner of the physical page, or at the
-    // upper-left corner of the printable area.
     def setOrigin(origin: PageAttributes.OriginType): Unit = ???
 
+    /** Specifies the desired cross feed and feed print resolutions in dots per
+     *  inch for pages using these attributes.
+     */
     @stub
-    // Specifies the desired cross feed and feed print resolutions in dots per
-    // inch for pages using these attributes.
     def setPrinterResolution(printerResolution: Int): Unit = ???
 
+    /** Specifies the desired print resolution for pages using these attributes. */
     @stub
-    // Specifies the desired print resolution for pages using these attributes.
     def setPrinterResolution(printerResolution: Array[Int]): Unit = ???
 
+    /** Sets the printer resolution for pages using these attributes to the
+     *  default.
+     */
     @stub
-    // Sets the printer resolution for pages using these attributes to the
-    // default.
     def setPrinterResolutionToDefault(): Unit = ???
 
+    /** Specifies the print quality for pages using these attributes. */
     @stub
-    // Specifies the print quality for pages using these attributes.
     def setPrintQuality(printQuality: Int): Unit = ???
 
+    /** Specifies the print quality for pages using these attributes. */
     @stub
-    // Specifies the print quality for pages using these attributes.
     def setPrintQuality(printQuality: PageAttributes.PrintQualityType): Unit = ???
 
+    /** Sets the print quality for pages using these attributes to the default. */
     @stub
-    // Sets the print quality for pages using these attributes to the default.
     def setPrintQualityToDefault(): Unit = ???
 }
 
 object PageAttributes {
+    /** A type-safe enumeration of possible color states. */
     @stub
-    // A type-safe enumeration of possible color states.
-    def PageAttributes.ColorType: class = ???
+    object ColorType extends PageAttributes.ColorType
 
+    /** A type-safe enumeration of possible paper sizes. */
     @stub
-    // A type-safe enumeration of possible paper sizes.
-    def PageAttributes.MediaType: class = ???
+    object MediaType extends PageAttributes.MediaType
 
+    /** A type-safe enumeration of possible orientations. */
     @stub
-    // A type-safe enumeration of possible orientations.
-    def PageAttributes.OrientationRequestedType: class = ???
+    object OrientationRequestedType extends PageAttributes.OrientationRequestedType
 
+    /** A type-safe enumeration of possible origins. */
     @stub
-    // A type-safe enumeration of possible origins.
-    def PageAttributes.OriginType: class = ???
+    object OriginType extends PageAttributes.OriginType
 }

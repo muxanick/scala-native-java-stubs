@@ -3,162 +3,178 @@ package java.awt
 import java.lang.{Object, String}
 import javax.accessibility.AccessibleContext
 
-// A TextArea object is a multi-line region
-// that displays text. It can be set to allow editing or
-// to be read-only.
-// 
-// The following image shows the appearance of a text area:
-// 
-// 
-// 
-// This text area could be created by the following line of code:
-//
-// 
-// new TextArea("Hello", 5, 40);
-// 
-// 
+/** A TextArea object is a multi-line region
+ *  that displays text. It can be set to allow editing or
+ *  to be read-only.
+ *  
+ *  The following image shows the appearance of a text area:
+ *  
+ *  
+ *  
+ *  This text area could be created by the following line of code:
+ * 
+ *  
+ *  new TextArea("Hello", 5, 40);
+ *  
+ *  
+ */
 class TextArea extends TextComponent {
 
+    /** Constructs a new text area with the empty string as text. */
     @stub
-    // Constructs a new text area with the empty string as text.
     def this() = ???
 
+    /** Constructs a new text area with the specified number of
+     *  rows and columns and the empty string as text.
+     */
     @stub
-    // Constructs a new text area with the specified number of
-    // rows and columns and the empty string as text.
     def this(rows: Int, columns: Int) = ???
 
+    /** Constructs a new text area with the specified text. */
     @stub
-    // Constructs a new text area with the specified text.
     def this(text: String) = ???
 
+    /** Constructs a new text area with the specified text,
+     *  and with the specified number of rows and columns.
+     */
     @stub
-    // Constructs a new text area with the specified text,
-    // and with the specified number of rows and columns.
     def this(text: String, rows: Int, columns: Int) = ???
 
+    /** Creates the TextArea's peer. */
     @stub
-    // Creates the TextArea's peer.
     def addNotify(): Unit = ???
 
+    /** Appends the given text to the text area's current text. */
     @stub
-    // Appends the given text to the text area's current text.
     def append(str: String): Unit = ???
 
+    /** Deprecated. 
+     * As of JDK version 1.1,
+     *  replaced by append(String).
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JDK version 1.1,
-    // replaced by append(String).
-    //
     def appendText(str: String): Unit = ???
 
+    /** Returns the AccessibleContext associated with
+     *  this TextArea.
+     */
     @stub
-    // Returns the AccessibleContext associated with
-    // this TextArea.
     def getAccessibleContext(): AccessibleContext = ???
 
+    /** Returns the number of columns in this text area. */
     @stub
-    // Returns the number of columns in this text area.
     def getColumns(): Int = ???
 
+    /** Determines the minimum size of this text area. */
     @stub
-    // Determines the minimum size of this text area.
     def getMinimumSize(): Dimension = ???
 
+    /** Determines the minimum size of a text area with the specified
+     *  number of rows and columns.
+     */
     @stub
-    // Determines the minimum size of a text area with the specified
-    // number of rows and columns.
     def getMinimumSize(rows: Int, columns: Int): Dimension = ???
 
+    /** Determines the preferred size of this text area. */
     @stub
-    // Determines the preferred size of this text area.
     def getPreferredSize(): Dimension = ???
 
+    /** Determines the preferred size of a text area with the specified
+     *  number of rows and columns.
+     */
     @stub
-    // Determines the preferred size of a text area with the specified
-    // number of rows and columns.
     def getPreferredSize(rows: Int, columns: Int): Dimension = ???
 
+    /** Returns the number of rows in the text area. */
     @stub
-    // Returns the number of rows in the text area.
     def getRows(): Int = ???
 
+    /** Returns an enumerated value that indicates which scroll bars
+     *  the text area uses.
+     */
     @stub
-    // Returns an enumerated value that indicates which scroll bars
-    // the text area uses.
     def getScrollbarVisibility(): Int = ???
 
+    /** Inserts the specified text at the specified position
+     *  in this text area.
+     */
     @stub
-    // Inserts the specified text at the specified position
-    // in this text area.
     def insert(str: String, pos: Int): Unit = ???
 
+    /** Deprecated. 
+     * As of JDK version 1.1,
+     *  replaced by insert(String, int).
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JDK version 1.1,
-    // replaced by insert(String, int).
-    //
     def insertText(str: String, pos: Int): Unit = ???
 
+    /** Deprecated. 
+     * As of JDK version 1.1,
+     *  replaced by getMinimumSize().
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JDK version 1.1,
-    // replaced by getMinimumSize().
-    //
     def minimumSize(): Dimension = ???
 
+    /** Deprecated. 
+     * As of JDK version 1.1,
+     *  replaced by getMinimumSize(int, int).
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JDK version 1.1,
-    // replaced by getMinimumSize(int, int).
-    //
     def minimumSize(rows: Int, columns: Int): Dimension = ???
 
+    /** Returns a string representing the state of this TextArea. */
     @stub
-    // Returns a string representing the state of this TextArea.
     protected def paramString(): String = ???
 
+    /** Deprecated. 
+     * As of JDK version 1.1,
+     *  replaced by getPreferredSize().
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JDK version 1.1,
-    // replaced by getPreferredSize().
-    //
     def preferredSize(): Dimension = ???
 
+    /** Deprecated. 
+     * As of JDK version 1.1,
+     *  replaced by getPreferredSize(int, int).
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JDK version 1.1,
-    // replaced by getPreferredSize(int, int).
-    //
     def preferredSize(rows: Int, columns: Int): Dimension = ???
 
+    /** Replaces text between the indicated start and end positions
+     *  with the specified replacement text.
+     */
     @stub
-    // Replaces text between the indicated start and end positions
-    // with the specified replacement text.
     def replaceRange(str: String, start: Int, end: Int): Unit = ???
 
+    /** Deprecated. 
+     * As of JDK version 1.1,
+     *  replaced by replaceRange(String, int, int).
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JDK version 1.1,
-    // replaced by replaceRange(String, int, int).
-    //
     def replaceText(str: String, start: Int, end: Int): Unit = ???
 
+    /** Sets the number of columns for this text area. */
     @stub
-    // Sets the number of columns for this text area.
     def setColumns(columns: Int): Unit = ???
 }
 
 object TextArea {
+    /** Create and display both vertical and horizontal scrollbars. */
     @stub
-    // Create and display both vertical and horizontal scrollbars.
-    def SCROLLBARS_BOTH: Int = ???
+    val SCROLLBARS_BOTH: Int = ???
 
+    /** Create and display horizontal scrollbar only. */
     @stub
-    // Create and display horizontal scrollbar only.
-    def SCROLLBARS_HORIZONTAL_ONLY: Int = ???
+    val SCROLLBARS_HORIZONTAL_ONLY: Int = ???
 
+    /** Do not create or display any scrollbars for the text area. */
     @stub
-    // Do not create or display any scrollbars for the text area.
-    def SCROLLBARS_NONE: Int = ???
+    val SCROLLBARS_NONE: Int = ???
 }

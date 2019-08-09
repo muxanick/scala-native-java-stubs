@@ -7,290 +7,316 @@ import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.event.MenuListener
 
-// An implementation of a menu -- a popup window containing
-// JMenuItems that
-// is displayed when the user selects an item on the JMenuBar.
-// In addition to JMenuItems, a JMenu can
-// also contain JSeparators.
-// 
-// In essence, a menu is a button with an associated JPopupMenu.
-// When the "button" is pressed, the JPopupMenu appears. If the
-// "button" is on the JMenuBar, the menu is a top-level window.
-// If the "button" is another menu item, then the JPopupMenu is
-// "pull-right" menu.
-// 
-// Menus can be configured, and to some degree controlled, by
-// Actions.  Using an
-// Action with a menu has many benefits beyond directly
-// configuring a menu.  Refer to 
-// Swing Components Supporting Action for more
-// details, and you can find more information in How
-// to Use Actions, a section in The Java Tutorial.
-// 
-// For information and examples of using menus see
-// How to Use Menus,
-// a section in The Java Tutorial.
-// 
-// Warning: Swing is not thread safe. For more
-// information see Swing's Threading
-// Policy.
-// 
-// Warning:
-// Serialized objects of this class will not be compatible with
-// future Swing releases. The current serialization support is
-// appropriate for short term storage or RMI between applications running
-// the same version of Swing.  As of 1.4, support for long term storage
-// of all JavaBeans™
-// has been added to the java.beans package.
-// Please see XMLEncoder.
-class JMenu extends JMenuItem with Accessible, with MenuElement {
+/** An implementation of a menu -- a popup window containing
+ *  JMenuItems that
+ *  is displayed when the user selects an item on the JMenuBar.
+ *  In addition to JMenuItems, a JMenu can
+ *  also contain JSeparators.
+ *  
+ *  In essence, a menu is a button with an associated JPopupMenu.
+ *  When the "button" is pressed, the JPopupMenu appears. If the
+ *  "button" is on the JMenuBar, the menu is a top-level window.
+ *  If the "button" is another menu item, then the JPopupMenu is
+ *  "pull-right" menu.
+ *  
+ *  Menus can be configured, and to some degree controlled, by
+ *  Actions.  Using an
+ *  Action with a menu has many benefits beyond directly
+ *  configuring a menu.  Refer to 
+ *  Swing Components Supporting Action for more
+ *  details, and you can find more information in How
+ *  to Use Actions, a section in The Java Tutorial.
+ *  
+ *  For information and examples of using menus see
+ *  How to Use Menus,
+ *  a section in The Java Tutorial.
+ *  
+ *  Warning: Swing is not thread safe. For more
+ *  information see Swing's Threading
+ *  Policy.
+ *  
+ *  Warning:
+ *  Serialized objects of this class will not be compatible with
+ *  future Swing releases. The current serialization support is
+ *  appropriate for short term storage or RMI between applications running
+ *  the same version of Swing.  As of 1.4, support for long term storage
+ *  of all JavaBeans™
+ *  has been added to the java.beans package.
+ *  Please see XMLEncoder.
+ */
+class JMenu extends JMenuItem with Accessible with MenuElement {
 
+    /** Constructs a new JMenu with no text. */
     @stub
-    // Constructs a new JMenu with no text.
     def this() = ???
 
+    /** Constructs a menu whose properties are taken from the
+     *  Action supplied.
+     */
     @stub
-    // Constructs a menu whose properties are taken from the
-    // Action supplied.
     def this(a: Action) = ???
 
+    /** Constructs a new JMenu with the supplied string
+     *  as its text.
+     */
     @stub
-    // Constructs a new JMenu with the supplied string
-    // as its text.
     def this(s: String) = ???
 
+    /** This class implements accessibility support for the
+     *  JMenu class.
+     */
     @stub
-    // This class implements accessibility support for the
-    // JMenu class.
-    protected def JMenu.AccessibleJMenu: class = ???
+    protected object AccessibleJMenu extends JMenu.AccessibleJMenu
 
+    /** Creates a new menu item attached to the specified
+     *  Action object and appends it to the end of this menu.
+     */
     @stub
-    // Creates a new menu item attached to the specified
-    // Action object and appends it to the end of this menu.
     def add(a: Action): JMenuItem = ???
 
+    /** Appends a component to the end of this menu. */
     @stub
-    // Appends a component to the end of this menu.
     def add(c: Component): Component = ???
 
+    /** Adds the specified component to this container at the given
+     *  position.
+     */
     @stub
-    // Adds the specified component to this container at the given
-    // position.
     def add(c: Component, index: Int): Component = ???
 
+    /** Appends a menu item to the end of this menu. */
     @stub
-    // Appends a menu item to the end of this menu.
     def add(menuItem: JMenuItem): JMenuItem = ???
 
+    /** Creates a new menu item with the specified text and appends
+     *  it to the end of this menu.
+     */
     @stub
-    // Creates a new menu item with the specified text and appends
-    // it to the end of this menu.
     def add(s: String): JMenuItem = ???
 
+    /** Adds a listener for menu events. */
     @stub
-    // Adds a listener for menu events.
     def addMenuListener(l: MenuListener): Unit = ???
 
+    /** Appends a new separator to the end of the menu. */
     @stub
-    // Appends a new separator to the end of the menu.
     def addSeparator(): Unit = ???
 
+    /** Sets the ComponentOrientation property of this menu
+     *  and all components contained within it.
+     */
     @stub
-    // Sets the ComponentOrientation property of this menu
-    // and all components contained within it.
     def applyComponentOrientation(o: ComponentOrientation): Unit = ???
 
+    /** Returns a properly configured PropertyChangeListener
+     *  which updates the control as changes to the Action occur.
+     */
     @stub
-    // Returns a properly configured PropertyChangeListener
-    // which updates the control as changes to the Action occur.
     protected def createActionChangeListener(b: JMenuItem): PropertyChangeListener = ???
 
+    /** Factory method which creates the JMenuItem for
+     *  Actions added to the JMenu.
+     */
     @stub
-    // Factory method which creates the JMenuItem for
-    // Actions added to the JMenu.
     protected def createActionComponent(a: Action): JMenuItem = ???
 
+    /** Creates a window-closing listener for the popup. */
     @stub
-    // Creates a window-closing listener for the popup.
     protected def createWinListener(p: JPopupMenu): JMenu.WinListener = ???
 
+    /** Programmatically performs a "click". */
     @stub
-    // Programmatically performs a "click".
     def doClick(pressTime: Int): Unit = ???
 
+    /** Notifies all listeners that have registered interest for
+     *  notification on this event type.
+     */
     @stub
-    // Notifies all listeners that have registered interest for
-    // notification on this event type.
     protected def fireMenuCanceled(): Unit = ???
 
+    /** Notifies all listeners that have registered interest for
+     *  notification on this event type.
+     */
     @stub
-    // Notifies all listeners that have registered interest for
-    // notification on this event type.
     protected def fireMenuDeselected(): Unit = ???
 
+    /** Notifies all listeners that have registered interest for
+     *  notification on this event type.
+     */
     @stub
-    // Notifies all listeners that have registered interest for
-    // notification on this event type.
     protected def fireMenuSelected(): Unit = ???
 
+    /** Gets the AccessibleContext associated with this JMenu. */
     @stub
-    // Gets the AccessibleContext associated with this JMenu.
     def getAccessibleContext(): AccessibleContext = ???
 
+    /** Returns the java.awt.Component used to
+     *  paint this MenuElement.
+     */
     @stub
-    // Returns the java.awt.Component used to
-    // paint this MenuElement.
     def getComponent(): Component = ???
 
+    /** Returns the suggested delay, in milliseconds, before submenus
+     *  are popped up or down.
+     */
     @stub
-    // Returns the suggested delay, in milliseconds, before submenus
-    // are popped up or down.
     def getDelay(): Int = ???
 
+    /** Returns the JMenuItem at the specified position. */
     @stub
-    // Returns the JMenuItem at the specified position.
     def getItem(pos: Int): JMenuItem = ???
 
+    /** Returns the number of items on the menu, including separators. */
     @stub
-    // Returns the number of items on the menu, including separators.
     def getItemCount(): Int = ???
 
+    /** Returns the component at position n. */
     @stub
-    // Returns the component at position n.
     def getMenuComponent(n: Int): Component = ???
 
+    /** Returns the number of components on the menu. */
     @stub
-    // Returns the number of components on the menu.
     def getMenuComponentCount(): Int = ???
 
+    /** Returns an array of Components of the menu's
+     *  subcomponents.
+     */
     @stub
-    // Returns an array of Components of the menu's
-    // subcomponents.
     def getMenuComponents(): Array[Component] = ???
 
+    /** Returns an array of all the MenuListeners added
+     *  to this JMenu with addMenuListener().
+     */
     @stub
-    // Returns an array of all the MenuListeners added
-    // to this JMenu with addMenuListener().
     def getMenuListeners(): Array[MenuListener] = ???
 
+    /** Returns the popupmenu associated with this menu. */
     @stub
-    // Returns the popupmenu associated with this menu.
     def getPopupMenu(): JPopupMenu = ???
 
+    /** Computes the origin for the JMenu's popup menu. */
     @stub
-    // Computes the origin for the JMenu's popup menu.
     protected def getPopupMenuOrigin(): Point = ???
 
+    /** Returns an array of MenuElements containing the submenu
+     *  for this menu component.
+     */
     @stub
-    // Returns an array of MenuElements containing the submenu
-    // for this menu component.
     def getSubElements(): Array[MenuElement] = ???
 
+    /** Returns the name of the L&F class that renders this component. */
     @stub
-    // Returns the name of the L&F class that renders this component.
     def getUIClassID(): String = ???
 
+    /** Inserts a new menu item attached to the specified Action
+     *  object at a given position.
+     */
     @stub
-    // Inserts a new menu item attached to the specified Action
-    // object at a given position.
     def insert(a: Action, pos: Int): JMenuItem = ???
 
+    /** Inserts the specified JMenuitem at a given position. */
     @stub
-    // Inserts the specified JMenuitem at a given position.
     def insert(mi: JMenuItem, pos: Int): JMenuItem = ???
 
+    /** Inserts a new menu item with the specified text at a
+     *  given position.
+     */
     @stub
-    // Inserts a new menu item with the specified text at a
-    // given position.
     def insert(s: String, pos: Int): Unit = ???
 
+    /** Inserts a separator at the specified position. */
     @stub
-    // Inserts a separator at the specified position.
     def insertSeparator(index: Int): Unit = ???
 
+    /** Returns true if the specified component exists in the
+     *  submenu hierarchy.
+     */
     @stub
-    // Returns true if the specified component exists in the
-    // submenu hierarchy.
     def isMenuComponent(c: Component): Boolean = ???
 
+    /** Returns true if the menu's popup window is visible. */
     @stub
-    // Returns true if the menu's popup window is visible.
     def isPopupMenuVisible(): Boolean = ???
 
+    /** Returns true if the menu is currently selected (highlighted). */
     @stub
-    // Returns true if the menu is currently selected (highlighted).
     def isSelected(): Boolean = ???
 
+    /** Returns true if the menu can be torn off. */
     @stub
-    // Returns true if the menu can be torn off.
     def isTearOff(): Boolean = ???
 
+    /** Returns true if the menu is a 'top-level menu', that is, if it is
+     *  the direct child of a menubar.
+     */
     @stub
-    // Returns true if the menu is a 'top-level menu', that is, if it is
-    // the direct child of a menubar.
     def isTopLevelMenu(): Boolean = ???
 
+    /** Messaged when the menubar selection changes to activate or
+     *  deactivate this menu.
+     */
     @stub
-    // Messaged when the menubar selection changes to activate or
-    // deactivate this menu.
     def menuSelectionChanged(isIncluded: Boolean): Unit = ???
 
+    /** Returns a string representation of this JMenu. */
     @stub
-    // Returns a string representation of this JMenu.
     protected def paramString(): String = ???
 
+    /** Processes key stroke events such as mnemonics and accelerators. */
     @stub
-    // Processes key stroke events such as mnemonics and accelerators.
     protected def processKeyEvent(evt: KeyEvent): Unit = ???
 
+    /** Removes the component c from this menu. */
     @stub
-    // Removes the component c from this menu.
     def remove(c: Component): Unit = ???
 
+    /** Removes the menu item at the specified index from this menu. */
     @stub
-    // Removes the menu item at the specified index from this menu.
     def remove(pos: Int): Unit = ???
 
+    /** Removes the specified menu item from this menu. */
     @stub
-    // Removes the specified menu item from this menu.
     def remove(item: JMenuItem): Unit = ???
 
+    /** Removes all menu items from this menu. */
     @stub
-    // Removes all menu items from this menu.
     def removeAll(): Unit = ???
 
+    /** Removes a listener for menu events. */
     @stub
-    // Removes a listener for menu events.
     def removeMenuListener(l: MenuListener): Unit = ???
 
+    /** setAccelerator is not defined for JMenu. */
     @stub
-    // setAccelerator is not defined for JMenu.
     def setAccelerator(keyStroke: KeyStroke): Unit = ???
 
+    /** Sets the language-sensitive orientation that is to be used to order
+     *  the elements or text within this component.
+     */
     @stub
-    // Sets the language-sensitive orientation that is to be used to order
-    // the elements or text within this component.
     def setComponentOrientation(o: ComponentOrientation): Unit = ???
 
+    /** Sets the suggested delay before the menu's PopupMenu
+     *  is popped up or down.
+     */
     @stub
-    // Sets the suggested delay before the menu's PopupMenu
-    // is popped up or down.
     def setDelay(d: Int): Unit = ???
 
+    /** Sets the location of the popup component. */
     @stub
-    // Sets the location of the popup component.
     def setMenuLocation(x: Int, y: Int): Unit = ???
 
+    /** Sets the data model for the "menu button" -- the label
+     *  that the user clicks to open or close the menu.
+     */
     @stub
-    // Sets the data model for the "menu button" -- the label
-    // that the user clicks to open or close the menu.
     def setModel(newModel: ButtonModel): Unit = ???
 
+    /** Sets the visibility of the menu's popup. */
     @stub
-    // Sets the visibility of the menu's popup.
     def setPopupMenuVisible(b: Boolean): Unit = ???
 
+    /** Sets the selection status of the menu. */
     @stub
-    // Sets the selection status of the menu.
     def setSelected(b: Boolean): Unit = ???
 }

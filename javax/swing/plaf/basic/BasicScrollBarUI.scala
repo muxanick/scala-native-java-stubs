@@ -6,309 +6,318 @@ import java.lang.{Object, String}
 import javax.swing.{JButton, JComponent, JScrollBar, SwingConstants, Timer}
 import javax.swing.plaf.{ComponentUI, ScrollBarUI}
 
-// Implementation of ScrollBarUI for the Basic Look and Feel
-class BasicScrollBarUI extends ScrollBarUI with LayoutManager, with SwingConstants {
+/** Implementation of ScrollBarUI for the Basic Look and Feel */
+class BasicScrollBarUI extends ScrollBarUI with LayoutManager with SwingConstants {
 
+    /** Listener for cursor keys. */
     @stub
-    // Listener for cursor keys.
-    protected def BasicScrollBarUI.ArrowButtonListener: class = ???
+    protected object ArrowButtonListener extends BasicScrollBarUI.ArrowButtonListener
 
+    /** A listener to listen for model changes. */
     @stub
-    // A listener to listen for model changes.
-    protected def BasicScrollBarUI.ModelListener: class = ???
+    protected object ModelListener extends BasicScrollBarUI.ModelListener
 
+    /**  */
     @stub
-    // 
-    def BasicScrollBarUI.PropertyChangeHandler: class = ???
+    object PropertyChangeHandler extends BasicScrollBarUI.PropertyChangeHandler
 
+    /** Listener for scrolling events initiated in the
+     *  ScrollPane.
+     */
     @stub
-    // Listener for scrolling events initiated in the
-    // ScrollPane.
-    protected def BasicScrollBarUI.ScrollListener: class = ???
+    protected object ScrollListener extends BasicScrollBarUI.ScrollListener
 
+    /**  */
     @stub
-    // 
-    protected def buttonListener: BasicScrollBarUI.ArrowButtonListener = ???
+    protected val buttonListener: BasicScrollBarUI.ArrowButtonListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def decrButton: JButton = ???
+    protected val decrButton: JButton = ???
 
+    /** Distance between the decrement button and the track. */
     @stub
-    // Distance between the decrement button and the track.
-    protected def decrGap: Int = ???
+    protected val decrGap: Int = ???
 
+    /**  */
     @stub
-    // 
-    protected def incrButton: JButton = ???
+    protected val incrButton: JButton = ???
 
+    /** Distance between the increment button and the track. */
     @stub
-    // Distance between the increment button and the track.
-    protected def incrGap: Int = ???
+    protected val incrGap: Int = ???
 
+    /**  */
     @stub
-    // 
-    protected def isDragging: Boolean = ???
+    protected val isDragging: Boolean = ???
 
+    /**  */
     @stub
-    // 
-    protected def maximumThumbSize: Dimension = ???
+    protected val maximumThumbSize: Dimension = ???
 
+    /**  */
     @stub
-    // 
-    protected def minimumThumbSize: Dimension = ???
+    protected val minimumThumbSize: Dimension = ???
 
+    /**  */
     @stub
-    // 
-    protected def modelListener: BasicScrollBarUI.ModelListener = ???
+    protected val modelListener: BasicScrollBarUI.ModelListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def propertyChangeListener: PropertyChangeListener = ???
+    protected val propertyChangeListener: PropertyChangeListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def scrollbar: JScrollBar = ???
+    protected val scrollbar: JScrollBar = ???
 
+    /** Hint as to what width (when vertical) or height (when horizontal)
+     *  should be.
+     */
     @stub
-    // Hint as to what width (when vertical) or height (when horizontal)
-    // should be.
-    protected def scrollBarWidth: Int = ???
+    protected val scrollBarWidth: Int = ???
 
+    /**  */
     @stub
-    // 
-    protected def scrollListener: BasicScrollBarUI.ScrollListener = ???
+    protected val scrollListener: BasicScrollBarUI.ScrollListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def scrollTimer: Timer = ???
+    protected val scrollTimer: Timer = ???
 
+    /**  */
     @stub
-    // 
-    protected def thumbColor: Color = ???
+    protected val thumbColor: Color = ???
 
+    /**  */
     @stub
-    // 
-    protected def thumbDarkShadowColor: Color = ???
+    protected val thumbDarkShadowColor: Color = ???
 
+    /**  */
     @stub
-    // 
-    protected def thumbHighlightColor: Color = ???
+    protected val thumbHighlightColor: Color = ???
 
+    /**  */
     @stub
-    // 
-    protected def thumbLightShadowColor: Color = ???
+    protected val thumbLightShadowColor: Color = ???
 
+    /**  */
     @stub
-    // 
-    protected def thumbRect: Rectangle = ???
+    protected val thumbRect: Rectangle = ???
 
+    /**  */
     @stub
-    // 
-    protected def trackColor: Color = ???
+    protected val trackColor: Color = ???
 
+    /**  */
     @stub
-    // 
-    protected def trackHighlight: Int = ???
+    protected val trackHighlight: Int = ???
 
+    /**  */
     @stub
-    // 
-    protected def trackHighlightColor: Color = ???
+    protected val trackHighlightColor: Color = ???
 
+    /**  */
     @stub
-    // 
-    protected def trackListener: BasicScrollBarUI.TrackListener = ???
+    protected val trackListener: BasicScrollBarUI.TrackListener = ???
 
+    /** If the layout manager uses a per-component string,
+     *  adds the component comp to the layout,
+     *  associating it
+     *  with the string specified by name.
+     */
     @stub
-    // If the layout manager uses a per-component string,
-    // adds the component comp to the layout,
-    // associating it
-    // with the string specified by name.
     def addLayoutComponent(name: String, child: Component): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def configureScrollBarColors(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def createArrowButtonListener(): BasicScrollBarUI.ArrowButtonListener = ???
 
+    /**  */
     @stub
-    // 
     protected def createDecreaseButton(orientation: Int): JButton = ???
 
+    /**  */
     @stub
-    // 
     protected def createIncreaseButton(orientation: Int): JButton = ???
 
+    /**  */
     @stub
-    // 
     protected def createModelListener(): BasicScrollBarUI.ModelListener = ???
 
+    /**  */
     @stub
-    // 
     protected def createPropertyChangeListener(): PropertyChangeListener = ???
 
+    /**  */
     @stub
-    // 
     protected def createScrollListener(): BasicScrollBarUI.ScrollListener = ???
 
+    /**  */
     @stub
-    // 
     protected def createTrackListener(): BasicScrollBarUI.TrackListener = ???
 
+    /** Returns the specified component's maximum size appropriate for
+     *  the look and feel.
+     */
     @stub
-    // Returns the specified component's maximum size appropriate for
-    // the look and feel.
     def getMaximumSize(c: JComponent): Dimension = ???
 
+    /** Returns the largest acceptable size for the thumb. */
     @stub
-    // Returns the largest acceptable size for the thumb.
     protected def getMaximumThumbSize(): Dimension = ???
 
+    /** Returns the smallest acceptable size for the thumb. */
     @stub
-    // Returns the smallest acceptable size for the thumb.
     protected def getMinimumThumbSize(): Dimension = ???
 
+    /** A vertical scrollbar's preferred width is the maximum of
+     *  preferred widths of the (non null)
+     *  increment/decrement buttons,
+     *  and the minimum width of the thumb.
+     */
     @stub
-    // A vertical scrollbar's preferred width is the maximum of
-    // preferred widths of the (non null)
-    // increment/decrement buttons,
-    // and the minimum width of the thumb.
     def getPreferredSize(c: JComponent): Dimension = ???
 
+    /** Indicates whether the user can absolutely position the thumb with
+     *  a mouse gesture (usually the middle mouse button).
+     */
     @stub
-    // Indicates whether the user can absolutely position the thumb with
-    // a mouse gesture (usually the middle mouse button).
     def getSupportsAbsolutePositioning(): Boolean = ???
 
+    /** Return the current size/location of the thumb. */
     @stub
-    // Return the current size/location of the thumb.
     protected def getThumbBounds(): Rectangle = ???
 
+    /** Returns the current bounds of the track, i.e. */
     @stub
-    // Returns the current bounds of the track, i.e.
     protected def getTrackBounds(): Rectangle = ???
 
+    /**  */
     @stub
-    // 
     protected def installComponents(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installDefaults(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installKeyboardActions(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installListeners(): Unit = ???
 
+    /** Configures the specified component appropriately for the look and feel. */
     @stub
-    // Configures the specified component appropriately for the look and feel.
     def installUI(c: JComponent): Unit = ???
 
+    /** Returns true if the mouse is currently over the thumb. */
     @stub
-    // Returns true if the mouse is currently over the thumb.
     def isThumbRollover(): Boolean = ???
 
+    /** Lays out the specified container. */
     @stub
-    // Lays out the specified container.
     def layoutContainer(scrollbarContainer: Container): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def layoutHScrollbar(sb: JScrollBar): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def layoutVScrollbar(sb: JScrollBar): Unit = ???
 
+    /** Calculates the minimum size dimensions for the specified
+     *  container, given the components it contains.
+     */
     @stub
-    // Calculates the minimum size dimensions for the specified
-    // container, given the components it contains.
     def minimumLayoutSize(scrollbarContainer: Container): Dimension = ???
 
+    /** Paints the specified component appropriately for the look and feel. */
     @stub
-    // Paints the specified component appropriately for the look and feel.
     def paint(g: Graphics, c: JComponent): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def paintDecreaseHighlight(g: Graphics): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def paintIncreaseHighlight(g: Graphics): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def paintThumb(g: Graphics, c: JComponent, thumbBounds: Rectangle): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def paintTrack(g: Graphics, c: JComponent, trackBounds: Rectangle): Unit = ???
 
+    /** Calculates the preferred size dimensions for the specified
+     *  container, given the components it contains.
+     */
     @stub
-    // Calculates the preferred size dimensions for the specified
-    // container, given the components it contains.
     def preferredLayoutSize(scrollbarContainer: Container): Dimension = ???
 
+    /** Removes the specified component from the layout. */
     @stub
-    // Removes the specified component from the layout.
     def removeLayoutComponent(child: Component): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def scrollByBlock(direction: Int): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def scrollByUnit(direction: Int): Unit = ???
 
+    /** Set the bounds of the thumb and force a repaint that includes
+     *  the old thumbBounds and the new one.
+     */
     @stub
-    // Set the bounds of the thumb and force a repaint that includes
-    // the old thumbBounds and the new one.
     protected def setThumbBounds(x: Int, y: Int, width: Int, height: Int): Unit = ???
 
+    /** Sets whether or not the mouse is currently over the thumb. */
     @stub
-    // Sets whether or not the mouse is currently over the thumb.
     protected def setThumbRollover(active: Boolean): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallComponents(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallDefaults(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallKeyboardActions(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallListeners(): Unit = ???
 }
 
 object BasicScrollBarUI {
+    /**  */
     @stub
-    // 
-    protected def DECREASE_HIGHLIGHT: Int = ???
+    protected val DECREASE_HIGHLIGHT: Int = ???
 
+    /**  */
     @stub
-    // 
-    protected def INCREASE_HIGHLIGHT: Int = ???
+    protected val INCREASE_HIGHLIGHT: Int = ???
 
+    /**  */
     @stub
-    // 
-    protected def NO_HIGHLIGHT: Int = ???
+    protected val NO_HIGHLIGHT: Int = ???
 
+    /**  */
     @stub
-    // 
     def createUI(c: JComponent): ComponentUI = ???
 }

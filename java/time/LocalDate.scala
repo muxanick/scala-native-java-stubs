@@ -6,292 +6,296 @@ import java.time.chrono.{ChronoLocalDate, Era, IsoChronology}
 import java.time.format.DateTimeFormatter
 import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalAmount, TemporalField, TemporalQuery, TemporalUnit, ValueRange}
 
-// A date without a time-zone in the ISO-8601 calendar system,
-// such as 2007-12-03.
-// 
-// LocalDate is an immutable date-time object that represents a date,
-// often viewed as year-month-day. Other date fields, such as day-of-year,
-// day-of-week and week-of-year, can also be accessed.
-// For example, the value "2nd October 2007" can be stored in a LocalDate.
-// 
-// This class does not store or represent a time or time-zone.
-// Instead, it is a description of the date, as used for birthdays.
-// It cannot represent an instant on the time-line without additional information
-// such as an offset or time-zone.
-// 
-// The ISO-8601 calendar system is the modern civil calendar system used today
-// in most of the world. It is equivalent to the proleptic Gregorian calendar
-// system, in which today's rules for leap years are applied for all time.
-// For most applications written today, the ISO-8601 rules are entirely suitable.
-// However, any application that makes use of historical dates, and requires them
-// to be accurate will find the ISO-8601 approach unsuitable.
-//
-// 
-// This is a value-based
-// class; use of identity-sensitive operations (including reference equality
-// (==), identity hash code, or synchronization) on instances of
-// LocalDate may have unpredictable results and should be avoided.
-// The equals method should be used for comparisons.
-final class LocalDate extends Object with Temporal, with TemporalAdjuster, with ChronoLocalDate, with Serializable {
+/** A date without a time-zone in the ISO-8601 calendar system,
+ *  such as 2007-12-03.
+ *  
+ *  LocalDate is an immutable date-time object that represents a date,
+ *  often viewed as year-month-day. Other date fields, such as day-of-year,
+ *  day-of-week and week-of-year, can also be accessed.
+ *  For example, the value "2nd October 2007" can be stored in a LocalDate.
+ *  
+ *  This class does not store or represent a time or time-zone.
+ *  Instead, it is a description of the date, as used for birthdays.
+ *  It cannot represent an instant on the time-line without additional information
+ *  such as an offset or time-zone.
+ *  
+ *  The ISO-8601 calendar system is the modern civil calendar system used today
+ *  in most of the world. It is equivalent to the proleptic Gregorian calendar
+ *  system, in which today's rules for leap years are applied for all time.
+ *  For most applications written today, the ISO-8601 rules are entirely suitable.
+ *  However, any application that makes use of historical dates, and requires them
+ *  to be accurate will find the ISO-8601 approach unsuitable.
+ * 
+ *  
+ *  This is a value-based
+ *  class; use of identity-sensitive operations (including reference equality
+ *  (==), identity hash code, or synchronization) on instances of
+ *  LocalDate may have unpredictable results and should be avoided.
+ *  The equals method should be used for comparisons.
+ */
+final class LocalDate extends Object with Temporal with TemporalAdjuster with ChronoLocalDate with Serializable {
 
+    /** Adjusts the specified temporal object to have the same date as this object. */
     @stub
-    // Adjusts the specified temporal object to have the same date as this object.
     def adjustInto(temporal: Temporal): Temporal = ???
 
+    /** Combines this date with the time of midnight to create a LocalDateTime
+     *  at the start of this date.
+     */
     @stub
-    // Combines this date with the time of midnight to create a LocalDateTime
-    // at the start of this date.
     def atStartOfDay(): LocalDateTime = ???
 
+    /** Returns a zoned date-time from this date at the earliest valid time according
+     *  to the rules in the time-zone.
+     */
     @stub
-    // Returns a zoned date-time from this date at the earliest valid time according
-    // to the rules in the time-zone.
     def atStartOfDay(zone: ZoneId): ZonedDateTime = ???
 
+    /** Combines this date with a time to create a LocalDateTime. */
     @stub
-    // Combines this date with a time to create a LocalDateTime.
     def atTime(hour: Int, minute: Int): LocalDateTime = ???
 
+    /** Combines this date with a time to create a LocalDateTime. */
     @stub
-    // Combines this date with a time to create a LocalDateTime.
     def atTime(hour: Int, minute: Int, second: Int): LocalDateTime = ???
 
+    /** Combines this date with a time to create a LocalDateTime. */
     @stub
-    // Combines this date with a time to create a LocalDateTime.
     def atTime(hour: Int, minute: Int, second: Int, nanoOfSecond: Int): LocalDateTime = ???
 
+    /** Combines this date with a time to create a LocalDateTime. */
     @stub
-    // Combines this date with a time to create a LocalDateTime.
     def atTime(time: LocalTime): LocalDateTime = ???
 
+    /** Combines this date with an offset time to create an OffsetDateTime. */
     @stub
-    // Combines this date with an offset time to create an OffsetDateTime.
     def atTime(time: OffsetTime): OffsetDateTime = ???
 
+    /** Compares this date to another date. */
     @stub
-    // Compares this date to another date.
     def compareTo(other: ChronoLocalDate): Int = ???
 
+    /** Checks if this date is equal to another date. */
     @stub
-    // Checks if this date is equal to another date.
     def equals(obj: Object): Boolean = ???
 
+    /** Formats this date using the specified formatter. */
     @stub
-    // Formats this date using the specified formatter.
     def format(formatter: DateTimeFormatter): String = ???
 
+    /** Gets the value of the specified field from this date as an int. */
     @stub
-    // Gets the value of the specified field from this date as an int.
     def get(field: TemporalField): Int = ???
 
+    /** Gets the chronology of this date, which is the ISO calendar system. */
     @stub
-    // Gets the chronology of this date, which is the ISO calendar system.
     def getChronology(): IsoChronology = ???
 
+    /** Gets the day-of-month field. */
     @stub
-    // Gets the day-of-month field.
     def getDayOfMonth(): Int = ???
 
+    /** Gets the day-of-week field, which is an enum DayOfWeek. */
     @stub
-    // Gets the day-of-week field, which is an enum DayOfWeek.
     def getDayOfWeek(): DayOfWeek = ???
 
+    /** Gets the day-of-year field. */
     @stub
-    // Gets the day-of-year field.
     def getDayOfYear(): Int = ???
 
+    /** Gets the era applicable at this date. */
     @stub
-    // Gets the era applicable at this date.
     def getEra(): Era = ???
 
+    /** Gets the value of the specified field from this date as a long. */
     @stub
-    // Gets the value of the specified field from this date as a long.
     def getLong(field: TemporalField): Long = ???
 
+    /** Gets the month-of-year field using the Month enum. */
     @stub
-    // Gets the month-of-year field using the Month enum.
     def getMonth(): Month = ???
 
+    /** Gets the month-of-year field from 1 to 12. */
     @stub
-    // Gets the month-of-year field from 1 to 12.
     def getMonthValue(): Int = ???
 
+    /** Gets the year field. */
     @stub
-    // Gets the year field.
     def getYear(): Int = ???
 
+    /** A hash code for this date. */
     @stub
-    // A hash code for this date.
     def hashCode(): Int = ???
 
+    /** Checks if this date is after the specified date. */
     @stub
-    // Checks if this date is after the specified date.
     def isAfter(other: ChronoLocalDate): Boolean = ???
 
+    /** Checks if this date is before the specified date. */
     @stub
-    // Checks if this date is before the specified date.
     def isBefore(other: ChronoLocalDate): Boolean = ???
 
+    /** Checks if this date is equal to the specified date. */
     @stub
-    // Checks if this date is equal to the specified date.
     def isEqual(other: ChronoLocalDate): Boolean = ???
 
+    /** Checks if the year is a leap year, according to the ISO proleptic
+     *  calendar system rules.
+     */
     @stub
-    // Checks if the year is a leap year, according to the ISO proleptic
-    // calendar system rules.
     def isLeapYear(): Boolean = ???
 
+    /** Checks if the specified field is supported. */
     @stub
-    // Checks if the specified field is supported.
     def isSupported(field: TemporalField): Boolean = ???
 
+    /** Checks if the specified unit is supported. */
     @stub
-    // Checks if the specified unit is supported.
     def isSupported(unit: TemporalUnit): Boolean = ???
 
+    /** Returns the length of the month represented by this date. */
     @stub
-    // Returns the length of the month represented by this date.
     def lengthOfMonth(): Int = ???
 
+    /** Returns the length of the year represented by this date. */
     @stub
-    // Returns the length of the year represented by this date.
     def lengthOfYear(): Int = ???
 
+    /** Returns a copy of this date with the specified amount subtracted. */
     @stub
-    // Returns a copy of this date with the specified amount subtracted.
     def minus(amountToSubtract: Long, unit: TemporalUnit): LocalDate = ???
 
+    /** Returns a copy of this date with the specified amount subtracted. */
     @stub
-    // Returns a copy of this date with the specified amount subtracted.
     def minus(amountToSubtract: TemporalAmount): LocalDate = ???
 
+    /** Returns a copy of this LocalDate with the specified number of days subtracted. */
     @stub
-    // Returns a copy of this LocalDate with the specified number of days subtracted.
     def minusDays(daysToSubtract: Long): LocalDate = ???
 
+    /** Returns a copy of this LocalDate with the specified number of months subtracted. */
     @stub
-    // Returns a copy of this LocalDate with the specified number of months subtracted.
     def minusMonths(monthsToSubtract: Long): LocalDate = ???
 
+    /** Returns a copy of this LocalDate with the specified number of weeks subtracted. */
     @stub
-    // Returns a copy of this LocalDate with the specified number of weeks subtracted.
     def minusWeeks(weeksToSubtract: Long): LocalDate = ???
 
+    /** Returns a copy of this LocalDate with the specified number of years subtracted. */
     @stub
-    // Returns a copy of this LocalDate with the specified number of years subtracted.
     def minusYears(yearsToSubtract: Long): LocalDate = ???
 
+    /** Returns a copy of this date with the specified amount added. */
     @stub
-    // Returns a copy of this date with the specified amount added.
     def plus(amountToAdd: Long, unit: TemporalUnit): LocalDate = ???
 
+    /** Returns a copy of this date with the specified amount added. */
     @stub
-    // Returns a copy of this date with the specified amount added.
     def plus(amountToAdd: TemporalAmount): LocalDate = ???
 
+    /** Returns a copy of this LocalDate with the specified number of days added. */
     @stub
-    // Returns a copy of this LocalDate with the specified number of days added.
     def plusDays(daysToAdd: Long): LocalDate = ???
 
+    /** Returns a copy of this LocalDate with the specified number of months added. */
     @stub
-    // Returns a copy of this LocalDate with the specified number of months added.
     def plusMonths(monthsToAdd: Long): LocalDate = ???
 
+    /** Returns a copy of this LocalDate with the specified number of weeks added. */
     @stub
-    // Returns a copy of this LocalDate with the specified number of weeks added.
     def plusWeeks(weeksToAdd: Long): LocalDate = ???
 
+    /** Returns a copy of this LocalDate with the specified number of years added. */
     @stub
-    // Returns a copy of this LocalDate with the specified number of years added.
     def plusYears(yearsToAdd: Long): LocalDate = ???
 
+    /** Queries this date using the specified query. */
     @stub
-    // Queries this date using the specified query.
-    def R: [R] = ???
+    def query[R](query: TemporalQuery[R]): R = ???
 
+    /** Gets the range of valid values for the specified field. */
     @stub
-    // Gets the range of valid values for the specified field.
     def range(field: TemporalField): ValueRange = ???
 
+    /** Converts this date to the Epoch Day. */
     @stub
-    // Converts this date to the Epoch Day.
     def toEpochDay(): Long = ???
 
+    /** Outputs this date as a String, such as 2007-12-03. */
     @stub
-    // Outputs this date as a String, such as 2007-12-03.
     def toString(): String = ???
 
+    /** Calculates the period between this date and another date as a Period. */
     @stub
-    // Calculates the period between this date and another date as a Period.
     def until(endDateExclusive: ChronoLocalDate): Period = ???
 
+    /** Calculates the amount of time until another date in terms of the specified unit. */
     @stub
-    // Calculates the amount of time until another date in terms of the specified unit.
     def until(endExclusive: Temporal, unit: TemporalUnit): Long = ???
 
+    /** Returns an adjusted copy of this date. */
     @stub
-    // Returns an adjusted copy of this date.
     def with(adjuster: TemporalAdjuster): LocalDate = ???
 
+    /** Returns a copy of this date with the specified field set to a new value. */
     @stub
-    // Returns a copy of this date with the specified field set to a new value.
     def with(field: TemporalField, newValue: Long): LocalDate = ???
 
+    /** Returns a copy of this LocalDate with the day-of-month altered. */
     @stub
-    // Returns a copy of this LocalDate with the day-of-month altered.
     def withDayOfMonth(dayOfMonth: Int): LocalDate = ???
 
+    /** Returns a copy of this LocalDate with the day-of-year altered. */
     @stub
-    // Returns a copy of this LocalDate with the day-of-year altered.
     def withDayOfYear(dayOfYear: Int): LocalDate = ???
 
+    /** Returns a copy of this LocalDate with the month-of-year altered. */
     @stub
-    // Returns a copy of this LocalDate with the month-of-year altered.
     def withMonth(month: Int): LocalDate = ???
 }
 
 object LocalDate {
+    /** The maximum supported LocalDate, '+999999999-12-31'. */
     @stub
-    // The maximum supported LocalDate, '+999999999-12-31'.
-    def MAX: LocalDate = ???
+    val MAX: LocalDate = ???
 
+    /** Obtains an instance of LocalDate from a temporal object. */
     @stub
-    // Obtains an instance of LocalDate from a temporal object.
     def from(temporal: TemporalAccessor): LocalDate = ???
 
+    /** Obtains the current date from the system clock in the default time-zone. */
     @stub
-    // Obtains the current date from the system clock in the default time-zone.
     def now(): LocalDate = ???
 
+    /** Obtains the current date from the specified clock. */
     @stub
-    // Obtains the current date from the specified clock.
     def now(clock: Clock): LocalDate = ???
 
+    /** Obtains the current date from the system clock in the specified time-zone. */
     @stub
-    // Obtains the current date from the system clock in the specified time-zone.
     def now(zone: ZoneId): LocalDate = ???
 
+    /** Obtains an instance of LocalDate from a year, month and day. */
     @stub
-    // Obtains an instance of LocalDate from a year, month and day.
     def of(year: Int, month: Int, dayOfMonth: Int): LocalDate = ???
 
+    /** Obtains an instance of LocalDate from a year, month and day. */
     @stub
-    // Obtains an instance of LocalDate from a year, month and day.
     def of(year: Int, month: Month, dayOfMonth: Int): LocalDate = ???
 
+    /** Obtains an instance of LocalDate from the epoch day count. */
     @stub
-    // Obtains an instance of LocalDate from the epoch day count.
     def ofEpochDay(epochDay: Long): LocalDate = ???
 
+    /** Obtains an instance of LocalDate from a year and day-of-year. */
     @stub
-    // Obtains an instance of LocalDate from a year and day-of-year.
     def ofYearDay(year: Int, dayOfYear: Int): LocalDate = ???
 
+    /** Obtains an instance of LocalDate from a text string such as 2007-12-03. */
     @stub
-    // Obtains an instance of LocalDate from a text string such as 2007-12-03.
     def parse(text: CharSequence): LocalDate = ???
 
+    /** Obtains an instance of LocalDate from a text string using a specific formatter. */
     @stub
-    // Obtains an instance of LocalDate from a text string using a specific formatter.
     def parse(text: CharSequence, formatter: DateTimeFormatter): LocalDate = ???
 }

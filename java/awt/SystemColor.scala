@@ -3,261 +3,294 @@ package java.awt
 import java.io.Serializable
 import java.lang.Object
 
-// A class to encapsulate symbolic colors representing the color of
-// native GUI objects on a system.  For systems which support the dynamic
-// update of the system colors (when the user changes the colors)
-// the actual RGB values of these symbolic colors will also change
-// dynamically.  In order to compare the "current" RGB value of a
-// SystemColor object with a non-symbolic Color object,
-// getRGB should be used rather than equals.
-// 
-// Note that the way in which these system colors are applied to GUI objects
-// may vary slightly from platform to platform since GUI objects may be
-// rendered differently on each platform.
-// 
-// System color values may also be available through the getDesktopProperty
-// method on java.awt.Toolkit.
+/** A class to encapsulate symbolic colors representing the color of
+ *  native GUI objects on a system.  For systems which support the dynamic
+ *  update of the system colors (when the user changes the colors)
+ *  the actual RGB values of these symbolic colors will also change
+ *  dynamically.  In order to compare the "current" RGB value of a
+ *  SystemColor object with a non-symbolic Color object,
+ *  getRGB should be used rather than equals.
+ *  
+ *  Note that the way in which these system colors are applied to GUI objects
+ *  may vary slightly from platform to platform since GUI objects may be
+ *  rendered differently on each platform.
+ *  
+ *  System color values may also be available through the getDesktopProperty
+ *  method on java.awt.Toolkit.
+ */
 final class SystemColor extends Color with Serializable {
 }
 
 object SystemColor {
+    /** The array index for the
+     *  activeCaption system color.
+     */
     @stub
-    // The array index for the
-    // activeCaption system color.
-    def ACTIVE_CAPTION: Int = ???
+    val ACTIVE_CAPTION: Int = ???
 
+    /** The array index for the
+     *  activeCaptionBorder system color.
+     */
     @stub
-    // The array index for the
-    // activeCaptionBorder system color.
-    def ACTIVE_CAPTION_BORDER: Int = ???
+    val ACTIVE_CAPTION_BORDER: Int = ???
 
+    /** The array index for the
+     *  activeCaptionText system color.
+     */
     @stub
-    // The array index for the
-    // activeCaptionText system color.
-    def ACTIVE_CAPTION_TEXT: Int = ???
+    val ACTIVE_CAPTION_TEXT: Int = ???
 
+    /** The color rendered for the window-title background of the currently active window. */
     @stub
-    // The color rendered for the window-title background of the currently active window.
-    def activeCaption: SystemColor = ???
+    val activeCaption: SystemColor = ???
 
+    /** The color rendered for the border around the currently active window. */
     @stub
-    // The color rendered for the border around the currently active window.
-    def activeCaptionBorder: SystemColor = ???
+    val activeCaptionBorder: SystemColor = ???
 
+    /** The color rendered for the window-title text of the currently active window. */
     @stub
-    // The color rendered for the window-title text of the currently active window.
-    def activeCaptionText: SystemColor = ???
+    val activeCaptionText: SystemColor = ???
 
+    /** The color rendered for the background of control panels and control objects,
+     *  such as pushbuttons.
+     */
     @stub
-    // The color rendered for the background of control panels and control objects,
-    // such as pushbuttons.
-    def control: SystemColor = ???
+    val control: SystemColor = ???
 
+    /** The array index for the
+     *  control system color.
+     */
     @stub
-    // The array index for the
-    // control system color.
-    def CONTROL: Int = ???
+    val CONTROL: Int = ???
 
+    /** The array index for the
+     *  controlDkShadow system color.
+     */
     @stub
-    // The array index for the
-    // controlDkShadow system color.
-    def CONTROL_DK_SHADOW: Int = ???
+    val CONTROL_DK_SHADOW: Int = ???
 
+    /** The array index for the
+     *  controlHighlight system color.
+     */
     @stub
-    // The array index for the
-    // controlHighlight system color.
-    def CONTROL_HIGHLIGHT: Int = ???
+    val CONTROL_HIGHLIGHT: Int = ???
 
+    /** The array index for the
+     *  controlLtHighlight system color.
+     */
     @stub
-    // The array index for the
-    // controlLtHighlight system color.
-    def CONTROL_LT_HIGHLIGHT: Int = ???
+    val CONTROL_LT_HIGHLIGHT: Int = ???
 
+    /** The array index for the
+     *  controlShadow system color.
+     */
     @stub
-    // The array index for the
-    // controlShadow system color.
-    def CONTROL_SHADOW: Int = ???
+    val CONTROL_SHADOW: Int = ???
 
+    /** The array index for the
+     *  controlText system color.
+     */
     @stub
-    // The array index for the
-    // controlText system color.
-    def CONTROL_TEXT: Int = ???
+    val CONTROL_TEXT: Int = ???
 
+    /** The color rendered for dark shadow areas on 3D control objects, such as pushbuttons. */
     @stub
-    // The color rendered for dark shadow areas on 3D control objects, such as pushbuttons.
-    def controlDkShadow: SystemColor = ???
+    val controlDkShadow: SystemColor = ???
 
+    /** The color rendered for light areas of 3D control objects, such as pushbuttons. */
     @stub
-    // The color rendered for light areas of 3D control objects, such as pushbuttons.
-    def controlHighlight: SystemColor = ???
+    val controlHighlight: SystemColor = ???
 
+    /** The color rendered for highlight areas of 3D control objects, such as pushbuttons. */
     @stub
-    // The color rendered for highlight areas of 3D control objects, such as pushbuttons.
-    def controlLtHighlight: SystemColor = ???
+    val controlLtHighlight: SystemColor = ???
 
+    /** The color rendered for shadow areas of 3D control objects, such as pushbuttons. */
     @stub
-    // The color rendered for shadow areas of 3D control objects, such as pushbuttons.
-    def controlShadow: SystemColor = ???
+    val controlShadow: SystemColor = ???
 
+    /** The color rendered for the text of control panels and control objects,
+     *  such as pushbuttons.
+     */
     @stub
-    // The color rendered for the text of control panels and control objects,
-    // such as pushbuttons.
-    def controlText: SystemColor = ???
+    val controlText: SystemColor = ???
 
+    /** The color rendered for the background of the desktop. */
     @stub
-    // The color rendered for the background of the desktop.
-    def desktop: SystemColor = ???
+    val desktop: SystemColor = ???
 
+    /** The array index for the
+     *  desktop system color.
+     */
     @stub
-    // The array index for the
-    // desktop system color.
-    def DESKTOP: Int = ???
+    val DESKTOP: Int = ???
 
+    /** The array index for the
+     *  inactiveCaption system color.
+     */
     @stub
-    // The array index for the
-    // inactiveCaption system color.
-    def INACTIVE_CAPTION: Int = ???
+    val INACTIVE_CAPTION: Int = ???
 
+    /** The array index for the
+     *  inactiveCaptionBorder system color.
+     */
     @stub
-    // The array index for the
-    // inactiveCaptionBorder system color.
-    def INACTIVE_CAPTION_BORDER: Int = ???
+    val INACTIVE_CAPTION_BORDER: Int = ???
 
+    /** The array index for the
+     *  inactiveCaptionText system color.
+     */
     @stub
-    // The array index for the
-    // inactiveCaptionText system color.
-    def INACTIVE_CAPTION_TEXT: Int = ???
+    val INACTIVE_CAPTION_TEXT: Int = ???
 
+    /** The color rendered for the window-title background of inactive windows. */
     @stub
-    // The color rendered for the window-title background of inactive windows.
-    def inactiveCaption: SystemColor = ???
+    val inactiveCaption: SystemColor = ???
 
+    /** The color rendered for the border around inactive windows. */
     @stub
-    // The color rendered for the border around inactive windows.
-    def inactiveCaptionBorder: SystemColor = ???
+    val inactiveCaptionBorder: SystemColor = ???
 
+    /** The color rendered for the window-title text of inactive windows. */
     @stub
-    // The color rendered for the window-title text of inactive windows.
-    def inactiveCaptionText: SystemColor = ???
+    val inactiveCaptionText: SystemColor = ???
 
+    /** The color rendered for the background of tooltips or spot help. */
     @stub
-    // The color rendered for the background of tooltips or spot help.
-    def info: SystemColor = ???
+    val info: SystemColor = ???
 
+    /** The array index for the
+     *  info system color.
+     */
     @stub
-    // The array index for the
-    // info system color.
-    def INFO: Int = ???
+    val INFO: Int = ???
 
+    /** The array index for the
+     *  infoText system color.
+     */
     @stub
-    // The array index for the
-    // infoText system color.
-    def INFO_TEXT: Int = ???
+    val INFO_TEXT: Int = ???
 
+    /** The color rendered for the text of tooltips or spot help. */
     @stub
-    // The color rendered for the text of tooltips or spot help.
-    def infoText: SystemColor = ???
+    val infoText: SystemColor = ???
 
+    /** The color rendered for the background of menus. */
     @stub
-    // The color rendered for the background of menus.
-    def menu: SystemColor = ???
+    val menu: SystemColor = ???
 
+    /** The array index for the
+     *  menu system color.
+     */
     @stub
-    // The array index for the
-    // menu system color.
-    def MENU: Int = ???
+    val MENU: Int = ???
 
+    /** The array index for the
+     *  menuText system color.
+     */
     @stub
-    // The array index for the
-    // menuText system color.
-    def MENU_TEXT: Int = ???
+    val MENU_TEXT: Int = ???
 
+    /** The color rendered for the text of menus. */
     @stub
-    // The color rendered for the text of menus.
-    def menuText: SystemColor = ???
+    val menuText: SystemColor = ???
 
+    /** The number of system colors in the array. */
     @stub
-    // The number of system colors in the array.
-    def NUM_COLORS: Int = ???
+    val NUM_COLORS: Int = ???
 
+    /** The color rendered for the background of scrollbars. */
     @stub
-    // The color rendered for the background of scrollbars.
-    def scrollbar: SystemColor = ???
+    val scrollbar: SystemColor = ???
 
+    /** The array index for the
+     *  scrollbar system color.
+     */
     @stub
-    // The array index for the
-    // scrollbar system color.
-    def SCROLLBAR: Int = ???
+    val SCROLLBAR: Int = ???
 
+    /** The color rendered for the background of text control objects, such as
+     *  textfields and comboboxes.
+     */
     @stub
-    // The color rendered for the background of text control objects, such as
-    // textfields and comboboxes.
-    def text: SystemColor = ???
+    val text: SystemColor = ???
 
+    /** The array index for the
+     *  text system color.
+     */
     @stub
-    // The array index for the
-    // text system color.
-    def TEXT: Int = ???
+    val TEXT: Int = ???
 
+    /** The array index for the
+     *  textHighlight system color.
+     */
     @stub
-    // The array index for the
-    // textHighlight system color.
-    def TEXT_HIGHLIGHT: Int = ???
+    val TEXT_HIGHLIGHT: Int = ???
 
+    /** The array index for the
+     *  textHighlightText system color.
+     */
     @stub
-    // The array index for the
-    // textHighlightText system color.
-    def TEXT_HIGHLIGHT_TEXT: Int = ???
+    val TEXT_HIGHLIGHT_TEXT: Int = ???
 
+    /** The array index for the
+     *  textInactiveText system color.
+     */
     @stub
-    // The array index for the
-    // textInactiveText system color.
-    def TEXT_INACTIVE_TEXT: Int = ???
+    val TEXT_INACTIVE_TEXT: Int = ???
 
+    /** The array index for the
+     *  textText system color.
+     */
     @stub
-    // The array index for the
-    // textText system color.
-    def TEXT_TEXT: Int = ???
+    val TEXT_TEXT: Int = ???
 
+    /** The color rendered for the background of selected items, such as in menus,
+     *  comboboxes, and text.
+     */
     @stub
-    // The color rendered for the background of selected items, such as in menus,
-    // comboboxes, and text.
-    def textHighlight: SystemColor = ???
+    val textHighlight: SystemColor = ???
 
+    /** The color rendered for the text of selected items, such as in menus, comboboxes,
+     *  and text.
+     */
     @stub
-    // The color rendered for the text of selected items, such as in menus, comboboxes,
-    // and text.
-    def textHighlightText: SystemColor = ???
+    val textHighlightText: SystemColor = ???
 
+    /** The color rendered for the text of inactive items, such as in menus. */
     @stub
-    // The color rendered for the text of inactive items, such as in menus.
-    def textInactiveText: SystemColor = ???
+    val textInactiveText: SystemColor = ???
 
+    /** The color rendered for the text of text control objects, such as textfields
+     *  and comboboxes.
+     */
     @stub
-    // The color rendered for the text of text control objects, such as textfields
-    // and comboboxes.
-    def textText: SystemColor = ???
+    val textText: SystemColor = ???
 
+    /** The color rendered for the background of interior regions inside windows. */
     @stub
-    // The color rendered for the background of interior regions inside windows.
-    def window: SystemColor = ???
+    val window: SystemColor = ???
 
+    /** The array index for the
+     *  window system color.
+     */
     @stub
-    // The array index for the
-    // window system color.
-    def WINDOW: Int = ???
+    val WINDOW: Int = ???
 
+    /** The array index for the
+     *  windowBorder system color.
+     */
     @stub
-    // The array index for the
-    // windowBorder system color.
-    def WINDOW_BORDER: Int = ???
+    val WINDOW_BORDER: Int = ???
 
+    /** The array index for the
+     *  windowText system color.
+     */
     @stub
-    // The array index for the
-    // windowText system color.
-    def WINDOW_TEXT: Int = ???
+    val WINDOW_TEXT: Int = ???
 
+    /** The color rendered for the border around interior regions inside windows. */
     @stub
-    // The color rendered for the border around interior regions inside windows.
-    def windowBorder: SystemColor = ???
+    val windowBorder: SystemColor = ???
 }

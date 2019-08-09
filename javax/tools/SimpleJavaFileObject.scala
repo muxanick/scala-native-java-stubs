@@ -4,67 +4,69 @@ import java.io.{InputStream, OutputStream, Reader, Writer}
 import java.lang.{CharSequence, Object, String}
 import javax.lang.model.element.{Modifier, NestingKind}
 
-// Provides simple implementations for most methods in JavaFileObject.
-// This class is designed to be subclassed and used as a basis for
-// JavaFileObject implementations.  Subclasses can override the
-// implementation and specification of any method of this class as
-// long as the general contract of JavaFileObject is obeyed.
+/** Provides simple implementations for most methods in JavaFileObject.
+ *  This class is designed to be subclassed and used as a basis for
+ *  JavaFileObject implementations.  Subclasses can override the
+ *  implementation and specification of any method of this class as
+ *  long as the general contract of JavaFileObject is obeyed.
+ */
 class SimpleJavaFileObject extends Object with JavaFileObject {
 
+    /** The kind of this file object. */
     @stub
-    // The kind of this file object.
-    protected def kind: JavaFileObject.Kind = ???
+    protected val kind: JavaFileObject.Kind = ???
 
+    /** This implementation does nothing. */
     @stub
-    // This implementation does nothing.
     def delete(): Boolean = ???
 
+    /** This implementation returns null. */
     @stub
-    // This implementation returns null.
     def getAccessLevel(): Modifier = ???
 
+    /** This implementation always throws UnsupportedOperationException. */
     @stub
-    // This implementation always throws UnsupportedOperationException.
     def getCharContent(ignoreEncodingErrors: Boolean): CharSequence = ???
 
+    /** Gets the kind of this file object. */
     @stub
-    // Gets the kind of this file object.
     def getKind(): JavaFileObject.Kind = ???
 
+    /** This implementation returns 0L. */
     @stub
-    // This implementation returns 0L.
     def getLastModified(): Long = ???
 
+    /** Gets a user-friendly name for this file object. */
     @stub
-    // Gets a user-friendly name for this file object.
     def getName(): String = ???
 
+    /** This implementation returns null. */
     @stub
-    // This implementation returns null.
     def getNestingKind(): NestingKind = ???
 
+    /** This implementation compares the path of its URI to the given
+     *  simple name.
+     */
     @stub
-    // This implementation compares the path of its URI to the given
-    // simple name.
     def isNameCompatible(simpleName: String, kind: JavaFileObject.Kind): Boolean = ???
 
+    /** This implementation always throws UnsupportedOperationException. */
     @stub
-    // This implementation always throws UnsupportedOperationException.
     def openInputStream(): InputStream = ???
 
+    /** This implementation always throws UnsupportedOperationException. */
     @stub
-    // This implementation always throws UnsupportedOperationException.
     def openOutputStream(): OutputStream = ???
 
+    /** Wraps the result of getCharContent(boolean) in a Reader. */
     @stub
-    // Wraps the result of getCharContent(boolean) in a Reader.
     def openReader(ignoreEncodingErrors: Boolean): Reader = ???
 
+    /** Wraps the result of openOutputStream in a Writer. */
     @stub
-    // Wraps the result of openOutputStream in a Writer.
     def openWriter(): Writer = ???
 
+    /** Returns a string representation of the object. */
     @stub
-    // Returns a string representation of the object.
     def toString(): String = ???
 }

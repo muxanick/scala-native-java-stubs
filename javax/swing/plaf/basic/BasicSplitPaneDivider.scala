@@ -6,160 +6,174 @@ import java.lang.Object
 import javax.swing.{JButton, JSplitPane}
 import javax.swing.border.Border
 
-// Divider used by BasicSplitPaneUI. Subclassers may wish to override
-// paint to do something more interesting.
-// The border effect is drawn in BasicSplitPaneUI, so if you don't like
-// that border, reset it there.
-// To conditionally drag from certain areas subclass mousePressed and
-// call super when you wish the dragging to begin.
-// 
-// Warning:
-// Serialized objects of this class will not be compatible with
-// future Swing releases. The current serialization support is
-// appropriate for short term storage or RMI between applications running
-// the same version of Swing.  As of 1.4, support for long term storage
-// of all JavaBeans™
-// has been added to the java.beans package.
-// Please see XMLEncoder.
+/** Divider used by BasicSplitPaneUI. Subclassers may wish to override
+ *  paint to do something more interesting.
+ *  The border effect is drawn in BasicSplitPaneUI, so if you don't like
+ *  that border, reset it there.
+ *  To conditionally drag from certain areas subclass mousePressed and
+ *  call super when you wish the dragging to begin.
+ *  
+ *  Warning:
+ *  Serialized objects of this class will not be compatible with
+ *  future Swing releases. The current serialization support is
+ *  appropriate for short term storage or RMI between applications running
+ *  the same version of Swing.  As of 1.4, support for long term storage
+ *  of all JavaBeans™
+ *  has been added to the java.beans package.
+ *  Please see XMLEncoder.
+ */
 class BasicSplitPaneDivider extends Container with PropertyChangeListener {
 
+    /** Used to layout a BasicSplitPaneDivider. */
     @stub
-    // Used to layout a BasicSplitPaneDivider.
-    protected def BasicSplitPaneDivider.DividerLayout: class = ???
+    protected object DividerLayout extends BasicSplitPaneDivider.DividerLayout
 
+    /** Handles the events during a dragging session for a
+     *  HORIZONTAL_SPLIT oriented split pane.
+     */
     @stub
-    // Handles the events during a dragging session for a
-    // HORIZONTAL_SPLIT oriented split pane.
-    protected def BasicSplitPaneDivider.DragController: class = ???
+    protected object DragController extends BasicSplitPaneDivider.DragController
 
+    /** MouseHandler is responsible for converting mouse events
+     *  (released, dragged...) into the appropriate DragController
+     *  methods.
+     */
     @stub
-    // MouseHandler is responsible for converting mouse events
-    // (released, dragged...) into the appropriate DragController
-    // methods.
-    protected def BasicSplitPaneDivider.MouseHandler: class = ???
+    protected object MouseHandler extends BasicSplitPaneDivider.MouseHandler
 
+    /** Size of the divider. */
     @stub
-    // Size of the divider.
-    protected def dividerSize: Int = ???
+    protected val dividerSize: Int = ???
 
+    /** Handles mouse dragging message to do the actual dragging. */
     @stub
-    // Handles mouse dragging message to do the actual dragging.
-    protected def dragger: BasicSplitPaneDivider.DragController = ???
+    protected val dragger: BasicSplitPaneDivider.DragController = ???
 
+    /** Divider that is used for noncontinuous layout mode. */
     @stub
-    // Divider that is used for noncontinuous layout mode.
-    protected def hiddenDivider: Component = ???
+    protected val hiddenDivider: Component = ???
 
+    /** Button for quickly toggling the left component. */
     @stub
-    // Button for quickly toggling the left component.
-    protected def leftButton: JButton = ???
+    protected val leftButton: JButton = ???
 
+    /** Handles mouse events from both this class, and the split pane. */
     @stub
-    // Handles mouse events from both this class, and the split pane.
-    protected def mouseHandler: BasicSplitPaneDivider.MouseHandler = ???
+    protected val mouseHandler: BasicSplitPaneDivider.MouseHandler = ???
 
+    /** Orientation of the JSplitPane. */
     @stub
-    // Orientation of the JSplitPane.
-    protected def orientation: Int = ???
+    protected val orientation: Int = ???
 
+    /** Button for quickly toggling the right component. */
     @stub
-    // Button for quickly toggling the right component.
-    protected def rightButton: JButton = ???
+    protected val rightButton: JButton = ???
 
+    /** JSplitPane the receiver is contained in. */
     @stub
-    // JSplitPane the receiver is contained in.
-    protected def splitPane: JSplitPane = ???
+    protected val splitPane: JSplitPane = ???
 
+    /** Creates and return an instance of JButton that can be used to
+     *  collapse the left component in the split pane.
+     */
     @stub
-    // Creates and return an instance of JButton that can be used to
-    // collapse the left component in the split pane.
     protected def createLeftOneTouchButton(): JButton = ???
 
+    /** Creates and return an instance of JButton that can be used to
+     *  collapse the right component in the split pane.
+     */
     @stub
-    // Creates and return an instance of JButton that can be used to
-    // collapse the right component in the split pane.
     protected def createRightOneTouchButton(): JButton = ???
 
+    /** Messages the BasicSplitPaneUI with dragDividerTo that this instance
+     *  is contained in.
+     */
     @stub
-    // Messages the BasicSplitPaneUI with dragDividerTo that this instance
-    // is contained in.
     protected def dragDividerTo(location: Int): Unit = ???
 
+    /** Messages the BasicSplitPaneUI with finishDraggingTo that this instance
+     *  is contained in.
+     */
     @stub
-    // Messages the BasicSplitPaneUI with finishDraggingTo that this instance
-    // is contained in.
     protected def finishDraggingTo(location: Int): Unit = ???
 
+    /** Returns the SplitPaneUI the receiver is currently
+     *  in.
+     */
     @stub
-    // Returns the SplitPaneUI the receiver is currently
-    // in.
     def getBasicSplitPaneUI(): BasicSplitPaneUI = ???
 
+    /** Returns the border of this component or null if no border is
+     *  currently set.
+     */
     @stub
-    // Returns the border of this component or null if no border is
-    // currently set.
     def getBorder(): Border = ???
 
+    /** Returns the size of the divider, that is the width if the splitpane
+     *  is HORIZONTAL_SPLIT, or the height of VERTICAL_SPLIT.
+     */
     @stub
-    // Returns the size of the divider, that is the width if the splitpane
-    // is HORIZONTAL_SPLIT, or the height of VERTICAL_SPLIT.
     def getDividerSize(): Int = ???
 
+    /** If a border has been set on this component, returns the
+     *  border's insets, else calls super.getInsets.
+     */
     @stub
-    // If a border has been set on this component, returns the
-    // border's insets, else calls super.getInsets.
     def getInsets(): Insets = ???
 
+    /** Returns dividerSize x dividerSize */
     @stub
-    // Returns dividerSize x dividerSize
     def getMinimumSize(): Dimension = ???
 
+    /** Returns dividerSize x dividerSize */
     @stub
-    // Returns dividerSize x dividerSize
     def getPreferredSize(): Dimension = ???
 
+    /** Returns whether or not the mouse is currently over the divider */
     @stub
-    // Returns whether or not the mouse is currently over the divider
     def isMouseOver(): Boolean = ???
 
+    /** Messaged when the oneTouchExpandable value of the JSplitPane the
+     *  receiver is contained in changes.
+     */
     @stub
-    // Messaged when the oneTouchExpandable value of the JSplitPane the
-    // receiver is contained in changes.
     protected def oneTouchExpandableChanged(): Unit = ???
 
+    /** Paints the divider. */
     @stub
-    // Paints the divider.
     def paint(g: Graphics): Unit = ???
 
+    /** Message to prepare for dragging. */
     @stub
-    // Message to prepare for dragging.
     protected def prepareForDragging(): Unit = ???
 
+    /** Property change event, presumably from the JSplitPane, will message
+     *  updateOrientation if necessary.
+     */
     @stub
-    // Property change event, presumably from the JSplitPane, will message
-    // updateOrientation if necessary.
     def propertyChange(e: PropertyChangeEvent): Unit = ???
 
+    /** Sets the SplitPaneUI that is using the receiver. */
     @stub
-    // Sets the SplitPaneUI that is using the receiver.
     def setBasicSplitPaneUI(newUI: BasicSplitPaneUI): Unit = ???
 
+    /** Sets the border of this component. */
     @stub
-    // Sets the border of this component.
     def setBorder(border: Border): Unit = ???
 
+    /** Sets the size of the divider to newSize. */
     @stub
-    // Sets the size of the divider to newSize.
     def setDividerSize(newSize: Int): Unit = ???
 }
 
 object BasicSplitPaneDivider {
+    /**  */
     @stub
-    // 
-    protected def ONE_TOUCH_OFFSET: Int = ???
+    protected val ONE_TOUCH_OFFSET: Int = ???
 
+    /** Width or height of the divider based on orientation
+     *  BasicSplitPaneUI adds two to this.
+     */
     @stub
-    // Width or height of the divider based on orientation
-    // BasicSplitPaneUI adds two to this.
-    protected def ONE_TOUCH_SIZE: Int = ???
+    protected val ONE_TOUCH_SIZE: Int = ???
 }

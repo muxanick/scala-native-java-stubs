@@ -3,62 +3,63 @@ package java.security
 import java.lang.{Deprecated, Object, String}
 import java.util.Enumeration
 
-// This class represents a scope for identities. It is an Identity
-// itself, and therefore has a name and can have a scope. It can also
-// optionally have a public key and associated certificates.
-//
-// An IdentityScope can contain Identity objects of all kinds, including
-// Signers. All types of Identity objects can be retrieved, added, and
-// removed using the same methods. Note that it is possible, and in fact
-// expected, that different types of identity scopes will
-// apply different policies for their various operations on the
-// various types of Identities.
-//
-// There is a one-to-one mapping between keys and identities, and
-// there can only be one copy of one key per scope. For example, suppose
-// Acme Software, Inc is a software publisher known to a user.
-// Suppose it is an Identity, that is, it has a public key, and a set of
-// associated certificates. It is named in the scope using the name
-// "Acme Software". No other named Identity in the scope has the same
-// public  key. Of course, none has the same name as well.
+/** This class represents a scope for identities. It is an Identity
+ *  itself, and therefore has a name and can have a scope. It can also
+ *  optionally have a public key and associated certificates.
+ * 
+ *  An IdentityScope can contain Identity objects of all kinds, including
+ *  Signers. All types of Identity objects can be retrieved, added, and
+ *  removed using the same methods. Note that it is possible, and in fact
+ *  expected, that different types of identity scopes will
+ *  apply different policies for their various operations on the
+ *  various types of Identities.
+ * 
+ *  There is a one-to-one mapping between keys and identities, and
+ *  there can only be one copy of one key per scope. For example, suppose
+ *  Acme Software, Inc is a software publisher known to a user.
+ *  Suppose it is an Identity, that is, it has a public key, and a set of
+ *  associated certificates. It is named in the scope using the name
+ *  "Acme Software". No other named Identity in the scope has the same
+ *  public  key. Of course, none has the same name as well.
+ */
 @Deprecated abstract class IdentityScope extends Identity {
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
     protected def this() = ???
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
     def this(name: String) = ???
 
-    // Deprecated. 
+    /** Deprecated.  */
     def addIdentity(identity: Identity): Unit
 
-    // Deprecated. 
+    /** Deprecated.  */
     def getIdentity(principal: Principal): Identity
 
-    // Deprecated. 
+    /** Deprecated.  */
     def getIdentity(key: PublicKey): Identity
 
-    // Deprecated. 
+    /** Deprecated.  */
     def getIdentity(name: String): Identity
 
-    // Deprecated. 
+    /** Deprecated.  */
     def identities(): Enumeration[Identity]
 
-    // Deprecated. 
+    /** Deprecated.  */
     def removeIdentity(identity: Identity): Unit
 
-    // Deprecated. 
+    /** Deprecated.  */
     def size(): Int
 }
 
 object IdentityScope {
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
     def getSystemScope(): IdentityScope = ???
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
     protected def setSystemScope(scope: IdentityScope): Unit = ???
 }

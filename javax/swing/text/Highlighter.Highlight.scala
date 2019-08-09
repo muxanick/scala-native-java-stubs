@@ -1,13 +1,13 @@
 package javax.swing.text
 
-// 
+/**  */
 object trait Highlighter.Highlight {
 
+    /** Gets the ending model offset for the highlight. */
     @stub
-    // Gets the ending model offset for the highlight.
     def getEndOffset(): Int = ???
 
+    /** Gets the painter for the highlighter. */
     @stub
-    // Gets the painter for the highlighter.
     def getPainter(): Highlighter.HighlightPainter = ???
 }

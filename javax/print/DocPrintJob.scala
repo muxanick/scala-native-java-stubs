@@ -3,33 +3,35 @@ package javax.print
 import javax.print.attribute.{PrintJobAttributeSet, PrintRequestAttributeSet}
 import javax.print.event.{PrintJobAttributeListener, PrintJobListener}
 
-// This interface represents a print job that can print a specified
-// document with a set of job attributes.  An object implementing
-// this interface is obtained from a print service.
+/** This interface represents a print job that can print a specified
+ *  document with a set of job attributes.  An object implementing
+ *  this interface is obtained from a print service.
+ */
 trait DocPrintJob {
 
+    /** Registers a listener for changes in the specified attributes. */
     @stub
-    // Registers a listener for changes in the specified attributes.
     def addPrintJobAttributeListener(listener: PrintJobAttributeListener, attributes: PrintJobAttributeSet): Unit = ???
 
+    /** Registers a listener for event occurring during this print job. */
     @stub
-    // Registers a listener for event occurring during this print job.
     def addPrintJobListener(listener: PrintJobListener): Unit = ???
 
+    /** Obtains this Print Job's set of printing attributes. */
     @stub
-    // Obtains this Print Job's set of printing attributes.
     def getAttributes(): PrintJobAttributeSet = ???
 
+    /** Determines the PrintService object to which this print job
+     *  object is bound.
+     */
     @stub
-    // Determines the PrintService object to which this print job
-    // object is bound.
     def getPrintService(): PrintService = ???
 
+    /** Prints a document with the specified job attributes. */
     @stub
-    // Prints a document with the specified job attributes.
     def print(doc: Doc, attributes: PrintRequestAttributeSet): Unit = ???
 
+    /** Removes an attribute listener from this print job. */
     @stub
-    // Removes an attribute listener from this print job.
     def removePrintJobAttributeListener(listener: PrintJobAttributeListener): Unit = ???
 }

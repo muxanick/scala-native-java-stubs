@@ -2,21 +2,22 @@ package javax.naming.ldap
 
 import java.lang.{Object, String}
 
-// A sort key and its associated sort parameters.
-// This class implements a sort key which is used by the LDAPv3
-// Control for server-side sorting of search results as defined in
-// RFC 2891.
+/** A sort key and its associated sort parameters.
+ *  This class implements a sort key which is used by the LDAPv3
+ *  Control for server-side sorting of search results as defined in
+ *  RFC 2891.
+ */
 class SortKey extends Object {
 
+    /** Creates the default sort key for an attribute. */
     @stub
-    // Creates the default sort key for an attribute.
     def this(attrID: String) = ???
 
+    /** Retrieves the attribute ID of the sort key. */
     @stub
-    // Retrieves the attribute ID of the sort key.
     def getAttributeID(): String = ???
 
+    /** Retrieves the matching rule ID used to order the attribute values. */
     @stub
-    // Retrieves the matching rule ID used to order the attribute values.
     def getMatchingRuleID(): String = ???
 }

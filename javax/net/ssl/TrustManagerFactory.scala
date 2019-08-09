@@ -3,48 +3,54 @@ package javax.net.ssl
 import java.lang.{Object, String}
 import java.security.{KeyStore, Provider}
 
-// This class acts as a factory for trust managers based on a
-// source of trust material. Each trust manager manages a specific
-// type of trust material for use by secure sockets. The trust
-// material is based on a KeyStore and/or provider specific sources.
+/** This class acts as a factory for trust managers based on a
+ *  source of trust material. Each trust manager manages a specific
+ *  type of trust material for use by secure sockets. The trust
+ *  material is based on a KeyStore and/or provider specific sources.
+ */
 class TrustManagerFactory extends Object {
 
+    /** Returns the algorithm name of this TrustManagerFactory
+     *  object.
+     */
     @stub
-    // Returns the algorithm name of this TrustManagerFactory
-    // object.
     def getAlgorithm(): String = ???
 
+    /** Returns the provider of this TrustManagerFactory object. */
     @stub
-    // Returns the provider of this TrustManagerFactory object.
     def getProvider(): Provider = ???
 
+    /** Returns one trust manager for each type of trust material. */
     @stub
-    // Returns one trust manager for each type of trust material.
     def getTrustManagers(): Array[TrustManager] = ???
 
+    /** Initializes this factory with a source of certificate
+     *  authorities and related trust material.
+     */
     @stub
-    // Initializes this factory with a source of certificate
-    // authorities and related trust material.
     def init(ks: KeyStore): Unit = ???
 }
 
 object TrustManagerFactory {
+    /** Obtains the default TrustManagerFactory algorithm name. */
     @stub
-    // Obtains the default TrustManagerFactory algorithm name.
     def getDefaultAlgorithm(): String = ???
 
+    /** Returns a TrustManagerFactory object that acts as a
+     *  factory for trust managers.
+     */
     @stub
-    // Returns a TrustManagerFactory object that acts as a
-    // factory for trust managers.
     def getInstance(algorithm: String): TrustManagerFactory = ???
 
+    /** Returns a TrustManagerFactory object that acts as a
+     *  factory for trust managers.
+     */
     @stub
-    // Returns a TrustManagerFactory object that acts as a
-    // factory for trust managers.
     def getInstance(algorithm: String, provider: Provider): TrustManagerFactory = ???
 
+    /** Returns a TrustManagerFactory object that acts as a
+     *  factory for trust managers.
+     */
     @stub
-    // Returns a TrustManagerFactory object that acts as a
-    // factory for trust managers.
     def getInstance(algorithm: String, provider: String): TrustManagerFactory = ???
 }

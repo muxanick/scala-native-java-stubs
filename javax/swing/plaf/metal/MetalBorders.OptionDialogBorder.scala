@@ -5,10 +5,10 @@ import java.lang.Object
 import javax.swing.border.AbstractBorder
 import javax.swing.plaf.UIResource
 
-// 
+/**  */
 object MetalBorders.OptionDialogBorder extends AbstractBorder with UIResource {
 
+    /** Reinitializes the insets parameter with this Border's current Insets. */
     @stub
-    // Reinitializes the insets parameter with this Border's current Insets.
     def getBorderInsets(c: Component, newInsets: Insets): Insets = ???
 }

@@ -43,7 +43,7 @@ def requestParseAndSave(classname, args, all_classes):
     if not os.path.exists(scalafile):
         dirs = os.path.dirname(scalafile)
         os.makedirs(dirs, exist_ok=True)
-    elif all_classes:
+    elif all_classes and not args.overwrite:
         return []
     full_url = 'http://docs.oracle.com/javase/' + args.java + '/docs/api/' + filepath
     try:
@@ -72,7 +72,7 @@ def requestParseAndSave(classname, args, all_classes):
                     return
                 baseurl.append(elem.split("#")[0].split('.html')[0])
         new_classname = '.'.join(baseurl)
-        if (new_classname not in refs) and (new_classname != classname):
+        if (new_classname not in refs) and (new_classname != classname) and new_classname.startswith('java'):
             refs.append(new_classname)
 
     def cleanToken(dirty_token):
@@ -238,7 +238,7 @@ def requestParseAndSave(classname, args, all_classes):
                         new_tokens.pop(j)
                     else:
                         j += 1
-                new_tokens[idx:] = ['with ' + ', with '.join(new_tokens[idx+1:])]
+                new_tokens[idx:] = ['with ' + ' with '.join(new_tokens[idx+1:])]
             elif new_tokens[idx] == '@interface':
                 new_tokens[idx:] = ['\n', 'final', 'class', new_tokens[idx+1], 'extends', 'StaticAnnotation']
             elif new_tokens[idx] == 'extends':
@@ -251,7 +251,7 @@ def requestParseAndSave(classname, args, all_classes):
                     else:
                         j += 1
                 if j > idx + 2:
-                    new_tokens[idx:j] = ['extends ' + ', with '.join(new_tokens[idx+1:])]
+                    new_tokens[idx:j] = ['extends ' + ' with '.join(new_tokens[idx+1:])]
                 else:
                     idx = j
             else:
@@ -308,6 +308,10 @@ def requestParseAndSave(classname, args, all_classes):
             line += 'final val ' + name + ' = new ' + classshortname + '(' + name + ', ' + str(enum_value[0]) + ')'
             enum_value_line = True
             enum_value[0] += 1
+        elif lineType == 'class':
+            line += 'object ' + name.split('.')[-1] + ' extends ' + name
+            lineType = None
+            abstract = True
         else:
             line += ('def ' if params != None else 'val ') + name + (generic if generic != None else '')
         if params != None:
@@ -372,7 +376,11 @@ def requestParseAndSave(classname, args, all_classes):
                 definition['tokens'].remove('enum')
                 definition['tokens'] = ['class'] + definition['tokens']
             else:
-                definition['tokens'] = ['object'] + definition['tokens']
+                if 'final' in definition['tokens']:
+                    definition['tokens'].remove('final')
+                    definition['tokens'] = ['final', 'object'] + definition['tokens']
+                else:
+                    definition['tokens'] = ['object'] + definition['tokens']
 
         enum_value[0] = 0
         code += makeClassDefinition(definition['tokens'], class_enum = class_enum)

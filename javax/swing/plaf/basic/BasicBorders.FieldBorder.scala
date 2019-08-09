@@ -5,22 +5,22 @@ import java.lang.Object
 import javax.swing.border.AbstractBorder
 import javax.swing.plaf.UIResource
 
-// 
+/**  */
 object BasicBorders.FieldBorder extends AbstractBorder with UIResource {
 
+    /**  */
     @stub
-    // 
-    protected def darkShadow: Color = ???
+    protected val darkShadow: Color = ???
 
+    /**  */
     @stub
-    // 
-    protected def highlight: Color = ???
+    protected val highlight: Color = ???
 
+    /**  */
     @stub
-    // 
-    protected def lightHighlight: Color = ???
+    protected val lightHighlight: Color = ???
 
+    /** Reinitializes the insets parameter with this Border's current Insets. */
     @stub
-    // Reinitializes the insets parameter with this Border's current Insets.
     def getBorderInsets(c: Component, insets: Insets): Insets = ???
 }

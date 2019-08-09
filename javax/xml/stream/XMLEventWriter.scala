@@ -5,49 +5,53 @@ import javax.xml.namespace.NamespaceContext
 import javax.xml.stream.events.XMLEvent
 import javax.xml.stream.util.XMLEventConsumer
 
-// This is the top level interface for writing XML documents.
-//
-// Instances of this interface are not required to validate the
-// form of the XML.
+/** This is the top level interface for writing XML documents.
+ * 
+ *  Instances of this interface are not required to validate the
+ *  form of the XML.
+ */
 trait XMLEventWriter extends XMLEventConsumer {
 
+    /** Add an event to the output stream
+     *  Adding a START_ELEMENT will open a new namespace scope that
+     *  will be closed when the corresponding END_ELEMENT is written.
+     */
     @stub
-    // Add an event to the output stream
-    // Adding a START_ELEMENT will open a new namespace scope that
-    // will be closed when the corresponding END_ELEMENT is written.
     def add(event: XMLEvent): Unit = ???
 
+    /** Adds an entire stream to an output stream,
+     *  calls next() on the inputStream argument until hasNext() returns false
+     *  This should be treated as a convenience method that will
+     *  perform the following loop over all the events in an
+     *  event reader and call add on each event.
+     */
     @stub
-    // Adds an entire stream to an output stream,
-    // calls next() on the inputStream argument until hasNext() returns false
-    // This should be treated as a convenience method that will
-    // perform the following loop over all the events in an
-    // event reader and call add on each event.
     def add(reader: XMLEventReader): Unit = ???
 
+    /** Frees any resources associated with this stream */
     @stub
-    // Frees any resources associated with this stream
     def close(): Unit = ???
 
+    /** Writes any cached events to the underlying output mechanism */
     @stub
-    // Writes any cached events to the underlying output mechanism
     def flush(): Unit = ???
 
+    /** Returns the current namespace context. */
     @stub
-    // Returns the current namespace context.
     def getNamespaceContext(): NamespaceContext = ???
 
+    /** Gets the prefix the uri is bound to */
     @stub
-    // Gets the prefix the uri is bound to
     def getPrefix(uri: String): String = ???
 
+    /** Binds a URI to the default namespace
+     *  This URI is bound
+     *  in the scope of the current START_ELEMENT / END_ELEMENT pair.
+     */
     @stub
-    // Binds a URI to the default namespace
-    // This URI is bound
-    // in the scope of the current START_ELEMENT / END_ELEMENT pair.
     def setDefaultNamespace(uri: String): Unit = ???
 
+    /** Sets the current namespace context for prefix and uri bindings. */
     @stub
-    // Sets the current namespace context for prefix and uri bindings.
     def setNamespaceContext(context: NamespaceContext): Unit = ???
 }

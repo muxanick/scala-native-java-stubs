@@ -2,81 +2,84 @@ package javax.swing.text
 
 import java.lang.Object
 
-// Specification for building elements.
-// 
-// Warning:
-// Serialized objects of this class will not be compatible with
-// future Swing releases. The current serialization support is
-// appropriate for short term storage or RMI between applications running
-// the same version of Swing.  As of 1.4, support for long term storage
-// of all JavaBeans™
-// has been added to the java.beans package.
-// Please see XMLEncoder.
+/** Specification for building elements.
+ *  
+ *  Warning:
+ *  Serialized objects of this class will not be compatible with
+ *  future Swing releases. The current serialization support is
+ *  appropriate for short term storage or RMI between applications running
+ *  the same version of Swing.  As of 1.4, support for long term storage
+ *  of all JavaBeans™
+ *  has been added to the java.beans package.
+ *  Please see XMLEncoder.
+ */
 object DefaultStyledDocument.ElementSpec extends Object {
 
+    /** Constructor useful for markup when the markup will not
+     *  be stored in the document.
+     */
     @stub
-    // Constructor useful for markup when the markup will not
-    // be stored in the document.
     def ElementSpec(a: AttributeSet, type: Short) = ???
 
+    /** Constructor for creating a spec externally for batch
+     *  input of content and markup into the document.
+     */
     @stub
-    // Constructor for creating a spec externally for batch
-    // input of content and markup into the document.
     def ElementSpec(a: AttributeSet, type: Short, txt: Array[Char], offs: Int, len: Int) = ???
 
+    /** A possible value for getType. */
     @stub
-    // A possible value for getType.
-    def ContentType: Short = ???
+    val ContentType: Short = ???
 
+    /** A possible value for getType. */
     @stub
-    // A possible value for getType.
-    def EndTagType: Short = ???
+    val EndTagType: Short = ???
 
+    /** A possible value for getDirection. */
     @stub
-    // A possible value for getDirection.
-    def JoinFractureDirection: Short = ???
+    val JoinFractureDirection: Short = ???
 
+    /** A possible value for getDirection. */
     @stub
-    // A possible value for getDirection.
-    def JoinNextDirection: Short = ???
+    val JoinNextDirection: Short = ???
 
+    /** A possible value for getDirection. */
     @stub
-    // A possible value for getDirection.
-    def JoinPreviousDirection: Short = ???
+    val JoinPreviousDirection: Short = ???
 
+    /** A possible value for getDirection. */
     @stub
-    // A possible value for getDirection.
-    def OriginateDirection: Short = ???
+    val OriginateDirection: Short = ???
 
+    /** Gets the array of characters. */
     @stub
-    // Gets the array of characters.
     def getArray(): Array[Char] = ???
 
+    /** Gets the element attributes. */
     @stub
-    // Gets the element attributes.
     def getAttributes(): AttributeSet = ???
 
+    /** Gets the direction. */
     @stub
-    // Gets the direction.
     def getDirection(): Short = ???
 
+    /** Gets the length. */
     @stub
-    // Gets the length.
     def getLength(): Int = ???
 
+    /** Gets the starting offset. */
     @stub
-    // Gets the starting offset.
     def getOffset(): Int = ???
 
+    /** Gets the element type. */
     @stub
-    // Gets the element type.
     def getType(): Short = ???
 
+    /** Sets the direction. */
     @stub
-    // Sets the direction.
     def setDirection(direction: Short): Unit = ???
 
+    /** Sets the element type. */
     @stub
-    // Sets the element type.
     def setType(type: Short): Unit = ???
 }

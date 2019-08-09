@@ -3,397 +3,454 @@ package java.util.concurrent
 import java.lang.{Object, Runnable, String, Throwable, Void}
 import java.util.function.{BiConsumer, BiFunction, Consumer, Function, Supplier}
 
-// A Future that may be explicitly completed (setting its
-// value and status), and may be used as a CompletionStage,
-// supporting dependent functions and actions that trigger upon its
-// completion.
-//
-// When two or more threads attempt to
-// complete,
-// completeExceptionally, or
-// cancel
-// a CompletableFuture, only one of them succeeds.
-//
-// In addition to these and related methods for directly
-// manipulating status and results, CompletableFuture implements
-// interface CompletionStage with the following policies: 
-//
-// Actions supplied for dependent completions of
-// non-async methods may be performed by the thread that
-// completes the current CompletableFuture, or by any other caller of
-// a completion method.
-//
-// All async methods without an explicit Executor
-// argument are performed using the ForkJoinPool.commonPool()
-// (unless it does not support a parallelism level of at least two, in
-// which case, a new Thread is created to run each task).  To simplify
-// monitoring, debugging, and tracking, all generated asynchronous
-// tasks are instances of the marker interface CompletableFuture.AsynchronousCompletionTask. 
-//
-// All CompletionStage methods are implemented independently of
-// other public methods, so the behavior of one method is not impacted
-// by overrides of others in subclasses.   
-//
-// CompletableFuture also implements Future with the following
-// policies: 
-//
-// Since (unlike FutureTask) this class has no direct
-// control over the computation that causes it to be completed,
-// cancellation is treated as just another form of exceptional
-// completion.  Method cancel has the same effect as
-// completeExceptionally(new CancellationException()). Method
-// isCompletedExceptionally() can be used to determine if a
-// CompletableFuture completed in any exceptional fashion.
-//
-// In case of exceptional completion with a CompletionException,
-// methods get() and get(long, TimeUnit) throw an
-// ExecutionException with the same cause as held in the
-// corresponding CompletionException.  To simplify usage in most
-// contexts, this class also defines methods join() and
-// getNow(T) that instead throw the CompletionException directly
-// in these cases. 
-class CompletableFuture[T] extends Object with Future[T], with CompletionStage[T] {
+/** A Future that may be explicitly completed (setting its
+ *  value and status), and may be used as a CompletionStage,
+ *  supporting dependent functions and actions that trigger upon its
+ *  completion.
+ * 
+ *  When two or more threads attempt to
+ *  complete,
+ *  completeExceptionally, or
+ *  cancel
+ *  a CompletableFuture, only one of them succeeds.
+ * 
+ *  In addition to these and related methods for directly
+ *  manipulating status and results, CompletableFuture implements
+ *  interface CompletionStage with the following policies: 
+ * 
+ *  Actions supplied for dependent completions of
+ *  non-async methods may be performed by the thread that
+ *  completes the current CompletableFuture, or by any other caller of
+ *  a completion method.
+ * 
+ *  All async methods without an explicit Executor
+ *  argument are performed using the ForkJoinPool.commonPool()
+ *  (unless it does not support a parallelism level of at least two, in
+ *  which case, a new Thread is created to run each task).  To simplify
+ *  monitoring, debugging, and tracking, all generated asynchronous
+ *  tasks are instances of the marker interface CompletableFuture.AsynchronousCompletionTask. 
+ * 
+ *  All CompletionStage methods are implemented independently of
+ *  other public methods, so the behavior of one method is not impacted
+ *  by overrides of others in subclasses.   
+ * 
+ *  CompletableFuture also implements Future with the following
+ *  policies: 
+ * 
+ *  Since (unlike FutureTask) this class has no direct
+ *  control over the computation that causes it to be completed,
+ *  cancellation is treated as just another form of exceptional
+ *  completion.  Method cancel has the same effect as
+ *  completeExceptionally(new CancellationException()). Method
+ *  isCompletedExceptionally() can be used to determine if a
+ *  CompletableFuture completed in any exceptional fashion.
+ * 
+ *  In case of exceptional completion with a CompletionException,
+ *  methods get() and get(long, TimeUnit) throw an
+ *  ExecutionException with the same cause as held in the
+ *  corresponding CompletionException.  To simplify usage in most
+ *  contexts, this class also defines methods join() and
+ *  getNow(T) that instead throw the CompletionException directly
+ *  in these cases. 
+ */
+class CompletableFuture[T] extends Object with Future[T] with CompletionStage[T] {
 
+    /** Returns a new CompletionStage that, when either this or the
+     *  other given stage complete normally, is executed with the
+     *  corresponding result as argument to the supplied action.
+     */
     @stub
-    // Returns a new CompletionStage that, when either this or the
-    // other given stage complete normally, is executed with the
-    // corresponding result as argument to the supplied action.
     def acceptEither(other: CompletionStage[_ <: T], action: Consumer[_ >: T]): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletionStage that, when either this or the
+     *  other given stage complete normally, is executed using this
+     *  stage's default asynchronous execution facility, with the
+     *  corresponding result as argument to the supplied action.
+     */
     @stub
-    // Returns a new CompletionStage that, when either this or the
-    // other given stage complete normally, is executed using this
-    // stage's default asynchronous execution facility, with the
-    // corresponding result as argument to the supplied action.
     def acceptEitherAsync(other: CompletionStage[_ <: T], action: Consumer[_ >: T]): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletionStage that, when either this or the
+     *  other given stage complete normally, is executed using the
+     *  supplied executor, with the corresponding result as argument to
+     *  the supplied function.
+     */
     @stub
-    // Returns a new CompletionStage that, when either this or the
-    // other given stage complete normally, is executed using the
-    // supplied executor, with the corresponding result as argument to
-    // the supplied function.
     def acceptEitherAsync(other: CompletionStage[_ <: T], action: Consumer[_ >: T], executor: Executor): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletionStage that, when either this or the
+     *  other given stage complete normally, is executed with the
+     *  corresponding result as argument to the supplied function.
+     */
     @stub
-    // Returns a new CompletionStage that, when either this or the
-    // other given stage complete normally, is executed with the
-    // corresponding result as argument to the supplied function.
-    def CompletableFuture[U]: [U] = ???
+    def applyToEither[U](other: CompletionStage[_ <: T], fn: Function[_ >: T, U]): CompletableFuture[U] = ???
 
+    /** Returns a new CompletionStage that, when either this or the
+     *  other given stage complete normally, is executed using this
+     *  stage's default asynchronous execution facility, with the
+     *  corresponding result as argument to the supplied function.
+     */
     @stub
-    // Returns a new CompletionStage that, when either this or the
-    // other given stage complete normally, is executed using this
-    // stage's default asynchronous execution facility, with the
-    // corresponding result as argument to the supplied function.
-    def CompletableFuture[U]: [U] = ???
+    def applyToEitherAsync[U](other: CompletionStage[_ <: T], fn: Function[_ >: T, U]): CompletableFuture[U] = ???
 
+    /** Returns a new CompletionStage that, when either this or the
+     *  other given stage complete normally, is executed using the
+     *  supplied executor, with the corresponding result as argument to
+     *  the supplied function.
+     */
     @stub
-    // Returns a new CompletionStage that, when either this or the
-    // other given stage complete normally, is executed using the
-    // supplied executor, with the corresponding result as argument to
-    // the supplied function.
-    def CompletableFuture[U]: [U] = ???
+    def applyToEitherAsync[U](other: CompletionStage[_ <: T], fn: Function[_ >: T, U], executor: Executor): CompletableFuture[U] = ???
 
+    /** If not already completed, completes this CompletableFuture with
+     *  a CancellationException.
+     */
     @stub
-    // If not already completed, completes this CompletableFuture with
-    // a CancellationException.
     def cancel(mayInterruptIfRunning: Boolean): Boolean = ???
 
+    /** If not already completed, sets the value returned by get() and related methods to the given value. */
     @stub
-    // If not already completed, sets the value returned by get() and related methods to the given value.
     def complete(value: T): Boolean = ???
 
+    /** If not already completed, causes invocations of get()
+     *  and related methods to throw the given exception.
+     */
     @stub
-    // If not already completed, causes invocations of get()
-    // and related methods to throw the given exception.
     def completeExceptionally(ex: Throwable): Boolean = ???
 
+    /** Returns a new CompletableFuture that is completed when this
+     *  CompletableFuture completes, with the result of the given
+     *  function of the exception triggering this CompletableFuture's
+     *  completion when it completes exceptionally; otherwise, if this
+     *  CompletableFuture completes normally, then the returned
+     *  CompletableFuture also completes normally with the same value.
+     */
     @stub
-    // Returns a new CompletableFuture that is completed when this
-    // CompletableFuture completes, with the result of the given
-    // function of the exception triggering this CompletableFuture's
-    // completion when it completes exceptionally; otherwise, if this
-    // CompletableFuture completes normally, then the returned
-    // CompletableFuture also completes normally with the same value.
     def exceptionally(fn: Function[Throwable, _ <: T]): CompletableFuture[T] = ???
 
+    /** Waits if necessary for this future to complete, and then
+     *  returns its result.
+     */
     @stub
-    // Waits if necessary for this future to complete, and then
-    // returns its result.
     def get(): T = ???
 
+    /** Waits if necessary for at most the given time for this future
+     *  to complete, and then returns its result, if available.
+     */
     @stub
-    // Waits if necessary for at most the given time for this future
-    // to complete, and then returns its result, if available.
     def get(timeout: Long, unit: TimeUnit): T = ???
 
+    /** Returns the result value (or throws any encountered exception)
+     *  if completed, else returns the given valueIfAbsent.
+     */
     @stub
-    // Returns the result value (or throws any encountered exception)
-    // if completed, else returns the given valueIfAbsent.
     def getNow(valueIfAbsent: T): T = ???
 
+    /** Returns the estimated number of CompletableFutures whose
+     *  completions are awaiting completion of this CompletableFuture.
+     */
     @stub
-    // Returns the estimated number of CompletableFutures whose
-    // completions are awaiting completion of this CompletableFuture.
     def getNumberOfDependents(): Int = ???
 
+    /** Returns a new CompletionStage that, when this stage completes
+     *  either normally or exceptionally, is executed with this stage's
+     *  result and exception as arguments to the supplied function.
+     */
     @stub
-    // Returns a new CompletionStage that, when this stage completes
-    // either normally or exceptionally, is executed with this stage's
-    // result and exception as arguments to the supplied function.
-    def CompletableFuture[U]: [U] = ???
+    def handle[U](fn: BiFunction[_ >: T, Throwable, _ <: U]): CompletableFuture[U] = ???
 
+    /** Returns a new CompletionStage that, when this stage completes
+     *  either normally or exceptionally, is executed using this stage's
+     *  default asynchronous execution facility, with this stage's
+     *  result and exception as arguments to the supplied function.
+     */
     @stub
-    // Returns a new CompletionStage that, when this stage completes
-    // either normally or exceptionally, is executed using this stage's
-    // default asynchronous execution facility, with this stage's
-    // result and exception as arguments to the supplied function.
-    def CompletableFuture[U]: [U] = ???
+    def handleAsync[U](fn: BiFunction[_ >: T, Throwable, _ <: U]): CompletableFuture[U] = ???
 
+    /** Returns a new CompletionStage that, when this stage completes
+     *  either normally or exceptionally, is executed using the
+     *  supplied executor, with this stage's result and exception as
+     *  arguments to the supplied function.
+     */
     @stub
-    // Returns a new CompletionStage that, when this stage completes
-    // either normally or exceptionally, is executed using the
-    // supplied executor, with this stage's result and exception as
-    // arguments to the supplied function.
-    def CompletableFuture[U]: [U] = ???
+    def handleAsync[U](fn: BiFunction[_ >: T, Throwable, _ <: U], executor: Executor): CompletableFuture[U] = ???
 
+    /** Returns true if this CompletableFuture was cancelled
+     *  before it completed normally.
+     */
     @stub
-    // Returns true if this CompletableFuture was cancelled
-    // before it completed normally.
     def isCancelled(): Boolean = ???
 
+    /** Returns true if this CompletableFuture completed
+     *  exceptionally, in any way.
+     */
     @stub
-    // Returns true if this CompletableFuture completed
-    // exceptionally, in any way.
     def isCompletedExceptionally(): Boolean = ???
 
+    /** Returns true if completed in any fashion: normally,
+     *  exceptionally, or via cancellation.
+     */
     @stub
-    // Returns true if completed in any fashion: normally,
-    // exceptionally, or via cancellation.
     def isDone(): Boolean = ???
 
+    /** Returns the result value when complete, or throws an
+     *  (unchecked) exception if completed exceptionally.
+     */
     @stub
-    // Returns the result value when complete, or throws an
-    // (unchecked) exception if completed exceptionally.
     def join(): T = ???
 
+    /** Forcibly causes subsequent invocations of method get()
+     *  and related methods to throw the given exception, whether or
+     *  not already completed.
+     */
     @stub
-    // Forcibly causes subsequent invocations of method get()
-    // and related methods to throw the given exception, whether or
-    // not already completed.
     def obtrudeException(ex: Throwable): Unit = ???
 
+    /** Forcibly sets or resets the value subsequently returned by
+     *  method get() and related methods, whether or not
+     *  already completed.
+     */
     @stub
-    // Forcibly sets or resets the value subsequently returned by
-    // method get() and related methods, whether or not
-    // already completed.
     def obtrudeValue(value: T): Unit = ???
 
+    /** Returns a new CompletionStage that, when this and the other
+     *  given stage both complete normally, executes the given action.
+     */
     @stub
-    // Returns a new CompletionStage that, when this and the other
-    // given stage both complete normally, executes the given action.
     def runAfterBoth(other: CompletionStage[_], action: Runnable): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletionStage that, when this and the other
+     *  given stage complete normally, executes the given action using
+     *  this stage's default asynchronous execution facility.
+     */
     @stub
-    // Returns a new CompletionStage that, when this and the other
-    // given stage complete normally, executes the given action using
-    // this stage's default asynchronous execution facility.
     def runAfterBothAsync(other: CompletionStage[_], action: Runnable): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletionStage that, when this and the other
+     *  given stage complete normally, executes the given action using
+     *  the supplied executor.
+     */
     @stub
-    // Returns a new CompletionStage that, when this and the other
-    // given stage complete normally, executes the given action using
-    // the supplied executor.
     def runAfterBothAsync(other: CompletionStage[_], action: Runnable, executor: Executor): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletionStage that, when either this or the
+     *  other given stage complete normally, executes the given action.
+     */
     @stub
-    // Returns a new CompletionStage that, when either this or the
-    // other given stage complete normally, executes the given action.
     def runAfterEither(other: CompletionStage[_], action: Runnable): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletionStage that, when either this or the
+     *  other given stage complete normally, executes the given action
+     *  using this stage's default asynchronous execution facility.
+     */
     @stub
-    // Returns a new CompletionStage that, when either this or the
-    // other given stage complete normally, executes the given action
-    // using this stage's default asynchronous execution facility.
     def runAfterEitherAsync(other: CompletionStage[_], action: Runnable): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletionStage that, when either this or the
+     *  other given stage complete normally, executes the given action
+     *  using the supplied executor.
+     */
     @stub
-    // Returns a new CompletionStage that, when either this or the
-    // other given stage complete normally, executes the given action
-    // using the supplied executor.
     def runAfterEitherAsync(other: CompletionStage[_], action: Runnable, executor: Executor): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletionStage that, when this stage completes
+     *  normally, is executed with this stage's result as the argument
+     *  to the supplied action.
+     */
     @stub
-    // Returns a new CompletionStage that, when this stage completes
-    // normally, is executed with this stage's result as the argument
-    // to the supplied action.
     def thenAccept(action: Consumer[_ >: T]): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletionStage that, when this stage completes
+     *  normally, is executed using this stage's default asynchronous
+     *  execution facility, with this stage's result as the argument to
+     *  the supplied action.
+     */
     @stub
-    // Returns a new CompletionStage that, when this stage completes
-    // normally, is executed using this stage's default asynchronous
-    // execution facility, with this stage's result as the argument to
-    // the supplied action.
     def thenAcceptAsync(action: Consumer[_ >: T]): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletionStage that, when this stage completes
+     *  normally, is executed using the supplied Executor, with this
+     *  stage's result as the argument to the supplied action.
+     */
     @stub
-    // Returns a new CompletionStage that, when this stage completes
-    // normally, is executed using the supplied Executor, with this
-    // stage's result as the argument to the supplied action.
     def thenAcceptAsync(action: Consumer[_ >: T], executor: Executor): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletionStage that, when this and the other
+     *  given stage both complete normally, is executed with the two
+     *  results as arguments to the supplied action.
+     */
     @stub
-    // Returns a new CompletionStage that, when this and the other
-    // given stage both complete normally, is executed with the two
-    // results as arguments to the supplied action.
-    def CompletableFuture[Void]: [U] = ???
+    def thenAcceptBoth[U](other: CompletionStage[_ <: U], action: BiConsumer[_ >: T, _ >: U]): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletionStage that, when this and the other
+     *  given stage complete normally, is executed using this stage's
+     *  default asynchronous execution facility, with the two results
+     *  as arguments to the supplied action.
+     */
     @stub
-    // Returns a new CompletionStage that, when this and the other
-    // given stage complete normally, is executed using this stage's
-    // default asynchronous execution facility, with the two results
-    // as arguments to the supplied action.
-    def CompletableFuture[Void]: [U] = ???
+    def thenAcceptBothAsync[U](other: CompletionStage[_ <: U], action: BiConsumer[_ >: T, _ >: U]): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletionStage that, when this and the other
+     *  given stage complete normally, is executed using the supplied
+     *  executor, with the two results as arguments to the supplied
+     *  function.
+     */
     @stub
-    // Returns a new CompletionStage that, when this and the other
-    // given stage complete normally, is executed using the supplied
-    // executor, with the two results as arguments to the supplied
-    // function.
-    def CompletableFuture[Void]: [U] = ???
+    def thenAcceptBothAsync[U](other: CompletionStage[_ <: U], action: BiConsumer[_ >: T, _ >: U], executor: Executor): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletionStage that, when this stage completes
+     *  normally, is executed with this stage's result as the argument
+     *  to the supplied function.
+     */
     @stub
-    // Returns a new CompletionStage that, when this stage completes
-    // normally, is executed with this stage's result as the argument
-    // to the supplied function.
-    def CompletableFuture[U]: [U] = ???
+    def thenApply[U](fn: Function[_ >: T, _ <: U]): CompletableFuture[U] = ???
 
+    /** Returns a new CompletionStage that, when this stage completes
+     *  normally, is executed using this stage's default asynchronous
+     *  execution facility, with this stage's result as the argument to
+     *  the supplied function.
+     */
     @stub
-    // Returns a new CompletionStage that, when this stage completes
-    // normally, is executed using this stage's default asynchronous
-    // execution facility, with this stage's result as the argument to
-    // the supplied function.
-    def CompletableFuture[U]: [U] = ???
+    def thenApplyAsync[U](fn: Function[_ >: T, _ <: U]): CompletableFuture[U] = ???
 
+    /** Returns a new CompletionStage that, when this stage completes
+     *  normally, is executed using the supplied Executor, with this
+     *  stage's result as the argument to the supplied function.
+     */
     @stub
-    // Returns a new CompletionStage that, when this stage completes
-    // normally, is executed using the supplied Executor, with this
-    // stage's result as the argument to the supplied function.
-    def CompletableFuture[U]: [U] = ???
+    def thenApplyAsync[U](fn: Function[_ >: T, _ <: U], executor: Executor): CompletableFuture[U] = ???
 
+    /** Returns a new CompletionStage that, when this and the other
+     *  given stage both complete normally, is executed with the two
+     *  results as arguments to the supplied function.
+     */
     @stub
-    // Returns a new CompletionStage that, when this and the other
-    // given stage both complete normally, is executed with the two
-    // results as arguments to the supplied function.
-    def CompletableFuture[V]: [U, V] = ???
+    def thenCombine[U, V](other: CompletionStage[_ <: U], fn: BiFunction[_ >: T, _ >: U, _ <: V]): CompletableFuture[V] = ???
 
+    /** Returns a new CompletionStage that, when this and the other
+     *  given stage complete normally, is executed using this stage's
+     *  default asynchronous execution facility, with the two results
+     *  as arguments to the supplied function.
+     */
     @stub
-    // Returns a new CompletionStage that, when this and the other
-    // given stage complete normally, is executed using this stage's
-    // default asynchronous execution facility, with the two results
-    // as arguments to the supplied function.
-    def CompletableFuture[V]: [U, V] = ???
+    def thenCombineAsync[U, V](other: CompletionStage[_ <: U], fn: BiFunction[_ >: T, _ >: U, _ <: V]): CompletableFuture[V] = ???
 
+    /** Returns a new CompletionStage that, when this and the other
+     *  given stage complete normally, is executed using the supplied
+     *  executor, with the two results as arguments to the supplied
+     *  function.
+     */
     @stub
-    // Returns a new CompletionStage that, when this and the other
-    // given stage complete normally, is executed using the supplied
-    // executor, with the two results as arguments to the supplied
-    // function.
-    def CompletableFuture[V]: [U, V] = ???
+    def thenCombineAsync[U, V](other: CompletionStage[_ <: U], fn: BiFunction[_ >: T, _ >: U, _ <: V], executor: Executor): CompletableFuture[V] = ???
 
+    /** Returns a new CompletionStage that, when this stage completes
+     *  normally, is executed with this stage as the argument
+     *  to the supplied function.
+     */
     @stub
-    // Returns a new CompletionStage that, when this stage completes
-    // normally, is executed with this stage as the argument
-    // to the supplied function.
-    def CompletableFuture[U]: [U] = ???
+    def thenCompose[U](fn: Function[_ >: T, _ <: CompletionStage[U]]): CompletableFuture[U] = ???
 
+    /** Returns a new CompletionStage that, when this stage completes
+     *  normally, is executed using this stage's default asynchronous
+     *  execution facility, with this stage as the argument to the
+     *  supplied function.
+     */
     @stub
-    // Returns a new CompletionStage that, when this stage completes
-    // normally, is executed using this stage's default asynchronous
-    // execution facility, with this stage as the argument to the
-    // supplied function.
-    def CompletableFuture[U]: [U] = ???
+    def thenComposeAsync[U](fn: Function[_ >: T, _ <: CompletionStage[U]]): CompletableFuture[U] = ???
 
+    /** Returns a new CompletionStage that, when this stage completes
+     *  normally, is executed using the supplied Executor, with this
+     *  stage's result as the argument to the supplied function.
+     */
     @stub
-    // Returns a new CompletionStage that, when this stage completes
-    // normally, is executed using the supplied Executor, with this
-    // stage's result as the argument to the supplied function.
-    def CompletableFuture[U]: [U] = ???
+    def thenComposeAsync[U](fn: Function[_ >: T, _ <: CompletionStage[U]], executor: Executor): CompletableFuture[U] = ???
 
+    /** Returns a new CompletionStage that, when this stage completes
+     *  normally, executes the given action.
+     */
     @stub
-    // Returns a new CompletionStage that, when this stage completes
-    // normally, executes the given action.
     def thenRun(action: Runnable): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletionStage that, when this stage completes
+     *  normally, executes the given action using this stage's default
+     *  asynchronous execution facility.
+     */
     @stub
-    // Returns a new CompletionStage that, when this stage completes
-    // normally, executes the given action using this stage's default
-    // asynchronous execution facility.
     def thenRunAsync(action: Runnable): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletionStage that, when this stage completes
+     *  normally, executes the given action using the supplied Executor.
+     */
     @stub
-    // Returns a new CompletionStage that, when this stage completes
-    // normally, executes the given action using the supplied Executor.
     def thenRunAsync(action: Runnable, executor: Executor): CompletableFuture[Void] = ???
 
+    /** Returns this CompletableFuture. */
     @stub
-    // Returns this CompletableFuture.
     def toCompletableFuture(): CompletableFuture[T] = ???
 
+    /** Returns a string identifying this CompletableFuture, as well as
+     *  its completion state.
+     */
     @stub
-    // Returns a string identifying this CompletableFuture, as well as
-    // its completion state.
     def toString(): String = ???
 
+    /** Returns a new CompletionStage with the same result or exception as
+     *  this stage, that executes the given action when this stage completes.
+     */
     @stub
-    // Returns a new CompletionStage with the same result or exception as
-    // this stage, that executes the given action when this stage completes.
     def whenComplete(action: BiConsumer[_ >: T, _ >: Throwable]): CompletableFuture[T] = ???
 
+    /** Returns a new CompletionStage with the same result or exception as
+     *  this stage, that executes the given action using this stage's
+     *  default asynchronous execution facility when this stage completes.
+     */
     @stub
-    // Returns a new CompletionStage with the same result or exception as
-    // this stage, that executes the given action using this stage's
-    // default asynchronous execution facility when this stage completes.
     def whenCompleteAsync(action: BiConsumer[_ >: T, _ >: Throwable]): CompletableFuture[T] = ???
 }
 
 object CompletableFuture {
+    /** Returns a new CompletableFuture that is completed when all of
+     *  the given CompletableFutures complete.
+     */
     @stub
-    // Returns a new CompletableFuture that is completed when all of
-    // the given CompletableFutures complete.
     def allOf(cfs: CompletableFuture[_]*): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletableFuture that is completed when any of
+     *  the given CompletableFutures complete, with the same result.
+     */
     @stub
-    // Returns a new CompletableFuture that is completed when any of
-    // the given CompletableFutures complete, with the same result.
     def anyOf(cfs: CompletableFuture[_]*): CompletableFuture[Object] = ???
 
+    /** Returns a new CompletableFuture that is already completed with
+     *  the given value.
+     */
     @stub
-    // Returns a new CompletableFuture that is already completed with
-    // the given value.
-    def CompletableFuture[U]: [U] = ???
+    def completedFuture[U](value: U): CompletableFuture[U] = ???
 
+    /** Returns a new CompletableFuture that is asynchronously completed
+     *  by a task running in the ForkJoinPool.commonPool() after
+     *  it runs the given action.
+     */
     @stub
-    // Returns a new CompletableFuture that is asynchronously completed
-    // by a task running in the ForkJoinPool.commonPool() after
-    // it runs the given action.
     def runAsync(runnable: Runnable): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletableFuture that is asynchronously completed
+     *  by a task running in the given executor after it runs the given
+     *  action.
+     */
     @stub
-    // Returns a new CompletableFuture that is asynchronously completed
-    // by a task running in the given executor after it runs the given
-    // action.
     def runAsync(runnable: Runnable, executor: Executor): CompletableFuture[Void] = ???
 
+    /** Returns a new CompletableFuture that is asynchronously completed
+     *  by a task running in the ForkJoinPool.commonPool() with
+     *  the value obtained by calling the given Supplier.
+     */
     @stub
-    // Returns a new CompletableFuture that is asynchronously completed
-    // by a task running in the ForkJoinPool.commonPool() with
-    // the value obtained by calling the given Supplier.
-    def CompletableFuture[U]: [U] = ???
+    def supplyAsync[U](supplier: Supplier[U]): CompletableFuture[U] = ???
 
+    /** Returns a new CompletableFuture that is asynchronously completed
+     *  by a task running in the given executor with the value obtained
+     *  by calling the given Supplier.
+     */
     @stub
-    // Returns a new CompletableFuture that is asynchronously completed
-    // by a task running in the given executor with the value obtained
-    // by calling the given Supplier.
-    def CompletableFuture[U]: [U] = ???
+    def supplyAsync[U](supplier: Supplier[U], executor: Executor): CompletableFuture[U] = ???
 }

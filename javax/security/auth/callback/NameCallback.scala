@@ -3,24 +3,25 @@ package javax.security.auth.callback
 import java.io.Serializable
 import java.lang.{Object, String}
 
-//  Underlying security services instantiate and pass a
-// NameCallback to the handle
-// method of a CallbackHandler to retrieve name information.
-class NameCallback extends Object with Callback, with Serializable {
+/**  Underlying security services instantiate and pass a
+ *  NameCallback to the handle
+ *  method of a CallbackHandler to retrieve name information.
+ */
+class NameCallback extends Object with Callback with Serializable {
 
+    /** Construct a NameCallback with a prompt. */
     @stub
-    // Construct a NameCallback with a prompt.
     def this(prompt: String) = ???
 
+    /** Get the default name. */
     @stub
-    // Get the default name.
     def getDefaultName(): String = ???
 
+    /** Get the retrieved name. */
     @stub
-    // Get the retrieved name.
     def getName(): String = ???
 
+    /** Get the prompt. */
     @stub
-    // Get the prompt.
     def getPrompt(): String = ???
 }

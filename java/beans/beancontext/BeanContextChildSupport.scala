@@ -4,98 +4,108 @@ import java.beans.{PropertyChangeListener, PropertyChangeSupport, VetoableChange
 import java.io.Serializable
 import java.lang.{Object, String}
 
-// 
-// This is a general support class to provide support for implementing the
-// BeanContextChild protocol.
-//
-// This class may either be directly subclassed, or encapsulated and delegated
-// to in order to implement this interface for a given component.
-// 
-class BeanContextChildSupport extends Object with BeanContextChild, with BeanContextServicesListener, with Serializable {
+/** 
+ *  This is a general support class to provide support for implementing the
+ *  BeanContextChild protocol.
+ * 
+ *  This class may either be directly subclassed, or encapsulated and delegated
+ *  to in order to implement this interface for a given component.
+ *  
+ */
+class BeanContextChildSupport extends Object with BeanContextChild with BeanContextServicesListener with Serializable {
 
+    /** construct a BeanContextChildSupport where this class has been
+     *  subclassed in order to implement the JavaBean component itself.
+     */
     @stub
-    // construct a BeanContextChildSupport where this class has been
-    // subclassed in order to implement the JavaBean component itself.
     def this() = ???
 
+    /** The bean context. */
     @stub
-    // The bean context.
-    protected def beanContext: BeanContext = ???
+    protected val beanContext: BeanContext = ???
 
+    /** The BeanContext in which
+     *  this BeanContextChild is nested.
+     */
     @stub
-    // The BeanContext in which
-    // this BeanContextChild is nested.
-    def beanContextChildPeer: BeanContextChild = ???
+    val beanContextChildPeer: BeanContextChild = ???
 
+    /** The PropertyChangeSupport associated with this
+     *  BeanContextChildSupport.
+     */
     @stub
-    // The PropertyChangeSupport associated with this
-    // BeanContextChildSupport.
-    protected def pcSupport: PropertyChangeSupport = ???
+    protected val pcSupport: PropertyChangeSupport = ???
 
+    /** A flag indicating that there has been
+     *  at least one PropertyChangeVetoException
+     *  thrown for the attempted setBeanContext operation.
+     */
     @stub
-    // A flag indicating that there has been
-    // at least one PropertyChangeVetoException
-    // thrown for the attempted setBeanContext operation.
-    protected def rejectedSetBCOnce: Boolean = ???
+    protected val rejectedSetBCOnce: Boolean = ???
 
+    /** Add a PropertyChangeListener for a specific property. */
     @stub
-    // Add a PropertyChangeListener for a specific property.
     def addPropertyChangeListener(name: String, pcl: PropertyChangeListener): Unit = ???
 
+    /** Add a VetoableChangeListener for a specific property. */
     @stub
-    // Add a VetoableChangeListener for a specific property.
     def addVetoableChangeListener(name: String, vcl: VetoableChangeListener): Unit = ???
 
+    /** Report a bound property update to any registered listeners. */
     @stub
-    // Report a bound property update to any registered listeners.
     def firePropertyChange(name: String, oldValue: Object, newValue: Object): Unit = ???
 
+    /** Report a vetoable property update to any registered listeners. */
     @stub
-    // Report a vetoable property update to any registered listeners.
     def fireVetoableChange(name: String, oldValue: Object, newValue: Object): Unit = ???
 
+    /** Gets the nesting BeanContext
+     *  for this BeanContextChildSupport.
+     */
     @stub
-    // Gets the nesting BeanContext
-    // for this BeanContextChildSupport.
     def getBeanContext(): BeanContext = ???
 
+    /** Gets the BeanContextChild associated with this
+     *  BeanContextChildSupport.
+     */
     @stub
-    // Gets the BeanContextChild associated with this
-    // BeanContextChildSupport.
     def getBeanContextChildPeer(): BeanContextChild = ???
 
+    /** This method may be overridden by subclasses to provide their own
+     *  initialization behaviors.
+     */
     @stub
-    // This method may be overridden by subclasses to provide their own
-    // initialization behaviors.
     protected def initializeBeanContextResources(): Unit = ???
 
+    /** Reports whether or not this class is a delegate of another. */
     @stub
-    // Reports whether or not this class is a delegate of another.
     def isDelegated(): Boolean = ???
 
+    /** This method may be overridden by subclasses to provide their own
+     *  release behaviors.
+     */
     @stub
-    // This method may be overridden by subclasses to provide their own
-    // release behaviors.
     protected def releaseBeanContextResources(): Unit = ???
 
+    /** Remove a PropertyChangeListener for a specific property. */
     @stub
-    // Remove a PropertyChangeListener for a specific property.
     def removePropertyChangeListener(name: String, pcl: PropertyChangeListener): Unit = ???
 
+    /** Removes a VetoableChangeListener. */
     @stub
-    // Removes a VetoableChangeListener.
     def removeVetoableChangeListener(name: String, vcl: VetoableChangeListener): Unit = ???
 
+    /** A new service is available from the nesting BeanContext. */
     @stub
-    // A new service is available from the nesting BeanContext.
     def serviceAvailable(bcsae: BeanContextServiceAvailableEvent): Unit = ???
 
+    /** A service provided by the nesting BeanContext has been revoked. */
     @stub
-    // A service provided by the nesting BeanContext has been revoked.
     def serviceRevoked(bcsre: BeanContextServiceRevokedEvent): Unit = ???
 
+    /** Sets the BeanContext for
+     *  this BeanContextChildSupport.
+     */
     @stub
-    // Sets the BeanContext for
-    // this BeanContextChildSupport.
     def setBeanContext(bc: BeanContext): Unit = ???
 }

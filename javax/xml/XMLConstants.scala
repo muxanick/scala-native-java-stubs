@@ -2,65 +2,66 @@ package javax.xml
 
 import java.lang.{Object, String}
 
-// Utility class to contain basic XML values as constants.
+/** Utility class to contain basic XML values as constants. */
 final class XMLConstants extends Object {
 }
 
 object XMLConstants {
+    /** Property: accessExternalDTD */
     @stub
-    // Property: accessExternalDTD
-    def ACCESS_EXTERNAL_DTD: String = ???
+    val ACCESS_EXTERNAL_DTD: String = ???
 
+    /** Property: accessExternalSchema */
     @stub
-    // Property: accessExternalSchema
-    def ACCESS_EXTERNAL_SCHEMA: String = ???
+    val ACCESS_EXTERNAL_SCHEMA: String = ???
 
+    /** Property: accessExternalStylesheet */
     @stub
-    // Property: accessExternalStylesheet
-    def ACCESS_EXTERNAL_STYLESHEET: String = ???
+    val ACCESS_EXTERNAL_STYLESHEET: String = ???
 
+    /** Prefix to use to represent the default XML Namespace. */
     @stub
-    // Prefix to use to represent the default XML Namespace.
-    def DEFAULT_NS_PREFIX: String = ???
+    val DEFAULT_NS_PREFIX: String = ???
 
+    /** Feature for secure processing. */
     @stub
-    // Feature for secure processing.
-    def FEATURE_SECURE_PROCESSING: String = ???
+    val FEATURE_SECURE_PROCESSING: String = ???
 
+    /** Namespace URI to use to represent that there is no Namespace. */
     @stub
-    // Namespace URI to use to represent that there is no Namespace.
-    def NULL_NS_URI: String = ???
+    val NULL_NS_URI: String = ???
 
+    /** RELAX NG Namespace URI. */
     @stub
-    // RELAX NG Namespace URI.
-    def RELAXNG_NS_URI: String = ???
+    val RELAXNG_NS_URI: String = ???
 
+    /** W3C XML Schema Instance Namespace URI. */
     @stub
-    // W3C XML Schema Instance Namespace URI.
-    def W3C_XML_SCHEMA_INSTANCE_NS_URI: String = ???
+    val W3C_XML_SCHEMA_INSTANCE_NS_URI: String = ???
 
+    /** W3C XML Schema Namespace URI. */
     @stub
-    // W3C XML Schema Namespace URI.
-    def W3C_XML_SCHEMA_NS_URI: String = ???
+    val W3C_XML_SCHEMA_NS_URI: String = ???
 
+    /** W3C XPath Datatype Namespace URI. */
     @stub
-    // W3C XPath Datatype Namespace URI.
-    def W3C_XPATH_DATATYPE_NS_URI: String = ???
+    val W3C_XPATH_DATATYPE_NS_URI: String = ???
 
+    /** XML Document Type Declaration Namespace URI as an arbitrary value. */
     @stub
-    // XML Document Type Declaration Namespace URI as an arbitrary value.
-    def XML_DTD_NS_URI: String = ???
+    val XML_DTD_NS_URI: String = ???
 
+    /** The official XML Namespace prefix. */
     @stub
-    // The official XML Namespace prefix.
-    def XML_NS_PREFIX: String = ???
+    val XML_NS_PREFIX: String = ???
 
+    /** The official XML Namespace name URI. */
     @stub
-    // The official XML Namespace name URI.
-    def XML_NS_URI: String = ???
+    val XML_NS_URI: String = ???
 
+    /** The official XML attribute used for specifying XML Namespace
+     *  declarations.
+     */
     @stub
-    // The official XML attribute used for specifying XML Namespace
-    // declarations.
-    def XMLNS_ATTRIBUTE: String = ???
+    val XMLNS_ATTRIBUTE: String = ???
 }

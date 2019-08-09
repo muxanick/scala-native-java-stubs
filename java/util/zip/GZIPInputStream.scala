@@ -3,24 +3,26 @@ package java.util.zip
 import java.io.{FilterInputStream, InputStream}
 import java.lang.Object
 
-// This class implements a stream filter for reading compressed data in
-// the GZIP file format.
+/** This class implements a stream filter for reading compressed data in
+ *  the GZIP file format.
+ */
 class GZIPInputStream extends InflaterInputStream {
 
+    /** Creates a new input stream with a default buffer size. */
     @stub
-    // Creates a new input stream with a default buffer size.
     def this(in: InputStream) = ???
 
+    /** CRC-32 for uncompressed data. */
     @stub
-    // CRC-32 for uncompressed data.
-    protected def crc: CRC32 = ???
+    protected val crc: CRC32 = ???
 
+    /** Indicates end of input stream. */
     @stub
-    // Indicates end of input stream.
-    protected def eos: Boolean = ???
+    protected val eos: Boolean = ???
 
+    /** Closes this input stream and releases any system resources associated
+     *  with the stream.
+     */
     @stub
-    // Closes this input stream and releases any system resources associated
-    // with the stream.
     def close(): Unit = ???
 }

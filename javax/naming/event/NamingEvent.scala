@@ -4,89 +4,90 @@ import java.lang.Object
 import java.util.EventObject
 import javax.naming.Binding
 
-// This class represents an event fired by a naming/directory service.
-//
-// The NamingEvent's state consists of
-// 
-// The event source: the EventContext which fired this event.
-// The event type.
-// The new binding: information about the object after the change.
-// The old binding: information about the object before the change.
-// Change information: information about the change
-// that triggered this event; usually service provider-specific or server-specific
-// information.
-// 
-// 
-// Note that the event source is always the same EventContext
-// instance  that the listener has registered with.
-// Furthermore, the names of the bindings in
-// the NamingEvent are always relative to that instance.
-// For example, suppose a listener makes the following registration:
-//
-//     NamespaceChangeListener listener = ...;
-//     src.addNamingListener("x", SUBTREE_SCOPE, listener);
-//
-// When an object named "x/y" is subsequently deleted, the corresponding
-// NamingEvent (evt) must contain:
-//
-//     evt.getEventContext() == src
-//     evt.getOldBinding().getName().equals("x/y")
-//
-//
-// Care must be taken when multiple threads are accessing the same
-// EventContext concurrently.
-// See the
-// package description
-// for more information on threading issues.
+/** This class represents an event fired by a naming/directory service.
+ * 
+ *  The NamingEvent's state consists of
+ *  
+ *  The event source: the EventContext which fired this event.
+ *  The event type.
+ *  The new binding: information about the object after the change.
+ *  The old binding: information about the object before the change.
+ *  Change information: information about the change
+ *  that triggered this event; usually service provider-specific or server-specific
+ *  information.
+ *  
+ *  
+ *  Note that the event source is always the same EventContext
+ *  instance  that the listener has registered with.
+ *  Furthermore, the names of the bindings in
+ *  the NamingEvent are always relative to that instance.
+ *  For example, suppose a listener makes the following registration:
+ * 
+ *      NamespaceChangeListener listener = ...;
+ *      src.addNamingListener("x", SUBTREE_SCOPE, listener);
+ * 
+ *  When an object named "x/y" is subsequently deleted, the corresponding
+ *  NamingEvent (evt) must contain:
+ * 
+ *      evt.getEventContext() == src
+ *      evt.getOldBinding().getName().equals("x/y")
+ * 
+ * 
+ *  Care must be taken when multiple threads are accessing the same
+ *  EventContext concurrently.
+ *  See the
+ *  package description
+ *  for more information on threading issues.
+ */
 class NamingEvent extends EventObject {
 
+    /** Contains information about the change that generated this event. */
     @stub
-    // Contains information about the change that generated this event.
-    protected def changeInfo: Object = ???
+    protected val changeInfo: Object = ???
 
+    /** Contains information about the object after the change. */
     @stub
-    // Contains information about the object after the change.
-    protected def newBinding: Binding = ???
+    protected val newBinding: Binding = ???
 
+    /** Contains information about the object before the change. */
     @stub
-    // Contains information about the object before the change.
-    protected def oldBinding: Binding = ???
+    protected val oldBinding: Binding = ???
 
+    /** Invokes the appropriate listener method on this event. */
     @stub
-    // Invokes the appropriate listener method on this event.
     def dispatch(listener: NamingListener): Unit = ???
 
+    /** Retrieves the change information for this event. */
     @stub
-    // Retrieves the change information for this event.
     def getChangeInfo(): Object = ???
 
+    /** Retrieves the event source that fired this event. */
     @stub
-    // Retrieves the event source that fired this event.
     def getEventContext(): EventContext = ???
 
+    /** Retrieves the binding of the object after the change. */
     @stub
-    // Retrieves the binding of the object after the change.
     def getNewBinding(): Binding = ???
 
+    /** Retrieves the binding of the object before the change. */
     @stub
-    // Retrieves the binding of the object before the change.
     def getOldBinding(): Binding = ???
 }
 
 object NamingEvent {
+    /** Naming event type for indicating that a new object has been added. */
     @stub
-    // Naming event type for indicating that a new object has been added.
-    def OBJECT_ADDED: Int = ???
+    val OBJECT_ADDED: Int = ???
 
+    /** Naming event type for indicating that an object has been changed. */
     @stub
-    // Naming event type for indicating that an object has been changed.
-    def OBJECT_CHANGED: Int = ???
+    val OBJECT_CHANGED: Int = ???
 
+    /** Naming event type for indicating that an object has been removed. */
     @stub
-    // Naming event type for indicating that an object has been removed.
-    def OBJECT_REMOVED: Int = ???
+    val OBJECT_REMOVED: Int = ???
 
+    /** Naming event type for indicating that an object has been renamed. */
     @stub
-    // Naming event type for indicating that an object has been renamed.
-    def OBJECT_RENAMED: Int = ???
+    val OBJECT_RENAMED: Int = ???
 }

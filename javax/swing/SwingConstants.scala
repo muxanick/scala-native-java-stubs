@@ -1,82 +1,85 @@
 package javax.swing
 
-// A collection of constants generally used for positioning and orienting
-// components on the screen.
+/** A collection of constants generally used for positioning and orienting
+ *  components on the screen.
+ */
 trait SwingConstants {
 }
 
 object SwingConstants {
+    /** Box-orientation constant used to specify the bottom of a box. */
     @stub
-    // Box-orientation constant used to specify the bottom of a box.
-    def BOTTOM: Int = ???
+    val BOTTOM: Int = ???
 
+    /** The central position in an area. */
     @stub
-    // The central position in an area.
-    def CENTER: Int = ???
+    val CENTER: Int = ???
 
+    /** Compass-direction east (right). */
     @stub
-    // Compass-direction east (right).
-    def EAST: Int = ???
+    val EAST: Int = ???
 
+    /** Horizontal orientation. */
     @stub
-    // Horizontal orientation.
-    def HORIZONTAL: Int = ???
+    val HORIZONTAL: Int = ???
 
+    /** Identifies the leading edge of text for use with left-to-right
+     *  and right-to-left languages.
+     */
     @stub
-    // Identifies the leading edge of text for use with left-to-right
-    // and right-to-left languages.
-    def LEADING: Int = ???
+    val LEADING: Int = ???
 
+    /** Box-orientation constant used to specify the left side of a box. */
     @stub
-    // Box-orientation constant used to specify the left side of a box.
-    def LEFT: Int = ???
+    val LEFT: Int = ???
 
+    /** Identifies the next direction in a sequence. */
     @stub
-    // Identifies the next direction in a sequence.
-    def NEXT: Int = ???
+    val NEXT: Int = ???
 
+    /** Compass-direction North (up). */
     @stub
-    // Compass-direction North (up).
-    def NORTH: Int = ???
+    val NORTH: Int = ???
 
+    /** Compass-direction north-east (upper right). */
     @stub
-    // Compass-direction north-east (upper right).
-    def NORTH_EAST: Int = ???
+    val NORTH_EAST: Int = ???
 
+    /** Compass-direction north west (upper left). */
     @stub
-    // Compass-direction north west (upper left).
-    def NORTH_WEST: Int = ???
+    val NORTH_WEST: Int = ???
 
+    /** Identifies the previous direction in a sequence. */
     @stub
-    // Identifies the previous direction in a sequence.
-    def PREVIOUS: Int = ???
+    val PREVIOUS: Int = ???
 
+    /** Box-orientation constant used to specify the right side of a box. */
     @stub
-    // Box-orientation constant used to specify the right side of a box.
-    def RIGHT: Int = ???
+    val RIGHT: Int = ???
 
+    /** Compass-direction south (down). */
     @stub
-    // Compass-direction south (down).
-    def SOUTH: Int = ???
+    val SOUTH: Int = ???
 
+    /** Compass-direction south-east (lower right). */
     @stub
-    // Compass-direction south-east (lower right).
-    def SOUTH_EAST: Int = ???
+    val SOUTH_EAST: Int = ???
 
+    /** Compass-direction south-west (lower left). */
     @stub
-    // Compass-direction south-west (lower left).
-    def SOUTH_WEST: Int = ???
+    val SOUTH_WEST: Int = ???
 
+    /** Box-orientation constant used to specify the top of a box. */
     @stub
-    // Box-orientation constant used to specify the top of a box.
-    def TOP: Int = ???
+    val TOP: Int = ???
 
+    /** Identifies the trailing edge of text for use with left-to-right
+     *  and right-to-left languages.
+     */
     @stub
-    // Identifies the trailing edge of text for use with left-to-right
-    // and right-to-left languages.
-    def TRAILING: Int = ???
+    val TRAILING: Int = ???
 
+    /** Vertical orientation. */
     @stub
-    // Vertical orientation.
-    def VERTICAL: Int = ???
+    val VERTICAL: Int = ???
 }

@@ -5,104 +5,112 @@ import java.lang.Object
 import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole, AccessibleSelection}
 import javax.swing.event.{TreeExpansionEvent, TreeExpansionListener, TreeModelEvent, TreeModelListener, TreeSelectionListener}
 
-// This class implements accessibility support for the
-// JTree class.  It provides an implementation of the
-// Java Accessibility API appropriate to tree user-interface elements.
-// 
-// Warning:
-// Serialized objects of this class will not be compatible with
-// future Swing releases. The current serialization support is
-// appropriate for short term storage or RMI between applications running
-// the same version of Swing.  As of 1.4, support for long term storage
-// of all JavaBeans™
-// has been added to the java.beans package.
-// Please see XMLEncoder.
-protected class JTree.AccessibleJTree extends JComponent.AccessibleJComponent with AccessibleSelection, with TreeSelectionListener, with TreeModelListener, with TreeExpansionListener {
+/** This class implements accessibility support for the
+ *  JTree class.  It provides an implementation of the
+ *  Java Accessibility API appropriate to tree user-interface elements.
+ *  
+ *  Warning:
+ *  Serialized objects of this class will not be compatible with
+ *  future Swing releases. The current serialization support is
+ *  appropriate for short term storage or RMI between applications running
+ *  the same version of Swing.  As of 1.4, support for long term storage
+ *  of all JavaBeans™
+ *  has been added to the java.beans package.
+ *  Please see XMLEncoder.
+ */
+protected class JTree.AccessibleJTree extends JComponent.AccessibleJComponent with AccessibleSelection with TreeSelectionListener with TreeModelListener with TreeExpansionListener {
 
+    /** Adds the specified selected item in the object to the object's
+     *  selection.
+     */
     @stub
-    // Adds the specified selected item in the object to the object's
-    // selection.
     def addAccessibleSelection(i: Int): Unit = ???
 
+    /** Clears the selection in the object, so that nothing in the
+     *  object is selected.
+     */
     @stub
-    // Clears the selection in the object, so that nothing in the
-    // object is selected.
     def clearAccessibleSelection(): Unit = ???
 
+    /** Fire a visible data property change notification. */
     @stub
-    // Fire a visible data property change notification.
     def fireVisibleDataPropertyChange(): Unit = ???
 
+    /** Returns the Accessible child, if one exists,
+     *  contained at the local coordinate Point.
+     */
     @stub
-    // Returns the Accessible child, if one exists,
-    // contained at the local coordinate Point.
     def getAccessibleAt(p: Point): Accessible = ???
 
+    /** Return the nth Accessible child of the object. */
     @stub
-    // Return the nth Accessible child of the object.
     def getAccessibleChild(i: Int): Accessible = ???
 
+    /** Returns the number of top-level children nodes of this
+     *  JTree.
+     */
     @stub
-    // Returns the number of top-level children nodes of this
-    // JTree.
     def getAccessibleChildrenCount(): Int = ???
 
+    /** Get the index of this object in its accessible parent. */
     @stub
-    // Get the index of this object in its accessible parent.
     def getAccessibleIndexInParent(): Int = ???
 
+    /** Get the role of this object. */
     @stub
-    // Get the role of this object.
     def getAccessibleRole(): AccessibleRole = ???
 
+    /** Get the AccessibleSelection associated with this object. */
     @stub
-    // Get the AccessibleSelection associated with this object.
     def getAccessibleSelection(): AccessibleSelection = ???
 
+    /** Returns an Accessible representing the specified selected item
+     *  in the object.
+     */
     @stub
-    // Returns an Accessible representing the specified selected item
-    // in the object.
     def getAccessibleSelection(i: Int): Accessible = ???
 
+    /** Returns the number of items currently selected. */
     @stub
-    // Returns the number of items currently selected.
     def getAccessibleSelectionCount(): Int = ???
 
+    /** Returns true if the current child of this object is selected. */
     @stub
-    // Returns true if the current child of this object is selected.
     def isAccessibleChildSelected(i: Int): Boolean = ???
 
+    /** Removes the specified selected item in the object from the object's
+     *  selection.
+     */
     @stub
-    // Removes the specified selected item in the object from the object's
-    // selection.
     def removeAccessibleSelection(i: Int): Unit = ???
 
+    /** Causes every selected item in the object to be selected
+     *  if the object supports multiple selections.
+     */
     @stub
-    // Causes every selected item in the object to be selected
-    // if the object supports multiple selections.
     def selectAllAccessibleSelection(): Unit = ???
 
+    /** Tree Collapsed notification. */
     @stub
-    // Tree Collapsed notification.
     def treeCollapsed(e: TreeExpansionEvent): Unit = ???
 
+    /** Tree Model Expansion notification. */
     @stub
-    // Tree Model Expansion notification.
     def treeExpanded(e: TreeExpansionEvent): Unit = ???
 
+    /** Tree Model Node change notification. */
     @stub
-    // Tree Model Node change notification.
     def treeNodesChanged(e: TreeModelEvent): Unit = ???
 
+    /** Tree Model Node change notification. */
     @stub
-    // Tree Model Node change notification.
     def treeNodesInserted(e: TreeModelEvent): Unit = ???
 
+    /** Tree Model Node change notification. */
     @stub
-    // Tree Model Node change notification.
     def treeNodesRemoved(e: TreeModelEvent): Unit = ???
 
+    /** Tree Model structure change change notification. */
     @stub
-    // Tree Model structure change change notification.
     def treeStructureChanged(e: TreeModelEvent): Unit = ???
 }

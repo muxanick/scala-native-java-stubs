@@ -3,58 +3,62 @@ package javax.script
 import java.lang.{Object, String}
 import java.util.{Map, Map.Entry, Set}
 
-// A simple implementation of Bindings backed by
-// a HashMap or some other specified Map.
+/** A simple implementation of Bindings backed by
+ *  a HashMap or some other specified Map.
+ */
 class SimpleBindings extends Object with Bindings {
 
+    /** Default constructor uses a HashMap. */
     @stub
-    // Default constructor uses a HashMap.
     def this() = ???
 
+    /** Removes all of the mappings from this map (optional operation). */
     @stub
-    // Removes all of the mappings from this map (optional operation).
     def clear(): Unit = ???
 
+    /** Returns true if this map contains a mapping for the specified
+     *  key.
+     */
     @stub
-    // Returns true if this map contains a mapping for the specified
-    // key.
     def containsKey(key: Object): Boolean = ???
 
+    /** Returns true if this map maps one or more keys to the
+     *  specified value.
+     */
     @stub
-    // Returns true if this map maps one or more keys to the
-    // specified value.
     def containsValue(value: Object): Boolean = ???
 
+    /** Returns a Set view of the mappings contained in this map. */
     @stub
-    // Returns a Set view of the mappings contained in this map.
     def entrySet(): Set[Map.Entry[String, Object]] = ???
 
+    /** Returns the value to which this map maps the specified key. */
     @stub
-    // Returns the value to which this map maps the specified key.
     def get(key: Object): Object = ???
 
+    /** Returns true if this map contains no key-value mappings. */
     @stub
-    // Returns true if this map contains no key-value mappings.
     def isEmpty(): Boolean = ???
 
+    /** Returns a Set view of the keys contained in this map. */
     @stub
-    // Returns a Set view of the keys contained in this map.
     def keySet(): Set[String] = ???
 
+    /** Sets the specified key/value in the underlying map field. */
     @stub
-    // Sets the specified key/value in the underlying map field.
     def put(name: String, value: Object): Object = ???
 
+    /** putAll is implemented using Map.putAll. */
     @stub
-    // putAll is implemented using Map.putAll.
     def putAll(toMerge: Map[_ <: String, _ <: Object]): Unit = ???
 
+    /** Removes the mapping for this key from this map if it is present
+     *  (optional operation).
+     */
     @stub
-    // Removes the mapping for this key from this map if it is present
-    // (optional operation).
     def remove(key: Object): Object = ???
 
+    /** Returns the number of key-value mappings in this map. */
     @stub
-    // Returns the number of key-value mappings in this map.
     def size(): Int = ???
 }

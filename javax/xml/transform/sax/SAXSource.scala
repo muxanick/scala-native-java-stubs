@@ -4,45 +4,47 @@ import java.lang.{Object, String}
 import javax.xml.transform.Source
 import org.xml.sax.{InputSource, XMLReader}
 
-// Acts as an holder for SAX-style Source.
-//
-// Note that XSLT requires namespace support. Attempting to transform an
-// input source that is not
-// generated with a namespace-aware parser may result in errors.
-// Parsers can be made namespace aware by calling the
-// SAXParserFactory.setNamespaceAware(boolean awareness) method.
+/** Acts as an holder for SAX-style Source.
+ * 
+ *  Note that XSLT requires namespace support. Attempting to transform an
+ *  input source that is not
+ *  generated with a namespace-aware parser may result in errors.
+ *  Parsers can be made namespace aware by calling the
+ *  SAXParserFactory.setNamespaceAware(boolean awareness) method.
+ */
 class SAXSource extends Object with Source {
 
+    /** Zero-argument default constructor. */
     @stub
-    // Zero-argument default constructor.
     def this() = ???
 
+    /** Create a SAXSource, using a SAX InputSource. */
     @stub
-    // Create a SAXSource, using a SAX InputSource.
     def this(inputSource: InputSource) = ???
 
+    /** Get the SAX InputSource to be used for the Source. */
     @stub
-    // Get the SAX InputSource to be used for the Source.
     def getInputSource(): InputSource = ???
 
+    /** Get the base ID (URI or system ID) from where URIs
+     *  will be resolved.
+     */
     @stub
-    // Get the base ID (URI or system ID) from where URIs
-    // will be resolved.
     def getSystemId(): String = ???
 
+    /** Get the XMLReader to be used for the Source. */
     @stub
-    // Get the XMLReader to be used for the Source.
     def getXMLReader(): XMLReader = ???
 
+    /** Set the SAX InputSource to be used for the Source. */
     @stub
-    // Set the SAX InputSource to be used for the Source.
     def setInputSource(inputSource: InputSource): Unit = ???
 
+    /** Set the system identifier for this Source. */
     @stub
-    // Set the system identifier for this Source.
     def setSystemId(systemId: String): Unit = ???
 
+    /** Set the XMLReader to be used for the Source. */
     @stub
-    // Set the XMLReader to be used for the Source.
     def setXMLReader(reader: XMLReader): Unit = ???
 }

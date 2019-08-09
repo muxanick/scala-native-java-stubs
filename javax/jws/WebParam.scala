@@ -2,23 +2,26 @@ package javax.jws
 
 import java.lang.String
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
+import scala.annotation.StaticAnnotation
 
-// 
-@Retention ( value = RUNTIME ) @Target ( value = PARAMETER ) @interface WebParam {
+/**  */
+@Retention ( value = RUNTIME ) 
+@Target ( value = PARAMETER ) 
+ final class WebParam extends StaticAnnotation {
 
+    /**  */
     @stub
-    // 
-    def header: Boolean = ???
+    val header: Boolean = ???
 
+    /**  */
     @stub
-    // 
-    def mode: WebParam.Mode = ???
+    val mode: WebParam.Mode = ???
 
+    /**  */
     @stub
-    // 
-    def name: String = ???
+    val name: String = ???
 
+    /**  */
     @stub
-    // 
-    def partName: String = ???
+    val partName: String = ???
 }

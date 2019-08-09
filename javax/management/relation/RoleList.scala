@@ -3,67 +3,75 @@ package javax.management.relation
 import java.lang.Object
 import java.util.{AbstractCollection, AbstractList, ArrayList, Collection, List}
 
-// A RoleList represents a list of roles (Role objects). It is used as
-// parameter when creating a relation, and when trying to set several roles in
-// a relation (via 'setRoles()' method). It is returned as part of a
-// RoleResult, to provide roles successfully retrieved.
+/** A RoleList represents a list of roles (Role objects). It is used as
+ *  parameter when creating a relation, and when trying to set several roles in
+ *  a relation (via 'setRoles()' method). It is returned as part of a
+ *  RoleResult, to provide roles successfully retrieved.
+ */
 class RoleList extends ArrayList[Object] {
 
+    /** Constructs an empty RoleList. */
     @stub
-    // Constructs an empty RoleList.
     def this() = ???
 
+    /** Constructs an empty RoleList with the initial capacity
+     *  specified.
+     */
     @stub
-    // Constructs an empty RoleList with the initial capacity
-    // specified.
     def this(initialCapacity: Int) = ???
 
+    /** Inserts the specified element at the specified position in this
+     *  list.
+     */
     @stub
-    // Inserts the specified element at the specified position in this
-    // list.
     def add(index: Int, element: Object): Unit = ???
 
+    /** Inserts the role specified as an element at the position specified. */
     @stub
-    // Inserts the role specified as an element at the position specified.
     def add(index: Int, role: Role): Unit = ???
 
+    /** Appends the specified element to the end of this list. */
     @stub
-    // Appends the specified element to the end of this list.
     def add(o: Object): Boolean = ???
 
+    /** Adds the Role specified as the last element of the list. */
     @stub
-    // Adds the Role specified as the last element of the list.
     def add(role: Role): Unit = ???
 
+    /** Appends all of the elements in the specified collection to the end of
+     *  this list, in the order that they are returned by the
+     *  specified collection's Iterator.
+     */
     @stub
-    // Appends all of the elements in the specified collection to the end of
-    // this list, in the order that they are returned by the
-    // specified collection's Iterator.
     def addAll(c: Collection[_]): Boolean = ???
 
+    /** Inserts all of the elements in the specified collection into this
+     *  list, starting at the specified position.
+     */
     @stub
-    // Inserts all of the elements in the specified collection into this
-    // list, starting at the specified position.
     def addAll(index: Int, c: Collection[_]): Boolean = ???
 
+    /** Inserts all of the elements in the RoleList specified into this
+     *  list, starting at the specified position, in the order in which they are
+     *  returned by the Iterator of the RoleList specified.
+     */
     @stub
-    // Inserts all of the elements in the RoleList specified into this
-    // list, starting at the specified position, in the order in which they are
-    // returned by the Iterator of the RoleList specified.
     def addAll(index: Int, roleList: RoleList): Boolean = ???
 
+    /** Appends all the elements in the RoleList specified to the end
+     *  of the list, in the order in which they are returned by the Iterator of
+     *  the RoleList specified.
+     */
     @stub
-    // Appends all the elements in the RoleList specified to the end
-    // of the list, in the order in which they are returned by the Iterator of
-    // the RoleList specified.
     def addAll(roleList: RoleList): Boolean = ???
 
+    /** Return a view of this list as a List<Role>. */
     @stub
-    // Return a view of this list as a List<Role>.
     def asList(): List[Role] = ???
 
+    /** Replaces the element at the specified position in this list with
+     *  the specified element.
+     */
     @stub
-    // Replaces the element at the specified position in this list with
-    // the specified element.
     def set(index: Int, element: Object): Object = ???
 }

@@ -2,16 +2,17 @@ package java.util.concurrent
 
 import java.lang.FunctionalInterface
 
-// A task that returns a result and may throw an exception.
-// Implementors define a single method with no arguments called
-// call.
-//
-// The Callable interface is similar to Runnable, in that both are designed for classes whose
-// instances are potentially executed by another thread.  A
-// Runnable, however, does not return a result and cannot
-// throw a checked exception.
-//
-// The Executors class contains utility methods to
-// convert from other common forms to Callable classes.
+/** A task that returns a result and may throw an exception.
+ *  Implementors define a single method with no arguments called
+ *  call.
+ * 
+ *  The Callable interface is similar to Runnable, in that both are designed for classes whose
+ *  instances are potentially executed by another thread.  A
+ *  Runnable, however, does not return a result and cannot
+ *  throw a checked exception.
+ * 
+ *  The Executors class contains utility methods to
+ *  convert from other common forms to Callable classes.
+ */
 @FunctionalInterface trait Callable[V] {
 }

@@ -2,19 +2,20 @@ package java.security.spec
 
 import java.lang.Object
 
-// This immutable class specifies the set of domain parameters
-// used with elliptic curve cryptography (ECC).
+/** This immutable class specifies the set of domain parameters
+ *  used with elliptic curve cryptography (ECC).
+ */
 class ECParameterSpec extends Object with AlgorithmParameterSpec {
 
+    /** Returns the cofactor. */
     @stub
-    // Returns the cofactor.
     def getCofactor(): Int = ???
 
+    /** Returns the elliptic curve that this parameter defines. */
     @stub
-    // Returns the elliptic curve that this parameter defines.
     def getCurve(): EllipticCurve = ???
 
+    /** Returns the generator which is also known as the base point. */
     @stub
-    // Returns the generator which is also known as the base point.
     def getGenerator(): ECPoint = ???
 }

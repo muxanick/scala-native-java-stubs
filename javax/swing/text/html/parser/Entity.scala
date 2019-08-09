@@ -2,39 +2,40 @@ package javax.swing.text.html.parser
 
 import java.lang.{Object, String}
 
-// An entity is described in a DTD using the ENTITY construct.
-// It defines the type and value of the the entity.
+/** An entity is described in a DTD using the ENTITY construct.
+ *  It defines the type and value of the the entity.
+ */
 final class Entity extends Object with DTDConstants {
 
+    /**  */
     @stub
-    // 
-    def data: Array[Char] = ???
+    val data: Array[Char] = ???
 
+    /**  */
     @stub
-    // 
-    def name: String = ???
+    val name: String = ???
 
+    /** Returns the data. */
     @stub
-    // Returns the data.
     def getData(): Array[Char] = ???
 
+    /** Gets the name of the entity. */
     @stub
-    // Gets the name of the entity.
     def getName(): String = ???
 
+    /** Returns the data as a String. */
     @stub
-    // Returns the data as a String.
     def getString(): String = ???
 
+    /** Gets the type of the entity. */
     @stub
-    // Gets the type of the entity.
     def getType(): Int = ???
 
+    /** Returns true if it is a general entity. */
     @stub
-    // Returns true if it is a general entity.
     def isGeneral(): Boolean = ???
 
+    /** Returns true if it is a parameter entity. */
     @stub
-    // Returns true if it is a parameter entity.
     def isParameter(): Boolean = ???
 }

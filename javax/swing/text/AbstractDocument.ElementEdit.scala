@@ -4,27 +4,28 @@ import java.lang.Object
 import javax.swing.event.DocumentEvent.ElementChange
 import javax.swing.undo.AbstractUndoableEdit
 
-// An implementation of ElementChange that can be added to the document
-// event.
+/** An implementation of ElementChange that can be added to the document
+ *  event.
+ */
 object AbstractDocument.ElementEdit extends AbstractUndoableEdit with DocumentEvent.ElementChange {
 
+    /** Gets a list of children that were added. */
     @stub
-    // Gets a list of children that were added.
     def getChildrenAdded(): Array[Element] = ???
 
+    /** Gets a list of children that were removed. */
     @stub
-    // Gets a list of children that were removed.
     def getChildrenRemoved(): Array[Element] = ???
 
+    /** Returns the underlying element. */
     @stub
-    // Returns the underlying element.
     def getElement(): Element = ???
 
+    /** Returns the index into the list of elements. */
     @stub
-    // Returns the index into the list of elements.
     def getIndex(): Int = ???
 
+    /** Redoes a change. */
     @stub
-    // Redoes a change.
     def redo(): Unit = ???
 }

@@ -4,20 +4,22 @@ import java.lang.Object
 import java.security.cert.Certificate
 import java.util.Set
 
-// A KeyStore entry that holds a trusted
-// Certificate.
-object final KeyStore.TrustedCertificateEntry extends Object with KeyStore.Entry {
+/** A KeyStore entry that holds a trusted
+ *  Certificate.
+ */
+final object KeyStore.TrustedCertificateEntry extends Object with KeyStore.Entry {
 
+    /** Constructs a TrustedCertificateEntry with a
+     *  trusted Certificate.
+     */
     @stub
-    // Constructs a TrustedCertificateEntry with a
-    // trusted Certificate.
     def TrustedCertificateEntry(trustedCert: Certificate) = ???
 
+    /** Retrieves the attributes associated with an entry. */
     @stub
-    // Retrieves the attributes associated with an entry.
     def getAttributes(): Set[KeyStore.Entry.Attribute] = ???
 
+    /** Gets the trusted Certficate from this entry. */
     @stub
-    // Gets the trusted Certficate from this entry.
     def getTrustedCertificate(): Certificate = ???
 }

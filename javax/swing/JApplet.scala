@@ -5,150 +5,155 @@ import java.awt.{Component, Container, Graphics, LayoutManager, Panel}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 
-// An extended version of java.applet.Applet that adds support for
-// the JFC/Swing component architecture.
-// You can find task-oriented documentation about using JApplet
-// in The Java Tutorial,
-// in the section
-// How to Make Applets.
-// 
-// The JApplet class is slightly incompatible with
-// java.applet.Applet.  JApplet contains a
-// JRootPane as its only child.  The contentPane
-// should be the parent of any children of the JApplet.
-// As a convenience, the add, remove, and setLayout
-// methods of this class are overridden, so that they delegate calls
-// to the corresponding methods of the ContentPane.
-// For example, you can add a child component to an applet as follows:
-// 
-//       applet.add(child);
-// 
-//
-// And the child will be added to the contentPane.
-// The contentPane will always be non-null.
-// Attempting to set it to null will cause the
-// JApplet to throw an exception. The default
-// contentPane will have a BorderLayout
-// manager set on it.
-// Refer to RootPaneContainer
-// for details on adding, removing and setting the LayoutManager
-// of a JApplet.
-// 
-// Please see the JRootPane documentation for a
-// complete description of the contentPane, glassPane,
-// and layeredPane properties.
-// 
-// Warning: Swing is not thread safe. For more
-// information see Swing's Threading
-// Policy.
-// 
-// Warning:
-// Serialized objects of this class will not be compatible with
-// future Swing releases. The current serialization support is
-// appropriate for short term storage or RMI between applications running
-// the same version of Swing.  As of 1.4, support for long term storage
-// of all JavaBeans™
-// has been added to the java.beans package.
-// Please see XMLEncoder.
-class JApplet extends Applet with Accessible, with RootPaneContainer {
+/** An extended version of java.applet.Applet that adds support for
+ *  the JFC/Swing component architecture.
+ *  You can find task-oriented documentation about using JApplet
+ *  in The Java Tutorial,
+ *  in the section
+ *  How to Make Applets.
+ *  
+ *  The JApplet class is slightly incompatible with
+ *  java.applet.Applet.  JApplet contains a
+ *  JRootPane as its only child.  The contentPane
+ *  should be the parent of any children of the JApplet.
+ *  As a convenience, the add, remove, and setLayout
+ *  methods of this class are overridden, so that they delegate calls
+ *  to the corresponding methods of the ContentPane.
+ *  For example, you can add a child component to an applet as follows:
+ *  
+ *        applet.add(child);
+ *  
+ * 
+ *  And the child will be added to the contentPane.
+ *  The contentPane will always be non-null.
+ *  Attempting to set it to null will cause the
+ *  JApplet to throw an exception. The default
+ *  contentPane will have a BorderLayout
+ *  manager set on it.
+ *  Refer to RootPaneContainer
+ *  for details on adding, removing and setting the LayoutManager
+ *  of a JApplet.
+ *  
+ *  Please see the JRootPane documentation for a
+ *  complete description of the contentPane, glassPane,
+ *  and layeredPane properties.
+ *  
+ *  Warning: Swing is not thread safe. For more
+ *  information see Swing's Threading
+ *  Policy.
+ *  
+ *  Warning:
+ *  Serialized objects of this class will not be compatible with
+ *  future Swing releases. The current serialization support is
+ *  appropriate for short term storage or RMI between applications running
+ *  the same version of Swing.  As of 1.4, support for long term storage
+ *  of all JavaBeans™
+ *  has been added to the java.beans package.
+ *  Please see XMLEncoder.
+ */
+class JApplet extends Applet with Accessible with RootPaneContainer {
 
+    /**  */
     @stub
-    // 
-    protected def accessibleContext: AccessibleContext = ???
+    protected val accessibleContext: AccessibleContext = ???
 
+    /**  */
     @stub
-    // 
-    protected def rootPane: JRootPane = ???
+    protected val rootPane: JRootPane = ???
 
+    /** Adds the specified child Component. */
     @stub
-    // Adds the specified child Component.
     protected def addImpl(comp: Component, constraints: Object, index: Int): Unit = ???
 
+    /** Called by the constructor methods to create the default rootPane. */
     @stub
-    // Called by the constructor methods to create the default rootPane.
     protected def createRootPane(): JRootPane = ???
 
+    /** Gets the AccessibleContext associated with this JApplet. */
     @stub
-    // Gets the AccessibleContext associated with this JApplet.
     def getAccessibleContext(): AccessibleContext = ???
 
+    /** Returns the contentPane object for this applet. */
     @stub
-    // Returns the contentPane object for this applet.
     def getContentPane(): Container = ???
 
+    /** Returns the glassPane object for this applet. */
     @stub
-    // Returns the glassPane object for this applet.
     def getGlassPane(): Component = ???
 
+    /** Creates a graphics context for this component. */
     @stub
-    // Creates a graphics context for this component.
     def getGraphics(): Graphics = ???
 
+    /** Returns the menubar set on this applet. */
     @stub
-    // Returns the menubar set on this applet.
     def getJMenuBar(): JMenuBar = ???
 
+    /** Returns the layeredPane object for this applet. */
     @stub
-    // Returns the layeredPane object for this applet.
     def getLayeredPane(): JLayeredPane = ???
 
+    /** Returns the rootPane object for this applet. */
     @stub
-    // Returns the rootPane object for this applet.
     def getRootPane(): JRootPane = ???
 
+    /** Gets the transferHandler property. */
     @stub
-    // Gets the transferHandler property.
     def getTransferHandler(): TransferHandler = ???
 
+    /** Returns whether calls to add and
+     *  setLayout are forwarded to the contentPane.
+     */
     @stub
-    // Returns whether calls to add and
-    // setLayout are forwarded to the contentPane.
     protected def isRootPaneCheckingEnabled(): Boolean = ???
 
+    /** Returns a string representation of this JApplet. */
     @stub
-    // Returns a string representation of this JApplet.
     protected def paramString(): String = ???
 
+    /** Removes the specified component from the container. */
     @stub
-    // Removes the specified component from the container.
     def remove(comp: Component): Unit = ???
 
+    /** Repaints the specified rectangle of this component within
+     *  time milliseconds.
+     */
     @stub
-    // Repaints the specified rectangle of this component within
-    // time milliseconds.
     def repaint(time: Long, x: Int, y: Int, width: Int, height: Int): Unit = ???
 
+    /** Sets the contentPane property. */
     @stub
-    // Sets the contentPane property.
     def setContentPane(contentPane: Container): Unit = ???
 
+    /** Sets the glassPane property. */
     @stub
-    // Sets the glassPane property.
     def setGlassPane(glassPane: Component): Unit = ???
 
+    /** Sets the menubar for this applet. */
     @stub
-    // Sets the menubar for this applet.
     def setJMenuBar(menuBar: JMenuBar): Unit = ???
 
+    /** Sets the layeredPane property. */
     @stub
-    // Sets the layeredPane property.
     def setLayeredPane(layeredPane: JLayeredPane): Unit = ???
 
+    /** Sets the LayoutManager. */
     @stub
-    // Sets the LayoutManager.
     def setLayout(manager: LayoutManager): Unit = ???
 
+    /** Sets the rootPane property. */
     @stub
-    // Sets the rootPane property.
     protected def setRootPane(root: JRootPane): Unit = ???
 
+    /** Sets whether calls to add and
+     *  setLayout are forwarded to the contentPane.
+     */
     @stub
-    // Sets whether calls to add and
-    // setLayout are forwarded to the contentPane.
     protected def setRootPaneCheckingEnabled(enabled: Boolean): Unit = ???
 
+    /** Sets the transferHandler property, which is a mechanism to
+     *  support transfer of data into this component.
+     */
     @stub
-    // Sets the transferHandler property, which is a mechanism to
-    // support transfer of data into this component.
     def setTransferHandler(newHandler: TransferHandler): Unit = ???
 }

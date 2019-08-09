@@ -2,18 +2,18 @@ package javax.xml.crypto
 
 import java.lang.Object
 
-// The purpose of the key that is to be selected.
+/** The purpose of the key that is to be selected. */
 object KeySelector.Purpose extends Object {
 
+    /** A key for decrypting. */
     @stub
-    // A key for decrypting.
-    def DECRYPT: KeySelector.Purpose = ???
+    val DECRYPT: KeySelector.Purpose = ???
 
+    /** A key for encrypting. */
     @stub
-    // A key for encrypting.
-    def ENCRYPT: KeySelector.Purpose = ???
+    val ENCRYPT: KeySelector.Purpose = ???
 
+    /** A key for signing. */
     @stub
-    // A key for signing.
-    def SIGN: KeySelector.Purpose = ???
+    val SIGN: KeySelector.Purpose = ???
 }

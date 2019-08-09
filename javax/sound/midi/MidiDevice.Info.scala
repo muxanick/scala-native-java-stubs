@@ -2,32 +2,33 @@ package javax.sound.midi
 
 import java.lang.{Object, String}
 
-// A MidiDevice.Info object contains assorted
-// data about a MidiDevice, including its
-// name, the company who created it, and descriptive text.
+/** A MidiDevice.Info object contains assorted
+ *  data about a MidiDevice, including its
+ *  name, the company who created it, and descriptive text.
+ */
 object MidiDevice.Info extends Object {
 
+    /** Reports whether two objects are equal. */
     @stub
-    // Reports whether two objects are equal.
     def equals(obj: Object): Boolean = ???
 
+    /** Obtains the description of the device. */
     @stub
-    // Obtains the description of the device.
     def getDescription(): String = ???
 
+    /** Obtains the name of the device. */
     @stub
-    // Obtains the name of the device.
     def getName(): String = ???
 
+    /** Obtains the name of the company who supplies the device. */
     @stub
-    // Obtains the name of the company who supplies the device.
     def getVendor(): String = ???
 
+    /** Obtains the version of the device. */
     @stub
-    // Obtains the version of the device.
     def getVersion(): String = ???
 
+    /** Finalizes the hashcode method. */
     @stub
-    // Finalizes the hashcode method.
     def hashCode(): Int = ???
 }

@@ -2,57 +2,58 @@ package javax.sound.sampled
 
 import java.lang.{Object, String}
 
-// The Port.Info class extends Line.Info
-// with additional information specific to ports, including the port's name
-// and whether it is a source or a target for its mixer.
-// By definition, a port acts as either a source or a target to its mixer,
-// but not both.  (Audio input ports are sources; audio output ports are targets.)
-// 
-// To learn what ports are available, you can retrieve port info objects through the
-// getSourceLineInfo and
-// getTargetLineInfo
-// methods of the Mixer interface.  Instances of the
-// Port.Info class may also be constructed and used to obtain
-// lines matching the parameters specified in the Port.Info object.
+/** The Port.Info class extends Line.Info
+ *  with additional information specific to ports, including the port's name
+ *  and whether it is a source or a target for its mixer.
+ *  By definition, a port acts as either a source or a target to its mixer,
+ *  but not both.  (Audio input ports are sources; audio output ports are targets.)
+ *  
+ *  To learn what ports are available, you can retrieve port info objects through the
+ *  getSourceLineInfo and
+ *  getTargetLineInfo
+ *  methods of the Mixer interface.  Instances of the
+ *  Port.Info class may also be constructed and used to obtain
+ *  lines matching the parameters specified in the Port.Info object.
+ */
 object Port.Info extends Line.Info {
 
+    /** A type of port that gets audio from a CD-ROM drive. */
     @stub
-    // A type of port that gets audio from a CD-ROM drive.
-    def COMPACT_DISC: Port.Info = ???
+    val COMPACT_DISC: Port.Info = ???
 
+    /** A type of port that sends audio to a headphone jack. */
     @stub
-    // A type of port that sends audio to a headphone jack.
-    def HEADPHONE: Port.Info = ???
+    val HEADPHONE: Port.Info = ???
 
+    /** A type of port that gets audio from a line-level audio input jack. */
     @stub
-    // A type of port that gets audio from a line-level audio input jack.
-    def LINE_IN: Port.Info = ???
+    val LINE_IN: Port.Info = ???
 
+    /** A type of port that sends audio to a line-level audio output jack. */
     @stub
-    // A type of port that sends audio to a line-level audio output jack.
-    def LINE_OUT: Port.Info = ???
+    val LINE_OUT: Port.Info = ???
 
+    /** A type of port that gets audio from a built-in microphone or a microphone jack. */
     @stub
-    // A type of port that gets audio from a built-in microphone or a microphone jack.
-    def MICROPHONE: Port.Info = ???
+    val MICROPHONE: Port.Info = ???
 
+    /** Finalizes the equals method */
     @stub
-    // Finalizes the equals method
     def equals(obj: Object): Boolean = ???
 
+    /** Obtains the name of the port. */
     @stub
-    // Obtains the name of the port.
     def getName(): String = ???
 
+    /** Finalizes the hashCode method */
     @stub
-    // Finalizes the hashCode method
     def hashCode(): Int = ???
 
+    /** Indicates whether the port is a source or a target for its mixer. */
     @stub
-    // Indicates whether the port is a source or a target for its mixer.
     def isSource(): Boolean = ???
 
+    /** Indicates whether this info object specified matches this one. */
     @stub
-    // Indicates whether this info object specified matches this one.
     def matches(info: Line.Info): Boolean = ???
 }

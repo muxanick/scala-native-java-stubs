@@ -6,75 +6,76 @@ import javax.xml.bind.ValidationEventLocator
 import org.w3c.dom.Node
 import org.xml.sax.Locator
 
-// Default implementation of the ValidationEventLocator interface.
-//
-// 
-// JAXB providers are allowed to use whatever class that implements
-// the ValidationEventLocator interface. This class is just provided for a
-// convenience.
+/** Default implementation of the ValidationEventLocator interface.
+ * 
+ *  
+ *  JAXB providers are allowed to use whatever class that implements
+ *  the ValidationEventLocator interface. This class is just provided for a
+ *  convenience.
+ */
 class ValidationEventLocatorImpl extends Object with ValidationEventLocator {
 
+    /** Creates an object with all fields unavailable. */
     @stub
-    // Creates an object with all fields unavailable.
     def this() = ???
 
+    /** Constructs an object from an org.xml.sax.Locator. */
     @stub
-    // Constructs an object from an org.xml.sax.Locator.
     def this(loc: Locator) = ???
 
+    /** Constructs an object that points to a DOM Node. */
     @stub
-    // Constructs an object that points to a DOM Node.
     def this(_node: Node) = ???
 
+    /** Constructs an object that points to a JAXB content object. */
     @stub
-    // Constructs an object that points to a JAXB content object.
     def this(_object: Object) = ???
 
+    /** Return the column number if available */
     @stub
-    // Return the column number if available
     def getColumnNumber(): Int = ???
 
+    /** Return the line number if available */
     @stub
-    // Return the line number if available
     def getLineNumber(): Int = ???
 
+    /** Return a reference to the DOM Node if available */
     @stub
-    // Return a reference to the DOM Node if available
     def getNode(): Node = ???
 
+    /** Return a reference to the object in the Java content tree if available */
     @stub
-    // Return a reference to the object in the Java content tree if available
     def getObject(): Object = ???
 
+    /** Return the byte offset if available */
     @stub
-    // Return the byte offset if available
     def getOffset(): Int = ???
 
+    /** Return the name of the XML source as a URL if available */
     @stub
-    // Return the name of the XML source as a URL if available
     def getURL(): URL = ???
 
+    /** Set the columnNumber field on this event locator. */
     @stub
-    // Set the columnNumber field on this event locator.
     def setColumnNumber(_columnNumber: Int): Unit = ???
 
+    /** Set the lineNumber field on this event locator. */
     @stub
-    // Set the lineNumber field on this event locator.
     def setLineNumber(_lineNumber: Int): Unit = ???
 
+    /** Set the Node field on this event locator. */
     @stub
-    // Set the Node field on this event locator.
     def setNode(_node: Node): Unit = ???
 
+    /** Set the Object field on this event locator. */
     @stub
-    // Set the Object field on this event locator.
     def setObject(_object: Object): Unit = ???
 
+    /** Set the offset field on this event locator. */
     @stub
-    // Set the offset field on this event locator.
     def setOffset(_offset: Int): Unit = ???
 
+    /** Set the URL field on this event locator. */
     @stub
-    // Set the URL field on this event locator.
     def setURL(_url: URL): Unit = ???
 }

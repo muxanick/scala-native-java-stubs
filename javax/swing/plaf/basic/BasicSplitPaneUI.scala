@@ -7,363 +7,404 @@ import java.lang.{Object, String}
 import javax.swing.{JComponent, JSplitPane, KeyStroke}
 import javax.swing.plaf.{ComponentUI, SplitPaneUI}
 
-// A Basic L&F implementation of the SplitPaneUI.
+/** A Basic L&F implementation of the SplitPaneUI. */
 class BasicSplitPaneUI extends SplitPaneUI {
 
+    /** LayoutManager for JSplitPanes that have an orientation of
+     *  HORIZONTAL_SPLIT.
+     */
     @stub
-    // LayoutManager for JSplitPanes that have an orientation of
-    // HORIZONTAL_SPLIT.
-    def BasicSplitPaneUI.BasicHorizontalLayoutManager: class = ???
+    object BasicHorizontalLayoutManager extends BasicSplitPaneUI.BasicHorizontalLayoutManager
 
+    /** LayoutManager used for JSplitPanes with an orientation of
+     *  VERTICAL_SPLIT.
+     */
     @stub
-    // LayoutManager used for JSplitPanes with an orientation of
-    // VERTICAL_SPLIT.
-    def BasicSplitPaneUI.BasicVerticalLayoutManager: class = ???
+    object BasicVerticalLayoutManager extends BasicSplitPaneUI.BasicVerticalLayoutManager
 
+    /** Implementation of the FocusListener that the JSplitPane UI uses. */
     @stub
-    // Implementation of the FocusListener that the JSplitPane UI uses.
-    def BasicSplitPaneUI.FocusHandler: class = ???
+    object FocusHandler extends BasicSplitPaneUI.FocusHandler
 
+    /** Implementation of an ActionListener that the JSplitPane UI uses for
+     *  handling specific key presses.
+     */
     @stub
-    // Implementation of an ActionListener that the JSplitPane UI uses for
-    // handling specific key presses.
-    def BasicSplitPaneUI.KeyboardDownRightHandler: class = ???
+    object KeyboardDownRightHandler extends BasicSplitPaneUI.KeyboardDownRightHandler
 
+    /** Implementation of an ActionListener that the JSplitPane UI uses for
+     *  handling specific key presses.
+     */
     @stub
-    // Implementation of an ActionListener that the JSplitPane UI uses for
-    // handling specific key presses.
-    def BasicSplitPaneUI.KeyboardEndHandler: class = ???
+    object KeyboardEndHandler extends BasicSplitPaneUI.KeyboardEndHandler
 
+    /** Implementation of an ActionListener that the JSplitPane UI uses for
+     *  handling specific key presses.
+     */
     @stub
-    // Implementation of an ActionListener that the JSplitPane UI uses for
-    // handling specific key presses.
-    def BasicSplitPaneUI.KeyboardHomeHandler: class = ???
+    object KeyboardHomeHandler extends BasicSplitPaneUI.KeyboardHomeHandler
 
+    /** Implementation of an ActionListener that the JSplitPane UI uses for
+     *  handling specific key presses.
+     */
     @stub
-    // Implementation of an ActionListener that the JSplitPane UI uses for
-    // handling specific key presses.
-    def BasicSplitPaneUI.KeyboardResizeToggleHandler: class = ???
+    object KeyboardResizeToggleHandler extends BasicSplitPaneUI.KeyboardResizeToggleHandler
 
+    /** Implementation of an ActionListener that the JSplitPane UI uses for
+     *  handling specific key presses.
+     */
     @stub
-    // Implementation of an ActionListener that the JSplitPane UI uses for
-    // handling specific key presses.
-    def BasicSplitPaneUI.KeyboardUpLeftHandler: class = ???
+    object KeyboardUpLeftHandler extends BasicSplitPaneUI.KeyboardUpLeftHandler
 
+    /** Location of the divider when the dragging session began. */
     @stub
-    // Location of the divider when the dragging session began.
-    protected def beginDragDividerLocation: Int = ???
+    protected val beginDragDividerLocation: Int = ???
 
+    /** Instance of the divider for this JSplitPane. */
     @stub
-    // Instance of the divider for this JSplitPane.
-    protected def divider: BasicSplitPaneDivider = ???
+    protected val divider: BasicSplitPaneDivider = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
-    protected def dividerResizeToggleKey: KeyStroke = ???
+    protected val dividerResizeToggleKey: KeyStroke = ???
 
+    /** The size of the divider while the dragging session is valid. */
     @stub
-    // The size of the divider while the dragging session is valid.
-    protected def dividerSize: Int = ???
+    protected val dividerSize: Int = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
-    protected def downKey: KeyStroke = ???
+    protected val downKey: KeyStroke = ???
 
+    /** Set to true in startDragging if any of the children
+     *  (not including the nonContinuousLayoutDivider) are heavy weights.
+     */
     @stub
-    // Set to true in startDragging if any of the children
-    // (not including the nonContinuousLayoutDivider) are heavy weights.
-    protected def draggingHW: Boolean = ???
+    protected val draggingHW: Boolean = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
-    protected def endKey: KeyStroke = ???
+    protected val endKey: KeyStroke = ???
 
+    /** Instance of the FocusListener for this JSplitPane. */
     @stub
-    // Instance of the FocusListener for this JSplitPane.
-    protected def focusListener: FocusListener = ???
+    protected val focusListener: FocusListener = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
-    protected def homeKey: KeyStroke = ???
+    protected val homeKey: KeyStroke = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
-    protected def keyboardDownRightListener: ActionListener = ???
+    protected val keyboardDownRightListener: ActionListener = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
-    protected def keyboardEndListener: ActionListener = ???
+    protected val keyboardEndListener: ActionListener = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
-    protected def keyboardHomeListener: ActionListener = ???
+    protected val keyboardHomeListener: ActionListener = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
-    protected def keyboardResizeToggleListener: ActionListener = ???
+    protected val keyboardResizeToggleListener: ActionListener = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
-    protected def keyboardUpLeftListener: ActionListener = ???
+    protected val keyboardUpLeftListener: ActionListener = ???
 
+    /** LayoutManager that is created and placed into the split pane. */
     @stub
-    // LayoutManager that is created and placed into the split pane.
-    protected def layoutManager: BasicSplitPaneUI.BasicHorizontalLayoutManager = ???
+    protected val layoutManager: BasicSplitPaneUI.BasicHorizontalLayoutManager = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
-    protected def leftKey: KeyStroke = ???
+    protected val leftKey: KeyStroke = ???
 
+    /** Instance for the shadow of the divider when non continuous layout
+     *  is being used.
+     */
     @stub
-    // Instance for the shadow of the divider when non continuous layout
-    // is being used.
-    protected def nonContinuousLayoutDivider: Component = ???
+    protected val nonContinuousLayoutDivider: Component = ???
 
+    /** Instance of the PropertyChangeListener for this JSplitPane. */
     @stub
-    // Instance of the PropertyChangeListener for this JSplitPane.
-    protected def propertyChangeListener: PropertyChangeListener = ???
+    protected val propertyChangeListener: PropertyChangeListener = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
-    protected def rightKey: KeyStroke = ???
+    protected val rightKey: KeyStroke = ???
 
+    /** JSplitPane instance this instance is providing
+     *  the look and feel for.
+     */
     @stub
-    // JSplitPane instance this instance is providing
-    // the look and feel for.
-    protected def splitPane: JSplitPane = ???
+    protected val splitPane: JSplitPane = ???
 
+    /** Creates the default divider. */
     @stub
-    // Creates the default divider.
     def createDefaultDivider(): BasicSplitPaneDivider = ???
 
+    /** Returns the default non continuous layout divider, which is an
+     *  instance of Canvas that fills in the background with dark gray.
+     */
     @stub
-    // Returns the default non continuous layout divider, which is an
-    // instance of Canvas that fills in the background with dark gray.
     protected def createDefaultNonContinuousLayoutDivider(): Component = ???
 
+    /** Creates a FocusListener for the JSplitPane UI. */
     @stub
-    // Creates a FocusListener for the JSplitPane UI.
     protected def createFocusListener(): FocusListener = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
     protected def createKeyboardDownRightListener(): ActionListener = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
     protected def createKeyboardEndListener(): ActionListener = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
     protected def createKeyboardHomeListener(): ActionListener = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
     protected def createKeyboardResizeToggleListener(): ActionListener = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3.
-    //
     protected def createKeyboardUpLeftListener(): ActionListener = ???
 
+    /** Creates a PropertyChangeListener for the JSplitPane UI. */
     @stub
-    // Creates a PropertyChangeListener for the JSplitPane UI.
     protected def createPropertyChangeListener(): PropertyChangeListener = ???
 
+    /** Messaged during a dragging session to move the divider to the
+     *  passed in location.
+     */
     @stub
-    // Messaged during a dragging session to move the divider to the
-    // passed in location.
     protected def dragDividerTo(location: Int): Unit = ???
 
+    /** Messaged to finish the dragging session. */
     @stub
-    // Messaged to finish the dragging session.
     protected def finishDraggingTo(location: Int): Unit = ???
 
+    /** Called when the specified split pane has finished painting
+     *  its children.
+     */
     @stub
-    // Called when the specified split pane has finished painting
-    // its children.
     def finishedPaintingChildren(sp: JSplitPane, g: Graphics): Unit = ???
 
+    /** Returns the divider between the top Components. */
     @stub
-    // Returns the divider between the top Components.
     def getDivider(): BasicSplitPaneDivider = ???
 
+    /** Deprecated. 
+     * As of Java 2 platform v1.3, instead set the border on the
+     *  divider.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of Java 2 platform v1.3, instead set the border on the
-    // divider.
-    //
     protected def getDividerBorderSize(): Int = ???
 
+    /** Returns the location of the divider, which may differ from what
+     *  the splitpane thinks the location of the divider is.
+     */
     @stub
-    // Returns the location of the divider, which may differ from what
-    // the splitpane thinks the location of the divider is.
     def getDividerLocation(jc: JSplitPane): Int = ???
 
+    /** Returns the insets. */
     @stub
-    // Returns the insets.
     def getInsets(jc: JComponent): Insets = ???
 
+    /** Returns the last drag location of the JSplitPane. */
     @stub
-    // Returns the last drag location of the JSplitPane.
     def getLastDragLocation(): Int = ???
 
+    /** Gets the maximum location of the divider. */
     @stub
-    // Gets the maximum location of the divider.
     def getMaximumDividerLocation(jc: JSplitPane): Int = ???
 
+    /** Returns the maximum size for the passed in component,
+     *  This is passed off to the current layout manager.
+     */
     @stub
-    // Returns the maximum size for the passed in component,
-    // This is passed off to the current layout manager.
     def getMaximumSize(jc: JComponent): Dimension = ???
 
+    /** Gets the minimum location of the divider. */
     @stub
-    // Gets the minimum location of the divider.
     def getMinimumDividerLocation(jc: JSplitPane): Int = ???
 
+    /** Returns the minimum size for the passed in component,
+     *  This is passed off to the current layout manager.
+     */
     @stub
-    // Returns the minimum size for the passed in component,
-    // This is passed off to the current layout manager.
     def getMinimumSize(jc: JComponent): Dimension = ???
 
+    /** Returns the divider to use when the splitPane is configured to
+     *  not continuously layout.
+     */
     @stub
-    // Returns the divider to use when the splitPane is configured to
-    // not continuously layout.
     def getNonContinuousLayoutDivider(): Component = ???
 
+    /** Returns the orientation for the JSplitPane. */
     @stub
-    // Returns the orientation for the JSplitPane.
     def getOrientation(): Int = ???
 
+    /** Returns the preferred size for the passed in component,
+     *  This is passed off to the current layout manager.
+     */
     @stub
-    // Returns the preferred size for the passed in component,
-    // This is passed off to the current layout manager.
     def getPreferredSize(jc: JComponent): Dimension = ???
 
+    /** Returns the splitpane this instance is currently contained
+     *  in.
+     */
     @stub
-    // Returns the splitpane this instance is currently contained
-    // in.
     def getSplitPane(): JSplitPane = ???
 
+    /** Installs the UI defaults. */
     @stub
-    // Installs the UI defaults.
     protected def installDefaults(): Unit = ???
 
+    /** Installs the keyboard actions for the UI. */
     @stub
-    // Installs the keyboard actions for the UI.
     protected def installKeyboardActions(): Unit = ???
 
+    /** Installs the event listeners for the UI. */
     @stub
-    // Installs the event listeners for the UI.
     protected def installListeners(): Unit = ???
 
+    /** Installs the UI. */
     @stub
-    // Installs the UI.
     def installUI(c: JComponent): Unit = ???
 
+    /** Determines whether the JSplitPane is set to use a continuous layout. */
     @stub
-    // Determines whether the JSplitPane is set to use a continuous layout.
     def isContinuousLayout(): Boolean = ???
 
+    /** Paints the specified component appropriately for the look and feel. */
     @stub
-    // Paints the specified component appropriately for the look and feel.
     def paint(g: Graphics, jc: JComponent): Unit = ???
 
+    /** Resets the layout manager based on orientation and messages it
+     *  with invalidateLayout to pull in appropriate Components.
+     */
     @stub
-    // Resets the layout manager based on orientation and messages it
-    // with invalidateLayout to pull in appropriate Components.
     protected def resetLayoutManager(): Unit = ???
 
+    /** Messaged to reset the preferred sizes. */
     @stub
-    // Messaged to reset the preferred sizes.
     def resetToPreferredSizes(jc: JSplitPane): Unit = ???
 
+    /** Turn continuous layout on/off. */
     @stub
-    // Turn continuous layout on/off.
     def setContinuousLayout(b: Boolean): Unit = ???
 
+    /** Sets the location of the divider to location. */
     @stub
-    // Sets the location of the divider to location.
     def setDividerLocation(jc: JSplitPane, location: Int): Unit = ???
 
+    /** Set the last drag location of the JSplitPane. */
     @stub
-    // Set the last drag location of the JSplitPane.
     def setLastDragLocation(l: Int): Unit = ???
 
+    /** Sets the divider to use when the splitPane is configured to
+     *  not continuously layout.
+     */
     @stub
-    // Sets the divider to use when the splitPane is configured to
-    // not continuously layout.
     protected def setNonContinuousLayoutDivider(newDivider: Component): Unit = ???
 
+    /** Sets the divider to use. */
     @stub
-    // Sets the divider to use.
     protected def setNonContinuousLayoutDivider(newDivider: Component, rememberSizes: Boolean): Unit = ???
 
+    /** Set the orientation for the JSplitPane. */
     @stub
-    // Set the orientation for the JSplitPane.
     def setOrientation(orientation: Int): Unit = ???
 
+    /** Should be messaged before the dragging session starts, resets
+     *  lastDragLocation and dividerSize.
+     */
     @stub
-    // Should be messaged before the dragging session starts, resets
-    // lastDragLocation and dividerSize.
     protected def startDragging(): Unit = ???
 
+    /** Uninstalls the UI defaults. */
     @stub
-    // Uninstalls the UI defaults.
     protected def uninstallDefaults(): Unit = ???
 
+    /** Uninstalls the keyboard actions for the UI. */
     @stub
-    // Uninstalls the keyboard actions for the UI.
     protected def uninstallKeyboardActions(): Unit = ???
 
+    /** Uninstalls the event listeners for the UI. */
     @stub
-    // Uninstalls the event listeners for the UI.
     protected def uninstallListeners(): Unit = ???
 }
 
 object BasicSplitPaneUI {
+    /** How far (relative) the divider does move when it is moved around by
+     *  the cursor keys on the keyboard.
+     */
     @stub
-    // How far (relative) the divider does move when it is moved around by
-    // the cursor keys on the keyboard.
-    protected def KEYBOARD_DIVIDER_MOVE_OFFSET: Int = ???
+    protected val KEYBOARD_DIVIDER_MOVE_OFFSET: Int = ???
 
+    /** The divider used for non-continuous layout is added to the split pane
+     *  with this object.
+     */
     @stub
-    // The divider used for non-continuous layout is added to the split pane
-    // with this object.
-    protected def NON_CONTINUOUS_DIVIDER: String = ???
+    protected val NON_CONTINUOUS_DIVIDER: String = ???
 
+    /** Creates a new BasicSplitPaneUI instance */
     @stub
-    // Creates a new BasicSplitPaneUI instance
     def createUI(x: JComponent): ComponentUI = ???
 }

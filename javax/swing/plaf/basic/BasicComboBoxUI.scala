@@ -9,326 +9,346 @@ import javax.swing.{CellRendererPane, ComboBoxEditor, JButton, JComboBox, JCompo
 import javax.swing.event.ListDataListener
 import javax.swing.plaf.{ComboBoxUI, ComponentUI}
 
-// Basic UI implementation for JComboBox.
-// 
-// The combo box is a compound component which means that it is an aggregate of
-// many simpler components. This class creates and manages the listeners
-// on the combo box and the combo box model. These listeners update the user
-// interface in response to changes in the properties and state of the combo box.
-// 
-// All event handling is handled by listener classes created with the
-// createxxxListener() methods and internal classes.
-// You can change the behavior of this class by overriding the
-// createxxxListener() methods and supplying your own
-// event listeners or subclassing from the ones supplied in this class.
-// 
-// For adding specific actions,
-// overide installKeyboardActions to add actions in response to
-// KeyStroke bindings. See the article How to Use Key Bindings
+/** Basic UI implementation for JComboBox.
+ *  
+ *  The combo box is a compound component which means that it is an aggregate of
+ *  many simpler components. This class creates and manages the listeners
+ *  on the combo box and the combo box model. These listeners update the user
+ *  interface in response to changes in the properties and state of the combo box.
+ *  
+ *  All event handling is handled by listener classes created with the
+ *  createxxxListener() methods and internal classes.
+ *  You can change the behavior of this class by overriding the
+ *  createxxxListener() methods and supplying your own
+ *  event listeners or subclassing from the ones supplied in this class.
+ *  
+ *  For adding specific actions,
+ *  overide installKeyboardActions to add actions in response to
+ *  KeyStroke bindings. See the article How to Use Key Bindings
+ */
 class BasicComboBoxUI extends ComboBoxUI {
 
+    /** This layout manager handles the 'standard' layout of combo boxes. */
     @stub
-    // This layout manager handles the 'standard' layout of combo boxes.
-    def BasicComboBoxUI.ComboBoxLayoutManager: class = ???
+    object ComboBoxLayoutManager extends BasicComboBoxUI.ComboBoxLayoutManager
 
+    /** This listener hides the popup when the focus is lost. */
     @stub
-    // This listener hides the popup when the focus is lost.
-    def BasicComboBoxUI.FocusHandler: class = ???
+    object FocusHandler extends BasicComboBoxUI.FocusHandler
 
+    /** This listener watches for changes to the selection in the
+     *  combo box.
+     */
     @stub
-    // This listener watches for changes to the selection in the
-    // combo box.
-    def BasicComboBoxUI.ItemHandler: class = ???
+    object ItemHandler extends BasicComboBoxUI.ItemHandler
 
+    /** This listener checks to see if the key event isn't a navigation key. */
     @stub
-    // This listener checks to see if the key event isn't a navigation key.
-    def BasicComboBoxUI.KeyHandler: class = ???
+    object KeyHandler extends BasicComboBoxUI.KeyHandler
 
+    /** This listener watches for changes in the
+     *  ComboBoxModel.
+     */
     @stub
-    // This listener watches for changes in the
-    // ComboBoxModel.
-    def BasicComboBoxUI.ListDataHandler: class = ???
+    object ListDataHandler extends BasicComboBoxUI.ListDataHandler
 
+    /**  */
     @stub
-    // 
-    protected def arrowButton: JButton = ???
+    protected val arrowButton: JButton = ???
 
+    /**  */
     @stub
-    // 
-    protected def cachedMinimumSize: Dimension = ???
+    protected val cachedMinimumSize: Dimension = ???
 
+    /**  */
     @stub
-    // 
-    protected def comboBox: JComboBox = ???
+    protected val comboBox: JComboBox = ???
 
+    /**  */
     @stub
-    // 
-    protected def currentValuePane: CellRendererPane = ???
+    protected val currentValuePane: CellRendererPane = ???
 
+    /**  */
     @stub
-    // 
-    protected def editor: Component = ???
+    protected val editor: Component = ???
 
+    /** This protected field is implementation specific. */
     @stub
-    // This protected field is implementation specific.
-    protected def focusListener: FocusListener = ???
+    protected val focusListener: FocusListener = ???
 
+    /** This protected field is implementation specific. */
     @stub
-    // This protected field is implementation specific.
-    protected def hasFocus: Boolean = ???
+    protected val hasFocus: Boolean = ???
 
+    /**  */
     @stub
-    // 
-    protected def isMinimumSizeDirty: Boolean = ???
+    protected val isMinimumSizeDirty: Boolean = ???
 
+    /** This protected field is implementation specific. */
     @stub
-    // This protected field is implementation specific.
-    protected def itemListener: ItemListener = ???
+    protected val itemListener: ItemListener = ???
 
+    /** This protected field is implementation specific. */
     @stub
-    // This protected field is implementation specific.
-    protected def keyListener: KeyListener = ???
+    protected val keyListener: KeyListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def listBox: JList = ???
+    protected val listBox: JList = ???
 
+    /** This protected field is implementation specific. */
     @stub
-    // This protected field is implementation specific.
-    protected def listDataListener: ListDataListener = ???
+    protected val listDataListener: ListDataListener = ???
 
+    /** If specified, these insets act as padding around the cell renderer when
+     *  laying out and painting the "selected" item in the combo box.
+     */
     @stub
-    // If specified, these insets act as padding around the cell renderer when
-    // laying out and painting the "selected" item in the combo box.
-    protected def padding: Insets = ???
+    protected val padding: Insets = ???
 
+    /**  */
     @stub
-    // 
-    protected def popup: ComboPopup = ???
+    protected val popup: ComboPopup = ???
 
+    /**  */
     @stub
-    // 
-    protected def popupKeyListener: KeyListener = ???
+    protected val popupKeyListener: KeyListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def popupMouseListener: MouseListener = ???
+    protected val popupMouseListener: MouseListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def popupMouseMotionListener: MouseMotionListener = ???
+    protected val popupMouseMotionListener: MouseMotionListener = ???
 
+    /** This protected field is implementation specific. */
     @stub
-    // This protected field is implementation specific.
-    protected def propertyChangeListener: PropertyChangeListener = ???
+    protected val propertyChangeListener: PropertyChangeListener = ???
 
+    /** This public method is implementation specific and should be private. */
     @stub
-    // This public method is implementation specific and should be private.
     def addEditor(): Unit = ???
 
+    /** This public method is implementation specific and should be private. */
     @stub
-    // This public method is implementation specific and should be private.
     def configureArrowButton(): Unit = ???
 
+    /** This protected method is implementation specific and should be private. */
     @stub
-    // This protected method is implementation specific and should be private.
     protected def configureEditor(): Unit = ???
 
+    /** Creates a button which will be used as the control to show or hide
+     *  the popup portion of the combo box.
+     */
     @stub
-    // Creates a button which will be used as the control to show or hide
-    // the popup portion of the combo box.
     protected def createArrowButton(): JButton = ???
 
+    /** Creates the default editor that will be used in editable combo boxes. */
     @stub
-    // Creates the default editor that will be used in editable combo boxes.
     protected def createEditor(): ComboBoxEditor = ???
 
+    /** Creates a FocusListener which will be added to the combo box. */
     @stub
-    // Creates a FocusListener which will be added to the combo box.
     protected def createFocusListener(): FocusListener = ???
 
+    /** Creates an ItemListener which will be added to the
+     *  combo box.
+     */
     @stub
-    // Creates an ItemListener which will be added to the
-    // combo box.
     protected def createItemListener(): ItemListener = ???
 
+    /** Creates a KeyListener which will be added to the
+     *  combo box.
+     */
     @stub
-    // Creates a KeyListener which will be added to the
-    // combo box.
     protected def createKeyListener(): KeyListener = ???
 
+    /** Creates a layout manager for managing the components which make up the
+     *  combo box.
+     */
     @stub
-    // Creates a layout manager for managing the components which make up the
-    // combo box.
     protected def createLayoutManager(): LayoutManager = ???
 
+    /** Creates a list data listener which will be added to the
+     *  ComboBoxModel.
+     */
     @stub
-    // Creates a list data listener which will be added to the
-    // ComboBoxModel.
     protected def createListDataListener(): ListDataListener = ???
 
+    /** Creates the popup portion of the combo box. */
     @stub
-    // Creates the popup portion of the combo box.
     protected def createPopup(): ComboPopup = ???
 
+    /** Creates a PropertyChangeListener which will be added to
+     *  the combo box.
+     */
     @stub
-    // Creates a PropertyChangeListener which will be added to
-    // the combo box.
     protected def createPropertyChangeListener(): PropertyChangeListener = ???
 
+    /** Creates the default renderer that will be used in a non-editiable combo
+     *  box.
+     */
     @stub
-    // Creates the default renderer that will be used in a non-editiable combo
-    // box.
     protected def createRenderer(): ListCellRenderer = ???
 
+    /** Returns the ith Accessible child of the object. */
     @stub
-    // Returns the ith Accessible child of the object.
     def getAccessibleChild(c: JComponent, i: Int): Accessible = ???
 
+    /** Returns the number of accessible children in the object. */
     @stub
-    // Returns the number of accessible children in the object.
     def getAccessibleChildrenCount(c: JComponent): Int = ???
 
+    /** Returns the baseline. */
     @stub
-    // Returns the baseline.
     def getBaseline(c: JComponent, width: Int, height: Int): Int = ???
 
+    /** Returns an enum indicating how the baseline of the component
+     *  changes as the size changes.
+     */
     @stub
-    // Returns an enum indicating how the baseline of the component
-    // changes as the size changes.
     def getBaselineResizeBehavior(c: JComponent): Component.BaselineResizeBehavior = ???
 
+    /** Return the default size of an empty display area of the combo box using
+     *  the current renderer and font.
+     */
     @stub
-    // Return the default size of an empty display area of the combo box using
-    // the current renderer and font.
     protected def getDefaultSize(): Dimension = ???
 
+    /** Returns the calculated size of the display area. */
     @stub
-    // Returns the calculated size of the display area.
     protected def getDisplaySize(): Dimension = ???
 
+    /** Gets the insets from the JComboBox. */
     @stub
-    // Gets the insets from the JComboBox.
     protected def getInsets(): Insets = ???
 
+    /** Returns the specified component's maximum size appropriate for
+     *  the look and feel.
+     */
     @stub
-    // Returns the specified component's maximum size appropriate for
-    // the look and feel.
     def getMaximumSize(c: JComponent): Dimension = ???
 
+    /** The minimum size is the size of the display area plus insets plus the button. */
     @stub
-    // The minimum size is the size of the display area plus insets plus the button.
     def getMinimumSize(c: JComponent): Dimension = ???
 
+    /** Returns the specified component's preferred size appropriate for
+     *  the look and feel.
+     */
     @stub
-    // Returns the specified component's preferred size appropriate for
-    // the look and feel.
     def getPreferredSize(c: JComponent): Dimension = ???
 
+    /** Returns the size a component would have if used as a cell renderer. */
     @stub
-    // Returns the size a component would have if used as a cell renderer.
     protected def getSizeForComponent(comp: Component): Dimension = ???
 
+    /** Creates and initializes the components which make up the
+     *  aggregate combo box.
+     */
     @stub
-    // Creates and initializes the components which make up the
-    // aggregate combo box.
     protected def installComponents(): Unit = ???
 
+    /** Installs the default colors, default font, default renderer, and default
+     *  editor into the JComboBox.
+     */
     @stub
-    // Installs the default colors, default font, default renderer, and default
-    // editor into the JComboBox.
     protected def installDefaults(): Unit = ???
 
+    /** Adds keyboard actions to the JComboBox. */
     @stub
-    // Adds keyboard actions to the JComboBox.
     protected def installKeyboardActions(): Unit = ???
 
+    /** Creates and installs listeners for the combo box and its model. */
     @stub
-    // Creates and installs listeners for the combo box and its model.
     protected def installListeners(): Unit = ???
 
+    /** Configures the specified component appropriately for the look and feel. */
     @stub
-    // Configures the specified component appropriately for the look and feel.
     def installUI(c: JComponent): Unit = ???
 
+    /** Determines if the JComboBox is focus traversable. */
     @stub
-    // Determines if the JComboBox is focus traversable.
     def isFocusTraversable(c: JComboBox): Boolean = ???
 
+    /** Returns whether or not the supplied keyCode maps to a key that is used for
+     *  navigation.
+     */
     @stub
-    // Returns whether or not the supplied keyCode maps to a key that is used for
-    // navigation.
     protected def isNavigationKey(keyCode: Int): Boolean = ???
 
+    /** Tells if the popup is visible or not. */
     @stub
-    // Tells if the popup is visible or not.
     def isPopupVisible(c: JComboBox): Boolean = ???
 
+    /** Paints the specified component appropriately for the look and feel. */
     @stub
-    // Paints the specified component appropriately for the look and feel.
     def paint(g: Graphics, c: JComponent): Unit = ???
 
+    /** Paints the currently selected item. */
     @stub
-    // Paints the currently selected item.
     def paintCurrentValue(g: Graphics, bounds: Rectangle, hasFocus: Boolean): Unit = ???
 
+    /** Paints the background of the currently selected item. */
     @stub
-    // Paints the background of the currently selected item.
     def paintCurrentValueBackground(g: Graphics, bounds: Rectangle, hasFocus: Boolean): Unit = ???
 
+    /** Returns the area that is reserved for drawing the currently selected item. */
     @stub
-    // Returns the area that is reserved for drawing the currently selected item.
     protected def rectangleForCurrentValue(): Rectangle = ???
 
+    /** This public method is implementation specific and should be private. */
     @stub
-    // This public method is implementation specific and should be private.
     def removeEditor(): Unit = ???
 
+    /** Selects the next item in the list. */
     @stub
-    // Selects the next item in the list.
     protected def selectNextPossibleValue(): Unit = ???
 
+    /** Selects the previous item in the list. */
     @stub
-    // Selects the previous item in the list.
     protected def selectPreviousPossibleValue(): Unit = ???
 
+    /** Hides the popup. */
     @stub
-    // Hides the popup.
     def setPopupVisible(c: JComboBox, v: Boolean): Unit = ???
 
+    /** Hides the popup if it is showing and shows the popup if it is hidden. */
     @stub
-    // Hides the popup if it is showing and shows the popup if it is hidden.
     protected def toggleOpenClose(): Unit = ???
 
+    /** This public method is implementation specific and should be private. */
     @stub
-    // This public method is implementation specific and should be private.
     def unconfigureArrowButton(): Unit = ???
 
+    /** This protected method is implementation specific and should be private. */
     @stub
-    // This protected method is implementation specific and should be private.
     protected def unconfigureEditor(): Unit = ???
 
+    /** The aggregate components which comprise the combo box are
+     *  unregistered and uninitialized.
+     */
     @stub
-    // The aggregate components which comprise the combo box are
-    // unregistered and uninitialized.
     protected def uninstallComponents(): Unit = ???
 
+    /** Uninstalls the default colors, default font, default renderer,
+     *  and default editor from the combo box.
+     */
     @stub
-    // Uninstalls the default colors, default font, default renderer,
-    // and default editor from the combo box.
     protected def uninstallDefaults(): Unit = ???
 
+    /** Removes the focus InputMap and ActionMap. */
     @stub
-    // Removes the focus InputMap and ActionMap.
     protected def uninstallKeyboardActions(): Unit = ???
 
+    /** Removes the installed listeners from the combo box and its model. */
     @stub
-    // Removes the installed listeners from the combo box and its model.
     protected def uninstallListeners(): Unit = ???
 }
 
 object BasicComboBoxUI {
+    /**  */
     @stub
-    // 
     def createUI(c: JComponent): ComponentUI = ???
 }

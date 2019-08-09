@@ -2,27 +2,28 @@ package javax.swing
 
 import java.lang.Object
 
-// A ComponentInputMap is an InputMap
-// associated with a particular JComponent.
-// The component is automatically notified whenever
-// the ComponentInputMap changes.
-// ComponentInputMaps are used for
-// WHEN_IN_FOCUSED_WINDOW bindings.
+/** A ComponentInputMap is an InputMap
+ *  associated with a particular JComponent.
+ *  The component is automatically notified whenever
+ *  the ComponentInputMap changes.
+ *  ComponentInputMaps are used for
+ *  WHEN_IN_FOCUSED_WINDOW bindings.
+ */
 class ComponentInputMap extends InputMap {
 
+    /** Removes all the mappings from this object. */
     @stub
-    // Removes all the mappings from this object.
     def clear(): Unit = ???
 
+    /** Returns the component the InputMap was created for. */
     @stub
-    // Returns the component the InputMap was created for.
     def getComponent(): JComponent = ???
 
+    /** Adds a binding for keyStroke to actionMapKey. */
     @stub
-    // Adds a binding for keyStroke to actionMapKey.
     def put(keyStroke: KeyStroke, actionMapKey: Object): Unit = ???
 
+    /** Removes the binding for key from this object. */
     @stub
-    // Removes the binding for key from this object.
     def remove(key: KeyStroke): Unit = ???
 }

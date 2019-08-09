@@ -6,195 +6,214 @@ import java.lang.{Class, Object, String}
 import java.util.EventListener
 import javax.swing.event.{ChangeEvent, ChangeListener, EventListenerList}
 
-// The default implementation of a Button component's data model.
-// 
-// Warning:
-// Serialized objects of this class will not be compatible with
-// future Swing releases. The current serialization support is
-// appropriate for short term storage or RMI between applications running
-// the same version of Swing. As of 1.4, support for long term storage
-// of all JavaBeans™
-// has been added to the java.beans package.
-// Please see XMLEncoder.
-class DefaultButtonModel extends Object with ButtonModel, with Serializable {
+/** The default implementation of a Button component's data model.
+ *  
+ *  Warning:
+ *  Serialized objects of this class will not be compatible with
+ *  future Swing releases. The current serialization support is
+ *  appropriate for short term storage or RMI between applications running
+ *  the same version of Swing. As of 1.4, support for long term storage
+ *  of all JavaBeans™
+ *  has been added to the java.beans package.
+ *  Please see XMLEncoder.
+ */
+class DefaultButtonModel extends Object with ButtonModel with Serializable {
 
+    /** The action command string fired by the button. */
     @stub
-    // The action command string fired by the button.
-    protected def actionCommand: String = ???
+    protected val actionCommand: String = ???
 
+    /** Only one ChangeEvent is needed per button model
+     *  instance since the event's only state is the source property.
+     */
     @stub
-    // Only one ChangeEvent is needed per button model
-    // instance since the event's only state is the source property.
-    protected def changeEvent: ChangeEvent = ???
+    protected val changeEvent: ChangeEvent = ???
 
+    /** The button group that the button belongs to. */
     @stub
-    // The button group that the button belongs to.
-    protected def group: ButtonGroup = ???
+    protected val group: ButtonGroup = ???
 
+    /** Stores the listeners on this model. */
     @stub
-    // Stores the listeners on this model.
-    protected def listenerList: EventListenerList = ???
+    protected val listenerList: EventListenerList = ???
 
+    /** The button's mnemonic. */
     @stub
-    // The button's mnemonic.
-    protected def mnemonic: Int = ???
+    protected val mnemonic: Int = ???
 
+    /** Adds an ActionListener to the model. */
     @stub
-    // Adds an ActionListener to the model.
     def addActionListener(l: ActionListener): Unit = ???
 
+    /** Adds a ChangeListener to the model. */
     @stub
-    // Adds a ChangeListener to the model.
     def addChangeListener(l: ChangeListener): Unit = ???
 
+    /** Adds an ItemListener to the model. */
     @stub
-    // Adds an ItemListener to the model.
     def addItemListener(l: ItemListener): Unit = ???
 
+    /** Notifies all listeners that have registered interest for
+     *  notification on this event type.
+     */
     @stub
-    // Notifies all listeners that have registered interest for
-    // notification on this event type.
     protected def fireActionPerformed(e: ActionEvent): Unit = ???
 
+    /** Notifies all listeners that have registered interest for
+     *  notification on this event type.
+     */
     @stub
-    // Notifies all listeners that have registered interest for
-    // notification on this event type.
     protected def fireItemStateChanged(e: ItemEvent): Unit = ???
 
+    /** Notifies all listeners that have registered interest for
+     *  notification on this event type.
+     */
     @stub
-    // Notifies all listeners that have registered interest for
-    // notification on this event type.
     protected def fireStateChanged(): Unit = ???
 
+    /** Returns the action command string for the button. */
     @stub
-    // Returns the action command string for the button.
     def getActionCommand(): String = ???
 
+    /** Returns an array of all the action listeners
+     *  registered on this DefaultButtonModel.
+     */
     @stub
-    // Returns an array of all the action listeners
-    // registered on this DefaultButtonModel.
     def getActionListeners(): Array[ActionListener] = ???
 
+    /** Returns an array of all the change listeners
+     *  registered on this DefaultButtonModel.
+     */
     @stub
-    // Returns an array of all the change listeners
-    // registered on this DefaultButtonModel.
     def getChangeListeners(): Array[ChangeListener] = ???
 
+    /** Returns the group that the button belongs to. */
     @stub
-    // Returns the group that the button belongs to.
     def getGroup(): ButtonGroup = ???
 
+    /** Returns an array of all the item listeners
+     *  registered on this DefaultButtonModel.
+     */
     @stub
-    // Returns an array of all the item listeners
-    // registered on this DefaultButtonModel.
     def getItemListeners(): Array[ItemListener] = ???
 
+    /** Returns an array of all the objects currently registered as
+     *  FooListeners
+     *  upon this model.
+     */
     @stub
-    // Returns an array of all the objects currently registered as
-    // FooListeners
-    // upon this model.
-    def Array[T]: [T <: EventListener] = ???
+    def getListeners[T <: EventListener](listenerType: Class[T]): Array[T] = ???
 
+    /** Gets the keyboard mnemonic for the button. */
     @stub
-    // Gets the keyboard mnemonic for the button.
     def getMnemonic(): Int = ???
 
+    /** Overridden to return null. */
     @stub
-    // Overridden to return null.
     def getSelectedObjects(): Array[Object] = ???
 
+    /** Indicates partial commitment towards triggering the
+     *  button.
+     */
     @stub
-    // Indicates partial commitment towards triggering the
-    // button.
     def isArmed(): Boolean = ???
 
+    /** Indicates if the button can be selected or triggered by
+     *  an input device, such as a mouse pointer.
+     */
     @stub
-    // Indicates if the button can be selected or triggered by
-    // an input device, such as a mouse pointer.
     def isEnabled(): Boolean = ???
 
+    /** Indicates if the button is pressed. */
     @stub
-    // Indicates if the button is pressed.
     def isPressed(): Boolean = ???
 
+    /** Indicates that the mouse is over the button. */
     @stub
-    // Indicates that the mouse is over the button.
     def isRollover(): Boolean = ???
 
+    /** Indicates if the button has been selected. */
     @stub
-    // Indicates if the button has been selected.
     def isSelected(): Boolean = ???
 
+    /** Removes an ActionListener from the model. */
     @stub
-    // Removes an ActionListener from the model.
     def removeActionListener(l: ActionListener): Unit = ???
 
+    /** Removes a ChangeListener from the model. */
     @stub
-    // Removes a ChangeListener from the model.
     def removeChangeListener(l: ChangeListener): Unit = ???
 
+    /** Removes an ItemListener from the model. */
     @stub
-    // Removes an ItemListener from the model.
     def removeItemListener(l: ItemListener): Unit = ???
 
+    /** Sets the action command string that gets sent as part of the
+     *  ActionEvent when the button is triggered.
+     */
     @stub
-    // Sets the action command string that gets sent as part of the
-    // ActionEvent when the button is triggered.
     def setActionCommand(actionCommand: String): Unit = ???
 
+    /** Marks the button as armed or unarmed. */
     @stub
-    // Marks the button as armed or unarmed.
     def setArmed(b: Boolean): Unit = ???
 
+    /** Enables or disables the button. */
     @stub
-    // Enables or disables the button.
     def setEnabled(b: Boolean): Unit = ???
 
+    /** Identifies the group the button belongs to --
+     *  needed for radio buttons, which are mutually
+     *  exclusive within their group.
+     */
     @stub
-    // Identifies the group the button belongs to --
-    // needed for radio buttons, which are mutually
-    // exclusive within their group.
     def setGroup(group: ButtonGroup): Unit = ???
 
+    /** Sets the keyboard mnemonic (shortcut key or
+     *  accelerator key) for the button.
+     */
     @stub
-    // Sets the keyboard mnemonic (shortcut key or
-    // accelerator key) for the button.
     def setMnemonic(key: Int): Unit = ???
 
+    /** Sets the button to pressed or unpressed. */
     @stub
-    // Sets the button to pressed or unpressed.
     def setPressed(b: Boolean): Unit = ???
 
+    /** Sets or clears the button's rollover state */
     @stub
-    // Sets or clears the button's rollover state
     def setRollover(b: Boolean): Unit = ???
 }
 
 object DefaultButtonModel {
+    /** Identifies the "armed" bit in the bitmask, which
+     *  indicates partial commitment towards choosing/triggering
+     *  the button.
+     */
     @stub
-    // Identifies the "armed" bit in the bitmask, which
-    // indicates partial commitment towards choosing/triggering
-    // the button.
-    def ARMED: Int = ???
+    val ARMED: Int = ???
 
+    /** Identifies the "enabled" bit in the bitmask, which
+     *  indicates that the button can be selected by
+     *  an input device (such as a mouse pointer).
+     */
     @stub
-    // Identifies the "enabled" bit in the bitmask, which
-    // indicates that the button can be selected by
-    // an input device (such as a mouse pointer).
-    def ENABLED: Int = ???
+    val ENABLED: Int = ???
 
+    /** Identifies the "pressed" bit in the bitmask, which
+     *  indicates that the button is pressed.
+     */
     @stub
-    // Identifies the "pressed" bit in the bitmask, which
-    // indicates that the button is pressed.
-    def PRESSED: Int = ???
+    val PRESSED: Int = ???
 
+    /** Identifies the "rollover" bit in the bitmask, which
+     *  indicates that the mouse is over the button.
+     */
     @stub
-    // Identifies the "rollover" bit in the bitmask, which
-    // indicates that the mouse is over the button.
-    def ROLLOVER: Int = ???
+    val ROLLOVER: Int = ???
 
+    /** Identifies the "selected" bit in the bitmask, which
+     *  indicates that the button has been selected.
+     */
     @stub
-    // Identifies the "selected" bit in the bitmask, which
-    // indicates that the button has been selected.
-    def SELECTED: Int = ???
+    val SELECTED: Int = ???
 }

@@ -5,39 +5,44 @@ import java.lang.Object
 import javax.swing.event.DocumentEvent
 import javax.swing.text.{AttributeSet, GlyphView, LabelView, View, ViewFactory}
 
-// Displays the inline element styles
-// based upon css attributes.
+/** Displays the inline element styles
+ *  based upon css attributes.
+ */
 class InlineView extends LabelView {
 
+    /** Tries to break this view on the given axis. */
     @stub
-    // Tries to break this view on the given axis.
-    def breakView(axis: Int, offset: Int, pos: float, len: float): View = ???
+    def breakView(axis: Int, offset: Int, pos: Float, len: Float): View = ???
 
+    /** Gives notification from the document that attributes were changed
+     *  in a location that this view is responsible for.
+     */
     @stub
-    // Gives notification from the document that attributes were changed
-    // in a location that this view is responsible for.
     def changedUpdate(e: DocumentEvent, a: Shape, f: ViewFactory): Unit = ???
 
+    /** Fetches the attributes to use when rendering. */
     @stub
-    // Fetches the attributes to use when rendering.
     def getAttributes(): AttributeSet = ???
 
+    /** Determines how attractive a break opportunity in
+     *  this view is.
+     */
     @stub
-    // Determines how attractive a break opportunity in
-    // this view is.
-    def getBreakWeight(axis: Int, pos: float, len: float): Int = ???
+    def getBreakWeight(axis: Int, pos: Float, len: Float): Int = ???
 
+    /**  */
     @stub
-    // 
     protected def getStyleSheet(): StyleSheet = ???
 
+    /** Gives notification that something was inserted into
+     *  the document in a location that this view is responsible for.
+     */
     @stub
-    // Gives notification that something was inserted into
-    // the document in a location that this view is responsible for.
     def insertUpdate(e: DocumentEvent, a: Shape, f: ViewFactory): Unit = ???
 
+    /** Gives notification that something was removed from the document
+     *  in a location that this view is responsible for.
+     */
     @stub
-    // Gives notification that something was removed from the document
-    // in a location that this view is responsible for.
     def removeUpdate(e: DocumentEvent, a: Shape, f: ViewFactory): Unit = ???
 }

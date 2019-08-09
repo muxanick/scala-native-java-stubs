@@ -5,56 +5,56 @@ import java.io.Serializable
 import java.lang.Object
 import javax.swing.border.Border
 
-// 
-class BorderUIResource extends Object with Border, with UIResource, with Serializable {
+/**  */
+class BorderUIResource extends Object with Border with UIResource with Serializable {
 
+    /** Returns the insets of the border. */
     @stub
-    // Returns the insets of the border.
     def getBorderInsets(c: Component): Insets = ???
 
+    /** Returns whether or not the border is opaque. */
     @stub
-    // Returns whether or not the border is opaque.
     def isBorderOpaque(): Boolean = ???
 }
 
 object BorderUIResource {
+    /**  */
     @stub
-    // 
-    def BorderUIResource.BevelBorderUIResource: class = ???
+    object BevelBorderUIResource extends BorderUIResource.BevelBorderUIResource
 
+    /**  */
     @stub
-    // 
-    def BorderUIResource.CompoundBorderUIResource: class = ???
+    object CompoundBorderUIResource extends BorderUIResource.CompoundBorderUIResource
 
+    /**  */
     @stub
-    // 
-    def BorderUIResource.EmptyBorderUIResource: class = ???
+    object EmptyBorderUIResource extends BorderUIResource.EmptyBorderUIResource
 
+    /**  */
     @stub
-    // 
-    def BorderUIResource.EtchedBorderUIResource: class = ???
+    object EtchedBorderUIResource extends BorderUIResource.EtchedBorderUIResource
 
+    /**  */
     @stub
-    // 
-    def BorderUIResource.LineBorderUIResource: class = ???
+    object LineBorderUIResource extends BorderUIResource.LineBorderUIResource
 
+    /**  */
     @stub
-    // 
-    def BorderUIResource.MatteBorderUIResource: class = ???
+    object MatteBorderUIResource extends BorderUIResource.MatteBorderUIResource
 
+    /**  */
     @stub
-    // 
     def getBlackLineBorderUIResource(): Border = ???
 
+    /**  */
     @stub
-    // 
     def getEtchedBorderUIResource(): Border = ???
 
+    /**  */
     @stub
-    // 
     def getLoweredBevelBorderUIResource(): Border = ???
 
+    /**  */
     @stub
-    // 
     def getRaisedBevelBorderUIResource(): Border = ???
 }

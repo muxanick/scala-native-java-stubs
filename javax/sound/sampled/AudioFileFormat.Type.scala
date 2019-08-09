@@ -2,36 +2,37 @@ package javax.sound.sampled
 
 import java.lang.{Object, String}
 
-// An instance of the Type class represents one of the
-// standard types of audio file.  Static instances are provided for the
-// common types.
+/** An instance of the Type class represents one of the
+ *  standard types of audio file.  Static instances are provided for the
+ *  common types.
+ */
 object AudioFileFormat.Type extends Object {
 
+    /** Specifies an AIFF-C file. */
     @stub
-    // Specifies an AIFF-C file.
-    def AIFC: AudioFileFormat.Type = ???
+    val AIFC: AudioFileFormat.Type = ???
 
+    /** Specifies an AIFF file. */
     @stub
-    // Specifies an AIFF file.
-    def AIFF: AudioFileFormat.Type = ???
+    val AIFF: AudioFileFormat.Type = ???
 
+    /** Specifies an AU file. */
     @stub
-    // Specifies an AU file.
-    def AU: AudioFileFormat.Type = ???
+    val AU: AudioFileFormat.Type = ???
 
+    /** Specifies a SND file. */
     @stub
-    // Specifies a SND file.
-    def SND: AudioFileFormat.Type = ???
+    val SND: AudioFileFormat.Type = ???
 
+    /** Finalizes the equals method */
     @stub
-    // Finalizes the equals method
     def equals(obj: Object): Boolean = ???
 
+    /** Obtains the common file name extension for this file type. */
     @stub
-    // Obtains the common file name extension for this file type.
     def getExtension(): String = ???
 
+    /** Finalizes the hashCode method */
     @stub
-    // Finalizes the hashCode method
     def hashCode(): Int = ???
 }

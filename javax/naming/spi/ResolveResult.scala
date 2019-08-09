@@ -4,46 +4,49 @@ import java.io.Serializable
 import java.lang.{Object, String}
 import javax.naming.Name
 
-// This class represents the result of resolution of a name.
-// It contains the object to which name was resolved, and the portion
-// of the name that has not been resolved.
-//
-// A ResolveResult instance is not synchronized against concurrent
-// multithreaded access. Multiple threads trying to access and modify
-// a single ResolveResult instance should lock the object.
+/** This class represents the result of resolution of a name.
+ *  It contains the object to which name was resolved, and the portion
+ *  of the name that has not been resolved.
+ * 
+ *  A ResolveResult instance is not synchronized against concurrent
+ *  multithreaded access. Multiple threads trying to access and modify
+ *  a single ResolveResult instance should lock the object.
+ */
 class ResolveResult extends Object with Serializable {
 
+    /** Constructs an instance of ResolveResult with the
+     *  resolved object and remaining name both initialized to null.
+     */
     @stub
-    // Constructs an instance of ResolveResult with the
-    // resolved object and remaining name both initialized to null.
     protected def this() = ???
 
+    /** Constructs a new instance of ResolveResult consisting of
+     *  the resolved Object and the remaining name.
+     */
     @stub
-    // Constructs a new instance of ResolveResult consisting of
-    // the resolved Object and the remaining name.
     def this(robj: Object, rname: Name) = ???
 
+    /** Field containing the remaining name yet to be resolved. */
     @stub
-    // Field containing the remaining name yet to be resolved.
-    protected def remainingName: Name = ???
+    protected val remainingName: Name = ???
 
+    /** Adds a single component to the end of remaining name. */
     @stub
-    // Adds a single component to the end of remaining name.
     def appendRemainingComponent(name: String): Unit = ???
 
+    /** Adds components to the end of remaining name. */
     @stub
-    // Adds components to the end of remaining name.
     def appendRemainingName(name: Name): Unit = ???
 
+    /** Retrieves the remaining unresolved portion of the name. */
     @stub
-    // Retrieves the remaining unresolved portion of the name.
     def getRemainingName(): Name = ???
 
+    /** Retrieves the Object to which resolution was successful. */
     @stub
-    // Retrieves the Object to which resolution was successful.
     def getResolvedObj(): Object = ???
 
+    /** Sets the remaining name field of this result to name. */
     @stub
-    // Sets the remaining name field of this result to name.
     def setRemainingName(name: Name): Unit = ???
 }

@@ -3,102 +3,114 @@ package java.awt.geom
 import java.io.Serializable
 import java.lang.Object
 
-// A cubic parametric curve segment specified with
-// double coordinates.
+/** A cubic parametric curve segment specified with
+ *  double coordinates.
+ */
 object CubicCurve2D.Double extends CubicCurve2D with Serializable {
 
+    /** Constructs and initializes a CubicCurve with coordinates
+     *  (0, 0, 0, 0, 0, 0, 0, 0).
+     */
     @stub
-    // Constructs and initializes a CubicCurve with coordinates
-    // (0, 0, 0, 0, 0, 0, 0, 0).
     def Double() = ???
 
+    /** The X coordinate of the first control point
+     *  of the cubic curve segment.
+     */
     @stub
-    // The X coordinate of the first control point
-    // of the cubic curve segment.
-    def ctrlx1: double = ???
+    val ctrlx1: Double = ???
 
+    /** The X coordinate of the second control point
+     *  of the cubic curve segment.
+     */
     @stub
-    // The X coordinate of the second control point
-    // of the cubic curve segment.
-    def ctrlx2: double = ???
+    val ctrlx2: Double = ???
 
+    /** The Y coordinate of the first control point
+     *  of the cubic curve segment.
+     */
     @stub
-    // The Y coordinate of the first control point
-    // of the cubic curve segment.
-    def ctrly1: double = ???
+    val ctrly1: Double = ???
 
+    /** The Y coordinate of the second control point
+     *  of the cubic curve segment.
+     */
     @stub
-    // The Y coordinate of the second control point
-    // of the cubic curve segment.
-    def ctrly2: double = ???
+    val ctrly2: Double = ???
 
+    /** The X coordinate of the start point
+     *  of the cubic curve segment.
+     */
     @stub
-    // The X coordinate of the start point
-    // of the cubic curve segment.
-    def x1: double = ???
+    val x1: Double = ???
 
+    /** The X coordinate of the end point
+     *  of the cubic curve segment.
+     */
     @stub
-    // The X coordinate of the end point
-    // of the cubic curve segment.
-    def x2: double = ???
+    val x2: Double = ???
 
+    /** The Y coordinate of the start point
+     *  of the cubic curve segment.
+     */
     @stub
-    // The Y coordinate of the start point
-    // of the cubic curve segment.
-    def y1: double = ???
+    val y1: Double = ???
 
+    /** Returns a high precision and more accurate bounding box of
+     *  the Shape than the getBounds method.
+     */
     @stub
-    // Returns a high precision and more accurate bounding box of
-    // the Shape than the getBounds method.
     def getBounds2D(): Rectangle2D = ???
 
+    /** Returns the first control point. */
     @stub
-    // Returns the first control point.
     def getCtrlP1(): Point2D = ???
 
+    /** Returns the second control point. */
     @stub
-    // Returns the second control point.
     def getCtrlP2(): Point2D = ???
 
+    /** Returns the X coordinate of the first control point in double precision. */
     @stub
-    // Returns the X coordinate of the first control point in double precision.
-    def getCtrlX1(): double = ???
+    def getCtrlX1(): Double = ???
 
+    /** Returns the X coordinate of the second control point
+     *  in double precision.
+     */
     @stub
-    // Returns the X coordinate of the second control point
-    // in double precision.
-    def getCtrlX2(): double = ???
+    def getCtrlX2(): Double = ???
 
+    /** Returns the Y coordinate of the first control point in double precision. */
     @stub
-    // Returns the Y coordinate of the first control point in double precision.
-    def getCtrlY1(): double = ???
+    def getCtrlY1(): Double = ???
 
+    /** Returns the Y coordinate of the second control point
+     *  in double precision.
+     */
     @stub
-    // Returns the Y coordinate of the second control point
-    // in double precision.
-    def getCtrlY2(): double = ???
+    def getCtrlY2(): Double = ???
 
+    /** Returns the start point. */
     @stub
-    // Returns the start point.
     def getP1(): Point2D = ???
 
+    /** Returns the end point. */
     @stub
-    // Returns the end point.
     def getP2(): Point2D = ???
 
+    /** Returns the X coordinate of the start point in double precision. */
     @stub
-    // Returns the X coordinate of the start point in double precision.
-    def getX1(): double = ???
+    def getX1(): Double = ???
 
+    /** Returns the X coordinate of the end point in double precision. */
     @stub
-    // Returns the X coordinate of the end point in double precision.
-    def getX2(): double = ???
+    def getX2(): Double = ???
 
+    /** Returns the Y coordinate of the start point in double precision. */
     @stub
-    // Returns the Y coordinate of the start point in double precision.
-    def getY1(): double = ???
+    def getY1(): Double = ???
 
+    /** Returns the Y coordinate of the end point in double precision. */
     @stub
-    // Returns the Y coordinate of the end point in double precision.
-    def getY2(): double = ???
+    def getY2(): Double = ???
 }

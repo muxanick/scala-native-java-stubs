@@ -4,42 +4,44 @@ import java.awt.image.BufferStrategy
 import java.lang.Object
 import javax.accessibility.{Accessible, AccessibleContext}
 
-// A Canvas component represents a blank rectangular
-// area of the screen onto which the application can draw or from
-// which the application can trap input events from the user.
-// 
-// An application must subclass the Canvas class in
-// order to get useful functionality such as creating a custom
-// component. The paint method must be overridden
-// in order to perform custom graphics on the canvas.
+/** A Canvas component represents a blank rectangular
+ *  area of the screen onto which the application can draw or from
+ *  which the application can trap input events from the user.
+ *  
+ *  An application must subclass the Canvas class in
+ *  order to get useful functionality such as creating a custom
+ *  component. The paint method must be overridden
+ *  in order to perform custom graphics on the canvas.
+ */
 class Canvas extends Component with Accessible {
 
+    /** Constructs a new Canvas. */
     @stub
-    // Constructs a new Canvas.
     def this() = ???
 
+    /** Creates the peer of the canvas. */
     @stub
-    // Creates the peer of the canvas.
     def addNotify(): Unit = ???
 
+    /** Creates a new strategy for multi-buffering on this component. */
     @stub
-    // Creates a new strategy for multi-buffering on this component.
     def createBufferStrategy(numBuffers: Int): Unit = ???
 
+    /** Creates a new strategy for multi-buffering on this component with the
+     *  required buffer capabilities.
+     */
     @stub
-    // Creates a new strategy for multi-buffering on this component with the
-    // required buffer capabilities.
     def createBufferStrategy(numBuffers: Int, caps: BufferCapabilities): Unit = ???
 
+    /** Gets the AccessibleContext associated with this Canvas. */
     @stub
-    // Gets the AccessibleContext associated with this Canvas.
     def getAccessibleContext(): AccessibleContext = ???
 
+    /** Returns the BufferStrategy used by this component. */
     @stub
-    // Returns the BufferStrategy used by this component.
     def getBufferStrategy(): BufferStrategy = ???
 
+    /** Paints this canvas. */
     @stub
-    // Paints this canvas.
     def paint(g: Graphics): Unit = ???
 }

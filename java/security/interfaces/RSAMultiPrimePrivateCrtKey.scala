@@ -3,33 +3,35 @@ package java.security.interfaces
 import java.math.BigInteger
 import java.security.spec.RSAOtherPrimeInfo
 
-// The interface to an RSA multi-prime private key, as defined in the
-// PKCS#1 v2.1, using the Chinese Remainder Theorem
-// (CRT) information values.
+/** The interface to an RSA multi-prime private key, as defined in the
+ *  PKCS#1 v2.1, using the Chinese Remainder Theorem
+ *  (CRT) information values.
+ */
 trait RSAMultiPrimePrivateCrtKey extends RSAPrivateKey {
 
+    /** Returns the crtCoefficient. */
     @stub
-    // Returns the crtCoefficient.
     def getCrtCoefficient(): BigInteger = ???
 
+    /** Returns the otherPrimeInfo or null if there are only
+     *  two prime factors (p and q).
+     */
     @stub
-    // Returns the otherPrimeInfo or null if there are only
-    // two prime factors (p and q).
     def getOtherPrimeInfo(): Array[RSAOtherPrimeInfo] = ???
 
+    /** Returns the primeExponentP. */
     @stub
-    // Returns the primeExponentP.
     def getPrimeExponentP(): BigInteger = ???
 
+    /** Returns the primeExponentQ. */
     @stub
-    // Returns the primeExponentQ.
     def getPrimeExponentQ(): BigInteger = ???
 
+    /** Returns the primeP. */
     @stub
-    // Returns the primeP.
     def getPrimeP(): BigInteger = ???
 
+    /** Returns the primeQ. */
     @stub
-    // Returns the primeQ.
     def getPrimeQ(): BigInteger = ???
 }

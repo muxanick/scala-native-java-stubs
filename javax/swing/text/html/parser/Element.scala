@@ -4,91 +4,92 @@ import java.io.Serializable
 import java.lang.{Object, String}
 import java.util.BitSet
 
-// An element as described in a DTD using the ELEMENT construct.
-// This is essential the description of a tag. It describes the
-// type, content model, attributes, attribute types etc. It is used
-// to correctly parse a document by the Parser.
-final class Element extends Object with DTDConstants, with Serializable {
+/** An element as described in a DTD using the ELEMENT construct.
+ *  This is essential the description of a tag. It describes the
+ *  type, content model, attributes, attribute types etc. It is used
+ *  to correctly parse a document by the Parser.
+ */
+final class Element extends Object with DTDConstants with Serializable {
 
+    /**  */
     @stub
-    // 
-    def atts: AttributeList = ???
+    val atts: AttributeList = ???
 
+    /**  */
     @stub
-    // 
-    def content: ContentModel = ???
+    val content: ContentModel = ???
 
+    /** A field to store user data. */
     @stub
-    // A field to store user data.
-    def data: Object = ???
+    val data: Object = ???
 
+    /**  */
     @stub
-    // 
-    def exclusions: BitSet = ???
+    val exclusions: BitSet = ???
 
+    /**  */
     @stub
-    // 
-    def inclusions: BitSet = ???
+    val inclusions: BitSet = ???
 
+    /**  */
     @stub
-    // 
-    def index: Int = ???
+    val index: Int = ???
 
+    /**  */
     @stub
-    // 
-    def name: String = ???
+    val name: String = ???
 
+    /**  */
     @stub
-    // 
-    def oEnd: Boolean = ???
+    val oEnd: Boolean = ???
 
+    /**  */
     @stub
-    // 
-    def oStart: Boolean = ???
+    val oStart: Boolean = ???
 
+    /** Get an attribute by name. */
     @stub
-    // Get an attribute by name.
     def getAttribute(name: String): AttributeList = ???
 
+    /** Get an attribute by value. */
     @stub
-    // Get an attribute by value.
     def getAttributeByValue(name: String): AttributeList = ???
 
+    /** Get the attributes. */
     @stub
-    // Get the attributes.
     def getAttributes(): AttributeList = ???
 
+    /** Get content model */
     @stub
-    // Get content model
     def getContent(): ContentModel = ???
 
+    /** Get index. */
     @stub
-    // Get index.
     def getIndex(): Int = ???
 
+    /** Get the name of the element. */
     @stub
-    // Get the name of the element.
     def getName(): String = ???
 
+    /** Get type. */
     @stub
-    // Get type.
     def getType(): Int = ???
 
+    /** Check if empty */
     @stub
-    // Check if empty
     def isEmpty(): Boolean = ???
 
+    /** Return true if the end tag can be omitted. */
     @stub
-    // Return true if the end tag can be omitted.
     def omitEnd(): Boolean = ???
 
+    /** Return true if the start tag can be omitted. */
     @stub
-    // Return true if the start tag can be omitted.
     def omitStart(): Boolean = ???
 }
 
 object Element {
+    /**  */
     @stub
-    // 
     def name2type(nm: String): Int = ???
 }

@@ -3,90 +3,94 @@ package javax.security.auth.callback
 import java.io.Serializable
 import java.lang.{Object, String}
 
-//  Underlying security services instantiate and pass a
-// ConfirmationCallback to the handle
-// method of a CallbackHandler to ask for YES/NO,
-// OK/CANCEL, YES/NO/CANCEL or other similar confirmations.
-class ConfirmationCallback extends Object with Callback, with Serializable {
+/**  Underlying security services instantiate and pass a
+ *  ConfirmationCallback to the handle
+ *  method of a CallbackHandler to ask for YES/NO,
+ *  OK/CANCEL, YES/NO/CANCEL or other similar confirmations.
+ */
+class ConfirmationCallback extends Object with Callback with Serializable {
 
+    /** Construct a ConfirmationCallback with a
+     *  message type, an option type and a default option.
+     */
     @stub
-    // Construct a ConfirmationCallback with a
-    // message type, an option type and a default option.
     def this(messageType: Int, optionType: Int, defaultOption: Int) = ???
 
+    /** Construct a ConfirmationCallback with a
+     *  message type, a list of options and a default option.
+     */
     @stub
-    // Construct a ConfirmationCallback with a
-    // message type, a list of options and a default option.
     def this(messageType: Int, options: Array[String], defaultOption: Int) = ???
 
+    /** Construct a ConfirmationCallback with a prompt,
+     *  message type, an option type and a default option.
+     */
     @stub
-    // Construct a ConfirmationCallback with a prompt,
-    // message type, an option type and a default option.
     def this(prompt: String, messageType: Int, optionType: Int, defaultOption: Int) = ???
 
+    /** Get the default option. */
     @stub
-    // Get the default option.
     def getDefaultOption(): Int = ???
 
+    /** Get the message type. */
     @stub
-    // Get the message type.
     def getMessageType(): Int = ???
 
+    /** Get the confirmation options. */
     @stub
-    // Get the confirmation options.
     def getOptions(): Array[String] = ???
 
+    /** Get the option type. */
     @stub
-    // Get the option type.
     def getOptionType(): Int = ???
 
+    /** Get the prompt. */
     @stub
-    // Get the prompt.
     def getPrompt(): String = ???
 
+    /** Get the selected confirmation option. */
     @stub
-    // Get the selected confirmation option.
     def getSelectedIndex(): Int = ???
 }
 
 object ConfirmationCallback {
+    /** CANCEL option. */
     @stub
-    // CANCEL option.
-    def CANCEL: Int = ???
+    val CANCEL: Int = ???
 
+    /** ERROR message type. */
     @stub
-    // ERROR message type.
-    def ERROR: Int = ???
+    val ERROR: Int = ???
 
+    /** INFORMATION message type. */
     @stub
-    // INFORMATION message type.
-    def INFORMATION: Int = ???
+    val INFORMATION: Int = ???
 
+    /** NO option. */
     @stub
-    // NO option.
-    def NO: Int = ???
+    val NO: Int = ???
 
+    /** OK option. */
     @stub
-    // OK option.
-    def OK: Int = ???
+    val OK: Int = ???
 
+    /** OK/CANCEL confirmation confirmation option. */
     @stub
-    // OK/CANCEL confirmation confirmation option.
-    def OK_CANCEL_OPTION: Int = ???
+    val OK_CANCEL_OPTION: Int = ???
 
+    /** Unspecified option type. */
     @stub
-    // Unspecified option type.
-    def UNSPECIFIED_OPTION: Int = ???
+    val UNSPECIFIED_OPTION: Int = ???
 
+    /** WARNING message type. */
     @stub
-    // WARNING message type.
-    def WARNING: Int = ???
+    val WARNING: Int = ???
 
+    /** YES option. */
     @stub
-    // YES option.
-    def YES: Int = ???
+    val YES: Int = ???
 
+    /** YES/NO/CANCEL confirmation confirmation option. */
     @stub
-    // YES/NO/CANCEL confirmation confirmation option.
-    def YES_NO_CANCEL_OPTION: Int = ???
+    val YES_NO_CANCEL_OPTION: Int = ???
 }

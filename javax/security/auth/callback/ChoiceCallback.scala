@@ -3,34 +3,36 @@ package javax.security.auth.callback
 import java.io.Serializable
 import java.lang.{Object, String}
 
-//  Underlying security services instantiate and pass a
-// ChoiceCallback to the handle
-// method of a CallbackHandler to display a list of choices
-// and to retrieve the selected choice(s).
-class ChoiceCallback extends Object with Callback, with Serializable {
+/**  Underlying security services instantiate and pass a
+ *  ChoiceCallback to the handle
+ *  method of a CallbackHandler to display a list of choices
+ *  and to retrieve the selected choice(s).
+ */
+class ChoiceCallback extends Object with Callback with Serializable {
 
+    /** Get the boolean determining whether multiple selections from
+     *  the choices list are allowed.
+     */
     @stub
-    // Get the boolean determining whether multiple selections from
-    // the choices list are allowed.
     def allowMultipleSelections(): Boolean = ???
 
+    /** Get the list of choices. */
     @stub
-    // Get the list of choices.
     def getChoices(): Array[String] = ???
 
+    /** Get the defaultChoice. */
     @stub
-    // Get the defaultChoice.
     def getDefaultChoice(): Int = ???
 
+    /** Get the prompt. */
     @stub
-    // Get the prompt.
     def getPrompt(): String = ???
 
+    /** Get the selected choices. */
     @stub
-    // Get the selected choices.
     def getSelectedIndexes(): Array[Int] = ???
 
+    /** Set the selected choice. */
     @stub
-    // Set the selected choice.
     def setSelectedIndex(selection: Int): Unit = ???
 }

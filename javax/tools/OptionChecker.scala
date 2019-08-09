@@ -1,5 +1,5 @@
 package javax.tools
 
-// Interface for recognizing options.
+/** Interface for recognizing options. */
 trait OptionChecker {
 }

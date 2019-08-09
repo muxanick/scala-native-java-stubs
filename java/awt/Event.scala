@@ -3,373 +3,392 @@ package java.awt
 import java.io.Serializable
 import java.lang.{Object, String}
 
-// NOTE: The Event class is obsolete and is
-// available only for backwards compatibility.  It has been replaced
-// by the AWTEvent class and its subclasses.
-// 
-// Event is a platform-independent class that
-// encapsulates events from the platform's Graphical User
-// Interface in the Java 1.0 event model. In Java 1.1
-// and later versions, the Event class is maintained
-// only for backwards compatibility. The information in this
-// class description is provided to assist programmers in
-// converting Java 1.0 programs to the new event model.
-// 
-// In the Java 1.0 event model, an event contains an
-// id field
-// that indicates what type of event it is and which other
-// Event variables are relevant for the event.
-// 
-// For keyboard events, key
-// contains a value indicating which key was activated, and
-// modifiers contains the
-// modifiers for that event.  For the KEY_PRESS and KEY_RELEASE
-// event ids, the value of key is the unicode
-// character code for the key. For KEY_ACTION and
-// KEY_ACTION_RELEASE, the value of key is
-// one of the defined action-key identifiers in the
-// Event class (PGUP,
-// PGDN, F1, F2, etc).
+/** NOTE: The Event class is obsolete and is
+ *  available only for backwards compatibility.  It has been replaced
+ *  by the AWTEvent class and its subclasses.
+ *  
+ *  Event is a platform-independent class that
+ *  encapsulates events from the platform's Graphical User
+ *  Interface in the Java 1.0 event model. In Java 1.1
+ *  and later versions, the Event class is maintained
+ *  only for backwards compatibility. The information in this
+ *  class description is provided to assist programmers in
+ *  converting Java 1.0 programs to the new event model.
+ *  
+ *  In the Java 1.0 event model, an event contains an
+ *  id field
+ *  that indicates what type of event it is and which other
+ *  Event variables are relevant for the event.
+ *  
+ *  For keyboard events, key
+ *  contains a value indicating which key was activated, and
+ *  modifiers contains the
+ *  modifiers for that event.  For the KEY_PRESS and KEY_RELEASE
+ *  event ids, the value of key is the unicode
+ *  character code for the key. For KEY_ACTION and
+ *  KEY_ACTION_RELEASE, the value of key is
+ *  one of the defined action-key identifiers in the
+ *  Event class (PGUP,
+ *  PGDN, F1, F2, etc).
+ */
 class Event extends Object with Serializable {
 
+    /** NOTE: The Event class is obsolete and is
+     *  available only for backwards compatibility.
+     */
     @stub
-    // NOTE: The Event class is obsolete and is
-    // available only for backwards compatibility.
     def this(target: Object, id: Int, arg: Object) = ???
 
+    /** NOTE: The Event class is obsolete and is
+     *  available only for backwards compatibility.
+     */
     @stub
-    // NOTE: The Event class is obsolete and is
-    // available only for backwards compatibility.
     def this(target: Object, when: Long, id: Int, x: Int, y: Int, key: Int, modifiers: Int) = ???
 
+    /** An arbitrary argument of the event. */
     @stub
-    // An arbitrary argument of the event.
-    def arg: Object = ???
+    val arg: Object = ???
 
+    /** For MOUSE_DOWN events, this field indicates the
+     *  number of consecutive clicks.
+     */
     @stub
-    // For MOUSE_DOWN events, this field indicates the
-    // number of consecutive clicks.
-    def clickCount: Int = ???
+    val clickCount: Int = ???
 
+    /** The next event. */
     @stub
-    // The next event.
-    def evt: Event = ???
+    val evt: Event = ???
 
+    /** Indicates which type of event the event is, and which
+     *  other Event variables are relevant for the event.
+     */
     @stub
-    // Indicates which type of event the event is, and which
-    // other Event variables are relevant for the event.
-    def id: Int = ???
+    val id: Int = ???
 
+    /** The key code of the key that was pressed in a keyboard event. */
     @stub
-    // The key code of the key that was pressed in a keyboard event.
-    def key: Int = ???
+    val key: Int = ???
 
+    /** The state of the modifier keys. */
     @stub
-    // The state of the modifier keys.
-    def modifiers: Int = ???
+    val modifiers: Int = ???
 
+    /** The target component. */
     @stub
-    // The target component.
-    def target: Object = ???
+    val target: Object = ???
 
+    /** The time stamp. */
     @stub
-    // The time stamp.
-    def when: Long = ???
+    val when: Long = ???
 
+    /** The x coordinate of the event. */
     @stub
-    // The x coordinate of the event.
-    def x: Int = ???
+    val x: Int = ???
 
+    /** NOTE: The Event class is obsolete and is
+     *  available only for backwards compatibility.
+     */
     @stub
-    // NOTE: The Event class is obsolete and is
-    // available only for backwards compatibility.
     def controlDown(): Boolean = ???
 
+    /** NOTE: The Event class is obsolete and is
+     *  available only for backwards compatibility.
+     */
     @stub
-    // NOTE: The Event class is obsolete and is
-    // available only for backwards compatibility.
     def metaDown(): Boolean = ???
 
+    /** NOTE: The Event class is obsolete and is
+     *  available only for backwards compatibility.
+     */
     @stub
-    // NOTE: The Event class is obsolete and is
-    // available only for backwards compatibility.
     protected def paramString(): String = ???
 
+    /** NOTE: The Event class is obsolete and is
+     *  available only for backwards compatibility.
+     */
     @stub
-    // NOTE: The Event class is obsolete and is
-    // available only for backwards compatibility.
     def shiftDown(): Boolean = ???
 
+    /** NOTE: The Event class is obsolete and is
+     *  available only for backwards compatibility.
+     */
     @stub
-    // NOTE: The Event class is obsolete and is
-    // available only for backwards compatibility.
     def toString(): String = ???
 }
 
 object Event {
+    /** This event indicates that the user wants some action to occur. */
     @stub
-    // This event indicates that the user wants some action to occur.
-    def ACTION_EVENT: Int = ???
+    val ACTION_EVENT: Int = ???
 
+    /** This flag indicates that the Alt key was down when
+     *  the event occurred.
+     */
     @stub
-    // This flag indicates that the Alt key was down when
-    // the event occurred.
-    def ALT_MASK: Int = ???
+    val ALT_MASK: Int = ???
 
+    /** The BackSpace key. */
     @stub
-    // The BackSpace key.
-    def BACK_SPACE: Int = ???
+    val BACK_SPACE: Int = ???
 
+    /** The Caps Lock key, a non-ASCII action key. */
     @stub
-    // The Caps Lock key, a non-ASCII action key.
-    def CAPS_LOCK: Int = ???
+    val CAPS_LOCK: Int = ???
 
+    /** This flag indicates that the Control key was down when the event
+     *  occurred.
+     */
     @stub
-    // This flag indicates that the Control key was down when the event
-    // occurred.
-    def CTRL_MASK: Int = ???
+    val CTRL_MASK: Int = ???
 
+    /** The Delete key. */
     @stub
-    // The Delete key.
-    def DELETE: Int = ???
+    val DELETE: Int = ???
 
+    /** The Down Arrow key, a non-ASCII action key. */
     @stub
-    // The Down Arrow key, a non-ASCII action key.
-    def DOWN: Int = ???
+    val DOWN: Int = ???
 
+    /** The End key, a non-ASCII action key. */
     @stub
-    // The End key, a non-ASCII action key.
-    def END: Int = ???
+    val END: Int = ???
 
+    /** The Enter key. */
     @stub
-    // The Enter key.
-    def ENTER: Int = ???
+    val ENTER: Int = ???
 
+    /** The Escape key. */
     @stub
-    // The Escape key.
-    def ESCAPE: Int = ???
+    val ESCAPE: Int = ???
 
+    /** The F1 function key, a non-ASCII action key. */
     @stub
-    // The F1 function key, a non-ASCII action key.
-    def F1: Int = ???
+    val F1: Int = ???
 
+    /** The F10 function key, a non-ASCII action key. */
     @stub
-    // The F10 function key, a non-ASCII action key.
-    def F10: Int = ???
+    val F10: Int = ???
 
+    /** The F11 function key, a non-ASCII action key. */
     @stub
-    // The F11 function key, a non-ASCII action key.
-    def F11: Int = ???
+    val F11: Int = ???
 
+    /** The F12 function key, a non-ASCII action key. */
     @stub
-    // The F12 function key, a non-ASCII action key.
-    def F12: Int = ???
+    val F12: Int = ???
 
+    /** The F2 function key, a non-ASCII action key. */
     @stub
-    // The F2 function key, a non-ASCII action key.
-    def F2: Int = ???
+    val F2: Int = ???
 
+    /** The F3 function key, a non-ASCII action key. */
     @stub
-    // The F3 function key, a non-ASCII action key.
-    def F3: Int = ???
+    val F3: Int = ???
 
+    /** The F4 function key, a non-ASCII action key. */
     @stub
-    // The F4 function key, a non-ASCII action key.
-    def F4: Int = ???
+    val F4: Int = ???
 
+    /** The F5 function key, a non-ASCII action key. */
     @stub
-    // The F5 function key, a non-ASCII action key.
-    def F5: Int = ???
+    val F5: Int = ???
 
+    /** The F6 function key, a non-ASCII action key. */
     @stub
-    // The F6 function key, a non-ASCII action key.
-    def F6: Int = ???
+    val F6: Int = ???
 
+    /** The F7 function key, a non-ASCII action key. */
     @stub
-    // The F7 function key, a non-ASCII action key.
-    def F7: Int = ???
+    val F7: Int = ???
 
+    /** The F8 function key, a non-ASCII action key. */
     @stub
-    // The F8 function key, a non-ASCII action key.
-    def F8: Int = ???
+    val F8: Int = ???
 
+    /** The F9 function key, a non-ASCII action key. */
     @stub
-    // The F9 function key, a non-ASCII action key.
-    def F9: Int = ???
+    val F9: Int = ???
 
+    /** A component gained the focus. */
     @stub
-    // A component gained the focus.
-    def GOT_FOCUS: Int = ???
+    val GOT_FOCUS: Int = ???
 
+    /** The Home key, a non-ASCII action key. */
     @stub
-    // The Home key, a non-ASCII action key.
-    def HOME: Int = ???
+    val HOME: Int = ???
 
+    /** The Insert key, a non-ASCII action key. */
     @stub
-    // The Insert key, a non-ASCII action key.
-    def INSERT: Int = ???
+    val INSERT: Int = ???
 
+    /** The user has pressed a non-ASCII action key. */
     @stub
-    // The user has pressed a non-ASCII action key.
-    def KEY_ACTION: Int = ???
+    val KEY_ACTION: Int = ???
 
+    /** The user has released a non-ASCII action key. */
     @stub
-    // The user has released a non-ASCII action key.
-    def KEY_ACTION_RELEASE: Int = ???
+    val KEY_ACTION_RELEASE: Int = ???
 
+    /** The user has pressed a normal key. */
     @stub
-    // The user has pressed a normal key.
-    def KEY_PRESS: Int = ???
+    val KEY_PRESS: Int = ???
 
+    /** The user has released a normal key. */
     @stub
-    // The user has released a normal key.
-    def KEY_RELEASE: Int = ???
+    val KEY_RELEASE: Int = ???
 
+    /** The Left Arrow key, a non-ASCII action key. */
     @stub
-    // The Left Arrow key, a non-ASCII action key.
-    def LEFT: Int = ???
+    val LEFT: Int = ???
 
+    /** An item in a list has been deselected. */
     @stub
-    // An item in a list has been deselected.
-    def LIST_DESELECT: Int = ???
+    val LIST_DESELECT: Int = ???
 
+    /** An item in a list has been selected. */
     @stub
-    // An item in a list has been selected.
-    def LIST_SELECT: Int = ???
+    val LIST_SELECT: Int = ???
 
+    /** A file loading event. */
     @stub
-    // A file loading event.
-    def LOAD_FILE: Int = ???
+    val LOAD_FILE: Int = ???
 
+    /** A component lost the focus. */
     @stub
-    // A component lost the focus.
-    def LOST_FOCUS: Int = ???
+    val LOST_FOCUS: Int = ???
 
+    /** This flag indicates that the Meta key was down when the event
+     *  occurred.
+     */
     @stub
-    // This flag indicates that the Meta key was down when the event
-    // occurred.
-    def META_MASK: Int = ???
+    val META_MASK: Int = ???
 
+    /** The user has pressed the mouse button. */
     @stub
-    // The user has pressed the mouse button.
-    def MOUSE_DOWN: Int = ???
+    val MOUSE_DOWN: Int = ???
 
+    /** The user has moved the mouse with a button pressed. */
     @stub
-    // The user has moved the mouse with a button pressed.
-    def MOUSE_DRAG: Int = ???
+    val MOUSE_DRAG: Int = ???
 
+    /** The mouse has entered a component. */
     @stub
-    // The mouse has entered a component.
-    def MOUSE_ENTER: Int = ???
+    val MOUSE_ENTER: Int = ???
 
+    /** The mouse has exited a component. */
     @stub
-    // The mouse has exited a component.
-    def MOUSE_EXIT: Int = ???
+    val MOUSE_EXIT: Int = ???
 
+    /** The mouse has moved with no button pressed. */
     @stub
-    // The mouse has moved with no button pressed.
-    def MOUSE_MOVE: Int = ???
+    val MOUSE_MOVE: Int = ???
 
+    /** The user has released the mouse button. */
     @stub
-    // The user has released the mouse button.
-    def MOUSE_UP: Int = ???
+    val MOUSE_UP: Int = ???
 
+    /** The Num Lock key, a non-ASCII action key. */
     @stub
-    // The Num Lock key, a non-ASCII action key.
-    def NUM_LOCK: Int = ???
+    val NUM_LOCK: Int = ???
 
+    /** The Pause key, a non-ASCII action key. */
     @stub
-    // The Pause key, a non-ASCII action key.
-    def PAUSE: Int = ???
+    val PAUSE: Int = ???
 
+    /** The Page Down key, a non-ASCII action key. */
     @stub
-    // The Page Down key, a non-ASCII action key.
-    def PGDN: Int = ???
+    val PGDN: Int = ???
 
+    /** The Page Up key, a non-ASCII action key. */
     @stub
-    // The Page Up key, a non-ASCII action key.
-    def PGUP: Int = ???
+    val PGUP: Int = ???
 
+    /** The Print Screen key, a non-ASCII action key. */
     @stub
-    // The Print Screen key, a non-ASCII action key.
-    def PRINT_SCREEN: Int = ???
+    val PRINT_SCREEN: Int = ???
 
+    /** The Right Arrow key, a non-ASCII action key. */
     @stub
-    // The Right Arrow key, a non-ASCII action key.
-    def RIGHT: Int = ???
+    val RIGHT: Int = ???
 
+    /** A file saving event. */
     @stub
-    // A file saving event.
-    def SAVE_FILE: Int = ???
+    val SAVE_FILE: Int = ???
 
+    /** The user has moved the bubble (thumb) in a scroll bar,
+     *  moving to an "absolute" position, rather than to
+     *  an offset from the last position.
+     */
     @stub
-    // The user has moved the bubble (thumb) in a scroll bar,
-    // moving to an "absolute" position, rather than to
-    // an offset from the last position.
-    def SCROLL_ABSOLUTE: Int = ???
+    val SCROLL_ABSOLUTE: Int = ???
 
+    /** The scroll begin event. */
     @stub
-    // The scroll begin event.
-    def SCROLL_BEGIN: Int = ???
+    val SCROLL_BEGIN: Int = ???
 
+    /** The scroll end event. */
     @stub
-    // The scroll end event.
-    def SCROLL_END: Int = ???
+    val SCROLL_END: Int = ???
 
+    /** The user has activated the line down
+     *  area of a scroll bar.
+     */
     @stub
-    // The user has activated the line down
-    // area of a scroll bar.
-    def SCROLL_LINE_DOWN: Int = ???
+    val SCROLL_LINE_DOWN: Int = ???
 
+    /** The user has activated the line up
+     *  area of a scroll bar.
+     */
     @stub
-    // The user has activated the line up
-    // area of a scroll bar.
-    def SCROLL_LINE_UP: Int = ???
+    val SCROLL_LINE_UP: Int = ???
 
+    /** The Scroll Lock key, a non-ASCII action key. */
     @stub
-    // The Scroll Lock key, a non-ASCII action key.
-    def SCROLL_LOCK: Int = ???
+    val SCROLL_LOCK: Int = ???
 
+    /** The user has activated the page down
+     *  area of a scroll bar.
+     */
     @stub
-    // The user has activated the page down
-    // area of a scroll bar.
-    def SCROLL_PAGE_DOWN: Int = ???
+    val SCROLL_PAGE_DOWN: Int = ???
 
+    /** The user has activated the page up
+     *  area of a scroll bar.
+     */
     @stub
-    // The user has activated the page up
-    // area of a scroll bar.
-    def SCROLL_PAGE_UP: Int = ???
+    val SCROLL_PAGE_UP: Int = ???
 
+    /** This flag indicates that the Shift key was down when the event
+     *  occurred.
+     */
     @stub
-    // This flag indicates that the Shift key was down when the event
-    // occurred.
-    def SHIFT_MASK: Int = ???
+    val SHIFT_MASK: Int = ???
 
+    /** The Tab key. */
     @stub
-    // The Tab key.
-    def TAB: Int = ???
+    val TAB: Int = ???
 
+    /** The Up Arrow key, a non-ASCII action key. */
     @stub
-    // The Up Arrow key, a non-ASCII action key.
-    def UP: Int = ???
+    val UP: Int = ???
 
+    /** The user has asked the window manager to de-iconify the window. */
     @stub
-    // The user has asked the window manager to de-iconify the window.
-    def WINDOW_DEICONIFY: Int = ???
+    val WINDOW_DEICONIFY: Int = ???
 
+    /** The user has asked the window manager to kill the window. */
     @stub
-    // The user has asked the window manager to kill the window.
-    def WINDOW_DESTROY: Int = ???
+    val WINDOW_DESTROY: Int = ???
 
+    /** The user has asked the window manager to expose the window. */
     @stub
-    // The user has asked the window manager to expose the window.
-    def WINDOW_EXPOSE: Int = ???
+    val WINDOW_EXPOSE: Int = ???
 
+    /** The user has asked the window manager to iconify the window. */
     @stub
-    // The user has asked the window manager to iconify the window.
-    def WINDOW_ICONIFY: Int = ???
+    val WINDOW_ICONIFY: Int = ???
 
+    /** The user has asked the window manager to move the window. */
     @stub
-    // The user has asked the window manager to move the window.
-    def WINDOW_MOVED: Int = ???
+    val WINDOW_MOVED: Int = ???
 }

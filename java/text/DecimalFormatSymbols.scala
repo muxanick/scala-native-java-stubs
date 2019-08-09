@@ -4,168 +4,179 @@ import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
 import java.util.{Currency, Locale}
 
-// This class represents the set of symbols (such as the decimal separator,
-// the grouping separator, and so on) needed by DecimalFormat
-// to format numbers. DecimalFormat creates for itself an instance of
-// DecimalFormatSymbols from its locale data.  If you need to change any
-// of these symbols, you can get the DecimalFormatSymbols object from
-// your DecimalFormat and modify it.
-class DecimalFormatSymbols extends Object with Cloneable, with Serializable {
+/** This class represents the set of symbols (such as the decimal separator,
+ *  the grouping separator, and so on) needed by DecimalFormat
+ *  to format numbers. DecimalFormat creates for itself an instance of
+ *  DecimalFormatSymbols from its locale data.  If you need to change any
+ *  of these symbols, you can get the DecimalFormatSymbols object from
+ *  your DecimalFormat and modify it.
+ */
+class DecimalFormatSymbols extends Object with Cloneable with Serializable {
 
+    /** Create a DecimalFormatSymbols object for the default
+     *  FORMAT locale.
+     */
     @stub
-    // Create a DecimalFormatSymbols object for the default
-    // FORMAT locale.
     def this() = ???
 
+    /** Standard override. */
     @stub
-    // Standard override.
     def clone(): Object = ???
 
+    /** Override equals. */
     @stub
-    // Override equals.
     def equals(obj: Object): Boolean = ???
 
+    /** Gets the currency of these DecimalFormatSymbols. */
     @stub
-    // Gets the currency of these DecimalFormatSymbols.
     def getCurrency(): Currency = ???
 
+    /** Returns the currency symbol for the currency of these
+     *  DecimalFormatSymbols in their locale.
+     */
     @stub
-    // Returns the currency symbol for the currency of these
-    // DecimalFormatSymbols in their locale.
     def getCurrencySymbol(): String = ???
 
+    /** Gets the character used for decimal sign. */
     @stub
-    // Gets the character used for decimal sign.
     def getDecimalSeparator(): Char = ???
 
+    /** Gets the character used for a digit in a pattern. */
     @stub
-    // Gets the character used for a digit in a pattern.
     def getDigit(): Char = ???
 
+    /** Returns the string used to separate the mantissa from the exponent. */
     @stub
-    // Returns the string used to separate the mantissa from the exponent.
     def getExponentSeparator(): String = ???
 
+    /** Gets the character used for thousands separator. */
     @stub
-    // Gets the character used for thousands separator.
     def getGroupingSeparator(): Char = ???
 
+    /** Gets the string used to represent infinity. */
     @stub
-    // Gets the string used to represent infinity.
     def getInfinity(): String = ???
 
+    /** Returns the ISO 4217 currency code of the currency of these
+     *  DecimalFormatSymbols.
+     */
     @stub
-    // Returns the ISO 4217 currency code of the currency of these
-    // DecimalFormatSymbols.
     def getInternationalCurrencySymbol(): String = ???
 
+    /** Gets the character used to represent minus sign. */
     @stub
-    // Gets the character used to represent minus sign.
     def getMinusSign(): Char = ???
 
+    /** Returns the monetary decimal separator. */
     @stub
-    // Returns the monetary decimal separator.
     def getMonetaryDecimalSeparator(): Char = ???
 
+    /** Gets the string used to represent "not a number". */
     @stub
-    // Gets the string used to represent "not a number".
     def getNaN(): String = ???
 
+    /** Gets the character used to separate positive and negative subpatterns
+     *  in a pattern.
+     */
     @stub
-    // Gets the character used to separate positive and negative subpatterns
-    // in a pattern.
     def getPatternSeparator(): Char = ???
 
+    /** Gets the character used for percent sign. */
     @stub
-    // Gets the character used for percent sign.
     def getPercent(): Char = ???
 
+    /** Gets the character used for per mille sign. */
     @stub
-    // Gets the character used for per mille sign.
     def getPerMill(): Char = ???
 
+    /** Gets the character used for zero. */
     @stub
-    // Gets the character used for zero.
     def getZeroDigit(): Char = ???
 
+    /** Override hashCode. */
     @stub
-    // Override hashCode.
     def hashCode(): Int = ???
 
+    /** Sets the currency of these DecimalFormatSymbols. */
     @stub
-    // Sets the currency of these DecimalFormatSymbols.
     def setCurrency(currency: Currency): Unit = ???
 
+    /** Sets the currency symbol for the currency of these
+     *  DecimalFormatSymbols in their locale.
+     */
     @stub
-    // Sets the currency symbol for the currency of these
-    // DecimalFormatSymbols in their locale.
     def setCurrencySymbol(currency: String): Unit = ???
 
+    /** Sets the character used for decimal sign. */
     @stub
-    // Sets the character used for decimal sign.
     def setDecimalSeparator(decimalSeparator: Char): Unit = ???
 
+    /** Sets the character used for a digit in a pattern. */
     @stub
-    // Sets the character used for a digit in a pattern.
     def setDigit(digit: Char): Unit = ???
 
+    /** Sets the string used to separate the mantissa from the exponent. */
     @stub
-    // Sets the string used to separate the mantissa from the exponent.
     def setExponentSeparator(exp: String): Unit = ???
 
+    /** Sets the character used for thousands separator. */
     @stub
-    // Sets the character used for thousands separator.
     def setGroupingSeparator(groupingSeparator: Char): Unit = ???
 
+    /** Sets the string used to represent infinity. */
     @stub
-    // Sets the string used to represent infinity.
     def setInfinity(infinity: String): Unit = ???
 
+    /** Sets the ISO 4217 currency code of the currency of these
+     *  DecimalFormatSymbols.
+     */
     @stub
-    // Sets the ISO 4217 currency code of the currency of these
-    // DecimalFormatSymbols.
     def setInternationalCurrencySymbol(currencyCode: String): Unit = ???
 
+    /** Sets the character used to represent minus sign. */
     @stub
-    // Sets the character used to represent minus sign.
     def setMinusSign(minusSign: Char): Unit = ???
 
+    /** Sets the monetary decimal separator. */
     @stub
-    // Sets the monetary decimal separator.
     def setMonetaryDecimalSeparator(sep: Char): Unit = ???
 
+    /** Sets the string used to represent "not a number". */
     @stub
-    // Sets the string used to represent "not a number".
     def setNaN(NaN: String): Unit = ???
 
+    /** Sets the character used to separate positive and negative subpatterns
+     *  in a pattern.
+     */
     @stub
-    // Sets the character used to separate positive and negative subpatterns
-    // in a pattern.
     def setPatternSeparator(patternSeparator: Char): Unit = ???
 
+    /** Sets the character used for percent sign. */
     @stub
-    // Sets the character used for percent sign.
     def setPercent(percent: Char): Unit = ???
 
+    /** Sets the character used for per mille sign. */
     @stub
-    // Sets the character used for per mille sign.
     def setPerMill(perMill: Char): Unit = ???
 }
 
 object DecimalFormatSymbols {
+    /** Returns an array of all locales for which the
+     *  getInstance methods of this class can return
+     *  localized instances.
+     */
     @stub
-    // Returns an array of all locales for which the
-    // getInstance methods of this class can return
-    // localized instances.
     def getAvailableLocales(): Array[Locale] = ???
 
+    /** Gets the DecimalFormatSymbols instance for the default
+     *  locale.
+     */
     @stub
-    // Gets the DecimalFormatSymbols instance for the default
-    // locale.
     def getInstance(): DecimalFormatSymbols = ???
 
+    /** Gets the DecimalFormatSymbols instance for the specified
+     *  locale.
+     */
     @stub
-    // Gets the DecimalFormatSymbols instance for the specified
-    // locale.
     def getInstance(locale: Locale): DecimalFormatSymbols = ???
 }

@@ -2,21 +2,22 @@ package javax.swing.text
 
 import java.lang.{Object, Runnable}
 
-// A queue of text layout tasks.
+/** A queue of text layout tasks. */
 class LayoutQueue extends Object {
 
+    /** Add a task that is not needed immediately because
+     *  the results are not believed to be visible.
+     */
     @stub
-    // Add a task that is not needed immediately because
-    // the results are not believed to be visible.
     def addTask(task: Runnable): Unit = ???
 }
 
 object LayoutQueue {
+    /** Fetch the default layout queue. */
     @stub
-    // Fetch the default layout queue.
     def getDefaultQueue(): LayoutQueue = ???
 
+    /** Set the default layout queue. */
     @stub
-    // Set the default layout queue.
     def setDefaultQueue(q: LayoutQueue): Unit = ???
 }

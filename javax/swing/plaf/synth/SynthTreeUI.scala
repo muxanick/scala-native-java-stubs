@@ -8,95 +8,98 @@ import javax.swing.plaf.{ComponentUI, TreeUI}
 import javax.swing.plaf.basic.BasicTreeUI
 import javax.swing.tree.{TreeCellEditor, TreeCellRenderer, TreePath}
 
-// Provides the Synth L&F UI delegate for
-// JTree.
-class SynthTreeUI extends BasicTreeUI with PropertyChangeListener, with SynthUI {
+/** Provides the Synth L&F UI delegate for
+ *  JTree.
+ */
+class SynthTreeUI extends BasicTreeUI with PropertyChangeListener with SynthUI {
 
+    /** Creates a default cell editor. */
     @stub
-    // Creates a default cell editor.
     protected def createDefaultCellEditor(): TreeCellEditor = ???
 
+    /** Returns the default cell renderer that is used to do the
+     *  stamping of each node.
+     */
     @stub
-    // Returns the default cell renderer that is used to do the
-    // stamping of each node.
     protected def createDefaultCellRenderer(): TreeCellRenderer = ???
 
+    /**  */
     @stub
-    // 
     protected def drawCentered(c: Component, graphics: Graphics, icon: Icon, x: Int, y: Int): Unit = ???
 
+    /** Returns the Context for the specified component. */
     @stub
-    // Returns the Context for the specified component.
     def getContext(c: JComponent): SynthContext = ???
 
+    /**  */
     @stub
-    // 
     def getExpandedIcon(): Icon = ???
 
+    /** Returns the location, along the x-axis, to render a particular row
+     *  at.
+     */
     @stub
-    // Returns the location, along the x-axis, to render a particular row
-    // at.
     protected def getRowX(row: Int, depth: Int): Int = ???
 
+    /**  */
     @stub
-    // 
     protected def installDefaults(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installListeners(): Unit = ???
 
+    /** Paints the specified component according to the Look and Feel. */
     @stub
-    // Paints the specified component according to the Look and Feel.
     def paint(g: Graphics, c: JComponent): Unit = ???
 
+    /** Paints the specified component. */
     @stub
-    // Paints the specified component.
     protected def paint(context: SynthContext, g: Graphics): Unit = ???
 
+    /** Paints the border. */
     @stub
-    // Paints the border.
     def paintBorder(context: SynthContext, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
 
+    /** Paints the drop line. */
     @stub
-    // Paints the drop line.
     protected def paintDropLine(g: Graphics): Unit = ???
 
+    /** Paints the expand (toggle) part of a row. */
     @stub
-    // Paints the expand (toggle) part of a row.
     protected def paintExpandControl(g: Graphics, clipBounds: Rectangle, insets: Insets, bounds: Rectangle, path: TreePath, row: Int, isExpanded: Boolean, hasBeenExpanded: Boolean, isLeaf: Boolean): Unit = ???
 
+    /** Paints a horizontal line. */
     @stub
-    // Paints a horizontal line.
     protected def paintHorizontalLine(g: Graphics, c: JComponent, y: Int, left: Int, right: Int): Unit = ???
 
+    /** Paints the horizontal part of the leg. */
     @stub
-    // Paints the horizontal part of the leg.
     protected def paintHorizontalPartOfLeg(g: Graphics, clipBounds: Rectangle, insets: Insets, bounds: Rectangle, path: TreePath, row: Int, isExpanded: Boolean, hasBeenExpanded: Boolean, isLeaf: Boolean): Unit = ???
 
+    /** Paints a vertical line. */
     @stub
-    // Paints a vertical line.
     protected def paintVerticalLine(g: Graphics, c: JComponent, x: Int, top: Int, bottom: Int): Unit = ???
 
+    /** Paints the vertical part of the leg. */
     @stub
-    // Paints the vertical part of the leg.
     protected def paintVerticalPartOfLeg(g: Graphics, clipBounds: Rectangle, insets: Insets, path: TreePath): Unit = ???
 
+    /** This method gets called when a bound property is changed. */
     @stub
-    // This method gets called when a bound property is changed.
     def propertyChange(event: PropertyChangeEvent): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallDefaults(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallListeners(): Unit = ???
 }
 
 object SynthTreeUI {
+    /** Creates a new UI object for the given component. */
     @stub
-    // Creates a new UI object for the given component.
     def createUI(x: JComponent): ComponentUI = ???
 }

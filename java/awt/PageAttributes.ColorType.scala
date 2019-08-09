@@ -2,14 +2,14 @@ package java.awt
 
 import java.lang.Object
 
-// A type-safe enumeration of possible color states.
-object final PageAttributes.ColorType extends Object {
+/** A type-safe enumeration of possible color states. */
+final object PageAttributes.ColorType extends Object {
 
+    /** The ColorType instance to use for specifying color printing. */
     @stub
-    // The ColorType instance to use for specifying color printing.
-    def COLOR: PageAttributes.ColorType = ???
+    val COLOR: PageAttributes.ColorType = ???
 
+    /** Returns a hash code value for the object. */
     @stub
-    // Returns a hash code value for the object.
     def hashCode(): Int = ???
 }

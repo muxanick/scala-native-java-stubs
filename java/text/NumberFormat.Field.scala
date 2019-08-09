@@ -2,49 +2,50 @@ package java.text
 
 import java.lang.Object
 
-// Defines constants that are used as attribute keys in the
-// AttributedCharacterIterator returned
-// from NumberFormat.formatToCharacterIterator and as
-// field identifiers in FieldPosition.
+/** Defines constants that are used as attribute keys in the
+ *  AttributedCharacterIterator returned
+ *  from NumberFormat.formatToCharacterIterator and as
+ *  field identifiers in FieldPosition.
+ */
 object NumberFormat.Field extends Format.Field {
 
+    /** Constant identifying the currency field. */
     @stub
-    // Constant identifying the currency field.
-    def CURRENCY: NumberFormat.Field = ???
+    val CURRENCY: NumberFormat.Field = ???
 
+    /** Constant identifying the decimal separator field. */
     @stub
-    // Constant identifying the decimal separator field.
-    def DECIMAL_SEPARATOR: NumberFormat.Field = ???
+    val DECIMAL_SEPARATOR: NumberFormat.Field = ???
 
+    /** Constant identifying the exponent field. */
     @stub
-    // Constant identifying the exponent field.
-    def EXPONENT: NumberFormat.Field = ???
+    val EXPONENT: NumberFormat.Field = ???
 
+    /** Constant identifying the exponent sign field. */
     @stub
-    // Constant identifying the exponent sign field.
-    def EXPONENT_SIGN: NumberFormat.Field = ???
+    val EXPONENT_SIGN: NumberFormat.Field = ???
 
+    /** Constant identifying the exponent symbol field. */
     @stub
-    // Constant identifying the exponent symbol field.
-    def EXPONENT_SYMBOL: NumberFormat.Field = ???
+    val EXPONENT_SYMBOL: NumberFormat.Field = ???
 
+    /** Constant identifying the fraction field. */
     @stub
-    // Constant identifying the fraction field.
-    def FRACTION: NumberFormat.Field = ???
+    val FRACTION: NumberFormat.Field = ???
 
+    /** Constant identifying the grouping separator field. */
     @stub
-    // Constant identifying the grouping separator field.
-    def GROUPING_SEPARATOR: NumberFormat.Field = ???
+    val GROUPING_SEPARATOR: NumberFormat.Field = ???
 
+    /** Constant identifying the integer field. */
     @stub
-    // Constant identifying the integer field.
-    def INTEGER: NumberFormat.Field = ???
+    val INTEGER: NumberFormat.Field = ???
 
+    /** Constant identifying the percent field. */
     @stub
-    // Constant identifying the percent field.
-    def PERCENT: NumberFormat.Field = ???
+    val PERCENT: NumberFormat.Field = ???
 
+    /** Constant identifying the permille field. */
     @stub
-    // Constant identifying the permille field.
-    def PERMILLE: NumberFormat.Field = ???
+    val PERMILLE: NumberFormat.Field = ???
 }

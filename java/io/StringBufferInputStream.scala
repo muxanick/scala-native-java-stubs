@@ -2,36 +2,37 @@ package java.io
 
 import java.lang.{Deprecated, Object, String}
 
-// This class allows an application to create an input stream in
-// which the bytes read are supplied by the contents of a string.
-// Applications can also read bytes from a byte array by using a
-// ByteArrayInputStream.
-// 
-// Only the low eight bits of each character in the string are used by
-// this class.
+/** This class allows an application to create an input stream in
+ *  which the bytes read are supplied by the contents of a string.
+ *  Applications can also read bytes from a byte array by using a
+ *  ByteArrayInputStream.
+ *  
+ *  Only the low eight bits of each character in the string are used by
+ *  this class.
+ */
 @Deprecated class StringBufferInputStream extends InputStream {
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
-    protected def buffer: String = ???
+    protected val buffer: String = ???
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
-    protected def count: Int = ???
+    protected val count: Int = ???
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
     def available(): Int = ???
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
     def read(): Int = ???
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
     def read(b: Array[Byte], off: Int, len: Int): Int = ???
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
     def reset(): Unit = ???
 }

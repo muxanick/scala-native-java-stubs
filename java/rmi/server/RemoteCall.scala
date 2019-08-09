@@ -3,46 +3,53 @@ package java.rmi.server
 import java.io.{ObjectInput, ObjectOutput}
 import java.lang.Deprecated
 
-// RemoteCall is an abstraction used solely by the RMI runtime
-// (in conjunction with stubs and skeletons of remote objects) to carry out a
-// call to a remote object.  The RemoteCall interface is
-// deprecated because it is only used by deprecated methods of
-// java.rmi.server.RemoteRef.
+/** RemoteCall is an abstraction used solely by the RMI runtime
+ *  (in conjunction with stubs and skeletons of remote objects) to carry out a
+ *  call to a remote object.  The RemoteCall interface is
+ *  deprecated because it is only used by deprecated methods of
+ *  java.rmi.server.RemoteRef.
+ */
 @Deprecated trait RemoteCall {
 
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
     @stub
-    // Deprecated. 
-    //no replacement
-    //
     def done(): Unit = ???
 
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
     @stub
-    // Deprecated. 
-    //no replacement
-    //
     def executeCall(): Unit = ???
 
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
     @stub
-    // Deprecated. 
-    //no replacement
-    //
     def getInputStream(): ObjectInput = ???
 
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
     @stub
-    // Deprecated. 
-    //no replacement
-    //
     def getOutputStream(): ObjectOutput = ???
 
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
     @stub
-    // Deprecated. 
-    //no replacement
-    //
     def getResultStream(success: Boolean): ObjectOutput = ???
 
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
     @stub
-    // Deprecated. 
-    //no replacement
-    //
     def releaseInputStream(): Unit = ???
 }

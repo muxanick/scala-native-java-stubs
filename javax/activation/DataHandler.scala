@@ -4,112 +4,121 @@ import java.awt.datatransfer.{DataFlavor, Transferable}
 import java.io.{InputStream, OutputStream}
 import java.lang.{Object, String}
 
-// The DataHandler class provides a consistent interface to data
-// available in many different sources and formats.
-// It manages simple stream to string conversions and related operations
-// using DataContentHandlers.
-// It provides access to commands that can operate on the data.
-// The commands are found using a CommandMap. 
-//
-// DataHandler and the Transferable Interface
-// DataHandler implements the Transferable interface so that data can
-// be used in AWT data transfer operations, such as cut and paste and
-// drag and drop. The implementation of the Transferable interface
-// relies on the availability of an installed DataContentHandler
-// object corresponding to the MIME type of the data represented in
-// the specific instance of the DataHandler.
-//
-// DataHandler and CommandMaps
-// The DataHandler keeps track of the current CommandMap that it uses to
-// service requests for commands (getCommand,
-// getAllCommands, getPreferredCommands).
-// Each instance of a DataHandler may have a CommandMap associated with
-// it using the setCommandMap method.  If a CommandMap was
-// not set, DataHandler calls the getDefaultCommandMap
-// method in CommandMap and uses the value it returns. See
-// CommandMap for more information. 
-//
-// DataHandler and URLs
-// The current DataHandler implementation creates a private
-// instance of URLDataSource when it is constructed with a URL.
+/** The DataHandler class provides a consistent interface to data
+ *  available in many different sources and formats.
+ *  It manages simple stream to string conversions and related operations
+ *  using DataContentHandlers.
+ *  It provides access to commands that can operate on the data.
+ *  The commands are found using a CommandMap. 
+ * 
+ *  DataHandler and the Transferable Interface
+ *  DataHandler implements the Transferable interface so that data can
+ *  be used in AWT data transfer operations, such as cut and paste and
+ *  drag and drop. The implementation of the Transferable interface
+ *  relies on the availability of an installed DataContentHandler
+ *  object corresponding to the MIME type of the data represented in
+ *  the specific instance of the DataHandler.
+ * 
+ *  DataHandler and CommandMaps
+ *  The DataHandler keeps track of the current CommandMap that it uses to
+ *  service requests for commands (getCommand,
+ *  getAllCommands, getPreferredCommands).
+ *  Each instance of a DataHandler may have a CommandMap associated with
+ *  it using the setCommandMap method.  If a CommandMap was
+ *  not set, DataHandler calls the getDefaultCommandMap
+ *  method in CommandMap and uses the value it returns. See
+ *  CommandMap for more information. 
+ * 
+ *  DataHandler and URLs
+ *  The current DataHandler implementation creates a private
+ *  instance of URLDataSource when it is constructed with a URL.
+ */
 class DataHandler extends Object with Transferable {
 
+    /** Create a DataHandler instance referencing the
+     *  specified DataSource.
+     */
     @stub
-    // Create a DataHandler instance referencing the
-    // specified DataSource.
     def this(ds: DataSource) = ???
 
+    /** Create a DataHandler instance representing an object
+     *  of this MIME type.
+     */
     @stub
-    // Create a DataHandler instance representing an object
-    // of this MIME type.
     def this(obj: Object, mimeType: String) = ???
 
+    /** Return all the commands for this type of data. */
     @stub
-    // Return all the commands for this type of data.
     def getAllCommands(): Array[CommandInfo] = ???
 
+    /** A convenience method that takes a CommandInfo object
+     *  and instantiates the corresponding command, usually
+     *  a JavaBean component.
+     */
     @stub
-    // A convenience method that takes a CommandInfo object
-    // and instantiates the corresponding command, usually
-    // a JavaBean component.
     def getBean(cmdinfo: CommandInfo): Object = ???
 
+    /** Get the command cmdName. */
     @stub
-    // Get the command cmdName.
     def getCommand(cmdName: String): CommandInfo = ???
 
+    /** Return the data in its preferred Object form. */
     @stub
-    // Return the data in its preferred Object form.
     def getContent(): Object = ???
 
+    /** Return the MIME type of this object as retrieved from
+     *  the source object.
+     */
     @stub
-    // Return the MIME type of this object as retrieved from
-    // the source object.
     def getContentType(): String = ???
 
+    /** Return the DataSource associated with this instance
+     *  of DataHandler.
+     */
     @stub
-    // Return the DataSource associated with this instance
-    // of DataHandler.
     def getDataSource(): DataSource = ???
 
+    /** Get the InputStream for this object. */
     @stub
-    // Get the InputStream for this object.
     def getInputStream(): InputStream = ???
 
+    /** Return the name of the data object. */
     @stub
-    // Return the name of the data object.
     def getName(): String = ???
 
+    /** Get an OutputStream for this DataHandler to allow overwriting
+     *  the underlying data.
+     */
     @stub
-    // Get an OutputStream for this DataHandler to allow overwriting
-    // the underlying data.
     def getOutputStream(): OutputStream = ???
 
+    /** Return the preferred commands for this type of data. */
     @stub
-    // Return the preferred commands for this type of data.
     def getPreferredCommands(): Array[CommandInfo] = ???
 
+    /** Returns an object that represents the data to be
+     *  transferred.
+     */
     @stub
-    // Returns an object that represents the data to be
-    // transferred.
     def getTransferData(flavor: DataFlavor): Object = ???
 
+    /** Return the DataFlavors in which this data is available. */
     @stub
-    // Return the DataFlavors in which this data is available.
     def getTransferDataFlavors(): Array[DataFlavor] = ???
 
+    /** Returns whether the specified data flavor is supported
+     *  for this object.
+     */
     @stub
-    // Returns whether the specified data flavor is supported
-    // for this object.
     def isDataFlavorSupported(flavor: DataFlavor): Boolean = ???
 
+    /** Set the CommandMap for use by this DataHandler. */
     @stub
-    // Set the CommandMap for use by this DataHandler.
     def setCommandMap(commandMap: CommandMap): Unit = ???
 }
 
 object DataHandler {
+    /** Sets the DataContentHandlerFactory. */
     @stub
-    // Sets the DataContentHandlerFactory.
     def setDataContentHandlerFactory(newFactory: DataContentHandlerFactory): Unit = ???
 }

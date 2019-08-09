@@ -2,36 +2,38 @@ package java.io
 
 import java.lang.Object
 
-// A character stream whose source is a string.
+/** A character stream whose source is a string. */
 class StringReader extends Reader {
 
+    /** Closes the stream and releases any system resources associated with
+     *  it.
+     */
     @stub
-    // Closes the stream and releases any system resources associated with
-    // it.
     def close(): Unit = ???
 
+    /** Marks the present position in the stream. */
     @stub
-    // Marks the present position in the stream.
     def mark(readAheadLimit: Int): Unit = ???
 
+    /** Tells whether this stream supports the mark() operation, which it does. */
     @stub
-    // Tells whether this stream supports the mark() operation, which it does.
     def markSupported(): Boolean = ???
 
+    /** Reads a single character. */
     @stub
-    // Reads a single character.
     def read(): Int = ???
 
+    /** Reads characters into a portion of an array. */
     @stub
-    // Reads characters into a portion of an array.
     def read(cbuf: Array[Char], off: Int, len: Int): Int = ???
 
+    /** Tells whether this stream is ready to be read. */
     @stub
-    // Tells whether this stream is ready to be read.
     def ready(): Boolean = ???
 
+    /** Resets the stream to the most recent mark, or to the beginning of the
+     *  string if it has never been marked.
+     */
     @stub
-    // Resets the stream to the most recent mark, or to the beginning of the
-    // string if it has never been marked.
     def reset(): Unit = ???
 }

@@ -1,96 +1,103 @@
 package javax.accessibility
 
-// Class AccessibleTable describes a user-interface component that
-// presents data in a two-dimensional table format.
+/** Class AccessibleTable describes a user-interface component that
+ *  presents data in a two-dimensional table format.
+ */
 trait AccessibleTable {
 
+    /** Returns the Accessible at a specified row and column
+     *  in the table.
+     */
     @stub
-    // Returns the Accessible at a specified row and column
-    // in the table.
     def getAccessibleAt(r: Int, c: Int): Accessible = ???
 
+    /** Returns the caption for the table. */
     @stub
-    // Returns the caption for the table.
     def getAccessibleCaption(): Accessible = ???
 
+    /** Returns the number of columns in the table. */
     @stub
-    // Returns the number of columns in the table.
     def getAccessibleColumnCount(): Int = ???
 
+    /** Returns the description text of the specified column in the table. */
     @stub
-    // Returns the description text of the specified column in the table.
     def getAccessibleColumnDescription(c: Int): Accessible = ???
 
+    /** Returns the number of columns occupied by the Accessible at
+     *  a specified row and column in the table.
+     */
     @stub
-    // Returns the number of columns occupied by the Accessible at
-    // a specified row and column in the table.
     def getAccessibleColumnExtentAt(r: Int, c: Int): Int = ???
 
+    /** Returns the column headers as an AccessibleTable. */
     @stub
-    // Returns the column headers as an AccessibleTable.
     def getAccessibleColumnHeader(): AccessibleTable = ???
 
+    /** Returns the number of rows in the table. */
     @stub
-    // Returns the number of rows in the table.
     def getAccessibleRowCount(): Int = ???
 
+    /** Returns the description of the specified row in the table. */
     @stub
-    // Returns the description of the specified row in the table.
     def getAccessibleRowDescription(r: Int): Accessible = ???
 
+    /** Returns the number of rows occupied by the Accessible at
+     *  a specified row and column in the table.
+     */
     @stub
-    // Returns the number of rows occupied by the Accessible at
-    // a specified row and column in the table.
     def getAccessibleRowExtentAt(r: Int, c: Int): Int = ???
 
+    /** Returns the row headers as an AccessibleTable. */
     @stub
-    // Returns the row headers as an AccessibleTable.
     def getAccessibleRowHeader(): AccessibleTable = ???
 
+    /** Returns the summary description of the table. */
     @stub
-    // Returns the summary description of the table.
     def getAccessibleSummary(): Accessible = ???
 
+    /** Returns the selected columns in a table. */
     @stub
-    // Returns the selected columns in a table.
     def getSelectedAccessibleColumns(): Array[Int] = ???
 
+    /** Returns the selected rows in a table. */
     @stub
-    // Returns the selected rows in a table.
     def getSelectedAccessibleRows(): Array[Int] = ???
 
+    /** Returns a boolean value indicating whether the specified column
+     *  is selected.
+     */
     @stub
-    // Returns a boolean value indicating whether the specified column
-    // is selected.
     def isAccessibleColumnSelected(c: Int): Boolean = ???
 
+    /** Returns a boolean value indicating whether the specified row
+     *  is selected.
+     */
     @stub
-    // Returns a boolean value indicating whether the specified row
-    // is selected.
     def isAccessibleRowSelected(r: Int): Boolean = ???
 
+    /** Returns a boolean value indicating whether the accessible at
+     *  a specified row and column is selected.
+     */
     @stub
-    // Returns a boolean value indicating whether the accessible at
-    // a specified row and column is selected.
     def isAccessibleSelected(r: Int, c: Int): Boolean = ???
 
+    /** Sets the caption for the table. */
     @stub
-    // Sets the caption for the table.
     def setAccessibleCaption(a: Accessible): Unit = ???
 
+    /** Sets the description text of the specified column in the table. */
     @stub
-    // Sets the description text of the specified column in the table.
     def setAccessibleColumnDescription(c: Int, a: Accessible): Unit = ???
 
+    /** Sets the column headers. */
     @stub
-    // Sets the column headers.
     def setAccessibleColumnHeader(table: AccessibleTable): Unit = ???
 
+    /** Sets the description text of the specified row of the table. */
     @stub
-    // Sets the description text of the specified row of the table.
     def setAccessibleRowDescription(r: Int, a: Accessible): Unit = ???
 
+    /** Sets the row headers. */
     @stub
-    // Sets the row headers.
     def setAccessibleRowHeader(table: AccessibleTable): Unit = ???
 }

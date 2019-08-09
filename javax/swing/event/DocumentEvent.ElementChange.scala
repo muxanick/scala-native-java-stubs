@@ -2,20 +2,22 @@ package javax.swing.event
 
 import javax.swing.text.Element
 
-// Describes changes made to a specific element.
+/** Describes changes made to a specific element. */
 object trait DocumentEvent.ElementChange {
 
+    /** Gets the child elements that were added to the given
+     *  parent element.
+     */
     @stub
-    // Gets the child elements that were added to the given
-    // parent element.
     def getChildrenAdded(): Array[Element] = ???
 
+    /** Gets the child elements that were removed from the
+     *  given parent element.
+     */
     @stub
-    // Gets the child elements that were removed from the
-    // given parent element.
     def getChildrenRemoved(): Array[Element] = ???
 
+    /** Returns the element represented. */
     @stub
-    // Returns the element represented.
     def getElement(): Element = ???
 }

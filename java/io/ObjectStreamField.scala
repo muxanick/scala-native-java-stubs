@@ -2,48 +2,50 @@ package java.io
 
 import java.lang.{Class, Comparable, Object, String}
 
-// A description of a Serializable field from a Serializable class.  An array
-// of ObjectStreamFields is used to declare the Serializable fields of a class.
+/** A description of a Serializable field from a Serializable class.  An array
+ *  of ObjectStreamFields is used to declare the Serializable fields of a class.
+ */
 class ObjectStreamField extends Object with Comparable[Object] {
 
+    /** Create a Serializable field with the specified type. */
     @stub
-    // Create a Serializable field with the specified type.
     def this(name: String, type: Class[_]) = ???
 
+    /** Compare this field with another ObjectStreamField. */
     @stub
-    // Compare this field with another ObjectStreamField.
     def compareTo(obj: Object): Int = ???
 
+    /** Get the name of this field. */
     @stub
-    // Get the name of this field.
     def getName(): String = ???
 
+    /** Offset of field within instance data. */
     @stub
-    // Offset of field within instance data.
     def getOffset(): Int = ???
 
+    /** Get the type of the field. */
     @stub
-    // Get the type of the field.
     def getType(): Class[_] = ???
 
+    /** Returns character encoding of field type. */
     @stub
-    // Returns character encoding of field type.
     def getTypeCode(): Char = ???
 
+    /** Return the JVM type signature. */
     @stub
-    // Return the JVM type signature.
     def getTypeString(): String = ???
 
+    /** Return true if this field has a primitive type. */
     @stub
-    // Return true if this field has a primitive type.
     def isPrimitive(): Boolean = ???
 
+    /** Returns boolean value indicating whether or not the serializable field
+     *  represented by this ObjectStreamField instance is unshared.
+     */
     @stub
-    // Returns boolean value indicating whether or not the serializable field
-    // represented by this ObjectStreamField instance is unshared.
     def isUnshared(): Boolean = ???
 
+    /** Offset within instance data. */
     @stub
-    // Offset within instance data.
     protected def setOffset(offset: Int): Unit = ???
 }

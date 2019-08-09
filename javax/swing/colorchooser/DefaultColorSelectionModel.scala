@@ -5,40 +5,45 @@ import java.io.Serializable
 import java.lang.Object
 import javax.swing.event.{ChangeEvent, ChangeListener}
 
-// A generic implementation of ColorSelectionModel.
-class DefaultColorSelectionModel extends Object with ColorSelectionModel, with Serializable {
+/** A generic implementation of ColorSelectionModel. */
+class DefaultColorSelectionModel extends Object with ColorSelectionModel with Serializable {
 
+    /** Creates a DefaultColorSelectionModel with the
+     *  current color set to Color.white.
+     */
     @stub
-    // Creates a DefaultColorSelectionModel with the
-    // current color set to Color.white.
     def this() = ???
 
+    /** Only one ChangeEvent is needed per model instance
+     *  since the event's only (read-only) state is the source property.
+     */
     @stub
-    // Only one ChangeEvent is needed per model instance
-    // since the event's only (read-only) state is the source property.
-    protected def changeEvent: ChangeEvent = ???
+    protected val changeEvent: ChangeEvent = ???
 
+    /** Adds a ChangeListener to the model. */
     @stub
-    // Adds a ChangeListener to the model.
     def addChangeListener(l: ChangeListener): Unit = ???
 
+    /** Runs each ChangeListener's
+     *  stateChanged method.
+     */
     @stub
-    // Runs each ChangeListener's
-    // stateChanged method.
     protected def fireStateChanged(): Unit = ???
 
+    /** Returns an array of all the ChangeListeners added
+     *  to this DefaultColorSelectionModel with
+     *  addChangeListener.
+     */
     @stub
-    // Returns an array of all the ChangeListeners added
-    // to this DefaultColorSelectionModel with
-    // addChangeListener.
     def getChangeListeners(): Array[ChangeListener] = ???
 
+    /** Returns the selected Color which should be
+     *  non-null.
+     */
     @stub
-    // Returns the selected Color which should be
-    // non-null.
     def getSelectedColor(): Color = ???
 
+    /** Removes a ChangeListener from the model. */
     @stub
-    // Removes a ChangeListener from the model.
     def removeChangeListener(l: ChangeListener): Unit = ???
 }

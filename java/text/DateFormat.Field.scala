@@ -2,95 +2,103 @@ package java.text
 
 import java.lang.Object
 
-// Defines constants that are used as attribute keys in the
-// AttributedCharacterIterator returned
-// from DateFormat.formatToCharacterIterator and as
-// field identifiers in FieldPosition.
-// 
-// The class also provides two methods to map
-// between its constants and the corresponding Calendar constants.
+/** Defines constants that are used as attribute keys in the
+ *  AttributedCharacterIterator returned
+ *  from DateFormat.formatToCharacterIterator and as
+ *  field identifiers in FieldPosition.
+ *  
+ *  The class also provides two methods to map
+ *  between its constants and the corresponding Calendar constants.
+ */
 object DateFormat.Field extends Format.Field {
 
+    /** Constant identifying the time of day indicator
+     *  (e.g.
+     */
     @stub
-    // Constant identifying the time of day indicator
-    // (e.g.
-    def AM_PM: DateFormat.Field = ???
+    val AM_PM: DateFormat.Field = ???
 
+    /** Constant identifying the day of month field. */
     @stub
-    // Constant identifying the day of month field.
-    def DAY_OF_MONTH: DateFormat.Field = ???
+    val DAY_OF_MONTH: DateFormat.Field = ???
 
+    /** Constant identifying the day of week field. */
     @stub
-    // Constant identifying the day of week field.
-    def DAY_OF_WEEK: DateFormat.Field = ???
+    val DAY_OF_WEEK: DateFormat.Field = ???
 
+    /** Constant identifying the day of week field. */
     @stub
-    // Constant identifying the day of week field.
-    def DAY_OF_WEEK_IN_MONTH: DateFormat.Field = ???
+    val DAY_OF_WEEK_IN_MONTH: DateFormat.Field = ???
 
+    /** Constant identifying the day of year field. */
     @stub
-    // Constant identifying the day of year field.
-    def DAY_OF_YEAR: DateFormat.Field = ???
+    val DAY_OF_YEAR: DateFormat.Field = ???
 
+    /** Constant identifying the era field. */
     @stub
-    // Constant identifying the era field.
-    def ERA: DateFormat.Field = ???
+    val ERA: DateFormat.Field = ???
 
+    /** Constant identifying the hour of day field, where the legal values
+     *  are 0 to 23.
+     */
     @stub
-    // Constant identifying the hour of day field, where the legal values
-    // are 0 to 23.
-    def HOUR_OF_DAY0: DateFormat.Field = ???
+    val HOUR_OF_DAY0: DateFormat.Field = ???
 
+    /** Constant identifying the hour of day field, where the legal values
+     *  are 1 to 24.
+     */
     @stub
-    // Constant identifying the hour of day field, where the legal values
-    // are 1 to 24.
-    def HOUR_OF_DAY1: DateFormat.Field = ???
+    val HOUR_OF_DAY1: DateFormat.Field = ???
 
+    /** Constant identifying the hour field, where the legal values are
+     *  0 to 11.
+     */
     @stub
-    // Constant identifying the hour field, where the legal values are
-    // 0 to 11.
-    def HOUR0: DateFormat.Field = ???
+    val HOUR0: DateFormat.Field = ???
 
+    /** Constant identifying the hour field, where the legal values are
+     *  1 to 12.
+     */
     @stub
-    // Constant identifying the hour field, where the legal values are
-    // 1 to 12.
-    def HOUR1: DateFormat.Field = ???
+    val HOUR1: DateFormat.Field = ???
 
+    /** Constant identifying the millisecond field. */
     @stub
-    // Constant identifying the millisecond field.
-    def MILLISECOND: DateFormat.Field = ???
+    val MILLISECOND: DateFormat.Field = ???
 
+    /** Constant identifying the minute field. */
     @stub
-    // Constant identifying the minute field.
-    def MINUTE: DateFormat.Field = ???
+    val MINUTE: DateFormat.Field = ???
 
+    /** Constant identifying the month field. */
     @stub
-    // Constant identifying the month field.
-    def MONTH: DateFormat.Field = ???
+    val MONTH: DateFormat.Field = ???
 
+    /** Constant identifying the second field. */
     @stub
-    // Constant identifying the second field.
-    def SECOND: DateFormat.Field = ???
+    val SECOND: DateFormat.Field = ???
 
+    /** Constant identifying the time zone field. */
     @stub
-    // Constant identifying the time zone field.
-    def TIME_ZONE: DateFormat.Field = ???
+    val TIME_ZONE: DateFormat.Field = ???
 
+    /** Constant identifying the week of month field. */
     @stub
-    // Constant identifying the week of month field.
-    def WEEK_OF_MONTH: DateFormat.Field = ???
+    val WEEK_OF_MONTH: DateFormat.Field = ???
 
+    /** Constant identifying the week of year field. */
     @stub
-    // Constant identifying the week of year field.
-    def WEEK_OF_YEAR: DateFormat.Field = ???
+    val WEEK_OF_YEAR: DateFormat.Field = ???
 
+    /** Returns the Calendar field associated with this
+     *  attribute.
+     */
     @stub
-    // Returns the Calendar field associated with this
-    // attribute.
     def getCalendarField(): Int = ???
 
+    /** Returns the Field constant that corresponds to
+     *  the Calendar constant calendarField.
+     */
     @stub
-    // Returns the Field constant that corresponds to
-    // the Calendar constant calendarField.
     def ofCalendarField(calendarField: Int): DateFormat.Field = ???
 }

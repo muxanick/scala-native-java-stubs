@@ -3,103 +3,113 @@ package java.util.concurrent
 import java.lang.Object
 import java.util.{AbstractCollection, AbstractQueue, Collection, Iterator}
 
-// An unbounded blocking queue of
-// Delayed elements, in which an element can only be taken
-// when its delay has expired.  The head of the queue is that
-// Delayed element whose delay expired furthest in the
-// past.  If no delay has expired there is no head and poll
-// will return null. Expiration occurs when an element's
-// getDelay(TimeUnit.NANOSECONDS) method returns a value less
-// than or equal to zero.  Even though unexpired elements cannot be
-// removed using take or poll, they are otherwise
-// treated as normal elements. For example, the size method
-// returns the count of both expired and unexpired elements.
-// This queue does not permit null elements.
-//
-// This class and its iterator implement all of the
-// optional methods of the Collection and Iterator interfaces.  The Iterator provided in method iterator() is not guaranteed to traverse the elements of
-// the DelayQueue in any particular order.
-//
-// This class is a member of the
-// 
-// Java Collections Framework.
+/** An unbounded blocking queue of
+ *  Delayed elements, in which an element can only be taken
+ *  when its delay has expired.  The head of the queue is that
+ *  Delayed element whose delay expired furthest in the
+ *  past.  If no delay has expired there is no head and poll
+ *  will return null. Expiration occurs when an element's
+ *  getDelay(TimeUnit.NANOSECONDS) method returns a value less
+ *  than or equal to zero.  Even though unexpired elements cannot be
+ *  removed using take or poll, they are otherwise
+ *  treated as normal elements. For example, the size method
+ *  returns the count of both expired and unexpired elements.
+ *  This queue does not permit null elements.
+ * 
+ *  This class and its iterator implement all of the
+ *  optional methods of the Collection and Iterator interfaces.  The Iterator provided in method iterator() is not guaranteed to traverse the elements of
+ *  the DelayQueue in any particular order.
+ * 
+ *  This class is a member of the
+ *  
+ *  Java Collections Framework.
+ */
 class DelayQueue[E <: Delayed] extends AbstractQueue[E] with BlockingQueue[E] {
 
+    /** Creates a new DelayQueue that is initially empty. */
     @stub
-    // Creates a new DelayQueue that is initially empty.
     def this() = ???
 
+    /** Inserts the specified element into this delay queue. */
     @stub
-    // Inserts the specified element into this delay queue.
     def add(e: E): Boolean = ???
 
+    /** Atomically removes all of the elements from this delay queue. */
     @stub
-    // Atomically removes all of the elements from this delay queue.
     def clear(): Unit = ???
 
+    /** Removes all available elements from this queue and adds them
+     *  to the given collection.
+     */
     @stub
-    // Removes all available elements from this queue and adds them
-    // to the given collection.
     def drainTo(c: Collection[_ >: E]): Int = ???
 
+    /** Removes at most the given number of available elements from
+     *  this queue and adds them to the given collection.
+     */
     @stub
-    // Removes at most the given number of available elements from
-    // this queue and adds them to the given collection.
     def drainTo(c: Collection[_ >: E], maxElements: Int): Int = ???
 
+    /** Returns an iterator over all the elements (both expired and
+     *  unexpired) in this queue.
+     */
     @stub
-    // Returns an iterator over all the elements (both expired and
-    // unexpired) in this queue.
     def iterator(): Iterator[E] = ???
 
+    /** Inserts the specified element into this delay queue. */
     @stub
-    // Inserts the specified element into this delay queue.
     def offer(e: E): Boolean = ???
 
+    /** Inserts the specified element into this delay queue. */
     @stub
-    // Inserts the specified element into this delay queue.
     def offer(e: E, timeout: Long, unit: TimeUnit): Boolean = ???
 
+    /** Retrieves, but does not remove, the head of this queue, or
+     *  returns null if this queue is empty.
+     */
     @stub
-    // Retrieves, but does not remove, the head of this queue, or
-    // returns null if this queue is empty.
     def peek(): E = ???
 
+    /** Retrieves and removes the head of this queue, or returns null
+     *  if this queue has no elements with an expired delay.
+     */
     @stub
-    // Retrieves and removes the head of this queue, or returns null
-    // if this queue has no elements with an expired delay.
     def poll(): E = ???
 
+    /** Retrieves and removes the head of this queue, waiting if necessary
+     *  until an element with an expired delay is available on this queue,
+     *  or the specified wait time expires.
+     */
     @stub
-    // Retrieves and removes the head of this queue, waiting if necessary
-    // until an element with an expired delay is available on this queue,
-    // or the specified wait time expires.
     def poll(timeout: Long, unit: TimeUnit): E = ???
 
+    /** Inserts the specified element into this delay queue. */
     @stub
-    // Inserts the specified element into this delay queue.
     def put(e: E): Unit = ???
 
+    /** Always returns Integer.MAX_VALUE because
+     *  a DelayQueue is not capacity constrained.
+     */
     @stub
-    // Always returns Integer.MAX_VALUE because
-    // a DelayQueue is not capacity constrained.
     def remainingCapacity(): Int = ???
 
+    /** Removes a single instance of the specified element from this
+     *  queue, if it is present, whether or not it has expired.
+     */
     @stub
-    // Removes a single instance of the specified element from this
-    // queue, if it is present, whether or not it has expired.
     def remove(o: Object): Boolean = ???
 
+    /** Returns the number of elements in this collection. */
     @stub
-    // Returns the number of elements in this collection.
     def size(): Int = ???
 
+    /** Retrieves and removes the head of this queue, waiting if necessary
+     *  until an element with an expired delay is available on this queue.
+     */
     @stub
-    // Retrieves and removes the head of this queue, waiting if necessary
-    // until an element with an expired delay is available on this queue.
     def take(): E = ???
 
+    /** Returns an array containing all of the elements in this queue. */
     @stub
-    // Returns an array containing all of the elements in this queue.
     def toArray(): Array[Object] = ???
 }

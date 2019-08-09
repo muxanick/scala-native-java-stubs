@@ -3,85 +3,98 @@ package java.awt.geom
 import java.io.Serializable
 import java.lang.Object
 
-// The Float class defines a rectangle specified in float
-// coordinates.
+/** The Float class defines a rectangle specified in float
+ *  coordinates.
+ */
 object Rectangle2D.Float extends Rectangle2D with Serializable {
 
+    /** Constructs a new Rectangle2D, initialized to
+     *  location (0.0, 0.0) and size (0.0, 0.0).
+     */
     @stub
-    // Constructs a new Rectangle2D, initialized to
-    // location (0.0, 0.0) and size (0.0, 0.0).
     def Float() = ???
 
+    /** The height of this Rectangle2D. */
     @stub
-    // The height of this Rectangle2D.
-    def height: float = ???
+    val height: Float = ???
 
+    /** The width of this Rectangle2D. */
     @stub
-    // The width of this Rectangle2D.
-    def width: float = ???
+    val width: Float = ???
 
+    /** The X coordinate of this Rectangle2D. */
     @stub
-    // The X coordinate of this Rectangle2D.
-    def x: float = ???
+    val x: Float = ???
 
+    /** Returns a new Rectangle2D object representing the
+     *  intersection of this Rectangle2D with the specified
+     *  Rectangle2D.
+     */
     @stub
-    // Returns a new Rectangle2D object representing the
-    // intersection of this Rectangle2D with the specified
-    // Rectangle2D.
     def createIntersection(r: Rectangle2D): Rectangle2D = ???
 
+    /** Returns a new Rectangle2D object representing the
+     *  union of this Rectangle2D with the specified
+     *  Rectangle2D.
+     */
     @stub
-    // Returns a new Rectangle2D object representing the
-    // union of this Rectangle2D with the specified
-    // Rectangle2D.
     def createUnion(r: Rectangle2D): Rectangle2D = ???
 
+    /** Returns a high precision and more accurate bounding box of
+     *  the Shape than the getBounds method.
+     */
     @stub
-    // Returns a high precision and more accurate bounding box of
-    // the Shape than the getBounds method.
     def getBounds2D(): Rectangle2D = ???
 
+    /** Returns the height of the framing rectangle
+     *  in double precision.
+     */
     @stub
-    // Returns the height of the framing rectangle
-    // in double precision.
-    def getHeight(): double = ???
+    def getHeight(): Double = ???
 
+    /** Returns the width of the framing rectangle in
+     *  double precision.
+     */
     @stub
-    // Returns the width of the framing rectangle in
-    // double precision.
-    def getWidth(): double = ???
+    def getWidth(): Double = ???
 
+    /** Returns the X coordinate of the upper-left corner of
+     *  the framing rectangle in double precision.
+     */
     @stub
-    // Returns the X coordinate of the upper-left corner of
-    // the framing rectangle in double precision.
-    def getX(): double = ???
+    def getX(): Double = ???
 
+    /** Returns the Y coordinate of the upper-left corner of
+     *  the framing rectangle in double precision.
+     */
     @stub
-    // Returns the Y coordinate of the upper-left corner of
-    // the framing rectangle in double precision.
-    def getY(): double = ???
+    def getY(): Double = ???
 
+    /** Determines whether the RectangularShape is empty. */
     @stub
-    // Determines whether the RectangularShape is empty.
     def isEmpty(): Boolean = ???
 
+    /** Determines where the specified coordinates lie with respect
+     *  to this Rectangle2D.
+     */
     @stub
-    // Determines where the specified coordinates lie with respect
-    // to this Rectangle2D.
-    def outcode(x: double, y: double): Int = ???
+    def outcode(x: Double, y: Double): Int = ???
 
+    /** Sets the location and size of this Rectangle2D
+     *  to the specified double values.
+     */
     @stub
-    // Sets the location and size of this Rectangle2D
-    // to the specified double values.
-    def setRect(x: double, y: double, w: double, h: double): Unit = ???
+    def setRect(x: Double, y: Double, w: Double, h: Double): Unit = ???
 
+    /** Sets the location and size of this Rectangle2D
+     *  to the specified float values.
+     */
     @stub
-    // Sets the location and size of this Rectangle2D
-    // to the specified float values.
-    def setRect(x: float, y: float, w: float, h: float): Unit = ???
+    def setRect(x: Float, y: Float, w: Float, h: Float): Unit = ???
 
+    /** Sets this Rectangle2D to be the same as the specified
+     *  Rectangle2D.
+     */
     @stub
-    // Sets this Rectangle2D to be the same as the specified
-    // Rectangle2D.
     def setRect(r: Rectangle2D): Unit = ???
 }

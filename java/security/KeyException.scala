@@ -2,19 +2,20 @@ package java.security
 
 import java.lang.{Exception, Object, String, Throwable}
 
-// This is the basic key exception.
+/** This is the basic key exception. */
 class KeyException extends GeneralSecurityException {
 
+    /** Constructs a KeyException with no detail message. */
     @stub
-    // Constructs a KeyException with no detail message.
     def this() = ???
 
+    /** Constructs a KeyException with the specified detail message. */
     @stub
-    // Constructs a KeyException with the specified detail message.
     def this(msg: String) = ???
 
+    /** Creates a KeyException with the specified
+     *  detail message and cause.
+     */
     @stub
-    // Creates a KeyException with the specified
-    // detail message and cause.
     def this(message: String, cause: Throwable) = ???
 }

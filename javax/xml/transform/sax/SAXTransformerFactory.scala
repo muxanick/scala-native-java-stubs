@@ -4,45 +4,52 @@ import java.lang.{Object, String}
 import javax.xml.transform.{Source, Templates, TransformerFactory}
 import org.xml.sax.XMLFilter
 
-// This class extends TransformerFactory to provide SAX-specific
-// factory methods.  It provides two types of ContentHandlers,
-// one for creating Transformers, the other for creating Templates
-// objects.
-//
-// If an application wants to set the ErrorHandler or EntityResolver
-// for an XMLReader used during a transformation, it should use a URIResolver
-// to return the SAXSource which provides (with getXMLReader) a reference to
-// the XMLReader.
+/** This class extends TransformerFactory to provide SAX-specific
+ *  factory methods.  It provides two types of ContentHandlers,
+ *  one for creating Transformers, the other for creating Templates
+ *  objects.
+ * 
+ *  If an application wants to set the ErrorHandler or EntityResolver
+ *  for an XMLReader used during a transformation, it should use a URIResolver
+ *  to return the SAXSource which provides (with getXMLReader) a reference to
+ *  the XMLReader.
+ */
 abstract class SAXTransformerFactory extends TransformerFactory {
 
-    // Get a TemplatesHandler object that can process SAX
-    // ContentHandler events into a Templates object.
+    /** Get a TemplatesHandler object that can process SAX
+     *  ContentHandler events into a Templates object.
+     */
     def newTemplatesHandler(): TemplatesHandler
 
-    // Get a TransformerHandler object that can process SAX
-    // ContentHandler events into a Result.
+    /** Get a TransformerHandler object that can process SAX
+     *  ContentHandler events into a Result.
+     */
     def newTransformerHandler(): TransformerHandler
 
-    // Get a TransformerHandler object that can process SAX
-    // ContentHandler events into a Result, based on the transformation
-    // instructions specified by the argument.
+    /** Get a TransformerHandler object that can process SAX
+     *  ContentHandler events into a Result, based on the transformation
+     *  instructions specified by the argument.
+     */
     def newTransformerHandler(src: Source): TransformerHandler
 
-    // Get a TransformerHandler object that can process SAX
-    // ContentHandler events into a Result, based on the Templates argument.
+    /** Get a TransformerHandler object that can process SAX
+     *  ContentHandler events into a Result, based on the Templates argument.
+     */
     def newTransformerHandler(templates: Templates): TransformerHandler
 
-    // Create an XMLFilter that uses the given Source as the
-    // transformation instructions.
+    /** Create an XMLFilter that uses the given Source as the
+     *  transformation instructions.
+     */
     def newXMLFilter(src: Source): XMLFilter
 }
 
 object SAXTransformerFactory {
+    /** If TransformerFactory.getFeature(java.lang.String)
+     *  returns true when passed this value as an argument,
+     *  the TransformerFactory returned from
+     *  TransformerFactory.newInstance() may
+     *  be safely cast to a SAXTransformerFactory.
+     */
     @stub
-    // If TransformerFactory.getFeature(java.lang.String)
-    // returns true when passed this value as an argument,
-    // the TransformerFactory returned from
-    // TransformerFactory.newInstance() may
-    // be safely cast to a SAXTransformerFactory.
-    def FEATURE: String = ???
+    val FEATURE: String = ???
 }

@@ -6,252 +6,259 @@ import java.security.PublicKey
 import java.util.{Collection, Date, List, Set}
 import javax.security.auth.x500.X500Principal
 
-// A CertSelector that selects X509Certificates that
-// match all specified criteria. This class is particularly useful when
-// selecting certificates from a CertStore to build a
-// PKIX-compliant certification path.
-// 
-// When first constructed, an X509CertSelector has no criteria
-// enabled and each of the get methods return a default value
-// (null, or -1 for the getBasicConstraints method). Therefore, the match
-// method would return true for any X509Certificate.
-// Typically, several criteria are enabled (by calling
-// setIssuer or
-// setKeyUsage, for instance) and then the
-// X509CertSelector is passed to
-// CertStore.getCertificates or some similar
-// method.
-// 
-// Several criteria can be enabled (by calling setIssuer
-// and setSerialNumber,
-// for example) such that the match method
-// usually uniquely matches a single X509Certificate. We say
-// usually, since it is possible for two issuing CAs to have the same
-// distinguished name and each issue a certificate with the same serial
-// number. Other unique combinations include the issuer, subject,
-// subjectKeyIdentifier and/or the subjectPublicKey criteria.
-// 
-// Please refer to RFC 3280:
-// Internet X.509 Public Key Infrastructure Certificate and CRL Profile for
-// definitions of the X.509 certificate extensions mentioned below.
-// 
-// Concurrent Access
-// 
-// Unless otherwise specified, the methods defined in this class are not
-// thread-safe. Multiple threads that need to access a single
-// object concurrently should synchronize amongst themselves and
-// provide the necessary locking. Multiple threads each manipulating
-// separate objects need not synchronize.
+/** A CertSelector that selects X509Certificates that
+ *  match all specified criteria. This class is particularly useful when
+ *  selecting certificates from a CertStore to build a
+ *  PKIX-compliant certification path.
+ *  
+ *  When first constructed, an X509CertSelector has no criteria
+ *  enabled and each of the get methods return a default value
+ *  (null, or -1 for the getBasicConstraints method). Therefore, the match
+ *  method would return true for any X509Certificate.
+ *  Typically, several criteria are enabled (by calling
+ *  setIssuer or
+ *  setKeyUsage, for instance) and then the
+ *  X509CertSelector is passed to
+ *  CertStore.getCertificates or some similar
+ *  method.
+ *  
+ *  Several criteria can be enabled (by calling setIssuer
+ *  and setSerialNumber,
+ *  for example) such that the match method
+ *  usually uniquely matches a single X509Certificate. We say
+ *  usually, since it is possible for two issuing CAs to have the same
+ *  distinguished name and each issue a certificate with the same serial
+ *  number. Other unique combinations include the issuer, subject,
+ *  subjectKeyIdentifier and/or the subjectPublicKey criteria.
+ *  
+ *  Please refer to RFC 3280:
+ *  Internet X.509 Public Key Infrastructure Certificate and CRL Profile for
+ *  definitions of the X.509 certificate extensions mentioned below.
+ *  
+ *  Concurrent Access
+ *  
+ *  Unless otherwise specified, the methods defined in this class are not
+ *  thread-safe. Multiple threads that need to access a single
+ *  object concurrently should synchronize amongst themselves and
+ *  provide the necessary locking. Multiple threads each manipulating
+ *  separate objects need not synchronize.
+ */
 class X509CertSelector extends Object with CertSelector {
 
+    /** Adds a name to the pathToNames criterion. */
     @stub
-    // Adds a name to the pathToNames criterion.
     def addPathToName(type: Int, name: Array[Byte]): Unit = ???
 
+    /** Adds a name to the pathToNames criterion. */
     @stub
-    // Adds a name to the pathToNames criterion.
     def addPathToName(type: Int, name: String): Unit = ???
 
+    /** Adds a name to the subjectAlternativeNames criterion. */
     @stub
-    // Adds a name to the subjectAlternativeNames criterion.
     def addSubjectAlternativeName(type: Int, name: Array[Byte]): Unit = ???
 
+    /** Adds a name to the subjectAlternativeNames criterion. */
     @stub
-    // Adds a name to the subjectAlternativeNames criterion.
     def addSubjectAlternativeName(type: Int, name: String): Unit = ???
 
+    /** Returns a copy of this object. */
     @stub
-    // Returns a copy of this object.
     def clone(): Object = ???
 
+    /** Returns the authorityKeyIdentifier criterion. */
     @stub
-    // Returns the authorityKeyIdentifier criterion.
     def getAuthorityKeyIdentifier(): Array[Byte] = ???
 
+    /** Returns the basic constraints constraint. */
     @stub
-    // Returns the basic constraints constraint.
     def getBasicConstraints(): Int = ???
 
+    /** Returns the certificateEquals criterion. */
     @stub
-    // Returns the certificateEquals criterion.
     def getCertificate(): X509Certificate = ???
 
+    /** Returns the certificateValid criterion. */
     @stub
-    // Returns the certificateValid criterion.
     def getCertificateValid(): Date = ???
 
+    /** Returns the extendedKeyUsage criterion. */
     @stub
-    // Returns the extendedKeyUsage criterion.
     def getExtendedKeyUsage(): Set[String] = ???
 
+    /** Returns the issuer criterion as an X500Principal. */
     @stub
-    // Returns the issuer criterion as an X500Principal.
     def getIssuer(): X500Principal = ???
 
+    /** Returns the issuer criterion as a byte array. */
     @stub
-    // Returns the issuer criterion as a byte array.
     def getIssuerAsBytes(): Array[Byte] = ???
 
+    /** Denigrated, use getIssuer() or
+     *  getIssuerAsBytes() instead.
+     */
     @stub
-    // Denigrated, use getIssuer() or
-    // getIssuerAsBytes() instead.
     def getIssuerAsString(): String = ???
 
+    /** Returns the keyUsage criterion. */
     @stub
-    // Returns the keyUsage criterion.
     def getKeyUsage(): Array[Boolean] = ???
 
+    /** Indicates if the X509Certificate must contain all
+     *  or at least one of the subjectAlternativeNames
+     *  specified in the setSubjectAlternativeNames or addSubjectAlternativeName methods.
+     */
     @stub
-    // Indicates if the X509Certificate must contain all
-    // or at least one of the subjectAlternativeNames
-    // specified in the setSubjectAlternativeNames or addSubjectAlternativeName methods.
     def getMatchAllSubjectAltNames(): Boolean = ???
 
+    /** Returns the name constraints criterion. */
     @stub
-    // Returns the name constraints criterion.
     def getNameConstraints(): Array[Byte] = ???
 
+    /** Returns a copy of the pathToNames criterion. */
     @stub
-    // Returns a copy of the pathToNames criterion.
     def getPathToNames(): Collection[List[_]] = ???
 
+    /** Returns the policy criterion. */
     @stub
-    // Returns the policy criterion.
     def getPolicy(): Set[String] = ???
 
+    /** Returns the privateKeyValid criterion. */
     @stub
-    // Returns the privateKeyValid criterion.
     def getPrivateKeyValid(): Date = ???
 
+    /** Returns the serialNumber criterion. */
     @stub
-    // Returns the serialNumber criterion.
     def getSerialNumber(): BigInteger = ???
 
+    /** Returns the subject criterion as an X500Principal. */
     @stub
-    // Returns the subject criterion as an X500Principal.
     def getSubject(): X500Principal = ???
 
+    /** Returns a copy of the subjectAlternativeNames criterion. */
     @stub
-    // Returns a copy of the subjectAlternativeNames criterion.
     def getSubjectAlternativeNames(): Collection[List[_]] = ???
 
+    /** Returns the subject criterion as a byte array. */
     @stub
-    // Returns the subject criterion as a byte array.
     def getSubjectAsBytes(): Array[Byte] = ???
 
+    /** Denigrated, use getSubject() or
+     *  getSubjectAsBytes() instead.
+     */
     @stub
-    // Denigrated, use getSubject() or
-    // getSubjectAsBytes() instead.
     def getSubjectAsString(): String = ???
 
+    /** Returns the subjectKeyIdentifier criterion. */
     @stub
-    // Returns the subjectKeyIdentifier criterion.
     def getSubjectKeyIdentifier(): Array[Byte] = ???
 
+    /** Returns the subjectPublicKey criterion. */
     @stub
-    // Returns the subjectPublicKey criterion.
     def getSubjectPublicKey(): PublicKey = ???
 
+    /** Returns the subjectPublicKeyAlgID criterion. */
     @stub
-    // Returns the subjectPublicKeyAlgID criterion.
     def getSubjectPublicKeyAlgID(): String = ???
 
+    /** Decides whether a Certificate should be selected. */
     @stub
-    // Decides whether a Certificate should be selected.
     def match(cert: Certificate): Boolean = ???
 
+    /** Sets the authorityKeyIdentifier criterion. */
     @stub
-    // Sets the authorityKeyIdentifier criterion.
     def setAuthorityKeyIdentifier(authorityKeyID: Array[Byte]): Unit = ???
 
+    /** Sets the basic constraints constraint. */
     @stub
-    // Sets the basic constraints constraint.
     def setBasicConstraints(minMaxPathLen: Int): Unit = ???
 
+    /** Sets the certificateEquals criterion. */
     @stub
-    // Sets the certificateEquals criterion.
     def setCertificate(cert: X509Certificate): Unit = ???
 
+    /** Sets the certificateValid criterion. */
     @stub
-    // Sets the certificateValid criterion.
     def setCertificateValid(certValid: Date): Unit = ???
 
+    /** Sets the extendedKeyUsage criterion. */
     @stub
-    // Sets the extendedKeyUsage criterion.
     def setExtendedKeyUsage(keyPurposeSet: Set[String]): Unit = ???
 
+    /** Sets the issuer criterion. */
     @stub
-    // Sets the issuer criterion.
     def setIssuer(issuerDN: Array[Byte]): Unit = ???
 
+    /** Denigrated, use setIssuer(X500Principal)
+     *  or setIssuer(byte[]) instead.
+     */
     @stub
-    // Denigrated, use setIssuer(X500Principal)
-    // or setIssuer(byte[]) instead.
     def setIssuer(issuerDN: String): Unit = ???
 
+    /** Sets the issuer criterion. */
     @stub
-    // Sets the issuer criterion.
     def setIssuer(issuer: X500Principal): Unit = ???
 
+    /** Sets the keyUsage criterion. */
     @stub
-    // Sets the keyUsage criterion.
     def setKeyUsage(keyUsage: Array[Boolean]): Unit = ???
 
+    /** Enables/disables matching all of the subjectAlternativeNames
+     *  specified in the setSubjectAlternativeNames or addSubjectAlternativeName methods.
+     */
     @stub
-    // Enables/disables matching all of the subjectAlternativeNames
-    // specified in the setSubjectAlternativeNames or addSubjectAlternativeName methods.
     def setMatchAllSubjectAltNames(matchAllNames: Boolean): Unit = ???
 
+    /** Sets the name constraints criterion. */
     @stub
-    // Sets the name constraints criterion.
     def setNameConstraints(bytes: Array[Byte]): Unit = ???
 
+    /** Sets the pathToNames criterion. */
     @stub
-    // Sets the pathToNames criterion.
     def setPathToNames(names: Collection[List[_]]): Unit = ???
 
+    /** Sets the policy constraint. */
     @stub
-    // Sets the policy constraint.
     def setPolicy(certPolicySet: Set[String]): Unit = ???
 
+    /** Sets the privateKeyValid criterion. */
     @stub
-    // Sets the privateKeyValid criterion.
     def setPrivateKeyValid(privateKeyValid: Date): Unit = ???
 
+    /** Sets the serialNumber criterion. */
     @stub
-    // Sets the serialNumber criterion.
     def setSerialNumber(serial: BigInteger): Unit = ???
 
+    /** Sets the subject criterion. */
     @stub
-    // Sets the subject criterion.
     def setSubject(subjectDN: Array[Byte]): Unit = ???
 
+    /** Denigrated, use setSubject(X500Principal)
+     *  or setSubject(byte[]) instead.
+     */
     @stub
-    // Denigrated, use setSubject(X500Principal)
-    // or setSubject(byte[]) instead.
     def setSubject(subjectDN: String): Unit = ???
 
+    /** Sets the subject criterion. */
     @stub
-    // Sets the subject criterion.
     def setSubject(subject: X500Principal): Unit = ???
 
+    /** Sets the subjectAlternativeNames criterion. */
     @stub
-    // Sets the subjectAlternativeNames criterion.
     def setSubjectAlternativeNames(names: Collection[List[_]]): Unit = ???
 
+    /** Sets the subjectKeyIdentifier criterion. */
     @stub
-    // Sets the subjectKeyIdentifier criterion.
     def setSubjectKeyIdentifier(subjectKeyID: Array[Byte]): Unit = ???
 
+    /** Sets the subjectPublicKey criterion. */
     @stub
-    // Sets the subjectPublicKey criterion.
     def setSubjectPublicKey(key: Array[Byte]): Unit = ???
 
+    /** Sets the subjectPublicKey criterion. */
     @stub
-    // Sets the subjectPublicKey criterion.
     def setSubjectPublicKey(key: PublicKey): Unit = ???
 
+    /** Sets the subjectPublicKeyAlgID criterion. */
     @stub
-    // Sets the subjectPublicKeyAlgID criterion.
     def setSubjectPublicKeyAlgID(oid: String): Unit = ???
 }

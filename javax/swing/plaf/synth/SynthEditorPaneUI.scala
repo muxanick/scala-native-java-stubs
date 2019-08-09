@@ -7,45 +7,49 @@ import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, TextUI}
 import javax.swing.plaf.basic.{BasicEditorPaneUI, BasicTextUI}
 
-// Provides the Synth L&F UI delegate for
-// JEditorPane.
+/** Provides the Synth L&F UI delegate for
+ *  JEditorPane.
+ */
 class SynthEditorPaneUI extends BasicEditorPaneUI with SynthUI {
 
+    /** Returns the Context for the specified component. */
     @stub
-    // Returns the Context for the specified component.
     def getContext(c: JComponent): SynthContext = ???
 
+    /** Initializes component properties, such as font, foreground,
+     *  background, caret color, selection color, selected text color,
+     *  disabled text color, and border color.
+     */
     @stub
-    // Initializes component properties, such as font, foreground,
-    // background, caret color, selection color, selected text color,
-    // disabled text color, and border color.
     protected def installDefaults(): Unit = ???
 
+    /** Paints the specified component. */
     @stub
-    // Paints the specified component.
     protected def paint(context: SynthContext, g: Graphics): Unit = ???
 
+    /** Paints a background for the view. */
     @stub
-    // Paints a background for the view.
     protected def paintBackground(g: Graphics): Unit = ???
 
+    /** Paints the border. */
     @stub
-    // Paints the border.
     def paintBorder(context: SynthContext, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
 
+    /** This method gets called when a bound property is changed
+     *  on the associated JTextComponent.
+     */
     @stub
-    // This method gets called when a bound property is changed
-    // on the associated JTextComponent.
     protected def propertyChange(evt: PropertyChangeEvent): Unit = ???
 
+    /** Sets the component properties that have not been explicitly overridden
+     *  to null.
+     */
     @stub
-    // Sets the component properties that have not been explicitly overridden
-    // to null.
     protected def uninstallDefaults(): Unit = ???
 }
 
 object SynthEditorPaneUI {
+    /** Creates a new UI object for the given component. */
     @stub
-    // Creates a new UI object for the given component.
     def createUI(c: JComponent): ComponentUI = ???
 }

@@ -4,130 +4,146 @@ import java.io.Serializable
 import java.lang.Object
 import java.util.{AbstractCollection, AbstractQueue, Collection, Iterator, Spliterator}
 
-// An optionally-bounded blocking queue based on
-// linked nodes.
-// This queue orders elements FIFO (first-in-first-out).
-// The head of the queue is that element that has been on the
-// queue the longest time.
-// The tail of the queue is that element that has been on the
-// queue the shortest time. New elements
-// are inserted at the tail of the queue, and the queue retrieval
-// operations obtain elements at the head of the queue.
-// Linked queues typically have higher throughput than array-based queues but
-// less predictable performance in most concurrent applications.
-//
-// The optional capacity bound constructor argument serves as a
-// way to prevent excessive queue expansion. The capacity, if unspecified,
-// is equal to Integer.MAX_VALUE.  Linked nodes are
-// dynamically created upon each insertion unless this would bring the
-// queue above capacity.
-//
-// This class and its iterator implement all of the
-// optional methods of the Collection and Iterator interfaces.
-//
-// This class is a member of the
-// 
-// Java Collections Framework.
-class LinkedBlockingQueue[E] extends AbstractQueue[E] with BlockingQueue[E], with Serializable {
+/** An optionally-bounded blocking queue based on
+ *  linked nodes.
+ *  This queue orders elements FIFO (first-in-first-out).
+ *  The head of the queue is that element that has been on the
+ *  queue the longest time.
+ *  The tail of the queue is that element that has been on the
+ *  queue the shortest time. New elements
+ *  are inserted at the tail of the queue, and the queue retrieval
+ *  operations obtain elements at the head of the queue.
+ *  Linked queues typically have higher throughput than array-based queues but
+ *  less predictable performance in most concurrent applications.
+ * 
+ *  The optional capacity bound constructor argument serves as a
+ *  way to prevent excessive queue expansion. The capacity, if unspecified,
+ *  is equal to Integer.MAX_VALUE.  Linked nodes are
+ *  dynamically created upon each insertion unless this would bring the
+ *  queue above capacity.
+ * 
+ *  This class and its iterator implement all of the
+ *  optional methods of the Collection and Iterator interfaces.
+ * 
+ *  This class is a member of the
+ *  
+ *  Java Collections Framework.
+ */
+class LinkedBlockingQueue[E] extends AbstractQueue[E] with BlockingQueue[E] with Serializable {
 
+    /** Creates a LinkedBlockingQueue with a capacity of
+     *  Integer.MAX_VALUE.
+     */
     @stub
-    // Creates a LinkedBlockingQueue with a capacity of
-    // Integer.MAX_VALUE.
     def this() = ???
 
+    /** Creates a LinkedBlockingQueue with a capacity of
+     *  Integer.MAX_VALUE, initially containing the elements of the
+     *  given collection,
+     *  added in traversal order of the collection's iterator.
+     */
     @stub
-    // Creates a LinkedBlockingQueue with a capacity of
-    // Integer.MAX_VALUE, initially containing the elements of the
-    // given collection,
-    // added in traversal order of the collection's iterator.
     def this(c: Collection[_ <: E]) = ???
 
+    /** Atomically removes all of the elements from this queue. */
     @stub
-    // Atomically removes all of the elements from this queue.
     def clear(): Unit = ???
 
+    /** Returns true if this queue contains the specified element. */
     @stub
-    // Returns true if this queue contains the specified element.
     def contains(o: Object): Boolean = ???
 
+    /** Removes all available elements from this queue and adds them
+     *  to the given collection.
+     */
     @stub
-    // Removes all available elements from this queue and adds them
-    // to the given collection.
     def drainTo(c: Collection[_ >: E]): Int = ???
 
+    /** Removes at most the given number of available elements from
+     *  this queue and adds them to the given collection.
+     */
     @stub
-    // Removes at most the given number of available elements from
-    // this queue and adds them to the given collection.
     def drainTo(c: Collection[_ >: E], maxElements: Int): Int = ???
 
+    /** Returns an iterator over the elements in this queue in proper sequence. */
     @stub
-    // Returns an iterator over the elements in this queue in proper sequence.
     def iterator(): Iterator[E] = ???
 
+    /** Inserts the specified element at the tail of this queue if it is
+     *  possible to do so immediately without exceeding the queue's capacity,
+     *  returning true upon success and false if this queue
+     *  is full.
+     */
     @stub
-    // Inserts the specified element at the tail of this queue if it is
-    // possible to do so immediately without exceeding the queue's capacity,
-    // returning true upon success and false if this queue
-    // is full.
     def offer(e: E): Boolean = ???
 
+    /** Inserts the specified element at the tail of this queue, waiting if
+     *  necessary up to the specified wait time for space to become available.
+     */
     @stub
-    // Inserts the specified element at the tail of this queue, waiting if
-    // necessary up to the specified wait time for space to become available.
     def offer(e: E, timeout: Long, unit: TimeUnit): Boolean = ???
 
+    /** Retrieves, but does not remove, the head of this queue,
+     *  or returns null if this queue is empty.
+     */
     @stub
-    // Retrieves, but does not remove, the head of this queue,
-    // or returns null if this queue is empty.
     def peek(): E = ???
 
+    /** Retrieves and removes the head of this queue,
+     *  or returns null if this queue is empty.
+     */
     @stub
-    // Retrieves and removes the head of this queue,
-    // or returns null if this queue is empty.
     def poll(): E = ???
 
+    /** Retrieves and removes the head of this queue, waiting up to the
+     *  specified wait time if necessary for an element to become available.
+     */
     @stub
-    // Retrieves and removes the head of this queue, waiting up to the
-    // specified wait time if necessary for an element to become available.
     def poll(timeout: Long, unit: TimeUnit): E = ???
 
+    /** Inserts the specified element at the tail of this queue, waiting if
+     *  necessary for space to become available.
+     */
     @stub
-    // Inserts the specified element at the tail of this queue, waiting if
-    // necessary for space to become available.
     def put(e: E): Unit = ???
 
+    /** Returns the number of additional elements that this queue can ideally
+     *  (in the absence of memory or resource constraints) accept without
+     *  blocking.
+     */
     @stub
-    // Returns the number of additional elements that this queue can ideally
-    // (in the absence of memory or resource constraints) accept without
-    // blocking.
     def remainingCapacity(): Int = ???
 
+    /** Removes a single instance of the specified element from this queue,
+     *  if it is present.
+     */
     @stub
-    // Removes a single instance of the specified element from this queue,
-    // if it is present.
     def remove(o: Object): Boolean = ???
 
+    /** Returns the number of elements in this queue. */
     @stub
-    // Returns the number of elements in this queue.
     def size(): Int = ???
 
+    /** Returns a Spliterator over the elements in this queue. */
     @stub
-    // Returns a Spliterator over the elements in this queue.
     def spliterator(): Spliterator[E] = ???
 
+    /** Retrieves and removes the head of this queue, waiting if necessary
+     *  until an element becomes available.
+     */
     @stub
-    // Retrieves and removes the head of this queue, waiting if necessary
-    // until an element becomes available.
     def take(): E = ???
 
+    /** Returns an array containing all of the elements in this queue, in
+     *  proper sequence.
+     */
     @stub
-    // Returns an array containing all of the elements in this queue, in
-    // proper sequence.
     def toArray(): Array[Object] = ???
 
+    /** Returns an array containing all of the elements in this queue, in
+     *  proper sequence; the runtime type of the returned array is that of
+     *  the specified array.
+     */
     @stub
-    // Returns an array containing all of the elements in this queue, in
-    // proper sequence; the runtime type of the returned array is that of
-    // the specified array.
-    def Array[T]: [T] = ???
+    def toArray[T](a: Array[T]): Array[T] = ???
 }

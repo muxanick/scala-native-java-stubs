@@ -3,74 +3,81 @@ package java.beans
 import java.awt.{Component, Graphics, Rectangle}
 import java.lang.{Object, String}
 
-// This is a support class to help build property editors.
-// 
-// It can be used either as a base class or as a delegate.
+/** This is a support class to help build property editors.
+ *  
+ *  It can be used either as a base class or as a delegate.
+ */
 class PropertyEditorSupport extends Object with PropertyEditor {
 
+    /** Constructs a PropertyEditorSupport object. */
     @stub
-    // Constructs a PropertyEditorSupport object.
     def this() = ???
 
+    /** Adds a listener for the value change. */
     @stub
-    // Adds a listener for the value change.
     def addPropertyChangeListener(listener: PropertyChangeListener): Unit = ???
 
+    /** Report that we have been modified to any interested listeners. */
     @stub
-    // Report that we have been modified to any interested listeners.
     def firePropertyChange(): Unit = ???
 
+    /** Gets the property value as a string suitable for presentation
+     *  to a human to edit.
+     */
     @stub
-    // Gets the property value as a string suitable for presentation
-    // to a human to edit.
     def getAsText(): String = ???
 
+    /** A PropertyEditor may chose to make available a full custom Component
+     *  that edits its property value.
+     */
     @stub
-    // A PropertyEditor may chose to make available a full custom Component
-    // that edits its property value.
     def getCustomEditor(): Component = ???
 
+    /** This method is intended for use when generating Java code to set
+     *  the value of the property.
+     */
     @stub
-    // This method is intended for use when generating Java code to set
-    // the value of the property.
     def getJavaInitializationString(): String = ???
 
+    /** Returns the bean that is used as the
+     *  source of events.
+     */
     @stub
-    // Returns the bean that is used as the
-    // source of events.
     def getSource(): Object = ???
 
+    /** If the property value must be one of a set of known tagged values,
+     *  then this method should return an array of the tag values.
+     */
     @stub
-    // If the property value must be one of a set of known tagged values,
-    // then this method should return an array of the tag values.
     def getTags(): Array[String] = ???
 
+    /** Gets the value of the property. */
     @stub
-    // Gets the value of the property.
     def getValue(): Object = ???
 
+    /** Determines whether the class will honor the paintValue method. */
     @stub
-    // Determines whether the class will honor the paintValue method.
     def isPaintable(): Boolean = ???
 
+    /** Paint a representation of the value into a given area of screen
+     *  real estate.
+     */
     @stub
-    // Paint a representation of the value into a given area of screen
-    // real estate.
     def paintValue(gfx: Graphics, box: Rectangle): Unit = ???
 
+    /** Removes a listener for the value change. */
     @stub
-    // Removes a listener for the value change.
     def removePropertyChangeListener(listener: PropertyChangeListener): Unit = ???
 
+    /** Sets the property value by parsing a given String. */
     @stub
-    // Sets the property value by parsing a given String.
     def setAsText(text: String): Unit = ???
 
+    /** Sets the source bean. */
     @stub
-    // Sets the source bean.
     def setSource(source: Object): Unit = ???
 
+    /** Set (or change) the object that is to be edited. */
     @stub
-    // Set (or change) the object that is to be edited.
     def setValue(value: Object): Unit = ???
 }

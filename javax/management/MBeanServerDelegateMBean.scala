@@ -2,32 +2,34 @@ package javax.management
 
 import java.lang.String
 
-// Defines the management interface  of an object of class MBeanServerDelegate.
+/** Defines the management interface  of an object of class MBeanServerDelegate. */
 trait MBeanServerDelegateMBean {
 
+    /** Returns the JMX implementation name (the name of this product). */
     @stub
-    // Returns the JMX implementation name (the name of this product).
     def getImplementationName(): String = ???
 
+    /** Returns the JMX implementation vendor (the vendor of this product). */
     @stub
-    // Returns the JMX implementation vendor (the vendor of this product).
     def getImplementationVendor(): String = ???
 
+    /** Returns the JMX implementation version (the version of this product). */
     @stub
-    // Returns the JMX implementation version (the version of this product).
     def getImplementationVersion(): String = ???
 
+    /** Returns the MBean server agent identity. */
     @stub
-    // Returns the MBean server agent identity.
     def getMBeanServerId(): String = ???
 
+    /** Returns the full name of the JMX specification implemented
+     *  by this product.
+     */
     @stub
-    // Returns the full name of the JMX specification implemented
-    // by this product.
     def getSpecificationName(): String = ???
 
+    /** Returns the vendor of the JMX specification implemented
+     *  by this product.
+     */
     @stub
-    // Returns the vendor of the JMX specification implemented
-    // by this product.
     def getSpecificationVendor(): String = ???
 }

@@ -4,11 +4,12 @@ import java.lang.{Object, String}
 import java.util.EventObject
 import javax.swing.event.HyperlinkEvent
 
-// FormSubmitEvent is used to notify interested
-// parties that a form was submitted.
+/** FormSubmitEvent is used to notify interested
+ *  parties that a form was submitted.
+ */
 class FormSubmitEvent extends HTMLFrameHyperlinkEvent {
 
+    /** Gets the form submission data. */
     @stub
-    // Gets the form submission data.
     def getData(): String = ???
 }

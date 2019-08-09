@@ -5,235 +5,238 @@ import java.lang.{CharSequence, Comparable, Object, String}
 import java.time.temporal.{Temporal, TemporalAmount, TemporalUnit}
 import java.util.List
 
-// A time-based amount of time, such as '34.5 seconds'.
-// 
-// This class models a quantity or amount of time in terms of seconds and nanoseconds.
-// It can be accessed using other duration-based units, such as minutes and hours.
-// In addition, the DAYS unit can be used and is treated as
-// exactly equal to 24 hours, thus ignoring daylight savings effects.
-// See Period for the date-based equivalent to this class.
-// 
-// A physical duration could be of infinite length.
-// For practicality, the duration is stored with constraints similar to Instant.
-// The duration uses nanosecond resolution with a maximum value of the seconds that can
-// be held in a long. This is greater than the current estimated age of the universe.
-// 
-// The range of a duration requires the storage of a number larger than a long.
-// To achieve this, the class stores a long representing seconds and an int
-// representing nanosecond-of-second, which will always be between 0 and 999,999,999.
-// The model is of a directed duration, meaning that the duration may be negative.
-// 
-// The duration is measured in "seconds", but these are not necessarily identical to
-// the scientific "SI second" definition based on atomic clocks.
-// This difference only impacts durations measured near a leap-second and should not affect
-// most applications.
-// See Instant for a discussion as to the meaning of the second and time-scales.
-//
-// 
-// This is a value-based
-// class; use of identity-sensitive operations (including reference equality
-// (==), identity hash code, or synchronization) on instances of
-// Duration may have unpredictable results and should be avoided.
-// The equals method should be used for comparisons.
-final class Duration extends Object with TemporalAmount, with Comparable[Duration], with Serializable {
+/** A time-based amount of time, such as '34.5 seconds'.
+ *  
+ *  This class models a quantity or amount of time in terms of seconds and nanoseconds.
+ *  It can be accessed using other duration-based units, such as minutes and hours.
+ *  In addition, the DAYS unit can be used and is treated as
+ *  exactly equal to 24 hours, thus ignoring daylight savings effects.
+ *  See Period for the date-based equivalent to this class.
+ *  
+ *  A physical duration could be of infinite length.
+ *  For practicality, the duration is stored with constraints similar to Instant.
+ *  The duration uses nanosecond resolution with a maximum value of the seconds that can
+ *  be held in a long. This is greater than the current estimated age of the universe.
+ *  
+ *  The range of a duration requires the storage of a number larger than a long.
+ *  To achieve this, the class stores a long representing seconds and an int
+ *  representing nanosecond-of-second, which will always be between 0 and 999,999,999.
+ *  The model is of a directed duration, meaning that the duration may be negative.
+ *  
+ *  The duration is measured in "seconds", but these are not necessarily identical to
+ *  the scientific "SI second" definition based on atomic clocks.
+ *  This difference only impacts durations measured near a leap-second and should not affect
+ *  most applications.
+ *  See Instant for a discussion as to the meaning of the second and time-scales.
+ * 
+ *  
+ *  This is a value-based
+ *  class; use of identity-sensitive operations (including reference equality
+ *  (==), identity hash code, or synchronization) on instances of
+ *  Duration may have unpredictable results and should be avoided.
+ *  The equals method should be used for comparisons.
+ */
+final class Duration extends Object with TemporalAmount with Comparable[Duration] with Serializable {
 
+    /** Returns a copy of this duration with a positive length. */
     @stub
-    // Returns a copy of this duration with a positive length.
     def abs(): Duration = ???
 
+    /** Adds this duration to the specified temporal object. */
     @stub
-    // Adds this duration to the specified temporal object.
     def addTo(temporal: Temporal): Temporal = ???
 
+    /** Compares this duration to the specified Duration. */
     @stub
-    // Compares this duration to the specified Duration.
     def compareTo(otherDuration: Duration): Int = ???
 
+    /** Returns a copy of this duration divided by the specified value. */
     @stub
-    // Returns a copy of this duration divided by the specified value.
     def dividedBy(divisor: Long): Duration = ???
 
+    /** Checks if this duration is equal to the specified Duration. */
     @stub
-    // Checks if this duration is equal to the specified Duration.
     def equals(otherDuration: Object): Boolean = ???
 
+    /** Gets the value of the requested unit. */
     @stub
-    // Gets the value of the requested unit.
     def get(unit: TemporalUnit): Long = ???
 
+    /** Gets the number of nanoseconds within the second in this duration. */
     @stub
-    // Gets the number of nanoseconds within the second in this duration.
     def getNano(): Int = ???
 
+    /** Gets the number of seconds in this duration. */
     @stub
-    // Gets the number of seconds in this duration.
     def getSeconds(): Long = ???
 
+    /** Gets the set of units supported by this duration. */
     @stub
-    // Gets the set of units supported by this duration.
     def getUnits(): List[TemporalUnit] = ???
 
+    /** A hash code for this duration. */
     @stub
-    // A hash code for this duration.
     def hashCode(): Int = ???
 
+    /** Checks if this duration is negative, excluding zero. */
     @stub
-    // Checks if this duration is negative, excluding zero.
     def isNegative(): Boolean = ???
 
+    /** Checks if this duration is zero length. */
     @stub
-    // Checks if this duration is zero length.
     def isZero(): Boolean = ???
 
+    /** Returns a copy of this duration with the specified duration subtracted. */
     @stub
-    // Returns a copy of this duration with the specified duration subtracted.
     def minus(duration: Duration): Duration = ???
 
+    /** Returns a copy of this duration with the specified duration subtracted. */
     @stub
-    // Returns a copy of this duration with the specified duration subtracted.
     def minus(amountToSubtract: Long, unit: TemporalUnit): Duration = ???
 
+    /** Returns a copy of this duration with the specified duration in standard 24 hour days subtracted. */
     @stub
-    // Returns a copy of this duration with the specified duration in standard 24 hour days subtracted.
     def minusDays(daysToSubtract: Long): Duration = ???
 
+    /** Returns a copy of this duration with the specified duration in hours subtracted. */
     @stub
-    // Returns a copy of this duration with the specified duration in hours subtracted.
     def minusHours(hoursToSubtract: Long): Duration = ???
 
+    /** Returns a copy of this duration with the specified duration in milliseconds subtracted. */
     @stub
-    // Returns a copy of this duration with the specified duration in milliseconds subtracted.
     def minusMillis(millisToSubtract: Long): Duration = ???
 
+    /** Returns a copy of this duration with the specified duration in minutes subtracted. */
     @stub
-    // Returns a copy of this duration with the specified duration in minutes subtracted.
     def minusMinutes(minutesToSubtract: Long): Duration = ???
 
+    /** Returns a copy of this duration with the specified duration in nanoseconds subtracted. */
     @stub
-    // Returns a copy of this duration with the specified duration in nanoseconds subtracted.
     def minusNanos(nanosToSubtract: Long): Duration = ???
 
+    /** Returns a copy of this duration with the specified duration in seconds subtracted. */
     @stub
-    // Returns a copy of this duration with the specified duration in seconds subtracted.
     def minusSeconds(secondsToSubtract: Long): Duration = ???
 
+    /** Returns a copy of this duration multiplied by the scalar. */
     @stub
-    // Returns a copy of this duration multiplied by the scalar.
     def multipliedBy(multiplicand: Long): Duration = ???
 
+    /** Returns a copy of this duration with the length negated. */
     @stub
-    // Returns a copy of this duration with the length negated.
     def negated(): Duration = ???
 
+    /** Returns a copy of this duration with the specified duration added. */
     @stub
-    // Returns a copy of this duration with the specified duration added.
     def plus(duration: Duration): Duration = ???
 
+    /** Returns a copy of this duration with the specified duration added. */
     @stub
-    // Returns a copy of this duration with the specified duration added.
     def plus(amountToAdd: Long, unit: TemporalUnit): Duration = ???
 
+    /** Returns a copy of this duration with the specified duration in standard 24 hour days added. */
     @stub
-    // Returns a copy of this duration with the specified duration in standard 24 hour days added.
     def plusDays(daysToAdd: Long): Duration = ???
 
+    /** Returns a copy of this duration with the specified duration in hours added. */
     @stub
-    // Returns a copy of this duration with the specified duration in hours added.
     def plusHours(hoursToAdd: Long): Duration = ???
 
+    /** Returns a copy of this duration with the specified duration in milliseconds added. */
     @stub
-    // Returns a copy of this duration with the specified duration in milliseconds added.
     def plusMillis(millisToAdd: Long): Duration = ???
 
+    /** Returns a copy of this duration with the specified duration in minutes added. */
     @stub
-    // Returns a copy of this duration with the specified duration in minutes added.
     def plusMinutes(minutesToAdd: Long): Duration = ???
 
+    /** Returns a copy of this duration with the specified duration in nanoseconds added. */
     @stub
-    // Returns a copy of this duration with the specified duration in nanoseconds added.
     def plusNanos(nanosToAdd: Long): Duration = ???
 
+    /** Returns a copy of this duration with the specified duration in seconds added. */
     @stub
-    // Returns a copy of this duration with the specified duration in seconds added.
     def plusSeconds(secondsToAdd: Long): Duration = ???
 
+    /** Subtracts this duration from the specified temporal object. */
     @stub
-    // Subtracts this duration from the specified temporal object.
     def subtractFrom(temporal: Temporal): Temporal = ???
 
+    /** Gets the number of days in this duration. */
     @stub
-    // Gets the number of days in this duration.
     def toDays(): Long = ???
 
+    /** Gets the number of hours in this duration. */
     @stub
-    // Gets the number of hours in this duration.
     def toHours(): Long = ???
 
+    /** Converts this duration to the total length in milliseconds. */
     @stub
-    // Converts this duration to the total length in milliseconds.
     def toMillis(): Long = ???
 
+    /** Gets the number of minutes in this duration. */
     @stub
-    // Gets the number of minutes in this duration.
     def toMinutes(): Long = ???
 
+    /** Converts this duration to the total length in nanoseconds expressed as a long. */
     @stub
-    // Converts this duration to the total length in nanoseconds expressed as a long.
     def toNanos(): Long = ???
 
+    /** A string representation of this duration using ISO-8601 seconds
+     *  based representation, such as PT8H6M12.345S.
+     */
     @stub
-    // A string representation of this duration using ISO-8601 seconds
-    // based representation, such as PT8H6M12.345S.
     def toString(): String = ???
 
+    /** Returns a copy of this duration with the specified nano-of-second. */
     @stub
-    // Returns a copy of this duration with the specified nano-of-second.
     def withNanos(nanoOfSecond: Int): Duration = ???
 }
 
 object Duration {
+    /** Obtains a Duration representing the duration between two temporal objects. */
     @stub
-    // Obtains a Duration representing the duration between two temporal objects.
     def between(startInclusive: Temporal, endExclusive: Temporal): Duration = ???
 
+    /** Obtains an instance of Duration from a temporal amount. */
     @stub
-    // Obtains an instance of Duration from a temporal amount.
     def from(amount: TemporalAmount): Duration = ???
 
+    /** Obtains a Duration representing an amount in the specified unit. */
     @stub
-    // Obtains a Duration representing an amount in the specified unit.
     def of(amount: Long, unit: TemporalUnit): Duration = ???
 
+    /** Obtains a Duration representing a number of standard 24 hour days. */
     @stub
-    // Obtains a Duration representing a number of standard 24 hour days.
     def ofDays(days: Long): Duration = ???
 
+    /** Obtains a Duration representing a number of standard hours. */
     @stub
-    // Obtains a Duration representing a number of standard hours.
     def ofHours(hours: Long): Duration = ???
 
+    /** Obtains a Duration representing a number of milliseconds. */
     @stub
-    // Obtains a Duration representing a number of milliseconds.
     def ofMillis(millis: Long): Duration = ???
 
+    /** Obtains a Duration representing a number of standard minutes. */
     @stub
-    // Obtains a Duration representing a number of standard minutes.
     def ofMinutes(minutes: Long): Duration = ???
 
+    /** Obtains a Duration representing a number of nanoseconds. */
     @stub
-    // Obtains a Duration representing a number of nanoseconds.
     def ofNanos(nanos: Long): Duration = ???
 
+    /** Obtains a Duration representing a number of seconds. */
     @stub
-    // Obtains a Duration representing a number of seconds.
     def ofSeconds(seconds: Long): Duration = ???
 
+    /** Obtains a Duration representing a number of seconds and an
+     *  adjustment in nanoseconds.
+     */
     @stub
-    // Obtains a Duration representing a number of seconds and an
-    // adjustment in nanoseconds.
     def ofSeconds(seconds: Long, nanoAdjustment: Long): Duration = ???
 
+    /** Obtains a Duration from a text string such as PnDTnHnMn.nS. */
     @stub
-    // Obtains a Duration from a text string such as PnDTnHnMn.nS.
     def parse(text: CharSequence): Duration = ???
 }

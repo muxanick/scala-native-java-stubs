@@ -3,24 +3,25 @@ package java.security
 import java.lang.{Object, String}
 import javax.security.auth.Subject
 
-// This interface represents the abstract notion of a principal, which
-// can be used to represent any entity, such as an individual, a
-// corporation, and a login id.
+/** This interface represents the abstract notion of a principal, which
+ *  can be used to represent any entity, such as an individual, a
+ *  corporation, and a login id.
+ */
 trait Principal {
 
+    /** Compares this principal to the specified object. */
     @stub
-    // Compares this principal to the specified object.
     def equals(another: Object): Boolean = ???
 
+    /** Returns the name of this principal. */
     @stub
-    // Returns the name of this principal.
     def getName(): String = ???
 
+    /** Returns a hashcode for this principal. */
     @stub
-    // Returns a hashcode for this principal.
     def hashCode(): Int = ???
 
+    /** Returns true if the specified subject is implied by this principal. */
     @stub
-    // Returns true if the specified subject is implied by this principal.
-    def Boolean: default = ???
+    val Boolean: default = ???
 }

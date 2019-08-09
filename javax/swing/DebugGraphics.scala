@@ -6,251 +6,255 @@ import java.io.PrintStream
 import java.lang.{Object, String}
 import java.text.AttributedCharacterIterator
 
-// Graphics subclass supporting graphics debugging. Overrides most methods
-// from Graphics.  DebugGraphics objects are rarely created by hand.  They
-// are most frequently created automatically when a JComponent's
-// debugGraphicsOptions are changed using the setDebugGraphicsOptions()
-// method.
-// 
-// NOTE: You must turn off double buffering to use DebugGraphics:
-//       RepaintManager repaintManager = RepaintManager.currentManager(component);
-//       repaintManager.setDoubleBufferingEnabled(false);
+/** Graphics subclass supporting graphics debugging. Overrides most methods
+ *  from Graphics.  DebugGraphics objects are rarely created by hand.  They
+ *  are most frequently created automatically when a JComponent's
+ *  debugGraphicsOptions are changed using the setDebugGraphicsOptions()
+ *  method.
+ *  
+ *  NOTE: You must turn off double buffering to use DebugGraphics:
+ *        RepaintManager repaintManager = RepaintManager.currentManager(component);
+ *        repaintManager.setDoubleBufferingEnabled(false);
+ */
 class DebugGraphics extends Graphics {
 
+    /** Constructs a new debug graphics context that supports slowed
+     *  down drawing.
+     */
     @stub
-    // Constructs a new debug graphics context that supports slowed
-    // down drawing.
     def this() = ???
 
+    /** Constructs a debug graphics context from an existing graphics
+     *  context that supports slowed down drawing.
+     */
     @stub
-    // Constructs a debug graphics context from an existing graphics
-    // context that supports slowed down drawing.
     def this(graphics: Graphics) = ???
 
+    /** Overrides Graphics.clearRect. */
     @stub
-    // Overrides Graphics.clearRect.
     def clearRect(x: Int, y: Int, width: Int, height: Int): Unit = ???
 
+    /** Overrides Graphics.clipRect. */
     @stub
-    // Overrides Graphics.clipRect.
     def clipRect(x: Int, y: Int, width: Int, height: Int): Unit = ???
 
+    /** Overrides Graphics.copyArea. */
     @stub
-    // Overrides Graphics.copyArea.
     def copyArea(x: Int, y: Int, width: Int, height: Int, destX: Int, destY: Int): Unit = ???
 
+    /** Overrides Graphics.create to return a DebugGraphics object. */
     @stub
-    // Overrides Graphics.create to return a DebugGraphics object.
     def create(): Graphics = ???
 
+    /** Overrides Graphics.create to return a DebugGraphics object. */
     @stub
-    // Overrides Graphics.create to return a DebugGraphics object.
     def create(x: Int, y: Int, width: Int, height: Int): Graphics = ???
 
+    /** Overrides Graphics.dispose. */
     @stub
-    // Overrides Graphics.dispose.
     def dispose(): Unit = ???
 
+    /** Overrides Graphics.draw3DRect. */
     @stub
-    // Overrides Graphics.draw3DRect.
     def draw3DRect(x: Int, y: Int, width: Int, height: Int, raised: Boolean): Unit = ???
 
+    /** Overrides Graphics.drawArc. */
     @stub
-    // Overrides Graphics.drawArc.
     def drawArc(x: Int, y: Int, width: Int, height: Int, startAngle: Int, arcAngle: Int): Unit = ???
 
+    /** Overrides Graphics.drawBytes. */
     @stub
-    // Overrides Graphics.drawBytes.
     def drawBytes(data: Array[Byte], offset: Int, length: Int, x: Int, y: Int): Unit = ???
 
+    /** Overrides Graphics.drawChars. */
     @stub
-    // Overrides Graphics.drawChars.
     def drawChars(data: Array[Char], offset: Int, length: Int, x: Int, y: Int): Unit = ???
 
+    /** Overrides Graphics.drawImage. */
     @stub
-    // Overrides Graphics.drawImage.
     def drawImage(img: Image, x: Int, y: Int, bgcolor: Color, observer: ImageObserver): Boolean = ???
 
+    /** Overrides Graphics.drawImage. */
     @stub
-    // Overrides Graphics.drawImage.
     def drawImage(img: Image, x: Int, y: Int, observer: ImageObserver): Boolean = ???
 
+    /** Overrides Graphics.drawImage. */
     @stub
-    // Overrides Graphics.drawImage.
     def drawImage(img: Image, x: Int, y: Int, width: Int, height: Int, bgcolor: Color, observer: ImageObserver): Boolean = ???
 
+    /** Overrides Graphics.drawImage. */
     @stub
-    // Overrides Graphics.drawImage.
     def drawImage(img: Image, x: Int, y: Int, width: Int, height: Int, observer: ImageObserver): Boolean = ???
 
+    /** Overrides Graphics.drawImage. */
     @stub
-    // Overrides Graphics.drawImage.
     def drawImage(img: Image, dx1: Int, dy1: Int, dx2: Int, dy2: Int, sx1: Int, sy1: Int, sx2: Int, sy2: Int, bgcolor: Color, observer: ImageObserver): Boolean = ???
 
+    /** Overrides Graphics.drawImage. */
     @stub
-    // Overrides Graphics.drawImage.
     def drawImage(img: Image, dx1: Int, dy1: Int, dx2: Int, dy2: Int, sx1: Int, sy1: Int, sx2: Int, sy2: Int, observer: ImageObserver): Boolean = ???
 
+    /** Overrides Graphics.drawLine. */
     @stub
-    // Overrides Graphics.drawLine.
     def drawLine(x1: Int, y1: Int, x2: Int, y2: Int): Unit = ???
 
+    /** Overrides Graphics.drawOval. */
     @stub
-    // Overrides Graphics.drawOval.
     def drawOval(x: Int, y: Int, width: Int, height: Int): Unit = ???
 
+    /** Overrides Graphics.drawPolygon. */
     @stub
-    // Overrides Graphics.drawPolygon.
     def drawPolygon(xPoints: Array[Int], yPoints: Array[Int], nPoints: Int): Unit = ???
 
+    /** Overrides Graphics.drawPolyline. */
     @stub
-    // Overrides Graphics.drawPolyline.
     def drawPolyline(xPoints: Array[Int], yPoints: Array[Int], nPoints: Int): Unit = ???
 
+    /** Overrides Graphics.drawRect. */
     @stub
-    // Overrides Graphics.drawRect.
     def drawRect(x: Int, y: Int, width: Int, height: Int): Unit = ???
 
+    /** Overrides Graphics.drawRoundRect. */
     @stub
-    // Overrides Graphics.drawRoundRect.
     def drawRoundRect(x: Int, y: Int, width: Int, height: Int, arcWidth: Int, arcHeight: Int): Unit = ???
 
+    /** Overrides Graphics.drawString. */
     @stub
-    // Overrides Graphics.drawString.
     def drawString(iterator: AttributedCharacterIterator, x: Int, y: Int): Unit = ???
 
+    /** Overrides Graphics.drawString. */
     @stub
-    // Overrides Graphics.drawString.
     def drawString(aString: String, x: Int, y: Int): Unit = ???
 
+    /** Overrides Graphics.fill3DRect. */
     @stub
-    // Overrides Graphics.fill3DRect.
     def fill3DRect(x: Int, y: Int, width: Int, height: Int, raised: Boolean): Unit = ???
 
+    /** Overrides Graphics.fillArc. */
     @stub
-    // Overrides Graphics.fillArc.
     def fillArc(x: Int, y: Int, width: Int, height: Int, startAngle: Int, arcAngle: Int): Unit = ???
 
+    /** Overrides Graphics.fillOval. */
     @stub
-    // Overrides Graphics.fillOval.
     def fillOval(x: Int, y: Int, width: Int, height: Int): Unit = ???
 
+    /** Overrides Graphics.fillPolygon. */
     @stub
-    // Overrides Graphics.fillPolygon.
     def fillPolygon(xPoints: Array[Int], yPoints: Array[Int], nPoints: Int): Unit = ???
 
+    /** Overrides Graphics.fillRect. */
     @stub
-    // Overrides Graphics.fillRect.
     def fillRect(x: Int, y: Int, width: Int, height: Int): Unit = ???
 
+    /** Overrides Graphics.fillRoundRect. */
     @stub
-    // Overrides Graphics.fillRoundRect.
     def fillRoundRect(x: Int, y: Int, width: Int, height: Int, arcWidth: Int, arcHeight: Int): Unit = ???
 
+    /** Overrides Graphics.getClip. */
     @stub
-    // Overrides Graphics.getClip.
     def getClip(): Shape = ???
 
+    /** Overrides Graphics.getClipBounds. */
     @stub
-    // Overrides Graphics.getClipBounds.
     def getClipBounds(): Rectangle = ???
 
+    /** Returns the Color used for text drawing operations. */
     @stub
-    // Returns the Color used for text drawing operations.
     def getColor(): Color = ???
 
+    /** Returns the current debugging options for this DebugGraphics. */
     @stub
-    // Returns the current debugging options for this DebugGraphics.
     def getDebugOptions(): Int = ???
 
+    /** Returns the Font used for text drawing operations. */
     @stub
-    // Returns the Font used for text drawing operations.
     def getFont(): Font = ???
 
+    /** Overrides Graphics.getFontMetrics. */
     @stub
-    // Overrides Graphics.getFontMetrics.
     def getFontMetrics(): FontMetrics = ???
 
+    /** Overrides Graphics.getFontMetrics. */
     @stub
-    // Overrides Graphics.getFontMetrics.
     def getFontMetrics(f: Font): FontMetrics = ???
 
+    /** Returns the drawingBuffer value. */
     @stub
-    // Returns the drawingBuffer value.
     def isDrawingBuffer(): Boolean = ???
 
+    /** Overrides Graphics.setClip. */
     @stub
-    // Overrides Graphics.setClip.
     def setClip(x: Int, y: Int, width: Int, height: Int): Unit = ???
 
+    /** Overrides Graphics.setClip. */
     @stub
-    // Overrides Graphics.setClip.
     def setClip(clip: Shape): Unit = ???
 
+    /** Sets the color to be used for drawing and filling lines and shapes. */
     @stub
-    // Sets the color to be used for drawing and filling lines and shapes.
     def setColor(aColor: Color): Unit = ???
 
+    /** Enables/disables diagnostic information about every graphics
+     *  operation.
+     */
     @stub
-    // Enables/disables diagnostic information about every graphics
-    // operation.
     def setDebugOptions(options: Int): Unit = ???
 
+    /** Sets the Font used for text drawing operations. */
     @stub
-    // Sets the Font used for text drawing operations.
     def setFont(aFont: Font): Unit = ???
 
+    /** Overrides Graphics.setPaintMode. */
     @stub
-    // Overrides Graphics.setPaintMode.
     def setPaintMode(): Unit = ???
 
+    /** Overrides Graphics.setXORMode. */
     @stub
-    // Overrides Graphics.setXORMode.
     def setXORMode(aColor: Color): Unit = ???
 }
 
 object DebugGraphics {
+    /** Show buffered operations in a separate Frame. */
     @stub
-    // Show buffered operations in a separate Frame.
-    def BUFFERED_OPTION: Int = ???
+    val BUFFERED_OPTION: Int = ???
 
+    /** Flash graphics operations. */
     @stub
-    // Flash graphics operations.
-    def FLASH_OPTION: Int = ???
+    val FLASH_OPTION: Int = ???
 
+    /** Log graphics operations. */
     @stub
-    // Log graphics operations.
-    def LOG_OPTION: Int = ???
+    val LOG_OPTION: Int = ???
 
+    /** Returns the Color used to flash drawing operations. */
     @stub
-    // Returns the Color used to flash drawing operations.
     def flashColor(): Color = ???
 
+    /** Returns the number of times that drawing operations will flash. */
     @stub
-    // Returns the number of times that drawing operations will flash.
     def flashCount(): Int = ???
 
+    /** Returns the time delay of drawing operation flashing. */
     @stub
-    // Returns the time delay of drawing operation flashing.
     def flashTime(): Int = ???
 
+    /** Returns the stream to which the DebugGraphics logs drawing operations. */
     @stub
-    // Returns the stream to which the DebugGraphics logs drawing operations.
     def logStream(): PrintStream = ???
 
+    /** Sets the Color used to flash drawing operations. */
     @stub
-    // Sets the Color used to flash drawing operations.
     def setFlashColor(flashColor: Color): Unit = ???
 
+    /** Sets the number of times that drawing operations will flash. */
     @stub
-    // Sets the number of times that drawing operations will flash.
     def setFlashCount(flashCount: Int): Unit = ???
 
+    /** Sets the time delay of drawing operation flashing. */
     @stub
-    // Sets the time delay of drawing operation flashing.
     def setFlashTime(flashTime: Int): Unit = ???
 
+    /** Sets the stream to which the DebugGraphics logs drawing operations. */
     @stub
-    // Sets the stream to which the DebugGraphics logs drawing operations.
     def setLogStream(stream: PrintStream): Unit = ???
 }

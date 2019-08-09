@@ -6,165 +6,192 @@ import java.math.BigDecimal
 import java.net.URL
 import java.sql.{Array, Blob, Clob, Date, NClob, Ref, RowId, SQLInput, SQLXML, Time, Timestamp}
 
-// An input stream used for custom mapping user-defined types (UDTs).
-// An SQLInputImpl object is an input stream that contains a
-// stream of values that are the attributes of a UDT.
-// 
-// This class is used by the driver behind the scenes when the method
-// getObject is called on an SQL structured or distinct type
-// that has a custom mapping; a programmer never invokes
-// SQLInputImpl methods directly. They are provided here as a
-// convenience for those who write RowSet implementations.
-// 
-// The SQLInputImpl class provides a set of
-// reader methods analogous to the ResultSet getter
-// methods.  These methods make it possible to read the values in an
-// SQLInputImpl object.
-// 
-// The method wasNull is used to determine whether the
-// the last value read was SQL NULL.
-// When the method getObject is called with an
-// object of a class implementing the interface SQLData,
-// the JDBC driver calls the method SQLData.getSQLType
-// to determine the SQL type of the UDT being custom mapped. The driver
-// creates an instance of SQLInputImpl, populating it with the
-// attributes of the UDT.  The driver then passes the input
-// stream to the method SQLData.readSQL, which in turn
-// calls the SQLInputImpl reader methods
-// to read the attributes from the input stream.
+/** An input stream used for custom mapping user-defined types (UDTs).
+ *  An SQLInputImpl object is an input stream that contains a
+ *  stream of values that are the attributes of a UDT.
+ *  
+ *  This class is used by the driver behind the scenes when the method
+ *  getObject is called on an SQL structured or distinct type
+ *  that has a custom mapping; a programmer never invokes
+ *  SQLInputImpl methods directly. They are provided here as a
+ *  convenience for those who write RowSet implementations.
+ *  
+ *  The SQLInputImpl class provides a set of
+ *  reader methods analogous to the ResultSet getter
+ *  methods.  These methods make it possible to read the values in an
+ *  SQLInputImpl object.
+ *  
+ *  The method wasNull is used to determine whether the
+ *  the last value read was SQL NULL.
+ *  When the method getObject is called with an
+ *  object of a class implementing the interface SQLData,
+ *  the JDBC driver calls the method SQLData.getSQLType
+ *  to determine the SQL type of the UDT being custom mapped. The driver
+ *  creates an instance of SQLInputImpl, populating it with the
+ *  attributes of the UDT.  The driver then passes the input
+ *  stream to the method SQLData.readSQL, which in turn
+ *  calls the SQLInputImpl reader methods
+ *  to read the attributes from the input stream.
+ */
 class SQLInputImpl extends Object with SQLInput {
 
+    /** Reads an SQL ARRAY value from the stream and
+     *  returns it as an Array object in the Java programming
+     *  language.
+     */
     @stub
-    // Reads an SQL ARRAY value from the stream and
-    // returns it as an Array object in the Java programming
-    // language.
     def readArray(): Array = ???
 
+    /** Returns the next attribute in this SQLInputImpl object
+     *  as a stream of ASCII characters.
+     */
     @stub
-    // Returns the next attribute in this SQLInputImpl object
-    // as a stream of ASCII characters.
     def readAsciiStream(): InputStream = ???
 
+    /** Retrieves the next attribute in this SQLInputImpl object
+     *  as a java.math.BigDecimal.
+     */
     @stub
-    // Retrieves the next attribute in this SQLInputImpl object
-    // as a java.math.BigDecimal.
     def readBigDecimal(): BigDecimal = ???
 
+    /** Returns the next attribute in this SQLInputImpl object
+     *  as a stream of uninterpreted bytes.
+     */
     @stub
-    // Returns the next attribute in this SQLInputImpl object
-    // as a stream of uninterpreted bytes.
     def readBinaryStream(): InputStream = ???
 
+    /** Retrieves the BLOB value at the head of this
+     *  SQLInputImpl object as a Blob object
+     *  in the Java programming language.
+     */
     @stub
-    // Retrieves the BLOB value at the head of this
-    // SQLInputImpl object as a Blob object
-    // in the Java programming language.
     def readBlob(): Blob = ???
 
+    /** Retrieves the next attribute in this SQLInputImpl object as
+     *  a boolean in the Java programming language.
+     */
     @stub
-    // Retrieves the next attribute in this SQLInputImpl object as
-    // a boolean in the Java programming language.
     def readBoolean(): Boolean = ???
 
+    /** Retrieves the next attribute in this SQLInputImpl object as
+     *  a byte in the Java programming language.
+     */
     @stub
-    // Retrieves the next attribute in this SQLInputImpl object as
-    // a byte in the Java programming language.
     def readByte(): Byte = ???
 
+    /** Retrieves the next attribute in this SQLInputImpl object
+     *  as an array of bytes.
+     */
     @stub
-    // Retrieves the next attribute in this SQLInputImpl object
-    // as an array of bytes.
     def readBytes(): Array[Byte] = ???
 
+    /** Retrieves the next attribute in this SQLInputImpl object
+     *  as a stream of Unicode characters.
+     */
     @stub
-    // Retrieves the next attribute in this SQLInputImpl object
-    // as a stream of Unicode characters.
     def readCharacterStream(): Reader = ???
 
+    /** Retrieves the CLOB value at the head of this
+     *  SQLInputImpl object as a Clob object
+     *  in the Java programming language.
+     */
     @stub
-    // Retrieves the CLOB value at the head of this
-    // SQLInputImpl object as a Clob object
-    // in the Java programming language.
     def readClob(): Clob = ???
 
+    /** Retrieves the next attribute in this SQLInputImpl as
+     *  a java.sql.Date object.
+     */
     @stub
-    // Retrieves the next attribute in this SQLInputImpl as
-    // a java.sql.Date object.
     def readDate(): Date = ???
 
+    /** Retrieves the next attribute in this SQLInputImpl object
+     *  as a double in the Java programming language.
+     */
     @stub
-    // Retrieves the next attribute in this SQLInputImpl object
-    // as a double in the Java programming language.
-    def readDouble(): double = ???
+    def readDouble(): Double = ???
 
+    /** Retrieves the next attribute in this SQLInputImpl object
+     *  as a float in the Java programming language.
+     */
     @stub
-    // Retrieves the next attribute in this SQLInputImpl object
-    // as a float in the Java programming language.
-    def readFloat(): float = ???
+    def readFloat(): Float = ???
 
+    /** Retrieves the next attribute in this SQLInputImpl object
+     *  as an int in the Java programming language.
+     */
     @stub
-    // Retrieves the next attribute in this SQLInputImpl object
-    // as an int in the Java programming language.
     def readInt(): Int = ???
 
+    /** Retrieves the next attribute in this SQLInputImpl object
+     *  as a long in the Java programming language.
+     */
     @stub
-    // Retrieves the next attribute in this SQLInputImpl object
-    // as a long in the Java programming language.
     def readLong(): Long = ???
 
+    /** Reads an SQL NCLOB value from the stream and returns it as a
+     *  Clob object in the Java programming language.
+     */
     @stub
-    // Reads an SQL NCLOB value from the stream and returns it as a
-    // Clob object in the Java programming language.
     def readNClob(): NClob = ???
 
+    /** Reads the next attribute in the stream and returns it as a String
+     *  in the Java programming language.
+     */
     @stub
-    // Reads the next attribute in the stream and returns it as a String
-    // in the Java programming language.
     def readNString(): String = ???
 
+    /** Retrieves the value at the head of this SQLInputImpl
+     *  object as an Object in the Java programming language.
+     */
     @stub
-    // Retrieves the value at the head of this SQLInputImpl
-    // object as an Object in the Java programming language.
     def readObject(): Object = ???
 
+    /** Retrieves the value at the head of this SQLInputImpl object
+     *  as a Ref object in the Java programming language.
+     */
     @stub
-    // Retrieves the value at the head of this SQLInputImpl object
-    // as a Ref object in the Java programming language.
     def readRef(): Ref = ???
 
+    /** Reads an SQL ROWID value from the stream and returns it as a
+     *  RowId object in the Java programming language.
+     */
     @stub
-    // Reads an SQL ROWID value from the stream and returns it as a
-    // RowId object in the Java programming language.
     def readRowId(): RowId = ???
 
+    /** Retrieves the next attribute in this SQLInputImpl object
+     *  as a short in the Java programming language.
+     */
     @stub
-    // Retrieves the next attribute in this SQLInputImpl object
-    // as a short in the Java programming language.
     def readShort(): Short = ???
 
+    /** Reads an SQL XML value from the stream and returns it as a
+     *  SQLXML object in the Java programming language.
+     */
     @stub
-    // Reads an SQL XML value from the stream and returns it as a
-    // SQLXML object in the Java programming language.
     def readSQLXML(): SQLXML = ???
 
+    /** Retrieves the next attribute in this SQLInputImpl object as
+     *  a String in the Java programming language.
+     */
     @stub
-    // Retrieves the next attribute in this SQLInputImpl object as
-    // a String in the Java programming language.
     def readString(): String = ???
 
+    /** Retrieves the next attribute in this SQLInputImpl object as
+     *  a java.sql.Time object.
+     */
     @stub
-    // Retrieves the next attribute in this SQLInputImpl object as
-    // a java.sql.Time object.
     def readTime(): Time = ???
 
+    /** Retrieves the next attribute in this SQLInputImpl object as
+     *  a java.sql.Timestamp object.
+     */
     @stub
-    // Retrieves the next attribute in this SQLInputImpl object as
-    // a java.sql.Timestamp object.
     def readTimestamp(): Timestamp = ???
 
+    /** Reads an SQL DATALINK value from the stream and
+     *  returns it as an URL object in the Java programming
+     *  language.
+     */
     @stub
-    // Reads an SQL DATALINK value from the stream and
-    // returns it as an URL object in the Java programming
-    // language.
     def readURL(): URL = ???
 }

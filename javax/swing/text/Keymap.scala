@@ -3,60 +3,65 @@ package javax.swing.text
 import java.lang.String
 import javax.swing.{Action, KeyStroke}
 
-// A collection of bindings of KeyStrokes to actions.  The
-// bindings are basically name-value pairs that potentially
-// resolve in a hierarchy.
+/** A collection of bindings of KeyStrokes to actions.  The
+ *  bindings are basically name-value pairs that potentially
+ *  resolve in a hierarchy.
+ */
 trait Keymap {
 
+    /** Adds a binding to the keymap. */
     @stub
-    // Adds a binding to the keymap.
     def addActionForKeyStroke(key: KeyStroke, a: Action): Unit = ???
 
+    /** Fetches the action appropriate for the given symbolic
+     *  event sequence.
+     */
     @stub
-    // Fetches the action appropriate for the given symbolic
-    // event sequence.
     def getAction(key: KeyStroke): Action = ???
 
+    /** Fetches all of the actions defined in this keymap. */
     @stub
-    // Fetches all of the actions defined in this keymap.
     def getBoundActions(): Array[Action] = ???
 
+    /** Fetches all of the keystrokes in this map that
+     *  are bound to some action.
+     */
     @stub
-    // Fetches all of the keystrokes in this map that
-    // are bound to some action.
     def getBoundKeyStrokes(): Array[KeyStroke] = ???
 
+    /** Fetches the default action to fire if a
+     *  key is typed (i.e.
+     */
     @stub
-    // Fetches the default action to fire if a
-    // key is typed (i.e.
     def getDefaultAction(): Action = ???
 
+    /** Fetches the keystrokes that will result in
+     *  the given action.
+     */
     @stub
-    // Fetches the keystrokes that will result in
-    // the given action.
     def getKeyStrokesForAction(a: Action): Array[KeyStroke] = ???
 
+    /** Fetches the name of the set of key-bindings. */
     @stub
-    // Fetches the name of the set of key-bindings.
     def getName(): String = ???
 
+    /** Fetches the parent keymap used to resolve key-bindings. */
     @stub
-    // Fetches the parent keymap used to resolve key-bindings.
     def getResolveParent(): Keymap = ???
 
+    /** Determines if the given key sequence is locally defined. */
     @stub
-    // Determines if the given key sequence is locally defined.
     def isLocallyDefined(key: KeyStroke): Boolean = ???
 
+    /** Removes all bindings from the keymap. */
     @stub
-    // Removes all bindings from the keymap.
     def removeBindings(): Unit = ???
 
+    /** Removes a binding from the keymap. */
     @stub
-    // Removes a binding from the keymap.
     def removeKeyStrokeBinding(keys: KeyStroke): Unit = ???
 
+    /** Set the default action to fire if a key is typed. */
     @stub
-    // Set the default action to fire if a key is typed.
     def setDefaultAction(a: Action): Unit = ???
 }

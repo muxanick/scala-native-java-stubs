@@ -9,336 +9,340 @@ import javax.swing.event.ListSelectionListener
 import javax.swing.filechooser.{FileFilter, FileView}
 import javax.swing.plaf.{ComponentUI, FileChooserUI}
 
-// Basic L&F implementation of a FileChooser.
+/** Basic L&F implementation of a FileChooser. */
 class BasicFileChooserUI extends FileChooserUI {
 
+    /**  */
     @stub
-    // 
-    protected def BasicFileChooserUI.AcceptAllFileFilter: class = ???
+    protected object AcceptAllFileFilter extends BasicFileChooserUI.AcceptAllFileFilter
 
+    /** Responds to an Open or Save request */
     @stub
-    // Responds to an Open or Save request
-    protected def BasicFileChooserUI.ApproveSelectionAction: class = ???
+    protected object ApproveSelectionAction extends BasicFileChooserUI.ApproveSelectionAction
 
+    /**  */
     @stub
-    // 
-    protected def BasicFileChooserUI.BasicFileView: class = ???
+    protected object BasicFileView extends BasicFileChooserUI.BasicFileView
 
+    /** Responds to a cancel request. */
     @stub
-    // Responds to a cancel request.
-    protected def BasicFileChooserUI.CancelSelectionAction: class = ???
+    protected object CancelSelectionAction extends BasicFileChooserUI.CancelSelectionAction
 
+    /**  */
     @stub
-    // 
-    protected def BasicFileChooserUI.ChangeToParentDirectoryAction: class = ???
+    protected object ChangeToParentDirectoryAction extends BasicFileChooserUI.ChangeToParentDirectoryAction
 
+    /**  */
     @stub
-    // 
-    protected def BasicFileChooserUI.DoubleClickListener: class = ???
+    protected object DoubleClickListener extends BasicFileChooserUI.DoubleClickListener
 
+    /** Acts on the "home" key event or equivalent event. */
     @stub
-    // Acts on the "home" key event or equivalent event.
-    protected def BasicFileChooserUI.GoHomeAction: class = ???
+    protected object GoHomeAction extends BasicFileChooserUI.GoHomeAction
 
+    /** Creates a new folder. */
     @stub
-    // Creates a new folder.
-    protected def BasicFileChooserUI.NewFolderAction: class = ???
+    protected object NewFolderAction extends BasicFileChooserUI.NewFolderAction
 
+    /**  */
     @stub
-    // 
-    protected def BasicFileChooserUI.SelectionListener: class = ???
+    protected object SelectionListener extends BasicFileChooserUI.SelectionListener
 
+    /**  */
     @stub
-    // 
-    protected def cancelButtonMnemonic: Int = ???
+    protected val cancelButtonMnemonic: Int = ???
 
+    /**  */
     @stub
-    // 
-    protected def cancelButtonText: String = ???
+    protected val cancelButtonText: String = ???
 
+    /**  */
     @stub
-    // 
-    protected def cancelButtonToolTipText: String = ???
+    protected val cancelButtonToolTipText: String = ???
 
+    /**  */
     @stub
-    // 
-    protected def computerIcon: Icon = ???
+    protected val computerIcon: Icon = ???
 
+    /**  */
     @stub
-    // 
-    protected def detailsViewIcon: Icon = ???
+    protected val detailsViewIcon: Icon = ???
 
+    /**  */
     @stub
-    // 
-    protected def directoryIcon: Icon = ???
+    protected val directoryIcon: Icon = ???
 
+    /** The mnemonic keycode used for the approve button when a directory
+     *  is selected and the current selection mode is FILES_ONLY.
+     */
     @stub
-    // The mnemonic keycode used for the approve button when a directory
-    // is selected and the current selection mode is FILES_ONLY.
-    protected def directoryOpenButtonMnemonic: Int = ???
+    protected val directoryOpenButtonMnemonic: Int = ???
 
+    /** The label text displayed on the approve button when a directory
+     *  is selected and the current selection mode is FILES_ONLY.
+     */
     @stub
-    // The label text displayed on the approve button when a directory
-    // is selected and the current selection mode is FILES_ONLY.
-    protected def directoryOpenButtonText: String = ???
+    protected val directoryOpenButtonText: String = ???
 
+    /** The tooltip text displayed on the approve button when a directory
+     *  is selected and the current selection mode is FILES_ONLY.
+     */
     @stub
-    // The tooltip text displayed on the approve button when a directory
-    // is selected and the current selection mode is FILES_ONLY.
-    protected def directoryOpenButtonToolTipText: String = ???
+    protected val directoryOpenButtonToolTipText: String = ???
 
+    /**  */
     @stub
-    // 
-    protected def fileIcon: Icon = ???
+    protected val fileIcon: Icon = ???
 
+    /**  */
     @stub
-    // 
-    protected def floppyDriveIcon: Icon = ???
+    protected val floppyDriveIcon: Icon = ???
 
+    /**  */
     @stub
-    // 
-    protected def hardDriveIcon: Icon = ???
+    protected val hardDriveIcon: Icon = ???
 
+    /**  */
     @stub
-    // 
-    protected def helpButtonMnemonic: Int = ???
+    protected val helpButtonMnemonic: Int = ???
 
+    /**  */
     @stub
-    // 
-    protected def helpButtonText: String = ???
+    protected val helpButtonText: String = ???
 
+    /**  */
     @stub
-    // 
-    protected def helpButtonToolTipText: String = ???
+    protected val helpButtonToolTipText: String = ???
 
+    /**  */
     @stub
-    // 
-    protected def homeFolderIcon: Icon = ???
+    protected val homeFolderIcon: Icon = ???
 
+    /**  */
     @stub
-    // 
-    protected def listViewIcon: Icon = ???
+    protected val listViewIcon: Icon = ???
 
+    /**  */
     @stub
-    // 
-    protected def newFolderIcon: Icon = ???
+    protected val newFolderIcon: Icon = ???
 
+    /**  */
     @stub
-    // 
-    protected def openButtonMnemonic: Int = ???
+    protected val openButtonMnemonic: Int = ???
 
+    /**  */
     @stub
-    // 
-    protected def openButtonText: String = ???
+    protected val openButtonText: String = ???
 
+    /**  */
     @stub
-    // 
-    protected def openButtonToolTipText: String = ???
+    protected val openButtonToolTipText: String = ???
 
+    /**  */
     @stub
-    // 
-    protected def saveButtonMnemonic: Int = ???
+    protected val saveButtonMnemonic: Int = ???
 
+    /**  */
     @stub
-    // 
-    protected def saveButtonText: String = ???
+    protected val saveButtonText: String = ???
 
+    /**  */
     @stub
-    // 
-    protected def saveButtonToolTipText: String = ???
+    protected val saveButtonToolTipText: String = ???
 
+    /**  */
     @stub
-    // 
-    protected def updateButtonMnemonic: Int = ???
+    protected val updateButtonMnemonic: Int = ???
 
+    /**  */
     @stub
-    // 
-    protected def updateButtonText: String = ???
+    protected val updateButtonText: String = ???
 
+    /**  */
     @stub
-    // 
-    protected def updateButtonToolTipText: String = ???
+    protected val updateButtonToolTipText: String = ???
 
+    /**  */
     @stub
-    // 
-    protected def upFolderIcon: Icon = ???
+    protected val upFolderIcon: Icon = ???
 
+    /**  */
     @stub
-    // 
     def clearIconCache(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def createDoubleClickListener(fc: JFileChooser, list: JList): MouseListener = ???
 
+    /**  */
     @stub
-    // 
     def createListSelectionListener(fc: JFileChooser): ListSelectionListener = ???
 
+    /**  */
     @stub
-    // 
     protected def createModel(): Unit = ???
 
+    /**  */
     @stub
-    // 
     def createPropertyChangeListener(fc: JFileChooser): PropertyChangeListener = ???
 
+    /**  */
     @stub
-    // 
     def ensureFileIsVisible(fc: JFileChooser, f: File): Unit = ???
 
+    /** Returns the default accept all file filter */
     @stub
-    // Returns the default accept all file filter
     def getAcceptAllFileFilter(fc: JFileChooser): FileFilter = ???
 
+    /**  */
     @stub
-    // 
     def getAccessoryPanel(): JPanel = ???
 
+    /**  */
     @stub
-    // 
     protected def getApproveButton(fc: JFileChooser): JButton = ???
 
+    /**  */
     @stub
-    // 
     def getApproveButtonMnemonic(fc: JFileChooser): Int = ???
 
+    /**  */
     @stub
-    // 
     def getApproveButtonText(fc: JFileChooser): String = ???
 
+    /**  */
     @stub
-    // 
     def getApproveButtonToolTipText(fc: JFileChooser): String = ???
 
+    /**  */
     @stub
-    // 
     def getApproveSelectionAction(): Action = ???
 
+    /**  */
     @stub
-    // 
     def getCancelSelectionAction(): Action = ???
 
+    /**  */
     @stub
-    // 
     def getChangeToParentDirectoryAction(): Action = ???
 
+    /** Returns default button for current LookAndFeel. */
     @stub
-    // Returns default button for current LookAndFeel.
     def getDefaultButton(fc: JFileChooser): JButton = ???
 
+    /** Returns the title of this dialog */
     @stub
-    // Returns the title of this dialog
     def getDialogTitle(fc: JFileChooser): String = ???
 
+    /** Property to remember the directory that is currently selected in the UI. */
     @stub
-    // Property to remember the directory that is currently selected in the UI.
     protected def getDirectory(): File = ???
 
+    /**  */
     @stub
-    // 
     def getDirectoryName(): String = ???
 
+    /**  */
     @stub
-    // 
     def getFileChooser(): JFileChooser = ???
 
+    /**  */
     @stub
-    // 
     def getFileName(): String = ???
 
+    /**  */
     @stub
-    // 
     def getFileView(fc: JFileChooser): FileView = ???
 
+    /**  */
     @stub
-    // 
     def getGoHomeAction(): Action = ???
 
+    /**  */
     @stub
-    // 
     def getModel(): BasicDirectoryModel = ???
 
+    /**  */
     @stub
-    // 
     def getNewFolderAction(): Action = ???
 
+    /**  */
     @stub
-    // 
     def getUpdateAction(): Action = ???
 
+    /**  */
     @stub
-    // 
     def installComponents(fc: JFileChooser): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installDefaults(fc: JFileChooser): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installIcons(fc: JFileChooser): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installListeners(fc: JFileChooser): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installStrings(fc: JFileChooser): Unit = ???
 
+    /** Configures the specified component appropriately for the look and feel. */
     @stub
-    // Configures the specified component appropriately for the look and feel.
     def installUI(c: JComponent): Unit = ???
 
+    /** Property to remember whether a directory is currently selected in the UI. */
     @stub
-    // Property to remember whether a directory is currently selected in the UI.
     protected def isDirectorySelected(): Boolean = ???
 
+    /**  */
     @stub
-    // 
     def rescanCurrentDirectory(fc: JFileChooser): Unit = ???
 
+    /** Property to remember the directory that is currently selected in the UI. */
     @stub
-    // Property to remember the directory that is currently selected in the UI.
     protected def setDirectory(f: File): Unit = ???
 
+    /**  */
     @stub
-    // 
     def setDirectoryName(dirname: String): Unit = ???
 
+    /** Property to remember whether a directory is currently selected in the UI. */
     @stub
-    // Property to remember whether a directory is currently selected in the UI.
     protected def setDirectorySelected(b: Boolean): Unit = ???
 
+    /**  */
     @stub
-    // 
     def setFileName(filename: String): Unit = ???
 
+    /**  */
     @stub
-    // 
     def uninstallComponents(fc: JFileChooser): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallDefaults(fc: JFileChooser): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallIcons(fc: JFileChooser): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallListeners(fc: JFileChooser): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallStrings(fc: JFileChooser): Unit = ???
 }
 
 object BasicFileChooserUI {
+    /** Creates a BasicFileChooserUI implementation
+     *  for the specified component.
+     */
     @stub
-    // Creates a BasicFileChooserUI implementation
-    // for the specified component.
     def createUI(c: JComponent): ComponentUI = ???
 }

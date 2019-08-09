@@ -8,134 +8,140 @@ import javax.swing.{JComponent, JScrollPane, ScrollPaneConstants}
 import javax.swing.event.ChangeListener
 import javax.swing.plaf.{ComponentUI, ScrollPaneUI}
 
-// A default L&F implementation of ScrollPaneUI.
+/** A default L&F implementation of ScrollPaneUI. */
 class BasicScrollPaneUI extends ScrollPaneUI with ScrollPaneConstants {
 
+    /** Horizontal scrollbar listener. */
     @stub
-    // Horizontal scrollbar listener.
-    def BasicScrollPaneUI.HSBChangeListener: class = ???
+    object HSBChangeListener extends BasicScrollPaneUI.HSBChangeListener
 
+    /** MouseWheelHandler is an inner class which implements the
+     *  MouseWheelListener interface.
+     */
     @stub
-    // MouseWheelHandler is an inner class which implements the
-    // MouseWheelListener interface.
-    protected def BasicScrollPaneUI.MouseWheelHandler: class = ???
+    protected object MouseWheelHandler extends BasicScrollPaneUI.MouseWheelHandler
 
+    /**  */
     @stub
-    // 
-    def BasicScrollPaneUI.PropertyChangeHandler: class = ???
+    object PropertyChangeHandler extends BasicScrollPaneUI.PropertyChangeHandler
 
+    /** Listener for viewport events. */
     @stub
-    // Listener for viewport events.
-    def BasicScrollPaneUI.ViewportChangeHandler: class = ???
+    object ViewportChangeHandler extends BasicScrollPaneUI.ViewportChangeHandler
 
+    /**  */
     @stub
-    // 
-    protected def hsbChangeListener: ChangeListener = ???
+    protected val hsbChangeListener: ChangeListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def scrollpane: JScrollPane = ???
+    protected val scrollpane: JScrollPane = ???
 
+    /**  */
     @stub
-    // 
-    protected def spPropertyChangeListener: PropertyChangeListener = ???
+    protected val spPropertyChangeListener: PropertyChangeListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def viewportChangeListener: ChangeListener = ???
+    protected val viewportChangeListener: ChangeListener = ???
 
+    /**  */
     @stub
-    // 
     protected def createHSBChangeListener(): ChangeListener = ???
 
+    /** Creates an instance of MouseWheelListener, which is added to the
+     *  JScrollPane by installUI().
+     */
     @stub
-    // Creates an instance of MouseWheelListener, which is added to the
-    // JScrollPane by installUI().
     protected def createMouseWheelListener(): MouseWheelListener = ???
 
+    /** Creates an instance of PropertyChangeListener that's added to
+     *  the JScrollPane by installUI().
+     */
     @stub
-    // Creates an instance of PropertyChangeListener that's added to
-    // the JScrollPane by installUI().
     protected def createPropertyChangeListener(): PropertyChangeListener = ???
 
+    /**  */
     @stub
-    // 
     protected def createViewportChangeListener(): ChangeListener = ???
 
+    /**  */
     @stub
-    // 
     protected def createVSBChangeListener(): ChangeListener = ???
 
+    /** Returns the baseline. */
     @stub
-    // Returns the baseline.
     def getBaseline(c: JComponent, width: Int, height: Int): Int = ???
 
+    /** Returns an enum indicating how the baseline of the component
+     *  changes as the size changes.
+     */
     @stub
-    // Returns an enum indicating how the baseline of the component
-    // changes as the size changes.
     def getBaselineResizeBehavior(c: JComponent): Component.BaselineResizeBehavior = ???
 
+    /** Returns the specified component's maximum size appropriate for
+     *  the look and feel.
+     */
     @stub
-    // Returns the specified component's maximum size appropriate for
-    // the look and feel.
     def getMaximumSize(c: JComponent): Dimension = ???
 
+    /**  */
     @stub
-    // 
     protected def installDefaults(scrollpane: JScrollPane): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installKeyboardActions(c: JScrollPane): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installListeners(c: JScrollPane): Unit = ???
 
+    /** Configures the specified component appropriately for the look and feel. */
     @stub
-    // Configures the specified component appropriately for the look and feel.
     def installUI(x: JComponent): Unit = ???
 
+    /** Paints the specified component appropriately for the look and feel. */
     @stub
-    // Paints the specified component appropriately for the look and feel.
     def paint(g: Graphics, c: JComponent): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def syncScrollPaneWithViewport(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallDefaults(c: JScrollPane): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallKeyboardActions(c: JScrollPane): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallListeners(c: JComponent): Unit = ???
 
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
     @stub
-    // Reverses configuration which was done on the specified component during
-    // installUI.
     def uninstallUI(c: JComponent): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def updateColumnHeader(e: PropertyChangeEvent): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def updateRowHeader(e: PropertyChangeEvent): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def updateScrollBarDisplayPolicy(e: PropertyChangeEvent): Unit = ???
 }
 
 object BasicScrollPaneUI {
+    /**  */
     @stub
-    // 
     def createUI(x: JComponent): ComponentUI = ???
 }

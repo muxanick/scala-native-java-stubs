@@ -4,71 +4,78 @@ import java.lang.{CharSequence, Object, String}
 import java.util.{List, Map}
 import javax.lang.model.element.{AnnotationMirror, AnnotationValue, Element, ExecutableElement, Name, PackageElement, TypeElement}
 
-// Utility methods for operating on program elements.
-//
-// Compatibility Note: Methods may be added to this interface
-// in future releases of the platform.
+/** Utility methods for operating on program elements.
+ * 
+ *  Compatibility Note: Methods may be added to this interface
+ *  in future releases of the platform.
+ */
 trait Elements {
 
+    /** Returns all annotations present on an element, whether
+     *  directly present or present via inheritance.
+     */
     @stub
-    // Returns all annotations present on an element, whether
-    // directly present or present via inheritance.
     def getAllAnnotationMirrors(e: Element): List[_ <: AnnotationMirror] = ???
 
+    /** Returns all members of a type element, whether inherited or
+     *  declared directly.
+     */
     @stub
-    // Returns all members of a type element, whether inherited or
-    // declared directly.
     def getAllMembers(type: TypeElement): List[_ <: Element] = ???
 
+    /** Returns the binary name of a type element. */
     @stub
-    // Returns the binary name of a type element.
     def getBinaryName(type: TypeElement): Name = ???
 
+    /** Returns the text of a constant expression representing a
+     *  primitive value or a string.
+     */
     @stub
-    // Returns the text of a constant expression representing a
-    // primitive value or a string.
     def getConstantExpression(value: Object): String = ???
 
+    /** Returns the text of the documentation ("Javadoc")
+     *  comment of an element.
+     */
     @stub
-    // Returns the text of the documentation ("Javadoc")
-    // comment of an element.
     def getDocComment(e: Element): String = ???
 
+    /** Returns the values of an annotation's elements, including defaults. */
     @stub
-    // Returns the values of an annotation's elements, including defaults.
     def getElementValuesWithDefaults(a: AnnotationMirror): Map[_ <: ExecutableElement, _ <: AnnotationValue] = ???
 
+    /** Return a name with the same sequence of characters as the
+     *  argument.
+     */
     @stub
-    // Return a name with the same sequence of characters as the
-    // argument.
     def getName(cs: CharSequence): Name = ???
 
+    /** Returns a package given its fully qualified name. */
     @stub
-    // Returns a package given its fully qualified name.
     def getPackageElement(name: CharSequence): PackageElement = ???
 
+    /** Returns the package of an element. */
     @stub
-    // Returns the package of an element.
     def getPackageOf(type: Element): PackageElement = ???
 
+    /** Returns a type element given its canonical name. */
     @stub
-    // Returns a type element given its canonical name.
     def getTypeElement(name: CharSequence): TypeElement = ???
 
+    /** Tests whether one type, method, or field hides another. */
     @stub
-    // Tests whether one type, method, or field hides another.
     def hides(hider: Element, hidden: Element): Boolean = ???
 
+    /** Returns true if the element is deprecated, false otherwise. */
     @stub
-    // Returns true if the element is deprecated, false otherwise.
     def isDeprecated(e: Element): Boolean = ???
 
+    /** Returns true if the type element is a functional interface, false otherwise. */
     @stub
-    // Returns true if the type element is a functional interface, false otherwise.
     def isFunctionalInterface(type: TypeElement): Boolean = ???
 
+    /** Tests whether one method, as a member of a given type,
+     *  overrides another method.
+     */
     @stub
-    // Tests whether one method, as a member of a given type,
-    // overrides another method.
     def overrides(overrider: ExecutableElement, overridden: ExecutableElement, type: TypeElement): Boolean = ???
 }

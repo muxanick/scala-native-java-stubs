@@ -8,98 +8,105 @@ import javax.swing.{JComponent, LookAndFeel, UIDefaults}
 import javax.swing.plaf.ComponentUI
 import javax.swing.plaf.basic.BasicLookAndFeel
 
-// SynthLookAndFeel provides the basis for creating a customized look and
-// feel. SynthLookAndFeel does not directly provide a look, all painting is
-// delegated.
-// You need to either provide a configuration file, by way of the
-// load(java.io.InputStream, java.lang.Class<?>) method, or provide your own SynthStyleFactory
-// to setStyleFactory(javax.swing.plaf.synth.SynthStyleFactory). Refer to the
-// package summary for an example of
-// loading a file, and SynthStyleFactory for
-// an example of providing your own SynthStyleFactory to
-// setStyleFactory.
-// 
-// Warning:
-// This class implements Serializable as a side effect of it
-// extending BasicLookAndFeel. It is not intended to be serialized.
-// An attempt to serialize it will
-// result in NotSerializableException.
+/** SynthLookAndFeel provides the basis for creating a customized look and
+ *  feel. SynthLookAndFeel does not directly provide a look, all painting is
+ *  delegated.
+ *  You need to either provide a configuration file, by way of the
+ *  load(java.io.InputStream, java.lang.Class<?>) method, or provide your own SynthStyleFactory
+ *  to setStyleFactory(javax.swing.plaf.synth.SynthStyleFactory). Refer to the
+ *  package summary for an example of
+ *  loading a file, and SynthStyleFactory for
+ *  an example of providing your own SynthStyleFactory to
+ *  setStyleFactory.
+ *  
+ *  Warning:
+ *  This class implements Serializable as a side effect of it
+ *  extending BasicLookAndFeel. It is not intended to be serialized.
+ *  An attempt to serialize it will
+ *  result in NotSerializableException.
+ */
 class SynthLookAndFeel extends BasicLookAndFeel {
 
+    /** Returns the defaults for this SynthLookAndFeel. */
     @stub
-    // Returns the defaults for this SynthLookAndFeel.
     def getDefaults(): UIDefaults = ???
 
+    /** Returns a textual description of SynthLookAndFeel. */
     @stub
-    // Returns a textual description of SynthLookAndFeel.
     def getDescription(): String = ???
 
+    /** Return a string that identifies this look and feel. */
     @stub
-    // Return a string that identifies this look and feel.
     def getID(): String = ???
 
+    /** Return a short string that identifies this look and feel. */
     @stub
-    // Return a short string that identifies this look and feel.
     def getName(): String = ???
 
+    /** Called by UIManager when this look and feel is installed. */
     @stub
-    // Called by UIManager when this look and feel is installed.
     def initialize(): Unit = ???
 
+    /** Returns false, SynthLookAndFeel is not a native look and feel. */
     @stub
-    // Returns false, SynthLookAndFeel is not a native look and feel.
     def isNativeLookAndFeel(): Boolean = ???
 
+    /** Returns true, SynthLookAndFeel is always supported. */
     @stub
-    // Returns true, SynthLookAndFeel is always supported.
     def isSupportedLookAndFeel(): Boolean = ???
 
+    /** Loads the set of SynthStyles that will be used by
+     *  this SynthLookAndFeel.
+     */
     @stub
-    // Loads the set of SynthStyles that will be used by
-    // this SynthLookAndFeel.
     def load(input: InputStream, resourceBase: Class[_]): Unit = ???
 
+    /** Loads the set of SynthStyles that will be used by
+     *  this SynthLookAndFeel.
+     */
     @stub
-    // Loads the set of SynthStyles that will be used by
-    // this SynthLookAndFeel.
     def load(url: URL): Unit = ???
 
+    /** Returns whether or not the UIs should update their
+     *  SynthStyles from the SynthStyleFactory
+     *  when the ancestor of the JComponent changes.
+     */
     @stub
-    // Returns whether or not the UIs should update their
-    // SynthStyles from the SynthStyleFactory
-    // when the ancestor of the JComponent changes.
     def shouldUpdateStyleOnAncestorChanged(): Boolean = ???
 
+    /** Returns whether or not the UIs should update their styles when a
+     *  particular event occurs.
+     */
     @stub
-    // Returns whether or not the UIs should update their styles when a
-    // particular event occurs.
     protected def shouldUpdateStyleOnEvent(ev: PropertyChangeEvent): Boolean = ???
 
+    /** Called by UIManager when this look and feel is uninstalled. */
     @stub
-    // Called by UIManager when this look and feel is uninstalled.
     def uninitialize(): Unit = ???
 }
 
 object SynthLookAndFeel {
+    /** Creates the Synth look and feel ComponentUI for
+     *  the passed in JComponent.
+     */
     @stub
-    // Creates the Synth look and feel ComponentUI for
-    // the passed in JComponent.
     def createUI(c: JComponent): ComponentUI = ???
 
+    /** Returns the Region for the JComponent c. */
     @stub
-    // Returns the Region for the JComponent c.
     def getRegion(c: JComponent): Region = ???
 
+    /** Gets a SynthStyle for the specified region of the specified component. */
     @stub
-    // Gets a SynthStyle for the specified region of the specified component.
     def getStyle(c: JComponent, region: Region): SynthStyle = ???
 
+    /** Returns the current SynthStyleFactory. */
     @stub
-    // Returns the current SynthStyleFactory.
     def getStyleFactory(): SynthStyleFactory = ???
 
+    /** Sets the SynthStyleFactory that the UI classes provided by
+     *  synth will use to obtain a SynthStyle.
+     */
     @stub
-    // Sets the SynthStyleFactory that the UI classes provided by
-    // synth will use to obtain a SynthStyle.
     def setStyleFactory(cache: SynthStyleFactory): Unit = ???
 }

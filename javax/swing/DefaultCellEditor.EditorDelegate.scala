@@ -5,40 +5,42 @@ import java.io.Serializable
 import java.lang.Object
 import java.util.EventObject
 
-// The protected EditorDelegate class.
-protected class DefaultCellEditor.EditorDelegate extends Object with ActionListener, with ItemListener, with Serializable {
+/** The protected EditorDelegate class. */
+protected class DefaultCellEditor.EditorDelegate extends Object with ActionListener with ItemListener with Serializable {
 
+    /** When an action is performed, editing is ended. */
     @stub
-    // When an action is performed, editing is ended.
     def actionPerformed(e: ActionEvent): Unit = ???
 
+    /** Cancels editing. */
     @stub
-    // Cancels editing.
     def cancelCellEditing(): Unit = ???
 
+    /** Returns the value of this cell. */
     @stub
-    // Returns the value of this cell.
     def getCellEditorValue(): Object = ???
 
+    /** Returns true if anEvent is not a
+     *  MouseEvent.
+     */
     @stub
-    // Returns true if anEvent is not a
-    // MouseEvent.
     def isCellEditable(anEvent: EventObject): Boolean = ???
 
+    /** When an item's state changes, editing is ended. */
     @stub
-    // When an item's state changes, editing is ended.
     def itemStateChanged(e: ItemEvent): Unit = ???
 
+    /** Sets the value of this cell. */
     @stub
-    // Sets the value of this cell.
     def setValue(value: Object): Unit = ???
 
+    /** Returns true to indicate that the editing cell may
+     *  be selected.
+     */
     @stub
-    // Returns true to indicate that the editing cell may
-    // be selected.
     def shouldSelectCell(anEvent: EventObject): Boolean = ???
 
+    /** Returns true to indicate that editing has begun. */
     @stub
-    // Returns true to indicate that editing has begun.
     def startCellEditing(anEvent: EventObject): Boolean = ???
 }

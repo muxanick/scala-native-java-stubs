@@ -6,5 +6,5 @@ import java.lang.Object
 import javax.swing.plaf.UIResource
 import javax.swing.text.DefaultCaret
 
-// 
+/**  */
 object BasicTextUI.BasicCaret extends DefaultCaret with UIResource {

@@ -7,82 +7,84 @@ import javax.swing.event.MouseInputListener
 import javax.swing.plaf.{ComponentUI, TableHeaderUI}
 import javax.swing.table.JTableHeader
 
-// BasicTableHeaderUI implementation
+/** BasicTableHeaderUI implementation */
 class BasicTableHeaderUI extends TableHeaderUI {
 
+    /** The JTableHeader that is delegating the painting to this UI. */
     @stub
-    // The JTableHeader that is delegating the painting to this UI.
-    protected def header: JTableHeader = ???
+    protected val header: JTableHeader = ???
 
+    /**  */
     @stub
-    // 
-    protected def mouseInputListener: MouseInputListener = ???
+    protected val mouseInputListener: MouseInputListener = ???
 
+    /** Creates the mouse listener for the JTableHeader. */
     @stub
-    // Creates the mouse listener for the JTableHeader.
     protected def createMouseInputListener(): MouseInputListener = ???
 
+    /** Returns the baseline. */
     @stub
-    // Returns the baseline.
     def getBaseline(c: JComponent, width: Int, height: Int): Int = ???
 
+    /** Return the maximum size of the header. */
     @stub
-    // Return the maximum size of the header.
     def getMaximumSize(c: JComponent): Dimension = ???
 
+    /** Return the minimum size of the header. */
     @stub
-    // Return the minimum size of the header.
     def getMinimumSize(c: JComponent): Dimension = ???
 
+    /** Return the preferred size of the header. */
     @stub
-    // Return the preferred size of the header.
     def getPreferredSize(c: JComponent): Dimension = ???
 
+    /** Returns the index of the column header over which the mouse
+     *  currently is.
+     */
     @stub
-    // Returns the index of the column header over which the mouse
-    // currently is.
     protected def getRolloverColumn(): Int = ???
 
+    /** Initializes JTableHeader properties such as font, foreground, and background. */
     @stub
-    // Initializes JTableHeader properties such as font, foreground, and background.
     protected def installDefaults(): Unit = ???
 
+    /** Register all keyboard actions on the JTableHeader. */
     @stub
-    // Register all keyboard actions on the JTableHeader.
     protected def installKeyboardActions(): Unit = ???
 
+    /** Attaches listeners to the JTableHeader. */
     @stub
-    // Attaches listeners to the JTableHeader.
     protected def installListeners(): Unit = ???
 
+    /** Configures the specified component appropriately for the look and feel. */
     @stub
-    // Configures the specified component appropriately for the look and feel.
     def installUI(c: JComponent): Unit = ???
 
+    /** Paints the specified component appropriately for the look and feel. */
     @stub
-    // Paints the specified component appropriately for the look and feel.
     def paint(g: Graphics, c: JComponent): Unit = ???
 
+    /** This method gets called every time when a rollover column in the table
+     *  header is updated.
+     */
     @stub
-    // This method gets called every time when a rollover column in the table
-    // header is updated.
     protected def rolloverColumnUpdated(oldColumn: Int, newColumn: Int): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallDefaults(): Unit = ???
 
+    /** Unregisters default key actions. */
     @stub
-    // Unregisters default key actions.
     protected def uninstallKeyboardActions(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallListeners(): Unit = ???
 }
 
 object BasicTableHeaderUI {
+    /**  */
     @stub
-    // 
     def createUI(h: JComponent): ComponentUI = ???
 }

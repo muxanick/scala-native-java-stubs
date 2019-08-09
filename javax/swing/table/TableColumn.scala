@@ -4,255 +4,278 @@ import java.beans.PropertyChangeListener
 import java.io.Serializable
 import java.lang.{Object, String}
 
-// A TableColumn represents all the attributes of a column in a
-//  JTable, such as width, resizability, minimum and maximum width.
-//  In addition, the TableColumn provides slots for a renderer and
-//  an editor that can be used to display and edit the values in this column.
-//  
-//  It is also possible to specify renderers and editors on a per type basis
-//  rather than a per column basis - see the
-//  setDefaultRenderer method in the JTable class.
-//  This default mechanism is only used when the renderer (or
-//  editor) in the TableColumn is null.
-// 
-//  The TableColumn stores the link between the columns in the
-//  JTable and the columns in the TableModel.
-//  The modelIndex is the column in the
-//  TableModel, which will be queried for the data values for the
-//  cells in this column. As the column moves around in the view this
-//  modelIndex does not change.
-//  
-// Note: Some implementations may assume that all
-//    TableColumnModels are unique, therefore we would
-//    recommend that the same TableColumn instance
-//    not be added more than once to a TableColumnModel.
-//    To show TableColumns with the same column of
-//    data from the model, create a new instance with the same
-//    modelIndex.
-//  
-// Warning:
-// Serialized objects of this class will not be compatible with
-// future Swing releases. The current serialization support is
-// appropriate for short term storage or RMI between applications running
-// the same version of Swing.  As of 1.4, support for long term storage
-// of all JavaBeans™
-// has been added to the java.beans package.
-// Please see XMLEncoder.
+/** A TableColumn represents all the attributes of a column in a
+ *   JTable, such as width, resizability, minimum and maximum width.
+ *   In addition, the TableColumn provides slots for a renderer and
+ *   an editor that can be used to display and edit the values in this column.
+ *   
+ *   It is also possible to specify renderers and editors on a per type basis
+ *   rather than a per column basis - see the
+ *   setDefaultRenderer method in the JTable class.
+ *   This default mechanism is only used when the renderer (or
+ *   editor) in the TableColumn is null.
+ *  
+ *   The TableColumn stores the link between the columns in the
+ *   JTable and the columns in the TableModel.
+ *   The modelIndex is the column in the
+ *   TableModel, which will be queried for the data values for the
+ *   cells in this column. As the column moves around in the view this
+ *   modelIndex does not change.
+ *   
+ *  Note: Some implementations may assume that all
+ *     TableColumnModels are unique, therefore we would
+ *     recommend that the same TableColumn instance
+ *     not be added more than once to a TableColumnModel.
+ *     To show TableColumns with the same column of
+ *     data from the model, create a new instance with the same
+ *     modelIndex.
+ *   
+ *  Warning:
+ *  Serialized objects of this class will not be compatible with
+ *  future Swing releases. The current serialization support is
+ *  appropriate for short term storage or RMI between applications running
+ *  the same version of Swing.  As of 1.4, support for long term storage
+ *  of all JavaBeans™
+ *  has been added to the java.beans package.
+ *  Please see XMLEncoder.
+ */
 class TableColumn extends Object with Serializable {
 
+    /** Cover method, using a default model index of 0,
+     *   default width of 75, a null renderer and a
+     *   null editor.
+     */
     @stub
-    // Cover method, using a default model index of 0,
-    //  default width of 75, a null renderer and a
-    //  null editor.
     def this() = ???
 
+    /** Cover method, using a default width of 75, a null
+     *   renderer and a null editor.
+     */
     @stub
-    // Cover method, using a default width of 75, a null
-    //  renderer and a null editor.
     def this(modelIndex: Int) = ???
 
+    /** Cover method, using a null renderer and a
+     *   null editor.
+     */
     @stub
-    // Cover method, using a null renderer and a
-    //  null editor.
     def this(modelIndex: Int, width: Int) = ???
 
+    /** The editor used to edit the data cells of the column. */
     @stub
-    // The editor used to edit the data cells of the column.
-    protected def cellEditor: TableCellEditor = ???
+    protected val cellEditor: TableCellEditor = ???
 
+    /** The renderer used to draw the data cells of the column. */
     @stub
-    // The renderer used to draw the data cells of the column.
-    protected def cellRenderer: TableCellRenderer = ???
+    protected val cellRenderer: TableCellRenderer = ???
 
+    /** The renderer used to draw the header of the column. */
     @stub
-    // The renderer used to draw the header of the column.
-    protected def headerRenderer: TableCellRenderer = ???
+    protected val headerRenderer: TableCellRenderer = ???
 
+    /** The header value of the column. */
     @stub
-    // The header value of the column.
-    protected def headerValue: Object = ???
+    protected val headerValue: Object = ???
 
+    /** This object is not used internally by the drawing machinery of
+     *   the JTable; identifiers may be set in the
+     *   TableColumn as as an
+     *   optional way to tag and locate table columns.
+     */
     @stub
-    // This object is not used internally by the drawing machinery of
-    //  the JTable; identifiers may be set in the
-    //  TableColumn as as an
-    //  optional way to tag and locate table columns.
-    protected def identifier: Object = ???
+    protected val identifier: Object = ???
 
+    /** If true, the user is allowed to resize the column; the default is true. */
     @stub
-    // If true, the user is allowed to resize the column; the default is true.
-    protected def isResizable: Boolean = ???
+    protected val isResizable: Boolean = ???
 
+    /** The maximum width of the column. */
     @stub
-    // The maximum width of the column.
-    protected def maxWidth: Int = ???
+    protected val maxWidth: Int = ???
 
+    /** The minimum width of the column. */
     @stub
-    // The minimum width of the column.
-    protected def minWidth: Int = ???
+    protected val minWidth: Int = ???
 
+    /** The index of the column in the model which is to be displayed by
+     *  this TableColumn.
+     */
     @stub
-    // The index of the column in the model which is to be displayed by
-    // this TableColumn.
-    protected def modelIndex: Int = ???
+    protected val modelIndex: Int = ???
 
+    /** Deprecated. 
+     * as of Java 2 platform v1.3
+     * 
+     */
     @stub
-    // Deprecated. 
-    //as of Java 2 platform v1.3
-    //
-    protected def resizedPostingDisableCount: Int = ???
+    protected val resizedPostingDisableCount: Int = ???
 
+    /** Adds a PropertyChangeListener to the listener list. */
     @stub
-    // Adds a PropertyChangeListener to the listener list.
     def addPropertyChangeListener(listener: PropertyChangeListener): Unit = ???
 
+    /** As of Java 2 platform v1.3, this method is not called by the TableColumn
+     *  constructor.
+     */
     @stub
-    // As of Java 2 platform v1.3, this method is not called by the TableColumn
-    // constructor.
     protected def createDefaultHeaderRenderer(): TableCellRenderer = ???
 
+    /** Deprecated. 
+     * as of Java 2 platform v1.3
+     * 
+     */
     @stub
-    // Deprecated. 
-    //as of Java 2 platform v1.3
-    //
     def disableResizedPosting(): Unit = ???
 
+    /** Deprecated. 
+     * as of Java 2 platform v1.3
+     * 
+     */
     @stub
-    // Deprecated. 
-    //as of Java 2 platform v1.3
-    //
     def enableResizedPosting(): Unit = ???
 
+    /** Returns the TableCellEditor used by the
+     *  JTable to edit values for this column.
+     */
     @stub
-    // Returns the TableCellEditor used by the
-    // JTable to edit values for this column.
     def getCellEditor(): TableCellEditor = ???
 
+    /** Returns the TableCellRenderer used by the
+     *  JTable to draw
+     *  values for this column.
+     */
     @stub
-    // Returns the TableCellRenderer used by the
-    // JTable to draw
-    // values for this column.
     def getCellRenderer(): TableCellRenderer = ???
 
+    /** Returns the TableCellRenderer used to draw the header of the
+     *  TableColumn.
+     */
     @stub
-    // Returns the TableCellRenderer used to draw the header of the
-    // TableColumn.
     def getHeaderRenderer(): TableCellRenderer = ???
 
+    /** Returns the Object used as the value for the header
+     *  renderer.
+     */
     @stub
-    // Returns the Object used as the value for the header
-    // renderer.
     def getHeaderValue(): Object = ???
 
+    /** Returns the identifier object for this column. */
     @stub
-    // Returns the identifier object for this column.
     def getIdentifier(): Object = ???
 
+    /** Returns the maximum width for the TableColumn. */
     @stub
-    // Returns the maximum width for the TableColumn.
     def getMaxWidth(): Int = ???
 
+    /** Returns the minimum width for the TableColumn. */
     @stub
-    // Returns the minimum width for the TableColumn.
     def getMinWidth(): Int = ???
 
+    /** Returns the model index for this column. */
     @stub
-    // Returns the model index for this column.
     def getModelIndex(): Int = ???
 
+    /** Returns the preferred width of the TableColumn. */
     @stub
-    // Returns the preferred width of the TableColumn.
     def getPreferredWidth(): Int = ???
 
+    /** Returns an array of all the PropertyChangeListeners added
+     *  to this TableColumn with addPropertyChangeListener().
+     */
     @stub
-    // Returns an array of all the PropertyChangeListeners added
-    // to this TableColumn with addPropertyChangeListener().
     def getPropertyChangeListeners(): Array[PropertyChangeListener] = ???
 
+    /** Returns true if the user is allowed to resize the
+     *  TableColumn's
+     *  width, false otherwise.
+     */
     @stub
-    // Returns true if the user is allowed to resize the
-    // TableColumn's
-    // width, false otherwise.
     def getResizable(): Boolean = ???
 
+    /** Returns the width of the TableColumn. */
     @stub
-    // Returns the width of the TableColumn.
     def getWidth(): Int = ???
 
+    /** Removes a PropertyChangeListener from the listener list. */
     @stub
-    // Removes a PropertyChangeListener from the listener list.
     def removePropertyChangeListener(listener: PropertyChangeListener): Unit = ???
 
+    /** Sets the editor to used by when a cell in this column is edited. */
     @stub
-    // Sets the editor to used by when a cell in this column is edited.
     def setCellEditor(cellEditor: TableCellEditor): Unit = ???
 
+    /** Sets the TableCellRenderer used by JTable
+     *  to draw individual values for this column.
+     */
     @stub
-    // Sets the TableCellRenderer used by JTable
-    // to draw individual values for this column.
     def setCellRenderer(cellRenderer: TableCellRenderer): Unit = ???
 
+    /** Sets the TableCellRenderer used to draw the
+     *  TableColumn's header to headerRenderer.
+     */
     @stub
-    // Sets the TableCellRenderer used to draw the
-    // TableColumn's header to headerRenderer.
     def setHeaderRenderer(headerRenderer: TableCellRenderer): Unit = ???
 
+    /** Sets the Object whose string representation will be
+     *  used as the value for the headerRenderer.
+     */
     @stub
-    // Sets the Object whose string representation will be
-    // used as the value for the headerRenderer.
     def setHeaderValue(headerValue: Object): Unit = ???
 
+    /** Sets the TableColumn's identifier to
+     *  anIdentifier.
+     */
     @stub
-    // Sets the TableColumn's identifier to
-    // anIdentifier.
     def setIdentifier(identifier: Object): Unit = ???
 
+    /** Sets the TableColumn's maximum width to
+     *  maxWidth or,
+     *  if maxWidth is less than the minimum width,
+     *  to the minimum width.
+     */
     @stub
-    // Sets the TableColumn's maximum width to
-    // maxWidth or,
-    // if maxWidth is less than the minimum width,
-    // to the minimum width.
     def setMaxWidth(maxWidth: Int): Unit = ???
 
+    /** Sets the TableColumn's minimum width to
+     *  minWidth,
+     *  adjusting the new minimum width if necessary to ensure that
+     *  0 <= minWidth <= maxWidth.
+     */
     @stub
-    // Sets the TableColumn's minimum width to
-    // minWidth,
-    // adjusting the new minimum width if necessary to ensure that
-    // 0 <= minWidth <= maxWidth.
     def setMinWidth(minWidth: Int): Unit = ???
 
+    /** Sets the model index for this column. */
     @stub
-    // Sets the model index for this column.
     def setModelIndex(modelIndex: Int): Unit = ???
 
+    /** Sets this column's preferred width to preferredWidth. */
     @stub
-    // Sets this column's preferred width to preferredWidth.
     def setPreferredWidth(preferredWidth: Int): Unit = ???
 
+    /** Sets whether this column can be resized. */
     @stub
-    // Sets whether this column can be resized.
     def setResizable(isResizable: Boolean): Unit = ???
 
+    /** This method should not be used to set the widths of columns in the
+     *  JTable, use setPreferredWidth instead.
+     */
     @stub
-    // This method should not be used to set the widths of columns in the
-    // JTable, use setPreferredWidth instead.
     def setWidth(width: Int): Unit = ???
 }
 
 object TableColumn {
+    /** Obsolete as of Java 2 platform v1.3. */
     @stub
-    // Obsolete as of Java 2 platform v1.3.
-    def CELL_RENDERER_PROPERTY: String = ???
+    val CELL_RENDERER_PROPERTY: String = ???
 
+    /** Obsolete as of Java 2 platform v1.3. */
     @stub
-    // Obsolete as of Java 2 platform v1.3.
-    def COLUMN_WIDTH_PROPERTY: String = ???
+    val COLUMN_WIDTH_PROPERTY: String = ???
 
+    /** Obsolete as of Java 2 platform v1.3. */
     @stub
-    // Obsolete as of Java 2 platform v1.3.
-    def HEADER_RENDERER_PROPERTY: String = ???
+    val HEADER_RENDERER_PROPERTY: String = ???
 
+    /** Obsolete as of Java 2 platform v1.3. */
     @stub
-    // Obsolete as of Java 2 platform v1.3.
-    def HEADER_VALUE_PROPERTY: String = ???
+    val HEADER_VALUE_PROPERTY: String = ???
 }

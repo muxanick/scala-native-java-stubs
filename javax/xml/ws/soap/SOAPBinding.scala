@@ -5,42 +5,44 @@ import java.util.Set
 import javax.xml.soap.{MessageFactory, SOAPFactory}
 import javax.xml.ws.Binding
 
-// The SOAPBinding interface is an abstraction for
-//  the SOAP binding.
+/** The SOAPBinding interface is an abstraction for
+ *   the SOAP binding.
+ */
 trait SOAPBinding extends Binding {
 
+    /** Gets the SAAJ MessageFactory instance used by this SOAP binding. */
     @stub
-    // Gets the SAAJ MessageFactory instance used by this SOAP binding.
     def getMessageFactory(): MessageFactory = ???
 
+    /** Gets the roles played by the SOAP binding instance. */
     @stub
-    // Gets the roles played by the SOAP binding instance.
     def getRoles(): Set[String] = ???
 
+    /** Gets the SAAJ SOAPFactory instance used by this SOAP binding. */
     @stub
-    // Gets the SAAJ SOAPFactory instance used by this SOAP binding.
     def getSOAPFactory(): SOAPFactory = ???
 
+    /** Returns true if the use of MTOM is enabled. */
     @stub
-    // Returns true if the use of MTOM is enabled.
     def isMTOMEnabled(): Boolean = ???
 
+    /** Enables or disables use of MTOM. */
     @stub
-    // Enables or disables use of MTOM.
     def setMTOMEnabled(flag: Boolean): Unit = ???
 }
 
 object SOAPBinding {
+    /** A constant representing the identity of the SOAP 1.1 over HTTP binding. */
     @stub
-    // A constant representing the identity of the SOAP 1.1 over HTTP binding.
-    def SOAP11HTTP_BINDING: String = ???
+    val SOAP11HTTP_BINDING: String = ???
 
+    /** A constant representing the identity of the SOAP 1.1 over HTTP binding
+     *  with MTOM enabled by default.
+     */
     @stub
-    // A constant representing the identity of the SOAP 1.1 over HTTP binding
-    // with MTOM enabled by default.
-    def SOAP11HTTP_MTOM_BINDING: String = ???
+    val SOAP11HTTP_MTOM_BINDING: String = ???
 
+    /** A constant representing the identity of the SOAP 1.2 over HTTP binding. */
     @stub
-    // A constant representing the identity of the SOAP 1.2 over HTTP binding.
-    def SOAP12HTTP_BINDING: String = ???
+    val SOAP12HTTP_BINDING: String = ???
 }

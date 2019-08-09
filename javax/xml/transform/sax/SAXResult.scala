@@ -5,30 +5,30 @@ import javax.xml.transform.Result
 import org.xml.sax.ContentHandler
 import org.xml.sax.ext.LexicalHandler
 
-// Acts as an holder for a transformation Result.
+/** Acts as an holder for a transformation Result. */
 class SAXResult extends Object with Result {
 
+    /** Zero-argument default constructor. */
     @stub
-    // Zero-argument default constructor.
     def this() = ???
 
+    /** Get the ContentHandler that is the Result. */
     @stub
-    // Get the ContentHandler that is the Result.
     def getHandler(): ContentHandler = ???
 
+    /** Get a SAX2 LexicalHandler for the output. */
     @stub
-    // Get a SAX2 LexicalHandler for the output.
     def getLexicalHandler(): LexicalHandler = ???
 
+    /** Get the system identifier that was set with setSystemId. */
     @stub
-    // Get the system identifier that was set with setSystemId.
     def getSystemId(): String = ???
 
+    /** Set the target to be a SAX2 ContentHandler. */
     @stub
-    // Set the target to be a SAX2 ContentHandler.
     def setHandler(handler: ContentHandler): Unit = ???
 
+    /** Set the SAX2 LexicalHandler for the output. */
     @stub
-    // Set the SAX2 LexicalHandler for the output.
     def setLexicalHandler(handler: LexicalHandler): Unit = ???
 }

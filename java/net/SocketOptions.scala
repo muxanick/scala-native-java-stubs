@@ -2,83 +2,90 @@ package java.net
 
 import java.lang.Object
 
-// Interface of methods to get/set socket options.  This interface is
-// implemented by: SocketImpl and  DatagramSocketImpl.
-// Subclasses of these should override the methods
-// of this interface in order to support their own options.
-// 
-// The methods and constants which specify options in this interface are
-// for implementation only.  If you're not subclassing SocketImpl or
-// DatagramSocketImpl, you won't use these directly. There are
-// type-safe methods to get/set each of these options in Socket, ServerSocket,
-// DatagramSocket and MulticastSocket.
-// 
+/** Interface of methods to get/set socket options.  This interface is
+ *  implemented by: SocketImpl and  DatagramSocketImpl.
+ *  Subclasses of these should override the methods
+ *  of this interface in order to support their own options.
+ *  
+ *  The methods and constants which specify options in this interface are
+ *  for implementation only.  If you're not subclassing SocketImpl or
+ *  DatagramSocketImpl, you won't use these directly. There are
+ *  type-safe methods to get/set each of these options in Socket, ServerSocket,
+ *  DatagramSocket and MulticastSocket.
+ *  
+ */
 trait SocketOptions {
 
+    /** Fetch the value of an option. */
     @stub
-    // Fetch the value of an option.
     def getOption(optID: Int): Object = ???
 }
 
 object SocketOptions {
+    /** Set which outgoing interface on which to send multicast packets. */
     @stub
-    // Set which outgoing interface on which to send multicast packets.
-    def IP_MULTICAST_IF: Int = ???
+    val IP_MULTICAST_IF: Int = ???
 
+    /** Same as above. */
     @stub
-    // Same as above.
-    def IP_MULTICAST_IF2: Int = ???
+    val IP_MULTICAST_IF2: Int = ???
 
+    /** This option enables or disables local loopback of multicast datagrams. */
     @stub
-    // This option enables or disables local loopback of multicast datagrams.
-    def IP_MULTICAST_LOOP: Int = ???
+    val IP_MULTICAST_LOOP: Int = ???
 
+    /** This option sets the type-of-service or traffic class field
+     *  in the IP header for a TCP or UDP socket.
+     */
     @stub
-    // This option sets the type-of-service or traffic class field
-    // in the IP header for a TCP or UDP socket.
-    def IP_TOS: Int = ???
+    val IP_TOS: Int = ???
 
+    /** Fetch the local address binding of a socket (this option cannot
+     *  be "set" only "gotten", since sockets are bound at creation time,
+     *  and so the locally bound address cannot be changed).
+     */
     @stub
-    // Fetch the local address binding of a socket (this option cannot
-    // be "set" only "gotten", since sockets are bound at creation time,
-    // and so the locally bound address cannot be changed).
-    def SO_BINDADDR: Int = ???
+    val SO_BINDADDR: Int = ???
 
+    /** Sets SO_BROADCAST for a socket. */
     @stub
-    // Sets SO_BROADCAST for a socket.
-    def SO_BROADCAST: Int = ???
+    val SO_BROADCAST: Int = ???
 
+    /** When the keepalive option is set for a TCP socket and no data
+     *  has been exchanged across the socket in either direction for
+     *  2 hours (NOTE: the actual value is implementation dependent),
+     *  TCP automatically sends a keepalive probe to the peer.
+     */
     @stub
-    // When the keepalive option is set for a TCP socket and no data
-    // has been exchanged across the socket in either direction for
-    // 2 hours (NOTE: the actual value is implementation dependent),
-    // TCP automatically sends a keepalive probe to the peer.
-    def SO_KEEPALIVE: Int = ???
+    val SO_KEEPALIVE: Int = ???
 
+    /** Specify a linger-on-close timeout. */
     @stub
-    // Specify a linger-on-close timeout.
-    def SO_LINGER: Int = ???
+    val SO_LINGER: Int = ???
 
+    /** When the OOBINLINE option is set, any TCP urgent data received on
+     *  the socket will be received through the socket input stream.
+     */
     @stub
-    // When the OOBINLINE option is set, any TCP urgent data received on
-    // the socket will be received through the socket input stream.
-    def SO_OOBINLINE: Int = ???
+    val SO_OOBINLINE: Int = ???
 
+    /** Set a hint the size of the underlying buffers used by the
+     *  platform for incoming network I/O.
+     */
     @stub
-    // Set a hint the size of the underlying buffers used by the
-    // platform for incoming network I/O.
-    def SO_RCVBUF: Int = ???
+    val SO_RCVBUF: Int = ???
 
+    /** Sets SO_REUSEADDR for a socket. */
     @stub
-    // Sets SO_REUSEADDR for a socket.
-    def SO_REUSEADDR: Int = ???
+    val SO_REUSEADDR: Int = ???
 
+    /** Set a hint the size of the underlying buffers used by the
+     *  platform for outgoing network I/O.
+     */
     @stub
-    // Set a hint the size of the underlying buffers used by the
-    // platform for outgoing network I/O.
-    def SO_SNDBUF: Int = ???
+    val SO_SNDBUF: Int = ???
 
+    /** Set a timeout on blocking Socket operations: */
     @stub
-    // Set a timeout on blocking Socket operations:
-    def SO_TIMEOUT: Int = ???
+    val SO_TIMEOUT: Int = ???
 }

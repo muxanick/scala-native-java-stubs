@@ -5,39 +5,40 @@ import java.lang.{Object, String}
 import java.util.List
 import javax.management.ObjectName
 
-// Represents an unresolved role: a role not retrieved from a relation due
-// to a problem. It provides the role name, value (if problem when trying to
-// set the role) and an integer defining the problem (constants defined in
-// RoleStatus).
-//
-// The serialVersionUID of this class is -48350262537070138L.
+/** Represents an unresolved role: a role not retrieved from a relation due
+ *  to a problem. It provides the role name, value (if problem when trying to
+ *  set the role) and an integer defining the problem (constants defined in
+ *  RoleStatus).
+ * 
+ *  The serialVersionUID of this class is -48350262537070138L.
+ */
 class RoleUnresolved extends Object with Serializable {
 
+    /** Clone this object. */
     @stub
-    // Clone this object.
     def clone(): Object = ???
 
+    /** Retrieves problem type. */
     @stub
-    // Retrieves problem type.
     def getProblemType(): Int = ???
 
+    /** Retrieves role name. */
     @stub
-    // Retrieves role name.
     def getRoleName(): String = ???
 
+    /** Retrieves role value. */
     @stub
-    // Retrieves role value.
     def getRoleValue(): List[ObjectName] = ???
 
+    /** Sets problem type. */
     @stub
-    // Sets problem type.
     def setProblemType(pbType: Int): Unit = ???
 
+    /** Sets role name. */
     @stub
-    // Sets role name.
     def setRoleName(name: String): Unit = ???
 
+    /** Sets role value. */
     @stub
-    // Sets role value.
     def setRoleValue(value: List[ObjectName]): Unit = ???
 }

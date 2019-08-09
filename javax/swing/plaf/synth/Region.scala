@@ -2,275 +2,278 @@ package javax.swing.plaf.synth
 
 import java.lang.{Object, String}
 
-// A distinct rendering area of a Swing component.  A component may
-// support one or more regions.  Specific component regions are defined
-// by the typesafe enumeration in this class.
-// 
-// Regions are typically used as a way to identify the Components
-// and areas a particular style is to apply to. Synth's file format allows you
-// to bind styles based on the name of a Region.
-// The name is derived from the field name of the constant:
-// 
-//  Map all characters to lowercase.
-//  Map the first character to uppercase.
-//  Map the first character after underscores to uppercase.
-//  Remove all underscores.
-// 
-// For example, to identify the SPLIT_PANE
-// Region you would use SplitPane.
-// The following shows a custom SynthStyleFactory
-// that returns a specific style for split panes:
-// 
-//    public SynthStyle getStyle(JComponent c, Region id) {
-//        if (id == Region.SPLIT_PANE) {
-//            return splitPaneStyle;
-//        }
-//        ...
-//    }
-// 
-// The following xml
-// accomplishes the same thing:
-// 
-// <style id="splitPaneStyle">
-//   ...
-// </style>
-// <bind style="splitPaneStyle" type="region" key="SplitPane"/>
-// 
+/** A distinct rendering area of a Swing component.  A component may
+ *  support one or more regions.  Specific component regions are defined
+ *  by the typesafe enumeration in this class.
+ *  
+ *  Regions are typically used as a way to identify the Components
+ *  and areas a particular style is to apply to. Synth's file format allows you
+ *  to bind styles based on the name of a Region.
+ *  The name is derived from the field name of the constant:
+ *  
+ *   Map all characters to lowercase.
+ *   Map the first character to uppercase.
+ *   Map the first character after underscores to uppercase.
+ *   Remove all underscores.
+ *  
+ *  For example, to identify the SPLIT_PANE
+ *  Region you would use SplitPane.
+ *  The following shows a custom SynthStyleFactory
+ *  that returns a specific style for split panes:
+ *  
+ *     public SynthStyle getStyle(JComponent c, Region id) {
+ *         if (id == Region.SPLIT_PANE) {
+ *             return splitPaneStyle;
+ *         }
+ *         ...
+ *     }
+ *  
+ *  The following xml
+ *  accomplishes the same thing:
+ *  
+ *  <style id="splitPaneStyle">
+ *    ...
+ *  </style>
+ *  <bind style="splitPaneStyle" type="region" key="SplitPane"/>
+ *  
+ */
 class Region extends Object {
 
+    /** Returns the name of the region. */
     @stub
-    // Returns the name of the region.
     def getName(): String = ???
 
+    /** Returns true if the Region is a subregion of a Component, otherwise
+     *  false.
+     */
     @stub
-    // Returns true if the Region is a subregion of a Component, otherwise
-    // false.
     def isSubregion(): Boolean = ???
 }
 
 object Region {
+    /** ArrowButton's are special types of buttons that also render a
+     *  directional indicator, typically an arrow.
+     */
     @stub
-    // ArrowButton's are special types of buttons that also render a
-    // directional indicator, typically an arrow.
-    def ARROW_BUTTON: Region = ???
+    val ARROW_BUTTON: Region = ???
 
+    /** Button region. */
     @stub
-    // Button region.
-    def BUTTON: Region = ???
+    val BUTTON: Region = ???
 
+    /** CheckBox region. */
     @stub
-    // CheckBox region.
-    def CHECK_BOX: Region = ???
+    val CHECK_BOX: Region = ???
 
+    /** CheckBoxMenuItem region. */
     @stub
-    // CheckBoxMenuItem region.
-    def CHECK_BOX_MENU_ITEM: Region = ???
+    val CHECK_BOX_MENU_ITEM: Region = ???
 
+    /** ColorChooser region. */
     @stub
-    // ColorChooser region.
-    def COLOR_CHOOSER: Region = ???
+    val COLOR_CHOOSER: Region = ???
 
+    /** ComboBox region. */
     @stub
-    // ComboBox region.
-    def COMBO_BOX: Region = ???
+    val COMBO_BOX: Region = ???
 
+    /** DesktopIcon region. */
     @stub
-    // DesktopIcon region.
-    def DESKTOP_ICON: Region = ???
+    val DESKTOP_ICON: Region = ???
 
+    /** DesktopPane region. */
     @stub
-    // DesktopPane region.
-    def DESKTOP_PANE: Region = ???
+    val DESKTOP_PANE: Region = ???
 
+    /** EditorPane region. */
     @stub
-    // EditorPane region.
-    def EDITOR_PANE: Region = ???
+    val EDITOR_PANE: Region = ???
 
+    /** FileChooser region. */
     @stub
-    // FileChooser region.
-    def FILE_CHOOSER: Region = ???
+    val FILE_CHOOSER: Region = ???
 
+    /** FormattedTextField region. */
     @stub
-    // FormattedTextField region.
-    def FORMATTED_TEXT_FIELD: Region = ???
+    val FORMATTED_TEXT_FIELD: Region = ???
 
+    /** InternalFrame region. */
     @stub
-    // InternalFrame region.
-    def INTERNAL_FRAME: Region = ???
+    val INTERNAL_FRAME: Region = ???
 
+    /** TitlePane of an InternalFrame. */
     @stub
-    // TitlePane of an InternalFrame.
-    def INTERNAL_FRAME_TITLE_PANE: Region = ???
+    val INTERNAL_FRAME_TITLE_PANE: Region = ???
 
+    /** Label region. */
     @stub
-    // Label region.
-    def LABEL: Region = ???
+    val LABEL: Region = ???
 
+    /** List region. */
     @stub
-    // List region.
-    def LIST: Region = ???
+    val LIST: Region = ???
 
+    /** Menu region. */
     @stub
-    // Menu region.
-    def MENU: Region = ???
+    val MENU: Region = ???
 
+    /** MenuBar region. */
     @stub
-    // MenuBar region.
-    def MENU_BAR: Region = ???
+    val MENU_BAR: Region = ???
 
+    /** MenuItem region. */
     @stub
-    // MenuItem region.
-    def MENU_ITEM: Region = ???
+    val MENU_ITEM: Region = ???
 
+    /** Accelerator region of a MenuItem. */
     @stub
-    // Accelerator region of a MenuItem.
-    def MENU_ITEM_ACCELERATOR: Region = ???
+    val MENU_ITEM_ACCELERATOR: Region = ???
 
+    /** OptionPane region. */
     @stub
-    // OptionPane region.
-    def OPTION_PANE: Region = ???
+    val OPTION_PANE: Region = ???
 
+    /** Panel region. */
     @stub
-    // Panel region.
-    def PANEL: Region = ???
+    val PANEL: Region = ???
 
+    /** PasswordField region. */
     @stub
-    // PasswordField region.
-    def PASSWORD_FIELD: Region = ???
+    val PASSWORD_FIELD: Region = ???
 
+    /** PopupMenu region. */
     @stub
-    // PopupMenu region.
-    def POPUP_MENU: Region = ???
+    val POPUP_MENU: Region = ???
 
+    /** PopupMenuSeparator region. */
     @stub
-    // PopupMenuSeparator region.
-    def POPUP_MENU_SEPARATOR: Region = ???
+    val POPUP_MENU_SEPARATOR: Region = ???
 
+    /** ProgressBar region. */
     @stub
-    // ProgressBar region.
-    def PROGRESS_BAR: Region = ???
+    val PROGRESS_BAR: Region = ???
 
+    /** RadioButton region. */
     @stub
-    // RadioButton region.
-    def RADIO_BUTTON: Region = ???
+    val RADIO_BUTTON: Region = ???
 
+    /** RegionButtonMenuItem region. */
     @stub
-    // RegionButtonMenuItem region.
-    def RADIO_BUTTON_MENU_ITEM: Region = ???
+    val RADIO_BUTTON_MENU_ITEM: Region = ???
 
+    /** RootPane region. */
     @stub
-    // RootPane region.
-    def ROOT_PANE: Region = ???
+    val ROOT_PANE: Region = ???
 
+    /** ScrollBar region. */
     @stub
-    // ScrollBar region.
-    def SCROLL_BAR: Region = ???
+    val SCROLL_BAR: Region = ???
 
+    /** Thumb of the ScrollBar. */
     @stub
-    // Thumb of the ScrollBar.
-    def SCROLL_BAR_THUMB: Region = ???
+    val SCROLL_BAR_THUMB: Region = ???
 
+    /** Track of the ScrollBar. */
     @stub
-    // Track of the ScrollBar.
-    def SCROLL_BAR_TRACK: Region = ???
+    val SCROLL_BAR_TRACK: Region = ???
 
+    /** ScrollPane region. */
     @stub
-    // ScrollPane region.
-    def SCROLL_PANE: Region = ???
+    val SCROLL_PANE: Region = ???
 
+    /** Separator region. */
     @stub
-    // Separator region.
-    def SEPARATOR: Region = ???
+    val SEPARATOR: Region = ???
 
+    /** Slider region. */
     @stub
-    // Slider region.
-    def SLIDER: Region = ???
+    val SLIDER: Region = ???
 
+    /** Thumb of the Slider. */
     @stub
-    // Thumb of the Slider.
-    def SLIDER_THUMB: Region = ???
+    val SLIDER_THUMB: Region = ???
 
+    /** Track of the Slider. */
     @stub
-    // Track of the Slider.
-    def SLIDER_TRACK: Region = ???
+    val SLIDER_TRACK: Region = ???
 
+    /** Spinner region. */
     @stub
-    // Spinner region.
-    def SPINNER: Region = ???
+    val SPINNER: Region = ???
 
+    /** SplitPane region. */
     @stub
-    // SplitPane region.
-    def SPLIT_PANE: Region = ???
+    val SPLIT_PANE: Region = ???
 
+    /** Divider of the SplitPane. */
     @stub
-    // Divider of the SplitPane.
-    def SPLIT_PANE_DIVIDER: Region = ???
+    val SPLIT_PANE_DIVIDER: Region = ???
 
+    /** TabbedPane region. */
     @stub
-    // TabbedPane region.
-    def TABBED_PANE: Region = ???
+    val TABBED_PANE: Region = ???
 
+    /** Region of a TabbedPane containing the content. */
     @stub
-    // Region of a TabbedPane containing the content.
-    def TABBED_PANE_CONTENT: Region = ???
+    val TABBED_PANE_CONTENT: Region = ???
 
+    /** Region of a TabbedPane for one tab. */
     @stub
-    // Region of a TabbedPane for one tab.
-    def TABBED_PANE_TAB: Region = ???
+    val TABBED_PANE_TAB: Region = ???
 
+    /** Region of a TabbedPane containing the tabs. */
     @stub
-    // Region of a TabbedPane containing the tabs.
-    def TABBED_PANE_TAB_AREA: Region = ???
+    val TABBED_PANE_TAB_AREA: Region = ???
 
+    /** Table region. */
     @stub
-    // Table region.
-    def TABLE: Region = ???
+    val TABLE: Region = ???
 
+    /** TableHeader region. */
     @stub
-    // TableHeader region.
-    def TABLE_HEADER: Region = ???
+    val TABLE_HEADER: Region = ???
 
+    /** TextArea region. */
     @stub
-    // TextArea region.
-    def TEXT_AREA: Region = ???
+    val TEXT_AREA: Region = ???
 
+    /** TextField region. */
     @stub
-    // TextField region.
-    def TEXT_FIELD: Region = ???
+    val TEXT_FIELD: Region = ???
 
+    /** TextPane region. */
     @stub
-    // TextPane region.
-    def TEXT_PANE: Region = ???
+    val TEXT_PANE: Region = ???
 
+    /** ToggleButton region. */
     @stub
-    // ToggleButton region.
-    def TOGGLE_BUTTON: Region = ???
+    val TOGGLE_BUTTON: Region = ???
 
+    /** ToolBar region. */
     @stub
-    // ToolBar region.
-    def TOOL_BAR: Region = ???
+    val TOOL_BAR: Region = ???
 
+    /** Region of the ToolBar containing the content. */
     @stub
-    // Region of the ToolBar containing the content.
-    def TOOL_BAR_CONTENT: Region = ???
+    val TOOL_BAR_CONTENT: Region = ???
 
+    /** Region for the Window containing the ToolBar. */
     @stub
-    // Region for the Window containing the ToolBar.
-    def TOOL_BAR_DRAG_WINDOW: Region = ???
+    val TOOL_BAR_DRAG_WINDOW: Region = ???
 
+    /** ToolBar separator region. */
     @stub
-    // ToolBar separator region.
-    def TOOL_BAR_SEPARATOR: Region = ???
+    val TOOL_BAR_SEPARATOR: Region = ???
 
+    /** ToolTip region. */
     @stub
-    // ToolTip region.
-    def TOOL_TIP: Region = ???
+    val TOOL_TIP: Region = ???
 
+    /** Tree region. */
     @stub
-    // Tree region.
-    def TREE: Region = ???
+    val TREE: Region = ???
 
+    /** Region of the Tree for one cell. */
     @stub
-    // Region of the Tree for one cell.
-    def TREE_CELL: Region = ???
+    val TREE_CELL: Region = ???
 }

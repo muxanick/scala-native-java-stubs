@@ -5,72 +5,79 @@ import java.lang.{AutoCloseable, ClassLoader, Object}
 import org.xml.sax.InputSource
 import org.xml.sax.helpers.DefaultHandler
 
-// The XMLDecoder class is used to read XML documents
-// created using the XMLEncoder and is used just like
-// the ObjectInputStream. For example, one can use
-// the following fragment to read the first object defined
-// in an XML document written by the XMLEncoder
-// class:
-// 
-//       XMLDecoder d = new XMLDecoder(
-//                          new BufferedInputStream(
-//                              new FileInputStream("Test.xml")));
-//       Object result = d.readObject();
-//       d.close();
-// 
-//
-//
-// For more information you might also want to check out
-// Long Term Persistence of JavaBeans Components: XML Schema,
-// an article in The Swing Connection.
+/** The XMLDecoder class is used to read XML documents
+ *  created using the XMLEncoder and is used just like
+ *  the ObjectInputStream. For example, one can use
+ *  the following fragment to read the first object defined
+ *  in an XML document written by the XMLEncoder
+ *  class:
+ *  
+ *        XMLDecoder d = new XMLDecoder(
+ *                           new BufferedInputStream(
+ *                               new FileInputStream("Test.xml")));
+ *        Object result = d.readObject();
+ *        d.close();
+ *  
+ * 
+ * 
+ *  For more information you might also want to check out
+ *  Long Term Persistence of JavaBeans Components: XML Schema,
+ *  an article in The Swing Connection.
+ */
 class XMLDecoder extends Object with AutoCloseable {
 
+    /** Creates a new decoder to parse XML archives
+     *  created by the XMLEncoder class.
+     */
     @stub
-    // Creates a new decoder to parse XML archives
-    // created by the XMLEncoder class.
     def this(is: InputSource) = ???
 
+    /** Creates a new input stream for reading archives
+     *  created by the XMLEncoder class.
+     */
     @stub
-    // Creates a new input stream for reading archives
-    // created by the XMLEncoder class.
     def this(in: InputStream) = ???
 
+    /** Creates a new input stream for reading archives
+     *  created by the XMLEncoder class.
+     */
     @stub
-    // Creates a new input stream for reading archives
-    // created by the XMLEncoder class.
     def this(in: InputStream, owner: Object) = ???
 
+    /** Creates a new input stream for reading archives
+     *  created by the XMLEncoder class.
+     */
     @stub
-    // Creates a new input stream for reading archives
-    // created by the XMLEncoder class.
     def this(in: InputStream, owner: Object, exceptionListener: ExceptionListener) = ???
 
+    /** This method closes the input stream associated
+     *  with this stream.
+     */
     @stub
-    // This method closes the input stream associated
-    // with this stream.
     def close(): Unit = ???
 
+    /** Gets the exception handler for this stream. */
     @stub
-    // Gets the exception handler for this stream.
     def getExceptionListener(): ExceptionListener = ???
 
+    /** Gets the owner of this decoder. */
     @stub
-    // Gets the owner of this decoder.
     def getOwner(): Object = ???
 
+    /** Reads the next object from the underlying input stream. */
     @stub
-    // Reads the next object from the underlying input stream.
     def readObject(): Object = ???
 
+    /** Sets the exception handler for this stream to exceptionListener. */
     @stub
-    // Sets the exception handler for this stream to exceptionListener.
     def setExceptionListener(exceptionListener: ExceptionListener): Unit = ???
 }
 
 object XMLDecoder {
+    /** Creates a new handler for SAX parser
+     *  that can be used to parse embedded XML archives
+     *  created by the XMLEncoder class.
+     */
     @stub
-    // Creates a new handler for SAX parser
-    // that can be used to parse embedded XML archives
-    // created by the XMLEncoder class.
     def createHandler(owner: Object, el: ExceptionListener, cl: ClassLoader): DefaultHandler = ???
 }

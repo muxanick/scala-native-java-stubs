@@ -2,11 +2,12 @@ package java.nio.file
 
 import java.lang.{Exception, Object, RuntimeException, Throwable}
 
-// Runtime exception thrown when an attempt is made to create a file system that
-// already exists.
+/** Runtime exception thrown when an attempt is made to create a file system that
+ *  already exists.
+ */
 class FileSystemAlreadyExistsException extends RuntimeException {
 
+    /** Constructs an instance of this class. */
     @stub
-    // Constructs an instance of this class.
     def this() = ???
 }

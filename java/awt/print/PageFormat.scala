@@ -2,74 +2,84 @@ package java.awt.print
 
 import java.lang.{Cloneable, Object}
 
-// The PageFormat class describes the size and
-// orientation of a page to be printed.
+/** The PageFormat class describes the size and
+ *  orientation of a page to be printed.
+ */
 class PageFormat extends Object with Cloneable {
 
+    /** Makes a copy of this PageFormat with the same
+     *  contents as this PageFormat.
+     */
     @stub
-    // Makes a copy of this PageFormat with the same
-    // contents as this PageFormat.
     def clone(): Object = ???
 
+    /** Returns the height, in 1/72nds of an inch, of the page. */
     @stub
-    // Returns the height, in 1/72nds of an inch, of the page.
-    def getHeight(): double = ???
+    def getHeight(): Double = ???
 
+    /** Return the height, in 1/72nds of an inch, of the imageable
+     *  area of the page.
+     */
     @stub
-    // Return the height, in 1/72nds of an inch, of the imageable
-    // area of the page.
-    def getImageableHeight(): double = ???
+    def getImageableHeight(): Double = ???
 
+    /** Returns the width, in 1/72nds of an inch, of the imageable
+     *  area of the page.
+     */
     @stub
-    // Returns the width, in 1/72nds of an inch, of the imageable
-    // area of the page.
-    def getImageableWidth(): double = ???
+    def getImageableWidth(): Double = ???
 
+    /** Returns the x coordinate of the upper left point of the
+     *  imageable area of the Paper object
+     *  associated with this PageFormat.
+     */
     @stub
-    // Returns the x coordinate of the upper left point of the
-    // imageable area of the Paper object
-    // associated with this PageFormat.
-    def getImageableX(): double = ???
+    def getImageableX(): Double = ???
 
+    /** Returns the y coordinate of the upper left point of the
+     *  imageable area of the Paper object
+     *  associated with this PageFormat.
+     */
     @stub
-    // Returns the y coordinate of the upper left point of the
-    // imageable area of the Paper object
-    // associated with this PageFormat.
-    def getImageableY(): double = ???
+    def getImageableY(): Double = ???
 
+    /** Returns a transformation matrix that translates user
+     *  space rendering to the requested orientation
+     *  of the page.
+     */
     @stub
-    // Returns a transformation matrix that translates user
-    // space rendering to the requested orientation
-    // of the page.
-    def getMatrix(): Array[double] = ???
+    def getMatrix(): Array[Double] = ???
 
+    /** Returns the orientation of this PageFormat. */
     @stub
-    // Returns the orientation of this PageFormat.
     def getOrientation(): Int = ???
 
+    /** Returns a copy of the Paper object associated
+     *  with this PageFormat.
+     */
     @stub
-    // Returns a copy of the Paper object associated
-    // with this PageFormat.
     def getPaper(): Paper = ???
 
+    /** Returns the width, in 1/72nds of an inch, of the page. */
     @stub
-    // Returns the width, in 1/72nds of an inch, of the page.
-    def getWidth(): double = ???
+    def getWidth(): Double = ???
 
+    /** Sets the page orientation. */
     @stub
-    // Sets the page orientation.
     def setOrientation(orientation: Int): Unit = ???
 }
 
 object PageFormat {
+    /** The origin is at the bottom left of the paper with
+     *   x running bottom to top and y running left to right.
+     */
     @stub
-    // The origin is at the bottom left of the paper with
-    //  x running bottom to top and y running left to right.
-    def LANDSCAPE: Int = ???
+    val LANDSCAPE: Int = ???
 
+    /** The origin is at the top left of the paper with
+     *   x running to the right and y running down the
+     *   paper.
+     */
     @stub
-    // The origin is at the top left of the paper with
-    //  x running to the right and y running down the
-    //  paper.
-    def PORTRAIT: Int = ???
+    val PORTRAIT: Int = ???
 }

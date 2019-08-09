@@ -4,151 +4,168 @@ import java.lang.{Boolean, Object, String}
 import javax.management.{Attribute, AttributeChangeNotification, AttributeList, MBeanInfo, MBeanNotificationInfo, MBeanRegistration, MBeanServer, Notification, NotificationEmitter, NotificationFilter, NotificationListener, ObjectName}
 import javax.management.loading.ClassLoaderRepository
 
-// This class is the implementation of a ModelMBean. An appropriate
-// implementation of a ModelMBean must be shipped with every JMX Agent
-// and the class must be named RequiredModelMBean.
-// 
-// Java resources wishing to be manageable instantiate the
-// RequiredModelMBean using the MBeanServer's createMBean method.
-// The resource then sets the MBeanInfo and Descriptors for the
-// RequiredModelMBean instance. The attributes and operations exposed
-// via the ModelMBeanInfo for the ModelMBean are accessible
-// from MBeans, connectors/adaptors like other MBeans. Through the
-// Descriptors, values and methods in the managed application can be
-// defined and mapped to attributes and operations of the ModelMBean.
-// This mapping can be defined in an XML formatted file or dynamically and
-// programmatically at runtime.
-// 
-// Every RequiredModelMBean which is instantiated in the MBeanServer
-// becomes manageable:
-// its attributes and operations become remotely accessible through the
-// connectors/adaptors connected to that MBeanServer.
-// 
-// A Java object cannot be registered in the MBeanServer unless it is a
-// JMX compliant MBean. By instantiating a RequiredModelMBean, resources
-// are guaranteed that the MBean is valid.
-//
-// MBeanException and RuntimeOperationsException must be thrown on every
-// public method.  This allows for wrapping exceptions from distributed
-// communications (RMI, EJB, etc.)
-class RequiredModelMBean extends Object with ModelMBean, with MBeanRegistration, with NotificationEmitter {
+/** This class is the implementation of a ModelMBean. An appropriate
+ *  implementation of a ModelMBean must be shipped with every JMX Agent
+ *  and the class must be named RequiredModelMBean.
+ *  
+ *  Java resources wishing to be manageable instantiate the
+ *  RequiredModelMBean using the MBeanServer's createMBean method.
+ *  The resource then sets the MBeanInfo and Descriptors for the
+ *  RequiredModelMBean instance. The attributes and operations exposed
+ *  via the ModelMBeanInfo for the ModelMBean are accessible
+ *  from MBeans, connectors/adaptors like other MBeans. Through the
+ *  Descriptors, values and methods in the managed application can be
+ *  defined and mapped to attributes and operations of the ModelMBean.
+ *  This mapping can be defined in an XML formatted file or dynamically and
+ *  programmatically at runtime.
+ *  
+ *  Every RequiredModelMBean which is instantiated in the MBeanServer
+ *  becomes manageable:
+ *  its attributes and operations become remotely accessible through the
+ *  connectors/adaptors connected to that MBeanServer.
+ *  
+ *  A Java object cannot be registered in the MBeanServer unless it is a
+ *  JMX compliant MBean. By instantiating a RequiredModelMBean, resources
+ *  are guaranteed that the MBean is valid.
+ * 
+ *  MBeanException and RuntimeOperationsException must be thrown on every
+ *  public method.  This allows for wrapping exceptions from distributed
+ *  communications (RMI, EJB, etc.)
+ */
+class RequiredModelMBean extends Object with ModelMBean with MBeanRegistration with NotificationEmitter {
 
+    /** Constructs an RequiredModelMBean with an empty
+     *  ModelMBeanInfo.
+     */
     @stub
-    // Constructs an RequiredModelMBean with an empty
-    // ModelMBeanInfo.
     def this() = ???
 
+    /** Registers an object which implements the NotificationListener interface as a listener. */
     @stub
-    // Registers an object which implements the NotificationListener interface as a listener.
     def addAttributeChangeNotificationListener(inlistener: NotificationListener, inAttributeName: String, inhandback: Object): Unit = ???
 
+    /** Registers an object which implements the NotificationListener
+     *  interface as a listener.
+     */
     @stub
-    // Registers an object which implements the NotificationListener
-    // interface as a listener.
     def addNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
 
+    /** Returns the value of a specific attribute defined for this
+     *  ModelMBean.
+     */
     @stub
-    // Returns the value of a specific attribute defined for this
-    // ModelMBean.
     def getAttribute(attrName: String): Object = ???
 
+    /** Returns the values of several attributes in the ModelMBean. */
     @stub
-    // Returns the values of several attributes in the ModelMBean.
     def getAttributes(attrNames: Array[String]): AttributeList = ???
 
+    /** Return the Class Loader Repository used to perform class loading. */
     @stub
-    // Return the Class Loader Repository used to perform class loading.
     protected def getClassLoaderRepository(): ClassLoaderRepository = ???
 
+    /** Returns the attributes, operations, constructors and notifications
+     *  that this RequiredModelMBean exposes for management.
+     */
     @stub
-    // Returns the attributes, operations, constructors and notifications
-    // that this RequiredModelMBean exposes for management.
     def getMBeanInfo(): MBeanInfo = ???
 
+    /** Returns the array of Notifications always generated by the
+     *  RequiredModelMBean.
+     */
     @stub
-    // Returns the array of Notifications always generated by the
-    // RequiredModelMBean.
     def getNotificationInfo(): Array[MBeanNotificationInfo] = ???
 
+    /** Invokes a method on or through a RequiredModelMBean and returns
+     *  the result of the method execution.
+     */
     @stub
-    // Invokes a method on or through a RequiredModelMBean and returns
-    // the result of the method execution.
     def invoke(opName: String, opArgs: Array[Object], sig: Array[String]): Object = ???
 
+    /** Instantiates this MBean instance with the data found for
+     *  the MBean in the persistent store.
+     */
     @stub
-    // Instantiates this MBean instance with the data found for
-    // the MBean in the persistent store.
     def load(): Unit = ???
 
+    /** Allows the MBean to perform any operations needed after having been
+     *  unregistered in the MBean server.
+     */
     @stub
-    // Allows the MBean to perform any operations needed after having been
-    // unregistered in the MBean server.
     def postDeregister(): Unit = ???
 
+    /** Allows the MBean to perform any operations needed after having been
+     *  registered in the MBean server or after the registration has failed.
+     */
     @stub
-    // Allows the MBean to perform any operations needed after having been
-    // registered in the MBean server or after the registration has failed.
     def postRegister(registrationDone: Boolean): Unit = ???
 
+    /** Allows the MBean to perform any operations it needs before
+     *  being unregistered by the MBean server.
+     */
     @stub
-    // Allows the MBean to perform any operations it needs before
-    // being unregistered by the MBean server.
     def preDeregister(): Unit = ???
 
+    /** Allows the MBean to perform any operations it needs before
+     *  being registered in the MBean server.
+     */
     @stub
-    // Allows the MBean to perform any operations it needs before
-    // being registered in the MBean server.
     def preRegister(server: MBeanServer, name: ObjectName): ObjectName = ???
 
+    /** Removes a listener for attributeChangeNotifications from the RequiredModelMBean. */
     @stub
-    // Removes a listener for attributeChangeNotifications from the RequiredModelMBean.
     def removeAttributeChangeNotificationListener(inlistener: NotificationListener, inAttributeName: String): Unit = ???
 
+    /** Removes a listener for Notifications from the RequiredModelMBean. */
     @stub
-    // Removes a listener for Notifications from the RequiredModelMBean.
     def removeNotificationListener(listener: NotificationListener): Unit = ???
 
+    /** Removes a listener from this MBean. */
     @stub
-    // Removes a listener from this MBean.
     def removeNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
 
+    /** Sends an attributeChangeNotification which contains the old value and new value for the
+     *  attribute to the registered AttributeChangeNotification listeners on the ModelMBean.
+     */
     @stub
-    // Sends an attributeChangeNotification which contains the old value and new value for the
-    // attribute to the registered AttributeChangeNotification listeners on the ModelMBean.
     def sendAttributeChangeNotification(inOldVal: Attribute, inNewVal: Attribute): Unit = ???
 
+    /** Sends an attributeChangeNotification which is passed in to
+     *  the registered attributeChangeNotification listeners on the
+     *  ModelMBean.
+     */
     @stub
-    // Sends an attributeChangeNotification which is passed in to
-    // the registered attributeChangeNotification listeners on the
-    // ModelMBean.
     def sendAttributeChangeNotification(ntfyObj: AttributeChangeNotification): Unit = ???
 
+    /** Sends a Notification which is passed in to the registered
+     *  Notification listeners on the ModelMBean as a
+     *  jmx.modelmbean.generic notification.
+     */
     @stub
-    // Sends a Notification which is passed in to the registered
-    // Notification listeners on the ModelMBean as a
-    // jmx.modelmbean.generic notification.
     def sendNotification(ntfyObj: Notification): Unit = ???
 
+    /** Sends a Notification which contains the text string that is passed in
+     *  to the registered Notification listeners on the ModelMBean.
+     */
     @stub
-    // Sends a Notification which contains the text string that is passed in
-    // to the registered Notification listeners on the ModelMBean.
     def sendNotification(ntfyText: String): Unit = ???
 
+    /** Sets the value of a specific attribute of a named ModelMBean. */
     @stub
-    // Sets the value of a specific attribute of a named ModelMBean.
     def setAttribute(attribute: Attribute): Unit = ???
 
+    /** Sets the values of an array of attributes of this ModelMBean. */
     @stub
-    // Sets the values of an array of attributes of this ModelMBean.
     def setAttributes(attributes: AttributeList): AttributeList = ???
 
+    /** Sets the instance handle of the object against which to
+     *  execute all methods in this ModelMBean management interface
+     *  (MBeanInfo and Descriptors).
+     */
     @stub
-    // Sets the instance handle of the object against which to
-    // execute all methods in this ModelMBean management interface
-    // (MBeanInfo and Descriptors).
     def setManagedResource(mr: Object, mr_type: String): Unit = ???
 
+    /** Initializes a ModelMBean object using ModelMBeanInfo passed in. */
     @stub
-    // Initializes a ModelMBean object using ModelMBeanInfo passed in.
     def setModelMBeanInfo(mbi: ModelMBeanInfo): Unit = ???
 }

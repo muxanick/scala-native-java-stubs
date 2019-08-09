@@ -2,14 +2,14 @@ package javax.swing.event
 
 import java.lang.Object
 
-// Enumeration for document event types
-object final DocumentEvent.EventType extends Object {
+/** Enumeration for document event types */
+final object DocumentEvent.EventType extends Object {
 
+    /** Change type. */
     @stub
-    // Change type.
-    def CHANGE: DocumentEvent.EventType = ???
+    val CHANGE: DocumentEvent.EventType = ???
 
+    /** Insert type. */
     @stub
-    // Insert type.
-    def INSERT: DocumentEvent.EventType = ???
+    val INSERT: DocumentEvent.EventType = ???
 }

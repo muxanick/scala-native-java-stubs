@@ -3,73 +3,77 @@ package javax.naming.directory
 import java.io.Serializable
 import java.lang.{Object, String}
 
-// This class encapsulates
-// factors that determine scope of search and what gets returned
-// as a result of the search.
-//
-// A SearchControls instance is not synchronized against concurrent
-// multithreaded access. Multiple threads trying to access and modify
-// a single SearchControls instance should lock the object.
+/** This class encapsulates
+ *  factors that determine scope of search and what gets returned
+ *  as a result of the search.
+ * 
+ *  A SearchControls instance is not synchronized against concurrent
+ *  multithreaded access. Multiple threads trying to access and modify
+ *  a single SearchControls instance should lock the object.
+ */
 class SearchControls extends Object with Serializable {
 
+    /** Constructs a search constraints using defaults. */
     @stub
-    // Constructs a search constraints using defaults.
     def this() = ???
 
+    /** Retrieves the maximum number of entries that will be returned
+     *  as a result of the search.
+     */
     @stub
-    // Retrieves the maximum number of entries that will be returned
-    // as a result of the search.
     def getCountLimit(): Long = ???
 
+    /** Determines whether links will be dereferenced during the search. */
     @stub
-    // Determines whether links will be dereferenced during the search.
     def getDerefLinkFlag(): Boolean = ???
 
+    /** Retrieves the attributes that will be returned as part of the search. */
     @stub
-    // Retrieves the attributes that will be returned as part of the search.
     def getReturningAttributes(): Array[String] = ???
 
+    /** Determines whether objects will be returned as part of the result. */
     @stub
-    // Determines whether objects will be returned as part of the result.
     def getReturningObjFlag(): Boolean = ???
 
+    /** Retrieves the search scope of these SearchControls. */
     @stub
-    // Retrieves the search scope of these SearchControls.
     def getSearchScope(): Int = ???
 
+    /** Retrieves the time limit of these SearchControls in milliseconds. */
     @stub
-    // Retrieves the time limit of these SearchControls in milliseconds.
     def getTimeLimit(): Int = ???
 
+    /** Sets the maximum number of entries to be returned
+     *  as a result of the search.
+     */
     @stub
-    // Sets the maximum number of entries to be returned
-    // as a result of the search.
     def setCountLimit(limit: Long): Unit = ???
 
+    /** Enables/disables link dereferencing during the search. */
     @stub
-    // Enables/disables link dereferencing during the search.
     def setDerefLinkFlag(on: Boolean): Unit = ???
 
+    /** Specifies the attributes that will be returned as part of the search. */
     @stub
-    // Specifies the attributes that will be returned as part of the search.
     def setReturningAttributes(attrs: Array[String]): Unit = ???
 
+    /** Enables/disables returning objects returned as part of the result. */
     @stub
-    // Enables/disables returning objects returned as part of the result.
     def setReturningObjFlag(on: Boolean): Unit = ???
 
+    /** Sets the search scope to one of:
+     *  OBJECT_SCOPE, ONELEVEL_SCOPE, SUBTREE_SCOPE.
+     */
     @stub
-    // Sets the search scope to one of:
-    // OBJECT_SCOPE, ONELEVEL_SCOPE, SUBTREE_SCOPE.
     def setSearchScope(scope: Int): Unit = ???
 }
 
 object SearchControls {
+    /** Search the named object. */
     @stub
-    // Search the named object.
-    def OBJECT_SCOPE: Int = ???
+    val OBJECT_SCOPE: Int = ???
 
+    /** Search one level of the named context. */
     @stub
-    // Search one level of the named context.
-    def ONELEVEL_SCOPE: Int = ???
+    val ONELEVEL_SCOPE: Int = ???
 }

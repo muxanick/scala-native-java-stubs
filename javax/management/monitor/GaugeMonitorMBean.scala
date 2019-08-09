@@ -3,58 +3,60 @@ package javax.management.monitor
 import java.lang.Number
 import javax.management.ObjectName
 
-// Exposes the remote management interface of the gauge monitor MBean.
+/** Exposes the remote management interface of the gauge monitor MBean. */
 trait GaugeMonitorMBean extends MonitorMBean {
 
+    /** Deprecated. 
+     * As of JMX 1.2, replaced by getDerivedGauge(ObjectName)
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JMX 1.2, replaced by getDerivedGauge(ObjectName)
-    //
     def getDerivedGauge(): Number = ???
 
+    /** Gets the derived gauge for the specified MBean. */
     @stub
-    // Gets the derived gauge for the specified MBean.
     def getDerivedGauge(object: ObjectName): Number = ???
 
+    /** Deprecated. 
+     * As of JMX 1.2, replaced by getDerivedGaugeTimeStamp(ObjectName)
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JMX 1.2, replaced by getDerivedGaugeTimeStamp(ObjectName)
-    //
     def getDerivedGaugeTimeStamp(): Long = ???
 
+    /** Gets the derived gauge timestamp for the specified MBean. */
     @stub
-    // Gets the derived gauge timestamp for the specified MBean.
     def getDerivedGaugeTimeStamp(object: ObjectName): Long = ???
 
+    /** Gets the difference mode flag value. */
     @stub
-    // Gets the difference mode flag value.
     def getDifferenceMode(): Boolean = ???
 
+    /** Gets the high threshold value. */
     @stub
-    // Gets the high threshold value.
     def getHighThreshold(): Number = ???
 
+    /** Gets the low threshold value. */
     @stub
-    // Gets the low threshold value.
     def getLowThreshold(): Number = ???
 
+    /** Gets the high notification's on/off switch value. */
     @stub
-    // Gets the high notification's on/off switch value.
     def getNotifyHigh(): Boolean = ???
 
+    /** Gets the low notification's on/off switch value. */
     @stub
-    // Gets the low notification's on/off switch value.
     def getNotifyLow(): Boolean = ???
 
+    /** Sets the difference mode flag value. */
     @stub
-    // Sets the difference mode flag value.
     def setDifferenceMode(value: Boolean): Unit = ???
 
+    /** Sets the high notification's on/off switch value. */
     @stub
-    // Sets the high notification's on/off switch value.
     def setNotifyHigh(value: Boolean): Unit = ???
 
+    /** Sets the low notification's on/off switch value. */
     @stub
-    // Sets the low notification's on/off switch value.
     def setNotifyLow(value: Boolean): Unit = ???
 }

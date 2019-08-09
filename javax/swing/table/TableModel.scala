@@ -3,56 +3,62 @@ package javax.swing.table
 import java.lang.{Class, Object, String}
 import javax.swing.event.TableModelListener
 
-// The TableModel interface specifies the methods the
-//  JTable will use to interrogate a tabular data model. 
-//
-//  The JTable can be set up to display any data
-//  model which implements the
-//  TableModel interface with a couple of lines of code:
-//  
-//      TableModel myData = new MyTableModel();
-//      JTable table = new JTable(myData);
-//  
-//
-// For further documentation, see Creating a Table Model
-// in The Java Tutorial.
+/** The TableModel interface specifies the methods the
+ *   JTable will use to interrogate a tabular data model. 
+ * 
+ *   The JTable can be set up to display any data
+ *   model which implements the
+ *   TableModel interface with a couple of lines of code:
+ *   
+ *       TableModel myData = new MyTableModel();
+ *       JTable table = new JTable(myData);
+ *   
+ * 
+ *  For further documentation, see Creating a Table Model
+ *  in The Java Tutorial.
+ */
 trait TableModel {
 
+    /** Adds a listener to the list that is notified each time a change
+     *  to the data model occurs.
+     */
     @stub
-    // Adds a listener to the list that is notified each time a change
-    // to the data model occurs.
     def addTableModelListener(l: TableModelListener): Unit = ???
 
+    /** Returns the most specific superclass for all the cell values
+     *  in the column.
+     */
     @stub
-    // Returns the most specific superclass for all the cell values
-    // in the column.
     def getColumnClass(columnIndex: Int): Class[_] = ???
 
+    /** Returns the number of columns in the model. */
     @stub
-    // Returns the number of columns in the model.
     def getColumnCount(): Int = ???
 
+    /** Returns the name of the column at columnIndex. */
     @stub
-    // Returns the name of the column at columnIndex.
     def getColumnName(columnIndex: Int): String = ???
 
+    /** Returns the number of rows in the model. */
     @stub
-    // Returns the number of rows in the model.
     def getRowCount(): Int = ???
 
+    /** Returns the value for the cell at columnIndex and
+     *  rowIndex.
+     */
     @stub
-    // Returns the value for the cell at columnIndex and
-    // rowIndex.
     def getValueAt(rowIndex: Int, columnIndex: Int): Object = ???
 
+    /** Returns true if the cell at rowIndex and
+     *  columnIndex
+     *  is editable.
+     */
     @stub
-    // Returns true if the cell at rowIndex and
-    // columnIndex
-    // is editable.
     def isCellEditable(rowIndex: Int, columnIndex: Int): Boolean = ???
 
+    /** Removes a listener from the list that is notified each time a
+     *  change to the data model occurs.
+     */
     @stub
-    // Removes a listener from the list that is notified each time a
-    // change to the data model occurs.
     def removeTableModelListener(l: TableModelListener): Unit = ???
 }

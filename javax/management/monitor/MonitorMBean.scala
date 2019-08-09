@@ -3,58 +3,60 @@ package javax.management.monitor
 import java.lang.String
 import javax.management.ObjectName
 
-// Exposes the remote management interface of monitor MBeans.
+/** Exposes the remote management interface of monitor MBeans. */
 trait MonitorMBean {
 
+    /** Adds the specified object in the set of observed MBeans. */
     @stub
-    // Adds the specified object in the set of observed MBeans.
     def addObservedObject(object: ObjectName): Unit = ???
 
+    /** Tests whether the specified object is in the set of observed MBeans. */
     @stub
-    // Tests whether the specified object is in the set of observed MBeans.
     def containsObservedObject(object: ObjectName): Boolean = ???
 
+    /** Gets the granularity period (in milliseconds). */
     @stub
-    // Gets the granularity period (in milliseconds).
     def getGranularityPeriod(): Long = ???
 
+    /** Gets the attribute being observed. */
     @stub
-    // Gets the attribute being observed.
     def getObservedAttribute(): String = ???
 
+    /** Deprecated. 
+     * As of JMX 1.2, replaced by getObservedObjects()
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JMX 1.2, replaced by getObservedObjects()
-    //
     def getObservedObject(): ObjectName = ???
 
+    /** Returns an array containing the objects being observed. */
     @stub
-    // Returns an array containing the objects being observed.
     def getObservedObjects(): Array[ObjectName] = ???
 
+    /** Tests if the monitor MBean is active. */
     @stub
-    // Tests if the monitor MBean is active.
     def isActive(): Boolean = ???
 
+    /** Removes the specified object from the set of observed MBeans. */
     @stub
-    // Removes the specified object from the set of observed MBeans.
     def removeObservedObject(object: ObjectName): Unit = ???
 
+    /** Sets the granularity period (in milliseconds). */
     @stub
-    // Sets the granularity period (in milliseconds).
     def setGranularityPeriod(period: Long): Unit = ???
 
+    /** Sets the attribute to observe. */
     @stub
-    // Sets the attribute to observe.
     def setObservedAttribute(attribute: String): Unit = ???
 
+    /** Deprecated. 
+     * As of JMX 1.2, replaced by addObservedObject(javax.management.ObjectName)
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JMX 1.2, replaced by addObservedObject(javax.management.ObjectName)
-    //
     def setObservedObject(object: ObjectName): Unit = ???
 
+    /** Starts the monitor. */
     @stub
-    // Starts the monitor.
     def start(): Unit = ???
 }

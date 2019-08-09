@@ -3,212 +3,221 @@ package java.awt.color
 import java.io.Serializable
 import java.lang.{Object, String}
 
-// This abstract class is used to serve as a color space tag to identify the
-// specific color space of a Color object or, via a ColorModel object,
-// of an Image, a BufferedImage, or a GraphicsDevice.  It contains
-// methods that transform colors in a specific color space to/from sRGB
-// and to/from a well-defined CIEXYZ color space.
-// 
-// For purposes of the methods in this class, colors are represented as
-// arrays of color components represented as floats in a normalized range
-// defined by each ColorSpace.  For many ColorSpaces (e.g. sRGB), this
-// range is 0.0 to 1.0.  However, some ColorSpaces have components whose
-// values have a different range.  Methods are provided to inquire per
-// component minimum and maximum normalized values.
-// 
-// Several variables are defined for purposes of referring to color
-// space types (e.g. TYPE_RGB, TYPE_XYZ, etc.) and to refer to specific
-// color spaces (e.g. CS_sRGB and CS_CIEXYZ).
-// sRGB is a proposed standard RGB color space.  For more information,
-// see 
-// http://www.w3.org/pub/WWW/Graphics/Color/sRGB.html
-// .
-// 
-// The purpose of the methods to transform to/from the well-defined
-// CIEXYZ color space is to support conversions between any two color
-// spaces at a reasonably high degree of accuracy.  It is expected that
-// particular implementations of subclasses of ColorSpace (e.g.
-// ICC_ColorSpace) will support high performance conversion based on
-// underlying platform color management systems.
-// 
-// The CS_CIEXYZ space used by the toCIEXYZ/fromCIEXYZ methods can be
-// described as follows:
-//
-//
-//      CIEXYZ
-//      viewing illuminance: 200 lux
-//      viewing white point: CIE D50
-//      media white point: "that of a perfectly reflecting diffuser" -- D50
-//      media black point: 0 lux or 0 Reflectance
-//      flare: 1 percent
-//      surround: 20percent of the media white point
-//      media description: reflection print (i.e., RLAB, Hunt viewing media)
-//      note: For developers creating an ICC profile for this conversion
-//            space, the following is applicable.  Use a simple Von Kries
-//            white point adaptation folded into the 3X3 matrix parameters
-//            and fold the flare and surround effects into the three
-//            one-dimensional lookup tables (assuming one uses the minimal
-//            model for monitors).
-//
-//
+/** This abstract class is used to serve as a color space tag to identify the
+ *  specific color space of a Color object or, via a ColorModel object,
+ *  of an Image, a BufferedImage, or a GraphicsDevice.  It contains
+ *  methods that transform colors in a specific color space to/from sRGB
+ *  and to/from a well-defined CIEXYZ color space.
+ *  
+ *  For purposes of the methods in this class, colors are represented as
+ *  arrays of color components represented as floats in a normalized range
+ *  defined by each ColorSpace.  For many ColorSpaces (e.g. sRGB), this
+ *  range is 0.0 to 1.0.  However, some ColorSpaces have components whose
+ *  values have a different range.  Methods are provided to inquire per
+ *  component minimum and maximum normalized values.
+ *  
+ *  Several variables are defined for purposes of referring to color
+ *  space types (e.g. TYPE_RGB, TYPE_XYZ, etc.) and to refer to specific
+ *  color spaces (e.g. CS_sRGB and CS_CIEXYZ).
+ *  sRGB is a proposed standard RGB color space.  For more information,
+ *  see 
+ *  http://www.w3.org/pub/WWW/Graphics/Color/sRGB.html
+ *  .
+ *  
+ *  The purpose of the methods to transform to/from the well-defined
+ *  CIEXYZ color space is to support conversions between any two color
+ *  spaces at a reasonably high degree of accuracy.  It is expected that
+ *  particular implementations of subclasses of ColorSpace (e.g.
+ *  ICC_ColorSpace) will support high performance conversion based on
+ *  underlying platform color management systems.
+ *  
+ *  The CS_CIEXYZ space used by the toCIEXYZ/fromCIEXYZ methods can be
+ *  described as follows:
+ * 
+ * 
+ *       CIEXYZ
+ *       viewing illuminance: 200 lux
+ *       viewing white point: CIE D50
+ *       media white point: "that of a perfectly reflecting diffuser" -- D50
+ *       media black point: 0 lux or 0 Reflectance
+ *       flare: 1 percent
+ *       surround: 20percent of the media white point
+ *       media description: reflection print (i.e., RLAB, Hunt viewing media)
+ *       note: For developers creating an ICC profile for this conversion
+ *             space, the following is applicable.  Use a simple Von Kries
+ *             white point adaptation folded into the 3X3 matrix parameters
+ *             and fold the flare and surround effects into the three
+ *             one-dimensional lookup tables (assuming one uses the minimal
+ *             model for monitors).
+ * 
+ * 
+ */
 abstract class ColorSpace extends Object with Serializable {
 
-    // Transforms a color value assumed to be in the CS_CIEXYZ conversion
-    // color space into this ColorSpace.
-    def fromCIEXYZ(colorvalue: Array[float]): Array[float]
+    /** Transforms a color value assumed to be in the CS_CIEXYZ conversion
+     *  color space into this ColorSpace.
+     */
+    def fromCIEXYZ(colorvalue: Array[Float]): Array[Float]
 
-    // Transforms a color value assumed to be in the default CS_sRGB
-    // color space into this ColorSpace.
-    def fromRGB(rgbvalue: Array[float]): Array[float]
+    /** Transforms a color value assumed to be in the default CS_sRGB
+     *  color space into this ColorSpace.
+     */
+    def fromRGB(rgbvalue: Array[Float]): Array[Float]
 
-    // Returns the maximum normalized color component value for the
-    // specified component.
-    def getMaxValue(component: Int): float
+    /** Returns the maximum normalized color component value for the
+     *  specified component.
+     */
+    def getMaxValue(component: Int): Float
 
-    // Returns the minimum normalized color component value for the
-    // specified component.
-    def getMinValue(component: Int): float
+    /** Returns the minimum normalized color component value for the
+     *  specified component.
+     */
+    def getMinValue(component: Int): Float
 
-    // Returns the name of the component given the component index.
+    /** Returns the name of the component given the component index. */
     def getName(idx: Int): String
 
-    // Returns the number of components of this ColorSpace.
+    /** Returns the number of components of this ColorSpace. */
     def getNumComponents(): Int
 
-    // Returns the color space type of this ColorSpace (for example
-    // TYPE_RGB, TYPE_XYZ, ...).
+    /** Returns the color space type of this ColorSpace (for example
+     *  TYPE_RGB, TYPE_XYZ, ...).
+     */
     def getType(): Int
 
-    // Returns true if the ColorSpace is CS_sRGB.
+    /** Returns true if the ColorSpace is CS_sRGB. */
     def isCS_sRGB(): Boolean
 
-    // Transforms a color value assumed to be in this ColorSpace
-    // into the CS_CIEXYZ conversion color space.
-    def toCIEXYZ(colorvalue: Array[float]): Array[float]
+    /** Transforms a color value assumed to be in this ColorSpace
+     *  into the CS_CIEXYZ conversion color space.
+     */
+    def toCIEXYZ(colorvalue: Array[Float]): Array[Float]
 }
 
 object ColorSpace {
+    /** The CIEXYZ conversion color space defined above. */
     @stub
-    // The CIEXYZ conversion color space defined above.
-    def CS_CIEXYZ: Int = ???
+    val CS_CIEXYZ: Int = ???
 
+    /** The built-in linear gray scale color space. */
     @stub
-    // The built-in linear gray scale color space.
-    def CS_GRAY: Int = ???
+    val CS_GRAY: Int = ???
 
+    /** A built-in linear RGB color space. */
     @stub
-    // A built-in linear RGB color space.
-    def CS_LINEAR_RGB: Int = ???
+    val CS_LINEAR_RGB: Int = ???
 
+    /** The Photo YCC conversion color space. */
     @stub
-    // The Photo YCC conversion color space.
-    def CS_PYCC: Int = ???
+    val CS_PYCC: Int = ???
 
+    /** The sRGB color space defined at
+     *  
+     *  http://www.w3.org/pub/WWW/Graphics/Color/sRGB.html
+     *  .
+     */
     @stub
-    // The sRGB color space defined at
-    // 
-    // http://www.w3.org/pub/WWW/Graphics/Color/sRGB.html
-    // .
-    def CS_sRGB: Int = ???
+    val CS_sRGB: Int = ???
 
+    /** Generic 2 component color spaces. */
     @stub
-    // Generic 2 component color spaces.
-    def TYPE_2CLR: Int = ???
+    val TYPE_2CLR: Int = ???
 
+    /** Generic 3 component color spaces. */
     @stub
-    // Generic 3 component color spaces.
-    def TYPE_3CLR: Int = ???
+    val TYPE_3CLR: Int = ???
 
+    /** Generic 4 component color spaces. */
     @stub
-    // Generic 4 component color spaces.
-    def TYPE_4CLR: Int = ???
+    val TYPE_4CLR: Int = ???
 
+    /** Generic 5 component color spaces. */
     @stub
-    // Generic 5 component color spaces.
-    def TYPE_5CLR: Int = ???
+    val TYPE_5CLR: Int = ???
 
+    /** Generic 6 component color spaces. */
     @stub
-    // Generic 6 component color spaces.
-    def TYPE_6CLR: Int = ???
+    val TYPE_6CLR: Int = ???
 
+    /** Generic 7 component color spaces. */
     @stub
-    // Generic 7 component color spaces.
-    def TYPE_7CLR: Int = ???
+    val TYPE_7CLR: Int = ???
 
+    /** Generic 8 component color spaces. */
     @stub
-    // Generic 8 component color spaces.
-    def TYPE_8CLR: Int = ???
+    val TYPE_8CLR: Int = ???
 
+    /** Generic 9 component color spaces. */
     @stub
-    // Generic 9 component color spaces.
-    def TYPE_9CLR: Int = ???
+    val TYPE_9CLR: Int = ???
 
+    /** Generic 10 component color spaces. */
     @stub
-    // Generic 10 component color spaces.
-    def TYPE_ACLR: Int = ???
+    val TYPE_ACLR: Int = ???
 
+    /** Generic 11 component color spaces. */
     @stub
-    // Generic 11 component color spaces.
-    def TYPE_BCLR: Int = ???
+    val TYPE_BCLR: Int = ???
 
+    /** Generic 12 component color spaces. */
     @stub
-    // Generic 12 component color spaces.
-    def TYPE_CCLR: Int = ???
+    val TYPE_CCLR: Int = ???
 
+    /** Any of the family of CMY color spaces. */
     @stub
-    // Any of the family of CMY color spaces.
-    def TYPE_CMY: Int = ???
+    val TYPE_CMY: Int = ???
 
+    /** Any of the family of CMYK color spaces. */
     @stub
-    // Any of the family of CMYK color spaces.
-    def TYPE_CMYK: Int = ???
+    val TYPE_CMYK: Int = ???
 
+    /** Generic 13 component color spaces. */
     @stub
-    // Generic 13 component color spaces.
-    def TYPE_DCLR: Int = ???
+    val TYPE_DCLR: Int = ???
 
+    /** Generic 14 component color spaces. */
     @stub
-    // Generic 14 component color spaces.
-    def TYPE_ECLR: Int = ???
+    val TYPE_ECLR: Int = ???
 
+    /** Generic 15 component color spaces. */
     @stub
-    // Generic 15 component color spaces.
-    def TYPE_FCLR: Int = ???
+    val TYPE_FCLR: Int = ???
 
+    /** Any of the family of GRAY color spaces. */
     @stub
-    // Any of the family of GRAY color spaces.
-    def TYPE_GRAY: Int = ???
+    val TYPE_GRAY: Int = ???
 
+    /** Any of the family of HLS color spaces. */
     @stub
-    // Any of the family of HLS color spaces.
-    def TYPE_HLS: Int = ???
+    val TYPE_HLS: Int = ???
 
+    /** Any of the family of HSV color spaces. */
     @stub
-    // Any of the family of HSV color spaces.
-    def TYPE_HSV: Int = ???
+    val TYPE_HSV: Int = ???
 
+    /** Any of the family of Lab color spaces. */
     @stub
-    // Any of the family of Lab color spaces.
-    def TYPE_Lab: Int = ???
+    val TYPE_Lab: Int = ???
 
+    /** Any of the family of Luv color spaces. */
     @stub
-    // Any of the family of Luv color spaces.
-    def TYPE_Luv: Int = ???
+    val TYPE_Luv: Int = ???
 
+    /** Any of the family of RGB color spaces. */
     @stub
-    // Any of the family of RGB color spaces.
-    def TYPE_RGB: Int = ???
+    val TYPE_RGB: Int = ???
 
+    /** Any of the family of XYZ color spaces. */
     @stub
-    // Any of the family of XYZ color spaces.
-    def TYPE_XYZ: Int = ???
+    val TYPE_XYZ: Int = ???
 
+    /** Any of the family of YCbCr color spaces. */
     @stub
-    // Any of the family of YCbCr color spaces.
-    def TYPE_YCbCr: Int = ???
+    val TYPE_YCbCr: Int = ???
 
+    /** Returns a ColorSpace representing one of the specific
+     *  predefined color spaces.
+     */
     @stub
-    // Returns a ColorSpace representing one of the specific
-    // predefined color spaces.
     def getInstance(colorspace: Int): ColorSpace = ???
 }

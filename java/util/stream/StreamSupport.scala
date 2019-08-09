@@ -4,47 +4,55 @@ import java.lang.Object
 import java.util.{Spliterator, Spliterator.OfDouble, Spliterator.OfInt, Spliterator.OfLong}
 import java.util.function.Supplier
 
-// Low-level utility methods for creating and manipulating streams.
-//
-// This class is mostly for library writers presenting stream views
-// of data structures; most static stream methods intended for end users are in
-// the various Stream classes.
+/** Low-level utility methods for creating and manipulating streams.
+ * 
+ *  This class is mostly for library writers presenting stream views
+ *  of data structures; most static stream methods intended for end users are in
+ *  the various Stream classes.
+ */
 final class StreamSupport extends Object {
 }
 
 object StreamSupport {
+    /** Creates a new sequential or parallel DoubleStream from a
+     *  Spliterator.OfDouble.
+     */
     @stub
-    // Creates a new sequential or parallel DoubleStream from a
-    // Spliterator.OfDouble.
     def doubleStream(spliterator: Spliterator.OfDouble, parallel: Boolean): DoubleStream = ???
 
+    /** Creates a new sequential or parallel DoubleStream from a
+     *  Supplier of Spliterator.OfDouble.
+     */
     @stub
-    // Creates a new sequential or parallel DoubleStream from a
-    // Supplier of Spliterator.OfDouble.
     def doubleStream(supplier: Supplier[_ <: Spliterator.OfDouble], characteristics: Int, parallel: Boolean): DoubleStream = ???
 
+    /** Creates a new sequential or parallel IntStream from a
+     *  Spliterator.OfInt.
+     */
     @stub
-    // Creates a new sequential or parallel IntStream from a
-    // Spliterator.OfInt.
     def intStream(spliterator: Spliterator.OfInt, parallel: Boolean): IntStream = ???
 
+    /** Creates a new sequential or parallel IntStream from a
+     *  Supplier of Spliterator.OfInt.
+     */
     @stub
-    // Creates a new sequential or parallel IntStream from a
-    // Supplier of Spliterator.OfInt.
     def intStream(supplier: Supplier[_ <: Spliterator.OfInt], characteristics: Int, parallel: Boolean): IntStream = ???
 
+    /** Creates a new sequential or parallel LongStream from a
+     *  Spliterator.OfLong.
+     */
     @stub
-    // Creates a new sequential or parallel LongStream from a
-    // Spliterator.OfLong.
     def longStream(spliterator: Spliterator.OfLong, parallel: Boolean): LongStream = ???
 
+    /** Creates a new sequential or parallel LongStream from a
+     *  Supplier of Spliterator.OfLong.
+     */
     @stub
-    // Creates a new sequential or parallel LongStream from a
-    // Supplier of Spliterator.OfLong.
     def longStream(supplier: Supplier[_ <: Spliterator.OfLong], characteristics: Int, parallel: Boolean): LongStream = ???
 
+    /** Creates a new sequential or parallel Stream from a
+     *  Spliterator.
+     */
     @stub
-    // Creates a new sequential or parallel Stream from a
-    // Spliterator.
-    def Stream[T]: [T] = ???
+    def stream[T](spliterator: Spliterator[T], parallel: Boolean): Stream[T] = ???
 }

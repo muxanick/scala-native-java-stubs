@@ -3,18 +3,20 @@ package javax.tools
 import java.nio.charset.Charset
 import java.util.Locale
 
-// Interface to invoke Java™ programming language documentation tools from
-// programs.
-trait DocumentationTool extends Tool , OptionChecker {
+/** Interface to invoke Java™ programming language documentation tools from
+ *  programs.
+ */
+trait DocumentationTool extends Tool with OptionChecker {
 
+    /** Gets a new instance of the standard file manager implementation
+     *  for this tool.
+     */
     @stub
-    // Gets a new instance of the standard file manager implementation
-    // for this tool.
     def getStandardFileManager(diagnosticListener: DiagnosticListener[_ >: JavaFileObject], locale: Locale, charset: Charset): StandardJavaFileManager = ???
 }
 
 object DocumentationTool {
+    /** Interface representing a future for a documentation task. */
     @stub
-    // Interface representing a future for a documentation task.
-    def DocumentationTool.DocumentationTask: trait = ???
+    val DocumentationTool.DocumentationTask: trait = ???
 }

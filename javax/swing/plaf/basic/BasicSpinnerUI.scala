@@ -6,91 +6,102 @@ import java.lang.Object
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, SpinnerUI}
 
-// The default Spinner UI delegate.
+/** The default Spinner UI delegate. */
 class BasicSpinnerUI extends SpinnerUI {
 
+    /** This method is called by installUI to get the editor component
+     *  of the JSpinner.
+     */
     @stub
-    // This method is called by installUI to get the editor component
-    // of the JSpinner.
     protected def createEditor(): JComponent = ???
 
+    /** Creates a LayoutManager that manages the editor,
+     *  nextButton, and previousButton
+     *  children of the JSpinner.
+     */
     @stub
-    // Creates a LayoutManager that manages the editor,
-    // nextButton, and previousButton
-    // children of the JSpinner.
     protected def createLayout(): LayoutManager = ???
 
+    /** Creates an increment button, i.e. */
     @stub
-    // Creates an increment button, i.e.
     protected def createNextButton(): Component = ???
 
+    /** Creates a decrement button, i.e. */
     @stub
-    // Creates a decrement button, i.e.
     protected def createPreviousButton(): Component = ???
 
+    /** Creates a PropertyChangeListener that can be
+     *  added to the JSpinner itself.
+     */
     @stub
-    // Creates a PropertyChangeListener that can be
-    // added to the JSpinner itself.
     protected def createPropertyChangeListener(): PropertyChangeListener = ???
 
+    /** Returns the baseline. */
     @stub
-    // Returns the baseline.
     def getBaseline(c: JComponent, width: Int, height: Int): Int = ???
 
+    /** Returns an enum indicating how the baseline of the component
+     *  changes as the size changes.
+     */
     @stub
-    // Returns an enum indicating how the baseline of the component
-    // changes as the size changes.
     def getBaselineResizeBehavior(c: JComponent): Component.BaselineResizeBehavior = ???
 
+    /** Initialize the JSpinner border,
+     *  foreground, and background, properties
+     *  based on the corresponding "Spinner.*" properties from defaults table.
+     */
     @stub
-    // Initialize the JSpinner border,
-    // foreground, and background, properties
-    // based on the corresponding "Spinner.*" properties from defaults table.
     protected def installDefaults(): Unit = ???
 
+    /** Installs the keyboard Actions onto the JSpinner. */
     @stub
-    // Installs the keyboard Actions onto the JSpinner.
     protected def installKeyboardActions(): Unit = ???
 
+    /** Initializes PropertyChangeListener with
+     *  a shared object that delegates interesting PropertyChangeEvents
+     *  to protected methods.
+     */
     @stub
-    // Initializes PropertyChangeListener with
-    // a shared object that delegates interesting PropertyChangeEvents
-    // to protected methods.
     protected def installListeners(): Unit = ???
 
+    /** Installs the necessary listeners on the next button, c,
+     *  to update the JSpinner in response to a user gesture.
+     */
     @stub
-    // Installs the necessary listeners on the next button, c,
-    // to update the JSpinner in response to a user gesture.
     protected def installNextButtonListeners(c: Component): Unit = ???
 
+    /** Installs the necessary listeners on the previous button, c,
+     *  to update the JSpinner in response to a user gesture.
+     */
     @stub
-    // Installs the necessary listeners on the previous button, c,
-    // to update the JSpinner in response to a user gesture.
     protected def installPreviousButtonListeners(c: Component): Unit = ???
 
+    /** Calls installDefaults, installListeners,
+     *  and then adds the components returned by createNextButton,
+     *  createPreviousButton, and createEditor.
+     */
     @stub
-    // Calls installDefaults, installListeners,
-    // and then adds the components returned by createNextButton,
-    // createPreviousButton, and createEditor.
     def installUI(c: JComponent): Unit = ???
 
+    /** Called by the PropertyChangeListener when the
+     *  JSpinner editor property changes.
+     */
     @stub
-    // Called by the PropertyChangeListener when the
-    // JSpinner editor property changes.
     protected def replaceEditor(oldEditor: JComponent, newEditor: JComponent): Unit = ???
 
+    /** Sets the JSpinner's layout manager to null. */
     @stub
-    // Sets the JSpinner's layout manager to null.
     protected def uninstallDefaults(): Unit = ???
 
+    /** Removes the PropertyChangeListener added
+     *  by installListeners.
+     */
     @stub
-    // Removes the PropertyChangeListener added
-    // by installListeners.
     protected def uninstallListeners(): Unit = ???
 }
 
 object BasicSpinnerUI {
+    /** Returns a new instance of BasicSpinnerUI. */
     @stub
-    // Returns a new instance of BasicSpinnerUI.
     def createUI(c: JComponent): ComponentUI = ???
 }

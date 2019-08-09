@@ -5,88 +5,96 @@ import java.util.Enumeration
 import javax.swing.ListSelectionModel
 import javax.swing.event.TableColumnModelListener
 
-// Defines the requirements for a table column model object suitable for
-// use with JTable.
+/** Defines the requirements for a table column model object suitable for
+ *  use with JTable.
+ */
 trait TableColumnModel {
 
+    /** Appends aColumn to the end of the
+     *   tableColumns array.
+     */
     @stub
-    // Appends aColumn to the end of the
-    //  tableColumns array.
     def addColumn(aColumn: TableColumn): Unit = ???
 
+    /** Adds a listener for table column model events. */
     @stub
-    // Adds a listener for table column model events.
     def addColumnModelListener(x: TableColumnModelListener): Unit = ???
 
+    /** Returns the TableColumn object for the column at
+     *  columnIndex.
+     */
     @stub
-    // Returns the TableColumn object for the column at
-    // columnIndex.
     def getColumn(columnIndex: Int): TableColumn = ???
 
+    /** Returns the number of columns in the model. */
     @stub
-    // Returns the number of columns in the model.
     def getColumnCount(): Int = ???
 
+    /** Returns the index of the first column in the table
+     *  whose identifier is equal to identifier,
+     *  when compared using equals.
+     */
     @stub
-    // Returns the index of the first column in the table
-    // whose identifier is equal to identifier,
-    // when compared using equals.
     def getColumnIndex(columnIdentifier: Object): Int = ???
 
+    /** Returns the index of the column that lies on the
+     *  horizontal point, xPosition;
+     *  or -1 if it lies outside the any of the column's bounds.
+     */
     @stub
-    // Returns the index of the column that lies on the
-    // horizontal point, xPosition;
-    // or -1 if it lies outside the any of the column's bounds.
     def getColumnIndexAtX(xPosition: Int): Int = ???
 
+    /** Returns the width between the cells in each column. */
     @stub
-    // Returns the width between the cells in each column.
     def getColumnMargin(): Int = ???
 
+    /** Returns an Enumeration of all the columns in the model. */
     @stub
-    // Returns an Enumeration of all the columns in the model.
     def getColumns(): Enumeration[TableColumn] = ???
 
+    /** Returns true if columns may be selected. */
     @stub
-    // Returns true if columns may be selected.
     def getColumnSelectionAllowed(): Boolean = ???
 
+    /** Returns the number of selected columns. */
     @stub
-    // Returns the number of selected columns.
     def getSelectedColumnCount(): Int = ???
 
+    /** Returns an array of indicies of all selected columns. */
     @stub
-    // Returns an array of indicies of all selected columns.
     def getSelectedColumns(): Array[Int] = ???
 
+    /** Returns the current selection model. */
     @stub
-    // Returns the current selection model.
     def getSelectionModel(): ListSelectionModel = ???
 
+    /** Returns the total width of all the columns. */
     @stub
-    // Returns the total width of all the columns.
     def getTotalColumnWidth(): Int = ???
 
+    /** Moves the column and its header at columnIndex to
+     *  newIndex.
+     */
     @stub
-    // Moves the column and its header at columnIndex to
-    // newIndex.
     def moveColumn(columnIndex: Int, newIndex: Int): Unit = ???
 
+    /** Deletes the TableColumn column from the
+     *   tableColumns array.
+     */
     @stub
-    // Deletes the TableColumn column from the
-    //  tableColumns array.
     def removeColumn(column: TableColumn): Unit = ???
 
+    /** Removes a listener for table column model events. */
     @stub
-    // Removes a listener for table column model events.
     def removeColumnModelListener(x: TableColumnModelListener): Unit = ???
 
+    /** Sets the TableColumn's column margin to
+     *  newMargin.
+     */
     @stub
-    // Sets the TableColumn's column margin to
-    // newMargin.
     def setColumnMargin(newMargin: Int): Unit = ???
 
+    /** Sets whether the columns in this model may be selected. */
     @stub
-    // Sets whether the columns in this model may be selected.
     def setColumnSelectionAllowed(flag: Boolean): Unit = ???
 }

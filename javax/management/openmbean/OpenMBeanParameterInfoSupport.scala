@@ -4,102 +4,117 @@ import java.lang.{Comparable, Object, String}
 import java.util.Set
 import javax.management.{Descriptor, MBeanFeatureInfo, MBeanParameterInfo}
 
-// Describes a parameter used in one or more operations or
-// constructors of an open MBean.
+/** Describes a parameter used in one or more operations or
+ *  constructors of an open MBean.
+ */
 class OpenMBeanParameterInfoSupport extends MBeanParameterInfo with OpenMBeanParameterInfo {
 
+    /** Constructs an OpenMBeanParameterInfoSupport instance,
+     *  which describes the parameter used in one or more operations or
+     *  constructors of a class of open MBeans, with the specified
+     *  name, openType and description.
+     */
     @stub
-    // Constructs an OpenMBeanParameterInfoSupport instance,
-    // which describes the parameter used in one or more operations or
-    // constructors of a class of open MBeans, with the specified
-    // name, openType and description.
     def this(name: String, description: String, openType: OpenType[_]) = ???
 
+    /** Constructs an OpenMBeanParameterInfoSupport instance,
+     *  which describes the parameter used in one or more operations or
+     *  constructors of a class of open MBeans, with the specified
+     *  name, openType, description,
+     *  and descriptor.
+     */
     @stub
-    // Constructs an OpenMBeanParameterInfoSupport instance,
-    // which describes the parameter used in one or more operations or
-    // constructors of a class of open MBeans, with the specified
-    // name, openType, description,
-    // and descriptor.
     def this(name: String, description: String, openType: OpenType[_], descriptor: Descriptor) = ???
 
+    /** Constructs an OpenMBeanParameterInfoSupport instance,
+     *  which describes the parameter used in one or more operations or
+     *  constructors of a class of open MBeans, with the specified
+     *  name, openType, description and defaultValue.
+     */
     @stub
-    // Constructs an OpenMBeanParameterInfoSupport instance,
-    // which describes the parameter used in one or more operations or
-    // constructors of a class of open MBeans, with the specified
-    // name, openType, description and defaultValue.
     def this(name: String, description: String, openType: OpenType[T], defaultValue: T) = ???
 
+    /** Constructs an OpenMBeanParameterInfoSupport instance,
+     *  which describes the parameter used in one or more operations or
+     *  constructors of a class of open MBeans, with the specified
+     *  name, openType, description, defaultValue, minValue and maxValue.
+     */
     @stub
-    // Constructs an OpenMBeanParameterInfoSupport instance,
-    // which describes the parameter used in one or more operations or
-    // constructors of a class of open MBeans, with the specified
-    // name, openType, description, defaultValue, minValue and maxValue.
     def this(name: String, description: String, openType: OpenType[T], defaultValue: T, minValue: Comparable[T], maxValue: Comparable[T]) = ???
 
+    /** Compares the specified obj parameter with this OpenMBeanParameterInfoSupport instance for equality. */
     @stub
-    // Compares the specified obj parameter with this OpenMBeanParameterInfoSupport instance for equality.
     def equals(obj: Object): Boolean = ???
 
+    /** Returns the default value for the parameter described by this
+     *  OpenMBeanParameterInfoSupport instance, if specified,
+     *  or null otherwise.
+     */
     @stub
-    // Returns the default value for the parameter described by this
-    // OpenMBeanParameterInfoSupport instance, if specified,
-    // or null otherwise.
     def getDefaultValue(): Object = ???
 
+    /** Returns an unmodifiable Set of legal values for the parameter
+     *  described by this OpenMBeanParameterInfoSupport
+     *  instance, if specified, or null otherwise.
+     */
     @stub
-    // Returns an unmodifiable Set of legal values for the parameter
-    // described by this OpenMBeanParameterInfoSupport
-    // instance, if specified, or null otherwise.
     def getLegalValues(): Set[_] = ???
 
+    /** Returns the maximal value for the parameter described by this
+     *  OpenMBeanParameterInfoSupport instance, if specified,
+     *  or null otherwise.
+     */
     @stub
-    // Returns the maximal value for the parameter described by this
-    // OpenMBeanParameterInfoSupport instance, if specified,
-    // or null otherwise.
     def getMaxValue(): Comparable[_] = ???
 
+    /** Returns the minimal value for the parameter described by this
+     *  OpenMBeanParameterInfoSupport instance, if specified,
+     *  or null otherwise.
+     */
     @stub
-    // Returns the minimal value for the parameter described by this
-    // OpenMBeanParameterInfoSupport instance, if specified,
-    // or null otherwise.
     def getMinValue(): Comparable[_] = ???
 
+    /** Returns the open type for the values of the parameter described
+     *  by this OpenMBeanParameterInfoSupport instance.
+     */
     @stub
-    // Returns the open type for the values of the parameter described
-    // by this OpenMBeanParameterInfoSupport instance.
     def getOpenType(): OpenType[_] = ???
 
+    /** Returns true if this OpenMBeanParameterInfoSupport instance specifies a non-null
+     *  default value for the described parameter, false
+     *  otherwise.
+     */
     @stub
-    // Returns true if this OpenMBeanParameterInfoSupport instance specifies a non-null
-    // default value for the described parameter, false
-    // otherwise.
     def hasDefaultValue(): Boolean = ???
 
+    /** Returns the hash code value for this OpenMBeanParameterInfoSupport instance. */
     @stub
-    // Returns the hash code value for this OpenMBeanParameterInfoSupport instance.
     def hashCode(): Int = ???
 
+    /** Returns true if this OpenMBeanParameterInfoSupport instance specifies a non-null
+     *  set of legal values for the described parameter, false
+     *  otherwise.
+     */
     @stub
-    // Returns true if this OpenMBeanParameterInfoSupport instance specifies a non-null
-    // set of legal values for the described parameter, false
-    // otherwise.
     def hasLegalValues(): Boolean = ???
 
+    /** Returns true if this OpenMBeanParameterInfoSupport instance specifies a non-null
+     *  maximal value for the described parameter, false
+     *  otherwise.
+     */
     @stub
-    // Returns true if this OpenMBeanParameterInfoSupport instance specifies a non-null
-    // maximal value for the described parameter, false
-    // otherwise.
     def hasMaxValue(): Boolean = ???
 
+    /** Returns true if this OpenMBeanParameterInfoSupport instance specifies a non-null
+     *  minimal value for the described parameter, false
+     *  otherwise.
+     */
     @stub
-    // Returns true if this OpenMBeanParameterInfoSupport instance specifies a non-null
-    // minimal value for the described parameter, false
-    // otherwise.
     def hasMinValue(): Boolean = ???
 
+    /** Tests whether obj is a valid value for the parameter
+     *  described by this OpenMBeanParameterInfo instance.
+     */
     @stub
-    // Tests whether obj is a valid value for the parameter
-    // described by this OpenMBeanParameterInfo instance.
     def isValue(obj: Object): Boolean = ???
 }

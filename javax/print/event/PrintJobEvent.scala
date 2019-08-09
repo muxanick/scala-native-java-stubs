@@ -3,36 +3,39 @@ package javax.print.event
 import java.lang.Object
 import java.util.EventObject
 
-// Class PrintJobEvent encapsulates common events a print job
-// reports to let a listener know of progress in the processing of the
-// DocPrintJob.
+/** Class PrintJobEvent encapsulates common events a print job
+ *  reports to let a listener know of progress in the processing of the
+ *  DocPrintJob.
+ */
 class PrintJobEvent extends PrintEvent {
 
+    /** Gets the reason for this event. */
     @stub
-    // Gets the reason for this event.
     def getPrintEventType(): Int = ???
 }
 
 object PrintJobEvent {
+    /** The job is not necessarily printed yet, but the data has been transferred
+     *  successfully from the client to the print service.
+     */
     @stub
-    // The job is not necessarily printed yet, but the data has been transferred
-    // successfully from the client to the print service.
-    def DATA_TRANSFER_COMPLETE: Int = ???
+    val DATA_TRANSFER_COMPLETE: Int = ???
 
+    /** The job was canceled by the PrintService. */
     @stub
-    // The job was canceled by the PrintService.
-    def JOB_CANCELED: Int = ???
+    val JOB_CANCELED: Int = ???
 
+    /** The document cis completely printed. */
     @stub
-    // The document cis completely printed.
-    def JOB_COMPLETE: Int = ???
+    val JOB_COMPLETE: Int = ???
 
+    /** The print service reports that the job cannot be completed. */
     @stub
-    // The print service reports that the job cannot be completed.
-    def JOB_FAILED: Int = ???
+    val JOB_FAILED: Int = ???
 
+    /** Not all print services may be capable of delivering interesting
+     *  events, or even telling when a job is complete.
+     */
     @stub
-    // Not all print services may be capable of delivering interesting
-    // events, or even telling when a job is complete.
-    def NO_MORE_EVENTS: Int = ???
+    val NO_MORE_EVENTS: Int = ???
 }

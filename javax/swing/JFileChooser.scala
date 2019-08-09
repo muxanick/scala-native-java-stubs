@@ -8,484 +8,523 @@ import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.filechooser.{FileFilter, FileSystemView, FileView}
 import javax.swing.plaf.FileChooserUI
 
-// JFileChooser provides a simple mechanism for the user to
-// choose a file.
-// For information about using JFileChooser, see
-// How to Use File Choosers,
-// a section in The Java Tutorial.
-//
-// 
-//
-// The following code pops up a file chooser for the user's home directory that
-// sees only .jpg and .gif images:
-// 
-//    JFileChooser chooser = new JFileChooser();
-//    FileNameExtensionFilter filter = new FileNameExtensionFilter(
-//        "JPG & GIF Images", "jpg", "gif");
-//    chooser.setFileFilter(filter);
-//    int returnVal = chooser.showOpenDialog(parent);
-//    if(returnVal == JFileChooser.APPROVE_OPTION) {
-//       System.out.println("You chose to open this file: " +
-//            chooser.getSelectedFile().getName());
-//    }
-// 
-// 
-// Warning: Swing is not thread safe. For more
-// information see Swing's Threading
-// Policy.
+/** JFileChooser provides a simple mechanism for the user to
+ *  choose a file.
+ *  For information about using JFileChooser, see
+ *  How to Use File Choosers,
+ *  a section in The Java Tutorial.
+ * 
+ *  
+ * 
+ *  The following code pops up a file chooser for the user's home directory that
+ *  sees only .jpg and .gif images:
+ *  
+ *     JFileChooser chooser = new JFileChooser();
+ *     FileNameExtensionFilter filter = new FileNameExtensionFilter(
+ *         "JPG & GIF Images", "jpg", "gif");
+ *     chooser.setFileFilter(filter);
+ *     int returnVal = chooser.showOpenDialog(parent);
+ *     if(returnVal == JFileChooser.APPROVE_OPTION) {
+ *        System.out.println("You chose to open this file: " +
+ *             chooser.getSelectedFile().getName());
+ *     }
+ *  
+ *  
+ *  Warning: Swing is not thread safe. For more
+ *  information see Swing's Threading
+ *  Policy.
+ */
 class JFileChooser extends JComponent with Accessible {
 
+    /** Constructs a JFileChooser pointing to the user's
+     *  default directory.
+     */
     @stub
-    // Constructs a JFileChooser pointing to the user's
-    // default directory.
     def this() = ???
 
+    /** Constructs a JFileChooser using the given File
+     *  as the path.
+     */
     @stub
-    // Constructs a JFileChooser using the given File
-    // as the path.
     def this(currentDirectory: File) = ???
 
+    /** Constructs a JFileChooser using the given current directory
+     *  and FileSystemView.
+     */
     @stub
-    // Constructs a JFileChooser using the given current directory
-    // and FileSystemView.
     def this(currentDirectory: File, fsv: FileSystemView) = ???
 
+    /** Constructs a JFileChooser using the given
+     *  FileSystemView.
+     */
     @stub
-    // Constructs a JFileChooser using the given
-    // FileSystemView.
     def this(fsv: FileSystemView) = ???
 
+    /** Constructs a JFileChooser using the given path. */
     @stub
-    // Constructs a JFileChooser using the given path.
     def this(currentDirectoryPath: String) = ???
 
+    /**  */
     @stub
-    // 
-    protected def accessibleContext: AccessibleContext = ???
+    protected val accessibleContext: AccessibleContext = ???
 
+    /** Returns true if the file should be displayed. */
     @stub
-    // Returns true if the file should be displayed.
     def accept(f: File): Boolean = ???
 
+    /** Adds an ActionListener to the file chooser. */
     @stub
-    // Adds an ActionListener to the file chooser.
     def addActionListener(l: ActionListener): Unit = ???
 
+    /** Adds a filter to the list of user choosable file filters. */
     @stub
-    // Adds a filter to the list of user choosable file filters.
     def addChoosableFileFilter(filter: FileFilter): Unit = ???
 
+    /** Called by the UI when the user hits the Approve button
+     *  (labeled "Open" or "Save", by default).
+     */
     @stub
-    // Called by the UI when the user hits the Approve button
-    // (labeled "Open" or "Save", by default).
     def approveSelection(): Unit = ???
 
+    /** Called by the UI when the user chooses the Cancel button. */
     @stub
-    // Called by the UI when the user chooses the Cancel button.
     def cancelSelection(): Unit = ???
 
+    /** Changes the directory to be set to the parent of the
+     *  current directory.
+     */
     @stub
-    // Changes the directory to be set to the parent of the
-    // current directory.
     def changeToParentDirectory(): Unit = ???
 
+    /** Creates and returns a new JDialog wrapping
+     *  this centered on the parent
+     *  in the parent's frame.
+     */
     @stub
-    // Creates and returns a new JDialog wrapping
-    // this centered on the parent
-    // in the parent's frame.
     protected def createDialog(parent: Component): JDialog = ???
 
+    /** Makes sure that the specified file is viewable, and
+     *  not hidden.
+     */
     @stub
-    // Makes sure that the specified file is viewable, and
-    // not hidden.
     def ensureFileIsVisible(f: File): Unit = ???
 
+    /** Notifies all listeners that have registered interest for
+     *  notification on this event type.
+     */
     @stub
-    // Notifies all listeners that have registered interest for
-    // notification on this event type.
     protected def fireActionPerformed(command: String): Unit = ???
 
+    /** Returns the AcceptAll file filter. */
     @stub
-    // Returns the AcceptAll file filter.
     def getAcceptAllFileFilter(): FileFilter = ???
 
+    /** Gets the AccessibleContext associated with this JFileChooser. */
     @stub
-    // Gets the AccessibleContext associated with this JFileChooser.
     def getAccessibleContext(): AccessibleContext = ???
 
+    /** Returns the accessory component. */
     @stub
-    // Returns the accessory component.
     def getAccessory(): JComponent = ???
 
+    /** Returns an array of all the action listeners
+     *  registered on this file chooser.
+     */
     @stub
-    // Returns an array of all the action listeners
-    // registered on this file chooser.
     def getActionListeners(): Array[ActionListener] = ???
 
+    /** Returns the approve button's mnemonic. */
     @stub
-    // Returns the approve button's mnemonic.
     def getApproveButtonMnemonic(): Int = ???
 
+    /** Returns the text used in the ApproveButton in the
+     *  FileChooserUI.
+     */
     @stub
-    // Returns the text used in the ApproveButton in the
-    // FileChooserUI.
     def getApproveButtonText(): String = ???
 
+    /** Returns the tooltip text used in the ApproveButton. */
     @stub
-    // Returns the tooltip text used in the ApproveButton.
     def getApproveButtonToolTipText(): String = ???
 
+    /** Gets the list of user choosable file filters. */
     @stub
-    // Gets the list of user choosable file filters.
     def getChoosableFileFilters(): Array[FileFilter] = ???
 
+    /** Returns the value of the controlButtonsAreShown
+     *  property.
+     */
     @stub
-    // Returns the value of the controlButtonsAreShown
-    // property.
     def getControlButtonsAreShown(): Boolean = ???
 
+    /** Returns the current directory. */
     @stub
-    // Returns the current directory.
     def getCurrentDirectory(): File = ???
 
+    /** Returns the file description. */
     @stub
-    // Returns the file description.
     def getDescription(f: File): String = ???
 
+    /** Gets the string that goes in the JFileChooser's titlebar. */
     @stub
-    // Gets the string that goes in the JFileChooser's titlebar.
     def getDialogTitle(): String = ???
 
+    /** Returns the type of this dialog. */
     @stub
-    // Returns the type of this dialog.
     def getDialogType(): Int = ???
 
+    /** Gets the value of the dragEnabled property. */
     @stub
-    // Gets the value of the dragEnabled property.
     def getDragEnabled(): Boolean = ???
 
+    /** Returns the currently selected file filter. */
     @stub
-    // Returns the currently selected file filter.
     def getFileFilter(): FileFilter = ???
 
+    /** Returns the current file-selection mode. */
     @stub
-    // Returns the current file-selection mode.
     def getFileSelectionMode(): Int = ???
 
+    /** Returns the file system view. */
     @stub
-    // Returns the file system view.
     def getFileSystemView(): FileSystemView = ???
 
+    /** Returns the current file view. */
     @stub
-    // Returns the current file view.
     def getFileView(): FileView = ???
 
+    /** Returns the icon for this file or type of file, depending
+     *  on the system.
+     */
     @stub
-    // Returns the icon for this file or type of file, depending
-    // on the system.
     def getIcon(f: File): Icon = ???
 
+    /** Returns the filename. */
     @stub
-    // Returns the filename.
     def getName(f: File): String = ???
 
+    /** Returns the selected file. */
     @stub
-    // Returns the selected file.
     def getSelectedFile(): File = ???
 
+    /** Returns a list of selected files if the file chooser is
+     *  set to allow multiple selection.
+     */
     @stub
-    // Returns a list of selected files if the file chooser is
-    // set to allow multiple selection.
     def getSelectedFiles(): Array[File] = ???
 
+    /** Returns the file type. */
     @stub
-    // Returns the file type.
     def getTypeDescription(f: File): String = ???
 
+    /** Gets the UI object which implements the L&F for this component. */
     @stub
-    // Gets the UI object which implements the L&F for this component.
     def getUI(): FileChooserUI = ???
 
+    /** Returns a string that specifies the name of the L&F class
+     *  that renders this component.
+     */
     @stub
-    // Returns a string that specifies the name of the L&F class
-    // that renders this component.
     def getUIClassID(): String = ???
 
+    /** Returns whether the AcceptAll FileFilter is used. */
     @stub
-    // Returns whether the AcceptAll FileFilter is used.
     def isAcceptAllFileFilterUsed(): Boolean = ???
 
+    /** Convenience call that determines if directories are selectable based
+     *  on the current file selection mode.
+     */
     @stub
-    // Convenience call that determines if directories are selectable based
-    // on the current file selection mode.
     def isDirectorySelectionEnabled(): Boolean = ???
 
+    /** Returns true if hidden files are not shown in the file chooser;
+     *  otherwise, returns false.
+     */
     @stub
-    // Returns true if hidden files are not shown in the file chooser;
-    // otherwise, returns false.
     def isFileHidingEnabled(): Boolean = ???
 
+    /** Convenience call that determines if files are selectable based on the
+     *  current file selection mode.
+     */
     @stub
-    // Convenience call that determines if files are selectable based on the
-    // current file selection mode.
     def isFileSelectionEnabled(): Boolean = ???
 
+    /** Returns true if multiple files can be selected. */
     @stub
-    // Returns true if multiple files can be selected.
     def isMultiSelectionEnabled(): Boolean = ???
 
+    /** Returns true if the file (directory) can be visited. */
     @stub
-    // Returns true if the file (directory) can be visited.
     def isTraversable(f: File): Boolean = ???
 
+    /** Returns a string representation of this JFileChooser. */
     @stub
-    // Returns a string representation of this JFileChooser.
     protected def paramString(): String = ???
 
+    /** Removes an ActionListener from the file chooser. */
     @stub
-    // Removes an ActionListener from the file chooser.
     def removeActionListener(l: ActionListener): Unit = ???
 
+    /** Removes a filter from the list of user choosable file filters. */
     @stub
-    // Removes a filter from the list of user choosable file filters.
     def removeChoosableFileFilter(f: FileFilter): Boolean = ???
 
+    /** Tells the UI to rescan its files list from the current directory. */
     @stub
-    // Tells the UI to rescan its files list from the current directory.
     def rescanCurrentDirectory(): Unit = ???
 
+    /** Resets the choosable file filter list to its starting state. */
     @stub
-    // Resets the choosable file filter list to its starting state.
     def resetChoosableFileFilters(): Unit = ???
 
+    /** Determines whether the AcceptAll FileFilter is used
+     *  as an available choice in the choosable filter list.
+     */
     @stub
-    // Determines whether the AcceptAll FileFilter is used
-    // as an available choice in the choosable filter list.
     def setAcceptAllFileFilterUsed(b: Boolean): Unit = ???
 
+    /** Sets the accessory component. */
     @stub
-    // Sets the accessory component.
     def setAccessory(newAccessory: JComponent): Unit = ???
 
+    /** Sets the approve button's mnemonic using a character. */
     @stub
-    // Sets the approve button's mnemonic using a character.
     def setApproveButtonMnemonic(mnemonic: Char): Unit = ???
 
+    /** Sets the approve button's mnemonic using a numeric keycode. */
     @stub
-    // Sets the approve button's mnemonic using a numeric keycode.
     def setApproveButtonMnemonic(mnemonic: Int): Unit = ???
 
+    /** Sets the text used in the ApproveButton in the
+     *  FileChooserUI.
+     */
     @stub
-    // Sets the text used in the ApproveButton in the
-    // FileChooserUI.
     def setApproveButtonText(approveButtonText: String): Unit = ???
 
+    /** Sets the tooltip text used in the ApproveButton. */
     @stub
-    // Sets the tooltip text used in the ApproveButton.
     def setApproveButtonToolTipText(toolTipText: String): Unit = ???
 
+    /** Sets the property
+     *  that indicates whether the approve and cancel
+     *  buttons are shown in the file chooser.
+     */
     @stub
-    // Sets the property
-    // that indicates whether the approve and cancel
-    // buttons are shown in the file chooser.
     def setControlButtonsAreShown(b: Boolean): Unit = ???
 
+    /** Sets the current directory. */
     @stub
-    // Sets the current directory.
     def setCurrentDirectory(dir: File): Unit = ???
 
+    /** Sets the string that goes in the JFileChooser window's
+     *  title bar.
+     */
     @stub
-    // Sets the string that goes in the JFileChooser window's
-    // title bar.
     def setDialogTitle(dialogTitle: String): Unit = ???
 
+    /** Sets the type of this dialog. */
     @stub
-    // Sets the type of this dialog.
     def setDialogType(dialogType: Int): Unit = ???
 
+    /** Sets the dragEnabled property,
+     *  which must be true to enable
+     *  automatic drag handling (the first part of drag and drop)
+     *  on this component.
+     */
     @stub
-    // Sets the dragEnabled property,
-    // which must be true to enable
-    // automatic drag handling (the first part of drag and drop)
-    // on this component.
     def setDragEnabled(b: Boolean): Unit = ???
 
+    /** Sets the current file filter. */
     @stub
-    // Sets the current file filter.
     def setFileFilter(filter: FileFilter): Unit = ???
 
+    /** Sets file hiding on or off. */
     @stub
-    // Sets file hiding on or off.
     def setFileHidingEnabled(b: Boolean): Unit = ???
 
+    /** Sets the JFileChooser to allow the user to just
+     *  select files, just select
+     *  directories, or select both files and directories.
+     */
     @stub
-    // Sets the JFileChooser to allow the user to just
-    // select files, just select
-    // directories, or select both files and directories.
     def setFileSelectionMode(mode: Int): Unit = ???
 
+    /** Sets the file system view that the JFileChooser uses for
+     *  accessing and creating file system resources, such as finding
+     *  the floppy drive and getting a list of root drives.
+     */
     @stub
-    // Sets the file system view that the JFileChooser uses for
-    // accessing and creating file system resources, such as finding
-    // the floppy drive and getting a list of root drives.
     def setFileSystemView(fsv: FileSystemView): Unit = ???
 
+    /** Sets the file view to used to retrieve UI information, such as
+     *  the icon that represents a file or the type description of a file.
+     */
     @stub
-    // Sets the file view to used to retrieve UI information, such as
-    // the icon that represents a file or the type description of a file.
     def setFileView(fileView: FileView): Unit = ???
 
+    /** Sets the file chooser to allow multiple file selections. */
     @stub
-    // Sets the file chooser to allow multiple file selections.
     def setMultiSelectionEnabled(b: Boolean): Unit = ???
 
+    /** Sets the selected file. */
     @stub
-    // Sets the selected file.
     def setSelectedFile(file: File): Unit = ???
 
+    /** Sets the list of selected files if the file chooser is
+     *  set to allow multiple selection.
+     */
     @stub
-    // Sets the list of selected files if the file chooser is
-    // set to allow multiple selection.
     def setSelectedFiles(selectedFiles: Array[File]): Unit = ???
 
+    /** Performs common constructor initialization and setup. */
     @stub
-    // Performs common constructor initialization and setup.
     protected def setup(view: FileSystemView): Unit = ???
 
+    /** Pops a custom file chooser dialog with a custom approve button. */
     @stub
-    // Pops a custom file chooser dialog with a custom approve button.
     def showDialog(parent: Component, approveButtonText: String): Int = ???
 
+    /** Pops up an "Open File" file chooser dialog. */
     @stub
-    // Pops up an "Open File" file chooser dialog.
     def showOpenDialog(parent: Component): Int = ???
 
+    /** Pops up a "Save File" file chooser dialog. */
     @stub
-    // Pops up a "Save File" file chooser dialog.
     def showSaveDialog(parent: Component): Int = ???
 }
 
 object JFileChooser {
+    /** Identifies whether a the AcceptAllFileFilter is used or not. */
     @stub
-    // Identifies whether a the AcceptAllFileFilter is used or not.
-    def ACCEPT_ALL_FILE_FILTER_USED_CHANGED_PROPERTY: String = ???
+    val ACCEPT_ALL_FILE_FILTER_USED_CHANGED_PROPERTY: String = ???
 
+    /** Says that a different accessory component is in use
+     *  (for example, to preview files).
+     */
     @stub
-    // Says that a different accessory component is in use
-    // (for example, to preview files).
-    def ACCESSORY_CHANGED_PROPERTY: String = ???
+    val ACCESSORY_CHANGED_PROPERTY: String = ???
 
+    /** Identifies change in the mnemonic for the approve (yes, ok) button. */
     @stub
-    // Identifies change in the mnemonic for the approve (yes, ok) button.
-    def APPROVE_BUTTON_MNEMONIC_CHANGED_PROPERTY: String = ???
+    val APPROVE_BUTTON_MNEMONIC_CHANGED_PROPERTY: String = ???
 
+    /** Identifies change in the text on the approve (yes, ok) button. */
     @stub
-    // Identifies change in the text on the approve (yes, ok) button.
-    def APPROVE_BUTTON_TEXT_CHANGED_PROPERTY: String = ???
+    val APPROVE_BUTTON_TEXT_CHANGED_PROPERTY: String = ???
 
+    /** Identifies change in the tooltip text for the approve (yes, ok)
+     *  button.
+     */
     @stub
-    // Identifies change in the tooltip text for the approve (yes, ok)
-    // button.
-    def APPROVE_BUTTON_TOOL_TIP_TEXT_CHANGED_PROPERTY: String = ???
+    val APPROVE_BUTTON_TOOL_TIP_TEXT_CHANGED_PROPERTY: String = ???
 
+    /** Return value if approve (yes, ok) is chosen. */
     @stub
-    // Return value if approve (yes, ok) is chosen.
-    def APPROVE_OPTION: Int = ???
+    val APPROVE_OPTION: Int = ???
 
+    /** Instruction to approve the current selection
+     *  (same as pressing yes or ok).
+     */
     @stub
-    // Instruction to approve the current selection
-    // (same as pressing yes or ok).
-    def APPROVE_SELECTION: String = ???
+    val APPROVE_SELECTION: String = ???
 
+    /** Return value if cancel is chosen. */
     @stub
-    // Return value if cancel is chosen.
-    def CANCEL_OPTION: Int = ???
+    val CANCEL_OPTION: Int = ???
 
+    /** Instruction to cancel the current selection. */
     @stub
-    // Instruction to cancel the current selection.
-    def CANCEL_SELECTION: String = ???
+    val CANCEL_SELECTION: String = ???
 
+    /** Identifies a change in the list of predefined file filters
+     *  the user can choose from.
+     */
     @stub
-    // Identifies a change in the list of predefined file filters
-    // the user can choose from.
-    def CHOOSABLE_FILE_FILTER_CHANGED_PROPERTY: String = ???
+    val CHOOSABLE_FILE_FILTER_CHANGED_PROPERTY: String = ???
 
+    /** Instruction to display the control buttons. */
     @stub
-    // Instruction to display the control buttons.
-    def CONTROL_BUTTONS_ARE_SHOWN_CHANGED_PROPERTY: String = ???
+    val CONTROL_BUTTONS_ARE_SHOWN_CHANGED_PROPERTY: String = ???
 
+    /** Type value indicating that the JFileChooser supports a
+     *  developer-specified file operation.
+     */
     @stub
-    // Type value indicating that the JFileChooser supports a
-    // developer-specified file operation.
-    def CUSTOM_DIALOG: Int = ???
+    val CUSTOM_DIALOG: Int = ???
 
+    /** Identifies a change in the dialog title. */
     @stub
-    // Identifies a change in the dialog title.
-    def DIALOG_TITLE_CHANGED_PROPERTY: String = ???
+    val DIALOG_TITLE_CHANGED_PROPERTY: String = ???
 
+    /** Identifies a change in the type of files displayed (files only,
+     *  directories only, or both files and directories).
+     */
     @stub
-    // Identifies a change in the type of files displayed (files only,
-    // directories only, or both files and directories).
-    def DIALOG_TYPE_CHANGED_PROPERTY: String = ???
+    val DIALOG_TYPE_CHANGED_PROPERTY: String = ???
 
+    /** Instruction to display only directories. */
     @stub
-    // Instruction to display only directories.
-    def DIRECTORIES_ONLY: Int = ???
+    val DIRECTORIES_ONLY: Int = ???
 
+    /** Identifies user's directory change. */
     @stub
-    // Identifies user's directory change.
-    def DIRECTORY_CHANGED_PROPERTY: String = ???
+    val DIRECTORY_CHANGED_PROPERTY: String = ???
 
+    /** Return value if an error occurred. */
     @stub
-    // Return value if an error occurred.
-    def ERROR_OPTION: Int = ???
+    val ERROR_OPTION: Int = ???
 
+    /** User changed the kind of files to display. */
     @stub
-    // User changed the kind of files to display.
-    def FILE_FILTER_CHANGED_PROPERTY: String = ???
+    val FILE_FILTER_CHANGED_PROPERTY: String = ???
 
+    /** Identifies a change in the display-hidden-files property. */
     @stub
-    // Identifies a change in the display-hidden-files property.
-    def FILE_HIDING_CHANGED_PROPERTY: String = ???
+    val FILE_HIDING_CHANGED_PROPERTY: String = ???
 
+    /** Identifies a change in the kind of selection (single,
+     *  multiple, etc.).
+     */
     @stub
-    // Identifies a change in the kind of selection (single,
-    // multiple, etc.).
-    def FILE_SELECTION_MODE_CHANGED_PROPERTY: String = ???
+    val FILE_SELECTION_MODE_CHANGED_PROPERTY: String = ???
 
+    /** Says that a different object is being used to find available drives
+     *  on the system.
+     */
     @stub
-    // Says that a different object is being used to find available drives
-    // on the system.
-    def FILE_SYSTEM_VIEW_CHANGED_PROPERTY: String = ???
+    val FILE_SYSTEM_VIEW_CHANGED_PROPERTY: String = ???
 
+    /** Says that a different object is being used to retrieve file
+     *  information.
+     */
     @stub
-    // Says that a different object is being used to retrieve file
-    // information.
-    def FILE_VIEW_CHANGED_PROPERTY: String = ???
+    val FILE_VIEW_CHANGED_PROPERTY: String = ???
 
+    /** Instruction to display both files and directories. */
     @stub
-    // Instruction to display both files and directories.
-    def FILES_AND_DIRECTORIES: Int = ???
+    val FILES_AND_DIRECTORIES: Int = ???
 
+    /** Instruction to display only files. */
     @stub
-    // Instruction to display only files.
-    def FILES_ONLY: Int = ???
+    val FILES_ONLY: Int = ???
 
+    /** Enables multiple-file selections. */
     @stub
-    // Enables multiple-file selections.
-    def MULTI_SELECTION_ENABLED_CHANGED_PROPERTY: String = ???
+    val MULTI_SELECTION_ENABLED_CHANGED_PROPERTY: String = ???
 
+    /** Type value indicating that the JFileChooser supports an
+     *  "Open" file operation.
+     */
     @stub
-    // Type value indicating that the JFileChooser supports an
-    // "Open" file operation.
-    def OPEN_DIALOG: Int = ???
+    val OPEN_DIALOG: Int = ???
 
+    /** Type value indicating that the JFileChooser supports a
+     *  "Save" file operation.
+     */
     @stub
-    // Type value indicating that the JFileChooser supports a
-    // "Save" file operation.
-    def SAVE_DIALOG: Int = ???
+    val SAVE_DIALOG: Int = ???
 
+    /** Identifies change in user's single-file selection. */
     @stub
-    // Identifies change in user's single-file selection.
-    def SELECTED_FILE_CHANGED_PROPERTY: String = ???
+    val SELECTED_FILE_CHANGED_PROPERTY: String = ???
 }

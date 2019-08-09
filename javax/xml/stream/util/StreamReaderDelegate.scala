@@ -4,234 +4,262 @@ import java.lang.{Object, String}
 import javax.xml.namespace.{NamespaceContext, QName}
 import javax.xml.stream.{Location, XMLStreamReader}
 
-// This is the base class for deriving an XMLStreamReader filter
-//
-// This class is designed to sit between an XMLStreamReader and an
-// application's XMLStreamReader.   By default each method
-// does nothing but call the corresponding method on the
-// parent interface.
+/** This is the base class for deriving an XMLStreamReader filter
+ * 
+ *  This class is designed to sit between an XMLStreamReader and an
+ *  application's XMLStreamReader.   By default each method
+ *  does nothing but call the corresponding method on the
+ *  parent interface.
+ */
 class StreamReaderDelegate extends Object with XMLStreamReader {
 
+    /** Construct an empty filter with no parent. */
     @stub
-    // Construct an empty filter with no parent.
     def this() = ???
 
+    /** Frees any resources associated with this Reader. */
     @stub
-    // Frees any resources associated with this Reader.
     def close(): Unit = ???
 
+    /** Returns the count of attributes on this START_ELEMENT,
+     *  this method is only valid on a START_ELEMENT or ATTRIBUTE.
+     */
     @stub
-    // Returns the count of attributes on this START_ELEMENT,
-    // this method is only valid on a START_ELEMENT or ATTRIBUTE.
     def getAttributeCount(): Int = ???
 
+    /** Returns the localName of the attribute at the provided
+     *  index
+     */
     @stub
-    // Returns the localName of the attribute at the provided
-    // index
     def getAttributeLocalName(index: Int): String = ???
 
+    /** Returns the qname of the attribute at the provided index */
     @stub
-    // Returns the qname of the attribute at the provided index
     def getAttributeName(index: Int): QName = ???
 
+    /** Returns the namespace of the attribute at the provided
+     *  index
+     */
     @stub
-    // Returns the namespace of the attribute at the provided
-    // index
     def getAttributeNamespace(index: Int): String = ???
 
+    /** Returns the prefix of this attribute at the
+     *  provided index
+     */
     @stub
-    // Returns the prefix of this attribute at the
-    // provided index
     def getAttributePrefix(index: Int): String = ???
 
+    /** Returns the XML type of the attribute at the provided
+     *  index
+     */
     @stub
-    // Returns the XML type of the attribute at the provided
-    // index
     def getAttributeType(index: Int): String = ???
 
+    /** Returns the value of the attribute at the
+     *  index
+     */
     @stub
-    // Returns the value of the attribute at the
-    // index
     def getAttributeValue(index: Int): String = ???
 
+    /** Returns the normalized attribute value of the
+     *  attribute with the namespace and localName
+     *  If the namespaceURI is null the namespace
+     *  is not checked for equality
+     */
     @stub
-    // Returns the normalized attribute value of the
-    // attribute with the namespace and localName
-    // If the namespaceURI is null the namespace
-    // is not checked for equality
     def getAttributeValue(namespaceUri: String, localName: String): String = ???
 
+    /** Returns the character encoding declared on the xml declaration
+     *  Returns null if none was declared
+     */
     @stub
-    // Returns the character encoding declared on the xml declaration
-    // Returns null if none was declared
     def getCharacterEncodingScheme(): String = ???
 
+    /** Reads the content of a text-only element, an exception is thrown if this is
+     *  not a text-only element.
+     */
     @stub
-    // Reads the content of a text-only element, an exception is thrown if this is
-    // not a text-only element.
     def getElementText(): String = ???
 
+    /** Return input encoding if known or null if unknown. */
     @stub
-    // Return input encoding if known or null if unknown.
     def getEncoding(): String = ???
 
+    /** Returns an integer code that indicates the type
+     *  of the event the cursor is pointing to.
+     */
     @stub
-    // Returns an integer code that indicates the type
-    // of the event the cursor is pointing to.
     def getEventType(): Int = ???
 
+    /** Returns the (local) name of the current event. */
     @stub
-    // Returns the (local) name of the current event.
     def getLocalName(): String = ???
 
+    /** Return the current location of the processor. */
     @stub
-    // Return the current location of the processor.
     def getLocation(): Location = ???
 
+    /** Returns a QName for the current START_ELEMENT or END_ELEMENT event */
     @stub
-    // Returns a QName for the current START_ELEMENT or END_ELEMENT event
     def getName(): QName = ???
 
+    /** Returns a read only namespace context for the current
+     *  position.
+     */
     @stub
-    // Returns a read only namespace context for the current
-    // position.
     def getNamespaceContext(): NamespaceContext = ???
 
+    /** Returns the count of namespaces declared on this START_ELEMENT or END_ELEMENT,
+     *  this method is only valid on a START_ELEMENT, END_ELEMENT or NAMESPACE.
+     */
     @stub
-    // Returns the count of namespaces declared on this START_ELEMENT or END_ELEMENT,
-    // this method is only valid on a START_ELEMENT, END_ELEMENT or NAMESPACE.
     def getNamespaceCount(): Int = ???
 
+    /** Returns the prefix for the namespace declared at the
+     *  index.
+     */
     @stub
-    // Returns the prefix for the namespace declared at the
-    // index.
     def getNamespacePrefix(index: Int): String = ???
 
+    /** If the current event is a START_ELEMENT or END_ELEMENT  this method
+     *  returns the URI of the prefix or the default namespace.
+     */
     @stub
-    // If the current event is a START_ELEMENT or END_ELEMENT  this method
-    // returns the URI of the prefix or the default namespace.
     def getNamespaceURI(): String = ???
 
+    /** Returns the uri for the namespace declared at the
+     *  index.
+     */
     @stub
-    // Returns the uri for the namespace declared at the
-    // index.
     def getNamespaceURI(index: Int): String = ???
 
+    /** Return the uri for the given prefix. */
     @stub
-    // Return the uri for the given prefix.
     def getNamespaceURI(prefix: String): String = ???
 
+    /** Get the parent of this instance. */
     @stub
-    // Get the parent of this instance.
     def getParent(): XMLStreamReader = ???
 
+    /** Get the data section of a processing instruction */
     @stub
-    // Get the data section of a processing instruction
     def getPIData(): String = ???
 
+    /** Get the target of a processing instruction */
     @stub
-    // Get the target of a processing instruction
     def getPITarget(): String = ???
 
+    /** Returns the prefix of the current event or null if the event does not have a prefix */
     @stub
-    // Returns the prefix of the current event or null if the event does not have a prefix
     def getPrefix(): String = ???
 
+    /** Get the value of a feature/property from the underlying implementation */
     @stub
-    // Get the value of a feature/property from the underlying implementation
     def getProperty(name: String): Object = ???
 
+    /** Returns the current value of the parse event as a string,
+     *  this returns the string value of a CHARACTERS event,
+     *  returns the value of a COMMENT, the replacement value
+     *  for an ENTITY_REFERENCE, the string value of a CDATA section,
+     *  the string value for a SPACE event,
+     *  or the String value of the internal subset of the DTD.
+     */
     @stub
-    // Returns the current value of the parse event as a string,
-    // this returns the string value of a CHARACTERS event,
-    // returns the value of a COMMENT, the replacement value
-    // for an ENTITY_REFERENCE, the string value of a CDATA section,
-    // the string value for a SPACE event,
-    // or the String value of the internal subset of the DTD.
     def getText(): String = ???
 
+    /** Returns an array which contains the characters from this event. */
     @stub
-    // Returns an array which contains the characters from this event.
     def getTextCharacters(): Array[Char] = ???
 
+    /** Gets the the text associated with a CHARACTERS, SPACE or CDATA event. */
     @stub
-    // Gets the the text associated with a CHARACTERS, SPACE or CDATA event.
     def getTextCharacters(sourceStart: Int, target: Array[Char], targetStart: Int, length: Int): Int = ???
 
+    /** Returns the length of the sequence of characters for this
+     *  Text event within the text character array.
+     */
     @stub
-    // Returns the length of the sequence of characters for this
-    // Text event within the text character array.
     def getTextLength(): Int = ???
 
+    /** Returns the offset into the text character array where the first
+     *  character (of this text event) is stored.
+     */
     @stub
-    // Returns the offset into the text character array where the first
-    // character (of this text event) is stored.
     def getTextStart(): Int = ???
 
+    /** Get the xml version declared on the xml declaration
+     *  Returns null if none was declared
+     */
     @stub
-    // Get the xml version declared on the xml declaration
-    // Returns null if none was declared
     def getVersion(): String = ???
 
+    /** returns true if the current event has a name (is a START_ELEMENT or END_ELEMENT)
+     *  returns false otherwise
+     */
     @stub
-    // returns true if the current event has a name (is a START_ELEMENT or END_ELEMENT)
-    // returns false otherwise
     def hasName(): Boolean = ???
 
+    /** Returns true if there are more parsing events and false
+     *  if there are no more events.
+     */
     @stub
-    // Returns true if there are more parsing events and false
-    // if there are no more events.
     def hasNext(): Boolean = ???
 
+    /** Return true if the current event has text, false otherwise
+     *  The following events have text:
+     *  CHARACTERS,DTD ,ENTITY_REFERENCE, COMMENT, SPACE
+     */
     @stub
-    // Return true if the current event has text, false otherwise
-    // The following events have text:
-    // CHARACTERS,DTD ,ENTITY_REFERENCE, COMMENT, SPACE
     def hasText(): Boolean = ???
 
+    /** Returns a boolean which indicates if this
+     *  attribute was created by default
+     */
     @stub
-    // Returns a boolean which indicates if this
-    // attribute was created by default
     def isAttributeSpecified(index: Int): Boolean = ???
 
+    /** Returns true if the cursor points to a character data event */
     @stub
-    // Returns true if the cursor points to a character data event
     def isCharacters(): Boolean = ???
 
+    /** Returns true if the cursor points to an end tag (otherwise false) */
     @stub
-    // Returns true if the cursor points to an end tag (otherwise false)
     def isEndElement(): Boolean = ???
 
+    /** Get the standalone declaration from the xml declaration */
     @stub
-    // Get the standalone declaration from the xml declaration
     def isStandalone(): Boolean = ???
 
+    /** Returns true if the cursor points to a start tag (otherwise false) */
     @stub
-    // Returns true if the cursor points to a start tag (otherwise false)
     def isStartElement(): Boolean = ???
 
+    /** Returns true if the cursor points to a character data event
+     *  that consists of all whitespace
+     */
     @stub
-    // Returns true if the cursor points to a character data event
-    // that consists of all whitespace
     def isWhiteSpace(): Boolean = ???
 
+    /** Get next parsing event - a processor may return all contiguous
+     *  character data in a single chunk, or it may split it into several chunks.
+     */
     @stub
-    // Get next parsing event - a processor may return all contiguous
-    // character data in a single chunk, or it may split it into several chunks.
     def next(): Int = ???
 
+    /** Skips any white space (isWhiteSpace() returns true), COMMENT,
+     *  or PROCESSING_INSTRUCTION,
+     *  until a START_ELEMENT or END_ELEMENT is reached.
+     */
     @stub
-    // Skips any white space (isWhiteSpace() returns true), COMMENT,
-    // or PROCESSING_INSTRUCTION,
-    // until a START_ELEMENT or END_ELEMENT is reached.
     def nextTag(): Int = ???
 
+    /** Test if the current event is of the given type and if the namespace and name match the current
+     *  namespace and name of the current event.
+     */
     @stub
-    // Test if the current event is of the given type and if the namespace and name match the current
-    // namespace and name of the current event.
     def require(type: Int, namespaceURI: String, localName: String): Unit = ???
 
+    /** Set the parent of this instance. */
     @stub
-    // Set the parent of this instance.
     def setParent(reader: XMLStreamReader): Unit = ???
 }

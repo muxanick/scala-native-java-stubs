@@ -2,37 +2,40 @@ package java.util.regex
 
 import java.lang.String
 
-// The result of a match operation.
-//
-// This interface contains query methods used to determine the
-// results of a match against a regular expression. The match boundaries,
-// groups and group boundaries can be seen but not modified through
-// a MatchResult.
+/** The result of a match operation.
+ * 
+ *  This interface contains query methods used to determine the
+ *  results of a match against a regular expression. The match boundaries,
+ *  groups and group boundaries can be seen but not modified through
+ *  a MatchResult.
+ */
 trait MatchResult {
 
+    /** Returns the offset after the last character matched. */
     @stub
-    // Returns the offset after the last character matched.
     def end(): Int = ???
 
+    /** Returns the offset after the last character of the subsequence
+     *  captured by the given group during this match.
+     */
     @stub
-    // Returns the offset after the last character of the subsequence
-    // captured by the given group during this match.
     def end(group: Int): Int = ???
 
+    /** Returns the input subsequence matched by the previous match. */
     @stub
-    // Returns the input subsequence matched by the previous match.
     def group(): String = ???
 
+    /** Returns the input subsequence captured by the given group during the
+     *  previous match operation.
+     */
     @stub
-    // Returns the input subsequence captured by the given group during the
-    // previous match operation.
     def group(group: Int): String = ???
 
+    /** Returns the number of capturing groups in this match result's pattern. */
     @stub
-    // Returns the number of capturing groups in this match result's pattern.
     def groupCount(): Int = ???
 
+    /** Returns the start index of the match. */
     @stub
-    // Returns the start index of the match.
     def start(): Int = ???
 }

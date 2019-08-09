@@ -1,19 +1,21 @@
 package java.lang
 
-// Thrown by the security manager to indicate a security violation.
+/** Thrown by the security manager to indicate a security violation. */
 class SecurityException extends RuntimeException {
 
+    /** Constructs a SecurityException with no detail  message. */
     @stub
-    // Constructs a SecurityException with no detail  message.
     def this() = ???
 
+    /** Constructs a SecurityException with the specified
+     *  detail message.
+     */
     @stub
-    // Constructs a SecurityException with the specified
-    // detail message.
     def this(s: String) = ???
 
+    /** Creates a SecurityException with the specified
+     *  detail message and cause.
+     */
     @stub
-    // Creates a SecurityException with the specified
-    // detail message and cause.
     def this(message: String, cause: Throwable) = ???
 }

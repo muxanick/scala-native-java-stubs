@@ -3,20 +3,22 @@ package java.security.cert
 import java.lang.{Exception, Object, String, Throwable}
 import java.security.GeneralSecurityException
 
-// CRL (Certificate Revocation List) Exception.
+/** CRL (Certificate Revocation List) Exception. */
 class CRLException extends GeneralSecurityException {
 
+    /** Constructs a CRLException with no detail message. */
     @stub
-    // Constructs a CRLException with no detail message.
     def this() = ???
 
+    /** Constructs a CRLException with the specified detail
+     *  message.
+     */
     @stub
-    // Constructs a CRLException with the specified detail
-    // message.
     def this(message: String) = ???
 
+    /** Creates a CRLException with the specified
+     *  detail message and cause.
+     */
     @stub
-    // Creates a CRLException with the specified
-    // detail message and cause.
     def this(message: String, cause: Throwable) = ???
 }

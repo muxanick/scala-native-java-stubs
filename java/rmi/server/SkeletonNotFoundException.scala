@@ -4,13 +4,14 @@ import java.io.IOException
 import java.lang.{Deprecated, Exception, Object, String, Throwable}
 import java.rmi.RemoteException
 
-// A SkeletonNotFoundException is thrown if the
-// Skeleton corresponding to the remote object being
-// exported is not found.  Skeletons are no longer required, so this
-// exception is never thrown.
+/** A SkeletonNotFoundException is thrown if the
+ *  Skeleton corresponding to the remote object being
+ *  exported is not found.  Skeletons are no longer required, so this
+ *  exception is never thrown.
+ */
 @Deprecated class SkeletonNotFoundException extends RemoteException {
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
     def this(s: String) = ???
 }

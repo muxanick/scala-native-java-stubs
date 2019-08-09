@@ -2,49 +2,56 @@ package java.sql
 
 import java.lang.{Exception, Object, String, Throwable}
 
-// The subclass of SQLException thrown when the timeout specified by
-// Statement.setQueryTimeout, DriverManager.setLoginTimeout,
-// DataSource.setLoginTimeout,XADataSource.setLoginTimeout
-// has expired.
-//  This exception does not correspond to a standard SQLState.
+/** The subclass of SQLException thrown when the timeout specified by
+ *  Statement.setQueryTimeout, DriverManager.setLoginTimeout,
+ *  DataSource.setLoginTimeout,XADataSource.setLoginTimeout
+ *  has expired.
+ *   This exception does not correspond to a standard SQLState.
+ */
 class SQLTimeoutException extends SQLTransientException {
 
+    /** Constructs a SQLTimeoutException object. */
     @stub
-    // Constructs a SQLTimeoutException object.
     def this() = ???
 
+    /** Constructs a SQLTimeoutException object
+     *  with a given reason.
+     */
     @stub
-    // Constructs a SQLTimeoutException object
-    // with a given reason.
     def this(reason: String) = ???
 
+    /** Constructs a SQLTimeoutException object
+     *  with a given reason and SQLState.
+     */
     @stub
-    // Constructs a SQLTimeoutException object
-    // with a given reason and SQLState.
     def this(reason: String, SQLState: String) = ???
 
+    /** Constructs a SQLTimeoutException object
+     *  with a given reason, SQLState  and
+     *  vendorCode.
+     */
     @stub
-    // Constructs a SQLTimeoutException object
-    // with a given reason, SQLState  and
-    // vendorCode.
     def this(reason: String, SQLState: String, vendorCode: Int) = ???
 
+    /** Constructs a SQLTimeoutException object
+     *  with a given
+     *  reason, SQLState, vendorCode
+     *  and  cause.
+     */
     @stub
-    // Constructs a SQLTimeoutException object
-    // with a given
-    // reason, SQLState, vendorCode
-    // and  cause.
     def this(reason: String, SQLState: String, vendorCode: Int, cause: Throwable) = ???
 
+    /** Constructs a SQLTimeoutException object
+     *   with a given
+     *  reason, SQLState and  cause.
+     */
     @stub
-    // Constructs a SQLTimeoutException object
-    //  with a given
-    // reason, SQLState and  cause.
     def this(reason: String, SQLState: String, cause: Throwable) = ???
 
+    /** Constructs a SQLTimeoutException object
+     *  with a given
+     *  reason and  cause.
+     */
     @stub
-    // Constructs a SQLTimeoutException object
-    // with a given
-    // reason and  cause.
     def this(reason: String, cause: Throwable) = ???
 }

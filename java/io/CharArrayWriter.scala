@@ -2,69 +2,71 @@ package java.io
 
 import java.lang.{CharSequence, Object, String}
 
-// This class implements a character buffer that can be used as an Writer.
-// The buffer automatically grows when data is written to the stream.  The data
-// can be retrieved using toCharArray() and toString().
-// 
-// Note: Invoking close() on this class has no effect, and methods
-// of this class can be called after the stream has closed
-// without generating an IOException.
+/** This class implements a character buffer that can be used as an Writer.
+ *  The buffer automatically grows when data is written to the stream.  The data
+ *  can be retrieved using toCharArray() and toString().
+ *  
+ *  Note: Invoking close() on this class has no effect, and methods
+ *  of this class can be called after the stream has closed
+ *  without generating an IOException.
+ */
 class CharArrayWriter extends Writer {
 
+    /** Creates a new CharArrayWriter. */
     @stub
-    // Creates a new CharArrayWriter.
     def this() = ???
 
+    /** The buffer where data is stored. */
     @stub
-    // The buffer where data is stored.
-    protected def buf: Array[Char] = ???
+    protected val buf: Array[Char] = ???
 
+    /** Appends the specified character to this writer. */
     @stub
-    // Appends the specified character to this writer.
     def append(c: Char): CharArrayWriter = ???
 
+    /** Appends the specified character sequence to this writer. */
     @stub
-    // Appends the specified character sequence to this writer.
     def append(csq: CharSequence): CharArrayWriter = ???
 
+    /** Appends a subsequence of the specified character sequence to this writer. */
     @stub
-    // Appends a subsequence of the specified character sequence to this writer.
     def append(csq: CharSequence, start: Int, end: Int): CharArrayWriter = ???
 
+    /** Close the stream. */
     @stub
-    // Close the stream.
     def close(): Unit = ???
 
+    /** Flush the stream. */
     @stub
-    // Flush the stream.
     def flush(): Unit = ???
 
+    /** Resets the buffer so that you can use it again without
+     *  throwing away the already allocated buffer.
+     */
     @stub
-    // Resets the buffer so that you can use it again without
-    // throwing away the already allocated buffer.
     def reset(): Unit = ???
 
+    /** Returns the current size of the buffer. */
     @stub
-    // Returns the current size of the buffer.
     def size(): Int = ???
 
+    /** Returns a copy of the input data. */
     @stub
-    // Returns a copy of the input data.
     def toCharArray(): Array[Char] = ???
 
+    /** Converts input data to a string. */
     @stub
-    // Converts input data to a string.
     def toString(): String = ???
 
+    /** Writes characters to the buffer. */
     @stub
-    // Writes characters to the buffer.
     def write(c: Array[Char], off: Int, len: Int): Unit = ???
 
+    /** Writes a character to the buffer. */
     @stub
-    // Writes a character to the buffer.
     def write(c: Int): Unit = ???
 
+    /** Write a portion of a string to the buffer. */
     @stub
-    // Write a portion of a string to the buffer.
     def write(str: String, off: Int, len: Int): Unit = ???
 }

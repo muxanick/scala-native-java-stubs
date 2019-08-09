@@ -2,20 +2,22 @@ package java.security
 
 import java.lang.{Exception, Object, String, Throwable}
 
-// This is the generic Signature exception.
+/** This is the generic Signature exception. */
 class SignatureException extends GeneralSecurityException {
 
+    /** Constructs a SignatureException with no detail message. */
     @stub
-    // Constructs a SignatureException with no detail message.
     def this() = ???
 
+    /** Constructs a SignatureException with the specified detail
+     *  message.
+     */
     @stub
-    // Constructs a SignatureException with the specified detail
-    // message.
     def this(msg: String) = ???
 
+    /** Creates a SignatureException with the specified
+     *  detail message and cause.
+     */
     @stub
-    // Creates a SignatureException with the specified
-    // detail message and cause.
     def this(message: String, cause: Throwable) = ???
 }

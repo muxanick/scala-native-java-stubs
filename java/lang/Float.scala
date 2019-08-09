@@ -1,204 +1,233 @@
 package java.lang
 
-// The Float class wraps a value of primitive type
-// float in an object. An object of type
-// Float contains a single field whose type is
-// float.
-//
-// In addition, this class provides several methods for converting a
-// float to a String and a
-// String to a float, as well as other
-// constants and methods useful when dealing with a
-// float.
+/** The Float class wraps a value of primitive type
+ *  float in an object. An object of type
+ *  Float contains a single field whose type is
+ *  float.
+ * 
+ *  In addition, this class provides several methods for converting a
+ *  float to a String and a
+ *  String to a float, as well as other
+ *  constants and methods useful when dealing with a
+ *  float.
+ */
 final class Float extends Number with Comparable[Float] {
 
+    /** Constructs a newly allocated Float object that
+     *  represents the argument converted to type float.
+     */
     @stub
-    // Constructs a newly allocated Float object that
-    // represents the argument converted to type float.
-    def this(value: double) = ???
+    def this(value: Double) = ???
 
+    /** Constructs a newly allocated Float object that
+     *  represents the primitive float argument.
+     */
     @stub
-    // Constructs a newly allocated Float object that
-    // represents the primitive float argument.
-    def this(value: float) = ???
+    def this(value: Float) = ???
 
+    /** Returns the value of this Float as a byte after
+     *  a narrowing primitive conversion.
+     */
     @stub
-    // Returns the value of this Float as a byte after
-    // a narrowing primitive conversion.
     def byteValue(): Byte = ???
 
+    /** Compares two Float objects numerically. */
     @stub
-    // Compares two Float objects numerically.
     def compareTo(anotherFloat: Float): Int = ???
 
+    /** Returns the value of this Float as a double
+     *  after a widening primitive conversion.
+     */
     @stub
-    // Returns the value of this Float as a double
-    // after a widening primitive conversion.
-    def doubleValue(): double = ???
+    def doubleValue(): Double = ???
 
+    /** Compares this object against the specified object. */
     @stub
-    // Compares this object against the specified object.
     def equals(obj: Object): Boolean = ???
 
+    /** Returns the float value of this Float object. */
     @stub
-    // Returns the float value of this Float object.
-    def floatValue(): float = ???
+    def floatValue(): Float = ???
 
+    /** Returns a hash code for this Float object. */
     @stub
-    // Returns a hash code for this Float object.
     def hashCode(): Int = ???
 
+    /** Returns the value of this Float as an int after
+     *  a narrowing primitive conversion.
+     */
     @stub
-    // Returns the value of this Float as an int after
-    // a narrowing primitive conversion.
     def intValue(): Int = ???
 
+    /** Returns true if this Float value is
+     *  infinitely large in magnitude, false otherwise.
+     */
     @stub
-    // Returns true if this Float value is
-    // infinitely large in magnitude, false otherwise.
     def isInfinite(): Boolean = ???
 
+    /** Returns true if this Float value is a
+     *  Not-a-Number (NaN), false otherwise.
+     */
     @stub
-    // Returns true if this Float value is a
-    // Not-a-Number (NaN), false otherwise.
     def isNaN(): Boolean = ???
 
+    /** Returns value of this Float as a long after a
+     *  narrowing primitive conversion.
+     */
     @stub
-    // Returns value of this Float as a long after a
-    // narrowing primitive conversion.
     def longValue(): Long = ???
 
+    /** Returns the value of this Float as a short
+     *  after a narrowing primitive conversion.
+     */
     @stub
-    // Returns the value of this Float as a short
-    // after a narrowing primitive conversion.
     def shortValue(): Short = ???
 
+    /** Returns a string representation of this Float object. */
     @stub
-    // Returns a string representation of this Float object.
     def toString(): String = ???
 }
 
 object Float {
+    /** The number of bytes used to represent a float value. */
     @stub
-    // The number of bytes used to represent a float value.
-    def BYTES: Int = ???
+    val BYTES: Int = ???
 
+    /** Maximum exponent a finite float variable may have. */
     @stub
-    // Maximum exponent a finite float variable may have.
-    def MAX_EXPONENT: Int = ???
+    val MAX_EXPONENT: Int = ???
 
+    /** A constant holding the largest positive finite value of type
+     *  float, (2-2-23)·2127.
+     */
     @stub
-    // A constant holding the largest positive finite value of type
-    // float, (2-2-23)·2127.
-    def MAX_VALUE: float = ???
+    val MAX_VALUE: Float = ???
 
+    /** Minimum exponent a normalized float variable may have. */
     @stub
-    // Minimum exponent a normalized float variable may have.
-    def MIN_EXPONENT: Int = ???
+    val MIN_EXPONENT: Int = ???
 
+    /** A constant holding the smallest positive normal value of type
+     *  float, 2-126.
+     */
     @stub
-    // A constant holding the smallest positive normal value of type
-    // float, 2-126.
-    def MIN_NORMAL: float = ???
+    val MIN_NORMAL: Float = ???
 
+    /** A constant holding the smallest positive nonzero value of type
+     *  float, 2-149.
+     */
     @stub
-    // A constant holding the smallest positive nonzero value of type
-    // float, 2-149.
-    def MIN_VALUE: float = ???
+    val MIN_VALUE: Float = ???
 
+    /** A constant holding a Not-a-Number (NaN) value of type
+     *  float.
+     */
     @stub
-    // A constant holding a Not-a-Number (NaN) value of type
-    // float.
-    def NaN: float = ???
+    val NaN: Float = ???
 
+    /** A constant holding the negative infinity of type
+     *  float.
+     */
     @stub
-    // A constant holding the negative infinity of type
-    // float.
-    def NEGATIVE_INFINITY: float = ???
+    val NEGATIVE_INFINITY: Float = ???
 
+    /** A constant holding the positive infinity of type
+     *  float.
+     */
     @stub
-    // A constant holding the positive infinity of type
-    // float.
-    def POSITIVE_INFINITY: float = ???
+    val POSITIVE_INFINITY: Float = ???
 
+    /** The number of bits used to represent a float value. */
     @stub
-    // The number of bits used to represent a float value.
-    def SIZE: Int = ???
+    val SIZE: Int = ???
 
+    /** Compares the two specified float values. */
     @stub
-    // Compares the two specified float values.
-    def compare(f1: float, f2: float): Int = ???
+    def compare(f1: Float, f2: Float): Int = ???
 
+    /** Returns a representation of the specified floating-point value
+     *  according to the IEEE 754 floating-point "single format" bit
+     *  layout.
+     */
     @stub
-    // Returns a representation of the specified floating-point value
-    // according to the IEEE 754 floating-point "single format" bit
-    // layout.
-    def floatToIntBits(value: float): Int = ???
+    def floatToIntBits(value: Float): Int = ???
 
+    /** Returns a representation of the specified floating-point value
+     *  according to the IEEE 754 floating-point "single format" bit
+     *  layout, preserving Not-a-Number (NaN) values.
+     */
     @stub
-    // Returns a representation of the specified floating-point value
-    // according to the IEEE 754 floating-point "single format" bit
-    // layout, preserving Not-a-Number (NaN) values.
-    def floatToRawIntBits(value: float): Int = ???
+    def floatToRawIntBits(value: Float): Int = ???
 
+    /** Returns a hash code for a float value; compatible with
+     *  Float.hashCode().
+     */
     @stub
-    // Returns a hash code for a float value; compatible with
-    // Float.hashCode().
-    def hashCode(value: float): Int = ???
+    def hashCode(value: Float): Int = ???
 
+    /** Returns the float value corresponding to a given
+     *  bit representation.
+     */
     @stub
-    // Returns the float value corresponding to a given
-    // bit representation.
-    def intBitsToFloat(bits: Int): float = ???
+    def intBitsToFloat(bits: Int): Float = ???
 
+    /** Returns true if the argument is a finite floating-point
+     *  value; returns false otherwise (for NaN and infinity
+     *  arguments).
+     */
     @stub
-    // Returns true if the argument is a finite floating-point
-    // value; returns false otherwise (for NaN and infinity
-    // arguments).
-    def isFinite(f: float): Boolean = ???
+    def isFinite(f: Float): Boolean = ???
 
+    /** Returns true if the specified number is infinitely
+     *  large in magnitude, false otherwise.
+     */
     @stub
-    // Returns true if the specified number is infinitely
-    // large in magnitude, false otherwise.
-    def isInfinite(v: float): Boolean = ???
+    def isInfinite(v: Float): Boolean = ???
 
+    /** Returns true if the specified number is a
+     *  Not-a-Number (NaN) value, false otherwise.
+     */
     @stub
-    // Returns true if the specified number is a
-    // Not-a-Number (NaN) value, false otherwise.
-    def isNaN(v: float): Boolean = ???
+    def isNaN(v: Float): Boolean = ???
 
+    /** Returns the greater of two float values
+     *  as if by calling Math.max.
+     */
     @stub
-    // Returns the greater of two float values
-    // as if by calling Math.max.
-    def max(a: float, b: float): float = ???
+    def max(a: Float, b: Float): Float = ???
 
+    /** Returns the smaller of two float values
+     *  as if by calling Math.min.
+     */
     @stub
-    // Returns the smaller of two float values
-    // as if by calling Math.min.
-    def min(a: float, b: float): float = ???
+    def min(a: Float, b: Float): Float = ???
 
+    /** Returns a new float initialized to the value
+     *  represented by the specified String, as performed
+     *  by the valueOf method of class Float.
+     */
     @stub
-    // Returns a new float initialized to the value
-    // represented by the specified String, as performed
-    // by the valueOf method of class Float.
-    def parseFloat(s: String): float = ???
+    def parseFloat(s: String): Float = ???
 
+    /** Adds two float values together as per the + operator. */
     @stub
-    // Adds two float values together as per the + operator.
-    def sum(a: float, b: float): float = ???
+    def sum(a: Float, b: Float): Float = ???
 
+    /** Returns a hexadecimal string representation of the
+     *  float argument.
+     */
     @stub
-    // Returns a hexadecimal string representation of the
-    // float argument.
-    def toHexString(f: float): String = ???
+    def toHexString(f: Float): String = ???
 
+    /** Returns a string representation of the float
+     *  argument.
+     */
     @stub
-    // Returns a string representation of the float
-    // argument.
-    def toString(f: float): String = ???
+    def toString(f: Float): String = ???
 
+    /** Returns a Float instance representing the specified
+     *  float value.
+     */
     @stub
-    // Returns a Float instance representing the specified
-    // float value.
-    def valueOf(f: float): Float = ???
+    def valueOf(f: Float): Float = ???
 }

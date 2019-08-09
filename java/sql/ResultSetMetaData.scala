@@ -2,115 +2,120 @@ package java.sql
 
 import java.lang.String
 
-// An object that can be used to get information about the types
-// and properties of the columns in a ResultSet object.
-// The following code fragment creates the ResultSet object rs,
-// creates the ResultSetMetaData object rsmd, and uses rsmd
-// to find out how many columns rs has and whether the first column in rs
-// can be used in a WHERE clause.
-// 
-//
-//     ResultSet rs = stmt.executeQuery("SELECT a, b, c FROM TABLE2");
-//     ResultSetMetaData rsmd = rs.getMetaData();
-//     int numberOfColumns = rsmd.getColumnCount();
-//     boolean b = rsmd.isSearchable(1);
-//
-// 
+/** An object that can be used to get information about the types
+ *  and properties of the columns in a ResultSet object.
+ *  The following code fragment creates the ResultSet object rs,
+ *  creates the ResultSetMetaData object rsmd, and uses rsmd
+ *  to find out how many columns rs has and whether the first column in rs
+ *  can be used in a WHERE clause.
+ *  
+ * 
+ *      ResultSet rs = stmt.executeQuery("SELECT a, b, c FROM TABLE2");
+ *      ResultSetMetaData rsmd = rs.getMetaData();
+ *      int numberOfColumns = rsmd.getColumnCount();
+ *      boolean b = rsmd.isSearchable(1);
+ * 
+ *  
+ */
 trait ResultSetMetaData extends Wrapper {
 
+    /** Gets the designated column's table's catalog name. */
     @stub
-    // Gets the designated column's table's catalog name.
     def getCatalogName(column: Int): String = ???
 
+    /** Returns the fully-qualified name of the Java class whose instances
+     *  are manufactured if the method ResultSet.getObject
+     *  is called to retrieve a value
+     *  from the column.
+     */
     @stub
-    // Returns the fully-qualified name of the Java class whose instances
-    // are manufactured if the method ResultSet.getObject
-    // is called to retrieve a value
-    // from the column.
     def getColumnClassName(column: Int): String = ???
 
+    /** Returns the number of columns in this ResultSet object. */
     @stub
-    // Returns the number of columns in this ResultSet object.
     def getColumnCount(): Int = ???
 
+    /** Indicates the designated column's normal maximum width in characters. */
     @stub
-    // Indicates the designated column's normal maximum width in characters.
     def getColumnDisplaySize(column: Int): Int = ???
 
+    /** Gets the designated column's suggested title for use in printouts and
+     *  displays.
+     */
     @stub
-    // Gets the designated column's suggested title for use in printouts and
-    // displays.
     def getColumnLabel(column: Int): String = ???
 
+    /** Get the designated column's name. */
     @stub
-    // Get the designated column's name.
     def getColumnName(column: Int): String = ???
 
+    /** Retrieves the designated column's SQL type. */
     @stub
-    // Retrieves the designated column's SQL type.
     def getColumnType(column: Int): Int = ???
 
+    /** Retrieves the designated column's database-specific type name. */
     @stub
-    // Retrieves the designated column's database-specific type name.
     def getColumnTypeName(column: Int): String = ???
 
+    /** Get the designated column's specified column size. */
     @stub
-    // Get the designated column's specified column size.
     def getPrecision(column: Int): Int = ???
 
+    /** Gets the designated column's number of digits to right of the decimal point. */
     @stub
-    // Gets the designated column's number of digits to right of the decimal point.
     def getScale(column: Int): Int = ???
 
+    /** Get the designated column's table's schema. */
     @stub
-    // Get the designated column's table's schema.
     def getSchemaName(column: Int): String = ???
 
+    /** Gets the designated column's table name. */
     @stub
-    // Gets the designated column's table name.
     def getTableName(column: Int): String = ???
 
+    /** Indicates whether the designated column is automatically numbered. */
     @stub
-    // Indicates whether the designated column is automatically numbered.
     def isAutoIncrement(column: Int): Boolean = ???
 
+    /** Indicates whether a column's case matters. */
     @stub
-    // Indicates whether a column's case matters.
     def isCaseSensitive(column: Int): Boolean = ???
 
+    /** Indicates whether the designated column is a cash value. */
     @stub
-    // Indicates whether the designated column is a cash value.
     def isCurrency(column: Int): Boolean = ???
 
+    /** Indicates whether a write on the designated column will definitely succeed. */
     @stub
-    // Indicates whether a write on the designated column will definitely succeed.
     def isDefinitelyWritable(column: Int): Boolean = ???
 
+    /** Indicates the nullability of values in the designated column. */
     @stub
-    // Indicates the nullability of values in the designated column.
     def isNullable(column: Int): Int = ???
 
+    /** Indicates whether the designated column is definitely not writable. */
     @stub
-    // Indicates whether the designated column is definitely not writable.
     def isReadOnly(column: Int): Boolean = ???
 
+    /** Indicates whether the designated column can be used in a where clause. */
     @stub
-    // Indicates whether the designated column can be used in a where clause.
     def isSearchable(column: Int): Boolean = ???
 
+    /** Indicates whether values in the designated column are signed numbers. */
     @stub
-    // Indicates whether values in the designated column are signed numbers.
     def isSigned(column: Int): Boolean = ???
 }
 
 object ResultSetMetaData {
+    /** The constant indicating that a
+     *  column does not allow NULL values.
+     */
     @stub
-    // The constant indicating that a
-    // column does not allow NULL values.
-    def columnNoNulls: Int = ???
+    val columnNoNulls: Int = ???
 
+    /** The constant indicating that a
+     *  column allows NULL values.
+     */
     @stub
-    // The constant indicating that a
-    // column allows NULL values.
-    def columnNullable: Int = ???
+    val columnNullable: Int = ???
 }

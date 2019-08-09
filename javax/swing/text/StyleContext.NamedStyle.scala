@@ -5,124 +5,129 @@ import java.lang.{Class, Object, String}
 import java.util.{Enumeration, EventListener}
 import javax.swing.event.{ChangeEvent, ChangeListener}
 
-// A collection of attributes, typically used to represent
-// character and paragraph styles.  This is an implementation
-// of MutableAttributeSet that can be observed if desired.
-// These styles will take advantage of immutability while
-// the sets are small enough, and may be substantially more
-// efficient than something like SimpleAttributeSet.
-// 
-// Warning:
-// Serialized objects of this class will not be compatible with
-// future Swing releases. The current serialization support is
-// appropriate for short term storage or RMI between applications running
-// the same version of Swing.  As of 1.4, support for long term storage
-// of all JavaBeans™
-// has been added to the java.beans package.
-// Please see XMLEncoder.
-class StyleContext.NamedStyle extends Object with Style, with Serializable {
+/** A collection of attributes, typically used to represent
+ *  character and paragraph styles.  This is an implementation
+ *  of MutableAttributeSet that can be observed if desired.
+ *  These styles will take advantage of immutability while
+ *  the sets are small enough, and may be substantially more
+ *  efficient than something like SimpleAttributeSet.
+ *  
+ *  Warning:
+ *  Serialized objects of this class will not be compatible with
+ *  future Swing releases. The current serialization support is
+ *  appropriate for short term storage or RMI between applications running
+ *  the same version of Swing.  As of 1.4, support for long term storage
+ *  of all JavaBeans™
+ *  has been added to the java.beans package.
+ *  Please see XMLEncoder.
+ */
+class StyleContext.NamedStyle extends Object with Style with Serializable {
 
+    /** Creates a new named style, with a null name and parent. */
     @stub
-    // Creates a new named style, with a null name and parent.
     def NamedStyle() = ???
 
+    /** Creates a new named style. */
     @stub
-    // Creates a new named style.
     def NamedStyle(name: String, parent: Style) = ???
 
+    /** Only one ChangeEvent is needed per model instance since the
+     *  event's only (read-only) state is the source property.
+     */
     @stub
-    // Only one ChangeEvent is needed per model instance since the
-    // event's only (read-only) state is the source property.
-    protected def changeEvent: ChangeEvent = ???
+    protected val changeEvent: ChangeEvent = ???
 
+    /** Adds an attribute. */
     @stub
-    // Adds an attribute.
     def addAttribute(name: Object, value: Object): Unit = ???
 
+    /** Adds a set of attributes to the element. */
     @stub
-    // Adds a set of attributes to the element.
     def addAttributes(attr: AttributeSet): Unit = ???
 
+    /** Adds a change listener. */
     @stub
-    // Adds a change listener.
     def addChangeListener(l: ChangeListener): Unit = ???
 
+    /** Checks whether a given attribute name/value is defined. */
     @stub
-    // Checks whether a given attribute name/value is defined.
     def containsAttribute(name: Object, value: Object): Boolean = ???
 
+    /** Checks whether the element contains all the attributes. */
     @stub
-    // Checks whether the element contains all the attributes.
     def containsAttributes(attrs: AttributeSet): Boolean = ???
 
+    /** Copies a set of attributes. */
     @stub
-    // Copies a set of attributes.
     def copyAttributes(): AttributeSet = ???
 
+    /** Notifies all listeners that have registered interest for
+     *  notification on this event type.
+     */
     @stub
-    // Notifies all listeners that have registered interest for
-    // notification on this event type.
     protected def fireStateChanged(): Unit = ???
 
+    /** Gets the value of an attribute. */
     @stub
-    // Gets the value of an attribute.
     def getAttribute(attrName: Object): Object = ???
 
+    /** Gets the number of attributes that are defined. */
     @stub
-    // Gets the number of attributes that are defined.
     def getAttributeCount(): Int = ???
 
+    /** Gets the names of all attributes. */
     @stub
-    // Gets the names of all attributes.
     def getAttributeNames(): Enumeration[_] = ???
 
+    /** Returns an array of all the ChangeListeners added
+     *  to this NamedStyle with addChangeListener().
+     */
     @stub
-    // Returns an array of all the ChangeListeners added
-    // to this NamedStyle with addChangeListener().
     def getChangeListeners(): Array[ChangeListener] = ???
 
+    /** Return an array of all the listeners of the given type that
+     *  were added to this model.
+     */
     @stub
-    // Return an array of all the listeners of the given type that
-    // were added to this model.
-    def Array[T]: [T <: EventListener] = ???
+    def getListeners[T <: EventListener](listenerType: Class[T]): Array[T] = ???
 
+    /** Fetches the name of the style. */
     @stub
-    // Fetches the name of the style.
     def getName(): String = ???
 
+    /** Gets attributes from the parent. */
     @stub
-    // Gets attributes from the parent.
     def getResolveParent(): AttributeSet = ???
 
+    /** Checks whether a given attribute is defined. */
     @stub
-    // Checks whether a given attribute is defined.
     def isDefined(attrName: Object): Boolean = ???
 
+    /** Checks whether two attribute sets are equal. */
     @stub
-    // Checks whether two attribute sets are equal.
     def isEqual(attr: AttributeSet): Boolean = ???
 
+    /** Removes an attribute from the set. */
     @stub
-    // Removes an attribute from the set.
     def removeAttribute(name: Object): Unit = ???
 
+    /** Removes a set of attributes for the element. */
     @stub
-    // Removes a set of attributes for the element.
     def removeAttributes(attrs: AttributeSet): Unit = ???
 
+    /** Removes a set of attributes for the element. */
     @stub
-    // Removes a set of attributes for the element.
     def removeAttributes(names: Enumeration[_]): Unit = ???
 
+    /** Removes a change listener. */
     @stub
-    // Removes a change listener.
     def removeChangeListener(l: ChangeListener): Unit = ???
 
+    /** Changes the name of the style. */
     @stub
-    // Changes the name of the style.
     def setName(name: String): Unit = ???
 
+    /** Sets the resolving parent. */
     @stub
-    // Sets the resolving parent.
     def setResolveParent(parent: AttributeSet): Unit = ???
 }

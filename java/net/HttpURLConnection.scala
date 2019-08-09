@@ -4,280 +4,294 @@ import java.io.InputStream
 import java.lang.{Object, String}
 import java.security.Permission
 
-// A URLConnection with support for HTTP-specific features. See
-//  the spec  for
-// details.
-// 
-//
-// Each HttpURLConnection instance is used to make a single request
-// but the underlying network connection to the HTTP server may be
-// transparently shared by other instances. Calling the close() methods
-// on the InputStream or OutputStream of an HttpURLConnection
-// after a request may free network resources associated with this
-// instance but has no effect on any shared persistent connection.
-// Calling the disconnect() method may close the underlying socket
-// if a persistent connection is otherwise idle at that time.
-//
-// The HTTP protocol handler has a few settings that can be accessed through
-// System Properties. This covers
-// Proxy settings as well as
-//  various other settings.
-// 
-// 
-// Security permissions
-// 
-// If a security manager is installed, and if a method is called which results in an
-// attempt to open a connection, the caller must possess either:-
-// a "connect" SocketPermission to the host/port combination of the
-// destination URL or
-// a URLPermission that permits this request.
-// 
-// If automatic redirection is enabled, and this request is redirected to another
-// destination, then the caller must also have permission to connect to the
-// redirected host/URL.
+/** A URLConnection with support for HTTP-specific features. See
+ *   the spec  for
+ *  details.
+ *  
+ * 
+ *  Each HttpURLConnection instance is used to make a single request
+ *  but the underlying network connection to the HTTP server may be
+ *  transparently shared by other instances. Calling the close() methods
+ *  on the InputStream or OutputStream of an HttpURLConnection
+ *  after a request may free network resources associated with this
+ *  instance but has no effect on any shared persistent connection.
+ *  Calling the disconnect() method may close the underlying socket
+ *  if a persistent connection is otherwise idle at that time.
+ * 
+ *  The HTTP protocol handler has a few settings that can be accessed through
+ *  System Properties. This covers
+ *  Proxy settings as well as
+ *   various other settings.
+ *  
+ *  
+ *  Security permissions
+ *  
+ *  If a security manager is installed, and if a method is called which results in an
+ *  attempt to open a connection, the caller must possess either:-
+ *  a "connect" SocketPermission to the host/port combination of the
+ *  destination URL or
+ *  a URLPermission that permits this request.
+ *  
+ *  If automatic redirection is enabled, and this request is redirected to another
+ *  destination, then the caller must also have permission to connect to the
+ *  redirected host/URL.
+ */
 abstract class HttpURLConnection extends URLConnection {
 
-    // The chunk-length when using chunked encoding streaming mode for output.
-    protected def chunkLength: Int
+    /** The chunk-length when using chunked encoding streaming mode for output. */
+    protected val chunkLength: Int
 
-    // The fixed content-length when using fixed-length streaming mode.
-    protected def fixedContentLength: Int
+    /** The fixed content-length when using fixed-length streaming mode. */
+    protected val fixedContentLength: Int
 
-    // The fixed content-length when using fixed-length streaming mode.
-    protected def fixedContentLengthLong: Long
+    /** The fixed content-length when using fixed-length streaming mode. */
+    protected val fixedContentLengthLong: Long
 
-    // If true, the protocol will automatically follow redirects.
-    protected def instanceFollowRedirects: Boolean
+    /** If true, the protocol will automatically follow redirects. */
+    protected val instanceFollowRedirects: Boolean
 
-    // The HTTP method (GET,POST,PUT,etc.).
-    protected def method: String
+    /** The HTTP method (GET,POST,PUT,etc.). */
+    protected val method: String
 
-    // An int representing the three digit HTTP Status-Code.
-    protected def responseCode: Int
+    /** An int representing the three digit HTTP Status-Code. */
+    protected val responseCode: Int
 
-    // Indicates that other requests to the server
-    // are unlikely in the near future.
+    /** Indicates that other requests to the server
+     *  are unlikely in the near future.
+     */
     def disconnect(): Unit
 
-    // Returns the error stream if the connection failed
-    // but the server sent useful data nonetheless.
+    /** Returns the error stream if the connection failed
+     *  but the server sent useful data nonetheless.
+     */
     def getErrorStream(): InputStream
 
-    // Returns the value for the nth header field.
+    /** Returns the value for the nth header field. */
     def getHeaderField(n: Int): String
 
-    // Returns the value of the named field parsed as date.
+    /** Returns the value of the named field parsed as date. */
     def getHeaderFieldDate(name: String, Default: Long): Long
 
-    // Returns the key for the nth header field.
+    /** Returns the key for the nth header field. */
     def getHeaderFieldKey(n: Int): String
 
-    // Returns the value of this HttpURLConnection's
-    // instanceFollowRedirects field.
+    /** Returns the value of this HttpURLConnection's
+     *  instanceFollowRedirects field.
+     */
     def getInstanceFollowRedirects(): Boolean
 
-    // Returns a SocketPermission object representing the
-    // permission necessary to connect to the destination host and port.
+    /** Returns a SocketPermission object representing the
+     *  permission necessary to connect to the destination host and port.
+     */
     def getPermission(): Permission
 
-    // Get the request method.
+    /** Get the request method. */
     def getRequestMethod(): String
 
-    // Gets the status code from an HTTP response message.
+    /** Gets the status code from an HTTP response message. */
     def getResponseCode(): Int
 
-    // Gets the HTTP response message, if any, returned along with the
-    // response code from a server.
+    /** Gets the HTTP response message, if any, returned along with the
+     *  response code from a server.
+     */
     def getResponseMessage(): String
 
-    // This method is used to enable streaming of a HTTP request body
-    // without internal buffering, when the content length is not
-    // known in advance.
+    /** This method is used to enable streaming of a HTTP request body
+     *  without internal buffering, when the content length is not
+     *  known in advance.
+     */
     def setChunkedStreamingMode(chunklen: Int): Unit
 
-    // This method is used to enable streaming of a HTTP request body
-    // without internal buffering, when the content length is known in
-    // advance.
+    /** This method is used to enable streaming of a HTTP request body
+     *  without internal buffering, when the content length is known in
+     *  advance.
+     */
     def setFixedLengthStreamingMode(contentLength: Int): Unit
 
-    // This method is used to enable streaming of a HTTP request body
-    // without internal buffering, when the content length is known in
-    // advance.
+    /** This method is used to enable streaming of a HTTP request body
+     *  without internal buffering, when the content length is known in
+     *  advance.
+     */
     def setFixedLengthStreamingMode(contentLength: Long): Unit
 
-    // Sets whether HTTP redirects (requests with response code 3xx) should
-    // be automatically followed by this HttpURLConnection
-    // instance.
+    /** Sets whether HTTP redirects (requests with response code 3xx) should
+     *  be automatically followed by this HttpURLConnection
+     *  instance.
+     */
     def setInstanceFollowRedirects(followRedirects: Boolean): Unit
 
-    // Set the method for the URL request, one of:
-    // 
-    //  GET
-    //  POST
-    //  HEAD
-    //  OPTIONS
-    //  PUT
-    //  DELETE
-    //  TRACE
-    //  are legal, subject to protocol restrictions.
+    /** Set the method for the URL request, one of:
+     *  
+     *   GET
+     *   POST
+     *   HEAD
+     *   OPTIONS
+     *   PUT
+     *   DELETE
+     *   TRACE
+     *   are legal, subject to protocol restrictions.
+     */
     def setRequestMethod(method: String): Unit
 }
 
 object HttpURLConnection {
+    /** HTTP Status-Code 202: Accepted. */
     @stub
-    // HTTP Status-Code 202: Accepted.
-    def HTTP_ACCEPTED: Int = ???
+    val HTTP_ACCEPTED: Int = ???
 
+    /** HTTP Status-Code 502: Bad Gateway. */
     @stub
-    // HTTP Status-Code 502: Bad Gateway.
-    def HTTP_BAD_GATEWAY: Int = ???
+    val HTTP_BAD_GATEWAY: Int = ???
 
+    /** HTTP Status-Code 405: Method Not Allowed. */
     @stub
-    // HTTP Status-Code 405: Method Not Allowed.
-    def HTTP_BAD_METHOD: Int = ???
+    val HTTP_BAD_METHOD: Int = ???
 
+    /** HTTP Status-Code 400: Bad Request. */
     @stub
-    // HTTP Status-Code 400: Bad Request.
-    def HTTP_BAD_REQUEST: Int = ???
+    val HTTP_BAD_REQUEST: Int = ???
 
+    /** HTTP Status-Code 408: Request Time-Out. */
     @stub
-    // HTTP Status-Code 408: Request Time-Out.
-    def HTTP_CLIENT_TIMEOUT: Int = ???
+    val HTTP_CLIENT_TIMEOUT: Int = ???
 
+    /** HTTP Status-Code 409: Conflict. */
     @stub
-    // HTTP Status-Code 409: Conflict.
-    def HTTP_CONFLICT: Int = ???
+    val HTTP_CONFLICT: Int = ???
 
+    /** HTTP Status-Code 201: Created. */
     @stub
-    // HTTP Status-Code 201: Created.
-    def HTTP_CREATED: Int = ???
+    val HTTP_CREATED: Int = ???
 
+    /** HTTP Status-Code 413: Request Entity Too Large. */
     @stub
-    // HTTP Status-Code 413: Request Entity Too Large.
-    def HTTP_ENTITY_TOO_LARGE: Int = ???
+    val HTTP_ENTITY_TOO_LARGE: Int = ???
 
+    /** HTTP Status-Code 403: Forbidden. */
     @stub
-    // HTTP Status-Code 403: Forbidden.
-    def HTTP_FORBIDDEN: Int = ???
+    val HTTP_FORBIDDEN: Int = ???
 
+    /** HTTP Status-Code 504: Gateway Timeout. */
     @stub
-    // HTTP Status-Code 504: Gateway Timeout.
-    def HTTP_GATEWAY_TIMEOUT: Int = ???
+    val HTTP_GATEWAY_TIMEOUT: Int = ???
 
+    /** HTTP Status-Code 410: Gone. */
     @stub
-    // HTTP Status-Code 410: Gone.
-    def HTTP_GONE: Int = ???
+    val HTTP_GONE: Int = ???
 
+    /** HTTP Status-Code 500: Internal Server Error. */
     @stub
-    // HTTP Status-Code 500: Internal Server Error.
-    def HTTP_INTERNAL_ERROR: Int = ???
+    val HTTP_INTERNAL_ERROR: Int = ???
 
+    /** HTTP Status-Code 411: Length Required. */
     @stub
-    // HTTP Status-Code 411: Length Required.
-    def HTTP_LENGTH_REQUIRED: Int = ???
+    val HTTP_LENGTH_REQUIRED: Int = ???
 
+    /** HTTP Status-Code 301: Moved Permanently. */
     @stub
-    // HTTP Status-Code 301: Moved Permanently.
-    def HTTP_MOVED_PERM: Int = ???
+    val HTTP_MOVED_PERM: Int = ???
 
+    /** HTTP Status-Code 302: Temporary Redirect. */
     @stub
-    // HTTP Status-Code 302: Temporary Redirect.
-    def HTTP_MOVED_TEMP: Int = ???
+    val HTTP_MOVED_TEMP: Int = ???
 
+    /** HTTP Status-Code 300: Multiple Choices. */
     @stub
-    // HTTP Status-Code 300: Multiple Choices.
-    def HTTP_MULT_CHOICE: Int = ???
+    val HTTP_MULT_CHOICE: Int = ???
 
+    /** HTTP Status-Code 204: No Content. */
     @stub
-    // HTTP Status-Code 204: No Content.
-    def HTTP_NO_CONTENT: Int = ???
+    val HTTP_NO_CONTENT: Int = ???
 
+    /** HTTP Status-Code 406: Not Acceptable. */
     @stub
-    // HTTP Status-Code 406: Not Acceptable.
-    def HTTP_NOT_ACCEPTABLE: Int = ???
+    val HTTP_NOT_ACCEPTABLE: Int = ???
 
+    /** HTTP Status-Code 203: Non-Authoritative Information. */
     @stub
-    // HTTP Status-Code 203: Non-Authoritative Information.
-    def HTTP_NOT_AUTHORITATIVE: Int = ???
+    val HTTP_NOT_AUTHORITATIVE: Int = ???
 
+    /** HTTP Status-Code 404: Not Found. */
     @stub
-    // HTTP Status-Code 404: Not Found.
-    def HTTP_NOT_FOUND: Int = ???
+    val HTTP_NOT_FOUND: Int = ???
 
+    /** HTTP Status-Code 501: Not Implemented. */
     @stub
-    // HTTP Status-Code 501: Not Implemented.
-    def HTTP_NOT_IMPLEMENTED: Int = ???
+    val HTTP_NOT_IMPLEMENTED: Int = ???
 
+    /** HTTP Status-Code 304: Not Modified. */
     @stub
-    // HTTP Status-Code 304: Not Modified.
-    def HTTP_NOT_MODIFIED: Int = ???
+    val HTTP_NOT_MODIFIED: Int = ???
 
+    /** HTTP Status-Code 200: OK. */
     @stub
-    // HTTP Status-Code 200: OK.
-    def HTTP_OK: Int = ???
+    val HTTP_OK: Int = ???
 
+    /** HTTP Status-Code 206: Partial Content. */
     @stub
-    // HTTP Status-Code 206: Partial Content.
-    def HTTP_PARTIAL: Int = ???
+    val HTTP_PARTIAL: Int = ???
 
+    /** HTTP Status-Code 402: Payment Required. */
     @stub
-    // HTTP Status-Code 402: Payment Required.
-    def HTTP_PAYMENT_REQUIRED: Int = ???
+    val HTTP_PAYMENT_REQUIRED: Int = ???
 
+    /** HTTP Status-Code 412: Precondition Failed. */
     @stub
-    // HTTP Status-Code 412: Precondition Failed.
-    def HTTP_PRECON_FAILED: Int = ???
+    val HTTP_PRECON_FAILED: Int = ???
 
+    /** HTTP Status-Code 407: Proxy Authentication Required. */
     @stub
-    // HTTP Status-Code 407: Proxy Authentication Required.
-    def HTTP_PROXY_AUTH: Int = ???
+    val HTTP_PROXY_AUTH: Int = ???
 
+    /** HTTP Status-Code 414: Request-URI Too Large. */
     @stub
-    // HTTP Status-Code 414: Request-URI Too Large.
-    def HTTP_REQ_TOO_LONG: Int = ???
+    val HTTP_REQ_TOO_LONG: Int = ???
 
+    /** HTTP Status-Code 205: Reset Content. */
     @stub
-    // HTTP Status-Code 205: Reset Content.
-    def HTTP_RESET: Int = ???
+    val HTTP_RESET: Int = ???
 
+    /** HTTP Status-Code 303: See Other. */
     @stub
-    // HTTP Status-Code 303: See Other.
-    def HTTP_SEE_OTHER: Int = ???
+    val HTTP_SEE_OTHER: Int = ???
 
+    /** Deprecated. 
+     * it is misplaced and shouldn't have existed.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //it is misplaced and shouldn't have existed.
-    //
-    def HTTP_SERVER_ERROR: Int = ???
+    val HTTP_SERVER_ERROR: Int = ???
 
+    /** HTTP Status-Code 401: Unauthorized. */
     @stub
-    // HTTP Status-Code 401: Unauthorized.
-    def HTTP_UNAUTHORIZED: Int = ???
+    val HTTP_UNAUTHORIZED: Int = ???
 
+    /** HTTP Status-Code 503: Service Unavailable. */
     @stub
-    // HTTP Status-Code 503: Service Unavailable.
-    def HTTP_UNAVAILABLE: Int = ???
+    val HTTP_UNAVAILABLE: Int = ???
 
+    /** HTTP Status-Code 415: Unsupported Media Type. */
     @stub
-    // HTTP Status-Code 415: Unsupported Media Type.
-    def HTTP_UNSUPPORTED_TYPE: Int = ???
+    val HTTP_UNSUPPORTED_TYPE: Int = ???
 
+    /** HTTP Status-Code 305: Use Proxy. */
     @stub
-    // HTTP Status-Code 305: Use Proxy.
-    def HTTP_USE_PROXY: Int = ???
+    val HTTP_USE_PROXY: Int = ???
 
+    /** HTTP Status-Code 505: HTTP Version Not Supported. */
     @stub
-    // HTTP Status-Code 505: HTTP Version Not Supported.
-    def HTTP_VERSION: Int = ???
+    val HTTP_VERSION: Int = ???
 
+    /** Returns a boolean indicating
+     *  whether or not HTTP redirects (3xx) should
+     *  be automatically followed.
+     */
     @stub
-    // Returns a boolean indicating
-    // whether or not HTTP redirects (3xx) should
-    // be automatically followed.
     def getFollowRedirects(): Boolean = ???
 
+    /** Sets whether HTTP redirects  (requests with response code 3xx) should
+     *  be automatically followed by this class.
+     */
     @stub
-    // Sets whether HTTP redirects  (requests with response code 3xx) should
-    // be automatically followed by this class.
     def setFollowRedirects(set: Boolean): Unit = ???
 }

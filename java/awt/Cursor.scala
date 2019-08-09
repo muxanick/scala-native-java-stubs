@@ -3,100 +3,102 @@ package java.awt
 import java.io.Serializable
 import java.lang.{Object, String}
 
-// A class to encapsulate the bitmap representation of the mouse cursor.
+/** A class to encapsulate the bitmap representation of the mouse cursor. */
 class Cursor extends Object with Serializable {
 
+    /** Creates a new cursor object with the specified type. */
     @stub
-    // Creates a new cursor object with the specified type.
     def this(type: Int) = ???
 
+    /** The user-visible name of the cursor. */
     @stub
-    // The user-visible name of the cursor.
-    protected def name: String = ???
+    protected val name: String = ???
 
+    /** Returns the name of this cursor. */
     @stub
-    // Returns the name of this cursor.
     def getName(): String = ???
 
+    /** Returns the type for this cursor. */
     @stub
-    // Returns the type for this cursor.
     def getType(): Int = ???
 }
 
 object Cursor {
+    /** The crosshair cursor type. */
     @stub
-    // The crosshair cursor type.
-    def CROSSHAIR_CURSOR: Int = ???
+    val CROSSHAIR_CURSOR: Int = ???
 
+    /** The type associated with all custom cursors. */
     @stub
-    // The type associated with all custom cursors.
-    def CUSTOM_CURSOR: Int = ???
+    val CUSTOM_CURSOR: Int = ???
 
+    /** The default cursor type (gets set if no cursor is defined). */
     @stub
-    // The default cursor type (gets set if no cursor is defined).
-    def DEFAULT_CURSOR: Int = ???
+    val DEFAULT_CURSOR: Int = ???
 
+    /** The east-resize cursor type. */
     @stub
-    // The east-resize cursor type.
-    def E_RESIZE_CURSOR: Int = ???
+    val E_RESIZE_CURSOR: Int = ???
 
+    /** The hand cursor type. */
     @stub
-    // The hand cursor type.
-    def HAND_CURSOR: Int = ???
+    val HAND_CURSOR: Int = ???
 
+    /** The move cursor type. */
     @stub
-    // The move cursor type.
-    def MOVE_CURSOR: Int = ???
+    val MOVE_CURSOR: Int = ???
 
+    /** The north-resize cursor type. */
     @stub
-    // The north-resize cursor type.
-    def N_RESIZE_CURSOR: Int = ???
+    val N_RESIZE_CURSOR: Int = ???
 
+    /** The north-east-resize cursor type. */
     @stub
-    // The north-east-resize cursor type.
-    def NE_RESIZE_CURSOR: Int = ???
+    val NE_RESIZE_CURSOR: Int = ???
 
+    /** The north-west-resize cursor type. */
     @stub
-    // The north-west-resize cursor type.
-    def NW_RESIZE_CURSOR: Int = ???
+    val NW_RESIZE_CURSOR: Int = ???
 
+    /** Deprecated. 
+     * As of JDK version 1.7, the getPredefinedCursor(int)
+     *  method should be used instead.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of JDK version 1.7, the getPredefinedCursor(int)
-    // method should be used instead.
-    //
-    protected def predefined: Array[Cursor] = ???
+    protected val predefined: Array[Cursor] = ???
 
+    /** The south-resize cursor type. */
     @stub
-    // The south-resize cursor type.
-    def S_RESIZE_CURSOR: Int = ???
+    val S_RESIZE_CURSOR: Int = ???
 
+    /** The south-east-resize cursor type. */
     @stub
-    // The south-east-resize cursor type.
-    def SE_RESIZE_CURSOR: Int = ???
+    val SE_RESIZE_CURSOR: Int = ???
 
+    /** The south-west-resize cursor type. */
     @stub
-    // The south-west-resize cursor type.
-    def SW_RESIZE_CURSOR: Int = ???
+    val SW_RESIZE_CURSOR: Int = ???
 
+    /** The text cursor type. */
     @stub
-    // The text cursor type.
-    def TEXT_CURSOR: Int = ???
+    val TEXT_CURSOR: Int = ???
 
+    /** The west-resize cursor type. */
     @stub
-    // The west-resize cursor type.
-    def W_RESIZE_CURSOR: Int = ???
+    val W_RESIZE_CURSOR: Int = ???
 
+    /** Return the system default cursor. */
     @stub
-    // Return the system default cursor.
     def getDefaultCursor(): Cursor = ???
 
+    /** Returns a cursor object with the specified predefined type. */
     @stub
-    // Returns a cursor object with the specified predefined type.
     def getPredefinedCursor(type: Int): Cursor = ???
 
+    /** Returns a system-specific custom cursor object matching the
+     *  specified name.
+     */
     @stub
-    // Returns a system-specific custom cursor object matching the
-    // specified name.
     def getSystemCustomCursor(name: String): Cursor = ???
 }

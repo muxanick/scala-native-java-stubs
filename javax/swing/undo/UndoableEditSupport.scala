@@ -4,61 +4,64 @@ import java.lang.Object
 import java.util.Vector
 import javax.swing.event.UndoableEditListener
 
-// A support class used for managing UndoableEdit listeners.
+/** A support class used for managing UndoableEdit listeners. */
 class UndoableEditSupport extends Object {
 
+    /** Constructs an UndoableEditSupport object. */
     @stub
-    // Constructs an UndoableEditSupport object.
     def this() = ???
 
+    /**  */
     @stub
-    // 
-    protected def compoundEdit: CompoundEdit = ???
+    protected val compoundEdit: CompoundEdit = ???
 
+    /**  */
     @stub
-    // 
-    protected def listeners: Vector[UndoableEditListener] = ???
+    protected val listeners: Vector[UndoableEditListener] = ???
 
+    /**  */
     @stub
-    // 
-    protected def realSource: Object = ???
+    protected val realSource: Object = ???
 
+    /** Called only from postEdit and endUpdate. */
     @stub
-    // Called only from postEdit and endUpdate.
     protected def _postEdit(e: UndoableEdit): Unit = ???
 
+    /** Registers an UndoableEditListener. */
     @stub
-    // Registers an UndoableEditListener.
     def addUndoableEditListener(l: UndoableEditListener): Unit = ???
 
+    /**  */
     @stub
-    // 
     def beginUpdate(): Unit = ???
 
+    /** Called only from beginUpdate. */
     @stub
-    // Called only from beginUpdate.
     protected def createCompoundEdit(): CompoundEdit = ???
 
+    /** DEADLOCK WARNING: Calling this method may call
+     *  undoableEditHappened in all listeners.
+     */
     @stub
-    // DEADLOCK WARNING: Calling this method may call
-    // undoableEditHappened in all listeners.
     def endUpdate(): Unit = ???
 
+    /** Returns an array of all the UndoableEditListeners added
+     *  to this UndoableEditSupport with addUndoableEditListener().
+     */
     @stub
-    // Returns an array of all the UndoableEditListeners added
-    // to this UndoableEditSupport with addUndoableEditListener().
     def getUndoableEditListeners(): Array[UndoableEditListener] = ???
 
+    /** Returns the update level value. */
     @stub
-    // Returns the update level value.
     def getUpdateLevel(): Int = ???
 
+    /** DEADLOCK WARNING: Calling this method may call
+     *  undoableEditHappened in all listeners.
+     */
     @stub
-    // DEADLOCK WARNING: Calling this method may call
-    // undoableEditHappened in all listeners.
     def postEdit(e: UndoableEdit): Unit = ???
 
+    /** Removes an UndoableEditListener. */
     @stub
-    // Removes an UndoableEditListener.
     def removeUndoableEditListener(l: UndoableEditListener): Unit = ???
 }

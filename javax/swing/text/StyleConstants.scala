@@ -4,342 +4,355 @@ import java.awt.{Color, Component}
 import java.lang.{Object, String}
 import javax.swing.Icon
 
-// 
-// A collection of well known or common attribute keys
-// and methods to apply to an AttributeSet or MutableAttributeSet
-// to get/set the properties in a typesafe manner.
-// 
-// The paragraph attributes form the definition of a paragraph to be rendered.
-// All sizes are specified in points (such as found in postscript), a
-// device independent measure.
-// 
-// 
-// 
+/** 
+ *  A collection of well known or common attribute keys
+ *  and methods to apply to an AttributeSet or MutableAttributeSet
+ *  to get/set the properties in a typesafe manner.
+ *  
+ *  The paragraph attributes form the definition of a paragraph to be rendered.
+ *  All sizes are specified in points (such as found in postscript), a
+ *  device independent measure.
+ *  
+ *  
+ *  
+ */
 class StyleConstants extends Object {
 }
 
 object StyleConstants {
+    /** This is a typesafe enumeration of the well-known
+     *  attributes that contribute to a character style.
+     */
     @stub
-    // This is a typesafe enumeration of the well-known
-    // attributes that contribute to a character style.
-    def StyleConstants.CharacterConstants: class = ???
+    object CharacterConstants extends StyleConstants.CharacterConstants
 
+    /** This is a typesafe enumeration of the well-known
+     *  attributes that contribute to a color.
+     */
     @stub
-    // This is a typesafe enumeration of the well-known
-    // attributes that contribute to a color.
-    def StyleConstants.ColorConstants: class = ???
+    object ColorConstants extends StyleConstants.ColorConstants
 
+    /** This is a typesafe enumeration of the well-known
+     *  attributes that contribute to a font.
+     */
     @stub
-    // This is a typesafe enumeration of the well-known
-    // attributes that contribute to a font.
-    def StyleConstants.FontConstants: class = ???
+    object FontConstants extends StyleConstants.FontConstants
 
+    /** A possible value for paragraph alignment. */
     @stub
-    // A possible value for paragraph alignment.
-    def ALIGN_CENTER: Int = ???
+    val ALIGN_CENTER: Int = ???
 
+    /** A possible value for paragraph alignment. */
     @stub
-    // A possible value for paragraph alignment.
-    def ALIGN_JUSTIFIED: Int = ???
+    val ALIGN_JUSTIFIED: Int = ???
 
+    /** A possible value for paragraph alignment. */
     @stub
-    // A possible value for paragraph alignment.
-    def ALIGN_LEFT: Int = ???
+    val ALIGN_LEFT: Int = ???
 
+    /** A possible value for paragraph alignment. */
     @stub
-    // A possible value for paragraph alignment.
-    def ALIGN_RIGHT: Int = ???
+    val ALIGN_RIGHT: Int = ???
 
+    /** Alignment for the paragraph. */
     @stub
-    // Alignment for the paragraph.
-    def Alignment: Object = ???
+    val Alignment: Object = ???
 
+    /** Name of the background color attribute. */
     @stub
-    // Name of the background color attribute.
-    def Background: Object = ???
+    val Background: Object = ???
 
+    /** Bidirectional level of a character as assigned by the Unicode bidi
+     *  algorithm.
+     */
     @stub
-    // Bidirectional level of a character as assigned by the Unicode bidi
-    // algorithm.
-    def BidiLevel: Object = ???
+    val BidiLevel: Object = ???
 
+    /** Name of the bold attribute. */
     @stub
-    // Name of the bold attribute.
-    def Bold: Object = ???
+    val Bold: Object = ???
 
+    /** Name of the component attribute. */
     @stub
-    // Name of the component attribute.
-    def ComponentAttribute: Object = ???
+    val ComponentAttribute: Object = ???
 
+    /** Name of elements used to represent components. */
     @stub
-    // Name of elements used to represent components.
-    def ComponentElementName: String = ???
+    val ComponentElementName: String = ???
 
+    /** Name of the input method composed text attribute. */
     @stub
-    // Name of the input method composed text attribute.
-    def ComposedTextAttribute: Object = ???
+    val ComposedTextAttribute: Object = ???
 
+    /** Name of the font family. */
     @stub
-    // Name of the font family.
-    def Family: Object = ???
+    val Family: Object = ???
 
+    /** The amount of space to indent the first
+     *  line of the paragraph.
+     */
     @stub
-    // The amount of space to indent the first
-    // line of the paragraph.
-    def FirstLineIndent: Object = ???
+    val FirstLineIndent: Object = ???
 
+    /** Name of the font family. */
     @stub
-    // Name of the font family.
-    def FontFamily: Object = ???
+    val FontFamily: Object = ???
 
+    /** Name of the font size. */
     @stub
-    // Name of the font size.
-    def FontSize: Object = ???
+    val FontSize: Object = ???
 
+    /** Name of the foreground color attribute. */
     @stub
-    // Name of the foreground color attribute.
-    def Foreground: Object = ???
+    val Foreground: Object = ???
 
+    /** Name of the icon attribute. */
     @stub
-    // Name of the icon attribute.
-    def IconAttribute: Object = ???
+    val IconAttribute: Object = ???
 
+    /** Name of elements used to represent icons. */
     @stub
-    // Name of elements used to represent icons.
-    def IconElementName: String = ???
+    val IconElementName: String = ???
 
+    /** Name of the italic attribute. */
     @stub
-    // Name of the italic attribute.
-    def Italic: Object = ???
+    val Italic: Object = ???
 
+    /** The amount to indent the left side
+     *  of the paragraph.
+     */
     @stub
-    // The amount to indent the left side
-    // of the paragraph.
-    def LeftIndent: Object = ???
+    val LeftIndent: Object = ???
 
+    /** The amount of space between lines
+     *  of the paragraph.
+     */
     @stub
-    // The amount of space between lines
-    // of the paragraph.
-    def LineSpacing: Object = ???
+    val LineSpacing: Object = ???
 
+    /** Attribute used to identify the model for embedded
+     *  objects that have a model view separation.
+     */
     @stub
-    // Attribute used to identify the model for embedded
-    // objects that have a model view separation.
-    def ModelAttribute: Object = ???
+    val ModelAttribute: Object = ???
 
+    /** Attribute name used to name the collection of
+     *  attributes.
+     */
     @stub
-    // Attribute name used to name the collection of
-    // attributes.
-    def NameAttribute: Object = ???
+    val NameAttribute: Object = ???
 
+    /** Orientation for a paragraph. */
     @stub
-    // Orientation for a paragraph.
-    def Orientation: Object = ???
+    val Orientation: Object = ???
 
+    /** Attribute name used to identify the resolving parent
+     *  set of attributes, if one is defined.
+     */
     @stub
-    // Attribute name used to identify the resolving parent
-    // set of attributes, if one is defined.
-    def ResolveAttribute: Object = ???
+    val ResolveAttribute: Object = ???
 
+    /** The amount to indent the right side
+     *  of the paragraph.
+     */
     @stub
-    // The amount to indent the right side
-    // of the paragraph.
-    def RightIndent: Object = ???
+    val RightIndent: Object = ???
 
+    /** Name of the font size. */
     @stub
-    // Name of the font size.
-    def Size: Object = ???
+    val Size: Object = ???
 
+    /** The amount of space above the paragraph. */
     @stub
-    // The amount of space above the paragraph.
-    def SpaceAbove: Object = ???
+    val SpaceAbove: Object = ???
 
+    /** The amount of space below the paragraph. */
     @stub
-    // The amount of space below the paragraph.
-    def SpaceBelow: Object = ???
+    val SpaceBelow: Object = ???
 
+    /** Name of the Strikethrough attribute. */
     @stub
-    // Name of the Strikethrough attribute.
-    def StrikeThrough: Object = ???
+    val StrikeThrough: Object = ???
 
+    /** Name of the Subscript attribute. */
     @stub
-    // Name of the Subscript attribute.
-    def Subscript: Object = ???
+    val Subscript: Object = ???
 
+    /** Name of the Superscript attribute. */
     @stub
-    // Name of the Superscript attribute.
-    def Superscript: Object = ???
+    val Superscript: Object = ???
 
+    /** TabSet for the paragraph, type is a TabSet containing
+     *  TabStops.
+     */
     @stub
-    // TabSet for the paragraph, type is a TabSet containing
-    // TabStops.
-    def TabSet: Object = ???
+    val TabSet: Object = ???
 
+    /** Gets the alignment setting. */
     @stub
-    // Gets the alignment setting.
     def getAlignment(a: AttributeSet): Int = ???
 
+    /** Gets the background color setting from the attribute list. */
     @stub
-    // Gets the background color setting from the attribute list.
     def getBackground(a: AttributeSet): Color = ???
 
+    /** Gets the BidiLevel setting. */
     @stub
-    // Gets the BidiLevel setting.
     def getBidiLevel(a: AttributeSet): Int = ???
 
+    /** Gets the component setting from the attribute list. */
     @stub
-    // Gets the component setting from the attribute list.
     def getComponent(a: AttributeSet): Component = ???
 
+    /** Gets the first line indent setting. */
     @stub
-    // Gets the first line indent setting.
-    def getFirstLineIndent(a: AttributeSet): float = ???
+    def getFirstLineIndent(a: AttributeSet): Float = ???
 
+    /** Gets the font family setting from the attribute list. */
     @stub
-    // Gets the font family setting from the attribute list.
     def getFontFamily(a: AttributeSet): String = ???
 
+    /** Gets the font size setting from the attribute list. */
     @stub
-    // Gets the font size setting from the attribute list.
     def getFontSize(a: AttributeSet): Int = ???
 
+    /** Gets the foreground color setting from the attribute list. */
     @stub
-    // Gets the foreground color setting from the attribute list.
     def getForeground(a: AttributeSet): Color = ???
 
+    /** Gets the icon setting from the attribute list. */
     @stub
-    // Gets the icon setting from the attribute list.
     def getIcon(a: AttributeSet): Icon = ???
 
+    /** Gets the left indent setting. */
     @stub
-    // Gets the left indent setting.
-    def getLeftIndent(a: AttributeSet): float = ???
+    def getLeftIndent(a: AttributeSet): Float = ???
 
+    /** Gets the line spacing setting. */
     @stub
-    // Gets the line spacing setting.
-    def getLineSpacing(a: AttributeSet): float = ???
+    def getLineSpacing(a: AttributeSet): Float = ???
 
+    /** Gets the right indent setting. */
     @stub
-    // Gets the right indent setting.
-    def getRightIndent(a: AttributeSet): float = ???
+    def getRightIndent(a: AttributeSet): Float = ???
 
+    /** Gets the space above setting. */
     @stub
-    // Gets the space above setting.
-    def getSpaceAbove(a: AttributeSet): float = ???
+    def getSpaceAbove(a: AttributeSet): Float = ???
 
+    /** Gets the space below setting. */
     @stub
-    // Gets the space below setting.
-    def getSpaceBelow(a: AttributeSet): float = ???
+    def getSpaceBelow(a: AttributeSet): Float = ???
 
+    /** Gets the TabSet. */
     @stub
-    // Gets the TabSet.
     def getTabSet(a: AttributeSet): TabSet = ???
 
+    /** Checks whether the bold attribute is set. */
     @stub
-    // Checks whether the bold attribute is set.
     def isBold(a: AttributeSet): Boolean = ???
 
+    /** Checks whether the italic attribute is set. */
     @stub
-    // Checks whether the italic attribute is set.
     def isItalic(a: AttributeSet): Boolean = ???
 
+    /** Checks whether the strikethrough attribute is set. */
     @stub
-    // Checks whether the strikethrough attribute is set.
     def isStrikeThrough(a: AttributeSet): Boolean = ???
 
+    /** Checks whether the subscript attribute is set. */
     @stub
-    // Checks whether the subscript attribute is set.
     def isSubscript(a: AttributeSet): Boolean = ???
 
+    /** Checks whether the superscript attribute is set. */
     @stub
-    // Checks whether the superscript attribute is set.
     def isSuperscript(a: AttributeSet): Boolean = ???
 
+    /** Checks whether the underline attribute is set. */
     @stub
-    // Checks whether the underline attribute is set.
     def isUnderline(a: AttributeSet): Boolean = ???
 
+    /** Sets alignment. */
     @stub
-    // Sets alignment.
     def setAlignment(a: MutableAttributeSet, align: Int): Unit = ???
 
+    /** Sets the background color. */
     @stub
-    // Sets the background color.
     def setBackground(a: MutableAttributeSet, fg: Color): Unit = ???
 
+    /** Sets the BidiLevel. */
     @stub
-    // Sets the BidiLevel.
     def setBidiLevel(a: MutableAttributeSet, o: Int): Unit = ???
 
+    /** Sets the bold attribute. */
     @stub
-    // Sets the bold attribute.
     def setBold(a: MutableAttributeSet, b: Boolean): Unit = ???
 
+    /** Sets the component attribute. */
     @stub
-    // Sets the component attribute.
     def setComponent(a: MutableAttributeSet, c: Component): Unit = ???
 
+    /** Sets the first line indent. */
     @stub
-    // Sets the first line indent.
-    def setFirstLineIndent(a: MutableAttributeSet, i: float): Unit = ???
+    def setFirstLineIndent(a: MutableAttributeSet, i: Float): Unit = ???
 
+    /** Sets the font attribute. */
     @stub
-    // Sets the font attribute.
     def setFontFamily(a: MutableAttributeSet, fam: String): Unit = ???
 
+    /** Sets the font size attribute. */
     @stub
-    // Sets the font size attribute.
     def setFontSize(a: MutableAttributeSet, s: Int): Unit = ???
 
+    /** Sets the foreground color. */
     @stub
-    // Sets the foreground color.
     def setForeground(a: MutableAttributeSet, fg: Color): Unit = ???
 
+    /** Sets the icon attribute. */
     @stub
-    // Sets the icon attribute.
     def setIcon(a: MutableAttributeSet, c: Icon): Unit = ???
 
+    /** Sets the italic attribute. */
     @stub
-    // Sets the italic attribute.
     def setItalic(a: MutableAttributeSet, b: Boolean): Unit = ???
 
+    /** Sets left indent. */
     @stub
-    // Sets left indent.
-    def setLeftIndent(a: MutableAttributeSet, i: float): Unit = ???
+    def setLeftIndent(a: MutableAttributeSet, i: Float): Unit = ???
 
+    /** Sets line spacing. */
     @stub
-    // Sets line spacing.
-    def setLineSpacing(a: MutableAttributeSet, i: float): Unit = ???
+    def setLineSpacing(a: MutableAttributeSet, i: Float): Unit = ???
 
+    /** Sets right indent. */
     @stub
-    // Sets right indent.
-    def setRightIndent(a: MutableAttributeSet, i: float): Unit = ???
+    def setRightIndent(a: MutableAttributeSet, i: Float): Unit = ???
 
+    /** Sets space above. */
     @stub
-    // Sets space above.
-    def setSpaceAbove(a: MutableAttributeSet, i: float): Unit = ???
+    def setSpaceAbove(a: MutableAttributeSet, i: Float): Unit = ???
 
+    /** Sets space below. */
     @stub
-    // Sets space below.
-    def setSpaceBelow(a: MutableAttributeSet, i: float): Unit = ???
+    def setSpaceBelow(a: MutableAttributeSet, i: Float): Unit = ???
 
+    /** Sets the strikethrough attribute. */
     @stub
-    // Sets the strikethrough attribute.
     def setStrikeThrough(a: MutableAttributeSet, b: Boolean): Unit = ???
 
+    /** Sets the subscript attribute. */
     @stub
-    // Sets the subscript attribute.
     def setSubscript(a: MutableAttributeSet, b: Boolean): Unit = ???
 
+    /** Sets the superscript attribute. */
     @stub
-    // Sets the superscript attribute.
     def setSuperscript(a: MutableAttributeSet, b: Boolean): Unit = ???
 
+    /** Sets the TabSet. */
     @stub
-    // Sets the TabSet.
     def setTabSet(a: MutableAttributeSet, tabs: TabSet): Unit = ???
 
+    /** Sets the underline attribute. */
     @stub
-    // Sets the underline attribute.
     def setUnderline(a: MutableAttributeSet, b: Boolean): Unit = ???
 }

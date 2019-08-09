@@ -3,59 +3,68 @@ package java.awt.geom
 import java.io.Serializable
 import java.lang.Object
 
-// The Float class defines an ellipse specified
-// in float precision.
+/** The Float class defines an ellipse specified
+ *  in float precision.
+ */
 object Ellipse2D.Float extends Ellipse2D with Serializable {
 
+    /** Constructs a new Ellipse2D, initialized to
+     *  location (0, 0) and size (0, 0).
+     */
     @stub
-    // Constructs a new Ellipse2D, initialized to
-    // location (0, 0) and size (0, 0).
     def Float() = ???
 
+    /** The overall height of this Ellipse2D. */
     @stub
-    // The overall height of this Ellipse2D.
-    def height: float = ???
+    val height: Float = ???
 
+    /** The overall width of this Ellipse2D. */
     @stub
-    // The overall width of this Ellipse2D.
-    def width: float = ???
+    val width: Float = ???
 
+    /** The X coordinate of the upper-left corner of the
+     *  framing rectangle of this Ellipse2D.
+     */
     @stub
-    // The X coordinate of the upper-left corner of the
-    // framing rectangle of this Ellipse2D.
-    def x: float = ???
+    val x: Float = ???
 
+    /** Returns a high precision and more accurate bounding box of
+     *  the Shape than the getBounds method.
+     */
     @stub
-    // Returns a high precision and more accurate bounding box of
-    // the Shape than the getBounds method.
     def getBounds2D(): Rectangle2D = ???
 
+    /** Returns the height of the framing rectangle
+     *  in double precision.
+     */
     @stub
-    // Returns the height of the framing rectangle
-    // in double precision.
-    def getHeight(): double = ???
+    def getHeight(): Double = ???
 
+    /** Returns the width of the framing rectangle in
+     *  double precision.
+     */
     @stub
-    // Returns the width of the framing rectangle in
-    // double precision.
-    def getWidth(): double = ???
+    def getWidth(): Double = ???
 
+    /** Returns the X coordinate of the upper-left corner of
+     *  the framing rectangle in double precision.
+     */
     @stub
-    // Returns the X coordinate of the upper-left corner of
-    // the framing rectangle in double precision.
-    def getX(): double = ???
+    def getX(): Double = ???
 
+    /** Returns the Y coordinate of the upper-left corner of
+     *  the framing rectangle in double precision.
+     */
     @stub
-    // Returns the Y coordinate of the upper-left corner of
-    // the framing rectangle in double precision.
-    def getY(): double = ???
+    def getY(): Double = ???
 
+    /** Determines whether the RectangularShape is empty. */
     @stub
-    // Determines whether the RectangularShape is empty.
     def isEmpty(): Boolean = ???
 
+    /** Sets the location and size of the framing rectangle of this
+     *  Shape to the specified rectangular values.
+     */
     @stub
-    // Sets the location and size of the framing rectangle of this
-    // Shape to the specified rectangular values.
-    def setFrame(x: double, y: double, w: double, h: double): Unit = ???
+    def setFrame(x: Double, y: Double, w: Double, h: Double): Unit = ???
 }

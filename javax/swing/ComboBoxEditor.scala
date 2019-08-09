@@ -4,27 +4,28 @@ import java.awt.Component
 import java.awt.event.ActionListener
 import java.lang.Object
 
-// The editor component used for JComboBox components.
+/** The editor component used for JComboBox components. */
 trait ComboBoxEditor {
 
+    /** Add an ActionListener. */
     @stub
-    // Add an ActionListener.
     def addActionListener(l: ActionListener): Unit = ???
 
+    /** Return the component that should be added to the tree hierarchy for
+     *  this editor
+     */
     @stub
-    // Return the component that should be added to the tree hierarchy for
-    // this editor
     def getEditorComponent(): Component = ???
 
+    /** Return the edited item */
     @stub
-    // Return the edited item
     def getItem(): Object = ???
 
+    /** Remove an ActionListener */
     @stub
-    // Remove an ActionListener
     def removeActionListener(l: ActionListener): Unit = ???
 
+    /** Ask the editor to start editing and to select everything */
     @stub
-    // Ask the editor to start editing and to select everything
     def selectAll(): Unit = ???
 }

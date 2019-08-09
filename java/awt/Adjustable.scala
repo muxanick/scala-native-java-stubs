@@ -2,74 +2,76 @@ package java.awt
 
 import java.awt.event.AdjustmentListener
 
-// The interface for objects which have an adjustable numeric value
-// contained within a bounded range of values.
+/** The interface for objects which have an adjustable numeric value
+ *  contained within a bounded range of values.
+ */
 trait Adjustable {
 
+    /** Adds a listener to receive adjustment events when the value of
+     *  the adjustable object changes.
+     */
     @stub
-    // Adds a listener to receive adjustment events when the value of
-    // the adjustable object changes.
     def addAdjustmentListener(l: AdjustmentListener): Unit = ???
 
+    /** Gets the block value increment for the adjustable object. */
     @stub
-    // Gets the block value increment for the adjustable object.
     def getBlockIncrement(): Int = ???
 
+    /** Gets the maximum value of the adjustable object. */
     @stub
-    // Gets the maximum value of the adjustable object.
     def getMaximum(): Int = ???
 
+    /** Gets the minimum value of the adjustable object. */
     @stub
-    // Gets the minimum value of the adjustable object.
     def getMinimum(): Int = ???
 
+    /** Gets the orientation of the adjustable object. */
     @stub
-    // Gets the orientation of the adjustable object.
     def getOrientation(): Int = ???
 
+    /** Gets the unit value increment for the adjustable object. */
     @stub
-    // Gets the unit value increment for the adjustable object.
     def getUnitIncrement(): Int = ???
 
+    /** Gets the current value of the adjustable object. */
     @stub
-    // Gets the current value of the adjustable object.
     def getValue(): Int = ???
 
+    /** Gets the length of the proportional indicator. */
     @stub
-    // Gets the length of the proportional indicator.
     def getVisibleAmount(): Int = ???
 
+    /** Removes an adjustment listener. */
     @stub
-    // Removes an adjustment listener.
     def removeAdjustmentListener(l: AdjustmentListener): Unit = ???
 
+    /** Sets the block value increment for the adjustable object. */
     @stub
-    // Sets the block value increment for the adjustable object.
     def setBlockIncrement(b: Int): Unit = ???
 
+    /** Sets the maximum value of the adjustable object. */
     @stub
-    // Sets the maximum value of the adjustable object.
     def setMaximum(max: Int): Unit = ???
 
+    /** Sets the minimum value of the adjustable object. */
     @stub
-    // Sets the minimum value of the adjustable object.
     def setMinimum(min: Int): Unit = ???
 
+    /** Sets the unit value increment for the adjustable object. */
     @stub
-    // Sets the unit value increment for the adjustable object.
     def setUnitIncrement(u: Int): Unit = ???
 
+    /** Sets the current value of the adjustable object. */
     @stub
-    // Sets the current value of the adjustable object.
     def setValue(v: Int): Unit = ???
 }
 
 object Adjustable {
+    /** Indicates that the Adjustable has horizontal orientation. */
     @stub
-    // Indicates that the Adjustable has horizontal orientation.
-    def HORIZONTAL: Int = ???
+    val HORIZONTAL: Int = ???
 
+    /** Indicates that the Adjustable has no orientation. */
     @stub
-    // Indicates that the Adjustable has no orientation.
-    def NO_ORIENTATION: Int = ???
+    val NO_ORIENTATION: Int = ???
 }

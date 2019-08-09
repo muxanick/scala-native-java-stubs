@@ -3,90 +3,94 @@ package javax.xml.ws.handler
 import java.lang.{Object, String}
 import java.util.Map
 
-// The interface MessageContext abstracts the message
-// context that is processed by a handler in the handle
-// method.
-//
-// The MessageContext interface provides methods to
-// manage a property set. MessageContext properties
-// enable handlers in a handler chain to share processing related
-// state.
+/** The interface MessageContext abstracts the message
+ *  context that is processed by a handler in the handle
+ *  method.
+ * 
+ *  The MessageContext interface provides methods to
+ *  manage a property set. MessageContext properties
+ *  enable handlers in a handler chain to share processing related
+ *  state.
+ */
 trait MessageContext extends Map[String, Object] {
 
+    /** Gets the scope of a property. */
     @stub
-    // Gets the scope of a property.
     def getScope(name: String): MessageContext.Scope = ???
 }
 
 object MessageContext {
+    /** Standard property: HTTP request headers. */
     @stub
-    // Standard property: HTTP request headers.
-    def HTTP_REQUEST_HEADERS: String = ???
+    val HTTP_REQUEST_HEADERS: String = ???
 
+    /** Standard property: HTTP request method. */
     @stub
-    // Standard property: HTTP request method.
-    def HTTP_REQUEST_METHOD: String = ???
+    val HTTP_REQUEST_METHOD: String = ???
 
+    /** Standard property: HTTP response status code. */
     @stub
-    // Standard property: HTTP response status code.
-    def HTTP_RESPONSE_CODE: String = ???
+    val HTTP_RESPONSE_CODE: String = ???
 
+    /** Standard property: HTTP response headers. */
     @stub
-    // Standard property: HTTP response headers.
-    def HTTP_RESPONSE_HEADERS: String = ???
+    val HTTP_RESPONSE_HEADERS: String = ???
 
+    /** Standard property: Map of attachments to a message for the inbound
+     *  message, key is  the MIME Content-ID, value is a DataHandler.
+     */
     @stub
-    // Standard property: Map of attachments to a message for the inbound
-    // message, key is  the MIME Content-ID, value is a DataHandler.
-    def INBOUND_MESSAGE_ATTACHMENTS: String = ???
+    val INBOUND_MESSAGE_ATTACHMENTS: String = ???
 
+    /** Standard property: message direction, true for
+     *  outbound messages, false for inbound.
+     */
     @stub
-    // Standard property: message direction, true for
-    // outbound messages, false for inbound.
-    def MESSAGE_OUTBOUND_PROPERTY: String = ???
+    val MESSAGE_OUTBOUND_PROPERTY: String = ???
 
+    /** Standard property: Map of attachments to a message for the outbound
+     *  message, key is the MIME Content-ID, value is a DataHandler.
+     */
     @stub
-    // Standard property: Map of attachments to a message for the outbound
-    // message, key is the MIME Content-ID, value is a DataHandler.
-    def OUTBOUND_MESSAGE_ATTACHMENTS: String = ???
+    val OUTBOUND_MESSAGE_ATTACHMENTS: String = ???
 
+    /** Standard property: Request Path Info */
     @stub
-    // Standard property: Request Path Info
-    def PATH_INFO: String = ???
+    val PATH_INFO: String = ???
 
+    /** Standard property: Query string for request. */
     @stub
-    // Standard property: Query string for request.
-    def QUERY_STRING: String = ???
+    val QUERY_STRING: String = ???
 
+    /** Standard property: WS Addressing Reference Parameters. */
     @stub
-    // Standard property: WS Addressing Reference Parameters.
-    def REFERENCE_PARAMETERS: String = ???
+    val REFERENCE_PARAMETERS: String = ???
 
+    /** Standard property: servlet context object. */
     @stub
-    // Standard property: servlet context object.
-    def SERVLET_CONTEXT: String = ???
+    val SERVLET_CONTEXT: String = ???
 
+    /** Standard property: servlet request object. */
     @stub
-    // Standard property: servlet request object.
-    def SERVLET_REQUEST: String = ???
+    val SERVLET_REQUEST: String = ???
 
+    /** Standard property: servlet response object. */
     @stub
-    // Standard property: servlet response object.
-    def SERVLET_RESPONSE: String = ???
+    val SERVLET_RESPONSE: String = ???
 
+    /** Standard property: input source for WSDL document. */
     @stub
-    // Standard property: input source for WSDL document.
-    def WSDL_DESCRIPTION: String = ???
+    val WSDL_DESCRIPTION: String = ???
 
+    /** Standard property: name of wsdl interface (2.0) or port type (1.1). */
     @stub
-    // Standard property: name of wsdl interface (2.0) or port type (1.1).
-    def WSDL_INTERFACE: String = ???
+    val WSDL_INTERFACE: String = ???
 
+    /** Standard property: name of WSDL operation. */
     @stub
-    // Standard property: name of WSDL operation.
-    def WSDL_OPERATION: String = ???
+    val WSDL_OPERATION: String = ???
 
+    /** Standard property: name of WSDL port. */
     @stub
-    // Standard property: name of WSDL port.
-    def WSDL_PORT: String = ???
+    val WSDL_PORT: String = ???
 }

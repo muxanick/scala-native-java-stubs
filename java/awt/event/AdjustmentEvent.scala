@@ -4,78 +4,82 @@ import java.awt.{AWTEvent, Adjustable}
 import java.lang.Object
 import java.util.EventObject
 
-// The adjustment event emitted by Adjustable objects like
-// Scrollbar and ScrollPane.
-// When the user changes the value of the scrolling component,
-// it receives an instance of AdjustmentEvent.
-// 
-// An unspecified behavior will be caused if the id parameter
-// of any particular AdjustmentEvent instance is not
-// in the range from ADJUSTMENT_FIRST to ADJUSTMENT_LAST.
-// 
-// The type of any AdjustmentEvent instance takes one of the following
-// values:
-//                     
-//                      UNIT_INCREMENT
-//                      UNIT_DECREMENT
-//                      BLOCK_INCREMENT
-//                      BLOCK_DECREMENT
-//                      TRACK
-//                     
-// Assigning the value different from listed above will cause an unspecified behavior.
+/** The adjustment event emitted by Adjustable objects like
+ *  Scrollbar and ScrollPane.
+ *  When the user changes the value of the scrolling component,
+ *  it receives an instance of AdjustmentEvent.
+ *  
+ *  An unspecified behavior will be caused if the id parameter
+ *  of any particular AdjustmentEvent instance is not
+ *  in the range from ADJUSTMENT_FIRST to ADJUSTMENT_LAST.
+ *  
+ *  The type of any AdjustmentEvent instance takes one of the following
+ *  values:
+ *                      
+ *                       UNIT_INCREMENT
+ *                       UNIT_DECREMENT
+ *                       BLOCK_INCREMENT
+ *                       BLOCK_DECREMENT
+ *                       TRACK
+ *                      
+ *  Assigning the value different from listed above will cause an unspecified behavior.
+ */
 class AdjustmentEvent extends AWTEvent {
 
+    /** Constructs an AdjustmentEvent object with the
+     *  specified Adjustable source, event type,
+     *  adjustment type, and value.
+     */
     @stub
-    // Constructs an AdjustmentEvent object with the
-    // specified Adjustable source, event type,
-    // adjustment type, and value.
     def this(source: Adjustable, id: Int, type: Int, value: Int) = ???
 
+    /** Returns the Adjustable object where this event originated. */
     @stub
-    // Returns the Adjustable object where this event originated.
     def getAdjustable(): Adjustable = ???
 
+    /** Returns the type of adjustment which caused the value changed
+     *  event.
+     */
     @stub
-    // Returns the type of adjustment which caused the value changed
-    // event.
     def getAdjustmentType(): Int = ???
 
+    /** Returns the current value in the adjustment event. */
     @stub
-    // Returns the current value in the adjustment event.
     def getValue(): Int = ???
 
+    /** Returns true if this is one of multiple
+     *  adjustment events.
+     */
     @stub
-    // Returns true if this is one of multiple
-    // adjustment events.
     def getValueIsAdjusting(): Boolean = ???
 }
 
 object AdjustmentEvent {
+    /** Marks the first integer id for the range of adjustment event ids. */
     @stub
-    // Marks the first integer id for the range of adjustment event ids.
-    def ADJUSTMENT_FIRST: Int = ???
+    val ADJUSTMENT_FIRST: Int = ???
 
+    /** Marks the last integer id for the range of adjustment event ids. */
     @stub
-    // Marks the last integer id for the range of adjustment event ids.
-    def ADJUSTMENT_LAST: Int = ???
+    val ADJUSTMENT_LAST: Int = ???
 
+    /** The adjustment value changed event. */
     @stub
-    // The adjustment value changed event.
-    def ADJUSTMENT_VALUE_CHANGED: Int = ???
+    val ADJUSTMENT_VALUE_CHANGED: Int = ???
 
+    /** The block decrement adjustment type. */
     @stub
-    // The block decrement adjustment type.
-    def BLOCK_DECREMENT: Int = ???
+    val BLOCK_DECREMENT: Int = ???
 
+    /** The block increment adjustment type. */
     @stub
-    // The block increment adjustment type.
-    def BLOCK_INCREMENT: Int = ???
+    val BLOCK_INCREMENT: Int = ???
 
+    /** The absolute tracking adjustment type. */
     @stub
-    // The absolute tracking adjustment type.
-    def TRACK: Int = ???
+    val TRACK: Int = ???
 
+    /** The unit decrement adjustment type. */
     @stub
-    // The unit decrement adjustment type.
-    def UNIT_DECREMENT: Int = ???
+    val UNIT_DECREMENT: Int = ???
 }

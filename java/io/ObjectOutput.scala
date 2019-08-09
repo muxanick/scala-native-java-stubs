@@ -2,28 +2,29 @@ package java.io
 
 import java.lang.AutoCloseable
 
-// ObjectOutput extends the DataOutput interface to include writing of objects.
-// DataOutput includes methods for output of primitive types, ObjectOutput
-// extends that interface to include objects, arrays, and Strings.
-trait ObjectOutput extends DataOutput , AutoCloseable {
+/** ObjectOutput extends the DataOutput interface to include writing of objects.
+ *  DataOutput includes methods for output of primitive types, ObjectOutput
+ *  extends that interface to include objects, arrays, and Strings.
+ */
+trait ObjectOutput extends DataOutput with AutoCloseable {
 
+    /** Closes the stream. */
     @stub
-    // Closes the stream.
     def close(): Unit = ???
 
+    /** Flushes the stream. */
     @stub
-    // Flushes the stream.
     def flush(): Unit = ???
 
+    /** Writes an array of bytes. */
     @stub
-    // Writes an array of bytes.
     def write(b: Array[Byte]): Unit = ???
 
+    /** Writes a sub array of bytes. */
     @stub
-    // Writes a sub array of bytes.
     def write(b: Array[Byte], off: Int, len: Int): Unit = ???
 
+    /** Writes a byte. */
     @stub
-    // Writes a byte.
     def write(b: Int): Unit = ???
 }

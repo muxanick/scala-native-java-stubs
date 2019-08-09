@@ -2,43 +2,46 @@ package javax.accessibility
 
 import java.lang.String
 
-// The AccessibleAction interface should be supported by any object
-// that can perform one or more actions.  This interface
-// provides the standard mechanism for an assistive technology to determine
-// what those actions are as well as tell the object to perform them.
-// Any object that can be manipulated should support this
-// interface.  Applications can determine if an object supports the
-// AccessibleAction interface by first obtaining its AccessibleContext (see
-// Accessible) and then calling the AccessibleContext.getAccessibleAction()
-// method.  If the return value is not null, the object supports this interface.
+/** The AccessibleAction interface should be supported by any object
+ *  that can perform one or more actions.  This interface
+ *  provides the standard mechanism for an assistive technology to determine
+ *  what those actions are as well as tell the object to perform them.
+ *  Any object that can be manipulated should support this
+ *  interface.  Applications can determine if an object supports the
+ *  AccessibleAction interface by first obtaining its AccessibleContext (see
+ *  Accessible) and then calling the AccessibleContext.getAccessibleAction()
+ *  method.  If the return value is not null, the object supports this interface.
+ */
 trait AccessibleAction {
 
+    /** Performs the specified Action on the object */
     @stub
-    // Performs the specified Action on the object
     def doAccessibleAction(i: Int): Boolean = ???
 
+    /** Returns the number of accessible actions available in this object
+     *  If there are more than one, the first one is considered the "default"
+     *  action of the object.
+     */
     @stub
-    // Returns the number of accessible actions available in this object
-    // If there are more than one, the first one is considered the "default"
-    // action of the object.
     def getAccessibleActionCount(): Int = ???
 }
 
 object AccessibleAction {
+    /** An action which causes a component to execute its default action. */
     @stub
-    // An action which causes a component to execute its default action.
-    def CLICK: String = ???
+    val CLICK: String = ???
 
+    /** An action which decrements a value. */
     @stub
-    // An action which decrements a value.
-    def DECREMENT: String = ???
+    val DECREMENT: String = ???
 
+    /** An action which increments a value. */
     @stub
-    // An action which increments a value.
-    def INCREMENT: String = ???
+    val INCREMENT: String = ???
 
+    /** An action which causes a tree node to
+     *  collapse if expanded and expand if collapsed.
+     */
     @stub
-    // An action which causes a tree node to
-    // collapse if expanded and expand if collapsed.
-    def TOGGLE_EXPAND: String = ???
+    val TOGGLE_EXPAND: String = ???
 }

@@ -4,47 +4,49 @@ import java.lang.Object
 import java.util.Enumeration
 import javax.swing.tree.{DefaultMutableTreeNode, TreeNode}
 
-// DynamicUtilTreeNode can wrap
-// vectors/hashtables/arrays/strings and
-// create the appropriate children tree nodes as necessary. It is
-// dynamic in that it will only create the children as necessary.
-// 
-// Warning:
-// Serialized objects of this class will not be compatible with
-// future Swing releases. The current serialization support is
-// appropriate for short term storage or RMI between applications running
-// the same version of Swing.  As of 1.4, support for long term storage
-// of all JavaBeans™
-// has been added to the java.beans package.
-// Please see XMLEncoder.
+/** DynamicUtilTreeNode can wrap
+ *  vectors/hashtables/arrays/strings and
+ *  create the appropriate children tree nodes as necessary. It is
+ *  dynamic in that it will only create the children as necessary.
+ *  
+ *  Warning:
+ *  Serialized objects of this class will not be compatible with
+ *  future Swing releases. The current serialization support is
+ *  appropriate for short term storage or RMI between applications running
+ *  the same version of Swing.  As of 1.4, support for long term storage
+ *  of all JavaBeans™
+ *  has been added to the java.beans package.
+ *  Please see XMLEncoder.
+ */
 object JTree.DynamicUtilTreeNode extends DefaultMutableTreeNode {
 
+    /** Value to create children with. */
     @stub
-    // Value to create children with.
-    protected def childValue: Object = ???
+    protected val childValue: Object = ???
 
+    /** Does the this JTree have children?
+     *  This property is currently not implemented.
+     */
     @stub
-    // Does the this JTree have children?
-    // This property is currently not implemented.
-    protected def hasChildren: Boolean = ???
+    protected val hasChildren: Boolean = ???
 
+    /** Subclassed to load the children, if necessary. */
     @stub
-    // Subclassed to load the children, if necessary.
     def children(): Enumeration = ???
 
+    /** Adds to parent all the children in children. */
     @stub
-    // Adds to parent all the children in children.
     def createChildren(parent: DefaultMutableTreeNode, children: Object): Unit = ???
 
+    /** Subclassed to load the children, if necessary. */
     @stub
-    // Subclassed to load the children, if necessary.
     def getChildAt(index: Int): TreeNode = ???
 
+    /** Returns the number of child nodes. */
     @stub
-    // Returns the number of child nodes.
     def getChildCount(): Int = ???
 
+    /** Returns true if this node allows children. */
     @stub
-    // Returns true if this node allows children.
     def isLeaf(): Boolean = ???
 }

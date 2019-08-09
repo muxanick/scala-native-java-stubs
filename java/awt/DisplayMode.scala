@@ -2,45 +2,47 @@ package java.awt
 
 import java.lang.Object
 
-// The DisplayMode class encapsulates the bit depth, height,
-// width, and refresh rate of a GraphicsDevice. The ability to
-// change graphics device's display mode is platform- and
-// configuration-dependent and may not always be available
-// (see GraphicsDevice.isDisplayChangeSupported()).
-// 
-// For more information on full-screen exclusive mode API, see the
-// 
-// Full-Screen Exclusive Mode API Tutorial.
+/** The DisplayMode class encapsulates the bit depth, height,
+ *  width, and refresh rate of a GraphicsDevice. The ability to
+ *  change graphics device's display mode is platform- and
+ *  configuration-dependent and may not always be available
+ *  (see GraphicsDevice.isDisplayChangeSupported()).
+ *  
+ *  For more information on full-screen exclusive mode API, see the
+ *  
+ *  Full-Screen Exclusive Mode API Tutorial.
+ */
 final class DisplayMode extends Object {
 
+    /** Returns whether the two display modes are equal. */
     @stub
-    // Returns whether the two display modes are equal.
     def equals(dm: DisplayMode): Boolean = ???
 
+    /** Indicates whether some other object is "equal to" this one. */
     @stub
-    // Indicates whether some other object is "equal to" this one.
     def equals(dm: Object): Boolean = ???
 
+    /** Returns the bit depth of the display, in bits per pixel. */
     @stub
-    // Returns the bit depth of the display, in bits per pixel.
     def getBitDepth(): Int = ???
 
+    /** Returns the height of the display, in pixels. */
     @stub
-    // Returns the height of the display, in pixels.
     def getHeight(): Int = ???
 
+    /** Returns the refresh rate of the display, in hertz. */
     @stub
-    // Returns the refresh rate of the display, in hertz.
     def getRefreshRate(): Int = ???
 
+    /** Returns the width of the display, in pixels. */
     @stub
-    // Returns the width of the display, in pixels.
     def getWidth(): Int = ???
 }
 
 object DisplayMode {
+    /** Value of the bit depth if multiple bit depths are supported in this
+     *  display mode.
+     */
     @stub
-    // Value of the bit depth if multiple bit depths are supported in this
-    // display mode.
-    def BIT_DEPTH_MULTI: Int = ???
+    val BIT_DEPTH_MULTI: Int = ???
 }

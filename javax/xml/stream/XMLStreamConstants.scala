@@ -1,66 +1,68 @@
 package javax.xml.stream
 
-// This interface declares the constants used in this API.
-// Numbers in the range 0 to 256 are reserved for the specification,
-// user defined events must use event codes outside that range.
+/** This interface declares the constants used in this API.
+ *  Numbers in the range 0 to 256 are reserved for the specification,
+ *  user defined events must use event codes outside that range.
+ */
 trait XMLStreamConstants {
 }
 
 object XMLStreamConstants {
+    /** Indicates an event is an attribute */
     @stub
-    // Indicates an event is an attribute
-    def ATTRIBUTE: Int = ???
+    val ATTRIBUTE: Int = ???
 
+    /** Indicates an event is a CDATA section */
     @stub
-    // Indicates an event is a CDATA section
-    def CDATA: Int = ???
+    val CDATA: Int = ???
 
+    /** Indicates an event is characters */
     @stub
-    // Indicates an event is characters
-    def CHARACTERS: Int = ???
+    val CHARACTERS: Int = ???
 
+    /** Indicates an event is a comment */
     @stub
-    // Indicates an event is a comment
-    def COMMENT: Int = ???
+    val COMMENT: Int = ???
 
+    /** Indicates an event is a DTD */
     @stub
-    // Indicates an event is a DTD
-    def DTD: Int = ???
+    val DTD: Int = ???
 
+    /** Indicates an event is an end document */
     @stub
-    // Indicates an event is an end document
-    def END_DOCUMENT: Int = ???
+    val END_DOCUMENT: Int = ???
 
+    /** Indicates an event is an end element */
     @stub
-    // Indicates an event is an end element
-    def END_ELEMENT: Int = ???
+    val END_ELEMENT: Int = ???
 
+    /** Indicates a Entity Declaration */
     @stub
-    // Indicates a Entity Declaration
-    def ENTITY_DECLARATION: Int = ???
+    val ENTITY_DECLARATION: Int = ???
 
+    /** Indicates an event is an entity reference */
     @stub
-    // Indicates an event is an entity reference
-    def ENTITY_REFERENCE: Int = ???
+    val ENTITY_REFERENCE: Int = ???
 
+    /** Indicates the event is a namespace declaration */
     @stub
-    // Indicates the event is a namespace declaration
-    def NAMESPACE: Int = ???
+    val NAMESPACE: Int = ???
 
+    /** Indicates a Notation */
     @stub
-    // Indicates a Notation
-    def NOTATION_DECLARATION: Int = ???
+    val NOTATION_DECLARATION: Int = ???
 
+    /** Indicates an event is a processing instruction */
     @stub
-    // Indicates an event is a processing instruction
-    def PROCESSING_INSTRUCTION: Int = ???
+    val PROCESSING_INSTRUCTION: Int = ???
 
+    /** The characters are white space
+     *  (see [XML], 2.10 "White Space Handling").
+     */
     @stub
-    // The characters are white space
-    // (see [XML], 2.10 "White Space Handling").
-    def SPACE: Int = ???
+    val SPACE: Int = ???
 
+    /** Indicates an event is a start document */
     @stub
-    // Indicates an event is a start document
-    def START_DOCUMENT: Int = ???
+    val START_DOCUMENT: Int = ???
 }

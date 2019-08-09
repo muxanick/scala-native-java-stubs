@@ -2,22 +2,22 @@ package javax.swing.text
 
 import java.lang.{Deprecated, Object}
 
-// 
+/**  */
 @Deprecated class TableView.TableCell extends BoxView {
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
     def getColumnCount(): Int = ???
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
     def getGridColumn(): Int = ???
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
     def getGridRow(): Int = ???
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
     def getRowCount(): Int = ???
 }

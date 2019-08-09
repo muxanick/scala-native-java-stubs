@@ -1,22 +1,23 @@
 package javax.sql.rowset
 
-// An interface that defines the implementation of a factory that is used
-// to obtain different types of RowSet implementations.
+/** An interface that defines the implementation of a factory that is used
+ *  to obtain different types of RowSet implementations.
+ */
 trait RowSetFactory {
 
+    /** Creates a new instance of a CachedRowSet. */
     @stub
-    // Creates a new instance of a CachedRowSet.
     def createCachedRowSet(): CachedRowSet = ???
 
+    /** Creates a new instance of a FilteredRowSet. */
     @stub
-    // Creates a new instance of a FilteredRowSet.
     def createFilteredRowSet(): FilteredRowSet = ???
 
+    /** Creates a new instance of a JdbcRowSet. */
     @stub
-    // Creates a new instance of a JdbcRowSet.
     def createJdbcRowSet(): JdbcRowSet = ???
 
+    /** Creates a new instance of a JoinRowSet. */
     @stub
-    // Creates a new instance of a JoinRowSet.
     def createJoinRowSet(): JoinRowSet = ???
 }

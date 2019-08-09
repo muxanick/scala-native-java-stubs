@@ -1,931 +1,960 @@
 package java.lang
 
-// A family of character subsets representing the character blocks in the
-// Unicode specification. Character blocks generally define characters
-// used for a specific script or purpose. A character is contained by
-// at most one Unicode block.
-object final Character.UnicodeBlock extends Character.Subset {
+/** A family of character subsets representing the character blocks in the
+ *  Unicode specification. Character blocks generally define characters
+ *  used for a specific script or purpose. A character is contained by
+ *  at most one Unicode block.
+ */
+final object Character.UnicodeBlock extends Character.Subset {
 
+    /** Constant for the "Aegean Numbers" Unicode character block. */
     @stub
-    // Constant for the "Aegean Numbers" Unicode character block.
-    def AEGEAN_NUMBERS: Character.UnicodeBlock = ???
+    val AEGEAN_NUMBERS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Alchemical Symbols" Unicode character block. */
     @stub
-    // Constant for the "Alchemical Symbols" Unicode character block.
-    def ALCHEMICAL_SYMBOLS: Character.UnicodeBlock = ???
+    val ALCHEMICAL_SYMBOLS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Alphabetic Presentation Forms" Unicode character block. */
     @stub
-    // Constant for the "Alphabetic Presentation Forms" Unicode character block.
-    def ALPHABETIC_PRESENTATION_FORMS: Character.UnicodeBlock = ???
+    val ALPHABETIC_PRESENTATION_FORMS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Ancient Greek Musical Notation" Unicode character
+     *  block.
+     */
     @stub
-    // Constant for the "Ancient Greek Musical Notation" Unicode character
-    // block.
-    def ANCIENT_GREEK_MUSICAL_NOTATION: Character.UnicodeBlock = ???
+    val ANCIENT_GREEK_MUSICAL_NOTATION: Character.UnicodeBlock = ???
 
+    /** Constant for the "Ancient Greek Numbers" Unicode character block. */
     @stub
-    // Constant for the "Ancient Greek Numbers" Unicode character block.
-    def ANCIENT_GREEK_NUMBERS: Character.UnicodeBlock = ???
+    val ANCIENT_GREEK_NUMBERS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Ancient Symbols" Unicode character block. */
     @stub
-    // Constant for the "Ancient Symbols" Unicode character block.
-    def ANCIENT_SYMBOLS: Character.UnicodeBlock = ???
+    val ANCIENT_SYMBOLS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Arabic" Unicode character block. */
     @stub
-    // Constant for the "Arabic" Unicode character block.
-    def ARABIC: Character.UnicodeBlock = ???
+    val ARABIC: Character.UnicodeBlock = ???
 
+    /** Constant for the "Arabic Extended-A" Unicode character block. */
     @stub
-    // Constant for the "Arabic Extended-A" Unicode character block.
-    def ARABIC_EXTENDED_A: Character.UnicodeBlock = ???
+    val ARABIC_EXTENDED_A: Character.UnicodeBlock = ???
 
+    /** Constant for the "Arabic Mathematical Alphabetic Symbols" Unicode
+     *  character block.
+     */
     @stub
-    // Constant for the "Arabic Mathematical Alphabetic Symbols" Unicode
-    // character block.
-    def ARABIC_MATHEMATICAL_ALPHABETIC_SYMBOLS: Character.UnicodeBlock = ???
+    val ARABIC_MATHEMATICAL_ALPHABETIC_SYMBOLS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Arabic Presentation Forms-A" Unicode character
+     *  block.
+     */
     @stub
-    // Constant for the "Arabic Presentation Forms-A" Unicode character
-    // block.
-    def ARABIC_PRESENTATION_FORMS_A: Character.UnicodeBlock = ???
+    val ARABIC_PRESENTATION_FORMS_A: Character.UnicodeBlock = ???
 
+    /** Constant for the "Arabic Presentation Forms-B" Unicode character block. */
     @stub
-    // Constant for the "Arabic Presentation Forms-B" Unicode character block.
-    def ARABIC_PRESENTATION_FORMS_B: Character.UnicodeBlock = ???
+    val ARABIC_PRESENTATION_FORMS_B: Character.UnicodeBlock = ???
 
+    /** Constant for the "Arabic Supplement" Unicode character block. */
     @stub
-    // Constant for the "Arabic Supplement" Unicode character block.
-    def ARABIC_SUPPLEMENT: Character.UnicodeBlock = ???
+    val ARABIC_SUPPLEMENT: Character.UnicodeBlock = ???
 
+    /** Constant for the "Armenian" Unicode character block. */
     @stub
-    // Constant for the "Armenian" Unicode character block.
-    def ARMENIAN: Character.UnicodeBlock = ???
+    val ARMENIAN: Character.UnicodeBlock = ???
 
+    /** Constant for the "Arrows" Unicode character block. */
     @stub
-    // Constant for the "Arrows" Unicode character block.
-    def ARROWS: Character.UnicodeBlock = ???
+    val ARROWS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Avestan" Unicode character block. */
     @stub
-    // Constant for the "Avestan" Unicode character block.
-    def AVESTAN: Character.UnicodeBlock = ???
+    val AVESTAN: Character.UnicodeBlock = ???
 
+    /** Constant for the "Balinese" Unicode character block. */
     @stub
-    // Constant for the "Balinese" Unicode character block.
-    def BALINESE: Character.UnicodeBlock = ???
+    val BALINESE: Character.UnicodeBlock = ???
 
+    /** Constant for the "Bamum" Unicode character block. */
     @stub
-    // Constant for the "Bamum" Unicode character block.
-    def BAMUM: Character.UnicodeBlock = ???
+    val BAMUM: Character.UnicodeBlock = ???
 
+    /** Constant for the "Bamum Supplement" Unicode character block. */
     @stub
-    // Constant for the "Bamum Supplement" Unicode character block.
-    def BAMUM_SUPPLEMENT: Character.UnicodeBlock = ???
+    val BAMUM_SUPPLEMENT: Character.UnicodeBlock = ???
 
+    /** Constant for the "Basic Latin" Unicode character block. */
     @stub
-    // Constant for the "Basic Latin" Unicode character block.
-    def BASIC_LATIN: Character.UnicodeBlock = ???
+    val BASIC_LATIN: Character.UnicodeBlock = ???
 
+    /** Constant for the "Batak" Unicode character block. */
     @stub
-    // Constant for the "Batak" Unicode character block.
-    def BATAK: Character.UnicodeBlock = ???
+    val BATAK: Character.UnicodeBlock = ???
 
+    /** Constant for the "Bengali" Unicode character block. */
     @stub
-    // Constant for the "Bengali" Unicode character block.
-    def BENGALI: Character.UnicodeBlock = ???
+    val BENGALI: Character.UnicodeBlock = ???
 
+    /** Constant for the "Block Elements" Unicode character block. */
     @stub
-    // Constant for the "Block Elements" Unicode character block.
-    def BLOCK_ELEMENTS: Character.UnicodeBlock = ???
+    val BLOCK_ELEMENTS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Bopomofo" Unicode character block. */
     @stub
-    // Constant for the "Bopomofo" Unicode character block.
-    def BOPOMOFO: Character.UnicodeBlock = ???
+    val BOPOMOFO: Character.UnicodeBlock = ???
 
+    /** Constant for the "Bopomofo Extended" Unicode character block. */
     @stub
-    // Constant for the "Bopomofo Extended" Unicode character block.
-    def BOPOMOFO_EXTENDED: Character.UnicodeBlock = ???
+    val BOPOMOFO_EXTENDED: Character.UnicodeBlock = ???
 
+    /** Constant for the "Box Drawing" Unicode character block. */
     @stub
-    // Constant for the "Box Drawing" Unicode character block.
-    def BOX_DRAWING: Character.UnicodeBlock = ???
+    val BOX_DRAWING: Character.UnicodeBlock = ???
 
+    /** Constant for the "Brahmi" Unicode character block. */
     @stub
-    // Constant for the "Brahmi" Unicode character block.
-    def BRAHMI: Character.UnicodeBlock = ???
+    val BRAHMI: Character.UnicodeBlock = ???
 
+    /** Constant for the "Braille Patterns" Unicode character block. */
     @stub
-    // Constant for the "Braille Patterns" Unicode character block.
-    def BRAILLE_PATTERNS: Character.UnicodeBlock = ???
+    val BRAILLE_PATTERNS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Buginese" Unicode character block. */
     @stub
-    // Constant for the "Buginese" Unicode character block.
-    def BUGINESE: Character.UnicodeBlock = ???
+    val BUGINESE: Character.UnicodeBlock = ???
 
+    /** Constant for the "Buhid" Unicode character block. */
     @stub
-    // Constant for the "Buhid" Unicode character block.
-    def BUHID: Character.UnicodeBlock = ???
+    val BUHID: Character.UnicodeBlock = ???
 
+    /** Constant for the "Byzantine Musical Symbols" Unicode character block. */
     @stub
-    // Constant for the "Byzantine Musical Symbols" Unicode character block.
-    def BYZANTINE_MUSICAL_SYMBOLS: Character.UnicodeBlock = ???
+    val BYZANTINE_MUSICAL_SYMBOLS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Carian" Unicode character block. */
     @stub
-    // Constant for the "Carian" Unicode character block.
-    def CARIAN: Character.UnicodeBlock = ???
+    val CARIAN: Character.UnicodeBlock = ???
 
+    /** Constant for the "Chakma" Unicode character block. */
     @stub
-    // Constant for the "Chakma" Unicode character block.
-    def CHAKMA: Character.UnicodeBlock = ???
+    val CHAKMA: Character.UnicodeBlock = ???
 
+    /** Constant for the "Cham" Unicode character block. */
     @stub
-    // Constant for the "Cham" Unicode character block.
-    def CHAM: Character.UnicodeBlock = ???
+    val CHAM: Character.UnicodeBlock = ???
 
+    /** Constant for the "Cherokee" Unicode character block. */
     @stub
-    // Constant for the "Cherokee" Unicode character block.
-    def CHEROKEE: Character.UnicodeBlock = ???
+    val CHEROKEE: Character.UnicodeBlock = ???
 
+    /** Constant for the "CJK Compatibility" Unicode character block. */
     @stub
-    // Constant for the "CJK Compatibility" Unicode character block.
-    def CJK_COMPATIBILITY: Character.UnicodeBlock = ???
+    val CJK_COMPATIBILITY: Character.UnicodeBlock = ???
 
+    /** Constant for the "CJK Compatibility Forms" Unicode character block. */
     @stub
-    // Constant for the "CJK Compatibility Forms" Unicode character block.
-    def CJK_COMPATIBILITY_FORMS: Character.UnicodeBlock = ???
+    val CJK_COMPATIBILITY_FORMS: Character.UnicodeBlock = ???
 
+    /** Constant for the "CJK Compatibility Ideographs" Unicode character
+     *  block.
+     */
     @stub
-    // Constant for the "CJK Compatibility Ideographs" Unicode character
-    // block.
-    def CJK_COMPATIBILITY_IDEOGRAPHS: Character.UnicodeBlock = ???
+    val CJK_COMPATIBILITY_IDEOGRAPHS: Character.UnicodeBlock = ???
 
+    /** Constant for the "CJK Compatibility Ideographs Supplement" Unicode character block. */
     @stub
-    // Constant for the "CJK Compatibility Ideographs Supplement" Unicode character block.
-    def CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT: Character.UnicodeBlock = ???
+    val CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT: Character.UnicodeBlock = ???
 
+    /** Constant for the "CJK Radicals Supplement" Unicode character block. */
     @stub
-    // Constant for the "CJK Radicals Supplement" Unicode character block.
-    def CJK_RADICALS_SUPPLEMENT: Character.UnicodeBlock = ???
+    val CJK_RADICALS_SUPPLEMENT: Character.UnicodeBlock = ???
 
+    /** Constant for the "CJK Strokes" Unicode character block. */
     @stub
-    // Constant for the "CJK Strokes" Unicode character block.
-    def CJK_STROKES: Character.UnicodeBlock = ???
+    val CJK_STROKES: Character.UnicodeBlock = ???
 
+    /** Constant for the "CJK Symbols and Punctuation" Unicode character block. */
     @stub
-    // Constant for the "CJK Symbols and Punctuation" Unicode character block.
-    def CJK_SYMBOLS_AND_PUNCTUATION: Character.UnicodeBlock = ???
+    val CJK_SYMBOLS_AND_PUNCTUATION: Character.UnicodeBlock = ???
 
+    /** Constant for the "CJK Unified Ideographs" Unicode character block. */
     @stub
-    // Constant for the "CJK Unified Ideographs" Unicode character block.
-    def CJK_UNIFIED_IDEOGRAPHS: Character.UnicodeBlock = ???
+    val CJK_UNIFIED_IDEOGRAPHS: Character.UnicodeBlock = ???
 
+    /** Constant for the "CJK Unified Ideographs Extension A" Unicode character block. */
     @stub
-    // Constant for the "CJK Unified Ideographs Extension A" Unicode character block.
-    def CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A: Character.UnicodeBlock = ???
+    val CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A: Character.UnicodeBlock = ???
 
+    /** Constant for the "CJK Unified Ideographs Extension B" Unicode
+     *  character block.
+     */
     @stub
-    // Constant for the "CJK Unified Ideographs Extension B" Unicode
-    // character block.
-    def CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B: Character.UnicodeBlock = ???
+    val CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B: Character.UnicodeBlock = ???
 
+    /** Constant for the "CJK Unified Ideographs Extension C" Unicode
+     *  character block.
+     */
     @stub
-    // Constant for the "CJK Unified Ideographs Extension C" Unicode
-    // character block.
-    def CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C: Character.UnicodeBlock = ???
+    val CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C: Character.UnicodeBlock = ???
 
+    /** Constant for the "CJK Unified Ideographs Extension D" Unicode
+     *  character block.
+     */
     @stub
-    // Constant for the "CJK Unified Ideographs Extension D" Unicode
-    // character block.
-    def CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D: Character.UnicodeBlock = ???
+    val CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D: Character.UnicodeBlock = ???
 
+    /** Constant for the "Combining Diacritical Marks" Unicode character block. */
     @stub
-    // Constant for the "Combining Diacritical Marks" Unicode character block.
-    def COMBINING_DIACRITICAL_MARKS: Character.UnicodeBlock = ???
+    val COMBINING_DIACRITICAL_MARKS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Combining Diacritical Marks Supplement" Unicode
+     *  character block.
+     */
     @stub
-    // Constant for the "Combining Diacritical Marks Supplement" Unicode
-    // character block.
-    def COMBINING_DIACRITICAL_MARKS_SUPPLEMENT: Character.UnicodeBlock = ???
+    val COMBINING_DIACRITICAL_MARKS_SUPPLEMENT: Character.UnicodeBlock = ???
 
+    /** Constant for the "Combining Half Marks" Unicode character block. */
     @stub
-    // Constant for the "Combining Half Marks" Unicode character block.
-    def COMBINING_HALF_MARKS: Character.UnicodeBlock = ???
+    val COMBINING_HALF_MARKS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Combining Diacritical Marks for Symbols" Unicode
+     *  character block.
+     */
     @stub
-    // Constant for the "Combining Diacritical Marks for Symbols" Unicode
-    // character block.
-    def COMBINING_MARKS_FOR_SYMBOLS: Character.UnicodeBlock = ???
+    val COMBINING_MARKS_FOR_SYMBOLS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Common Indic Number Forms" Unicode character block. */
     @stub
-    // Constant for the "Common Indic Number Forms" Unicode character block.
-    def COMMON_INDIC_NUMBER_FORMS: Character.UnicodeBlock = ???
+    val COMMON_INDIC_NUMBER_FORMS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Control Pictures" Unicode character block. */
     @stub
-    // Constant for the "Control Pictures" Unicode character block.
-    def CONTROL_PICTURES: Character.UnicodeBlock = ???
+    val CONTROL_PICTURES: Character.UnicodeBlock = ???
 
+    /** Constant for the "Coptic" Unicode character block. */
     @stub
-    // Constant for the "Coptic" Unicode character block.
-    def COPTIC: Character.UnicodeBlock = ???
+    val COPTIC: Character.UnicodeBlock = ???
 
+    /** Constant for the "Counting Rod Numerals" Unicode character block. */
     @stub
-    // Constant for the "Counting Rod Numerals" Unicode character block.
-    def COUNTING_ROD_NUMERALS: Character.UnicodeBlock = ???
+    val COUNTING_ROD_NUMERALS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Cuneiform" Unicode character block. */
     @stub
-    // Constant for the "Cuneiform" Unicode character block.
-    def CUNEIFORM: Character.UnicodeBlock = ???
+    val CUNEIFORM: Character.UnicodeBlock = ???
 
+    /** Constant for the "Cuneiform Numbers and Punctuation" Unicode
+     *  character block.
+     */
     @stub
-    // Constant for the "Cuneiform Numbers and Punctuation" Unicode
-    // character block.
-    def CUNEIFORM_NUMBERS_AND_PUNCTUATION: Character.UnicodeBlock = ???
+    val CUNEIFORM_NUMBERS_AND_PUNCTUATION: Character.UnicodeBlock = ???
 
+    /** Constant for the "Currency Symbols" Unicode character block. */
     @stub
-    // Constant for the "Currency Symbols" Unicode character block.
-    def CURRENCY_SYMBOLS: Character.UnicodeBlock = ???
+    val CURRENCY_SYMBOLS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Cypriot Syllabary" Unicode character block. */
     @stub
-    // Constant for the "Cypriot Syllabary" Unicode character block.
-    def CYPRIOT_SYLLABARY: Character.UnicodeBlock = ???
+    val CYPRIOT_SYLLABARY: Character.UnicodeBlock = ???
 
+    /** Constant for the "Cyrillic" Unicode character block. */
     @stub
-    // Constant for the "Cyrillic" Unicode character block.
-    def CYRILLIC: Character.UnicodeBlock = ???
+    val CYRILLIC: Character.UnicodeBlock = ???
 
+    /** Constant for the "Cyrillic Extended-A" Unicode character block. */
     @stub
-    // Constant for the "Cyrillic Extended-A" Unicode character block.
-    def CYRILLIC_EXTENDED_A: Character.UnicodeBlock = ???
+    val CYRILLIC_EXTENDED_A: Character.UnicodeBlock = ???
 
+    /** Constant for the "Cyrillic Extended-B" Unicode character block. */
     @stub
-    // Constant for the "Cyrillic Extended-B" Unicode character block.
-    def CYRILLIC_EXTENDED_B: Character.UnicodeBlock = ???
+    val CYRILLIC_EXTENDED_B: Character.UnicodeBlock = ???
 
+    /** Constant for the "Cyrillic Supplementary" Unicode character block. */
     @stub
-    // Constant for the "Cyrillic Supplementary" Unicode character block.
-    def CYRILLIC_SUPPLEMENTARY: Character.UnicodeBlock = ???
+    val CYRILLIC_SUPPLEMENTARY: Character.UnicodeBlock = ???
 
+    /** Constant for the "Deseret" Unicode character block. */
     @stub
-    // Constant for the "Deseret" Unicode character block.
-    def DESERET: Character.UnicodeBlock = ???
+    val DESERET: Character.UnicodeBlock = ???
 
+    /** Constant for the "Devanagari" Unicode character block. */
     @stub
-    // Constant for the "Devanagari" Unicode character block.
-    def DEVANAGARI: Character.UnicodeBlock = ???
+    val DEVANAGARI: Character.UnicodeBlock = ???
 
+    /** Constant for the "Devanagari Extended" Unicode character block. */
     @stub
-    // Constant for the "Devanagari Extended" Unicode character block.
-    def DEVANAGARI_EXTENDED: Character.UnicodeBlock = ???
+    val DEVANAGARI_EXTENDED: Character.UnicodeBlock = ???
 
+    /** Constant for the "Dingbats" Unicode character block. */
     @stub
-    // Constant for the "Dingbats" Unicode character block.
-    def DINGBATS: Character.UnicodeBlock = ???
+    val DINGBATS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Domino Tiles" Unicode character block. */
     @stub
-    // Constant for the "Domino Tiles" Unicode character block.
-    def DOMINO_TILES: Character.UnicodeBlock = ???
+    val DOMINO_TILES: Character.UnicodeBlock = ???
 
+    /** Constant for the "Egyptian Hieroglyphs" Unicode character block. */
     @stub
-    // Constant for the "Egyptian Hieroglyphs" Unicode character block.
-    def EGYPTIAN_HIEROGLYPHS: Character.UnicodeBlock = ???
+    val EGYPTIAN_HIEROGLYPHS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Emoticons" Unicode character block. */
     @stub
-    // Constant for the "Emoticons" Unicode character block.
-    def EMOTICONS: Character.UnicodeBlock = ???
+    val EMOTICONS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Enclosed Alphanumeric Supplement" Unicode character
+     *  block.
+     */
     @stub
-    // Constant for the "Enclosed Alphanumeric Supplement" Unicode character
-    // block.
-    def ENCLOSED_ALPHANUMERIC_SUPPLEMENT: Character.UnicodeBlock = ???
+    val ENCLOSED_ALPHANUMERIC_SUPPLEMENT: Character.UnicodeBlock = ???
 
+    /** Constant for the "Enclosed Alphanumerics" Unicode character block. */
     @stub
-    // Constant for the "Enclosed Alphanumerics" Unicode character block.
-    def ENCLOSED_ALPHANUMERICS: Character.UnicodeBlock = ???
+    val ENCLOSED_ALPHANUMERICS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Enclosed CJK Letters and Months" Unicode character block. */
     @stub
-    // Constant for the "Enclosed CJK Letters and Months" Unicode character block.
-    def ENCLOSED_CJK_LETTERS_AND_MONTHS: Character.UnicodeBlock = ???
+    val ENCLOSED_CJK_LETTERS_AND_MONTHS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Enclosed Ideographic Supplement" Unicode character
+     *  block.
+     */
     @stub
-    // Constant for the "Enclosed Ideographic Supplement" Unicode character
-    // block.
-    def ENCLOSED_IDEOGRAPHIC_SUPPLEMENT: Character.UnicodeBlock = ???
+    val ENCLOSED_IDEOGRAPHIC_SUPPLEMENT: Character.UnicodeBlock = ???
 
+    /** Constant for the "Ethiopic" Unicode character block. */
     @stub
-    // Constant for the "Ethiopic" Unicode character block.
-    def ETHIOPIC: Character.UnicodeBlock = ???
+    val ETHIOPIC: Character.UnicodeBlock = ???
 
+    /** Constant for the "Ethiopic Extended" Unicode character block. */
     @stub
-    // Constant for the "Ethiopic Extended" Unicode character block.
-    def ETHIOPIC_EXTENDED: Character.UnicodeBlock = ???
+    val ETHIOPIC_EXTENDED: Character.UnicodeBlock = ???
 
+    /** Constant for the "Ethiopic Extended-A" Unicode character block. */
     @stub
-    // Constant for the "Ethiopic Extended-A" Unicode character block.
-    def ETHIOPIC_EXTENDED_A: Character.UnicodeBlock = ???
+    val ETHIOPIC_EXTENDED_A: Character.UnicodeBlock = ???
 
+    /** Constant for the "Ethiopic Supplement" Unicode character block. */
     @stub
-    // Constant for the "Ethiopic Supplement" Unicode character block.
-    def ETHIOPIC_SUPPLEMENT: Character.UnicodeBlock = ???
+    val ETHIOPIC_SUPPLEMENT: Character.UnicodeBlock = ???
 
+    /** Constant for the "General Punctuation" Unicode character block. */
     @stub
-    // Constant for the "General Punctuation" Unicode character block.
-    def GENERAL_PUNCTUATION: Character.UnicodeBlock = ???
+    val GENERAL_PUNCTUATION: Character.UnicodeBlock = ???
 
+    /** Constant for the "Geometric Shapes" Unicode character block. */
     @stub
-    // Constant for the "Geometric Shapes" Unicode character block.
-    def GEOMETRIC_SHAPES: Character.UnicodeBlock = ???
+    val GEOMETRIC_SHAPES: Character.UnicodeBlock = ???
 
+    /** Constant for the "Georgian" Unicode character block. */
     @stub
-    // Constant for the "Georgian" Unicode character block.
-    def GEORGIAN: Character.UnicodeBlock = ???
+    val GEORGIAN: Character.UnicodeBlock = ???
 
+    /** Constant for the "Georgian Supplement" Unicode character block. */
     @stub
-    // Constant for the "Georgian Supplement" Unicode character block.
-    def GEORGIAN_SUPPLEMENT: Character.UnicodeBlock = ???
+    val GEORGIAN_SUPPLEMENT: Character.UnicodeBlock = ???
 
+    /** Constant for the "Glagolitic" Unicode character block. */
     @stub
-    // Constant for the "Glagolitic" Unicode character block.
-    def GLAGOLITIC: Character.UnicodeBlock = ???
+    val GLAGOLITIC: Character.UnicodeBlock = ???
 
+    /** Constant for the "Gothic" Unicode character block. */
     @stub
-    // Constant for the "Gothic" Unicode character block.
-    def GOTHIC: Character.UnicodeBlock = ???
+    val GOTHIC: Character.UnicodeBlock = ???
 
+    /** Constant for the "Greek and Coptic" Unicode character block. */
     @stub
-    // Constant for the "Greek and Coptic" Unicode character block.
-    def GREEK: Character.UnicodeBlock = ???
+    val GREEK: Character.UnicodeBlock = ???
 
+    /** Constant for the "Greek Extended" Unicode character block. */
     @stub
-    // Constant for the "Greek Extended" Unicode character block.
-    def GREEK_EXTENDED: Character.UnicodeBlock = ???
+    val GREEK_EXTENDED: Character.UnicodeBlock = ???
 
+    /** Constant for the "Gujarati" Unicode character block. */
     @stub
-    // Constant for the "Gujarati" Unicode character block.
-    def GUJARATI: Character.UnicodeBlock = ???
+    val GUJARATI: Character.UnicodeBlock = ???
 
+    /** Constant for the "Gurmukhi" Unicode character block. */
     @stub
-    // Constant for the "Gurmukhi" Unicode character block.
-    def GURMUKHI: Character.UnicodeBlock = ???
+    val GURMUKHI: Character.UnicodeBlock = ???
 
+    /** Constant for the "Halfwidth and Fullwidth Forms" Unicode character
+     *  block.
+     */
     @stub
-    // Constant for the "Halfwidth and Fullwidth Forms" Unicode character
-    // block.
-    def HALFWIDTH_AND_FULLWIDTH_FORMS: Character.UnicodeBlock = ???
+    val HALFWIDTH_AND_FULLWIDTH_FORMS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Hangul Compatibility Jamo" Unicode character block. */
     @stub
-    // Constant for the "Hangul Compatibility Jamo" Unicode character block.
-    def HANGUL_COMPATIBILITY_JAMO: Character.UnicodeBlock = ???
+    val HANGUL_COMPATIBILITY_JAMO: Character.UnicodeBlock = ???
 
+    /** Constant for the "Hangul Jamo" Unicode character block. */
     @stub
-    // Constant for the "Hangul Jamo" Unicode character block.
-    def HANGUL_JAMO: Character.UnicodeBlock = ???
+    val HANGUL_JAMO: Character.UnicodeBlock = ???
 
+    /** Constant for the "Hangul Jamo Extended-A" Unicode character block. */
     @stub
-    // Constant for the "Hangul Jamo Extended-A" Unicode character block.
-    def HANGUL_JAMO_EXTENDED_A: Character.UnicodeBlock = ???
+    val HANGUL_JAMO_EXTENDED_A: Character.UnicodeBlock = ???
 
+    /** Constant for the "Hangul Jamo Extended-B" Unicode character block. */
     @stub
-    // Constant for the "Hangul Jamo Extended-B" Unicode character block.
-    def HANGUL_JAMO_EXTENDED_B: Character.UnicodeBlock = ???
+    val HANGUL_JAMO_EXTENDED_B: Character.UnicodeBlock = ???
 
+    /** Constant for the "Hangul Syllables" Unicode character block. */
     @stub
-    // Constant for the "Hangul Syllables" Unicode character block.
-    def HANGUL_SYLLABLES: Character.UnicodeBlock = ???
+    val HANGUL_SYLLABLES: Character.UnicodeBlock = ???
 
+    /** Constant for the "Hanunoo" Unicode character block. */
     @stub
-    // Constant for the "Hanunoo" Unicode character block.
-    def HANUNOO: Character.UnicodeBlock = ???
+    val HANUNOO: Character.UnicodeBlock = ???
 
+    /** Constant for the "Hebrew" Unicode character block. */
     @stub
-    // Constant for the "Hebrew" Unicode character block.
-    def HEBREW: Character.UnicodeBlock = ???
+    val HEBREW: Character.UnicodeBlock = ???
 
+    /** Constant for the "High Private Use Surrogates" Unicode character
+     *  block.
+     */
     @stub
-    // Constant for the "High Private Use Surrogates" Unicode character
-    // block.
-    def HIGH_PRIVATE_USE_SURROGATES: Character.UnicodeBlock = ???
+    val HIGH_PRIVATE_USE_SURROGATES: Character.UnicodeBlock = ???
 
+    /** Constant for the "High Surrogates" Unicode character block. */
     @stub
-    // Constant for the "High Surrogates" Unicode character block.
-    def HIGH_SURROGATES: Character.UnicodeBlock = ???
+    val HIGH_SURROGATES: Character.UnicodeBlock = ???
 
+    /** Constant for the "Hiragana" Unicode character block. */
     @stub
-    // Constant for the "Hiragana" Unicode character block.
-    def HIRAGANA: Character.UnicodeBlock = ???
+    val HIRAGANA: Character.UnicodeBlock = ???
 
+    /** Constant for the "Ideographic Description Characters" Unicode character block. */
     @stub
-    // Constant for the "Ideographic Description Characters" Unicode character block.
-    def IDEOGRAPHIC_DESCRIPTION_CHARACTERS: Character.UnicodeBlock = ???
+    val IDEOGRAPHIC_DESCRIPTION_CHARACTERS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Imperial Aramaic" Unicode character block. */
     @stub
-    // Constant for the "Imperial Aramaic" Unicode character block.
-    def IMPERIAL_ARAMAIC: Character.UnicodeBlock = ???
+    val IMPERIAL_ARAMAIC: Character.UnicodeBlock = ???
 
+    /** Constant for the "Inscriptional Pahlavi" Unicode character block. */
     @stub
-    // Constant for the "Inscriptional Pahlavi" Unicode character block.
-    def INSCRIPTIONAL_PAHLAVI: Character.UnicodeBlock = ???
+    val INSCRIPTIONAL_PAHLAVI: Character.UnicodeBlock = ???
 
+    /** Constant for the "Inscriptional Parthian" Unicode character block. */
     @stub
-    // Constant for the "Inscriptional Parthian" Unicode character block.
-    def INSCRIPTIONAL_PARTHIAN: Character.UnicodeBlock = ???
+    val INSCRIPTIONAL_PARTHIAN: Character.UnicodeBlock = ???
 
+    /** Constant for the "IPA Extensions" Unicode character block. */
     @stub
-    // Constant for the "IPA Extensions" Unicode character block.
-    def IPA_EXTENSIONS: Character.UnicodeBlock = ???
+    val IPA_EXTENSIONS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Javanese" Unicode character block. */
     @stub
-    // Constant for the "Javanese" Unicode character block.
-    def JAVANESE: Character.UnicodeBlock = ???
+    val JAVANESE: Character.UnicodeBlock = ???
 
+    /** Constant for the "Kaithi" Unicode character block. */
     @stub
-    // Constant for the "Kaithi" Unicode character block.
-    def KAITHI: Character.UnicodeBlock = ???
+    val KAITHI: Character.UnicodeBlock = ???
 
+    /** Constant for the "Kana Supplement" Unicode character block. */
     @stub
-    // Constant for the "Kana Supplement" Unicode character block.
-    def KANA_SUPPLEMENT: Character.UnicodeBlock = ???
+    val KANA_SUPPLEMENT: Character.UnicodeBlock = ???
 
+    /** Constant for the "Kanbun" Unicode character block. */
     @stub
-    // Constant for the "Kanbun" Unicode character block.
-    def KANBUN: Character.UnicodeBlock = ???
+    val KANBUN: Character.UnicodeBlock = ???
 
+    /** Constant for the "Kangxi Radicals" Unicode character block. */
     @stub
-    // Constant for the "Kangxi Radicals" Unicode character block.
-    def KANGXI_RADICALS: Character.UnicodeBlock = ???
+    val KANGXI_RADICALS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Kannada" Unicode character block. */
     @stub
-    // Constant for the "Kannada" Unicode character block.
-    def KANNADA: Character.UnicodeBlock = ???
+    val KANNADA: Character.UnicodeBlock = ???
 
+    /** Constant for the "Katakana" Unicode character block. */
     @stub
-    // Constant for the "Katakana" Unicode character block.
-    def KATAKANA: Character.UnicodeBlock = ???
+    val KATAKANA: Character.UnicodeBlock = ???
 
+    /** Constant for the "Katakana Phonetic Extensions" Unicode character
+     *  block.
+     */
     @stub
-    // Constant for the "Katakana Phonetic Extensions" Unicode character
-    // block.
-    def KATAKANA_PHONETIC_EXTENSIONS: Character.UnicodeBlock = ???
+    val KATAKANA_PHONETIC_EXTENSIONS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Kayah Li" Unicode character block. */
     @stub
-    // Constant for the "Kayah Li" Unicode character block.
-    def KAYAH_LI: Character.UnicodeBlock = ???
+    val KAYAH_LI: Character.UnicodeBlock = ???
 
+    /** Constant for the "Kharoshthi" Unicode character block. */
     @stub
-    // Constant for the "Kharoshthi" Unicode character block.
-    def KHAROSHTHI: Character.UnicodeBlock = ???
+    val KHAROSHTHI: Character.UnicodeBlock = ???
 
+    /** Constant for the "Khmer" Unicode character block. */
     @stub
-    // Constant for the "Khmer" Unicode character block.
-    def KHMER: Character.UnicodeBlock = ???
+    val KHMER: Character.UnicodeBlock = ???
 
+    /** Constant for the "Khmer Symbols" Unicode character block. */
     @stub
-    // Constant for the "Khmer Symbols" Unicode character block.
-    def KHMER_SYMBOLS: Character.UnicodeBlock = ???
+    val KHMER_SYMBOLS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Lao" Unicode character block. */
     @stub
-    // Constant for the "Lao" Unicode character block.
-    def LAO: Character.UnicodeBlock = ???
+    val LAO: Character.UnicodeBlock = ???
 
+    /** Constant for the "Latin-1 Supplement" Unicode character block. */
     @stub
-    // Constant for the "Latin-1 Supplement" Unicode character block.
-    def LATIN_1_SUPPLEMENT: Character.UnicodeBlock = ???
+    val LATIN_1_SUPPLEMENT: Character.UnicodeBlock = ???
 
+    /** Constant for the "Latin Extended-A" Unicode character block. */
     @stub
-    // Constant for the "Latin Extended-A" Unicode character block.
-    def LATIN_EXTENDED_A: Character.UnicodeBlock = ???
+    val LATIN_EXTENDED_A: Character.UnicodeBlock = ???
 
+    /** Constant for the "Latin Extended Additional" Unicode character block. */
     @stub
-    // Constant for the "Latin Extended Additional" Unicode character block.
-    def LATIN_EXTENDED_ADDITIONAL: Character.UnicodeBlock = ???
+    val LATIN_EXTENDED_ADDITIONAL: Character.UnicodeBlock = ???
 
+    /** Constant for the "Latin Extended-B" Unicode character block. */
     @stub
-    // Constant for the "Latin Extended-B" Unicode character block.
-    def LATIN_EXTENDED_B: Character.UnicodeBlock = ???
+    val LATIN_EXTENDED_B: Character.UnicodeBlock = ???
 
+    /** Constant for the "Latin Extended-C" Unicode character block. */
     @stub
-    // Constant for the "Latin Extended-C" Unicode character block.
-    def LATIN_EXTENDED_C: Character.UnicodeBlock = ???
+    val LATIN_EXTENDED_C: Character.UnicodeBlock = ???
 
+    /** Constant for the "Latin Extended-D" Unicode character block. */
     @stub
-    // Constant for the "Latin Extended-D" Unicode character block.
-    def LATIN_EXTENDED_D: Character.UnicodeBlock = ???
+    val LATIN_EXTENDED_D: Character.UnicodeBlock = ???
 
+    /** Constant for the "Lepcha" Unicode character block. */
     @stub
-    // Constant for the "Lepcha" Unicode character block.
-    def LEPCHA: Character.UnicodeBlock = ???
+    val LEPCHA: Character.UnicodeBlock = ???
 
+    /** Constant for the "Letterlike Symbols" Unicode character block. */
     @stub
-    // Constant for the "Letterlike Symbols" Unicode character block.
-    def LETTERLIKE_SYMBOLS: Character.UnicodeBlock = ???
+    val LETTERLIKE_SYMBOLS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Limbu" Unicode character block. */
     @stub
-    // Constant for the "Limbu" Unicode character block.
-    def LIMBU: Character.UnicodeBlock = ???
+    val LIMBU: Character.UnicodeBlock = ???
 
+    /** Constant for the "Linear B Ideograms" Unicode character block. */
     @stub
-    // Constant for the "Linear B Ideograms" Unicode character block.
-    def LINEAR_B_IDEOGRAMS: Character.UnicodeBlock = ???
+    val LINEAR_B_IDEOGRAMS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Linear B Syllabary" Unicode character block. */
     @stub
-    // Constant for the "Linear B Syllabary" Unicode character block.
-    def LINEAR_B_SYLLABARY: Character.UnicodeBlock = ???
+    val LINEAR_B_SYLLABARY: Character.UnicodeBlock = ???
 
+    /** Constant for the "Lisu" Unicode character block. */
     @stub
-    // Constant for the "Lisu" Unicode character block.
-    def LISU: Character.UnicodeBlock = ???
+    val LISU: Character.UnicodeBlock = ???
 
+    /** Constant for the "Low Surrogates" Unicode character block. */
     @stub
-    // Constant for the "Low Surrogates" Unicode character block.
-    def LOW_SURROGATES: Character.UnicodeBlock = ???
+    val LOW_SURROGATES: Character.UnicodeBlock = ???
 
+    /** Constant for the "Lycian" Unicode character block. */
     @stub
-    // Constant for the "Lycian" Unicode character block.
-    def LYCIAN: Character.UnicodeBlock = ???
+    val LYCIAN: Character.UnicodeBlock = ???
 
+    /** Constant for the "Lydian" Unicode character block. */
     @stub
-    // Constant for the "Lydian" Unicode character block.
-    def LYDIAN: Character.UnicodeBlock = ???
+    val LYDIAN: Character.UnicodeBlock = ???
 
+    /** Constant for the "Mahjong Tiles" Unicode character block. */
     @stub
-    // Constant for the "Mahjong Tiles" Unicode character block.
-    def MAHJONG_TILES: Character.UnicodeBlock = ???
+    val MAHJONG_TILES: Character.UnicodeBlock = ???
 
+    /** Constant for the "Malayalam" Unicode character block. */
     @stub
-    // Constant for the "Malayalam" Unicode character block.
-    def MALAYALAM: Character.UnicodeBlock = ???
+    val MALAYALAM: Character.UnicodeBlock = ???
 
+    /** Constant for the "Mandaic" Unicode character block. */
     @stub
-    // Constant for the "Mandaic" Unicode character block.
-    def MANDAIC: Character.UnicodeBlock = ???
+    val MANDAIC: Character.UnicodeBlock = ???
 
+    /** Constant for the "Mathematical Alphanumeric Symbols" Unicode
+     *  character block.
+     */
     @stub
-    // Constant for the "Mathematical Alphanumeric Symbols" Unicode
-    // character block.
-    def MATHEMATICAL_ALPHANUMERIC_SYMBOLS: Character.UnicodeBlock = ???
+    val MATHEMATICAL_ALPHANUMERIC_SYMBOLS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Mathematical Operators" Unicode character block. */
     @stub
-    // Constant for the "Mathematical Operators" Unicode character block.
-    def MATHEMATICAL_OPERATORS: Character.UnicodeBlock = ???
+    val MATHEMATICAL_OPERATORS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Meetei Mayek" Unicode character block. */
     @stub
-    // Constant for the "Meetei Mayek" Unicode character block.
-    def MEETEI_MAYEK: Character.UnicodeBlock = ???
+    val MEETEI_MAYEK: Character.UnicodeBlock = ???
 
+    /** Constant for the "Meetei Mayek Extensions" Unicode character block. */
     @stub
-    // Constant for the "Meetei Mayek Extensions" Unicode character block.
-    def MEETEI_MAYEK_EXTENSIONS: Character.UnicodeBlock = ???
+    val MEETEI_MAYEK_EXTENSIONS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Meroitic Cursive" Unicode character block. */
     @stub
-    // Constant for the "Meroitic Cursive" Unicode character block.
-    def MEROITIC_CURSIVE: Character.UnicodeBlock = ???
+    val MEROITIC_CURSIVE: Character.UnicodeBlock = ???
 
+    /** Constant for the "Meroitic Hieroglyphs" Unicode character block. */
     @stub
-    // Constant for the "Meroitic Hieroglyphs" Unicode character block.
-    def MEROITIC_HIEROGLYPHS: Character.UnicodeBlock = ???
+    val MEROITIC_HIEROGLYPHS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Miao" Unicode character block. */
     @stub
-    // Constant for the "Miao" Unicode character block.
-    def MIAO: Character.UnicodeBlock = ???
+    val MIAO: Character.UnicodeBlock = ???
 
+    /** Constant for the "Miscellaneous Mathematical Symbols-A" Unicode character block. */
     @stub
-    // Constant for the "Miscellaneous Mathematical Symbols-A" Unicode character block.
-    def MISCELLANEOUS_MATHEMATICAL_SYMBOLS_A: Character.UnicodeBlock = ???
+    val MISCELLANEOUS_MATHEMATICAL_SYMBOLS_A: Character.UnicodeBlock = ???
 
+    /** Constant for the "Miscellaneous Mathematical Symbols-B" Unicode
+     *  character block.
+     */
     @stub
-    // Constant for the "Miscellaneous Mathematical Symbols-B" Unicode
-    // character block.
-    def MISCELLANEOUS_MATHEMATICAL_SYMBOLS_B: Character.UnicodeBlock = ???
+    val MISCELLANEOUS_MATHEMATICAL_SYMBOLS_B: Character.UnicodeBlock = ???
 
+    /** Constant for the "Miscellaneous Symbols" Unicode character block. */
     @stub
-    // Constant for the "Miscellaneous Symbols" Unicode character block.
-    def MISCELLANEOUS_SYMBOLS: Character.UnicodeBlock = ???
+    val MISCELLANEOUS_SYMBOLS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Miscellaneous Symbols and Arrows" Unicode character
+     *  block.
+     */
     @stub
-    // Constant for the "Miscellaneous Symbols and Arrows" Unicode character
-    // block.
-    def MISCELLANEOUS_SYMBOLS_AND_ARROWS: Character.UnicodeBlock = ???
+    val MISCELLANEOUS_SYMBOLS_AND_ARROWS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Miscellaneous Symbols And Pictographs" Unicode
+     *  character block.
+     */
     @stub
-    // Constant for the "Miscellaneous Symbols And Pictographs" Unicode
-    // character block.
-    def MISCELLANEOUS_SYMBOLS_AND_PICTOGRAPHS: Character.UnicodeBlock = ???
+    val MISCELLANEOUS_SYMBOLS_AND_PICTOGRAPHS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Miscellaneous Technical" Unicode character block. */
     @stub
-    // Constant for the "Miscellaneous Technical" Unicode character block.
-    def MISCELLANEOUS_TECHNICAL: Character.UnicodeBlock = ???
+    val MISCELLANEOUS_TECHNICAL: Character.UnicodeBlock = ???
 
+    /** Constant for the "Modifier Tone Letters" Unicode character block. */
     @stub
-    // Constant for the "Modifier Tone Letters" Unicode character block.
-    def MODIFIER_TONE_LETTERS: Character.UnicodeBlock = ???
+    val MODIFIER_TONE_LETTERS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Mongolian" Unicode character block. */
     @stub
-    // Constant for the "Mongolian" Unicode character block.
-    def MONGOLIAN: Character.UnicodeBlock = ???
+    val MONGOLIAN: Character.UnicodeBlock = ???
 
+    /** Constant for the "Musical Symbols" Unicode character block. */
     @stub
-    // Constant for the "Musical Symbols" Unicode character block.
-    def MUSICAL_SYMBOLS: Character.UnicodeBlock = ???
+    val MUSICAL_SYMBOLS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Myanmar" Unicode character block. */
     @stub
-    // Constant for the "Myanmar" Unicode character block.
-    def MYANMAR: Character.UnicodeBlock = ???
+    val MYANMAR: Character.UnicodeBlock = ???
 
+    /** Constant for the "Myanmar Extended-A" Unicode character block. */
     @stub
-    // Constant for the "Myanmar Extended-A" Unicode character block.
-    def MYANMAR_EXTENDED_A: Character.UnicodeBlock = ???
+    val MYANMAR_EXTENDED_A: Character.UnicodeBlock = ???
 
+    /** Constant for the "New Tai Lue" Unicode character block. */
     @stub
-    // Constant for the "New Tai Lue" Unicode character block.
-    def NEW_TAI_LUE: Character.UnicodeBlock = ???
+    val NEW_TAI_LUE: Character.UnicodeBlock = ???
 
+    /** Constant for the "NKo" Unicode character block. */
     @stub
-    // Constant for the "NKo" Unicode character block.
-    def NKO: Character.UnicodeBlock = ???
+    val NKO: Character.UnicodeBlock = ???
 
+    /** Constant for the "Number Forms" Unicode character block. */
     @stub
-    // Constant for the "Number Forms" Unicode character block.
-    def NUMBER_FORMS: Character.UnicodeBlock = ???
+    val NUMBER_FORMS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Ogham" Unicode character block. */
     @stub
-    // Constant for the "Ogham" Unicode character block.
-    def OGHAM: Character.UnicodeBlock = ???
+    val OGHAM: Character.UnicodeBlock = ???
 
+    /** Constant for the "Ol Chiki" Unicode character block. */
     @stub
-    // Constant for the "Ol Chiki" Unicode character block.
-    def OL_CHIKI: Character.UnicodeBlock = ???
+    val OL_CHIKI: Character.UnicodeBlock = ???
 
+    /** Constant for the "Old Italic" Unicode character block. */
     @stub
-    // Constant for the "Old Italic" Unicode character block.
-    def OLD_ITALIC: Character.UnicodeBlock = ???
+    val OLD_ITALIC: Character.UnicodeBlock = ???
 
+    /** Constant for the "Old Persian" Unicode character block. */
     @stub
-    // Constant for the "Old Persian" Unicode character block.
-    def OLD_PERSIAN: Character.UnicodeBlock = ???
+    val OLD_PERSIAN: Character.UnicodeBlock = ???
 
+    /** Constant for the "Old South Arabian" Unicode character block. */
     @stub
-    // Constant for the "Old South Arabian" Unicode character block.
-    def OLD_SOUTH_ARABIAN: Character.UnicodeBlock = ???
+    val OLD_SOUTH_ARABIAN: Character.UnicodeBlock = ???
 
+    /** Constant for the "Old Turkic" Unicode character block. */
     @stub
-    // Constant for the "Old Turkic" Unicode character block.
-    def OLD_TURKIC: Character.UnicodeBlock = ???
+    val OLD_TURKIC: Character.UnicodeBlock = ???
 
+    /** Constant for the "Optical Character Recognition" Unicode character block. */
     @stub
-    // Constant for the "Optical Character Recognition" Unicode character block.
-    def OPTICAL_CHARACTER_RECOGNITION: Character.UnicodeBlock = ???
+    val OPTICAL_CHARACTER_RECOGNITION: Character.UnicodeBlock = ???
 
+    /** Constant for the "Oriya" Unicode character block. */
     @stub
-    // Constant for the "Oriya" Unicode character block.
-    def ORIYA: Character.UnicodeBlock = ???
+    val ORIYA: Character.UnicodeBlock = ???
 
+    /** Constant for the "Osmanya" Unicode character block. */
     @stub
-    // Constant for the "Osmanya" Unicode character block.
-    def OSMANYA: Character.UnicodeBlock = ???
+    val OSMANYA: Character.UnicodeBlock = ???
 
+    /** Constant for the "Phags-pa" Unicode character block. */
     @stub
-    // Constant for the "Phags-pa" Unicode character block.
-    def PHAGS_PA: Character.UnicodeBlock = ???
+    val PHAGS_PA: Character.UnicodeBlock = ???
 
+    /** Constant for the "Phaistos Disc" Unicode character block. */
     @stub
-    // Constant for the "Phaistos Disc" Unicode character block.
-    def PHAISTOS_DISC: Character.UnicodeBlock = ???
+    val PHAISTOS_DISC: Character.UnicodeBlock = ???
 
+    /** Constant for the "Phoenician" Unicode character block. */
     @stub
-    // Constant for the "Phoenician" Unicode character block.
-    def PHOENICIAN: Character.UnicodeBlock = ???
+    val PHOENICIAN: Character.UnicodeBlock = ???
 
+    /** Constant for the "Phonetic Extensions" Unicode character block. */
     @stub
-    // Constant for the "Phonetic Extensions" Unicode character block.
-    def PHONETIC_EXTENSIONS: Character.UnicodeBlock = ???
+    val PHONETIC_EXTENSIONS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Phonetic Extensions Supplement" Unicode character
+     *  block.
+     */
     @stub
-    // Constant for the "Phonetic Extensions Supplement" Unicode character
-    // block.
-    def PHONETIC_EXTENSIONS_SUPPLEMENT: Character.UnicodeBlock = ???
+    val PHONETIC_EXTENSIONS_SUPPLEMENT: Character.UnicodeBlock = ???
 
+    /** Constant for the "Playing Cards" Unicode character block. */
     @stub
-    // Constant for the "Playing Cards" Unicode character block.
-    def PLAYING_CARDS: Character.UnicodeBlock = ???
+    val PLAYING_CARDS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Private Use Area" Unicode character block. */
     @stub
-    // Constant for the "Private Use Area" Unicode character block.
-    def PRIVATE_USE_AREA: Character.UnicodeBlock = ???
+    val PRIVATE_USE_AREA: Character.UnicodeBlock = ???
 
+    /** Constant for the "Rejang" Unicode character block. */
     @stub
-    // Constant for the "Rejang" Unicode character block.
-    def REJANG: Character.UnicodeBlock = ???
+    val REJANG: Character.UnicodeBlock = ???
 
+    /** Constant for the "Rumi Numeral Symbols" Unicode character block. */
     @stub
-    // Constant for the "Rumi Numeral Symbols" Unicode character block.
-    def RUMI_NUMERAL_SYMBOLS: Character.UnicodeBlock = ???
+    val RUMI_NUMERAL_SYMBOLS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Runic" Unicode character block. */
     @stub
-    // Constant for the "Runic" Unicode character block.
-    def RUNIC: Character.UnicodeBlock = ???
+    val RUNIC: Character.UnicodeBlock = ???
 
+    /** Constant for the "Samaritan" Unicode character block. */
     @stub
-    // Constant for the "Samaritan" Unicode character block.
-    def SAMARITAN: Character.UnicodeBlock = ???
+    val SAMARITAN: Character.UnicodeBlock = ???
 
+    /** Constant for the "Saurashtra" Unicode character block. */
     @stub
-    // Constant for the "Saurashtra" Unicode character block.
-    def SAURASHTRA: Character.UnicodeBlock = ???
+    val SAURASHTRA: Character.UnicodeBlock = ???
 
+    /** Constant for the "Sharada" Unicode character block. */
     @stub
-    // Constant for the "Sharada" Unicode character block.
-    def SHARADA: Character.UnicodeBlock = ???
+    val SHARADA: Character.UnicodeBlock = ???
 
+    /** Constant for the "Shavian" Unicode character block. */
     @stub
-    // Constant for the "Shavian" Unicode character block.
-    def SHAVIAN: Character.UnicodeBlock = ???
+    val SHAVIAN: Character.UnicodeBlock = ???
 
+    /** Constant for the "Sinhala" Unicode character block. */
     @stub
-    // Constant for the "Sinhala" Unicode character block.
-    def SINHALA: Character.UnicodeBlock = ???
+    val SINHALA: Character.UnicodeBlock = ???
 
+    /** Constant for the "Small Form Variants" Unicode character block. */
     @stub
-    // Constant for the "Small Form Variants" Unicode character block.
-    def SMALL_FORM_VARIANTS: Character.UnicodeBlock = ???
+    val SMALL_FORM_VARIANTS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Sora Sompeng" Unicode character block. */
     @stub
-    // Constant for the "Sora Sompeng" Unicode character block.
-    def SORA_SOMPENG: Character.UnicodeBlock = ???
+    val SORA_SOMPENG: Character.UnicodeBlock = ???
 
+    /** Constant for the "Spacing Modifier Letters" Unicode character block. */
     @stub
-    // Constant for the "Spacing Modifier Letters" Unicode character block.
-    def SPACING_MODIFIER_LETTERS: Character.UnicodeBlock = ???
+    val SPACING_MODIFIER_LETTERS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Specials" Unicode character block. */
     @stub
-    // Constant for the "Specials" Unicode character block.
-    def SPECIALS: Character.UnicodeBlock = ???
+    val SPECIALS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Sundanese" Unicode character block. */
     @stub
-    // Constant for the "Sundanese" Unicode character block.
-    def SUNDANESE: Character.UnicodeBlock = ???
+    val SUNDANESE: Character.UnicodeBlock = ???
 
+    /** Constant for the "Sundanese Supplement" Unicode character block. */
     @stub
-    // Constant for the "Sundanese Supplement" Unicode character block.
-    def SUNDANESE_SUPPLEMENT: Character.UnicodeBlock = ???
+    val SUNDANESE_SUPPLEMENT: Character.UnicodeBlock = ???
 
+    /** Constant for the "Superscripts and Subscripts" Unicode character
+     *  block.
+     */
     @stub
-    // Constant for the "Superscripts and Subscripts" Unicode character
-    // block.
-    def SUPERSCRIPTS_AND_SUBSCRIPTS: Character.UnicodeBlock = ???
+    val SUPERSCRIPTS_AND_SUBSCRIPTS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Supplemental Arrows-A" Unicode character block. */
     @stub
-    // Constant for the "Supplemental Arrows-A" Unicode character block.
-    def SUPPLEMENTAL_ARROWS_A: Character.UnicodeBlock = ???
+    val SUPPLEMENTAL_ARROWS_A: Character.UnicodeBlock = ???
 
+    /** Constant for the "Supplemental Arrows-B" Unicode character block. */
     @stub
-    // Constant for the "Supplemental Arrows-B" Unicode character block.
-    def SUPPLEMENTAL_ARROWS_B: Character.UnicodeBlock = ???
+    val SUPPLEMENTAL_ARROWS_B: Character.UnicodeBlock = ???
 
+    /** Constant for the "Supplemental Mathematical Operators" Unicode
+     *  character block.
+     */
     @stub
-    // Constant for the "Supplemental Mathematical Operators" Unicode
-    // character block.
-    def SUPPLEMENTAL_MATHEMATICAL_OPERATORS: Character.UnicodeBlock = ???
+    val SUPPLEMENTAL_MATHEMATICAL_OPERATORS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Supplemental Punctuation" Unicode character block. */
     @stub
-    // Constant for the "Supplemental Punctuation" Unicode character block.
-    def SUPPLEMENTAL_PUNCTUATION: Character.UnicodeBlock = ???
+    val SUPPLEMENTAL_PUNCTUATION: Character.UnicodeBlock = ???
 
+    /** Constant for the "Supplementary Private Use Area-A" Unicode character
+     *  block.
+     */
     @stub
-    // Constant for the "Supplementary Private Use Area-A" Unicode character
-    // block.
-    def SUPPLEMENTARY_PRIVATE_USE_AREA_A: Character.UnicodeBlock = ???
+    val SUPPLEMENTARY_PRIVATE_USE_AREA_A: Character.UnicodeBlock = ???
 
+    /** Constant for the "Supplementary Private Use Area-B" Unicode character
+     *  block.
+     */
     @stub
-    // Constant for the "Supplementary Private Use Area-B" Unicode character
-    // block.
-    def SUPPLEMENTARY_PRIVATE_USE_AREA_B: Character.UnicodeBlock = ???
+    val SUPPLEMENTARY_PRIVATE_USE_AREA_B: Character.UnicodeBlock = ???
 
+    /** Deprecated. 
+     * As of J2SE 5, use HIGH_SURROGATES,
+     *              HIGH_PRIVATE_USE_SURROGATES, and
+     *              LOW_SURROGATES. These new constants match
+     *              the block definitions of the Unicode Standard.
+     *              The of(char) and of(int) methods
+     *              return the new constants, not SURROGATES_AREA.
+     * 
+     */
     @stub
-    // Deprecated. 
-    //As of J2SE 5, use HIGH_SURROGATES,
-    //             HIGH_PRIVATE_USE_SURROGATES, and
-    //             LOW_SURROGATES. These new constants match
-    //             the block definitions of the Unicode Standard.
-    //             The of(char) and of(int) methods
-    //             return the new constants, not SURROGATES_AREA.
-    //
-    def SURROGATES_AREA: Character.UnicodeBlock = ???
+    val SURROGATES_AREA: Character.UnicodeBlock = ???
 
+    /** Constant for the "Syloti Nagri" Unicode character block. */
     @stub
-    // Constant for the "Syloti Nagri" Unicode character block.
-    def SYLOTI_NAGRI: Character.UnicodeBlock = ???
+    val SYLOTI_NAGRI: Character.UnicodeBlock = ???
 
+    /** Constant for the "Syriac" Unicode character block. */
     @stub
-    // Constant for the "Syriac" Unicode character block.
-    def SYRIAC: Character.UnicodeBlock = ???
+    val SYRIAC: Character.UnicodeBlock = ???
 
+    /** Constant for the "Tagalog" Unicode character block. */
     @stub
-    // Constant for the "Tagalog" Unicode character block.
-    def TAGALOG: Character.UnicodeBlock = ???
+    val TAGALOG: Character.UnicodeBlock = ???
 
+    /** Constant for the "Tagbanwa" Unicode character block. */
     @stub
-    // Constant for the "Tagbanwa" Unicode character block.
-    def TAGBANWA: Character.UnicodeBlock = ???
+    val TAGBANWA: Character.UnicodeBlock = ???
 
+    /** Constant for the "Tags" Unicode character block. */
     @stub
-    // Constant for the "Tags" Unicode character block.
-    def TAGS: Character.UnicodeBlock = ???
+    val TAGS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Tai Le" Unicode character block. */
     @stub
-    // Constant for the "Tai Le" Unicode character block.
-    def TAI_LE: Character.UnicodeBlock = ???
+    val TAI_LE: Character.UnicodeBlock = ???
 
+    /** Constant for the "Tai Tham" Unicode character block. */
     @stub
-    // Constant for the "Tai Tham" Unicode character block.
-    def TAI_THAM: Character.UnicodeBlock = ???
+    val TAI_THAM: Character.UnicodeBlock = ???
 
+    /** Constant for the "Tai Viet" Unicode character block. */
     @stub
-    // Constant for the "Tai Viet" Unicode character block.
-    def TAI_VIET: Character.UnicodeBlock = ???
+    val TAI_VIET: Character.UnicodeBlock = ???
 
+    /** Constant for the "Tai Xuan Jing Symbols" Unicode character block. */
     @stub
-    // Constant for the "Tai Xuan Jing Symbols" Unicode character block.
-    def TAI_XUAN_JING_SYMBOLS: Character.UnicodeBlock = ???
+    val TAI_XUAN_JING_SYMBOLS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Takri" Unicode character block. */
     @stub
-    // Constant for the "Takri" Unicode character block.
-    def TAKRI: Character.UnicodeBlock = ???
+    val TAKRI: Character.UnicodeBlock = ???
 
+    /** Constant for the "Tamil" Unicode character block. */
     @stub
-    // Constant for the "Tamil" Unicode character block.
-    def TAMIL: Character.UnicodeBlock = ???
+    val TAMIL: Character.UnicodeBlock = ???
 
+    /** Constant for the "Telugu" Unicode character block. */
     @stub
-    // Constant for the "Telugu" Unicode character block.
-    def TELUGU: Character.UnicodeBlock = ???
+    val TELUGU: Character.UnicodeBlock = ???
 
+    /** Constant for the "Thaana" Unicode character block. */
     @stub
-    // Constant for the "Thaana" Unicode character block.
-    def THAANA: Character.UnicodeBlock = ???
+    val THAANA: Character.UnicodeBlock = ???
 
+    /** Constant for the "Thai" Unicode character block. */
     @stub
-    // Constant for the "Thai" Unicode character block.
-    def THAI: Character.UnicodeBlock = ???
+    val THAI: Character.UnicodeBlock = ???
 
+    /** Constant for the "Tibetan" Unicode character block. */
     @stub
-    // Constant for the "Tibetan" Unicode character block.
-    def TIBETAN: Character.UnicodeBlock = ???
+    val TIBETAN: Character.UnicodeBlock = ???
 
+    /** Constant for the "Tifinagh" Unicode character block. */
     @stub
-    // Constant for the "Tifinagh" Unicode character block.
-    def TIFINAGH: Character.UnicodeBlock = ???
+    val TIFINAGH: Character.UnicodeBlock = ???
 
+    /** Constant for the "Transport And Map Symbols" Unicode character block. */
     @stub
-    // Constant for the "Transport And Map Symbols" Unicode character block.
-    def TRANSPORT_AND_MAP_SYMBOLS: Character.UnicodeBlock = ???
+    val TRANSPORT_AND_MAP_SYMBOLS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Ugaritic" Unicode character block. */
     @stub
-    // Constant for the "Ugaritic" Unicode character block.
-    def UGARITIC: Character.UnicodeBlock = ???
+    val UGARITIC: Character.UnicodeBlock = ???
 
+    /** Constant for the "Unified Canadian Aboriginal Syllabics" Unicode character block. */
     @stub
-    // Constant for the "Unified Canadian Aboriginal Syllabics" Unicode character block.
-    def UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS: Character.UnicodeBlock = ???
+    val UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Unified Canadian Aboriginal Syllabics Extended"
+     *  Unicode character block.
+     */
     @stub
-    // Constant for the "Unified Canadian Aboriginal Syllabics Extended"
-    // Unicode character block.
-    def UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_EXTENDED: Character.UnicodeBlock = ???
+    val UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_EXTENDED: Character.UnicodeBlock = ???
 
+    /** Constant for the "Vai" Unicode character block. */
     @stub
-    // Constant for the "Vai" Unicode character block.
-    def VAI: Character.UnicodeBlock = ???
+    val VAI: Character.UnicodeBlock = ???
 
+    /** Constant for the "Variation Selectors" Unicode character block. */
     @stub
-    // Constant for the "Variation Selectors" Unicode character block.
-    def VARIATION_SELECTORS: Character.UnicodeBlock = ???
+    val VARIATION_SELECTORS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Variation Selectors Supplement" Unicode character
+     *  block.
+     */
     @stub
-    // Constant for the "Variation Selectors Supplement" Unicode character
-    // block.
-    def VARIATION_SELECTORS_SUPPLEMENT: Character.UnicodeBlock = ???
+    val VARIATION_SELECTORS_SUPPLEMENT: Character.UnicodeBlock = ???
 
+    /** Constant for the "Vedic Extensions" Unicode character block. */
     @stub
-    // Constant for the "Vedic Extensions" Unicode character block.
-    def VEDIC_EXTENSIONS: Character.UnicodeBlock = ???
+    val VEDIC_EXTENSIONS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Vertical Forms" Unicode character block. */
     @stub
-    // Constant for the "Vertical Forms" Unicode character block.
-    def VERTICAL_FORMS: Character.UnicodeBlock = ???
+    val VERTICAL_FORMS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Yi Radicals" Unicode character block. */
     @stub
-    // Constant for the "Yi Radicals" Unicode character block.
-    def YI_RADICALS: Character.UnicodeBlock = ???
+    val YI_RADICALS: Character.UnicodeBlock = ???
 
+    /** Constant for the "Yi Syllables" Unicode character block. */
     @stub
-    // Constant for the "Yi Syllables" Unicode character block.
-    def YI_SYLLABLES: Character.UnicodeBlock = ???
+    val YI_SYLLABLES: Character.UnicodeBlock = ???
 
+    /** Returns the UnicodeBlock with the given name. */
     @stub
-    // Returns the UnicodeBlock with the given name.
     def forName(blockName: String): Character.UnicodeBlock = ???
 
+    /** Returns the object representing the Unicode block containing the
+     *  given character, or null if the character is not a
+     *  member of a defined block.
+     */
     @stub
-    // Returns the object representing the Unicode block containing the
-    // given character, or null if the character is not a
-    // member of a defined block.
     def of(c: Char): Character.UnicodeBlock = ???
 }

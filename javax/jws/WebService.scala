@@ -2,27 +2,30 @@ package javax.jws
 
 import java.lang.String
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
+import scala.annotation.StaticAnnotation
 
-// 
-@Retention ( value = RUNTIME ) @Target ( value = TYPE ) @interface WebService {
+/**  */
+@Retention ( value = RUNTIME ) 
+@Target ( value = TYPE ) 
+ final class WebService extends StaticAnnotation {
 
+    /**  */
     @stub
-    // 
-    def endpointInterface: String = ???
+    val endpointInterface: String = ???
 
+    /**  */
     @stub
-    // 
-    def name: String = ???
+    val name: String = ???
 
+    /**  */
     @stub
-    // 
-    def portName: String = ???
+    val portName: String = ???
 
+    /**  */
     @stub
-    // 
-    def serviceName: String = ???
+    val serviceName: String = ???
 
+    /**  */
     @stub
-    // 
-    def targetNamespace: String = ???
+    val targetNamespace: String = ???
 }

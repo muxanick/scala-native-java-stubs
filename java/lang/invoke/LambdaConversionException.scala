@@ -2,23 +2,24 @@ package java.lang.invoke
 
 import java.lang.{Exception, Object, String, Throwable}
 
-// LambdaConversionException
+/** LambdaConversionException */
 class LambdaConversionException extends Exception {
 
+    /** Constructs a LambdaConversionException. */
     @stub
-    // Constructs a LambdaConversionException.
     def this() = ???
 
+    /** Constructs a LambdaConversionException with a message. */
     @stub
-    // Constructs a LambdaConversionException with a message.
     def this(message: String) = ???
 
+    /** Constructs a LambdaConversionException with a message and cause. */
     @stub
-    // Constructs a LambdaConversionException with a message and cause.
     def this(message: String, cause: Throwable) = ???
 
+    /** Constructs a LambdaConversionException with a message,
+     *  cause, and other settings.
+     */
     @stub
-    // Constructs a LambdaConversionException with a message,
-    // cause, and other settings.
     def this(message: String, cause: Throwable, enableSuppression: Boolean, writableStackTrace: Boolean) = ???
 }

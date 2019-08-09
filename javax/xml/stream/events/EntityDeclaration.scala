@@ -2,29 +2,31 @@ package javax.xml.stream.events
 
 import java.lang.String
 
-// An interface for handling Entity Declarations
-//
-// This interface is used to record and report unparsed entity declarations.
+/** An interface for handling Entity Declarations
+ * 
+ *  This interface is used to record and report unparsed entity declarations.
+ */
 trait EntityDeclaration extends XMLEvent {
 
+    /** Get the base URI for this reference
+     *  or null if this information is not available
+     */
     @stub
-    // Get the base URI for this reference
-    // or null if this information is not available
     def getBaseURI(): String = ???
 
+    /** The entity's name */
     @stub
-    // The entity's name
     def getName(): String = ???
 
+    /** The name of the associated notation. */
     @stub
-    // The name of the associated notation.
     def getNotationName(): String = ???
 
+    /** The entity's public identifier, or null if none was given */
     @stub
-    // The entity's public identifier, or null if none was given
     def getPublicId(): String = ???
 
+    /** The replacement text of the entity. */
     @stub
-    // The replacement text of the entity.
     def getReplacementText(): String = ???
 }

@@ -1,269 +1,311 @@
 package java.lang
 
-// The Long class wraps a value of the primitive type long in an object. An object of type Long contains a
-// single field whose type is long.
-//
-//  In addition, this class provides several methods for converting
-// a long to a String and a String to a long, as well as other constants and methods useful when dealing
-// with a long.
-//
-// Implementation note: The implementations of the "bit twiddling"
-// methods (such as highestOneBit and
-// numberOfTrailingZeros) are
-// based on material from Henry S. Warren, Jr.'s Hacker's
-// Delight, (Addison Wesley, 2002).
+/** The Long class wraps a value of the primitive type long in an object. An object of type Long contains a
+ *  single field whose type is long.
+ * 
+ *   In addition, this class provides several methods for converting
+ *  a long to a String and a String to a long, as well as other constants and methods useful when dealing
+ *  with a long.
+ * 
+ *  Implementation note: The implementations of the "bit twiddling"
+ *  methods (such as highestOneBit and
+ *  numberOfTrailingZeros) are
+ *  based on material from Henry S. Warren, Jr.'s Hacker's
+ *  Delight, (Addison Wesley, 2002).
+ */
 final class Long extends Number with Comparable[Long] {
 
+    /** Constructs a newly allocated Long object that
+     *  represents the specified long argument.
+     */
     @stub
-    // Constructs a newly allocated Long object that
-    // represents the specified long argument.
     def this(value: Long) = ???
 
+    /** Returns the value of this Long as a byte after
+     *  a narrowing primitive conversion.
+     */
     @stub
-    // Returns the value of this Long as a byte after
-    // a narrowing primitive conversion.
     def byteValue(): Byte = ???
 
+    /** Compares two Long objects numerically. */
     @stub
-    // Compares two Long objects numerically.
     def compareTo(anotherLong: Long): Int = ???
 
+    /** Returns the value of this Long as a double
+     *  after a widening primitive conversion.
+     */
     @stub
-    // Returns the value of this Long as a double
-    // after a widening primitive conversion.
-    def doubleValue(): double = ???
+    def doubleValue(): Double = ???
 
+    /** Compares this object to the specified object. */
     @stub
-    // Compares this object to the specified object.
     def equals(obj: Object): Boolean = ???
 
+    /** Returns the value of this Long as a float after
+     *  a widening primitive conversion.
+     */
     @stub
-    // Returns the value of this Long as a float after
-    // a widening primitive conversion.
-    def floatValue(): float = ???
+    def floatValue(): Float = ???
 
+    /** Returns a hash code for this Long. */
     @stub
-    // Returns a hash code for this Long.
     def hashCode(): Int = ???
 
+    /** Returns the value of this Long as an int after
+     *  a narrowing primitive conversion.
+     */
     @stub
-    // Returns the value of this Long as an int after
-    // a narrowing primitive conversion.
     def intValue(): Int = ???
 
+    /** Returns the value of this Long as a
+     *  long value.
+     */
     @stub
-    // Returns the value of this Long as a
-    // long value.
     def longValue(): Long = ???
 
+    /** Returns the value of this Long as a short after
+     *  a narrowing primitive conversion.
+     */
     @stub
-    // Returns the value of this Long as a short after
-    // a narrowing primitive conversion.
     def shortValue(): Short = ???
 
+    /** Returns a String object representing this
+     *  Long's value.
+     */
     @stub
-    // Returns a String object representing this
-    // Long's value.
     def toString(): String = ???
 }
 
 object Long {
+    /** The number of bytes used to represent a long value in two's
+     *  complement binary form.
+     */
     @stub
-    // The number of bytes used to represent a long value in two's
-    // complement binary form.
-    def BYTES: Int = ???
+    val BYTES: Int = ???
 
+    /** A constant holding the maximum value a long can
+     *  have, 263-1.
+     */
     @stub
-    // A constant holding the maximum value a long can
-    // have, 263-1.
-    def MAX_VALUE: Long = ???
+    val MAX_VALUE: Long = ???
 
+    /** A constant holding the minimum value a long can
+     *  have, -263.
+     */
     @stub
-    // A constant holding the minimum value a long can
-    // have, -263.
-    def MIN_VALUE: Long = ???
+    val MIN_VALUE: Long = ???
 
+    /** The number of bits used to represent a long value in two's
+     *  complement binary form.
+     */
     @stub
-    // The number of bits used to represent a long value in two's
-    // complement binary form.
-    def SIZE: Int = ???
+    val SIZE: Int = ???
 
+    /** Returns the number of one-bits in the two's complement binary
+     *  representation of the specified long value.
+     */
     @stub
-    // Returns the number of one-bits in the two's complement binary
-    // representation of the specified long value.
     def bitCount(i: Long): Int = ???
 
+    /** Compares two long values numerically. */
     @stub
-    // Compares two long values numerically.
     def compare(x: Long, y: Long): Int = ???
 
+    /** Compares two long values numerically treating the values
+     *  as unsigned.
+     */
     @stub
-    // Compares two long values numerically treating the values
-    // as unsigned.
     def compareUnsigned(x: Long, y: Long): Int = ???
 
+    /** Decodes a String into a Long. */
     @stub
-    // Decodes a String into a Long.
     def decode(nm: String): Long = ???
 
+    /** Returns the unsigned quotient of dividing the first argument by
+     *  the second where each argument and the result is interpreted as
+     *  an unsigned value.
+     */
     @stub
-    // Returns the unsigned quotient of dividing the first argument by
-    // the second where each argument and the result is interpreted as
-    // an unsigned value.
     def divideUnsigned(dividend: Long, divisor: Long): Long = ???
 
+    /** Determines the long value of the system property
+     *  with the specified name.
+     */
     @stub
-    // Determines the long value of the system property
-    // with the specified name.
     def getLong(nm: String): Long = ???
 
+    /** Determines the long value of the system property
+     *  with the specified name.
+     */
     @stub
-    // Determines the long value of the system property
-    // with the specified name.
     def getLong(nm: String, val: Long): Long = ???
 
+    /** Returns the long value of the system property with
+     *  the specified name.
+     */
     @stub
-    // Returns the long value of the system property with
-    // the specified name.
     def getLong(nm: String, val: Long): Long = ???
 
+    /** Returns a hash code for a long value; compatible with
+     *  Long.hashCode().
+     */
     @stub
-    // Returns a hash code for a long value; compatible with
-    // Long.hashCode().
     def hashCode(value: Long): Int = ???
 
+    /** Returns a long value with at most a single one-bit, in the
+     *  position of the highest-order ("leftmost") one-bit in the specified
+     *  long value.
+     */
     @stub
-    // Returns a long value with at most a single one-bit, in the
-    // position of the highest-order ("leftmost") one-bit in the specified
-    // long value.
     def highestOneBit(i: Long): Long = ???
 
+    /** Returns a long value with at most a single one-bit, in the
+     *  position of the lowest-order ("rightmost") one-bit in the specified
+     *  long value.
+     */
     @stub
-    // Returns a long value with at most a single one-bit, in the
-    // position of the lowest-order ("rightmost") one-bit in the specified
-    // long value.
     def lowestOneBit(i: Long): Long = ???
 
+    /** Returns the greater of two long values
+     *  as if by calling Math.max.
+     */
     @stub
-    // Returns the greater of two long values
-    // as if by calling Math.max.
     def max(a: Long, b: Long): Long = ???
 
+    /** Returns the smaller of two long values
+     *  as if by calling Math.min.
+     */
     @stub
-    // Returns the smaller of two long values
-    // as if by calling Math.min.
     def min(a: Long, b: Long): Long = ???
 
+    /** Returns the number of zero bits preceding the highest-order
+     *  ("leftmost") one-bit in the two's complement binary representation
+     *  of the specified long value.
+     */
     @stub
-    // Returns the number of zero bits preceding the highest-order
-    // ("leftmost") one-bit in the two's complement binary representation
-    // of the specified long value.
     def numberOfLeadingZeros(i: Long): Int = ???
 
+    /** Returns the number of zero bits following the lowest-order ("rightmost")
+     *  one-bit in the two's complement binary representation of the specified
+     *  long value.
+     */
     @stub
-    // Returns the number of zero bits following the lowest-order ("rightmost")
-    // one-bit in the two's complement binary representation of the specified
-    // long value.
     def numberOfTrailingZeros(i: Long): Int = ???
 
+    /** Parses the string argument as a signed decimal long. */
     @stub
-    // Parses the string argument as a signed decimal long.
     def parseLong(s: String): Long = ???
 
+    /** Parses the string argument as a signed long in the
+     *  radix specified by the second argument.
+     */
     @stub
-    // Parses the string argument as a signed long in the
-    // radix specified by the second argument.
     def parseLong(s: String, radix: Int): Long = ???
 
+    /** Parses the string argument as an unsigned decimal long. */
     @stub
-    // Parses the string argument as an unsigned decimal long.
     def parseUnsignedLong(s: String): Long = ???
 
+    /** Parses the string argument as an unsigned long in the
+     *  radix specified by the second argument.
+     */
     @stub
-    // Parses the string argument as an unsigned long in the
-    // radix specified by the second argument.
     def parseUnsignedLong(s: String, radix: Int): Long = ???
 
+    /** Returns the unsigned remainder from dividing the first argument
+     *  by the second where each argument and the result is interpreted
+     *  as an unsigned value.
+     */
     @stub
-    // Returns the unsigned remainder from dividing the first argument
-    // by the second where each argument and the result is interpreted
-    // as an unsigned value.
     def remainderUnsigned(dividend: Long, divisor: Long): Long = ???
 
+    /** Returns the value obtained by reversing the order of the bits in the
+     *  two's complement binary representation of the specified long
+     *  value.
+     */
     @stub
-    // Returns the value obtained by reversing the order of the bits in the
-    // two's complement binary representation of the specified long
-    // value.
     def reverse(i: Long): Long = ???
 
+    /** Returns the value obtained by reversing the order of the bytes in the
+     *  two's complement representation of the specified long value.
+     */
     @stub
-    // Returns the value obtained by reversing the order of the bytes in the
-    // two's complement representation of the specified long value.
     def reverseBytes(i: Long): Long = ???
 
+    /** Returns the value obtained by rotating the two's complement binary
+     *  representation of the specified long value left by the
+     *  specified number of bits.
+     */
     @stub
-    // Returns the value obtained by rotating the two's complement binary
-    // representation of the specified long value left by the
-    // specified number of bits.
     def rotateLeft(i: Long, distance: Int): Long = ???
 
+    /** Returns the value obtained by rotating the two's complement binary
+     *  representation of the specified long value right by the
+     *  specified number of bits.
+     */
     @stub
-    // Returns the value obtained by rotating the two's complement binary
-    // representation of the specified long value right by the
-    // specified number of bits.
     def rotateRight(i: Long, distance: Int): Long = ???
 
+    /** Returns the signum function of the specified long value. */
     @stub
-    // Returns the signum function of the specified long value.
     def signum(i: Long): Int = ???
 
+    /** Adds two long values together as per the + operator. */
     @stub
-    // Adds two long values together as per the + operator.
     def sum(a: Long, b: Long): Long = ???
 
+    /** Returns a string representation of the long
+     *  argument as an unsigned integer in base 2.
+     */
     @stub
-    // Returns a string representation of the long
-    // argument as an unsigned integer in base 2.
     def toBinaryString(i: Long): String = ???
 
+    /** Returns a string representation of the long
+     *  argument as an unsigned integer in base 16.
+     */
     @stub
-    // Returns a string representation of the long
-    // argument as an unsigned integer in base 16.
     def toHexString(i: Long): String = ???
 
+    /** Returns a string representation of the long
+     *  argument as an unsigned integer in base 8.
+     */
     @stub
-    // Returns a string representation of the long
-    // argument as an unsigned integer in base 8.
     def toOctalString(i: Long): String = ???
 
+    /** Returns a String object representing the specified
+     *  long.
+     */
     @stub
-    // Returns a String object representing the specified
-    // long.
     def toString(i: Long): String = ???
 
+    /** Returns a string representation of the first argument in the
+     *  radix specified by the second argument.
+     */
     @stub
-    // Returns a string representation of the first argument in the
-    // radix specified by the second argument.
     def toString(i: Long, radix: Int): String = ???
 
+    /** Returns a string representation of the argument as an unsigned
+     *  decimal value.
+     */
     @stub
-    // Returns a string representation of the argument as an unsigned
-    // decimal value.
     def toUnsignedString(i: Long): String = ???
 
+    /** Returns a string representation of the first argument as an
+     *  unsigned integer value in the radix specified by the second
+     *  argument.
+     */
     @stub
-    // Returns a string representation of the first argument as an
-    // unsigned integer value in the radix specified by the second
-    // argument.
     def toUnsignedString(i: Long, radix: Int): String = ???
 
+    /** Returns a Long instance representing the specified
+     *  long value.
+     */
     @stub
-    // Returns a Long instance representing the specified
-    // long value.
     def valueOf(l: Long): Long = ???
 
+    /** Returns a Long object holding the value
+     *  of the specified String.
+     */
     @stub
-    // Returns a Long object holding the value
-    // of the specified String.
     def valueOf(s: String): Long = ???
 }

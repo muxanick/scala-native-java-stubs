@@ -4,187 +4,206 @@ import java.awt.{Graphics, Shape}
 import java.lang.Object
 import javax.swing.event.{DocumentEvent, DocumentEvent.ElementChange}
 
-// A box that does layout asynchronously.  This
-// is useful to keep the GUI event thread moving by
-// not doing any layout on it.  The layout is done
-// on a granularity of operations on the child views.
-// After each child view is accessed for some part
-// of layout (a potentially time consuming operation)
-// the remaining tasks can be abandoned or a new higher
-// priority task (i.e. to service a synchronous request
-// or a visible area) can be taken on.
-// 
-// While the child view is being accessed
-// a read lock is acquired on the associated document
-// so that the model is stable while being accessed.
+/** A box that does layout asynchronously.  This
+ *  is useful to keep the GUI event thread moving by
+ *  not doing any layout on it.  The layout is done
+ *  on a granularity of operations on the child views.
+ *  After each child view is accessed for some part
+ *  of layout (a potentially time consuming operation)
+ *  the remaining tasks can be abandoned or a new higher
+ *  priority task (i.e. to service a synchronous request
+ *  or a visible area) can be taken on.
+ *  
+ *  While the child view is being accessed
+ *  a read lock is acquired on the associated document
+ *  so that the model is stable while being accessed.
+ */
 class AsyncBoxView extends View {
 
+    /** A class to manage the effective position of the
+     *  child views in a localized area while changes are
+     *  being made around the localized area.
+     */
     @stub
-    // A class to manage the effective position of the
-    // child views in a localized area while changes are
-    // being made around the localized area.
-    def AsyncBoxView.ChildLocator: class = ???
+    object ChildLocator extends AsyncBoxView.ChildLocator
 
+    /** New ChildState records are created through
+     *  this method to allow subclasses the extend
+     *  the ChildState records to do/hold more
+     */
     @stub
-    // New ChildState records are created through
-    // this method to allow subclasses the extend
-    // the ChildState records to do/hold more
     protected def createChildState(v: View): AsyncBoxView.ChildState = ???
 
+    /** Publish the changes in preferences upward to the parent
+     *  view.
+     */
     @stub
-    // Publish the changes in preferences upward to the parent
-    // view.
     protected def flushRequirementChanges(): Unit = ???
 
+    /** Get the bottom part of the margin around the view. */
     @stub
-    // Get the bottom part of the margin around the view.
-    def getBottomInset(): float = ???
+    def getBottomInset(): Float = ???
 
+    /** Fetches the allocation for the given child view. */
     @stub
-    // Fetches the allocation for the given child view.
     def getChildAllocation(index: Int, a: Shape): Shape = ???
 
+    /** Fetch the object representing the layout state of
+     *  of the child at the given index.
+     */
     @stub
-    // Fetch the object representing the layout state of
-    // of the child at the given index.
     protected def getChildState(index: Int): AsyncBoxView.ChildState = ???
 
+    /** Is the major span currently estimated? */
     @stub
-    // Is the major span currently estimated?
     protected def getEstimatedMajorSpan(): Boolean = ???
 
+    /** Fetch the span along an axis that is taken up by the insets. */
     @stub
-    // Fetch the span along an axis that is taken up by the insets.
-    protected def getInsetSpan(axis: Int): float = ???
+    protected def getInsetSpan(axis: Int): Float = ???
 
+    /** Fetch the queue to use for layout. */
     @stub
-    // Fetch the queue to use for layout.
     protected def getLayoutQueue(): LayoutQueue = ???
 
+    /** Get the left part of the margin around the view. */
     @stub
-    // Get the left part of the margin around the view.
-    def getLeftInset(): float = ???
+    def getLeftInset(): Float = ???
 
+    /** Fetch the major axis (the axis the children
+     *  are tiled along).
+     */
     @stub
-    // Fetch the major axis (the axis the children
-    // are tiled along).
     def getMajorAxis(): Int = ???
 
+    /** Determines the maximum span for this view along an
+     *  axis.
+     */
     @stub
-    // Determines the maximum span for this view along an
-    // axis.
-    def getMaximumSpan(axis: Int): float = ???
+    def getMaximumSpan(axis: Int): Float = ???
 
+    /** Determines the minimum span for this view along an
+     *  axis.
+     */
     @stub
-    // Determines the minimum span for this view along an
-    // axis.
-    def getMinimumSpan(axis: Int): float = ???
+    def getMinimumSpan(axis: Int): Float = ???
 
+    /** Fetch the minor axis (the axis orthogonal
+     *  to the tiled axis).
+     */
     @stub
-    // Fetch the minor axis (the axis orthogonal
-    // to the tiled axis).
     def getMinorAxis(): Int = ???
 
+    /** Provides a way to determine the next visually represented model
+     *  location that one might place a caret.
+     */
     @stub
-    // Provides a way to determine the next visually represented model
-    // location that one might place a caret.
     def getNextVisualPositionFrom(pos: Int, b: Position.Bias, a: Shape, direction: Int, biasRet: Array[Position.Bias]): Int = ???
 
+    /** Determines the preferred span for this view along an
+     *  axis.
+     */
     @stub
-    // Determines the preferred span for this view along an
-    // axis.
-    def getPreferredSpan(axis: Int): float = ???
+    def getPreferredSpan(axis: Int): Float = ???
 
+    /** Get the right part of the margin around the view. */
     @stub
-    // Get the right part of the margin around the view.
-    def getRightInset(): float = ???
+    def getRightInset(): Float = ???
 
+    /** Get the top part of the margin around the view. */
     @stub
-    // Get the top part of the margin around the view.
-    def getTopInset(): float = ???
+    def getTopInset(): Float = ???
 
+    /** Gets the nth child view. */
     @stub
-    // Gets the nth child view.
     def getView(n: Int): View = ???
 
+    /** Returns the number of views in this view. */
     @stub
-    // Returns the number of views in this view.
     def getViewCount(): Int = ???
 
+    /** Returns the child view index representing the given position in
+     *  the model.
+     */
     @stub
-    // Returns the child view index representing the given position in
-    // the model.
     def getViewIndex(pos: Int, b: Position.Bias): Int = ???
 
+    /** Fetches the child view index representing the given position in
+     *  the model.
+     */
     @stub
-    // Fetches the child view index representing the given position in
-    // the model.
     protected def getViewIndexAtPosition(pos: Int, b: Position.Bias): Int = ???
 
+    /** Loads all of the children to initialize the view. */
     @stub
-    // Loads all of the children to initialize the view.
     protected def loadChildren(f: ViewFactory): Unit = ???
 
+    /** Requirements changed along the major axis. */
     @stub
-    // Requirements changed along the major axis.
-    protected def majorRequirementChange(cs: AsyncBoxView.ChildState, delta: float): Unit = ???
+    protected def majorRequirementChange(cs: AsyncBoxView.ChildState, delta: Float): Unit = ???
 
+    /** Requirements changed along the minor axis. */
     @stub
-    // Requirements changed along the minor axis.
     protected def minorRequirementChange(cs: AsyncBoxView.ChildState): Unit = ???
 
+    /** Provides a mapping from the document model coordinate space
+     *  to the coordinate space of the view mapped to it.
+     */
     @stub
-    // Provides a mapping from the document model coordinate space
-    // to the coordinate space of the view mapped to it.
     def modelToView(pos: Int, a: Shape, b: Position.Bias): Shape = ???
 
+    /** Render the view using the given allocation and
+     *  rendering surface.
+     */
     @stub
-    // Render the view using the given allocation and
-    // rendering surface.
     def paint(g: Graphics, alloc: Shape): Unit = ???
 
+    /** Child views can call this on the parent to indicate that
+     *  the preference has changed and should be reconsidered
+     *  for layout.
+     */
     @stub
-    // Child views can call this on the parent to indicate that
-    // the preference has changed and should be reconsidered
-    // for layout.
     def preferenceChanged(child: View, width: Boolean, height: Boolean): Unit = ???
 
+    /** Calls the superclass to update the child views, and
+     *  updates the status records for the children.
+     */
     @stub
-    // Calls the superclass to update the child views, and
-    // updates the status records for the children.
     def replace(offset: Int, length: Int, views: Array[View]): Unit = ???
 
+    /** Set the bottom part of the margin around the view. */
     @stub
-    // Set the bottom part of the margin around the view.
-    def setBottomInset(i: float): Unit = ???
+    def setBottomInset(i: Float): Unit = ???
 
+    /** Set the estimatedMajorSpan property that determines if the
+     *  major span should be treated as being estimated.
+     */
     @stub
-    // Set the estimatedMajorSpan property that determines if the
-    // major span should be treated as being estimated.
     protected def setEstimatedMajorSpan(isEstimated: Boolean): Unit = ???
 
+    /** Set the left part of the margin around the view. */
     @stub
-    // Set the left part of the margin around the view.
-    def setLeftInset(i: float): Unit = ???
+    def setLeftInset(i: Float): Unit = ???
 
+    /** Sets the parent of the view. */
     @stub
-    // Sets the parent of the view.
     def setParent(parent: View): Unit = ???
 
+    /** Set the right part of the margin around the view. */
     @stub
-    // Set the right part of the margin around the view.
-    def setRightInset(i: float): Unit = ???
+    def setRightInset(i: Float): Unit = ???
 
+    /** Sets the size of the view. */
     @stub
-    // Sets the size of the view.
-    def setSize(width: float, height: float): Unit = ???
+    def setSize(width: Float, height: Float): Unit = ???
 
+    /** Set the top part of the margin around the view. */
     @stub
-    // Set the top part of the margin around the view.
-    def setTopInset(i: float): Unit = ???
+    def setTopInset(i: Float): Unit = ???
 
+    /** Update the layout in response to receiving notification of
+     *  change from the model.
+     */
     @stub
-    // Update the layout in response to receiving notification of
-    // change from the model.
     protected def updateLayout(ec: DocumentEvent.ElementChange, e: DocumentEvent, a: Shape): Unit = ???
 }

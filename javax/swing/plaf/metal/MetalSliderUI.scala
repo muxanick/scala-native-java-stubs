@@ -7,114 +7,116 @@ import javax.swing.{Icon, JComponent, JSlider}
 import javax.swing.plaf.{ComponentUI, SliderUI}
 import javax.swing.plaf.basic.BasicSliderUI
 
-// A Java L&F implementation of SliderUI.
-// 
-// Warning:
-// Serialized objects of this class will not be compatible with
-// future Swing releases. The current serialization support is
-// appropriate for short term storage or RMI between applications running
-// the same version of Swing.  As of 1.4, support for long term storage
-// of all JavaBeans™
-// has been added to the java.beans package.
-// Please see XMLEncoder.
+/** A Java L&F implementation of SliderUI.
+ *  
+ *  Warning:
+ *  Serialized objects of this class will not be compatible with
+ *  future Swing releases. The current serialization support is
+ *  appropriate for short term storage or RMI between applications running
+ *  the same version of Swing.  As of 1.4, support for long term storage
+ *  of all JavaBeans™
+ *  has been added to the java.beans package.
+ *  Please see XMLEncoder.
+ */
 class MetalSliderUI extends BasicSliderUI {
 
+    /**  */
     @stub
-    // 
-    protected def filledSlider: Boolean = ???
+    protected val filledSlider: Boolean = ???
 
+    /**  */
     @stub
-    // 
-    protected def SLIDER_FILL: String = ???
+    protected val SLIDER_FILL: String = ???
 
+    /**  */
     @stub
-    // 
-    protected def TICK_BUFFER: Int = ???
+    protected val TICK_BUFFER: Int = ???
 
+    /**  */
     @stub
-    // 
     protected def createPropertyChangeListener(slider: JSlider): PropertyChangeListener = ???
 
+    /** Returns the amount that the thumb goes past the slide bar. */
     @stub
-    // Returns the amount that the thumb goes past the slide bar.
     protected def getThumbOverhang(): Int = ???
 
+    /**  */
     @stub
-    // 
     protected def getThumbSize(): Dimension = ???
 
+    /** Gets the height of the tick area for horizontal sliders and the width of the
+     *  tick area for vertical sliders.
+     */
     @stub
-    // Gets the height of the tick area for horizontal sliders and the width of the
-    // tick area for vertical sliders.
     def getTickLength(): Int = ???
 
+    /** Returns the longer dimension of the slide bar. */
     @stub
-    // Returns the longer dimension of the slide bar.
     protected def getTrackLength(): Int = ???
 
+    /** Returns the shorter dimension of the track. */
     @stub
-    // Returns the shorter dimension of the track.
     protected def getTrackWidth(): Int = ???
 
+    /** Configures the specified component appropriately for the look and feel. */
     @stub
-    // Configures the specified component appropriately for the look and feel.
     def installUI(c: JComponent): Unit = ???
 
+    /**  */
     @stub
-    // 
     def paintFocus(g: Graphics): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def paintMajorTickForHorizSlider(g: Graphics, tickBounds: Rectangle, x: Int): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def paintMajorTickForVertSlider(g: Graphics, tickBounds: Rectangle, y: Int): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def paintMinorTickForHorizSlider(g: Graphics, tickBounds: Rectangle, x: Int): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def paintMinorTickForVertSlider(g: Graphics, tickBounds: Rectangle, y: Int): Unit = ???
 
+    /**  */
     @stub
-    // 
     def paintThumb(g: Graphics): Unit = ???
 
+    /**  */
     @stub
-    // 
     def paintTrack(g: Graphics): Unit = ???
 }
 
 object MetalSliderUI {
+    /**  */
     @stub
-    // 
-    protected def darkShadowColor: Color = ???
+    protected val darkShadowColor: Color = ???
 
+    /**  */
     @stub
-    // 
-    protected def highlightColor: Color = ???
+    protected val highlightColor: Color = ???
 
+    /** A default horizontal thumb Icon. */
     @stub
-    // A default horizontal thumb Icon.
-    protected def horizThumbIcon: Icon = ???
+    protected val horizThumbIcon: Icon = ???
 
+    /**  */
     @stub
-    // 
-    protected def thumbColor: Color = ???
+    protected val thumbColor: Color = ???
 
+    /**  */
     @stub
-    // 
-    protected def tickLength: Int = ???
+    protected val tickLength: Int = ???
 
+    /**  */
     @stub
-    // 
-    protected def trackWidth: Int = ???
+    protected val trackWidth: Int = ???
 
+    /**  */
     @stub
-    // 
     def createUI(c: JComponent): ComponentUI = ???
 }

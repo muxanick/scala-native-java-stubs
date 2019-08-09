@@ -3,19 +3,20 @@ package javax.swing.plaf.basic
 import java.awt.event.{KeyAdapter, KeyEvent}
 import java.lang.Object
 
-// This is used to get multiple key down events to appropriately generate
-// events.
+/** This is used to get multiple key down events to appropriately generate
+ *  events.
+ */
 class BasicTreeUI.KeyHandler extends KeyAdapter {
 
+    /** Set to true while keyPressed is active. */
     @stub
-    // Set to true while keyPressed is active.
-    protected def isKeyDown: Boolean = ???
+    protected val isKeyDown: Boolean = ???
 
+    /** Invoked when a key has been pressed. */
     @stub
-    // Invoked when a key has been pressed.
     def keyPressed(e: KeyEvent): Unit = ???
 
+    /** Invoked when a key has been released. */
     @stub
-    // Invoked when a key has been released.
     def keyReleased(e: KeyEvent): Unit = ???
 }

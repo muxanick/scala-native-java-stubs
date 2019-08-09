@@ -3,193 +3,204 @@ package javax.print.attribute.standard
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, EnumSyntax}
 
-// Class PrinterStateReason is a printing attribute class, an enumeration,
-// that provides additional information about the printer's current state,
-// i.e., information that augments the value of the printer's
-// PrinterState attribute.
-// Class PrinterStateReason defines standard printer
-// state reason values. A Print Service implementation only needs to report
-// those printer state reasons which are appropriate for the particular
-// implementation; it does not have to report every defined printer state
-// reason.
-// 
-// Instances of PrinterStateReason do not appear in a Print Service's
-// attribute set directly.
-// Rather, a PrinterStateReasons
-// attribute appears in the Print Service's attribute set. The PrinterStateReasons attribute contains zero, one, or
-// more than one PrinterStateReason objects which pertain to the
-// Print Service's status, and each PrinterStateReason object is
-// associated with a Severity level of REPORT (least severe),
-// WARNING, or ERROR (most severe). The printer adds a PrinterStateReason
-// object to the Print Service's
-// PrinterStateReasons attribute when the
-// corresponding condition becomes true of the printer, and the printer
-// removes the PrinterStateReason object again when the corresponding
-// condition becomes false, regardless of whether the Print Service's overall
-// PrinterState also changed.
-// 
-// IPP Compatibility:
-// The string values returned by each individual PrinterStateReason and
-// associated Severity object's toString()
-// methods, concatenated together with a hyphen ("-") in
-// between, gives the IPP keyword value for a PrinterStateReasons.
-// The category name returned by getName() gives the IPP
-// attribute name.
-// 
+/** Class PrinterStateReason is a printing attribute class, an enumeration,
+ *  that provides additional information about the printer's current state,
+ *  i.e., information that augments the value of the printer's
+ *  PrinterState attribute.
+ *  Class PrinterStateReason defines standard printer
+ *  state reason values. A Print Service implementation only needs to report
+ *  those printer state reasons which are appropriate for the particular
+ *  implementation; it does not have to report every defined printer state
+ *  reason.
+ *  
+ *  Instances of PrinterStateReason do not appear in a Print Service's
+ *  attribute set directly.
+ *  Rather, a PrinterStateReasons
+ *  attribute appears in the Print Service's attribute set. The PrinterStateReasons attribute contains zero, one, or
+ *  more than one PrinterStateReason objects which pertain to the
+ *  Print Service's status, and each PrinterStateReason object is
+ *  associated with a Severity level of REPORT (least severe),
+ *  WARNING, or ERROR (most severe). The printer adds a PrinterStateReason
+ *  object to the Print Service's
+ *  PrinterStateReasons attribute when the
+ *  corresponding condition becomes true of the printer, and the printer
+ *  removes the PrinterStateReason object again when the corresponding
+ *  condition becomes false, regardless of whether the Print Service's overall
+ *  PrinterState also changed.
+ *  
+ *  IPP Compatibility:
+ *  The string values returned by each individual PrinterStateReason and
+ *  associated Severity object's toString()
+ *  methods, concatenated together with a hyphen ("-") in
+ *  between, gives the IPP keyword value for a PrinterStateReasons.
+ *  The category name returned by getName() gives the IPP
+ *  attribute name.
+ *  
+ */
 class PrinterStateReason extends EnumSyntax with Attribute {
 
+    /** Get the printing attribute class which is to be used as the "category"
+     *  for this printing attribute value.
+     */
     @stub
-    // Get the printing attribute class which is to be used as the "category"
-    // for this printing attribute value.
     def getCategory(): Class[_ <: Attribute] = ???
 
+    /** Returns the enumeration value table for class PrinterStateReason. */
     @stub
-    // Returns the enumeration value table for class PrinterStateReason.
     protected def getEnumValueTable(): Array[EnumSyntax] = ???
 
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
     @stub
-    // Get the name of the category of which this attribute value is an
-    // instance.
     def getName(): String = ???
 }
 
 object PrinterStateReason {
+    /** The printer has scheduled a job on the output device and is in the
+     *  process of connecting to a shared network output device (and might not
+     *  be able to actually start printing the job for an arbitrarily long time
+     *  depending on the usage of the output device by other servers on the
+     *  network).
+     */
     @stub
-    // The printer has scheduled a job on the output device and is in the
-    // process of connecting to a shared network output device (and might not
-    // be able to actually start printing the job for an arbitrarily long time
-    // depending on the usage of the output device by other servers on the
-    // network).
-    def CONNECTING_TO_DEVICE: PrinterStateReason = ???
+    val CONNECTING_TO_DEVICE: PrinterStateReason = ???
 
+    /** One or more covers on the device are open. */
     @stub
-    // One or more covers on the device are open.
-    def COVER_OPEN: PrinterStateReason = ???
+    val COVER_OPEN: PrinterStateReason = ???
 
+    /** The device is out of developer. */
     @stub
-    // The device is out of developer.
-    def DEVELOPER_EMPTY: PrinterStateReason = ???
+    val DEVELOPER_EMPTY: PrinterStateReason = ???
 
+    /** The device is low on developer. */
     @stub
-    // The device is low on developer.
-    def DEVELOPER_LOW: PrinterStateReason = ???
+    val DEVELOPER_LOW: PrinterStateReason = ???
 
+    /** One or more doors on the device are open. */
     @stub
-    // One or more doors on the device are open.
-    def DOOR_OPEN: PrinterStateReason = ???
+    val DOOR_OPEN: PrinterStateReason = ???
 
+    /** The fuser temperature is above normal. */
     @stub
-    // The fuser temperature is above normal.
-    def FUSER_OVER_TEMP: PrinterStateReason = ???
+    val FUSER_OVER_TEMP: PrinterStateReason = ???
 
+    /** The fuser temperature is below normal. */
     @stub
-    // The fuser temperature is below normal.
-    def FUSER_UNDER_TEMP: PrinterStateReason = ???
+    val FUSER_UNDER_TEMP: PrinterStateReason = ???
 
+    /** One or more input trays are not in the device. */
     @stub
-    // One or more input trays are not in the device.
-    def INPUT_TRAY_MISSING: PrinterStateReason = ???
+    val INPUT_TRAY_MISSING: PrinterStateReason = ???
 
+    /** One or more interlock devices on the printer are unlocked. */
     @stub
-    // One or more interlock devices on the printer are unlocked.
-    def INTERLOCK_OPEN: PrinterStateReason = ???
+    val INTERLOCK_OPEN: PrinterStateReason = ???
 
+    /** An interpreter resource is unavailable (e.g., font, form). */
     @stub
-    // An interpreter resource is unavailable (e.g., font, form).
-    def INTERPRETER_RESOURCE_UNAVAILABLE: PrinterStateReason = ???
+    val INTERPRETER_RESOURCE_UNAVAILABLE: PrinterStateReason = ???
 
+    /** The device is out of at least one marker supply (e.g. */
     @stub
-    // The device is out of at least one marker supply (e.g.
-    def MARKER_SUPPLY_EMPTY: PrinterStateReason = ???
+    val MARKER_SUPPLY_EMPTY: PrinterStateReason = ???
 
+    /** The device is low on at least one marker supply (e.g. */
     @stub
-    // The device is low on at least one marker supply (e.g.
-    def MARKER_SUPPLY_LOW: PrinterStateReason = ???
+    val MARKER_SUPPLY_LOW: PrinterStateReason = ???
 
+    /** The device marker supply waste receptacle is almost full. */
     @stub
-    // The device marker supply waste receptacle is almost full.
-    def MARKER_WASTE_ALMOST_FULL: PrinterStateReason = ???
+    val MARKER_WASTE_ALMOST_FULL: PrinterStateReason = ???
 
+    /** The device marker supply waste receptacle is full. */
     @stub
-    // The device marker supply waste receptacle is full.
-    def MARKER_WASTE_FULL: PrinterStateReason = ???
+    val MARKER_WASTE_FULL: PrinterStateReason = ???
 
+    /** At least one input tray is empty. */
     @stub
-    // At least one input tray is empty.
-    def MEDIA_EMPTY: PrinterStateReason = ???
+    val MEDIA_EMPTY: PrinterStateReason = ???
 
+    /** The device has a media jam. */
     @stub
-    // The device has a media jam.
-    def MEDIA_JAM: PrinterStateReason = ???
+    val MEDIA_JAM: PrinterStateReason = ???
 
+    /** At least one input tray is low on media. */
     @stub
-    // At least one input tray is low on media.
-    def MEDIA_LOW: PrinterStateReason = ???
+    val MEDIA_LOW: PrinterStateReason = ???
 
+    /** A tray has run out of media. */
     @stub
-    // A tray has run out of media.
-    def MEDIA_NEEDED: PrinterStateReason = ???
+    val MEDIA_NEEDED: PrinterStateReason = ???
 
+    /** Someone has paused the printer, but the device(s) are taking an
+     *  appreciable time to stop.
+     */
     @stub
-    // Someone has paused the printer, but the device(s) are taking an
-    // appreciable time to stop.
-    def MOVING_TO_PAUSED: PrinterStateReason = ???
+    val MOVING_TO_PAUSED: PrinterStateReason = ???
 
+    /** The optical photo conductor is no longer functioning. */
     @stub
-    // The optical photo conductor is no longer functioning.
-    def OPC_LIFE_OVER: PrinterStateReason = ???
+    val OPC_LIFE_OVER: PrinterStateReason = ???
 
+    /** The optical photo conductor is near end of life. */
     @stub
-    // The optical photo conductor is near end of life.
-    def OPC_NEAR_EOL: PrinterStateReason = ???
+    val OPC_NEAR_EOL: PrinterStateReason = ???
 
+    /** The printer has detected an error other than ones listed below. */
     @stub
-    // The printer has detected an error other than ones listed below.
-    def OTHER: PrinterStateReason = ???
+    val OTHER: PrinterStateReason = ???
 
+    /** One or more output areas are almost full
+     *  (e.g.
+     */
     @stub
-    // One or more output areas are almost full
-    // (e.g.
-    def OUTPUT_AREA_ALMOST_FULL: PrinterStateReason = ???
+    val OUTPUT_AREA_ALMOST_FULL: PrinterStateReason = ???
 
+    /** One or more output areas are full (e.g. */
     @stub
-    // One or more output areas are full (e.g.
-    def OUTPUT_AREA_FULL: PrinterStateReason = ???
+    val OUTPUT_AREA_FULL: PrinterStateReason = ???
 
+    /** One or more output trays are not in the device. */
     @stub
-    // One or more output trays are not in the device.
-    def OUTPUT_TRAY_MISSING: PrinterStateReason = ???
+    val OUTPUT_TRAY_MISSING: PrinterStateReason = ???
 
+    /** Someone has paused the printer and the printer's PrinterState is STOPPED. */
     @stub
-    // Someone has paused the printer and the printer's PrinterState is STOPPED.
-    def PAUSED: PrinterStateReason = ???
+    val PAUSED: PrinterStateReason = ???
 
+    /** Someone has removed a printer from service, and the device may be
+     *  powered down or physically removed.
+     */
     @stub
-    // Someone has removed a printer from service, and the device may be
-    // powered down or physically removed.
-    def SHUTDOWN: PrinterStateReason = ???
+    val SHUTDOWN: PrinterStateReason = ???
 
+    /** The limit of persistent storage allocated for spooling has been
+     *  reached.
+     */
     @stub
-    // The limit of persistent storage allocated for spooling has been
-    // reached.
-    def SPOOL_AREA_FULL: PrinterStateReason = ???
+    val SPOOL_AREA_FULL: PrinterStateReason = ???
 
+    /** When a printer controls more than one output device, this reason
+     *  indicates that one or more output devices are stopped.
+     */
     @stub
-    // When a printer controls more than one output device, this reason
-    // indicates that one or more output devices are stopped.
-    def STOPPED_PARTLY: PrinterStateReason = ???
+    val STOPPED_PARTLY: PrinterStateReason = ???
 
+    /** The printer is in the process of stopping the device and will be
+     *  stopped in a while.
+     */
     @stub
-    // The printer is in the process of stopping the device and will be
-    // stopped in a while.
-    def STOPPING: PrinterStateReason = ???
+    val STOPPING: PrinterStateReason = ???
 
+    /** The server was able to connect to the output device (or is always
+     *  connected), but was unable to get a response from the output device.
+     */
     @stub
-    // The server was able to connect to the output device (or is always
-    // connected), but was unable to get a response from the output device.
-    def TIMED_OUT: PrinterStateReason = ???
+    val TIMED_OUT: PrinterStateReason = ???
 
+    /** The device is out of toner. */
     @stub
-    // The device is out of toner.
-    def TONER_EMPTY: PrinterStateReason = ???
+    val TONER_EMPTY: PrinterStateReason = ???
 }

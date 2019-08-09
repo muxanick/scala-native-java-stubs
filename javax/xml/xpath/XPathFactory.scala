@@ -2,57 +2,61 @@ package javax.xml.xpath
 
 import java.lang.{ClassLoader, Object, String}
 
-// An XPathFactory instance can be used to create
-// XPath objects.
-//
-//See newInstance(String uri) for lookup mechanism.
-//
-// The XPathFactory class is not thread-safe. In other words,
-// it is the application's responsibility to ensure that at most
-// one thread is using a XPathFactory object at any
-// given moment. Implementations are encouraged to mark methods
-// as synchronized to protect themselves from broken clients.
-//
-// XPathFactory is not re-entrant. While one of the
-// newInstance methods is being invoked, applications
-// may not attempt to recursively invoke a newInstance method,
-// even from the same thread.
+/** An XPathFactory instance can be used to create
+ *  XPath objects.
+ * 
+ * See newInstance(String uri) for lookup mechanism.
+ * 
+ *  The XPathFactory class is not thread-safe. In other words,
+ *  it is the application's responsibility to ensure that at most
+ *  one thread is using a XPathFactory object at any
+ *  given moment. Implementations are encouraged to mark methods
+ *  as synchronized to protect themselves from broken clients.
+ * 
+ *  XPathFactory is not re-entrant. While one of the
+ *  newInstance methods is being invoked, applications
+ *  may not attempt to recursively invoke a newInstance method,
+ *  even from the same thread.
+ */
 abstract class XPathFactory extends Object {
 
-    // Get the state of the named feature.
+    /** Get the state of the named feature. */
     def getFeature(name: String): Boolean
 
-    // Is specified object model supported by this XPathFactory?
+    /** Is specified object model supported by this XPathFactory? */
     def isObjectModelSupported(objectModel: String): Boolean
 
-    // Return a new XPath using the underlying object
-    // model determined when the XPathFactory was instantiated.
+    /** Return a new XPath using the underlying object
+     *  model determined when the XPathFactory was instantiated.
+     */
     def newXPath(): XPath
 
-    // Set a feature for this XPathFactory and
-    // XPaths created by this factory.
+    /** Set a feature for this XPathFactory and
+     *  XPaths created by this factory.
+     */
     def setFeature(name: String, value: Boolean): Unit
 
-    // Establish a default function resolver.
+    /** Establish a default function resolver. */
     def setXPathFunctionResolver(resolver: XPathFunctionResolver): Unit
 }
 
 object XPathFactory {
+    /** Default Object Model URI. */
     @stub
-    // Default Object Model URI.
-    def DEFAULT_OBJECT_MODEL_URI: String = ???
+    val DEFAULT_OBJECT_MODEL_URI: String = ???
 
+    /** Get a new XPathFactory instance using the default object model,
+     *  DEFAULT_OBJECT_MODEL_URI,
+     *  the W3C DOM.
+     */
     @stub
-    // Get a new XPathFactory instance using the default object model,
-    // DEFAULT_OBJECT_MODEL_URI,
-    // the W3C DOM.
     def newInstance(): XPathFactory = ???
 
+    /** Get a new XPathFactory instance using the specified object model. */
     @stub
-    // Get a new XPathFactory instance using the specified object model.
     def newInstance(uri: String): XPathFactory = ???
 
+    /** Obtain a new instance of a XPathFactory from a factory class name. */
     @stub
-    // Obtain a new instance of a XPathFactory from a factory class name.
     def newInstance(uri: String, factoryClassName: String, classLoader: ClassLoader): XPathFactory = ???
 }

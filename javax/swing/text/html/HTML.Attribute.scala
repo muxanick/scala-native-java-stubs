@@ -2,323 +2,324 @@ package javax.swing.text.html
 
 import java.lang.Object
 
-// Typesafe enumeration representing an HTML
-// attribute.
-object final HTML.Attribute extends Object {
+/** Typesafe enumeration representing an HTML
+ *  attribute.
+ */
+final object HTML.Attribute extends Object {
 
+    /**  */
     @stub
-    // 
-    def ACTION: HTML.Attribute = ???
+    val ACTION: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def ALIGN: HTML.Attribute = ???
+    val ALIGN: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def ALINK: HTML.Attribute = ???
+    val ALINK: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def ALT: HTML.Attribute = ???
+    val ALT: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def ARCHIVE: HTML.Attribute = ???
+    val ARCHIVE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def BACKGROUND: HTML.Attribute = ???
+    val BACKGROUND: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def BGCOLOR: HTML.Attribute = ???
+    val BGCOLOR: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def BORDER: HTML.Attribute = ???
+    val BORDER: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def CELLPADDING: HTML.Attribute = ???
+    val CELLPADDING: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def CELLSPACING: HTML.Attribute = ???
+    val CELLSPACING: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def CHECKED: HTML.Attribute = ???
+    val CHECKED: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def CLASS: HTML.Attribute = ???
+    val CLASS: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def CLASSID: HTML.Attribute = ???
+    val CLASSID: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def CLEAR: HTML.Attribute = ???
+    val CLEAR: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def CODE: HTML.Attribute = ???
+    val CODE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def CODEBASE: HTML.Attribute = ???
+    val CODEBASE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def CODETYPE: HTML.Attribute = ???
+    val CODETYPE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def COLOR: HTML.Attribute = ???
+    val COLOR: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def COLS: HTML.Attribute = ???
+    val COLS: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def COLSPAN: HTML.Attribute = ???
+    val COLSPAN: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def COMMENT: HTML.Attribute = ???
+    val COMMENT: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def COMPACT: HTML.Attribute = ???
+    val COMPACT: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def CONTENT: HTML.Attribute = ???
+    val CONTENT: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def COORDS: HTML.Attribute = ???
+    val COORDS: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def DATA: HTML.Attribute = ???
+    val DATA: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def DECLARE: HTML.Attribute = ???
+    val DECLARE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def DIR: HTML.Attribute = ???
+    val DIR: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def DUMMY: HTML.Attribute = ???
+    val DUMMY: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def ENCTYPE: HTML.Attribute = ???
+    val ENCTYPE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def ENDTAG: HTML.Attribute = ???
+    val ENDTAG: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def FACE: HTML.Attribute = ???
+    val FACE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def FRAMEBORDER: HTML.Attribute = ???
+    val FRAMEBORDER: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def HALIGN: HTML.Attribute = ???
+    val HALIGN: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def HEIGHT: HTML.Attribute = ???
+    val HEIGHT: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def HREF: HTML.Attribute = ???
+    val HREF: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def HSPACE: HTML.Attribute = ???
+    val HSPACE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def HTTPEQUIV: HTML.Attribute = ???
+    val HTTPEQUIV: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def ID: HTML.Attribute = ???
+    val ID: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def ISMAP: HTML.Attribute = ???
+    val ISMAP: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def LANG: HTML.Attribute = ???
+    val LANG: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def LANGUAGE: HTML.Attribute = ???
+    val LANGUAGE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def LINK: HTML.Attribute = ???
+    val LINK: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def LOWSRC: HTML.Attribute = ???
+    val LOWSRC: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def MARGINHEIGHT: HTML.Attribute = ???
+    val MARGINHEIGHT: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def MARGINWIDTH: HTML.Attribute = ???
+    val MARGINWIDTH: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def MAXLENGTH: HTML.Attribute = ???
+    val MAXLENGTH: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def METHOD: HTML.Attribute = ???
+    val METHOD: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def MULTIPLE: HTML.Attribute = ???
+    val MULTIPLE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def N: HTML.Attribute = ???
+    val N: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def NAME: HTML.Attribute = ???
+    val NAME: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def NOHREF: HTML.Attribute = ???
+    val NOHREF: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def NORESIZE: HTML.Attribute = ???
+    val NORESIZE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def NOSHADE: HTML.Attribute = ???
+    val NOSHADE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def NOWRAP: HTML.Attribute = ???
+    val NOWRAP: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def PROMPT: HTML.Attribute = ???
+    val PROMPT: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def REL: HTML.Attribute = ???
+    val REL: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def REV: HTML.Attribute = ???
+    val REV: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def ROWS: HTML.Attribute = ???
+    val ROWS: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def ROWSPAN: HTML.Attribute = ???
+    val ROWSPAN: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def SCROLLING: HTML.Attribute = ???
+    val SCROLLING: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def SELECTED: HTML.Attribute = ???
+    val SELECTED: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def SHAPE: HTML.Attribute = ???
+    val SHAPE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def SHAPES: HTML.Attribute = ???
+    val SHAPES: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def SIZE: HTML.Attribute = ???
+    val SIZE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def SRC: HTML.Attribute = ???
+    val SRC: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def STANDBY: HTML.Attribute = ???
+    val STANDBY: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def START: HTML.Attribute = ???
+    val START: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def STYLE: HTML.Attribute = ???
+    val STYLE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def TARGET: HTML.Attribute = ???
+    val TARGET: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def TEXT: HTML.Attribute = ???
+    val TEXT: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def TITLE: HTML.Attribute = ???
+    val TITLE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def TYPE: HTML.Attribute = ???
+    val TYPE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def USEMAP: HTML.Attribute = ???
+    val USEMAP: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def VALIGN: HTML.Attribute = ???
+    val VALIGN: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def VALUE: HTML.Attribute = ???
+    val VALUE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def VALUETYPE: HTML.Attribute = ???
+    val VALUETYPE: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def VERSION: HTML.Attribute = ???
+    val VERSION: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def VLINK: HTML.Attribute = ???
+    val VLINK: HTML.Attribute = ???
 
+    /**  */
     @stub
-    // 
-    def VSPACE: HTML.Attribute = ???
+    val VSPACE: HTML.Attribute = ???
 }

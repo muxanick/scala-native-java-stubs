@@ -2,27 +2,28 @@ package javax.management
 
 import java.lang.{Object, String}
 
-// Defines the methods that should be implemented by
-// a Dynamic MBean (MBean that exposes a dynamic management interface).
+/** Defines the methods that should be implemented by
+ *  a Dynamic MBean (MBean that exposes a dynamic management interface).
+ */
 trait DynamicMBean {
 
+    /** Obtain the value of a specific attribute of the Dynamic MBean. */
     @stub
-    // Obtain the value of a specific attribute of the Dynamic MBean.
     def getAttribute(attribute: String): Object = ???
 
+    /** Get the values of several attributes of the Dynamic MBean. */
     @stub
-    // Get the values of several attributes of the Dynamic MBean.
     def getAttributes(attributes: Array[String]): AttributeList = ???
 
+    /** Provides the exposed attributes and actions of the Dynamic MBean using an MBeanInfo object. */
     @stub
-    // Provides the exposed attributes and actions of the Dynamic MBean using an MBeanInfo object.
     def getMBeanInfo(): MBeanInfo = ???
 
+    /** Allows an action to be invoked on the Dynamic MBean. */
     @stub
-    // Allows an action to be invoked on the Dynamic MBean.
     def invoke(actionName: String, params: Array[Object], signature: Array[String]): Object = ???
 
+    /** Set the value of a specific attribute of the Dynamic MBean. */
     @stub
-    // Set the value of a specific attribute of the Dynamic MBean.
     def setAttribute(attribute: Attribute): Unit = ???
 }

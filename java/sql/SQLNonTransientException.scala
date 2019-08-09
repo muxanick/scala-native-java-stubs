@@ -2,48 +2,55 @@ package java.sql
 
 import java.lang.{Exception, Object, String, Throwable}
 
-// The subclass of SQLException thrown when an instance where a retry
-// of the same operation would fail unless the cause of the SQLException
-// is corrected.
-//
+/** The subclass of SQLException thrown when an instance where a retry
+ *  of the same operation would fail unless the cause of the SQLException
+ *  is corrected.
+ * 
+ */
 class SQLNonTransientException extends SQLException {
 
+    /** Constructs a SQLNonTransientException object. */
     @stub
-    // Constructs a SQLNonTransientException object.
     def this() = ???
 
+    /** Constructs a SQLNonTransientException object
+     *  with a given reason.
+     */
     @stub
-    // Constructs a SQLNonTransientException object
-    // with a given reason.
     def this(reason: String) = ???
 
+    /** Constructs a SQLNonTransientException object
+     *  with a given reason and SQLState.
+     */
     @stub
-    // Constructs a SQLNonTransientException object
-    // with a given reason and SQLState.
     def this(reason: String, SQLState: String) = ???
 
+    /** Constructs a SQLNonTransientException object
+     *  with a given reason, SQLState  and
+     *  vendorCode.
+     */
     @stub
-    // Constructs a SQLNonTransientException object
-    // with a given reason, SQLState  and
-    // vendorCode.
     def this(reason: String, SQLState: String, vendorCode: Int) = ???
 
+    /** Constructs a SQLNonTransientException object
+     *  with a given
+     *  reason, SQLState, vendorCode
+     *  and  cause.
+     */
     @stub
-    // Constructs a SQLNonTransientException object
-    // with a given
-    // reason, SQLState, vendorCode
-    // and  cause.
     def this(reason: String, SQLState: String, vendorCode: Int, cause: Throwable) = ???
 
+    /** Constructs a SQLNonTransientException object
+     *  with a given
+     *  reason, SQLState and  cause.
+     */
     @stub
-    // Constructs a SQLNonTransientException object
-    // with a given
-    // reason, SQLState and  cause.
     def this(reason: String, SQLState: String, cause: Throwable) = ???
 
+    /** Constructs a SQLTransientException object
+     *  with a given
+     *  reason and  cause.
+     */
     @stub
-    // Constructs a SQLTransientException object
-    // with a given
-    // reason and  cause.
     def this(reason: String, cause: Throwable) = ???
 }

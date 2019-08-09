@@ -2,65 +2,66 @@ package java.text
 
 import java.lang.{Object, String}
 
-// StringCharacterIterator implements the
-// CharacterIterator protocol for a String.
-// The StringCharacterIterator class iterates over the
-// entire String.
+/** StringCharacterIterator implements the
+ *  CharacterIterator protocol for a String.
+ *  The StringCharacterIterator class iterates over the
+ *  entire String.
+ */
 final class StringCharacterIterator extends Object with CharacterIterator {
 
+    /** Constructs an iterator with an initial index of 0. */
     @stub
-    // Constructs an iterator with an initial index of 0.
     def this(text: String) = ???
 
+    /** Constructs an iterator with the specified initial index. */
     @stub
-    // Constructs an iterator with the specified initial index.
     def this(text: String, pos: Int) = ???
 
+    /** Creates a copy of this iterator. */
     @stub
-    // Creates a copy of this iterator.
     def clone(): Object = ???
 
+    /** Implements CharacterIterator.current() for String. */
     @stub
-    // Implements CharacterIterator.current() for String.
     def current(): Char = ???
 
+    /** Compares the equality of two StringCharacterIterator objects. */
     @stub
-    // Compares the equality of two StringCharacterIterator objects.
     def equals(obj: Object): Boolean = ???
 
+    /** Implements CharacterIterator.first() for String. */
     @stub
-    // Implements CharacterIterator.first() for String.
     def first(): Char = ???
 
+    /** Implements CharacterIterator.getBeginIndex() for String. */
     @stub
-    // Implements CharacterIterator.getBeginIndex() for String.
     def getBeginIndex(): Int = ???
 
+    /** Implements CharacterIterator.getEndIndex() for String. */
     @stub
-    // Implements CharacterIterator.getEndIndex() for String.
     def getEndIndex(): Int = ???
 
+    /** Implements CharacterIterator.getIndex() for String. */
     @stub
-    // Implements CharacterIterator.getIndex() for String.
     def getIndex(): Int = ???
 
+    /** Computes a hashcode for this iterator. */
     @stub
-    // Computes a hashcode for this iterator.
     def hashCode(): Int = ???
 
+    /** Implements CharacterIterator.last() for String. */
     @stub
-    // Implements CharacterIterator.last() for String.
     def last(): Char = ???
 
+    /** Implements CharacterIterator.next() for String. */
     @stub
-    // Implements CharacterIterator.next() for String.
     def next(): Char = ???
 
+    /** Implements CharacterIterator.previous() for String. */
     @stub
-    // Implements CharacterIterator.previous() for String.
     def previous(): Char = ???
 
+    /** Implements CharacterIterator.setIndex() for String. */
     @stub
-    // Implements CharacterIterator.setIndex() for String.
     def setIndex(p: Int): Char = ???
 }

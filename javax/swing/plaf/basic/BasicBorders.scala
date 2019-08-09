@@ -3,68 +3,68 @@ package javax.swing.plaf.basic
 import java.lang.Object
 import javax.swing.border.Border
 
-// Factory object that can vend Borders appropriate for the basic L & F.
+/** Factory object that can vend Borders appropriate for the basic L & F. */
 class BasicBorders extends Object {
 }
 
 object BasicBorders {
+    /**  */
     @stub
-    // 
-    def BasicBorders.ButtonBorder: class = ???
+    object ButtonBorder extends BasicBorders.ButtonBorder
 
+    /**  */
     @stub
-    // 
-    def BasicBorders.FieldBorder: class = ???
+    object FieldBorder extends BasicBorders.FieldBorder
 
+    /**  */
     @stub
-    // 
-    def BasicBorders.MarginBorder: class = ???
+    object MarginBorder extends BasicBorders.MarginBorder
 
+    /**  */
     @stub
-    // 
-    def BasicBorders.MenuBarBorder: class = ???
+    object MenuBarBorder extends BasicBorders.MenuBarBorder
 
+    /**  */
     @stub
-    // 
-    def BasicBorders.RadioButtonBorder: class = ???
+    object RadioButtonBorder extends BasicBorders.RadioButtonBorder
 
+    /** Special thin border for rollover toolbar buttons. */
     @stub
-    // Special thin border for rollover toolbar buttons.
-    def BasicBorders.RolloverButtonBorder: class = ???
+    object RolloverButtonBorder extends BasicBorders.RolloverButtonBorder
 
+    /** Draws the border around the splitpane. */
     @stub
-    // Draws the border around the splitpane.
-    def BasicBorders.SplitPaneBorder: class = ???
+    object SplitPaneBorder extends BasicBorders.SplitPaneBorder
 
+    /**  */
     @stub
-    // 
     def getButtonBorder(): Border = ???
 
+    /**  */
     @stub
-    // 
     def getInternalFrameBorder(): Border = ???
 
+    /**  */
     @stub
-    // 
     def getMenuBarBorder(): Border = ???
 
+    /**  */
     @stub
-    // 
     def getProgressBarBorder(): Border = ???
 
+    /**  */
     @stub
-    // 
     def getRadioButtonBorder(): Border = ???
 
+    /**  */
     @stub
-    // 
     def getSplitPaneBorder(): Border = ???
 
+    /** Returns a border instance for a JSplitPane divider */
     @stub
-    // Returns a border instance for a JSplitPane divider
     def getSplitPaneDividerBorder(): Border = ???
 
+    /**  */
     @stub
-    // 
     def getTextFieldBorder(): Border = ???
 }

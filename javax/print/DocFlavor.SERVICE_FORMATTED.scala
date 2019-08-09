@@ -2,21 +2,24 @@ package javax.print
 
 import java.lang.Object
 
-// Class DocFlavor.SERVICE_FORMATTED provides predefined static constant
-// DocFlavor objects for example doc flavors for service formatted print
-// data.
-// 
+/** Class DocFlavor.SERVICE_FORMATTED provides predefined static constant
+ *  DocFlavor objects for example doc flavors for service formatted print
+ *  data.
+ *  
+ */
 object DocFlavor.SERVICE_FORMATTED extends DocFlavor {
 
+    /** Service formatted print data doc flavor with print data
+     *  representation class name = "java.awt.print.Pageable"
+     *  (pageable object).
+     */
     @stub
-    // Service formatted print data doc flavor with print data
-    // representation class name = "java.awt.print.Pageable"
-    // (pageable object).
-    def PAGEABLE: DocFlavor.SERVICE_FORMATTED = ???
+    val PAGEABLE: DocFlavor.SERVICE_FORMATTED = ???
 
+    /** Service formatted print data doc flavor with print data
+     *  representation class name = "java.awt.print.Printable"
+     *  (printable object).
+     */
     @stub
-    // Service formatted print data doc flavor with print data
-    // representation class name = "java.awt.print.Printable"
-    // (printable object).
-    def PRINTABLE: DocFlavor.SERVICE_FORMATTED = ???
+    val PRINTABLE: DocFlavor.SERVICE_FORMATTED = ???
 }

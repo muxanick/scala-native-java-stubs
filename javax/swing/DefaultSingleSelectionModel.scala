@@ -5,55 +5,59 @@ import java.lang.{Class, Object}
 import java.util.EventListener
 import javax.swing.event.{ChangeEvent, ChangeListener}
 
-// A generic implementation of SingleSelectionModel.
-// 
-// Warning:
-// Serialized objects of this class will not be compatible with
-// future Swing releases. The current serialization support is
-// appropriate for short term storage or RMI between applications running
-// the same version of Swing.  As of 1.4, support for long term storage
-// of all JavaBeans™
-// has been added to the java.beans package.
-// Please see XMLEncoder.
-class DefaultSingleSelectionModel extends Object with SingleSelectionModel, with Serializable {
+/** A generic implementation of SingleSelectionModel.
+ *  
+ *  Warning:
+ *  Serialized objects of this class will not be compatible with
+ *  future Swing releases. The current serialization support is
+ *  appropriate for short term storage or RMI between applications running
+ *  the same version of Swing.  As of 1.4, support for long term storage
+ *  of all JavaBeans™
+ *  has been added to the java.beans package.
+ *  Please see XMLEncoder.
+ */
+class DefaultSingleSelectionModel extends Object with SingleSelectionModel with Serializable {
 
+    /**  */
     @stub
-    // 
-    protected def changeEvent: ChangeEvent = ???
+    protected val changeEvent: ChangeEvent = ???
 
+    /** Adds a ChangeListener to the button. */
     @stub
-    // Adds a ChangeListener to the button.
     def addChangeListener(l: ChangeListener): Unit = ???
 
+    /** Clears the selection (to -1). */
     @stub
-    // Clears the selection (to -1).
     def clearSelection(): Unit = ???
 
+    /** Notifies all listeners that have registered interest for
+     *  notification on this event type.
+     */
     @stub
-    // Notifies all listeners that have registered interest for
-    // notification on this event type.
     protected def fireStateChanged(): Unit = ???
 
+    /** Returns an array of all the change listeners
+     *  registered on this DefaultSingleSelectionModel.
+     */
     @stub
-    // Returns an array of all the change listeners
-    // registered on this DefaultSingleSelectionModel.
     def getChangeListeners(): Array[ChangeListener] = ???
 
+    /** Returns an array of all the objects currently registered as
+     *  FooListeners
+     *  upon this model.
+     */
     @stub
-    // Returns an array of all the objects currently registered as
-    // FooListeners
-    // upon this model.
-    def Array[T]: [T <: EventListener] = ???
+    def getListeners[T <: EventListener](listenerType: Class[T]): Array[T] = ???
 
+    /** Returns the model's selection. */
     @stub
-    // Returns the model's selection.
     def getSelectedIndex(): Int = ???
 
+    /** Returns true if the selection model currently has a selected value. */
     @stub
-    // Returns true if the selection model currently has a selected value.
     def isSelected(): Boolean = ???
 
+    /** Removes a ChangeListener from the button. */
     @stub
-    // Removes a ChangeListener from the button.
     def removeChangeListener(l: ChangeListener): Unit = ???
 }

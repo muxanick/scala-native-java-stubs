@@ -4,54 +4,55 @@ import java.io.Serializable
 import java.lang.{Object, String}
 import java.security.Principal
 
-// This class encapsulates a Kerberos principal.
-final class KerberosPrincipal extends Object with Principal, with Serializable {
+/** This class encapsulates a Kerberos principal. */
+final class KerberosPrincipal extends Object with Principal with Serializable {
 
+    /** Constructs a KerberosPrincipal from the provided string input. */
     @stub
-    // Constructs a KerberosPrincipal from the provided string input.
     def this(name: String) = ???
 
+    /** Compares the specified Object with this Principal for equality. */
     @stub
-    // Compares the specified Object with this Principal for equality.
     def equals(other: Object): Boolean = ???
 
+    /** The returned string corresponds to the single-string
+     *  representation of a Kerberos Principal name as specified in
+     *  Section 2.1 of RFC 1964.
+     */
     @stub
-    // The returned string corresponds to the single-string
-    // representation of a Kerberos Principal name as specified in
-    // Section 2.1 of RFC 1964.
     def getName(): String = ???
 
+    /** Returns the name type of the KerberosPrincipal. */
     @stub
-    // Returns the name type of the KerberosPrincipal.
     def getNameType(): Int = ???
 
+    /** Returns the realm component of this Kerberos principal. */
     @stub
-    // Returns the realm component of this Kerberos principal.
     def getRealm(): String = ???
 
+    /** Returns a hashcode for this principal. */
     @stub
-    // Returns a hashcode for this principal.
     def hashCode(): Int = ???
 }
 
 object KerberosPrincipal {
+    /** user principal name type. */
     @stub
-    // user principal name type.
-    def KRB_NT_PRINCIPAL: Int = ???
+    val KRB_NT_PRINCIPAL: Int = ???
 
+    /** service with host name as instance (telnet, rcommands) name type. */
     @stub
-    // service with host name as instance (telnet, rcommands) name type.
-    def KRB_NT_SRV_HST: Int = ???
+    val KRB_NT_SRV_HST: Int = ???
 
+    /** service and other unique instance (krbtgt) name type. */
     @stub
-    // service and other unique instance (krbtgt) name type.
-    def KRB_NT_SRV_INST: Int = ???
+    val KRB_NT_SRV_INST: Int = ???
 
+    /** service with host as remaining components name type. */
     @stub
-    // service with host as remaining components name type.
-    def KRB_NT_SRV_XHST: Int = ???
+    val KRB_NT_SRV_XHST: Int = ???
 
+    /** unique ID name type. */
     @stub
-    // unique ID name type.
-    def KRB_NT_UID: Int = ???
+    val KRB_NT_UID: Int = ???
 }

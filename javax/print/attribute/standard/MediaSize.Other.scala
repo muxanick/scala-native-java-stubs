@@ -2,47 +2,48 @@ package javax.print.attribute.standard
 
 import java.lang.Object
 
-// Class MediaSize.Other includes MediaSize values for
-// miscellaneous media.
-object final MediaSize.Other extends Object {
+/** Class MediaSize.Other includes MediaSize values for
+ *  miscellaneous media.
+ */
+final object MediaSize.Other extends Object {
 
+    /** Specifies the executive size, 7.25 inches by 10.5 inches. */
     @stub
-    // Specifies the executive size, 7.25 inches by 10.5 inches.
-    def EXECUTIVE: MediaSize = ???
+    val EXECUTIVE: MediaSize = ???
 
+    /** Specifies the folio size, 8.5 inches by 13 inches. */
     @stub
-    // Specifies the folio size, 8.5 inches by 13 inches.
-    def FOLIO: MediaSize = ???
+    val FOLIO: MediaSize = ???
 
+    /** Specifies the invoice size, 5.5 inches by 8.5 inches. */
     @stub
-    // Specifies the invoice size, 5.5 inches by 8.5 inches.
-    def INVOICE: MediaSize = ???
+    val INVOICE: MediaSize = ???
 
+    /** Specifies the Italy envelope size, 110 mm by 230 mm. */
     @stub
-    // Specifies the Italy envelope size, 110 mm by 230 mm.
-    def ITALY_ENVELOPE: MediaSize = ???
+    val ITALY_ENVELOPE: MediaSize = ???
 
+    /** Specifies the Japanese Double postcard size, 148 mm by 200 mm. */
     @stub
-    // Specifies the Japanese Double postcard size, 148 mm by 200 mm.
-    def JAPANESE_DOUBLE_POSTCARD: MediaSize = ???
+    val JAPANESE_DOUBLE_POSTCARD: MediaSize = ???
 
+    /** Specifies the Japanese postcard size, 100 mm by 148 mm. */
     @stub
-    // Specifies the Japanese postcard size, 100 mm by 148 mm.
-    def JAPANESE_POSTCARD: MediaSize = ???
+    val JAPANESE_POSTCARD: MediaSize = ???
 
+    /** Specifies the ledger size, 11 inches by 17 inches. */
     @stub
-    // Specifies the ledger size, 11 inches by 17 inches.
-    def LEDGER: MediaSize = ???
+    val LEDGER: MediaSize = ???
 
+    /** Specifies the Monarch envelope size, 3.87 inch by 7.5 inch. */
     @stub
-    // Specifies the Monarch envelope size, 3.87 inch by 7.5 inch.
-    def MONARCH_ENVELOPE: MediaSize = ???
+    val MONARCH_ENVELOPE: MediaSize = ???
 
+    /** Specifies the Personal envelope size, 3.625 inch by 6.5 inch. */
     @stub
-    // Specifies the Personal envelope size, 3.625 inch by 6.5 inch.
-    def PERSONAL_ENVELOPE: MediaSize = ???
+    val PERSONAL_ENVELOPE: MediaSize = ???
 
+    /** Specifies the quarto size, 8.5 inches by 10.83 inches. */
     @stub
-    // Specifies the quarto size, 8.5 inches by 10.83 inches.
-    def QUARTO: MediaSize = ???
+    val QUARTO: MediaSize = ???
 }

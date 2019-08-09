@@ -2,31 +2,32 @@ package javax.xml.stream
 
 import java.lang.{Error, Exception, Object, String, Throwable}
 
-// An error class for reporting factory configuration errors.
+/** An error class for reporting factory configuration errors. */
 class FactoryConfigurationError extends Error {
 
+    /** Default constructor */
     @stub
-    // Default constructor
     def this() = ???
 
+    /** Construct an exception with a nested inner exception */
     @stub
-    // Construct an exception with a nested inner exception
     def this(e: Exception) = ???
 
+    /** Construct an exception with a nested inner exception
+     *  and a message
+     */
     @stub
-    // Construct an exception with a nested inner exception
-    // and a message
     def this(e: Exception, msg: String) = ???
 
+    /** Construct an exception with associated message */
     @stub
-    // Construct an exception with associated message
     def this(msg: String) = ???
 
+    /** use the exception chaining mechanism of JDK1.4 */
     @stub
-    // use the exception chaining mechanism of JDK1.4
     def getCause(): Throwable = ???
 
+    /** Return the nested exception (if any) */
     @stub
-    // Return the nested exception (if any)
     def getException(): Exception = ???
 }

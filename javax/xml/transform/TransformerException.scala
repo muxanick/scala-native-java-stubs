@@ -3,65 +3,72 @@ package javax.xml.transform
 import java.io.{PrintStream, PrintWriter}
 import java.lang.{Exception, Object, String, Throwable}
 
-// This class specifies an exceptional condition that occurred
-// during the transformation process.
+/** This class specifies an exceptional condition that occurred
+ *  during the transformation process.
+ */
 class TransformerException extends Exception {
 
+    /** Create a new TransformerException. */
     @stub
-    // Create a new TransformerException.
     def this(message: String) = ???
 
+    /** Create a new TransformerException from a message and a Locator. */
     @stub
-    // Create a new TransformerException from a message and a Locator.
     def this(message: String, locator: SourceLocator) = ???
 
+    /** Wrap an existing exception in a TransformerException. */
     @stub
-    // Wrap an existing exception in a TransformerException.
     def this(message: String, locator: SourceLocator, e: Throwable) = ???
 
+    /** Wrap an existing exception in a TransformerException. */
     @stub
-    // Wrap an existing exception in a TransformerException.
     def this(message: String, e: Throwable) = ???
 
+    /** Returns the cause of this throwable or null if the
+     *  cause is nonexistent or unknown.
+     */
     @stub
-    // Returns the cause of this throwable or null if the
-    // cause is nonexistent or unknown.
     def getCause(): Throwable = ???
 
+    /** This method retrieves an exception that this exception wraps. */
     @stub
-    // This method retrieves an exception that this exception wraps.
     def getException(): Throwable = ???
 
+    /** Get the location information as a string. */
     @stub
-    // Get the location information as a string.
     def getLocationAsString(): String = ???
 
+    /** Method getLocator retrieves an instance of a SourceLocator
+     *  object that specifies where an error occurred.
+     */
     @stub
-    // Method getLocator retrieves an instance of a SourceLocator
-    // object that specifies where an error occurred.
     def getLocator(): SourceLocator = ???
 
+    /** Get the error message with location information
+     *  appended.
+     */
     @stub
-    // Get the error message with location information
-    // appended.
     def getMessageAndLocation(): String = ???
 
+    /** Initializes the cause of this throwable to the specified value. */
     @stub
-    // Initializes the cause of this throwable to the specified value.
     def initCause(cause: Throwable): Throwable = ???
 
+    /** Print the the trace of methods from where the error
+     *  originated.
+     */
     @stub
-    // Print the the trace of methods from where the error
-    // originated.
     def printStackTrace(): Unit = ???
 
+    /** Print the the trace of methods from where the error
+     *  originated.
+     */
     @stub
-    // Print the the trace of methods from where the error
-    // originated.
     def printStackTrace(s: PrintStream): Unit = ???
 
+    /** Print the the trace of methods from where the error
+     *  originated.
+     */
     @stub
-    // Print the the trace of methods from where the error
-    // originated.
     def printStackTrace(s: PrintWriter): Unit = ???
 }

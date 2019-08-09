@@ -5,36 +5,37 @@ import java.lang.{Object, String}
 import java.util.List
 import javax.management.ObjectName
 
-// Represents a role: includes a role name and referenced MBeans (via their
-// ObjectNames). The role value is always represented as an ArrayList
-// collection (of ObjectNames) to homogenize the access.
-//
-// The serialVersionUID of this class is -279985518429862552L.
+/** Represents a role: includes a role name and referenced MBeans (via their
+ *  ObjectNames). The role value is always represented as an ArrayList
+ *  collection (of ObjectNames) to homogenize the access.
+ * 
+ *  The serialVersionUID of this class is -279985518429862552L.
+ */
 class Role extends Object with Serializable {
 
+    /** Clone the role object. */
     @stub
-    // Clone the role object.
     def clone(): Object = ???
 
+    /** Retrieves role name. */
     @stub
-    // Retrieves role name.
     def getRoleName(): String = ???
 
+    /** Retrieves role value. */
     @stub
-    // Retrieves role value.
     def getRoleValue(): List[ObjectName] = ???
 
+    /** Sets role name. */
     @stub
-    // Sets role name.
     def setRoleName(roleName: String): Unit = ???
 
+    /** Sets role value. */
     @stub
-    // Sets role value.
     def setRoleValue(roleValue: List[ObjectName]): Unit = ???
 }
 
 object Role {
+    /** Returns a string for the given role value. */
     @stub
-    // Returns a string for the given role value.
     def roleValueToString(roleValue: List[ObjectName]): String = ???
 }

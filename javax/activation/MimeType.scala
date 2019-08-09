@@ -3,74 +3,81 @@ package javax.activation
 import java.io.{Externalizable, ObjectInput}
 import java.lang.{Object, String}
 
-// A Multipurpose Internet Mail Extension (MIME) type, as defined
-// in RFC 2045 and 2046.
+/** A Multipurpose Internet Mail Extension (MIME) type, as defined
+ *  in RFC 2045 and 2046.
+ */
 class MimeType extends Object with Externalizable {
 
+    /** Default constructor. */
     @stub
-    // Default constructor.
     def this() = ???
 
+    /** Constructor that builds a MimeType from a String. */
     @stub
-    // Constructor that builds a MimeType from a String.
     def this(rawdata: String) = ???
 
+    /** Return a String representation of this object
+     *  without the parameter list.
+     */
     @stub
-    // Return a String representation of this object
-    // without the parameter list.
     def getBaseType(): String = ???
 
+    /** Retrieve the value associated with the given name, or null if there
+     *  is no current association.
+     */
     @stub
-    // Retrieve the value associated with the given name, or null if there
-    // is no current association.
     def getParameter(name: String): String = ???
 
+    /** Retrieve this object's parameter list. */
     @stub
-    // Retrieve this object's parameter list.
     def getParameters(): MimeTypeParameterList = ???
 
+    /** Retrieve the primary type of this object. */
     @stub
-    // Retrieve the primary type of this object.
     def getPrimaryType(): String = ???
 
+    /** Retrieve the subtype of this object. */
     @stub
-    // Retrieve the subtype of this object.
     def getSubType(): String = ???
 
+    /** Determine if the primary and sub type of this object is
+     *  the same as what is in the given type.
+     */
     @stub
-    // Determine if the primary and sub type of this object is
-    // the same as what is in the given type.
     def match(type: MimeType): Boolean = ???
 
+    /** Determine if the primary and sub type of this object is
+     *  the same as the content type described in rawdata.
+     */
     @stub
-    // Determine if the primary and sub type of this object is
-    // the same as the content type described in rawdata.
     def match(rawdata: String): Boolean = ???
 
+    /** The object implements the readExternal method to restore its
+     *  contents by calling the methods of DataInput for primitive
+     *  types and readObject for objects, strings and arrays.
+     */
     @stub
-    // The object implements the readExternal method to restore its
-    // contents by calling the methods of DataInput for primitive
-    // types and readObject for objects, strings and arrays.
     def readExternal(in: ObjectInput): Unit = ???
 
+    /** Remove any value associated with the given name. */
     @stub
-    // Remove any value associated with the given name.
     def removeParameter(name: String): Unit = ???
 
+    /** Set the value to be associated with the given name, replacing
+     *  any previous association.
+     */
     @stub
-    // Set the value to be associated with the given name, replacing
-    // any previous association.
     def setParameter(name: String, value: String): Unit = ???
 
+    /** Set the primary type for this object to the given String. */
     @stub
-    // Set the primary type for this object to the given String.
     def setPrimaryType(primary: String): Unit = ???
 
+    /** Set the subtype for this object to the given String. */
     @stub
-    // Set the subtype for this object to the given String.
     def setSubType(sub: String): Unit = ???
 
+    /** Return the String representation of this object. */
     @stub
-    // Return the String representation of this object.
     def toString(): String = ???
 }

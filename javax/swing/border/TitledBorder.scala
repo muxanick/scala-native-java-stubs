@@ -3,217 +3,227 @@ package javax.swing.border
 import java.awt.{Color, Component, Component.BaselineResizeBehavior, Dimension, Font, Graphics, Insets}
 import java.lang.{Object, String}
 
-// A class which implements an arbitrary border
-// with the addition of a String title in a
-// specified position and justification.
-// 
-// If the border, font, or color property values are not
-// specified in the constructor or by invoking the appropriate
-// set methods, the property values will be defined by the current
-// look and feel, using the following property names in the
-// Defaults Table:
-// 
-// "TitledBorder.border"
-// "TitledBorder.font"
-// "TitledBorder.titleColor"
-// 
-// 
-// Warning:
-// Serialized objects of this class will not be compatible with
-// future Swing releases. The current serialization support is
-// appropriate for short term storage or RMI between applications running
-// the same version of Swing.  As of 1.4, support for long term storage
-// of all JavaBeans™
-// has been added to the java.beans package.
-// Please see XMLEncoder.
+/** A class which implements an arbitrary border
+ *  with the addition of a String title in a
+ *  specified position and justification.
+ *  
+ *  If the border, font, or color property values are not
+ *  specified in the constructor or by invoking the appropriate
+ *  set methods, the property values will be defined by the current
+ *  look and feel, using the following property names in the
+ *  Defaults Table:
+ *  
+ *  "TitledBorder.border"
+ *  "TitledBorder.font"
+ *  "TitledBorder.titleColor"
+ *  
+ *  
+ *  Warning:
+ *  Serialized objects of this class will not be compatible with
+ *  future Swing releases. The current serialization support is
+ *  appropriate for short term storage or RMI between applications running
+ *  the same version of Swing.  As of 1.4, support for long term storage
+ *  of all JavaBeans™
+ *  has been added to the java.beans package.
+ *  Please see XMLEncoder.
+ */
 class TitledBorder extends AbstractBorder {
 
+    /** Creates a TitledBorder instance with the specified border
+     *  and an empty title.
+     */
     @stub
-    // Creates a TitledBorder instance with the specified border
-    // and an empty title.
     def this(border: Border) = ???
 
+    /** Creates a TitledBorder instance with the specified border
+     *  and title.
+     */
     @stub
-    // Creates a TitledBorder instance with the specified border
-    // and title.
     def this(border: Border, title: String) = ???
 
+    /** Creates a TitledBorder instance with the specified border,
+     *  title, title-justification, and title-position.
+     */
     @stub
-    // Creates a TitledBorder instance with the specified border,
-    // title, title-justification, and title-position.
     def this(border: Border, title: String, titleJustification: Int, titlePosition: Int) = ???
 
+    /** Creates a TitledBorder instance with the specified border,
+     *  title, title-justification, title-position, and title-font.
+     */
     @stub
-    // Creates a TitledBorder instance with the specified border,
-    // title, title-justification, title-position, and title-font.
     def this(border: Border, title: String, titleJustification: Int, titlePosition: Int, titleFont: Font) = ???
 
+    /** Creates a TitledBorder instance with the specified border,
+     *  title, title-justification, title-position, title-font, and
+     *  title-color.
+     */
     @stub
-    // Creates a TitledBorder instance with the specified border,
-    // title, title-justification, title-position, title-font, and
-    // title-color.
     def this(border: Border, title: String, titleJustification: Int, titlePosition: Int, titleFont: Font, titleColor: Color) = ???
 
+    /**  */
     @stub
-    // 
-    protected def border: Border = ???
+    protected val border: Border = ???
 
+    /**  */
     @stub
-    // 
-    protected def title: String = ???
+    protected val title: String = ???
 
+    /**  */
     @stub
-    // 
-    protected def titleColor: Color = ???
+    protected val titleColor: Color = ???
 
+    /**  */
     @stub
-    // 
-    protected def titleFont: Font = ???
+    protected val titleFont: Font = ???
 
+    /**  */
     @stub
-    // 
-    protected def titleJustification: Int = ???
+    protected val titleJustification: Int = ???
 
+    /**  */
     @stub
-    // 
-    protected def titlePosition: Int = ???
+    protected val titlePosition: Int = ???
 
+    /** Returns the baseline. */
     @stub
-    // Returns the baseline.
     def getBaseline(c: Component, width: Int, height: Int): Int = ???
 
+    /** Returns an enum indicating how the baseline of the border
+     *  changes as the size changes.
+     */
     @stub
-    // Returns an enum indicating how the baseline of the border
-    // changes as the size changes.
     def getBaselineResizeBehavior(c: Component): Component.BaselineResizeBehavior = ???
 
+    /** Returns the border of the titled border. */
     @stub
-    // Returns the border of the titled border.
     def getBorder(): Border = ???
 
+    /** Reinitialize the insets parameter with this Border's current Insets. */
     @stub
-    // Reinitialize the insets parameter with this Border's current Insets.
     def getBorderInsets(c: Component, insets: Insets): Insets = ???
 
+    /**  */
     @stub
-    // 
     protected def getFont(c: Component): Font = ???
 
+    /** Returns the minimum dimensions this border requires
+     *  in order to fully display the border and title.
+     */
     @stub
-    // Returns the minimum dimensions this border requires
-    // in order to fully display the border and title.
     def getMinimumSize(c: Component): Dimension = ???
 
+    /** Returns the title of the titled border. */
     @stub
-    // Returns the title of the titled border.
     def getTitle(): String = ???
 
+    /** Returns the title-color of the titled border. */
     @stub
-    // Returns the title-color of the titled border.
     def getTitleColor(): Color = ???
 
+    /** Returns the title-font of the titled border. */
     @stub
-    // Returns the title-font of the titled border.
     def getTitleFont(): Font = ???
 
+    /** Returns the title-justification of the titled border. */
     @stub
-    // Returns the title-justification of the titled border.
     def getTitleJustification(): Int = ???
 
+    /** Returns the title-position of the titled border. */
     @stub
-    // Returns the title-position of the titled border.
     def getTitlePosition(): Int = ???
 
+    /** Returns whether or not the border is opaque. */
     @stub
-    // Returns whether or not the border is opaque.
     def isBorderOpaque(): Boolean = ???
 
+    /** Paints the border for the specified component with the
+     *  specified position and size.
+     */
     @stub
-    // Paints the border for the specified component with the
-    // specified position and size.
     def paintBorder(c: Component, g: Graphics, x: Int, y: Int, width: Int, height: Int): Unit = ???
 
+    /** Sets the border of the titled border. */
     @stub
-    // Sets the border of the titled border.
     def setBorder(border: Border): Unit = ???
 
+    /** Sets the title of the titled border. */
     @stub
-    // Sets the title of the titled border.
     def setTitle(title: String): Unit = ???
 
+    /** Sets the title-color of the titled border. */
     @stub
-    // Sets the title-color of the titled border.
     def setTitleColor(titleColor: Color): Unit = ???
 
+    /** Sets the title-font of the titled border. */
     @stub
-    // Sets the title-font of the titled border.
     def setTitleFont(titleFont: Font): Unit = ???
 
+    /** Sets the title-justification of the titled border. */
     @stub
-    // Sets the title-justification of the titled border.
     def setTitleJustification(titleJustification: Int): Unit = ???
 }
 
 object TitledBorder {
+    /** Position the title above the border's bottom line. */
     @stub
-    // Position the title above the border's bottom line.
-    def ABOVE_BOTTOM: Int = ???
+    val ABOVE_BOTTOM: Int = ???
 
+    /** Position the title above the border's top line. */
     @stub
-    // Position the title above the border's top line.
-    def ABOVE_TOP: Int = ???
+    val ABOVE_TOP: Int = ???
 
+    /** Position the title below the border's bottom line. */
     @stub
-    // Position the title below the border's bottom line.
-    def BELOW_BOTTOM: Int = ???
+    val BELOW_BOTTOM: Int = ???
 
+    /** Position the title below the border's top line. */
     @stub
-    // Position the title below the border's top line.
-    def BELOW_TOP: Int = ???
+    val BELOW_TOP: Int = ???
 
+    /** Position the title in the middle of the border's bottom line. */
     @stub
-    // Position the title in the middle of the border's bottom line.
-    def BOTTOM: Int = ???
+    val BOTTOM: Int = ???
 
+    /** Position title text in the center of the border line. */
     @stub
-    // Position title text in the center of the border line.
-    def CENTER: Int = ???
+    val CENTER: Int = ???
 
+    /** Use the default justification for the title text. */
     @stub
-    // Use the default justification for the title text.
-    def DEFAULT_JUSTIFICATION: Int = ???
+    val DEFAULT_JUSTIFICATION: Int = ???
 
+    /** Use the default vertical orientation for the title text. */
     @stub
-    // Use the default vertical orientation for the title text.
-    def DEFAULT_POSITION: Int = ???
+    val DEFAULT_POSITION: Int = ???
 
+    /**  */
     @stub
-    // 
-    protected def EDGE_SPACING: Int = ???
+    protected val EDGE_SPACING: Int = ???
 
+    /** Position title text at the left side of the border line
+     *   for left to right orientation, at the right side of the
+     *   border line for right to left orientation.
+     */
     @stub
-    // Position title text at the left side of the border line
-    //  for left to right orientation, at the right side of the
-    //  border line for right to left orientation.
-    def LEADING: Int = ???
+    val LEADING: Int = ???
 
+    /** Position title text at the left side of the border line. */
     @stub
-    // Position title text at the left side of the border line.
-    def LEFT: Int = ???
+    val LEFT: Int = ???
 
+    /** Position title text at the right side of the border line. */
     @stub
-    // Position title text at the right side of the border line.
-    def RIGHT: Int = ???
+    val RIGHT: Int = ???
 
+    /**  */
     @stub
-    // 
-    protected def TEXT_INSET_H: Int = ???
+    protected val TEXT_INSET_H: Int = ???
 
+    /**  */
     @stub
-    // 
-    protected def TEXT_SPACING: Int = ???
+    protected val TEXT_SPACING: Int = ???
 
+    /** Position the title in the middle of the border's top line. */
     @stub
-    // Position the title in the middle of the border's top line.
-    def TOP: Int = ???
+    val TOP: Int = ???
 }

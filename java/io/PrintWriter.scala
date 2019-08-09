@@ -3,197 +3,209 @@ package java.io
 import java.lang.{CharSequence, Object, String}
 import java.util.Locale
 
-// Prints formatted representations of objects to a text-output stream.  This
-// class implements all of the print methods found in PrintStream.  It does not contain methods for writing raw bytes, for which
-// a program should use unencoded byte streams.
-//
-//  Unlike the PrintStream class, if automatic flushing is enabled
-// it will be done only when one of the println, printf, or
-// format methods is invoked, rather than whenever a newline character
-// happens to be output.  These methods use the platform's own notion of line
-// separator rather than the newline character.
-//
-//  Methods in this class never throw I/O exceptions, although some of its
-// constructors may.  The client may inquire as to whether any errors have
-// occurred by invoking checkError().
+/** Prints formatted representations of objects to a text-output stream.  This
+ *  class implements all of the print methods found in PrintStream.  It does not contain methods for writing raw bytes, for which
+ *  a program should use unencoded byte streams.
+ * 
+ *   Unlike the PrintStream class, if automatic flushing is enabled
+ *  it will be done only when one of the println, printf, or
+ *  format methods is invoked, rather than whenever a newline character
+ *  happens to be output.  These methods use the platform's own notion of line
+ *  separator rather than the newline character.
+ * 
+ *   Methods in this class never throw I/O exceptions, although some of its
+ *  constructors may.  The client may inquire as to whether any errors have
+ *  occurred by invoking checkError().
+ */
 class PrintWriter extends Writer {
 
+    /** Creates a new PrintWriter, without automatic line flushing, with the
+     *  specified file.
+     */
     @stub
-    // Creates a new PrintWriter, without automatic line flushing, with the
-    // specified file.
     def this(file: File) = ???
 
+    /** Creates a new PrintWriter, without automatic line flushing, with the
+     *  specified file and charset.
+     */
     @stub
-    // Creates a new PrintWriter, without automatic line flushing, with the
-    // specified file and charset.
     def this(file: File, csn: String) = ???
 
+    /** Creates a new PrintWriter, without automatic line flushing, from an
+     *  existing OutputStream.
+     */
     @stub
-    // Creates a new PrintWriter, without automatic line flushing, from an
-    // existing OutputStream.
     def this(out: OutputStream) = ???
 
+    /** Creates a new PrintWriter from an existing OutputStream. */
     @stub
-    // Creates a new PrintWriter from an existing OutputStream.
     def this(out: OutputStream, autoFlush: Boolean) = ???
 
+    /** Creates a new PrintWriter, without automatic line flushing, with the
+     *  specified file name.
+     */
     @stub
-    // Creates a new PrintWriter, without automatic line flushing, with the
-    // specified file name.
     def this(fileName: String) = ???
 
+    /** Creates a new PrintWriter, without automatic line flushing, with the
+     *  specified file name and charset.
+     */
     @stub
-    // Creates a new PrintWriter, without automatic line flushing, with the
-    // specified file name and charset.
     def this(fileName: String, csn: String) = ???
 
+    /** Creates a new PrintWriter, without automatic line flushing. */
     @stub
-    // Creates a new PrintWriter, without automatic line flushing.
     def this(out: Writer) = ???
 
+    /** Appends the specified character to this writer. */
     @stub
-    // Appends the specified character to this writer.
     def append(c: Char): PrintWriter = ???
 
+    /** Appends the specified character sequence to this writer. */
     @stub
-    // Appends the specified character sequence to this writer.
     def append(csq: CharSequence): PrintWriter = ???
 
+    /** Appends a subsequence of the specified character sequence to this writer. */
     @stub
-    // Appends a subsequence of the specified character sequence to this writer.
     def append(csq: CharSequence, start: Int, end: Int): PrintWriter = ???
 
+    /** Flushes the stream if it's not closed and checks its error state. */
     @stub
-    // Flushes the stream if it's not closed and checks its error state.
     def checkError(): Boolean = ???
 
+    /** Clears the error state of this stream. */
     @stub
-    // Clears the error state of this stream.
     protected def clearError(): Unit = ???
 
+    /** Closes the stream and releases any system resources associated
+     *  with it.
+     */
     @stub
-    // Closes the stream and releases any system resources associated
-    // with it.
     def close(): Unit = ???
 
+    /** Flushes the stream. */
     @stub
-    // Flushes the stream.
     def flush(): Unit = ???
 
+    /** Writes a formatted string to this writer using the specified format
+     *  string and arguments.
+     */
     @stub
-    // Writes a formatted string to this writer using the specified format
-    // string and arguments.
     def format(l: Locale, format: String, args: Object*): PrintWriter = ???
 
+    /** Writes a formatted string to this writer using the specified format
+     *  string and arguments.
+     */
     @stub
-    // Writes a formatted string to this writer using the specified format
-    // string and arguments.
     def format(format: String, args: Object*): PrintWriter = ???
 
+    /** Prints a boolean value. */
     @stub
-    // Prints a boolean value.
     def print(b: Boolean): Unit = ???
 
+    /** Prints a character. */
     @stub
-    // Prints a character.
     def print(c: Char): Unit = ???
 
+    /** Prints an array of characters. */
     @stub
-    // Prints an array of characters.
     def print(s: Array[Char]): Unit = ???
 
+    /** Prints a double-precision floating-point number. */
     @stub
-    // Prints a double-precision floating-point number.
-    def print(d: double): Unit = ???
+    def print(d: Double): Unit = ???
 
+    /** Prints a floating-point number. */
     @stub
-    // Prints a floating-point number.
-    def print(f: float): Unit = ???
+    def print(f: Float): Unit = ???
 
+    /** Prints an integer. */
     @stub
-    // Prints an integer.
     def print(i: Int): Unit = ???
 
+    /** Prints a long integer. */
     @stub
-    // Prints a long integer.
     def print(l: Long): Unit = ???
 
+    /** Prints an object. */
     @stub
-    // Prints an object.
     def print(obj: Object): Unit = ???
 
+    /** Prints a string. */
     @stub
-    // Prints a string.
     def print(s: String): Unit = ???
 
+    /** A convenience method to write a formatted string to this writer using
+     *  the specified format string and arguments.
+     */
     @stub
-    // A convenience method to write a formatted string to this writer using
-    // the specified format string and arguments.
     def printf(l: Locale, format: String, args: Object*): PrintWriter = ???
 
+    /** A convenience method to write a formatted string to this writer using
+     *  the specified format string and arguments.
+     */
     @stub
-    // A convenience method to write a formatted string to this writer using
-    // the specified format string and arguments.
     def printf(format: String, args: Object*): PrintWriter = ???
 
+    /** Terminates the current line by writing the line separator string. */
     @stub
-    // Terminates the current line by writing the line separator string.
     def println(): Unit = ???
 
+    /** Prints a boolean value and then terminates the line. */
     @stub
-    // Prints a boolean value and then terminates the line.
     def println(x: Boolean): Unit = ???
 
+    /** Prints a character and then terminates the line. */
     @stub
-    // Prints a character and then terminates the line.
     def println(x: Char): Unit = ???
 
+    /** Prints an array of characters and then terminates the line. */
     @stub
-    // Prints an array of characters and then terminates the line.
     def println(x: Array[Char]): Unit = ???
 
+    /** Prints a double-precision floating-point number and then terminates the
+     *  line.
+     */
     @stub
-    // Prints a double-precision floating-point number and then terminates the
-    // line.
-    def println(x: double): Unit = ???
+    def println(x: Double): Unit = ???
 
+    /** Prints a floating-point number and then terminates the line. */
     @stub
-    // Prints a floating-point number and then terminates the line.
-    def println(x: float): Unit = ???
+    def println(x: Float): Unit = ???
 
+    /** Prints an integer and then terminates the line. */
     @stub
-    // Prints an integer and then terminates the line.
     def println(x: Int): Unit = ???
 
+    /** Prints a long integer and then terminates the line. */
     @stub
-    // Prints a long integer and then terminates the line.
     def println(x: Long): Unit = ???
 
+    /** Prints an Object and then terminates the line. */
     @stub
-    // Prints an Object and then terminates the line.
     def println(x: Object): Unit = ???
 
+    /** Prints a String and then terminates the line. */
     @stub
-    // Prints a String and then terminates the line.
     def println(x: String): Unit = ???
 
+    /** Indicates that an error has occurred. */
     @stub
-    // Indicates that an error has occurred.
     protected def setError(): Unit = ???
 
+    /** Writes an array of characters. */
     @stub
-    // Writes an array of characters.
     def write(buf: Array[Char]): Unit = ???
 
+    /** Writes A Portion of an array of characters. */
     @stub
-    // Writes A Portion of an array of characters.
     def write(buf: Array[Char], off: Int, len: Int): Unit = ???
 
+    /** Writes a single character. */
     @stub
-    // Writes a single character.
     def write(c: Int): Unit = ???
 
+    /** Writes a string. */
     @stub
-    // Writes a string.
     def write(s: String): Unit = ???
 }

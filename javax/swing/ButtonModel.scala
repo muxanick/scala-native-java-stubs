@@ -5,131 +5,137 @@ import java.awt.event.{ActionListener, ItemListener}
 import java.lang.String
 import javax.swing.event.ChangeListener
 
-// State model for buttons.
-// 
-// This model is used for regular buttons, as well as check boxes
-// and radio buttons, which are special kinds of buttons. In practice,
-// a button's UI takes the responsibility of calling methods on its
-// model to manage the state, as detailed below:
-// 
-// In simple terms, pressing and releasing the mouse over a regular
-// button triggers the button and causes and ActionEvent
-// to be fired. The same behavior can be produced via a keyboard key
-// defined by the look and feel of the button (typically the SPACE BAR).
-// Pressing and releasing this key while the button has
-// focus will give the same results. For check boxes and radio buttons, the
-// mouse or keyboard equivalent sequence just described causes the button
-// to become selected.
-// 
-// In details, the state model for buttons works as follows
-// when used with the mouse:
-// 
-// Pressing the mouse on top of a button makes the model both
-// armed and pressed. As long as the mouse remains down,
-// the model remains pressed, even if the mouse moves
-// outside the button. On the contrary, the model is only
-// armed while the mouse remains pressed within the bounds of
-// the button (it can move in or out of the button, but the model
-// is only armed during the portion of time spent within the button).
-// A button is triggered, and an ActionEvent is fired,
-// when the mouse is released while the model is armed
-// - meaning when it is released over top of the button after the mouse
-// has previously been pressed on that button (and not already released).
-// Upon mouse release, the model becomes unarmed and unpressed.
-// 
-// In details, the state model for buttons works as follows
-// when used with the keyboard:
-// 
-// Pressing the look and feel defined keyboard key while the button
-// has focus makes the model both armed and pressed. As long as this key
-// remains down, the model remains in this state. Releasing the key sets
-// the model to unarmed and unpressed, triggers the button, and causes an
-// ActionEvent to be fired.
+/** State model for buttons.
+ *  
+ *  This model is used for regular buttons, as well as check boxes
+ *  and radio buttons, which are special kinds of buttons. In practice,
+ *  a button's UI takes the responsibility of calling methods on its
+ *  model to manage the state, as detailed below:
+ *  
+ *  In simple terms, pressing and releasing the mouse over a regular
+ *  button triggers the button and causes and ActionEvent
+ *  to be fired. The same behavior can be produced via a keyboard key
+ *  defined by the look and feel of the button (typically the SPACE BAR).
+ *  Pressing and releasing this key while the button has
+ *  focus will give the same results. For check boxes and radio buttons, the
+ *  mouse or keyboard equivalent sequence just described causes the button
+ *  to become selected.
+ *  
+ *  In details, the state model for buttons works as follows
+ *  when used with the mouse:
+ *  
+ *  Pressing the mouse on top of a button makes the model both
+ *  armed and pressed. As long as the mouse remains down,
+ *  the model remains pressed, even if the mouse moves
+ *  outside the button. On the contrary, the model is only
+ *  armed while the mouse remains pressed within the bounds of
+ *  the button (it can move in or out of the button, but the model
+ *  is only armed during the portion of time spent within the button).
+ *  A button is triggered, and an ActionEvent is fired,
+ *  when the mouse is released while the model is armed
+ *  - meaning when it is released over top of the button after the mouse
+ *  has previously been pressed on that button (and not already released).
+ *  Upon mouse release, the model becomes unarmed and unpressed.
+ *  
+ *  In details, the state model for buttons works as follows
+ *  when used with the keyboard:
+ *  
+ *  Pressing the look and feel defined keyboard key while the button
+ *  has focus makes the model both armed and pressed. As long as this key
+ *  remains down, the model remains in this state. Releasing the key sets
+ *  the model to unarmed and unpressed, triggers the button, and causes an
+ *  ActionEvent to be fired.
+ */
 trait ButtonModel extends ItemSelectable {
 
+    /** Adds an ActionListener to the model. */
     @stub
-    // Adds an ActionListener to the model.
     def addActionListener(l: ActionListener): Unit = ???
 
+    /** Adds a ChangeListener to the model. */
     @stub
-    // Adds a ChangeListener to the model.
     def addChangeListener(l: ChangeListener): Unit = ???
 
+    /** Adds an ItemListener to the model. */
     @stub
-    // Adds an ItemListener to the model.
     def addItemListener(l: ItemListener): Unit = ???
 
+    /** Returns the action command string for the button. */
     @stub
-    // Returns the action command string for the button.
     def getActionCommand(): String = ???
 
+    /** Gets the keyboard mnemonic for the button. */
     @stub
-    // Gets the keyboard mnemonic for the button.
     def getMnemonic(): Int = ???
 
+    /** Indicates partial commitment towards triggering the
+     *  button.
+     */
     @stub
-    // Indicates partial commitment towards triggering the
-    // button.
     def isArmed(): Boolean = ???
 
+    /** Indicates if the button can be selected or triggered by
+     *  an input device, such as a mouse pointer.
+     */
     @stub
-    // Indicates if the button can be selected or triggered by
-    // an input device, such as a mouse pointer.
     def isEnabled(): Boolean = ???
 
+    /** Indicates if the button is pressed. */
     @stub
-    // Indicates if the button is pressed.
     def isPressed(): Boolean = ???
 
+    /** Indicates that the mouse is over the button. */
     @stub
-    // Indicates that the mouse is over the button.
     def isRollover(): Boolean = ???
 
+    /** Indicates if the button has been selected. */
     @stub
-    // Indicates if the button has been selected.
     def isSelected(): Boolean = ???
 
+    /** Removes an ActionListener from the model. */
     @stub
-    // Removes an ActionListener from the model.
     def removeActionListener(l: ActionListener): Unit = ???
 
+    /** Removes a ChangeListener from the model. */
     @stub
-    // Removes a ChangeListener from the model.
     def removeChangeListener(l: ChangeListener): Unit = ???
 
+    /** Removes an ItemListener from the model. */
     @stub
-    // Removes an ItemListener from the model.
     def removeItemListener(l: ItemListener): Unit = ???
 
+    /** Sets the action command string that gets sent as part of the
+     *  ActionEvent when the button is triggered.
+     */
     @stub
-    // Sets the action command string that gets sent as part of the
-    // ActionEvent when the button is triggered.
     def setActionCommand(s: String): Unit = ???
 
+    /** Marks the button as armed or unarmed. */
     @stub
-    // Marks the button as armed or unarmed.
     def setArmed(b: Boolean): Unit = ???
 
+    /** Enables or disables the button. */
     @stub
-    // Enables or disables the button.
     def setEnabled(b: Boolean): Unit = ???
 
+    /** Identifies the group the button belongs to --
+     *  needed for radio buttons, which are mutually
+     *  exclusive within their group.
+     */
     @stub
-    // Identifies the group the button belongs to --
-    // needed for radio buttons, which are mutually
-    // exclusive within their group.
     def setGroup(group: ButtonGroup): Unit = ???
 
+    /** Sets the keyboard mnemonic (shortcut key or
+     *  accelerator key) for the button.
+     */
     @stub
-    // Sets the keyboard mnemonic (shortcut key or
-    // accelerator key) for the button.
     def setMnemonic(key: Int): Unit = ???
 
+    /** Sets the button to pressed or unpressed. */
     @stub
-    // Sets the button to pressed or unpressed.
     def setPressed(b: Boolean): Unit = ???
 
+    /** Sets or clears the button's rollover state */
     @stub
-    // Sets or clears the button's rollover state
     def setRollover(b: Boolean): Unit = ???
 }

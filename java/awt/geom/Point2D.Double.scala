@@ -3,31 +3,36 @@ package java.awt.geom
 import java.io.Serializable
 import java.lang.Object
 
-// The Double class defines a point specified in
-// double precision.
+/** The Double class defines a point specified in
+ *  double precision.
+ */
 object Point2D.Double extends Point2D with Serializable {
 
+    /** Constructs and initializes a Point2D with
+     *  coordinates (0, 0).
+     */
     @stub
-    // Constructs and initializes a Point2D with
-    // coordinates (0, 0).
     def Double() = ???
 
+    /** The X coordinate of this Point2D. */
     @stub
-    // The X coordinate of this Point2D.
-    def x: double = ???
+    val x: Double = ???
 
+    /** Returns the X coordinate of this Point2D in
+     *  double precision.
+     */
     @stub
-    // Returns the X coordinate of this Point2D in
-    // double precision.
-    def getX(): double = ???
+    def getX(): Double = ???
 
+    /** Returns the Y coordinate of this Point2D in
+     *  double precision.
+     */
     @stub
-    // Returns the Y coordinate of this Point2D in
-    // double precision.
-    def getY(): double = ???
+    def getY(): Double = ???
 
+    /** Sets the location of this Point2D to the
+     *  specified double coordinates.
+     */
     @stub
-    // Sets the location of this Point2D to the
-    // specified double coordinates.
-    def setLocation(x: double, y: double): Unit = ???
+    def setLocation(x: Double, y: Double): Unit = ???
 }

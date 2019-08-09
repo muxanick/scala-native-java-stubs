@@ -4,193 +4,199 @@ import java.io.{FilterInputStream, InputStream}
 import java.lang.{Object, String}
 import java.util.zip.{InflaterInputStream, ZipEntry, ZipInputStream}
 
-// The JarInputStream class is used to read the contents of
-// a JAR file from any input stream. It extends the class
-// java.util.zip.ZipInputStream with support for reading
-// an optional Manifest entry. The Manifest
-// can be used to store meta-information about the JAR file and its entries.
+/** The JarInputStream class is used to read the contents of
+ *  a JAR file from any input stream. It extends the class
+ *  java.util.zip.ZipInputStream with support for reading
+ *  an optional Manifest entry. The Manifest
+ *  can be used to store meta-information about the JAR file and its entries.
+ */
 class JarInputStream extends ZipInputStream {
 
+    /** Creates a new JarInputStream and reads the optional
+     *  manifest.
+     */
     @stub
-    // Creates a new JarInputStream and reads the optional
-    // manifest.
     def this(in: InputStream) = ???
 
+    /** Creates a new JarEntry (ZipEntry) for the
+     *  specified JAR file entry name.
+     */
     @stub
-    // Creates a new JarEntry (ZipEntry) for the
-    // specified JAR file entry name.
     protected def createZipEntry(name: String): ZipEntry = ???
 
+    /** Returns the Manifest for this JAR file, or
+     *  null if none.
+     */
     @stub
-    // Returns the Manifest for this JAR file, or
-    // null if none.
     def getManifest(): Manifest = ???
 
+    /** Reads the next ZIP file entry and positions the stream at the
+     *  beginning of the entry data.
+     */
     @stub
-    // Reads the next ZIP file entry and positions the stream at the
-    // beginning of the entry data.
     def getNextEntry(): ZipEntry = ???
 
+    /** Reads the next JAR file entry and positions the stream at the
+     *  beginning of the entry data.
+     */
     @stub
-    // Reads the next JAR file entry and positions the stream at the
-    // beginning of the entry data.
     def getNextJarEntry(): JarEntry = ???
 }
 
 object JarInputStream {
+    /**  */
     @stub
-    // 
-    def CENATT: Int = ???
+    val CENATT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENATX: Int = ???
+    val CENATX: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENCOM: Int = ???
+    val CENCOM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENCRC: Int = ???
+    val CENCRC: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENDSK: Int = ???
+    val CENDSK: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENEXT: Int = ???
+    val CENEXT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENFLG: Int = ???
+    val CENFLG: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENHDR: Int = ???
+    val CENHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENHOW: Int = ???
+    val CENHOW: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENLEN: Int = ???
+    val CENLEN: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENNAM: Int = ???
+    val CENNAM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENOFF: Int = ???
+    val CENOFF: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENSIG: Long = ???
+    val CENSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def CENSIZ: Int = ???
+    val CENSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENTIM: Int = ???
+    val CENTIM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENVEM: Int = ???
+    val CENVEM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENVER: Int = ???
+    val CENVER: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDCOM: Int = ???
+    val ENDCOM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDHDR: Int = ???
+    val ENDHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDOFF: Int = ???
+    val ENDOFF: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDSIG: Long = ???
+    val ENDSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def ENDSIZ: Int = ???
+    val ENDSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDSUB: Int = ???
+    val ENDSUB: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDTOT: Int = ???
+    val ENDTOT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTCRC: Int = ???
+    val EXTCRC: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTHDR: Int = ???
+    val EXTHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTLEN: Int = ???
+    val EXTLEN: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTSIG: Long = ???
+    val EXTSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def EXTSIZ: Int = ???
+    val EXTSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCCRC: Int = ???
+    val LOCCRC: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCEXT: Int = ???
+    val LOCEXT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCFLG: Int = ???
+    val LOCFLG: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCHDR: Int = ???
+    val LOCHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCHOW: Int = ???
+    val LOCHOW: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCLEN: Int = ???
+    val LOCLEN: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCNAM: Int = ???
+    val LOCNAM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCSIG: Long = ???
+    val LOCSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def LOCSIZ: Int = ???
+    val LOCSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCTIM: Int = ???
+    val LOCTIM: Int = ???
 }

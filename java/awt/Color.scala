@@ -6,286 +6,311 @@ import java.awt.image.ColorModel
 import java.io.Serializable
 import java.lang.{Object, String}
 
-// The Color class is used to encapsulate colors in the default
-// sRGB color space or colors in arbitrary color spaces identified by a
-// ColorSpace.  Every color has an implicit alpha value of 1.0 or
-// an explicit one provided in the constructor.  The alpha value
-// defines the transparency of a color and can be represented by
-// a float value in the range 0.0 - 1.0 or 0 - 255.
-// An alpha value of 1.0 or 255 means that the color is completely
-// opaque and an alpha value of 0 or 0.0 means that the color is
-// completely transparent.
-// When constructing a Color with an explicit alpha or
-// getting the color/alpha components of a Color, the color
-// components are never premultiplied by the alpha component.
-// 
-// The default color space for the Java 2D(tm) API is sRGB, a proposed
-// standard RGB color space.  For further information on sRGB,
-// see 
-// http://www.w3.org/pub/WWW/Graphics/Color/sRGB.html
-// .
-// 
-class Color extends Object with Paint, with Serializable {
+/** The Color class is used to encapsulate colors in the default
+ *  sRGB color space or colors in arbitrary color spaces identified by a
+ *  ColorSpace.  Every color has an implicit alpha value of 1.0 or
+ *  an explicit one provided in the constructor.  The alpha value
+ *  defines the transparency of a color and can be represented by
+ *  a float value in the range 0.0 - 1.0 or 0 - 255.
+ *  An alpha value of 1.0 or 255 means that the color is completely
+ *  opaque and an alpha value of 0 or 0.0 means that the color is
+ *  completely transparent.
+ *  When constructing a Color with an explicit alpha or
+ *  getting the color/alpha components of a Color, the color
+ *  components are never premultiplied by the alpha component.
+ *  
+ *  The default color space for the Java 2D(tm) API is sRGB, a proposed
+ *  standard RGB color space.  For further information on sRGB,
+ *  see 
+ *  http://www.w3.org/pub/WWW/Graphics/Color/sRGB.html
+ *  .
+ *  
+ */
+class Color extends Object with Paint with Serializable {
 
+    /** Creates a color in the specified ColorSpace
+     *  with the color components specified in the float
+     *  array and the specified alpha.
+     */
     @stub
-    // Creates a color in the specified ColorSpace
-    // with the color components specified in the float
-    // array and the specified alpha.
-    def this(cspace: ColorSpace, components: Array[float], alpha: float) = ???
+    def this(cspace: ColorSpace, components: Array[Float], alpha: Float) = ???
 
+    /** Creates an opaque sRGB color with the specified red, green, and blue
+     *  values in the range (0.0 - 1.0).
+     */
     @stub
-    // Creates an opaque sRGB color with the specified red, green, and blue
-    // values in the range (0.0 - 1.0).
-    def this(r: float, g: float, b: float) = ???
+    def this(r: Float, g: Float, b: Float) = ???
 
+    /** Creates an sRGB color with the specified red, green, blue, and
+     *  alpha values in the range (0.0 - 1.0).
+     */
     @stub
-    // Creates an sRGB color with the specified red, green, blue, and
-    // alpha values in the range (0.0 - 1.0).
-    def this(r: float, g: float, b: float, a: float) = ???
+    def this(r: Float, g: Float, b: Float, a: Float) = ???
 
+    /** Creates an opaque sRGB color with the specified combined RGB value
+     *  consisting of the red component in bits 16-23, the green component
+     *  in bits 8-15, and the blue component in bits 0-7.
+     */
     @stub
-    // Creates an opaque sRGB color with the specified combined RGB value
-    // consisting of the red component in bits 16-23, the green component
-    // in bits 8-15, and the blue component in bits 0-7.
     def this(rgb: Int) = ???
 
+    /** Creates an sRGB color with the specified combined RGBA value consisting
+     *  of the alpha component in bits 24-31, the red component in bits 16-23,
+     *  the green component in bits 8-15, and the blue component in bits 0-7.
+     */
     @stub
-    // Creates an sRGB color with the specified combined RGBA value consisting
-    // of the alpha component in bits 24-31, the red component in bits 16-23,
-    // the green component in bits 8-15, and the blue component in bits 0-7.
     def this(rgba: Int, hasalpha: Boolean) = ???
 
+    /** Creates an opaque sRGB color with the specified red, green,
+     *  and blue values in the range (0 - 255).
+     */
     @stub
-    // Creates an opaque sRGB color with the specified red, green,
-    // and blue values in the range (0 - 255).
     def this(r: Int, g: Int, b: Int) = ???
 
+    /** Creates a new Color that is a brighter version of this
+     *  Color.
+     */
     @stub
-    // Creates a new Color that is a brighter version of this
-    // Color.
     def brighter(): Color = ???
 
+    /** Creates and returns a PaintContext used to
+     *  generate a solid color field pattern.
+     */
     @stub
-    // Creates and returns a PaintContext used to
-    // generate a solid color field pattern.
     def createContext(cm: ColorModel, r: Rectangle, r2d: Rectangle2D, xform: AffineTransform, hints: RenderingHints): PaintContext = ???
 
+    /** Creates a new Color that is a darker version of this
+     *  Color.
+     */
     @stub
-    // Creates a new Color that is a darker version of this
-    // Color.
     def darker(): Color = ???
 
+    /** Determines whether another object is equal to this
+     *  Color.
+     */
     @stub
-    // Determines whether another object is equal to this
-    // Color.
     def equals(obj: Object): Boolean = ???
 
+    /** Returns the alpha component in the range 0-255. */
     @stub
-    // Returns the alpha component in the range 0-255.
     def getAlpha(): Int = ???
 
+    /** Returns the blue component in the range 0-255 in the default sRGB
+     *  space.
+     */
     @stub
-    // Returns the blue component in the range 0-255 in the default sRGB
-    // space.
     def getBlue(): Int = ???
 
+    /** Returns a float array containing only the color
+     *  components of the Color in the
+     *  ColorSpace specified by the cspace
+     *  parameter.
+     */
     @stub
-    // Returns a float array containing only the color
-    // components of the Color in the
-    // ColorSpace specified by the cspace
-    // parameter.
-    def getColorComponents(cspace: ColorSpace, compArray: Array[float]): Array[float] = ???
+    def getColorComponents(cspace: ColorSpace, compArray: Array[Float]): Array[Float] = ???
 
+    /** Returns a float array containing only the color
+     *  components of the Color, in the
+     *  ColorSpace of the Color.
+     */
     @stub
-    // Returns a float array containing only the color
-    // components of the Color, in the
-    // ColorSpace of the Color.
-    def getColorComponents(compArray: Array[float]): Array[float] = ???
+    def getColorComponents(compArray: Array[Float]): Array[Float] = ???
 
+    /** Returns the ColorSpace of this Color. */
     @stub
-    // Returns the ColorSpace of this Color.
     def getColorSpace(): ColorSpace = ???
 
+    /** Returns a float array containing the color and alpha
+     *  components of the Color, in the
+     *  ColorSpace specified by the cspace
+     *  parameter.
+     */
     @stub
-    // Returns a float array containing the color and alpha
-    // components of the Color, in the
-    // ColorSpace specified by the cspace
-    // parameter.
-    def getComponents(cspace: ColorSpace, compArray: Array[float]): Array[float] = ???
+    def getComponents(cspace: ColorSpace, compArray: Array[Float]): Array[Float] = ???
 
+    /** Returns a float array containing the color and alpha
+     *  components of the Color, in the
+     *  ColorSpace of the Color.
+     */
     @stub
-    // Returns a float array containing the color and alpha
-    // components of the Color, in the
-    // ColorSpace of the Color.
-    def getComponents(compArray: Array[float]): Array[float] = ???
+    def getComponents(compArray: Array[Float]): Array[Float] = ???
 
+    /** Returns the green component in the range 0-255 in the default sRGB
+     *  space.
+     */
     @stub
-    // Returns the green component in the range 0-255 in the default sRGB
-    // space.
     def getGreen(): Int = ???
 
+    /** Returns the red component in the range 0-255 in the default sRGB
+     *  space.
+     */
     @stub
-    // Returns the red component in the range 0-255 in the default sRGB
-    // space.
     def getRed(): Int = ???
 
+    /** Returns the RGB value representing the color in the default sRGB
+     *  ColorModel.
+     */
     @stub
-    // Returns the RGB value representing the color in the default sRGB
-    // ColorModel.
     def getRGB(): Int = ???
 
+    /** Returns a float array containing only the color
+     *  components of the Color, in the default sRGB color
+     *  space.
+     */
     @stub
-    // Returns a float array containing only the color
-    // components of the Color, in the default sRGB color
-    // space.
-    def getRGBColorComponents(compArray: Array[float]): Array[float] = ???
+    def getRGBColorComponents(compArray: Array[Float]): Array[Float] = ???
 
+    /** Returns a float array containing the color and alpha
+     *  components of the Color, as represented in the default
+     *  sRGB color space.
+     */
     @stub
-    // Returns a float array containing the color and alpha
-    // components of the Color, as represented in the default
-    // sRGB color space.
-    def getRGBComponents(compArray: Array[float]): Array[float] = ???
+    def getRGBComponents(compArray: Array[Float]): Array[Float] = ???
 
+    /** Returns the transparency mode for this Color. */
     @stub
-    // Returns the transparency mode for this Color.
     def getTransparency(): Int = ???
 
+    /** Computes the hash code for this Color. */
     @stub
-    // Computes the hash code for this Color.
     def hashCode(): Int = ???
 }
 
 object Color {
+    /** The color black. */
     @stub
-    // The color black.
-    def black: Color = ???
+    val black: Color = ???
 
+    /** The color black. */
     @stub
-    // The color black.
-    def BLACK: Color = ???
+    val BLACK: Color = ???
 
+    /** The color blue. */
     @stub
-    // The color blue.
-    def blue: Color = ???
+    val blue: Color = ???
 
+    /** The color blue. */
     @stub
-    // The color blue.
-    def BLUE: Color = ???
+    val BLUE: Color = ???
 
+    /** The color cyan. */
     @stub
-    // The color cyan.
-    def cyan: Color = ???
+    val cyan: Color = ???
 
+    /** The color cyan. */
     @stub
-    // The color cyan.
-    def CYAN: Color = ???
+    val CYAN: Color = ???
 
+    /** The color dark gray. */
     @stub
-    // The color dark gray.
-    def DARK_GRAY: Color = ???
+    val DARK_GRAY: Color = ???
 
+    /** The color dark gray. */
     @stub
-    // The color dark gray.
-    def darkGray: Color = ???
+    val darkGray: Color = ???
 
+    /** The color gray. */
     @stub
-    // The color gray.
-    def gray: Color = ???
+    val gray: Color = ???
 
+    /** The color gray. */
     @stub
-    // The color gray.
-    def GRAY: Color = ???
+    val GRAY: Color = ???
 
+    /** The color green. */
     @stub
-    // The color green.
-    def green: Color = ???
+    val green: Color = ???
 
+    /** The color green. */
     @stub
-    // The color green.
-    def GREEN: Color = ???
+    val GREEN: Color = ???
 
+    /** The color light gray. */
     @stub
-    // The color light gray.
-    def LIGHT_GRAY: Color = ???
+    val LIGHT_GRAY: Color = ???
 
+    /** The color light gray. */
     @stub
-    // The color light gray.
-    def lightGray: Color = ???
+    val lightGray: Color = ???
 
+    /** The color magenta. */
     @stub
-    // The color magenta.
-    def magenta: Color = ???
+    val magenta: Color = ???
 
+    /** The color magenta. */
     @stub
-    // The color magenta.
-    def MAGENTA: Color = ???
+    val MAGENTA: Color = ???
 
+    /** The color orange. */
     @stub
-    // The color orange.
-    def orange: Color = ???
+    val orange: Color = ???
 
+    /** The color orange. */
     @stub
-    // The color orange.
-    def ORANGE: Color = ???
+    val ORANGE: Color = ???
 
+    /** The color pink. */
     @stub
-    // The color pink.
-    def pink: Color = ???
+    val pink: Color = ???
 
+    /** The color pink. */
     @stub
-    // The color pink.
-    def PINK: Color = ???
+    val PINK: Color = ???
 
+    /** The color red. */
     @stub
-    // The color red.
-    def red: Color = ???
+    val red: Color = ???
 
+    /** The color red. */
     @stub
-    // The color red.
-    def RED: Color = ???
+    val RED: Color = ???
 
+    /** The color white. */
     @stub
-    // The color white.
-    def white: Color = ???
+    val white: Color = ???
 
+    /** The color white. */
     @stub
-    // The color white.
-    def WHITE: Color = ???
+    val WHITE: Color = ???
 
+    /** The color yellow. */
     @stub
-    // The color yellow.
-    def yellow: Color = ???
+    val yellow: Color = ???
 
+    /** Converts a String to an integer and returns the
+     *  specified opaque Color.
+     */
     @stub
-    // Converts a String to an integer and returns the
-    // specified opaque Color.
     def decode(nm: String): Color = ???
 
+    /** Finds a color in the system properties. */
     @stub
-    // Finds a color in the system properties.
     def getColor(nm: String): Color = ???
 
+    /** Finds a color in the system properties. */
     @stub
-    // Finds a color in the system properties.
     def getColor(nm: String, v: Color): Color = ???
 
+    /** Finds a color in the system properties. */
     @stub
-    // Finds a color in the system properties.
     def getColor(nm: String, v: Int): Color = ???
 
+    /** Creates a Color object based on the specified values
+     *  for the HSB color model.
+     */
     @stub
-    // Creates a Color object based on the specified values
-    // for the HSB color model.
-    def getHSBColor(h: float, s: float, b: float): Color = ???
+    def getHSBColor(h: Float, s: Float, b: Float): Color = ???
 
+    /** Converts the components of a color, as specified by the HSB
+     *  model, to an equivalent set of values for the default RGB model.
+     */
     @stub
-    // Converts the components of a color, as specified by the HSB
-    // model, to an equivalent set of values for the default RGB model.
-    def HSBtoRGB(hue: float, saturation: float, brightness: float): Int = ???
+    def HSBtoRGB(hue: Float, saturation: Float, brightness: Float): Int = ???
 
+    /** Converts the components of a color, as specified by the default RGB
+     *  model, to an equivalent set of values for hue, saturation, and
+     *  brightness that are the three components of the HSB model.
+     */
     @stub
-    // Converts the components of a color, as specified by the default RGB
-    // model, to an equivalent set of values for hue, saturation, and
-    // brightness that are the three components of the HSB model.
-    def RGBtoHSB(r: Int, g: Int, b: Int, hsbvals: Array[float]): Array[float] = ???
+    def RGBtoHSB(r: Int, g: Int, b: Int, hsbvals: Array[Float]): Array[Float] = ???
 }

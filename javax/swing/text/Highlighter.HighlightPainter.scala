@@ -1,4 +1,4 @@
 package javax.swing.text
 
-// Highlight renderer.
+/** Highlight renderer. */
 object trait Highlighter.HighlightPainter {

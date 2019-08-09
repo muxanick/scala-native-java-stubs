@@ -7,58 +7,60 @@ import javax.swing.{JComponent, JPanel}
 import javax.swing.plaf.{ComponentUI, PanelUI}
 import javax.swing.plaf.basic.BasicPanelUI
 
-// Provides the Synth L&F UI delegate for
-// JPanel.
-class SynthPanelUI extends BasicPanelUI with PropertyChangeListener, with SynthUI {
+/** Provides the Synth L&F UI delegate for
+ *  JPanel.
+ */
+class SynthPanelUI extends BasicPanelUI with PropertyChangeListener with SynthUI {
 
+    /** Returns the Context for the specified component. */
     @stub
-    // Returns the Context for the specified component.
     def getContext(c: JComponent): SynthContext = ???
 
+    /**  */
     @stub
-    // 
     protected def installDefaults(p: JPanel): Unit = ???
 
+    /** Installs listeners into the panel. */
     @stub
-    // Installs listeners into the panel.
     protected def installListeners(p: JPanel): Unit = ???
 
+    /** Configures the specified component appropriately for the look and feel. */
     @stub
-    // Configures the specified component appropriately for the look and feel.
     def installUI(c: JComponent): Unit = ???
 
+    /** Paints the specified component according to the Look and Feel. */
     @stub
-    // Paints the specified component according to the Look and Feel.
     def paint(g: Graphics, c: JComponent): Unit = ???
 
+    /** Paints the specified component. */
     @stub
-    // Paints the specified component.
     protected def paint(context: SynthContext, g: Graphics): Unit = ???
 
+    /** Paints the border. */
     @stub
-    // Paints the border.
     def paintBorder(context: SynthContext, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
 
+    /** This method gets called when a bound property is changed. */
     @stub
-    // This method gets called when a bound property is changed.
     def propertyChange(pce: PropertyChangeEvent): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallDefaults(p: JPanel): Unit = ???
 
+    /** Uninstalls listeners from the panel. */
     @stub
-    // Uninstalls listeners from the panel.
     protected def uninstallListeners(p: JPanel): Unit = ???
 
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
     @stub
-    // Reverses configuration which was done on the specified component during
-    // installUI.
     def uninstallUI(c: JComponent): Unit = ???
 }
 
 object SynthPanelUI {
+    /** Creates a new UI object for the given component. */
     @stub
-    // Creates a new UI object for the given component.
     def createUI(c: JComponent): ComponentUI = ???
 }

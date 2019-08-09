@@ -1,7 +1,10 @@
 package javax.jws
 
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
+import scala.annotation.StaticAnnotation
 
-// 
-@Retention ( value = RUNTIME ) @Target ( value ={ TYPE , METHOD , FIELD } ) @interface HandlerChain {
+/**  */
+@Retention ( value = RUNTIME ) 
+@Target ( value ={ TYPE , METHOD , FIELD } ) 
+ final class HandlerChain extends StaticAnnotation {
 }

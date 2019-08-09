@@ -2,49 +2,51 @@ package java.nio.file.attribute
 
 import java.lang.Object
 
-// Basic attributes associated with a file in a file system.
-//
-//  Basic file attributes are attributes that are common to many file systems
-// and consist of mandatory and optional file attributes as defined by this
-// interface.
-//
-//  Usage Example:
-// 
-//    Path file = ...
-//    BasicFileAttributes attrs = Files.readAttributes(file, BasicFileAttributes.class);
-// 
+/** Basic attributes associated with a file in a file system.
+ * 
+ *   Basic file attributes are attributes that are common to many file systems
+ *  and consist of mandatory and optional file attributes as defined by this
+ *  interface.
+ * 
+ *   Usage Example:
+ *  
+ *     Path file = ...
+ *     BasicFileAttributes attrs = Files.readAttributes(file, BasicFileAttributes.class);
+ *  
+ */
 trait BasicFileAttributes {
 
+    /** Returns the creation time. */
     @stub
-    // Returns the creation time.
     def creationTime(): FileTime = ???
 
+    /** Returns an object that uniquely identifies the given file, or null if a file key is not available. */
     @stub
-    // Returns an object that uniquely identifies the given file, or null if a file key is not available.
     def fileKey(): Object = ???
 
+    /** Tells whether the file is a directory. */
     @stub
-    // Tells whether the file is a directory.
     def isDirectory(): Boolean = ???
 
+    /** Tells whether the file is something other than a regular file, directory,
+     *  or symbolic link.
+     */
     @stub
-    // Tells whether the file is something other than a regular file, directory,
-    // or symbolic link.
     def isOther(): Boolean = ???
 
+    /** Tells whether the file is a regular file with opaque content. */
     @stub
-    // Tells whether the file is a regular file with opaque content.
     def isRegularFile(): Boolean = ???
 
+    /** Tells whether the file is a symbolic link. */
     @stub
-    // Tells whether the file is a symbolic link.
     def isSymbolicLink(): Boolean = ???
 
+    /** Returns the time of last access. */
     @stub
-    // Returns the time of last access.
     def lastAccessTime(): FileTime = ???
 
+    /** Returns the time of last modification. */
     @stub
-    // Returns the time of last modification.
     def lastModifiedTime(): FileTime = ???
 }

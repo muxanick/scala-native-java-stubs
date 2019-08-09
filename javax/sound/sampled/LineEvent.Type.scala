@@ -2,32 +2,37 @@ package javax.sound.sampled
 
 import java.lang.Object
 
-// The LineEvent.Type inner class identifies what kind of event occurred on a line.
-// Static instances are provided for the common types (OPEN, CLOSE, START, and STOP).
+/** The LineEvent.Type inner class identifies what kind of event occurred on a line.
+ *  Static instances are provided for the common types (OPEN, CLOSE, START, and STOP).
+ */
 object LineEvent.Type extends Object {
 
+    /** A type of event that is sent when a line closes, freeing the system
+     *  resources it had obtained when it was opened.
+     */
     @stub
-    // A type of event that is sent when a line closes, freeing the system
-    // resources it had obtained when it was opened.
-    def CLOSE: LineEvent.Type = ???
+    val CLOSE: LineEvent.Type = ???
 
+    /** A type of event that is sent when a line opens, reserving system
+     *  resources for itself.
+     */
     @stub
-    // A type of event that is sent when a line opens, reserving system
-    // resources for itself.
-    def OPEN: LineEvent.Type = ???
+    val OPEN: LineEvent.Type = ???
 
+    /** A type of event that is sent when a line begins to engage in active
+     *  input or output of audio data in response to a
+     *  start request.
+     */
     @stub
-    // A type of event that is sent when a line begins to engage in active
-    // input or output of audio data in response to a
-    // start request.
-    def START: LineEvent.Type = ???
+    val START: LineEvent.Type = ???
 
+    /** Indicates whether the specified object is equal to this event type,
+     *  returning true if the objects are identical.
+     */
     @stub
-    // Indicates whether the specified object is equal to this event type,
-    // returning true if the objects are identical.
     def equals(obj: Object): Boolean = ???
 
+    /** Finalizes the hashcode method. */
     @stub
-    // Finalizes the hashcode method.
     def hashCode(): Int = ???
 }

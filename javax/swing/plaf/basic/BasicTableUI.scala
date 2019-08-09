@@ -7,102 +7,104 @@ import javax.swing.{CellRendererPane, JComponent}
 import javax.swing.event.MouseInputListener
 import javax.swing.plaf.{ComponentUI, TableUI}
 
-// BasicTableUI implementation
+/** BasicTableUI implementation */
 class BasicTableUI extends TableUI {
 
+    /** This class should be treated as a "protected" inner class. */
     @stub
-    // This class should be treated as a "protected" inner class.
-    def BasicTableUI.FocusHandler: class = ???
+    object FocusHandler extends BasicTableUI.FocusHandler
 
+    /** This class should be treated as a "protected" inner class. */
     @stub
-    // This class should be treated as a "protected" inner class.
-    def BasicTableUI.KeyHandler: class = ???
+    object KeyHandler extends BasicTableUI.KeyHandler
 
+    /**  */
     @stub
-    // 
-    protected def focusListener: FocusListener = ???
+    protected val focusListener: FocusListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def keyListener: KeyListener = ???
+    protected val keyListener: KeyListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def mouseInputListener: MouseInputListener = ???
+    protected val mouseInputListener: MouseInputListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def rendererPane: CellRendererPane = ???
+    protected val rendererPane: CellRendererPane = ???
 
+    /** Creates the focus listener for handling keyboard navigation in the JTable. */
     @stub
-    // Creates the focus listener for handling keyboard navigation in the JTable.
     protected def createFocusListener(): FocusListener = ???
 
+    /** Creates the key listener for handling keyboard navigation in the JTable. */
     @stub
-    // Creates the key listener for handling keyboard navigation in the JTable.
     protected def createKeyListener(): KeyListener = ???
 
+    /** Creates the mouse listener for the JTable. */
     @stub
-    // Creates the mouse listener for the JTable.
     protected def createMouseInputListener(): MouseInputListener = ???
 
+    /** Returns the baseline. */
     @stub
-    // Returns the baseline.
     def getBaseline(c: JComponent, width: Int, height: Int): Int = ???
 
+    /** Returns an enum indicating how the baseline of the component
+     *  changes as the size changes.
+     */
     @stub
-    // Returns an enum indicating how the baseline of the component
-    // changes as the size changes.
     def getBaselineResizeBehavior(c: JComponent): Component.BaselineResizeBehavior = ???
 
+    /** Return the maximum size of the table. */
     @stub
-    // Return the maximum size of the table.
     def getMaximumSize(c: JComponent): Dimension = ???
 
+    /** Return the minimum size of the table. */
     @stub
-    // Return the minimum size of the table.
     def getMinimumSize(c: JComponent): Dimension = ???
 
+    /** Return the preferred size of the table. */
     @stub
-    // Return the preferred size of the table.
     def getPreferredSize(c: JComponent): Dimension = ???
 
+    /** Initialize JTable properties, e.g. */
     @stub
-    // Initialize JTable properties, e.g.
     protected def installDefaults(): Unit = ???
 
+    /** Register all keyboard actions on the JTable. */
     @stub
-    // Register all keyboard actions on the JTable.
     protected def installKeyboardActions(): Unit = ???
 
+    /** Attaches listeners to the JTable. */
     @stub
-    // Attaches listeners to the JTable.
     protected def installListeners(): Unit = ???
 
+    /** Configures the specified component appropriately for the look and feel. */
     @stub
-    // Configures the specified component appropriately for the look and feel.
     def installUI(c: JComponent): Unit = ???
 
+    /** Paint a representation of the table instance
+     *  that was set in installUI().
+     */
     @stub
-    // Paint a representation of the table instance
-    // that was set in installUI().
     def paint(g: Graphics, c: JComponent): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallDefaults(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallKeyboardActions(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallListeners(): Unit = ???
 }
 
 object BasicTableUI {
+    /**  */
     @stub
-    // 
     def createUI(c: JComponent): ComponentUI = ???
 }

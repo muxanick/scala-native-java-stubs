@@ -2,79 +2,83 @@ package javax.naming
 
 import java.lang.{Exception, Object, String, Throwable}
 
-// This exception is used to describe problems encounter while resolving links.
-// Addition information is added to the base NamingException for pinpointing
-// the problem with the link.
-//
-// Analogous to how NamingException captures name resolution information,
-// LinkException captures "link"-name resolution information pinpointing
-// the problem encountered while resolving a link. All these fields may
-// be null.
-// 
-//  Link Resolved Name. Portion of link name that has been resolved.
-//  Link Resolved Object. Object to which resolution of link name proceeded.
-//  Link Remaining Name. Portion of link name that has not been resolved.
-//  Link Explanation. Detail explaining why link resolution failed.
-//
-//
-//
-// A LinkException instance is not synchronized against concurrent
-// multithreaded access. Multiple threads trying to access and modify
-// a single LinkException instance should lock the object.
+/** This exception is used to describe problems encounter while resolving links.
+ *  Addition information is added to the base NamingException for pinpointing
+ *  the problem with the link.
+ * 
+ *  Analogous to how NamingException captures name resolution information,
+ *  LinkException captures "link"-name resolution information pinpointing
+ *  the problem encountered while resolving a link. All these fields may
+ *  be null.
+ *  
+ *   Link Resolved Name. Portion of link name that has been resolved.
+ *   Link Resolved Object. Object to which resolution of link name proceeded.
+ *   Link Remaining Name. Portion of link name that has not been resolved.
+ *   Link Explanation. Detail explaining why link resolution failed.
+ * 
+ * 
+ * 
+ *  A LinkException instance is not synchronized against concurrent
+ *  multithreaded access. Multiple threads trying to access and modify
+ *  a single LinkException instance should lock the object.
+ */
 class LinkException extends NamingException {
 
+    /** Constructs a new instance of LinkException. */
     @stub
-    // Constructs a new instance of LinkException.
     def this() = ???
 
+    /** Contains the exception of why resolution of the link failed. */
     @stub
-    // Contains the exception of why resolution of the link failed.
-    protected def linkExplanation: String = ???
+    protected val linkExplanation: String = ???
 
+    /** Contains the remaining link name that has not been resolved yet. */
     @stub
-    // Contains the remaining link name that has not been resolved yet.
-    protected def linkRemainingName: Name = ???
+    protected val linkRemainingName: Name = ???
 
+    /** Contains the part of the link that has been successfully resolved. */
     @stub
-    // Contains the part of the link that has been successfully resolved.
-    protected def linkResolvedName: Name = ???
+    protected val linkResolvedName: Name = ???
 
+    /** Retrieves the explanation associated with the problem encounter
+     *  when resolving a link.
+     */
     @stub
-    // Retrieves the explanation associated with the problem encounter
-    // when resolving a link.
     def getLinkExplanation(): String = ???
 
+    /** Retrieves the remaining unresolved portion of the link name. */
     @stub
-    // Retrieves the remaining unresolved portion of the link name.
     def getLinkRemainingName(): Name = ???
 
+    /** Retrieves the leading portion of the link name that was resolved
+     *  successfully.
+     */
     @stub
-    // Retrieves the leading portion of the link name that was resolved
-    // successfully.
     def getLinkResolvedName(): Name = ???
 
+    /** Retrieves the object to which resolution was successful. */
     @stub
-    // Retrieves the object to which resolution was successful.
     def getLinkResolvedObj(): Object = ???
 
+    /** Sets the explanation associated with the problem encounter
+     *  when resolving a link.
+     */
     @stub
-    // Sets the explanation associated with the problem encounter
-    // when resolving a link.
     def setLinkExplanation(msg: String): Unit = ???
 
+    /** Sets the remaining link name field of this exception. */
     @stub
-    // Sets the remaining link name field of this exception.
     def setLinkRemainingName(name: Name): Unit = ???
 
+    /** Sets the resolved link name field of this exception. */
     @stub
-    // Sets the resolved link name field of this exception.
     def setLinkResolvedName(name: Name): Unit = ???
 
+    /** Sets the link resolved object field of this exception. */
     @stub
-    // Sets the link resolved object field of this exception.
     def setLinkResolvedObj(obj: Object): Unit = ???
 
+    /** Generates the string representation of this exception. */
     @stub
-    // Generates the string representation of this exception.
     def toString(): String = ???
 }

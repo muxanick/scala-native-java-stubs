@@ -3,100 +3,113 @@ package javax.print.attribute
 import java.io.Serializable
 import java.lang.{Class, Object}
 
-// Class HashAttributeSet provides an AttributeSet
-// implementation with characteristics of a hash map.
-// 
-class HashAttributeSet extends Object with AttributeSet, with Serializable {
+/** Class HashAttributeSet provides an AttributeSet
+ *  implementation with characteristics of a hash map.
+ *  
+ */
+class HashAttributeSet extends Object with AttributeSet with Serializable {
 
+    /** Construct a new, empty attribute set. */
     @stub
-    // Construct a new, empty attribute set.
     def this() = ???
 
+    /** Construct a new attribute set,
+     *  initially populated with the given attribute.
+     */
     @stub
-    // Construct a new attribute set,
-    // initially populated with the given attribute.
     def this(attribute: Attribute) = ???
 
+    /** Construct a new attribute set,
+     *  initially populated with the values from the
+     *  given array.
+     */
     @stub
-    // Construct a new attribute set,
-    // initially populated with the values from the
-    // given array.
     def this(attributes: Array[Attribute]) = ???
 
+    /** Construct a new attribute set, where the members of the attribute
+     *  set are restricted to the given interface.
+     */
     @stub
-    // Construct a new attribute set, where the members of the attribute
-    // set are restricted to the given interface.
     protected def this(attributes: Array[Attribute], interfaceName: Class[_]) = ???
 
+    /** Construct a new attribute set, initially populated with the given
+     *  attribute, where the members of the attribute set are restricted to the
+     *  given interface.
+     */
     @stub
-    // Construct a new attribute set, initially populated with the given
-    // attribute, where the members of the attribute set are restricted to the
-    // given interface.
     protected def this(attribute: Attribute, interfaceName: Class[_]) = ???
 
+    /** Construct a new attribute set,
+     *  initially populated with the values from the  given set.
+     */
     @stub
-    // Construct a new attribute set,
-    // initially populated with the values from the  given set.
     def this(attributes: AttributeSet) = ???
 
+    /** Construct a new attribute set, initially populated with the
+     *  values from the  given set where the members of the attribute
+     *  set are restricted to the given interface.
+     */
     @stub
-    // Construct a new attribute set, initially populated with the
-    // values from the  given set where the members of the attribute
-    // set are restricted to the given interface.
     protected def this(attributes: AttributeSet, interfaceName: Class[_]) = ???
 
+    /** Adds the specified attribute to this attribute set if it is not
+     *  already present, first removing any existing in the same
+     *  attribute category as the specified attribute value.
+     */
     @stub
-    // Adds the specified attribute to this attribute set if it is not
-    // already present, first removing any existing in the same
-    // attribute category as the specified attribute value.
     def add(attribute: Attribute): Boolean = ???
 
+    /** Adds all of the elements in the specified set to this attribute. */
     @stub
-    // Adds all of the elements in the specified set to this attribute.
     def addAll(attributes: AttributeSet): Boolean = ???
 
+    /** Removes all attributes from this attribute set. */
     @stub
-    // Removes all attributes from this attribute set.
     def clear(): Unit = ???
 
+    /** Returns true if this attribute set contains an
+     *  attribute for the specified category.
+     */
     @stub
-    // Returns true if this attribute set contains an
-    // attribute for the specified category.
     def containsKey(category: Class[_]): Boolean = ???
 
+    /** Returns true if this attribute set contains the given
+     *  attribute.
+     */
     @stub
-    // Returns true if this attribute set contains the given
-    // attribute.
     def containsValue(attribute: Attribute): Boolean = ???
 
+    /** Compares the specified object with this attribute set for equality. */
     @stub
-    // Compares the specified object with this attribute set for equality.
     def equals(object: Object): Boolean = ???
 
+    /** Returns the attribute value which this attribute set contains in the
+     *  given attribute category.
+     */
     @stub
-    // Returns the attribute value which this attribute set contains in the
-    // given attribute category.
     def get(category: Class[_]): Attribute = ???
 
+    /** Returns the hash code value for this attribute set. */
     @stub
-    // Returns the hash code value for this attribute set.
     def hashCode(): Int = ???
 
+    /** Returns true if this attribute set contains no attributes. */
     @stub
-    // Returns true if this attribute set contains no attributes.
     def isEmpty(): Boolean = ???
 
+    /** Removes the specified attribute from this attribute set if
+     *  present.
+     */
     @stub
-    // Removes the specified attribute from this attribute set if
-    // present.
     def remove(attribute: Attribute): Boolean = ???
 
+    /** Removes any attribute for this category from this attribute set if
+     *  present.
+     */
     @stub
-    // Removes any attribute for this category from this attribute set if
-    // present.
     def remove(category: Class[_]): Boolean = ???
 
+    /** Returns the number of attributes in this attribute set. */
     @stub
-    // Returns the number of attributes in this attribute set.
     def size(): Int = ???
 }

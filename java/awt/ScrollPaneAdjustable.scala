@@ -4,88 +4,93 @@ import java.awt.event.AdjustmentListener
 import java.io.Serializable
 import java.lang.{Object, String}
 
-// This class represents the state of a horizontal or vertical
-// scrollbar of a ScrollPane.  Objects of this class are
-// returned by ScrollPane methods.
-class ScrollPaneAdjustable extends Object with Adjustable, with Serializable {
+/** This class represents the state of a horizontal or vertical
+ *  scrollbar of a ScrollPane.  Objects of this class are
+ *  returned by ScrollPane methods.
+ */
+class ScrollPaneAdjustable extends Object with Adjustable with Serializable {
 
+    /** Adds the specified adjustment listener to receive adjustment
+     *  events from this ScrollPaneAdjustable.
+     */
     @stub
-    // Adds the specified adjustment listener to receive adjustment
-    // events from this ScrollPaneAdjustable.
     def addAdjustmentListener(l: AdjustmentListener): Unit = ???
 
+    /** Returns an array of all the adjustment listeners
+     *  registered on this ScrollPaneAdjustable.
+     */
     @stub
-    // Returns an array of all the adjustment listeners
-    // registered on this ScrollPaneAdjustable.
     def getAdjustmentListeners(): Array[AdjustmentListener] = ???
 
+    /** Gets the block value increment for the adjustable object. */
     @stub
-    // Gets the block value increment for the adjustable object.
     def getBlockIncrement(): Int = ???
 
+    /** Gets the maximum value of the adjustable object. */
     @stub
-    // Gets the maximum value of the adjustable object.
     def getMaximum(): Int = ???
 
+    /** Gets the minimum value of the adjustable object. */
     @stub
-    // Gets the minimum value of the adjustable object.
     def getMinimum(): Int = ???
 
+    /** Returns the orientation of this scrollbar. */
     @stub
-    // Returns the orientation of this scrollbar.
     def getOrientation(): Int = ???
 
+    /** Gets the unit value increment for the adjustable object. */
     @stub
-    // Gets the unit value increment for the adjustable object.
     def getUnitIncrement(): Int = ???
 
+    /** Gets the current value of the adjustable object. */
     @stub
-    // Gets the current value of the adjustable object.
     def getValue(): Int = ???
 
+    /** Returns true if the value is in the process of changing as a
+     *  result of actions being taken by the user.
+     */
     @stub
-    // Returns true if the value is in the process of changing as a
-    // result of actions being taken by the user.
     def getValueIsAdjusting(): Boolean = ???
 
+    /** Gets the length of the proportional indicator. */
     @stub
-    // Gets the length of the proportional indicator.
     def getVisibleAmount(): Int = ???
 
+    /** Returns a string representing the state of this scrollbar. */
     @stub
-    // Returns a string representing the state of this scrollbar.
     def paramString(): String = ???
 
+    /** Removes the specified adjustment listener so that it no longer
+     *  receives adjustment events from this ScrollPaneAdjustable.
+     */
     @stub
-    // Removes the specified adjustment listener so that it no longer
-    // receives adjustment events from this ScrollPaneAdjustable.
     def removeAdjustmentListener(l: AdjustmentListener): Unit = ???
 
+    /** Sets the block value increment for the adjustable object. */
     @stub
-    // Sets the block value increment for the adjustable object.
     def setBlockIncrement(b: Int): Unit = ???
 
+    /** This method should NOT be called by user code. */
     @stub
-    // This method should NOT be called by user code.
     def setMaximum(max: Int): Unit = ???
 
+    /** This method should NOT be called by user code. */
     @stub
-    // This method should NOT be called by user code.
     def setMinimum(min: Int): Unit = ???
 
+    /** Sets the unit value increment for the adjustable object. */
     @stub
-    // Sets the unit value increment for the adjustable object.
     def setUnitIncrement(u: Int): Unit = ???
 
+    /** Sets the value of this scrollbar to the specified value. */
     @stub
-    // Sets the value of this scrollbar to the specified value.
     def setValue(v: Int): Unit = ???
 
+    /** Sets the valueIsAdjusting property. */
     @stub
-    // Sets the valueIsAdjusting property.
     def setValueIsAdjusting(b: Boolean): Unit = ???
 
+    /** This method should NOT be called by user code. */
     @stub
-    // This method should NOT be called by user code.
     def setVisibleAmount(v: Int): Unit = ???
 }

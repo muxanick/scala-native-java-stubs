@@ -3,98 +3,111 @@ package java.lang.reflect
 import java.lang.{Class, Object, String}
 import java.lang.annotation.Annotation
 
-// Information about method parameters.
-//
-// A Parameter provides information about method parameters,
-// including its name and modifiers.  It also provides an alternate
-// means of obtaining attributes for the parameter.
+/** Information about method parameters.
+ * 
+ *  A Parameter provides information about method parameters,
+ *  including its name and modifiers.  It also provides an alternate
+ *  means of obtaining attributes for the parameter.
+ */
 final class Parameter extends Object with AnnotatedElement {
 
+    /** Compares based on the executable and the index. */
     @stub
-    // Compares based on the executable and the index.
     def equals(obj: Object): Boolean = ???
 
+    /** Returns an AnnotatedType object that represents the use of a type to
+     *  specify the type of the formal parameter represented by this Parameter.
+     */
     @stub
-    // Returns an AnnotatedType object that represents the use of a type to
-    // specify the type of the formal parameter represented by this Parameter.
     def getAnnotatedType(): AnnotatedType = ???
 
+    /** Returns this element's annotation for the specified type if
+     *  such an annotation is present, else null.
+     */
     @stub
-    // Returns this element's annotation for the specified type if
-    // such an annotation is present, else null.
-    def T: [T <: Annotation] = ???
+    def getAnnotation[T <: Annotation](annotationClass: Class[T]): T = ???
 
+    /** Returns annotations that are present on this element. */
     @stub
-    // Returns annotations that are present on this element.
     def getAnnotations(): Array[Annotation] = ???
 
+    /** Returns annotations that are associated with this element. */
     @stub
-    // Returns annotations that are associated with this element.
-    def Array[T]: [T <: Annotation] = ???
+    def getAnnotationsByType[T <: Annotation](annotationClass: Class[T]): Array[T] = ???
 
+    /** Returns this element's annotation for the specified type if
+     *  such an annotation is directly present, else null.
+     */
     @stub
-    // Returns this element's annotation for the specified type if
-    // such an annotation is directly present, else null.
-    def T: [T <: Annotation] = ???
+    def getDeclaredAnnotation[T <: Annotation](annotationClass: Class[T]): T = ???
 
+    /** Returns annotations that are directly present on this element. */
     @stub
-    // Returns annotations that are directly present on this element.
     def getDeclaredAnnotations(): Array[Annotation] = ???
 
+    /** Returns this element's annotation(s) for the specified type if
+     *  such annotations are either directly present or
+     *  indirectly present.
+     */
     @stub
-    // Returns this element's annotation(s) for the specified type if
-    // such annotations are either directly present or
-    // indirectly present.
-    def Array[T]: [T <: Annotation] = ???
+    def getDeclaredAnnotationsByType[T <: Annotation](annotationClass: Class[T]): Array[T] = ???
 
+    /** Return the Executable which declares this parameter. */
     @stub
-    // Return the Executable which declares this parameter.
     def getDeclaringExecutable(): Executable = ???
 
+    /** Get the modifier flags for this the parameter represented by
+     *  this Parameter object.
+     */
     @stub
-    // Get the modifier flags for this the parameter represented by
-    // this Parameter object.
     def getModifiers(): Int = ???
 
+    /** Returns the name of the parameter. */
     @stub
-    // Returns the name of the parameter.
     def getName(): String = ???
 
+    /** Returns a Type object that identifies the parameterized
+     *  type for the parameter represented by this Parameter
+     *  object.
+     */
     @stub
-    // Returns a Type object that identifies the parameterized
-    // type for the parameter represented by this Parameter
-    // object.
     def getParameterizedType(): Type = ???
 
+    /** Returns a Class object that identifies the
+     *  declared type for the parameter represented by this
+     *  Parameter object.
+     */
     @stub
-    // Returns a Class object that identifies the
-    // declared type for the parameter represented by this
-    // Parameter object.
     def getType(): Class[_] = ???
 
+    /** Returns a hash code based on the executable's hash code and the
+     *  index.
+     */
     @stub
-    // Returns a hash code based on the executable's hash code and the
-    // index.
     def hashCode(): Int = ???
 
+    /** Returns true if this parameter is implicitly declared
+     *  in source code; returns false otherwise.
+     */
     @stub
-    // Returns true if this parameter is implicitly declared
-    // in source code; returns false otherwise.
     def isImplicit(): Boolean = ???
 
+    /** Returns true if the parameter has a name according to the class
+     *  file; returns false otherwise.
+     */
     @stub
-    // Returns true if the parameter has a name according to the class
-    // file; returns false otherwise.
     def isNamePresent(): Boolean = ???
 
+    /** Returns true if this parameter is neither implicitly
+     *  nor explicitly declared in source code; returns false
+     *  otherwise.
+     */
     @stub
-    // Returns true if this parameter is neither implicitly
-    // nor explicitly declared in source code; returns false
-    // otherwise.
     def isSynthetic(): Boolean = ???
 
+    /** Returns true if this parameter represents a variable
+     *  argument list; returns false otherwise.
+     */
     @stub
-    // Returns true if this parameter represents a variable
-    // argument list; returns false otherwise.
     def isVarArgs(): Boolean = ???
 }

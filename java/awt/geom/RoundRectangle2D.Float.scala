@@ -3,82 +3,91 @@ package java.awt.geom
 import java.io.Serializable
 import java.lang.Object
 
-// The Float class defines a rectangle with rounded
-// corners all specified in float coordinates.
+/** The Float class defines a rectangle with rounded
+ *  corners all specified in float coordinates.
+ */
 object RoundRectangle2D.Float extends RoundRectangle2D with Serializable {
 
+    /** Constructs a new RoundRectangle2D, initialized to
+     *  location (0.0, 0.0), size (0.0, 0.0), and corner arcs
+     *  of radius 0.0.
+     */
     @stub
-    // Constructs a new RoundRectangle2D, initialized to
-    // location (0.0, 0.0), size (0.0, 0.0), and corner arcs
-    // of radius 0.0.
     def Float() = ???
 
+    /** The height of the arc that rounds off the corners. */
     @stub
-    // The height of the arc that rounds off the corners.
-    def archeight: float = ???
+    val archeight: Float = ???
 
+    /** The width of the arc that rounds off the corners. */
     @stub
-    // The width of the arc that rounds off the corners.
-    def arcwidth: float = ???
+    val arcwidth: Float = ???
 
+    /** The height of this RoundRectangle2D. */
     @stub
-    // The height of this RoundRectangle2D.
-    def height: float = ???
+    val height: Float = ???
 
+    /** The width of this RoundRectangle2D. */
     @stub
-    // The width of this RoundRectangle2D.
-    def width: float = ???
+    val width: Float = ???
 
+    /** The X coordinate of this RoundRectangle2D. */
     @stub
-    // The X coordinate of this RoundRectangle2D.
-    def x: float = ???
+    val x: Float = ???
 
+    /** Gets the height of the arc that rounds off the corners. */
     @stub
-    // Gets the height of the arc that rounds off the corners.
-    def getArcHeight(): double = ???
+    def getArcHeight(): Double = ???
 
+    /** Gets the width of the arc that rounds off the corners. */
     @stub
-    // Gets the width of the arc that rounds off the corners.
-    def getArcWidth(): double = ???
+    def getArcWidth(): Double = ???
 
+    /** Returns a high precision and more accurate bounding box of
+     *  the Shape than the getBounds method.
+     */
     @stub
-    // Returns a high precision and more accurate bounding box of
-    // the Shape than the getBounds method.
     def getBounds2D(): Rectangle2D = ???
 
+    /** Returns the height of the framing rectangle
+     *  in double precision.
+     */
     @stub
-    // Returns the height of the framing rectangle
-    // in double precision.
-    def getHeight(): double = ???
+    def getHeight(): Double = ???
 
+    /** Returns the width of the framing rectangle in
+     *  double precision.
+     */
     @stub
-    // Returns the width of the framing rectangle in
-    // double precision.
-    def getWidth(): double = ???
+    def getWidth(): Double = ???
 
+    /** Returns the X coordinate of the upper-left corner of
+     *  the framing rectangle in double precision.
+     */
     @stub
-    // Returns the X coordinate of the upper-left corner of
-    // the framing rectangle in double precision.
-    def getX(): double = ???
+    def getX(): Double = ???
 
+    /** Returns the Y coordinate of the upper-left corner of
+     *  the framing rectangle in double precision.
+     */
     @stub
-    // Returns the Y coordinate of the upper-left corner of
-    // the framing rectangle in double precision.
-    def getY(): double = ???
+    def getY(): Double = ???
 
+    /** Determines whether the RectangularShape is empty. */
     @stub
-    // Determines whether the RectangularShape is empty.
     def isEmpty(): Boolean = ???
 
+    /** Sets the location, size, and corner radii of this
+     *  RoundRectangle2D to the specified
+     *  double values.
+     */
     @stub
-    // Sets the location, size, and corner radii of this
-    // RoundRectangle2D to the specified
-    // double values.
-    def setRoundRect(x: double, y: double, w: double, h: double, arcw: double, arch: double): Unit = ???
+    def setRoundRect(x: Double, y: Double, w: Double, h: Double, arcw: Double, arch: Double): Unit = ???
 
+    /** Sets the location, size, and corner radii of this
+     *  RoundRectangle2D to the specified
+     *  float values.
+     */
     @stub
-    // Sets the location, size, and corner radii of this
-    // RoundRectangle2D to the specified
-    // float values.
-    def setRoundRect(x: float, y: float, w: float, h: float, arcw: float, arch: float): Unit = ???
+    def setRoundRect(x: Float, y: Float, w: Float, h: Float, arcw: Float, arch: Float): Unit = ???
 }

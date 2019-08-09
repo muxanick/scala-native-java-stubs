@@ -1,145 +1,146 @@
 package javax.swing.text.html.parser
 
-// SGML constants used in a DTD. The names of the
-// constants correspond the the equivalent SGML constructs
-// as described in "The SGML Handbook" by  Charles F. Goldfarb.
+/** SGML constants used in a DTD. The names of the
+ *  constants correspond the the equivalent SGML constructs
+ *  as described in "The SGML Handbook" by  Charles F. Goldfarb.
+ */
 trait DTDConstants {
 }
 
 object DTDConstants {
+    /**  */
     @stub
-    // 
-    def ANY: Int = ???
+    val ANY: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CDATA: Int = ???
+    val CDATA: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CONREF: Int = ???
+    val CONREF: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CURRENT: Int = ???
+    val CURRENT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def DEFAULT: Int = ???
+    val DEFAULT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EMPTY: Int = ???
+    val EMPTY: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDTAG: Int = ???
+    val ENDTAG: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENTITIES: Int = ???
+    val ENTITIES: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENTITY: Int = ???
+    val ENTITY: Int = ???
 
+    /**  */
     @stub
-    // 
-    def FIXED: Int = ???
+    val FIXED: Int = ???
 
+    /**  */
     @stub
-    // 
-    def GENERAL: Int = ???
+    val GENERAL: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ID: Int = ???
+    val ID: Int = ???
 
+    /**  */
     @stub
-    // 
-    def IDREF: Int = ???
+    val IDREF: Int = ???
 
+    /**  */
     @stub
-    // 
-    def IDREFS: Int = ???
+    val IDREFS: Int = ???
 
+    /**  */
     @stub
-    // 
-    def IMPLIED: Int = ???
+    val IMPLIED: Int = ???
 
+    /**  */
     @stub
-    // 
-    def MD: Int = ???
+    val MD: Int = ???
 
+    /**  */
     @stub
-    // 
-    def MODEL: Int = ???
+    val MODEL: Int = ???
 
+    /**  */
     @stub
-    // 
-    def MS: Int = ???
+    val MS: Int = ???
 
+    /**  */
     @stub
-    // 
-    def NAME: Int = ???
+    val NAME: Int = ???
 
+    /**  */
     @stub
-    // 
-    def NAMES: Int = ???
+    val NAMES: Int = ???
 
+    /**  */
     @stub
-    // 
-    def NMTOKEN: Int = ???
+    val NMTOKEN: Int = ???
 
+    /**  */
     @stub
-    // 
-    def NMTOKENS: Int = ???
+    val NMTOKENS: Int = ???
 
+    /**  */
     @stub
-    // 
-    def NOTATION: Int = ???
+    val NOTATION: Int = ???
 
+    /**  */
     @stub
-    // 
-    def NUMBER: Int = ???
+    val NUMBER: Int = ???
 
+    /**  */
     @stub
-    // 
-    def NUMBERS: Int = ???
+    val NUMBERS: Int = ???
 
+    /**  */
     @stub
-    // 
-    def NUTOKEN: Int = ???
+    val NUTOKEN: Int = ???
 
+    /**  */
     @stub
-    // 
-    def NUTOKENS: Int = ???
+    val NUTOKENS: Int = ???
 
+    /**  */
     @stub
-    // 
-    def PARAMETER: Int = ???
+    val PARAMETER: Int = ???
 
+    /**  */
     @stub
-    // 
-    def PI: Int = ???
+    val PI: Int = ???
 
+    /**  */
     @stub
-    // 
-    def PUBLIC: Int = ???
+    val PUBLIC: Int = ???
 
+    /**  */
     @stub
-    // 
-    def RCDATA: Int = ???
+    val RCDATA: Int = ???
 
+    /**  */
     @stub
-    // 
-    def REQUIRED: Int = ???
+    val REQUIRED: Int = ???
 
+    /**  */
     @stub
-    // 
-    def SDATA: Int = ???
+    val SDATA: Int = ???
 
+    /**  */
     @stub
-    // 
-    def STARTTAG: Int = ???
+    val STARTTAG: Int = ???
 }

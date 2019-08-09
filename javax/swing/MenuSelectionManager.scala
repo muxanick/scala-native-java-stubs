@@ -5,62 +5,68 @@ import java.awt.event.{KeyEvent, MouseEvent}
 import java.lang.Object
 import javax.swing.event.{ChangeEvent, ChangeListener}
 
-// A MenuSelectionManager owns the selection in menu hierarchy.
+/** A MenuSelectionManager owns the selection in menu hierarchy. */
 class MenuSelectionManager extends Object {
 
+    /** Only one ChangeEvent is needed per button model instance since the
+     *  event's only state is the source property.
+     */
     @stub
-    // Only one ChangeEvent is needed per button model instance since the
-    // event's only state is the source property.
-    protected def changeEvent: ChangeEvent = ???
+    protected val changeEvent: ChangeEvent = ???
 
+    /** Adds a ChangeListener to the button. */
     @stub
-    // Adds a ChangeListener to the button.
     def addChangeListener(l: ChangeListener): Unit = ???
 
+    /** Tell the menu selection to close and unselect all the menu components. */
     @stub
-    // Tell the menu selection to close and unselect all the menu components.
     def clearSelectedPath(): Unit = ???
 
+    /** Returns the component in the currently selected path
+     *  which contains sourcePoint.
+     */
     @stub
-    // Returns the component in the currently selected path
-    // which contains sourcePoint.
     def componentForPoint(source: Component, sourcePoint: Point): Component = ???
 
+    /** Notifies all listeners that have registered interest for
+     *  notification on this event type.
+     */
     @stub
-    // Notifies all listeners that have registered interest for
-    // notification on this event type.
     protected def fireStateChanged(): Unit = ???
 
+    /** Returns an array of all the ChangeListeners added
+     *  to this MenuSelectionManager with addChangeListener().
+     */
     @stub
-    // Returns an array of all the ChangeListeners added
-    // to this MenuSelectionManager with addChangeListener().
     def getChangeListeners(): Array[ChangeListener] = ???
 
+    /** Returns the path to the currently selected menu item */
     @stub
-    // Returns the path to the currently selected menu item
     def getSelectedPath(): Array[MenuElement] = ???
 
+    /** Return true if c is part of the currently used menu */
     @stub
-    // Return true if c is part of the currently used menu
     def isComponentPartOfCurrentMenu(c: Component): Boolean = ???
 
+    /** When a MenuElement receives an event from a KeyListener, it should never process the event
+     *  directly.
+     */
     @stub
-    // When a MenuElement receives an event from a KeyListener, it should never process the event
-    // directly.
     def processKeyEvent(e: KeyEvent): Unit = ???
 
+    /** When a MenuElement receives an event from a MouseListener, it should never process the event
+     *  directly.
+     */
     @stub
-    // When a MenuElement receives an event from a MouseListener, it should never process the event
-    // directly.
     def processMouseEvent(event: MouseEvent): Unit = ???
 
+    /** Removes a ChangeListener from the button. */
     @stub
-    // Removes a ChangeListener from the button.
     def removeChangeListener(l: ChangeListener): Unit = ???
 }
 
 object MenuSelectionManager {
+    /** Returns the default menu selection manager. */
     @stub
-    // Returns the default menu selection manager.
     def defaultManager(): MenuSelectionManager = ???
 }

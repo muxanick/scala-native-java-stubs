@@ -1,17 +1,17 @@
 package java.util.zip
 
-// An interface representing a data checksum.
+/** An interface representing a data checksum. */
 trait Checksum {
 
+    /** Returns the current checksum value. */
     @stub
-    // Returns the current checksum value.
     def getValue(): Long = ???
 
+    /** Resets the checksum to its initial value. */
     @stub
-    // Resets the checksum to its initial value.
     def reset(): Unit = ???
 
+    /** Updates the current checksum with the specified array of bytes. */
     @stub
-    // Updates the current checksum with the specified array of bytes.
     def update(b: Array[Byte], off: Int, len: Int): Unit = ???
 }

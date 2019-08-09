@@ -2,241 +2,244 @@ package java.awt.font
 
 import java.lang.String
 
-// The OpenType interface represents OpenType and
-// TrueType fonts.  This interface makes it possible to obtain
-// sfnt tables from the font.  A particular
-// Font object can implement this interface.
-// 
-// For more information on TrueType and OpenType fonts, see the
-// OpenType specification.
-// ( http://www.microsoft.com/typography/otspec/ ).
+/** The OpenType interface represents OpenType and
+ *  TrueType fonts.  This interface makes it possible to obtain
+ *  sfnt tables from the font.  A particular
+ *  Font object can implement this interface.
+ *  
+ *  For more information on TrueType and OpenType fonts, see the
+ *  OpenType specification.
+ *  ( http://www.microsoft.com/typography/otspec/ ).
+ */
 trait OpenType {
 
+    /** Returns the table as an array of bytes for a specified tag. */
     @stub
-    // Returns the table as an array of bytes for a specified tag.
     def getFontTable(sfntTag: Int): Array[Byte] = ???
 
+    /** Returns a subset of the table as an array of bytes
+     *  for a specified tag.
+     */
     @stub
-    // Returns a subset of the table as an array of bytes
-    // for a specified tag.
     def getFontTable(sfntTag: Int, offset: Int, count: Int): Array[Byte] = ???
 
+    /** Returns the table as an array of bytes for a specified tag. */
     @stub
-    // Returns the table as an array of bytes for a specified tag.
     def getFontTable(strSfntTag: String): Array[Byte] = ???
 
+    /** Returns a subset of the table as an array of bytes
+     *  for a specified tag.
+     */
     @stub
-    // Returns a subset of the table as an array of bytes
-    // for a specified tag.
     def getFontTable(strSfntTag: String, offset: Int, count: Int): Array[Byte] = ???
 
+    /** Returns the size of the table for a specified tag. */
     @stub
-    // Returns the size of the table for a specified tag.
     def getFontTableSize(sfntTag: Int): Int = ???
 
+    /** Returns the size of the table for a specified tag. */
     @stub
-    // Returns the size of the table for a specified tag.
     def getFontTableSize(strSfntTag: String): Int = ???
 }
 
 object OpenType {
+    /** Accent attachment. */
     @stub
-    // Accent attachment.
-    def TAG_ACNT: Int = ???
+    val TAG_ACNT: Int = ???
 
+    /** Axis variation. */
     @stub
-    // Axis variation.
-    def TAG_AVAR: Int = ???
+    val TAG_AVAR: Int = ???
 
+    /** Baseline data. */
     @stub
-    // Baseline data.
-    def TAG_BASE: Int = ???
+    val TAG_BASE: Int = ???
 
+    /** Bitmap data. */
     @stub
-    // Bitmap data.
-    def TAG_BDAT: Int = ???
+    val TAG_BDAT: Int = ???
 
+    /** Bitmap location. */
     @stub
-    // Bitmap location.
-    def TAG_BLOC: Int = ???
+    val TAG_BLOC: Int = ???
 
+    /** Baseline table. */
     @stub
-    // Baseline table.
-    def TAG_BSLN: Int = ???
+    val TAG_BSLN: Int = ???
 
+    /** Compact font format (Type1 font). */
     @stub
-    // Compact font format (Type1 font).
-    def TAG_CFF: Int = ???
+    val TAG_CFF: Int = ???
 
+    /** Character to glyph mapping. */
     @stub
-    // Character to glyph mapping.
-    def TAG_CMAP: Int = ???
+    val TAG_CMAP: Int = ???
 
+    /** CVT variation. */
     @stub
-    // CVT variation.
-    def TAG_CVAR: Int = ???
+    val TAG_CVAR: Int = ???
 
+    /** Control value table. */
     @stub
-    // Control value table.
-    def TAG_CVT: Int = ???
+    val TAG_CVT: Int = ???
 
+    /** Digital signature. */
     @stub
-    // Digital signature.
-    def TAG_DSIG: Int = ???
+    val TAG_DSIG: Int = ???
 
+    /** Embedded bitmap data. */
     @stub
-    // Embedded bitmap data.
-    def TAG_EBDT: Int = ???
+    val TAG_EBDT: Int = ???
 
+    /** Embedded bitmap location. */
     @stub
-    // Embedded bitmap location.
-    def TAG_EBLC: Int = ???
+    val TAG_EBLC: Int = ???
 
+    /** Embedded bitmap scaling. */
     @stub
-    // Embedded bitmap scaling.
-    def TAG_EBSC: Int = ???
+    val TAG_EBSC: Int = ???
 
+    /** Font descriptors. */
     @stub
-    // Font descriptors.
-    def TAG_FDSC: Int = ???
+    val TAG_FDSC: Int = ???
 
+    /** Feature name. */
     @stub
-    // Feature name.
-    def TAG_FEAT: Int = ???
+    val TAG_FEAT: Int = ???
 
+    /** Font metrics. */
     @stub
-    // Font metrics.
-    def TAG_FMTX: Int = ???
+    val TAG_FMTX: Int = ???
 
+    /** Font program. */
     @stub
-    // Font program.
-    def TAG_FPGM: Int = ???
+    val TAG_FPGM: Int = ???
 
+    /** Font variation. */
     @stub
-    // Font variation.
-    def TAG_FVAR: Int = ???
+    val TAG_FVAR: Int = ???
 
+    /** Grid-fitting and scan conversion procedure. */
     @stub
-    // Grid-fitting and scan conversion procedure.
-    def TAG_GASP: Int = ???
+    val TAG_GASP: Int = ???
 
+    /** Glyph definition. */
     @stub
-    // Glyph definition.
-    def TAG_GDEF: Int = ???
+    val TAG_GDEF: Int = ???
 
+    /** Glyph data. */
     @stub
-    // Glyph data.
-    def TAG_GLYF: Int = ???
+    val TAG_GLYF: Int = ???
 
+    /** Glyph positioning. */
     @stub
-    // Glyph positioning.
-    def TAG_GPOS: Int = ???
+    val TAG_GPOS: Int = ???
 
+    /** Glyph substitution. */
     @stub
-    // Glyph substitution.
-    def TAG_GSUB: Int = ???
+    val TAG_GSUB: Int = ???
 
+    /** Glyph variation. */
     @stub
-    // Glyph variation.
-    def TAG_GVAR: Int = ???
+    val TAG_GVAR: Int = ???
 
+    /** Horizontal device metrics. */
     @stub
-    // Horizontal device metrics.
-    def TAG_HDMX: Int = ???
+    val TAG_HDMX: Int = ???
 
+    /** Font header. */
     @stub
-    // Font header.
-    def TAG_HEAD: Int = ???
+    val TAG_HEAD: Int = ???
 
+    /** Horizontal metrics header. */
     @stub
-    // Horizontal metrics header.
-    def TAG_HHEA: Int = ???
+    val TAG_HHEA: Int = ???
 
+    /** Horizontal metrics. */
     @stub
-    // Horizontal metrics.
-    def TAG_HMTX: Int = ???
+    val TAG_HMTX: Int = ???
 
+    /** Justification. */
     @stub
-    // Justification.
-    def TAG_JSTF: Int = ???
+    val TAG_JSTF: Int = ???
 
+    /** Justification. */
     @stub
-    // Justification.
-    def TAG_JUST: Int = ???
+    val TAG_JUST: Int = ???
 
+    /** Kerning. */
     @stub
-    // Kerning.
-    def TAG_KERN: Int = ???
+    val TAG_KERN: Int = ???
 
+    /** Ligature caret. */
     @stub
-    // Ligature caret.
-    def TAG_LCAR: Int = ???
+    val TAG_LCAR: Int = ???
 
+    /** Index to location. */
     @stub
-    // Index to location.
-    def TAG_LOCA: Int = ???
+    val TAG_LOCA: Int = ???
 
+    /** Linear threshold. */
     @stub
-    // Linear threshold.
-    def TAG_LTSH: Int = ???
+    val TAG_LTSH: Int = ???
 
+    /** Maximum profile. */
     @stub
-    // Maximum profile.
-    def TAG_MAXP: Int = ???
+    val TAG_MAXP: Int = ???
 
+    /** Multiple master font metrics. */
     @stub
-    // Multiple master font metrics.
-    def TAG_MMFX: Int = ???
+    val TAG_MMFX: Int = ???
 
+    /** Multiple master supplementary data. */
     @stub
-    // Multiple master supplementary data.
-    def TAG_MMSD: Int = ???
+    val TAG_MMSD: Int = ???
 
+    /** Glyph metamorphosis. */
     @stub
-    // Glyph metamorphosis.
-    def TAG_MORT: Int = ???
+    val TAG_MORT: Int = ???
 
+    /** Naming table. */
     @stub
-    // Naming table.
-    def TAG_NAME: Int = ???
+    val TAG_NAME: Int = ???
 
+    /** Optical bounds. */
     @stub
-    // Optical bounds.
-    def TAG_OPBD: Int = ???
+    val TAG_OPBD: Int = ???
 
+    /** OS/2 and Windows specific metrics. */
     @stub
-    // OS/2 and Windows specific metrics.
-    def TAG_OS2: Int = ???
+    val TAG_OS2: Int = ???
 
+    /** PCL 5 data. */
     @stub
-    // PCL 5 data.
-    def TAG_PCLT: Int = ???
+    val TAG_PCLT: Int = ???
 
+    /** PostScript Information. */
     @stub
-    // PostScript Information.
-    def TAG_POST: Int = ???
+    val TAG_POST: Int = ???
 
+    /** CVT preprogram. */
     @stub
-    // CVT preprogram.
-    def TAG_PREP: Int = ???
+    val TAG_PREP: Int = ???
 
+    /** Glyph properties. */
     @stub
-    // Glyph properties.
-    def TAG_PROP: Int = ???
+    val TAG_PROP: Int = ???
 
+    /** Tracking. */
     @stub
-    // Tracking.
-    def TAG_TRAK: Int = ???
+    val TAG_TRAK: Int = ???
 
+    /** Adobe Type 1 font data. */
     @stub
-    // Adobe Type 1 font data.
-    def TAG_TYP1: Int = ???
+    val TAG_TYP1: Int = ???
 
+    /** Vertical device metrics. */
     @stub
-    // Vertical device metrics.
-    def TAG_VDMX: Int = ???
+    val TAG_VDMX: Int = ???
 
+    /** Vertical metrics header. */
     @stub
-    // Vertical metrics header.
-    def TAG_VHEA: Int = ???
+    val TAG_VHEA: Int = ???
 }

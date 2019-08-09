@@ -2,58 +2,60 @@ package javax.management
 
 import java.lang.{Class, Object, String}
 
-// Static methods from the JMX API.  There are no instances of this class.
+/** Static methods from the JMX API.  There are no instances of this class. */
 class JMX extends Object {
 }
 
 object JMX {
+    /** The name of the defaultValue field. */
     @stub
-    // The name of the defaultValue field.
-    def DEFAULT_VALUE_FIELD: String = ???
+    val DEFAULT_VALUE_FIELD: String = ???
 
+    /** The name of the immutableInfo field. */
     @stub
-    // The name of the immutableInfo field.
-    def IMMUTABLE_INFO_FIELD: String = ???
+    val IMMUTABLE_INFO_FIELD: String = ???
 
+    /** The name of the interfaceClassName field. */
     @stub
-    // The name of the interfaceClassName field.
-    def INTERFACE_CLASS_NAME_FIELD: String = ???
+    val INTERFACE_CLASS_NAME_FIELD: String = ???
 
+    /** The name of the legalValues field. */
     @stub
-    // The name of the legalValues field.
-    def LEGAL_VALUES_FIELD: String = ???
+    val LEGAL_VALUES_FIELD: String = ???
 
+    /** The name of the maxValue field. */
     @stub
-    // The name of the maxValue field.
-    def MAX_VALUE_FIELD: String = ???
+    val MAX_VALUE_FIELD: String = ???
 
+    /** The name of the minValue field. */
     @stub
-    // The name of the minValue field.
-    def MIN_VALUE_FIELD: String = ???
+    val MIN_VALUE_FIELD: String = ???
 
+    /** The name of the mxbean field. */
     @stub
-    // The name of the mxbean field.
-    def MXBEAN_FIELD: String = ???
+    val MXBEAN_FIELD: String = ???
 
+    /** The name of the openType field. */
     @stub
-    // The name of the openType field.
-    def OPEN_TYPE_FIELD: String = ???
+    val OPEN_TYPE_FIELD: String = ???
 
+    /** Test whether an interface is an MXBean interface. */
     @stub
-    // Test whether an interface is an MXBean interface.
     def isMXBeanInterface(interfaceClass: Class[_]): Boolean = ???
 
+    /** Make a proxy for a Standard MBean in a local or remote
+     *  MBean Server.
+     */
     @stub
-    // Make a proxy for a Standard MBean in a local or remote
-    // MBean Server.
-    def T: [T] = ???
+    def newMBeanProxy[T](connection: MBeanServerConnection, objectName: ObjectName, interfaceClass: Class[T]): T = ???
 
+    /** Make a proxy for a Standard MBean in a local or remote MBean
+     *  Server that may also support the methods of NotificationEmitter.
+     */
     @stub
-    // Make a proxy for a Standard MBean in a local or remote MBean
-    // Server that may also support the methods of NotificationEmitter.
-    def T: [T] = ???
+    def newMBeanProxy[T](connection: MBeanServerConnection, objectName: ObjectName, interfaceClass: Class[T], notificationEmitter: Boolean): T = ???
 
+    /** Make a proxy for an MXBean in a local or remote MBean Server. */
     @stub
-    // Make a proxy for an MXBean in a local or remote MBean Server.
-    def T: [T] = ???
+    def newMXBeanProxy[T](connection: MBeanServerConnection, objectName: ObjectName, interfaceClass: Class[T]): T = ???
 }

@@ -2,55 +2,60 @@ package java.io
 
 import java.lang.Object
 
-// A character-stream reader that allows characters to be pushed back into the
-// stream.
+/** A character-stream reader that allows characters to be pushed back into the
+ *  stream.
+ */
 class PushbackReader extends FilterReader {
 
+    /** Creates a new pushback reader with a one-character pushback buffer. */
     @stub
-    // Creates a new pushback reader with a one-character pushback buffer.
     def this(in: Reader) = ???
 
+    /** Closes the stream and releases any system resources associated with
+     *  it.
+     */
     @stub
-    // Closes the stream and releases any system resources associated with
-    // it.
     def close(): Unit = ???
 
+    /** Marks the present position in the stream. */
     @stub
-    // Marks the present position in the stream.
     def mark(readAheadLimit: Int): Unit = ???
 
+    /** Tells whether this stream supports the mark() operation, which it does
+     *  not.
+     */
     @stub
-    // Tells whether this stream supports the mark() operation, which it does
-    // not.
     def markSupported(): Boolean = ???
 
+    /** Reads a single character. */
     @stub
-    // Reads a single character.
     def read(): Int = ???
 
+    /** Reads characters into a portion of an array. */
     @stub
-    // Reads characters into a portion of an array.
     def read(cbuf: Array[Char], off: Int, len: Int): Int = ???
 
+    /** Tells whether this stream is ready to be read. */
     @stub
-    // Tells whether this stream is ready to be read.
     def ready(): Boolean = ???
 
+    /** Resets the stream. */
     @stub
-    // Resets the stream.
     def reset(): Unit = ???
 
+    /** Skips characters. */
     @stub
-    // Skips characters.
     def skip(n: Long): Long = ???
 
+    /** Pushes back an array of characters by copying it to the front of the
+     *  pushback buffer.
+     */
     @stub
-    // Pushes back an array of characters by copying it to the front of the
-    // pushback buffer.
     def unread(cbuf: Array[Char]): Unit = ???
 
+    /** Pushes back a portion of an array of characters by copying it to the
+     *  front of the pushback buffer.
+     */
     @stub
-    // Pushes back a portion of an array of characters by copying it to the
-    // front of the pushback buffer.
     def unread(cbuf: Array[Char], off: Int, len: Int): Unit = ???
 }

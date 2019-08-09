@@ -5,233 +5,239 @@ import java.lang.{Object, String}
 import java.nio.charset.Charset
 import java.util.Enumeration
 
-// This class is used to read entries from a zip file.
-//
-//  Unless otherwise noted, passing a null argument to a constructor
-// or method in this class will cause a NullPointerException to be
-// thrown.
+/** This class is used to read entries from a zip file.
+ * 
+ *   Unless otherwise noted, passing a null argument to a constructor
+ *  or method in this class will cause a NullPointerException to be
+ *  thrown.
+ */
 class ZipFile extends Object with Closeable {
 
+    /** Opens a ZIP file for reading given the specified File object. */
     @stub
-    // Opens a ZIP file for reading given the specified File object.
     def this(file: File) = ???
 
+    /** Opens a ZIP file for reading given the specified File object. */
     @stub
-    // Opens a ZIP file for reading given the specified File object.
     def this(file: File, charset: Charset) = ???
 
+    /** Opens a new ZipFile to read from the specified
+     *  File object in the specified mode.
+     */
     @stub
-    // Opens a new ZipFile to read from the specified
-    // File object in the specified mode.
     def this(file: File, mode: Int) = ???
 
+    /** Opens a new ZipFile to read from the specified
+     *  File object in the specified mode.
+     */
     @stub
-    // Opens a new ZipFile to read from the specified
-    // File object in the specified mode.
     def this(file: File, mode: Int, charset: Charset) = ???
 
+    /** Opens a zip file for reading. */
     @stub
-    // Opens a zip file for reading.
     def this(name: String) = ???
 
+    /** Closes the ZIP file. */
     @stub
-    // Closes the ZIP file.
     def close(): Unit = ???
 
+    /** Returns an enumeration of the ZIP file entries. */
     @stub
-    // Returns an enumeration of the ZIP file entries.
     def entries(): Enumeration[_ <: ZipEntry] = ???
 
+    /** Ensures that the system resources held by this ZipFile object are
+     *  released when there are no more references to it.
+     */
     @stub
-    // Ensures that the system resources held by this ZipFile object are
-    // released when there are no more references to it.
     protected def finalize(): Unit = ???
 
+    /** Returns the zip file comment, or null if none. */
     @stub
-    // Returns the zip file comment, or null if none.
     def getComment(): String = ???
 
+    /** Returns the zip file entry for the specified name, or null
+     *  if not found.
+     */
     @stub
-    // Returns the zip file entry for the specified name, or null
-    // if not found.
     def getEntry(name: String): ZipEntry = ???
 
+    /** Returns an input stream for reading the contents of the specified
+     *  zip file entry.
+     */
     @stub
-    // Returns an input stream for reading the contents of the specified
-    // zip file entry.
     def getInputStream(entry: ZipEntry): InputStream = ???
 
+    /** Returns the path name of the ZIP file. */
     @stub
-    // Returns the path name of the ZIP file.
     def getName(): String = ???
 
+    /** Returns the number of entries in the ZIP file. */
     @stub
-    // Returns the number of entries in the ZIP file.
     def size(): Int = ???
 }
 
 object ZipFile {
+    /**  */
     @stub
-    // 
-    def CENATT: Int = ???
+    val CENATT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENATX: Int = ???
+    val CENATX: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENCOM: Int = ???
+    val CENCOM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENCRC: Int = ???
+    val CENCRC: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENDSK: Int = ???
+    val CENDSK: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENEXT: Int = ???
+    val CENEXT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENFLG: Int = ???
+    val CENFLG: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENHDR: Int = ???
+    val CENHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENHOW: Int = ???
+    val CENHOW: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENLEN: Int = ???
+    val CENLEN: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENNAM: Int = ???
+    val CENNAM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENOFF: Int = ???
+    val CENOFF: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENSIG: Long = ???
+    val CENSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def CENSIZ: Int = ???
+    val CENSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENTIM: Int = ???
+    val CENTIM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENVEM: Int = ???
+    val CENVEM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def CENVER: Int = ???
+    val CENVER: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDCOM: Int = ???
+    val ENDCOM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDHDR: Int = ???
+    val ENDHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDOFF: Int = ???
+    val ENDOFF: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDSIG: Long = ???
+    val ENDSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def ENDSIZ: Int = ???
+    val ENDSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDSUB: Int = ???
+    val ENDSUB: Int = ???
 
+    /**  */
     @stub
-    // 
-    def ENDTOT: Int = ???
+    val ENDTOT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTCRC: Int = ???
+    val EXTCRC: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTHDR: Int = ???
+    val EXTHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTLEN: Int = ???
+    val EXTLEN: Int = ???
 
+    /**  */
     @stub
-    // 
-    def EXTSIG: Long = ???
+    val EXTSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def EXTSIZ: Int = ???
+    val EXTSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCCRC: Int = ???
+    val LOCCRC: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCEXT: Int = ???
+    val LOCEXT: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCFLG: Int = ???
+    val LOCFLG: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCHDR: Int = ???
+    val LOCHDR: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCHOW: Int = ???
+    val LOCHOW: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCLEN: Int = ???
+    val LOCLEN: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCNAM: Int = ???
+    val LOCNAM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCSIG: Long = ???
+    val LOCSIG: Long = ???
 
+    /**  */
     @stub
-    // 
-    def LOCSIZ: Int = ???
+    val LOCSIZ: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCTIM: Int = ???
+    val LOCTIM: Int = ???
 
+    /**  */
     @stub
-    // 
-    def LOCVER: Int = ???
+    val LOCVER: Int = ???
 
+    /** Mode flag to open a zip file and mark it for deletion. */
     @stub
-    // Mode flag to open a zip file and mark it for deletion.
-    def OPEN_DELETE: Int = ???
+    val OPEN_DELETE: Int = ???
 }

@@ -3,50 +3,54 @@ package javax.activation
 import java.awt.datatransfer.DataFlavor
 import java.lang.{Class, Object, String}
 
-// The ActivationDataFlavor class is a special subclass of
-// java.awt.datatransfer.DataFlavor. It allows the JAF to
-// set all three values stored by the DataFlavor class via a new
-// constructor. It also contains improved MIME parsing in the equals
-//  method. Except for the improved parsing, its semantics are
-// identical to that of the JDK's DataFlavor class.
+/** The ActivationDataFlavor class is a special subclass of
+ *  java.awt.datatransfer.DataFlavor. It allows the JAF to
+ *  set all three values stored by the DataFlavor class via a new
+ *  constructor. It also contains improved MIME parsing in the equals
+ *   method. Except for the improved parsing, its semantics are
+ *  identical to that of the JDK's DataFlavor class.
+ */
 class ActivationDataFlavor extends DataFlavor {
 
+    /** Construct a DataFlavor that represents a MimeType. */
     @stub
-    // Construct a DataFlavor that represents a MimeType.
     def this(representationClass: Class, humanPresentableName: String) = ???
 
+    /** Construct a DataFlavor that represents an arbitrary
+     *  Java object.
+     */
     @stub
-    // Construct a DataFlavor that represents an arbitrary
-    // Java object.
     def this(representationClass: Class, mimeType: String, humanPresentableName: String) = ???
 
+    /** Compares the DataFlavor passed in with this DataFlavor; calls
+     *  the isMimeTypeEqual method.
+     */
     @stub
-    // Compares the DataFlavor passed in with this DataFlavor; calls
-    // the isMimeTypeEqual method.
     def equals(dataFlavor: DataFlavor): Boolean = ???
 
+    /** Return the Human Presentable name. */
     @stub
-    // Return the Human Presentable name.
     def getHumanPresentableName(): String = ???
 
+    /** Return the MIME type for this DataFlavor. */
     @stub
-    // Return the MIME type for this DataFlavor.
     def getMimeType(): String = ???
 
+    /** Return the representation class. */
     @stub
-    // Return the representation class.
     def getRepresentationClass(): Class = ???
 
+    /** Is the string representation of the MIME type passed in equivalent
+     *  to the MIME type of this DataFlavor.
+     */
     @stub
-    // Is the string representation of the MIME type passed in equivalent
-    // to the MIME type of this DataFlavor.
     def isMimeTypeEqual(mimeType: String): Boolean = ???
 
+    /** Deprecated.   */
     @stub
-    // Deprecated.  
     protected def normalizeMimeType(mimeType: String): String = ???
 
+    /** Deprecated.   */
     @stub
-    // Deprecated.  
     protected def normalizeMimeTypeParameter(parameterName: String, parameterValue: String): String = ???
 }

@@ -4,14 +4,14 @@ import java.io.Serializable
 import java.lang.Object
 import javax.swing.Icon
 
-// This utility class draws the horizontal bars which indicate a MetalComboBox
-class MetalComboBoxIcon extends Object with Icon, with Serializable {
+/** This utility class draws the horizontal bars which indicate a MetalComboBox */
+class MetalComboBoxIcon extends Object with Icon with Serializable {
 
+    /** Created a stub to satisfy the interface. */
     @stub
-    // Created a stub to satisfy the interface.
     def getIconHeight(): Int = ???
 
+    /** Created a stub to satisfy the interface. */
     @stub
-    // Created a stub to satisfy the interface.
     def getIconWidth(): Int = ???
 }

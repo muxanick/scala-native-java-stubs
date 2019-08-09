@@ -4,46 +4,52 @@ import java.awt.{Graphics2D, Image}
 import java.awt.geom.Rectangle2D
 import java.lang.Object
 
-// The ImageGraphicAttribute class is an implementation of
-// GraphicAttribute which draws images in
-// a TextLayout.
+/** The ImageGraphicAttribute class is an implementation of
+ *  GraphicAttribute which draws images in
+ *  a TextLayout.
+ */
 final class ImageGraphicAttribute extends GraphicAttribute {
 
+    /** Constucts an ImageGraphicAttribute from the specified
+     *  Image.
+     */
     @stub
-    // Constucts an ImageGraphicAttribute from the specified
-    // Image.
     def this(image: Image, alignment: Int) = ???
 
+    /** Renders this GraphicAttribute at the specified
+     *  location.
+     */
     @stub
-    // Renders this GraphicAttribute at the specified
-    // location.
-    def draw(graphics: Graphics2D, x: float, y: float): Unit = ???
+    def draw(graphics: Graphics2D, x: Float, y: Float): Unit = ???
 
+    /** Compares this ImageGraphicAttribute to the specified
+     *  ImageGraphicAttribute.
+     */
     @stub
-    // Compares this ImageGraphicAttribute to the specified
-    // ImageGraphicAttribute.
     def equals(rhs: ImageGraphicAttribute): Boolean = ???
 
+    /** Compares this ImageGraphicAttribute to the specified
+     *  Object.
+     */
     @stub
-    // Compares this ImageGraphicAttribute to the specified
-    // Object.
     def equals(rhs: Object): Boolean = ???
 
+    /** Returns the advance of this ImageGraphicAttribute. */
     @stub
-    // Returns the advance of this ImageGraphicAttribute.
-    def getAdvance(): float = ???
+    def getAdvance(): Float = ???
 
+    /** Returns the ascent of this ImageGraphicAttribute. */
     @stub
-    // Returns the ascent of this ImageGraphicAttribute.
-    def getAscent(): float = ???
+    def getAscent(): Float = ???
 
+    /** Returns a Rectangle2D that encloses all of the
+     *  bits rendered by this ImageGraphicAttribute, relative
+     *  to the rendering position.
+     */
     @stub
-    // Returns a Rectangle2D that encloses all of the
-    // bits rendered by this ImageGraphicAttribute, relative
-    // to the rendering position.
     def getBounds(): Rectangle2D = ???
 
+    /** Returns the descent of this ImageGraphicAttribute. */
     @stub
-    // Returns the descent of this ImageGraphicAttribute.
-    def getDescent(): float = ???
+    def getDescent(): Float = ???
 }

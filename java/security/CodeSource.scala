@@ -5,38 +5,41 @@ import java.lang.Object
 import java.net.URL
 import java.security.cert.Certificate
 
-// This class extends the concept of a codebase to
-// encapsulate not only the location (URL) but also the certificate chains
-// that were used to verify signed code originating from that location.
+/** This class extends the concept of a codebase to
+ *  encapsulate not only the location (URL) but also the certificate chains
+ *  that were used to verify signed code originating from that location.
+ */
 class CodeSource extends Object with Serializable {
 
+    /** Constructs a CodeSource and associates it with the specified
+     *  location and set of certificates.
+     */
     @stub
-    // Constructs a CodeSource and associates it with the specified
-    // location and set of certificates.
     def this(url: URL, certs: Array[Certificate]) = ???
 
+    /** Tests for equality between the specified object and this
+     *  object.
+     */
     @stub
-    // Tests for equality between the specified object and this
-    // object.
     def equals(obj: Object): Boolean = ???
 
+    /** Returns the certificates associated with this CodeSource. */
     @stub
-    // Returns the certificates associated with this CodeSource.
     def getCertificates(): Array[Certificate] = ???
 
+    /** Returns the code signers associated with this CodeSource. */
     @stub
-    // Returns the code signers associated with this CodeSource.
     def getCodeSigners(): Array[CodeSigner] = ???
 
+    /** Returns the location associated with this CodeSource. */
     @stub
-    // Returns the location associated with this CodeSource.
     def getLocation(): URL = ???
 
+    /** Returns the hash code value for this object. */
     @stub
-    // Returns the hash code value for this object.
     def hashCode(): Int = ???
 
+    /** Returns true if this CodeSource object "implies" the specified CodeSource. */
     @stub
-    // Returns true if this CodeSource object "implies" the specified CodeSource.
     def implies(codesource: CodeSource): Boolean = ???
 }

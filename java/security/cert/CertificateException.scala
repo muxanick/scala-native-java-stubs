@@ -3,20 +3,22 @@ package java.security.cert
 import java.lang.{Exception, Object, String, Throwable}
 import java.security.GeneralSecurityException
 
-// This exception indicates one of a variety of certificate problems.
+/** This exception indicates one of a variety of certificate problems. */
 class CertificateException extends GeneralSecurityException {
 
+    /** Constructs a certificate exception with no detail message. */
     @stub
-    // Constructs a certificate exception with no detail message.
     def this() = ???
 
+    /** Constructs a certificate exception with the given detail
+     *  message.
+     */
     @stub
-    // Constructs a certificate exception with the given detail
-    // message.
     def this(msg: String) = ???
 
+    /** Creates a CertificateException with the specified
+     *  detail message and cause.
+     */
     @stub
-    // Creates a CertificateException with the specified
-    // detail message and cause.
     def this(message: String, cause: Throwable) = ???
 }

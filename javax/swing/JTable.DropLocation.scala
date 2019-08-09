@@ -2,27 +2,32 @@ package javax.swing
 
 import java.lang.Object
 
-// A subclass of TransferHandler.DropLocation representing
-// a drop location for a JTable.
-object final JTable.DropLocation extends TransferHandler.DropLocation {
+/** A subclass of TransferHandler.DropLocation representing
+ *  a drop location for a JTable.
+ */
+final object JTable.DropLocation extends TransferHandler.DropLocation {
 
+    /** Returns the column index where a dropped item should be placed in the
+     *  table.
+     */
     @stub
-    // Returns the column index where a dropped item should be placed in the
-    // table.
     def getColumn(): Int = ???
 
+    /** Returns the row index where a dropped item should be placed in the
+     *  table.
+     */
     @stub
-    // Returns the row index where a dropped item should be placed in the
-    // table.
     def getRow(): Int = ???
 
+    /** Returns whether or not this location represents an insert
+     *  of a column.
+     */
     @stub
-    // Returns whether or not this location represents an insert
-    // of a column.
     def isInsertColumn(): Boolean = ???
 
+    /** Returns whether or not this location represents an insert
+     *  of a row.
+     */
     @stub
-    // Returns whether or not this location represents an insert
-    // of a row.
     def isInsertRow(): Boolean = ???
 }

@@ -7,63 +7,66 @@ import javax.swing.{JComponent, JSplitPane}
 import javax.swing.plaf.{ComponentUI, SplitPaneUI}
 import javax.swing.plaf.basic.{BasicSplitPaneDivider, BasicSplitPaneUI}
 
-// Provides the Synth L&F UI delegate for
-// JSplitPane.
-class SynthSplitPaneUI extends BasicSplitPaneUI with PropertyChangeListener, with SynthUI {
+/** Provides the Synth L&F UI delegate for
+ *  JSplitPane.
+ */
+class SynthSplitPaneUI extends BasicSplitPaneUI with PropertyChangeListener with SynthUI {
 
+    /** Creates the default divider. */
     @stub
-    // Creates the default divider.
     def createDefaultDivider(): BasicSplitPaneDivider = ???
 
+    /** Returns the default non continuous layout divider, which is an
+     *  instance of Canvas that fills in the background with dark gray.
+     */
     @stub
-    // Returns the default non continuous layout divider, which is an
-    // instance of Canvas that fills in the background with dark gray.
     protected def createDefaultNonContinuousLayoutDivider(): Component = ???
 
+    /** Called when the specified split pane has finished painting
+     *  its children.
+     */
     @stub
-    // Called when the specified split pane has finished painting
-    // its children.
     def finishedPaintingChildren(jc: JSplitPane, g: Graphics): Unit = ???
 
+    /** Returns the Context for the specified component. */
     @stub
-    // Returns the Context for the specified component.
     def getContext(c: JComponent): SynthContext = ???
 
+    /** Installs the UI defaults. */
     @stub
-    // Installs the UI defaults.
     protected def installDefaults(): Unit = ???
 
+    /** Installs the event listeners for the UI. */
     @stub
-    // Installs the event listeners for the UI.
     protected def installListeners(): Unit = ???
 
+    /** Paints the specified component according to the Look and Feel. */
     @stub
-    // Paints the specified component according to the Look and Feel.
     def paint(g: Graphics, c: JComponent): Unit = ???
 
+    /** Paints the specified component. */
     @stub
-    // Paints the specified component.
     protected def paint(context: SynthContext, g: Graphics): Unit = ???
 
+    /** Paints the border. */
     @stub
-    // Paints the border.
     def paintBorder(context: SynthContext, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
 
+    /** This method gets called when a bound property is changed. */
     @stub
-    // This method gets called when a bound property is changed.
     def propertyChange(e: PropertyChangeEvent): Unit = ???
 
+    /** Uninstalls the UI defaults. */
     @stub
-    // Uninstalls the UI defaults.
     protected def uninstallDefaults(): Unit = ???
 
+    /** Uninstalls the event listeners from the UI. */
     @stub
-    // Uninstalls the event listeners from the UI.
     protected def uninstallListeners(): Unit = ???
 }
 
 object SynthSplitPaneUI {
+    /** Creates a new SynthSplitPaneUI instance */
     @stub
-    // Creates a new SynthSplitPaneUI instance
     def createUI(x: JComponent): ComponentUI = ???
 }

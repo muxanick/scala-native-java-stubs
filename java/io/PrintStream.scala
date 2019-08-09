@@ -3,181 +3,191 @@ package java.io
 import java.lang.{Appendable, CharSequence, Object, String}
 import java.util.Locale
 
-// A PrintStream adds functionality to another output stream,
-// namely the ability to print representations of various data values
-// conveniently.  Two other features are provided as well.  Unlike other output
-// streams, a PrintStream never throws an
-// IOException; instead, exceptional situations merely set an
-// internal flag that can be tested via the checkError method.
-// Optionally, a PrintStream can be created so as to flush
-// automatically; this means that the flush method is
-// automatically invoked after a byte array is written, one of the
-// println methods is invoked, or a newline character or byte
-// ('\n') is written.
-//
-//  All characters printed by a PrintStream are converted into
-// bytes using the platform's default character encoding.  The PrintWriter class should be used in situations that require writing
-// characters rather than bytes.
-class PrintStream extends FilterOutputStream with Appendable, with Closeable {
+/** A PrintStream adds functionality to another output stream,
+ *  namely the ability to print representations of various data values
+ *  conveniently.  Two other features are provided as well.  Unlike other output
+ *  streams, a PrintStream never throws an
+ *  IOException; instead, exceptional situations merely set an
+ *  internal flag that can be tested via the checkError method.
+ *  Optionally, a PrintStream can be created so as to flush
+ *  automatically; this means that the flush method is
+ *  automatically invoked after a byte array is written, one of the
+ *  println methods is invoked, or a newline character or byte
+ *  ('\n') is written.
+ * 
+ *   All characters printed by a PrintStream are converted into
+ *  bytes using the platform's default character encoding.  The PrintWriter class should be used in situations that require writing
+ *  characters rather than bytes.
+ */
+class PrintStream extends FilterOutputStream with Appendable with Closeable {
 
+    /** Creates a new print stream, without automatic line flushing, with the
+     *  specified file.
+     */
     @stub
-    // Creates a new print stream, without automatic line flushing, with the
-    // specified file.
     def this(file: File) = ???
 
+    /** Creates a new print stream, without automatic line flushing, with the
+     *  specified file and charset.
+     */
     @stub
-    // Creates a new print stream, without automatic line flushing, with the
-    // specified file and charset.
     def this(file: File, csn: String) = ???
 
+    /** Creates a new print stream. */
     @stub
-    // Creates a new print stream.
     def this(out: OutputStream) = ???
 
+    /** Creates a new print stream. */
     @stub
-    // Creates a new print stream.
     def this(out: OutputStream, autoFlush: Boolean) = ???
 
+    /** Creates a new print stream. */
     @stub
-    // Creates a new print stream.
     def this(out: OutputStream, autoFlush: Boolean, encoding: String) = ???
 
+    /** Creates a new print stream, without automatic line flushing, with the
+     *  specified file name.
+     */
     @stub
-    // Creates a new print stream, without automatic line flushing, with the
-    // specified file name.
     def this(fileName: String) = ???
 
+    /** Appends the specified character to this output stream. */
     @stub
-    // Appends the specified character to this output stream.
     def append(c: Char): PrintStream = ???
 
+    /** Appends the specified character sequence to this output stream. */
     @stub
-    // Appends the specified character sequence to this output stream.
     def append(csq: CharSequence): PrintStream = ???
 
+    /** Appends a subsequence of the specified character sequence to this output
+     *  stream.
+     */
     @stub
-    // Appends a subsequence of the specified character sequence to this output
-    // stream.
     def append(csq: CharSequence, start: Int, end: Int): PrintStream = ???
 
+    /** Flushes the stream and checks its error state. */
     @stub
-    // Flushes the stream and checks its error state.
     def checkError(): Boolean = ???
 
+    /** Clears the internal error state of this stream. */
     @stub
-    // Clears the internal error state of this stream.
     protected def clearError(): Unit = ???
 
+    /** Closes the stream. */
     @stub
-    // Closes the stream.
     def close(): Unit = ???
 
+    /** Flushes the stream. */
     @stub
-    // Flushes the stream.
     def flush(): Unit = ???
 
+    /** Writes a formatted string to this output stream using the specified
+     *  format string and arguments.
+     */
     @stub
-    // Writes a formatted string to this output stream using the specified
-    // format string and arguments.
     def format(l: Locale, format: String, args: Object*): PrintStream = ???
 
+    /** Writes a formatted string to this output stream using the specified
+     *  format string and arguments.
+     */
     @stub
-    // Writes a formatted string to this output stream using the specified
-    // format string and arguments.
     def format(format: String, args: Object*): PrintStream = ???
 
+    /** Prints a boolean value. */
     @stub
-    // Prints a boolean value.
     def print(b: Boolean): Unit = ???
 
+    /** Prints a character. */
     @stub
-    // Prints a character.
     def print(c: Char): Unit = ???
 
+    /** Prints an array of characters. */
     @stub
-    // Prints an array of characters.
     def print(s: Array[Char]): Unit = ???
 
+    /** Prints a double-precision floating-point number. */
     @stub
-    // Prints a double-precision floating-point number.
-    def print(d: double): Unit = ???
+    def print(d: Double): Unit = ???
 
+    /** Prints a floating-point number. */
     @stub
-    // Prints a floating-point number.
-    def print(f: float): Unit = ???
+    def print(f: Float): Unit = ???
 
+    /** Prints an integer. */
     @stub
-    // Prints an integer.
     def print(i: Int): Unit = ???
 
+    /** Prints a long integer. */
     @stub
-    // Prints a long integer.
     def print(l: Long): Unit = ???
 
+    /** Prints an object. */
     @stub
-    // Prints an object.
     def print(obj: Object): Unit = ???
 
+    /** Prints a string. */
     @stub
-    // Prints a string.
     def print(s: String): Unit = ???
 
+    /** A convenience method to write a formatted string to this output stream
+     *  using the specified format string and arguments.
+     */
     @stub
-    // A convenience method to write a formatted string to this output stream
-    // using the specified format string and arguments.
     def printf(l: Locale, format: String, args: Object*): PrintStream = ???
 
+    /** A convenience method to write a formatted string to this output stream
+     *  using the specified format string and arguments.
+     */
     @stub
-    // A convenience method to write a formatted string to this output stream
-    // using the specified format string and arguments.
     def printf(format: String, args: Object*): PrintStream = ???
 
+    /** Terminates the current line by writing the line separator string. */
     @stub
-    // Terminates the current line by writing the line separator string.
     def println(): Unit = ???
 
+    /** Prints a boolean and then terminate the line. */
     @stub
-    // Prints a boolean and then terminate the line.
     def println(x: Boolean): Unit = ???
 
+    /** Prints a character and then terminate the line. */
     @stub
-    // Prints a character and then terminate the line.
     def println(x: Char): Unit = ???
 
+    /** Prints an array of characters and then terminate the line. */
     @stub
-    // Prints an array of characters and then terminate the line.
     def println(x: Array[Char]): Unit = ???
 
+    /** Prints a double and then terminate the line. */
     @stub
-    // Prints a double and then terminate the line.
-    def println(x: double): Unit = ???
+    def println(x: Double): Unit = ???
 
+    /** Prints a float and then terminate the line. */
     @stub
-    // Prints a float and then terminate the line.
-    def println(x: float): Unit = ???
+    def println(x: Float): Unit = ???
 
+    /** Prints an integer and then terminate the line. */
     @stub
-    // Prints an integer and then terminate the line.
     def println(x: Int): Unit = ???
 
+    /** Prints a long and then terminate the line. */
     @stub
-    // Prints a long and then terminate the line.
     def println(x: Long): Unit = ???
 
+    /** Prints an Object and then terminate the line. */
     @stub
-    // Prints an Object and then terminate the line.
     def println(x: Object): Unit = ???
 
+    /** Prints a String and then terminate the line. */
     @stub
-    // Prints a String and then terminate the line.
     def println(x: String): Unit = ???
 
+    /** Sets the error state of the stream to true. */
     @stub
-    // Sets the error state of the stream to true.
     protected def setError(): Unit = ???
 
+    /** Writes len bytes from the specified byte array starting at
+     *  offset off to this stream.
+     */
     @stub
-    // Writes len bytes from the specified byte array starting at
-    // offset off to this stream.
     def write(buf: Array[Byte], off: Int, len: Int): Unit = ???
 }

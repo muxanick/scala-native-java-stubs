@@ -4,10 +4,10 @@ import java.io.IOException
 import java.lang.{Deprecated, Exception, Object, String, Throwable}
 import java.rmi.RemoteException
 
-// An obsolete subclass of ExportException.
+/** An obsolete subclass of ExportException. */
 @Deprecated class SocketSecurityException extends ExportException {
 
+    /** Deprecated.  */
     @stub
-    // Deprecated. 
     def this(s: String) = ???
 }

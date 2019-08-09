@@ -2,18 +2,18 @@ package javax.swing
 
 import java.lang.Object
 
-// A mutable version of ComboBoxModel.
+/** A mutable version of ComboBoxModel. */
 trait MutableComboBoxModel[E] extends ComboBoxModel[E] {
 
+    /** Adds an item at the end of the model. */
     @stub
-    // Adds an item at the end of the model.
     def addElement(item: E): Unit = ???
 
+    /** Adds an item at a specific index. */
     @stub
-    // Adds an item at a specific index.
     def insertElementAt(item: E, index: Int): Unit = ???
 
+    /** Removes an item from the model. */
     @stub
-    // Removes an item from the model.
     def removeElement(obj: Object): Unit = ???
 }

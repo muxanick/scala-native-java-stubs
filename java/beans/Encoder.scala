@@ -2,47 +2,50 @@ package java.beans
 
 import java.lang.{Class, Object}
 
-// An Encoder is a class which can be used to create
-// files or streams that encode the state of a collection of
-// JavaBeans in terms of their public APIs. The Encoder,
-// in conjunction with its persistence delegates, is responsible for
-// breaking the object graph down into a series of Statementss
-// and Expressions which can be used to create it.
-// A subclass typically provides a syntax for these expressions
-// using some human readable form - like Java source code or XML.
+/** An Encoder is a class which can be used to create
+ *  files or streams that encode the state of a collection of
+ *  JavaBeans in terms of their public APIs. The Encoder,
+ *  in conjunction with its persistence delegates, is responsible for
+ *  breaking the object graph down into a series of Statementss
+ *  and Expressions which can be used to create it.
+ *  A subclass typically provides a syntax for these expressions
+ *  using some human readable form - like Java source code or XML.
+ */
 class Encoder extends Object {
 
+    /** Returns a tentative value for oldInstance in
+     *  the environment created by this stream.
+     */
     @stub
-    // Returns a tentative value for oldInstance in
-    // the environment created by this stream.
     def get(oldInstance: Object): Object = ???
 
+    /** Gets the exception handler for this stream. */
     @stub
-    // Gets the exception handler for this stream.
     def getExceptionListener(): ExceptionListener = ???
 
+    /** Returns the persistence delegate for the given type. */
     @stub
-    // Returns the persistence delegate for the given type.
     def getPersistenceDelegate(type: Class[_]): PersistenceDelegate = ???
 
+    /** Removes the entry for this instance, returning the old entry. */
     @stub
-    // Removes the entry for this instance, returning the old entry.
     def remove(oldInstance: Object): Object = ???
 
+    /** Sets the exception handler for this stream to exceptionListener. */
     @stub
-    // Sets the exception handler for this stream to exceptionListener.
     def setExceptionListener(exceptionListener: ExceptionListener): Unit = ???
 
+    /** Associates the specified persistence delegate with the given type. */
     @stub
-    // Associates the specified persistence delegate with the given type.
     def setPersistenceDelegate(type: Class[_], delegate: PersistenceDelegate): Unit = ???
 
+    /** The implementation first checks to see if an
+     *  expression with this value has already been written.
+     */
     @stub
-    // The implementation first checks to see if an
-    // expression with this value has already been written.
     def writeExpression(oldExp: Expression): Unit = ???
 
+    /** Write the specified object to the output stream. */
     @stub
-    // Write the specified object to the output stream.
     protected def writeObject(o: Object): Unit = ???
 }

@@ -3,18 +3,18 @@ package javax.swing.plaf.basic
 import java.awt.event.{ComponentEvent, ComponentListener}
 import java.lang.Object
 
-// 
+/**  */
 protected class BasicInternalFrameUI.ComponentHandler extends Object with ComponentListener {
 
+    /** Invoked when the component has been made invisible. */
     @stub
-    // Invoked when the component has been made invisible.
     def componentHidden(e: ComponentEvent): Unit = ???
 
+    /** Invoked when the component's position changes. */
     @stub
-    // Invoked when the component's position changes.
     def componentMoved(e: ComponentEvent): Unit = ???
 
+    /** Invoked when a JInternalFrame's parent's size changes. */
     @stub
-    // Invoked when a JInternalFrame's parent's size changes.
     def componentResized(e: ComponentEvent): Unit = ???
 }

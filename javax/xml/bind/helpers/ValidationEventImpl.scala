@@ -3,47 +3,48 @@ package javax.xml.bind.helpers
 import java.lang.{Object, String, Throwable}
 import javax.xml.bind.{ValidationEvent, ValidationEventLocator}
 
-// Default implementation of the ValidationEvent interface.
-//
-// 
-// JAXB providers are allowed to use whatever class that implements
-// the ValidationEvent interface. This class is just provided for a
-// convenience.
+/** Default implementation of the ValidationEvent interface.
+ * 
+ *  
+ *  JAXB providers are allowed to use whatever class that implements
+ *  the ValidationEvent interface. This class is just provided for a
+ *  convenience.
+ */
 class ValidationEventImpl extends Object with ValidationEvent {
 
+    /** Create a new ValidationEventImpl. */
     @stub
-    // Create a new ValidationEventImpl.
     def this(_severity: Int, _message: String, _locator: ValidationEventLocator) = ???
 
+    /** Retrieve the linked exception for this warning/error. */
     @stub
-    // Retrieve the linked exception for this warning/error.
     def getLinkedException(): Throwable = ???
 
+    /** Retrieve the locator for this warning/error. */
     @stub
-    // Retrieve the locator for this warning/error.
     def getLocator(): ValidationEventLocator = ???
 
+    /** Retrieve the text message for this warning/error. */
     @stub
-    // Retrieve the text message for this warning/error.
     def getMessage(): String = ???
 
+    /** Retrieve the severity code for this warning/error. */
     @stub
-    // Retrieve the severity code for this warning/error.
     def getSeverity(): Int = ???
 
+    /** Set the linked exception field of this event. */
     @stub
-    // Set the linked exception field of this event.
     def setLinkedException(_linkedException: Throwable): Unit = ???
 
+    /** Set the locator object for this event. */
     @stub
-    // Set the locator object for this event.
     def setLocator(_locator: ValidationEventLocator): Unit = ???
 
+    /** Set the message field of this event. */
     @stub
-    // Set the message field of this event.
     def setMessage(_message: String): Unit = ???
 
+    /** Set the severity field of this event. */
     @stub
-    // Set the severity field of this event.
     def setSeverity(_severity: Int): Unit = ???
 }

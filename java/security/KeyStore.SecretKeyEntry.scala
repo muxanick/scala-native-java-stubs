@@ -4,19 +4,20 @@ import java.lang.Object
 import java.util.Set
 import javax.crypto.SecretKey
 
-// A KeyStore entry that holds a SecretKey.
-object final KeyStore.SecretKeyEntry extends Object with KeyStore.Entry {
+/** A KeyStore entry that holds a SecretKey. */
+final object KeyStore.SecretKeyEntry extends Object with KeyStore.Entry {
 
+    /** Constructs a SecretKeyEntry with a
+     *  SecretKey.
+     */
     @stub
-    // Constructs a SecretKeyEntry with a
-    // SecretKey.
     def SecretKeyEntry(secretKey: SecretKey) = ???
 
+    /** Retrieves the attributes associated with an entry. */
     @stub
-    // Retrieves the attributes associated with an entry.
     def getAttributes(): Set[KeyStore.Entry.Attribute] = ???
 
+    /** Gets the SecretKey from this entry. */
     @stub
-    // Gets the SecretKey from this entry.
     def getSecretKey(): SecretKey = ???
 }

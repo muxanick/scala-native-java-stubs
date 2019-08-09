@@ -8,416 +8,424 @@ import javax.swing.{JComponent, JSlider, Timer}
 import javax.swing.event.ChangeListener
 import javax.swing.plaf.{ComponentUI, SliderUI}
 
-// A Basic L&F implementation of SliderUI.
+/** A Basic L&F implementation of SliderUI. */
 class BasicSliderUI extends SliderUI {
 
+    /** As of Java 2 platform v1.3 this undocumented class is no longer used. */
     @stub
-    // As of Java 2 platform v1.3 this undocumented class is no longer used.
-    def BasicSliderUI.ActionScroller: class = ???
+    object ActionScroller extends BasicSliderUI.ActionScroller
 
+    /** Data model listener. */
     @stub
-    // Data model listener.
-    def BasicSliderUI.ChangeHandler: class = ???
+    object ChangeHandler extends BasicSliderUI.ChangeHandler
 
+    /** Listener for resizing events. */
     @stub
-    // Listener for resizing events.
-    def BasicSliderUI.ComponentHandler: class = ???
+    object ComponentHandler extends BasicSliderUI.ComponentHandler
 
+    /** Focus-change listener. */
     @stub
-    // Focus-change listener.
-    def BasicSliderUI.FocusHandler: class = ???
+    object FocusHandler extends BasicSliderUI.FocusHandler
 
+    /**  */
     @stub
-    // 
-    def BasicSliderUI.PropertyChangeHandler: class = ???
+    object PropertyChangeHandler extends BasicSliderUI.PropertyChangeHandler
 
+    /** Scroll-event listener. */
     @stub
-    // Scroll-event listener.
-    def BasicSliderUI.ScrollListener: class = ???
+    object ScrollListener extends BasicSliderUI.ScrollListener
 
+    /**  */
     @stub
-    // 
-    protected def changeListener: ChangeListener = ???
+    protected val changeListener: ChangeListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def componentListener: ComponentListener = ???
+    protected val componentListener: ComponentListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def contentRect: Rectangle = ???
+    protected val contentRect: Rectangle = ???
 
+    /**  */
     @stub
-    // 
-    protected def focusInsets: Insets = ???
+    protected val focusInsets: Insets = ???
 
+    /**  */
     @stub
-    // 
-    protected def focusListener: FocusListener = ???
+    protected val focusListener: FocusListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def focusRect: Rectangle = ???
+    protected val focusRect: Rectangle = ???
 
+    /**  */
     @stub
-    // 
-    protected def insetCache: Insets = ???
+    protected val insetCache: Insets = ???
 
+    /**  */
     @stub
-    // 
-    protected def labelRect: Rectangle = ???
+    protected val labelRect: Rectangle = ???
 
+    /**  */
     @stub
-    // 
-    protected def leftToRightCache: Boolean = ???
+    protected val leftToRightCache: Boolean = ???
 
+    /**  */
     @stub
-    // 
-    protected def propertyChangeListener: PropertyChangeListener = ???
+    protected val propertyChangeListener: PropertyChangeListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def scrollListener: BasicSliderUI.ScrollListener = ???
+    protected val scrollListener: BasicSliderUI.ScrollListener = ???
 
+    /**  */
     @stub
-    // 
-    protected def scrollTimer: Timer = ???
+    protected val scrollTimer: Timer = ???
 
+    /**  */
     @stub
-    // 
-    protected def slider: JSlider = ???
+    protected val slider: JSlider = ???
 
+    /**  */
     @stub
-    // 
-    protected def thumbRect: Rectangle = ???
+    protected val thumbRect: Rectangle = ???
 
+    /**  */
     @stub
-    // 
-    protected def tickRect: Rectangle = ???
+    protected val tickRect: Rectangle = ???
 
+    /**  */
     @stub
-    // 
-    protected def trackBuffer: Int = ???
+    protected val trackBuffer: Int = ???
 
+    /**  */
     @stub
-    // 
-    protected def trackListener: BasicSliderUI.TrackListener = ???
+    protected val trackListener: BasicSliderUI.TrackListener = ???
 
+    /**  */
     @stub
-    // 
     protected def calculateContentRect(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def calculateFocusRect(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def calculateGeometry(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def calculateLabelRect(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def calculateThumbLocation(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def calculateThumbSize(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def calculateTickRect(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def calculateTrackBuffer(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def calculateTrackRect(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def createChangeListener(slider: JSlider): ChangeListener = ???
 
+    /**  */
     @stub
-    // 
     protected def createComponentListener(slider: JSlider): ComponentListener = ???
 
+    /**  */
     @stub
-    // 
     protected def createFocusListener(slider: JSlider): FocusListener = ???
 
+    /**  */
     @stub
-    // 
     protected def createPropertyChangeListener(slider: JSlider): PropertyChangeListener = ???
 
+    /**  */
     @stub
-    // 
     protected def createScrollListener(slider: JSlider): BasicSliderUI.ScrollListener = ???
 
+    /**  */
     @stub
-    // 
     protected def createTrackListener(slider: JSlider): BasicSliderUI.TrackListener = ???
 
+    /**  */
     @stub
-    // 
     protected def drawInverted(): Boolean = ???
 
+    /** Returns the baseline. */
     @stub
-    // Returns the baseline.
     def getBaseline(c: JComponent, width: Int, height: Int): Int = ???
 
+    /** Returns an enum indicating how the baseline of the component
+     *  changes as the size changes.
+     */
     @stub
-    // Returns an enum indicating how the baseline of the component
-    // changes as the size changes.
     def getBaselineResizeBehavior(c: JComponent): Component.BaselineResizeBehavior = ???
 
+    /**  */
     @stub
-    // 
     protected def getFocusColor(): Color = ???
 
+    /**  */
     @stub
-    // 
     protected def getHeightOfHighValueLabel(): Int = ???
 
+    /**  */
     @stub
-    // 
     protected def getHeightOfLowValueLabel(): Int = ???
 
+    /**  */
     @stub
-    // 
     protected def getHeightOfTallestLabel(): Int = ???
 
+    /** Returns the biggest value that has an entry in the label table. */
     @stub
-    // Returns the biggest value that has an entry in the label table.
     protected def getHighestValue(): Integer = ???
 
+    /** Returns the label that corresponds to the lowest slider value in the label table. */
     @stub
-    // Returns the label that corresponds to the lowest slider value in the label table.
     protected def getHighestValueLabel(): Component = ???
 
+    /**  */
     @stub
-    // 
     protected def getHighlightColor(): Color = ???
 
+    /** Returns the smallest value that has an entry in the label table. */
     @stub
-    // Returns the smallest value that has an entry in the label table.
     protected def getLowestValue(): Integer = ???
 
+    /** Returns the label that corresponds to the highest slider value in the label table. */
     @stub
-    // Returns the label that corresponds to the highest slider value in the label table.
     protected def getLowestValueLabel(): Component = ???
 
+    /** Returns the specified component's maximum size appropriate for
+     *  the look and feel.
+     */
     @stub
-    // Returns the specified component's maximum size appropriate for
-    // the look and feel.
     def getMaximumSize(c: JComponent): Dimension = ???
 
+    /**  */
     @stub
-    // 
     def getMinimumHorizontalSize(): Dimension = ???
 
+    /** Returns the specified component's minimum size appropriate for
+     *  the look and feel.
+     */
     @stub
-    // Returns the specified component's minimum size appropriate for
-    // the look and feel.
     def getMinimumSize(c: JComponent): Dimension = ???
 
+    /**  */
     @stub
-    // 
     def getMinimumVerticalSize(): Dimension = ???
 
+    /**  */
     @stub
-    // 
     def getPreferredHorizontalSize(): Dimension = ???
 
+    /** Returns the specified component's preferred size appropriate for
+     *  the look and feel.
+     */
     @stub
-    // Returns the specified component's preferred size appropriate for
-    // the look and feel.
     def getPreferredSize(c: JComponent): Dimension = ???
 
+    /**  */
     @stub
-    // 
     def getPreferredVerticalSize(): Dimension = ???
 
+    /**  */
     @stub
-    // 
     protected def getShadowColor(): Color = ???
 
+    /**  */
     @stub
-    // 
     protected def getThumbSize(): Dimension = ???
 
+    /** Gets the height of the tick area for horizontal sliders and the width of the
+     *  tick area for vertical sliders.
+     */
     @stub
-    // Gets the height of the tick area for horizontal sliders and the width of the
-    // tick area for vertical sliders.
     protected def getTickLength(): Int = ???
 
+    /**  */
     @stub
-    // 
     protected def getWidthOfHighValueLabel(): Int = ???
 
+    /**  */
     @stub
-    // 
     protected def getWidthOfLowValueLabel(): Int = ???
 
+    /**  */
     @stub
-    // 
     protected def getWidthOfWidestLabel(): Int = ???
 
+    /**  */
     @stub
-    // 
     protected def installDefaults(slider: JSlider): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installKeyboardActions(slider: JSlider): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def installListeners(slider: JSlider): Unit = ???
 
+    /** Configures the specified component appropriately for the look and feel. */
     @stub
-    // Configures the specified component appropriately for the look and feel.
     def installUI(c: JComponent): Unit = ???
 
+    /** Returns true if the user is dragging the slider. */
     @stub
-    // Returns true if the user is dragging the slider.
     protected def isDragging(): Boolean = ???
 
+    /** Returns true if all the labels from the label table have the same
+     *  baseline.
+     */
     @stub
-    // Returns true if all the labels from the label table have the same
-    // baseline.
     protected def labelsHaveSameBaselines(): Boolean = ???
 
+    /** Paints the specified component appropriately for the look and feel. */
     @stub
-    // Paints the specified component appropriately for the look and feel.
     def paint(g: Graphics, c: JComponent): Unit = ???
 
+    /**  */
     @stub
-    // 
     def paintFocus(g: Graphics): Unit = ???
 
+    /** Called for every label in the label table. */
     @stub
-    // Called for every label in the label table.
     protected def paintHorizontalLabel(g: Graphics, value: Int, label: Component): Unit = ???
 
+    /**  */
     @stub
-    // 
     def paintLabels(g: Graphics): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def paintMajorTickForHorizSlider(g: Graphics, tickBounds: Rectangle, x: Int): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def paintMajorTickForVertSlider(g: Graphics, tickBounds: Rectangle, y: Int): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def paintMinorTickForHorizSlider(g: Graphics, tickBounds: Rectangle, x: Int): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def paintMinorTickForVertSlider(g: Graphics, tickBounds: Rectangle, y: Int): Unit = ???
 
+    /**  */
     @stub
-    // 
     def paintThumb(g: Graphics): Unit = ???
 
+    /**  */
     @stub
-    // 
     def paintTicks(g: Graphics): Unit = ???
 
+    /**  */
     @stub
-    // 
     def paintTrack(g: Graphics): Unit = ???
 
+    /** Called for every label in the label table. */
     @stub
-    // Called for every label in the label table.
     protected def paintVerticalLabel(g: Graphics, value: Int, label: Component): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def recalculateIfInsetsChanged(): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def recalculateIfOrientationChanged(): Unit = ???
 
+    /**  */
     @stub
-    // 
     def scrollByBlock(direction: Int): Unit = ???
 
+    /**  */
     @stub
-    // 
     def scrollByUnit(direction: Int): Unit = ???
 
+    /** This function is called when a mousePressed was detected in the track, not
+     *  in the thumb.
+     */
     @stub
-    // This function is called when a mousePressed was detected in the track, not
-    // in the thumb.
     protected def scrollDueToClickInTrack(dir: Int): Unit = ???
 
+    /**  */
     @stub
-    // 
     def setThumbLocation(x: Int, y: Int): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallDefaults(slider: JSlider): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallKeyboardActions(slider: JSlider): Unit = ???
 
+    /**  */
     @stub
-    // 
     protected def uninstallListeners(slider: JSlider): Unit = ???
 
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
     @stub
-    // Reverses configuration which was done on the specified component during
-    // installUI.
     def uninstallUI(c: JComponent): Unit = ???
 
+    /** Returns the value at the x position. */
     @stub
-    // Returns the value at the x position.
     def valueForXPosition(xPos: Int): Int = ???
 
+    /** Returns the value at the y position. */
     @stub
-    // Returns the value at the y position.
     def valueForYPosition(yPos: Int): Int = ???
 
+    /**  */
     @stub
-    // 
     protected def xPositionForValue(value: Int): Int = ???
 
+    /**  */
     @stub
-    // 
     protected def yPositionForValue(value: Int): Int = ???
 }
 
 object BasicSliderUI {
+    /**  */
     @stub
-    // 
-    def MAX_SCROLL: Int = ???
+    val MAX_SCROLL: Int = ???
 
+    /**  */
     @stub
-    // 
-    def MIN_SCROLL: Int = ???
+    val MIN_SCROLL: Int = ???
 
+    /**  */
     @stub
-    // 
-    def NEGATIVE_SCROLL: Int = ???
+    val NEGATIVE_SCROLL: Int = ???
 
+    /**  */
     @stub
-    // 
-    def POSITIVE_SCROLL: Int = ???
+    val POSITIVE_SCROLL: Int = ???
 
+    /**  */
     @stub
-    // 
     def createUI(b: JComponent): ComponentUI = ???
 }

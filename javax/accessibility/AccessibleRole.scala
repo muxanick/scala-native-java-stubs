@@ -2,300 +2,331 @@ package javax.accessibility
 
 import java.lang.Object
 
-// Class AccessibleRole determines the role of a component.  The role of a
-// component describes its generic function. (E.G.,
-// "push button," "table," or "list.")
-// The toDisplayString method allows you to obtain the localized string
-// for a locale independent key from a predefined ResourceBundle for the
-// keys defined in this class.
-// The constants in this class present a strongly typed enumeration
-// of common object roles.  A public constructor for this class has been
-// purposely omitted and applications should use one of the constants
-// from this class.  If the constants in this class are not sufficient
-// to describe the role of an object, a subclass should be generated
-// from this class and it should provide constants in a similar manner.
+/** Class AccessibleRole determines the role of a component.  The role of a
+ *  component describes its generic function. (E.G.,
+ *  "push button," "table," or "list.")
+ *  The toDisplayString method allows you to obtain the localized string
+ *  for a locale independent key from a predefined ResourceBundle for the
+ *  keys defined in this class.
+ *  The constants in this class present a strongly typed enumeration
+ *  of common object roles.  A public constructor for this class has been
+ *  purposely omitted and applications should use one of the constants
+ *  from this class.  If the constants in this class are not sufficient
+ *  to describe the role of an object, a subclass should be generated
+ *  from this class and it should provide constants in a similar manner.
+ */
 class AccessibleRole extends AccessibleBundle {
 }
 
 object AccessibleRole {
+    /** Object is used to alert the user about something. */
     @stub
-    // Object is used to alert the user about something.
-    def ALERT: AccessibleRole = ???
+    val ALERT: AccessibleRole = ???
 
+    /** An AWT component, but nothing else is known about it. */
     @stub
-    // An AWT component, but nothing else is known about it.
-    def AWT_COMPONENT: AccessibleRole = ???
+    val AWT_COMPONENT: AccessibleRole = ???
 
+    /** Object that can be drawn into and is used to trap
+     *  events.
+     */
     @stub
-    // Object that can be drawn into and is used to trap
-    // events.
-    def CANVAS: AccessibleRole = ???
+    val CANVAS: AccessibleRole = ???
 
+    /** A choice that can be checked or unchecked and provides a
+     *  separate indicator for the current state.
+     */
     @stub
-    // A choice that can be checked or unchecked and provides a
-    // separate indicator for the current state.
-    def CHECK_BOX: AccessibleRole = ???
+    val CHECK_BOX: AccessibleRole = ???
 
+    /** A specialized pane that lets the user choose a color. */
     @stub
-    // A specialized pane that lets the user choose a color.
-    def COLOR_CHOOSER: AccessibleRole = ???
+    val COLOR_CHOOSER: AccessibleRole = ???
 
+    /** The header for a column of data. */
     @stub
-    // The header for a column of data.
-    def COLUMN_HEADER: AccessibleRole = ???
+    val COLUMN_HEADER: AccessibleRole = ???
 
+    /** A list of choices the user can select from. */
     @stub
-    // A list of choices the user can select from.
-    def COMBO_BOX: AccessibleRole = ???
+    val COMBO_BOX: AccessibleRole = ???
 
+    /** A DATE_EDITOR is a component that allows users to edit
+     *  java.util.Date and java.util.Time objects
+     */
     @stub
-    // A DATE_EDITOR is a component that allows users to edit
-    // java.util.Date and java.util.Time objects
-    def DATE_EDITOR: AccessibleRole = ???
+    val DATE_EDITOR: AccessibleRole = ???
 
+    /** An iconified internal frame in a DESKTOP_PANE. */
     @stub
-    // An iconified internal frame in a DESKTOP_PANE.
-    def DESKTOP_ICON: AccessibleRole = ???
+    val DESKTOP_ICON: AccessibleRole = ???
 
+    /** A pane that supports internal frames and
+     *  iconified versions of those internal frames.
+     */
     @stub
-    // A pane that supports internal frames and
-    // iconified versions of those internal frames.
-    def DESKTOP_PANE: AccessibleRole = ???
+    val DESKTOP_PANE: AccessibleRole = ???
 
+    /** A top level window with title bar and a border. */
     @stub
-    // A top level window with title bar and a border.
-    def DIALOG: AccessibleRole = ???
+    val DIALOG: AccessibleRole = ???
 
+    /** A pane that allows the user to navigate through
+     *  and select the contents of a directory.
+     */
     @stub
-    // A pane that allows the user to navigate through
-    // and select the contents of a directory.
-    def DIRECTORY_PANE: AccessibleRole = ???
+    val DIRECTORY_PANE: AccessibleRole = ???
 
+    /** A role indicating the object acts as a formula for
+     *  calculating a value.
+     */
     @stub
-    // A role indicating the object acts as a formula for
-    // calculating a value.
-    def EDITBAR: AccessibleRole = ???
+    val EDITBAR: AccessibleRole = ???
 
+    /** A specialized dialog that displays the files in the directory
+     *  and lets the user select a file, browse a different directory,
+     *  or specify a filename.
+     */
     @stub
-    // A specialized dialog that displays the files in the directory
-    // and lets the user select a file, browse a different directory,
-    // or specify a filename.
-    def FILE_CHOOSER: AccessibleRole = ???
+    val FILE_CHOOSER: AccessibleRole = ???
 
+    /** An object that fills up space in a user interface. */
     @stub
-    // An object that fills up space in a user interface.
-    def FILLER: AccessibleRole = ???
+    val FILLER: AccessibleRole = ???
 
+    /** A FONT_CHOOSER is a component that lets the user pick various
+     *  attributes for fonts.
+     */
     @stub
-    // A FONT_CHOOSER is a component that lets the user pick various
-    // attributes for fonts.
-    def FONT_CHOOSER: AccessibleRole = ???
+    val FONT_CHOOSER: AccessibleRole = ???
 
+    /** A text footer */
     @stub
-    // A text footer
-    def FOOTER: AccessibleRole = ???
+    val FOOTER: AccessibleRole = ???
 
+    /** A top level window with a title bar, border, menu bar, etc. */
     @stub
-    // A top level window with a title bar, border, menu bar, etc.
-    def FRAME: AccessibleRole = ???
+    val FRAME: AccessibleRole = ???
 
+    /** A pane that is guaranteed to be painted on top
+     *  of all panes beneath it.
+     */
     @stub
-    // A pane that is guaranteed to be painted on top
-    // of all panes beneath it.
-    def GLASS_PANE: AccessibleRole = ???
+    val GLASS_PANE: AccessibleRole = ???
 
+    /** A GROUP_BOX is a simple container that contains a border
+     *  around it and contains components inside it.
+     */
     @stub
-    // A GROUP_BOX is a simple container that contains a border
-    // around it and contains components inside it.
-    def GROUP_BOX: AccessibleRole = ???
+    val GROUP_BOX: AccessibleRole = ???
 
+    /** A text header */
     @stub
-    // A text header
-    def HEADER: AccessibleRole = ???
+    val HEADER: AccessibleRole = ???
 
+    /** An object containing a collection of Accessibles that
+     *  together represents HTML content.
+     */
     @stub
-    // An object containing a collection of Accessibles that
-    // together represents HTML content.
-    def HTML_CONTAINER: AccessibleRole = ???
+    val HTML_CONTAINER: AccessibleRole = ???
 
+    /** A hypertext anchor */
     @stub
-    // A hypertext anchor
-    def HYPERLINK: AccessibleRole = ???
+    val HYPERLINK: AccessibleRole = ???
 
+    /** A small fixed size picture, typically used to decorate components. */
     @stub
-    // A small fixed size picture, typically used to decorate components.
-    def ICON: AccessibleRole = ???
+    val ICON: AccessibleRole = ???
 
+    /** A frame-like object that is clipped by a desktop pane. */
     @stub
-    // A frame-like object that is clipped by a desktop pane.
-    def INTERNAL_FRAME: AccessibleRole = ???
+    val INTERNAL_FRAME: AccessibleRole = ???
 
+    /** An object used to present an icon or short string in an interface. */
     @stub
-    // An object used to present an icon or short string in an interface.
-    def LABEL: AccessibleRole = ???
+    val LABEL: AccessibleRole = ???
 
+    /** A specialized pane that allows its children to be drawn in layers,
+     *  providing a form of stacking order.
+     */
     @stub
-    // A specialized pane that allows its children to be drawn in layers,
-    // providing a form of stacking order.
-    def LAYERED_PANE: AccessibleRole = ???
+    val LAYERED_PANE: AccessibleRole = ???
 
+    /** An object that presents a list of objects to the user and allows the
+     *  user to select one or more of them.
+     */
     @stub
-    // An object that presents a list of objects to the user and allows the
-    // user to select one or more of them.
-    def LIST: AccessibleRole = ???
+    val LIST: AccessibleRole = ???
 
+    /** An object that presents an element in a list. */
     @stub
-    // An object that presents an element in a list.
-    def LIST_ITEM: AccessibleRole = ???
+    val LIST_ITEM: AccessibleRole = ???
 
+    /** An object usually found inside a menu bar that contains a list
+     *  of actions the user can choose from.
+     */
     @stub
-    // An object usually found inside a menu bar that contains a list
-    // of actions the user can choose from.
-    def MENU: AccessibleRole = ???
+    val MENU: AccessibleRole = ???
 
+    /** An object usually drawn at the top of the primary dialog box of
+     *  an application that contains a list of menus the user can choose
+     *  from.
+     */
     @stub
-    // An object usually drawn at the top of the primary dialog box of
-    // an application that contains a list of menus the user can choose
-    // from.
-    def MENU_BAR: AccessibleRole = ???
+    val MENU_BAR: AccessibleRole = ???
 
+    /** An object usually contained in a menu that presents an action
+     *  the user can choose.
+     */
     @stub
-    // An object usually contained in a menu that presents an action
-    // the user can choose.
-    def MENU_ITEM: AccessibleRole = ???
+    val MENU_ITEM: AccessibleRole = ???
 
+    /** A specialized pane whose primary use is inside a DIALOG */
     @stub
-    // A specialized pane whose primary use is inside a DIALOG
-    def OPTION_PANE: AccessibleRole = ???
+    val OPTION_PANE: AccessibleRole = ???
 
+    /** An object that is a child of a page tab list. */
     @stub
-    // An object that is a child of a page tab list.
-    def PAGE_TAB: AccessibleRole = ???
+    val PAGE_TAB: AccessibleRole = ???
 
+    /** An object that presents a series of panels (or page tabs), one at a
+     *  time, through some mechanism provided by the object.
+     */
     @stub
-    // An object that presents a series of panels (or page tabs), one at a
-    // time, through some mechanism provided by the object.
-    def PAGE_TAB_LIST: AccessibleRole = ???
+    val PAGE_TAB_LIST: AccessibleRole = ???
 
+    /** A generic container that is often used to group objects. */
     @stub
-    // A generic container that is often used to group objects.
-    def PANEL: AccessibleRole = ???
+    val PANEL: AccessibleRole = ???
 
+    /** A text paragraph */
     @stub
-    // A text paragraph
-    def PARAGRAPH: AccessibleRole = ???
+    val PARAGRAPH: AccessibleRole = ???
 
+    /** A text object used for passwords, or other places where the
+     *  text contents is not shown visibly to the user
+     */
     @stub
-    // A text object used for passwords, or other places where the
-    // text contents is not shown visibly to the user
-    def PASSWORD_TEXT: AccessibleRole = ???
+    val PASSWORD_TEXT: AccessibleRole = ???
 
+    /** A temporary window that is usually used to offer the user a
+     *  list of choices, and then hides when the user selects one of
+     *  those choices.
+     */
     @stub
-    // A temporary window that is usually used to offer the user a
-    // list of choices, and then hides when the user selects one of
-    // those choices.
-    def POPUP_MENU: AccessibleRole = ???
+    val POPUP_MENU: AccessibleRole = ???
 
+    /** An object used to indicate how much of a task has been completed. */
     @stub
-    // An object used to indicate how much of a task has been completed.
-    def PROGRESS_BAR: AccessibleRole = ???
+    val PROGRESS_BAR: AccessibleRole = ???
 
+    /** A role indicating the object monitors the progress
+     *  of some operation.
+     */
     @stub
-    // A role indicating the object monitors the progress
-    // of some operation.
-    def PROGRESS_MONITOR: AccessibleRole = ???
+    val PROGRESS_MONITOR: AccessibleRole = ???
 
+    /** An object the user can manipulate to tell the application to do
+     *  something.
+     */
     @stub
-    // An object the user can manipulate to tell the application to do
-    // something.
-    def PUSH_BUTTON: AccessibleRole = ???
+    val PUSH_BUTTON: AccessibleRole = ???
 
+    /** A specialized check box that will cause other radio buttons in the
+     *  same group to become unchecked when this one is checked.
+     */
     @stub
-    // A specialized check box that will cause other radio buttons in the
-    // same group to become unchecked when this one is checked.
-    def RADIO_BUTTON: AccessibleRole = ???
+    val RADIO_BUTTON: AccessibleRole = ???
 
+    /** A specialized pane that has a glass pane and a layered pane as its
+     *  children.
+     */
     @stub
-    // A specialized pane that has a glass pane and a layered pane as its
-    // children.
-    def ROOT_PANE: AccessibleRole = ???
+    val ROOT_PANE: AccessibleRole = ???
 
+    /** The header for a row of data. */
     @stub
-    // The header for a row of data.
-    def ROW_HEADER: AccessibleRole = ???
+    val ROW_HEADER: AccessibleRole = ???
 
+    /** A ruler is an object used to measure distance */
     @stub
-    // A ruler is an object used to measure distance
-    def RULER: AccessibleRole = ???
+    val RULER: AccessibleRole = ???
 
+    /** An object usually used to allow a user to incrementally view a
+     *  large amount of data.
+     */
     @stub
-    // An object usually used to allow a user to incrementally view a
-    // large amount of data.
-    def SCROLL_BAR: AccessibleRole = ???
+    val SCROLL_BAR: AccessibleRole = ???
 
+    /** An object that allows a user to incrementally view a large amount
+     *  of information.
+     */
     @stub
-    // An object that allows a user to incrementally view a large amount
-    // of information.
-    def SCROLL_PANE: AccessibleRole = ???
+    val SCROLL_PANE: AccessibleRole = ???
 
+    /** An object usually contained in a menu to provide a visual
+     *  and logical separation of the contents in a menu.
+     */
     @stub
-    // An object usually contained in a menu to provide a visual
-    // and logical separation of the contents in a menu.
-    def SEPARATOR: AccessibleRole = ???
+    val SEPARATOR: AccessibleRole = ???
 
+    /** An object that allows the user to select from a bounded range. */
     @stub
-    // An object that allows the user to select from a bounded range.
-    def SLIDER: AccessibleRole = ???
+    val SLIDER: AccessibleRole = ???
 
+    /** A SPIN_BOX is a simple spinner component and its main use
+     *  is for simple numbers.
+     */
     @stub
-    // A SPIN_BOX is a simple spinner component and its main use
-    // is for simple numbers.
-    def SPIN_BOX: AccessibleRole = ???
+    val SPIN_BOX: AccessibleRole = ???
 
+    /** A specialized panel that presents two other panels at the same time. */
     @stub
-    // A specialized panel that presents two other panels at the same time.
-    def SPLIT_PANE: AccessibleRole = ???
+    val SPLIT_PANE: AccessibleRole = ???
 
+    /** A STATUS_BAR is an simple component that can contain
+     *  multiple labels of status information to the user.
+     */
     @stub
-    // A STATUS_BAR is an simple component that can contain
-    // multiple labels of status information to the user.
-    def STATUS_BAR: AccessibleRole = ???
+    val STATUS_BAR: AccessibleRole = ???
 
+    /** A Swing component, but nothing else is known about it. */
     @stub
-    // A Swing component, but nothing else is known about it.
-    def SWING_COMPONENT: AccessibleRole = ???
+    val SWING_COMPONENT: AccessibleRole = ???
 
+    /** An object used to present information in terms of rows and columns. */
     @stub
-    // An object used to present information in terms of rows and columns.
-    def TABLE: AccessibleRole = ???
+    val TABLE: AccessibleRole = ???
 
+    /** An object that presents text to the user. */
     @stub
-    // An object that presents text to the user.
-    def TEXT: AccessibleRole = ???
+    val TEXT: AccessibleRole = ???
 
+    /** A specialized push button that can be checked or unchecked, but
+     *  does not provide a separate indicator for the current state.
+     */
     @stub
-    // A specialized push button that can be checked or unchecked, but
-    // does not provide a separate indicator for the current state.
-    def TOGGLE_BUTTON: AccessibleRole = ???
+    val TOGGLE_BUTTON: AccessibleRole = ???
 
+    /** A bar or palette usually composed of push buttons or toggle buttons. */
     @stub
-    // A bar or palette usually composed of push buttons or toggle buttons.
-    def TOOL_BAR: AccessibleRole = ???
+    val TOOL_BAR: AccessibleRole = ???
 
+    /** An object that provides information about another object. */
     @stub
-    // An object that provides information about another object.
-    def TOOL_TIP: AccessibleRole = ???
+    val TOOL_TIP: AccessibleRole = ???
 
+    /** An object used to present hierarchical information to the user. */
     @stub
-    // An object used to present hierarchical information to the user.
-    def TREE: AccessibleRole = ???
+    val TREE: AccessibleRole = ???
 
+    /** The object contains some Accessible information, but its role is
+     *  not known.
+     */
     @stub
-    // The object contains some Accessible information, but its role is
-    // not known.
-    def UNKNOWN: AccessibleRole = ???
+    val UNKNOWN: AccessibleRole = ???
 
+    /** An object usually used in a scroll pane. */
     @stub
-    // An object usually used in a scroll pane.
-    def VIEWPORT: AccessibleRole = ???
+    val VIEWPORT: AccessibleRole = ???
 }

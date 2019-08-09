@@ -3,59 +3,63 @@ package javax.management.relation
 import java.io.Serializable
 import java.lang.{Object, String}
 
-// A RoleInfo object summarises a role in a relation type.
-//
-// The serialVersionUID of this class is 2504952983494636987L.
+/** A RoleInfo object summarises a role in a relation type.
+ * 
+ *  The serialVersionUID of this class is 2504952983494636987L.
+ */
 class RoleInfo extends Object with Serializable {
 
+    /** Copy constructor. */
     @stub
-    // Copy constructor.
     def this(roleInfo: RoleInfo) = ???
 
+    /** Constructor. */
     @stub
-    // Constructor.
     def this(roleName: String, mbeanClassName: String) = ???
 
+    /** Constructor. */
     @stub
-    // Constructor.
     def this(roleName: String, mbeanClassName: String, read: Boolean, write: Boolean) = ???
 
+    /** Returns true if the value parameter is lower than or equal to
+     *  the expected maximum degree, false otherwise.
+     */
     @stub
-    // Returns true if the value parameter is lower than or equal to
-    // the expected maximum degree, false otherwise.
     def checkMaxDegree(value: Int): Boolean = ???
 
+    /** Returns true if the value parameter is greater than or equal to
+     *  the expected minimum degree, false otherwise.
+     */
     @stub
-    // Returns true if the value parameter is greater than or equal to
-    // the expected minimum degree, false otherwise.
     def checkMinDegree(value: Int): Boolean = ???
 
+    /** Returns description text for the role. */
     @stub
-    // Returns description text for the role.
     def getDescription(): String = ???
 
+    /** Returns maximum degree for corresponding role reference. */
     @stub
-    // Returns maximum degree for corresponding role reference.
     def getMaxDegree(): Int = ???
 
+    /** Returns minimum degree for corresponding role reference. */
     @stub
-    // Returns minimum degree for corresponding role reference.
     def getMinDegree(): Int = ???
 
+    /** Returns the name of the role. */
     @stub
-    // Returns the name of the role.
     def getName(): String = ???
 
+    /** Returns name of type of MBean expected to be referenced in
+     *  corresponding role.
+     */
     @stub
-    // Returns name of type of MBean expected to be referenced in
-    // corresponding role.
     def getRefMBeanClassName(): String = ???
 
+    /** Returns read access mode for the role (true if it is readable). */
     @stub
-    // Returns read access mode for the role (true if it is readable).
     def isReadable(): Boolean = ???
 
+    /** Returns write access mode for the role (true if it is writable). */
     @stub
-    // Returns write access mode for the role (true if it is writable).
     def isWritable(): Boolean = ???
 }

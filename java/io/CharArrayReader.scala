@@ -2,53 +2,56 @@ package java.io
 
 import java.lang.Object
 
-// This class implements a character buffer that can be used as a
-// character-input stream.
+/** This class implements a character buffer that can be used as a
+ *  character-input stream.
+ */
 class CharArrayReader extends Reader {
 
+    /** Creates a CharArrayReader from the specified array of chars. */
     @stub
-    // Creates a CharArrayReader from the specified array of chars.
     def this(buf: Array[Char]) = ???
 
+    /** The character buffer. */
     @stub
-    // The character buffer.
-    protected def buf: Array[Char] = ???
+    protected val buf: Array[Char] = ???
 
+    /** The index of the end of this buffer. */
     @stub
-    // The index of the end of this buffer.
-    protected def count: Int = ???
+    protected val count: Int = ???
 
+    /** The position of mark in buffer. */
     @stub
-    // The position of mark in buffer.
-    protected def markedPos: Int = ???
+    protected val markedPos: Int = ???
 
+    /** Closes the stream and releases any system resources associated with
+     *  it.
+     */
     @stub
-    // Closes the stream and releases any system resources associated with
-    // it.
     def close(): Unit = ???
 
+    /** Marks the present position in the stream. */
     @stub
-    // Marks the present position in the stream.
     def mark(readAheadLimit: Int): Unit = ???
 
+    /** Tells whether this stream supports the mark() operation, which it does. */
     @stub
-    // Tells whether this stream supports the mark() operation, which it does.
     def markSupported(): Boolean = ???
 
+    /** Reads a single character. */
     @stub
-    // Reads a single character.
     def read(): Int = ???
 
+    /** Reads characters into a portion of an array. */
     @stub
-    // Reads characters into a portion of an array.
     def read(b: Array[Char], off: Int, len: Int): Int = ???
 
+    /** Tells whether this stream is ready to be read. */
     @stub
-    // Tells whether this stream is ready to be read.
     def ready(): Boolean = ???
 
+    /** Resets the stream to the most recent mark, or to the beginning if it has
+     *  never been marked.
+     */
     @stub
-    // Resets the stream to the most recent mark, or to the beginning if it has
-    // never been marked.
     def reset(): Unit = ???
 }

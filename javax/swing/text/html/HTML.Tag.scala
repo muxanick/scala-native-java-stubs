@@ -2,338 +2,343 @@ package javax.swing.text.html
 
 import java.lang.{Object, String}
 
-// Typesafe enumeration for an HTML tag.  Although the
-// set of HTML tags is a closed set, we have left the
-// set open so that people can add their own tag types
-// to their custom parser and still communicate to the
-// reader.
+/** Typesafe enumeration for an HTML tag.  Although the
+ *  set of HTML tags is a closed set, we have left the
+ *  set open so that people can add their own tag types
+ *  to their custom parser and still communicate to the
+ *  reader.
+ */
 object HTML.Tag extends Object {
 
+    /**  */
     @stub
-    // 
     def Tag() = ???
 
+    /** Creates a new Tag with the specified id,
+     *  and with causesBreak and isBlock
+     *  set to false.
+     */
     @stub
-    // Creates a new Tag with the specified id,
-    // and with causesBreak and isBlock
-    // set to false.
     protected def Tag(id: String) = ???
 
+    /**  */
     @stub
-    // 
-    def A: HTML.Tag = ???
+    val A: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def ADDRESS: HTML.Tag = ???
+    val ADDRESS: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def APPLET: HTML.Tag = ???
+    val APPLET: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def AREA: HTML.Tag = ???
+    val AREA: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def B: HTML.Tag = ???
+    val B: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def BASE: HTML.Tag = ???
+    val BASE: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def BASEFONT: HTML.Tag = ???
+    val BASEFONT: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def BIG: HTML.Tag = ???
+    val BIG: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def BLOCKQUOTE: HTML.Tag = ???
+    val BLOCKQUOTE: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def BODY: HTML.Tag = ???
+    val BODY: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def BR: HTML.Tag = ???
+    val BR: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def CAPTION: HTML.Tag = ???
+    val CAPTION: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def CENTER: HTML.Tag = ???
+    val CENTER: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def CITE: HTML.Tag = ???
+    val CITE: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def CODE: HTML.Tag = ???
+    val CODE: HTML.Tag = ???
 
+    /** All comments are labeled with this tag. */
     @stub
-    // All comments are labeled with this tag.
-    def COMMENT: HTML.Tag = ???
+    val COMMENT: HTML.Tag = ???
 
+    /** All text content is labeled with this tag. */
     @stub
-    // All text content is labeled with this tag.
-    def CONTENT: HTML.Tag = ???
+    val CONTENT: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def DD: HTML.Tag = ???
+    val DD: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def DFN: HTML.Tag = ???
+    val DFN: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def DIR: HTML.Tag = ???
+    val DIR: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def DIV: HTML.Tag = ???
+    val DIV: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def DL: HTML.Tag = ???
+    val DL: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def DT: HTML.Tag = ???
+    val DT: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def EM: HTML.Tag = ???
+    val EM: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def FONT: HTML.Tag = ???
+    val FONT: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def FORM: HTML.Tag = ???
+    val FORM: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def FRAME: HTML.Tag = ???
+    val FRAME: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def FRAMESET: HTML.Tag = ???
+    val FRAMESET: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def H1: HTML.Tag = ???
+    val H1: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def H2: HTML.Tag = ???
+    val H2: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def H3: HTML.Tag = ???
+    val H3: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def H4: HTML.Tag = ???
+    val H4: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def H5: HTML.Tag = ???
+    val H5: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def H6: HTML.Tag = ???
+    val H6: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def HEAD: HTML.Tag = ???
+    val HEAD: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def HR: HTML.Tag = ???
+    val HR: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def HTML: HTML.Tag = ???
+    val HTML: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def I: HTML.Tag = ???
+    val I: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def IMG: HTML.Tag = ???
+    val IMG: HTML.Tag = ???
 
+    /** All text content must be in a paragraph element. */
     @stub
-    // All text content must be in a paragraph element.
-    def IMPLIED: HTML.Tag = ???
+    val IMPLIED: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def INPUT: HTML.Tag = ???
+    val INPUT: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def ISINDEX: HTML.Tag = ???
+    val ISINDEX: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def KBD: HTML.Tag = ???
+    val KBD: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def LI: HTML.Tag = ???
+    val LI: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def LINK: HTML.Tag = ???
+    val LINK: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def MAP: HTML.Tag = ???
+    val MAP: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def MENU: HTML.Tag = ???
+    val MENU: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def META: HTML.Tag = ???
+    val META: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def NOFRAMES: HTML.Tag = ???
+    val NOFRAMES: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def OBJECT: HTML.Tag = ???
+    val OBJECT: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def OL: HTML.Tag = ???
+    val OL: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def OPTION: HTML.Tag = ???
+    val OPTION: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def P: HTML.Tag = ???
+    val P: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def PARAM: HTML.Tag = ???
+    val PARAM: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def PRE: HTML.Tag = ???
+    val PRE: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def S: HTML.Tag = ???
+    val S: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def SAMP: HTML.Tag = ???
+    val SAMP: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def SCRIPT: HTML.Tag = ???
+    val SCRIPT: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def SELECT: HTML.Tag = ???
+    val SELECT: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def SMALL: HTML.Tag = ???
+    val SMALL: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def SPAN: HTML.Tag = ???
+    val SPAN: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def STRIKE: HTML.Tag = ???
+    val STRIKE: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def STRONG: HTML.Tag = ???
+    val STRONG: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def STYLE: HTML.Tag = ???
+    val STYLE: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def SUB: HTML.Tag = ???
+    val SUB: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def SUP: HTML.Tag = ???
+    val SUP: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def TABLE: HTML.Tag = ???
+    val TABLE: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def TD: HTML.Tag = ???
+    val TD: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def TEXTAREA: HTML.Tag = ???
+    val TEXTAREA: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def TH: HTML.Tag = ???
+    val TH: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def TITLE: HTML.Tag = ???
+    val TITLE: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def TR: HTML.Tag = ???
+    val TR: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def TT: HTML.Tag = ???
+    val TT: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def U: HTML.Tag = ???
+    val U: HTML.Tag = ???
 
+    /**  */
     @stub
-    // 
-    def UL: HTML.Tag = ???
+    val UL: HTML.Tag = ???
 
+    /** Returns true if this tag causes a
+     *  line break to the flow of data, otherwise returns
+     *  false.
+     */
     @stub
-    // Returns true if this tag causes a
-    // line break to the flow of data, otherwise returns
-    // false.
     def breaksFlow(): Boolean = ???
 
+    /** Returns true if this tag is a block
+     *  tag, which is a tag used to add structure to a
+     *  document.
+     */
     @stub
-    // Returns true if this tag is a block
-    // tag, which is a tag used to add structure to a
-    // document.
     def isBlock(): Boolean = ???
 
+    /** Returns true if this tag is pre-formatted,
+     *  which is true if the tag is either PRE or
+     *  TEXTAREA.
+     */
     @stub
-    // Returns true if this tag is pre-formatted,
-    // which is true if the tag is either PRE or
-    // TEXTAREA.
     def isPreformatted(): Boolean = ???
 }

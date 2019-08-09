@@ -4,26 +4,26 @@ import java.lang.{Object, String}
 import java.security.spec.AlgorithmParameterSpec
 import javax.security.auth.Destroyable
 
-// A password-based implementation of ProtectionParameter.
-object KeyStore.PasswordProtection extends Object with KeyStore.ProtectionParameter, with Destroyable {
+/** A password-based implementation of ProtectionParameter. */
+object KeyStore.PasswordProtection extends Object with KeyStore.ProtectionParameter with Destroyable {
 
+    /** Creates a password parameter. */
     @stub
-    // Creates a password parameter.
     def PasswordProtection(password: Array[Char]) = ???
 
+    /** Clears the password. */
     @stub
-    // Clears the password.
     def destroy(): Unit = ???
 
+    /** Gets the password. */
     @stub
-    // Gets the password.
     def getPassword(): Array[Char] = ???
 
+    /** Gets the name of the protection algorithm. */
     @stub
-    // Gets the name of the protection algorithm.
     def getProtectionAlgorithm(): String = ???
 
+    /** Gets the parameters supplied for the protection algorithm. */
     @stub
-    // Gets the parameters supplied for the protection algorithm.
     def getProtectionParameters(): AlgorithmParameterSpec = ???
 }

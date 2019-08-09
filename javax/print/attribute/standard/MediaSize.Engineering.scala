@@ -2,23 +2,24 @@ package javax.print.attribute.standard
 
 import java.lang.Object
 
-// Class MediaSize.Engineering includes MediaSize values
-// for engineering media.
-object final MediaSize.Engineering extends Object {
+/** Class MediaSize.Engineering includes MediaSize values
+ *  for engineering media.
+ */
+final object MediaSize.Engineering extends Object {
 
+    /** Specifies the engineering A size, 8.5 inch by 11 inch. */
     @stub
-    // Specifies the engineering A size, 8.5 inch by 11 inch.
-    def A: MediaSize = ???
+    val A: MediaSize = ???
 
+    /** Specifies the engineering B size, 11 inch by 17 inch. */
     @stub
-    // Specifies the engineering B size, 11 inch by 17 inch.
-    def B: MediaSize = ???
+    val B: MediaSize = ???
 
+    /** Specifies the engineering C size, 17 inch by 22 inch. */
     @stub
-    // Specifies the engineering C size, 17 inch by 22 inch.
-    def C: MediaSize = ???
+    val C: MediaSize = ???
 
+    /** Specifies the engineering D size, 22 inch by 34 inch. */
     @stub
-    // Specifies the engineering D size, 22 inch by 34 inch.
-    def D: MediaSize = ???
+    val D: MediaSize = ???
 }
