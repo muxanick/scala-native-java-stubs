@@ -1,0 +1,104 @@
+package javax.swing.event
+
+import java.lang.Object
+import java.util.EventObject
+import javax.swing.table.TableModel
+
+// TableModelEvent is used to notify listeners that a table model
+// has changed. The model event describes changes to a TableModel
+// and all references to rows and columns are in the co-ordinate
+// system of the model.
+// Depending on the parameters used in the constructors, the TableModelevent
+// can be used to specify the following types of changes:
+//
+// 
+// TableModelEvent(source);              //  The data, ie. all rows changed
+// TableModelEvent(source, HEADER_ROW);  //  Structure change, reallocate TableColumns
+// TableModelEvent(source, 1);           //  Row 1 changed
+// TableModelEvent(source, 3, 6);        //  Rows 3 to 6 inclusive changed
+// TableModelEvent(source, 2, 2, 6);     //  Cell at (2, 6) changed
+// TableModelEvent(source, 3, 6, ALL_COLUMNS, INSERT); // Rows (3, 6) were inserted
+// TableModelEvent(source, 3, 6, ALL_COLUMNS, DELETE); // Rows (3, 6) were deleted
+// 
+//
+// It is possible to use other combinations of the parameters, not all of them
+// are meaningful. By subclassing, you can add other information, for example:
+// whether the event WILL happen or DID happen. This makes the specification
+// of rows in DELETE events more useful but has not been included in
+// the swing package as the JTable only needs post-event notification.
+// 
+// Warning:
+// Serialized objects of this class will not be compatible with
+// future Swing releases. The current serialization support is
+// appropriate for short term storage or RMI between applications running
+// the same version of Swing.  As of 1.4, support for long term storage
+// of all JavaBeans™
+// has been added to the java.beans package.
+// Please see XMLEncoder.
+class TableModelEvent extends EventObject {
+
+    @stub
+    // All row data in the table has changed, listeners should discard any state
+    //  that was based on the rows and requery the TableModel
+    //  to get the new row count and all the appropriate values.
+    def this(source: TableModel) = ???
+
+    @stub
+    // This row of data has been updated.
+    def this(source: TableModel, row: Int) = ???
+
+    @stub
+    // The data in rows [firstRow, lastRow] have been updated.
+    def this(source: TableModel, firstRow: Int, lastRow: Int) = ???
+
+    @stub
+    // The cells in column column in the range
+    //  [firstRow, lastRow] have been updated.
+    def this(source: TableModel, firstRow: Int, lastRow: Int, column: Int) = ???
+
+    @stub
+    // 
+    protected def column: Int = ???
+
+    @stub
+    // 
+    protected def firstRow: Int = ???
+
+    @stub
+    // 
+    protected def lastRow: Int = ???
+
+    @stub
+    // 
+    protected def type: Int = ???
+
+    @stub
+    // Returns the column for the event.
+    def getColumn(): Int = ???
+
+    @stub
+    // Returns the first row that changed.
+    def getFirstRow(): Int = ???
+
+    @stub
+    // Returns the last row that changed.
+    def getLastRow(): Int = ???
+}
+
+object TableModelEvent {
+    @stub
+    // Specifies all columns in a row or rows.
+    def ALL_COLUMNS: Int = ???
+
+    @stub
+    // Identifies the removal of rows or columns.
+    def DELETE: Int = ???
+
+    @stub
+    // Identifies the header row.
+    def HEADER_ROW: Int = ???
+
+    @stub
+    // Identifies the addition of new rows or columns.
+    def INSERT: Int = ???
+}
