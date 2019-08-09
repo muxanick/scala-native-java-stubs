@@ -1,8 +1,9 @@
 package java.nio.file.attribute
 
-import java.lang.{Comparable, Object}
+import java.lang.{Comparable, Object, String}
 import java.time.Instant
 import java.util.concurrent.TimeUnit
+import scala.scalanative.annotation.stub
 
 /** Represents the value of a file's time stamp attribute. For example, it may
  *  represent the time that the file was last
@@ -37,6 +38,10 @@ final class FileTime extends Object with Comparable[FileTime] {
     /** Returns the value in milliseconds. */
     @stub
     def toMillis(): Long = ???
+
+    /** Returns the string representation of this FileTime. */
+    @stub
+    def toString(): String = ???
 }
 
 object FileTime {

@@ -2,6 +2,7 @@ package java.lang
 
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** An informative annotation type used to indicate that an interface
  *  type declaration is intended to be a functional interface as

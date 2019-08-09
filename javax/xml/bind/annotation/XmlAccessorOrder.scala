@@ -2,6 +2,7 @@ package javax.xml.bind.annotation
 
 import java.lang.annotation.{ElementType, Inherited, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /**  Controls the ordering of fields and properties in a class. 
  * 
@@ -42,4 +43,8 @@ import scala.annotation.StaticAnnotation
 @Retention ( value = RUNTIME ) 
 @Target ( value ={ PACKAGE , TYPE } ) 
  final class XmlAccessorOrder extends StaticAnnotation {
+
+    /**  */
+    @stub
+    val value: XmlAccessOrder = ???
 }

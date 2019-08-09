@@ -1,7 +1,8 @@
 package javax.swing
 
 import java.awt.Component
-import java.awt.event.KeyEvent
+import java.awt.event.{KeyEvent, MouseEvent}
+import scala.scalanative.annotation.stub
 
 /** Any component that can be placed into a menu should implement this interface.
  *  This interface is used by MenuSelectionManager
@@ -27,4 +28,8 @@ trait MenuElement {
     /** Process a key event. */
     @stub
     def processKeyEvent(event: KeyEvent, path: Array[MenuElement], manager: MenuSelectionManager): Unit = ???
+
+    /** Processes a mouse event. */
+    @stub
+    def processMouseEvent(event: MouseEvent, path: Array[MenuElement], manager: MenuSelectionManager): Unit = ???
 }

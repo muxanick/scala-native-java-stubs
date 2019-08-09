@@ -2,6 +2,7 @@ package javax.crypto
 
 import java.lang.{Class, Object}
 import java.security.spec.KeySpec
+import scala.scalanative.annotation.stub
 
 /** This class defines the Service Provider Interface (SPI)
  *  for the SecretKeyFactory class.
@@ -19,6 +20,10 @@ import java.security.spec.KeySpec
  */
 abstract class SecretKeyFactorySpi extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Generates a SecretKey object from the
      *  provided key specification (key material).
      */
@@ -28,4 +33,10 @@ abstract class SecretKeyFactorySpi extends Object {
      *  object in the requested format.
      */
     protected def engineGetKeySpec(key: SecretKey, keySpec: Class[_]): KeySpec
+
+    /** Translates a key object, whose provider may be unknown or
+     *  potentially untrusted, into a corresponding key object of this
+     *  secret-key factory.
+     */
+    protected def engineTranslateKey(key: SecretKey): SecretKey
 }

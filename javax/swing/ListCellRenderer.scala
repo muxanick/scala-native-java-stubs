@@ -1,5 +1,8 @@
 package javax.swing
 
+import java.awt.Component
+import scala.scalanative.annotation.stub
+
 /** Identifies components that can be used as "rubber stamps" to paint
  *  the cells in a JList.  For example, to use a JLabel as a
  *  ListCellRenderer, you would write something like this:
@@ -51,4 +54,10 @@ package javax.swing
  *  
  */
 trait ListCellRenderer[E] {
+
+    /** Return a component that has been configured to display the specified
+     *  value.
+     */
+    @stub
+    def getListCellRendererComponent(list: JList[_ <: E], value: E, index: Int, isSelected: Boolean, cellHasFocus: Boolean): Component = ???
 }

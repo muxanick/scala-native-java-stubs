@@ -3,6 +3,7 @@ package javax.crypto
 import java.lang.{Class, Object, String}
 import java.security.Provider
 import java.security.spec.KeySpec
+import scala.scalanative.annotation.stub
 
 /** This class represents a factory for secret keys.
  * 
@@ -41,6 +42,10 @@ import java.security.spec.KeySpec
  */
 class SecretKeyFactory extends Object {
 
+    /** Creates a SecretKeyFactory object. */
+    @stub
+    protected def this(keyFacSpi: SecretKeyFactorySpi, provider: Provider, algorithm: String) = ???
+
     /** Generates a SecretKey object from the provided key
      *  specification (key material).
      */
@@ -60,6 +65,12 @@ class SecretKeyFactory extends Object {
     /** Returns the provider of this SecretKeyFactory object. */
     @stub
     def getProvider(): Provider = ???
+
+    /** Translates a key object, whose provider may be unknown or potentially
+     *  untrusted, into a corresponding key object of this secret-key factory.
+     */
+    @stub
+    def translateKey(key: SecretKey): SecretKey = ???
 }
 
 object SecretKeyFactory {

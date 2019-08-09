@@ -2,6 +2,7 @@ package javax.security.auth
 
 import java.lang.Object
 import java.security.{CodeSource, PermissionCollection}
+import scala.scalanative.annotation.stub
 
 /** 
  *       public ProtectionDomain
@@ -12,6 +13,10 @@ import java.security.{CodeSource, PermissionCollection}
  *  
  */
 PermissionCollection getPermissions ( java.security.ProtectionDomain pd ) {
+
+    /** Deprecated.  */
+    @stub
+    protected def this() = ???
 
     /** Deprecated.  */
     @stub
@@ -26,4 +31,8 @@ object Policy {
     /** Deprecated.  */
     @stub
     def getPolicy(): Policy = ???
+
+    /** Deprecated.  */
+    @stub
+    def setPolicy(policy: Policy): Unit = ???
 }

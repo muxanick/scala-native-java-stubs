@@ -1,6 +1,7 @@
 package javax.management.loading
 
 import java.lang.{Class, ClassLoader, String}
+import scala.scalanative.annotation.stub
 
 /** Instances of this interface are used to keep the list of ClassLoaders
  *  registered in an MBean Server.
@@ -37,4 +38,10 @@ trait ClassLoaderRepository {
      */
     @stub
     def loadClassBefore(stop: ClassLoader, className: String): Class[_] = ???
+
+    /** Load the given class name through the list of class loaders,
+     *  excluding the given one.
+     */
+    @stub
+    def loadClassWithout(exclude: ClassLoader, className: String): Class[_] = ???
 }

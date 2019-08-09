@@ -2,6 +2,7 @@ package java.util.concurrent
 
 import java.lang.{Runnable, Throwable, Void}
 import java.util.function.{BiConsumer, BiFunction, Consumer, Function}
+import scala.scalanative.annotation.stub
 
 /** A stage of a possibly asynchronous computation, that performs an
  *  action or computes a value when another CompletionStage completes.
@@ -345,4 +346,11 @@ trait CompletionStage[T] {
      */
     @stub
     def whenCompleteAsync(action: BiConsumer[_ >: T, _ >: Throwable]): CompletionStage[T] = ???
+
+    /** Returns a new CompletionStage with the same result or exception as
+     *  this stage, that executes the given action using the supplied
+     *  Executor when this stage completes.
+     */
+    @stub
+    def whenCompleteAsync(action: BiConsumer[_ >: T, _ >: Throwable], executor: Executor): CompletionStage[T] = ???
 }

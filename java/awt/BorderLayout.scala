@@ -2,6 +2,7 @@ package java.awt
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A border layout lays out a container, arranging and resizing
  *  its components to fit in five regions:
@@ -96,6 +97,12 @@ class BorderLayout extends Object with LayoutManager2 with Serializable {
     @stub
     def this() = ???
 
+    /** Constructs a border layout with the specified gaps
+     *  between components.
+     */
+    @stub
+    def this(hgap: Int, vgap: Int) = ???
+
     /** Adds the specified component to the layout, using the specified
      *  constraint object.
      */
@@ -179,6 +186,10 @@ class BorderLayout extends Object with LayoutManager2 with Serializable {
     /** Sets the vertical gap between components. */
     @stub
     def setVgap(vgap: Int): Unit = ???
+
+    /** Returns a string representation of the state of this border layout. */
+    @stub
+    def toString(): String = ???
 }
 
 object BorderLayout {
@@ -233,4 +244,8 @@ object BorderLayout {
     /** The south layout constraint (bottom of container). */
     @stub
     val SOUTH: String = ???
+
+    /** The west layout constraint (left side of container). */
+    @stub
+    val WEST: String = ???
 }

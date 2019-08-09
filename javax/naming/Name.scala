@@ -3,6 +3,7 @@ package javax.naming
 import java.io.Serializable
 import java.lang.{Cloneable, Comparable, Object, String}
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** The Name interface represents a generic name -- an ordered
  *  sequence of components.  It can be a composite name (names that
@@ -90,4 +91,17 @@ trait Name extends Cloneable with Serializable with Comparable[Object] {
     /** Returns the number of components in this name. */
     @stub
     def size(): Int = ???
+
+    /** Determines whether this name starts with a specified prefix. */
+    @stub
+    def startsWith(n: Name): Boolean = ???
+}
+
+object Name {
+    /** The class fingerprint that is set to indicate
+     *  serialization compatibility with a previous
+     *  version of the class.
+     */
+    @stub
+    val serialVersionUID: Long = ???
 }

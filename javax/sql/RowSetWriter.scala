@@ -1,5 +1,7 @@
 package javax.sql
 
+import scala.scalanative.annotation.stub
+
 /** An object that implements the RowSetWriter interface,
  *  called a writer. A writer may be registered with a RowSet
  *  object that supports the reader/writer paradigm.
@@ -16,4 +18,10 @@ package javax.sql
  *  or limiting conflicts depends entirely on its implementation.
  */
 trait RowSetWriter {
+
+    /** Writes the changes in this RowSetWriter object's
+     *  rowset back to the data source from which it got its data.
+     */
+    @stub
+    def writeData(caller: RowSetInternal): Boolean = ???
 }

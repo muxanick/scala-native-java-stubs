@@ -1,6 +1,7 @@
 package java.lang.ref
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Abstract base class for reference objects.  This class defines the
  *  operations common to all reference objects.  Because reference objects are
@@ -19,4 +20,9 @@ abstract class Reference[T] extends Object {
 
     /** Returns this reference object's referent. */
     def get(): T
+
+    /** Tells whether or not this reference object has been enqueued, either by
+     *  the program or by the garbage collector.
+     */
+    def isEnqueued(): Boolean
 }

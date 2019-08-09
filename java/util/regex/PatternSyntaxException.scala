@@ -1,11 +1,16 @@
 package java.util.regex
 
 import java.lang.{Exception, IllegalArgumentException, Object, RuntimeException, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Unchecked exception thrown to indicate a syntax error in a
  *  regular-expression pattern.
  */
 class PatternSyntaxException extends IllegalArgumentException {
+
+    /** Constructs a new instance of this class. */
+    @stub
+    def this(desc: String, regex: String, index: Int) = ???
 
     /** Retrieves the description of the error. */
     @stub
@@ -21,4 +26,8 @@ class PatternSyntaxException extends IllegalArgumentException {
      */
     @stub
     def getMessage(): String = ???
+
+    /** Retrieves the erroneous regular-expression pattern. */
+    @stub
+    def getPattern(): String = ???
 }

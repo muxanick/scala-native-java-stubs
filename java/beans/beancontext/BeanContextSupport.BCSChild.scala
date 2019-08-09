@@ -2,6 +2,7 @@ package java.beans.beancontext
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** 
  * See Also:

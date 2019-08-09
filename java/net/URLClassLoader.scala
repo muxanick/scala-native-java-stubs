@@ -5,6 +5,7 @@ import java.lang.{Class, ClassLoader, Object, Package, String}
 import java.security.{CodeSource, PermissionCollection, SecureClassLoader}
 import java.util.Enumeration
 import java.util.jar.Manifest
+import scala.scalanative.annotation.stub
 
 /** This class loader is used to load classes and resources from a search
  *  path of URLs referring to both JAR files and directories. Any URL that
@@ -29,6 +30,12 @@ class URLClassLoader extends SecureClassLoader with Closeable {
     /** Constructs a new URLClassLoader for the given URLs. */
     @stub
     def this(urls: Array[URL], parent: ClassLoader) = ???
+
+    /** Constructs a new URLClassLoader for the specified URLs, parent
+     *  class loader, and URLStreamHandlerFactory.
+     */
+    @stub
+    def this(urls: Array[URL], parent: ClassLoader, factory: URLStreamHandlerFactory) = ???
 
     /** Appends the specified URL to the list of URLs to search for
      *  classes and resources.
@@ -81,4 +88,10 @@ object URLClassLoader {
      */
     @stub
     def newInstance(urls: Array[URL]): URLClassLoader = ???
+
+    /** Creates a new instance of URLClassLoader for the specified
+     *  URLs and parent class loader.
+     */
+    @stub
+    def newInstance(urls: Array[URL], parent: ClassLoader): URLClassLoader = ???
 }

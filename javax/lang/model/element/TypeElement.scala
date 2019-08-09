@@ -2,6 +2,7 @@ package javax.lang.model.element
 
 import java.util.List
 import javax.lang.model.type.TypeMirror
+import scala.scalanative.annotation.stub
 
 /** Represents a class or interface program element.  Provides access
  *  to information about the type and its members.  Note that an enum
@@ -61,4 +62,10 @@ trait TypeElement extends Element with Parameterizable with QualifiedNameable {
     /** Returns the direct superclass of this type element. */
     @stub
     def getSuperclass(): TypeMirror = ???
+
+    /** Returns the formal type parameters of this type element
+     *  in declaration order.
+     */
+    @stub
+    def getTypeParameters(): List[_ <: TypeParameterElement] = ???
 }

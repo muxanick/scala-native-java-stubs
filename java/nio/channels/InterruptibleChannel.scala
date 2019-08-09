@@ -1,5 +1,7 @@
 package java.nio.channels
 
+import scala.scalanative.annotation.stub
+
 /** A channel that can be asynchronously closed and interrupted.
  * 
  *   A channel that implements this interface is asynchronously
@@ -23,4 +25,8 @@ package java.nio.channels
  *  necessary, via the instanceof operator.
  */
 trait InterruptibleChannel extends Channel {
+
+    /** Closes this channel. */
+    @stub
+    def close(): Unit = ???
 }

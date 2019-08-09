@@ -1,6 +1,7 @@
 package javax.print.attribute.standard
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Class MediaSize.Other includes MediaSize values for
  *  miscellaneous media.
@@ -46,4 +47,8 @@ final object MediaSize.Other extends Object {
     /** Specifies the quarto size, 8.5 inches by 10.83 inches. */
     @stub
     val QUARTO: MediaSize = ???
+
+    /** Specifies the tabloid size, 11 inches by 17 inches. */
+    @stub
+    val TABLOID: MediaSize = ???
 }

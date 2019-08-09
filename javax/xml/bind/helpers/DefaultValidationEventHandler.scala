@@ -1,7 +1,8 @@
 package javax.xml.bind.helpers
 
 import java.lang.Object
-import javax.xml.bind.ValidationEventHandler
+import javax.xml.bind.{ValidationEvent, ValidationEventHandler}
+import scala.scalanative.annotation.stub
 
 /** 
  *  JAXB 1.0 only default validation event handler. This is the default
@@ -19,4 +20,12 @@ import javax.xml.bind.ValidationEventHandler
  *  Marshaller.
  */
 class DefaultValidationEventHandler extends Object with ValidationEventHandler {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** Receive notification of a validation warning or error. */
+    @stub
+    def handleEvent(event: ValidationEvent): Boolean = ???
 }

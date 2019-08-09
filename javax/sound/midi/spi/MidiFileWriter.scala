@@ -1,14 +1,19 @@
 package javax.sound.midi.spi
 
-import java.io.File
+import java.io.{File, OutputStream}
 import java.lang.Object
 import javax.sound.midi.Sequence
+import scala.scalanative.annotation.stub
 
 /** A MidiFileWriter supplies MIDI file-writing services. Classes that
  *  implement this interface can write one or more types of MIDI file from a
  *  Sequence object.
  */
 abstract class MidiFileWriter extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Obtains the set of MIDI file types for which file writing support is
      *  provided by this file writer.
@@ -34,4 +39,9 @@ abstract class MidiFileWriter extends Object {
      *  indicated to the external file provided.
      */
     def write(in: Sequence, fileType: Int, out: File): Int
+
+    /** Writes a stream of bytes representing a MIDI file of the file type
+     *  indicated to the output stream provided.
+     */
+    def write(in: Sequence, fileType: Int, out: OutputStream): Int
 }

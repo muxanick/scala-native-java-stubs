@@ -1,8 +1,8 @@
 package javax.xml.crypto.dom
 
-import java.lang.Object
+import java.lang.{Object, String}
 import javax.xml.crypto.XMLStructure
-import org.w3c.dom.Node
+import scala.scalanative.annotation.stub
 
 /** A DOM-specific XMLStructure. The purpose of this class is to
  *  allow a DOM node to be used to represent extensible content (any elements
@@ -19,7 +19,15 @@ import org.w3c.dom.Node
  */
 class DOMStructure extends Object with XMLStructure {
 
+    /** Creates a DOMStructure containing the specified node. */
+    @stub
+    def this(node: Node) = ???
+
     /** Returns the node contained in this DOMStructure. */
     @stub
     def getNode(): Node = ???
+
+    /** Indicates whether a specified feature is supported. */
+    @stub
+    def isFeatureSupported(feature: String): Boolean = ???
 }

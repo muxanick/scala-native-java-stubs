@@ -2,6 +2,7 @@ package javax.accessibility
 
 import java.awt.{Color, Cursor, Dimension, Font, FontMetrics, Point, Rectangle}
 import java.awt.event.FocusListener
+import scala.scalanative.annotation.stub
 
 /** The AccessibleComponent interface should be supported by any object
  *  that is rendered on the screen.  This interface provides the standard
@@ -130,4 +131,8 @@ trait AccessibleComponent {
     /** Resizes this object so that it has width and height. */
     @stub
     def setSize(d: Dimension): Unit = ???
+
+    /** Sets the visible state of the object. */
+    @stub
+    def setVisible(b: Boolean): Unit = ???
 }

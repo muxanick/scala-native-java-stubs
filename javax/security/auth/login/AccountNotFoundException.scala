@@ -1,7 +1,8 @@
 package javax.security.auth.login
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
 import java.security.GeneralSecurityException
+import scala.scalanative.annotation.stub
 
 /** Signals that an account was not found.
  * 
@@ -13,4 +14,10 @@ class AccountNotFoundException extends AccountException {
     /** Constructs a AccountNotFoundException with no detail message. */
     @stub
     def this() = ???
+
+    /** Constructs a AccountNotFoundException with the specified
+     *  detail message.
+     */
+    @stub
+    def this(msg: String) = ???
 }

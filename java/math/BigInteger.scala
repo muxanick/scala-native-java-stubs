@@ -2,6 +2,7 @@ package java.math
 
 import java.lang.{Comparable, Number, Object, String}
 import java.util.Random
+import scala.scalanative.annotation.stub
 
 /** Immutable arbitrary-precision integers.  All operations behave as if
  *  BigIntegers were represented in two's-complement notation (like Java's
@@ -100,6 +101,12 @@ class BigInteger extends Number with Comparable[BigInteger] {
      */
     @stub
     def this(val: String) = ???
+
+    /** Translates the String representation of a BigInteger in the
+     *  specified radix into a BigInteger.
+     */
+    @stub
+    def this(val: String, radix: Int) = ???
 
     /** Returns a BigInteger whose value is the absolute value of this
      *  BigInteger.
@@ -317,6 +324,10 @@ class BigInteger extends Number with Comparable[BigInteger] {
      */
     @stub
     def toString(radix: Int): String = ???
+
+    /** Returns a BigInteger whose value is (this ^ val). */
+    @stub
+    def xor(val: BigInteger): BigInteger = ???
 }
 
 object BigInteger {
@@ -327,6 +338,10 @@ object BigInteger {
     /** The BigInteger constant ten. */
     @stub
     val TEN: BigInteger = ???
+
+    /** The BigInteger constant zero. */
+    @stub
+    val ZERO: BigInteger = ???
 
     /** Returns a positive BigInteger that is probably prime, with the
      *  specified bitLength.

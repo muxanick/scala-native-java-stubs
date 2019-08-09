@@ -2,6 +2,7 @@ package javax.swing.event
 
 import java.awt.event.MouseAdapter
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An empty implementation of the MouseInputListener interface, provided
  *  as a convenience to simplify the task of creating listeners, by extending
@@ -10,4 +11,8 @@ import java.lang.Object
  *  its extension from AWT's MouseAdapter.
  */
 abstract class MouseInputAdapter extends MouseAdapter with MouseInputListener {
+
+    /**  */
+    @stub
+    def this() = ???
 }

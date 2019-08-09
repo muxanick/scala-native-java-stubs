@@ -3,6 +3,7 @@ package java.awt.image
 import java.awt.Rectangle
 import java.lang.{Object, String}
 import java.util.Vector
+import scala.scalanative.annotation.stub
 
 /** RenderedImage is a common interface for objects which contain
  *  or can produce image data in the form of Rasters.  The image
@@ -104,4 +105,8 @@ trait RenderedImage {
     /** Returns the tile width in pixels. */
     @stub
     def getTileWidth(): Int = ???
+
+    /** Returns the width of the RenderedImage. */
+    @stub
+    def getWidth(): Int = ???
 }

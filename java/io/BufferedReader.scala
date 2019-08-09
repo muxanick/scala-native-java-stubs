@@ -2,6 +2,7 @@ package java.io
 
 import java.lang.{Object, String}
 import java.util.stream.Stream
+import scala.scalanative.annotation.stub
 
 /** Reads text from a character-input stream, buffering characters so as to
  *  provide for the efficient reading of characters, arrays, and lines.
@@ -35,6 +36,12 @@ class BufferedReader extends Reader {
      */
     @stub
     def this(in: Reader) = ???
+
+    /** Creates a buffering character-input stream that uses an input buffer of
+     *  the specified size.
+     */
+    @stub
+    def this(in: Reader, sz: Int) = ???
 
     /** Closes the stream and releases any system resources associated with
      *  it.
@@ -75,4 +82,8 @@ class BufferedReader extends Reader {
     /** Resets the stream to the most recent mark. */
     @stub
     def reset(): Unit = ???
+
+    /** Skips characters. */
+    @stub
+    def skip(n: Long): Long = ???
 }

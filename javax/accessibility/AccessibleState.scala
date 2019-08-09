@@ -1,6 +1,7 @@
 package javax.accessibility
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Class AccessibleState describes a component's particular state.  The actual
  *  state of the component is defined as an AccessibleStateSet, which is a
@@ -16,6 +17,10 @@ import java.lang.Object
  *  from this class and it should provide constants in a similar manner.
  */
 class AccessibleState extends AccessibleBundle {
+
+    /** Creates a new AccessibleState using the given locale independent key. */
+    @stub
+    protected def this(key: String) = ???
 }
 
 object AccessibleState {
@@ -153,4 +158,8 @@ object AccessibleState {
     /** Indicates the orientation of this object is vertical. */
     @stub
     val VERTICAL: AccessibleState = ???
+
+    /** Indicates this object is visible. */
+    @stub
+    val VISIBLE: AccessibleState = ???
 }

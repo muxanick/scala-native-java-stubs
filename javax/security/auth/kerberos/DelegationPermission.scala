@@ -2,7 +2,8 @@ package javax.security.auth.kerberos
 
 import java.io.Serializable
 import java.lang.{Object, String}
-import java.security.{BasicPermission, Permission}
+import java.security.{BasicPermission, Permission, PermissionCollection}
+import scala.scalanative.annotation.stub
 
 /** This class is used to restrict the usage of the Kerberos
  *  delegation model, ie: forwardable and proxiable tickets.
@@ -37,6 +38,12 @@ final class DelegationPermission extends BasicPermission with Serializable {
     @stub
     def this(principals: String) = ???
 
+    /** Create a new DelegationPermission
+     *  with the specified subordinate and target principals.
+     */
+    @stub
+    def this(principals: String, actions: String) = ???
+
     /** Checks two DelegationPermission objects for equality. */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -50,4 +57,10 @@ final class DelegationPermission extends BasicPermission with Serializable {
      */
     @stub
     def implies(p: Permission): Boolean = ???
+
+    /** Returns a PermissionCollection object for storing
+     *  DelegationPermission objects.
+     */
+    @stub
+    def newPermissionCollection(): PermissionCollection = ???
 }

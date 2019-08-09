@@ -3,11 +3,20 @@ package javax.swing.plaf.basic
 import java.awt.{Component, Component.BaselineResizeBehavior, LayoutManager}
 import java.beans.PropertyChangeListener
 import java.lang.Object
-import javax.swing.JComponent
+import javax.swing.{JComponent, JSpinner}
 import javax.swing.plaf.{ComponentUI, SpinnerUI}
+import scala.scalanative.annotation.stub
 
 /** The default Spinner UI delegate. */
 class BasicSpinnerUI extends SpinnerUI {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** The spinner that we're a UI delegate for. */
+    @stub
+    protected val spinner: JSpinner = ???
 
     /** This method is called by installUI to get the editor component
      *  of the JSpinner.
@@ -98,6 +107,12 @@ class BasicSpinnerUI extends SpinnerUI {
      */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Calls uninstallDefaults, uninstallListeners,
+     *  and then removes all of the spinners children.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicSpinnerUI {

@@ -2,6 +2,7 @@ package java.util
 
 import java.lang.Double
 import java.util.function.{Consumer, DoubleConsumer}
+import scala.scalanative.annotation.stub
 
 /** An Iterator specialized for double values. */
 object trait PrimitiveIterator.OfDouble extends PrimitiveIterator[Double, DoubleConsumer] {
@@ -21,4 +22,8 @@ object trait PrimitiveIterator.OfDouble extends PrimitiveIterator[Double, Double
     /** Returns the next element in the iteration. */
     @stub
     val Double: default = ???
+
+    /** Returns the next double element in the iteration. */
+    @stub
+    def nextDouble(): Double = ???
 }

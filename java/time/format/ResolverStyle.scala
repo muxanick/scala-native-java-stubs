@@ -1,6 +1,7 @@
 package java.time.format
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Enumeration of different ways to resolve dates and times.
  *  
@@ -19,7 +20,16 @@ object ResolverStyle {
     /** Style to resolve dates and times in a smart, or intelligent, manner. */
     final val SMART = new ResolverStyle(SMART, 1)
 
+    /** Style to resolve dates and times strictly. */
+    final val STRICT = new ResolverStyle(STRICT, 2)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): ResolverStyle = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[ResolverStyle] = ???
 }

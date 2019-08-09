@@ -1,6 +1,7 @@
 package java.lang
 
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** A thread is a thread of execution in a program. The Java
  *  Virtual Machine allows an application to have multiple threads of
@@ -125,6 +126,10 @@ class Thread extends Object with Runnable {
      */
     @stub
     def this(group: ThreadGroup, target: Runnable, name: String, stackSize: Long) = ???
+
+    /** Allocates a new Thread object. */
+    @stub
+    def this(group: ThreadGroup, name: String) = ???
 
     /** Determines if the currently running thread has permission to
      *  modify this thread.
@@ -350,6 +355,12 @@ object Thread {
     @stub
     object State extends Thread.State
 
+    /** Interface for handlers invoked when a Thread abruptly
+     *  terminates due to an uncaught exception.
+     */
+    @stub
+    val Thread.UncaughtExceptionHandler: trait = ???
+
     /** The maximum priority that a thread can have. */
     @stub
     val MAX_PRIORITY: Int = ???
@@ -357,6 +368,10 @@ object Thread {
     /** The minimum priority that a thread can have. */
     @stub
     val MIN_PRIORITY: Int = ???
+
+    /** The default priority that is assigned to a thread. */
+    @stub
+    val NORM_PRIORITY: Int = ???
 
     /** Returns an estimate of the number of active threads in the current
      *  thread's thread group and its
@@ -420,4 +435,10 @@ object Thread {
      */
     @stub
     def sleep(millis: Long, nanos: Int): Unit = ???
+
+    /** A hint to the scheduler that the current thread is willing to yield
+     *  its current use of a processor.
+     */
+    @stub
+    def yield(): Unit = ???
 }

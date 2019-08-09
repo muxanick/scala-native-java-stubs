@@ -1,6 +1,7 @@
 package javax.xml.parsers
 
 import java.lang.{Error, Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Thrown when a problem with configuration with the Parser Factories
  *  exists. This error will typically be thrown when the class of a
@@ -27,6 +28,12 @@ class FactoryConfigurationError extends Error {
     @stub
     def this(e: Exception, msg: String) = ???
 
+    /** Create a new FactoryConfigurationError with
+     *  the String  specified as an error message.
+     */
+    @stub
+    def this(msg: String) = ???
+
     /** use the exception chaining mechanism of JDK1.4 */
     @stub
     def getCause(): Throwable = ???
@@ -36,4 +43,8 @@ class FactoryConfigurationError extends Error {
      */
     @stub
     def getException(): Exception = ???
+
+    /** Return the message (if any) for this error . */
+    @stub
+    def getMessage(): String = ???
 }

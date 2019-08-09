@@ -1,6 +1,7 @@
 package javax.activation
 
-import java.lang.{Object, String}
+import java.lang.{ClassLoader, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The CommandInfo class is used by CommandMap implementations to
  *  describe the results of command requests. It provides the requestor
@@ -16,6 +17,10 @@ import java.lang.{Object, String}
  */
 class CommandInfo extends Object {
 
+    /** The Constructor for CommandInfo. */
+    @stub
+    def this(verb: String, className: String) = ???
+
     /** Return the command's class name. */
     @stub
     def getCommandClass(): String = ???
@@ -23,4 +28,8 @@ class CommandInfo extends Object {
     /** Return the command verb. */
     @stub
     def getCommandName(): String = ???
+
+    /** Return the instantiated JavaBean component. */
+    @stub
+    def getCommandObject(dh: DataHandler, loader: ClassLoader): Object = ???
 }

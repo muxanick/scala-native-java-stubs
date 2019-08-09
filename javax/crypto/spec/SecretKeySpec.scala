@@ -3,6 +3,7 @@ package javax.crypto.spec
 import java.lang.{Object, String}
 import java.security.spec.KeySpec
 import javax.crypto.SecretKey
+import scala.scalanative.annotation.stub
 
 /** This class specifies a secret key in a provider-independent fashion.
  * 
@@ -23,6 +24,10 @@ class SecretKeySpec extends Object with KeySpec with SecretKey {
     @stub
     def this(key: Array[Byte], offset: Int, len: Int, algorithm: String) = ???
 
+    /** Constructs a secret key from the given byte array. */
+    @stub
+    def this(key: Array[Byte], algorithm: String) = ???
+
     /** Tests for equality between the specified object and this
      *  object.
      */
@@ -40,4 +45,8 @@ class SecretKeySpec extends Object with KeySpec with SecretKey {
     /** Returns the name of the encoding format for this secret key. */
     @stub
     def getFormat(): String = ???
+
+    /** Calculates a hash code value for the object. */
+    @stub
+    def hashCode(): Int = ???
 }

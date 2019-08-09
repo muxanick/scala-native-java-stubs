@@ -4,6 +4,7 @@ import java.awt.{Component, Container}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.plaf.DesktopIconUI
+import scala.scalanative.annotation.stub
 
 /** This component represents an iconified version of a
  *  JInternalFrame.
@@ -24,6 +25,16 @@ import javax.swing.plaf.DesktopIconUI
  *  Please see XMLEncoder.
  */
 object JInternalFrame.JDesktopIcon extends JComponent with Accessible {
+
+    /** Creates an icon for an internal frame. */
+    @stub
+    def JDesktopIcon(f: JInternalFrame) = ???
+
+    /** This class implements accessibility support for the
+     *  JInternalFrame.JDesktopIcon class.
+     */
+    @stub
+    protected object AccessibleJDesktopIcon extends JInternalFrame.JDesktopIcon.AccessibleJDesktopIcon
 
     /** Gets the AccessibleContext associated with this JDesktopIcon. */
     @stub
@@ -60,4 +71,10 @@ object JInternalFrame.JDesktopIcon extends JComponent with Accessible {
     /** Sets the look-and-feel object that renders this component. */
     @stub
     def setUI(ui: DesktopIconUI): Unit = ???
+
+    /** Notification from the UIManager that the look and feel
+     *  has changed.
+     */
+    @stub
+    def updateUI(): Unit = ???
 }

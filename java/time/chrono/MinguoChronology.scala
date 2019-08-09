@@ -6,6 +6,7 @@ import java.time.{Clock, Instant, ZoneId}
 import java.time.format.ResolverStyle
 import java.time.temporal.{ChronoField, TemporalAccessor, TemporalField, ValueRange}
 import java.util.{List, Map}
+import scala.scalanative.annotation.stub
 
 /** The Minguo calendar system.
  *  
@@ -114,4 +115,14 @@ final class MinguoChronology extends AbstractChronology with Serializable {
     /** Obtains a ChronoZonedDateTime in this chronology from an Instant. */
     @stub
     def zonedDateTime(instant: Instant, zone: ZoneId): ChronoZonedDateTime[MinguoDate] = ???
+
+    /** Obtains a ChronoZonedDateTime in this chronology from another temporal object. */
+    @stub
+    def zonedDateTime(temporal: TemporalAccessor): ChronoZonedDateTime[MinguoDate] = ???
+}
+
+object MinguoChronology {
+    /** Singleton instance for the Minguo chronology. */
+    @stub
+    val INSTANCE: MinguoChronology = ???
 }

@@ -1,6 +1,7 @@
 package java.awt.image
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An ImageFilter class for scaling images using a simple area averaging
  *  algorithm that produces smoother results than the nearest neighbor
@@ -24,6 +25,12 @@ import java.lang.Object
  */
 class AreaAveragingScaleFilter extends ReplicateScaleFilter {
 
+    /** Constructs an AreaAveragingScaleFilter that scales the pixels from
+     *  its source Image as specified by the width and height parameters.
+     */
+    @stub
+    def this(width: Int, height: Int) = ???
+
     /** Detect if the data is being delivered with the necessary hints
      *  to allow the averaging algorithm to do its work.
      */
@@ -36,4 +43,11 @@ class AreaAveragingScaleFilter extends ReplicateScaleFilter {
      */
     @stub
     def setPixels(x: Int, y: Int, w: Int, h: Int, model: ColorModel, pixels: Array[Byte], off: Int, scansize: Int): Unit = ???
+
+    /** Combine the components for the delivered int pixels into the
+     *  accumulation arrays and send on any averaged data for rows of
+     *  pixels that are complete.
+     */
+    @stub
+    def setPixels(x: Int, y: Int, w: Int, h: Int, model: ColorModel, pixels: Array[Int], off: Int, scansize: Int): Unit = ???
 }

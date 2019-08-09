@@ -1,6 +1,7 @@
 package java.net
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Utility class for HTML form encoding. This class contains static methods
  *  for converting a String to the application/x-www-form-urlencoded MIME
@@ -49,4 +50,10 @@ object URLEncoder {
      */
     @stub
     def encode(s: String): String = ???
+
+    /** Translates a string into application/x-www-form-urlencoded
+     *  format using a specific encoding scheme.
+     */
+    @stub
+    def encode(s: String, enc: String): String = ???
 }

@@ -5,6 +5,7 @@ import java.security.Principal
 import java.security.cert.Certificate
 import java.util.EventObject
 import javax.security.cert.X509Certificate
+import scala.scalanative.annotation.stub
 
 /** This event indicates that an SSL handshake completed on a given
  *  SSL connection.  All of the core information about that handshake's
@@ -16,6 +17,10 @@ import javax.security.cert.X509Certificate
  *  just completed.
  */
 class HandshakeCompletedEvent extends EventObject {
+
+    /** Constructs a new HandshakeCompletedEvent. */
+    @stub
+    def this(sock: SSLSocket, s: SSLSession) = ???
 
     /** Returns the cipher suite in use by the session which was produced
      *  by the handshake.
@@ -54,4 +59,8 @@ class HandshakeCompletedEvent extends EventObject {
     /** Returns the session that triggered this event. */
     @stub
     def getSession(): SSLSession = ???
+
+    /** Returns the socket which is the source of this event. */
+    @stub
+    def getSocket(): SSLSocket = ???
 }

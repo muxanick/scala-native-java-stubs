@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{CharSequence, Comparable, Object, String}
 import java.time.format.DateTimeFormatter
 import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalAmount, TemporalField, TemporalQuery, TemporalUnit, ValueRange}
+import scala.scalanative.annotation.stub
 
 /** A year in the ISO-8601 calendar system, such as 2007.
  *  
@@ -158,12 +159,20 @@ final class Year extends Object with Temporal with TemporalAdjuster with Compara
     /** Returns an adjusted copy of this year. */
     @stub
     def with(adjuster: TemporalAdjuster): Year = ???
+
+    /** Returns a copy of this year with the specified field set to a new value. */
+    @stub
+    def with(field: TemporalField, newValue: Long): Year = ???
 }
 
 object Year {
     /** The maximum supported year, '+999,999,999'. */
     @stub
     val MAX_VALUE: Int = ???
+
+    /** The minimum supported year, '-999,999,999'. */
+    @stub
+    val MIN_VALUE: Int = ???
 
     /** Obtains an instance of Year from a temporal object. */
     @stub

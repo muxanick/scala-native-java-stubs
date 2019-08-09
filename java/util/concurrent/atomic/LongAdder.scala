@@ -1,7 +1,8 @@
 package java.util.concurrent.atomic
 
 import java.io.Serializable
-import java.lang.{Number, Object}
+import java.lang.{Number, Object, String}
+import scala.scalanative.annotation.stub
 
 /** One or more variables that together maintain an initially zero
  *  long sum.  When updates (method add(long)) are contended
@@ -27,6 +28,10 @@ import java.lang.{Number, Object}
  *  not useful as collection keys.
  */
 class LongAdder extends Number with Serializable {
+
+    /** Creates a new adder with initial sum of zero. */
+    @stub
+    def this() = ???
 
     /** Adds the given value. */
     @stub
@@ -73,4 +78,8 @@ class LongAdder extends Number with Serializable {
     /** Equivalent in effect to sum() followed by reset(). */
     @stub
     def sumThenReset(): Long = ???
+
+    /** Returns the String representation of the sum(). */
+    @stub
+    def toString(): String = ???
 }

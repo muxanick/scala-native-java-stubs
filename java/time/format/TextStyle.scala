@@ -1,6 +1,7 @@
 package java.time.format
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Enumeration of the style of text formatting and parsing.
  *  
@@ -37,6 +38,9 @@ object TextStyle {
     /** Short text, typically an abbreviation. */
     final val SHORT = new TextStyle(SHORT, 4)
 
+    /** Short text for stand-alone use, typically an abbreviation. */
+    final val SHORT_STANDALONE = new TextStyle(SHORT_STANDALONE, 5)
+
     /** Returns the normal style with the same size. */
     @stub
     def asNormal(): TextStyle = ???
@@ -52,4 +56,10 @@ object TextStyle {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): TextStyle = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[TextStyle] = ???
 }

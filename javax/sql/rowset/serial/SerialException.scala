@@ -1,7 +1,8 @@
 package javax.sql.rowset.serial
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
 import java.sql.SQLException
+import scala.scalanative.annotation.stub
 
 /** Indicates and an error with the serialization or de-serialization of
  *  SQL types such as BLOB, CLOB, STRUCT or ARRAY in
@@ -14,4 +15,10 @@ class SerialException extends SQLException {
      */
     @stub
     def this() = ???
+
+    /** Creates a new SerialException with the
+     *  specified message.
+     */
+    @stub
+    def this(msg: String) = ???
 }

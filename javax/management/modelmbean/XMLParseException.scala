@@ -1,6 +1,7 @@
 package javax.management.modelmbean
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown when an XML formatted string is being parsed into ModelMBean objects
  *  or when XML formatted strings are being created from ModelMBean objects.
@@ -18,4 +19,8 @@ class XMLParseException extends Exception {
     /** Constructor taking a string and an exception. */
     @stub
     def this(e: Exception, s: String) = ???
+
+    /** Constructor taking a string. */
+    @stub
+    def this(s: String) = ???
 }

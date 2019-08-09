@@ -3,6 +3,7 @@ package javax.swing.plaf.metal
 import java.awt.{Component, Container, Dimension, Graphics}
 import java.lang.Object
 import javax.swing.{AbstractButton, CellRendererPane, Icon, JButton, JComboBox, JComponent, JList}
+import scala.scalanative.annotation.stub
 
 /** JButton subclass to help out MetalComboBoxUI
  *  
@@ -23,6 +24,10 @@ class MetalComboBoxButton extends JButton {
 
     /**  */
     @stub
+    def this(cb: JComboBox, i: Icon, pane: CellRendererPane, list: JList) = ???
+
+    /**  */
+    @stub
     protected val comboBox: JComboBox = ???
 
     /**  */
@@ -36,6 +41,10 @@ class MetalComboBoxButton extends JButton {
     /**  */
     @stub
     protected val listBox: JList = ???
+
+    /**  */
+    @stub
+    protected val rendererPane: CellRendererPane = ???
 
     /**  */
     @stub
@@ -78,4 +87,8 @@ class MetalComboBoxButton extends JButton {
     /** Enables (or disables) the button. */
     @stub
     def setEnabled(enabled: Boolean): Unit = ???
+
+    /**  */
+    @stub
+    def setIconOnly(isIconOnly: Boolean): Unit = ???
 }

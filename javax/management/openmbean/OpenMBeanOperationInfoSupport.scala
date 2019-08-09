@@ -1,7 +1,8 @@
 package javax.management.openmbean
 
 import java.lang.{Object, String}
-import javax.management.{MBeanFeatureInfo, MBeanOperationInfo}
+import javax.management.{Descriptor, MBeanFeatureInfo, MBeanOperationInfo}
+import scala.scalanative.annotation.stub
 
 /** Describes an operation of an Open MBean. */
 class OpenMBeanOperationInfoSupport extends MBeanOperationInfo with OpenMBeanOperationInfo {
@@ -13,6 +14,14 @@ class OpenMBeanOperationInfoSupport extends MBeanOperationInfo with OpenMBeanOpe
      */
     @stub
     def this(name: String, description: String, signature: Array[OpenMBeanParameterInfo], returnOpenType: OpenType[_], impact: Int) = ???
+
+    /** Constructs an OpenMBeanOperationInfoSupport
+     *  instance, which describes the operation of a class of open
+     *  MBeans, with the specified name, description,
+     *  signature, returnOpenType, impact, and descriptor.
+     */
+    @stub
+    def this(name: String, description: String, signature: Array[OpenMBeanParameterInfo], returnOpenType: OpenType[_], impact: Int, descriptor: Descriptor) = ???
 
     /** Compares the specified obj parameter with this
      *  OpenMBeanOperationInfoSupport instance for
@@ -31,4 +40,8 @@ class OpenMBeanOperationInfoSupport extends MBeanOperationInfo with OpenMBeanOpe
     /** Returns the hash code value for this OpenMBeanOperationInfoSupport instance. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a string representation of this OpenMBeanOperationInfoSupport instance. */
+    @stub
+    def toString(): String = ???
 }

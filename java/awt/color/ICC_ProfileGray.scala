@@ -1,6 +1,7 @@
 package java.awt.color
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A subclass of the ICC_Profile class which represents profiles
  *  which meet the following criteria: the color space type of the
@@ -39,4 +40,8 @@ class ICC_ProfileGray extends ICC_Profile {
      */
     @stub
     def getMediaWhitePoint(): Array[Float] = ???
+
+    /** Returns the TRC as an array of shorts. */
+    @stub
+    def getTRC(): Array[Short] = ???
 }

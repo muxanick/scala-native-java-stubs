@@ -1,7 +1,8 @@
 package javax.naming
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
 import java.util.Hashtable
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown to indicate that the operation reached
  *  a point in the name where the operation cannot proceed any further.
@@ -28,6 +29,12 @@ class CannotProceedException extends NamingException {
     @stub
     def this() = ???
 
+    /** Constructs a new instance of CannotProceedException using an
+     *  explanation.
+     */
+    @stub
+    def this(explanation: String) = ???
+
     /** Contains the name of the resolved object, relative
      *  to the context altNameCtx.
      */
@@ -45,6 +52,12 @@ class CannotProceedException extends NamingException {
      */
     @stub
     protected val environment: Hashtable[_, _] = ???
+
+    /** Contains the remaining unresolved part of the second
+     *  "name" argument to Context.rename().
+     */
+    @stub
+    protected val remainingNewName: Name = ???
 
     /** Retrieves the altName field of this exception. */
     @stub
@@ -79,4 +92,8 @@ class CannotProceedException extends NamingException {
      */
     @stub
     def setEnvironment(environment: Hashtable[_, _]): Unit = ???
+
+    /** Sets the "remaining new name" field of this exception. */
+    @stub
+    def setRemainingNewName(newName: Name): Unit = ???
 }

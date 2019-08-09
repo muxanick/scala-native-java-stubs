@@ -2,6 +2,7 @@ package javax.sound.sampled
 
 import java.lang.{Object, String}
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** AudioFormat is the class that specifies a particular arrangement of data in a sound stream.
  *  By examining the information stored in the audio format, you can discover how to interpret the bits in the
@@ -96,6 +97,12 @@ class AudioFormat extends Object {
     @stub
     def this(encoding: AudioFormat.Encoding, sampleRate: Float, sampleSizeInBits: Int, channels: Int, frameSize: Int, frameRate: Float, bigEndian: Boolean, properties: Map[String, Object]) = ???
 
+    /** Constructs an AudioFormat with a linear PCM encoding and
+     *  the given parameters.
+     */
+    @stub
+    def this(sampleRate: Float, sampleSizeInBits: Int, channels: Int, signed: Boolean, bigEndian: Boolean) = ???
+
     /** Indicates whether the audio data is stored in big-endian or little-endian order. */
     @stub
     protected val bigEndian: Boolean = ???
@@ -119,6 +126,10 @@ class AudioFormat extends Object {
     /** The number of samples played or recorded per second, for sounds that have this format. */
     @stub
     protected val sampleRate: Float = ???
+
+    /** The number of bits in each sample of a sound that has this format. */
+    @stub
+    protected val sampleSizeInBits: Int = ???
 
     /** Obtains the number of channels. */
     @stub
@@ -161,4 +172,18 @@ class AudioFormat extends Object {
     /** Obtain an unmodifiable map of properties. */
     @stub
     def properties(): Map[String, Object] = ???
+
+    /** Returns a string that describes the format, such as:
+     *  "PCM SIGNED 22050 Hz 16 bit mono big-endian".
+     */
+    @stub
+    def toString(): String = ???
+}
+
+object AudioFormat {
+    /** The Encoding class  names the  specific type of data representation
+     *  used for an audio stream.
+     */
+    @stub
+    object Encoding extends AudioFormat.Encoding
 }

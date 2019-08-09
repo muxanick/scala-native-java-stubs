@@ -1,5 +1,7 @@
 package javax.lang.model.type
 
+import scala.scalanative.annotation.stub
+
 /** A visitor of types, in the style of the
  *  visitor design pattern.  Classes implementing this
  *  interface are used to operate on a type when the kind of
@@ -88,4 +90,8 @@ trait TypeVisitor[R, P] {
     /** Visits an unknown kind of type. */
     @stub
     def visitUnknown(t: TypeMirror, p: P): R = ???
+
+    /** Visits a wildcard type. */
+    @stub
+    def visitWildcard(t: WildcardType, p: P): R = ???
 }

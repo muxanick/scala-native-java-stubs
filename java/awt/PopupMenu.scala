@@ -1,7 +1,8 @@
 package java.awt
 
-import java.lang.Object
+import java.lang.{Object, String}
 import javax.accessibility.AccessibleContext
+import scala.scalanative.annotation.stub
 
 /** A class that implements a menu which can be dynamically popped up
  *  at a specified position within a component.
@@ -18,6 +19,16 @@ class PopupMenu extends Menu {
     @stub
     def this() = ???
 
+    /** Creates a new popup menu with the specified name. */
+    @stub
+    def this(label: String) = ???
+
+    /** Inner class of PopupMenu used to provide default support for
+     *  accessibility.
+     */
+    @stub
+    protected object AccessibleAWTPopupMenu extends PopupMenu.AccessibleAWTPopupMenu
+
     /** Creates the popup menu's peer. */
     @stub
     def addNotify(): Unit = ???
@@ -31,4 +42,10 @@ class PopupMenu extends Menu {
     /** Returns the parent container for this menu component. */
     @stub
     def getParent(): MenuContainer = ???
+
+    /** Shows the popup menu at the x, y position relative to an origin
+     *  component.
+     */
+    @stub
+    def show(origin: Component, x: Int, y: Int): Unit = ???
 }

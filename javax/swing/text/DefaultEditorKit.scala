@@ -1,8 +1,9 @@
 package javax.swing.text
 
-import java.io.{InputStream, OutputStream, Reader}
+import java.io.{InputStream, OutputStream, Reader, Writer}
 import java.lang.{Object, String}
 import javax.swing.Action
+import scala.scalanative.annotation.stub
 
 /** This is the set of things needed by a text component
  *  to be a reasonably functioning editor for some type
@@ -37,6 +38,10 @@ import javax.swing.Action
  *  
  */
 class DefaultEditorKit extends EditorKit {
+
+    /** default constructor for DefaultEditorKit */
+    @stub
+    def this() = ???
 
     /** Fetches a caret that can navigate through views
      *  produced by the associated ViewFactory.
@@ -88,6 +93,12 @@ class DefaultEditorKit extends EditorKit {
      */
     @stub
     def write(out: OutputStream, doc: Document, pos: Int, len: Int): Unit = ???
+
+    /** Writes content from a document to the given stream
+     *  as plain text.
+     */
+    @stub
+    def write(out: Writer, doc: Document, pos: Int, len: Int): Unit = ???
 }
 
 object DefaultEditorKit {
@@ -125,6 +136,13 @@ object DefaultEditorKit {
     /** Places a tab character into the document. */
     @stub
     object InsertTabAction extends DefaultEditorKit.InsertTabAction
+
+    /** Pastes the contents of the system clipboard into the
+     *  selected region, or before the caret if nothing is
+     *  selected.
+     */
+    @stub
+    object PasteAction extends DefaultEditorKit.PasteAction
 
     /** Name of the Action for moving the caret
      *  logically backward one position.
@@ -401,4 +419,10 @@ object DefaultEditorKit {
      */
     @stub
     val upAction: String = ???
+
+    /** Name of the action to set the editor into writeable
+     *  mode.
+     */
+    @stub
+    val writableAction: String = ???
 }

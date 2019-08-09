@@ -3,7 +3,8 @@ package javax.lang.model.util
 import java.lang.Object
 import javax.annotation.processing.SupportedSourceVersion
 import javax.lang.model.SourceVersion
-import javax.lang.model.type.{ArrayType, DeclaredType, ErrorType, ExecutableType, NoType, NullType, PrimitiveType, TypeMirror, TypeVariable}
+import javax.lang.model.type.{ArrayType, DeclaredType, ErrorType, ExecutableType, NoType, NullType, PrimitiveType, TypeMirror, TypeVariable, WildcardType}
+import scala.scalanative.annotation.stub
 
 /** A simple visitor of types with default behavior appropriate for the
  *  RELEASE_6 source version.
@@ -52,6 +53,18 @@ import javax.lang.model.type.{ArrayType, DeclaredType, ErrorType, ExecutableType
     @stub
     protected def this() = ???
 
+    /** Constructor for concrete subclasses; uses the argument for the
+     *  default value.
+     */
+    @stub
+    protected def this(defaultValue: R) = ???
+
+    /** Default value to be returned; defaultAction returns this value unless the method is
+     *  overridden.
+     */
+    @stub
+    protected val DEFAULT_VALUE: R = ???
+
     /** The default action for visit methods. */
     @stub
     protected def defaultAction(e: TypeMirror, p: P): R = ???
@@ -87,4 +100,8 @@ import javax.lang.model.type.{ArrayType, DeclaredType, ErrorType, ExecutableType
     /** Visits a type variable. */
     @stub
     def visitTypeVariable(t: TypeVariable, p: P): R = ???
+
+    /** Visits a wildcard type. */
+    @stub
+    def visitWildcard(t: WildcardType, p: P): R = ???
 }

@@ -4,9 +4,18 @@ import java.awt.Component
 import java.awt.event.{ActionListener, FocusEvent, FocusListener}
 import java.lang.Object
 import javax.swing.{ComboBoxEditor, JTextField}
+import scala.scalanative.annotation.stub
 
 /** The default editor for editable combo boxes. The editor is implemented as a JTextField. */
 class BasicComboBoxEditor extends Object with ComboBoxEditor with FocusListener {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /**  */
+    @stub
+    protected val editor: JTextField = ???
 
     /** Add an ActionListener. */
     @stub
@@ -41,4 +50,14 @@ class BasicComboBoxEditor extends Object with ComboBoxEditor with FocusListener 
     /** Ask the editor to start editing and to select everything */
     @stub
     def selectAll(): Unit = ???
+
+    /** Sets the item that should be edited. */
+    @stub
+    def setItem(anObject: Object): Unit = ???
+}
+
+object BasicComboBoxEditor {
+    /** A subclass of BasicComboBoxEditor that implements UIResource. */
+    @stub
+    object UIResource extends BasicComboBoxEditor.UIResource
 }

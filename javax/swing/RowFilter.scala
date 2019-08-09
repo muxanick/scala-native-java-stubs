@@ -1,7 +1,8 @@
 package javax.swing
 
-import java.lang.{Iterable, Number, Object}
+import java.lang.{Iterable, Number, Object, String}
 import java.util.Date
+import scala.scalanative.annotation.stub
 
 /** RowFilter is used to filter out entries from the
  *  model so that they are not shown in the view.  For example, a
@@ -59,6 +60,10 @@ import java.util.Date
  */
 abstract class RowFilter[M, I] extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Returns true if the specified entry should be shown;
      *  returns false if the entry should be hidden.
      */
@@ -71,6 +76,13 @@ object RowFilter {
      */
     @stub
     object ComparisonType extends RowFilter.ComparisonType
+
+    /** An Entry object is passed to instances of
+     *  RowFilter, allowing the filter to get the value of the
+     *  entry's data, and thus to determine whether the entry should be shown.
+     */
+    @stub
+    object Entry[M, I] extends RowFilter.Entry[M, I]
 
     /** Returns a RowFilter that includes entries if all
      *  of the supplied filters include the entry.
@@ -103,4 +115,10 @@ object RowFilter {
      */
     @stub
     def orFilter[M, I](filters: Iterable[_ <: RowFilter[_ >: M, _ >: I]]): RowFilter[M, I] = ???
+
+    /** Returns a RowFilter that uses a regular
+     *  expression to determine which entries to include.
+     */
+    @stub
+    def regexFilter[M, I](regex: String, indices: int*): RowFilter[M, I] = ???
 }

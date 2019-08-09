@@ -4,6 +4,7 @@ import java.io.{File, InputStream}
 import java.lang.Object
 import java.net.URL
 import javax.sound.midi.{MidiFileFormat, Sequence}
+import scala.scalanative.annotation.stub
 
 /** A MidiFileReader supplies MIDI file-reading services. Classes
  *  implementing this interface can parse the format information from one or more
@@ -11,6 +12,10 @@ import javax.sound.midi.{MidiFileFormat, Sequence}
  *  these types.
  */
 abstract class MidiFileReader extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Obtains the MIDI file format of the File provided. */
     def getMidiFileFormat(file: File): MidiFileFormat
@@ -26,4 +31,7 @@ abstract class MidiFileReader extends Object {
 
     /** Obtains a MIDI sequence from the input stream provided. */
     def getSequence(stream: InputStream): Sequence
+
+    /** Obtains a MIDI sequence from the URL provided. */
+    def getSequence(url: URL): Sequence
 }

@@ -4,6 +4,7 @@ import java.io.ObjectInputStream
 import java.lang.{ClassLoader, Integer, Object, String}
 import java.util.Set
 import javax.management.loading.ClassLoaderRepository
+import scala.scalanative.annotation.stub
 
 /** This is the interface for MBean manipulation on the agent
  *  side. It contains the methods necessary for the creation,
@@ -333,4 +334,8 @@ trait MBeanServer extends MBeanServerConnection {
     /** Sets the values of several attributes of a named MBean. */
     @stub
     def setAttributes(name: ObjectName, attributes: AttributeList): AttributeList = ???
+
+    /** Unregisters an MBean from the MBean server. */
+    @stub
+    def unregisterMBean(name: ObjectName): Unit = ???
 }

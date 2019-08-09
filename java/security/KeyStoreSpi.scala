@@ -1,9 +1,10 @@
 package java.security
 
-import java.io.InputStream
+import java.io.{InputStream, OutputStream}
 import java.lang.{Class, Object, String}
 import java.security.cert.Certificate
 import java.util.{Date, Enumeration}
+import scala.scalanative.annotation.stub
 
 /** This class defines the Service Provider Interface (SPI)
  *  for the KeyStore class.
@@ -12,6 +13,10 @@ import java.util.{Date, Enumeration}
  *  of a keystore for a particular keystore type.
  */
 abstract class KeyStoreSpi extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Lists all the alias names of this keystore. */
     def engineAliases(): Enumeration[String]
@@ -97,4 +102,9 @@ abstract class KeyStoreSpi extends Object {
      *  KeyStore.LoadStoreParmeter.
      */
     def engineStore(param: KeyStore.LoadStoreParameter): Unit
+
+    /** Stores this keystore to the given output stream, and protects its
+     *  integrity with the given password.
+     */
+    def engineStore(stream: OutputStream, password: Array[Char]): Unit
 }

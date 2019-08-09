@@ -3,6 +3,7 @@ package java.awt
 import java.awt.event.AdjustmentListener
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class represents the state of a horizontal or vertical
  *  scrollbar of a ScrollPane.  Objects of this class are
@@ -93,4 +94,8 @@ class ScrollPaneAdjustable extends Object with Adjustable with Serializable {
     /** This method should NOT be called by user code. */
     @stub
     def setVisibleAmount(v: Int): Unit = ???
+
+    /** Returns a string representation of this scrollbar and its values. */
+    @stub
+    def toString(): String = ???
 }

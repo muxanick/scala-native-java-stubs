@@ -2,6 +2,7 @@ package javax.print.attribute.standard
 
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, EnumSyntax}
+import scala.scalanative.annotation.stub
 
 /** Class ReferenceUriSchemesSupported is a printing attribute class
  *  an enumeration, that indicates a "URI scheme," such as "http:" or "ftp:",
@@ -34,6 +35,12 @@ import javax.print.attribute.{Attribute, EnumSyntax}
  */
 class ReferenceUriSchemesSupported extends EnumSyntax with Attribute {
 
+    /** Construct a new reference URI scheme enumeration value with the given
+     *  integer value.
+     */
+    @stub
+    protected def this(value: Int) = ???
+
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.
      */
@@ -51,6 +58,10 @@ class ReferenceUriSchemesSupported extends EnumSyntax with Attribute {
      */
     @stub
     def getName(): String = ???
+
+    /** Returns the string table for class ReferenceUriSchemesSupported. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object ReferenceUriSchemesSupported {
@@ -81,4 +92,8 @@ object ReferenceUriSchemesSupported {
     /** USENET news using Network News Transfer Protocol (NNTP). */
     @stub
     val NNTP: ReferenceUriSchemesSupported = ???
+
+    /** Wide Area Information Server (WAIS) protocol. */
+    @stub
+    val WAIS: ReferenceUriSchemesSupported = ???
 }

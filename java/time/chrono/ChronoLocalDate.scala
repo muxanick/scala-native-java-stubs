@@ -5,6 +5,7 @@ import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalAmount, TemporalField, TemporalQuery, TemporalUnit}
 import java.util.Comparator
+import scala.scalanative.annotation.stub
 
 /** A date without time-of-day or time-zone in an arbitrary chronology, intended
  *  for advanced globalization use cases.
@@ -251,6 +252,10 @@ trait ChronoLocalDate extends Temporal with TemporalAdjuster with Comparable[Chr
     def until(endExclusive: Temporal, unit: TemporalUnit): Long = ???
 
     /** Returns an adjusted object of the same type as this object with the adjustment made. */
+    @stub
+    val this: default = ???
+
+    /** Returns an object of the same type as this object with the specified field altered. */
     @stub
     val this: default = ???
 }

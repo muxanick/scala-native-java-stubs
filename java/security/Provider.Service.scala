@@ -1,6 +1,8 @@
 package java.security
 
 import java.lang.{Object, String}
+import java.util.{List, Map}
+import scala.scalanative.annotation.stub
 
 /** The description of a security service. It encapsulates the properties
  *  of a service and contains a factory method to obtain new implementation
@@ -26,6 +28,10 @@ import java.lang.{Object, String}
  *  Instances of this class are immutable.
  */
 object Provider.Service extends Object {
+
+    /** Construct a new service. */
+    @stub
+    def Service(provider: Provider, type: String, algorithm: String, className: String, aliases: List[String], attributes: Map[String, String]) = ???
 
     /** Return the name of the algorithm of this service. */
     @stub
@@ -58,4 +64,8 @@ object Provider.Service extends Object {
     /** Test whether this Service can use the specified parameter. */
     @stub
     def supportsParameter(parameter: Object): Boolean = ???
+
+    /** Return a String representation of this service. */
+    @stub
+    def toString(): String = ???
 }

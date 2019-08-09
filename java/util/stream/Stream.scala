@@ -2,7 +2,8 @@ package java.util.stream
 
 import java.lang.Object
 import java.util.{Comparator, Optional}
-import java.util.function.{BiConsumer, BiFunction, BinaryOperator, Consumer, Function, Predicate, Supplier, ToDoubleFunction, ToIntFunction, ToLongFunction, UnaryOperator}
+import java.util.function.{BiConsumer, BiFunction, BinaryOperator, Consumer, Function, IntFunction, Predicate, Supplier, ToDoubleFunction, ToIntFunction, ToLongFunction, UnaryOperator}
+import scala.scalanative.annotation.stub
 
 /** A sequence of elements supporting sequential and parallel aggregate
  *  operations.  The following example illustrates an aggregate operation using
@@ -287,9 +288,21 @@ trait Stream[T] extends BaseStream[T, Stream[T]] {
     /** Returns an array containing the elements of this stream. */
     @stub
     def toArray(): Array[Object] = ???
+
+    /** Returns an array containing the elements of this stream, using the
+     *  provided generator function to allocate the returned array, as
+     *  well as any additional arrays that might be required for a partitioned
+     *  execution or for resizing.
+     */
+    @stub
+    def toArray[A](generator: IntFunction[Array[A]]): Array[A] = ???
 }
 
 object Stream {
+    /** A mutable builder for a Stream. */
+    @stub
+    val Stream.Builder[T]: trait = ???
+
     /** Returns a builder for a Stream. */
     @stub
     def builder[T](): Stream.Builder[T] = ???

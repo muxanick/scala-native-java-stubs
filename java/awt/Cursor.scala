@@ -2,6 +2,7 @@ package java.awt
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A class to encapsulate the bitmap representation of the mouse cursor. */
 class Cursor extends Object with Serializable {
@@ -9,6 +10,10 @@ class Cursor extends Object with Serializable {
     /** Creates a new cursor object with the specified type. */
     @stub
     def this(type: Int) = ???
+
+    /** Creates a new custom cursor object with the specified name. */
+    @stub
+    protected def this(name: String) = ???
 
     /** The user-visible name of the cursor. */
     @stub
@@ -21,6 +26,10 @@ class Cursor extends Object with Serializable {
     /** Returns the type for this cursor. */
     @stub
     def getType(): Int = ???
+
+    /** Returns a string representation of this cursor. */
+    @stub
+    def toString(): String = ???
 }
 
 object Cursor {
@@ -87,6 +96,10 @@ object Cursor {
     /** The west-resize cursor type. */
     @stub
     val W_RESIZE_CURSOR: Int = ???
+
+    /** The wait cursor type. */
+    @stub
+    val WAIT_CURSOR: Int = ???
 
     /** Return the system default cursor. */
     @stub

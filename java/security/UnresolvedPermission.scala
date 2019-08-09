@@ -3,6 +3,7 @@ package java.security
 import java.io.Serializable
 import java.lang.{Object, String}
 import java.security.cert.Certificate
+import scala.scalanative.annotation.stub
 
 /** The UnresolvedPermission class is used to hold Permissions that
  *  were "unresolved" when the Policy was initialized.
@@ -62,6 +63,13 @@ import java.security.cert.Certificate
  */
 final class UnresolvedPermission extends Permission with Serializable {
 
+    /** Creates a new UnresolvedPermission containing the permission
+     *  information needed later to actually create a Permission of the
+     *  specified class, when the permission is resolved.
+     */
+    @stub
+    def this(type: String, name: String, actions: String, certs: Array[Certificate]) = ???
+
     /** Checks two UnresolvedPermission objects for equality. */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -110,4 +118,8 @@ final class UnresolvedPermission extends Permission with Serializable {
      */
     @stub
     def newPermissionCollection(): PermissionCollection = ???
+
+    /** Returns a string describing this UnresolvedPermission. */
+    @stub
+    def toString(): String = ???
 }

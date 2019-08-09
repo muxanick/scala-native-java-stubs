@@ -2,6 +2,7 @@ package javax.print
 
 import java.io.OutputStream
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A StreamPrintServiceFactory is the factory for
  *  StreamPrintService instances,
@@ -23,6 +24,10 @@ import java.lang.{Object, String}
  */
 abstract class StreamPrintServiceFactory extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Queries the factory for the document format that is emitted
      *  by printers obtained from this factory.
      */
@@ -37,4 +42,13 @@ abstract class StreamPrintServiceFactory extends Object {
      *  by printers obtained from this factory.
      */
     def getSupportedDocFlavors(): Array[DocFlavor]
+}
+
+object StreamPrintServiceFactory {
+    /** Locates factories for print services that can be used with
+     *  a print job to output a stream of data in the
+     *  format specified by outputMimeType.
+     */
+    @stub
+    def lookupStreamPrintServiceFactories(flavor: DocFlavor, outputMimeType: String): Array[StreamPrintServiceFactory] = ???
 }

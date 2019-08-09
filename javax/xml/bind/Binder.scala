@@ -2,6 +2,7 @@ package javax.xml.bind
 
 import java.lang.{Class, Object, String}
 import javax.xml.validation.Schema
+import scala.scalanative.annotation.stub
 
 /** Enable synchronization between XML infoset nodes and JAXB objects
  *  representing same XML document.
@@ -46,6 +47,10 @@ import javax.xml.validation.Schema
  *  preserving representations.
  */
 abstract class Binder[XmlNode] extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Return the current event handler or the default event handler if one
      *  hasn't been set.
@@ -99,4 +104,7 @@ abstract class Binder[XmlNode] extends Object {
      *  its associated XML node and its descendants.
      */
     def updateXML(jaxbObject: Object): XmlNode
+
+    /** Changes in JAXB object tree are updated in its associated XML parse tree. */
+    def updateXML(jaxbObject: Object, xmlNode: XmlNode): XmlNode
 }

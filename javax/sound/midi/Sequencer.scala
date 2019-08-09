@@ -1,6 +1,7 @@
 package javax.sound.midi
 
 import java.io.InputStream
+import scala.scalanative.annotation.stub
 
 /** A hardware or software device that plays back a MIDI
  *  sequence is known as a sequencer.
@@ -236,4 +237,24 @@ trait Sequencer extends MidiDevice {
      */
     @stub
     def stop(): Unit = ???
+
+    /** Stops recording, if active. */
+    @stub
+    def stopRecording(): Unit = ???
+}
+
+object Sequencer {
+    /** A SyncMode object represents one of the ways in which
+     *  a MIDI sequencer's notion of time can be synchronized with a master
+     *  or slave device.
+     */
+    @stub
+    object SyncMode extends Sequencer.SyncMode
+
+    /** A value indicating that looping should continue
+     *  indefinitely rather than complete after a specific
+     *  number of loops.
+     */
+    @stub
+    val LOOP_CONTINUOUSLY: Int = ???
 }

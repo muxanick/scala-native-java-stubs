@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
 import java.nio.{ByteBuffer, LongBuffer}
 import java.util.stream.IntStream
+import scala.scalanative.annotation.stub
 
 /** This class implements a vector of bits that grows as needed. Each
  *  component of the bit set has a boolean value. The
@@ -34,6 +35,13 @@ class BitSet extends Object with Cloneable with Serializable {
     /** Creates a new bit set. */
     @stub
     def this() = ???
+
+    /** Creates a bit set whose initial size is large enough to explicitly
+     *  represent bits with indices in the range 0 through
+     *  nbits-1.
+     */
+    @stub
+    def this(nbits: Int) = ???
 
     /** Performs a logical AND of this target bit set with the
      *  argument bit set.
@@ -193,6 +201,12 @@ class BitSet extends Object with Cloneable with Serializable {
     /** Returns a string representation of this bit set. */
     @stub
     def toString(): String = ???
+
+    /** Performs a logical XOR of this bit set with the bit set
+     *  argument.
+     */
+    @stub
+    def xor(set: BitSet): Unit = ???
 }
 
 object BitSet {

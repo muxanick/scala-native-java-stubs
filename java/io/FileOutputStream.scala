@@ -2,6 +2,7 @@ package java.io
 
 import java.lang.{Object, String}
 import java.nio.channels.FileChannel
+import scala.scalanative.annotation.stub
 
 /** A file output stream is an output stream for writing data to a
  *  File or to a FileDescriptor. Whether or not
@@ -42,6 +43,12 @@ class FileOutputStream extends OutputStream {
     @stub
     def this(name: String) = ???
 
+    /** Creates a file output stream to write to the file with the specified
+     *  name.
+     */
+    @stub
+    def this(name: String, append: Boolean) = ???
+
     /** Closes this file output stream and releases any system resources
      *  associated with this stream.
      */
@@ -76,4 +83,8 @@ class FileOutputStream extends OutputStream {
      */
     @stub
     def write(b: Array[Byte], off: Int, len: Int): Unit = ???
+
+    /** Writes the specified byte to this file output stream. */
+    @stub
+    def write(b: Int): Unit = ???
 }

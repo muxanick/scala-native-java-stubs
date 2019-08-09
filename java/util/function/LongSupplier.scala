@@ -1,6 +1,7 @@
 package java.util.function
 
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** Represents a supplier of long-valued results.  This is the
  *  long-producing primitive specialization of Supplier.
@@ -12,4 +13,8 @@ import java.lang.FunctionalInterface
  *  whose functional method is getAsLong().
  */
 @FunctionalInterface trait LongSupplier {
+
+    /** Gets a result. */
+    @stub
+    def getAsLong(): Long = ???
 }

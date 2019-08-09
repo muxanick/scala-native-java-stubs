@@ -2,7 +2,7 @@ package javax.xml.transform.dom
 
 import java.lang.{Object, String}
 import javax.xml.transform.Result
-import org.w3c.dom.Node
+import scala.scalanative.annotation.stub
 
 /** Acts as a holder for a transformation result tree in the form of a Document Object Model (DOM) tree.
  * 
@@ -29,6 +29,10 @@ class DOMResult extends Object with Result {
     @stub
     def this(node: Node, nextSibling: Node, systemId: String) = ???
 
+    /** Use a DOM node to create a new output target with the specified System ID. */
+    @stub
+    def this(node: Node, systemId: String) = ???
+
     /** Get the child node before which the result nodes will be inserted. */
     @stub
     def getNextSibling(): Node = ???
@@ -48,4 +52,17 @@ class DOMResult extends Object with Result {
     /** Set the node that will contain the result DOM tree. */
     @stub
     def setNode(node: Node): Unit = ???
+
+    /** Set the systemId that may be used in association with the node. */
+    @stub
+    def setSystemId(systemId: String): Unit = ???
+}
+
+object DOMResult {
+    /** If TransformerFactory.getFeature(java.lang.String)
+     *  returns true when passed this value as an argument,
+     *  the Transformer supports Result output of this type.
+     */
+    @stub
+    val FEATURE: String = ???
 }

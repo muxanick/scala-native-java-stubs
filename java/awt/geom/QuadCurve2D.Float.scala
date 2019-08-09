@@ -2,6 +2,7 @@ package java.awt.geom
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A quadratic parametric curve segment specified with
  *  float coordinates.
@@ -13,6 +14,12 @@ object QuadCurve2D.Float extends QuadCurve2D with Serializable {
      */
     @stub
     def Float() = ???
+
+    /** Constructs and initializes a QuadCurve2D from the
+     *  specified float coordinates.
+     */
+    @stub
+    def Float(x1: Float, y1: Float, ctrlx: Float, ctrly: Float, x2: Float, y2: Float) = ???
 
     /** The X coordinate of the control point of the quadratic curve
      *  segment.
@@ -43,6 +50,12 @@ object QuadCurve2D.Float extends QuadCurve2D with Serializable {
      */
     @stub
     val y1: Float = ???
+
+    /** The Y coordinate of the end point of the quadratic curve
+     *  segment.
+     */
+    @stub
+    val y2: Float = ???
 
     /** Returns a high precision and more accurate bounding box of
      *  the Shape than the getBounds method.
@@ -103,4 +116,10 @@ object QuadCurve2D.Float extends QuadCurve2D with Serializable {
      */
     @stub
     def setCurve(x1: Double, y1: Double, ctrlx: Double, ctrly: Double, x2: Double, y2: Double): Unit = ???
+
+    /** Sets the location of the end points and control point of this curve
+     *  to the specified float coordinates.
+     */
+    @stub
+    def setCurve(x1: Float, y1: Float, ctrlx: Float, ctrly: Float, x2: Float, y2: Float): Unit = ???
 }

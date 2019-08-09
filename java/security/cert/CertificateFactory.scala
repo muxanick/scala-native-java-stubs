@@ -4,6 +4,7 @@ import java.io.InputStream
 import java.lang.{Object, String}
 import java.security.Provider
 import java.util.{Collection, Iterator, List}
+import scala.scalanative.annotation.stub
 
 /** This class defines the functionality of a certificate factory, which is
  *  used to generate certificate, certification path (CertPath)
@@ -75,6 +76,12 @@ import java.util.{Collection, Iterator, List}
  */
 class CertificateFactory extends Object {
 
+    /** Creates a CertificateFactory object of the given type, and encapsulates
+     *  the given provider implementation (SPI object) in it.
+     */
+    @stub
+    protected def this(certFacSpi: CertificateFactorySpi, provider: Provider, type: String) = ???
+
     /** Generates a certificate object and initializes it with
      *  the data read from the input stream inStream.
      */
@@ -126,6 +133,12 @@ class CertificateFactory extends Object {
     /** Returns the provider of this certificate factory. */
     @stub
     def getProvider(): Provider = ???
+
+    /** Returns the name of the certificate type associated with this
+     *  certificate factory.
+     */
+    @stub
+    def getType(): String = ???
 }
 
 object CertificateFactory {

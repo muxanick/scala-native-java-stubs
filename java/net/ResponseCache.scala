@@ -2,6 +2,7 @@ package java.net
 
 import java.lang.{Object, String}
 import java.util.{List, Map}
+import scala.scalanative.annotation.stub
 
 /** Represents implementations of URLConnection caches. An instance of
  *  such a class can be registered with the system by doing
@@ -28,6 +29,10 @@ import java.util.{List, Map}
  */
 abstract class ResponseCache extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Retrieve the cached response based on the requesting uri,
      *  request method and request headers.
      */
@@ -44,4 +49,8 @@ object ResponseCache {
     /** Gets the system-wide response cache. */
     @stub
     def getDefault(): ResponseCache = ???
+
+    /** Sets (or unsets) the system-wide cache. */
+    @stub
+    def setDefault(responseCache: ResponseCache): Unit = ???
 }

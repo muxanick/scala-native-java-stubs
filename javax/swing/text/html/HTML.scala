@@ -2,11 +2,16 @@ package javax.swing.text.html
 
 import java.lang.{Object, String}
 import javax.swing.text.AttributeSet
+import scala.scalanative.annotation.stub
 
 /** Constants used in the HTMLDocument.  These
  *  are basically tag and attribute definitions.
  */
 class HTML extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 }
 
 object HTML {
@@ -19,6 +24,14 @@ object HTML {
     /** Typesafe enumeration for an HTML tag. */
     @stub
     object Tag extends HTML.Tag
+
+    /**  */
+    @stub
+    object UnknownTag extends HTML.UnknownTag
+
+    /**  */
+    @stub
+    val NULL_ATTRIBUTE_VALUE: String = ???
 
     /** Returns the set of HTML attributes recognized. */
     @stub
@@ -39,4 +52,8 @@ object HTML {
     /** Fetches an integer attribute value. */
     @stub
     def getIntegerAttributeValue(attr: AttributeSet, key: HTML.Attribute, def: Int): Int = ???
+
+    /** Fetches a tag constant for a well-known tag name (i.e. */
+    @stub
+    def getTag(tagName: String): HTML.Tag = ???
 }

@@ -1,13 +1,22 @@
 package javax.tools
 
-import java.lang.{ClassLoader, Object, String}
-import java.util.Iterator
+import java.lang.{ClassLoader, Iterable, Object, String}
+import java.util.{Iterator, Set}
+import scala.scalanative.annotation.stub
 
 /** Forwards calls to a given file manager.  Subclasses of this class
  *  might override some of these methods and might also provide
  *  additional fields and methods.
  */
 class ForwardingJavaFileManager[M <: JavaFileManager] extends Object with JavaFileManager {
+
+    /** Creates a new instance of ForwardingJavaFileManager. */
+    @stub
+    protected def this(fileManager: M) = ???
+
+    /** The file manager which all methods are delegated to. */
+    @stub
+    protected val fileManager: M = ???
 
     /** Releases any resources opened by this file manager directly or
      *  indirectly.
@@ -78,4 +87,10 @@ class ForwardingJavaFileManager[M <: JavaFileManager] extends Object with JavaFi
      */
     @stub
     def isSupportedOption(option: String): Int = ???
+
+    /** Lists all file objects matching the given criteria in the given
+     *  location.
+     */
+    @stub
+    def list(location: JavaFileManager.Location, packageName: String, kinds: Set[JavaFileObject.Kind], recurse: Boolean): Iterable[JavaFileObject] = ???
 }

@@ -1,7 +1,9 @@
 package java.util
 
+import java.io.OutputStream
 import java.lang.{Object, String}
 import java.nio.ByteBuffer
+import scala.scalanative.annotation.stub
 
 /** This class implements an encoder for encoding byte data using
  *  the Base64 encoding scheme as specified in RFC 4648 and RFC 2045.
@@ -48,4 +50,10 @@ object Base64.Encoder extends Object {
      */
     @stub
     def withoutPadding(): Base64.Encoder = ???
+
+    /** Wraps an output stream for encoding byte data using the Base64
+     *  encoding scheme.
+     */
+    @stub
+    def wrap(os: OutputStream): OutputStream = ???
 }

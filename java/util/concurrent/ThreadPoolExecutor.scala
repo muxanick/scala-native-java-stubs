@@ -1,7 +1,8 @@
 package java.util.concurrent
 
-import java.lang.{Object, Runnable, Thread, Throwable}
+import java.lang.{Object, Runnable, String, Thread, Throwable}
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** An ExecutorService that executes each submitted task using
  *  one of possibly several pooled threads, normally configured
@@ -286,6 +287,12 @@ class ThreadPoolExecutor extends AbstractExecutorService {
     @stub
     def this(corePoolSize: Int, maximumPoolSize: Int, keepAliveTime: Long, unit: TimeUnit, workQueue: BlockingQueue[Runnable], threadFactory: ThreadFactory) = ???
 
+    /** Creates a new ThreadPoolExecutor with the given initial
+     *  parameters.
+     */
+    @stub
+    def this(corePoolSize: Int, maximumPoolSize: Int, keepAliveTime: Long, unit: TimeUnit, workQueue: BlockingQueue[Runnable], threadFactory: ThreadFactory, handler: RejectedExecutionHandler) = ???
+
     /** Method invoked upon completion of execution of the given Runnable. */
     @stub
     protected def afterExecute(r: Runnable, t: Throwable): Unit = ???
@@ -456,6 +463,13 @@ class ThreadPoolExecutor extends AbstractExecutorService {
     /** Method invoked when the Executor has terminated. */
     @stub
     protected def terminated(): Unit = ???
+
+    /** Returns a string identifying this pool, as well as its state,
+     *  including indications of run state and estimated worker and
+     *  task counts.
+     */
+    @stub
+    def toString(): String = ???
 }
 
 object ThreadPoolExecutor {
@@ -479,4 +493,10 @@ object ThreadPoolExecutor {
      */
     @stub
     object DiscardOldestPolicy extends ThreadPoolExecutor.DiscardOldestPolicy
+
+    /** A handler for rejected tasks that silently discards the
+     *  rejected task.
+     */
+    @stub
+    object DiscardPolicy extends ThreadPoolExecutor.DiscardPolicy
 }

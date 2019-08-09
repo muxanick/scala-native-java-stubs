@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component, Container, Graphics, Rectangle}
 import java.lang.Object
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** This class is inserted in between cell renderers and the components that
  *  use them.  It just exists to thwart the repaint() and invalidate() methods
@@ -32,6 +33,20 @@ import javax.accessibility.{Accessible, AccessibleContext}
  *  Please see XMLEncoder.
  */
 class CellRendererPane extends Container with Accessible {
+
+    /** Construct a CellRendererPane object. */
+    @stub
+    def this() = ???
+
+    /** This class implements accessibility support for the
+     *  CellRendererPane class.
+     */
+    @stub
+    protected object AccessibleCellRendererPane extends CellRendererPane.AccessibleCellRendererPane
+
+    /**  */
+    @stub
+    protected val accessibleContext: AccessibleContext = ???
 
     /** If the specified component is already a child of this then we don't
      *  bother doing anything - stacking order doesn't matter for cell
@@ -65,4 +80,8 @@ class CellRendererPane extends Container with Accessible {
     /** Calls this.paintComponent() with the rectangles x,y,width,height fields. */
     @stub
     def paintComponent(g: Graphics, c: Component, p: Container, r: Rectangle): Unit = ???
+
+    /** Shouldn't be called. */
+    @stub
+    def update(g: Graphics): Unit = ???
 }

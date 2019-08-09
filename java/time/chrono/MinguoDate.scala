@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{Object, String}
 import java.time.{Clock, LocalTime, ZoneId}
 import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalAmount, TemporalField, TemporalUnit, ValueRange}
+import scala.scalanative.annotation.stub
 
 /** A date in the Minguo calendar system.
  *  
@@ -87,6 +88,10 @@ final class MinguoDate extends Object with ChronoLocalDate with Serializable {
     /** Returns an adjusted object of the same type as this object with the adjustment made. */
     @stub
     def with(adjuster: TemporalAdjuster): MinguoDate = ???
+
+    /** Returns an object of the same type as this object with the specified field altered. */
+    @stub
+    def with(field: TemporalField, newValue: Long): MinguoDate = ???
 }
 
 object MinguoDate {

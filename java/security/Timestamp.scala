@@ -1,9 +1,10 @@
 package java.security
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
 import java.security.cert.CertPath
 import java.util.Date
+import scala.scalanative.annotation.stub
 
 /** This class encapsulates information about a signed timestamp.
  *  It is immutable.
@@ -11,6 +12,10 @@ import java.util.Date
  *  Timestamping Authority (TSA) which generated and signed the timestamp.
  */
 final class Timestamp extends Object with Serializable {
+
+    /** Constructs a Timestamp. */
+    @stub
+    def this(timestamp: Date, signerCertPath: CertPath) = ???
 
     /** Tests for equality between the specified object and this
      *  timestamp.
@@ -29,4 +34,8 @@ final class Timestamp extends Object with Serializable {
     /** Returns the hash code value for this timestamp. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a string describing this timestamp. */
+    @stub
+    def toString(): String = ???
 }

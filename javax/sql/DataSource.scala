@@ -1,6 +1,8 @@
 package javax.sql
 
+import java.lang.String
 import java.sql.{Connection, Wrapper}
+import scala.scalanative.annotation.stub
 
 /** A factory for connections to the physical data source that this
  *  DataSource object represents.  An alternative to the
@@ -50,4 +52,10 @@ trait DataSource extends CommonDataSource with Wrapper {
      */
     @stub
     def getConnection(): Connection = ???
+
+    /** Attempts to establish a connection with the data source that
+     *  this DataSource object represents.
+     */
+    @stub
+    def getConnection(username: String, password: String): Connection = ???
 }

@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class provides a skeletal implementation of the List
  *  interface to minimize the effort required to implement this interface
@@ -35,6 +36,10 @@ import java.lang.Object
  */
 abstract class AbstractSequentialList[E] extends AbstractList[E] {
 
+    /** Sole constructor. */
+    @stub
+    protected def this() = ???
+
     /** Inserts the specified element at the specified position in this list
      *  (optional operation).
      */
@@ -62,4 +67,9 @@ abstract class AbstractSequentialList[E] extends AbstractList[E] {
      *  operation).
      */
     def remove(index: Int): E
+
+    /** Replaces the element at the specified position in this list with the
+     *  specified element (optional operation).
+     */
+    def set(index: Int, element: E): E
 }

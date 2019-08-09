@@ -2,6 +2,7 @@ package javax.security.sasl
 
 import java.io.IOException
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown by a SASL mechanism implementation
  *  to indicate that the SASL
@@ -26,4 +27,10 @@ class AuthenticationException extends SaslException {
      */
     @stub
     def this(detail: String) = ???
+
+    /** Constructs a new instance of AuthenticationException with a detailed message
+     *  and a root exception.
+     */
+    @stub
+    def this(detail: String, ex: Throwable) = ???
 }

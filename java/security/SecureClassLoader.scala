@@ -2,6 +2,7 @@ package java.security
 
 import java.lang.{Class, ClassLoader, Object, String}
 import java.nio.ByteBuffer
+import scala.scalanative.annotation.stub
 
 /** This class extends ClassLoader with additional support for defining
  *  classes with an associated code source and permissions which are
@@ -15,6 +16,12 @@ class SecureClassLoader extends ClassLoader {
     @stub
     protected def this() = ???
 
+    /** Creates a new SecureClassLoader using the specified parent
+     *  class loader for delegation.
+     */
+    @stub
+    protected def this(parent: ClassLoader) = ???
+
     /** Converts an array of bytes into an instance of class Class,
      *  with an optional CodeSource.
      */
@@ -26,4 +33,8 @@ class SecureClassLoader extends ClassLoader {
      */
     @stub
     protected def defineClass(name: String, b: ByteBuffer, cs: CodeSource): Class[_] = ???
+
+    /** Returns the permissions for the given CodeSource object. */
+    @stub
+    protected def getPermissions(codesource: CodeSource): PermissionCollection = ???
 }

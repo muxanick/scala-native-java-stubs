@@ -1,6 +1,7 @@
 package javax.lang.model.type
 
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** Represents the type of an executable.  An executable
  *  is a method, constructor, or initializer.
@@ -35,4 +36,10 @@ trait ExecutableType extends TypeMirror {
      */
     @stub
     def getThrownTypes(): List[_ <: TypeMirror] = ???
+
+    /** Returns the type variables declared by the formal type parameters
+     *  of this executable.
+     */
+    @stub
+    def getTypeVariables(): List[_ <: TypeVariable] = ???
 }

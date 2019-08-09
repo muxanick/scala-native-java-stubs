@@ -2,6 +2,7 @@ package java.awt
 
 import java.awt.image.ColorModel
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The AlphaComposite class implements basic alpha
  *  compositing rules for combining source and destination colors
@@ -344,6 +345,10 @@ final class AlphaComposite extends Object with Composite {
     /** Returns the compositing rule of this AlphaComposite. */
     @stub
     def getRule(): Int = ???
+
+    /** Returns the hashcode for this composite. */
+    @stub
+    def hashCode(): Int = ???
 }
 
 object AlphaComposite {
@@ -491,6 +496,14 @@ object AlphaComposite {
      */
     @stub
     val Xor: AlphaComposite = ???
+
+    /** The part of the source that lies outside of the destination
+     *  is combined with the part of the destination that lies outside
+     *  of the source
+     *  (Porter-Duff Source Xor Destination rule).
+     */
+    @stub
+    val XOR: Int = ???
 
     /** Creates an AlphaComposite object with the specified rule. */
     @stub

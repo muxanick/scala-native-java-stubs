@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An abstract adapter class for receiving component events.
  *  The methods in this class are empty. This class exists as
@@ -20,6 +21,10 @@ import java.lang.Object
  */
 abstract class ComponentAdapter extends Object with ComponentListener {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Invoked when the component has been made invisible. */
     def componentHidden(e: ComponentEvent): Unit
 
@@ -28,4 +33,7 @@ abstract class ComponentAdapter extends Object with ComponentListener {
 
     /** Invoked when the component's size changes. */
     def componentResized(e: ComponentEvent): Unit
+
+    /** Invoked when the component has been made visible. */
+    def componentShown(e: ComponentEvent): Unit
 }

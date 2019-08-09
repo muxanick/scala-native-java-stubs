@@ -2,6 +2,7 @@ package java.net
 
 import java.lang.{Object, String}
 import java.security.{BasicPermission, Permission}
+import scala.scalanative.annotation.stub
 
 /** This class is for various network permissions.
  *  A NetPermission contains a name (also referred to as a "target name") but
@@ -130,4 +131,8 @@ final class NetPermission extends BasicPermission {
     /** Creates a new NetPermission with the specified name. */
     @stub
     def this(name: String) = ???
+
+    /** Creates a new NetPermission object with the specified name. */
+    @stub
+    def this(name: String, actions: String) = ???
 }

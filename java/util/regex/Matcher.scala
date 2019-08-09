@@ -1,6 +1,7 @@
 package java.util.regex
 
 import java.lang.{CharSequence, Object, String, StringBuffer}
+import scala.scalanative.annotation.stub
 
 /** An engine that performs match operations on a character sequence by interpreting a Pattern.
  * 
@@ -221,6 +222,10 @@ final class Matcher extends Object with MatchResult {
      */
     @stub
     def usePattern(newPattern: Pattern): Matcher = ???
+
+    /** Sets the transparency of region bounds for this matcher. */
+    @stub
+    def useTransparentBounds(b: Boolean): Matcher = ???
 }
 
 object Matcher {

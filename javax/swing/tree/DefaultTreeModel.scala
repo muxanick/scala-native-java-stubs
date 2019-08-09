@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{Class, Object}
 import java.util.EventListener
 import javax.swing.event.{EventListenerList, TreeModelListener}
+import scala.scalanative.annotation.stub
 
 /** A simple tree data model that uses TreeNodes.
  *  For further information and examples that use DefaultTreeModel,
@@ -25,6 +26,12 @@ class DefaultTreeModel extends Object with Serializable with TreeModel {
     @stub
     def this(root: TreeNode) = ???
 
+    /** Creates a tree specifying whether any node can have children,
+     *  or whether only certain nodes can have children.
+     */
+    @stub
+    def this(root: TreeNode, asksAllowsChildren: Boolean) = ???
+
     /** Determines how the isLeaf method figures
      *  out if a node is a leaf node.
      */
@@ -34,6 +41,10 @@ class DefaultTreeModel extends Object with Serializable with TreeModel {
     /** Listeners. */
     @stub
     protected val listenerList: EventListenerList = ???
+
+    /** Root of the tree. */
+    @stub
+    protected val root: TreeNode = ???
 
     /** Adds a listener for the TreeModelEvent posted after the tree changes. */
     @stub
@@ -177,4 +188,10 @@ class DefaultTreeModel extends Object with Serializable with TreeModel {
     /** Sets the root to root. */
     @stub
     def setRoot(root: TreeNode): Unit = ???
+
+    /** This sets the user object of the TreeNode identified by path
+     *  and posts a node changed.
+     */
+    @stub
+    def valueForPathChanged(path: TreePath, newValue: Object): Unit = ???
 }

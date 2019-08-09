@@ -1,5 +1,11 @@
 package javax.naming.spi
 
+import java.lang.Object
+import java.util.Hashtable
+import javax.naming.{Context, Name}
+import javax.naming.directory.Attributes
+import scala.scalanative.annotation.stub
+
 /** This interface represents a factory for creating an object given
  *  an object and attributes about the object.
  * 
@@ -23,4 +29,10 @@ package javax.naming.spi
  *  factories can quickly eliminate CORBA-related LDAP entries.
  */
 trait DirObjectFactory extends ObjectFactory {
+
+    /** Creates an object using the location or reference information, and attributes
+     *  specified.
+     */
+    @stub
+    def getObjectInstance(obj: Object, name: Name, nameCtx: Context, environment: Hashtable[_, _], attrs: Attributes): Object = ???
 }

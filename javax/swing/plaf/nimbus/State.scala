@@ -1,7 +1,8 @@
 package javax.swing.plaf.nimbus
 
-import java.lang.Object
+import java.lang.{Object, String}
 import javax.swing.JComponent
+import scala.scalanative.annotation.stub
 
 /** Represents a built in, or custom, state in Nimbus.
  * 
@@ -45,8 +46,15 @@ import javax.swing.JComponent
  */
 abstract class State[T <: JComponent] extends Object {
 
+    /** Create a new custom State. */
+    @stub
+    protected def this(name: String) = ???
+
     /** Gets whether the specified JComponent is in the custom state represented
      *  by this class.
      */
     protected def isInState(c: T): Boolean
+
+    /** Returns a string representation of the object. */
+    def toString(): String
 }

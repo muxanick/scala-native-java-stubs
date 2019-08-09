@@ -1,6 +1,7 @@
 package java.net
 
-import java.lang.String
+import java.lang.{Class, String}
+import scala.scalanative.annotation.stub
 
 /** A socket option associated with a socket.
  * 
@@ -13,4 +14,8 @@ trait SocketOption[T] {
     /** Returns the name of the socket option. */
     @stub
     def name(): String = ???
+
+    /** Returns the type of the socket option value. */
+    @stub
+    def type(): Class[T] = ???
 }

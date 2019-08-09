@@ -7,8 +7,7 @@ import javax.xml.bind.annotation.adapters.XmlAdapter
 import javax.xml.bind.attachment.AttachmentMarshaller
 import javax.xml.stream.{XMLEventWriter, XMLStreamWriter}
 import javax.xml.validation.Schema
-import org.w3c.dom.Node
-import org.xml.sax.ContentHandler
+import scala.scalanative.annotation.stub
 
 /** Partial default Marshaller implementation.
  * 
@@ -23,6 +22,10 @@ import org.xml.sax.ContentHandler
  *  marshal(Object, javax.xml.stream.XMLEventWriter).
  */
 abstract class AbstractMarshallerImpl extends Object with Marshaller {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Gets the adapter associated with the specified type. */
     def getAdapter[A <: XmlAdapter](type: Class[A]): A
@@ -137,4 +140,7 @@ abstract class AbstractMarshallerImpl extends Object with Marshaller {
      *  against.
      */
     def setSchema(schema: Schema): Unit
+
+    /** Convenience method for setting the schemaLocation. */
+    protected def setSchemaLocation(location: String): Unit
 }

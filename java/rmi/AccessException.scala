@@ -2,6 +2,7 @@ package java.rmi
 
 import java.io.IOException
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** An AccessException is thrown by certain methods of the
  *  java.rmi.Naming class (specifically bind,
@@ -18,4 +19,10 @@ class AccessException extends RemoteException {
      */
     @stub
     def this(s: String) = ???
+
+    /** Constructs an AccessException with the specified
+     *  detail message and nested exception.
+     */
+    @stub
+    def this(s: String, ex: Exception) = ???
 }

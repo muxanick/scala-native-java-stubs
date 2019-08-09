@@ -2,6 +2,7 @@ package java.awt.geom
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A line segment specified with double coordinates. */
 object Line2D.Double extends Line2D with Serializable {
@@ -16,6 +17,12 @@ object Line2D.Double extends Line2D with Serializable {
     @stub
     def Double(x1: Double, y1: Double, x2: Double, y2: Double) = ???
 
+    /** Constructs and initializes a Line2D from the
+     *  specified Point2D objects.
+     */
+    @stub
+    def Double(p1: Point2D, p2: Point2D) = ???
+
     /** The X coordinate of the start point of the line segment. */
     @stub
     val x1: Double = ???
@@ -27,6 +34,10 @@ object Line2D.Double extends Line2D with Serializable {
     /** The Y coordinate of the start point of the line segment. */
     @stub
     val y1: Double = ???
+
+    /** The Y coordinate of the end point of the line segment. */
+    @stub
+    val y2: Double = ???
 
     /** Returns a high precision and more accurate bounding box of
      *  the Shape than the getBounds method.
@@ -57,4 +68,10 @@ object Line2D.Double extends Line2D with Serializable {
     /** Returns the Y coordinate of the end point in double precision. */
     @stub
     def getY2(): Double = ???
+
+    /** Sets the location of the end points of this Line2D to
+     *  the specified double coordinates.
+     */
+    @stub
+    def setLine(x1: Double, y1: Double, x2: Double, y2: Double): Unit = ???
 }

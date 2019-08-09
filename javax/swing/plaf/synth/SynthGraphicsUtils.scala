@@ -3,9 +3,14 @@ package javax.swing.plaf.synth
 import java.awt.{Dimension, Font, FontMetrics, Graphics, Rectangle}
 import java.lang.{Object, String}
 import javax.swing.Icon
+import scala.scalanative.annotation.stub
 
 /** Wrapper for primitive graphics calls. */
 class SynthGraphicsUtils extends Object {
+
+    /** Creates a SynthGraphicsUtils. */
+    @stub
+    def this() = ???
 
     /** Returns the size of the passed in string. */
     @stub
@@ -50,4 +55,8 @@ class SynthGraphicsUtils extends Object {
     /** Paints text at the specified location. */
     @stub
     def paintText(ss: SynthContext, g: Graphics, text: String, x: Int, y: Int, mnemonicIndex: Int): Unit = ???
+
+    /** Paints text at the specified location. */
+    @stub
+    def paintText(ss: SynthContext, g: Graphics, text: String, bounds: Rectangle, mnemonicIndex: Int): Unit = ???
 }

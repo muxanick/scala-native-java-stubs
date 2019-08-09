@@ -2,6 +2,7 @@ package java.util.zip
 
 import java.lang.Object
 import java.nio.ByteBuffer
+import scala.scalanative.annotation.stub
 
 /** A class that can be used to compute the CRC-32 of a data stream.
  * 
@@ -9,6 +10,10 @@ import java.nio.ByteBuffer
  *  a NullPointerException to be thrown.
  */
 class CRC32 extends Object with Checksum {
+
+    /** Creates a new CRC32 object. */
+    @stub
+    def this() = ???
 
     /** Returns CRC-32 value. */
     @stub
@@ -29,4 +34,10 @@ class CRC32 extends Object with Checksum {
     /** Updates the checksum with the bytes from the specified buffer. */
     @stub
     def update(buffer: ByteBuffer): Unit = ???
+
+    /** Updates the CRC-32 checksum with the specified byte (the low
+     *  eight bits of the argument b).
+     */
+    @stub
+    def update(b: Int): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.awt
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Defines an interface for classes that know how to layout Containers
  *  based on a layout constraints object.
@@ -35,4 +36,10 @@ trait LayoutManager2 extends LayoutManager {
      */
     @stub
     def invalidateLayout(target: Container): Unit = ???
+
+    /** Calculates the maximum size dimensions for the specified container,
+     *  given the components it contains.
+     */
+    @stub
+    def maximumLayoutSize(target: Container): Dimension = ???
 }

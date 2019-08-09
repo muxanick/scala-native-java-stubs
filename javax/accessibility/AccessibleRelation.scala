@@ -1,6 +1,7 @@
 package javax.accessibility
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Class AccessibleRelation describes a relation between the
  *  object that implements the AccessibleRelation and one or more other
@@ -25,6 +26,10 @@ class AccessibleRelation extends AccessibleBundle {
     @stub
     def this(key: String, target: Object) = ???
 
+    /** Creates a new AccessibleRelation using the given locale independent key. */
+    @stub
+    def this(key: String, target: Array[Object]) = ???
+
     /** Returns the key for this relation */
     @stub
     def getKey(): String = ???
@@ -36,6 +41,10 @@ class AccessibleRelation extends AccessibleBundle {
     /** Sets the target object for this relation */
     @stub
     def setTarget(target: Object): Unit = ???
+
+    /** Sets the target objects for this relation */
+    @stub
+    def setTarget(target: Array[Object]): Unit = ???
 }
 
 object AccessibleRelation {
@@ -164,4 +173,10 @@ object AccessibleRelation {
      */
     @stub
     val SUBWINDOW_OF: String = ???
+
+    /** Indicates the SUBWINDOW_OF relation between two or more objects
+     *  has changed.
+     */
+    @stub
+    val SUBWINDOW_OF_PROPERTY: String = ???
 }

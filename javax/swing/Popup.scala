@@ -1,6 +1,8 @@
 package javax.swing
 
+import java.awt.Component
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Popups are used to display a Component to the user, typically
  *  on top of all the other Components in a particular containment
@@ -28,7 +30,17 @@ class Popup extends Object {
     @stub
     protected def this() = ???
 
+    /** Creates a Popup for the Component owner
+     *  containing the Component contents.
+     */
+    @stub
+    protected def this(owner: Component, contents: Component, x: Int, y: Int) = ???
+
     /** Hides and disposes of the Popup. */
     @stub
     def hide(): Unit = ???
+
+    /** Makes the Popup visible. */
+    @stub
+    def show(): Unit = ???
 }

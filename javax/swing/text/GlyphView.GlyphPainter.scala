@@ -2,6 +2,7 @@ package javax.swing.text
 
 import java.awt.{Graphics, Shape}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A class to perform rendering of the glyphs.
  *  This can be implemented to be stateless, or
@@ -14,6 +15,10 @@ import java.lang.Object
  *  shaping for i18n, etc).
  */
 object abstract GlyphView.GlyphPainter extends Object {
+
+    /**  */
+    @stub
+    def GlyphPainter() = ???
 
     /**  */
     @stub
@@ -58,4 +63,10 @@ object abstract GlyphView.GlyphPainter extends Object {
     /** Paint the glyphs representing the given range. */
     @stub
     def paint(v: GlyphView, g: Graphics, a: Shape, p0: Int, p1: Int): Unit
+
+    /** Provides a mapping from the view coordinate space to the logical
+     *  coordinate space of the model.
+     */
+    @stub
+    def viewToModel(v: GlyphView, x: Float, y: Float, a: Shape, biasReturn: Array[Position.Bias]): Int
 }

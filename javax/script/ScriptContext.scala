@@ -3,6 +3,7 @@ package javax.script
 import java.io.{Reader, Writer}
 import java.lang.{Integer, Object, String}
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** The interface whose implementing classes are used to connect Script Engines
  *  with objects, such as scoped Bindings, in hosting applications.  Each scope is a set
@@ -75,6 +76,10 @@ trait ScriptContext {
      */
     @stub
     def setReader(reader: Reader): Unit = ???
+
+    /** Sets the Writer for scripts to use when displaying output. */
+    @stub
+    def setWriter(writer: Writer): Unit = ???
 }
 
 object ScriptContext {
@@ -84,4 +89,8 @@ object ScriptContext {
      */
     @stub
     val ENGINE_SCOPE: Int = ???
+
+    /** GlobalScope attributes are visible to all engines created by same ScriptEngineFactory. */
+    @stub
+    val GLOBAL_SCOPE: Int = ???
 }

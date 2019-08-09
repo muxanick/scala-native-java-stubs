@@ -1,11 +1,12 @@
 package javax.management.loading
 
-import java.io.{Externalizable, ObjectInput}
+import java.io.{Externalizable, ObjectInput, ObjectOutput}
 import java.lang.{Boolean, Class, ClassLoader, Object, String}
 import java.net.{URL, URLClassLoader, URLStreamHandlerFactory}
 import java.security.SecureClassLoader
 import java.util.Set
 import javax.management.{MBeanRegistration, MBeanServer, ObjectName}
+import scala.scalanative.annotation.stub
 
 /** Allows you to instantiate and register one or several MBeans in the MBean server
  *  coming from a remote URL. M-let is a shortcut for management applet. The m-let service does this
@@ -131,6 +132,12 @@ class MLet extends URLClassLoader with MLetMBean with MBeanRegistration with Ext
     @stub
     def this(urls: Array[URL], parent: ClassLoader, factory: URLStreamHandlerFactory) = ???
 
+    /** Constructs a new MLet for the specified URLs, parent class
+     *  loader, and URLStreamHandlerFactory.
+     */
+    @stub
+    def this(urls: Array[URL], parent: ClassLoader, factory: URLStreamHandlerFactory, delegateToCLR: Boolean) = ???
+
     /** Appends the specified URL to the list of URLs to search for classes and
      *  resources.
      */
@@ -218,4 +225,8 @@ class MLet extends URLClassLoader with MLetMBean with MBeanRegistration with Ext
      */
     @stub
     def setLibraryDirectory(libdir: String): Unit = ???
+
+    /** Save this MLet's contents to the given ObjectOutput. */
+    @stub
+    def writeExternal(out: ObjectOutput): Unit = ???
 }

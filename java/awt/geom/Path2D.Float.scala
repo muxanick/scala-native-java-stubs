@@ -3,6 +3,7 @@ package java.awt.geom
 import java.awt.Shape
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The Float class defines a geometric path with
  *  coordinates stored in single precision floating point.
@@ -34,6 +35,13 @@ object Path2D.Float extends Path2D with Serializable {
      */
     @stub
     def Float(s: Shape) = ???
+
+    /** Constructs a new single precision Path2D object
+     *  from an arbitrary Shape object, transformed by an
+     *  AffineTransform object.
+     */
+    @stub
+    def Float(s: Shape, at: AffineTransform) = ???
 
     /** Appends the geometry of the specified
      *  PathIterator object
@@ -121,4 +129,10 @@ object Path2D.Float extends Path2D with Serializable {
      */
     @stub
     def quadTo(x1: Float, y1: Float, x2: Float, y2: Float): Unit = ???
+
+    /** Transforms the geometry of this path using the specified
+     *  AffineTransform.
+     */
+    @stub
+    def transform(at: AffineTransform): Unit = ???
 }

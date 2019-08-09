@@ -1,6 +1,7 @@
 package javax.net.ssl
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Instances of this class represent a server name in a Server Name
  *  Indication (SNI) extension.
@@ -14,6 +15,12 @@ import java.lang.Object
  */
 abstract class SNIServerName extends Object {
 
+    /** Creates an SNIServerName using the specified name type and
+     *  encoded value.
+     */
+    @stub
+    protected def this(type: Int, encoded: Array[Byte]) = ???
+
     /** Indicates whether some other object is "equal to" this server name. */
     def equals(other: Object): Boolean
 
@@ -25,4 +32,10 @@ abstract class SNIServerName extends Object {
 
     /** Returns a hash code value for this server name. */
     def hashCode(): Int
+
+    /** Returns a string representation of this server name, including the server
+     *  name type and the encoded server name value in this
+     *  SNIServerName object.
+     */
+    def toString(): String
 }

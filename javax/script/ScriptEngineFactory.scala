@@ -2,6 +2,7 @@ package javax.script
 
 import java.lang.{Object, String}
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** ScriptEngineFactory is used to describe and instantiate
  *  ScriptEngines.
@@ -72,4 +73,10 @@ trait ScriptEngineFactory {
     /** Returns a valid scripting language executable program with given statements. */
     @stub
     def getProgram(statements: String*): String = ???
+
+    /** Returns an instance of the ScriptEngine associated with this
+     *  ScriptEngineFactory.
+     */
+    @stub
+    def getScriptEngine(): ScriptEngine = ???
 }

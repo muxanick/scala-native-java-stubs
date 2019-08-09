@@ -1,7 +1,8 @@
 package java.util
 
-import java.io.InputStream
+import java.io.{InputStream, Reader}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** PropertyResourceBundle is a concrete subclass of
  *  ResourceBundle that manages resources for a locale
@@ -78,6 +79,10 @@ class PropertyResourceBundle extends ResourceBundle {
     @stub
     def this(stream: InputStream) = ???
 
+    /** Creates a property resource bundle from a Reader. */
+    @stub
+    def this(reader: Reader) = ???
+
     /** Returns an Enumeration of the keys contained in
      *  this ResourceBundle and its parent bundles.
      */
@@ -87,4 +92,10 @@ class PropertyResourceBundle extends ResourceBundle {
     /** Gets an object for the given key from this resource bundle. */
     @stub
     def handleGetObject(key: String): Object = ???
+
+    /** Returns a Set of the keys contained
+     *  only in this ResourceBundle.
+     */
+    @stub
+    protected def handleKeySet(): Set[String] = ???
 }

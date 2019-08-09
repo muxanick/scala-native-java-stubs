@@ -7,6 +7,7 @@ import java.lang.Object
 import javax.swing.{JButton, JComponent}
 import javax.swing.plaf.{ComponentUI, TabbedPaneUI}
 import javax.swing.plaf.basic.BasicTabbedPaneUI
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for
  *  JTabbedPane.
@@ -15,6 +16,10 @@ import javax.swing.plaf.basic.BasicTabbedPaneUI
  *  which represents additional insets for the selected tab.
  */
 class SynthTabbedPaneUI extends BasicTabbedPaneUI with PropertyChangeListener with SynthUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /**  */
     @stub
@@ -111,6 +116,10 @@ class SynthTabbedPaneUI extends BasicTabbedPaneUI with PropertyChangeListener wi
     /**  */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthTabbedPaneUI {

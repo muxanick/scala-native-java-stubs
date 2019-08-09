@@ -3,6 +3,7 @@ package java.util.concurrent.locks
 import java.io.Serializable
 import java.lang.{Object, String, Thread}
 import java.util.Collection
+import scala.scalanative.annotation.stub
 
 /** An implementation of ReadWriteLock supporting similar
  *  semantics to ReentrantLock.
@@ -183,6 +184,12 @@ class ReentrantReadWriteLock extends Object with ReadWriteLock with Serializable
     @stub
     def this() = ???
 
+    /** Creates a new ReentrantReadWriteLock with
+     *  the given fairness policy.
+     */
+    @stub
+    def this(fair: Boolean) = ???
+
     /** Returns the thread that currently owns the write lock, or
      *  null if not owned.
      */
@@ -278,10 +285,18 @@ class ReentrantReadWriteLock extends Object with ReadWriteLock with Serializable
     /** Returns a string identifying this lock, as well as its lock state. */
     @stub
     def toString(): String = ???
+
+    /** Returns the lock used for writing. */
+    @stub
+    def writeLock(): ReentrantReadWriteLock.WriteLock = ???
 }
 
 object ReentrantReadWriteLock {
     /** The lock returned by method readLock(). */
     @stub
     object ReadLock extends ReentrantReadWriteLock.ReadLock
+
+    /** The lock returned by method writeLock(). */
+    @stub
+    object WriteLock extends ReentrantReadWriteLock.WriteLock
 }

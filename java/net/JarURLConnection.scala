@@ -2,7 +2,8 @@ package java.net
 
 import java.lang.{Object, String}
 import java.security.cert.Certificate
-import java.util.jar.{Attributes, JarEntry, JarFile}
+import java.util.jar.{Attributes, JarEntry, JarFile, Manifest}
+import scala.scalanative.annotation.stub
 
 /** A URL Connection to a Java ARchive (JAR) file or an entry in a JAR
  *  file.
@@ -95,6 +96,15 @@ import java.util.jar.{Attributes, JarEntry, JarFile}
  */
 abstract class JarURLConnection extends URLConnection {
 
+    /** Creates the new JarURLConnection to the specified URL. */
+    @stub
+    protected def this(url: URL) = ???
+
+    /** The connection to the JAR file URL, if the connection has been
+     *  initiated.
+     */
+    protected val jarFileURLConnection: URLConnection
+
     /** Return the Attributes object for this connection if the URL
      *  for it points to a JAR file entry, null otherwise.
      */
@@ -121,4 +131,7 @@ abstract class JarURLConnection extends URLConnection {
      *  connection.
      */
     def getMainAttributes(): Attributes
+
+    /** Returns the Manifest for this connection, or null if none. */
+    def getManifest(): Manifest
 }

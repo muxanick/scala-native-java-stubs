@@ -2,6 +2,7 @@ package java.awt
 
 import java.lang.{Object, String}
 import javax.accessibility.AccessibleContext
+import scala.scalanative.annotation.stub
 
 /** A Dialog is a top-level window with a title and a border
  *  that is typically used to take some form of input from the user.
@@ -129,6 +130,13 @@ class Dialog extends Window {
     @stub
     def this(owner: Window, title: String, modalityType: Dialog.ModalityType) = ???
 
+    /** Constructs an initially invisible Dialog with the
+     *  specified owner Window, title, modality and
+     *  GraphicsConfiguration.
+     */
+    @stub
+    def this(owner: Window, title: String, modalityType: Dialog.ModalityType, gc: GraphicsConfiguration) = ???
+
     /** This class implements accessibility support for the
      *  Dialog class.
      */
@@ -222,6 +230,12 @@ class Dialog extends Window {
      */
     @stub
     def show(): Unit = ???
+
+    /** If this Window is visible, sends this Window to the back and may cause
+     *  it to lose focus or activation if it is the focused or active Window.
+     */
+    @stub
+    def toBack(): Unit = ???
 }
 
 object Dialog {
@@ -230,4 +244,12 @@ object Dialog {
      */
     @stub
     object ModalExclusionType extends Dialog.ModalExclusionType
+
+    /** Modal dialogs block all input to some top-level windows. */
+    @stub
+    object ModalityType extends Dialog.ModalityType
+
+    /** Default modality type for modal dialogs. */
+    @stub
+    val DEFAULT_MODALITY_TYPE: Dialog.ModalityType = ???
 }

@@ -1,5 +1,8 @@
 package javax.swing.tree
 
+import java.lang.Object
+import scala.scalanative.annotation.stub
+
 /** Defines the requirements for a tree node object that can change --
  *  by adding or removing child nodes, or by changing the contents
  *  of a user object stored in the node.
@@ -25,4 +28,8 @@ trait MutableTreeNode extends TreeNode {
     /** Sets the parent of the receiver to newParent. */
     @stub
     def setParent(newParent: MutableTreeNode): Unit = ???
+
+    /** Resets the user object of the receiver to object. */
+    @stub
+    def setUserObject(object: Object): Unit = ???
 }

@@ -1,5 +1,7 @@
 package javax.swing
 
+import scala.scalanative.annotation.stub
+
 /** Constants used to control the window-closing operation.
  *  The setDefaultCloseOperation and
  *  getDefaultCloseOperation methods
@@ -26,4 +28,8 @@ object WindowConstants {
     /** The exit application default window close operation. */
     @stub
     val EXIT_ON_CLOSE: Int = ???
+
+    /** The hide-window default window close operation */
+    @stub
+    val HIDE_ON_CLOSE: Int = ???
 }

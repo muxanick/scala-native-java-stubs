@@ -2,6 +2,7 @@ package javax.imageio.event
 
 import java.util.EventListener
 import javax.imageio.ImageReader
+import scala.scalanative.annotation.stub
 
 /** An interface used by ImageReader implementations to
  *  notify callers of their image and thumbnail reading methods of
@@ -58,4 +59,8 @@ trait IIOReadProgressListener extends EventListener {
      */
     @stub
     def thumbnailProgress(source: ImageReader, percentageDone: Float): Unit = ???
+
+    /** Reports that a thumbnail read operation is beginning. */
+    @stub
+    def thumbnailStarted(source: ImageReader, imageIndex: Int, thumbnailIndex: Int): Unit = ???
 }

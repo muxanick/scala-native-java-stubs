@@ -1,6 +1,7 @@
 package javax.xml.crypto.dsig.spec
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Parameters for the 
  *  XML Signature HMAC Algorithm. The parameters include an optional output
@@ -17,4 +18,14 @@ import java.lang.Object
  *  
  */
 final class HMACParameterSpec extends Object with SignatureMethodParameterSpec {
+
+    /** Creates an HMACParameterSpec with the specified truncation
+     *  length.
+     */
+    @stub
+    def this(outputLength: Int) = ???
+
+    /** Returns the truncation length. */
+    @stub
+    def getOutputLength(): Int = ???
 }

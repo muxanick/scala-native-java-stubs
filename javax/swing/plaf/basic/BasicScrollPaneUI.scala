@@ -7,9 +7,14 @@ import java.lang.Object
 import javax.swing.{JComponent, JScrollPane, ScrollPaneConstants}
 import javax.swing.event.ChangeListener
 import javax.swing.plaf.{ComponentUI, ScrollPaneUI}
+import scala.scalanative.annotation.stub
 
 /** A default L&F implementation of ScrollPaneUI. */
 class BasicScrollPaneUI extends ScrollPaneUI with ScrollPaneConstants {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Horizontal scrollbar listener. */
     @stub
@@ -29,6 +34,10 @@ class BasicScrollPaneUI extends ScrollPaneUI with ScrollPaneConstants {
     @stub
     object ViewportChangeHandler extends BasicScrollPaneUI.ViewportChangeHandler
 
+    /** Vertical scrollbar listener. */
+    @stub
+    object VSBChangeListener extends BasicScrollPaneUI.VSBChangeListener
+
     /**  */
     @stub
     protected val hsbChangeListener: ChangeListener = ???
@@ -44,6 +53,10 @@ class BasicScrollPaneUI extends ScrollPaneUI with ScrollPaneConstants {
     /**  */
     @stub
     protected val viewportChangeListener: ChangeListener = ???
+
+    /**  */
+    @stub
+    protected val vsbChangeListener: ChangeListener = ???
 
     /**  */
     @stub
@@ -138,6 +151,10 @@ class BasicScrollPaneUI extends ScrollPaneUI with ScrollPaneConstants {
     /**  */
     @stub
     protected def updateScrollBarDisplayPolicy(e: PropertyChangeEvent): Unit = ???
+
+    /**  */
+    @stub
+    protected def updateViewport(e: PropertyChangeEvent): Unit = ???
 }
 
 object BasicScrollPaneUI {

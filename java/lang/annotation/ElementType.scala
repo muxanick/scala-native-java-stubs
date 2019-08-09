@@ -1,6 +1,7 @@
 package java.lang.annotation
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The constants of this enumerated type provide a simple classification of the
  *  syntactic locations where annotations may appear in a Java program. These
@@ -71,7 +72,16 @@ object ElementType {
     /** Type parameter declaration */
     final val TYPE_PARAMETER = new ElementType(TYPE_PARAMETER, 8)
 
+    /** Use of a type */
+    final val TYPE_USE = new ElementType(TYPE_USE, 9)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): ElementType = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[ElementType] = ???
 }

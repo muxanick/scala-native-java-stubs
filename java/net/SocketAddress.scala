@@ -2,6 +2,7 @@ package java.net
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class represents a Socket Address with no protocol attachment.
  *  As an abstract class, it is meant to be subclassed with a specific,
@@ -11,4 +12,8 @@ import java.lang.Object
  *  as returned values.
  */
 abstract class SocketAddress extends Object with Serializable {
+
+    /**  */
+    @stub
+    def this() = ???
 }

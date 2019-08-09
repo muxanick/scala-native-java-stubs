@@ -5,7 +5,7 @@ import java.util.{List, Map}
 import java.util.concurrent.Executor
 import javax.xml.transform.Source
 import javax.xml.ws.spi.http.HttpContext
-import org.w3c.dom.Element
+import scala.scalanative.annotation.stub
 
 /** A Web service endpoint.
  * 
@@ -35,6 +35,10 @@ import org.w3c.dom.Element
  *  present on the implementor.
  */
 abstract class Endpoint extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the binding for this endpoint. */
     def getBinding(): Binding
@@ -86,12 +90,19 @@ abstract class Endpoint extends Object {
 
     /** Sets the property bag for this Endpoint instance. */
     def setProperties(properties: Map[String, Object]): Unit
+
+    /** Stops publishing this endpoint. */
+    def stop(): Unit
 }
 
 object Endpoint {
     /** Standard property: name of WSDL port. */
     @stub
     val WSDL_PORT: String = ???
+
+    /** Standard property: name of WSDL service. */
+    @stub
+    val WSDL_SERVICE: String = ???
 
     /** Creates an endpoint with the specified implementor object. */
     @stub

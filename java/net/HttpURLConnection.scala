@@ -3,6 +3,7 @@ package java.net
 import java.io.InputStream
 import java.lang.{Object, String}
 import java.security.Permission
+import scala.scalanative.annotation.stub
 
 /** A URLConnection with support for HTTP-specific features. See
  *   the spec  for
@@ -38,6 +39,10 @@ import java.security.Permission
  */
 abstract class HttpURLConnection extends URLConnection {
 
+    /** Constructor for the HttpURLConnection. */
+    @stub
+    protected def this(u: URL) = ???
+
     /** The chunk-length when using chunked encoding streaming mode for output. */
     protected val chunkLength: Int
 
@@ -55,6 +60,9 @@ abstract class HttpURLConnection extends URLConnection {
 
     /** An int representing the three digit HTTP Status-Code. */
     protected val responseCode: Int
+
+    /** The HTTP response message. */
+    protected val responseMessage: String
 
     /** Indicates that other requests to the server
      *  are unlikely in the near future.
@@ -132,6 +140,9 @@ abstract class HttpURLConnection extends URLConnection {
      *   are legal, subject to protocol restrictions.
      */
     def setRequestMethod(method: String): Unit
+
+    /** Indicates if the connection is going through a proxy. */
+    def usingProxy(): Boolean
 }
 
 object HttpURLConnection {

@@ -3,6 +3,7 @@ package java.time
 import java.io.Serializable
 import java.lang.{CharSequence, Comparable, Object, String}
 import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalAmount, TemporalField, TemporalQuery, TemporalUnit, ValueRange}
+import scala.scalanative.annotation.stub
 
 /** An instantaneous point on the time-line.
  *  
@@ -237,6 +238,10 @@ final class Instant extends Object with Temporal with TemporalAdjuster with Comp
     /** Returns an adjusted copy of this instant. */
     @stub
     def with(adjuster: TemporalAdjuster): Instant = ???
+
+    /** Returns a copy of this instant with the specified field set to a new value. */
+    @stub
+    def with(field: TemporalField, newValue: Long): Instant = ???
 }
 
 object Instant {
@@ -247,6 +252,10 @@ object Instant {
     /** The maximum supported Instant, '1000000000-12-31T23:59:59.999999999Z'. */
     @stub
     val MAX: Instant = ???
+
+    /** The minimum supported Instant, '-1000000000-01-01T00:00Z'. */
+    @stub
+    val MIN: Instant = ???
 
     /** Obtains an instance of Instant from a temporal object. */
     @stub

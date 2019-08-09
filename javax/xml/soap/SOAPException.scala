@@ -1,6 +1,7 @@
 package javax.xml.soap
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** An exception that signals that a SOAP exception has occurred. A
  *  SOAPException object may contain a String
@@ -38,6 +39,12 @@ class SOAPException extends Exception {
     @stub
     def this(reason: String, cause: Throwable) = ???
 
+    /** Constructs a SOAPException object initialized
+     *  with the given Throwable object.
+     */
+    @stub
+    def this(cause: Throwable) = ???
+
     /** Returns the Throwable object embedded in this
      *  SOAPException if there is one.
      */
@@ -49,4 +56,10 @@ class SOAPException extends Exception {
      */
     @stub
     def getMessage(): String = ???
+
+    /** Initializes the cause field of this SOAPException
+     *  object with the given Throwable object.
+     */
+    @stub
+    def initCause(cause: Throwable): Throwable = ???
 }

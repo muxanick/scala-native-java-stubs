@@ -1,7 +1,8 @@
 package java.security.cert
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.Collection
+import scala.scalanative.annotation.stub
 
 /** Parameters used as input for the Collection CertStore
  *  algorithm.
@@ -29,6 +30,13 @@ class CollectionCertStoreParameters extends Object with CertStoreParameters {
     @stub
     def this() = ???
 
+    /** Creates an instance of CollectionCertStoreParameters
+     *  which will allow certificates and CRLs to be retrieved from the
+     *  specified Collection.
+     */
+    @stub
+    def this(collection: Collection[_]) = ???
+
     /** Returns a copy of this object. */
     @stub
     def clone(): Object = ???
@@ -38,4 +46,8 @@ class CollectionCertStoreParameters extends Object with CertStoreParameters {
      */
     @stub
     def getCollection(): Collection[_] = ???
+
+    /** Returns a formatted string describing the parameters. */
+    @stub
+    def toString(): String = ???
 }

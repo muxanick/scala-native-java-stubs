@@ -3,6 +3,7 @@ package javax.swing.plaf.synth
 import java.awt.{Color, Font, Insets}
 import java.lang.{Object, String}
 import javax.swing.Icon
+import scala.scalanative.annotation.stub
 
 /** SynthStyle is a set of style properties.
  *  Each SynthUI references at least one
@@ -13,6 +14,10 @@ import javax.swing.Icon
  *  SynthLookAndFeel that will create a set of SynthStyles.
  */
 abstract class SynthStyle extends Object {
+
+    /** Constructs a SynthStyle. */
+    @stub
+    def this() = ???
 
     /** Getter for a region specific style property. */
     def get(context: SynthContext, key: Object): Object
@@ -65,4 +70,9 @@ abstract class SynthStyle extends Object {
 
     /** Returns true if the region is opaque. */
     def isOpaque(context: SynthContext): Boolean
+
+    /** Uninstalls any state that this style installed on
+     *  the JComponent from context.
+     */
+    def uninstallDefaults(context: SynthContext): Unit
 }

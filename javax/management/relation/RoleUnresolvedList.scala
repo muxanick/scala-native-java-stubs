@@ -2,6 +2,7 @@ package javax.management.relation
 
 import java.lang.Object
 import java.util.{AbstractCollection, AbstractList, ArrayList, Collection, List}
+import scala.scalanative.annotation.stub
 
 /** A RoleUnresolvedList represents a list of RoleUnresolved objects,
  *  representing roles not retrieved from a relation due to a problem
@@ -18,6 +19,13 @@ class RoleUnresolvedList extends ArrayList[Object] {
      */
     @stub
     def this(initialCapacity: Int) = ???
+
+    /** Constructs a RoleUnresolvedList containing the elements of the
+     *  List specified, in the order in which they are returned by
+     *  the List's iterator.
+     */
+    @stub
+    def this(list: List[RoleUnresolved]) = ???
 
     /** Inserts the specified element at the specified position in this
      *  list.
@@ -75,4 +83,10 @@ class RoleUnresolvedList extends ArrayList[Object] {
      */
     @stub
     def set(index: Int, element: Object): Object = ???
+
+    /** Sets the element at the position specified to be the unresolved role
+     *  specified.
+     */
+    @stub
+    def set(index: Int, role: RoleUnresolved): Unit = ???
 }

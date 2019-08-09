@@ -3,6 +3,7 @@ package javax.swing
 import java.lang.Object
 import java.util.List
 import javax.swing.event.RowSorterListener
+import scala.scalanative.annotation.stub
 
 /** RowSorter provides the basis for sorting and filtering.
  *  Beyond creating and installing a RowSorter, you very rarely
@@ -64,6 +65,10 @@ import javax.swing.event.RowSorterListener
  *  rowsUpdated.
  */
 abstract class RowSorter[M] extends Object {
+
+    /** Creates a RowSorter. */
+    @stub
+    def this() = ???
 
     /** Adds a RowSorterListener to receive notification
      *  about this RowSorter.
@@ -133,4 +138,13 @@ abstract class RowSorter[M] extends Object {
 
     /** Sets the current sort keys. */
     def setSortKeys(keys: List[_ <: RowSorter.SortKey]): Unit
+
+    /** Reverses the sort order of the specified column. */
+    def toggleSortOrder(column: Int): Unit
+}
+
+object RowSorter {
+    /** SortKey describes the sort order for a particular column. */
+    @stub
+    object SortKey extends RowSorter.SortKey
 }

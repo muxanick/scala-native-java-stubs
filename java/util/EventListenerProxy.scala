@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An abstract wrapper class for an EventListener class
  *  which associates a set of additional parameters with the listener.
@@ -25,4 +26,11 @@ import java.lang.Object
  *  then it would have to test the element to see if it is a proxy class.
  */
 abstract class EventListenerProxy[T <: EventListener] extends Object with EventListener {
+
+    /** Creates a proxy for the specified listener. */
+    @stub
+    def this(listener: T) = ???
+
+    /** Returns the listener associated with the proxy. */
+    def getListener(): T
 }

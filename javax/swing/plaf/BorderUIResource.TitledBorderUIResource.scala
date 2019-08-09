@@ -3,6 +3,7 @@ package javax.swing.plaf
 import java.awt.{Color, Font}
 import java.lang.{Object, String}
 import javax.swing.border.{AbstractBorder, Border, TitledBorder}
+import scala.scalanative.annotation.stub
 
 /**  */
 object BorderUIResource.TitledBorderUIResource extends TitledBorder with UIResource {
@@ -26,3 +27,7 @@ object BorderUIResource.TitledBorderUIResource extends TitledBorder with UIResou
     /**  */
     @stub
     def TitledBorderUIResource(border: Border, title: String, titleJustification: Int, titlePosition: Int, titleFont: Font, titleColor: Color) = ???
+
+    /**  */
+    @stub
+    def TitledBorderUIResource(title: String) = ???

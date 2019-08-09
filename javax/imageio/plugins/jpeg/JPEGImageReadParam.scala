@@ -2,6 +2,7 @@ package javax.imageio.plugins.jpeg
 
 import java.lang.Object
 import javax.imageio.{IIOParam, ImageReadParam}
+import scala.scalanative.annotation.stub
 
 /** This class adds the ability to set JPEG quantization and Huffman
  *  tables when using the built-in JPEG reader plug-in.  An instance of
@@ -51,6 +52,10 @@ import javax.imageio.{IIOParam, ImageReadParam}
  */
 class JPEGImageReadParam extends ImageReadParam {
 
+    /** Constructs a JPEGImageReadParam. */
+    @stub
+    def this() = ???
+
     /** Returns true if tables are currently set. */
     @stub
     def areTablesSet(): Boolean = ???
@@ -81,4 +86,10 @@ class JPEGImageReadParam extends ImageReadParam {
      */
     @stub
     def setDecodeTables(qTables: Array[JPEGQTable], DCHuffmanTables: Array[JPEGHuffmanTable], ACHuffmanTables: Array[JPEGHuffmanTable]): Unit = ???
+
+    /** Removes any quantization and Huffman tables that are currently
+     *  set.
+     */
+    @stub
+    def unsetDecodeTables(): Unit = ???
 }

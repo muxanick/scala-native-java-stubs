@@ -1,6 +1,7 @@
 package javax.naming
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown when a method
  *  produces a result that exceeds a size-related limit.
@@ -16,4 +17,10 @@ class SizeLimitExceededException extends LimitExceededException {
     /** Constructs a new instance of SizeLimitExceededException. */
     @stub
     def this() = ???
+
+    /** Constructs a new instance of SizeLimitExceededException using an
+     *  explanation.
+     */
+    @stub
+    def this(explanation: String) = ???
 }

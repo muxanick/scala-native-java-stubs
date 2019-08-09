@@ -1,8 +1,9 @@
 package javax.xml.bind.annotation
 
-import java.lang.String
+import java.lang.{Class, String}
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Maps a Java type to a simple schema built-in type.
  * 
@@ -59,5 +60,15 @@ import scala.annotation.StaticAnnotation
 
     /**  */
     @stub
+    val name: String = ???
+
+    /**  */
+    @stub
     val namespace: String = ???
+
+    /** If this annotation is used at the package level, then value of
+     *  the type() must be specified.
+     */
+    @stub
+    val type: Class = ???
 }

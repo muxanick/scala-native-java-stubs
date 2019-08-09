@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.{ClassLoader, Object, String}
+import scala.scalanative.annotation.stub
 
 /** ResourceBundle.Control defines a set of callback methods
  *  that are invoked by the ResourceBundle.getBundle factory
@@ -138,6 +139,10 @@ import java.lang.{ClassLoader, Object, String}
  */
 object ResourceBundle.Control extends Object {
 
+    /** Sole constructor. */
+    @stub
+    protected def Control() = ???
+
     /** The class-only format List containing
      *  "java.class".
      */
@@ -162,6 +167,12 @@ object ResourceBundle.Control extends Object {
      */
     @stub
     val TTL_DONT_CACHE: Long = ???
+
+    /** The time-to-live constant for disabling the expiration control
+     *  for loaded resource bundle instances in the cache.
+     */
+    @stub
+    val TTL_NO_EXPIRATION_CONTROL: Long = ???
 
     /** Returns a List of Locales as candidate
      *  locales for baseName and locale.
@@ -222,4 +233,13 @@ object ResourceBundle.Control extends Object {
      */
     @stub
     def toBundleName(baseName: String, locale: Locale): String = ???
+
+    /** Converts the given bundleName to the form required
+     *  by the ClassLoader.getResource
+     *  method by replacing all occurrences of '.' in
+     *  bundleName with '/' and appending a
+     *  '.' and the given file suffix.
+     */
+    @stub
+    def toResourceName(bundleName: String, suffix: String): String = ???
 }

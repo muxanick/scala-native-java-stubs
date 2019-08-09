@@ -4,6 +4,7 @@ import java.io.InputStream
 import java.lang.String
 import java.util.List
 import javax.xml.crypto.{Data, URIReference, XMLStructure}
+import scala.scalanative.annotation.stub
 
 /** A representation of the Reference element as defined in the
  *  
@@ -82,4 +83,8 @@ trait Reference extends URIReference with XMLStructure {
      */
     @stub
     def getTransforms(): List = ???
+
+    /** Validates this reference. */
+    @stub
+    def validate(validateContext: XMLValidateContext): Boolean = ???
 }

@@ -2,9 +2,14 @@ package java.beans
 
 import java.beans.beancontext.BeanContext
 import java.lang.{Class, ClassLoader, Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class provides some general purpose beans control methods. */
 class Beans extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 }
 
 object Beans {
@@ -47,4 +52,10 @@ object Beans {
      */
     @stub
     def setDesignTime(isDesignTime: Boolean): Unit = ???
+
+    /** Used to indicate whether of not we are running in an environment
+     *  where GUI interaction is available.
+     */
+    @stub
+    def setGuiAvailable(isGuiAvailable: Boolean): Unit = ???
 }

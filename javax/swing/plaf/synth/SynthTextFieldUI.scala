@@ -6,6 +6,7 @@ import java.lang.Object
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, TextUI}
 import javax.swing.plaf.basic.{BasicTextFieldUI, BasicTextUI}
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for JTextField.
  *  
@@ -19,6 +20,10 @@ import javax.swing.plaf.basic.{BasicTextFieldUI, BasicTextUI}
  *  Please see XMLEncoder.
  */
 class SynthTextFieldUI extends BasicTextFieldUI with SynthUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the Context for the specified component. */
     @stub
@@ -54,6 +59,10 @@ class SynthTextFieldUI extends BasicTextFieldUI with SynthUI {
      */
     @stub
     protected def uninstallDefaults(): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthTextFieldUI {

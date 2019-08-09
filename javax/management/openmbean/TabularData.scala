@@ -1,7 +1,8 @@
 package javax.management.openmbean
 
 import java.lang.{Object, String}
-import java.util.Set
+import java.util.{Collection, Set}
+import scala.scalanative.annotation.stub
 
 /** The TabularData interface specifies the behavior of a specific type of complex open data objects
  *  which represent tabular data structures.
@@ -89,4 +90,10 @@ trait TabularData {
     /** Returns a string representation of this TabularData instance. */
     @stub
     def toString(): String = ???
+
+    /** Returns a collection view of the CompositeData values
+     *  (ie the rows) contained in this TabularData instance.
+     */
+    @stub
+    def values(): Collection[_] = ???
 }

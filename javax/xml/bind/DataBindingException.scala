@@ -1,6 +1,7 @@
 package javax.xml.bind
 
 import java.lang.{Exception, Object, RuntimeException, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Exception that represents a failure in a JAXB operation.
  * 
@@ -14,4 +15,8 @@ class DataBindingException extends RuntimeException {
     /**  */
     @stub
     def this(message: String, cause: Throwable) = ???
+
+    /**  */
+    @stub
+    def this(cause: Throwable) = ???
 }

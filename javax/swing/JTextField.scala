@@ -6,6 +6,7 @@ import java.beans.PropertyChangeListener
 import java.lang.{Object, String}
 import javax.accessibility.AccessibleContext
 import javax.swing.text.{Document, JTextComponent}
+import scala.scalanative.annotation.stub
 
 /** JTextField is a lightweight component that allows the editing
  *  of a single line of text.
@@ -141,6 +142,18 @@ class JTextField extends JTextComponent with SwingConstants {
      */
     @stub
     def this(text: String) = ???
+
+    /** Constructs a new TextField initialized with the
+     *  specified text and columns.
+     */
+    @stub
+    def this(text: String, columns: Int) = ???
+
+    /** This class implements accessibility support for the
+     *  JTextField class.
+     */
+    @stub
+    protected object AccessibleJTextField extends JTextField.AccessibleJTextField
 
     /** Updates the textfield's state in response to property changes in
      *  associated action.
@@ -287,4 +300,16 @@ class JTextField extends JTextComponent with SwingConstants {
     /** Sets the horizontal alignment of the text. */
     @stub
     def setHorizontalAlignment(alignment: Int): Unit = ???
+
+    /** Sets the scroll offset, in pixels. */
+    @stub
+    def setScrollOffset(scrollOffset: Int): Unit = ???
+}
+
+object JTextField {
+    /** Name of the action to send notification that the
+     *  contents of the field have been accepted.
+     */
+    @stub
+    val notifyAction: String = ???
 }

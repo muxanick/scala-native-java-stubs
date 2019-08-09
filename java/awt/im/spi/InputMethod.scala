@@ -3,6 +3,7 @@ package java.awt.im.spi
 import java.awt.{AWTEvent, Rectangle}
 import java.lang.{Character.Subset, Object}
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** Defines the interface for an input method that supports complex text input.
  *  Input methods traditionally support text input for languages that have
@@ -92,4 +93,8 @@ trait InputMethod {
      */
     @stub
     def setInputMethodContext(context: InputMethodContext): Unit = ???
+
+    /** Attempts to set the input locale. */
+    @stub
+    def setLocale(locale: Locale): Boolean = ???
 }

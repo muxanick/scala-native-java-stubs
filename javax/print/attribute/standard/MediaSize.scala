@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, Size2DSyntax}
+import scala.scalanative.annotation.stub
 
 /** Class MediaSize is a two-dimensional size valued printing attribute class
  *  that indicates the dimensions of the medium in a portrait orientation, with
@@ -38,6 +39,10 @@ class MediaSize extends Size2DSyntax with Attribute {
     @stub
     def this(x: Int, y: Int, units: Int) = ???
 
+    /** Construct a new media size attribute from the given integer values. */
+    @stub
+    def this(x: Int, y: Int, units: Int, media: MediaSizeName) = ???
+
     /** Returns whether this media size attribute is equivalent to the passed
      *  in object.
      */
@@ -53,6 +58,12 @@ class MediaSize extends Size2DSyntax with Attribute {
     /** Get the media name, if any, for this size. */
     @stub
     def getMediaSizeName(): MediaSizeName = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }
 
 object MediaSize {
@@ -79,6 +90,12 @@ object MediaSize {
      */
     @stub
     object NA extends MediaSize.NA
+
+    /** Class MediaSize.Other includes MediaSize values for
+     *  miscellaneous media.
+     */
+    @stub
+    object Other extends MediaSize.Other
 
     /** The specified dimensions are used to locate a matching MediaSize
      *  instance from amongst all the standard MediaSize instances.

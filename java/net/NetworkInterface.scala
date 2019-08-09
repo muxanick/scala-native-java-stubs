@@ -2,6 +2,7 @@ package java.net
 
 import java.lang.{Object, String}
 import java.util.{Enumeration, List}
+import scala.scalanative.annotation.stub
 
 /** This class represents a Network Interface made up of a name,
  *  and a list of IP addresses assigned to this interface.
@@ -88,6 +89,10 @@ final class NetworkInterface extends Object {
     /** Returns whether a network interface supports multicasting or not. */
     @stub
     def supportsMulticast(): Boolean = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }
 
 object NetworkInterface {

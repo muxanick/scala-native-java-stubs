@@ -1,6 +1,7 @@
 package javax.sound.sampled
 
-import java.lang.{Object, String}
+import java.lang.{Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The Port.Info class extends Line.Info
  *  with additional information specific to ports, including the port's name
@@ -16,6 +17,10 @@ import java.lang.{Object, String}
  *  lines matching the parameters specified in the Port.Info object.
  */
 object Port.Info extends Line.Info {
+
+    /** Constructs a port's info object from the information given. */
+    @stub
+    def Info(lineClass: Class[_], name: String, isSource: Boolean) = ???
 
     /** A type of port that gets audio from a CD-ROM drive. */
     @stub
@@ -37,6 +42,10 @@ object Port.Info extends Line.Info {
     @stub
     val MICROPHONE: Port.Info = ???
 
+    /** A type of port that sends audio to a built-in speaker or a speaker jack. */
+    @stub
+    val SPEAKER: Port.Info = ???
+
     /** Finalizes the equals method */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -56,4 +65,10 @@ object Port.Info extends Line.Info {
     /** Indicates whether this info object specified matches this one. */
     @stub
     def matches(info: Line.Info): Boolean = ???
+
+    /** Provides a String representation
+     *  of the port.
+     */
+    @stub
+    def toString(): String = ???
 }

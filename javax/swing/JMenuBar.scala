@@ -5,6 +5,7 @@ import java.awt.event.{KeyEvent, MouseEvent}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.plaf.MenuBarUI
+import scala.scalanative.annotation.stub
 
 /** An implementation of a menu bar. You add JMenu objects to the
  *  menu bar to construct a menu. When the user selects a JMenu
@@ -37,6 +38,16 @@ import javax.swing.plaf.MenuBarUI
  *  method.
  */
 class JMenuBar extends JComponent with Accessible with MenuElement {
+
+    /** Creates a new menu bar. */
+    @stub
+    def this() = ???
+
+    /** This class implements accessibility support for the
+     *  JMenuBar class.
+     */
+    @stub
+    protected object AccessibleJMenuBar extends JMenuBar.AccessibleJMenuBar
 
     /** Appends the specified menu to the end of the menu bar. */
     @stub
@@ -172,4 +183,8 @@ class JMenuBar extends JComponent with Accessible with MenuElement {
     /** Sets the L&F object that renders this component. */
     @stub
     def setUI(ui: MenuBarUI): Unit = ???
+
+    /** Resets the UI property with a value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
 }

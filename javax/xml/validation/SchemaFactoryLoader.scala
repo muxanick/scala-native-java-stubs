@@ -1,6 +1,7 @@
 package javax.xml.validation
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Factory that creates SchemaFactory.
  * 
@@ -17,4 +18,13 @@ import java.lang.Object
  *  
  */
 abstract class SchemaFactoryLoader extends Object {
+
+    /** A do-nothing constructor. */
+    @stub
+    protected def this() = ???
+
+    /** Creates a new SchemaFactory object for the specified
+     *  schema language.
+     */
+    def newFactory(schemaLanguage: String): SchemaFactory
 }

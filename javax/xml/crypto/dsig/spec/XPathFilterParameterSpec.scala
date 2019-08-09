@@ -2,6 +2,7 @@ package javax.xml.crypto.dsig.spec
 
 import java.lang.{Object, String}
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** Parameters for the 
  *  XPath Filtering Transform Algorithm.
@@ -20,7 +21,17 @@ final class XPathFilterParameterSpec extends Object with TransformParameterSpec 
     @stub
     def this(xPath: String) = ???
 
+    /** Creates an XPathFilterParameterSpec with the specified
+     *  XPath expression and namespace map.
+     */
+    @stub
+    def this(xPath: String, namespaceMap: Map) = ???
+
     /** Returns a map of namespace prefixes. */
     @stub
     def getNamespaceMap(): Map = ???
+
+    /** Returns the XPath expression to be evaluated. */
+    @stub
+    def getXPath(): String = ???
 }

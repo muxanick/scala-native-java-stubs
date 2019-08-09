@@ -1,7 +1,8 @@
 package java.util.concurrent.atomic
 
 import java.io.Serializable
-import java.lang.{Number, Object}
+import java.lang.{Number, Object, String}
+import scala.scalanative.annotation.stub
 
 /** One or more variables that together maintain an initially zero
  *  double sum.  When updates (method add(double)) are
@@ -22,6 +23,10 @@ import java.lang.{Number, Object}
  *  not useful as collection keys.
  */
 class DoubleAdder extends Number with Serializable {
+
+    /** Creates a new adder with initial sum of zero. */
+    @stub
+    def this() = ???
 
     /** Adds the given value. */
     @stub
@@ -60,4 +65,8 @@ class DoubleAdder extends Number with Serializable {
     /** Equivalent in effect to sum() followed by reset(). */
     @stub
     def sumThenReset(): Double = ???
+
+    /** Returns the String representation of the sum(). */
+    @stub
+    def toString(): String = ???
 }

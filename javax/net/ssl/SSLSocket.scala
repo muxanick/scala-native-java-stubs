@@ -2,6 +2,7 @@ package javax.net.ssl
 
 import java.lang.{Object, String}
 import java.net.{InetAddress, Socket}
+import scala.scalanative.annotation.stub
 
 /** This class extends Sockets and provides secure
  *  socket using protocols such as the "Secure
@@ -119,6 +120,10 @@ abstract class SSLSocket extends Socket {
     @stub
     protected def this(host: String, port: Int) = ???
 
+    /** Used only by subclasses. */
+    @stub
+    protected def this(host: String, port: Int, clientAddress: InetAddress, clientPort: Int) = ???
+
     /** Registers an event listener to receive notifications that an
      *  SSL handshake has completed on this connection.
      */
@@ -194,4 +199,7 @@ abstract class SSLSocket extends Socket {
 
     /** Configures the socket to request client authentication. */
     def setWantClientAuth(want: Boolean): Unit
+
+    /** Starts an SSL handshake on this connection. */
+    def startHandshake(): Unit
 }

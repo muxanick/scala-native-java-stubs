@@ -3,6 +3,7 @@ package javax.xml.ws.soap
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import javax.xml.ws.spi.WebServiceFeatureAnnotation
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** This feature represents the use of MTOM with a
  *  web service.
@@ -31,4 +32,8 @@ import scala.annotation.StaticAnnotation
     /** Specifies if this feature is enabled or disabled. */
     @stub
     val enabled: Boolean = ???
+
+    /** Property for MTOM threshold value. */
+    @stub
+    val threshold: Int = ???
 }

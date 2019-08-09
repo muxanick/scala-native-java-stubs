@@ -4,6 +4,7 @@ import java.awt.{Component, Container, Graphics}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.plaf.SplitPaneUI
+import scala.scalanative.annotation.stub
 
 /** JSplitPane is used to divide two (and only two)
  *  Components. The two Components
@@ -80,6 +81,18 @@ class JSplitPane extends JComponent with Accessible {
      */
     @stub
     def this(newOrientation: Int, newContinuousLayout: Boolean, newLeftComponent: Component, newRightComponent: Component) = ???
+
+    /** Creates a new JSplitPane with the specified
+     *  orientation and the specified components.
+     */
+    @stub
+    def this(newOrientation: Int, newLeftComponent: Component, newRightComponent: Component) = ???
+
+    /** This class implements accessibility support for the
+     *  JSplitPane class.
+     */
+    @stub
+    protected object AccessibleJSplitPane extends JSplitPane.AccessibleJSplitPane
 
     /** Whether or not the views are continuously redisplayed while
      *  resizing.
@@ -290,6 +303,10 @@ class JSplitPane extends JComponent with Accessible {
     /** Sets the L&F object that renders this component. */
     @stub
     def setUI(ui: SplitPaneUI): Unit = ???
+
+    /** Notification from the UIManager that the L&F has changed. */
+    @stub
+    def updateUI(): Unit = ???
 }
 
 object JSplitPane {
@@ -354,4 +371,10 @@ object JSplitPane {
      */
     @stub
     val TOP: String = ???
+
+    /** Vertical split indicates the Components are
+     *  split along the y axis.
+     */
+    @stub
+    val VERTICAL_SPLIT: Int = ???
 }

@@ -2,6 +2,7 @@ package javax.xml.stream
 
 import java.lang.{Object, String}
 import javax.xml.namespace.NamespaceContext
+import scala.scalanative.annotation.stub
 
 /** The XMLStreamWriter interface specifies how to write XML.  The XMLStreamWriter  does
  *  not perform well formedness checking on its input.  However
@@ -295,4 +296,8 @@ trait XMLStreamWriter {
     /** Writes a start tag to the output */
     @stub
     def writeStartElement(namespaceURI: String, localName: String): Unit = ???
+
+    /** Writes a start tag to the output */
+    @stub
+    def writeStartElement(prefix: String, localName: String, namespaceURI: String): Unit = ???
 }

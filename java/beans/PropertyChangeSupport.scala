@@ -2,6 +2,7 @@ package java.beans
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This is a utility class that can be used by beans that support bound
  *  properties.  It manages a list of listeners and dispatches
@@ -47,6 +48,10 @@ import java.lang.{Object, String}
  *  non-serializable listeners will be skipped during serialization.
  */
 class PropertyChangeSupport extends Object with Serializable {
+
+    /** Constructs a PropertyChangeSupport object. */
+    @stub
+    def this(sourceBean: Object) = ???
 
     /** Add a PropertyChangeListener to the listener list. */
     @stub
@@ -126,4 +131,8 @@ class PropertyChangeSupport extends Object with Serializable {
     /** Remove a PropertyChangeListener from the listener list. */
     @stub
     def removePropertyChangeListener(listener: PropertyChangeListener): Unit = ???
+
+    /** Remove a PropertyChangeListener for a specific property. */
+    @stub
+    def removePropertyChangeListener(propertyName: String, listener: PropertyChangeListener): Unit = ???
 }

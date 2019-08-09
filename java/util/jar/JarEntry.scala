@@ -1,8 +1,10 @@
 package java.util.jar
 
 import java.lang.{Object, String}
+import java.security.CodeSigner
 import java.security.cert.Certificate
 import java.util.zip.ZipEntry
+import scala.scalanative.annotation.stub
 
 /** This class is used to represent a JAR file entry. */
 class JarEntry extends ZipEntry {
@@ -19,6 +21,12 @@ class JarEntry extends ZipEntry {
     @stub
     def this(name: String) = ???
 
+    /** Creates a new JarEntry with fields taken from the
+     *  specified ZipEntry object.
+     */
+    @stub
+    def this(ze: ZipEntry) = ???
+
     /** Returns the Manifest Attributes for this
      *  entry, or null if none.
      */
@@ -30,6 +38,12 @@ class JarEntry extends ZipEntry {
      */
     @stub
     def getCertificates(): Array[Certificate] = ???
+
+    /** Returns the CodeSigner objects for this entry, or
+     *  null if none.
+     */
+    @stub
+    def getCodeSigners(): Array[CodeSigner] = ???
 }
 
 object JarEntry {
@@ -188,4 +202,8 @@ object JarEntry {
     /**  */
     @stub
     val LOCTIM: Int = ???
+
+    /**  */
+    @stub
+    val LOCVER: Int = ???
 }

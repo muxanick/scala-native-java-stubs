@@ -1,8 +1,9 @@
 package java.awt.event
 
 import java.awt.{AWTEvent, Adjustable}
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** The adjustment event emitted by Adjustable objects like
  *  Scrollbar and ScrollPane.
@@ -33,6 +34,12 @@ class AdjustmentEvent extends AWTEvent {
     @stub
     def this(source: Adjustable, id: Int, type: Int, value: Int) = ???
 
+    /** Constructs an AdjustmentEvent object with the
+     *  specified Adjustable source, event type, adjustment type, and value.
+     */
+    @stub
+    def this(source: Adjustable, id: Int, type: Int, value: Int, isAdjusting: Boolean) = ???
+
     /** Returns the Adjustable object where this event originated. */
     @stub
     def getAdjustable(): Adjustable = ???
@@ -52,6 +59,10 @@ class AdjustmentEvent extends AWTEvent {
      */
     @stub
     def getValueIsAdjusting(): Boolean = ???
+
+    /** Returns a string representing the state of this Event. */
+    @stub
+    def paramString(): String = ???
 }
 
 object AdjustmentEvent {
@@ -82,4 +93,8 @@ object AdjustmentEvent {
     /** The unit decrement adjustment type. */
     @stub
     val UNIT_DECREMENT: Int = ???
+
+    /** The unit increment adjustment type. */
+    @stub
+    val UNIT_INCREMENT: Int = ???
 }

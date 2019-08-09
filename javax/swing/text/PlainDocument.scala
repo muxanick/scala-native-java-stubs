@@ -1,6 +1,7 @@
 package javax.swing.text
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A plain document that maintains no character attributes.  The
  *  default element structure for this document is a map of the lines in
@@ -33,6 +34,10 @@ class PlainDocument extends AbstractDocument {
     @stub
     def this() = ???
 
+    /** Constructs a plain text document. */
+    @stub
+    def this(c: AbstractDocument.Content) = ???
+
     /** Creates the root element to be used to represent the
      *  default document structure.
      */
@@ -54,6 +59,10 @@ class PlainDocument extends AbstractDocument {
     /** Updates document structure as a result of text insertion. */
     @stub
     protected def insertUpdate(chng: AbstractDocument.DefaultDocumentEvent, attr: AttributeSet): Unit = ???
+
+    /** Updates any document structure as a result of text removal. */
+    @stub
+    protected def removeUpdate(chng: AbstractDocument.DefaultDocumentEvent): Unit = ???
 }
 
 object PlainDocument {
@@ -62,4 +71,10 @@ object PlainDocument {
      */
     @stub
     val lineLimitAttribute: String = ???
+
+    /** Name of the attribute that specifies the tab
+     *  size for tabs contained in the content.
+     */
+    @stub
+    val tabSizeAttribute: String = ???
 }

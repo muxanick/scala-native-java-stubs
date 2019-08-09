@@ -1,5 +1,7 @@
 package javax.xml.soap
 
+import scala.scalanative.annotation.stub
+
 /** A SOAPBodyElement object represents the contents in
  *  a SOAPBody object.  The SOAPFault interface
  *  is a SOAPBodyElement object that has been defined.

@@ -1,6 +1,7 @@
 package java.awt.dnd
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** A listener interface for receiving mouse motion events during a drag
  *  operation.
@@ -17,4 +18,8 @@ import java.util.EventListener
  *  DragSourceDragEvent is passed to it.
  */
 trait DragSourceMotionListener extends EventListener {
+
+    /** Called whenever the mouse is moved during a drag operation. */
+    @stub
+    def dragMouseMoved(dsde: DragSourceDragEvent): Unit = ???
 }

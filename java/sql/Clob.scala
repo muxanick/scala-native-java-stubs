@@ -2,6 +2,7 @@ package java.sql
 
 import java.io.{InputStream, OutputStream, Reader, Writer}
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** The mapping in the Java™ programming language
  *  for the SQL CLOB type.
@@ -109,4 +110,11 @@ trait Clob {
      */
     @stub
     def setString(pos: Long, str: String, offset: Int, len: Int): Int = ???
+
+    /** Truncates the CLOB value that this Clob
+     *  designates to have a length of len
+     *  characters.
+     */
+    @stub
+    def truncate(len: Long): Unit = ???
 }

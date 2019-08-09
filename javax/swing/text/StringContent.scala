@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{Object, String}
 import java.util.Vector
 import javax.swing.undo.UndoableEdit
+import scala.scalanative.annotation.stub
 
 /** An implementation of the AbstractDocument.Content interface that is
  *  a brute force implementation that is useful for relatively small
@@ -28,6 +29,12 @@ final class StringContent extends Object with AbstractDocument.Content with Seri
     /** Creates a new StringContent object. */
     @stub
     def this() = ???
+
+    /** Creates a new StringContent object, with the initial
+     *  size specified.
+     */
+    @stub
+    def this(initialLength: Int) = ???
 
     /** Creates a position within the content that will
      *  track change as the content is mutated.
@@ -61,4 +68,10 @@ final class StringContent extends Object with AbstractDocument.Content with Seri
     /** Removes part of the content. */
     @stub
     def remove(where: Int, nitems: Int): UndoableEdit = ???
+
+    /** Resets the location for all the UndoPosRef instances
+     *  in positions.
+     */
+    @stub
+    protected def updateUndoPositions(positions: Vector): Unit = ???
 }

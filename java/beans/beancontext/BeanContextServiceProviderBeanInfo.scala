@@ -1,6 +1,7 @@
 package java.beans.beancontext
 
 import java.beans.BeanInfo
+import scala.scalanative.annotation.stub
 
 /** A BeanContextServiceProvider implementor who wishes to provide explicit
  *  information about the services their bean may provide shall implement a
@@ -9,4 +10,11 @@ import java.beans.BeanInfo
  *  services.
  */
 trait BeanContextServiceProviderBeanInfo extends BeanInfo {
+
+    /** Gets a BeanInfo array, one for each
+     *  service class or interface statically available
+     *  from this ServiceProvider.
+     */
+    @stub
+    def getServicesBeanInfo(): Array[BeanInfo] = ???
 }

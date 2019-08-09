@@ -3,6 +3,7 @@ package javax.xml.stream
 import java.io.{OutputStream, Writer}
 import java.lang.{ClassLoader, Object, String}
 import javax.xml.transform.Result
+import scala.scalanative.annotation.stub
 
 /** Defines an abstract implementation of a factory for
  *  getting XMLEventWriters and XMLStreamWriters.
@@ -76,6 +77,10 @@ import javax.xml.transform.Result
  */
 abstract class XMLOutputFactory extends Object {
 
+    /**  */
+    @stub
+    protected def this() = ???
+
     /** Create a new XMLEventWriter that writes to a stream */
     def createXMLEventWriter(stream: OutputStream): XMLEventWriter
 
@@ -105,9 +110,16 @@ abstract class XMLOutputFactory extends Object {
 
     /** Query the set of properties that this factory supports. */
     def isPropertySupported(name: String): Boolean
+
+    /** Allows the user to set specific features/properties on the underlying implementation. */
+    def setProperty(name: String, value: Object): Unit
 }
 
 object XMLOutputFactory {
+    /** Property used to set prefix defaulting on the output side */
+    @stub
+    val IS_REPAIRING_NAMESPACES: String = ???
+
     /** Create a new instance of the factory. */
     @stub
     def newFactory(): XMLOutputFactory = ???

@@ -1,6 +1,7 @@
 package java.awt.font
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Defines a policy for determining the strong caret location.
  *  This class contains one method, getStrongCaret, which
@@ -19,3 +20,14 @@ import java.lang.Object
  *  Most clients do not need to use this class.
  */
 object TextLayout.CaretPolicy extends Object {
+
+    /** Constructs a CaretPolicy. */
+    @stub
+    def CaretPolicy() = ???
+
+    /** Chooses one of the specified TextHitInfo instances as
+     *  a strong caret in the specified TextLayout.
+     */
+    @stub
+    def getStrongCaret(hit1: TextHitInfo, hit2: TextHitInfo, layout: TextLayout): TextHitInfo = ???
+}

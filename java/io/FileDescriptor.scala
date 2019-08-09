@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Instances of the file descriptor class serve as an opaque handle
  *  to the underlying machine-specific structure representing an open
@@ -13,11 +14,21 @@ import java.lang.Object
  */
 final class FileDescriptor extends Object {
 
+    /** Constructs an (invalid) FileDescriptor
+     *  object.
+     */
+    @stub
+    def this() = ???
+
     /** Force all system buffers to synchronize with the underlying
      *  device.
      */
     @stub
     def sync(): Unit = ???
+
+    /** Tests if this file descriptor object is valid. */
+    @stub
+    def valid(): Boolean = ???
 }
 
 object FileDescriptor {
@@ -28,4 +39,8 @@ object FileDescriptor {
     /** A handle to the standard input stream. */
     @stub
     val in: FileDescriptor = ???
+
+    /** A handle to the standard output stream. */
+    @stub
+    val out: FileDescriptor = ???
 }

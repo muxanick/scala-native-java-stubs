@@ -2,6 +2,7 @@ package java.util.stream
 
 import java.util.Set
 import java.util.function.{BiConsumer, BinaryOperator, Function, Supplier}
+import scala.scalanative.annotation.stub
 
 /** A mutable reduction operation that
  *  accumulates input elements into a mutable result container, optionally transforming
@@ -140,9 +141,19 @@ trait Collector[T, A, R] {
      */
     @stub
     def finisher(): Function[A, R] = ???
+
+    /** A function that creates and returns a new mutable result container. */
+    @stub
+    def supplier(): Supplier[A] = ???
 }
 
 object Collector {
+    /** Characteristics indicating properties of a Collector, which can
+     *  be used to optimize reduction implementations.
+     */
+    @stub
+    object Characteristics extends Collector.Characteristics
+
     /** Returns a new Collector described by the given supplier,
      *  accumulator, combiner, and finisher functions.
      */

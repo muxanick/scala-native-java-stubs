@@ -2,6 +2,7 @@ package java.util.logging
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The Level class defines a set of standard logging levels that
  *  can be used to control logging output.  The logging Level objects
@@ -37,6 +38,12 @@ class Level extends Object with Serializable {
     @stub
     protected def this(name: String, value: Int) = ???
 
+    /** Create a named Level with a given integer value and a
+     *  given localization resource name.
+     */
+    @stub
+    protected def this(name: String, value: Int, resourceBundleName: String) = ???
+
     /** Compare two objects for value equality. */
     @stub
     def equals(ox: Object): Boolean = ???
@@ -64,6 +71,10 @@ class Level extends Object with Serializable {
     /** Get the integer value for this level. */
     @stub
     def intValue(): Int = ???
+
+    /** Returns a string representation of this Level. */
+    @stub
+    def toString(): String = ???
 }
 
 object Level {
@@ -98,6 +109,10 @@ object Level {
     /** SEVERE is a message level indicating a serious failure. */
     @stub
     val SEVERE: Level = ???
+
+    /** WARNING is a message level indicating a potential problem. */
+    @stub
+    val WARNING: Level = ???
 
     /** Parse a level name string into a Level. */
     @stub

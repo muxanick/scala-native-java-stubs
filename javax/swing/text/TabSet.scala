@@ -1,7 +1,8 @@
 package javax.swing.text
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A TabSet is comprised of many TabStops. It offers methods for locating the
  *  closest TabStop to a given position and finding all the potential TabStops.
@@ -17,6 +18,10 @@ import java.lang.Object
  *  Please see XMLEncoder.
  */
 class TabSet extends Object with Serializable {
+
+    /** Creates and returns an instance of TabSet. */
+    @stub
+    def this(tabs: Array[TabStop]) = ???
 
     /** Indicates whether this TabSet is equal to another one. */
     @stub
@@ -45,4 +50,8 @@ class TabSet extends Object with Serializable {
     /** Returns a hashcode for this set of TabStops. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns the string representation of the set of tabs. */
+    @stub
+    def toString(): String = ???
 }

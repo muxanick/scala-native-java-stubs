@@ -1,6 +1,7 @@
 package javax.sound.midi
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A SyncMode object represents one of the ways in which
  *  a MIDI sequencer's notion of time can be synchronized with a master
@@ -25,6 +26,10 @@ import java.lang.Object
  */
 object Sequencer.SyncMode extends Object {
 
+    /** Constructs a synchronization mode. */
+    @stub
+    protected def SyncMode(name: String) = ???
+
     /** A master synchronization mode that makes the sequencer get
      *  its timing information from its internal clock.
      */
@@ -44,6 +49,12 @@ object Sequencer.SyncMode extends Object {
     @stub
     val MIDI_TIME_CODE: Sequencer.SyncMode = ???
 
+    /** A slave synchronization mode indicating that no timing information
+     *  should be sent to the receiver.
+     */
+    @stub
+    val NO_SYNC: Sequencer.SyncMode = ???
+
     /** Determines whether two objects are equal. */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -51,4 +62,10 @@ object Sequencer.SyncMode extends Object {
     /** Finalizes the hashcode method. */
     @stub
     def hashCode(): Int = ???
+
+    /** Provides this synchronization mode's name as the string
+     *  representation of the mode.
+     */
+    @stub
+    def toString(): String = ???
 }

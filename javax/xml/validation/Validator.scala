@@ -1,9 +1,8 @@
 package javax.xml.validation
 
 import java.lang.{Object, String}
-import javax.xml.transform.Source
-import org.w3c.dom.ls.LSResourceResolver
-import org.xml.sax.ErrorHandler
+import javax.xml.transform.{Result, Source}
+import scala.scalanative.annotation.stub
 
 /** A processor that checks an XML document against Schema.
  * 
@@ -17,6 +16,10 @@ import org.xml.sax.ErrorHandler
  *  
  */
 abstract class Validator extends Object {
+
+    /** Constructor for derived classes. */
+    @stub
+    protected def this() = ???
 
     /** Gets the current ErrorHandler set to this Validator. */
     def getErrorHandler(): ErrorHandler
@@ -51,4 +54,9 @@ abstract class Validator extends Object {
 
     /** Validates the specified input. */
     def validate(source: Source): Unit
+
+    /** Validates the specified input and send the augmented validation
+     *  result to the specified output.
+     */
+    def validate(source: Source, result: Result): Unit
 }

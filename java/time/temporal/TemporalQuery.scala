@@ -1,6 +1,7 @@
 package java.time.temporal
 
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** Strategy for querying a temporal object.
  *  
@@ -30,4 +31,8 @@ import java.lang.FunctionalInterface
  *  Additional common queries are provided as static methods in TemporalQueries.
  */
 @FunctionalInterface trait TemporalQuery[R] {
+
+    /** Queries the specified temporal object. */
+    @stub
+    def queryFrom(temporal: TemporalAccessor): R = ???
 }

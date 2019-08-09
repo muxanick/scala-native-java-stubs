@@ -2,6 +2,7 @@ package javax.management
 
 import java.lang.{Integer, Object, String}
 import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** This interface represents a way to talk to an MBean server, whether
  *  local or remote.  The MBeanServer interface, representing a
@@ -114,4 +115,8 @@ trait MBeanServerConnection {
     /** Sets the values of several attributes of a named MBean. */
     @stub
     def setAttributes(name: ObjectName, attributes: AttributeList): AttributeList = ???
+
+    /** Unregisters an MBean from the MBean server. */
+    @stub
+    def unregisterMBean(name: ObjectName): Unit = ???
 }

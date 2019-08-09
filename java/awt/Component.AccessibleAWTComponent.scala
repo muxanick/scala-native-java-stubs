@@ -6,6 +6,7 @@ import java.io.Serializable
 import java.lang.{Object, String}
 import java.util.Locale
 import javax.accessibility.{Accessible, AccessibleComponent, AccessibleContext, AccessibleRole, AccessibleStateSet}
+import scala.scalanative.annotation.stub
 
 /** Inner class of Component used to provide default support for
  *  accessibility.  This class is not meant to be used directly by
@@ -16,13 +17,27 @@ import javax.accessibility.{Accessible, AccessibleComponent, AccessibleContext, 
  */
 protected abstract class Component.AccessibleAWTComponent extends AccessibleContext with Serializable with AccessibleComponent {
 
+    /** Though the class is abstract, this should be called by
+     *  all sub-classes.
+     */
+    @stub
+    protected def AccessibleAWTComponent() = ???
+
     /** Fire PropertyChange listener, if one is registered,
      *  when shown/hidden..
      */
     protected object AccessibleAWTComponentHandler extends Component.AccessibleAWTComponent.AccessibleAWTComponentHandler
 
+    /** Fire PropertyChange listener, if one is registered,
+     *  when focus events happen
+     */
+    protected object AccessibleAWTFocusHandler extends Component.AccessibleAWTComponent.AccessibleAWTFocusHandler
+
     /**  */
     protected val accessibleAWTComponentHandler: ComponentListener
+
+    /**  */
+    protected val accessibleAWTFocusHandler: FocusListener
 
     /** Adds the specified focus listener to receive focus events from this
      *  component.
@@ -156,4 +171,7 @@ protected abstract class Component.AccessibleAWTComponent extends AccessibleCont
 
     /** Resizes this object so that it has width and height. */
     def setSize(d: Dimension): Unit
+
+    /** Sets the visible state of the object. */
+    def setVisible(b: Boolean): Unit
 }

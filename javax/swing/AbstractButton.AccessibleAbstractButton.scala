@@ -4,6 +4,7 @@ import java.awt.{Component.AccessibleAWTComponent, Container.AccessibleAWTContai
 import java.lang.{Number, Object, String}
 import javax.accessibility.{AccessibleAction, AccessibleContext, AccessibleExtendedComponent, AccessibleIcon, AccessibleKeyBinding, AccessibleRelationSet, AccessibleStateSet, AccessibleText, AccessibleValue}
 import javax.swing.text.AttributeSet
+import scala.scalanative.annotation.stub
 
 /** This class implements accessibility support for the
  *  AbstractButton class.  It provides an implementation of the
@@ -20,6 +21,10 @@ import javax.swing.text.AttributeSet
  *  Please see XMLEncoder.
  */
 protected abstract class AbstractButton.AccessibleAbstractButton extends JComponent.AccessibleJComponent with AccessibleAction with AccessibleValue with AccessibleText with AccessibleExtendedComponent {
+
+    /**  */
+    @stub
+    protected def AccessibleAbstractButton() = ???
 
     /** Perform the specified Action on the object */
     def doAccessibleAction(i: Int): Boolean
@@ -111,4 +116,7 @@ protected abstract class AbstractButton.AccessibleAbstractButton extends JCompon
 
     /** Returns the tool tip text */
     def getToolTipText(): String
+
+    /** Set the value of this object as a Number. */
+    def setCurrentAccessibleValue(n: Number): Boolean
 }

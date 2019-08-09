@@ -1,5 +1,7 @@
 package javax.security.auth.callback
 
+import scala.scalanative.annotation.stub
+
 /**  An application implements a CallbackHandler and passes
  *  it to underlying security services so that they may interact with
  *  the application to retrieve specific authentication data,
@@ -38,4 +40,10 @@ package javax.security.auth.callback
  *  zero-argument constructor.
  */
 trait CallbackHandler {
+
+    /**  Retrieve or display the information requested in the
+     *  provided Callbacks.
+     */
+    @stub
+    def handle(callbacks: Array[Callback]): Unit = ???
 }

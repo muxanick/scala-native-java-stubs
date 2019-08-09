@@ -1,7 +1,9 @@
 package java.util
 
+import java.io.InputStream
 import java.lang.{Object, String}
 import java.nio.ByteBuffer
+import scala.scalanative.annotation.stub
 
 /** This class implements a decoder for decoding byte data using the
  *  Base64 encoding scheme as specified in RFC 4648 and RFC 2045.
@@ -52,4 +54,8 @@ object Base64.Decoder extends Object {
      */
     @stub
     def decode(src: String): Array[Byte] = ???
+
+    /** Returns an input stream for decoding Base64 encoded byte stream. */
+    @stub
+    def wrap(is: InputStream): InputStream = ???
 }

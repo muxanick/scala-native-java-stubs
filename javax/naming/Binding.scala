@@ -1,6 +1,7 @@
 package javax.naming
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class represents a name-to-object binding found in a context.
  * 
@@ -32,6 +33,12 @@ class Binding extends NameClassPair {
     @stub
     def this(name: String, className: String, obj: Object) = ???
 
+    /** Constructs an instance of a Binding given its
+     *  name, class name, object, and whether the name is relative.
+     */
+    @stub
+    def this(name: String, className: String, obj: Object, isRelative: Boolean) = ???
+
     /** Retrieves the class name of the object bound to the name of this binding. */
     @stub
     def getClassName(): String = ???
@@ -43,4 +50,8 @@ class Binding extends NameClassPair {
     /** Sets the object associated with this binding. */
     @stub
     def setObject(obj: Object): Unit = ???
+
+    /** Generates the string representation of this binding. */
+    @stub
+    def toString(): String = ???
 }

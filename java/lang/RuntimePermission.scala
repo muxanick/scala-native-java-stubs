@@ -1,6 +1,7 @@
 package java.lang
 
 import java.security.{BasicPermission, Permission}
+import scala.scalanative.annotation.stub
 
 /** This class is for runtime permissions. A RuntimePermission
  *  contains a name (also referred to as a "target name") but
@@ -308,4 +309,8 @@ final class RuntimePermission extends BasicPermission {
     /** Creates a new RuntimePermission with the specified name. */
     @stub
     def this(name: String) = ???
+
+    /** Creates a new RuntimePermission object with the specified name. */
+    @stub
+    def this(name: String, actions: String) = ???
 }

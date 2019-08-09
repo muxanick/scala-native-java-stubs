@@ -2,6 +2,7 @@ package java.lang.reflect
 
 import java.lang.{Class, Object, String}
 import java.lang.annotation.Annotation
+import scala.scalanative.annotation.stub
 
 /** Information about method parameters.
  * 
@@ -110,4 +111,8 @@ final class Parameter extends Object with AnnotatedElement {
      */
     @stub
     def isVarArgs(): Boolean = ???
+
+    /** Returns a string describing this parameter. */
+    @stub
+    def toString(): String = ???
 }

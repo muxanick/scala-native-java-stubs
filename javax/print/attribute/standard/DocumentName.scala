@@ -1,7 +1,9 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
+import java.util.Locale
 import javax.print.attribute.{Attribute, DocAttribute, TextSyntax}
+import scala.scalanative.annotation.stub
 
 /** Class DocumentName is a printing attribute class, a text attribute, that
  *  specifies the name of a document. DocumentName is an attribute of the print
@@ -19,6 +21,12 @@ import javax.print.attribute.{Attribute, DocAttribute, TextSyntax}
  */
 final class DocumentName extends TextSyntax with DocAttribute {
 
+    /** Constructs a new document name attribute with the given document name
+     *  and locale.
+     */
+    @stub
+    def this(documentName: String, locale: Locale) = ???
+
     /** Returns whether this document name attribute is equivalent to the
      *  passed in object.
      */
@@ -30,4 +38,10 @@ final class DocumentName extends TextSyntax with DocAttribute {
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

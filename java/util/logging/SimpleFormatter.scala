@@ -1,6 +1,7 @@
 package java.util.logging
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Print a brief summary of the LogRecord in a human readable
  *  format.  The summary will typically be 1 or 2 lines.
@@ -23,4 +24,12 @@ import java.lang.Object
  *  the default format is implementation-specific.
  */
 class SimpleFormatter extends Formatter {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** Format the given LogRecord. */
+    @stub
+    def format(record: LogRecord): String = ???
 }

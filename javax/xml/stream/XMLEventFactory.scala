@@ -4,11 +4,16 @@ import java.lang.{ClassLoader, Object, String}
 import java.util.Iterator
 import javax.xml.namespace.{NamespaceContext, QName}
 import javax.xml.stream.events.{Attribute, Characters, Comment, DTD, EndDocument, EndElement, EntityDeclaration, EntityReference, Namespace, ProcessingInstruction, StartDocument, StartElement}
+import scala.scalanative.annotation.stub
 
 /** This interface defines a utility class for creating instances of
  *  XMLEvents
  */
 abstract class XMLEventFactory extends Object {
+
+    /**  */
+    @stub
+    protected def this() = ???
 
     /** Create a new Attribute */
     def createAttribute(name: QName, value: String): Attribute
@@ -89,6 +94,11 @@ abstract class XMLEventFactory extends Object {
 
     /** Create a new StartElement. */
     def createStartElement(prefix: String, namespaceUri: String, localName: String, attributes: Iterator, namespaces: Iterator, context: NamespaceContext): StartElement
+
+    /** This method allows setting of the Location on each event that
+     *  is created by this factory.
+     */
+    def setLocation(location: Location): Unit
 }
 
 object XMLEventFactory {

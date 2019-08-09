@@ -1,6 +1,7 @@
 package javax.xml.bind
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** 
  *  Register an instance of an implementation of this class with a Marshaller to externally listen
@@ -18,9 +19,19 @@ import java.lang.Object
  */
 object abstract Marshaller.Listener extends Object {
 
+    /**  */
+    @stub
+    def Listener() = ???
+
     /** 
      *  Callback method invoked after marshalling source to XML.
      */
     @stub
     def afterMarshal(source: Object): Unit = ???
+
+    /** 
+     *  Callback method invoked before marshalling from source to XML.
+     */
+    @stub
+    def beforeMarshal(source: Object): Unit = ???
 }

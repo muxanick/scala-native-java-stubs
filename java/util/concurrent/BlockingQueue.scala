@@ -2,6 +2,7 @@ package java.util.concurrent
 
 import java.lang.Object
 import java.util.{Collection, Queue}
+import scala.scalanative.annotation.stub
 
 /** A Queue that additionally supports operations
  *  that wait for the queue to become non-empty when retrieving an
@@ -202,4 +203,10 @@ trait BlockingQueue[E] extends Queue[E] {
      */
     @stub
     def remove(o: Object): Boolean = ???
+
+    /** Retrieves and removes the head of this queue, waiting if necessary
+     *  until an element becomes available.
+     */
+    @stub
+    def take(): E = ???
 }

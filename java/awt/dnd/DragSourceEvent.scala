@@ -3,6 +3,7 @@ package java.awt.dnd
 import java.awt.Point
 import java.lang.Object
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** This class is the base class for
  *  DragSourceDragEvent and
@@ -36,6 +37,13 @@ class DragSourceEvent extends EventObject {
     @stub
     def this(dsc: DragSourceContext) = ???
 
+    /** Construct a DragSourceEvent given a specified
+     *  DragSourceContext, and coordinates of the cursor
+     *  location.
+     */
+    @stub
+    def this(dsc: DragSourceContext, x: Int, y: Int) = ???
+
     /** This method returns the DragSourceContext that
      *  originated the event.
      */
@@ -56,4 +64,11 @@ class DragSourceEvent extends EventObject {
      */
     @stub
     def getX(): Int = ???
+
+    /** This method returns the vertical coordinate of the cursor location in
+     *  screen coordinates at the moment this event occurred, or zero if the
+     *  cursor location is not specified for this event.
+     */
+    @stub
+    def getY(): Int = ???
 }

@@ -1,6 +1,8 @@
 package javax.security.auth.login
 
 import java.lang.{Object, String}
+import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** This class represents a single LoginModule entry
  *  configured for the application specified in the
@@ -14,6 +16,10 @@ import java.lang.{Object, String}
  */
 class AppConfigurationEntry extends Object {
 
+    /** Default constructor for this class. */
+    @stub
+    def this(loginModuleName: String, controlFlag: AppConfigurationEntry.LoginModuleControlFlag, options: Map[String, _]) = ???
+
     /** Return the controlFlag
      *  (either REQUIRED, REQUISITE, SUFFICIENT, or OPTIONAL)
      *  for this LoginModule.
@@ -24,4 +30,16 @@ class AppConfigurationEntry extends Object {
     /** Get the class name of the configured LoginModule. */
     @stub
     def getLoginModuleName(): String = ???
+
+    /** Get the options configured for this LoginModule. */
+    @stub
+    def getOptions(): Map[String, _] = ???
+}
+
+object AppConfigurationEntry {
+    /** This class represents whether or not a LoginModule
+     *  is REQUIRED, REQUISITE, SUFFICIENT or OPTIONAL.
+     */
+    @stub
+    object LoginModuleControlFlag extends AppConfigurationEntry.LoginModuleControlFlag
 }

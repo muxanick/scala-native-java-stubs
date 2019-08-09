@@ -1,7 +1,8 @@
 package javax.xml.crypto
 
-import java.io.PrintStream
+import java.io.{PrintStream, PrintWriter}
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Indicates an exceptional condition that occurred during the XML
  *  marshalling or unmarshalling process.
@@ -29,6 +30,13 @@ class MarshalException extends Exception {
     @stub
     def this(message: String, cause: Throwable) = ???
 
+    /** Constructs a new MarshalException with the specified cause
+     *  and a detail message of (cause==null ? null : cause.toString())
+     *  (which typically contains the class and detail message of cause).
+     */
+    @stub
+    def this(cause: Throwable) = ???
+
     /** Returns the cause of this MarshalException or
      *  null if the cause is nonexistent or unknown.
      */
@@ -46,4 +54,10 @@ class MarshalException extends Exception {
      */
     @stub
     def printStackTrace(s: PrintStream): Unit = ???
+
+    /** Prints this MarshalException, its backtrace and
+     *  the cause's backtrace to the specified print writer.
+     */
+    @stub
+    def printStackTrace(s: PrintWriter): Unit = ???
 }

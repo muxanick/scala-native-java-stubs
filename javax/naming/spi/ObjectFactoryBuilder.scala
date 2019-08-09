@@ -1,5 +1,9 @@
 package javax.naming.spi
 
+import java.lang.Object
+import java.util.Hashtable
+import scala.scalanative.annotation.stub
+
 /** This interface represents a builder that creates object factories.
  * 
  *  The JNDI framework allows for object implementations to
@@ -18,4 +22,8 @@ package javax.naming.spi
  *  interface that for creating object factories.
  */
 trait ObjectFactoryBuilder {
+
+    /** Creates a new object factory using the environment supplied. */
+    @stub
+    def createObjectFactory(obj: Object, environment: Hashtable[_, _]): ObjectFactory = ???
 }

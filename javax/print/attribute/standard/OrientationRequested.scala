@@ -2,6 +2,7 @@ package javax.print.attribute.standard
 
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, DocAttribute, EnumSyntax, PrintJobAttribute, PrintRequestAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class OrientationRequested is a printing attribute class, an enumeration,
  *  that indicates the desired orientation for printed print-stream pages; it
@@ -34,6 +35,12 @@ import javax.print.attribute.{Attribute, DocAttribute, EnumSyntax, PrintJobAttri
  */
 final class OrientationRequested extends EnumSyntax with DocAttribute with PrintRequestAttribute with PrintJobAttribute {
 
+    /** Construct a new orientation requested enumeration value with the given
+     *  integer value.
+     */
+    @stub
+    protected def this(value: Int) = ???
+
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.
      */
@@ -53,6 +60,10 @@ final class OrientationRequested extends EnumSyntax with DocAttribute with Print
     /** Returns the lowest integer value used by class OrientationRequested. */
     @stub
     protected def getOffset(): Int = ???
+
+    /** Returns the string table for class OrientationRequested. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object OrientationRequested {
@@ -69,4 +80,10 @@ object OrientationRequested {
      */
     @stub
     val REVERSE_LANDSCAPE: OrientationRequested = ???
+
+    /** The content will be imaged across the short edge of the medium, but in
+     *  the opposite manner from portrait.
+     */
+    @stub
+    val REVERSE_PORTRAIT: OrientationRequested = ???
 }

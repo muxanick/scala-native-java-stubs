@@ -1,6 +1,7 @@
 package javax.sound.midi
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A ShortMessage contains a MIDI message that has at most
  *  two data bytes following its status byte.  The types of MIDI message
@@ -42,6 +43,12 @@ class ShortMessage extends MidiMessage {
     @stub
     def this(status: Int, data1: Int, data2: Int) = ???
 
+    /** Constructs a new ShortMessage which represents a channel
+     *  MIDI message that takes up to two data bytes.
+     */
+    @stub
+    def this(command: Int, channel: Int, data1: Int, data2: Int) = ???
+
     /** Creates a new object of the same class and with the same contents
      *  as this object.
      */
@@ -79,6 +86,12 @@ class ShortMessage extends MidiMessage {
      */
     @stub
     def setMessage(status: Int, data1: Int, data2: Int): Unit = ???
+
+    /** Sets the short message parameters for a  channel message
+     *  which takes up to two data bytes.
+     */
+    @stub
+    def setMessage(command: Int, channel: Int, data1: Int, data2: Int): Unit = ???
 }
 
 object ShortMessage {
@@ -149,4 +162,8 @@ object ShortMessage {
     /** Status byte for Timing Clock message (0xF8, or 248). */
     @stub
     val TIMING_CLOCK: Int = ???
+
+    /** Status byte for Tune Request message (0xF6, or 246). */
+    @stub
+    val TUNE_REQUEST: Int = ???
 }

@@ -1,6 +1,7 @@
 package java.util.concurrent
 
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** A task that returns a result and may throw an exception.
  *  Implementors define a single method with no arguments called
@@ -15,4 +16,8 @@ import java.lang.FunctionalInterface
  *  convert from other common forms to Callable classes.
  */
 @FunctionalInterface trait Callable[V] {
+
+    /** Computes a result, or throws an exception if unable to do so. */
+    @stub
+    def call(): V = ???
 }

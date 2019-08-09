@@ -3,6 +3,7 @@ package javax.swing.text
 import java.awt.{Color, Font, FontMetrics, Shape}
 import java.lang.Object
 import javax.swing.event.DocumentEvent
+import scala.scalanative.annotation.stub
 
 /** A LabelView is a styled chunk of text
  *  that represents a view mapped over an element in the
@@ -10,6 +11,10 @@ import javax.swing.event.DocumentEvent
  *  used for rendering.
  */
 class LabelView extends GlyphView with TabableView {
+
+    /** Constructs a new view wrapped on an element. */
+    @stub
+    def this(elem: Element) = ???
 
     /** Gives notification from the document that attributes were changed
      *  in a location that this view is responsible for.
@@ -80,4 +85,8 @@ class LabelView extends GlyphView with TabableView {
      */
     @stub
     protected def setSuperscript(s: Boolean): Unit = ???
+
+    /** Sets whether or not the view is underlined. */
+    @stub
+    protected def setUnderline(u: Boolean): Unit = ???
 }

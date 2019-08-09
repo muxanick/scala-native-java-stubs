@@ -3,6 +3,7 @@ package java.security.cert
 import java.lang.{Object, String}
 import java.security.Provider
 import java.util.Collection
+import scala.scalanative.annotation.stub
 
 /** A class for retrieving Certificates and CRLs
  *  from a repository.
@@ -52,6 +53,12 @@ import java.util.Collection
  */
 class CertStore extends Object {
 
+    /** Creates a CertStore object of the given type, and
+     *  encapsulates the given provider implementation (SPI object) in it.
+     */
+    @stub
+    protected def this(storeSpi: CertStoreSpi, provider: Provider, type: String, params: CertStoreParameters) = ???
+
     /** Returns a Collection of Certificates that
      *  match the specified selector.
      */
@@ -71,6 +78,10 @@ class CertStore extends Object {
     /** Returns the provider of this CertStore. */
     @stub
     def getProvider(): Provider = ???
+
+    /** Returns the type of this CertStore. */
+    @stub
+    def getType(): String = ???
 }
 
 object CertStore {

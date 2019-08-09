@@ -2,6 +2,7 @@ package javax.crypto
 
 import java.io.{FilterOutputStream, OutputStream}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A CipherOutputStream is composed of an OutputStream and a Cipher so
  *  that write() methods first process the data before writing them out
@@ -42,6 +43,12 @@ class CipherOutputStream extends FilterOutputStream {
     @stub
     protected def this(os: OutputStream) = ???
 
+    /** Constructs a CipherOutputStream from an OutputStream and a
+     *  Cipher.
+     */
+    @stub
+    def this(os: OutputStream, c: Cipher) = ???
+
     /** Closes this output stream and releases any system resources
      *  associated with this stream.
      */
@@ -66,4 +73,8 @@ class CipherOutputStream extends FilterOutputStream {
      */
     @stub
     def write(b: Array[Byte], off: Int, len: Int): Unit = ???
+
+    /** Writes the specified byte to this output stream. */
+    @stub
+    def write(b: Int): Unit = ???
 }

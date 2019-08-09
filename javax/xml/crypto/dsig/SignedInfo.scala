@@ -4,6 +4,7 @@ import java.io.InputStream
 import java.lang.String
 import java.util.List
 import javax.xml.crypto.XMLStructure
+import scala.scalanative.annotation.stub
 
 /** An representation of the XML SignedInfo element as
  *  defined in the 
@@ -46,4 +47,8 @@ trait SignedInfo extends XMLStructure {
     /** Returns an unmodifiable list of one or more References. */
     @stub
     def getReferences(): List = ???
+
+    /** Returns the signature method of this SignedInfo. */
+    @stub
+    def getSignatureMethod(): SignatureMethod = ???
 }

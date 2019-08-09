@@ -3,6 +3,7 @@ package javax.security.auth.kerberos
 import java.io.Serializable
 import java.lang.{Object, String}
 import java.security.Principal
+import scala.scalanative.annotation.stub
 
 /** This class encapsulates a Kerberos principal. */
 final class KerberosPrincipal extends Object with Principal with Serializable {
@@ -10,6 +11,12 @@ final class KerberosPrincipal extends Object with Principal with Serializable {
     /** Constructs a KerberosPrincipal from the provided string input. */
     @stub
     def this(name: String) = ???
+
+    /** Constructs a KerberosPrincipal from the provided string and
+     *  name type input.
+     */
+    @stub
+    def this(name: String, nameType: Int) = ???
 
     /** Compares the specified Object with this Principal for equality. */
     @stub
@@ -33,6 +40,10 @@ final class KerberosPrincipal extends Object with Principal with Serializable {
     /** Returns a hashcode for this principal. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }
 
 object KerberosPrincipal {
@@ -55,4 +66,8 @@ object KerberosPrincipal {
     /** unique ID name type. */
     @stub
     val KRB_NT_UID: Int = ???
+
+    /** unknown name type. */
+    @stub
+    val KRB_NT_UNKNOWN: Int = ???
 }

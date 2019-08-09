@@ -2,6 +2,7 @@ package java.util.zip
 
 import java.io.{FilterOutputStream, OutputStream}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class implements an output stream filter for compressing data in
  *  the "deflate" compression format. It is also used as the basis for other
@@ -37,9 +38,19 @@ class DeflaterOutputStream extends FilterOutputStream {
     @stub
     def this(out: OutputStream, def: Deflater, size: Int) = ???
 
+    /** Creates a new output stream with the specified compressor,
+     *  buffer size and flush mode.
+     */
+    @stub
+    def this(out: OutputStream, def: Deflater, size: Int, syncFlush: Boolean) = ???
+
     /** Output buffer for writing compressed data. */
     @stub
     protected val buf: Array[Byte] = ???
+
+    /** Compressor for this stream. */
+    @stub
+    protected val def: Deflater = ???
 
     /** Writes remaining compressed data to the output stream and closes the
      *  underlying stream.
@@ -64,4 +75,8 @@ class DeflaterOutputStream extends FilterOutputStream {
     /** Writes an array of bytes to the compressed output stream. */
     @stub
     def write(b: Array[Byte], off: Int, len: Int): Unit = ???
+
+    /** Writes a byte to the compressed output stream. */
+    @stub
+    def write(b: Int): Unit = ???
 }

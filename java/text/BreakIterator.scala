@@ -1,7 +1,8 @@
 package java.text
 
-import java.lang.{Cloneable, Object}
+import java.lang.{Cloneable, Object, String}
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** The BreakIterator class implements methods for finding
  *  the location of boundaries in text. Instances of BreakIterator
@@ -178,6 +179,10 @@ import java.util.Locale
  */
 abstract class BreakIterator extends Object with Cloneable {
 
+    /** Constructor. */
+    @stub
+    protected def this() = ???
+
     /** Create a copy of this iterator */
     def clone(): Object
 
@@ -216,9 +221,19 @@ abstract class BreakIterator extends Object with Cloneable {
 
     /** Set a new text for scanning. */
     def setText(newText: CharacterIterator): Unit
+
+    /** Set a new text string to be scanned. */
+    def setText(newText: String): Unit
 }
 
 object BreakIterator {
+    /** DONE is returned by previous(), next(), next(int), preceding(int)
+     *  and following(int) when either the first or last text boundary has been
+     *  reached.
+     */
+    @stub
+    val DONE: Int = ???
+
     /** Returns an array of all locales for which the
      *  get*Instance methods of this class can return
      *  localized instances.

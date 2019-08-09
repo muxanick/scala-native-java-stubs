@@ -1,6 +1,8 @@
 package java.awt.image
 
 import java.lang.Object
+import java.util.Hashtable
+import scala.scalanative.annotation.stub
 
 /** An ImageFilter class for scaling images using the simplest algorithm.
  *  This class extends the basic ImageFilter Class to scale an existing
@@ -15,6 +17,12 @@ import java.lang.Object
  *  of an image filtered on different platforms.
  */
 class ReplicateScaleFilter extends ImageFilter {
+
+    /** Constructs a ReplicateScaleFilter that scales the pixels from
+     *  its source Image as specified by the width and height parameters.
+     */
+    @stub
+    def this(width: Int, height: Int) = ???
 
     /** The target height to scale the image. */
     @stub
@@ -47,6 +55,10 @@ class ReplicateScaleFilter extends ImageFilter {
     @stub
     protected val srcrows: Array[Int] = ???
 
+    /** The width of the source image. */
+    @stub
+    protected val srcWidth: Int = ???
+
     /** Override the dimensions of the source image and pass the dimensions
      *  of the new scaled size to the ImageConsumer.
      */
@@ -66,4 +78,10 @@ class ReplicateScaleFilter extends ImageFilter {
      */
     @stub
     def setPixels(x: Int, y: Int, w: Int, h: Int, model: ColorModel, pixels: Array[Int], off: Int, scansize: Int): Unit = ???
+
+    /** Passes along the properties from the source object after adding a
+     *  property indicating the scale applied.
+     */
+    @stub
+    def setProperties(props: Hashtable[_, _]): Unit = ???
 }

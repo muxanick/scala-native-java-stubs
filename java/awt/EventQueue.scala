@@ -1,6 +1,7 @@
 package java.awt
 
 import java.lang.{Object, Runnable}
+import scala.scalanative.annotation.stub
 
 /** EventQueue is a platform-independent class
  *  that queues events, both from the underlying peer classes
@@ -40,6 +41,10 @@ import java.lang.{Object, Runnable}
  */
 class EventQueue extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Creates a new secondary loop associated with this
      *  event queue.
      */
@@ -73,6 +78,10 @@ class EventQueue extends Object {
     /** Posts a 1.1-style event to the EventQueue. */
     @stub
     def postEvent(theEvent: AWTEvent): Unit = ???
+
+    /** Replaces the existing EventQueue with the specified one. */
+    @stub
+    def push(newEventQueue: EventQueue): Unit = ???
 }
 
 object EventQueue {

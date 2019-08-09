@@ -2,6 +2,7 @@ package java.util.prefs
 
 import java.io.OutputStream
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class provides a skeletal implementation of the Preferences
  *  class, greatly easing the task of implementing it.
@@ -80,8 +81,19 @@ import java.lang.{Object, String}
  */
 abstract class AbstractPreferences extends Preferences {
 
+    /** Creates a preference node with the specified parent and the specified
+     *  name relative to its parent.
+     */
+    @stub
+    protected def this(parent: AbstractPreferences, name: String) = ???
+
     /** An object whose monitor is used to lock this node. */
     protected val lock: Object
+
+    /** This field should be true if this node did not exist in the
+     *  backing store prior to the creation of this object.
+     */
+    protected val newNode: Boolean
 
     /** Implements the absolutePath method as per the specification in
      *  Preferences.absolutePath().
@@ -296,4 +308,7 @@ abstract class AbstractPreferences extends Preferences {
 
     /** This method is invoked with this node locked. */
     protected def syncSpi(): Unit
+
+    /** Returns the absolute path name of this preferences node. */
+    def toString(): String
 }

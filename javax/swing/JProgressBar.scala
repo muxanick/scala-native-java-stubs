@@ -5,6 +5,7 @@ import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.event.{ChangeEvent, ChangeListener}
 import javax.swing.plaf.ProgressBarUI
+import scala.scalanative.annotation.stub
 
 /** A component that visually displays the progress of some task.  As the task
  *  progresses towards completion, the progress bar displays the
@@ -110,6 +111,18 @@ class JProgressBar extends JComponent with SwingConstants with Accessible {
     @stub
     def this(min: Int, max: Int) = ???
 
+    /** Creates a progress bar using the specified orientation,
+     *  minimum, and maximum.
+     */
+    @stub
+    def this(orient: Int, min: Int, max: Int) = ???
+
+    /** This class implements accessibility support for the
+     *  JProgressBar class.
+     */
+    @stub
+    protected object AccessibleJProgressBar extends JProgressBar.AccessibleJProgressBar
+
     /** Only one ChangeEvent is needed per instance since the
      *  event's only interesting property is the immutable source, which
      *  is the progress bar.
@@ -140,6 +153,10 @@ class JProgressBar extends JComponent with SwingConstants with Accessible {
     /** Whether to display a string of text on the progress bar. */
     @stub
     protected val paintString: Boolean = ???
+
+    /** An optional string that can be displayed on the progress bar. */
+    @stub
+    protected val progressString: String = ???
 
     /** Adds the specified ChangeListener to the progress bar. */
     @stub
@@ -297,4 +314,8 @@ class JProgressBar extends JComponent with SwingConstants with Accessible {
     /** Sets the progress bar's current value to n. */
     @stub
     def setValue(n: Int): Unit = ???
+
+    /** Resets the UI property to a value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
 }

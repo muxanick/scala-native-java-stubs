@@ -2,6 +2,7 @@ package javax.xml.bind.util
 
 import java.lang.Object
 import javax.xml.bind.{ValidationEvent, ValidationEventHandler}
+import scala.scalanative.annotation.stub
 
 /** ValidationEventHandler
  *  implementation that collects all events.
@@ -13,6 +14,10 @@ import javax.xml.bind.{ValidationEvent, ValidationEventHandler}
  *  the reported errors and warnings.
  */
 class ValidationEventCollector extends Object with ValidationEventHandler {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Return an array of ValidationEvent objects containing a copy of each of
      *  the collected errors and warnings.
@@ -29,4 +34,8 @@ class ValidationEventCollector extends Object with ValidationEventHandler {
      */
     @stub
     def hasEvents(): Boolean = ???
+
+    /** Clear all collected errors and warnings. */
+    @stub
+    def reset(): Unit = ???
 }

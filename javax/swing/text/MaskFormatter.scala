@@ -2,6 +2,7 @@ package javax.swing.text
 
 import java.lang.{Object, String}
 import javax.swing.{JFormattedTextField, JFormattedTextField.AbstractFormatter}
+import scala.scalanative.annotation.stub
 
 /** MaskFormatter is used to format and edit strings. The behavior
  *  of a MaskFormatter is controlled by way of a String mask
@@ -125,6 +126,10 @@ class MaskFormatter extends DefaultFormatter {
     @stub
     def this() = ???
 
+    /** Creates a MaskFormatter with the specified mask. */
+    @stub
+    def this(mask: String) = ???
+
     /** Returns the characters that are not valid for input. */
     @stub
     def getInvalidCharacters(): String = ???
@@ -196,4 +201,10 @@ class MaskFormatter extends DefaultFormatter {
      */
     @stub
     def stringToValue(value: String): Object = ???
+
+    /** Returns a String representation of the Object value
+     *  based on the mask.
+     */
+    @stub
+    def valueToString(value: Object): String = ???
 }

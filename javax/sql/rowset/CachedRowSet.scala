@@ -5,6 +5,7 @@ import java.sql.{Connection, ResultSet, Savepoint}
 import java.util.Collection
 import javax.sql.{RowSet, RowSetEvent, RowSetMetaData}
 import javax.sql.rowset.spi.SyncProvider
+import scala.scalanative.annotation.stub
 
 /** The interface that all standard implementations of
  *  CachedRowSet must implement.
@@ -837,4 +838,20 @@ trait CachedRowSet extends RowSet with Joinable {
      */
     @stub
     def undoInsert(): Unit = ???
+
+    /** Immediately reverses the last update operation if the
+     *  row has been modified.
+     */
+    @stub
+    def undoUpdate(): Unit = ???
+}
+
+object CachedRowSet {
+    /** Deprecated. 
+     * Because this field is final (it is part of an interface),
+     *   its value cannot be changed.
+     * 
+     */
+    @stub
+    val COMMIT_ON_ACCEPT_CHANGES: Boolean = ???
 }

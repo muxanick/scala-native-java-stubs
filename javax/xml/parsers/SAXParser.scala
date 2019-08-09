@@ -3,8 +3,7 @@ package javax.xml.parsers
 import java.io.{File, InputStream}
 import java.lang.{Object, String}
 import javax.xml.validation.Schema
-import org.xml.sax.{HandlerBase, InputSource, Parser, XMLReader}
-import org.xml.sax.helpers.DefaultHandler
+import scala.scalanative.annotation.stub
 
 /** Defines the API that wraps an XMLReader
  *  implementation class. In JAXP 1.0, this class wrapped the
@@ -39,6 +38,10 @@ import org.xml.sax.helpers.DefaultHandler
  *  this revised class.
  */
 abstract class SAXParser extends Object {
+
+    /** Protected constructor to prevent instaniation. */
+    @stub
+    protected def this() = ???
 
     /** Returns the SAX parser that is encapsultated by the
      *  implementation of this class.
@@ -131,4 +134,9 @@ abstract class SAXParser extends Object {
 
     /** Reset this SAXParser to its original configuration. */
     def reset(): Unit
+
+    /** Sets the particular property in the underlying implementation of
+     *  XMLReader.
+     */
+    def setProperty(name: String, value: Object): Unit
 }

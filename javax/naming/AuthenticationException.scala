@@ -1,6 +1,7 @@
 package javax.naming
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown when an authentication error occurs while
  *  accessing the naming or directory service.
@@ -23,4 +24,10 @@ class AuthenticationException extends NamingSecurityException {
     /** Constructs a new instance of AuthenticationException. */
     @stub
     def this() = ???
+
+    /** Constructs a new instance of AuthenticationException using the
+     *  explanation supplied.
+     */
+    @stub
+    def this(explanation: String) = ???
 }

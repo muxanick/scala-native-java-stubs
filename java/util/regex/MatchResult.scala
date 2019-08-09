@@ -1,6 +1,7 @@
 package java.util.regex
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** The result of a match operation.
  * 
@@ -38,4 +39,10 @@ trait MatchResult {
     /** Returns the start index of the match. */
     @stub
     def start(): Int = ???
+
+    /** Returns the start index of the subsequence captured by the given group
+     *  during this match.
+     */
+    @stub
+    def start(group: Int): Int = ???
 }

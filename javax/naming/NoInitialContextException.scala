@@ -1,6 +1,7 @@
 package javax.naming
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown when no initial context implementation
  *  can be created.  The policy of how an initial context implementation
@@ -21,4 +22,10 @@ class NoInitialContextException extends NamingException {
     /** Constructs an instance of NoInitialContextException. */
     @stub
     def this() = ???
+
+    /** Constructs an instance of NoInitialContextException with an
+     *  explanation.
+     */
+    @stub
+    def this(explanation: String) = ???
 }

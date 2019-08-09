@@ -2,6 +2,7 @@ package javax.print.attribute.standard
 
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, DocAttribute, EnumSyntax, PrintJobAttribute, PrintRequestAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class Sides is a printing attribute class, an enumeration, that specifies
  *  how print-stream pages are to be imposed upon the sides of an instance of a
@@ -87,6 +88,10 @@ import javax.print.attribute.{Attribute, DocAttribute, EnumSyntax, PrintJobAttri
  */
 final class Sides extends EnumSyntax with DocAttribute with PrintRequestAttribute with PrintJobAttribute {
 
+    /** Construct a new sides enumeration value with the given integer value. */
+    @stub
+    protected def this(value: Int) = ???
+
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.
      */
@@ -102,6 +107,10 @@ final class Sides extends EnumSyntax with DocAttribute with PrintRequestAttribut
      */
     @stub
     def getName(): String = ???
+
+    /** Returns the string table for class Sides. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object Sides {
@@ -126,4 +135,12 @@ object Sides {
      */
     @stub
     val TWO_SIDED_LONG_EDGE: Sides = ???
+
+    /** Imposes each consecutive pair of print-stream pages upon front and back
+     *  sides of consecutive media sheets, such that the orientation of each
+     *  pair of print-stream pages on the medium would be correct for the
+     *  reader as if for binding on the short edge.
+     */
+    @stub
+    val TWO_SIDED_SHORT_EDGE: Sides = ???
 }

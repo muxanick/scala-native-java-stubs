@@ -2,6 +2,7 @@ package java.awt
 
 import java.awt.event.ItemListener
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The interface for objects which contain a set of items for
  *  which zero or more can be selected.
@@ -19,4 +20,8 @@ trait ItemSelectable {
      */
     @stub
     def getSelectedObjects(): Array[Object] = ???
+
+    /** Removes an item listener. */
+    @stub
+    def removeItemListener(l: ItemListener): Unit = ???
 }

@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{Object, String}
 import java.time.{Clock, LocalTime, ZoneId}
 import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalAmount, TemporalField, TemporalUnit, ValueRange}
+import scala.scalanative.annotation.stub
 
 /** A date in the Japanese Imperial calendar system.
  *  
@@ -108,6 +109,10 @@ final class JapaneseDate extends Object with ChronoLocalDate with Serializable {
     /** Returns an adjusted object of the same type as this object with the adjustment made. */
     @stub
     def with(adjuster: TemporalAdjuster): JapaneseDate = ???
+
+    /** Returns an object of the same type as this object with the specified field altered. */
+    @stub
+    def with(field: TemporalField, newValue: Long): JapaneseDate = ???
 }
 
 object JapaneseDate {

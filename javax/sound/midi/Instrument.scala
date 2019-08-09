@@ -1,6 +1,7 @@
 package javax.sound.midi
 
-import java.lang.Object
+import java.lang.{Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** An instrument is a sound-synthesis algorithm with certain parameter
  *  settings, usually designed to emulate a specific real-world
@@ -13,4 +14,13 @@ import java.lang.Object
  *  the sound of the selected instrument.
  */
 abstract class Instrument extends SoundbankResource {
+
+    /** Constructs a new MIDI instrument from the specified Patch. */
+    @stub
+    protected def this(soundbank: Soundbank, patch: Patch, name: String, dataClass: Class[_]) = ???
+
+    /** Obtains the Patch object that indicates the bank and program
+     *  numbers where this instrument is to be stored in the synthesizer.
+     */
+    def getPatch(): Patch
 }

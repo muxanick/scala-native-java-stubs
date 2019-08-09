@@ -3,6 +3,7 @@ package java.awt.im
 import java.awt.{AWTEvent, Component}
 import java.lang.{Character.Subset, Object}
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** Provides methods to control text input facilities such as input
  *  methods and keyboard layouts.
@@ -39,6 +40,10 @@ import java.util.Locale
  *  the individual methods below.
  */
 class InputContext extends Object {
+
+    /** Constructs an InputContext. */
+    @stub
+    protected def this() = ???
 
     /** Dispatches an event to the active input method. */
     @stub
@@ -93,6 +98,12 @@ class InputContext extends Object {
      */
     @stub
     def setCharacterSubsets(subsets: Array[Character.Subset]): Unit = ???
+
+    /** Enables or disables the current input method for composition,
+     *  depending on the value of the parameter enable.
+     */
+    @stub
+    def setCompositionEnabled(enable: Boolean): Unit = ???
 }
 
 object InputContext {

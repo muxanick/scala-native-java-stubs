@@ -3,7 +3,8 @@ package javax.swing.text
 import java.io.Serializable
 import java.lang.{Class, Object, String}
 import java.util.{Enumeration, EventListener}
-import javax.swing.event.{ChangeEvent, ChangeListener}
+import javax.swing.event.{ChangeEvent, ChangeListener, EventListenerList}
+import scala.scalanative.annotation.stub
 
 /** A collection of attributes, typically used to represent
  *  character and paragraph styles.  This is an implementation
@@ -31,11 +32,19 @@ class StyleContext.NamedStyle extends Object with Style with Serializable {
     @stub
     def NamedStyle(name: String, parent: Style) = ???
 
+    /** Creates a new named style. */
+    @stub
+    def NamedStyle(parent: Style) = ???
+
     /** Only one ChangeEvent is needed per model instance since the
      *  event's only (read-only) state is the source property.
      */
     @stub
     protected val changeEvent: ChangeEvent = ???
+
+    /** The change listeners for the model. */
+    @stub
+    protected val listenerList: EventListenerList = ???
 
     /** Adds an attribute. */
     @stub
@@ -130,4 +139,8 @@ class StyleContext.NamedStyle extends Object with Style with Serializable {
     /** Sets the resolving parent. */
     @stub
     def setResolveParent(parent: AttributeSet): Unit = ???
+
+    /** Converts the style to a string. */
+    @stub
+    def toString(): String = ???
 }

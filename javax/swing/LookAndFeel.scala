@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.Component
 import java.lang.{Class, Object, String}
 import javax.swing.text.JTextComponent.KeyBinding
+import scala.scalanative.annotation.stub
 
 /** LookAndFeel, as the name implies, encapsulates a look and
  *  feel. Beyond installing a look and feel most developers never need to
@@ -90,6 +91,10 @@ import javax.swing.text.JTextComponent.KeyBinding
  *  a null component is passed in.
  */
 abstract class LookAndFeel extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the look and feel defaults. */
     def getDefaults(): UIDefaults
@@ -209,4 +214,8 @@ object LookAndFeel {
     /** Convenience method for building an array of KeyBindings. */
     @stub
     def makeKeyBindings(keyBindingList: Array[Object]): Array[JTextComponent.KeyBinding] = ???
+
+    /** Convenience method for uninstalling a border. */
+    @stub
+    def uninstallBorder(c: JComponent): Unit = ???
 }

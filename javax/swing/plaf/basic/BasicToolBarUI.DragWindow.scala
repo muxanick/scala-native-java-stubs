@@ -2,6 +2,7 @@ package javax.swing.plaf.basic
 
 import java.awt.{Color, Component, Container, Graphics, Insets, Point, Window}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /**  */
 protected class BasicToolBarUI.DragWindow extends Window {
@@ -37,4 +38,8 @@ protected class BasicToolBarUI.DragWindow extends Window {
     /**  */
     @stub
     def setOffset(p: Point): Unit = ???
+
+    /**  */
+    @stub
+    def setOrientation(o: Int): Unit = ???
 }

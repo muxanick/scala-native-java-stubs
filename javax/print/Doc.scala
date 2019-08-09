@@ -1,8 +1,9 @@
 package javax.print
 
-import java.io.Reader
+import java.io.{InputStream, Reader}
 import java.lang.Object
 import javax.print.attribute.DocAttributeSet
+import scala.scalanative.annotation.stub
 
 /** Interface Doc specifies the interface for an object that supplies one piece
  *  of print data for a Print Job. "Doc" is a short, easy-to-pronounce term
@@ -98,4 +99,10 @@ trait Doc {
     /** Obtains a reader for extracting character print data from this doc. */
     @stub
     def getReaderForText(): Reader = ???
+
+    /** Obtains an input stream for extracting byte print data from this
+     *  doc.
+     */
+    @stub
+    def getStreamForBytes(): InputStream = ???
 }

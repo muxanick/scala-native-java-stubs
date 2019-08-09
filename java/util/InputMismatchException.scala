@@ -1,6 +1,7 @@
 package java.util
 
-import java.lang.{Exception, Object, RuntimeException, Throwable}
+import java.lang.{Exception, Object, RuntimeException, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Thrown by a Scanner to indicate that the token
  *  retrieved does not match the pattern for the expected type, or
@@ -13,4 +14,11 @@ class InputMismatchException extends NoSuchElementException {
      */
     @stub
     def this() = ???
+
+    /** Constructs an InputMismatchException, saving a reference
+     *  to the error message string s for later retrieval by the
+     *  getMessage method.
+     */
+    @stub
+    def this(s: String) = ???
 }

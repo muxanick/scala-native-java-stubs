@@ -1,6 +1,7 @@
 package java.nio.charset
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Constant definitions for the standard Charsets. These
  *  charsets are guaranteed to be available on every implementation of the Java
@@ -31,4 +32,8 @@ object StandardCharsets {
     /** Sixteen-bit UCS Transformation Format, little-endian byte order */
     @stub
     val UTF_16LE: Charset = ???
+
+    /** Eight-bit UCS Transformation Format */
+    @stub
+    val UTF_8: Charset = ???
 }

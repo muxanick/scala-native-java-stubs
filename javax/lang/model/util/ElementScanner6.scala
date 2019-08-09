@@ -3,7 +3,8 @@ package javax.lang.model.util
 import java.lang.{Iterable, Object}
 import javax.annotation.processing.SupportedSourceVersion
 import javax.lang.model.SourceVersion
-import javax.lang.model.element.{Element, ExecutableElement, PackageElement, TypeElement, TypeParameterElement}
+import javax.lang.model.element.{Element, ExecutableElement, PackageElement, TypeElement, TypeParameterElement, VariableElement}
+import scala.scalanative.annotation.stub
 
 /** A scanning visitor of program elements with default behavior
  *  appropriate for the RELEASE_6
@@ -58,6 +59,16 @@ import javax.lang.model.element.{Element, ExecutableElement, PackageElement, Typ
     @stub
     protected def this() = ???
 
+    /** Constructor for concrete subclasses; uses the argument for the
+     *  default value.
+     */
+    @stub
+    protected def this(defaultValue: R) = ???
+
+    /** The specified default value. */
+    @stub
+    protected val DEFAULT_VALUE: R = ???
+
     /** Convenience method equivalent to v.scan(e, null). */
     @stub
     def scan(e: Element): R = ???
@@ -87,4 +98,8 @@ import javax.lang.model.element.{Element, ExecutableElement, PackageElement, Typ
     /** Visits a type parameter element. */
     @stub
     def visitTypeParameter(e: TypeParameterElement, p: P): R = ???
+
+    /** Visits a variable element. */
+    @stub
+    def visitVariable(e: VariableElement, p: P): R = ???
 }

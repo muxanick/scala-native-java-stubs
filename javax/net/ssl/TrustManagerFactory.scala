@@ -2,6 +2,7 @@ package javax.net.ssl
 
 import java.lang.{Object, String}
 import java.security.{KeyStore, Provider}
+import scala.scalanative.annotation.stub
 
 /** This class acts as a factory for trust managers based on a
  *  source of trust material. Each trust manager manages a specific
@@ -9,6 +10,10 @@ import java.security.{KeyStore, Provider}
  *  material is based on a KeyStore and/or provider specific sources.
  */
 class TrustManagerFactory extends Object {
+
+    /** Creates a TrustManagerFactory object. */
+    @stub
+    protected def this(factorySpi: TrustManagerFactorySpi, provider: Provider, algorithm: String) = ???
 
     /** Returns the algorithm name of this TrustManagerFactory
      *  object.
@@ -29,6 +34,12 @@ class TrustManagerFactory extends Object {
      */
     @stub
     def init(ks: KeyStore): Unit = ???
+
+    /** Initializes this factory with a source of provider-specific
+     *  trust material.
+     */
+    @stub
+    def init(spec: ManagerFactoryParameters): Unit = ???
 }
 
 object TrustManagerFactory {

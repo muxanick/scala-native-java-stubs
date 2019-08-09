@@ -1,6 +1,7 @@
 package java.beans
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** An Expression object represents a primitive expression
  *  in which a single method is applied to a target and a set of
@@ -22,6 +23,13 @@ class Expression extends Statement {
     @stub
     def this(value: Object, target: Object, methodName: String, arguments: Array[Object]) = ???
 
+    /** Creates a new Expression object
+     *  for the specified target object to invoke the method
+     *  specified by the name and by the array of arguments.
+     */
+    @stub
+    def this(target: Object, methodName: String, arguments: Array[Object]) = ???
+
     /** The execute method finds a method whose name is the same
      *  as the methodName property, and invokes the method on
      *  the target.
@@ -39,4 +47,8 @@ class Expression extends Statement {
     /** Sets the value of this expression to value. */
     @stub
     def setValue(value: Object): Unit = ???
+
+    /** Prints the value of this expression using a Java-style syntax. */
+    @stub
+    def toString(): String = ???
 }

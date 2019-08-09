@@ -7,6 +7,7 @@ import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.event.{ChangeEvent, ChangeListener}
 import javax.swing.plaf.TabbedPaneUI
+import scala.scalanative.annotation.stub
 
 /** A component that lets the user switch between a group of components by
  *  clicking on a tab with a given title and/or icon.
@@ -77,11 +78,23 @@ class JTabbedPane extends JComponent with Serializable with Accessible with Swin
     @stub
     def this(tabPlacement: Int) = ???
 
+    /** Creates an empty TabbedPane with the specified tab placement
+     *  and tab layout policy.
+     */
+    @stub
+    def this(tabPlacement: Int, tabLayoutPolicy: Int) = ???
+
     /** This class implements accessibility support for the
      *  JTabbedPane class.
      */
     @stub
     protected object AccessibleJTabbedPane extends JTabbedPane.AccessibleJTabbedPane
+
+    /** We pass ModelChanged events along to the listeners with
+     *  the tabbedpane (instead of the model itself) as the event source.
+     */
+    @stub
+    protected object ModelListener extends JTabbedPane.ModelListener
 
     /** Only one ChangeEvent is needed per TabPane
      *  instance since the
@@ -425,6 +438,10 @@ class JTabbedPane extends JComponent with Serializable with Accessible with Swin
     /** Sets the UI object which implements the L&F for this component. */
     @stub
     def setUI(ui: TabbedPaneUI): Unit = ???
+
+    /** Resets the UI property to a value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
 }
 
 object JTabbedPane {
@@ -433,4 +450,10 @@ object JTabbedPane {
      */
     @stub
     val SCROLL_TAB_LAYOUT: Int = ???
+
+    /** The tab layout policy for wrapping tabs in multiple runs when all
+     *  tabs will not fit within a single run.
+     */
+    @stub
+    val WRAP_TAB_LAYOUT: Int = ???
 }

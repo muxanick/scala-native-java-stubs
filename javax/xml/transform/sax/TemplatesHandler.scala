@@ -2,7 +2,7 @@ package javax.xml.transform.sax
 
 import java.lang.String
 import javax.xml.transform.Templates
-import org.xml.sax.ContentHandler
+import scala.scalanative.annotation.stub
 
 /** A SAX ContentHandler that may be used to process SAX
  *  parse events (parsing transformation instructions) into a Templates object.
@@ -23,4 +23,10 @@ trait TemplatesHandler extends ContentHandler {
      */
     @stub
     def getTemplates(): Templates = ???
+
+    /** Set the base ID (URI or system ID) for the Templates object
+     *  created by this builder.
+     */
+    @stub
+    def setSystemId(systemID: String): Unit = ???
 }

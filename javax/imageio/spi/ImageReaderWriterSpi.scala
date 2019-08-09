@@ -2,6 +2,7 @@ package javax.imageio.spi
 
 import java.lang.{Object, String}
 import javax.imageio.metadata.IIOMetadataFormat
+import scala.scalanative.annotation.stub
 
 /** A superclass containing instance variables and methods common to
  *  ImageReaderSpi and ImageWriterSpi.
@@ -11,6 +12,12 @@ abstract class ImageReaderWriterSpi extends IIOServiceProvider {
     /** Constructs a blank ImageReaderWriterSpi. */
     @stub
     def this() = ???
+
+    /** Constructs an ImageReaderWriterSpi with a given
+     *  set of values.
+     */
+    @stub
+    def this(vendorName: String, version: String, names: Array[String], suffixes: Array[String], MIMETypes: Array[String], pluginClassName: String, supportsStandardStreamMetadataFormat: Boolean, nativeStreamMetadataFormatName: String, nativeStreamMetadataFormatClassName: String, extraStreamMetadataFormatNames: Array[String], extraStreamMetadataFormatClassNames: Array[String], supportsStandardImageMetadataFormat: Boolean, nativeImageMetadataFormatName: String, nativeImageMetadataFormatClassName: String, extraImageMetadataFormatNames: Array[String], extraImageMetadataFormatClassNames: Array[String]) = ???
 
     /** An array of Strings containing the class names of
      *  any additional image metadata formats supported by this
@@ -85,6 +92,12 @@ abstract class ImageReaderWriterSpi extends IIOServiceProvider {
      *  false.
      */
     protected val supportsStandardImageMetadataFormat: Boolean
+
+    /** A boolean indicating whether this plug-in supports the
+     *  standard metadata format for stream metadata, initially
+     *  false.
+     */
+    protected val supportsStandardStreamMetadataFormat: Boolean
 
     /** Returns an array of Strings containing the names
      *  of additional document formats, other than the native and
@@ -166,4 +179,12 @@ abstract class ImageReaderWriterSpi extends IIOServiceProvider {
      *  plug-in.
      */
     def isStandardImageMetadataFormatSupported(): Boolean
+
+    /** Returns true if the standard metadata format is
+     *  among the document formats recognized by the
+     *  getAsTree and setFromTree methods on
+     *  the stream metadata objects produced or consumed by this
+     *  plug-in.
+     */
+    def isStandardStreamMetadataFormatSupported(): Boolean
 }

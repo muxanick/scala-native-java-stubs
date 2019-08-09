@@ -7,9 +7,14 @@ import java.lang.{Integer, Object}
 import javax.swing.{JComponent, JSlider, Timer}
 import javax.swing.event.ChangeListener
 import javax.swing.plaf.{ComponentUI, SliderUI}
+import scala.scalanative.annotation.stub
 
 /** A Basic L&F implementation of SliderUI. */
 class BasicSliderUI extends SliderUI {
+
+    /**  */
+    @stub
+    def this(b: JSlider) = ???
 
     /** As of Java 2 platform v1.3 this undocumented class is no longer used. */
     @stub
@@ -34,6 +39,10 @@ class BasicSliderUI extends SliderUI {
     /** Scroll-event listener. */
     @stub
     object ScrollListener extends BasicSliderUI.ScrollListener
+
+    /** Track mouse movements. */
+    @stub
+    object TrackListener extends BasicSliderUI.TrackListener
 
     /**  */
     @stub
@@ -102,6 +111,10 @@ class BasicSliderUI extends SliderUI {
     /**  */
     @stub
     protected val trackListener: BasicSliderUI.TrackListener = ???
+
+    /**  */
+    @stub
+    protected val trackRect: Rectangle = ???
 
     /**  */
     @stub
@@ -406,6 +419,10 @@ class BasicSliderUI extends SliderUI {
     /**  */
     @stub
     protected def yPositionForValue(value: Int): Int = ???
+
+    /** Returns the y location for the specified value. */
+    @stub
+    protected def yPositionForValue(value: Int, trackY: Int, trackHeight: Int): Int = ???
 }
 
 object BasicSliderUI {

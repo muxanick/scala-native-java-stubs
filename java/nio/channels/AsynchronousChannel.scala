@@ -1,5 +1,7 @@
 package java.nio.channels
 
+import scala.scalanative.annotation.stub
+
 /** A channel that supports asynchronous I/O operations. Asynchronous I/O
  *  operations will usually take one of two forms:
  * 
@@ -61,4 +63,8 @@ package java.nio.channels
  *  the channel remains open.
  */
 trait AsynchronousChannel extends Channel {
+
+    /** Closes this channel. */
+    @stub
+    def close(): Unit = ???
 }

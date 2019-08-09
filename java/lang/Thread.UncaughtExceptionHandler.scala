@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** Interface for handlers invoked when a Thread abruptly
  *  terminates due to an uncaught exception.
  *  When a thread is about to terminate due to an uncaught exception
@@ -17,3 +19,10 @@ package java.lang
  */
 object 
 @FunctionalInterface trait Thread.UncaughtExceptionHandler {
+
+    /** Method invoked when the given thread terminates due to the
+     *  given uncaught exception.
+     */
+    @stub
+    def uncaughtException(t: Thread, e: Throwable): Unit = ???
+}

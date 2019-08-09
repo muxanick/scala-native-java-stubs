@@ -5,13 +5,14 @@ import java.awt.event.{KeyEvent, MouseEvent}
 import java.awt.print.Printable
 import java.lang.{Class, Object, String}
 import java.text.MessageFormat
-import java.util.{EventObject, Hashtable}
+import java.util.{EventObject, Hashtable, Vector}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.print.PrintService
 import javax.print.attribute.PrintRequestAttributeSet
 import javax.swing.event.{CellEditorListener, ChangeEvent, ListSelectionEvent, ListSelectionListener, RowSorterEvent, RowSorterListener, TableColumnModelEvent, TableColumnModelListener, TableModelEvent, TableModelListener}
 import javax.swing.plaf.TableUI
 import javax.swing.table.{JTableHeader, TableCellEditor, TableCellRenderer, TableColumn, TableColumnModel, TableModel}
+import scala.scalanative.annotation.stub
 
 /** The JTable is used to display and edit regular two-dimensional tables
  *  of cells.
@@ -199,6 +200,13 @@ class JTable extends JComponent with TableModelListener with Scrollable with Tab
     @stub
     def this(dm: TableModel, cm: TableColumnModel, sm: ListSelectionModel) = ???
 
+    /** Constructs a JTable to display the values in the
+     *  Vector of Vectors, rowData,
+     *  with column names, columnNames.
+     */
+    @stub
+    def this(rowData: Vector, columnNames: Vector) = ???
+
     /** This class implements accessibility support for the
      *  JTable class.
      */
@@ -301,6 +309,10 @@ class JTable extends JComponent with TableModelListener with Scrollable with Tab
     /** The table draws vertical lines between cells if showVerticalLines is true. */
     @stub
     protected val showVerticalLines: Boolean = ???
+
+    /** The TableHeader working with the table. */
+    @stub
+    protected val tableHeader: JTableHeader = ???
 
     /** Appends aColumn to the end of the array of columns held by
      *   this JTable's column model.
@@ -1104,6 +1116,12 @@ class JTable extends JComponent with TableModelListener with Scrollable with Tab
     /** Notification from the UIManager that the L&F has changed. */
     @stub
     def updateUI(): Unit = ???
+
+    /** Invoked when the row selection changes -- repaints to show the new
+     *  selection.
+     */
+    @stub
+    def valueChanged(e: ListSelectionEvent): Unit = ???
 }
 
 object JTable {
@@ -1112,6 +1130,10 @@ object JTable {
      */
     @stub
     object DropLocation extends JTable.DropLocation
+
+    /** Printing modes, used in printing JTables. */
+    @stub
+    object PrintMode extends JTable.PrintMode
 
     /** During all resize operations, proportionately resize all columns. */
     @stub

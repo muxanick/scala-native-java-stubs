@@ -3,6 +3,7 @@ package java.awt
 import java.awt.event.KeyEvent
 import java.io.Serializable
 import java.lang.{Character, Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** An AWTKeyStroke represents a key action on the
  *  keyboard, or equivalent input device. AWTKeyStrokes
@@ -27,6 +28,12 @@ class AWTKeyStroke extends Object with Serializable {
     /** Constructs an AWTKeyStroke with default values. */
     @stub
     protected def this() = ???
+
+    /** Constructs an AWTKeyStroke with the specified
+     *  values.
+     */
+    @stub
+    protected def this(keyChar: Char, keyCode: Int, modifiers: Int, onKeyRelease: Boolean) = ???
 
     /** Returns true if this object is identical to the specified object. */
     @stub
@@ -65,6 +72,10 @@ class AWTKeyStroke extends Object with Serializable {
      */
     @stub
     protected def readResolve(): Object = ???
+
+    /** Returns a string that displays and identifies this object's properties. */
+    @stub
+    def toString(): String = ???
 }
 
 object AWTKeyStroke {

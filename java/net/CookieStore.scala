@@ -1,6 +1,7 @@
 package java.net
 
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** A CookieStore object represents a storage for cookie. Can store and retrieve
  *  cookies.
@@ -33,4 +34,8 @@ trait CookieStore {
     /** Remove a cookie from store. */
     @stub
     def remove(uri: URI, cookie: HttpCookie): Boolean = ???
+
+    /** Remove all cookies in this cookie store. */
+    @stub
+    def removeAll(): Boolean = ???
 }

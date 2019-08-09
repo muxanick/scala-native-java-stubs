@@ -7,6 +7,7 @@ import java.beans.PropertyChangeListener
 import java.lang.{Class, Object, String}
 import java.util.{EventListener, List, Locale, ResourceBundle, Set}
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** A Window object is a top-level window with no borders and no
  *  menubar.
@@ -95,6 +96,13 @@ class Window extends Container with Accessible {
      */
     @stub
     def this(owner: Window) = ???
+
+    /** Constructs a new, initially invisible window with the specified owner
+     *  Window and a GraphicsConfiguration
+     *  of a screen device.
+     */
+    @stub
+    def this(owner: Window, gc: GraphicsConfiguration) = ???
 
     /** This class implements accessibility support for the
      *  Window class.
@@ -544,9 +552,19 @@ class Window extends Container with Accessible {
      */
     @stub
     def toBack(): Unit = ???
+
+    /** If this Window is visible, brings this Window to the front and may make
+     *  it the focused Window.
+     */
+    @stub
+    def toFront(): Unit = ???
 }
 
 object Window {
+    /** Enumeration of available window types. */
+    @stub
+    object Type extends Window.Type
+
     /** Returns an array of all Windows created by this application
      *  that have no owner.
      */

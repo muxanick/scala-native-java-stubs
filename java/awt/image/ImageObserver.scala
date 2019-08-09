@@ -1,9 +1,19 @@
 package java.awt.image
 
+import java.awt.Image
+import scala.scalanative.annotation.stub
+
 /** An asynchronous update interface for receiving notifications about
  *  Image information as the Image is constructed.
  */
 trait ImageObserver {
+
+    /** This method is called when information about an image which was
+     *  previously requested using an asynchronous interface becomes
+     *  available.
+     */
+    @stub
+    def imageUpdate(img: Image, infoflags: Int, x: Int, y: Int, width: Int, height: Int): Boolean = ???
 }
 
 object ImageObserver {
@@ -54,4 +64,11 @@ object ImageObserver {
      */
     @stub
     val SOMEBITS: Int = ???
+
+    /** This flag in the infoflags argument to imageUpdate indicates that
+     *  the width of the base image is now available and can be taken
+     *  from the width argument to the imageUpdate callback method.
+     */
+    @stub
+    val WIDTH: Int = ???
 }

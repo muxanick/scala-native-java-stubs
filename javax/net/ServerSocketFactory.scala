@@ -2,6 +2,7 @@ package javax.net
 
 import java.lang.Object
 import java.net.{InetAddress, ServerSocket}
+import scala.scalanative.annotation.stub
 
 /** This class creates server sockets.  It may be subclassed by other
  *  factories, which create particular types of server sockets.  This
@@ -16,6 +17,10 @@ import java.net.{InetAddress, ServerSocket}
  *  their own customized factory.
  */
 abstract class ServerSocketFactory extends Object {
+
+    /** Creates a server socket factory. */
+    @stub
+    protected def this() = ???
 
     /** Returns an unbound server socket. */
     def createServerSocket(): ServerSocket
@@ -32,4 +37,10 @@ abstract class ServerSocketFactory extends Object {
      *  with a specified listen backlog and local IP.
      */
     def createServerSocket(port: Int, backlog: Int, ifAddress: InetAddress): ServerSocket
+}
+
+object ServerSocketFactory {
+    /** Returns a copy of the environment's default socket factory. */
+    @stub
+    def getDefault(): ServerSocketFactory = ???
 }

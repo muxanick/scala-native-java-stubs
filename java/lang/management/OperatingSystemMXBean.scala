@@ -1,6 +1,7 @@
 package java.lang.management
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** The management interface for the operating system on which
  *  the Java virtual machine is running.
@@ -42,4 +43,8 @@ trait OperatingSystemMXBean extends PlatformManagedObject {
     /** Returns the system load average for the last minute. */
     @stub
     def getSystemLoadAverage(): Double = ???
+
+    /** Returns the operating system version. */
+    @stub
+    def getVersion(): String = ???
 }

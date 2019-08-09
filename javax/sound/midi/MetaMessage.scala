@@ -1,6 +1,7 @@
 package javax.sound.midi
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A MetaMessage is a MidiMessage that is not meaningful to synthesizers, but
  *  that can be stored in a MIDI file and interpreted by a sequencer program.
@@ -33,6 +34,10 @@ class MetaMessage extends MidiMessage {
     @stub
     protected def this(data: Array[Byte]) = ???
 
+    /** Constructs a new MetaMessage and sets the message parameters. */
+    @stub
+    def this(type: Int, data: Array[Byte], length: Int) = ???
+
     /** Creates a new object of the same class and with the same contents
      *  as this object.
      */
@@ -46,4 +51,16 @@ class MetaMessage extends MidiMessage {
     /** Obtains the type of the MetaMessage. */
     @stub
     def getType(): Int = ???
+
+    /** Sets the message parameters for a MetaMessage. */
+    @stub
+    def setMessage(type: Int, data: Array[Byte], length: Int): Unit = ???
+}
+
+object MetaMessage {
+    /** Status byte for MetaMessage (0xFF, or 255), which is used
+     *  in MIDI files.
+     */
+    @stub
+    val META: Int = ???
 }

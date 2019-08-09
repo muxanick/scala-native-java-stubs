@@ -1,8 +1,9 @@
 package javax.swing.text
 
-import java.io.{InputStream, OutputStream, Reader, Serializable}
+import java.io.{InputStream, OutputStream, Reader, Serializable, Writer}
 import java.lang.{Cloneable, Object, String}
 import javax.swing.{Action, JEditorPane}
+import scala.scalanative.annotation.stub
 
 /** Establishes the set of things needed by a text component
  *  to be a reasonably functioning editor for some type
@@ -19,6 +20,10 @@ import javax.swing.{Action, JEditorPane}
  *  it's relationship with a JTextComponent.
  */
 abstract class EditorKit extends Object with Cloneable with Serializable {
+
+    /** Construct an EditorKit. */
+    @stub
+    def this() = ???
 
     /** Creates a copy of the editor kit. */
     def clone(): Object
@@ -76,4 +81,9 @@ abstract class EditorKit extends Object with Cloneable with Serializable {
      *  in a format appropriate for this kind of content handler.
      */
     def write(out: OutputStream, doc: Document, pos: Int, len: Int): Unit
+
+    /** Writes content from a document to the given stream
+     *  in a format appropriate for this kind of content handler.
+     */
+    def write(out: Writer, doc: Document, pos: Int, len: Int): Unit
 }

@@ -1,6 +1,8 @@
 package javax.lang.model.type
 
+import java.util.List
 import javax.lang.model.element.Element
+import scala.scalanative.annotation.stub
 
 /** Represents a declared type, either a class type or an interface type.
  *  This includes parameterized types such as java.util.Set<String>
@@ -28,4 +30,8 @@ trait DeclaredType extends ReferenceType {
      */
     @stub
     def getEnclosingType(): TypeMirror = ???
+
+    /** Returns the actual type arguments of this type. */
+    @stub
+    def getTypeArguments(): List[_ <: TypeMirror] = ???
 }

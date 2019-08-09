@@ -5,6 +5,7 @@ import java.lang.{Object, String}
 import java.net.InetSocketAddress
 import java.security.Principal
 import java.util.{List, Map, Set}
+import scala.scalanative.annotation.stub
 
 /** This class encapsulates a HTTP request received and a
  *  response to be generated in one exchange. It provides methods
@@ -16,6 +17,10 @@ import java.util.{List, Map, Set}
  *  is undefined.
  */
 abstract class HttpExchange extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Adds a response header with the given name and value. */
     def addResponseHeader(name: String, value: String): Unit
@@ -106,6 +111,9 @@ abstract class HttpExchange extends Object {
      *  logical "role".
      */
     def isUserInRole(role: String): Boolean
+
+    /** Sets the HTTP status code for the response. */
+    def setStatus(status: Int): Unit
 }
 
 object HttpExchange {
@@ -120,4 +128,8 @@ object HttpExchange {
      */
     @stub
     val REQUEST_KEY_SIZE: String = ???
+
+    /** Standard property: A SSL certificate, if any, associated with the request */
+    @stub
+    val REQUEST_X509CERTIFICATE: String = ???
 }

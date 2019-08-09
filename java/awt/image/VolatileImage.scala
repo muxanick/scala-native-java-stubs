@@ -1,7 +1,8 @@
 package java.awt.image
 
-import java.awt.{Graphics, Graphics2D, Image, ImageCapabilities, Transparency}
+import java.awt.{Graphics, Graphics2D, GraphicsConfiguration, Image, ImageCapabilities, Transparency}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** VolatileImage is an image which can lose its
  *  contents at any time due to circumstances beyond the control of the
@@ -96,6 +97,13 @@ import java.lang.Object
  */
 abstract class VolatileImage extends Image with Transparency {
 
+    /**  */
+    @stub
+    def this() = ???
+
+    /** The transparency value with which this image was created. */
+    protected val transparency: Int
+
     /** Returns true if rendering data was lost since last
      *  validate call.
      */
@@ -131,6 +139,11 @@ abstract class VolatileImage extends Image with Transparency {
 
     /** Returns the width of the VolatileImage. */
     def getWidth(): Int
+
+    /** Attempts to restore the drawing surface of the image if the surface
+     *  had been lost since the last validate call.
+     */
+    def validate(gc: GraphicsConfiguration): Int
 }
 
 object VolatileImage {

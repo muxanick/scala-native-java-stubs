@@ -1,6 +1,7 @@
 package java.rmi
 
 import java.lang.{Deprecated, Object, SecurityManager}
+import scala.scalanative.annotation.stub
 
 /** RMISecurityManager implements a policy identical to the policy
  *  implemented by SecurityManager. RMI applications
@@ -10,4 +11,8 @@ import java.lang.{Deprecated, Object, SecurityManager}
  *  manager has been set.
  */
 @Deprecated class RMISecurityManager extends SecurityManager {
+
+    /** Deprecated.  */
+    @stub
+    def this() = ???
 }

@@ -1,5 +1,7 @@
 package java.nio.file
 
+import scala.scalanative.annotation.stub
+
 /** An object that configures how to open or create a file.
  * 
  *   Objects of this type are used by methods such as newOutputStream, newByteChannel, FileChannel.open, and AsynchronousFileChannel.open

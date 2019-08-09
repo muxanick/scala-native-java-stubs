@@ -3,6 +3,7 @@ package javax.crypto
 import java.lang.{Object, String}
 import java.security.{Key, SecureRandom}
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** This class defines the Service Provider Interface (SPI)
  *  for the KeyAgreement class.
@@ -30,6 +31,10 @@ import java.security.spec.AlgorithmParameterSpec
  */
 abstract class KeyAgreementSpi extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Executes the next phase of this key agreement with the given
      *  key that was received from one of the other parties involved in this key
      *  agreement.
@@ -53,4 +58,9 @@ abstract class KeyAgreementSpi extends Object {
      *  algorithm parameters, and source of randomness.
      */
     protected def engineInit(key: Key, params: AlgorithmParameterSpec, random: SecureRandom): Unit
+
+    /** Initializes this key agreement with the given key and source of
+     *  randomness.
+     */
+    protected def engineInit(key: Key, random: SecureRandom): Unit
 }

@@ -3,6 +3,7 @@ package javax.swing
 import java.applet.Applet
 import java.awt.{Component, Dimension, Image, Rectangle, Window}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class manages repaint requests, allowing the number
  *  of repaints to be minimized, for example by collapsing multiple
@@ -15,6 +16,10 @@ import java.lang.{Object, String}
  *  appropriate addDirtyRegion method.
  */
 class RepaintManager extends Object {
+
+    /** Create a new RepaintManager instance. */
+    @stub
+    def this() = ???
 
     /** Adds applet to the list of Components that
      *  need to be repainted.
@@ -98,6 +103,10 @@ class RepaintManager extends Object {
      */
     @stub
     def toString(): String = ???
+
+    /** Validate all of the components that have been marked invalid. */
+    @stub
+    def validateInvalidComponents(): Unit = ???
 }
 
 object RepaintManager {

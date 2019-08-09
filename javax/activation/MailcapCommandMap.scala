@@ -2,6 +2,7 @@ package javax.activation
 
 import java.io.InputStream
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** MailcapCommandMap extends the CommandMap
  *  abstract class. It implements a CommandMap whose configuration
@@ -93,6 +94,12 @@ class MailcapCommandMap extends CommandMap {
     @stub
     def this(is: InputStream) = ???
 
+    /** Constructor that allows the caller to specify the path
+     *  of a mailcap file.
+     */
+    @stub
+    def this(fileName: String) = ???
+
     /** Add entries to the registry. */
     @stub
     def addMailcap(mail_cap: String): Unit = ???
@@ -118,4 +125,8 @@ class MailcapCommandMap extends CommandMap {
     /** Get the native commands for the given MIME type. */
     @stub
     def getNativeCommands(mimeType: String): Array[String] = ???
+
+    /** Get the preferred command list for a MIME Type. */
+    @stub
+    def getPreferredCommands(mimeType: String): Array[CommandInfo] = ???
 }

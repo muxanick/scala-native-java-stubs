@@ -6,6 +6,7 @@ import java.time.{Period, ZoneId}
 import java.time.chrono.Chronology
 import java.time.temporal.{TemporalAccessor, TemporalField, TemporalQuery}
 import java.util.{Locale, Set}
+import scala.scalanative.annotation.stub
 
 /** Formatter for printing and parsing date-time objects.
  *  
@@ -477,6 +478,10 @@ final class DateTimeFormatter extends Object {
     /** Returns a copy of this formatter with a new resolver style. */
     @stub
     def withResolverStyle(resolverStyle: ResolverStyle): DateTimeFormatter = ???
+
+    /** Returns a copy of this formatter with a new override zone. */
+    @stub
+    def withZone(zone: ZoneId): DateTimeFormatter = ???
 }
 
 object DateTimeFormatter {
@@ -564,6 +569,10 @@ object DateTimeFormatter {
      */
     @stub
     val ISO_ZONED_DATE_TIME: DateTimeFormatter = ???
+
+    /** The RFC-1123 date-time formatter, such as 'Tue, 3 Jun 2008 11:05:30 GMT'. */
+    @stub
+    val RFC_1123_DATE_TIME: DateTimeFormatter = ???
 
     /** Returns a locale specific date format for the ISO chronology. */
     @stub

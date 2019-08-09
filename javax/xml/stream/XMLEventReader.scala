@@ -3,6 +3,7 @@ package javax.xml.stream
 import java.lang.{Object, String}
 import java.util.Iterator
 import javax.xml.stream.events.XMLEvent
+import scala.scalanative.annotation.stub
 
 /** This is the top level interface for parsing XML Events.  It provides
  *  the ability to peek at the next event and returns configuration
@@ -35,4 +36,8 @@ trait XMLEventReader extends Iterator {
      */
     @stub
     def nextTag(): XMLEvent = ???
+
+    /** Check the next XMLEvent without reading it from the stream. */
+    @stub
+    def peek(): XMLEvent = ???
 }

@@ -1,5 +1,7 @@
 package java.util
 
+import scala.scalanative.annotation.stub
+
 /** A collection designed for holding elements prior to processing.
  *  Besides basic Collection operations,
  *  queues provide additional insertion, extraction, and inspection
@@ -123,4 +125,8 @@ trait Queue[E] extends Collection[E] {
      */
     @stub
     def poll(): E = ???
+
+    /** Retrieves and removes the head of this queue. */
+    @stub
+    def remove(): E = ???
 }

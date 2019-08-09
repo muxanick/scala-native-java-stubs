@@ -1,7 +1,8 @@
 package javax.management
 
 import java.lang.{Object, String}
-import java.security.{BasicPermission, Permission}
+import java.security.{BasicPermission, Permission, PermissionCollection}
+import scala.scalanative.annotation.stub
 
 /** A Permission to perform actions related to MBeanServers.
  *     The name of the permission specifies the operation requested
@@ -38,6 +39,10 @@ class MBeanServerPermission extends BasicPermission {
     @stub
     def this(name: String) = ???
 
+    /** Create a new MBeanServerPermission with the given name. */
+    @stub
+    def this(name: String, actions: String) = ???
+
     /** Checks two MBeanServerPermission objects for equality. */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -51,4 +56,10 @@ class MBeanServerPermission extends BasicPermission {
      */
     @stub
     def implies(p: Permission): Boolean = ???
+
+    /** Returns a new PermissionCollection object for storing BasicPermission
+     *  objects.
+     */
+    @stub
+    def newPermissionCollection(): PermissionCollection = ???
 }

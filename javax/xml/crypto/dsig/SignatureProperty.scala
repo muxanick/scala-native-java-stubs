@@ -3,6 +3,7 @@ package javax.xml.crypto.dsig
 import java.lang.String
 import java.util.List
 import javax.xml.crypto.XMLStructure
+import scala.scalanative.annotation.stub
 
 /** A representation of the XML SignatureProperty element as
  *  defined in the 
@@ -42,4 +43,8 @@ trait SignatureProperty extends XMLStructure {
     /** Returns the Id of this SignatureProperty. */
     @stub
     def getId(): String = ???
+
+    /** Returns the target URI of this SignatureProperty. */
+    @stub
+    def getTarget(): String = ???
 }

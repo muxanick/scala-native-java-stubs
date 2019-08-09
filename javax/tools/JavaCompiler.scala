@@ -1,7 +1,10 @@
 package javax.tools
 
+import java.io.Writer
+import java.lang.{Iterable, String}
 import java.nio.charset.Charset
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** Interface to invoke Java™ programming language compilers from
  *  programs.
@@ -179,4 +182,16 @@ trait JavaCompiler extends Tool with OptionChecker {
      */
     @stub
     def getStandardFileManager(diagnosticListener: DiagnosticListener[_ >: JavaFileObject], locale: Locale, charset: Charset): StandardJavaFileManager = ???
+
+    /** Creates a future for a compilation task with the given
+     *  components and arguments.
+     */
+    @stub
+    def getTask(out: Writer, fileManager: JavaFileManager, diagnosticListener: DiagnosticListener[_ >: JavaFileObject], options: Iterable[String], classes: Iterable[String], compilationUnits: Iterable[_ <: JavaFileObject]): JavaCompiler.CompilationTask = ???
+}
+
+object JavaCompiler {
+    /** Interface representing a future for a compilation task. */
+    @stub
+    val JavaCompiler.CompilationTask: trait = ???
 }

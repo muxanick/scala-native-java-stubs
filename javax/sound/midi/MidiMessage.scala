@@ -1,6 +1,7 @@
 package javax.sound.midi
 
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** MidiMessage is the base class for MIDI messages.  They include
  *  not only the standard MIDI messages that a synthesizer can respond to, but also
@@ -42,8 +43,17 @@ import java.lang.{Cloneable, Object}
  */
 abstract class MidiMessage extends Object with Cloneable {
 
+    /** Constructs a new MidiMessage. */
+    @stub
+    protected def this(data: Array[Byte]) = ???
+
     /** The MIDI message data. */
     protected val data: Array[Byte]
+
+    /** The number of bytes in the MIDI message, including the
+     *  status byte and any data bytes.
+     */
+    protected val length: Int
 
     /** Creates a new object of the same class and with the same contents
      *  as this object.
@@ -58,4 +68,7 @@ abstract class MidiMessage extends Object with Cloneable {
 
     /** Obtains the status byte for the MIDI message. */
     def getStatus(): Int
+
+    /** Sets the data for the MIDI message. */
+    protected def setMessage(data: Array[Byte], length: Int): Unit
 }

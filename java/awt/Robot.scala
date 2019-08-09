@@ -2,6 +2,7 @@ package java.awt
 
 import java.awt.image.BufferedImage
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class is used to generate native system input events
  *  for the purposes of test automation, self-running demos, and
@@ -30,6 +31,10 @@ class Robot extends Object {
     /** Constructs a Robot object in the coordinate system of the primary screen. */
     @stub
     def this() = ???
+
+    /** Creates a Robot for the given screen device. */
+    @stub
+    def this(screen: GraphicsDevice) = ???
 
     /** Creates an image containing pixels read from the screen. */
     @stub
@@ -90,4 +95,8 @@ class Robot extends Object {
     /** Returns a string representation of this Robot. */
     @stub
     def toString(): String = ???
+
+    /** Waits until all events currently on the event queue have been processed. */
+    @stub
+    def waitForIdle(): Unit = ???
 }

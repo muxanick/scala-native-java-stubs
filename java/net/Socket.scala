@@ -3,6 +3,7 @@ package java.net
 import java.io.{Closeable, InputStream, OutputStream}
 import java.lang.{Object, String}
 import java.nio.channels.SocketChannel
+import scala.scalanative.annotation.stub
 
 /** This class implements client sockets (also called just
  *  "sockets"). A socket is an endpoint for communication
@@ -65,6 +66,12 @@ class Socket extends Object with Closeable {
      */
     @stub
     def this(host: String, port: Int, stream: Boolean) = ???
+
+    /** Creates a socket and connects it to the specified remote host on
+     *  the specified remote port.
+     */
+    @stub
+    def this(host: String, port: Int, localAddr: InetAddress, localPort: Int) = ???
 
     /** Binds the socket to a local address. */
     @stub
@@ -256,6 +263,10 @@ class Socket extends Object with Closeable {
     /** Disables the output stream for this socket. */
     @stub
     def shutdownOutput(): Unit = ???
+
+    /** Converts this socket to a String. */
+    @stub
+    def toString(): String = ???
 }
 
 object Socket {

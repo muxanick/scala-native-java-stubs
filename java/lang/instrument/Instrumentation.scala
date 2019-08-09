@@ -1,7 +1,8 @@
 package java.lang.instrument
 
-import java.lang.{Class, ClassLoader, Object}
+import java.lang.{Class, ClassLoader, Object, String}
 import java.util.jar.JarFile
+import scala.scalanative.annotation.stub
 
 /** This class provides services needed to instrument Java
  *  programming language code.
@@ -105,4 +106,11 @@ trait Instrumentation {
     /** Retransform the supplied set of classes. */
     @stub
     def retransformClasses(classes: Class[_]*): Unit = ???
+
+    /** This method modifies the failure handling of
+     *  native method resolution by allowing retry
+     *  with a prefix applied to the name.
+     */
+    @stub
+    def setNativeMethodPrefix(transformer: ClassFileTransformer, prefix: String): Unit = ???
 }

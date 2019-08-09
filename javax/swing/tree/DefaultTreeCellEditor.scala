@@ -5,7 +5,8 @@ import java.awt.event.{ActionEvent, ActionListener}
 import java.lang.Object
 import java.util.EventObject
 import javax.swing.{Icon, JTree, Timer}
-import javax.swing.event.{CellEditorListener, TreeSelectionListener}
+import javax.swing.event.{CellEditorListener, TreeSelectionEvent, TreeSelectionListener}
+import scala.scalanative.annotation.stub
 
 /** A TreeCellEditor. You need to supply an
  *  instance of DefaultTreeCellRenderer
@@ -35,9 +36,20 @@ class DefaultTreeCellEditor extends Object with ActionListener with TreeCellEdit
     @stub
     def this(tree: JTree, renderer: DefaultTreeCellRenderer) = ???
 
+    /** Constructs a DefaultTreeCellEditor
+     *  object for a JTree using the
+     *  specified renderer and the specified editor.
+     */
+    @stub
+    def this(tree: JTree, renderer: DefaultTreeCellRenderer, editor: TreeCellEditor) = ???
+
     /** TextField used when no editor is supplied. */
     @stub
     object DefaultTextField extends DefaultTreeCellEditor.DefaultTextField
+
+    /** Container responsible for placing the editingComponent. */
+    @stub
+    object EditorContainer extends DefaultTreeCellEditor.EditorContainer
 
     /** True if the border selection color should be drawn. */
     @stub
@@ -92,6 +104,10 @@ class DefaultTreeCellEditor extends Object with ActionListener with TreeCellEdit
     /** Used before starting the editing session. */
     @stub
     protected val timer: Timer = ???
+
+    /** JTree instance listening too. */
+    @stub
+    protected val tree: JTree = ???
 
     /** Messaged when the timer fires, this will start the editing
      *  session.
@@ -207,4 +223,8 @@ class DefaultTreeCellEditor extends Object with ActionListener with TreeCellEdit
      */
     @stub
     def stopCellEditing(): Boolean = ???
+
+    /** Resets lastPath. */
+    @stub
+    def valueChanged(e: TreeSelectionEvent): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.sql
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** An exception that provides information on  database access
  *  warnings. Warnings are silently chained to the object whose method
@@ -61,9 +62,19 @@ class SQLWarning extends SQLException {
     @stub
     def this(reason: String, cause: Throwable) = ???
 
+    /** Constructs a SQLWarning object
+     *  with a given  cause.
+     */
+    @stub
+    def this(cause: Throwable) = ???
+
     /** Retrieves the warning chained to this SQLWarning object by
      *  setNextWarning.
      */
     @stub
     def getNextWarning(): SQLWarning = ???
+
+    /** Adds a SQLWarning object to the end of the chain. */
+    @stub
+    def setNextWarning(w: SQLWarning): Unit = ???
 }

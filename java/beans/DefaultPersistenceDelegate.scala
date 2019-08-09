@@ -1,6 +1,7 @@
 package java.beans
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The DefaultPersistenceDelegate is a concrete implementation of
  *  the abstract PersistenceDelegate class and
@@ -26,6 +27,13 @@ class DefaultPersistenceDelegate extends PersistenceDelegate {
     @stub
     def this() = ???
 
+    /** Creates a default persistence delegate for a class with a
+     *  constructor whose arguments are the values of the property
+     *  names as specified by constructorPropertyNames.
+     */
+    @stub
+    def this(constructorPropertyNames: Array[String]) = ???
+
     /** This default implementation of the initialize method assumes
      *  all state held in objects of this type is exposed via the
      *  matching pairs of "setter" and "getter" methods in the order
@@ -41,4 +49,11 @@ class DefaultPersistenceDelegate extends PersistenceDelegate {
      */
     @stub
     protected def instantiate(oldInstance: Object, out: Encoder): Expression = ???
+
+    /** If the number of arguments in the specified constructor is non-zero and
+     *  the class of oldInstance explicitly declares an "equals" method
+     *  this method returns the value of oldInstance.equals(newInstance).
+     */
+    @stub
+    protected def mutatesTo(oldInstance: Object, newInstance: Object): Boolean = ???
 }

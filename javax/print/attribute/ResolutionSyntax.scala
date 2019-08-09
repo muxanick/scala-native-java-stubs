@@ -2,6 +2,7 @@ package javax.print.attribute
 
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Class ResolutionSyntax is an abstract base class providing the common
  *  implementation of all attributes denoting a printer resolution.
@@ -55,6 +56,10 @@ import java.lang.{Cloneable, Object, String}
  */
 abstract class ResolutionSyntax extends Object with Serializable with Cloneable {
 
+    /** Construct a new resolution attribute from the given items. */
+    @stub
+    def this(crossFeedResolution: Int, feedResolution: Int, units: Int) = ???
+
     /** Returns whether this resolution attribute is equivalent to the passed in
      *  object.
      */
@@ -93,10 +98,17 @@ abstract class ResolutionSyntax extends Object with Serializable with Cloneable 
 
     /** Returns a string version of this resolution attribute. */
     def toString(): String
+
+    /** Returns a string version of this resolution attribute in the given units. */
+    def toString(units: Int, unitsName: String): String
 }
 
 object ResolutionSyntax {
     /** Value to indicate units of dots per centimeter (dpcm). */
     @stub
     val DPCM: Int = ???
+
+    /** Value to indicate units of dots per inch (dpi). */
+    @stub
+    val DPI: Int = ???
 }

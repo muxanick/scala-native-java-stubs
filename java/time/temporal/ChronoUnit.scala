@@ -2,6 +2,7 @@ package java.time.temporal
 
 import java.lang.{Enum, Object, String}
 import java.time.Duration
+import scala.scalanative.annotation.stub
 
 /** A standard set of date periods units.
  *  
@@ -62,6 +63,9 @@ object ChronoUnit {
     /** Unit that represents the concept of a week. */
     final val WEEKS = new ChronoUnit(WEEKS, 14)
 
+    /** Unit that represents the concept of a year. */
+    final val YEARS = new ChronoUnit(YEARS, 15)
+
     /** Returns a copy of the specified temporal object with the specified period added. */
     @stub
     def addTo[R <: Temporal](temporal: R, amount: Long): R = ???
@@ -99,4 +103,10 @@ object ChronoUnit {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): ChronoUnit = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[ChronoUnit] = ???
 }

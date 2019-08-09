@@ -3,6 +3,7 @@ package javax.swing.plaf.basic
 import java.io.Serializable
 import java.lang.Object
 import javax.swing.Icon
+import scala.scalanative.annotation.stub
 
 /** Factory object that can vend Icons appropriate for the basic L & F.
  *  
@@ -16,6 +17,10 @@ import javax.swing.Icon
  *  Please see XMLEncoder.
  */
 class BasicIconFactory extends Object with Serializable {
+
+    /**  */
+    @stub
+    def this() = ???
 }
 
 object BasicIconFactory {
@@ -46,4 +51,8 @@ object BasicIconFactory {
     /**  */
     @stub
     def getRadioButtonIcon(): Icon = ???
+
+    /**  */
+    @stub
+    def getRadioButtonMenuItemIcon(): Icon = ???
 }

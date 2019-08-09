@@ -1,7 +1,8 @@
 package javax.swing.text
 
-import java.lang.Object
+import java.lang.{Object, String}
 import javax.swing.TransferHandler.DropLocation
+import scala.scalanative.annotation.stub
 
 /** Represents a drop location for JTextComponents. */
 final object JTextComponent.DropLocation extends TransferHandler.DropLocation {
@@ -15,4 +16,8 @@ final object JTextComponent.DropLocation extends TransferHandler.DropLocation {
      */
     @stub
     def getIndex(): Int = ???
+
+    /** Returns a string representation of this drop location. */
+    @stub
+    def toString(): String = ???
 }

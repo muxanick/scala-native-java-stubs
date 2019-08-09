@@ -1,5 +1,8 @@
 package javax.management
 
+import java.lang.Object
+import scala.scalanative.annotation.stub
+
 /** Interface implemented by an MBean that emits Notifications. It
  *  allows a listener to be registered with the MBean as a notification
  *  listener.
@@ -40,4 +43,8 @@ package javax.management
  *  use a CopyOnWriteArrayList for this list.
  */
 trait NotificationEmitter extends NotificationBroadcaster {
+
+    /** Removes a listener from this MBean. */
+    @stub
+    def removeNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
 }

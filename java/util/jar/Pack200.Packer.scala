@@ -4,6 +4,7 @@ import java.beans.PropertyChangeListener
 import java.io.OutputStream
 import java.lang.String
 import java.util.SortedMap
+import scala.scalanative.annotation.stub
 
 /** The packer engine applies various transformations to the input JAR file,
  *  making the pack stream highly compressible by a compressor such as
@@ -170,6 +171,12 @@ object trait Pack200.Packer {
     @stub
     val TRUE: String = ???
 
+    /** Indicates the action to take when a class-file containing an unknown
+     *  attribute is encountered.
+     */
+    @stub
+    val UNKNOWN_ATTRIBUTE: String = ???
+
     /** Deprecated. 
      * The dependency on PropertyChangeListener creates
      *              a significant impediment to future modularization of the
@@ -194,4 +201,14 @@ object trait Pack200.Packer {
     /** Get the set of this engine's properties. */
     @stub
     def properties(): SortedMap[String, String] = ???
+
+    /** Deprecated. 
+     * The dependency on PropertyChangeListener creates
+     *              a significant impediment to future modularization of the
+     *              Java platform. This method will be removed in a future
+     *              release.
+     * 
+     */
+    @stub
+    val Unit: default = ???
 }

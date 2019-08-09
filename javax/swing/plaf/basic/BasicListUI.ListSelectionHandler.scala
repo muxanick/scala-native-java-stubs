@@ -1,7 +1,8 @@
 package javax.swing.plaf.basic
 
 import java.lang.Object
-import javax.swing.event.ListSelectionListener
+import javax.swing.event.{ListSelectionEvent, ListSelectionListener}
+import scala.scalanative.annotation.stub
 
 /** The ListSelectionListener that's added to the JLists selection
  *  model at installUI time, and whenever the JList.selectionModel property
@@ -17,4 +18,12 @@ import javax.swing.event.ListSelectionListener
  *  Please see XMLEncoder.
  */
 class BasicListUI.ListSelectionHandler extends Object with ListSelectionListener {
+
+    /**  */
+    @stub
+    def ListSelectionHandler() = ???
+
+    /** Called whenever the value of the selection changes. */
+    @stub
+    def valueChanged(e: ListSelectionEvent): Unit = ???
 }

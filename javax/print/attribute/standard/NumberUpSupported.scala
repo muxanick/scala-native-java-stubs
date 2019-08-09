@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, SetOfIntegerSyntax, SupportedValuesAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class NumberUpSupported is a printing attribute class, a set of integers,
  *  that gives the supported values for a NumberUp attribute.
@@ -25,6 +26,12 @@ final class NumberUpSupported extends SetOfIntegerSyntax with SupportedValuesAtt
     @stub
     def this(members: Array[Array[Int]]) = ???
 
+    /** Construct a new number up supported attribute containing a single range
+     *  of integers.
+     */
+    @stub
+    def this(lowerBound: Int, upperBound: Int) = ???
+
     /** Returns whether this number up supported attribute is equivalent to the
      *  passed in object.
      */
@@ -36,4 +43,10 @@ final class NumberUpSupported extends SetOfIntegerSyntax with SupportedValuesAtt
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

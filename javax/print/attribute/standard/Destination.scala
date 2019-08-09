@@ -1,7 +1,9 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
+import java.net.URI
 import javax.print.attribute.{Attribute, PrintJobAttribute, PrintRequestAttribute, URISyntax}
+import scala.scalanative.annotation.stub
 
 /** Class Destination is a printing attribute class, a URI, that is used to
  *  indicate an alternate destination for the spooled printer formatted
@@ -25,6 +27,10 @@ import javax.print.attribute.{Attribute, PrintJobAttribute, PrintRequestAttribut
  */
 final class Destination extends URISyntax with PrintJobAttribute with PrintRequestAttribute {
 
+    /** Constructs a new destination attribute with the specified URI. */
+    @stub
+    def this(uri: URI) = ???
+
     /** Returns whether this destination attribute is equivalent to the
      *  passed in object.
      */
@@ -36,4 +42,10 @@ final class Destination extends URISyntax with PrintJobAttribute with PrintReque
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

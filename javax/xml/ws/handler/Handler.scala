@@ -1,5 +1,7 @@
 package javax.xml.ws.handler
 
+import scala.scalanative.annotation.stub
+
 /** The Handler interface
  *   is the base interface for JAX-WS handlers.
  */
@@ -16,4 +18,10 @@ trait Handler[C <: MessageContext] {
      */
     @stub
     def handleFault(context: C): Boolean = ???
+
+    /** The handleMessage method is invoked for normal processing
+     *   of inbound and outbound messages.
+     */
+    @stub
+    def handleMessage(context: C): Boolean = ???
 }

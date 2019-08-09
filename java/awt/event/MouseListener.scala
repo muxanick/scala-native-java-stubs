@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener interface for receiving "interesting" mouse events
  *  (press, release, click, enter, and exit) on a component.
@@ -39,4 +40,8 @@ trait MouseListener extends EventListener {
     /** Invoked when a mouse button has been pressed on a component. */
     @stub
     def mousePressed(e: MouseEvent): Unit = ???
+
+    /** Invoked when a mouse button has been released on a component. */
+    @stub
+    def mouseReleased(e: MouseEvent): Unit = ???
 }

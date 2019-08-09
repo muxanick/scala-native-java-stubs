@@ -1,6 +1,7 @@
 package javax.swing.text.html
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Typesafe enumeration for an HTML tag.  Although the
  *  set of HTML tags is a closed set, we have left the
@@ -20,6 +21,13 @@ object HTML.Tag extends Object {
      */
     @stub
     protected def Tag(id: String) = ???
+
+    /** Creates a new Tag with the specified id;
+     *  causesBreak and isBlock are defined
+     *  by the user.
+     */
+    @stub
+    protected def Tag(id: String, causesBreak: Boolean, isBlock: Boolean) = ???
 
     /**  */
     @stub
@@ -321,6 +329,10 @@ object HTML.Tag extends Object {
     @stub
     val UL: HTML.Tag = ???
 
+    /**  */
+    @stub
+    val VAR: HTML.Tag = ???
+
     /** Returns true if this tag causes a
      *  line break to the flow of data, otherwise returns
      *  false.
@@ -341,4 +353,10 @@ object HTML.Tag extends Object {
      */
     @stub
     def isPreformatted(): Boolean = ???
+
+    /** Returns the string representation of the
+     *  tag.
+     */
+    @stub
+    def toString(): String = ???
 }

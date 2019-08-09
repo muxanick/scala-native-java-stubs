@@ -1,6 +1,8 @@
 package javax.lang.model.util
 
 import java.lang.Object
+import javax.lang.model.type.IntersectionType
+import scala.scalanative.annotation.stub
 
 /** A skeletal visitor of types with default behavior appropriate for
  *  the RELEASE_8
@@ -32,4 +34,11 @@ import java.lang.Object
  *  in this situation.
  */
 abstract class AbstractTypeVisitor8[R, P] extends AbstractTypeVisitor7[R, P] {
+
+    /** Constructor for concrete subclasses to call. */
+    @stub
+    protected def this() = ???
+
+    /** Visits an IntersectionType in a manner defined by a subclass. */
+    def visitIntersection(t: IntersectionType, p: P): R
 }

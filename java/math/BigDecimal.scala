@@ -1,6 +1,7 @@
 package java.math
 
 import java.lang.{Comparable, Number, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Immutable, arbitrary-precision signed decimal numbers.  A
  *  BigDecimal consists of an arbitrary precision integer
@@ -270,6 +271,14 @@ class BigDecimal extends Number with Comparable[BigDecimal] {
      */
     @stub
     def this(val: String) = ???
+
+    /** Translates the string representation of a BigDecimal
+     *  into a BigDecimal, accepting the same strings as the
+     *  BigDecimal(String) constructor, with rounding
+     *  according to the context settings.
+     */
+    @stub
+    def this(val: String, mc: MathContext) = ???
 
     /** Returns a BigDecimal whose value is the absolute value
      *  of this BigDecimal, and whose scale is
@@ -661,6 +670,10 @@ object BigDecimal {
     @stub
     val TEN: BigDecimal = ???
 
+    /** The value 0, with a scale of 0. */
+    @stub
+    val ZERO: BigDecimal = ???
+
     /** Translates a double into a BigDecimal, using
      *  the double's canonical string representation provided
      *  by the Double.toString(double) method.
@@ -673,4 +686,10 @@ object BigDecimal {
      */
     @stub
     def valueOf(val: Long): BigDecimal = ???
+
+    /** Translates a long unscaled value and an
+     *  int scale into a BigDecimal.
+     */
+    @stub
+    def valueOf(unscaledVal: Long, scale: Int): BigDecimal = ???
 }

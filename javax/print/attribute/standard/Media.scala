@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, DocAttribute, EnumSyntax, PrintJobAttribute, PrintRequestAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class Media is a printing attribute class that specifies the
  *  medium on which to print.
@@ -28,6 +29,10 @@ import javax.print.attribute.{Attribute, DocAttribute, EnumSyntax, PrintJobAttri
  */
 abstract class Media extends EnumSyntax with DocAttribute with PrintRequestAttribute with PrintJobAttribute {
 
+    /** Constructs a new media attribute specified by name. */
+    @stub
+    protected def this(value: Int) = ???
+
     /** Returns whether this media attribute is equivalent to the passed in
      *  object.
      */
@@ -37,4 +42,9 @@ abstract class Media extends EnumSyntax with DocAttribute with PrintRequestAttri
      *  for this printing attribute value.
      */
     def getCategory(): Class[_ <: Attribute]
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    def getName(): String
 }

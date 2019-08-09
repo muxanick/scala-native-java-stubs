@@ -1,6 +1,7 @@
 package java.time.format
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Enumeration of ways to handle the positive/negative sign.
  *  
@@ -24,7 +25,16 @@ object SignStyle {
     /** Style to output the sign only if the value is negative. */
     final val NORMAL = new SignStyle(NORMAL, 3)
 
+    /** Style to block negative values, throwing an exception on printing. */
+    final val NOT_NEGATIVE = new SignStyle(NOT_NEGATIVE, 4)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): SignStyle = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[SignStyle] = ???
 }

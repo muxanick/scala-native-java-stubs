@@ -2,6 +2,7 @@ package javax.naming.ldap
 
 import java.lang.{Object, String}
 import javax.naming.NamingException
+import scala.scalanative.annotation.stub
 
 /** Indicates whether the requested sort of search results was successful or not.
  *  When the result code indicates success then the results have been sorted as
@@ -45,6 +46,10 @@ import javax.naming.NamingException
  */
 final class SortResponseControl extends BasicControl {
 
+    /** Constructs a control to indicate the outcome of a sort request. */
+    @stub
+    def this(id: String, criticality: Boolean, value: Array[Byte]) = ???
+
     /** Retrieves the ID of the attribute that caused the sort to fail. */
     @stub
     def getAttributeID(): String = ???
@@ -56,4 +61,16 @@ final class SortResponseControl extends BasicControl {
     /** Retrieves the LDAP result code of the sort operation. */
     @stub
     def getResultCode(): Int = ???
+
+    /** Determines if the search results have been successfully sorted. */
+    @stub
+    def isSorted(): Boolean = ???
+}
+
+object SortResponseControl {
+    /** The server-side sort response control's assigned object identifier
+     *  is 1.2.840.113556.1.4.474.
+     */
+    @stub
+    val OID: String = ???
 }

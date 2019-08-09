@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** An object to which char sequences and values can be appended.  The
  *  Appendable interface must be implemented by any class whose
  *  instances are intended to receive formatted output from a Formatter.
@@ -26,4 +28,10 @@ trait Appendable {
     /** Appends the specified character sequence to this Appendable. */
     @stub
     def append(csq: CharSequence): Appendable = ???
+
+    /** Appends a subsequence of the specified character sequence to this
+     *  Appendable.
+     */
+    @stub
+    def append(csq: CharSequence, start: Int, end: Int): Appendable = ???
 }

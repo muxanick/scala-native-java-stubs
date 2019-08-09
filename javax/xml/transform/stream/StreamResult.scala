@@ -3,6 +3,7 @@ package javax.xml.transform.stream
 import java.io.{File, OutputStream, Writer}
 import java.lang.{Object, String}
 import javax.xml.transform.Result
+import scala.scalanative.annotation.stub
 
 /** Acts as an holder for a transformation result,
  *  which may be XML, plain Text, HTML, or some other form of markup.
@@ -24,6 +25,10 @@ class StreamResult extends Object with Result {
     /** Construct a StreamResult from a URL. */
     @stub
     def this(systemId: String) = ???
+
+    /** Construct a StreamResult from a character stream. */
+    @stub
+    def this(writer: Writer) = ???
 
     /** Get the byte stream that was set with setOutputStream. */
     @stub
@@ -51,4 +56,17 @@ class StreamResult extends Object with Result {
      */
     @stub
     def setSystemId(systemId: String): Unit = ???
+
+    /** Set the writer that is to receive the result. */
+    @stub
+    def setWriter(writer: Writer): Unit = ???
+}
+
+object StreamResult {
+    /** If TransformerFactory.getFeature(java.lang.String)
+     *  returns true when passed this value as an argument,
+     *  the Transformer supports Result output of this type.
+     */
+    @stub
+    val FEATURE: String = ???
 }

@@ -1,8 +1,9 @@
 package javax.print.attribute
 
 import java.io.Serializable
-import java.lang.{Cloneable, Object}
+import java.lang.{Cloneable, Object, String}
 import java.util.Date
+import scala.scalanative.annotation.stub
 
 /** Class DateTimeSyntax is an abstract base class providing the common
  *  implementation of all attributes whose value is a date and time.
@@ -30,6 +31,12 @@ import java.util.Date
  */
 abstract class DateTimeSyntax extends Object with Serializable with Cloneable {
 
+    /** Construct a new date-time attribute with the given
+     *  java.util.Date  value.
+     */
+    @stub
+    protected def this(value: Date) = ???
+
     /** Returns whether this date-time attribute is equivalent to the passed in
      *  object.
      */
@@ -42,4 +49,7 @@ abstract class DateTimeSyntax extends Object with Serializable with Cloneable {
 
     /** Returns a hash code value for this date-time attribute. */
     def hashCode(): Int
+
+    /** Returns a string value corresponding to this date-time attribute. */
+    def toString(): String
 }

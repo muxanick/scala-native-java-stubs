@@ -2,6 +2,7 @@ package javax.swing.plaf.basic
 
 import java.lang.Object
 import javax.swing.plaf.UIResource
+import scala.scalanative.annotation.stub
 
 /** A subclass of BasicComboBoxEditor that implements UIResource.
  *  BasicComboBoxEditor doesn't implement UIResource
@@ -18,3 +19,7 @@ import javax.swing.plaf.UIResource
  *  Please see XMLEncoder.
  */
 object BasicComboBoxEditor.UIResource extends BasicComboBoxEditor with UIResource {
+
+    /**  */
+    @stub
+    def UIResource() = ???

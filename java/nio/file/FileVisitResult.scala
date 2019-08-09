@@ -1,6 +1,7 @@
 package java.nio.file
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The result type of a FileVisitor. */
 class FileVisitResult private (name: String, ordinal: Int) extends Enum[FileVisitResult](name, ordinal) {
@@ -16,7 +17,16 @@ object FileVisitResult {
     /** Continue without visiting the entries in this directory. */
     final val SKIP_SUBTREE = new FileVisitResult(SKIP_SUBTREE, 2)
 
+    /** Terminate. */
+    final val TERMINATE = new FileVisitResult(TERMINATE, 3)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): FileVisitResult = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[FileVisitResult] = ???
 }

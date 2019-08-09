@@ -1,5 +1,7 @@
 package java.security
 
+import scala.scalanative.annotation.stub
+
 /** A marker interface for keystore protection parameters.
  * 
  *   The information stored in a ProtectionParameter

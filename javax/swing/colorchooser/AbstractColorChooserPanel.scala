@@ -3,6 +3,7 @@ package javax.swing.colorchooser
 import java.awt.{Color, Component, Container, Graphics}
 import java.lang.{Object, String}
 import javax.swing.{Icon, JColorChooser, JComponent, JPanel}
+import scala.scalanative.annotation.stub
 
 /** This is the abstract superclass for color choosers.  If you want to add
  *  a new color chooser panel into a JColorChooser, subclass
@@ -18,6 +19,10 @@ import javax.swing.{Icon, JColorChooser, JComponent, JPanel}
  *  Please see XMLEncoder.
  */
 abstract class AbstractColorChooserPanel extends JPanel {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Builds a new chooser panel. */
     protected def buildChooser(): Unit
@@ -57,4 +62,7 @@ abstract class AbstractColorChooserPanel extends JPanel {
 
     /** Invoked when the panel is removed from the chooser. */
     def uninstallChooserPanel(enclosingChooser: JColorChooser): Unit
+
+    /** Invoked automatically when the model's state changes. */
+    def updateChooser(): Unit
 }

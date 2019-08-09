@@ -1,6 +1,7 @@
 package java.lang.annotation
 
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Indicates that annotations with a type are to be documented by javadoc
  *  and similar tools by default.  This type should be used to annotate the

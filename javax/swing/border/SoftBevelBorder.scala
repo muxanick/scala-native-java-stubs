@@ -1,7 +1,8 @@
 package javax.swing.border
 
-import java.awt.{Color, Component, Insets}
+import java.awt.{Color, Component, Graphics, Insets}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A class which implements a raised or lowered bevel with
  *  softened corners.
@@ -30,6 +31,12 @@ class SoftBevelBorder extends BevelBorder {
     @stub
     def this(bevelType: Int, highlight: Color, shadow: Color) = ???
 
+    /** Creates a bevel border with the specified type, highlight
+     *  shadow colors.
+     */
+    @stub
+    def this(bevelType: Int, highlightOuterColor: Color, highlightInnerColor: Color, shadowOuterColor: Color, shadowInnerColor: Color) = ???
+
     /** Reinitialize the insets parameter with this Border's current Insets. */
     @stub
     def getBorderInsets(c: Component, insets: Insets): Insets = ???
@@ -37,4 +44,10 @@ class SoftBevelBorder extends BevelBorder {
     /** Returns whether or not the border is opaque. */
     @stub
     def isBorderOpaque(): Boolean = ???
+
+    /** Paints the border for the specified component with the specified
+     *  position and size.
+     */
+    @stub
+    def paintBorder(c: Component, g: Graphics, x: Int, y: Int, width: Int, height: Int): Unit = ???
 }

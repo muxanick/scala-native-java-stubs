@@ -3,6 +3,7 @@ package javax.management.relation
 import java.lang.{Boolean, Integer, String}
 import java.util.{List, Map}
 import javax.management.ObjectName
+import scala.scalanative.annotation.stub
 
 /** The Relation Service is in charge of creating and deleting relation types
  *  and relations, of handling the consistency and of providing query
@@ -173,4 +174,10 @@ trait RelationServiceMBean {
     /** Sets the given roles in given relation. */
     @stub
     def setRoles(relationId: String, roleList: RoleList): RoleResult = ???
+
+    /** Handles update of the Relation Service role map for the update of given
+     *  role in given relation.
+     */
+    @stub
+    def updateRoleMap(relationId: String, newRole: Role, oldRoleValue: List[ObjectName]): Unit = ???
 }

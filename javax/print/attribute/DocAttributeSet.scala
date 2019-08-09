@@ -1,5 +1,7 @@
 package javax.print.attribute
 
+import scala.scalanative.annotation.stub
+
 /** Interface DocAttributeSet specifies the interface for a set of doc
  *  attributes, i.e. printing attributes that implement interface DocAttribute. In the Print Service API, the client uses a
  *  DocAttributeSet to specify the characteristics of an individual doc and
@@ -23,4 +25,8 @@ trait DocAttributeSet extends AttributeSet {
      */
     @stub
     def add(attribute: Attribute): Boolean = ???
+
+    /** Adds all of the elements in the specified set to this attribute. */
+    @stub
+    def addAll(attributes: AttributeSet): Boolean = ???
 }

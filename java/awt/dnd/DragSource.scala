@@ -5,6 +5,7 @@ import java.awt.datatransfer.{FlavorMap, Transferable}
 import java.io.Serializable
 import java.lang.{Class, Object}
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The DragSource is the entity responsible
  *  for the initiation of the Drag
@@ -71,6 +72,10 @@ import java.util.EventListener
  *  DragSource.
  */
 class DragSource extends Object with Serializable {
+
+    /** Creates a new DragSource. */
+    @stub
+    def this() = ???
 
     /** Adds the specified DragSourceListener to this
      *  DragSource to receive drag source events during drag
@@ -186,6 +191,16 @@ class DragSource extends Object with Serializable {
      */
     @stub
     def startDrag(trigger: DragGestureEvent, dragCursor: Cursor, transferable: Transferable, dsl: DragSourceListener): Unit = ???
+
+    /** Start a drag, given the DragGestureEvent
+     *  that initiated the drag, the initial
+     *  Cursor to use,
+     *  the Transferable subject data
+     *  of the drag, the DragSourceListener,
+     *  and the FlavorMap.
+     */
+    @stub
+    def startDrag(trigger: DragGestureEvent, dragCursor: Cursor, transferable: Transferable, dsl: DragSourceListener, flavorMap: FlavorMap): Unit = ???
 }
 
 object DragSource {
@@ -218,6 +233,12 @@ object DragSource {
      */
     @stub
     val DefaultMoveDrop: Cursor = ???
+
+    /** The default Cursor to use with a move operation indicating
+     *  that a drop is currently not allowed.
+     */
+    @stub
+    val DefaultMoveNoDrop: Cursor = ???
 
     /** Gets the DragSource object associated with
      *  the underlying platform.

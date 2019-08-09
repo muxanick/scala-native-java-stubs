@@ -3,6 +3,7 @@ package javax.crypto
 import java.lang.{Object, String}
 import java.security.{AlgorithmParameters, Key, Provider}
 import java.security.spec.PKCS8EncodedKeySpec
+import scala.scalanative.annotation.stub
 
 /** This class implements the EncryptedPrivateKeyInfo type
  *  as defined in PKCS #8.
@@ -31,6 +32,12 @@ class EncryptedPrivateKeyInfo extends Object {
      */
     @stub
     def this(encoded: Array[Byte]) = ???
+
+    /** Constructs an EncryptedPrivateKeyInfo from the
+     *  encryption algorithm name and the encrypted data.
+     */
+    @stub
+    def this(algName: String, encryptedData: Array[Byte]) = ???
 
     /** Returns the encryption algorithm. */
     @stub
@@ -65,4 +72,10 @@ class EncryptedPrivateKeyInfo extends Object {
      */
     @stub
     def getKeySpec(decryptKey: Key, provider: Provider): PKCS8EncodedKeySpec = ???
+
+    /** Extract the enclosed PKCS8EncodedKeySpec object from the
+     *  encrypted data and return it.
+     */
+    @stub
+    def getKeySpec(decryptKey: Key, providerName: String): PKCS8EncodedKeySpec = ???
 }

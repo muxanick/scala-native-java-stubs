@@ -2,6 +2,7 @@ package java.security
 
 import java.lang.{Object, String}
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** The KeyPairGenerator class is used to generate pairs of
  *  public and private keys. Key pair generators are constructed using the
@@ -87,6 +88,10 @@ import java.security.spec.AlgorithmParameterSpec
  */
 abstract class KeyPairGenerator extends KeyPairGeneratorSpi {
 
+    /** Creates a KeyPairGenerator object for the specified algorithm. */
+    @stub
+    protected def this(algorithm: String) = ???
+
     /** Generates a key pair. */
     def generateKeyPair(): KeyPair
 
@@ -117,6 +122,11 @@ abstract class KeyPairGenerator extends KeyPairGeneratorSpi {
      *  of randomness.
      */
     def initialize(keysize: Int): Unit
+
+    /** Initializes the key pair generator for a certain keysize with
+     *  the given source of randomness (and a default parameter set).
+     */
+    def initialize(keysize: Int, random: SecureRandom): Unit
 }
 
 object KeyPairGenerator {

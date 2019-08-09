@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** Thrown when an application tries to load in a class through its
  *  string name using:
  *  
@@ -29,10 +31,23 @@ class ClassNotFoundException extends ReflectiveOperationException {
     @stub
     def this(s: String) = ???
 
+    /** Constructs a ClassNotFoundException with the
+     *  specified detail message and optional exception that was
+     *  raised while loading the class.
+     */
+    @stub
+    def this(s: String, ex: Throwable) = ???
+
     /** Returns the cause of this exception (the exception that was raised
      *  if an error occurred while attempting to load the class; otherwise
      *  null).
      */
     @stub
     def getCause(): Throwable = ???
+
+    /** Returns the exception that was raised if an error occurred while
+     *  attempting to load the class.
+     */
+    @stub
+    def getException(): Throwable = ???
 }

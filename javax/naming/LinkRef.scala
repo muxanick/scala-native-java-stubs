@@ -1,6 +1,7 @@
 package javax.naming
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class represents a Reference whose contents is a name, called the link name,
  *  that is bound to an atomic name in a context.
@@ -38,4 +39,12 @@ class LinkRef extends Reference {
     /** Constructs a LinkRef for a name. */
     @stub
     def this(linkName: Name) = ???
+
+    /** Constructs a LinkRef for a string name. */
+    @stub
+    def this(linkName: String) = ???
+
+    /** Retrieves the name of this link. */
+    @stub
+    def getLinkName(): String = ???
 }

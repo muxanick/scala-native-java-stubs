@@ -1,6 +1,7 @@
 package javax.swing.event
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Defines the ENTERED, EXITED, and ACTIVATED event types, along
  *  with their string representations, returned by toString().
@@ -14,4 +15,12 @@ final object HyperlinkEvent.EventType extends Object {
     /** Entered type. */
     @stub
     val ENTERED: HyperlinkEvent.EventType = ???
+
+    /** Exited type. */
+    @stub
+    val EXITED: HyperlinkEvent.EventType = ???
+
+    /** Converts the type to a string. */
+    @stub
+    def toString(): String = ???
 }

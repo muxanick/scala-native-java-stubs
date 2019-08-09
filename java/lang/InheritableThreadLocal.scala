@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** This class extends ThreadLocal to provide inheritance of values
  *  from parent thread to child thread: when a child thread is created, the
  *  child receives initial values for all inheritable thread-local variables
@@ -14,4 +16,15 @@ package java.lang
  *  automatically transmitted to any child threads that are created.
  */
 class InheritableThreadLocal[T] extends ThreadLocal[T] {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** Computes the child's initial value for this inheritable thread-local
+     *  variable as a function of the parent's value at the time the child
+     *  thread is created.
+     */
+    @stub
+    protected def childValue(parentValue: T): T = ???
 }

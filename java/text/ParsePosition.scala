@@ -1,6 +1,7 @@
 package java.text
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** ParsePosition is a simple class used by Format
  *  and its subclasses to keep track of the current position during parsing.
@@ -13,6 +14,10 @@ import java.lang.Object
  *  records the current position.
  */
 class ParsePosition extends Object {
+
+    /** Create a new ParsePosition with the given initial index. */
+    @stub
+    def this(index: Int) = ???
 
     /** Overrides equals */
     @stub
@@ -39,4 +44,8 @@ class ParsePosition extends Object {
     /** Set the current parse position. */
     @stub
     def setIndex(index: Int): Unit = ???
+
+    /** Return a string representation of this ParsePosition. */
+    @stub
+    def toString(): String = ???
 }

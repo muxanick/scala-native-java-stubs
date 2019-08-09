@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Builder is used to build instances of Locale
  *  from values configured by the setters.  Unlike the Locale
@@ -32,6 +33,10 @@ import java.lang.{Object, String}
  *  fields to their default values.
  */
 final object Locale.Builder extends Object {
+
+    /** Constructs an empty Builder. */
+    @stub
+    def Builder() = ???
 
     /** Adds a unicode locale attribute, if not already present, otherwise
      *  has no effect.
@@ -90,4 +95,8 @@ final object Locale.Builder extends Object {
     /** Sets the Unicode locale keyword type for the given key. */
     @stub
     def setUnicodeLocaleKeyword(key: String, type: String): Locale.Builder = ???
+
+    /** Sets the variant. */
+    @stub
+    def setVariant(variant: String): Locale.Builder = ???
 }

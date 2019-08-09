@@ -1,11 +1,12 @@
 package javax.swing.text.html
 
 import java.awt.Cursor
-import java.io.Reader
+import java.io.{Reader, Writer}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.{Action, JEditorPane}
 import javax.swing.text.{DefaultEditorKit, Document, EditorKit, Element, MutableAttributeSet, StyledEditorKit, ViewFactory}
+import scala.scalanative.annotation.stub
 
 /** The Swing JEditorPane text component supports different kinds
  *  of content via a plug-in mechanism called an EditorKit.  Because
@@ -125,6 +126,12 @@ import javax.swing.text.{DefaultEditorKit, Document, EditorKit, Element, Mutable
  */
 class HTMLEditorKit extends StyledEditorKit with Accessible {
 
+    /** Constructs an HTMLEditorKit, creates a StyleContext,
+     *  and loads the style sheet.
+     */
+    @stub
+    def this() = ???
+
     /** Creates a copy of the editor kit. */
     @stub
     def clone(): Object = ???
@@ -231,6 +238,12 @@ class HTMLEditorKit extends StyledEditorKit with Accessible {
      */
     @stub
     def setStyleSheet(s: StyleSheet): Unit = ???
+
+    /** Write content from a document to the given stream
+     *  in a format appropriate for this kind of content handler.
+     */
+    @stub
+    def write(out: Writer, doc: Document, pos: Int, len: Int): Unit = ???
 }
 
 object HTMLEditorKit {
@@ -259,6 +272,10 @@ object HTMLEditorKit {
     /** Interface to be supported by the parser. */
     @stub
     object Parser extends HTMLEditorKit.Parser
+
+    /** The result of parsing drives these callback methods. */
+    @stub
+    object ParserCallback extends HTMLEditorKit.ParserCallback
 
     /** The bold action identifier */
     @stub
@@ -313,4 +330,8 @@ object HTMLEditorKit {
     /** The paragraph left indent action identifier */
     @stub
     val PARA_INDENT_LEFT: String = ???
+
+    /** The paragraph right indent action identifier */
+    @stub
+    val PARA_INDENT_RIGHT: String = ???
 }

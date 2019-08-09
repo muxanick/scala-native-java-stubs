@@ -1,6 +1,7 @@
 package java.awt.image
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class exists to wrap one or more data arrays.  Each data array in
  *  the DataBuffer is referred to as a bank.  Accessor methods for getting
@@ -42,6 +43,12 @@ abstract class DataBuffer extends Object {
      */
     @stub
     protected def this(dataType: Int, size: Int, numBanks: Int, offset: Int) = ???
+
+    /** Constructs a DataBuffer which contains the specified number
+     *   of banks.
+     */
+    @stub
+    protected def this(dataType: Int, size: Int, numBanks: Int, offsets: Array[Int]) = ???
 
     /** The number of banks in this DataBuffer. */
     protected val banks: Int
@@ -127,6 +134,11 @@ abstract class DataBuffer extends Object {
      *  from the given float.
      */
     def setElemFloat(i: Int, val: Float): Unit
+
+    /** Sets the requested data array element in the specified bank
+     *  from the given float.
+     */
+    def setElemFloat(bank: Int, i: Int, val: Float): Unit
 }
 
 object DataBuffer {
@@ -153,6 +165,10 @@ object DataBuffer {
     /** Tag for undefined data. */
     @stub
     val TYPE_UNDEFINED: Int = ???
+
+    /** Tag for unsigned short data. */
+    @stub
+    val TYPE_USHORT: Int = ???
 
     /** Returns the size (in bits) of the data type, given a datatype tag. */
     @stub

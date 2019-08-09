@@ -3,6 +3,7 @@ package javax.management.relation
 import java.lang.{Boolean, Integer, Object, String}
 import java.util.{List, Map}
 import javax.management.{MBeanNotificationInfo, MBeanRegistration, MBeanServer, Notification, NotificationBroadcasterSupport, NotificationListener, ObjectName}
+import scala.scalanative.annotation.stub
 
 /** The Relation Service is in charge of creating and deleting relation types
  *  and relations, of handling the consistency and of providing query
@@ -17,6 +18,10 @@ import javax.management.{MBeanNotificationInfo, MBeanRegistration, MBeanServer, 
  *  its ObjectName and MBean Server.
  */
 class RelationService extends NotificationBroadcasterSupport with RelationServiceMBean with MBeanRegistration with NotificationListener {
+
+    /** Constructor. */
+    @stub
+    def this(immediatePurgeFlag: Boolean) = ???
 
     /** Adds an MBean created by the user (and registered by him in the MBean
      *  Server) as a relation in the Relation Service.
@@ -213,4 +218,10 @@ class RelationService extends NotificationBroadcasterSupport with RelationServic
     /** Sets the given roles in given relation. */
     @stub
     def setRoles(relationId: String, roleList: RoleList): RoleResult = ???
+
+    /** Handles update of the Relation Service role map for the update of given
+     *  role in given relation.
+     */
+    @stub
+    def updateRoleMap(relationId: String, newRole: Role, oldValue: List[ObjectName]): Unit = ???
 }

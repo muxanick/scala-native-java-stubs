@@ -4,6 +4,7 @@ import java.lang.{Exception, Object, String, Throwable}
 import java.security.GeneralSecurityException
 import java.util.{Date, Map}
 import javax.security.auth.x500.X500Principal
+import scala.scalanative.annotation.stub
 
 /** An exception that indicates an X.509 certificate is revoked. A
  *  CertificateRevokedException contains additional information
@@ -11,6 +12,13 @@ import javax.security.auth.x500.X500Principal
  *  certificate was revoked and the reason it was revoked.
  */
 class CertificateRevokedException extends CertificateException {
+
+    /** Constructs a CertificateRevokedException with
+     *  the specified revocation date, reason code, authority name, and map
+     *  of extensions.
+     */
+    @stub
+    def this(revocationDate: Date, reason: CRLReason, authority: X500Principal, extensions: Map[String, Extension]) = ???
 
     /** Returns the name of the authority that signed the certificate's
      *  revocation status information.
@@ -38,4 +46,8 @@ class CertificateRevokedException extends CertificateException {
     /** Returns the date on which the certificate was revoked. */
     @stub
     def getRevocationDate(): Date = ???
+
+    /** Returns the reason the certificate was revoked. */
+    @stub
+    def getRevocationReason(): CRLReason = ???
 }

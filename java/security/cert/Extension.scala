@@ -2,6 +2,7 @@ package java.security.cert
 
 import java.io.OutputStream
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** This interface represents an X.509 extension.
  * 
@@ -49,4 +50,8 @@ trait Extension {
     /** Gets the extensions's DER-encoded value. */
     @stub
     def getValue(): Array[Byte] = ???
+
+    /** Gets the extension's criticality setting. */
+    @stub
+    def isCritical(): Boolean = ???
 }

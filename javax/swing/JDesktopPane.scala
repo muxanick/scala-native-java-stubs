@@ -4,6 +4,7 @@ import java.awt.{Component, Container}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.plaf.DesktopPaneUI
+import scala.scalanative.annotation.stub
 
 /** A container used to create a multiple-document interface or a virtual desktop.
  *  You create JInternalFrame objects and add them to the
@@ -41,6 +42,16 @@ import javax.swing.plaf.DesktopPaneUI
  *  Please see XMLEncoder.
  */
 class JDesktopPane extends JLayeredPane with Accessible {
+
+    /** Creates a new JDesktopPane. */
+    @stub
+    def this() = ???
+
+    /** This class implements accessibility support for the
+     *  JDesktopPane class.
+     */
+    @stub
+    protected object AccessibleJDesktopPane extends JDesktopPane.AccessibleJDesktopPane
 
     /** Adds the specified component to this container at the specified
      *  index.
@@ -136,6 +147,10 @@ class JDesktopPane extends JLayeredPane with Accessible {
     /** Sets the L&F object that renders this component. */
     @stub
     def setUI(ui: DesktopPaneUI): Unit = ???
+
+    /** Notification from the UIManager that the L&F has changed. */
+    @stub
+    def updateUI(): Unit = ???
 }
 
 object JDesktopPane {
@@ -144,4 +159,10 @@ object JDesktopPane {
      */
     @stub
     val LIVE_DRAG_MODE: Int = ???
+
+    /** Indicates that an outline only of the item being dragged
+     *  should appear inside the desktop pane.
+     */
+    @stub
+    val OUTLINE_DRAG_MODE: Int = ???
 }

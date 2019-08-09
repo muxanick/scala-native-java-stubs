@@ -3,6 +3,7 @@ package javax.naming.ldap
 import java.io.Serializable
 import java.lang.{Comparable, Object, String}
 import javax.naming.directory.Attributes
+import scala.scalanative.annotation.stub
 
 /** This class represents a relative distinguished name, or RDN, which is a
  *  component of a distinguished name as specified by
@@ -73,6 +74,12 @@ class Rdn extends Object with Serializable with Comparable[Object] {
     @stub
     def this(rdnString: String) = ???
 
+    /** Constructs an Rdn from the given attribute type and
+     *  value.
+     */
+    @stub
+    def this(type: String, value: Object) = ???
+
     /** Compares this Rdn with the specified Object for order. */
     @stub
     def compareTo(obj: Object): Int = ???
@@ -118,4 +125,12 @@ object Rdn {
      */
     @stub
     def escapeValue(val: Object): String = ???
+
+    /** Given an attribute value string formated according to the rules
+     *  specified in
+     *  RFC 2253,
+     *  returns the unformated value.
+     */
+    @stub
+    def unescapeValue(val: String): Object = ???
 }

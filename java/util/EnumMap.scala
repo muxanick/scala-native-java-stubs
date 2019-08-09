@@ -2,6 +2,7 @@ package java.util
 
 import java.io.Serializable
 import java.lang.{Class, Cloneable, Enum, Object}
+import scala.scalanative.annotation.stub
 
 /** A specialized Map implementation for use with enum type keys.  All
  *  of the keys in an enum map must come from a single enum type that is
@@ -57,6 +58,10 @@ class EnumMap[K <: Enum[K], V] extends AbstractMap[K, V] with Serializable with 
      */
     @stub
     def this(m: EnumMap[K, _ <: V]) = ???
+
+    /** Creates an enum map initialized from the specified map. */
+    @stub
+    def this(m: Map[K, _ <: V]) = ???
 
     /** Removes all mappings from this map. */
     @stub
@@ -115,4 +120,8 @@ class EnumMap[K <: Enum[K], V] extends AbstractMap[K, V] with Serializable with 
     /** Returns the number of key-value mappings in this map. */
     @stub
     def size(): Int = ???
+
+    /** Returns a Collection view of the values contained in this map. */
+    @stub
+    def values(): Collection[V] = ???
 }

@@ -1,6 +1,7 @@
 package javax.naming
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This is the superclass of security-related exceptions
  *  thrown by operations in the Context and DirContext interfaces.
@@ -20,4 +21,10 @@ abstract class NamingSecurityException extends NamingException {
     /** Constructs a new instance of NamingSecurityException. */
     @stub
     def this() = ???
+
+    /** Constructs a new instance of NamingSecurityException using the
+     *  explanation supplied.
+     */
+    @stub
+    def this(explanation: String) = ???
 }

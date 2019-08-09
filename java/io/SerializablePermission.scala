@@ -2,6 +2,7 @@ package java.io
 
 import java.lang.{Object, String}
 import java.security.{BasicPermission, Permission}
+import scala.scalanative.annotation.stub
 
 /** This class is for Serializable permissions. A SerializablePermission
  *  contains a name (also referred to as a "target name") but
@@ -52,4 +53,8 @@ final class SerializablePermission extends BasicPermission {
     /** Creates a new SerializablePermission with the specified name. */
     @stub
     def this(name: String) = ???
+
+    /** Creates a new SerializablePermission object with the specified name. */
+    @stub
+    def this(name: String, actions: String) = ???
 }

@@ -2,6 +2,7 @@ package javax.management
 
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Describes the management interface exposed by an MBean; that is,
  *  the set of attributes and operations which are available for
@@ -64,6 +65,10 @@ class MBeanInfo extends Object with Cloneable with Serializable with DescriptorR
     @stub
     def this(className: String, description: String, attributes: Array[MBeanAttributeInfo], constructors: Array[MBeanConstructorInfo], operations: Array[MBeanOperationInfo], notifications: Array[MBeanNotificationInfo]) = ???
 
+    /** Constructs an MBeanInfo. */
+    @stub
+    def this(className: String, description: String, attributes: Array[MBeanAttributeInfo], constructors: Array[MBeanConstructorInfo], operations: Array[MBeanOperationInfo], notifications: Array[MBeanNotificationInfo], descriptor: Descriptor) = ???
+
     /** Returns a shallow clone of this instance. */
     @stub
     def clone(): Object = ???
@@ -105,4 +110,8 @@ class MBeanInfo extends Object with Cloneable with Serializable with DescriptorR
     /** Returns a hash code value for the object. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }

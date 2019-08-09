@@ -1,6 +1,7 @@
 package java.security.cert
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The BasicReason enumerates the potential reasons that a certification
  *  path of any type may be invalid.
@@ -27,7 +28,16 @@ object CertPathValidatorException.BasicReason {
     /** The revocation status of the certificate could not be determined. */
     final val UNDETERMINED_REVOCATION_STATUS = new CertPathValidatorException.BasicReason(UNDETERMINED_REVOCATION_STATUS, 5)
 
+    /** Unspecified reason. */
+    final val UNSPECIFIED = new CertPathValidatorException.BasicReason(UNSPECIFIED, 6)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): CertPathValidatorException.BasicReason = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[CertPathValidatorException.BasicReason] = ???
 }

@@ -2,6 +2,7 @@ package javax.swing.undo
 
 import java.lang.{Object, String}
 import java.util.Hashtable
+import scala.scalanative.annotation.stub
 
 /** StateEdit is a general edit for objects that change state.
  *  Objects being edited must conform to the StateEditable interface.
@@ -30,6 +31,10 @@ class StateEdit extends AbstractUndoableEdit {
     @stub
     def this(anObject: StateEditable) = ???
 
+    /** Create and return a new StateEdit with a presentation name. */
+    @stub
+    def this(anObject: StateEditable, name: String) = ???
+
     /** The object being edited */
     @stub
     protected val object: StateEditable = ???
@@ -41,6 +46,10 @@ class StateEdit extends AbstractUndoableEdit {
     /** The state information prior to the edit */
     @stub
     protected val preState: Hashtable[Object, Object] = ???
+
+    /** The undo/redo presentation name */
+    @stub
+    protected val undoRedoName: String = ???
 
     /** Gets the post-edit state of the StateEditable object and
      *  ends the edit.
@@ -63,6 +72,10 @@ class StateEdit extends AbstractUndoableEdit {
     /** Remove redundant key/values in state hashtables. */
     @stub
     protected def removeRedundantState(): Unit = ???
+
+    /** Tells the edited object to apply the state prior to the edit */
+    @stub
+    def undo(): Unit = ???
 }
 
 object StateEdit {

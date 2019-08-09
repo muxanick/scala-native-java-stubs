@@ -3,6 +3,7 @@ package java.nio.file.attribute
 import java.lang.String
 import java.nio.ByteBuffer
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** A file attribute view that provides a view of a file's user-defined
  *  attributes, sometimes known as extended attributes. User-defined
@@ -56,4 +57,8 @@ trait UserDefinedFileAttributeView extends FileAttributeView {
     /** Returns the size of the value of a user-defined attribute. */
     @stub
     def size(name: String): Int = ???
+
+    /** Writes the value of a user-defined attribute from a buffer. */
+    @stub
+    def write(name: String, src: ByteBuffer): Int = ???
 }

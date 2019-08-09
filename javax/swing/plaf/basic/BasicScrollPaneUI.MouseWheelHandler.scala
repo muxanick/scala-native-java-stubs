@@ -1,7 +1,8 @@
 package javax.swing.plaf.basic
 
-import java.awt.event.MouseWheelListener
+import java.awt.event.{MouseWheelEvent, MouseWheelListener}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** MouseWheelHandler is an inner class which implements the
  *  MouseWheelListener interface.  MouseWheelHandler responds to
@@ -11,4 +12,14 @@ import java.lang.Object
  *  method returns false, no scrolling occurs.
  */
 protected class BasicScrollPaneUI.MouseWheelHandler extends Object with MouseWheelListener {
+
+    /**  */
+    @stub
+    protected def MouseWheelHandler() = ???
+
+    /** Called when the mouse wheel is rotated while over a
+     *  JScrollPane.
+     */
+    @stub
+    def mouseWheelMoved(e: MouseWheelEvent): Unit = ???
 }

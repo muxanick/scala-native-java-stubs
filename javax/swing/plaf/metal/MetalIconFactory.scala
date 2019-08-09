@@ -3,6 +3,7 @@ package javax.swing.plaf.metal
 import java.io.Serializable
 import java.lang.Object
 import javax.swing.Icon
+import scala.scalanative.annotation.stub
 
 /** Factory object that vends Icons for
  *  the Java™ look and feel (Metal).
@@ -26,6 +27,10 @@ import javax.swing.Icon
  *  Please see XMLEncoder.
  */
 class MetalIconFactory extends Object with Serializable {
+
+    /**  */
+    @stub
+    def this() = ???
 }
 
 object MetalIconFactory {
@@ -67,7 +72,15 @@ object MetalIconFactory {
 
     /**  */
     @stub
+    object TreeLeafIcon extends MetalIconFactory.TreeLeafIcon
+
+    /**  */
+    @stub
     val DARK: Boolean = ???
+
+    /**  */
+    @stub
+    val LIGHT: Boolean = ???
 
     /** Returns a checkbox icon. */
     @stub
@@ -164,4 +177,8 @@ object MetalIconFactory {
     /**  */
     @stub
     def getTreeLeafIcon(): Icon = ???
+
+    /**  */
+    @stub
+    def getVerticalSliderThumbIcon(): Icon = ???
 }

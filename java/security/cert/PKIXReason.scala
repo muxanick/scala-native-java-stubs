@@ -1,6 +1,7 @@
 package java.security.cert
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The PKIXReason enumerates the potential PKIX-specific reasons
  *  that an X.509 certification path may be invalid according to the PKIX
@@ -32,7 +33,18 @@ object PKIXReason {
     /** The path length constraint has been violated. */
     final val PATH_TOO_LONG = new PKIXReason(PATH_TOO_LONG, 6)
 
+    /** The certificate contains one or more unrecognized critical
+     *  extensions.
+     */
+    final val UNRECOGNIZED_CRIT_EXT = new PKIXReason(UNRECOGNIZED_CRIT_EXT, 7)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): PKIXReason = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[PKIXReason] = ???
 }

@@ -3,6 +3,7 @@ package javax.lang.model.util
 import java.lang.Object
 import javax.annotation.processing.SupportedSourceVersion
 import javax.lang.model.SourceVersion
+import scala.scalanative.annotation.stub
 
 /** A skeletal visitor of program elements with default behavior
  *  appropriate for the RELEASE_8
@@ -34,4 +35,8 @@ import javax.lang.model.SourceVersion
  *  in this situation.
  */
 @SupportedSourceVersion ( value = RELEASE_8 ) abstract class AbstractElementVisitor8[R, P] extends AbstractElementVisitor7[R, P] {
+
+    /** Constructor for concrete subclasses to call. */
+    @stub
+    protected def this() = ???
 }

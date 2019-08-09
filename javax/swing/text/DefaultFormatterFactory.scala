@@ -3,6 +3,7 @@ package javax.swing.text
 import java.io.Serializable
 import java.lang.Object
 import javax.swing.{JFormattedTextField, JFormattedTextField.AbstractFormatter, JFormattedTextField.AbstractFormatterFactory}
+import scala.scalanative.annotation.stub
 
 /** An implementation of
  *  JFormattedTextField.AbstractFormatterFactory.
@@ -67,6 +68,12 @@ class DefaultFormatterFactory extends JFormattedTextField.AbstractFormatterFacto
     @stub
     def this(defaultFormat: JFormattedTextField.AbstractFormatter, displayFormat: JFormattedTextField.AbstractFormatter, editFormat: JFormattedTextField.AbstractFormatter) = ???
 
+    /** Creates a DefaultFormatterFactory with the specified
+     *  JFormattedTextField.AbstractFormatters.
+     */
+    @stub
+    def this(defaultFormat: JFormattedTextField.AbstractFormatter, displayFormat: JFormattedTextField.AbstractFormatter, editFormat: JFormattedTextField.AbstractFormatter, nullFormat: JFormattedTextField.AbstractFormatter) = ???
+
     /** Returns the JFormattedTextField.AbstractFormatter to use
      *  as a last resort, eg in case a display, edit or null
      *  JFormattedTextField.AbstractFormatter
@@ -125,4 +132,10 @@ class DefaultFormatterFactory extends JFormattedTextField.AbstractFormatterFacto
      */
     @stub
     def setEditFormatter(atf: JFormattedTextField.AbstractFormatter): Unit = ???
+
+    /** Sets the formatter to use if the value of the JFormattedTextField is
+     *  null.
+     */
+    @stub
+    def setNullFormatter(atf: JFormattedTextField.AbstractFormatter): Unit = ???
 }

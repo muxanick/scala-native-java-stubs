@@ -3,6 +3,7 @@ package javax.management.timer
 import java.lang.{Boolean, Integer, Long, Object, String}
 import java.util.{Date, Vector}
 import javax.management.{MBeanNotificationInfo, MBeanRegistration, MBeanServer, NotificationBroadcasterSupport, ObjectName}
+import scala.scalanative.annotation.stub
 
 /** Provides the implementation of the timer MBean.
  *  The timer MBean sends out an alarm at a specified time
@@ -34,6 +35,10 @@ import javax.management.{MBeanNotificationInfo, MBeanRegistration, MBeanServer, 
  *  
  */
 class Timer extends NotificationBroadcasterSupport with TimerMBean with MBeanRegistration {
+
+    /** Default constructor. */
+    @stub
+    def this() = ???
 
     /** Creates a new timer notification with the specified type, message
      *  and userData and inserts it into the list of notifications with a given date
@@ -169,6 +174,10 @@ class Timer extends NotificationBroadcasterSupport with TimerMBean with MBeanReg
     /** Starts the timer. */
     @stub
     def start(): Unit = ???
+
+    /** Stops the timer. */
+    @stub
+    def stop(): Unit = ???
 }
 
 object Timer {
@@ -187,4 +196,8 @@ object Timer {
     /** Number of milliseconds in one second. */
     @stub
     val ONE_SECOND: Long = ???
+
+    /** Number of milliseconds in one week. */
+    @stub
+    val ONE_WEEK: Long = ???
 }

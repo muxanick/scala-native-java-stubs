@@ -3,6 +3,7 @@ package java.net
 import java.io.IOException
 import java.lang.Object
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** Selects the proxy server to use, if any, when connecting to the
  *  network resource referenced by a URL. A proxy selector is a
@@ -28,6 +29,10 @@ import java.util.List
  */
 abstract class ProxySelector extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Called to indicate that a connection could not be established
      *  to a proxy/socks server.
      */
@@ -44,4 +49,8 @@ object ProxySelector {
     /** Gets the system-wide proxy selector. */
     @stub
     def getDefault(): ProxySelector = ???
+
+    /** Sets (or unsets) the system-wide proxy selector. */
+    @stub
+    def setDefault(ps: ProxySelector): Unit = ???
 }

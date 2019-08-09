@@ -3,6 +3,7 @@ package javax.swing.text
 import java.awt.Shape
 import java.lang.Object
 import javax.swing.event.{DocumentEvent, DocumentEvent.ElementChange}
+import scala.scalanative.annotation.stub
 
 /** ZoneView is a View implementation that creates zones for which
  *  the child views are not created or stored until they are needed
@@ -47,6 +48,10 @@ import javax.swing.event.{DocumentEvent, DocumentEvent.ElementChange}
  *  large zones efficiently.
  */
 class ZoneView extends BoxView {
+
+    /** Constructs a ZoneView. */
+    @stub
+    def this(elem: Element, axis: Int) = ???
 
     /** Create a view to represent a zone for the given
      *  range within the model (which should be within
@@ -112,4 +117,8 @@ class ZoneView extends BoxView {
      */
     @stub
     protected def updateChildren(ec: DocumentEvent.ElementChange, e: DocumentEvent, f: ViewFactory): Boolean = ???
+
+    /** Called by a zone when it gets loaded. */
+    @stub
+    protected def zoneWasLoaded(zone: View): Unit = ???
 }

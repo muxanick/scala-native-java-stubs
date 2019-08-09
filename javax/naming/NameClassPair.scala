@@ -2,6 +2,7 @@ package javax.naming
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class represents the object name and class name pair of a binding
  *  found in a context.
@@ -27,6 +28,12 @@ class NameClassPair extends Object with Serializable {
      */
     @stub
     def this(name: String, className: String) = ???
+
+    /** Constructs an instance of a NameClassPair given its
+     *  name, class name, and whether it is relative to the listing context.
+     */
+    @stub
+    def this(name: String, className: String, isRelative: Boolean) = ???
 
     /** Retrieves the class name of the object bound to the name of this binding. */
     @stub
@@ -65,4 +72,8 @@ class NameClassPair extends Object with Serializable {
      */
     @stub
     def setRelative(r: Boolean): Unit = ???
+
+    /** Generates the string representation of this name/class pair. */
+    @stub
+    def toString(): String = ???
 }

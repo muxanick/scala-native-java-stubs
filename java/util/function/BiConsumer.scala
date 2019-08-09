@@ -1,6 +1,7 @@
 package java.util.function
 
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** Represents an operation that accepts two input arguments and returns no
  *  result.  This is the two-arity specialization of Consumer.
@@ -15,4 +16,10 @@ import java.lang.FunctionalInterface
     /** Performs this operation on the given arguments. */
     @stub
     def accept(t: T, u: U): Unit = ???
+
+    /** Returns a composed BiConsumer that performs, in sequence, this
+     *  operation followed by the after operation.
+     */
+    @stub
+    val BiConsumer[T, U]: default = ???
 }

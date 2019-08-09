@@ -1,7 +1,9 @@
 package javax.xml.crypto.dsig.keyinfo
 
 import java.lang.String
+import java.util.List
 import javax.xml.crypto.XMLStructure
+import scala.scalanative.annotation.stub
 
 /** A representation of the XML X509Data element as defined in
  *  the 
@@ -44,6 +46,12 @@ import javax.xml.crypto.XMLStructure
  *  
  */
 trait X509Data extends XMLStructure {
+
+    /** Returns an unmodifiable
+     *  list of the content in this X509Data.
+     */
+    @stub
+    def getContent(): List = ???
 }
 
 object X509Data {
@@ -52,4 +60,10 @@ object X509Data {
      */
     @stub
     val RAW_X509_CERTIFICATE_TYPE: String = ???
+
+    /** URI identifying the X509Data KeyInfo type:
+     *  http://www.w3.org/2000/09/xmldsig#X509Data.
+     */
+    @stub
+    val TYPE: String = ???
 }

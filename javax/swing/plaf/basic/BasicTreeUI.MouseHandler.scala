@@ -2,11 +2,16 @@ package javax.swing.plaf.basic
 
 import java.awt.event.{MouseAdapter, MouseEvent, MouseMotionListener}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** TreeMouseListener is responsible for updating the selection
  *  based on mouse events.
  */
 class BasicTreeUI.MouseHandler extends MouseAdapter with MouseMotionListener {
+
+    /**  */
+    @stub
+    def MouseHandler() = ???
 
     /** Invoked when a mouse button is pressed on a component and then
      *  dragged.
@@ -23,4 +28,8 @@ class BasicTreeUI.MouseHandler extends MouseAdapter with MouseMotionListener {
     /** Invoked when a mouse button has been pressed on a component. */
     @stub
     def mousePressed(e: MouseEvent): Unit = ???
+
+    /** Invoked when a mouse button has been released on a component. */
+    @stub
+    def mouseReleased(e: MouseEvent): Unit = ???
 }

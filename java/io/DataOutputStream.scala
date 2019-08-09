@@ -1,12 +1,23 @@
 package java.io
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A data output stream lets an application write primitive Java data
  *  types to an output stream in a portable way. An application can
  *  then use a data input stream to read the data back in.
  */
 class DataOutputStream extends FilterOutputStream with DataOutput {
+
+    /** Creates a new data output stream to write data to the specified
+     *  underlying output stream.
+     */
+    @stub
+    def this(out: OutputStream) = ???
+
+    /** The number of bytes written to the data output stream so far. */
+    @stub
+    protected val written: Int = ???
 
     /** Flushes this data output stream. */
     @stub
@@ -93,4 +104,11 @@ class DataOutputStream extends FilterOutputStream with DataOutput {
      */
     @stub
     def writeShort(v: Int): Unit = ???
+
+    /** Writes a string to the underlying output stream using
+     *  modified UTF-8
+     *  encoding in a machine-independent manner.
+     */
+    @stub
+    def writeUTF(str: String): Unit = ???
 }

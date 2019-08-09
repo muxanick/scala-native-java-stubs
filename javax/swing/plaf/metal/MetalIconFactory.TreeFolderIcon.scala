@@ -1,6 +1,7 @@
 package javax.swing.plaf.metal
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** 
  *  Warning:
@@ -16,5 +17,13 @@ object MetalIconFactory.TreeFolderIcon extends MetalIconFactory.FolderIcon16 {
 
     /**  */
     @stub
+    def TreeFolderIcon() = ???
+
+    /**  */
+    @stub
     def getAdditionalHeight(): Int = ???
+
+    /**  */
+    @stub
+    def getShift(): Int = ???
 }

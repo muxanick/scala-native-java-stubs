@@ -2,6 +2,7 @@ package javax.swing.text
 
 import java.lang.String
 import javax.swing.event.ChangeListener
+import scala.scalanative.annotation.stub
 
 /** A collection of attributes to associate with an element in a document.
  *  Since these are typically used to associate character and paragraph
@@ -23,4 +24,8 @@ trait Style extends MutableAttributeSet {
     /** Fetches the name of the style. */
     @stub
     def getName(): String = ???
+
+    /** Removes a listener that was tracking attribute changes. */
+    @stub
+    def removeChangeListener(l: ChangeListener): Unit = ???
 }

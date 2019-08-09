@@ -6,11 +6,16 @@ import java.lang.{Object, String}
 import javax.swing.{JButton, JComponent}
 import javax.swing.plaf.{ComponentUI, ScrollBarUI}
 import javax.swing.plaf.basic.BasicScrollBarUI
+import scala.scalanative.annotation.stub
 
 /** Implementation of ScrollBarUI for the Metal Look and Feel
  *  
  */
 class MetalScrollBarUI extends BasicScrollBarUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /**  */
     @stub
@@ -27,6 +32,10 @@ class MetalScrollBarUI extends BasicScrollBarUI {
     /**  */
     @stub
     protected val isFreeStanding: Boolean = ???
+
+    /**  */
+    @stub
+    protected val scrollBarWidth: Int = ???
 
     /**  */
     @stub
@@ -71,6 +80,10 @@ class MetalScrollBarUI extends BasicScrollBarUI {
     /**  */
     @stub
     protected def paintTrack(g: Graphics, c: JComponent, trackBounds: Rectangle): Unit = ???
+
+    /** This is overridden only to increase the invalid area. */
+    @stub
+    protected def setThumbBounds(x: Int, y: Int, width: Int, height: Int): Unit = ???
 }
 
 object MetalScrollBarUI {

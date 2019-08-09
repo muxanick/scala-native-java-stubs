@@ -4,15 +4,20 @@ import java.lang.{Class, Object, String}
 import java.net.URL
 import java.util.{List, Map}
 import javax.xml.namespace.QName
+import javax.xml.transform.Source
 import javax.xml.ws.{Endpoint, EndpointReference, Service, WebServiceFeature}
 import javax.xml.ws.wsaddressing.W3CEndpointReference
-import org.w3c.dom.Element
+import scala.scalanative.annotation.stub
 
 /** Service provider for ServiceDelegate and
  *  Endpoint objects.
  *  
  */
 abstract class Provider extends Object {
+
+    /** Creates a new instance of Provider */
+    @stub
+    protected def this() = ???
 
     /** Creates and publishes an endpoint object with the specified
      *  address and implementation object.
@@ -53,9 +58,21 @@ abstract class Provider extends Object {
 
     /** The getPort method returns a proxy. */
     val T: abstract[T]
+
+    /** read an EndpointReference from the infoset contained in
+     *  eprInfoset.
+     */
+    def readEndpointReference(eprInfoset: Source): EndpointReference
 }
 
 object Provider {
+    /** A constant representing the property used to lookup the
+     *  name of a Provider implementation
+     *  class.
+     */
+    @stub
+    val JAXWSPROVIDER_PROPERTY: String = ???
+
     /** Creates a new provider object. */
     @stub
     def provider(): Provider = ???

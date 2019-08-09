@@ -1,6 +1,7 @@
 package java.lang.invoke
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A ConstantCallSite is a CallSite whose target is permanent, and can never be changed.
  *  An invokedynamic instruction linked to a ConstantCallSite is permanently
@@ -12,6 +13,10 @@ class ConstantCallSite extends CallSite {
     @stub
     def this(target: MethodHandle) = ???
 
+    /** Creates a call site with a permanent target, possibly bound to the call site itself. */
+    @stub
+    protected def this(targetType: MethodType, createTargetHook: MethodHandle) = ???
+
     /** Returns this call site's permanent target. */
     @stub
     def dynamicInvoker(): MethodHandle = ???
@@ -21,4 +26,8 @@ class ConstantCallSite extends CallSite {
      */
     @stub
     def getTarget(): MethodHandle = ???
+
+    /** Always throws an UnsupportedOperationException. */
+    @stub
+    def setTarget(ignore: MethodHandle): Unit = ???
 }

@@ -1,7 +1,10 @@
 package javax.tools
 
+import java.io.{InputStream, OutputStream}
+import java.lang.String
 import java.util.Set
 import javax.lang.model.SourceVersion
+import scala.scalanative.annotation.stub
 
 /** Common interface for tools that can be invoked from a program.
  *  A tool is traditionally a command line program such as a compiler.
@@ -17,4 +20,8 @@ trait Tool {
      */
     @stub
     def getSourceVersions(): Set[SourceVersion] = ???
+
+    /** Run the tool with the given I/O channels and arguments. */
+    @stub
+    def run(in: InputStream, out: OutputStream, err: OutputStream, arguments: String*): Int = ???
 }

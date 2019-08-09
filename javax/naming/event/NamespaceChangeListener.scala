@@ -1,5 +1,7 @@
 package javax.naming.event
 
+import scala.scalanative.annotation.stub
+
 /** Specifies the methods that a listener interested in namespace changes
  *  must implement.
  *  Specifically, the listener is interested in NamingEvents
@@ -28,4 +30,8 @@ trait NamespaceChangeListener extends NamingListener {
     /** Called when an object has been removed. */
     @stub
     def objectRemoved(evt: NamingEvent): Unit = ???
+
+    /** Called when an object has been renamed. */
+    @stub
+    def objectRenamed(evt: NamingEvent): Unit = ???
 }

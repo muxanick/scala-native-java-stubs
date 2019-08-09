@@ -5,6 +5,7 @@ import java.math.BigInteger
 import java.security.PublicKey
 import java.util.{Collection, Date, List, Set}
 import javax.security.auth.x500.X500Principal
+import scala.scalanative.annotation.stub
 
 /** A CertSelector that selects X509Certificates that
  *  match all specified criteria. This class is particularly useful when
@@ -44,6 +45,10 @@ import javax.security.auth.x500.X500Principal
  *  separate objects need not synchronize.
  */
 class X509CertSelector extends Object with CertSelector {
+
+    /** Creates an X509CertSelector. */
+    @stub
+    def this() = ???
 
     /** Adds a name to the pathToNames criterion. */
     @stub
@@ -261,4 +266,8 @@ class X509CertSelector extends Object with CertSelector {
     /** Sets the subjectPublicKeyAlgID criterion. */
     @stub
     def setSubjectPublicKeyAlgID(oid: String): Unit = ???
+
+    /** Return a printable representation of the CertSelector. */
+    @stub
+    def toString(): String = ???
 }

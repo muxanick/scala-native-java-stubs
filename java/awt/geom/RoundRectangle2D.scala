@@ -1,6 +1,7 @@
 package java.awt.geom
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The RoundRectangle2D class defines a rectangle with
  *  rounded corners defined by a location (x,y), a
@@ -13,6 +14,10 @@ import java.lang.Object
  *  the subclass.
  */
 abstract class RoundRectangle2D extends RectangularShape {
+
+    /** This is an abstract class that cannot be instantiated directly. */
+    @stub
+    protected def this() = ???
 
     /** Tests if the specified coordinates are inside the boundary of the
      *  Shape, as described by the
@@ -60,6 +65,11 @@ abstract class RoundRectangle2D extends RectangularShape {
      *  double values.
      */
     def setRoundRect(x: Double, y: Double, w: Double, h: Double, arcWidth: Double, arcHeight: Double): Unit
+
+    /** Sets this RoundRectangle2D to be the same as the
+     *  specified RoundRectangle2D.
+     */
+    def setRoundRect(rr: RoundRectangle2D): Unit
 }
 
 object RoundRectangle2D {
@@ -68,4 +78,10 @@ object RoundRectangle2D {
      */
     @stub
     object Double extends RoundRectangle2D.Double
+
+    /** The Float class defines a rectangle with rounded
+     *  corners all specified in float coordinates.
+     */
+    @stub
+    object Float extends RoundRectangle2D.Float
 }

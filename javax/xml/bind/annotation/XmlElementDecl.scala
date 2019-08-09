@@ -3,6 +3,7 @@ package javax.xml.bind.annotation
 import java.lang.{Class, String}
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Maps a factory method to a XML element.
  * 
@@ -104,6 +105,10 @@ import scala.annotation.StaticAnnotation
 @Target ( value = METHOD ) 
  final class XmlElementDecl extends StaticAnnotation {
 
+    /** local name of the XML element. */
+    @stub
+    val name: String = ???
+
     /** Default value of this element. */
     @stub
     val defaultValue: String = ???
@@ -119,4 +124,8 @@ import scala.annotation.StaticAnnotation
     /** XML local name of a substitution group's head element. */
     @stub
     val substitutionHeadName: String = ???
+
+    /** namespace name of a substitution group's head XML element. */
+    @stub
+    val substitutionHeadNamespace: String = ???
 }

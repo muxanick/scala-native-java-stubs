@@ -1,8 +1,10 @@
 package javax.swing.text.html
 
+import java.awt.Graphics
 import java.io.Serializable
 import java.lang.Object
 import javax.swing.text.View
+import scala.scalanative.annotation.stub
 
 /** Class to carry out some of the duties of
  *  CSS formatting.  Implementations of this
@@ -21,4 +23,10 @@ object StyleSheet.BoxPainter extends Object with Serializable {
      */
     @stub
     def getInset(side: Int, v: View): Float = ???
+
+    /** Paints the CSS box according to the attributes
+     *  given.
+     */
+    @stub
+    def paint(g: Graphics, x: Float, y: Float, w: Float, h: Float, v: View): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.awt
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The DisplayMode class encapsulates the bit depth, height,
  *  width, and refresh rate of a GraphicsDevice. The ability to
@@ -13,6 +14,10 @@ import java.lang.Object
  *  Full-Screen Exclusive Mode API Tutorial.
  */
 final class DisplayMode extends Object {
+
+    /** Create a new display mode object with the supplied parameters. */
+    @stub
+    def this(width: Int, height: Int, bitDepth: Int, refreshRate: Int) = ???
 
     /** Returns whether the two display modes are equal. */
     @stub
@@ -37,6 +42,10 @@ final class DisplayMode extends Object {
     /** Returns the width of the display, in pixels. */
     @stub
     def getWidth(): Int = ???
+
+    /** Returns a hash code value for the object. */
+    @stub
+    def hashCode(): Int = ???
 }
 
 object DisplayMode {
@@ -45,4 +54,8 @@ object DisplayMode {
      */
     @stub
     val BIT_DEPTH_MULTI: Int = ???
+
+    /** Value of the refresh rate if not known. */
+    @stub
+    val REFRESH_RATE_UNKNOWN: Int = ???
 }

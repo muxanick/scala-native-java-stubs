@@ -3,6 +3,7 @@ package javax.activity
 import java.io.IOException
 import java.lang.{Exception, Object, String, Throwable}
 import java.rmi.RemoteException
+import scala.scalanative.annotation.stub
 
 /** This exception may be thrown on any method for which Activity context is
  *  accessed and indicates that ongoing work within the Activity is not
@@ -25,4 +26,8 @@ class ActivityCompletedException extends RemoteException {
     /** Constructs a new throwable with the specified detail message and cause. */
     @stub
     def this(message: String, cause: Throwable) = ???
+
+    /** Constructs a new throwable with the specified cause. */
+    @stub
+    def this(cause: Throwable) = ???
 }

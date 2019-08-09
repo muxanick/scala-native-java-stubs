@@ -1,8 +1,9 @@
 package javax.transaction
 
 import java.io.IOException
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
 import java.rmi.RemoteException
+import scala.scalanative.annotation.stub
 
 /** This exception indicates that the transaction associated with processing
  *  of the request has been rolled back, or marked to roll back. Thus the
@@ -15,4 +16,8 @@ class TransactionRolledbackException extends RemoteException {
     /**  */
     @stub
     def this() = ???
+
+    /**  */
+    @stub
+    def this(msg: String) = ???
 }

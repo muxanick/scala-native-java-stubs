@@ -4,6 +4,7 @@ import java.awt.{Color, Component, Container, FontMetrics, Graphics, LayoutManag
 import java.beans.PropertyChangeListener
 import java.lang.{Object, String}
 import javax.swing.{Action, Icon, JButton, JComponent, JInternalFrame, JMenu, JMenuBar}
+import scala.scalanative.annotation.stub
 
 /** The class that manages a basic title bar
  *  
@@ -17,6 +18,10 @@ import javax.swing.{Action, Icon, JButton, JComponent, JInternalFrame, JMenu, JM
  *  Please see XMLEncoder.
  */
 class BasicInternalFrameTitlePane extends JComponent {
+
+    /**  */
+    @stub
+    def this(f: JInternalFrame) = ???
 
     /** This class should be treated as a "protected" inner class. */
     @stub
@@ -49,6 +54,10 @@ class BasicInternalFrameTitlePane extends JComponent {
     /** This class should be treated as a "protected" inner class. */
     @stub
     object SystemMenuBar extends BasicInternalFrameTitlePane.SystemMenuBar
+
+    /** This class should be treated as a "protected" inner class. */
+    @stub
+    object TitlePaneLayout extends BasicInternalFrameTitlePane.TitlePaneLayout
 
     /**  */
     @stub
@@ -129,6 +138,10 @@ class BasicInternalFrameTitlePane extends JComponent {
     /**  */
     @stub
     protected val sizeAction: Action = ???
+
+    /**  */
+    @stub
+    protected val windowMenu: JMenu = ???
 
     /**  */
     @stub
@@ -213,6 +226,10 @@ class BasicInternalFrameTitlePane extends JComponent {
     /**  */
     @stub
     protected def uninstallDefaults(): Unit = ???
+
+    /**  */
+    @stub
+    protected def uninstallListeners(): Unit = ???
 }
 
 object BasicInternalFrameTitlePane {

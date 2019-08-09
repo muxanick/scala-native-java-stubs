@@ -5,6 +5,7 @@ import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.Object
 import javax.swing.{JButton, JSplitPane}
 import javax.swing.border.Border
+import scala.scalanative.annotation.stub
 
 /** Divider used by BasicSplitPaneUI. Subclassers may wish to override
  *  paint to do something more interesting.
@@ -24,6 +25,10 @@ import javax.swing.border.Border
  */
 class BasicSplitPaneDivider extends Container with PropertyChangeListener {
 
+    /** Creates an instance of BasicSplitPaneDivider. */
+    @stub
+    def this(ui: BasicSplitPaneUI) = ???
+
     /** Used to layout a BasicSplitPaneDivider. */
     @stub
     protected object DividerLayout extends BasicSplitPaneDivider.DividerLayout
@@ -40,6 +45,12 @@ class BasicSplitPaneDivider extends Container with PropertyChangeListener {
      */
     @stub
     protected object MouseHandler extends BasicSplitPaneDivider.MouseHandler
+
+    /** Handles the events during a dragging session for a
+     *  VERTICAL_SPLIT oriented split pane.
+     */
+    @stub
+    protected object VerticalDragController extends BasicSplitPaneDivider.VerticalDragController
 
     /** Size of the divider. */
     @stub
@@ -72,6 +83,10 @@ class BasicSplitPaneDivider extends Container with PropertyChangeListener {
     /** JSplitPane the receiver is contained in. */
     @stub
     protected val splitPane: JSplitPane = ???
+
+    /** UI this instance was created from. */
+    @stub
+    protected val splitPaneUI: BasicSplitPaneUI = ???
 
     /** Creates and return an instance of JButton that can be used to
      *  collapse the left component in the split pane.
@@ -164,6 +179,10 @@ class BasicSplitPaneDivider extends Container with PropertyChangeListener {
     /** Sets the size of the divider to newSize. */
     @stub
     def setDividerSize(newSize: Int): Unit = ???
+
+    /** Sets whether or not the mouse is currently over the divider. */
+    @stub
+    protected def setMouseOver(mouseOver: Boolean): Unit = ???
 }
 
 object BasicSplitPaneDivider {

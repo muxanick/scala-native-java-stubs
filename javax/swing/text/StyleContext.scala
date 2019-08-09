@@ -5,6 +5,7 @@ import java.io.{ObjectInputStream, ObjectOutputStream, Serializable}
 import java.lang.{Object, String}
 import java.util.Enumeration
 import javax.swing.event.ChangeListener
+import scala.scalanative.annotation.stub
 
 /** A pool of styles and their associated resources.  This class determines
  *  the lifetime of a group of resources by being a container that holds
@@ -30,11 +31,19 @@ import javax.swing.event.ChangeListener
  */
 class StyleContext extends Object with Serializable with AbstractDocument.AttributeContext {
 
+    /** Creates a new StyleContext object. */
+    @stub
+    def this() = ???
+
     /** A collection of attributes, typically used to represent
      *  character and paragraph styles.
      */
     @stub
     object NamedStyle extends StyleContext.NamedStyle
+
+    /** This class holds a small number of attributes in an array. */
+    @stub
+    object SmallAttributeSet extends StyleContext.SmallAttributeSet
 
     /** Adds an attribute to the given set, and returns
      *  the new representative set.
@@ -154,6 +163,12 @@ class StyleContext extends Object with Serializable with AbstractDocument.Attrib
 }
 
 object StyleContext {
+    /** The name given to the default logical style attached
+     *  to paragraphs.
+     */
+    @stub
+    val DEFAULT_STYLE: String = ???
+
     /** Returns default AttributeContext shared by all documents that
      *  don't bother to define/supply their own context.
      */
@@ -182,4 +197,10 @@ object StyleContext {
      */
     @stub
     def registerStaticAttributeKey(key: Object): Unit = ???
+
+    /** Writes a set of attributes to the given object stream
+     *  for the purpose of serialization.
+     */
+    @stub
+    def writeAttributeSet(out: ObjectOutputStream, a: AttributeSet): Unit = ???
 }

@@ -1,6 +1,7 @@
 package javax.xml.bind
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception indicates that an error has occurred while performing
  *  a marshal operation that the provider is unable to recover from.
@@ -33,4 +34,8 @@ class MarshalException extends JAXBException {
      */
     @stub
     def this(message: String, exception: Throwable) = ???
+
+    /** Construct a MarshalException with a linkedException. */
+    @stub
+    def this(exception: Throwable) = ???
 }

@@ -1,12 +1,17 @@
 package javax.management
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Represents  the MBean server from the management point of view.
  *  The MBeanServerDelegate MBean emits the MBeanServerNotifications when
  *  an MBean is registered/unregistered in the MBean server.
  */
 class MBeanServerDelegate extends Object with MBeanServerDelegateMBean with NotificationEmitter {
+
+    /** Create a MBeanServerDelegate object. */
+    @stub
+    def this() = ???
 
     /** Adds a listener to this MBean. */
     @stub
@@ -60,4 +65,14 @@ class MBeanServerDelegate extends Object with MBeanServerDelegateMBean with Noti
     /** Removes a listener from this MBean. */
     @stub
     def removeNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
+
+    /** Enables the MBean server to send a notification. */
+    @stub
+    def sendNotification(notification: Notification): Unit = ???
+}
+
+object MBeanServerDelegate {
+    /** Defines the default ObjectName of the MBeanServerDelegate. */
+    @stub
+    val DELEGATE_NAME: ObjectName = ???
 }

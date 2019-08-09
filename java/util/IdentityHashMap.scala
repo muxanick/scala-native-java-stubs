@@ -3,6 +3,7 @@ package java.util
 import java.io.Serializable
 import java.lang.{Cloneable, Object}
 import java.util.function.{BiConsumer, BiFunction}
+import scala.scalanative.annotation.stub
 
 /** This class implements the Map interface with a hash table, using
  *  reference-equality in place of object-equality when comparing keys (and
@@ -110,6 +111,12 @@ class IdentityHashMap[K, V] extends AbstractMap[K, V] with Map[K, V] with Serial
     @stub
     def this(expectedMaxSize: Int) = ???
 
+    /** Constructs a new identity hash map containing the keys-value mappings
+     *  in the specified map.
+     */
+    @stub
+    def this(m: Map[_ <: K, _ <: V]) = ???
+
     /** Removes all of the mappings from this map. */
     @stub
     def clear(): Unit = ???
@@ -190,4 +197,8 @@ class IdentityHashMap[K, V] extends AbstractMap[K, V] with Map[K, V] with Serial
     /** Returns the number of key-value mappings in this identity hash map. */
     @stub
     def size(): Int = ???
+
+    /** Returns a Collection view of the values contained in this map. */
+    @stub
+    def values(): Collection[V] = ???
 }

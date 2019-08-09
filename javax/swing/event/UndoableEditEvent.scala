@@ -2,6 +2,8 @@ package javax.swing.event
 
 import java.lang.Object
 import java.util.EventObject
+import javax.swing.undo.UndoableEdit
+import scala.scalanative.annotation.stub
 
 /** An event indicating that an operation which can be undone has occurred.
  *  
@@ -15,4 +17,12 @@ import java.util.EventObject
  *  Please see XMLEncoder.
  */
 class UndoableEditEvent extends EventObject {
+
+    /** Constructs an UndoableEditEvent object. */
+    @stub
+    def this(source: Object, edit: UndoableEdit) = ???
+
+    /** Returns the edit value. */
+    @stub
+    def getEdit(): UndoableEdit = ???
 }

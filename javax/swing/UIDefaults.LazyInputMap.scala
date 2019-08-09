@@ -1,6 +1,7 @@
 package javax.swing
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** LazyInputMap will create a InputMap
  *  in its createValue
@@ -12,3 +13,14 @@ import java.lang.Object
  *  InputMap (and the key in the ActionMap).
  */
 object UIDefaults.LazyInputMap extends Object with UIDefaults.LazyValue {
+
+    /**  */
+    @stub
+    def LazyInputMap(bindings: Array[Object]) = ???
+
+    /** Creates an InputMap with the bindings that are
+     *  passed in.
+     */
+    @stub
+    def createValue(table: UIDefaults): Object = ???
+}

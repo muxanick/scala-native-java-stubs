@@ -2,6 +2,7 @@ package javax.print.attribute.standard
 
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, DocAttribute, EnumSyntax}
+import scala.scalanative.annotation.stub
 
 /** Class Compression is a printing attribute class, an enumeration, that
  *  specifies how print data is compressed. Compression is an attribute of the
@@ -16,6 +17,12 @@ import javax.print.attribute.{Attribute, DocAttribute, EnumSyntax}
  *  
  */
 class Compression extends EnumSyntax with DocAttribute {
+
+    /** Construct a new compression enumeration value with the given integer
+     *  value.
+     */
+    @stub
+    protected def this(value: Int) = ???
 
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.
@@ -32,6 +39,10 @@ class Compression extends EnumSyntax with DocAttribute {
      */
     @stub
     def getName(): String = ???
+
+    /** Returns the string table for class Compression. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object Compression {
@@ -48,4 +59,8 @@ object Compression {
      */
     @stub
     val GZIP: Compression = ???
+
+    /** No compression is used. */
+    @stub
+    val NONE: Compression = ???
 }

@@ -2,6 +2,7 @@ package java.rmi.registry
 
 import java.lang.String
 import java.rmi.Remote
+import scala.scalanative.annotation.stub
 
 /** Registry is a remote interface to a simple remote
  *  object registry that provides methods for storing and retrieving
@@ -64,4 +65,16 @@ trait Registry extends Remote {
      */
     @stub
     def rebind(name: String, obj: Remote): Unit = ???
+
+    /** Removes the binding for the specified name in
+     *  this registry.
+     */
+    @stub
+    def unbind(name: String): Unit = ???
+}
+
+object Registry {
+    /** Well known port for registry. */
+    @stub
+    val REGISTRY_PORT: Int = ???
 }

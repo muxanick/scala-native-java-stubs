@@ -1,7 +1,8 @@
 package java.awt
 
 import java.lang.Object
-import javax.accessibility.{AccessibleContext, AccessibleRole}
+import javax.accessibility.{AccessibleContext, AccessibleRole, AccessibleStateSet}
+import scala.scalanative.annotation.stub
 
 /** This class implements accessibility support for the
  *  Window class.  It provides an implementation of the
@@ -9,7 +10,15 @@ import javax.accessibility.{AccessibleContext, AccessibleRole}
  */
 protected class Window.AccessibleAWTWindow extends Container.AccessibleAWTContainer {
 
+    /**  */
+    @stub
+    protected def AccessibleAWTWindow() = ???
+
     /** Get the role of this object. */
     @stub
     def getAccessibleRole(): AccessibleRole = ???
+
+    /** Get the state of this object. */
+    @stub
+    def getAccessibleStateSet(): AccessibleStateSet = ???
 }

@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** The Compiler class is provided to support Java-to-native-code
  *  compilers and related services. By design, the Compiler class does
  *  nothing; it serves as a placeholder for a JIT compiler implementation.
@@ -34,4 +36,8 @@ object Compiler {
     /** Cause the Compiler to cease operation. */
     @stub
     def disable(): Unit = ???
+
+    /** Cause the Compiler to resume operation. */
+    @stub
+    def enable(): Unit = ???
 }

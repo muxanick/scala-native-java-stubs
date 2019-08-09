@@ -2,6 +2,7 @@ package javax.swing.tree
 
 import java.lang.Object
 import javax.swing.event.TreeModelListener
+import scala.scalanative.annotation.stub
 
 /** The model used by JTree.
  *  
@@ -64,4 +65,10 @@ trait TreeModel {
      */
     @stub
     def removeTreeModelListener(l: TreeModelListener): Unit = ???
+
+    /** Messaged when the user has altered the value for the item identified
+     *  by path to newValue.
+     */
+    @stub
+    def valueForPathChanged(path: TreePath, newValue: Object): Unit = ???
 }

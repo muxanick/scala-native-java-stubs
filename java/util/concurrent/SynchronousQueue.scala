@@ -3,6 +3,7 @@ package java.util.concurrent
 import java.io.Serializable
 import java.lang.Object
 import java.util.{AbstractCollection, AbstractQueue, Collection, Iterator, Spliterator}
+import scala.scalanative.annotation.stub
 
 /** A blocking queue in which each insert
  *  operation must wait for a corresponding remove operation by another
@@ -43,6 +44,10 @@ class SynchronousQueue[E] extends AbstractQueue[E] with BlockingQueue[E] with Se
     /** Creates a SynchronousQueue with nonfair access policy. */
     @stub
     def this() = ???
+
+    /** Creates a SynchronousQueue with the specified fairness policy. */
+    @stub
+    def this(fair: Boolean) = ???
 
     /** Does nothing. */
     @stub
@@ -148,4 +153,10 @@ class SynchronousQueue[E] extends AbstractQueue[E] with BlockingQueue[E] with Se
     /** Returns a zero-length array. */
     @stub
     def toArray(): Array[Object] = ???
+
+    /** Sets the zeroeth element of the specified array to null
+     *  (if the array has non-zero length) and returns it.
+     */
+    @stub
+    def toArray[T](a: Array[T]): Array[T] = ???
 }

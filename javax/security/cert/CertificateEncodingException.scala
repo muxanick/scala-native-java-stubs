@@ -1,6 +1,7 @@
 package javax.security.cert
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Certificate Encoding Exception. This is thrown whenever an error
  *  occurs whilst attempting to encode a certificate.
@@ -16,4 +17,10 @@ class CertificateEncodingException extends CertificateException {
     /** Constructs a CertificateEncodingException with no detail message. */
     @stub
     def this() = ???
+
+    /** Constructs a CertificateEncodingException with the specified detail
+     *  message.
+     */
+    @stub
+    def this(message: String) = ???
 }

@@ -1,6 +1,7 @@
 package java.beans
 
 import java.awt.Image
+import scala.scalanative.annotation.stub
 
 /** Use the BeanInfo interface
  *  to create a BeanInfo class
@@ -62,6 +63,10 @@ trait BeanInfo {
      */
     @stub
     def getMethodDescriptors(): Array[MethodDescriptor] = ???
+
+    /** Returns descriptors for all properties of the bean. */
+    @stub
+    def getPropertyDescriptors(): Array[PropertyDescriptor] = ???
 }
 
 object BeanInfo {
@@ -76,4 +81,8 @@ object BeanInfo {
     /** Constant to indicate a 16 x 16 monochrome icon. */
     @stub
     val ICON_MONO_16x16: Int = ???
+
+    /** Constant to indicate a 32 x 32 monochrome icon. */
+    @stub
+    val ICON_MONO_32x32: Int = ???
 }

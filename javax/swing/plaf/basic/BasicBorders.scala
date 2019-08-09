@@ -2,9 +2,14 @@ package javax.swing.plaf.basic
 
 import java.lang.Object
 import javax.swing.border.Border
+import scala.scalanative.annotation.stub
 
 /** Factory object that can vend Borders appropriate for the basic L & F. */
 class BasicBorders extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 }
 
 object BasicBorders {
@@ -38,6 +43,10 @@ object BasicBorders {
 
     /**  */
     @stub
+    object ToggleButtonBorder extends BasicBorders.ToggleButtonBorder
+
+    /**  */
+    @stub
     def getButtonBorder(): Border = ???
 
     /**  */
@@ -67,4 +76,8 @@ object BasicBorders {
     /**  */
     @stub
     def getTextFieldBorder(): Border = ???
+
+    /**  */
+    @stub
+    def getToggleButtonBorder(): Border = ???
 }

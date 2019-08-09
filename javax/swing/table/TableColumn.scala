@@ -3,6 +3,7 @@ package javax.swing.table
 import java.beans.PropertyChangeListener
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A TableColumn represents all the attributes of a column in a
  *   JTable, such as width, resizability, minimum and maximum width.
@@ -60,6 +61,14 @@ class TableColumn extends Object with Serializable {
     @stub
     def this(modelIndex: Int, width: Int) = ???
 
+    /** Creates and initializes an instance of
+     *   TableColumn with the specified model index,
+     *   width, cell renderer, and cell editor;
+     *   all TableColumn constructors delegate to this one.
+     */
+    @stub
+    def this(modelIndex: Int, width: Int, cellRenderer: TableCellRenderer, cellEditor: TableCellEditor) = ???
+
     /** The editor used to edit the data cells of the column. */
     @stub
     protected val cellEditor: TableCellEditor = ???
@@ -108,6 +117,10 @@ class TableColumn extends Object with Serializable {
      */
     @stub
     protected val resizedPostingDisableCount: Int = ???
+
+    /** The width of the column. */
+    @stub
+    protected val width: Int = ???
 
     /** Adds a PropertyChangeListener to the listener list. */
     @stub
@@ -260,6 +273,10 @@ class TableColumn extends Object with Serializable {
      */
     @stub
     def setWidth(width: Int): Unit = ???
+
+    /** Resizes the TableColumn to fit the width of its header cell. */
+    @stub
+    def sizeWidthToFit(): Unit = ???
 }
 
 object TableColumn {

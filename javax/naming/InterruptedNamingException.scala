@@ -1,6 +1,7 @@
 package javax.naming
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown when the naming operation
  *  being invoked has been interrupted. For example, an application
@@ -22,4 +23,10 @@ class InterruptedNamingException extends NamingException {
      */
     @stub
     def this() = ???
+
+    /** Constructs an instance of InterruptedNamingException using an
+     *  explanation of the problem.
+     */
+    @stub
+    def this(explanation: String) = ???
 }

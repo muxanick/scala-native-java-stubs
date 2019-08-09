@@ -3,9 +3,10 @@ package javax.swing.plaf.basic
 import java.awt.Dimension
 import java.awt.event.ContainerListener
 import java.lang.Object
-import javax.swing.JComponent
+import javax.swing.{JComponent, JMenuBar}
 import javax.swing.event.ChangeListener
 import javax.swing.plaf.{ComponentUI, MenuBarUI}
+import scala.scalanative.annotation.stub
 
 /** A default L&F implementation of MenuBarUI.  This implementation
  *  is a "combined" view/controller.
@@ -14,11 +15,19 @@ class BasicMenuBarUI extends MenuBarUI {
 
     /**  */
     @stub
+    def this() = ???
+
+    /**  */
+    @stub
     protected val changeListener: ChangeListener = ???
 
     /**  */
     @stub
     protected val containerListener: ContainerListener = ???
+
+    /**  */
+    @stub
+    protected val menuBar: JMenuBar = ???
 
     /**  */
     @stub
@@ -67,6 +76,12 @@ class BasicMenuBarUI extends MenuBarUI {
     /**  */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicMenuBarUI {

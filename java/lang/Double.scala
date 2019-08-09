@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** The Double class wraps a value of the primitive type
  *  double in an object. An object of type
  *  Double contains a single field whose type is
@@ -18,6 +20,13 @@ final class Double extends Number with Comparable[Double] {
      */
     @stub
     def this(value: Double) = ???
+
+    /** Constructs a newly allocated Double object that
+     *  represents the floating-point value of type double
+     *  represented by the string.
+     */
+    @stub
+    def this(s: String) = ???
 
     /** Returns the value of this Double as a byte
      *  after a narrowing primitive conversion.
@@ -138,6 +147,12 @@ object Double {
     @stub
     val SIZE: Int = ???
 
+    /** The Class instance representing the primitive type
+     *  double.
+     */
+    @stub
+    val TYPE: Class[Double] = ???
+
     /** Compares the two specified double values. */
     @stub
     def compare(d1: Double, d2: Double): Int = ???
@@ -228,4 +243,11 @@ object Double {
      */
     @stub
     def valueOf(d: Double): Double = ???
+
+    /** Returns a Double object holding the
+     *  double value represented by the argument string
+     *  s.
+     */
+    @stub
+    def valueOf(s: String): Double = ???
 }

@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** Thrown to indicate that an assertion has failed.
  * 
  *  The seven one-argument public constructors provided by this
@@ -73,4 +75,10 @@ class AssertionError extends Error {
      */
     @stub
     def this(detailMessage: Object) = ???
+
+    /** Constructs a new AssertionError with the specified
+     *  detail message and cause.
+     */
+    @stub
+    def this(message: String, cause: Throwable) = ???
 }

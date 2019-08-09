@@ -1,6 +1,7 @@
 package java.net
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class represents a Network Interface address. In short it's an
  *  IP address, a subnet mask and a broadcast address when the address is
@@ -30,4 +31,8 @@ class InterfaceAddress extends Object {
     /** Returns a hashcode for this Interface address. */
     @stub
     def hashCode(): Int = ???
+
+    /** Converts this Interface address to a String. */
+    @stub
+    def toString(): String = ???
 }

@@ -1,7 +1,8 @@
 package java.awt
 
 import java.lang.{Cloneable, Object, String}
-import java.util.{Map, Map.Entry, Set}
+import java.util.{Collection, Map, Map.Entry, Set}
+import scala.scalanative.annotation.stub
 
 /** The RenderingHints class defines and manages collections of
  *  keys and associated values which allow an application to provide input
@@ -54,6 +55,10 @@ class RenderingHints extends Object with Map[Object, Object] with Cloneable {
      */
     @stub
     def this(init: Map[RenderingHints.Key, _]) = ???
+
+    /** Constructs a new object with the specified key/value pair. */
+    @stub
+    def this(key: RenderingHints.Key, value: Object) = ???
 
     /** Adds all of the keys and corresponding values from the specified
      *  RenderingHints object to this
@@ -149,9 +154,22 @@ class RenderingHints extends Object with Map[Object, Object] with Cloneable {
      */
     @stub
     def toString(): String = ???
+
+    /** Returns a Collection view of the values
+     *  contained in this RenderinHints.
+     */
+    @stub
+    def values(): Collection[Object] = ???
 }
 
 object RenderingHints {
+    /** Defines the base type of all keys used along with the
+     *  RenderingHints class to control various
+     *  algorithm choices in the rendering and imaging pipelines.
+     */
+    @stub
+    object Key extends RenderingHints.Key
+
     /** Alpha interpolation hint key. */
     @stub
     val KEY_ALPHA_INTERPOLATION: RenderingHints.Key = ???
@@ -389,4 +407,10 @@ object RenderingHints {
      */
     @stub
     val VALUE_TEXT_ANTIALIAS_OFF: Object = ???
+
+    /** Text antialiasing hint value -- text rendering is done with
+     *  some form of antialiasing.
+     */
+    @stub
+    val VALUE_TEXT_ANTIALIAS_ON: Object = ???
 }

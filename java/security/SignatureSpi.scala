@@ -3,6 +3,7 @@ package java.security
 import java.lang.{Object, String}
 import java.nio.ByteBuffer
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** This class defines the Service Provider Interface (SPI)
  *  for the Signature class, which is used to provide the
@@ -14,6 +15,13 @@ import java.security.spec.AlgorithmParameterSpec
  *  of a particular signature algorithm.
  */
 abstract class SignatureSpi extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** Application-specified source of randomness. */
+    protected val appRandom: SecureRandom
 
     /** Returns a clone if the implementation is cloneable. */
     def clone(): Object
@@ -81,4 +89,9 @@ abstract class SignatureSpi extends Object {
 
     /** Verifies the passed-in signature. */
     protected def engineVerify(sigBytes: Array[Byte]): Boolean
+
+    /** Verifies the passed-in signature in the specified array
+     *  of bytes, starting at the specified offset.
+     */
+    protected def engineVerify(sigBytes: Array[Byte], offset: Int, length: Int): Boolean
 }

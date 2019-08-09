@@ -1,6 +1,8 @@
 package java.nio.file.attribute
 
 import java.lang.String
+import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** A file attribute view that provides a view of the file attributes commonly
  *  associated with files on file systems used by operating systems that implement
@@ -108,4 +110,8 @@ trait PosixFileAttributeView extends BasicFileAttributeView with FileOwnerAttrib
     /** Updates the file group-owner. */
     @stub
     def setGroup(group: GroupPrincipal): Unit = ???
+
+    /** Updates the file permissions. */
+    @stub
+    def setPermissions(perms: Set[PosixFilePermission]): Unit = ???
 }

@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, SetOfIntegerSyntax, SupportedValuesAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class CopiesSupported is a printing attribute class, a set of integers, that
  *  gives the supported values for a Copies attribute. It is
@@ -21,6 +22,12 @@ final class CopiesSupported extends SetOfIntegerSyntax with SupportedValuesAttri
     @stub
     def this(member: Int) = ???
 
+    /** Construct a new copies supported attribute containing a single range of
+     *  integers.
+     */
+    @stub
+    def this(lowerBound: Int, upperBound: Int) = ???
+
     /** Returns whether this copies supported attribute is equivalent to the
      *  passed in object.
      */
@@ -32,4 +39,10 @@ final class CopiesSupported extends SetOfIntegerSyntax with SupportedValuesAttri
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

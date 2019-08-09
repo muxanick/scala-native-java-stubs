@@ -1,6 +1,7 @@
 package java.util.concurrent
 
-import java.lang.Object
+import java.lang.{Object, Runnable}
+import scala.scalanative.annotation.stub
 
 /** A synchronization aid that allows a set of threads to all wait for
  *  each other to reach a common barrier point.  CyclicBarriers are
@@ -104,6 +105,14 @@ class CyclicBarrier extends Object {
     @stub
     def this(parties: Int) = ???
 
+    /** Creates a new CyclicBarrier that will trip when the
+     *  given number of parties (threads) are waiting upon it, and which
+     *  will execute the given barrier action when the barrier is tripped,
+     *  performed by the last thread entering the barrier.
+     */
+    @stub
+    def this(parties: Int, barrierAction: Runnable) = ???
+
     /** Waits until all parties have invoked
      *  await on this barrier.
      */
@@ -127,4 +136,8 @@ class CyclicBarrier extends Object {
     /** Queries if this barrier is in a broken state. */
     @stub
     def isBroken(): Boolean = ???
+
+    /** Resets the barrier to its initial state. */
+    @stub
+    def reset(): Unit = ???
 }

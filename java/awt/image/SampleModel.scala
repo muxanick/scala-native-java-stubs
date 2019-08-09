@@ -1,6 +1,7 @@
 package java.awt.image
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This abstract class defines an interface for extracting samples of pixels
  *   in an image.  All image data is expressed as a collection of pixels.
@@ -37,6 +38,10 @@ import java.lang.Object
  */
 abstract class SampleModel extends Object {
 
+    /** Constructs a SampleModel with the specified parameters. */
+    @stub
+    def this(dataType: Int, w: Int, h: Int, numBands: Int) = ???
+
     /** Data type of the DataBuffer storing the pixel data. */
     protected val dataType: Int
 
@@ -47,6 +52,11 @@ abstract class SampleModel extends Object {
 
     /** Number of bands of the image data that this SampleModel describes. */
     protected val numBands: Int
+
+    /** Width in pixels of the region of image data that this SampleModel
+     *   describes.
+     */
+    protected val width: Int
 
     /** Creates a SampleModel which describes data in this SampleModel's
      *   format, but with a different width and height.
@@ -216,4 +226,9 @@ abstract class SampleModel extends Object {
      *  of pixels from a float array containing one sample per array element.
      */
     def setSamples(x: Int, y: Int, w: Int, h: Int, b: Int, fArray: Array[Float], data: DataBuffer): Unit
+
+    /** Sets the samples in the specified band for the specified rectangle
+     *  of pixels from an int array containing one sample per array element.
+     */
+    def setSamples(x: Int, y: Int, w: Int, h: Int, b: Int, iArray: Array[Int], data: DataBuffer): Unit
 }

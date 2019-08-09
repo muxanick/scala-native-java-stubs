@@ -4,6 +4,7 @@ import java.lang.Object
 import javax.annotation.processing.SupportedSourceVersion
 import javax.lang.model.SourceVersion
 import javax.lang.model.element.{AnnotationValue, AnnotationValueVisitor}
+import scala.scalanative.annotation.stub
 
 /** A skeletal visitor for annotation values with default behavior
  *  appropriate for the RELEASE_6
@@ -36,6 +37,10 @@ import javax.lang.model.element.{AnnotationValue, AnnotationValueVisitor}
  */
 @SupportedSourceVersion ( value = RELEASE_6 ) abstract class AbstractAnnotationValueVisitor6[R, P] extends Object with AnnotationValueVisitor[R, P] {
 
+    /** Constructor for concrete subclasses to call. */
+    @stub
+    protected def this() = ???
+
     /** Visits an annotation value as if by passing itself to that
      *  value's accept method passing
      *  null for the additional parameter.
@@ -46,4 +51,7 @@ import javax.lang.model.element.{AnnotationValue, AnnotationValueVisitor}
      *  value's accept.
      */
     def visit(av: AnnotationValue, p: P): R
+
+    /** Visits an unknown kind of annotation value. */
+    def visitUnknown(av: AnnotationValue, p: P): R
 }

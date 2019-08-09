@@ -1,7 +1,9 @@
 package javax.swing
 
 import java.awt.AWTKeyStroke
+import java.awt.event.KeyEvent
 import java.lang.{Character, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A KeyStroke represents a key action on the keyboard, or equivalent input
  *  device. KeyStrokes can correspond to only a press or release of a particular
@@ -72,4 +74,10 @@ object KeyStroke {
     /** Parses a string and returns a KeyStroke. */
     @stub
     def getKeyStroke(s: String): KeyStroke = ???
+
+    /** Returns a KeyStroke which represents the stroke which generated a given
+     *  KeyEvent.
+     */
+    @stub
+    def getKeyStrokeForEvent(anEvent: KeyEvent): KeyStroke = ???
 }

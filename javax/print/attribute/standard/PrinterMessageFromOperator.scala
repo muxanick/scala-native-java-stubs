@@ -1,7 +1,9 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
+import java.util.Locale
 import javax.print.attribute.{Attribute, PrintServiceAttribute, TextSyntax}
+import scala.scalanative.annotation.stub
 
 /** Class PrinterMessageFromOperator is a printing attribute class, a text
  *  attribute, that provides a message from an operator, system administrator,
@@ -27,6 +29,12 @@ import javax.print.attribute.{Attribute, PrintServiceAttribute, TextSyntax}
  */
 final class PrinterMessageFromOperator extends TextSyntax with PrintServiceAttribute {
 
+    /** Constructs a new printer message from operator attribute with the
+     *  given message and locale.
+     */
+    @stub
+    def this(message: String, locale: Locale) = ???
+
     /** Returns whether this printer message from operator attribute is
      *  equivalent to the passed in object.
      */
@@ -38,4 +46,10 @@ final class PrinterMessageFromOperator extends TextSyntax with PrintServiceAttri
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

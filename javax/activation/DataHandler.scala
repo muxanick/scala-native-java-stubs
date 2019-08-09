@@ -3,6 +3,8 @@ package javax.activation
 import java.awt.datatransfer.{DataFlavor, Transferable}
 import java.io.{InputStream, OutputStream}
 import java.lang.{Object, String}
+import java.net.URL
+import scala.scalanative.annotation.stub
 
 /** The DataHandler class provides a consistent interface to data
  *  available in many different sources and formats.
@@ -46,6 +48,10 @@ class DataHandler extends Object with Transferable {
      */
     @stub
     def this(obj: Object, mimeType: String) = ???
+
+    /** Create a DataHandler instance referencing a URL. */
+    @stub
+    def this(url: URL) = ???
 
     /** Return all the commands for this type of data. */
     @stub
@@ -115,6 +121,10 @@ class DataHandler extends Object with Transferable {
     /** Set the CommandMap for use by this DataHandler. */
     @stub
     def setCommandMap(commandMap: CommandMap): Unit = ???
+
+    /** Write the data to an OutputStream. */
+    @stub
+    def writeTo(os: OutputStream): Unit = ???
 }
 
 object DataHandler {

@@ -5,6 +5,7 @@ import java.lang.{CharSequence, Object, String}
 import java.time.chrono.{ChronoLocalDate, Era, IsoChronology}
 import java.time.format.DateTimeFormatter
 import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalAmount, TemporalField, TemporalQuery, TemporalUnit, ValueRange}
+import scala.scalanative.annotation.stub
 
 /** A date without a time-zone in the ISO-8601 calendar system,
  *  such as 2007-12-03.
@@ -252,12 +253,20 @@ final class LocalDate extends Object with Temporal with TemporalAdjuster with Ch
     /** Returns a copy of this LocalDate with the month-of-year altered. */
     @stub
     def withMonth(month: Int): LocalDate = ???
+
+    /** Returns a copy of this LocalDate with the year altered. */
+    @stub
+    def withYear(year: Int): LocalDate = ???
 }
 
 object LocalDate {
     /** The maximum supported LocalDate, '+999999999-12-31'. */
     @stub
     val MAX: LocalDate = ???
+
+    /** The minimum supported LocalDate, '-999999999-01-01'. */
+    @stub
+    val MIN: LocalDate = ???
 
     /** Obtains an instance of LocalDate from a temporal object. */
     @stub

@@ -1,6 +1,7 @@
 package javax.accessibility
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** The AccessibleIcon interface should be supported by any object
  *  that has an associated icon (e.g., buttons). This interface
@@ -26,4 +27,8 @@ trait AccessibleIcon {
     /** Gets the width of the icon */
     @stub
     def getAccessibleIconWidth(): Int = ???
+
+    /** Sets the description of the icon. */
+    @stub
+    def setAccessibleIconDescription(description: String): Unit = ???
 }

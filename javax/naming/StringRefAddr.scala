@@ -1,6 +1,7 @@
 package javax.naming
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class represents the string form of the address of
  *  a communications end-point.
@@ -20,4 +21,14 @@ import java.lang.Object
  *  a single StringRefAddr need not be synchronized.
  */
 class StringRefAddr extends RefAddr {
+
+    /** Constructs a new instance of StringRefAddr using its address type
+     *  and contents.
+     */
+    @stub
+    def this(addrType: String, addr: String) = ???
+
+    /** Retrieves the contents of this address. */
+    @stub
+    def getContent(): Object = ???
 }

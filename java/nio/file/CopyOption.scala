@@ -1,5 +1,7 @@
 package java.nio.file
 
+import scala.scalanative.annotation.stub
+
 /** An object that configures how to copy or move a file.
  * 
  *   Objects of this type may be used with the Files.copy(Path,Path,CopyOption...),

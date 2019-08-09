@@ -2,6 +2,7 @@ package java.lang
 
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Indicates that the named compiler warnings should be suppressed in the
  *  annotated element (and in all program elements contained in the annotated
@@ -18,4 +19,10 @@ import scala.annotation.StaticAnnotation
 @Target ( value ={ TYPE , FIELD , METHOD , PARAMETER , CONSTRUCTOR , LOCAL_VARIABLE } ) 
 @Retention ( value = SOURCE ) 
  final class SuppressWarnings extends StaticAnnotation {
+
+    /** The set of warnings that are to be suppressed by the compiler in the
+     *  annotated element.
+     */
+    @stub
+    val value: Array[String] = ???
 }

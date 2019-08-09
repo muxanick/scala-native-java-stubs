@@ -2,6 +2,7 @@ package java.security.cert
 
 import java.lang.{Exception, Object, String, Throwable}
 import java.security.GeneralSecurityException
+import scala.scalanative.annotation.stub
 
 /** An exception indicating one of a variety of problems encountered when
  *  validating a certification path.
@@ -58,6 +59,12 @@ class CertPathValidatorException extends GeneralSecurityException {
     @stub
     def this(msg: String, cause: Throwable, certPath: CertPath, index: Int, reason: CertPathValidatorException.Reason) = ???
 
+    /** Creates a CertPathValidatorException that wraps the
+     *  specified throwable.
+     */
+    @stub
+    def this(cause: Throwable) = ???
+
     /** Returns the certification path that was being validated when
      *  the exception was thrown.
      */
@@ -69,6 +76,10 @@ class CertPathValidatorException extends GeneralSecurityException {
      */
     @stub
     def getIndex(): Int = ???
+
+    /** Returns the reason that the validation failed. */
+    @stub
+    def getReason(): CertPathValidatorException.Reason = ???
 }
 
 object CertPathValidatorException {
@@ -77,4 +88,8 @@ object CertPathValidatorException {
      */
     @stub
     object BasicReason extends CertPathValidatorException.BasicReason
+
+    /** The reason the validation algorithm failed. */
+    @stub
+    val CertPathValidatorException.Reason: trait = ???
 }

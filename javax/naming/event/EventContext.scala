@@ -2,6 +2,7 @@ package javax.naming.event
 
 import java.lang.String
 import javax.naming.{Context, Name}
+import scala.scalanative.annotation.stub
 
 /** Contains methods for registering/deregistering listeners to be notified of
  *  events fired when objects named in a context changes.
@@ -119,6 +120,12 @@ trait EventContext extends Context {
      */
     @stub
     def removeNamingListener(l: NamingListener): Unit = ???
+
+    /** Determines whether a listener can register interest in a target
+     *  that does not exist.
+     */
+    @stub
+    def targetMustExist(): Boolean = ???
 }
 
 object EventContext {
@@ -134,4 +141,11 @@ object EventContext {
      */
     @stub
     val ONELEVEL_SCOPE: Int = ???
+
+    /** Constant for expressing interest in events concerning objects
+     *  in the subtree of the object named by the target, including the object
+     *  named by the target.
+     */
+    @stub
+    val SUBTREE_SCOPE: Int = ???
 }

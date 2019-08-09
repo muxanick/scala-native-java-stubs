@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{CharSequence, Comparable, Object, String}
 import java.time.temporal.{Temporal, TemporalAmount, TemporalUnit}
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** A time-based amount of time, such as '34.5 seconds'.
  *  
@@ -191,9 +192,17 @@ final class Duration extends Object with TemporalAmount with Comparable[Duration
     /** Returns a copy of this duration with the specified nano-of-second. */
     @stub
     def withNanos(nanoOfSecond: Int): Duration = ???
+
+    /** Returns a copy of this duration with the specified amount of seconds. */
+    @stub
+    def withSeconds(seconds: Long): Duration = ???
 }
 
 object Duration {
+    /** Constant for a duration of zero. */
+    @stub
+    val ZERO: Duration = ???
+
     /** Obtains a Duration representing the duration between two temporal objects. */
     @stub
     def between(startInclusive: Temporal, endExclusive: Temporal): Duration = ???

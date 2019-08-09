@@ -1,6 +1,7 @@
 package java.lang.reflect
 
-import java.lang.{Exception, Object, RuntimeException, Throwable}
+import java.lang.{Exception, Object, RuntimeException, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Thrown by a method invocation on a proxy instance if its invocation
  *  handler's invoke method throws a
@@ -34,10 +35,22 @@ class UndeclaredThrowableException extends RuntimeException {
     @stub
     def this(undeclaredThrowable: Throwable) = ???
 
+    /** Constructs an UndeclaredThrowableException with the
+     *  specified Throwable and a detail message.
+     */
+    @stub
+    def this(undeclaredThrowable: Throwable, s: String) = ???
+
     /** Returns the cause of this exception (the Throwable
      *  instance wrapped in this UndeclaredThrowableException,
      *  which may be null).
      */
     @stub
     def getCause(): Throwable = ???
+
+    /** Returns the Throwable instance wrapped in this
+     *  UndeclaredThrowableException, which may be null.
+     */
+    @stub
+    def getUndeclaredThrowable(): Throwable = ???
 }

@@ -1,5 +1,7 @@
 package java.security.spec
 
+import scala.scalanative.annotation.stub
+
 /** A (transparent) specification of the key material
  *  that constitutes a cryptographic key.
  * 

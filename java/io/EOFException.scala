@@ -1,6 +1,7 @@
 package java.io
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Signals that an end of file or end of stream has been reached
  *  unexpectedly during input.
@@ -16,4 +17,10 @@ class EOFException extends IOException {
      */
     @stub
     def this() = ???
+
+    /** Constructs an EOFException with the specified detail
+     *  message.
+     */
+    @stub
+    def this(s: String) = ???
 }

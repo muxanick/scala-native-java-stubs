@@ -2,6 +2,7 @@ package javax.net.ssl
 
 import java.lang.String
 import java.security.cert.X509Certificate
+import scala.scalanative.annotation.stub
 
 /** Instance of this interface manage which X509 certificates
  *  may be used to authenticate the remote side of a secure
@@ -26,4 +27,10 @@ trait X509TrustManager extends TrustManager {
      */
     @stub
     def checkServerTrusted(chain: Array[X509Certificate], authType: String): Unit = ???
+
+    /** Return an array of certificate authority certificates
+     *  which are trusted for authenticating peers.
+     */
+    @stub
+    def getAcceptedIssuers(): Array[X509Certificate] = ???
 }

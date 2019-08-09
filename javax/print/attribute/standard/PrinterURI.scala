@@ -1,7 +1,9 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
+import java.net.URI
 import javax.print.attribute.{Attribute, PrintServiceAttribute, URISyntax}
+import scala.scalanative.annotation.stub
 
 /** Class PrinterURI is a printing attribute class, a URI, that specifies the
  *  globally unique name of a printer.  If it has such a name, an administrator
@@ -16,6 +18,10 @@ import javax.print.attribute.{Attribute, PrintServiceAttribute, URISyntax}
  */
 final class PrinterURI extends URISyntax with PrintServiceAttribute {
 
+    /** Constructs a new PrinterURI attribute with the specified URI. */
+    @stub
+    def this(uri: URI) = ???
+
     /** Returns whether this printer name attribute is equivalent to the passed
      *  in object.
      */
@@ -27,4 +33,10 @@ final class PrinterURI extends URISyntax with PrintServiceAttribute {
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

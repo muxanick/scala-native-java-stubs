@@ -1,6 +1,7 @@
 package javax.xml.stream.events
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** An interface that contains information about a namespace.
  *  Namespaces are accessed from a StartElement.
@@ -16,4 +17,8 @@ trait Namespace extends Attribute {
      */
     @stub
     def getPrefix(): String = ???
+
+    /** returns true if this attribute declares the default namespace */
+    @stub
+    def isDefaultNamespaceDeclaration(): Boolean = ???
 }

@@ -1,6 +1,7 @@
 package java.lang.invoke
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Methods to facilitate the creation of simple "function objects" that
  *  implement one or more interfaces by delegation to a provided MethodHandle,
@@ -152,6 +153,10 @@ import java.lang.{Object, String}
  *  
  */
 class LambdaMetafactory extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 }
 
 object LambdaMetafactory {
@@ -168,10 +173,23 @@ object LambdaMetafactory {
     @stub
     val FLAG_MARKERS: Int = ???
 
+    /** Flag for alternate metafactories indicating the lambda object
+     *  must be serializable
+     */
+    @stub
+    val FLAG_SERIALIZABLE: Int = ???
+
     /** Facilitates the creation of simple "function objects" that implement one
      *  or more interfaces by delegation to a provided MethodHandle,
      *  after appropriate type adaptation and partial evaluation of arguments.
      */
     @stub
     def altMetafactory(caller: MethodHandles.Lookup, invokedName: String, invokedType: MethodType, args: Object*): CallSite = ???
+
+    /** Facilitates the creation of simple "function objects" that implement one
+     *  or more interfaces by delegation to a provided MethodHandle,
+     *  after appropriate type adaptation and partial evaluation of arguments.
+     */
+    @stub
+    def metafactory(caller: MethodHandles.Lookup, invokedName: String, invokedType: MethodType, samMethodType: MethodType, implMethod: MethodHandle, instantiatedMethodType: MethodType): CallSite = ???
 }

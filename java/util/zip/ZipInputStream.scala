@@ -2,6 +2,8 @@ package java.util.zip
 
 import java.io.{FilterInputStream, InputStream}
 import java.lang.{Object, String}
+import java.nio.charset.Charset
+import scala.scalanative.annotation.stub
 
 /** This class implements an input stream filter for reading files in the
  *  ZIP file format. Includes support for both compressed and uncompressed
@@ -12,6 +14,10 @@ class ZipInputStream extends InflaterInputStream {
     /** Creates a new ZIP input stream. */
     @stub
     def this(in: InputStream) = ???
+
+    /** Creates a new ZIP input stream. */
+    @stub
+    def this(in: InputStream, charset: Charset) = ???
 
     /** Returns 0 after EOF has reached for the current entry data,
      *  otherwise always return 1.
@@ -46,6 +52,10 @@ class ZipInputStream extends InflaterInputStream {
     /** Reads from the current ZIP entry into an array of bytes. */
     @stub
     def read(b: Array[Byte], off: Int, len: Int): Int = ???
+
+    /** Skips specified number of bytes in the current ZIP entry. */
+    @stub
+    def skip(n: Long): Long = ???
 }
 
 object ZipInputStream {
@@ -204,4 +214,8 @@ object ZipInputStream {
     /**  */
     @stub
     val LOCTIM: Int = ???
+
+    /**  */
+    @stub
+    val LOCVER: Int = ???
 }

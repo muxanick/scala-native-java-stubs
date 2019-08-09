@@ -2,6 +2,7 @@ package javax.sound.sampled
 
 import java.io.InputStream
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An audio input stream is an input stream with a specified audio format and
  *  length.  The length is expressed in sample frames, not bytes.
@@ -30,6 +31,12 @@ class AudioInputStream extends InputStream {
     @stub
     def this(stream: InputStream, format: AudioFormat, length: Long) = ???
 
+    /** Constructs an audio input stream that reads its data from the target
+     *  data line indicated.
+     */
+    @stub
+    def this(line: TargetDataLine) = ???
+
     /** The format of the audio data contained in the stream. */
     @stub
     protected val format: AudioFormat = ???
@@ -41,6 +48,10 @@ class AudioInputStream extends InputStream {
     /** The current position in this stream, in sample frames (zero-based). */
     @stub
     protected val framePos: Long = ???
+
+    /** The size of each frame, in bytes. */
+    @stub
+    protected val frameSize: Int = ???
 
     /** Returns the maximum number of bytes that can be read (or skipped over) from this
      *  audio input stream without blocking.
@@ -93,4 +104,10 @@ class AudioInputStream extends InputStream {
      */
     @stub
     def reset(): Unit = ???
+
+    /** Skips over and discards a specified number of bytes from this
+     *  audio input stream.
+     */
+    @stub
+    def skip(n: Long): Long = ???
 }

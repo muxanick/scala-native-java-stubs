@@ -4,6 +4,7 @@ import java.io.{PrintStream, Serializable}
 import java.lang.{Object, String}
 import java.util.Enumeration
 import javax.swing.tree.TreeNode
+import scala.scalanative.annotation.stub
 
 /** Implements the abstract part of an element.  By default elements
  *  support attributes by having a field that represents the immutable
@@ -22,6 +23,10 @@ import javax.swing.tree.TreeNode
  *  Please see XMLEncoder.
  */
 abstract class AbstractDocument.AbstractElement extends Object with Element with MutableAttributeSet with Serializable with TreeNode {
+
+    /** Creates a new AbstractElement. */
+    @stub
+    def AbstractElement(parent: Element, a: AttributeSet) = ???
 
     /** Adds an attribute to the element. */
     def addAttribute(name: Object, value: Object): Unit
@@ -121,4 +126,7 @@ abstract class AbstractDocument.AbstractElement extends Object with Element with
 
     /** Removes a set of attributes for the element. */
     def removeAttributes(names: Enumeration[_]): Unit
+
+    /** Sets the resolving parent. */
+    def setResolveParent(parent: AttributeSet): Unit
 }

@@ -1,5 +1,7 @@
 package javax.management
 
+import scala.scalanative.annotation.stub
+
 /** This class is the interface to be implemented by MBeans that are meant to be
  *   persistent.  MBeans supporting this interface should call the load method during
  *   construction in order to prime the MBean from the persistent store.
@@ -13,4 +15,10 @@ trait PersistentMBean {
      */
     @stub
     def load(): Unit = ???
+
+    /** Captures the current state of this MBean instance and
+     *  writes it out to the persistent store.
+     */
+    @stub
+    def store(): Unit = ???
 }

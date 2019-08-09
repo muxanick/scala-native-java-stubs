@@ -2,6 +2,7 @@ package javax.xml.bind.annotation.adapters
 
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** 
  *  A container for multiple @XmlJavaTypeAdapter annotations.
@@ -24,4 +25,8 @@ import scala.annotation.StaticAnnotation
 @Retention ( value = RUNTIME ) 
 @Target ( value = PACKAGE ) 
  final class XmlJavaTypeAdapters extends StaticAnnotation {
+
+    /** Collection of @XmlJavaTypeAdapter annotations */
+    @stub
+    val value: Array[XmlJavaTypeAdapter] = ???
 }

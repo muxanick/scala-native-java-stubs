@@ -1,8 +1,9 @@
 package java.rmi.server
 
 import java.io.IOException
-import java.lang.{Deprecated, Exception, Object, Throwable}
+import java.lang.{Deprecated, Exception, Object, String, Throwable}
 import java.rmi.RemoteException
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown when a call is received that does not
  *  match the available skeleton.  It indicates either that the
@@ -12,4 +13,11 @@ import java.rmi.RemoteException
  *  the stub compiler (rmic).
  */
 @Deprecated class SkeletonMismatchException extends RemoteException {
+
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
+    @stub
+    def this(s: String) = ???
 }

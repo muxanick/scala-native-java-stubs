@@ -8,6 +8,7 @@ import java.nio.file.attribute.{BasicFileAttributes, FileAttribute, FileAttribut
 import java.util.{List, Map, Set}
 import java.util.function.BiPredicate
 import java.util.stream.Stream
+import scala.scalanative.annotation.stub
 
 /** This class consists exclusively of static methods that operate on files,
  *  directories, or other types of files.
@@ -310,4 +311,8 @@ object Files {
     /** Write lines of text to a file. */
     @stub
     def write(path: Path, lines: Iterable[_ <: CharSequence], cs: Charset, options: OpenOption*): Path = ???
+
+    /** Write lines of text to a file. */
+    @stub
+    def write(path: Path, lines: Iterable[_ <: CharSequence], options: OpenOption*): Path = ???
 }

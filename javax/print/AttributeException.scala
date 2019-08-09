@@ -1,6 +1,8 @@
 package javax.print
 
 import java.lang.Class
+import javax.print.attribute.Attribute
+import scala.scalanative.annotation.stub
 
 /** Interface AttributeException is a mixin interface which a subclass of
  *  PrintException can implement to report an error condition
@@ -19,4 +21,11 @@ trait AttributeException {
      */
     @stub
     def getUnsupportedAttributes(): Array[Class] = ???
+
+    /** Returns the array of printing attributes for which the Print Service
+     *  instance supports the attribute but does not support that particular
+     *  value of the attribute, or null if there are no such attribute values.
+     */
+    @stub
+    def getUnsupportedValues(): Array[Attribute] = ???
 }

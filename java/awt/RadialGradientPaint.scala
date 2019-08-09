@@ -3,6 +3,7 @@ package java.awt
 import java.awt.geom.{AffineTransform, Point2D, Rectangle2D}
 import java.awt.image.ColorModel
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The RadialGradientPaint class provides a way to fill a shape with
  *  a circular radial color gradient pattern. The user may specify 2 or more
@@ -156,6 +157,12 @@ final class RadialGradientPaint extends MultipleGradientPaint {
     @stub
     def this(center: Point2D, radius: Float, focus: Point2D, fractions: Array[Float], colors: Array[Color], cycleMethod: MultipleGradientPaint.CycleMethod, colorSpace: MultipleGradientPaint.ColorSpaceType, gradientTransform: AffineTransform) = ???
 
+    /** Constructs a RadialGradientPaint with a default
+     *  SRGB color space.
+     */
+    @stub
+    def this(gradientBounds: Rectangle2D, fractions: Array[Float], colors: Array[Color], cycleMethod: MultipleGradientPaint.CycleMethod) = ???
+
     /** Creates and returns a PaintContext used to
      *  generate a circular radial color gradient pattern.
      */
@@ -169,4 +176,8 @@ final class RadialGradientPaint extends MultipleGradientPaint {
     /** Returns a copy of the focus point of the radial gradient. */
     @stub
     def getFocusPoint(): Point2D = ???
+
+    /** Returns the radius of the circle defining the radial gradient. */
+    @stub
+    def getRadius(): Float = ???
 }

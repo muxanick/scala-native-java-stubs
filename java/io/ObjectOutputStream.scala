@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.{Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** An ObjectOutputStream writes primitive data types and graphs of Java objects
  *  to an OutputStream.  The objects can be read (reconstituted) using an
@@ -121,6 +122,10 @@ class ObjectOutputStream extends OutputStream with ObjectOutput with ObjectStrea
      */
     @stub
     protected def this() = ???
+
+    /** Creates an ObjectOutputStream that writes to the specified OutputStream. */
+    @stub
+    def this(out: OutputStream) = ???
 
     /** Subclasses may implement this method to allow class data to be stored in
      *  the stream.
@@ -255,4 +260,19 @@ class ObjectOutputStream extends OutputStream with ObjectOutput with ObjectStrea
     /** Writes an "unshared" object to the ObjectOutputStream. */
     @stub
     def writeUnshared(obj: Object): Unit = ???
+
+    /** Primitive data write of this String in
+     *  modified UTF-8
+     *  format.
+     */
+    @stub
+    def writeUTF(str: String): Unit = ???
+}
+
+object ObjectOutputStream {
+    /** Provide programmatic access to the persistent fields to be written
+     *  to ObjectOutput.
+     */
+    @stub
+    object PutField extends ObjectOutputStream.PutField
 }

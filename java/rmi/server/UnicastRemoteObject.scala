@@ -2,6 +2,7 @@ package java.rmi.server
 
 import java.lang.Object
 import java.rmi.Remote
+import scala.scalanative.annotation.stub
 
 /** Used for exporting a remote object with JRMP and obtaining a stub
  *  that communicates to the remote object. Stubs are either generated
@@ -115,6 +116,12 @@ class UnicastRemoteObject extends RemoteServer {
     @stub
     protected def this(port: Int) = ???
 
+    /** Creates and exports a new UnicastRemoteObject object using the
+     *  particular supplied port and socket factories.
+     */
+    @stub
+    protected def this(port: Int, csf: RMIClientSocketFactory, ssf: RMIServerSocketFactory) = ???
+
     /** Returns a clone of the remote object that is distinct from
      *  the original.
      */
@@ -144,4 +151,8 @@ object UnicastRemoteObject {
      */
     @stub
     def exportObject(obj: Remote, port: Int, csf: RMIClientSocketFactory, ssf: RMIServerSocketFactory): Remote = ???
+
+    /** Removes the remote object, obj, from the RMI runtime. */
+    @stub
+    def unexportObject(obj: Remote, force: Boolean): Boolean = ???
 }

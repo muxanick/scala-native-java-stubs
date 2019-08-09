@@ -5,7 +5,7 @@ import java.security.Key
 import javax.xml.crypto.KeySelector
 import javax.xml.crypto.dom.DOMCryptoContext
 import javax.xml.crypto.dsig.XMLSignContext
-import org.w3c.dom.Node
+import scala.scalanative.annotation.stub
 
 /** A DOM-specific XMLSignContext. This class contains additional methods
  *  to specify the location in a DOM tree where an XMLSignature
@@ -38,6 +38,12 @@ class DOMSignContext extends DOMCryptoContext with XMLSignContext {
     @stub
     def this(ks: KeySelector, parent: Node) = ???
 
+    /** Creates a DOMSignContext with the specified key selector,
+     *  parent and next sibling nodes.
+     */
+    @stub
+    def this(ks: KeySelector, parent: Node, nextSibling: Node) = ???
+
     /** Returns the nextSibling node. */
     @stub
     def getNextSibling(): Node = ???
@@ -49,4 +55,8 @@ class DOMSignContext extends DOMCryptoContext with XMLSignContext {
     /** Sets the next sibling node. */
     @stub
     def setNextSibling(nextSibling: Node): Unit = ???
+
+    /** Sets the parent node. */
+    @stub
+    def setParent(parent: Node): Unit = ???
 }

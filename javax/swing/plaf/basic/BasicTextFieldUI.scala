@@ -1,10 +1,11 @@
 package javax.swing.plaf.basic
 
 import java.awt.Component.BaselineResizeBehavior
-import java.lang.Object
+import java.lang.{Object, String}
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, TextUI}
 import javax.swing.text.{Element, View}
+import scala.scalanative.annotation.stub
 
 /** Basis of a look and feel for a JTextField.
  *  
@@ -19,6 +20,10 @@ import javax.swing.text.{Element, View}
  */
 class BasicTextFieldUI extends BasicTextUI {
 
+    /** Creates a new BasicTextFieldUI. */
+    @stub
+    def this() = ???
+
     /** Creates a view (FieldView) based on an element. */
     @stub
     def create(elem: Element): View = ???
@@ -32,6 +37,12 @@ class BasicTextFieldUI extends BasicTextUI {
      */
     @stub
     def getBaselineResizeBehavior(c: JComponent): Component.BaselineResizeBehavior = ???
+
+    /** Fetches the name used as a key to lookup properties through the
+     *  UIManager.
+     */
+    @stub
+    protected def getPropertyPrefix(): String = ???
 }
 
 object BasicTextFieldUI {

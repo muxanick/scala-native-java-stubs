@@ -1,6 +1,7 @@
 package java.awt.image
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The MultiPixelPackedSampleModel class represents
  *  one-banded images and can pack multiple one-sample
@@ -34,6 +35,13 @@ class MultiPixelPackedSampleModel extends SampleModel {
      */
     @stub
     def this(dataType: Int, w: Int, h: Int, numberOfBits: Int) = ???
+
+    /** Constructs a MultiPixelPackedSampleModel with
+     *  specified data type, width, height, number of bits per pixel,
+     *  scanline stride and data bit offset.
+     */
+    @stub
+    def this(dataType: Int, w: Int, h: Int, numberOfBits: Int, scanlineStride: Int, dataBitOffset: Int) = ???
 
     /** Creates a new MultiPixelPackedSampleModel with the
      *  specified width and height.
@@ -136,4 +144,11 @@ class MultiPixelPackedSampleModel extends SampleModel {
      */
     @stub
     def setPixel(x: Int, y: Int, iArray: Array[Int], data: DataBuffer): Unit = ???
+
+    /** Sets a sample in the specified band for the pixel located at
+     *  (x, y) in the DataBuffer using an
+     *  int for input.
+     */
+    @stub
+    def setSample(x: Int, y: Int, b: Int, s: Int, data: DataBuffer): Unit = ???
 }

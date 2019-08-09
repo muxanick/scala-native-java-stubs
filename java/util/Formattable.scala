@@ -1,5 +1,7 @@
 package java.util
 
+import scala.scalanative.annotation.stub
+
 /** The Formattable interface must be implemented by any class that
  *  needs to perform custom formatting using the 's' conversion
  *  specifier of Formatter.  This interface allows basic
@@ -84,4 +86,8 @@ package java.util
  *  any method in this interface will cause a NullPointerException to be thrown.
  */
 trait Formattable {
+
+    /** Formats the object using the provided formatter. */
+    @stub
+    def formatTo(formatter: Formatter, flags: Int, width: Int, precision: Int): Unit = ???
 }

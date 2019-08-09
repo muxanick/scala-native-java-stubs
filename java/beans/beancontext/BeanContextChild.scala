@@ -2,6 +2,7 @@ package java.beans.beancontext
 
 import java.beans.{PropertyChangeListener, VetoableChangeListener}
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** 
  *  JavaBeans wishing to be nested within, and obtain a reference to their
@@ -63,4 +64,16 @@ trait BeanContextChild {
      */
     @stub
     def removeVetoableChangeListener(name: String, vcl: VetoableChangeListener): Unit = ???
+
+    /** 
+     *  Objects that implement this interface,
+     *  shall fire a java.beans.PropertyChangeEvent, with parameters:
+     * 
+     *  propertyName "beanContext", oldValue (the previous nesting
+     *  BeanContext instance, or null),
+     *  newValue (the current nesting
+     *  BeanContext instance, or null).
+     */
+    @stub
+    def setBeanContext(bc: BeanContext): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.time.temporal
 
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** Framework-level interface defining an amount of time, such as
  *  "6 hours", "8 days" or "2 years and 3 months".
@@ -38,4 +39,8 @@ trait TemporalAmount {
     /** Returns the list of units uniquely defining the value of this TemporalAmount. */
     @stub
     def getUnits(): List[TemporalUnit] = ???
+
+    /** Subtracts this object from the specified temporal object. */
+    @stub
+    def subtractFrom(temporal: Temporal): Temporal = ???
 }

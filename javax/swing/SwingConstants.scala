@@ -1,5 +1,7 @@
 package javax.swing
 
+import scala.scalanative.annotation.stub
+
 /** A collection of constants generally used for positioning and orienting
  *  components on the screen.
  */
@@ -82,4 +84,8 @@ object SwingConstants {
     /** Vertical orientation. */
     @stub
     val VERTICAL: Int = ???
+
+    /** Compass-direction west (left). */
+    @stub
+    val WEST: Int = ???
 }

@@ -1,9 +1,10 @@
 package javax.xml.datatype
 
-import java.lang.{Number, Object}
+import java.lang.{Number, Object, String}
 import java.math.BigDecimal
 import java.util.{Calendar, Date}
 import javax.xml.namespace.QName
+import scala.scalanative.annotation.stub
 
 /** Immutable representation of a time span as defined in
  *  the W3C XML Schema 1.0 specification.
@@ -61,6 +62,10 @@ import javax.xml.namespace.QName
  *  The impacted methods document their dependency on Calendar.
  */
 abstract class Duration extends Object {
+
+    /** Default no-arg constructor. */
+    @stub
+    def this() = ???
 
     /** Computes a new duration whose value is this+rhs. */
     def add(rhs: Duration): Duration
@@ -162,4 +167,7 @@ abstract class Duration extends Object {
 
     /** Computes a new duration whose value is this-rhs. */
     def subtract(rhs: Duration): Duration
+
+    /** Returns a String representation of this Duration Object. */
+    def toString(): String
 }

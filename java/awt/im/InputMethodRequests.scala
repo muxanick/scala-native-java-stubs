@@ -1,7 +1,9 @@
 package java.awt.im
 
+import java.awt.Rectangle
 import java.awt.font.TextHitInfo
 import java.text.{AttributedCharacterIterator, AttributedCharacterIterator.Attribute}
+import scala.scalanative.annotation.stub
 
 /** InputMethodRequests defines the requests that a text editing component
  *  has to handle in order to work with input methods. The component
@@ -62,4 +64,10 @@ trait InputMethodRequests {
     /** Gets the currently selected text from the text editing component. */
     @stub
     def getSelectedText(attributes: Array[AttributedCharacterIterator.Attribute]): AttributedCharacterIterator = ???
+
+    /** Gets the location of a specified offset in the current composed text,
+     *  or of the selection in committed text.
+     */
+    @stub
+    def getTextLocation(offset: TextHitInfo): Rectangle = ???
 }

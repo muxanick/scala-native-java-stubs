@@ -1,6 +1,7 @@
 package javax.swing
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Instances of AbstractFormatterFactory are used by
  *  JFormattedTextField to obtain instances of
@@ -13,3 +14,14 @@ import java.lang.Object
  *  doesn't have focus.
  */
 object abstract JFormattedTextField.AbstractFormatterFactory extends Object {
+
+    /**  */
+    @stub
+    def AbstractFormatterFactory() = ???
+
+    /** Returns an AbstractFormatter that can handle formatting
+     *  of the passed in JFormattedTextField.
+     */
+    @stub
+    def getFormatter(tf: JFormattedTextField): JFormattedTextField.AbstractFormatter
+}

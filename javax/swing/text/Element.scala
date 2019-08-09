@@ -1,6 +1,7 @@
 package javax.swing.text
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** Interface to describe a structural piece of a document.  It
  *  is intended to capture the spirit of an SGML element.
@@ -46,4 +47,11 @@ trait Element {
      */
     @stub
     def getStartOffset(): Int = ???
+
+    /** Is this element a leaf element? An element that
+     *  may have children, even if it currently
+     *  has no children, would return false.
+     */
+    @stub
+    def isLeaf(): Boolean = ???
 }

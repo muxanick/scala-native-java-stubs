@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{CharSequence, Object, String}
 import java.util.function.Predicate
 import java.util.stream.Stream
+import scala.scalanative.annotation.stub
 
 /** A compiled representation of a regular expression.
  * 
@@ -745,6 +746,10 @@ final class Pattern extends Object with Serializable {
      */
     @stub
     def splitAsStream(input: CharSequence): Stream[String] = ???
+
+    /** Returns the string representation of this pattern. */
+    @stub
+    def toString(): String = ???
 }
 
 object Pattern {
@@ -781,6 +786,10 @@ object Pattern {
      */
     @stub
     val UNICODE_CHARACTER_CLASS: Int = ???
+
+    /** Enables Unix lines mode. */
+    @stub
+    val UNIX_LINES: Int = ???
 
     /** Compiles the given regular expression into a pattern. */
     @stub

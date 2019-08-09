@@ -1,6 +1,7 @@
 package java.net
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The abstract class URLStreamHandler is the common
  *  superclass for all stream protocol handlers. A stream protocol
@@ -14,6 +15,10 @@ import java.lang.{Object, String}
  *  automatically loaded.
  */
 abstract class URLStreamHandler extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Provides the default equals calculation. */
     protected def equals(u1: URL, u2: URL): Boolean
@@ -61,4 +66,9 @@ abstract class URLStreamHandler extends Object {
 
     /** Sets the fields of the URL argument to the indicated values. */
     protected def setURL(u: URL, protocol: String, host: String, port: Int, authority: String, userInfo: String, path: String, query: String, ref: String): Unit
+
+    /** Converts a URL of a specific protocol to a
+     *  String.
+     */
+    protected def toExternalForm(u: URL): String
 }

@@ -5,6 +5,7 @@ import java.awt.geom.{AffineTransform, Rectangle2D}
 import java.awt.image.ColorModel
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The Color class is used to encapsulate colors in the default
  *  sRGB color space or colors in arbitrary color spaces identified by a
@@ -66,6 +67,12 @@ class Color extends Object with Paint with Serializable {
      */
     @stub
     def this(r: Int, g: Int, b: Int) = ???
+
+    /** Creates an sRGB color with the specified red, green, blue, and alpha
+     *  values in the range (0 - 255).
+     */
+    @stub
+    def this(r: Int, g: Int, b: Int, a: Int) = ???
 
     /** Creates a new Color that is a brighter version of this
      *  Color.
@@ -174,6 +181,10 @@ class Color extends Object with Paint with Serializable {
     /** Computes the hash code for this Color. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a string representation of this Color. */
+    @stub
+    def toString(): String = ???
 }
 
 object Color {
@@ -276,6 +287,10 @@ object Color {
     /** The color yellow. */
     @stub
     val yellow: Color = ???
+
+    /** The color yellow. */
+    @stub
+    val YELLOW: Color = ???
 
     /** Converts a String to an integer and returns the
      *  specified opaque Color.

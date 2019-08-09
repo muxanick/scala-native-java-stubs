@@ -2,6 +2,7 @@ package javax.print
 
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Class DocFlavor encapsulates an object that specifies the
  *  format in which print data is supplied to a DocPrintJob.
@@ -413,6 +414,12 @@ import java.lang.{Cloneable, Object, String}
  */
 class DocFlavor extends Object with Serializable with Cloneable {
 
+    /** Constructs a new doc flavor object from the given MIME type and
+     *  representation class name.
+     */
+    @stub
+    def this(mimeType: String, className: String) = ???
+
     /** Determines if this doc flavor object is equal to the given object. */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -444,6 +451,10 @@ class DocFlavor extends Object with Serializable with Cloneable {
     /** Returns a hash code for this doc flavor object. */
     @stub
     def hashCode(): Int = ???
+
+    /** Converts this DocFlavor to a string. */
+    @stub
+    def toString(): String = ???
 }
 
 object DocFlavor {
@@ -487,4 +498,14 @@ object DocFlavor {
      */
     @stub
     object STRING extends DocFlavor.STRING
+
+    /** Class DocFlavor.URL provides predefined static constant DocFlavor
+     *  objects.
+     */
+    @stub
+    object URL extends DocFlavor.URL
+
+    /** A String representing the host operating system encoding. */
+    @stub
+    val hostEncoding: String = ???
 }

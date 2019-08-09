@@ -1,5 +1,7 @@
 package javax.lang.model.type
 
+import scala.scalanative.annotation.stub
+
 /** Represents a wildcard type argument.
  *  Examples include:    
  *    ?
@@ -16,4 +18,8 @@ trait WildcardType extends TypeMirror {
     /** Returns the upper bound of this wildcard. */
     @stub
     def getExtendsBound(): TypeMirror = ???
+
+    /** Returns the lower bound of this wildcard. */
+    @stub
+    def getSuperBound(): TypeMirror = ???
 }

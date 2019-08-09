@@ -1,6 +1,7 @@
 package java.util.concurrent
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Exception thrown when attempting to retrieve the result of a task
  *  that aborted by throwing an exception. This exception can be
@@ -23,4 +24,8 @@ class ExecutionException extends Exception {
      */
     @stub
     def this(message: String, cause: Throwable) = ???
+
+    /** Constructs an ExecutionException with the specified cause. */
+    @stub
+    def this(cause: Throwable) = ???
 }

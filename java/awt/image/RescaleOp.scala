@@ -3,6 +3,7 @@ package java.awt.image
 import java.awt.RenderingHints
 import java.awt.geom.{Point2D, Rectangle2D}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class performs a pixel-by-pixel rescaling of the data in the
  *  source image by multiplying the sample values for each pixel by a scale
@@ -57,6 +58,12 @@ class RescaleOp extends Object with BufferedImageOp with RasterOp {
     @stub
     def this(scaleFactors: Array[Float], offsets: Array[Float], hints: RenderingHints) = ???
 
+    /** Constructs a new RescaleOp with the desired scale factor
+     *  and offset.
+     */
+    @stub
+    def this(scaleFactor: Float, offset: Float, hints: RenderingHints) = ???
+
     /** Creates a zeroed destination image with the correct size and number of
      *  bands.
      */
@@ -104,4 +111,8 @@ class RescaleOp extends Object with BufferedImageOp with RasterOp {
     /** Returns the rendering hints for this op. */
     @stub
     def getRenderingHints(): RenderingHints = ???
+
+    /** Returns the scale factors in the given array. */
+    @stub
+    def getScaleFactors(scaleFactors: Array[Float]): Array[Float] = ???
 }

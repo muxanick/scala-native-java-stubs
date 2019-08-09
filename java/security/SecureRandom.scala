@@ -2,6 +2,7 @@ package java.security
 
 import java.lang.{Object, String}
 import java.util.Random
+import scala.scalanative.annotation.stub
 
 /** This class provides a cryptographically strong random number
  *  generator (RNG).
@@ -66,6 +67,10 @@ class SecureRandom extends Random {
     @stub
     def this(seed: Array[Byte]) = ???
 
+    /** Creates a SecureRandom object. */
+    @stub
+    protected def this(secureRandomSpi: SecureRandomSpi, provider: Provider) = ???
+
     /** Returns the given number of seed bytes, computed using the seed
      *  generation algorithm that this class uses to seed itself.
      */
@@ -95,6 +100,12 @@ class SecureRandom extends Random {
     /** Reseeds this random object. */
     @stub
     def setSeed(seed: Array[Byte]): Unit = ???
+
+    /** Reseeds this random object, using the eight bytes contained
+     *  in the given long seed.
+     */
+    @stub
+    def setSeed(seed: Long): Unit = ???
 }
 
 object SecureRandom {

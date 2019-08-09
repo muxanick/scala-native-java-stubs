@@ -1,6 +1,7 @@
 package javax.swing
 
 import javax.swing.event.ListSelectionListener
+import scala.scalanative.annotation.stub
 
 /** This interface represents the current state of the
  *  selection for any of the components that display a
@@ -105,6 +106,13 @@ trait ListSelectionModel {
     /** Sets the selection mode. */
     @stub
     def setSelectionMode(selectionMode: Int): Unit = ???
+
+    /** Sets the valueIsAdjusting property, which indicates whether
+     *  or not upcoming selection changes should be considered part of a single
+     *  change.
+     */
+    @stub
+    def setValueIsAdjusting(valueIsAdjusting: Boolean): Unit = ???
 }
 
 object ListSelectionModel {
@@ -119,4 +127,10 @@ object ListSelectionModel {
      */
     @stub
     val SINGLE_INTERVAL_SELECTION: Int = ???
+
+    /** A value for the selectionMode property: select one list index
+     *  at a time.
+     */
+    @stub
+    val SINGLE_SELECTION: Int = ???
 }

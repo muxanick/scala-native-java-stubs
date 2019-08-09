@@ -6,11 +6,16 @@ import java.lang.Object
 import javax.swing.{JButton, JComponent}
 import javax.swing.plaf.{ComponentUI, ScrollBarUI}
 import javax.swing.plaf.basic.BasicScrollBarUI
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for
  *  JScrollBar.
  */
 class SynthScrollBarUI extends BasicScrollBarUI with PropertyChangeListener with SynthUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /**  */
     @stub
@@ -89,6 +94,10 @@ class SynthScrollBarUI extends BasicScrollBarUI with PropertyChangeListener with
     /**  */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthScrollBarUI {

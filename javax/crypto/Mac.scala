@@ -1,8 +1,10 @@
 package javax.crypto
 
 import java.lang.{Cloneable, Object, String}
+import java.nio.ByteBuffer
 import java.security.{Key, Provider}
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** This class provides the functionality of a "Message Authentication Code"
  *  (MAC) algorithm.
@@ -34,6 +36,10 @@ import java.security.spec.AlgorithmParameterSpec
  *  other algorithms are supported.
  */
 class Mac extends Object with Cloneable {
+
+    /** Creates a MAC object. */
+    @stub
+    protected def this(macSpi: MacSpi, provider: Provider, algorithm: String) = ???
 
     /** Returns a clone if the provider implementation is cloneable. */
     @stub
@@ -90,6 +96,12 @@ class Mac extends Object with Cloneable {
      */
     @stub
     def update(input: Array[Byte], offset: Int, len: Int): Unit = ???
+
+    /** Processes input.remaining() bytes in the ByteBuffer
+     *  input, starting at input.position().
+     */
+    @stub
+    def update(input: ByteBuffer): Unit = ???
 }
 
 object Mac {

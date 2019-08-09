@@ -2,6 +2,7 @@ package java.security
 
 import java.io.Serializable
 import java.lang.{Deprecated, Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class represents identities: real-world objects such as people,
  *  companies or organizations whose identities can be authenticated using
@@ -29,6 +30,10 @@ import java.lang.{Deprecated, Object, String}
     /** Deprecated.  */
     @stub
     def this(name: String) = ???
+
+    /** Deprecated.  */
+    @stub
+    def this(name: String, scope: IdentityScope) = ???
 
     /** Deprecated.  */
     def addCertificate(certificate: Certificate): Unit
@@ -68,4 +73,7 @@ import java.lang.{Deprecated, Object, String}
 
     /** Deprecated.  */
     def toString(): String
+
+    /** Deprecated.  */
+    def toString(detailed: Boolean): String
 }

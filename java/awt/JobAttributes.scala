@@ -1,6 +1,7 @@
 package java.awt
 
 import java.lang.{Cloneable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A set of attributes which control a print job.
  *  
@@ -43,6 +44,12 @@ final class JobAttributes extends Object with Cloneable {
      */
     @stub
     def this(copies: Int, defaultSelection: JobAttributes.DefaultSelectionType, destination: JobAttributes.DestinationType, dialog: JobAttributes.DialogType, fileName: String, maxPage: Int, minPage: Int, multipleDocumentHandling: JobAttributes.MultipleDocumentHandlingType, pageRanges: Array[Array[Int]], printer: String, sides: JobAttributes.SidesType) = ???
+
+    /** Constructs a JobAttributes instance which is a copy
+     *  of the supplied JobAttributes.
+     */
+    @stub
+    def this(obj: JobAttributes) = ???
 
     /** Creates and returns a copy of this JobAttributes. */
     @stub
@@ -235,6 +242,10 @@ final class JobAttributes extends Object with Cloneable {
      */
     @stub
     def setToPage(toPage: Int): Unit = ???
+
+    /** Returns a string representation of this JobAttributes. */
+    @stub
+    def toString(): String = ???
 }
 
 object JobAttributes {
@@ -253,4 +264,8 @@ object JobAttributes {
     /** A type-safe enumeration of possible multiple copy handling states. */
     @stub
     object MultipleDocumentHandlingType extends JobAttributes.MultipleDocumentHandlingType
+
+    /** A type-safe enumeration of possible multi-page impositions. */
+    @stub
+    object SidesType extends JobAttributes.SidesType
 }

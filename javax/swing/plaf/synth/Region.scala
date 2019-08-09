@@ -1,6 +1,7 @@
 package javax.swing.plaf.synth
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A distinct rendering area of a Swing component.  A component may
  *  support one or more regions.  Specific component regions are defined
@@ -39,6 +40,10 @@ import java.lang.{Object, String}
  */
 class Region extends Object {
 
+    /** Creates a Region with the specified name. */
+    @stub
+    protected def this(name: String, ui: String, subregion: Boolean) = ???
+
     /** Returns the name of the region. */
     @stub
     def getName(): String = ???
@@ -48,6 +53,10 @@ class Region extends Object {
      */
     @stub
     def isSubregion(): Boolean = ???
+
+    /** Returns the name of the Region. */
+    @stub
+    def toString(): String = ???
 }
 
 object Region {
@@ -276,4 +285,8 @@ object Region {
     /** Region of the Tree for one cell. */
     @stub
     val TREE_CELL: Region = ???
+
+    /** Viewport region. */
+    @stub
+    val VIEWPORT: Region = ???
 }

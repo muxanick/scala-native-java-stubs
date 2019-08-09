@@ -2,6 +2,7 @@ package java.util.concurrent
 
 import java.lang.{Object, Runnable}
 import java.security.{PrivilegedAction, PrivilegedExceptionAction}
+import scala.scalanative.annotation.stub
 
 /** Factory and utility methods for Executor, ExecutorService, ScheduledExecutorService, ThreadFactory, and Callable classes defined in this
  *  package. This class supports the following kinds of methods:
@@ -160,4 +161,11 @@ object Executors {
      */
     @stub
     def unconfigurableExecutorService(executor: ExecutorService): ExecutorService = ???
+
+    /** Returns an object that delegates all defined ScheduledExecutorService methods to the given executor, but
+     *  not any other methods that might otherwise be accessible using
+     *  casts.
+     */
+    @stub
+    def unconfigurableScheduledExecutorService(executor: ScheduledExecutorService): ScheduledExecutorService = ???
 }

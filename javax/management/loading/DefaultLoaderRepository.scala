@@ -1,6 +1,7 @@
 package javax.management.loading
 
-import java.lang.{Class, Deprecated, Object, String}
+import java.lang.{Class, ClassLoader, Deprecated, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Keeps the list of Class Loaders registered in the MBean Server.
  *  It provides the necessary methods to load classes using the registered
@@ -15,10 +16,18 @@ import java.lang.{Class, Deprecated, Object, String}
  *  DefaultLoaderRepository be rewritten.
  */
 @Deprecated class DefaultLoaderRepository extends Object {
+
+    /** Deprecated.  */
+    @stub
+    def this() = ???
 }
 
 object DefaultLoaderRepository {
     /** Deprecated.  */
     @stub
     def loadClass(className: String): Class[_] = ???
+
+    /** Deprecated.  */
+    @stub
+    def loadClassWithout(loader: ClassLoader, className: String): Class[_] = ???
 }

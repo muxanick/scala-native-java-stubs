@@ -2,6 +2,7 @@ package java.nio.channels
 
 import java.lang.Object
 import java.nio.channels.spi.{AbstractInterruptibleChannel, SelectorProvider}
+import scala.scalanative.annotation.stub
 
 /** A channel that can be multiplexed via a Selector.
  * 
@@ -51,6 +52,10 @@ import java.nio.channels.spi.{AbstractInterruptibleChannel, SelectorProvider}
  */
 abstract class SelectableChannel extends AbstractInterruptibleChannel with Channel {
 
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this() = ???
+
     /** Retrieves the object upon which the configureBlocking and register methods synchronize. */
     def blockingLock(): Object
 
@@ -84,4 +89,9 @@ abstract class SelectableChannel extends AbstractInterruptibleChannel with Chann
      *  key.
      */
     def register(sel: Selector, ops: Int, att: Object): SelectionKey
+
+    /** Returns an operation set
+     *  identifying this channel's supported operations.
+     */
+    def validOps(): Int
 }

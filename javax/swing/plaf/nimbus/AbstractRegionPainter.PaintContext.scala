@@ -2,6 +2,7 @@ package javax.swing.plaf.nimbus
 
 import java.awt.{Dimension, Insets}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A class encapsulating state useful when painting. Generally, instances of this
  *  class are created once, and reused for each paint request without modification.
@@ -15,3 +16,12 @@ object protected AbstractRegionPainter.PaintContext extends Object {
      */
     @stub
     def PaintContext(insets: Insets, canvasSize: Dimension, inverted: Boolean) = ???
+
+    /** Creates a new PaintContext. */
+    @stub
+    def PaintContext(insets: Insets, canvasSize: Dimension, inverted: Boolean, cacheMode: AbstractRegionPainter.PaintContext.CacheMode, maxH: Double, maxV: Double) = ???
+
+    /**  */
+    @stub
+    protected object CacheMode extends AbstractRegionPainter.PaintContext.CacheMode
+}

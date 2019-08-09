@@ -3,6 +3,7 @@ package javax.swing.text
 import java.lang.{Object, String}
 import javax.swing.event.{DocumentEvent, DocumentEvent.ElementChange, DocumentEvent.EventType}
 import javax.swing.undo.{AbstractUndoableEdit, CompoundEdit, UndoableEdit}
+import scala.scalanative.annotation.stub
 
 /** Stores document changes as the document is being
  *  modified.  Can subsequently be used for change notification
@@ -11,6 +12,10 @@ import javax.swing.undo.{AbstractUndoableEdit, CompoundEdit, UndoableEdit}
  *  for broadcasting change information to the document listeners.
  */
 class AbstractDocument.DefaultDocumentEvent extends CompoundEdit with DocumentEvent {
+
+    /** Constructs a change record. */
+    @stub
+    def DefaultDocumentEvent(offs: Int, len: Int, type: DocumentEvent.EventType) = ???
 
     /** Adds a document edit. */
     @stub
@@ -65,4 +70,8 @@ class AbstractDocument.DefaultDocumentEvent extends CompoundEdit with DocumentEv
     /** Returns a string description of the change event. */
     @stub
     def toString(): String = ???
+
+    /** Undoes a change. */
+    @stub
+    def undo(): Unit = ???
 }

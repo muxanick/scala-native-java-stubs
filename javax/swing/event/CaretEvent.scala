@@ -2,6 +2,7 @@ package javax.swing.event
 
 import java.lang.Object
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** CaretEvent is used to notify interested parties that
  *  the text caret has changed in the event source.
@@ -17,6 +18,15 @@ import java.util.EventObject
  */
 abstract class CaretEvent extends EventObject {
 
+    /** Creates a new CaretEvent object. */
+    @stub
+    def this(source: Object) = ???
+
     /** Fetches the location of the caret. */
     def getDot(): Int
+
+    /** Fetches the location of other end of a logical
+     *  selection.
+     */
+    def getMark(): Int
 }

@@ -5,6 +5,7 @@ import java.io.InputStream
 import java.lang.{Object, String}
 import java.net.URL
 import java.util.Collection
+import scala.scalanative.annotation.stub
 
 /** 
  *  The BeanContext acts a logical hierarchical container for JavaBeans.
@@ -41,4 +42,21 @@ trait BeanContext extends BeanContextChild with Collection with DesignMode with 
      */
     @stub
     def instantiateChild(beanName: String): Object = ???
+
+    /** Removes the specified BeanContextMembershipListener
+     *  so that it no longer receives BeanContextMembershipEvents
+     *  when the child Component(s) are added or removed.
+     */
+    @stub
+    def removeBeanContextMembershipListener(bcml: BeanContextMembershipListener): Unit = ???
+}
+
+object BeanContext {
+    /** This global lock is used by both BeanContext
+     *  and BeanContextServices implementors
+     *  to serialize changes in a BeanContext
+     *  hierarchy and any service requests etc.
+     */
+    @stub
+    val globalHierarchyLock: Object = ???
 }

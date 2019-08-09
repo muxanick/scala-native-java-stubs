@@ -1,8 +1,9 @@
 package java.awt.event
 
-import java.awt.{AWTEvent, Rectangle}
+import java.awt.{AWTEvent, Component, Rectangle}
 import java.lang.{Object, String}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** The component-level paint event.
  *  This event is a special type which is used to ensure that
@@ -18,6 +19,12 @@ import java.util.EventObject
  */
 class PaintEvent extends ComponentEvent {
 
+    /** Constructs a PaintEvent object with the specified
+     *  source component and type.
+     */
+    @stub
+    def this(source: Component, id: Int, updateRect: Rectangle) = ???
+
     /** Returns the rectangle representing the area which needs to be
      *  repainted in response to this event.
      */
@@ -27,6 +34,12 @@ class PaintEvent extends ComponentEvent {
     /** Returns a parameter string identifying this event. */
     @stub
     def paramString(): String = ???
+
+    /** Sets the rectangle representing the area which needs to be
+     *  repainted in response to this event.
+     */
+    @stub
+    def setUpdateRect(updateRect: Rectangle): Unit = ???
 }
 
 object PaintEvent {
@@ -41,4 +54,8 @@ object PaintEvent {
     /** Marks the last integer id for the range of paint event ids. */
     @stub
     val PAINT_LAST: Int = ???
+
+    /** The update event type. */
+    @stub
+    val UPDATE: Int = ???
 }

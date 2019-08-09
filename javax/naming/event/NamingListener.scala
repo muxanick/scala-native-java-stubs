@@ -1,6 +1,7 @@
 package javax.naming.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** This interface is the root of listener interfaces that
  *  handle NamingEvents.
@@ -22,4 +23,10 @@ import java.util.EventListener
  *  take some corrective action, such as notifying the user of the application.
  */
 trait NamingListener extends EventListener {
+
+    /** Called when a naming exception is thrown while attempting
+     *  to fire a NamingEvent.
+     */
+    @stub
+    def namingExceptionThrown(evt: NamingExceptionEvent): Unit = ???
 }

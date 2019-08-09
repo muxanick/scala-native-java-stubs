@@ -1,6 +1,8 @@
 package javax.imageio.stream
 
+import java.io.InputStream
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An implementation of ImageInputStream that gets its
  *  input from a regular InputStream.  A memory buffer is
@@ -13,6 +15,12 @@ import java.lang.Object
  *  it is not possible to create a writable temporary file.
  */
 class MemoryCacheImageInputStream extends ImageInputStreamImpl {
+
+    /** Constructs a MemoryCacheImageInputStream that will read
+     *  from a given InputStream.
+     */
+    @stub
+    def this(stream: InputStream) = ???
 
     /** Closes this MemoryCacheImageInputStream, freeing
      *  the cache.
@@ -54,4 +62,10 @@ class MemoryCacheImageInputStream extends ImageInputStreamImpl {
      */
     @stub
     def read(): Int = ???
+
+    /** Reads up to len bytes from the stream, and stores
+     *  them into b starting at index off.
+     */
+    @stub
+    def read(b: Array[Byte], off: Int, len: Int): Int = ???
 }

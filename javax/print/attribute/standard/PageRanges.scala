@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, DocAttribute, PrintJobAttribute, PrintRequestAttribute, SetOfIntegerSyntax}
+import scala.scalanative.annotation.stub
 
 /** Class PageRanges is a printing attribute class, a set of integers, that
  *  identifies the range(s) of print-stream pages that the Printer object uses
@@ -85,6 +86,12 @@ final class PageRanges extends SetOfIntegerSyntax with DocAttribute with PrintRe
     @stub
     def this(lowerBound: Int, upperBound: Int) = ???
 
+    /** Construct a new  page ranges attribute with the given members in
+     *  string form.
+     */
+    @stub
+    def this(members: String) = ???
+
     /** Returns whether this page ranges attribute is equivalent to the passed
      *  in object.
      */
@@ -96,4 +103,10 @@ final class PageRanges extends SetOfIntegerSyntax with DocAttribute with PrintRe
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

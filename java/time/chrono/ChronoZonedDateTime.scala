@@ -5,6 +5,7 @@ import java.time.{Instant, LocalTime, ZoneId, ZoneOffset}
 import java.time.format.DateTimeFormatter
 import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalAmount, TemporalField, TemporalQuery, TemporalUnit, ValueRange}
 import java.util.Comparator
+import scala.scalanative.annotation.stub
 
 /** A date-time with a time-zone in an arbitrary chronology,
  *  intended for advanced globalization use cases.
@@ -160,6 +161,12 @@ trait ChronoZonedDateTime[D <: ChronoLocalDate] extends Temporal with Comparable
      */
     @stub
     def withZoneSameInstant(zone: ZoneId): ChronoZonedDateTime[D] = ???
+
+    /** Returns a copy of this date-time with a different time-zone,
+     *  retaining the local date-time if possible.
+     */
+    @stub
+    def withZoneSameLocal(zone: ZoneId): ChronoZonedDateTime[D] = ???
 }
 
 object ChronoZonedDateTime {

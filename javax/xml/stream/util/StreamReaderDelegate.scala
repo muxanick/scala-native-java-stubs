@@ -3,6 +3,7 @@ package javax.xml.stream.util
 import java.lang.{Object, String}
 import javax.xml.namespace.{NamespaceContext, QName}
 import javax.xml.stream.{Location, XMLStreamReader}
+import scala.scalanative.annotation.stub
 
 /** This is the base class for deriving an XMLStreamReader filter
  * 
@@ -16,6 +17,10 @@ class StreamReaderDelegate extends Object with XMLStreamReader {
     /** Construct an empty filter with no parent. */
     @stub
     def this() = ???
+
+    /** Construct an filter with the specified parent. */
+    @stub
+    def this(reader: XMLStreamReader) = ???
 
     /** Frees any resources associated with this Reader. */
     @stub
@@ -262,4 +267,8 @@ class StreamReaderDelegate extends Object with XMLStreamReader {
     /** Set the parent of this instance. */
     @stub
     def setParent(reader: XMLStreamReader): Unit = ???
+
+    /** Checks if standalone was set in the document */
+    @stub
+    def standaloneSet(): Boolean = ???
 }

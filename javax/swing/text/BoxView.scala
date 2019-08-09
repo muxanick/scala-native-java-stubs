@@ -4,6 +4,7 @@ import java.awt.{Graphics, Rectangle, Shape}
 import java.lang.Object
 import javax.swing.SizeRequirements
 import javax.swing.event.{DocumentEvent, DocumentEvent.ElementChange}
+import scala.scalanative.annotation.stub
 
 /** A view that arranges its children into a box shape by tiling
  *  its children along an axis.  The box is somewhat like that
@@ -31,6 +32,10 @@ import javax.swing.event.{DocumentEvent, DocumentEvent.ElementChange}
  *  likely need to be reimplemented.
  */
 class BoxView extends CompositeView {
+
+    /** Constructs a BoxView. */
+    @stub
+    def this(elem: Element, axis: Int) = ???
 
     /** Computes the location and extent of each child view
      *  in this BoxView given the targetSpan,
@@ -198,4 +203,10 @@ class BoxView extends CompositeView {
     /** Sets the size of the view. */
     @stub
     def setSize(width: Float, height: Float): Unit = ???
+
+    /** Provides a mapping from the view coordinate space to the logical
+     *  coordinate space of the model.
+     */
+    @stub
+    def viewToModel(x: Float, y: Float, a: Shape, bias: Array[Position.Bias]): Int = ???
 }

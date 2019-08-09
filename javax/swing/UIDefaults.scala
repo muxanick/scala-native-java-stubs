@@ -6,6 +6,7 @@ import java.lang.{Class, ClassLoader, Object, String}
 import java.util.{Dictionary, Hashtable, Locale}
 import javax.swing.border.Border
 import javax.swing.plaf.ComponentUI
+import scala.scalanative.annotation.stub
 
 /** A table of defaults for Swing components.  Applications can set/get
  *  default values via the UIManager.
@@ -30,6 +31,12 @@ class UIDefaults extends Hashtable[Object, Object] {
      */
     @stub
     def this(initialCapacity: Int, loadFactor: Float) = ???
+
+    /** Creates a defaults table initialized with the specified
+     *  key/value pairs.
+     */
+    @stub
+    def this(keyValueList: Array[Object]) = ???
 
     /** Adds a PropertyChangeListener to the listener list. */
     @stub
@@ -214,6 +221,10 @@ class UIDefaults extends Hashtable[Object, Object] {
      */
     @stub
     def removeResourceBundle(bundleName: String): Unit = ???
+
+    /** Sets the default locale. */
+    @stub
+    def setDefaultLocale(l: Locale): Unit = ???
 }
 
 object UIDefaults {
@@ -237,4 +248,11 @@ object UIDefaults {
      */
     @stub
     val UIDefaults.LazyValue: trait = ???
+
+    /** This class provides an implementation of LazyValue
+     *  which can be
+     *  used to delay loading of the Class for the instance to be created.
+     */
+    @stub
+    object ProxyLazyValue extends UIDefaults.ProxyLazyValue
 }

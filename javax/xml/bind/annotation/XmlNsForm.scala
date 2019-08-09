@@ -1,6 +1,7 @@
 package javax.xml.bind.annotation
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Enumeration of XML Schema namespace qualifications.
  * 
@@ -46,7 +47,16 @@ object XmlNsForm {
     /**  */
     final val UNQUALIFIED = new XmlNsForm(UNQUALIFIED, 1)
 
+    /**  */
+    final val UNSET = new XmlNsForm(UNSET, 2)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): XmlNsForm = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[XmlNsForm] = ???
 }

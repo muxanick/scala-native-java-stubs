@@ -5,6 +5,7 @@ import java.lang.{Object, String}
 import javax.swing.{AbstractButton, JComponent}
 import javax.swing.plaf.{ButtonUI, ComponentUI}
 import javax.swing.plaf.basic.{BasicButtonListener, BasicButtonUI}
+import scala.scalanative.annotation.stub
 
 /** MetalButtonUI implementation
  *  
@@ -21,11 +22,19 @@ class MetalButtonUI extends BasicButtonUI {
 
     /**  */
     @stub
+    def this() = ???
+
+    /**  */
+    @stub
     protected val disabledTextColor: Color = ???
 
     /**  */
     @stub
     protected val focusColor: Color = ???
+
+    /**  */
+    @stub
+    protected val selectColor: Color = ???
 
     /**  */
     @stub
@@ -62,6 +71,12 @@ class MetalButtonUI extends BasicButtonUI {
     /**  */
     @stub
     def uninstallDefaults(b: AbstractButton): Unit = ???
+
+    /** If necessary paints the background of the component, then
+     *  invokes paint.
+     */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object MetalButtonUI {

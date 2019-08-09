@@ -1,6 +1,7 @@
 package javax.xml.validation
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Immutable in-memory representation of grammar.
  * 
@@ -36,6 +37,13 @@ import java.lang.Object
  */
 abstract class Schema extends Object {
 
+    /** Constructor for the derived class. */
+    @stub
+    protected def this() = ???
+
     /** Creates a new Validator for this Schema. */
     def newValidator(): Validator
+
+    /** Creates a new ValidatorHandler for this Schema. */
+    def newValidatorHandler(): ValidatorHandler
 }

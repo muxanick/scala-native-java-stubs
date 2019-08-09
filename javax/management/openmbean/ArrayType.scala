@@ -1,6 +1,7 @@
 package javax.management.openmbean
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The ArrayType class is the open type class whose instances describe
  *  all open data values which are n-dimensional arrays of open data values.
@@ -73,6 +74,12 @@ class ArrayType[T] extends OpenType[T] {
     @stub
     def this(dimension: Int, elementType: OpenType[_]) = ???
 
+    /** Constructs a unidimensional ArrayType instance for the
+     *  supplied SimpleType.
+     */
+    @stub
+    def this(elementType: SimpleType[_], primitiveArray: Boolean) = ???
+
     /** Compares the specified obj parameter with this
      *  ArrayType instance for equality.
      */
@@ -102,6 +109,10 @@ class ArrayType[T] extends OpenType[T] {
      */
     @stub
     def isValue(obj: Object): Boolean = ???
+
+    /** Returns a string representation of this ArrayType instance. */
+    @stub
+    def toString(): String = ???
 }
 
 object ArrayType {

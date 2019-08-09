@@ -5,6 +5,7 @@ import java.awt.event.AdjustmentListener
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.plaf.ScrollBarUI
+import scala.scalanative.annotation.stub
 
 /** An implementation of a scrollbar. The user positions the knob in the
  *  scrollbar to determine the contents of the viewing area. The
@@ -44,6 +45,18 @@ class JScrollBar extends JComponent with Adjustable with Accessible {
     @stub
     def this(orientation: Int) = ???
 
+    /** Creates a scrollbar with the specified orientation,
+     *  value, extent, minimum, and maximum.
+     */
+    @stub
+    def this(orientation: Int, value: Int, extent: Int, min: Int, max: Int) = ???
+
+    /** This class implements accessibility support for the
+     *  JScrollBar class.
+     */
+    @stub
+    protected object AccessibleJScrollBar extends JScrollBar.AccessibleJScrollBar
+
     /**  */
     @stub
     protected val blockIncrement: Int = ???
@@ -57,6 +70,10 @@ class JScrollBar extends JComponent with Adjustable with Accessible {
     /**  */
     @stub
     protected val orientation: Int = ???
+
+    /**  */
+    @stub
+    protected val unitIncrement: Int = ???
 
     /** Adds an AdjustmentListener. */
     @stub
@@ -211,4 +228,8 @@ class JScrollBar extends JComponent with Adjustable with Accessible {
     /** Set the model's extent property. */
     @stub
     def setVisibleAmount(extent: Int): Unit = ???
+
+    /** Overrides JComponent.updateUI. */
+    @stub
+    def updateUI(): Unit = ???
 }

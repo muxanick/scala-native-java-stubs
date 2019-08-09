@@ -1,6 +1,7 @@
 package java.util.function
 
 import java.lang.{FunctionalInterface, Object}
+import scala.scalanative.annotation.stub
 
 /** Represents a predicate (boolean-valued function) of one argument.
  * 
@@ -26,6 +27,10 @@ import java.lang.{FunctionalInterface, Object}
      */
     @stub
     val Predicate[T]: default = ???
+
+    /** Evaluates this predicate on the given argument. */
+    @stub
+    def test(t: T): Boolean = ???
 }
 
 object Predicate {

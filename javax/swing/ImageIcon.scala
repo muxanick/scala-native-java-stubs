@@ -1,11 +1,12 @@
 package javax.swing
 
-import java.awt.{Component, Graphics, Image}
+import java.awt.{Component, Graphics, Image, MediaTracker}
 import java.awt.image.ImageObserver
 import java.io.Serializable
 import java.lang.{Object, String}
 import java.net.URL
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** An implementation of the Icon interface that paints Icons
  *  from Images. Images that are created from a URL, filename or byte array
@@ -67,6 +68,16 @@ class ImageIcon extends Object with Icon with Serializable with Accessible {
     @stub
     def this(location: URL) = ???
 
+    /** Creates an ImageIcon from the specified URL. */
+    @stub
+    def this(location: URL, description: String) = ???
+
+    /** This class implements accessibility support for the
+     *  ImageIcon class.
+     */
+    @stub
+    protected object AccessibleImageIcon extends ImageIcon.AccessibleImageIcon
+
     /** Gets the AccessibleContext associated with this ImageIcon. */
     @stub
     def getAccessibleContext(): AccessibleContext = ???
@@ -114,6 +125,10 @@ class ImageIcon extends Object with Icon with Serializable with Accessible {
     /** Sets the image observer for the image. */
     @stub
     def setImageObserver(observer: ImageObserver): Unit = ???
+
+    /** Returns a string representation of this image. */
+    @stub
+    def toString(): String = ???
 }
 
 object ImageIcon {
@@ -123,4 +138,11 @@ object ImageIcon {
      */
     @stub
     protected val component: Component = ???
+
+    /** Deprecated. 
+     * since 1.8
+     * 
+     */
+    @stub
+    protected val tracker: MediaTracker = ???
 }

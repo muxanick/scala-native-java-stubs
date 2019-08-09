@@ -3,7 +3,8 @@ package javax.swing.text.html
 import java.awt.Component
 import java.awt.event.{ActionEvent, ActionListener}
 import java.lang.{Object, String}
-import javax.swing.text.{ComponentView, View}
+import javax.swing.text.{ComponentView, Element, View}
+import scala.scalanative.annotation.stub
 
 /** Component decorator that implements the view interface
  *  for form elements, <input>, <textarea>,
@@ -74,6 +75,16 @@ import javax.swing.text.{ComponentView, View}
  */
 class FormView extends ComponentView with ActionListener {
 
+    /** Creates a new FormView object. */
+    @stub
+    def this(elem: Element) = ???
+
+    /** MouseEventListener class to handle form submissions when
+     *  an input with type equal to image is clicked on.
+     */
+    @stub
+    protected object MouseEventListener extends FormView.MouseEventListener
+
     /** Responsible for processing the ActionEvent. */
     @stub
     def actionPerformed(evt: ActionEvent): Unit = ???
@@ -94,6 +105,10 @@ class FormView extends ComponentView with ActionListener {
      */
     @stub
     protected def imageSubmit(imageData: String): Unit = ???
+
+    /** This method is responsible for submitting the form data. */
+    @stub
+    protected def submitData(data: String): Unit = ???
 }
 
 object FormView {
@@ -104,4 +119,12 @@ object FormView {
      */
     @stub
     val RESET: String = ???
+
+    /** Deprecated. 
+     * As of 1.3, value now comes from UIManager property
+     *              FormView.submitButtonText
+     * 
+     */
+    @stub
+    val SUBMIT: String = ???
 }

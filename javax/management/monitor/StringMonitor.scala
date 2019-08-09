@@ -2,6 +2,7 @@ package javax.management.monitor
 
 import java.lang.{Object, String}
 import javax.management.{MBeanNotificationInfo, NotificationBroadcasterSupport, ObjectName}
+import scala.scalanative.annotation.stub
 
 /** Defines a monitor MBean designed to observe the values of a string
  *  attribute.
@@ -23,6 +24,10 @@ import javax.management.{MBeanNotificationInfo, NotificationBroadcasterSupport, 
  *  
  */
 class StringMonitor extends Monitor with StringMonitorMBean {
+
+    /** Default constructor. */
+    @stub
+    def this() = ???
 
     /** Deprecated. 
      * As of JMX 1.2, replaced by
@@ -99,4 +104,8 @@ class StringMonitor extends Monitor with StringMonitorMBean {
     /** Starts the string monitor. */
     @stub
     def start(): Unit = ???
+
+    /** Stops the string monitor. */
+    @stub
+    def stop(): Unit = ???
 }

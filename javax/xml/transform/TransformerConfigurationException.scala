@@ -1,6 +1,7 @@
 package javax.xml.transform
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Indicates a serious configuration error. */
 class TransformerConfigurationException extends TransformerException {
@@ -30,4 +31,10 @@ class TransformerConfigurationException extends TransformerException {
      */
     @stub
     def this(msg: String, e: Throwable) = ???
+
+    /** Create a new TransformerConfigurationException with a
+     *  given Exception base cause of the error.
+     */
+    @stub
+    def this(e: Throwable) = ???
 }

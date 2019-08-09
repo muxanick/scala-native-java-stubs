@@ -1,6 +1,7 @@
 package java.io
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Signals that an attempt to open the file denoted by a specified pathname
  *  has failed.
@@ -17,4 +18,10 @@ class FileNotFoundException extends IOException {
      */
     @stub
     def this() = ???
+
+    /** Constructs a FileNotFoundException with the
+     *  specified detail message.
+     */
+    @stub
+    def this(s: String) = ???
 }

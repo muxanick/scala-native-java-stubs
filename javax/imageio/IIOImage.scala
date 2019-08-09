@@ -4,6 +4,7 @@ import java.awt.image.{BufferedImage, Raster, RenderedImage}
 import java.lang.Object
 import java.util.List
 import javax.imageio.metadata.IIOMetadata
+import scala.scalanative.annotation.stub
 
 /** A simple container class to aggregate an image, a set of
  *  thumbnail (preview) images, and an object representing metadata
@@ -30,6 +31,13 @@ class IIOImage extends Object {
     @stub
     def this(raster: Raster, thumbnails: List[_ <: BufferedImage], metadata: IIOMetadata) = ???
 
+    /** Constructs an IIOImage containing a
+     *  RenderedImage, and thumbnails and metadata
+     *  associated with it.
+     */
+    @stub
+    def this(image: RenderedImage, thumbnails: List[_ <: BufferedImage], metadata: IIOMetadata) = ???
+
     /** The RenderedImage being referenced. */
     @stub
     protected val image: RenderedImage = ???
@@ -43,6 +51,12 @@ class IIOImage extends Object {
     /** The Raster being referenced. */
     @stub
     protected val raster: Raster = ???
+
+    /** A List of BufferedImage thumbnails,
+     *  or null.
+     */
+    @stub
+    protected val thumbnails: List[_ <: BufferedImage] = ???
 
     /** Returns a reference to the current IIOMetadata
      *  object, or null is none is set.
@@ -99,4 +113,10 @@ class IIOImage extends Object {
     /** Sets the current RenderedImage. */
     @stub
     def setRenderedImage(image: RenderedImage): Unit = ???
+
+    /** Sets the list of thumbnails to a new List of
+     *  BufferedImages, or to null.
+     */
+    @stub
+    def setThumbnails(thumbnails: List[_ <: BufferedImage]): Unit = ???
 }

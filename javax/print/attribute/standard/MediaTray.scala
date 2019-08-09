@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.Object
+import java.lang.{Object, String}
 import javax.print.attribute.{Attribute, EnumSyntax}
+import scala.scalanative.annotation.stub
 
 /** Class MediaTray is a subclass of Media.
  *  Class MediaTray is a printing attribute class, an enumeration, that
@@ -18,9 +19,19 @@ import javax.print.attribute.{Attribute, EnumSyntax}
  */
 class MediaTray extends Media with Attribute {
 
+    /** Construct a new media tray enumeration value with the given integer
+     *  value.
+     */
+    @stub
+    protected def this(value: Int) = ???
+
     /** Returns the enumeration value table for class MediaTray. */
     @stub
     protected def getEnumValueTable(): Array[EnumSyntax] = ???
+
+    /** Returns the string table for class MediaTray. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object MediaTray {
@@ -51,4 +62,8 @@ object MediaTray {
     /** The side input tray. */
     @stub
     val SIDE: MediaTray = ???
+
+    /** The top input tray in the printer. */
+    @stub
+    val TOP: MediaTray = ???
 }

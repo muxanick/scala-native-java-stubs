@@ -2,6 +2,7 @@ package javax.tools
 
 import java.io.File
 import java.lang.{Iterable, String}
+import scala.scalanative.annotation.stub
 
 /** File manager based on java.io.File.  A common way
  *  to obtain an instance of this class is using getStandardFileManager, for example:
@@ -133,4 +134,8 @@ trait StandardJavaFileManager extends JavaFileManager {
      */
     @stub
     def isSameFile(a: FileObject, b: FileObject): Boolean = ???
+
+    /** Associates the given path with the given location. */
+    @stub
+    def setLocation(location: JavaFileManager.Location, path: Iterable[_ <: File]): Unit = ???
 }

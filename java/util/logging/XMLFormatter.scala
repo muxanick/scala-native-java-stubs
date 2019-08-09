@@ -1,6 +1,7 @@
 package java.util.logging
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Format a LogRecord into a standard XML format.
  *  
@@ -13,6 +14,10 @@ import java.lang.{Object, String}
  */
 class XMLFormatter extends Formatter {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Format the given message to XML. */
     @stub
     def format(record: LogRecord): String = ???
@@ -20,4 +25,8 @@ class XMLFormatter extends Formatter {
     /** Return the header string for a set of XML formatted records. */
     @stub
     def getHead(h: Handler): String = ???
+
+    /** Return the tail string for a set of XML formatted records. */
+    @stub
+    def getTail(h: Handler): String = ???
 }

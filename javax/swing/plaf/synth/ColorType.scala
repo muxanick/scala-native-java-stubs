@@ -1,6 +1,7 @@
 package javax.swing.plaf.synth
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A typesafe enumeration of colors that can be fetched from a style.
  *  
@@ -36,9 +37,17 @@ import java.lang.Object
  */
 class ColorType extends Object {
 
+    /** Creates a new ColorType with the specified description. */
+    @stub
+    protected def this(description: String) = ???
+
     /** Returns a unique id, as an integer, for this ColorType. */
     @stub
     def getID(): Int = ???
+
+    /** Returns the textual description of this ColorType. */
+    @stub
+    def toString(): String = ???
 }
 
 object ColorType {
@@ -61,4 +70,8 @@ object ColorType {
     /** ColorType for the background of a region. */
     @stub
     val TEXT_BACKGROUND: ColorType = ???
+
+    /** ColorType for the foreground of a region. */
+    @stub
+    val TEXT_FOREGROUND: ColorType = ???
 }

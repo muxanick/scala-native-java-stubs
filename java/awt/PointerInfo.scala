@@ -1,6 +1,7 @@
 package java.awt
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A class that describes the pointer position.
  *  It provides the GraphicsDevice where the pointer is and
@@ -19,4 +20,10 @@ class PointerInfo extends Object {
      */
     @stub
     def getDevice(): GraphicsDevice = ???
+
+    /** Returns the Point that represents the coordinates of the pointer
+     *  on the screen.
+     */
+    @stub
+    def getLocation(): Point = ???
 }

@@ -1,9 +1,14 @@
 package java.io
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A character stream whose source is a string. */
 class StringReader extends Reader {
+
+    /** Creates a new string reader. */
+    @stub
+    def this(s: String) = ???
 
     /** Closes the stream and releases any system resources associated with
      *  it.
@@ -36,4 +41,8 @@ class StringReader extends Reader {
      */
     @stub
     def reset(): Unit = ???
+
+    /** Skips the specified number of characters in the stream. */
+    @stub
+    def skip(ns: Long): Long = ???
 }

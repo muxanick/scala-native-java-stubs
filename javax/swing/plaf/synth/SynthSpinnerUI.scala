@@ -6,11 +6,16 @@ import java.lang.Object
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, SpinnerUI}
 import javax.swing.plaf.basic.BasicSpinnerUI
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for
  *  JSpinner.
  */
 class SynthSpinnerUI extends BasicSpinnerUI with PropertyChangeListener with SynthUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** This method is called by installUI to get the editor component
      *  of the JSpinner.
@@ -82,6 +87,10 @@ class SynthSpinnerUI extends BasicSpinnerUI with PropertyChangeListener with Syn
      */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthSpinnerUI {

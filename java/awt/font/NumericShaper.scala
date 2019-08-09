@@ -1,8 +1,9 @@
 package java.awt.font
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** The NumericShaper class is used to convert Latin-1 (European)
  *  digits to other Unicode decimal digits.  Users of this class will
@@ -148,9 +149,19 @@ final class NumericShaper extends Object with Serializable {
     /** Converts the digits in the text that occur between start and start + count, using the provided context. */
     @stub
     def shape(text: Array[Char], start: Int, count: Int, context: NumericShaper.Range): Unit = ???
+
+    /** Returns a String that describes this shaper. */
+    @stub
+    def toString(): String = ???
 }
 
 object NumericShaper {
+    /** A NumericShaper.Range represents a Unicode range of a
+     *  script having its own decimal digits.
+     */
+    @stub
+    object Range extends NumericShaper.Range
+
     /** Identifies all ranges, for full contextual shaping. */
     @stub
     val ALL_RANGES: Int = ???
@@ -228,6 +239,10 @@ object NumericShaper {
     /** Identifies the THAI range and decimal base. */
     @stub
     val THAI: Int = ???
+
+    /** Identifies the TIBETAN range and decimal base. */
+    @stub
+    val TIBETAN: Int = ???
 
     /** Returns a contextual shaper for the provided unicode range(s). */
     @stub

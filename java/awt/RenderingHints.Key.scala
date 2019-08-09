@@ -1,6 +1,7 @@
 package java.awt
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Defines the base type of all keys used along with the
  *  RenderingHints class to control various
@@ -11,6 +12,10 @@ import java.lang.Object
  *  equals() method.
  */
 object abstract RenderingHints.Key extends Object {
+
+    /** Construct a key using the indicated private key. */
+    @stub
+    protected def Key(privatekey: Int) = ???
 
     /** The equals method for all Key objects will return the same
      *  result as the equality operator '=='.
@@ -30,4 +35,10 @@ object abstract RenderingHints.Key extends Object {
      */
     @stub
     protected def intKey(): Int = ???
+
+    /** Returns true if the specified object is a valid value
+     *  for this Key.
+     */
+    @stub
+    def isCompatibleValue(val: Object): Boolean
 }

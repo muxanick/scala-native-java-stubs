@@ -2,6 +2,7 @@ package javax.swing.border
 
 import java.awt.{Color, Component, Graphics, Insets}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A class which implements a simple two-line bevel border.
  *  
@@ -29,6 +30,12 @@ class BevelBorder extends AbstractBorder {
     @stub
     def this(bevelType: Int, highlight: Color, shadow: Color) = ???
 
+    /** Creates a bevel border with the specified type, highlight and
+     *  shadow colors.
+     */
+    @stub
+    def this(bevelType: Int, highlightOuterColor: Color, highlightInnerColor: Color, shadowOuterColor: Color, shadowInnerColor: Color) = ???
+
     /**  */
     @stub
     protected val bevelType: Int = ???
@@ -44,6 +51,10 @@ class BevelBorder extends AbstractBorder {
     /**  */
     @stub
     protected val shadowInner: Color = ???
+
+    /**  */
+    @stub
+    protected val shadowOuter: Color = ???
 
     /** Returns the type of the bevel border. */
     @stub
@@ -106,6 +117,10 @@ class BevelBorder extends AbstractBorder {
     /**  */
     @stub
     protected def paintLoweredBevel(c: Component, g: Graphics, x: Int, y: Int, width: Int, height: Int): Unit = ???
+
+    /**  */
+    @stub
+    protected def paintRaisedBevel(c: Component, g: Graphics, x: Int, y: Int, width: Int, height: Int): Unit = ???
 }
 
 object BevelBorder {

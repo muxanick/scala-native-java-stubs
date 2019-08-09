@@ -1,6 +1,7 @@
 package java.io
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Abstract class for writing filtered character streams.
  *  The abstract class FilterWriter itself
@@ -10,6 +11,13 @@ import java.lang.Object
  *  provide additional methods and fields.
  */
 abstract class FilterWriter extends Writer {
+
+    /** Create a new filtered writer. */
+    @stub
+    protected def this(out: Writer) = ???
+
+    /** The underlying character-output stream. */
+    protected val out: Writer
 
     /** Closes the stream, flushing it first. */
     def close(): Unit
@@ -22,4 +30,7 @@ abstract class FilterWriter extends Writer {
 
     /** Writes a single character. */
     def write(c: Int): Unit
+
+    /** Writes a portion of a string. */
+    def write(str: String, off: Int, len: Int): Unit
 }

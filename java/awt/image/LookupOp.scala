@@ -3,6 +3,7 @@ package java.awt.image
 import java.awt.RenderingHints
 import java.awt.geom.{Point2D, Rectangle2D}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class implements a lookup operation from the source
  *  to the destination.  The LookupTable object may contain a single array
@@ -41,6 +42,13 @@ import java.lang.Object
  */
 class LookupOp extends Object with BufferedImageOp with RasterOp {
 
+    /** Constructs a LookupOp object given the lookup
+     *  table and a RenderingHints object, which might
+     *  be null.
+     */
+    @stub
+    def this(lookup: LookupTable, hints: RenderingHints) = ???
+
     /** Creates a zeroed destination image with the correct size and number of
      *  bands.
      */
@@ -78,4 +86,8 @@ class LookupOp extends Object with BufferedImageOp with RasterOp {
     /** Returns the rendering hints for this op. */
     @stub
     def getRenderingHints(): RenderingHints = ???
+
+    /** Returns the LookupTable. */
+    @stub
+    def getTable(): LookupTable = ???
 }

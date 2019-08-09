@@ -2,6 +2,7 @@ package java.security
 
 import java.io.{FilterOutputStream, OutputStream}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A transparent stream that updates the associated message digest using
  *  the bits going through the stream.
@@ -18,6 +19,16 @@ import java.lang.{Object, String}
  *  digest is not updated. The default is for the stream to be on.
  */
 class DigestOutputStream extends FilterOutputStream {
+
+    /** Creates a digest output stream, using the specified output stream
+     *  and message digest.
+     */
+    @stub
+    def this(stream: OutputStream, digest: MessageDigest) = ???
+
+    /** The message digest associated with this stream. */
+    @stub
+    protected val digest: MessageDigest = ???
 
     /** Returns the message digest associated with this stream. */
     @stub
@@ -43,4 +54,11 @@ class DigestOutputStream extends FilterOutputStream {
      */
     @stub
     def write(b: Array[Byte], off: Int, len: Int): Unit = ???
+
+    /** Updates the message digest (if the digest function is on) using
+     *  the specified byte, and in any case writes the byte
+     *  to the output stream.
+     */
+    @stub
+    def write(b: Int): Unit = ???
 }

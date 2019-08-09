@@ -2,6 +2,7 @@ package java.beans.beancontext
 
 import java.lang.{Class, Object}
 import java.util.Iterator
+import scala.scalanative.annotation.stub
 
 /** 
  *  One of the primary functions of a BeanContext is to act a as rendezvous
@@ -37,4 +38,12 @@ trait BeanContextServiceProvider {
      */
     @stub
     def getService(bcs: BeanContextServices, requestor: Object, serviceClass: Class, serviceSelector: Object): Object = ???
+
+    /** Invoked by BeanContextServices,
+     *  this method releases a nested BeanContextChild's
+     *  (or any arbitrary object associated with a
+     *  BeanContextChild) reference to the specified service.
+     */
+    @stub
+    def releaseService(bcs: BeanContextServices, requestor: Object, service: Object): Unit = ???
 }

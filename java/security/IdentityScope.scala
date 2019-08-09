@@ -2,6 +2,7 @@ package java.security
 
 import java.lang.{Deprecated, Object, String}
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** This class represents a scope for identities. It is an Identity
  *  itself, and therefore has a name and can have a scope. It can also
@@ -33,6 +34,10 @@ import java.util.Enumeration
     def this(name: String) = ???
 
     /** Deprecated.  */
+    @stub
+    def this(name: String, scope: IdentityScope) = ???
+
+    /** Deprecated.  */
     def addIdentity(identity: Identity): Unit
 
     /** Deprecated.  */
@@ -52,6 +57,9 @@ import java.util.Enumeration
 
     /** Deprecated.  */
     def size(): Int
+
+    /** Deprecated.  */
+    def toString(): String
 }
 
 object IdentityScope {

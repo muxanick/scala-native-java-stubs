@@ -1,6 +1,7 @@
 package javax.swing
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** ComponentPlacement is an enumeration of the
  *  possible ways two components can be placed relative to each
@@ -22,7 +23,18 @@ object LayoutStyle.ComponentPlacement {
      */
     final val RELATED = new LayoutStyle.ComponentPlacement(RELATED, 1)
 
+    /** Enumeration value indicating the two components are
+     *  visually unrelated and will be placed in the same parent.
+     */
+    final val UNRELATED = new LayoutStyle.ComponentPlacement(UNRELATED, 2)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): LayoutStyle.ComponentPlacement = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[LayoutStyle.ComponentPlacement] = ???
 }

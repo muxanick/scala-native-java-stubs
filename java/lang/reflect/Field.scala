@@ -2,6 +2,7 @@ package java.lang.reflect
 
 import java.lang.{Class, Object, String}
 import java.lang.annotation.Annotation
+import scala.scalanative.annotation.stub
 
 /** A Field provides information about, and dynamic access to, a
  *  single field of a class or an interface.  The reflected field may
@@ -181,4 +182,8 @@ final class Field extends AccessibleObject with Member {
      */
     @stub
     def toGenericString(): String = ???
+
+    /** Returns a string describing this Field. */
+    @stub
+    def toString(): String = ???
 }

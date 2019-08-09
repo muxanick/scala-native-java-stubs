@@ -3,6 +3,7 @@ package java.awt.image
 import java.awt.RenderingHints
 import java.awt.geom.{AffineTransform, Point2D, Rectangle2D}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class uses an affine transform to perform a linear mapping from
  *  2D coordinates in the source image or Raster to 2D coordinates
@@ -30,6 +31,10 @@ class AffineTransformOp extends Object with BufferedImageOp with RasterOp {
      */
     @stub
     def this(xform: AffineTransform, interpolationType: Int) = ???
+
+    /** Constructs an AffineTransformOp given an affine transform. */
+    @stub
+    def this(xform: AffineTransform, hints: RenderingHints) = ???
 
     /** Creates a zeroed destination image with the correct size and number of
      *  bands.
@@ -76,6 +81,10 @@ class AffineTransformOp extends Object with BufferedImageOp with RasterOp {
     /** Returns the rendering hints used by this transform operation. */
     @stub
     def getRenderingHints(): RenderingHints = ???
+
+    /** Returns the affine transform used by this transform operation. */
+    @stub
+    def getTransform(): AffineTransform = ???
 }
 
 object AffineTransformOp {
@@ -86,4 +95,8 @@ object AffineTransformOp {
     /** Bilinear interpolation type. */
     @stub
     val TYPE_BILINEAR: Int = ???
+
+    /** Nearest-neighbor interpolation type. */
+    @stub
+    val TYPE_NEAREST_NEIGHBOR: Int = ???
 }

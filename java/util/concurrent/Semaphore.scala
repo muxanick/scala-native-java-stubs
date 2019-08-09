@@ -3,6 +3,7 @@ package java.util.concurrent
 import java.io.Serializable
 import java.lang.{Object, String, Thread}
 import java.util.Collection
+import scala.scalanative.annotation.stub
 
 /** A counting semaphore.  Conceptually, a semaphore maintains a set of
  *  permits.  Each acquire() blocks if necessary until a permit is
@@ -122,6 +123,12 @@ class Semaphore extends Object with Serializable {
     @stub
     def this(permits: Int) = ???
 
+    /** Creates a Semaphore with the given number of
+     *  permits and the given fairness setting.
+     */
+    @stub
+    def this(permits: Int, fair: Boolean) = ???
+
     /** Acquires a permit from this semaphore, blocking until one is
      *  available, or the thread is interrupted.
      */
@@ -207,4 +214,11 @@ class Semaphore extends Object with Serializable {
      */
     @stub
     def tryAcquire(permits: Int, timeout: Long, unit: TimeUnit): Boolean = ???
+
+    /** Acquires a permit from this semaphore, if one becomes available
+     *  within the given waiting time and the current thread has not
+     *  been interrupted.
+     */
+    @stub
+    def tryAcquire(timeout: Long, unit: TimeUnit): Boolean = ???
 }

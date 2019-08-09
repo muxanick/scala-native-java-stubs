@@ -2,6 +2,7 @@ package java.security
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /**  SignedObject is a class for the purpose of creating authentic
  *  runtime objects whose integrity cannot be compromised without being
@@ -87,6 +88,10 @@ import java.lang.{Object, String}
  */
 final class SignedObject extends Object with Serializable {
 
+    /** Constructs a SignedObject from any Serializable object. */
+    @stub
+    def this(object: Serializable, signingKey: PrivateKey, signingEngine: Signature) = ???
+
     /** Retrieves the name of the signature algorithm. */
     @stub
     def getAlgorithm(): String = ???
@@ -100,4 +105,11 @@ final class SignedObject extends Object with Serializable {
      */
     @stub
     def getSignature(): Array[Byte] = ???
+
+    /** Verifies that the signature in this SignedObject is the valid
+     *  signature for the object stored inside, with the given
+     *  verification key, using the designated verification engine.
+     */
+    @stub
+    def verify(verificationKey: PublicKey, verificationEngine: Signature): Boolean = ???
 }

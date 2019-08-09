@@ -1,7 +1,8 @@
 package javax.security.auth.kerberos
 
 import java.io.File
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class encapsulates a keytab file.
  *  
@@ -64,6 +65,10 @@ final class KeyTab extends Object {
     /** Returns if the keytab is bound to a principal */
     @stub
     def isBound(): Boolean = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }
 
 object KeyTab {

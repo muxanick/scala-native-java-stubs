@@ -2,6 +2,7 @@ package java.lang.reflect
 
 import java.io.Serializable
 import java.lang.{Class, ClassLoader, Object}
+import scala.scalanative.annotation.stub
 
 /** Proxy provides static methods for creating dynamic proxy
  *  classes and instances, and it is also the superclass of all
@@ -180,6 +181,17 @@ import java.lang.{Class, ClassLoader, Object}
  *  successfully by the invoke method.
  */
 class Proxy extends Object with Serializable {
+
+    /** Constructs a new Proxy instance from a subclass
+     *  (typically, a dynamic proxy class) with the specified value
+     *  for its invocation handler.
+     */
+    @stub
+    protected def this(h: InvocationHandler) = ???
+
+    /** the invocation handler for this proxy instance. */
+    @stub
+    protected val h: InvocationHandler = ???
 }
 
 object Proxy {
@@ -199,4 +211,11 @@ object Proxy {
      */
     @stub
     def isProxyClass(cl: Class[_]): Boolean = ???
+
+    /** Returns an instance of a proxy class for the specified interfaces
+     *  that dispatches method invocations to the specified invocation
+     *  handler.
+     */
+    @stub
+    def newProxyInstance(loader: ClassLoader, interfaces: Array[Class[_]], h: InvocationHandler): Object = ???
 }

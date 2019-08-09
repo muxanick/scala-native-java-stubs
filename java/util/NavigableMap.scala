@@ -1,5 +1,7 @@
 package java.util
 
+import scala.scalanative.annotation.stub
+
 /** A SortedMap extended with navigation methods returning the
  *  closest matches for given search targets. Methods
  *  lowerEntry, floorEntry, ceilingEntry,
@@ -167,4 +169,10 @@ trait NavigableMap[K, V] extends SortedMap[K, V] {
      */
     @stub
     def tailMap(fromKey: K): SortedMap[K, V] = ???
+
+    /** Returns a view of the portion of this map whose keys are greater than (or
+     *  equal to, if inclusive is true) fromKey.
+     */
+    @stub
+    def tailMap(fromKey: K, inclusive: Boolean): NavigableMap[K, V] = ???
 }

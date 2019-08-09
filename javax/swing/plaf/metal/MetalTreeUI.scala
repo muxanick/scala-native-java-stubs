@@ -6,6 +6,7 @@ import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, TreeUI}
 import javax.swing.plaf.basic.BasicTreeUI
 import javax.swing.tree.TreePath
+import scala.scalanative.annotation.stub
 
 /** The metal look and feel implementation of TreeUI.
  *  
@@ -44,6 +45,10 @@ import javax.swing.tree.TreePath
  */
 class MetalTreeUI extends BasicTreeUI {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** this function converts between the string passed into the client property
      *  and the internal representation (currently and int)
      */
@@ -79,6 +84,12 @@ class MetalTreeUI extends BasicTreeUI {
     /** Paints the vertical part of the leg. */
     @stub
     protected def paintVerticalPartOfLeg(g: Graphics, clipBounds: Rectangle, insets: Insets, path: TreePath): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object MetalTreeUI {

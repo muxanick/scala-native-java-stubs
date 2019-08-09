@@ -5,6 +5,7 @@ import java.lang.{Object, String}
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, ToolTipUI}
 import javax.swing.plaf.basic.BasicToolTipUI
+import scala.scalanative.annotation.stub
 
 /** A Metal L&F extension of BasicToolTipUI.
  *  
@@ -18,6 +19,10 @@ import javax.swing.plaf.basic.BasicToolTipUI
  *  Please see XMLEncoder.
  */
 class MetalToolTipUI extends BasicToolTipUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /**  */
     @stub
@@ -40,9 +45,19 @@ class MetalToolTipUI extends BasicToolTipUI {
     /** Paints the specified component appropriately for the look and feel. */
     @stub
     def paint(g: Graphics, c: JComponent): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object MetalToolTipUI {
+    /**  */
+    @stub
+    val padSpaceBetweenStrings: Int = ???
+
     /**  */
     @stub
     def createUI(c: JComponent): ComponentUI = ???

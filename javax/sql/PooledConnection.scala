@@ -1,6 +1,7 @@
 package javax.sql
 
 import java.sql.Connection
+import scala.scalanative.annotation.stub
 
 /** An object that provides hooks for connection pool management.
  *  A PooledConnection object
@@ -89,4 +90,11 @@ trait PooledConnection {
      */
     @stub
     def removeConnectionEventListener(listener: ConnectionEventListener): Unit = ???
+
+    /** Removes the specified StatementEventListener from the list of
+     *  components that will be notified when the driver detects that a
+     *  PreparedStatement has been closed or is invalid.
+     */
+    @stub
+    def removeStatementEventListener(listener: StatementEventListener): Unit = ???
 }

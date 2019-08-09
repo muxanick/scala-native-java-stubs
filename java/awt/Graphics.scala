@@ -3,6 +3,7 @@ package java.awt
 import java.awt.image.ImageObserver
 import java.lang.{Object, String}
 import java.text.AttributedCharacterIterator
+import scala.scalanative.annotation.stub
 
 /** The Graphics class is the abstract base class for
  *  all graphics contexts that allow an application to draw onto
@@ -65,6 +66,10 @@ import java.text.AttributedCharacterIterator
  *  using the current paint mode, and in the current font.
  */
 abstract class Graphics extends Object {
+
+    /** Constructs a new Graphics object. */
+    @stub
+    protected def this() = ???
 
     /** Clears the specified rectangle by filling it with the background
      *  color of the current drawing surface.
@@ -276,4 +281,9 @@ abstract class Graphics extends Object {
      *                         Graphics object's value.
      */
     def toString(): String
+
+    /** Translates the origin of the graphics context to the point
+     *  (x, y) in the current coordinate system.
+     */
+    def translate(x: Int, y: Int): Unit
 }

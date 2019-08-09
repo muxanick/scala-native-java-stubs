@@ -1,6 +1,7 @@
 package java.security.cert
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The Service Provider Interface (SPI)
  *  for the CertPathBuilder class. All
@@ -25,8 +26,17 @@ import java.lang.Object
  */
 abstract class CertPathBuilderSpi extends Object {
 
+    /** The default constructor. */
+    @stub
+    def this() = ???
+
     /** Attempts to build a certification path using the specified
      *  algorithm parameter set.
      */
     def engineBuild(params: CertPathParameters): CertPathBuilderResult
+
+    /** Returns a CertPathChecker that this implementation uses to
+     *  check the revocation status of certificates.
+     */
+    def engineGetRevocationChecker(): CertPathChecker
 }

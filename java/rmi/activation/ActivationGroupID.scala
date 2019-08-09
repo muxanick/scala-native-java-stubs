@@ -2,6 +2,7 @@ package java.rmi.activation
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The identifier for a registered activation group serves several
  *  purposes: 
@@ -17,6 +18,10 @@ import java.lang.Object
  */
 class ActivationGroupID extends Object with Serializable {
 
+    /** Constructs a unique group id. */
+    @stub
+    def this(system: ActivationSystem) = ???
+
     /** Compares two group identifiers for content equality. */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -24,4 +29,8 @@ class ActivationGroupID extends Object with Serializable {
     /** Returns the group's activation system. */
     @stub
     def getSystem(): ActivationSystem = ???
+
+    /** Returns a hashcode for the group's identifier. */
+    @stub
+    def hashCode(): Int = ???
 }

@@ -1,7 +1,9 @@
 package javax.xml.bind.annotation
 
+import java.lang.String
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Associates the MIME type that controls the XML representation of the property.
  * 
@@ -17,4 +19,10 @@ import scala.annotation.StaticAnnotation
 @Retention ( value = RUNTIME ) 
 @Target ( value ={ FIELD , METHOD , PARAMETER } ) 
  final class XmlMimeType extends StaticAnnotation {
+
+    /** The textual representation of the MIME type,
+     *  such as "image/jpeg" "image/*", "text/xml; charset=iso-8859-1" and so on.
+     */
+    @stub
+    val value: String = ???
 }

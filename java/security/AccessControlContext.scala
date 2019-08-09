@@ -1,6 +1,7 @@
 package java.security
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An AccessControlContext is used to make system resource access decisions
  *  based on the context it encapsulates.
@@ -47,6 +48,10 @@ final class AccessControlContext extends Object {
     @stub
     def this(acc: AccessControlContext, combiner: DomainCombiner) = ???
 
+    /** Create an AccessControlContext with the given array of ProtectionDomains. */
+    @stub
+    def this(context: Array[ProtectionDomain]) = ???
+
     /** Determines whether the access request indicated by the
      *  specified permission should be allowed or denied, based on
      *  the security policy currently in effect, and the context in
@@ -64,4 +69,8 @@ final class AccessControlContext extends Object {
      */
     @stub
     def getDomainCombiner(): DomainCombiner = ???
+
+    /** Returns the hash code value for this context. */
+    @stub
+    def hashCode(): Int = ???
 }

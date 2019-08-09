@@ -1,7 +1,8 @@
 package javax.swing.border
 
-import java.awt.{Color, Component, Insets}
+import java.awt.{Color, Component, Graphics, Insets}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A class which implements a line border of arbitrary thickness
  *  and of a single color.
@@ -27,6 +28,12 @@ class LineBorder extends AbstractBorder {
     @stub
     def this(color: Color, thickness: Int) = ???
 
+    /** Creates a line border with the specified color, thickness,
+     *  and corner shape.
+     */
+    @stub
+    def this(color: Color, thickness: Int, roundedCorners: Boolean) = ???
+
     /**  */
     @stub
     protected val lineColor: Color = ???
@@ -34,6 +41,10 @@ class LineBorder extends AbstractBorder {
     /**  */
     @stub
     protected val roundedCorners: Boolean = ???
+
+    /**  */
+    @stub
+    protected val thickness: Int = ???
 
     /** Reinitialize the insets parameter with this Border's current Insets. */
     @stub
@@ -54,6 +65,12 @@ class LineBorder extends AbstractBorder {
     /** Returns whether or not the border is opaque. */
     @stub
     def isBorderOpaque(): Boolean = ???
+
+    /** Paints the border for the specified component with the
+     *  specified position and size.
+     */
+    @stub
+    def paintBorder(c: Component, g: Graphics, x: Int, y: Int, width: Int, height: Int): Unit = ???
 }
 
 object LineBorder {

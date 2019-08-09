@@ -2,6 +2,7 @@ package javax.management.monitor
 
 import java.lang.{Boolean, Object, String}
 import javax.management.{MBeanRegistration, MBeanServer, NotificationBroadcasterSupport, ObjectName}
+import scala.scalanative.annotation.stub
 
 /** Defines the part common to all monitor MBeans.
  *  A monitor MBean monitors values of an attribute common to a set of observed
@@ -10,6 +11,10 @@ import javax.management.{MBeanRegistration, MBeanServer, NotificationBroadcaster
  *  of the observed attribute.
  */
 abstract class Monitor extends NotificationBroadcasterSupport with MonitorMBean with MBeanRegistration {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Deprecated. 
      * equivalent to alreadyNotifieds[0].
@@ -28,6 +33,9 @@ abstract class Monitor extends NotificationBroadcasterSupport with MonitorMBean 
 
     /** The number of valid components in the vector of observed objects. */
     protected val elementCount: Int
+
+    /** Reference to the MBean server. */
+    protected val server: MBeanServer
 
     /** Adds the specified object in the set of observed MBeans, if this object
      *  is not already present.
@@ -93,6 +101,9 @@ abstract class Monitor extends NotificationBroadcasterSupport with MonitorMBean 
 
     /** Starts the monitor. */
     def start(): Unit
+
+    /** Stops the monitor. */
+    def stop(): Unit
 }
 
 object Monitor {

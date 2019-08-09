@@ -3,6 +3,7 @@ package javax.security.sasl
 import java.lang.{Object, String}
 import java.util.{Enumeration, Map}
 import javax.security.auth.callback.CallbackHandler
+import scala.scalanative.annotation.stub
 
 /** A static class for creating SASL clients and servers.
  * 
@@ -103,6 +104,10 @@ object Sasl {
     @stub
     val SERVER_AUTH: String = ???
 
+    /** The name of a property that specifies the cipher strength to use. */
+    @stub
+    val STRENGTH: String = ???
+
     /** Creates a SaslClient using the parameters supplied. */
     @stub
     def createSaslClient(mechanisms: Array[String], authorizationId: String, protocol: String, serverName: String, props: Map[String, _], cbh: CallbackHandler): SaslClient = ???
@@ -114,4 +119,8 @@ object Sasl {
     /** Gets an enumeration of known factories for producing SaslClient. */
     @stub
     def getSaslClientFactories(): Enumeration[SaslClientFactory] = ???
+
+    /** Gets an enumeration of known factories for producing SaslServer. */
+    @stub
+    def getSaslServerFactories(): Enumeration[SaslServerFactory] = ???
 }

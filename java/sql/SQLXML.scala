@@ -3,6 +3,7 @@ package java.sql
 import java.io.{InputStream, OutputStream, Reader, Writer}
 import java.lang.{Class, String}
 import javax.xml.transform.{Result, Source}
+import scala.scalanative.annotation.stub
 
 /** The mapping in the JavaTM programming language for the SQL XML type.
  *  XML is a built-in type that stores an XML value
@@ -185,4 +186,8 @@ trait SQLXML {
     /** Returns a Result for setting the XML value designated by this SQLXML instance. */
     @stub
     def setResult[T <: Result](resultClass: Class[T]): T = ???
+
+    /** Sets the XML value designated by this SQLXML instance to the given String representation. */
+    @stub
+    def setString(value: String): Unit = ???
 }

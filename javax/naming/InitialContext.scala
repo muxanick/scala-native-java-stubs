@@ -2,6 +2,7 @@ package javax.naming
 
 import java.lang.{Object, String}
 import java.util.Hashtable
+import scala.scalanative.annotation.stub
 
 /** This class is the starting context for performing naming operations.
  * 
@@ -103,6 +104,10 @@ class InitialContext extends Object with Context {
     @stub
     protected def this(lazy: Boolean) = ???
 
+    /** Constructs an initial context using the supplied environment. */
+    @stub
+    def this(environment: Hashtable[_, _]) = ???
+
     /** Field holding the result of calling NamingManager.getInitialContext(). */
     @stub
     protected val defaultInitCtx: Context = ???
@@ -112,6 +117,10 @@ class InitialContext extends Object with Context {
      */
     @stub
     protected val gotDefault: Boolean = ???
+
+    /** The environment associated with this InitialContext. */
+    @stub
+    protected val myProps: Hashtable[Object, Object] = ???
 
     /** Adds a new environment property to the environment of this
      *  context.
@@ -267,6 +276,10 @@ class InitialContext extends Object with Context {
     /** Unbinds the named object. */
     @stub
     def unbind(name: Name): Unit = ???
+
+    /** Unbinds the named object. */
+    @stub
+    def unbind(name: String): Unit = ???
 }
 
 object InitialContext {

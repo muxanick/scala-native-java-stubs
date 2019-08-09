@@ -1,6 +1,7 @@
 package javax.swing.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** Interface for an observer to register to receive notifications
  *  of changes to a text document.
@@ -29,4 +30,10 @@ trait DocumentListener extends EventListener {
     /** Gives notification that there was an insert into the document. */
     @stub
     def insertUpdate(e: DocumentEvent): Unit = ???
+
+    /** Gives notification that a portion of the document has been
+     *  removed.
+     */
+    @stub
+    def removeUpdate(e: DocumentEvent): Unit = ???
 }

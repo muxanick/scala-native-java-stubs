@@ -2,6 +2,7 @@ package java.awt
 
 import java.awt.event.KeyEvent
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The default KeyboardFocusManager for AWT applications. Focus traversal is
  *  done in response to a Component's focus traversal keys, and using a
@@ -15,6 +16,10 @@ import java.lang.Object
  *  for more information.
  */
 class DefaultKeyboardFocusManager extends KeyboardFocusManager {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Releases for normal dispatching to the current focus owner all
      *  KeyEvents which were enqueued because of a call to
@@ -75,4 +80,8 @@ class DefaultKeyboardFocusManager extends KeyboardFocusManager {
      */
     @stub
     def processKeyEvent(focusedComponent: Component, e: KeyEvent): Unit = ???
+
+    /** Moves the focus up one focus traversal cycle. */
+    @stub
+    def upFocusCycle(aComponent: Component): Unit = ???
 }

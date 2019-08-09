@@ -3,6 +3,7 @@ package javax.sql.rowset.serial
 import java.io.{InputStream, OutputStream, Reader, Serializable, Writer}
 import java.lang.{Cloneable, Object, String}
 import java.sql.Clob
+import scala.scalanative.annotation.stub
 
 /** A serialized mapping in the Java programming language of an SQL
  *  CLOB value.
@@ -31,6 +32,12 @@ class SerialClob extends Object with Clob with Serializable with Cloneable {
      */
     @stub
     def this(ch: Array[Char]) = ???
+
+    /** Constructs a SerialClob object that is a serialized
+     *  version of the given Clob object.
+     */
+    @stub
+    def this(clob: Clob) = ???
 
     /** Returns a clone of this SerialClob. */
     @stub
@@ -123,4 +130,11 @@ class SerialClob extends Object with Clob with Serializable with Cloneable {
      */
     @stub
     def setString(pos: Long, str: String, offset: Int, length: Int): Int = ???
+
+    /** Truncates the CLOB value that this SerialClob
+     *  object represents so that it has a length of len
+     *  characters.
+     */
+    @stub
+    def truncate(length: Long): Unit = ???
 }

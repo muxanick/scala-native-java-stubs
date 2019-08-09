@@ -3,6 +3,7 @@ package java.util
 import java.io.Serializable
 import java.lang.{Cloneable, Object}
 import java.util.function.{BiConsumer, BiFunction}
+import scala.scalanative.annotation.stub
 
 /** A Red-Black tree based NavigableMap implementation.
  *  The map is sorted according to the natural
@@ -85,6 +86,12 @@ class TreeMap[K, V] extends AbstractMap[K, V] with NavigableMap[K, V] with Clone
      */
     @stub
     def this(m: Map[_ <: K, _ <: V]) = ???
+
+    /** Constructs a new tree map containing the same mappings and
+     *  using the same ordering as the specified sorted map.
+     */
+    @stub
+    def this(m: SortedMap[K, _ <: V]) = ???
 
     /** Returns a key-value mapping associated with the least key
      *  greater than or equal to the given key, or null if
@@ -298,4 +305,8 @@ class TreeMap[K, V] extends AbstractMap[K, V] with NavigableMap[K, V] with Clone
      */
     @stub
     def tailMap(fromKey: K, inclusive: Boolean): NavigableMap[K, V] = ???
+
+    /** Returns a Collection view of the values contained in this map. */
+    @stub
+    def values(): Collection[V] = ???
 }

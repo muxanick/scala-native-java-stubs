@@ -1,6 +1,7 @@
 package javax.lang.model.element
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The nesting kind of a type element.
  *  Type elements come in four varieties:
@@ -65,6 +66,9 @@ object NestingKind {
     /** A type that is a named member of another type. */
     final val MEMBER = new NestingKind(MEMBER, 2)
 
+    /** A top-level type, not contained within another type. */
+    final val TOP_LEVEL = new NestingKind(TOP_LEVEL, 3)
+
     /** Does this constant correspond to a nested type element?
      *  A nested type element is any that is not top-level.
      */
@@ -74,4 +78,10 @@ object NestingKind {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): NestingKind = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[NestingKind] = ???
 }

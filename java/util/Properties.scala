@@ -2,6 +2,7 @@ package java.util
 
 import java.io.{InputStream, OutputStream, PrintStream, PrintWriter, Reader, Writer}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The Properties class represents a persistent set of
  *  properties. The Properties can be saved to a stream
@@ -77,6 +78,16 @@ class Properties extends Hashtable[Object, Object] {
     /** Creates an empty property list with no default values. */
     @stub
     def this() = ???
+
+    /** Creates an empty property list with the specified defaults. */
+    @stub
+    def this(defaults: Properties) = ???
+
+    /** A property list that contains default values for any keys not
+     *  found in this property list.
+     */
+    @stub
+    protected val defaults: Properties = ???
 
     /** Searches for the property with the specified key in this property list. */
     @stub
@@ -162,4 +173,13 @@ class Properties extends Hashtable[Object, Object] {
      */
     @stub
     def storeToXML(os: OutputStream, comment: String, encoding: String): Unit = ???
+
+    /** Returns a set of keys in this property list where
+     *  the key and its corresponding value are strings,
+     *  including distinct keys in the default property list if a key
+     *  of the same name has not already been found from the main
+     *  properties list.
+     */
+    @stub
+    def stringPropertyNames(): Set[String] = ???
 }

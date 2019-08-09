@@ -4,6 +4,7 @@ import java.awt.event.{ActionEvent, ActionListener, AdjustmentEvent, AdjustmentL
 import java.io.ObjectOutputStream
 import java.lang.{Class, Object, String}
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** AWTEventMulticaster implements efficient and thread-safe multi-cast
  *  event dispatching for the AWT events defined in the java.awt.event
@@ -65,9 +66,19 @@ import java.util.EventListener
  */
 class AWTEventMulticaster extends Object with ComponentListener with ContainerListener with FocusListener with KeyListener with MouseListener with MouseMotionListener with WindowListener with WindowFocusListener with WindowStateListener with ActionListener with ItemListener with AdjustmentListener with TextListener with InputMethodListener with HierarchyListener with HierarchyBoundsListener with MouseWheelListener {
 
+    /** Creates an event multicaster instance which chains listener-a
+     *  with listener-b.
+     */
+    @stub
+    protected def this(a: EventListener, b: EventListener) = ???
+
     /**  */
     @stub
     protected val a: EventListener = ???
+
+    /**  */
+    @stub
+    protected val b: EventListener = ???
 
     /** Handles the actionPerformed event by invoking the
      *  actionPerformed methods on listener-a and listener-b.
@@ -296,6 +307,12 @@ class AWTEventMulticaster extends Object with ComponentListener with ContainerLi
      */
     @stub
     def windowOpened(e: WindowEvent): Unit = ???
+
+    /** Handles the windowStateChanged event by invoking the
+     *  windowStateChanged methods on listener-a and listener-b.
+     */
+    @stub
+    def windowStateChanged(e: WindowEvent): Unit = ???
 }
 
 object AWTEventMulticaster {

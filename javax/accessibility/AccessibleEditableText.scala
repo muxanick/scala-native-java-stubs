@@ -2,6 +2,7 @@ package javax.accessibility
 
 import java.lang.String
 import javax.swing.text.AttributeSet
+import scala.scalanative.annotation.stub
 
 /** The AccessibleEditableText interface should be implemented by all
  *  classes that present editable textual information on the display.
@@ -51,4 +52,8 @@ trait AccessibleEditableText extends AccessibleText {
     /** Sets attributes for the text between two indices. */
     @stub
     def setAttributes(startIndex: Int, endIndex: Int, as: AttributeSet): Unit = ???
+
+    /** Sets the text contents to the specified string. */
+    @stub
+    def setTextContents(s: String): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.{Deprecated, Object}
+import scala.scalanative.annotation.stub
 
 /** This class is an input stream filter that provides the added
  *  functionality of keeping track of the current line number.
@@ -15,6 +16,10 @@ import java.lang.{Deprecated, Object}
  *  1 when a read returns a newline character.
  */
 @Deprecated class LineNumberInputStream extends FilterInputStream {
+
+    /** Deprecated.  */
+    @stub
+    def this(in: InputStream) = ???
 
     /** Deprecated.  */
     @stub
@@ -43,4 +48,8 @@ import java.lang.{Deprecated, Object}
     /** Deprecated.  */
     @stub
     def setLineNumber(lineNumber: Int): Unit = ???
+
+    /** Deprecated.  */
+    @stub
+    def skip(n: Long): Long = ???
 }

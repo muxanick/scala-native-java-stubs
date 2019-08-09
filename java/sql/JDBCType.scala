@@ -1,6 +1,7 @@
 package java.sql
 
 import java.lang.{Enum, Integer, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Defines the constants that are used to identify generic
  *  SQL types, called JDBC types.
@@ -130,6 +131,9 @@ object JDBCType {
     /** Identifies the generic SQL type VARBINARY. */
     final val VARBINARY = new JDBCType(VARBINARY, 37)
 
+    /** Identifies the generic SQL type VARCHAR. */
+    final val VARCHAR = new JDBCType(VARCHAR, 38)
+
     /** Returns the SQLType name that represents a SQL data type. */
     @stub
     def getName(): String = ???
@@ -151,4 +155,10 @@ object JDBCType {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): JDBCType = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[JDBCType] = ???
 }

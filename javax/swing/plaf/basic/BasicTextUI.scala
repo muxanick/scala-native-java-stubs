@@ -6,6 +6,7 @@ import java.lang.{Object, String}
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, TextUI}
 import javax.swing.text.{Caret, EditorKit, Element, Highlighter, JTextComponent, Keymap, Position.Bias, View, ViewFactory}
+import scala.scalanative.annotation.stub
 
 /** 
  *  Basis of a text components look-and-feel.  This provides the
@@ -62,6 +63,10 @@ import javax.swing.text.{Caret, EditorKit, Element, Highlighter, JTextComponent,
  *  Please see XMLEncoder.
  */
 abstract class BasicTextUI extends TextUI with ViewFactory {
+
+    /** Creates a new UI. */
+    @stub
+    def this() = ???
 
     /** Creates a view for an element. */
     def create(elem: Element): View
@@ -203,10 +208,19 @@ abstract class BasicTextUI extends TextUI with ViewFactory {
      *  to the nearest representative location in the model.
      */
     def viewToModel(tc: JTextComponent, pt: Point): Int
+
+    /** Converts the given place in the view coordinate system
+     *  to the nearest representative location in the model.
+     */
+    def viewToModel(tc: JTextComponent, pt: Point, biasReturn: Array[Position.Bias]): Int
 }
 
 object BasicTextUI {
     /**  */
     @stub
     object BasicCaret extends BasicTextUI.BasicCaret
+
+    /**  */
+    @stub
+    object BasicHighlighter extends BasicTextUI.BasicHighlighter
 }

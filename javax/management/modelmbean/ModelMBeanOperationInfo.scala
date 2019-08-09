@@ -3,6 +3,7 @@ package javax.management.modelmbean
 import java.lang.{Object, String}
 import java.lang.reflect.Method
 import javax.management.{Descriptor, DescriptorAccess, MBeanFeatureInfo, MBeanOperationInfo, MBeanParameterInfo}
+import scala.scalanative.annotation.stub
 
 /** The ModelMBeanOperationInfo object describes a management operation of
  *  the ModelMBean.  It is a subclass of MBeanOperationInfo with the addition
@@ -78,6 +79,10 @@ class ModelMBeanOperationInfo extends MBeanOperationInfo with DescriptorAccess {
     @stub
     def this(name: String, description: String, signature: Array[MBeanParameterInfo], type: String, impact: Int) = ???
 
+    /** Constructs a ModelMBeanOperationInfo object. */
+    @stub
+    def this(name: String, description: String, signature: Array[MBeanParameterInfo], type: String, impact: Int, descriptor: Descriptor) = ???
+
     /** Creates and returns a new ModelMBeanOperationInfo which is a
      *  duplicate of this ModelMBeanOperationInfo.
      */
@@ -96,4 +101,10 @@ class ModelMBeanOperationInfo extends MBeanOperationInfo with DescriptorAccess {
      */
     @stub
     def setDescriptor(inDescriptor: Descriptor): Unit = ???
+
+    /** Returns a string containing the entire contents of the
+     *  ModelMBeanOperationInfo in human readable form.
+     */
+    @stub
+    def toString(): String = ???
 }

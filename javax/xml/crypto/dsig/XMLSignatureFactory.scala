@@ -6,6 +6,7 @@ import java.util.List
 import javax.xml.crypto.{Data, URIDereferencer, XMLStructure}
 import javax.xml.crypto.dsig.keyinfo.{KeyInfo, KeyInfoFactory}
 import javax.xml.crypto.dsig.spec.{C14NMethodParameterSpec, DigestMethodParameterSpec, SignatureMethodParameterSpec, TransformParameterSpec}
+import scala.scalanative.annotation.stub
 
 /** A factory for creating XMLSignature objects from scratch or
  *  for unmarshalling an XMLSignature object from a corresponding
@@ -100,6 +101,10 @@ import javax.xml.crypto.dsig.spec.{C14NMethodParameterSpec, DigestMethodParamete
  *  XMLSignatureFactory instance need not synchronize.
  */
 abstract class XMLSignatureFactory extends Object {
+
+    /** Default constructor, for invocation by subclasses. */
+    @stub
+    protected def this() = ???
 
     /** Returns a KeyInfoFactory that creates KeyInfo
      *  objects.
@@ -214,6 +219,11 @@ abstract class XMLSignatureFactory extends Object {
      *  mechanism-specific XMLStructure instance.
      */
     def unmarshalXMLSignature(xmlStructure: XMLStructure): XMLSignature
+
+    /** Unmarshals a new XMLSignature instance from a
+     *  mechanism-specific XMLValidateContext instance.
+     */
+    def unmarshalXMLSignature(context: XMLValidateContext): XMLSignature
 }
 
 object XMLSignatureFactory {

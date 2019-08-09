@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An abstract adapter class for receiving container events.
  *  The methods in this class are empty. This class exists as
@@ -20,6 +21,13 @@ import java.lang.Object
  */
 abstract class ContainerAdapter extends Object with ContainerListener {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Invoked when a component has been added to the container. */
     def componentAdded(e: ContainerEvent): Unit
+
+    /** Invoked when a component has been removed from the container. */
+    def componentRemoved(e: ContainerEvent): Unit
 }

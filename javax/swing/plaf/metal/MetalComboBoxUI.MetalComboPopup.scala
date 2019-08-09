@@ -1,9 +1,11 @@
 package javax.swing.plaf.metal
 
 import java.awt.{Component, Container}
+import java.awt.event.MouseEvent
 import java.lang.{Deprecated, Object}
-import javax.swing.{JComponent, JPopupMenu}
+import javax.swing.{JComboBox, JComponent, JPopupMenu}
 import javax.swing.plaf.basic.BasicComboPopup
+import scala.scalanative.annotation.stub
 
 /** This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of MetalComboBoxUI.
@@ -13,4 +15,12 @@ import javax.swing.plaf.basic.BasicComboPopup
  *  override.
  */
 @Deprecated class MetalComboBoxUI.MetalComboPopup extends BasicComboPopup {
+
+    /** Deprecated.  */
+    @stub
+    def MetalComboPopup(cBox: JComboBox) = ???
+
+    /** Deprecated.  */
+    @stub
+    def delegateFocus(e: MouseEvent): Unit = ???
 }

@@ -2,6 +2,7 @@ package java.net
 
 import java.lang.{Object, String}
 import java.security.Permission
+import scala.scalanative.annotation.stub
 
 /** Represents permission to access a resource or set of resources defined by a
  *  given url, and for a given set of user-settable request methods
@@ -111,6 +112,12 @@ final class URLPermission extends Permission {
     @stub
     def this(url: String) = ???
 
+    /** Creates a new URLPermission from a url string and which permits the given
+     *  request methods and user-settable request headers.
+     */
+    @stub
+    def this(url: String, actions: String) = ???
+
     /** Returns true if, this.getActions().equals(p.getActions())
      *  and p's url equals this's url.
      */
@@ -128,4 +135,8 @@ final class URLPermission extends Permission {
      */
     @stub
     def hashCode(): Int = ???
+
+    /** Checks if this URLPermission implies the given permission. */
+    @stub
+    def implies(p: Permission): Boolean = ???
 }

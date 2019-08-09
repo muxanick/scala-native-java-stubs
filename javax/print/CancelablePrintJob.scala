@@ -1,5 +1,7 @@
 package javax.print
 
+import scala.scalanative.annotation.stub
+
 /** This interface is used by a printing application to cancel a
  *  print job.  This interface extends DocPrintJob.  A
  *  DocPrintJob implementation returned from a print
@@ -23,4 +25,8 @@ package javax.print
  *  this interface must be made thread safe.
  */
 trait CancelablePrintJob extends DocPrintJob {
+
+    /** Stops further processing of a print job. */
+    @stub
+    def cancel(): Unit = ???
 }

@@ -2,6 +2,7 @@ package java.awt
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** NOTE: The Event class is obsolete and is
  *  available only for backwards compatibility.  It has been replaced
@@ -45,6 +46,12 @@ class Event extends Object with Serializable {
     @stub
     def this(target: Object, when: Long, id: Int, x: Int, y: Int, key: Int, modifiers: Int) = ???
 
+    /** NOTE: The Event class is obsolete and is
+     *  available only for backwards compatibility.
+     */
+    @stub
+    def this(target: Object, when: Long, id: Int, x: Int, y: Int, key: Int, modifiers: Int, arg: Object) = ???
+
     /** An arbitrary argument of the event. */
     @stub
     val arg: Object = ???
@@ -85,6 +92,10 @@ class Event extends Object with Serializable {
     @stub
     val x: Int = ???
 
+    /** The y coordinate of the event. */
+    @stub
+    val y: Int = ???
+
     /** NOTE: The Event class is obsolete and is
      *  available only for backwards compatibility.
      */
@@ -114,6 +125,12 @@ class Event extends Object with Serializable {
      */
     @stub
     def toString(): String = ???
+
+    /** NOTE: The Event class is obsolete and is
+     *  available only for backwards compatibility.
+     */
+    @stub
+    def translate(dx: Int, dy: Int): Unit = ???
 }
 
 object Event {

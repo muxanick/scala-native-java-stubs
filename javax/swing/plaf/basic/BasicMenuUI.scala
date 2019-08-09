@@ -6,11 +6,16 @@ import java.lang.{Object, String}
 import javax.swing.{JComponent, JMenu}
 import javax.swing.event.{ChangeListener, MenuDragMouseListener, MenuKeyListener, MenuListener, MouseInputListener}
 import javax.swing.plaf.{ButtonUI, ComponentUI, MenuItemUI}
+import scala.scalanative.annotation.stub
 
 /** A default L&F implementation of MenuUI.  This implementation
  *  is a "combined" view/controller.
  */
 class BasicMenuUI extends BasicMenuItemUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** As of Java 2 platform 1.4, this previously undocumented class
      *  is now obsolete.
@@ -18,9 +23,19 @@ class BasicMenuUI extends BasicMenuItemUI {
     @stub
     object ChangeHandler extends BasicMenuUI.ChangeHandler
 
+    /** Instantiated and used by a menu item to handle the current menu selection
+     *  from mouse events.
+     */
+    @stub
+    protected object MouseInputHandler extends BasicMenuUI.MouseInputHandler
+
     /**  */
     @stub
     protected val changeListener: ChangeListener = ???
+
+    /**  */
+    @stub
+    protected val menuListener: MenuListener = ???
 
     /**  */
     @stub
@@ -81,6 +96,10 @@ class BasicMenuUI extends BasicMenuItemUI {
     /**  */
     @stub
     protected def uninstallKeyboardActions(): Unit = ???
+
+    /**  */
+    @stub
+    protected def uninstallListeners(): Unit = ???
 }
 
 object BasicMenuUI {

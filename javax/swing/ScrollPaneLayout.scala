@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component, Container, Dimension, LayoutManager, Rectangle}
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The layout manager used by JScrollPane.
  *  JScrollPaneLayout is
@@ -19,6 +20,10 @@ import java.lang.{Object, String}
  *  Please see XMLEncoder.
  */
 class ScrollPaneLayout extends Object with LayoutManager with ScrollPaneConstants with Serializable {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** The column header child. */
     @stub
@@ -59,6 +64,10 @@ class ScrollPaneLayout extends Object with LayoutManager with ScrollPaneConstant
     /** The scrollpane's vertical scrollbar child. */
     @stub
     protected val vsb: JScrollBar = ???
+
+    /** The display policy for the vertical scrollbar. */
+    @stub
+    protected val vsbPolicy: Int = ???
 
     /** Adds the specified component to the layout. */
     @stub
@@ -143,4 +152,16 @@ class ScrollPaneLayout extends Object with LayoutManager with ScrollPaneConstant
     /** Sets the vertical scrollbar-display policy. */
     @stub
     def setVerticalScrollBarPolicy(x: Int): Unit = ???
+
+    /** This method is invoked after the ScrollPaneLayout is set as the
+     *  LayoutManager of a JScrollPane.
+     */
+    @stub
+    def syncWithScrollPane(sp: JScrollPane): Unit = ???
+}
+
+object ScrollPaneLayout {
+    /** The UI resource version of ScrollPaneLayout. */
+    @stub
+    object UIResource extends ScrollPaneLayout.UIResource
 }

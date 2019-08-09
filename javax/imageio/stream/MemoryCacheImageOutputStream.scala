@@ -1,6 +1,8 @@
 package javax.imageio.stream
 
+import java.io.OutputStream
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An implementation of ImageOutputStream that writes its
  *  output to a regular OutputStream.  A memory buffer is
@@ -12,6 +14,12 @@ import java.lang.Object
  *  yet flushed.
  */
 class MemoryCacheImageOutputStream extends ImageOutputStreamImpl {
+
+    /** Constructs a MemoryCacheImageOutputStream that will write
+     *  to a given OutputStream.
+     */
+    @stub
+    def this(stream: OutputStream) = ???
 
     /** Closes this MemoryCacheImageOutputStream. */
     @stub
@@ -65,4 +73,8 @@ class MemoryCacheImageOutputStream extends ImageOutputStreamImpl {
      */
     @stub
     def write(b: Array[Byte], off: Int, len: Int): Unit = ???
+
+    /** Writes a single byte to the stream at the current position. */
+    @stub
+    def write(b: Int): Unit = ???
 }

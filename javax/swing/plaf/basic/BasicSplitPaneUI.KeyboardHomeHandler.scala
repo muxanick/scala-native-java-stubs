@@ -1,7 +1,8 @@
 package javax.swing.plaf.basic
 
-import java.awt.event.ActionListener
+import java.awt.event.{ActionEvent, ActionListener}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Implementation of an ActionListener that the JSplitPane UI uses for
  *  handling specific key presses.
@@ -10,4 +11,12 @@ import java.lang.Object
  *  Instantiate it only within subclasses of BasicSplitPaneUI.
  */
 class BasicSplitPaneUI.KeyboardHomeHandler extends Object with ActionListener {
+
+    /**  */
+    @stub
+    def KeyboardHomeHandler() = ???
+
+    /** Invoked when an action occurs. */
+    @stub
+    def actionPerformed(ev: ActionEvent): Unit = ???
 }

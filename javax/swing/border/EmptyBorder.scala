@@ -1,8 +1,9 @@
 package javax.swing.border
 
-import java.awt.{Component, Insets}
+import java.awt.{Component, Graphics, Insets}
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A class which provides an empty, transparent border which
  *  takes up space but does no drawing.
@@ -22,6 +23,10 @@ class EmptyBorder extends AbstractBorder with Serializable {
     @stub
     def this(borderInsets: Insets) = ???
 
+    /** Creates an empty border with the specified insets. */
+    @stub
+    def this(top: Int, left: Int, bottom: Int, right: Int) = ???
+
     /**  */
     @stub
     protected val bottom: Int = ???
@@ -34,6 +39,10 @@ class EmptyBorder extends AbstractBorder with Serializable {
     @stub
     protected val right: Int = ???
 
+    /**  */
+    @stub
+    protected val top: Int = ???
+
     /** Returns the insets of the border. */
     @stub
     def getBorderInsets(): Insets = ???
@@ -45,4 +54,8 @@ class EmptyBorder extends AbstractBorder with Serializable {
     /** Returns whether or not the border is opaque. */
     @stub
     def isBorderOpaque(): Boolean = ???
+
+    /** Does no drawing by default. */
+    @stub
+    def paintBorder(c: Component, g: Graphics, x: Int, y: Int, width: Int, height: Int): Unit = ???
 }

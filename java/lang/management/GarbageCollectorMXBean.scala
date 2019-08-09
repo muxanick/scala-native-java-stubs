@@ -1,5 +1,7 @@
 package java.lang.management
 
+import scala.scalanative.annotation.stub
+
 /** The management interface for the garbage collection of
  *  the Java virtual machine.  Garbage collection is the process
  *  that the Java virtual machine uses to find and reclaim unreachable
@@ -31,4 +33,10 @@ trait GarbageCollectorMXBean extends MemoryManagerMXBean {
     /** Returns the total number of collections that have occurred. */
     @stub
     def getCollectionCount(): Long = ???
+
+    /** Returns the approximate accumulated collection elapsed time
+     *  in milliseconds.
+     */
+    @stub
+    def getCollectionTime(): Long = ???
 }

@@ -3,6 +3,7 @@ package javax.xml.ws
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import javax.xml.ws.spi.WebServiceFeatureAnnotation
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** This feature clarifies the use of the wsdl:binding
  *  in a JAX-WS runtime.
@@ -27,4 +28,8 @@ import scala.annotation.StaticAnnotation
 @Documented 
 @WebServiceFeatureAnnotation ( id ="javax.xml.ws.RespectBindingFeature" , bean = RespectBindingFeature.class ) 
  final class RespectBinding extends StaticAnnotation {
+
+    /** Specifies if this feature is enabled or disabled. */
+    @stub
+    val enabled: Boolean = ???
 }

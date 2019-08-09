@@ -2,6 +2,7 @@ package javax.xml.transform.sax
 
 import java.lang.String
 import javax.xml.transform.{Result, Transformer}
+import scala.scalanative.annotation.stub
 
 /** A TransformerHandler
  *  listens for SAX ContentHandler parse events and transforms
@@ -26,4 +27,10 @@ trait TransformerHandler extends ContentHandler with LexicalHandler with DTDHand
      */
     @stub
     def setResult(result: Result): Unit = ???
+
+    /** Set the base ID (URI or system ID) from where relative
+     *  URLs will be resolved.
+     */
+    @stub
+    def setSystemId(systemID: String): Unit = ???
 }

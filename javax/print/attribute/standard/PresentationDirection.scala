@@ -2,6 +2,7 @@ package javax.print.attribute.standard
 
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, EnumSyntax, PrintJobAttribute, PrintRequestAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class PresentationDirection is a printing attribute class, an enumeration,
  *  that is used in conjunction with the NumberUp attribute to
@@ -37,6 +38,10 @@ final class PresentationDirection extends EnumSyntax with PrintJobAttribute with
      */
     @stub
     def getName(): String = ???
+
+    /** Returns the string table for class PresentationDirection. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object PresentationDirection {
@@ -81,4 +86,10 @@ object PresentationDirection {
      */
     @stub
     val TOTOP_TOLEFT: PresentationDirection = ???
+
+    /** Pages are laid out in columns starting at the bottom left,
+     *  proceeding towards the top & right.
+     */
+    @stub
+    val TOTOP_TORIGHT: PresentationDirection = ???
 }

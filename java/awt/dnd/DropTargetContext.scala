@@ -5,6 +5,7 @@ import java.awt.datatransfer.{DataFlavor, Transferable}
 import java.io.Serializable
 import java.lang.Object
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** A DropTargetContext is created
  *  whenever the logical cursor associated
@@ -17,6 +18,14 @@ import java.util.List
  *  if appropriate.
  */
 class DropTargetContext extends Object with Serializable {
+
+    /** TransferableProxy is a helper inner class that implements
+     *  Transferable interface and serves as a proxy for another
+     *  Transferable object which represents data transfer for
+     *  a particular drag-n-drop operation.
+     */
+    @stub
+    protected object TransferableProxy extends DropTargetContext.TransferableProxy
 
     /** accept the Drag. */
     @stub
@@ -97,4 +106,10 @@ class DropTargetContext extends Object with Serializable {
     /** Called when disassociated with the DropTargetContextPeer. */
     @stub
     def removeNotify(): Unit = ???
+
+    /** This method sets the current actions acceptable to
+     *  this DropTarget.
+     */
+    @stub
+    protected def setTargetActions(actions: Int): Unit = ???
 }

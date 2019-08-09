@@ -3,6 +3,7 @@ package javax.swing
 import java.io.Serializable
 import java.lang.{Object, String}
 import javax.swing.text.{DocumentFilter, NavigationFilter}
+import scala.scalanative.annotation.stub
 
 /** Instances of AbstractFormatter are used by
  *  JFormattedTextField to handle the conversion both
@@ -32,6 +33,10 @@ import javax.swing.text.{DocumentFilter, NavigationFilter}
  *  at the appropriate times.
  */
 object abstract JFormattedTextField.AbstractFormatter extends Object with Serializable {
+
+    /**  */
+    @stub
+    def AbstractFormatter() = ???
 
     /** Clones the AbstractFormatter. */
     @stub
@@ -86,4 +91,8 @@ object abstract JFormattedTextField.AbstractFormatter extends Object with Serial
      */
     @stub
     def uninstall(): Unit = ???
+
+    /** Returns the string value to display for value. */
+    @stub
+    def valueToString(value: Object): String
 }

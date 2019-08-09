@@ -1,6 +1,7 @@
 package java.util.function
 
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** Represents a supplier of results.
  * 
@@ -11,4 +12,8 @@ import java.lang.FunctionalInterface
  *  whose functional method is get().
  */
 @FunctionalInterface trait Supplier[T] {
+
+    /** Gets a result. */
+    @stub
+    def get(): T = ???
 }

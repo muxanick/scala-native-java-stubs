@@ -2,6 +2,7 @@ package javax.swing
 
 import java.awt.Component
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An instance of the Spring class holds three properties that
  *   characterize its behavior: the minimum, preferred, and
@@ -98,6 +99,10 @@ import java.lang.Object
  */
 abstract class Spring extends Object {
 
+    /** Used by factory methods to create a Spring. */
+    @stub
+    protected def this() = ???
+
     /** Returns the maximum value of this Spring. */
     def getMaximumValue(): Int
 
@@ -115,6 +120,10 @@ abstract class Spring extends Object {
 }
 
 object Spring {
+    /** An integer value signifying that a property value has not yet been calculated. */
+    @stub
+    val UNSET: Int = ???
+
     /** Returns a strut -- a spring whose minimum, preferred, and
      *  maximum values each have the value pref.
      */
@@ -158,4 +167,12 @@ object Spring {
      */
     @stub
     def sum(s1: Spring, s2: Spring): Spring = ???
+
+    /** Returns a spring whose minimum, preferred, maximum
+     *  and value properties are defined by the widths of the minimumSize,
+     *  preferredSize, maximumSize and size properties
+     *  of the supplied component.
+     */
+    @stub
+    def width(c: Component): Spring = ???
 }

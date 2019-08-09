@@ -6,6 +6,7 @@ import javax.xml.bind.JAXBContext
 import javax.xml.namespace.QName
 import javax.xml.soap.SOAPMessage
 import javax.xml.ws.handler.MessageContext
+import scala.scalanative.annotation.stub
 
 /** The interface SOAPMessageContext
  *   provides access to the SOAP message for either RPC request or
@@ -30,4 +31,8 @@ trait SOAPMessageContext extends MessageContext {
      */
     @stub
     def getRoles(): Set[String] = ???
+
+    /** Sets the SOAPMessage in this message context */
+    @stub
+    def setMessage(message: SOAPMessage): Unit = ???
 }

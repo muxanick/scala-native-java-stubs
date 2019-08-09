@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{Object, String}
 import java.util.Vector
 import javax.swing.undo.UndoableEdit
+import scala.scalanative.annotation.stub
 
 /** An implementation of the AbstractDocument.Content interface
  *  implemented using a gapped buffer similar to that used by emacs.
@@ -29,6 +30,12 @@ class GapContent extends Object with AbstractDocument.Content with Serializable 
     /** Creates a new GapContent object. */
     @stub
     def this() = ???
+
+    /** Creates a new GapContent object, with the initial
+     *  size specified.
+     */
+    @stub
+    def this(initialLength: Int) = ???
 
     /** Allocate an array to store items of the type
      *  appropriate (which is determined by the subclass).
@@ -116,4 +123,10 @@ class GapContent extends Object with AbstractDocument.Content with Serializable 
     /** Adjust the gap end downward. */
     @stub
     protected def shiftGapStartDown(newGapStart: Int): Unit = ???
+
+    /** Resets the location for all the UndoPosRef instances
+     *  in positions.
+     */
+    @stub
+    protected def updateUndoPositions(positions: Vector, offset: Int, length: Int): Unit = ???
 }

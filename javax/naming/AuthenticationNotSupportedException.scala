@@ -1,6 +1,7 @@
 package javax.naming
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown when
  *  the particular flavor of authentication requested is not supported.
@@ -30,4 +31,10 @@ class AuthenticationNotSupportedException extends NamingSecurityException {
      */
     @stub
     def this() = ???
+
+    /** Constructs a new instance of AuthenticationNotSupportedException using
+     *  an explanation.
+     */
+    @stub
+    def this(explanation: String) = ???
 }

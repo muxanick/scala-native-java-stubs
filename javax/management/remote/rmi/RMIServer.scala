@@ -1,7 +1,8 @@
 package javax.management.remote.rmi
 
-import java.lang.String
+import java.lang.{Object, String}
 import java.rmi.Remote
+import scala.scalanative.annotation.stub
 
 /** RMI object used to establish connections to an RMI connector.
  *  There is one Remote object implementing this interface for each RMI
@@ -18,4 +19,8 @@ trait RMIServer extends Remote {
      */
     @stub
     def getVersion(): String = ???
+
+    /** Makes a new connection through this RMI connector. */
+    @stub
+    def newClient(credentials: Object): RMIConnection = ???
 }

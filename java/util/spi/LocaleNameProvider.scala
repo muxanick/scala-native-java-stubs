@@ -2,12 +2,17 @@ package java.util.spi
 
 import java.lang.{Object, String}
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** An abstract class for service providers that
  *  provide localized names for the
  *  Locale class.
  */
 abstract class LocaleNameProvider extends LocaleServiceProvider {
+
+    /** Sole constructor. */
+    @stub
+    protected def this() = ???
 
     /** Returns a localized name for the given 
      *  IETF BCP47 region code (either ISO 3166 country code or UN M.49 area
@@ -26,4 +31,9 @@ abstract class LocaleNameProvider extends LocaleServiceProvider {
      *  display to the user.
      */
     def getDisplayScript(scriptCode: String, locale: Locale): String
+
+    /** Returns a localized name for the given variant code and the given locale that
+     *  is appropriate for display to the user.
+     */
+    def getDisplayVariant(variant: String, locale: Locale): String
 }

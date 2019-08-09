@@ -2,6 +2,7 @@ package javax.sql
 
 import java.lang.Object
 import java.sql.{Connection, ResultSet}
+import scala.scalanative.annotation.stub
 
 /** The interface that a RowSet object implements in order to
  *  present itself to a RowSetReader or RowSetWriter
@@ -34,4 +35,11 @@ trait RowSetInternal {
      */
     @stub
     def getParams(): Array[Object] = ???
+
+    /** Sets the given RowSetMetaData object as the
+     *  RowSetMetaData object for this RowSet
+     *  object.
+     */
+    @stub
+    def setMetaData(md: RowSetMetaData): Unit = ???
 }

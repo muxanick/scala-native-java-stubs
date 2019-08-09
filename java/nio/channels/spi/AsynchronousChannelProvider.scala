@@ -3,6 +3,7 @@ package java.nio.channels.spi
 import java.lang.Object
 import java.nio.channels.{AsynchronousChannelGroup, AsynchronousServerSocketChannel, AsynchronousSocketChannel}
 import java.util.concurrent.{ExecutorService, ThreadFactory}
+import scala.scalanative.annotation.stub
 
 /** Service-provider class for asynchronous channels.
  * 
@@ -17,6 +18,10 @@ import java.util.concurrent.{ExecutorService, ThreadFactory}
  */
 abstract class AsynchronousChannelProvider extends Object {
 
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this() = ???
+
     /** Constructs a new asynchronous channel group with the given thread pool. */
     def openAsynchronousChannelGroup(executor: ExecutorService, initialSize: Int): AsynchronousChannelGroup
 
@@ -28,4 +33,12 @@ abstract class AsynchronousChannelProvider extends Object {
 
     /** Opens an asynchronous socket channel. */
     def openAsynchronousSocketChannel(group: AsynchronousChannelGroup): AsynchronousSocketChannel
+}
+
+object AsynchronousChannelProvider {
+    /** Returns the system-wide default asynchronous channel provider for this
+     *  invocation of the Java virtual machine.
+     */
+    @stub
+    def provider(): AsynchronousChannelProvider = ???
 }

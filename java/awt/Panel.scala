@@ -1,7 +1,8 @@
 package java.awt
 
 import java.lang.Object
-import javax.accessibility.Accessible
+import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** Panel is the simplest container class. A panel
  *  provides space in which an application can attach any other
@@ -16,7 +17,21 @@ class Panel extends Container with Accessible {
     @stub
     def this() = ???
 
+    /** Creates a new panel with the specified layout manager. */
+    @stub
+    def this(layout: LayoutManager) = ???
+
+    /** This class implements accessibility support for the
+     *  Panel class.
+     */
+    @stub
+    protected object AccessibleAWTPanel extends Panel.AccessibleAWTPanel
+
     /** Creates the Panel's peer. */
     @stub
     def addNotify(): Unit = ???
+
+    /** Gets the AccessibleContext associated with this Panel. */
+    @stub
+    def getAccessibleContext(): AccessibleContext = ???
 }

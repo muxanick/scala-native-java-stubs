@@ -1,5 +1,7 @@
 package java.nio.file.attribute
 
+import scala.scalanative.annotation.stub
+
 /** File attributes associated with a file in a file system that supports
  *  legacy "DOS" attributes.
  * 
@@ -22,4 +24,8 @@ trait DosFileAttributes extends BasicFileAttributes {
     /** Returns the value of the read-only attribute. */
     @stub
     def isReadOnly(): Boolean = ???
+
+    /** Returns the value of the system attribute. */
+    @stub
+    def isSystem(): Boolean = ???
 }

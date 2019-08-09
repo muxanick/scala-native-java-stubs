@@ -4,6 +4,7 @@ import java.awt.event.{ItemEvent, ItemListener}
 import java.lang.{Class, Object, String}
 import java.util.EventListener
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** This class represents a check box that can be included in a menu.
  *  Selecting the check box in the menu changes its state from
@@ -33,6 +34,16 @@ class CheckboxMenuItem extends MenuItem with ItemSelectable with Accessible {
     /** Create a check box menu item with the specified label. */
     @stub
     def this(label: String) = ???
+
+    /** Create a check box menu item with the specified label and state. */
+    @stub
+    def this(label: String, state: Boolean) = ???
+
+    /** Inner class of CheckboxMenuItem used to provide default support for
+     *  accessibility.
+     */
+    @stub
+    protected object AccessibleAWTCheckboxMenuItem extends CheckboxMenuItem.AccessibleAWTCheckboxMenuItem
 
     /** Adds the specified item listener to receive item events from
      *  this check box menu item.
@@ -94,4 +105,8 @@ class CheckboxMenuItem extends MenuItem with ItemSelectable with Accessible {
      */
     @stub
     def removeItemListener(l: ItemListener): Unit = ???
+
+    /** Sets this check box menu item to the specified state. */
+    @stub
+    def setState(b: Boolean): Unit = ???
 }

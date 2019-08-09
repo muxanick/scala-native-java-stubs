@@ -3,6 +3,7 @@ package javax.management.openmbean
 import java.lang.{Comparable, Object, String}
 import java.util.Set
 import javax.management.{Descriptor, MBeanAttributeInfo, MBeanFeatureInfo}
+import scala.scalanative.annotation.stub
 
 /** Describes an attribute of an open MBean. */
 class OpenMBeanAttributeInfoSupport extends MBeanAttributeInfo with OpenMBeanAttributeInfo {
@@ -37,6 +38,15 @@ class OpenMBeanAttributeInfoSupport extends MBeanAttributeInfo with OpenMBeanAtt
      */
     @stub
     def this(name: String, description: String, openType: OpenType[T], isReadable: Boolean, isWritable: Boolean, isIs: Boolean, defaultValue: T, minValue: Comparable[T], maxValue: Comparable[T]) = ???
+
+    /** Constructs an OpenMBeanAttributeInfoSupport instance,
+     *  which describes the attribute of an open MBean with the
+     *  specified name, openType, description,
+     *  defaultValue and legalValues, and the specified
+     *  read/write access properties.
+     */
+    @stub
+    def this(name: String, description: String, openType: OpenType[T], isReadable: Boolean, isWritable: Boolean, isIs: Boolean, defaultValue: T, legalValues: Array[T]) = ???
 
     /** Compares the specified obj parameter with this OpenMBeanAttributeInfoSupport instance for equality. */
     @stub
@@ -114,4 +124,10 @@ class OpenMBeanAttributeInfoSupport extends MBeanAttributeInfo with OpenMBeanAtt
      */
     @stub
     def isValue(obj: Object): Boolean = ???
+
+    /** Returns a string representation of this
+     *  OpenMBeanAttributeInfoSupport instance.
+     */
+    @stub
+    def toString(): String = ???
 }

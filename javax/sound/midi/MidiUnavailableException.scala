@@ -1,6 +1,7 @@
 package javax.sound.midi
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** A MidiUnavailableException is thrown when a requested MIDI
  *  component cannot be opened or created because it is unavailable.  This often
@@ -18,4 +19,10 @@ class MidiUnavailableException extends Exception {
      */
     @stub
     def this() = ???
+
+    /** Constructs a MidiUnavailableException with the
+     *  specified detail message.
+     */
+    @stub
+    def this(message: String) = ???
 }

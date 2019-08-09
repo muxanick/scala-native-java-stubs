@@ -1,6 +1,7 @@
 package java.awt
 
 import java.awt.event.AdjustmentListener
+import scala.scalanative.annotation.stub
 
 /** The interface for objects which have an adjustable numeric value
  *  contained within a bounded range of values.
@@ -64,6 +65,12 @@ trait Adjustable {
     /** Sets the current value of the adjustable object. */
     @stub
     def setValue(v: Int): Unit = ???
+
+    /** Sets the length of the proportional indicator of the
+     *  adjustable object.
+     */
+    @stub
+    def setVisibleAmount(v: Int): Unit = ???
 }
 
 object Adjustable {
@@ -74,4 +81,8 @@ object Adjustable {
     /** Indicates that the Adjustable has no orientation. */
     @stub
     val NO_ORIENTATION: Int = ???
+
+    /** Indicates that the Adjustable has vertical orientation. */
+    @stub
+    val VERTICAL: Int = ???
 }

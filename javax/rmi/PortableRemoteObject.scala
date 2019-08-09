@@ -2,6 +2,7 @@ package javax.rmi
 
 import java.lang.{Class, Object}
 import java.rmi.Remote
+import scala.scalanative.annotation.stub
 
 /** Server implementation objects may either inherit from
  *  javax.rmi.PortableRemoteObject or they may implement a remote interface
@@ -17,6 +18,10 @@ import java.rmi.Remote
  *  object of the specified type, otherwise an exception will be thrown.
  */
 class PortableRemoteObject extends Object {
+
+    /** Initializes the object by calling exportObject(this). */
+    @stub
+    protected def this() = ???
 }
 
 object PortableRemoteObject {
@@ -37,4 +42,10 @@ object PortableRemoteObject {
     /** Returns a stub for the given server object. */
     @stub
     def toStub(obj: Remote): Remote = ???
+
+    /** Deregisters a server object from the runtime, allowing the object to become
+     *  available for garbage collection.
+     */
+    @stub
+    def unexportObject(obj: Remote): Unit = ???
 }

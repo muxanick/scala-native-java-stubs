@@ -2,8 +2,9 @@ package java.util.concurrent
 
 import java.io.Serializable
 import java.lang.{Cloneable, Object}
-import java.util.{AbstractMap, Comparator, Map, Map.Entry, NavigableSet, Set}
+import java.util.{AbstractMap, Collection, Comparator, Map, Map.Entry, NavigableSet, Set, SortedMap}
 import java.util.function.{BiConsumer, BiFunction, Function}
+import scala.scalanative.annotation.stub
 
 /** A scalable concurrent ConcurrentNavigableMap implementation.
  *  The map is sorted according to the natural
@@ -72,6 +73,12 @@ class ConcurrentSkipListMap[K, V] extends AbstractMap[K, V] with ConcurrentNavig
      */
     @stub
     def this(m: Map[_ <: K, _ <: V]) = ???
+
+    /** Constructs a new map containing the same mappings and using the
+     *  same ordering as the specified sorted map.
+     */
+    @stub
+    def this(m: SortedMap[K, _ <: V]) = ???
 
     /** Returns a key-value mapping associated with the least key
      *  greater than or equal to the given key, or null if
@@ -330,4 +337,8 @@ class ConcurrentSkipListMap[K, V] extends AbstractMap[K, V] with ConcurrentNavig
      */
     @stub
     def tailMap(fromKey: K, inclusive: Boolean): ConcurrentNavigableMap[K, V] = ???
+
+    /** Returns a Collection view of the values contained in this map. */
+    @stub
+    def values(): Collection[V] = ???
 }

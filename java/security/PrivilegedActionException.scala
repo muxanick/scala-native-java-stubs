@@ -1,6 +1,7 @@
 package java.security
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown by
  *  doPrivileged(PrivilegedExceptionAction) and
@@ -21,6 +22,12 @@ import java.lang.{Exception, Object, Throwable}
  */
 class PrivilegedActionException extends Exception {
 
+    /** Constructs a new PrivilegedActionException "wrapping"
+     *  the specific Exception.
+     */
+    @stub
+    def this(exception: Exception) = ???
+
     /** Returns the cause of this exception (the exception thrown by
      *  the privileged computation that resulted in this
      *  PrivilegedActionException).
@@ -33,4 +40,8 @@ class PrivilegedActionException extends Exception {
      */
     @stub
     def getException(): Exception = ???
+
+    /** Returns a short description of this throwable. */
+    @stub
+    def toString(): String = ???
 }

@@ -2,6 +2,7 @@ package javax.management
 
 import java.lang.{Object, String}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** The Notification class represents a notification emitted by an
  *  MBean.  It contains a reference to the source MBean: if the
@@ -31,6 +32,17 @@ class Notification extends EventObject {
     /** Creates a Notification object. */
     @stub
     def this(type: String, source: Object, sequenceNumber: Long, timeStamp: Long, message: String) = ???
+
+    /** Creates a Notification object. */
+    @stub
+    def this(type: String, source: Object, sequenceNumber: Long, message: String) = ???
+
+    /** This field hides the EventObject.source field in the
+     *  parent class to make it non-transient and therefore part of the
+     *  serialized form.
+     */
+    @stub
+    protected val source: Object = ???
 
     /** Get the notification message. */
     @stub
@@ -67,4 +79,8 @@ class Notification extends EventObject {
     /** Set the user data. */
     @stub
     def setUserData(userData: Object): Unit = ???
+
+    /** Returns a String representation of this notification. */
+    @stub
+    def toString(): String = ???
 }

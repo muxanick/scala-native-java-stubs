@@ -3,6 +3,7 @@ package java.awt
 import java.io.Serializable
 import java.lang.{Object, String}
 import javax.accessibility.AccessibleContext
+import scala.scalanative.annotation.stub
 
 /** The abstract class MenuComponent is the superclass
  *  of all menu-related components. In this respect, the class
@@ -13,6 +14,15 @@ import javax.accessibility.AccessibleContext
  *  through the method processEvent.
  */
 abstract class MenuComponent extends Object with Serializable {
+
+    /** Creates a MenuComponent. */
+    @stub
+    def this() = ???
+
+    /** Inner class of MenuComponent used to provide
+     *  default support for accessibility.
+     */
+    protected object AccessibleAWTMenuComponent extends MenuComponent.AccessibleAWTMenuComponent
 
     /** Delivers an event to this component or one of its sub components. */
     def dispatchEvent(e: AWTEvent): Unit
@@ -68,4 +78,7 @@ abstract class MenuComponent extends Object with Serializable {
 
     /** Sets the name of the component to the specified string. */
     def setName(name: String): Unit
+
+    /** Returns a representation of this menu component as a string. */
+    def toString(): String
 }

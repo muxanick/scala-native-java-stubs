@@ -1,6 +1,7 @@
 package java.math
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Specifies a rounding behavior for numerical operations
  *  capable of discarding precision. Each rounding mode indicates how
@@ -91,6 +92,9 @@ object RoundingMode {
      */
     final val UNNECESSARY = new RoundingMode(UNNECESSARY, 6)
 
+    /** Rounding mode to round away from zero. */
+    final val UP = new RoundingMode(UP, 7)
+
     /** Returns the RoundingMode object corresponding to a
      *  legacy integer rounding mode constant in BigDecimal.
      */
@@ -100,4 +104,10 @@ object RoundingMode {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): RoundingMode = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[RoundingMode] = ???
 }

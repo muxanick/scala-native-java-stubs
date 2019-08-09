@@ -1,7 +1,8 @@
 package javax.swing.text.html
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Defines a set of
  *  CSS attributes
@@ -80,10 +81,24 @@ import java.lang.Object
  *  p { margin-top: 10% } will be treated as if no margin-top was specified.
  */
 class CSS extends Object with Serializable {
+
+    /**  */
+    @stub
+    def this() = ???
 }
 
 object CSS {
+    /** Definitions to be used as a key on AttributeSet's
+     *  that might hold CSS attributes.
+     */
+    @stub
+    object Attribute extends CSS.Attribute
+
     /** Return the set of all possible CSS attribute keys. */
     @stub
     def getAllAttributeKeys(): Array[CSS.Attribute] = ???
+
+    /** Translates a string to a CSS.Attribute object. */
+    @stub
+    def getAttribute(name: String): CSS.Attribute = ???
 }

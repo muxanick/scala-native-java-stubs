@@ -2,6 +2,7 @@ package java.nio.channels
 
 import java.lang.Object
 import java.net.{InetAddress, NetworkInterface}
+import scala.scalanative.annotation.stub
 
 /** A token representing the membership of an Internet Protocol (IP) multicast
  *  group.
@@ -22,6 +23,10 @@ import java.net.{InetAddress, NetworkInterface}
  *  from particular source addresses.
  */
 abstract class MembershipKey extends Object {
+
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this() = ???
 
     /** Block multicast datagrams from the given source address. */
     def block(source: InetAddress): MembershipKey
@@ -45,4 +50,9 @@ abstract class MembershipKey extends Object {
      *  or null if this membership is not source-specific.
      */
     def sourceAddress(): InetAddress
+
+    /** Unblock multicast datagrams from the given source address that was
+     *  previously blocked using the block method.
+     */
+    def unblock(source: InetAddress): MembershipKey
 }

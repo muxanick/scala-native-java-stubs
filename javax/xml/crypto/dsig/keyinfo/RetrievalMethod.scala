@@ -1,7 +1,9 @@
 package javax.xml.crypto.dsig.keyinfo
 
+import java.lang.String
 import java.util.List
 import javax.xml.crypto.{Data, URIReference, XMLCryptoContext, XMLStructure}
+import scala.scalanative.annotation.stub
 
 /** A representation of the XML RetrievalMethod element as
  *  defined in the 
@@ -46,4 +48,8 @@ trait RetrievalMethod extends URIReference with XMLStructure {
      */
     @stub
     def getTransforms(): List = ???
+
+    /** Returns the URI of the referenced KeyInfo information. */
+    @stub
+    def getURI(): String = ???
 }

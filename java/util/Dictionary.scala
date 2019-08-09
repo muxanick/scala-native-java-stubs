@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The Dictionary class is the abstract parent of any
  *  class, such as Hashtable, which maps keys to values.
@@ -16,6 +17,10 @@ import java.lang.Object
  *  implement the Map interface, rather than extending this class.
  */
 abstract class Dictionary[K, V] extends Object {
+
+    /** Sole constructor. */
+    @stub
+    def this() = ???
 
     /** Returns an enumeration of the values in this dictionary. */
     def elements(): Enumeration[V]
@@ -38,4 +43,7 @@ abstract class Dictionary[K, V] extends Object {
      *  value) from this dictionary.
      */
     def remove(key: Object): V
+
+    /** Returns the number of entries (distinct keys) in this dictionary. */
+    def size(): Int
 }

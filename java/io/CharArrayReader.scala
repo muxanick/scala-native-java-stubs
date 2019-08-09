@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class implements a character buffer that can be used as a
  *  character-input stream.
@@ -10,6 +11,10 @@ class CharArrayReader extends Reader {
     /** Creates a CharArrayReader from the specified array of chars. */
     @stub
     def this(buf: Array[Char]) = ???
+
+    /** Creates a CharArrayReader from the specified array of chars. */
+    @stub
+    def this(buf: Array[Char], offset: Int, length: Int) = ???
 
     /** The character buffer. */
     @stub
@@ -22,6 +27,10 @@ class CharArrayReader extends Reader {
     /** The position of mark in buffer. */
     @stub
     protected val markedPos: Int = ???
+
+    /** The current buffer position. */
+    @stub
+    protected val pos: Int = ???
 
     /** Closes the stream and releases any system resources associated with
      *  it.
@@ -54,4 +63,8 @@ class CharArrayReader extends Reader {
      */
     @stub
     def reset(): Unit = ???
+
+    /** Skips characters. */
+    @stub
+    def skip(n: Long): Long = ???
 }

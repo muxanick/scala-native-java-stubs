@@ -3,6 +3,7 @@ package javax.crypto
 import java.lang.{Object, String}
 import java.security.{Key, Provider, SecureRandom}
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** This class provides the functionality of a key agreement (or key
  *  exchange) protocol.
@@ -34,6 +35,10 @@ import java.security.spec.AlgorithmParameterSpec
  *  other algorithms are supported.
  */
 class KeyAgreement extends Object {
+
+    /** Creates a KeyAgreement object. */
+    @stub
+    protected def this(keyAgreeSpi: KeyAgreementSpi, provider: Provider, algorithm: String) = ???
 
     /** Executes the next phase of this key agreement with the given
      *  key that was received from one of the other parties involved in this key
@@ -83,6 +88,12 @@ class KeyAgreement extends Object {
      */
     @stub
     def init(key: Key, params: AlgorithmParameterSpec, random: SecureRandom): Unit = ???
+
+    /** Initializes this key agreement with the given key and source of
+     *  randomness.
+     */
+    @stub
+    def init(key: Key, random: SecureRandom): Unit = ???
 }
 
 object KeyAgreement {

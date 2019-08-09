@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Methods to access the character-based console device, if any, associated
  *  with the current Java virtual machine.
@@ -101,4 +102,10 @@ final class Console extends Object with Flushable {
      */
     @stub
     def readPassword(fmt: String, args: Object*): Array[Char] = ???
+
+    /** Retrieves the unique PrintWriter object
+     *  associated with this console.
+     */
+    @stub
+    def writer(): PrintWriter = ???
 }

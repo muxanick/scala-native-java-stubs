@@ -5,6 +5,7 @@ import java.lang.{Class, Object, String}
 import java.math.BigDecimal
 import java.net.URL
 import java.util.{Calendar, Map}
+import scala.scalanative.annotation.stub
 
 /** The interface used to execute SQL stored procedures.  The JDBC API
  *  provides a stored procedure SQL escape syntax that allows stored procedures
@@ -716,4 +717,10 @@ trait CallableStatement extends PreparedStatement {
     /** Sets the designated parameter to the given java.net.URL object. */
     @stub
     def setURL(parameterName: String, val: URL): Unit = ???
+
+    /** Retrieves whether the last OUT parameter read had the value of
+     *  SQL NULL.
+     */
+    @stub
+    def wasNull(): Boolean = ???
 }

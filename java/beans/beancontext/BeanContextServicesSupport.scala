@@ -2,7 +2,8 @@ package java.beans.beancontext
 
 import java.io.{ObjectInputStream, ObjectOutputStream}
 import java.lang.{Class, Object}
-import java.util.{ArrayList, Iterator, Locale}
+import java.util.{ArrayList, HashMap, Iterator, Locale}
+import scala.scalanative.annotation.stub
 
 /** 
  *  This helper class provides a utility implementation of the
@@ -33,6 +34,12 @@ class BeanContextServicesSupport extends BeanContextSupport with BeanContextServ
     @stub
     def this(peer: BeanContextServices, lcle: Locale, dtime: Boolean) = ???
 
+    /** 
+     *  Construct a BeanContextServicesSupport instance
+     */
+    @stub
+    def this(peer: BeanContextServices, lcle: Locale, dTime: Boolean, visible: Boolean) = ???
+
     /**  */
     @stub
     protected object BCSSChild extends BeanContextServicesSupport.BCSSChild
@@ -52,6 +59,12 @@ class BeanContextServicesSupport extends BeanContextSupport with BeanContextServ
     /** The number of instances of a serializable BeanContextServceProvider. */
     @stub
     protected val serializable: Int = ???
+
+    /** all accesses to the  protected transient HashMap services 
+     *  field should be synchronized on that object
+     */
+    @stub
+    protected val services: HashMap = ???
 
     /** add a BeanContextServicesListener */
     @stub
@@ -182,9 +195,23 @@ class BeanContextServicesSupport extends BeanContextSupport with BeanContextServ
      */
     @stub
     def serviceAvailable(bcssae: BeanContextServiceAvailableEvent): Unit = ???
+
+    /** BeanContextServicesListener callback, propagates event to all
+     *  currently registered listeners and BeanContextServices children,
+     *  if this BeanContextService does not already implement this service
+     *  itself.
+     */
+    @stub
+    def serviceRevoked(bcssre: BeanContextServiceRevokedEvent): Unit = ???
 }
 
 object BeanContextServicesSupport {
+    /** subclasses may subclass this nested class to add behaviors for
+     *  each BeanContextServicesProvider.
+     */
+    @stub
+    protected object BCSSServiceProvider extends BeanContextServicesSupport.BCSSServiceProvider
+
     /** Gets the BeanContextServicesListener (if any) of the specified
      *  child.
      */

@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, IntegerSyntax, PrintJobAttribute, PrintRequestAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class JobImpressions is an integer valued printing attribute class that
  *  specifies the total size in number of impressions of the document(s) being
@@ -42,6 +43,10 @@ import javax.print.attribute.{Attribute, IntegerSyntax, PrintJobAttribute, Print
  */
 final class JobImpressions extends IntegerSyntax with PrintRequestAttribute with PrintJobAttribute {
 
+    /** Construct a new job impressions attribute with the given integer value. */
+    @stub
+    def this(value: Int) = ???
+
     /** Returns whether this job impressions attribute is equivalent to the
      *  passed in object.
      */
@@ -53,4 +58,10 @@ final class JobImpressions extends IntegerSyntax with PrintRequestAttribute with
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

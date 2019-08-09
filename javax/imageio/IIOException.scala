@@ -2,6 +2,7 @@ package javax.imageio
 
 import java.io.IOException
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** An exception class used for signaling run-time failure of reading
  *  and writing operations.
@@ -20,4 +21,11 @@ class IIOException extends IOException {
      */
     @stub
     def this(message: String) = ???
+
+    /** Constructs an IIOException with a given message
+     *  String and a Throwable that was its
+     *  underlying cause.
+     */
+    @stub
+    def this(message: String, cause: Throwable) = ???
 }

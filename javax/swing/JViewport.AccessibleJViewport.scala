@@ -2,7 +2,8 @@ package javax.swing
 
 import java.awt.{Component.AccessibleAWTComponent, Container.AccessibleAWTContainer}
 import java.lang.Object
-import javax.accessibility.AccessibleContext
+import javax.accessibility.{AccessibleContext, AccessibleRole}
+import scala.scalanative.annotation.stub
 
 /** This class implements accessibility support for the
  *  JViewport class.  It provides an implementation of the
@@ -18,4 +19,12 @@ import javax.accessibility.AccessibleContext
  *  Please see XMLEncoder.
  */
 protected class JViewport.AccessibleJViewport extends JComponent.AccessibleJComponent {
+
+    /**  */
+    @stub
+    protected def AccessibleJViewport() = ???
+
+    /** Get the role of this object. */
+    @stub
+    def getAccessibleRole(): AccessibleRole = ???
 }

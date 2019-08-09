@@ -2,6 +2,7 @@ package java.util
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Represents a currency. Currencies are identified by their ISO 4217 currency
  *  codes. Visit the 
@@ -84,6 +85,10 @@ final class Currency extends Object with Serializable {
     /** Gets the symbol of this currency for the specified locale. */
     @stub
     def getSymbol(locale: Locale): String = ???
+
+    /** Returns the ISO 4217 currency code of this currency. */
+    @stub
+    def toString(): String = ???
 }
 
 object Currency {

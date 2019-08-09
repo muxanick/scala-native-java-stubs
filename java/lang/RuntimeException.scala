@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** RuntimeException is the superclass of those
  *  exceptions that can be thrown during the normal operation of the
  *  Java Virtual Machine.
@@ -34,4 +36,12 @@ class RuntimeException extends Exception {
      */
     @stub
     protected def this(message: String, cause: Throwable, enableSuppression: Boolean, writableStackTrace: Boolean) = ???
+
+    /** Constructs a new runtime exception with the specified cause and a
+     *  detail message of (cause==null ? null : cause.toString())
+     *  (which typically contains the class and detail message of
+     *  cause).
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

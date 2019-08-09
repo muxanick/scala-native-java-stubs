@@ -2,6 +2,7 @@ package java.security
 
 import java.lang.{Class, Object, String}
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** This class is used as an opaque representation of cryptographic parameters.
  * 
@@ -35,6 +36,10 @@ import java.security.spec.AlgorithmParameterSpec
  *  other algorithms are supported.
  */
 class AlgorithmParameters extends Object {
+
+    /** Creates an AlgorithmParameters object. */
+    @stub
+    protected def this(paramSpi: AlgorithmParametersSpi, provider: Provider, algorithm: String) = ???
 
     /** Returns the name of the algorithm associated with this parameter object. */
     @stub
@@ -73,6 +78,10 @@ class AlgorithmParameters extends Object {
      */
     @stub
     def init(params: Array[Byte], format: String): Unit = ???
+
+    /** Returns a formatted string describing the parameters. */
+    @stub
+    def toString(): String = ???
 }
 
 object AlgorithmParameters {

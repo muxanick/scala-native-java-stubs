@@ -2,6 +2,7 @@ package javax.swing.text
 
 import java.awt.{Rectangle, Shape}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** CompositeView is an abstract View
  *  implementation which manages one or more child views.
@@ -45,6 +46,10 @@ import java.lang.Object
  *  
  */
 abstract class CompositeView extends View {
+
+    /** Constructs a CompositeView for the given element. */
+    @stub
+    def this(elem: Element) = ???
 
     /** Returns the allocation for a given child. */
     protected def childAllocation(index: Int, a: Rectangle): Unit
@@ -146,4 +151,9 @@ abstract class CompositeView extends View {
 
     /** Sets the parent of the view. */
     def setParent(parent: View): Unit
+
+    /** Provides a mapping from the view coordinate space to the logical
+     *  coordinate space of the model.
+     */
+    def viewToModel(x: Float, y: Float, a: Shape, bias: Array[Position.Bias]): Int
 }

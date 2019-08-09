@@ -2,6 +2,7 @@ package java.lang.reflect
 
 import java.lang.{Class, Object, String}
 import java.lang.annotation.Annotation
+import scala.scalanative.annotation.stub
 
 /** A Method provides information about, and access to, a single method
  *  on a class or interface.  The reflected method may be a class method
@@ -159,4 +160,8 @@ final class Method extends Executable {
      */
     @stub
     def toGenericString(): String = ???
+
+    /** Returns a string describing this Method. */
+    @stub
+    def toString(): String = ???
 }

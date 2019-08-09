@@ -2,6 +2,7 @@ package java.util.concurrent
 
 import java.lang.{Object, Runnable, String, Throwable, Void}
 import java.util.function.{BiConsumer, BiFunction, Consumer, Function, Supplier}
+import scala.scalanative.annotation.stub
 
 /** A Future that may be explicitly completed (setting its
  *  value and status), and may be used as a CompletionStage,
@@ -54,6 +55,10 @@ import java.util.function.{BiConsumer, BiFunction, Consumer, Function, Supplier}
  *  in these cases. 
  */
 class CompletableFuture[T] extends Object with Future[T] with CompletionStage[T] {
+
+    /** Creates a new incomplete CompletableFuture. */
+    @stub
+    def this() = ???
 
     /** Returns a new CompletionStage that, when either this or the
      *  other given stage complete normally, is executed with the
@@ -405,9 +410,22 @@ class CompletableFuture[T] extends Object with Future[T] with CompletionStage[T]
      */
     @stub
     def whenCompleteAsync(action: BiConsumer[_ >: T, _ >: Throwable]): CompletableFuture[T] = ???
+
+    /** Returns a new CompletionStage with the same result or exception as
+     *  this stage, that executes the given action using the supplied
+     *  Executor when this stage completes.
+     */
+    @stub
+    def whenCompleteAsync(action: BiConsumer[_ >: T, _ >: Throwable], executor: Executor): CompletableFuture[T] = ???
 }
 
 object CompletableFuture {
+    /** A marker interface identifying asynchronous tasks produced by
+     *  async methods.
+     */
+    @stub
+    val CompletableFuture.AsynchronousCompletionTask: trait = ???
+
     /** Returns a new CompletableFuture that is completed when all of
      *  the given CompletableFutures complete.
      */

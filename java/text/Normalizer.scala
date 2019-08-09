@@ -1,6 +1,7 @@
 package java.text
 
-import java.lang.{CharSequence, Object}
+import java.lang.{CharSequence, Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class provides the method normalize which transforms Unicode
  *  text into an equivalent composed or decomposed form, allowing for easier
@@ -69,7 +70,20 @@ final class Normalizer extends Object {
 }
 
 object Normalizer {
+    /** This enum provides constants of the four Unicode normalization forms
+     *  that are described in
+     *  
+     *  Unicode Standard Annex #15 — Unicode Normalization Forms
+     *  and two methods to access them.
+     */
+    @stub
+    object Form extends Normalizer.Form
+
     /** Determines if the given sequence of char values is normalized. */
     @stub
     def isNormalized(src: CharSequence, form: Normalizer.Form): Boolean = ???
+
+    /** Normalize a sequence of char values. */
+    @stub
+    def normalize(src: CharSequence, form: Normalizer.Form): String = ???
 }

@@ -4,6 +4,7 @@ import java.lang.Object
 import java.util.Enumeration
 import javax.swing.ListSelectionModel
 import javax.swing.event.TableColumnModelListener
+import scala.scalanative.annotation.stub
 
 /** Defines the requirements for a table column model object suitable for
  *  use with JTable.
@@ -97,4 +98,8 @@ trait TableColumnModel {
     /** Sets whether the columns in this model may be selected. */
     @stub
     def setColumnSelectionAllowed(flag: Boolean): Unit = ???
+
+    /** Sets the selection model. */
+    @stub
+    def setSelectionModel(newModel: ListSelectionModel): Unit = ???
 }

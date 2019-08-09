@@ -1,6 +1,8 @@
 package java.awt.print
 
+import java.io.IOException
 import java.lang.{Exception, Object, Throwable}
+import scala.scalanative.annotation.stub
 
 /** The PrinterIOException class is a subclass of
  *  PrinterException and is used to indicate that an IO error
@@ -16,9 +18,22 @@ import java.lang.{Exception, Object, Throwable}
  */
 class PrinterIOException extends PrinterException {
 
+    /** Constructs a new PrinterIOException
+     *  with the string representation of the specified
+     *  IOException.
+     */
+    @stub
+    def this(exception: IOException) = ???
+
     /** Returns the the cause of this exception (the IOException
      *  that terminated the print job).
      */
     @stub
     def getCause(): Throwable = ???
+
+    /** Returns the IOException that terminated
+     *  the print job.
+     */
+    @stub
+    def getIOException(): IOException = ???
 }

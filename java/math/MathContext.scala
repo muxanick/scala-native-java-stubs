@@ -1,7 +1,8 @@
 package java.math
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Immutable objects which encapsulate the context settings which
  *  describe certain rules for numerical operators, such as those
@@ -33,6 +34,10 @@ final class MathContext extends Object with Serializable {
     @stub
     def this(setPrecision: Int, setRoundingMode: RoundingMode) = ???
 
+    /** Constructs a new MathContext from a string. */
+    @stub
+    def this(val: String) = ???
+
     /** Compares this MathContext with the specified
      *  Object for equality.
      */
@@ -50,6 +55,10 @@ final class MathContext extends Object with Serializable {
     /** Returns the hash code for this MathContext. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns the string representation of this MathContext. */
+    @stub
+    def toString(): String = ???
 }
 
 object MathContext {
@@ -76,4 +85,10 @@ object MathContext {
      */
     @stub
     val DECIMAL64: MathContext = ???
+
+    /** A MathContext object whose settings have the values
+     *   required for unlimited precision arithmetic.
+     */
+    @stub
+    val UNLIMITED: MathContext = ???
 }

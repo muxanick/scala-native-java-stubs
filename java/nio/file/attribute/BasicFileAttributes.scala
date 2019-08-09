@@ -1,6 +1,7 @@
 package java.nio.file.attribute
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Basic attributes associated with a file in a file system.
  * 
@@ -49,4 +50,8 @@ trait BasicFileAttributes {
     /** Returns the time of last modification. */
     @stub
     def lastModifiedTime(): FileTime = ???
+
+    /** Returns the size of the file (in bytes). */
+    @stub
+    def size(): Long = ???
 }

@@ -2,6 +2,7 @@ package java.lang.management
 
 import java.lang.String
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** The management interface for the logging facility.
  * 
@@ -41,4 +42,10 @@ trait PlatformLoggingMXBean extends PlatformManagedObject {
      */
     @stub
     def getParentLoggerName(loggerName: String): String = ???
+
+    /** Sets the specified logger to the specified new
+     *  level.
+     */
+    @stub
+    def setLoggerLevel(loggerName: String, levelName: String): Unit = ???
 }

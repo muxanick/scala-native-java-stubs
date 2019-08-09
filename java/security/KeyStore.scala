@@ -1,9 +1,10 @@
 package java.security
 
-import java.io.InputStream
+import java.io.{InputStream, OutputStream}
 import java.lang.{Class, Object, String}
 import java.security.cert.Certificate
 import java.util.{Date, Enumeration}
+import scala.scalanative.annotation.stub
 
 /** This class represents a storage facility for cryptographic
  *  keys and certificates.
@@ -134,6 +135,12 @@ import java.util.{Date, Enumeration}
  */
 class KeyStore extends Object {
 
+    /** Creates a KeyStore object of the given type, and encapsulates the given
+     *  provider implementation (SPI object) in it.
+     */
+    @stub
+    protected def this(keyStoreSpi: KeyStoreSpi, provider: Provider, type: String) = ???
+
     /** Lists all the alias names of this keystore. */
     @stub
     def aliases(): Enumeration[String] = ???
@@ -242,6 +249,12 @@ class KeyStore extends Object {
     /** Stores this keystore using the given LoadStoreParameter. */
     @stub
     def store(param: KeyStore.LoadStoreParameter): Unit = ???
+
+    /** Stores this keystore to the given output stream, and protects its
+     *  integrity with the given password.
+     */
+    @stub
+    def store(stream: OutputStream, password: Array[Char]): Unit = ???
 }
 
 object KeyStore {
@@ -283,6 +296,12 @@ object KeyStore {
     /** A KeyStore entry that holds a SecretKey. */
     @stub
     object SecretKeyEntry extends KeyStore.SecretKeyEntry
+
+    /** A KeyStore entry that holds a trusted
+     *  Certificate.
+     */
+    @stub
+    object TrustedCertificateEntry extends KeyStore.TrustedCertificateEntry
 
     /** Returns the default keystore type as specified by the
      *  keystore.type security property, or the string

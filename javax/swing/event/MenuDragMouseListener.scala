@@ -1,6 +1,7 @@
 package javax.swing.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** Defines a menu mouse-drag listener. */
 trait MenuDragMouseListener extends EventListener {
@@ -22,4 +23,10 @@ trait MenuDragMouseListener extends EventListener {
      */
     @stub
     def menuDragMouseExited(e: MenuDragMouseEvent): Unit = ???
+
+    /** Invoked when a dragged mouse is release in a menu component's
+     *  display area.
+     */
+    @stub
+    def menuDragMouseReleased(e: MenuDragMouseEvent): Unit = ???
 }

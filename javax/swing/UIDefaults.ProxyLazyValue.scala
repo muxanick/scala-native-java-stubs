@@ -1,6 +1,7 @@
 package javax.swing
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class provides an implementation of LazyValue
  *  which can be
@@ -31,3 +32,14 @@ object UIDefaults.ProxyLazyValue extends Object with UIDefaults.LazyValue {
      */
     @stub
     def ProxyLazyValue(c: String, m: String) = ???
+
+    /** Creates a LazyValue which will construct an instance
+     *  when asked.
+     */
+    @stub
+    def ProxyLazyValue(c: String, m: String, o: Array[Object]) = ???
+
+    /** Creates the value retrieved from the UIDefaults table. */
+    @stub
+    def createValue(table: UIDefaults): Object = ???
+}

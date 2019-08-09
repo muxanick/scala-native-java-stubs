@@ -1,6 +1,7 @@
 package java.security.spec
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class specifies the set of parameters used with mask generation
  *  function MGF1 in OAEP Padding and RSA-PSS signature scheme, as
@@ -25,6 +26,18 @@ import java.lang.Object
  *  
  */
 class MGF1ParameterSpec extends Object with AlgorithmParameterSpec {
+
+    /** Constructs a parameter set for mask generation function MGF1
+     *  as defined in the PKCS #1 standard.
+     */
+    @stub
+    def this(mdName: String) = ???
+
+    /** Returns the algorithm name of the message digest used by the mask
+     *  generation function.
+     */
+    @stub
+    def getDigestAlgorithm(): String = ???
 }
 
 object MGF1ParameterSpec {
@@ -43,4 +56,8 @@ object MGF1ParameterSpec {
     /** The MGF1ParameterSpec which uses "SHA-384" message digest. */
     @stub
     val SHA384: MGF1ParameterSpec = ???
+
+    /** The MGF1ParameterSpec which uses SHA-512 message digest. */
+    @stub
+    val SHA512: MGF1ParameterSpec = ???
 }

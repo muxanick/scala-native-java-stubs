@@ -6,11 +6,16 @@ import java.lang.Object
 import javax.swing.{AbstractButton, Icon, JComponent}
 import javax.swing.plaf.{ButtonUI, ComponentUI}
 import javax.swing.plaf.basic.BasicButtonUI
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for
  *  JButton.
  */
 class SynthButtonUI extends BasicButtonUI with PropertyChangeListener with SynthUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the baseline. */
     @stub
@@ -83,6 +88,10 @@ class SynthButtonUI extends BasicButtonUI with PropertyChangeListener with Synth
     /**  */
     @stub
     protected def uninstallListeners(b: AbstractButton): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthButtonUI {

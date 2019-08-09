@@ -3,6 +3,7 @@ package java.lang
 import java.io.{Console, InputStream, PrintStream}
 import java.nio.channels.Channel
 import java.util.{Map, Properties}
+import scala.scalanative.annotation.stub
 
 /** The System class contains several useful class fields
  *  and methods. It cannot be instantiated.
@@ -24,6 +25,10 @@ object System {
     /** The "standard" input stream. */
     @stub
     val in: InputStream = ???
+
+    /** The "standard" output stream. */
+    @stub
+    val out: PrintStream = ???
 
     /** Copies an array from the specified source array, beginning at the
      *  specified position, to the specified position of the destination array.
@@ -152,4 +157,8 @@ object System {
     /** Sets the system property indicated by the specified key. */
     @stub
     def setProperty(key: String, value: String): String = ???
+
+    /** Sets the System security. */
+    @stub
+    def setSecurityManager(s: SecurityManager): Unit = ???
 }

@@ -1,6 +1,7 @@
 package javax.naming
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown when resources are not available to complete
  *  the requested operation. This might due to a lack of resources on
@@ -23,4 +24,10 @@ class InsufficientResourcesException extends NamingException {
      */
     @stub
     def this() = ???
+
+    /** Constructs a new instance of InsufficientResourcesException using an
+     *  explanation.
+     */
+    @stub
+    def this(explanation: String) = ???
 }

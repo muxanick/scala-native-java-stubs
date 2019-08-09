@@ -6,6 +6,7 @@ import java.lang.{Class, Object}
 import java.util.{Enumeration, EventListener, Vector}
 import javax.swing.ListSelectionModel
 import javax.swing.event.{ChangeEvent, EventListenerList, ListSelectionEvent, ListSelectionListener, TableColumnModelEvent, TableColumnModelListener}
+import scala.scalanative.annotation.stub
 
 /** The standard column-handler for a JTable.
  *  
@@ -19,6 +20,10 @@ import javax.swing.event.{ChangeEvent, EventListenerList, ListSelectionEvent, Li
  *  Please see XMLEncoder.
  */
 class DefaultTableColumnModel extends Object with TableColumnModel with PropertyChangeListener with ListSelectionListener with Serializable {
+
+    /** Creates a default table column model. */
+    @stub
+    def this() = ???
 
     /** Change event (only one needed) */
     @stub
@@ -43,6 +48,10 @@ class DefaultTableColumnModel extends Object with TableColumnModel with Property
     /** Array of TableColumn objects in this model */
     @stub
     protected val tableColumns: Vector[TableColumn] = ???
+
+    /** A local cache of the combined width of all columns */
+    @stub
+    protected val totalColumnWidth: Int = ???
 
     /** Appends aColumn to the end of the
      *   tableColumns array.
@@ -193,4 +202,11 @@ class DefaultTableColumnModel extends Object with TableColumnModel with Property
      */
     @stub
     def setSelectionModel(newModel: ListSelectionModel): Unit = ???
+
+    /** A ListSelectionListener that forwards
+     *  ListSelectionEvents when there is a column
+     *  selection change.
+     */
+    @stub
+    def valueChanged(e: ListSelectionEvent): Unit = ???
 }

@@ -4,6 +4,8 @@ import java.io.Closeable
 import java.lang.{Iterable, Object, String}
 import java.nio.file.attribute.UserPrincipalLookupService
 import java.nio.file.spi.FileSystemProvider
+import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** Provides an interface to a file system and is the factory for objects to
  *  access files and other objects in the file system.
@@ -63,6 +65,10 @@ import java.nio.file.spi.FileSystemProvider
  */
 abstract class FileSystem extends Object with Closeable {
 
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this() = ???
+
     /** Closes this file system. */
     def close(): Unit
 
@@ -104,4 +110,9 @@ abstract class FileSystem extends Object with Closeable {
 
     /** Returns the provider that created this file system. */
     def provider(): FileSystemProvider
+
+    /** Returns the set of the names of the file
+     *  attribute views supported by this FileSystem.
+     */
+    def supportedFileAttributeViews(): Set[String]
 }

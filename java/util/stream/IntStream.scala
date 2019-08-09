@@ -3,6 +3,7 @@ package java.util.stream
 import java.lang.Integer
 import java.util.{IntSummaryStatistics, OptionalDouble, OptionalInt, PrimitiveIterator.OfInt, Spliterator.OfInt}
 import java.util.function.{BiConsumer, IntBinaryOperator, IntConsumer, IntFunction, IntPredicate, IntSupplier, IntToDoubleFunction, IntToLongFunction, IntUnaryOperator, ObjIntConsumer, Supplier}
+import scala.scalanative.annotation.stub
 
 /** A sequence of primitive int-valued elements supporting sequential and parallel
  *  aggregate operations.  This is the int primitive specialization of
@@ -217,9 +218,17 @@ trait IntStream extends BaseStream[Integer, IntStream] {
      */
     @stub
     def summaryStatistics(): IntSummaryStatistics = ???
+
+    /** Returns an array containing the elements of this stream. */
+    @stub
+    def toArray(): Array[Int] = ???
 }
 
 object IntStream {
+    /** A mutable builder for an IntStream. */
+    @stub
+    val IntStream.Builder: trait = ???
+
     /** Returns a builder for an IntStream. */
     @stub
     def builder(): IntStream.Builder = ???

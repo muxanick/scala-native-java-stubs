@@ -1,6 +1,7 @@
 package javax.sql
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** An object that registers to be notified of events that occur on PreparedStatements
  *  that are in the Statement pool.
@@ -34,4 +35,11 @@ trait StatementEventListener extends EventListener {
      */
     @stub
     def statementClosed(event: StatementEvent): Unit = ???
+
+    /** The driver calls this method on all StatementEventListeners
+     *  registered on the connection when it detects that a
+     *  PreparedStatement is invalid.
+     */
+    @stub
+    def statementErrorOccurred(event: StatementEvent): Unit = ???
 }

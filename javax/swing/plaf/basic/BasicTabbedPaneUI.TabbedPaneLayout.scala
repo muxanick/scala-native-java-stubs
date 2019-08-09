@@ -2,11 +2,16 @@ package javax.swing.plaf.basic
 
 import java.awt.{Component, Container, Dimension, LayoutManager}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of BasicTabbedPaneUI.
  */
 class BasicTabbedPaneUI.TabbedPaneLayout extends Object with LayoutManager {
+
+    /**  */
+    @stub
+    def TabbedPaneLayout() = ???
 
     /** If the layout manager uses a per-component string,
      *  adds the component comp to the layout,
@@ -67,4 +72,8 @@ class BasicTabbedPaneUI.TabbedPaneLayout extends Object with LayoutManager {
     /** Removes the specified component from the layout. */
     @stub
     def removeLayoutComponent(comp: Component): Unit = ???
+
+    /**  */
+    @stub
+    protected def rotateTabRuns(tabPlacement: Int, selectedRun: Int): Unit = ???
 }

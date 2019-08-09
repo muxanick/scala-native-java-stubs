@@ -2,6 +2,7 @@ package javax.xml.bind.annotation
 
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** 
  *  Maps a JavaBean property to a map of wildcard attributes.

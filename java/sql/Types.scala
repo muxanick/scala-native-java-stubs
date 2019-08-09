@@ -1,6 +1,7 @@
 package java.sql
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The class that defines the constants that are used to identify generic
  *  SQL types, called JDBC types.
@@ -268,4 +269,11 @@ object Types {
      */
     @stub
     val VARBINARY: Int = ???
+
+    /** The constant in the Java programming language, sometimes referred
+     *  to as a type code, that identifies the generic SQL type
+     *  VARCHAR.
+     */
+    @stub
+    val VARCHAR: Int = ???
 }

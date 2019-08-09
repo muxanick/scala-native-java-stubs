@@ -1,7 +1,8 @@
 package java.util.logging
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.security.{BasicPermission, Permission}
+import scala.scalanative.annotation.stub
 
 /** The permission which the SecurityManager will check when code
  *  that is running with a SecurityManager calls one of the logging
@@ -17,4 +18,8 @@ import java.security.{BasicPermission, Permission}
  *  the security policy file.
  */
 final class LoggingPermission extends BasicPermission {
+
+    /** Creates a new LoggingPermission object. */
+    @stub
+    def this(name: String, actions: String) = ???
 }

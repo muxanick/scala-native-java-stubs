@@ -1,6 +1,7 @@
 package java.text
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class implements the Unicode Bidirectional Algorithm.
  *  
@@ -29,6 +30,10 @@ final class Bidi extends Object {
     /** Create Bidi from the given text, embedding, and direction information. */
     @stub
     def this(text: Array[Char], textStart: Int, embeddings: Array[Byte], embStart: Int, paragraphLength: Int, flags: Int) = ???
+
+    /** Create Bidi from the given paragraph of text and base direction. */
+    @stub
+    def this(paragraph: String, flags: Int) = ???
 
     /** Return true if the base direction is left-to-right. */
     @stub
@@ -83,6 +88,10 @@ final class Bidi extends Object {
     /** Return true if the line is all right-to-left text, and the base direction is right-to-left. */
     @stub
     def isRightToLeft(): Boolean = ???
+
+    /** Display the bidi internal state, used in debugging. */
+    @stub
+    def toString(): String = ???
 }
 
 object Bidi {
@@ -103,6 +112,10 @@ object Bidi {
     /** Constant indicating base direction is left-to-right. */
     @stub
     val DIRECTION_LEFT_TO_RIGHT: Int = ???
+
+    /** Constant indicating base direction is right-to-left. */
+    @stub
+    val DIRECTION_RIGHT_TO_LEFT: Int = ???
 
     /** Reorder the objects in the array into visual order based on their levels. */
     @stub

@@ -1,6 +1,7 @@
 package java.util.concurrent
 
 import java.util.{NavigableMap, NavigableSet}
+import scala.scalanative.annotation.stub
 
 /** A ConcurrentMap supporting NavigableMap operations,
  *  and recursively so for its navigable sub-maps.
@@ -56,4 +57,10 @@ trait ConcurrentNavigableMap[K, V] extends ConcurrentMap[K, V] with NavigableMap
      */
     @stub
     def tailMap(fromKey: K): ConcurrentNavigableMap[K, V] = ???
+
+    /** Returns a view of the portion of this map whose keys are greater than (or
+     *  equal to, if inclusive is true) fromKey.
+     */
+    @stub
+    def tailMap(fromKey: K, inclusive: Boolean): ConcurrentNavigableMap[K, V] = ???
 }

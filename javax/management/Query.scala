@@ -1,6 +1,7 @@
 package javax.management
 
 import java.lang.{Number, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Constructs query object constraints.
  * 
@@ -25,6 +26,10 @@ import java.lang.{Number, Object, String}
  *  
  */
 class Query extends Object {
+
+    /** Basic constructor. */
+    @stub
+    def this() = ???
 }
 
 object Query {
@@ -59,6 +64,10 @@ object Query {
     /** A code representing the plus(javax.management.ValueExp, javax.management.ValueExp) expression. */
     @stub
     val PLUS: Int = ???
+
+    /** A code representing the times(javax.management.ValueExp, javax.management.ValueExp) expression. */
+    @stub
+    val TIMES: Int = ???
 
     /** Returns a query expression that is the conjunction of two other query
      *  expressions.
@@ -217,4 +226,8 @@ object Query {
      */
     @stub
     def value(val: Number): ValueExp = ???
+
+    /** Returns a new string expression. */
+    @stub
+    def value(val: String): StringValueExp = ???
 }

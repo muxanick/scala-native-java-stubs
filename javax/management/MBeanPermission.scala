@@ -2,6 +2,7 @@ package javax.management
 
 import java.lang.{Object, String}
 import java.security.Permission
+import scala.scalanative.annotation.stub
 
 /** Permission controlling access to MBeanServer operations.  If a
  *  security manager has been set using System.setSecurityManager(java.lang.SecurityManager), most operations on the MBean Server
@@ -132,6 +133,12 @@ class MBeanPermission extends Permission {
     @stub
     def this(name: String, actions: String) = ???
 
+    /** Create a new MBeanPermission object with the specified target name
+     *  (class name, member, object name) and actions.
+     */
+    @stub
+    def this(className: String, member: String, objectName: ObjectName, actions: String) = ???
+
     /** Checks two MBeanPermission objects for equality. */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -143,4 +150,10 @@ class MBeanPermission extends Permission {
     /** Returns the hash code value for this object. */
     @stub
     def hashCode(): Int = ???
+
+    /** Checks if this MBeanPermission object "implies" the
+     *  specified permission.
+     */
+    @stub
+    def implies(p: Permission): Boolean = ???
 }

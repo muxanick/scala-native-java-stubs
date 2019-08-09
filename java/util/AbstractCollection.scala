@@ -1,6 +1,7 @@
 package java.util
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class provides a skeletal implementation of the Collection
  *  interface, to minimize the effort required to implement this interface. 
@@ -29,6 +30,10 @@ import java.lang.Object
  *  Java Collections Framework.
  */
 abstract class AbstractCollection[E] extends Object with Collection[E] {
+
+    /** Sole constructor. */
+    @stub
+    protected def this() = ???
 
     /** Ensures that this collection contains the specified element (optional
      *  operation).
@@ -82,4 +87,7 @@ abstract class AbstractCollection[E] extends Object with Collection[E] {
      *  the runtime type of the returned array is that of the specified array.
      */
     def toArray[T](a: Array[T]): Array[T]
+
+    /** Returns a string representation of this collection. */
+    def toString(): String
 }

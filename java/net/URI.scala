@@ -2,6 +2,7 @@ package java.net
 
 import java.io.Serializable
 import java.lang.{Comparable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Represents a Uniform Resource Identifier (URI) reference.
  * 
@@ -410,6 +411,10 @@ final class URI extends Object with Comparable[URI] with Serializable {
     @stub
     def this(scheme: String, host: String, path: String, fragment: String) = ???
 
+    /** Constructs a hierarchical URI from the given components. */
+    @stub
+    def this(scheme: String, authority: String, path: String, query: String, fragment: String) = ???
+
     /** Compares this URI to another object, which must be a URI. */
     @stub
     def compareTo(that: URI): Int = ???
@@ -521,6 +526,10 @@ final class URI extends Object with Comparable[URI] with Serializable {
     /** Returns the content of this URI as a string. */
     @stub
     def toString(): String = ???
+
+    /** Constructs a URL from this URI. */
+    @stub
+    def toURL(): URL = ???
 }
 
 object URI {

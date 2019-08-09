@@ -4,6 +4,7 @@ import java.awt.{Component, Container}
 import java.lang.Object
 import javax.swing.{JComponent, JLabel}
 import javax.swing.plaf.UIResource
+import scala.scalanative.annotation.stub
 
 /** A subclass of DefaultTableCellRenderer that
  *  implements UIResource.
@@ -23,3 +24,7 @@ import javax.swing.plaf.UIResource
  *  Please see XMLEncoder.
  */
 object DefaultTableCellRenderer.UIResource extends DefaultTableCellRenderer with UIResource {
+
+    /**  */
+    @stub
+    def UIResource() = ???

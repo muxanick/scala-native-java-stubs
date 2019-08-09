@@ -3,7 +3,7 @@ package javax.imageio.metadata
 import java.io.IOException
 import java.lang.{Exception, Object, String, Throwable}
 import javax.imageio.IIOException
-import org.w3c.dom.Node
+import scala.scalanative.annotation.stub
 
 /** An IIOInvalidTreeException is thrown when an attempt
  *  by an IIOMetadata object to parse a tree of
@@ -22,4 +22,22 @@ class IIOInvalidTreeException extends IIOException {
      */
     @stub
     def this(message: String, offendingNode: Node) = ???
+
+    /** Constructs an IIOInvalidTreeException with a
+     *  message string, a reference to an exception that caused this
+     *  exception, and a reference to the Node that caused
+     *  the parsing error.
+     */
+    @stub
+    def this(message: String, cause: Throwable, offendingNode: Node) = ???
+
+    /** The Node that led to the parsing error, or
+     *  null.
+     */
+    @stub
+    protected val offendingNode: Node = ???
+
+    /** Returns the Node that caused the error in parsing. */
+    @stub
+    def getOffendingNode(): Node = ???
 }

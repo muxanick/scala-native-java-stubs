@@ -1,6 +1,7 @@
 package java.sql
 
 import java.lang.{AutoCloseable, String}
+import scala.scalanative.annotation.stub
 
 /** The object used for executing a static SQL statement
  *  and returning the results it produces.
@@ -330,6 +331,12 @@ trait Statement extends Wrapper with AutoCloseable {
     /** Requests that a Statement be pooled or not pooled. */
     @stub
     def setPoolable(poolable: Boolean): Unit = ???
+
+    /** Sets the number of seconds the driver will wait for a
+     *  Statement object to execute to the given number of seconds.
+     */
+    @stub
+    def setQueryTimeout(seconds: Int): Unit = ???
 }
 
 object Statement {
@@ -369,4 +376,10 @@ object Statement {
      */
     @stub
     val RETURN_GENERATED_KEYS: Int = ???
+
+    /** The constant indicating that a batch statement executed successfully
+     *  but that no count of the number of rows it affected is available.
+     */
+    @stub
+    val SUCCESS_NO_INFO: Int = ???
 }

@@ -4,9 +4,14 @@ import java.awt.Component.BaselineResizeBehavior
 import java.lang.Object
 import javax.swing.{JComponent, JPanel}
 import javax.swing.plaf.{ComponentUI, PanelUI}
+import scala.scalanative.annotation.stub
 
 /** BasicPanel implementation */
 class BasicPanelUI extends PanelUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the baseline. */
     @stub
@@ -29,6 +34,12 @@ class BasicPanelUI extends PanelUI {
     /**  */
     @stub
     protected def uninstallDefaults(p: JPanel): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicPanelUI {

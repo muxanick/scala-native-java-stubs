@@ -1,5 +1,8 @@
 package java.util.concurrent
 
+import java.lang.{Runnable, Thread}
+import scala.scalanative.annotation.stub
+
 /** An object that creates new threads on demand.  Using thread factories
  *  removes hardwiring of calls to new Thread,
  *  enabling applications to use special thread subclasses, priorities, etc.
@@ -18,4 +21,8 @@ package java.util.concurrent
  *  to known values before returning it.
  */
 trait ThreadFactory {
+
+    /** Constructs a new Thread. */
+    @stub
+    def newThread(r: Runnable): Thread = ???
 }

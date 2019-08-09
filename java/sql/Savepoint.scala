@@ -1,5 +1,8 @@
 package java.sql
 
+import java.lang.String
+import scala.scalanative.annotation.stub
+
 /** The representation of a savepoint, which is a point within
  *  the current transaction that can be referenced from the
  *  Connection.rollback method. When a transaction
@@ -16,4 +19,10 @@ trait Savepoint {
      */
     @stub
     def getSavepointId(): Int = ???
+
+    /** Retrieves the name of the savepoint that this Savepoint
+     *  object represents.
+     */
+    @stub
+    def getSavepointName(): String = ???
 }

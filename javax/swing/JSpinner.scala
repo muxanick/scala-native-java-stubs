@@ -5,6 +5,7 @@ import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.event.ChangeListener
 import javax.swing.plaf.SpinnerUI
+import scala.scalanative.annotation.stub
 
 /** A single line input field that lets the user select a
  *  number or an object value from an ordered sequence. Spinners typically
@@ -76,6 +77,10 @@ class JSpinner extends JComponent with Accessible {
      */
     @stub
     def this() = ???
+
+    /** Constructs a spinner for the given model. */
+    @stub
+    def this(model: SpinnerModel) = ???
 
     /** AccessibleJSpinner implements accessibility
      *  support for the JSpinner class.
@@ -179,6 +184,10 @@ class JSpinner extends JComponent with Accessible {
      */
     @stub
     def setValue(value: Object): Unit = ???
+
+    /** Resets the UI property with the value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
 }
 
 object JSpinner {
@@ -200,4 +209,10 @@ object JSpinner {
      */
     @stub
     object ListEditor extends JSpinner.ListEditor
+
+    /** An editor for a JSpinner whose model is a
+     *  SpinnerNumberModel.
+     */
+    @stub
+    object NumberEditor extends JSpinner.NumberEditor
 }

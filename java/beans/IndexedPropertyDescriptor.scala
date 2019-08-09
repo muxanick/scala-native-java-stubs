@@ -2,6 +2,7 @@ package java.beans
 
 import java.lang.{Class, Object, String}
 import java.lang.reflect.Method
+import scala.scalanative.annotation.stub
 
 /** An IndexedPropertyDescriptor describes a property that acts like an
  *  array and has an indexed read and/or indexed write method to access
@@ -26,6 +27,12 @@ class IndexedPropertyDescriptor extends PropertyDescriptor {
      */
     @stub
     def this(propertyName: String, beanClass: Class[_], readMethodName: String, writeMethodName: String, indexedReadMethodName: String, indexedWriteMethodName: String) = ???
+
+    /** This constructor takes the name of a simple property, and Method
+     *  objects for reading and writing the property.
+     */
+    @stub
+    def this(propertyName: String, readMethod: Method, writeMethod: Method, indexedReadMethod: Method, indexedWriteMethod: Method) = ???
 
     /** Compares this PropertyDescriptor against the specified object. */
     @stub
@@ -52,4 +59,8 @@ class IndexedPropertyDescriptor extends PropertyDescriptor {
     /** Sets the method that should be used to read an indexed property value. */
     @stub
     def setIndexedReadMethod(readMethod: Method): Unit = ???
+
+    /** Sets the method that should be used to write an indexed property value. */
+    @stub
+    def setIndexedWriteMethod(writeMethod: Method): Unit = ???
 }

@@ -1,7 +1,8 @@
 package java.awt
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The CheckboxGroup class is used to group together
  *  a set of Checkbox buttons.
@@ -29,6 +30,10 @@ import java.lang.Object
  */
 class CheckboxGroup extends Object with Serializable {
 
+    /** Creates a new instance of CheckboxGroup. */
+    @stub
+    def this() = ???
+
     /** Deprecated. 
      * As of JDK version 1.1,
      *  replaced by getSelectedCheckbox().
@@ -54,4 +59,10 @@ class CheckboxGroup extends Object with Serializable {
      */
     @stub
     def setSelectedCheckbox(box: Checkbox): Unit = ???
+
+    /** Returns a string representation of this check box group,
+     *  including the value of its current selection.
+     */
+    @stub
+    def toString(): String = ???
 }

@@ -2,6 +2,7 @@ package javax.xml.bind.attachment
 
 import java.lang.{Object, String}
 import javax.activation.DataHandler
+import scala.scalanative.annotation.stub
 
 /** Enables JAXB unmarshalling of a root document containing optimized binary data formats.
  * 
@@ -29,9 +30,16 @@ import javax.activation.DataHandler
  */
 abstract class AttachmentUnmarshaller extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Retrieve the attachment identified by content-id, cid,  as a byte[] */
     def getAttachmentAsByteArray(cid: String): Array[Byte]
 
     /** Lookup MIME content by content-id, cid, and return as a DataHandler. */
     def getAttachmentAsDataHandler(cid: String): DataHandler
+
+    /** Read-only property that returns true if JAXB unmarshaller needs to perform XOP processing. */
+    def isXOPPackage(): Boolean
 }

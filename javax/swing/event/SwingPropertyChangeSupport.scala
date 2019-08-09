@@ -2,6 +2,7 @@ package javax.swing.event
 
 import java.beans.{PropertyChangeEvent, PropertyChangeSupport}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This subclass of java.beans.PropertyChangeSupport is almost
  *  identical in functionality. The only difference is if constructed with
@@ -14,10 +15,18 @@ final class SwingPropertyChangeSupport extends PropertyChangeSupport {
     @stub
     def this(sourceBean: Object) = ???
 
+    /** Constructs a SwingPropertyChangeSupport object. */
+    @stub
+    def this(sourceBean: Object, notifyOnEDT: Boolean) = ???
+
     /** Fires a property change event to listeners
      *  that have been registered to track updates of
      *  all properties or a property with the specified name.
      */
     @stub
     def firePropertyChange(evt: PropertyChangeEvent): Unit = ???
+
+    /** Returns notifyOnEDT property. */
+    @stub
+    def isNotifyOnEDT(): Boolean = ???
 }

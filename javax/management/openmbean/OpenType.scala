@@ -2,6 +2,8 @@ package javax.management.openmbean
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import java.util.List
+import scala.scalanative.annotation.stub
 
 /** The OpenType class is the parent abstract class of all classes which describe the actual open type
  *  of open data values.
@@ -16,6 +18,12 @@ import java.lang.{Object, String}
  *  
  */
 abstract class OpenType[T] extends Object with Serializable {
+
+    /** Constructs an OpenType instance (actually a subclass instance as OpenType is abstract),
+     *  checking for the validity of the given parameters.
+     */
+    @stub
+    protected def this(className: String, typeName: String, description: String) = ???
 
     /** Compares the specified obj parameter with this
      *  open type instance for equality.
@@ -43,6 +51,9 @@ abstract class OpenType[T] extends Object with Serializable {
 
     /** Tests whether obj is a value for this open type. */
     def isValue(obj: Object): Boolean
+
+    /** Returns a string representation of this open type instance. */
+    def toString(): String
 }
 
 object OpenType {
@@ -52,4 +63,10 @@ object OpenType {
      */
     @stub
     val ALLOWED_CLASSNAMES: Array[String] = ???
+
+    /** List of the fully qualified names of the Java classes allowed for open
+     *  data values.
+     */
+    @stub
+    val ALLOWED_CLASSNAMES_LIST: List[String] = ???
 }

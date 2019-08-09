@@ -2,6 +2,7 @@ package java.lang.invoke
 
 import java.lang.{Class, Object, String}
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** A method handle is a typed, directly executable reference to an underlying method,
  *  constructor, field, or similar low-level operation, with optional
@@ -449,4 +450,7 @@ abstract class MethodHandle extends Object {
      *  ending with the string representation of the method handle's type.
      */
     def toString(): String
+
+    /** Reports the type of this method handle. */
+    def type(): MethodType
 }

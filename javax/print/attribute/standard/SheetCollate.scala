@@ -2,6 +2,7 @@ package javax.print.attribute.standard
 
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, DocAttribute, EnumSyntax, PrintJobAttribute, PrintRequestAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class SheetCollate is a printing attribute class, an enumeration, that
  *  specifies whether or not the media sheets of each copy of each printed
@@ -114,6 +115,12 @@ import javax.print.attribute.{Attribute, DocAttribute, EnumSyntax, PrintJobAttri
  */
 final class SheetCollate extends EnumSyntax with DocAttribute with PrintRequestAttribute with PrintJobAttribute {
 
+    /** Construct a new sheet collate enumeration value with the given integer
+     *  value.
+     */
+    @stub
+    protected def this(value: Int) = ???
+
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.
      */
@@ -129,6 +136,10 @@ final class SheetCollate extends EnumSyntax with DocAttribute with PrintRequestA
      */
     @stub
     def getName(): String = ???
+
+    /** Returns the string table for class SheetCollate. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object SheetCollate {
@@ -137,4 +148,10 @@ object SheetCollate {
      */
     @stub
     val COLLATED: SheetCollate = ???
+
+    /** Sheets within a document appear in uncollated order when multiple
+     *  copies are printed.
+     */
+    @stub
+    val UNCOLLATED: SheetCollate = ???
 }

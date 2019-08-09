@@ -1,5 +1,8 @@
 package java.beans
 
+import java.lang.Object
+import scala.scalanative.annotation.stub
+
 /** A customizer class provides a complete custom GUI for customizing
  *  a target Java Bean.
  *  
@@ -17,4 +20,8 @@ trait Customizer {
     /** Remove a listener for the PropertyChange event. */
     @stub
     def removePropertyChangeListener(listener: PropertyChangeListener): Unit = ???
+
+    /** Set the object to be customized. */
+    @stub
+    def setObject(bean: Object): Unit = ???
 }

@@ -4,6 +4,7 @@ import java.io.{InputStream, Serializable}
 import java.lang.{Object, String}
 import java.security.Principal
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /**  This class represents an X.500 Principal.
  *  X500Principals are represented by distinguished names such as
@@ -51,6 +52,13 @@ final class X500Principal extends Object with Principal with Serializable {
     @stub
     def this(name: String) = ???
 
+    /** Creates an X500Principal from a string representation of
+     *  an X.500 distinguished name (ex:
+     *  "CN=Duke, OU=JavaSoft, O=Sun Microsystems, C=US").
+     */
+    @stub
+    def this(name: String, keywordMap: Map[String, String]) = ???
+
     /** Compares the specified Object with this
      *  X500Principal for equality.
      */
@@ -82,6 +90,12 @@ final class X500Principal extends Object with Principal with Serializable {
     /** Return a hash code for this X500Principal. */
     @stub
     def hashCode(): Int = ???
+
+    /** Return a user-friendly string representation of this
+     *  X500Principal.
+     */
+    @stub
+    def toString(): String = ???
 }
 
 object X500Principal {
@@ -92,4 +106,8 @@ object X500Principal {
     /** RFC 1779 String format of Distinguished Names. */
     @stub
     val RFC1779: String = ???
+
+    /** RFC 2253 String format of Distinguished Names. */
+    @stub
+    val RFC2253: String = ???
 }

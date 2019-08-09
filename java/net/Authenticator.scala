@@ -1,6 +1,7 @@
 package java.net
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The class Authenticator represents an object that knows how to obtain
  *  authentication for a network connection.  Usually, it will do this
@@ -23,6 +24,10 @@ import java.lang.{Object, String}
  *  that fails.
  */
 abstract class Authenticator extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Called when password authorization is needed. */
     protected def getPasswordAuthentication(): PasswordAuthentication
@@ -63,6 +68,10 @@ abstract class Authenticator extends Object {
 }
 
 object Authenticator {
+    /** The type of the entity requesting authentication. */
+    @stub
+    object RequestorType extends Authenticator.RequestorType
+
     /** Ask the authenticator that has been registered with the system
      *  for a password.
      */
@@ -80,4 +89,10 @@ object Authenticator {
      */
     @stub
     def requestPasswordAuthentication(host: String, addr: InetAddress, port: Int, protocol: String, prompt: String, scheme: String, url: URL, reqType: Authenticator.RequestorType): PasswordAuthentication = ???
+
+    /** Sets the authenticator that will be used by the networking code
+     *  when a proxy or an HTTP server asks for authentication.
+     */
+    @stub
+    def setDefault(a: Authenticator): Unit = ???
 }

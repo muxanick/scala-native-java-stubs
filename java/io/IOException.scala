@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Signals that an I/O exception of some sort has occurred. This
  *  class is the general class of exceptions produced by failed or
@@ -23,4 +24,11 @@ class IOException extends Exception {
      */
     @stub
     def this(message: String, cause: Throwable) = ???
+
+    /** Constructs an IOException with the specified cause and a
+     *  detail message of (cause==null ? null : cause.toString())
+     *  (which typically contains the class and detail message of cause).
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

@@ -1,6 +1,7 @@
 package java.net
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Utility class for HTML form decoding. This class contains static methods
  *  for decoding a String from the application/x-www-form-urlencoded
@@ -45,6 +46,10 @@ import java.lang.{Object, String}
  *  implementation.
  */
 class URLDecoder extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 }
 
 object URLDecoder {
@@ -56,4 +61,10 @@ object URLDecoder {
      */
     @stub
     def decode(s: String): String = ???
+
+    /** Decodes a application/x-www-form-urlencoded string using a specific
+     *  encoding scheme.
+     */
+    @stub
+    def decode(s: String, enc: String): String = ???
 }

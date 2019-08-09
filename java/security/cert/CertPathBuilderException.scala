@@ -2,6 +2,7 @@ package java.security.cert
 
 import java.lang.{Exception, Object, String, Throwable}
 import java.security.GeneralSecurityException
+import scala.scalanative.annotation.stub
 
 /** An exception indicating one of a variety of problems encountered when
  *  building a certification path with a CertPathBuilder.
@@ -37,4 +38,10 @@ class CertPathBuilderException extends GeneralSecurityException {
      */
     @stub
     def this(msg: String, cause: Throwable) = ???
+
+    /** Creates a CertPathBuilderException that wraps the specified
+     *  throwable.
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

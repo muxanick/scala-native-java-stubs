@@ -1,5 +1,7 @@
 package java.awt.datatransfer
 
+import scala.scalanative.annotation.stub
+
 /** Defines the interface for classes that will provide data to
  *  a clipboard. An instance of this interface becomes the owner
  *  of the contents of a clipboard (clipboard owner) if it is
@@ -11,4 +13,8 @@ package java.awt.datatransfer
  *  of this clipboard.
  */
 trait ClipboardOwner {
+
+    /** Notifies this object that it is no longer the clipboard owner. */
+    @stub
+    def lostOwnership(clipboard: Clipboard, contents: Transferable): Unit = ???
 }

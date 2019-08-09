@@ -4,6 +4,7 @@ import java.lang.{Object, String}
 import java.util.Vector
 import javax.swing.{JComponent, LookAndFeel, UIDefaults}
 import javax.swing.plaf.ComponentUI
+import scala.scalanative.annotation.stub
 
 /** A multiplexing look and feel that allows more than one UI
  *  to be associated with a component at the same time.
@@ -27,6 +28,10 @@ import javax.swing.plaf.ComponentUI
  *  Please see XMLEncoder.
  */
 class MultiLookAndFeel extends LookAndFeel {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Creates, initializes, and returns
      *  the look and feel specific defaults.
@@ -74,4 +79,11 @@ object MultiLookAndFeel {
      */
     @stub
     def createUIs(mui: ComponentUI, uis: Vector, target: JComponent): ComponentUI = ???
+
+    /** Creates an array,
+     *  populates it with UI objects from the passed-in vector,
+     *  and returns the array.
+     */
+    @stub
+    protected def uisToArray(uis: Vector): Array[ComponentUI] = ???
 }

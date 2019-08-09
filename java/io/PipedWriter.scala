@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Piped character-output streams. */
 class PipedWriter extends Writer {
@@ -10,6 +11,12 @@ class PipedWriter extends Writer {
      */
     @stub
     def this() = ???
+
+    /** Creates a piped writer connected to the specified piped
+     *  reader.
+     */
+    @stub
+    def this(snk: PipedReader) = ???
 
     /** Closes this piped output stream and releases any system resources
      *  associated with this stream.
@@ -32,4 +39,8 @@ class PipedWriter extends Writer {
      */
     @stub
     def write(cbuf: Array[Char], off: Int, len: Int): Unit = ???
+
+    /** Writes the specified char to the piped output stream. */
+    @stub
+    def write(c: Int): Unit = ???
 }

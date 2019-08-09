@@ -1,6 +1,7 @@
 package javax.xml.transform
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Provides string constants that can be used to set
  *  output properties for a Transformer, or to retrieve
@@ -46,4 +47,8 @@ object OutputKeys {
     /** standalone = "yes" | "no". */
     @stub
     val STANDALONE: String = ???
+
+    /** version = nmtoken. */
+    @stub
+    val VERSION: String = ???
 }

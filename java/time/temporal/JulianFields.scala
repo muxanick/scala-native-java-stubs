@@ -1,6 +1,7 @@
 package java.time.temporal
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A set of date fields that provide access to Julian Days.
  *  
@@ -23,4 +24,8 @@ object JulianFields {
     /** Modified Julian Day field. */
     @stub
     val MODIFIED_JULIAN_DAY: TemporalField = ???
+
+    /** Rata Die field. */
+    @stub
+    val RATA_DIE: TemporalField = ???
 }

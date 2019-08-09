@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener interface for receiving mouse motion events on a component.
  *  (For clicks and other mouse events, use the MouseListener.)
@@ -24,4 +25,10 @@ trait MouseMotionListener extends EventListener {
      */
     @stub
     def mouseDragged(e: MouseEvent): Unit = ???
+
+    /** Invoked when the mouse cursor has been moved onto a component
+     *  but no buttons have been pushed.
+     */
+    @stub
+    def mouseMoved(e: MouseEvent): Unit = ???
 }

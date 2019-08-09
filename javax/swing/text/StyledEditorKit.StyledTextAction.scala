@@ -1,8 +1,9 @@
 package javax.swing.text
 
 import java.awt.event.ActionEvent
-import java.lang.Object
+import java.lang.{Object, String}
 import javax.swing.{AbstractAction, JEditorPane}
+import scala.scalanative.annotation.stub
 
 /** An action that assumes it's being fired on a JEditorPane
  *  with a StyledEditorKit (or subclass) installed.  This has
@@ -30,6 +31,10 @@ import javax.swing.{AbstractAction, JEditorPane}
  */
 object abstract StyledEditorKit.StyledTextAction extends TextAction {
 
+    /** Creates a new StyledTextAction from a string action name. */
+    @stub
+    def StyledTextAction(nm: String) = ???
+
     /** Gets the target editor for an action. */
     @stub
     protected def getEditor(e: ActionEvent): JEditorPane = ???
@@ -47,4 +52,8 @@ object abstract StyledEditorKit.StyledTextAction extends TextAction {
      */
     @stub
     protected def setCharacterAttributes(editor: JEditorPane, attr: AttributeSet, replace: Boolean): Unit = ???
+
+    /** Applies the given attributes to paragraphs. */
+    @stub
+    protected def setParagraphAttributes(editor: JEditorPane, attr: AttributeSet, replace: Boolean): Unit = ???
 }

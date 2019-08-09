@@ -1,5 +1,7 @@
 package java.beans.beancontext
 
+import scala.scalanative.annotation.stub
+
 /** 
  *  This interface is implemented by a JavaBean that does
  *  not directly have a BeanContext(Child) associated with
@@ -42,4 +44,10 @@ package java.beans.beancontext
  *  
  */
 trait BeanContextProxy {
+
+    /** Gets the BeanContextChild (or subinterface)
+     *  associated with this object.
+     */
+    @stub
+    def getBeanContextProxy(): BeanContextChild = ???
 }

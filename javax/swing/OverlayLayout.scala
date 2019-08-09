@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component, Container, Dimension, LayoutManager2}
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A layout manager to arrange components over the top
  *  of each other.  The requested size of the container
@@ -24,6 +25,12 @@ import java.lang.{Object, String}
  *  Please see XMLEncoder.
  */
 class OverlayLayout extends Object with LayoutManager2 with Serializable {
+
+    /** Constructs a layout manager that performs overlay
+     *  arrangement of the children.
+     */
+    @stub
+    def this(target: Container) = ???
 
     /** Adds the specified component to the layout, using the specified
      *  constraint object.
@@ -74,4 +81,8 @@ class OverlayLayout extends Object with LayoutManager2 with Serializable {
      */
     @stub
     def preferredLayoutSize(target: Container): Dimension = ???
+
+    /** Removes the specified component from the layout. */
+    @stub
+    def removeLayoutComponent(comp: Component): Unit = ???
 }

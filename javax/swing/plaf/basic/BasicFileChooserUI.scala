@@ -8,9 +8,14 @@ import javax.swing.{Action, Icon, JButton, JComponent, JFileChooser, JList, JPan
 import javax.swing.event.ListSelectionListener
 import javax.swing.filechooser.{FileFilter, FileView}
 import javax.swing.plaf.{ComponentUI, FileChooserUI}
+import scala.scalanative.annotation.stub
 
 /** Basic L&F implementation of a FileChooser. */
 class BasicFileChooserUI extends FileChooserUI {
+
+    /**  */
+    @stub
+    def this(b: JFileChooser) = ???
 
     /**  */
     @stub
@@ -47,6 +52,10 @@ class BasicFileChooserUI extends FileChooserUI {
     /**  */
     @stub
     protected object SelectionListener extends BasicFileChooserUI.SelectionListener
+
+    /** Rescans the files in the current directory */
+    @stub
+    protected object UpdateAction extends BasicFileChooserUI.UpdateAction
 
     /**  */
     @stub
@@ -165,6 +174,10 @@ class BasicFileChooserUI extends FileChooserUI {
     /**  */
     @stub
     protected val upFolderIcon: Icon = ???
+
+    /**  */
+    @stub
+    protected val viewMenuIcon: Icon = ???
 
     /**  */
     @stub
@@ -337,6 +350,12 @@ class BasicFileChooserUI extends FileChooserUI {
     /**  */
     @stub
     protected def uninstallStrings(fc: JFileChooser): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicFileChooserUI {

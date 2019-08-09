@@ -6,6 +6,7 @@ import java.lang.{Object, String}
 import javax.swing.{Icon, JComponent, JSlider}
 import javax.swing.plaf.{ComponentUI, SliderUI}
 import javax.swing.plaf.basic.BasicSliderUI
+import scala.scalanative.annotation.stub
 
 /** A Java L&F implementation of SliderUI.
  *  
@@ -19,6 +20,14 @@ import javax.swing.plaf.basic.BasicSliderUI
  *  Please see XMLEncoder.
  */
 class MetalSliderUI extends BasicSliderUI {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /**  */
+    @stub
+    protected object MetalPropertyListener extends MetalSliderUI.MetalPropertyListener
 
     /**  */
     @stub
@@ -89,6 +98,12 @@ class MetalSliderUI extends BasicSliderUI {
     /**  */
     @stub
     def paintTrack(g: Graphics): Unit = ???
+
+    /** This function is called when a mousePressed was detected in the track, not
+     *  in the thumb.
+     */
+    @stub
+    protected def scrollDueToClickInTrack(dir: Int): Unit = ???
 }
 
 object MetalSliderUI {
@@ -115,6 +130,10 @@ object MetalSliderUI {
     /**  */
     @stub
     protected val trackWidth: Int = ???
+
+    /** A default vertical thumb Icon. */
+    @stub
+    protected val vertThumbIcon: Icon = ???
 
     /**  */
     @stub

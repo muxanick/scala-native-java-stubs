@@ -3,6 +3,7 @@ package java.sql
 import java.lang.{Object, String}
 import java.time.{Instant, LocalTime}
 import java.util.Date
+import scala.scalanative.annotation.stub
 
 /** A thin wrapper around the java.util.Date class that allows the JDBC
  *  API to identify this as an SQL TIME value. The Time
@@ -21,6 +22,10 @@ class Time extends Date {
      */
     @stub
     def this(hour: Int, minute: Int, second: Int) = ???
+
+    /** Constructs a Time object using a milliseconds time value. */
+    @stub
+    def this(time: Long) = ???
 
     /** Deprecated.   */
     @stub
@@ -77,4 +82,8 @@ object Time {
      */
     @stub
     def valueOf(time: LocalTime): Time = ???
+
+    /** Converts a string in JDBC time escape format to a Time value. */
+    @stub
+    def valueOf(s: String): Time = ???
 }

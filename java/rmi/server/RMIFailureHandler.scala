@@ -1,5 +1,8 @@
 package java.rmi.server
 
+import java.lang.Exception
+import scala.scalanative.annotation.stub
+
 /** An RMIFailureHandler can be registered via the
  *  RMISocketFactory.setFailureHandler call. The
  *  failure method of the handler is invoked when the RMI
@@ -9,4 +12,11 @@ package java.rmi.server
  *  ServerSocket.
  */
 trait RMIFailureHandler {
+
+    /** The failure callback is invoked when the RMI
+     *  runtime is unable to create a ServerSocket via the
+     *  RMISocketFactory.
+     */
+    @stub
+    def failure(ex: Exception): Boolean = ???
 }

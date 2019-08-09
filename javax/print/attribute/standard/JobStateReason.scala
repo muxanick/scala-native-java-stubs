@@ -2,6 +2,7 @@ package javax.print.attribute.standard
 
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, EnumSyntax}
+import scala.scalanative.annotation.stub
 
 /** Class JobStateReason is a printing attribute class, an enumeration, that
  *  provides additional information about the job's current state, i.e.,
@@ -29,6 +30,12 @@ import javax.print.attribute.{Attribute, EnumSyntax}
  */
 class JobStateReason extends EnumSyntax with Attribute {
 
+    /** Construct a new job state reason enumeration value with the given
+     *  integer  value.
+     */
+    @stub
+    protected def this(value: Int) = ???
+
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.
      */
@@ -44,6 +51,10 @@ class JobStateReason extends EnumSyntax with Attribute {
      */
     @stub
     def getName(): String = ???
+
+    /** Returns the string table for class JobStateReason. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object JobStateReason {
@@ -202,4 +213,10 @@ object JobStateReason {
      */
     @stub
     val UNSUPPORTED_COMPRESSION: JobStateReason = ???
+
+    /** The job was aborted by the system because the document data's document
+     *  format (doc flavor) is not among those supported by the printer.
+     */
+    @stub
+    val UNSUPPORTED_DOCUMENT_FORMAT: JobStateReason = ???
 }

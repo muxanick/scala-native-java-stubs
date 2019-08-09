@@ -2,14 +2,25 @@ package javax.swing.plaf.basic
 
 import java.awt.event.{ActionEvent, ActionListener, ComponentAdapter, ComponentEvent}
 import java.lang.Object
-import javax.swing.{JScrollBar, JScrollPane}
+import javax.swing.{JScrollBar, JScrollPane, Timer}
+import scala.scalanative.annotation.stub
 
 /** Updates the preferred size when scrolling (if necessary). */
 class BasicTreeUI.ComponentHandler extends ComponentAdapter with ActionListener {
 
+    /**  */
+    @stub
+    def ComponentHandler() = ???
+
     /** ScrollBar that is being adjusted. */
     @stub
     protected val scrollBar: JScrollBar = ???
+
+    /** Timer used when inside a scrollpane and the scrollbar is
+     *  adjusting.
+     */
+    @stub
+    protected val timer: Timer = ???
 
     /** Public as a result of Timer. */
     @stub
@@ -24,4 +35,10 @@ class BasicTreeUI.ComponentHandler extends ComponentAdapter with ActionListener 
      */
     @stub
     protected def getScrollPane(): JScrollPane = ???
+
+    /** Creates, if necessary, and starts a Timer to check if need to
+     *  resize the bounds.
+     */
+    @stub
+    protected def startTimer(): Unit = ???
 }

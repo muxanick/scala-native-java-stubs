@@ -1,6 +1,7 @@
 package java.security.cert
 
-import java.lang.Cloneable
+import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** A specification of certification path algorithm parameters.
  *  The purpose of this interface is to group (and provide type safety for)
@@ -9,4 +10,8 @@ import java.lang.Cloneable
  *  interface.
  */
 trait CertPathParameters extends Cloneable {
+
+    /** Makes a copy of this CertPathParameters. */
+    @stub
+    def clone(): Object = ???
 }

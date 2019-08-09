@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.Object
+import java.lang.{Object, String}
 import javax.print.attribute.EnumSyntax
+import scala.scalanative.annotation.stub
 
 /** Class MediaSizeName is a subclass of Media.
  *  
@@ -18,9 +19,19 @@ import javax.print.attribute.EnumSyntax
  */
 class MediaSizeName extends Media {
 
+    /** Construct a new media size enumeration value with the given integer
+     *  value.
+     */
+    @stub
+    protected def this(value: Int) = ???
+
     /** Returns the enumeration value table for class MediaSizeName. */
     @stub
     protected def getEnumValueTable(): Array[EnumSyntax] = ???
+
+    /** Returns the string table for class MediaSizeName. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object MediaSizeName {
@@ -311,4 +322,8 @@ object MediaSizeName {
     /** quarto size . */
     @stub
     val QUARTO: MediaSizeName = ???
+
+    /** tabloid size . */
+    @stub
+    val TABLOID: MediaSizeName = ???
 }

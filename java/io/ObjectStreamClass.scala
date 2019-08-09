@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.{Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Serialization's descriptor for classes.  It contains the name and
  *  serialVersionUID of the class.  The ObjectStreamClass for a specific class
@@ -31,9 +32,17 @@ class ObjectStreamClass extends Object with Serializable {
     /** Return the serialVersionUID for this class. */
     @stub
     def getSerialVersionUID(): Long = ???
+
+    /** Return a string describing this ObjectStreamClass. */
+    @stub
+    def toString(): String = ???
 }
 
 object ObjectStreamClass {
+    /** serialPersistentFields value indicating no serializable fields */
+    @stub
+    val NO_FIELDS: Array[ObjectStreamField] = ???
+
     /** Find the descriptor for a class that can be serialized. */
     @stub
     def lookup(cl: Class[_]): ObjectStreamClass = ???

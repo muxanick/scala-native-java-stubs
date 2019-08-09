@@ -4,9 +4,18 @@ import java.awt.event.{ActionEvent, ActionListener, ItemEvent, ItemListener}
 import java.io.Serializable
 import java.lang.Object
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** The protected EditorDelegate class. */
 protected class DefaultCellEditor.EditorDelegate extends Object with ActionListener with ItemListener with Serializable {
+
+    /**  */
+    @stub
+    protected def EditorDelegate() = ???
+
+    /** The value of this cell. */
+    @stub
+    protected val value: Object = ???
 
     /** When an action is performed, editing is ended. */
     @stub
@@ -43,4 +52,10 @@ protected class DefaultCellEditor.EditorDelegate extends Object with ActionListe
     /** Returns true to indicate that editing has begun. */
     @stub
     def startCellEditing(anEvent: EventObject): Boolean = ???
+
+    /** Stops editing and
+     *  returns true to indicate that editing has stopped.
+     */
+    @stub
+    def stopCellEditing(): Boolean = ???
 }

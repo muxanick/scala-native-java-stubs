@@ -3,9 +3,14 @@ package javax.swing.plaf.basic
 import java.lang.Object
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, ViewportUI}
+import scala.scalanative.annotation.stub
 
 /** BasicViewport implementation */
 class BasicViewportUI extends ViewportUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /**  */
     @stub
@@ -18,6 +23,12 @@ class BasicViewportUI extends ViewportUI {
     /**  */
     @stub
     protected def uninstallDefaults(c: JComponent): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicViewportUI {

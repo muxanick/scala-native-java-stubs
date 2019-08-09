@@ -2,6 +2,7 @@ package java.lang.invoke
 
 import java.lang.{Class, String}
 import java.lang.reflect.Member
+import scala.scalanative.annotation.stub
 
 /** A symbolic reference obtained by cracking a direct method handle
  *  into its consitutent symbolic parts.
@@ -174,9 +175,21 @@ object MethodHandleInfo {
     @stub
     val REF_putField: Int = ???
 
+    /** A direct method handle reference kind,
+     *  as defined in the table above.
+     */
+    @stub
+    val REF_putStatic: Int = ???
+
     /** Returns the descriptive name of the given reference kind,
      *  as defined in the table above.
      */
     @stub
     def referenceKindToString(referenceKind: Int): String = ???
+
+    /** Returns a string representation for a MethodHandleInfo,
+     *  given the four parts of its symbolic reference.
+     */
+    @stub
+    def toString(kind: Int, defc: Class[_], name: String, type: MethodType): String = ???
 }

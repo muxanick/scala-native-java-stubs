@@ -1,9 +1,10 @@
 package java.util.concurrent
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.{Collection, Iterator, Set, Spliterator}
 import java.util.function.Consumer
+import scala.scalanative.annotation.stub
 
 /** A view of a ConcurrentHashMap as a Set of keys, in
  *  which additions may optionally be enabled by mapping to a
@@ -111,4 +112,8 @@ object ConcurrentHashMap.KeySetView[K, V] extends Object with Set[K] with Serial
      */
     @stub
     def toArray[T](a: Array[T]): Array[T] = ???
+
+    /** Returns a string representation of this collection. */
+    @stub
+    def toString(): String = ???
 }

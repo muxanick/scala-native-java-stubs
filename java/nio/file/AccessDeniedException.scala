@@ -2,6 +2,7 @@ package java.nio.file
 
 import java.io.IOException
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Checked exception thrown when a file system operation is denied, typically
  *  due to a file permission or other access check.
@@ -14,4 +15,8 @@ class AccessDeniedException extends FileSystemException {
     /** Constructs an instance of this class. */
     @stub
     def this(file: String) = ???
+
+    /** Constructs an instance of this class. */
+    @stub
+    def this(file: String, other: String, reason: String) = ???
 }

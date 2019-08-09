@@ -1,6 +1,8 @@
 package javax.xml.ws
 
 import java.lang.Object
+import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** EndpointContext allows multiple endpoints in an application
  *  to share any information. For example, servlet application's war may
@@ -15,4 +17,11 @@ import java.lang.Object
  *  before Endpoint.publish(java.lang.String) methods.
  */
 abstract class EndpointContext extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** This gives list of endpoints in an application. */
+    def getEndpoints(): Set[Endpoint]
 }

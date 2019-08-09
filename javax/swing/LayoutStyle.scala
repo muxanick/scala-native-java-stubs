@@ -2,6 +2,7 @@ package javax.swing
 
 import java.awt.Container
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** LayoutStyle provides information about how to position
  *  components.  This class is primarily useful for visual tools and
@@ -13,6 +14,10 @@ import java.lang.Object
  */
 abstract class LayoutStyle extends Object {
 
+    /** Creates a new LayoutStyle. */
+    @stub
+    def this() = ???
+
     /** Returns the amount of space to place between the component and specified
      *  edge of its parent.
      */
@@ -23,7 +28,18 @@ abstract class LayoutStyle extends Object {
 }
 
 object LayoutStyle {
+    /** ComponentPlacement is an enumeration of the
+     *  possible ways two components can be placed relative to each
+     *  other.
+     */
+    @stub
+    object ComponentPlacement extends LayoutStyle.ComponentPlacement
+
     /** Returns the shared instance of LayoutStyle. */
     @stub
     def getInstance(): LayoutStyle = ???
+
+    /** Sets the shared instance of LayoutStyle. */
+    @stub
+    def setInstance(style: LayoutStyle): Unit = ???
 }

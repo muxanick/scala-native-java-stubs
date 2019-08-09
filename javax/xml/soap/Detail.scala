@@ -1,6 +1,8 @@
 package javax.xml.soap
 
+import java.util.Iterator
 import javax.xml.namespace.QName
+import scala.scalanative.annotation.stub
 
 /** A container for DetailEntry objects. DetailEntry
  *  objects give detailed error information that is application-specific and
@@ -42,4 +44,8 @@ trait Detail extends SOAPFaultElement {
      */
     @stub
     def addDetailEntry(qname: QName): DetailEntry = ???
+
+    /** Gets an Iterator over all of the DetailEntrys in this Detail object. */
+    @stub
+    def getDetailEntries(): Iterator = ???
 }

@@ -4,6 +4,7 @@ import java.lang.{Object, String}
 import java.util.Enumeration
 import java.util.logging.{Level, Logger}
 import javax.naming.Context
+import scala.scalanative.annotation.stub
 
 /** The Service Provider Interface (SPI) mechanism that generates SyncProvider
  *  instances to be used by disconnected RowSet objects.
@@ -174,6 +175,12 @@ object SyncFactory {
     @stub
     val ROWSET_SYNC_PROVIDER_VERSION: String = ???
 
+    /** The standard property-id for a synchronization provider implementation
+     *  vendor name.
+     */
+    @stub
+    val ROWSET_SYNC_VENDOR: String = ???
+
     /** Returns the SyncProvider instance identified by providerID. */
     @stub
     def getInstance(providerID: String): SyncProvider = ???
@@ -215,4 +222,10 @@ object SyncFactory {
      */
     @stub
     def setLogger(logger: Logger, level: Level): Unit = ???
+
+    /** Removes the designated currently registered synchronization provider from the
+     *  Factory SPI register.
+     */
+    @stub
+    def unregisterProvider(providerID: String): Unit = ???
 }

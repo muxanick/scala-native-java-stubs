@@ -1,7 +1,9 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
+import java.util.Locale
 import javax.print.attribute.{Attribute, PrintJobAttribute, TextSyntax}
+import scala.scalanative.annotation.stub
 
 /** Class OutputDeviceAssigned is a printing attribute class, a text attribute,
  *  that identifies the output device to which the service has assigned this
@@ -19,6 +21,12 @@ import javax.print.attribute.{Attribute, PrintJobAttribute, TextSyntax}
  */
 final class OutputDeviceAssigned extends TextSyntax with PrintJobAttribute {
 
+    /** Constructs a new output device assigned attribute with the given device
+     *  name and locale.
+     */
+    @stub
+    def this(deviceName: String, locale: Locale) = ???
+
     /** Returns whether this output device assigned attribute is equivalent to
      *  the passed in object.
      */
@@ -30,4 +38,10 @@ final class OutputDeviceAssigned extends TextSyntax with PrintJobAttribute {
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

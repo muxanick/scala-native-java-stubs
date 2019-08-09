@@ -1,6 +1,7 @@
 package java.awt.image
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class represents pixel data packed such that the N samples which make
  *   up a single pixel are stored in a single data array element, and each data
@@ -31,6 +32,12 @@ class SinglePixelPackedSampleModel extends SampleModel {
     /** Constructs a SinglePixelPackedSampleModel with bitMasks.length bands. */
     @stub
     def this(dataType: Int, w: Int, h: Int, bitMasks: Array[Int]) = ???
+
+    /** Constructs a SinglePixelPackedSampleModel with bitMasks.length bands
+     *  and a scanline stride equal to scanlineStride data array elements.
+     */
+    @stub
+    def this(dataType: Int, w: Int, h: Int, scanlineStride: Int, bitMasks: Array[Int]) = ???
 
     /** Creates a new SinglePixelPackedSampleModel with the specified
      *  width and height.
@@ -139,4 +146,10 @@ class SinglePixelPackedSampleModel extends SampleModel {
      */
     @stub
     def setSample(x: Int, y: Int, b: Int, s: Int, data: DataBuffer): Unit = ???
+
+    /** Sets the samples in the specified band for the specified rectangle
+     *  of pixels from an int array containing one sample per array element.
+     */
+    @stub
+    def setSamples(x: Int, y: Int, w: Int, h: Int, b: Int, iArray: Array[Int], data: DataBuffer): Unit = ???
 }

@@ -3,6 +3,7 @@ package java.awt.im.spi
 import java.awt.Image
 import java.lang.String
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** Defines methods that provide sufficient information about an input method
  *  to enable selection and loading of that input method.
@@ -28,4 +29,10 @@ trait InputMethodDescriptor {
     /** Returns an icon for the corresponding input method. */
     @stub
     def getInputMethodIcon(inputLocale: Locale): Image = ???
+
+    /** Returns whether the list of available locales can change
+     *  at runtime.
+     */
+    @stub
+    def hasDynamicLocaleList(): Boolean = ???
 }

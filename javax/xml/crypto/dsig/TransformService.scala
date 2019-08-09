@@ -4,6 +4,7 @@ import java.lang.{Object, String}
 import java.security.Provider
 import javax.xml.crypto.{XMLCryptoContext, XMLStructure}
 import javax.xml.crypto.dsig.spec.TransformParameterSpec
+import scala.scalanative.annotation.stub
 
 /** A Service Provider Interface for transform and canonicalization algorithms.
  * 
@@ -68,6 +69,10 @@ import javax.xml.crypto.dsig.spec.TransformParameterSpec
  */
 abstract class TransformService extends Object with Transform {
 
+    /** Default constructor, for invocation by subclasses. */
+    @stub
+    protected def this() = ???
+
     /** Returns the URI of the algorithm supported by this
      *  TransformService.
      */
@@ -88,6 +93,9 @@ abstract class TransformService extends Object with Transform {
      *  parameters and document context.
      */
     def init(parent: XMLStructure, context: XMLCryptoContext): Unit
+
+    /** Marshals the algorithm-specific parameters. */
+    def marshalParams(parent: XMLStructure, context: XMLCryptoContext): Unit
 }
 
 object TransformService {

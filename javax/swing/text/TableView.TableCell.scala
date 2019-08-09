@@ -1,9 +1,14 @@
 package javax.swing.text
 
 import java.lang.{Deprecated, Object}
+import scala.scalanative.annotation.stub
 
 /**  */
 @Deprecated class TableView.TableCell extends BoxView {
+
+    /** Deprecated.  */
+    @stub
+    def TableCell(elem: Element) = ???
 
     /** Deprecated.  */
     @stub
@@ -20,4 +25,8 @@ import java.lang.{Deprecated, Object}
     /** Deprecated.  */
     @stub
     def getRowCount(): Int = ???
+
+    /** Deprecated.  */
+    @stub
+    def setGridLocation(row: Int, col: Int): Unit = ???
 }

@@ -1,5 +1,7 @@
 package javax.print.event
 
+import scala.scalanative.annotation.stub
+
 /** Implementations of this listener interface should be attached to a
  *  DocPrintJob to monitor the status of
  *  the printer job.
@@ -35,4 +37,10 @@ trait PrintJobListener {
     /** Called to notify the client that no more events will be delivered. */
     @stub
     def printJobNoMoreEvents(pje: PrintJobEvent): Unit = ???
+
+    /** Called to notify the client that an error has occurred that the
+     *  user might be able to fix.
+     */
+    @stub
+    def printJobRequiresAttention(pje: PrintJobEvent): Unit = ???
 }

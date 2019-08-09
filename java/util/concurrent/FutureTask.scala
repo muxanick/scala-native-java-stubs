@@ -1,6 +1,7 @@
 package java.util.concurrent
 
-import java.lang.Object
+import java.lang.{Object, Runnable, Throwable}
+import scala.scalanative.annotation.stub
 
 /** A cancellable asynchronous computation.  This class provides a base
  *  implementation of Future, with methods to start and cancel
@@ -28,6 +29,13 @@ class FutureTask[V] extends Object with RunnableFuture[V] {
      */
     @stub
     def this(callable: Callable[V]) = ???
+
+    /** Creates a FutureTask that will, upon running, execute the
+     *  given Runnable, and arrange that get will return the
+     *  given result on successful completion.
+     */
+    @stub
+    def this(runnable: Runnable, result: V) = ???
 
     /** Attempts to cancel execution of this task. */
     @stub
@@ -79,4 +87,11 @@ class FutureTask[V] extends Object with RunnableFuture[V] {
      */
     @stub
     protected def set(v: V): Unit = ???
+
+    /** Causes this future to report an ExecutionException
+     *  with the given throwable as its cause, unless this future has
+     *  already been set or has been cancelled.
+     */
+    @stub
+    protected def setException(t: Throwable): Unit = ???
 }

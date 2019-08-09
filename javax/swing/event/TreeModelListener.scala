@@ -1,6 +1,7 @@
 package javax.swing.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** Defines the interface for an object that listens
  *  to changes in a TreeModel.
@@ -23,4 +24,10 @@ trait TreeModelListener extends EventListener {
     /** Invoked after nodes have been removed from the tree. */
     @stub
     def treeNodesRemoved(e: TreeModelEvent): Unit = ???
+
+    /** Invoked after the tree has drastically changed structure from a
+     *  given node down.
+     */
+    @stub
+    def treeStructureChanged(e: TreeModelEvent): Unit = ???
 }

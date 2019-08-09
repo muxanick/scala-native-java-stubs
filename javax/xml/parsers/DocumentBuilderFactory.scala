@@ -2,11 +2,16 @@ package javax.xml.parsers
 
 import java.lang.{ClassLoader, Object, String}
 import javax.xml.validation.Schema
+import scala.scalanative.annotation.stub
 
 /** Defines a factory API that enables applications to obtain a
  *  parser that produces DOM object trees from XML documents.
  */
 abstract class DocumentBuilderFactory extends Object {
+
+    /** Protected constructor to prevent instantiation. */
+    @stub
+    protected def this() = ???
 
     /** Allows the user to retrieve specific attributes on the underlying
      *  implementation.
@@ -105,6 +110,9 @@ abstract class DocumentBuilderFactory extends Object {
      *  validate documents as they are parsed.
      */
     def setValidating(validating: Boolean): Unit
+
+    /** Set state of XInclude processing. */
+    def setXIncludeAware(state: Boolean): Unit
 }
 
 object DocumentBuilderFactory {

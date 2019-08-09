@@ -1,6 +1,7 @@
 package java.awt
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A FocusTraversalPolicy defines the order in which Components with a
  *  particular focus cycle root are traversed. Instances can apply the policy to
@@ -33,6 +34,10 @@ import java.lang.Object
  */
 abstract class FocusTraversalPolicy extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Returns the Component that should receive the focus after aComponent. */
     def getComponentAfter(aContainer: Container, aComponent: Component): Component
 
@@ -49,4 +54,7 @@ abstract class FocusTraversalPolicy extends Object {
      *  made visible for the first time.
      */
     def getInitialComponent(window: Window): Component
+
+    /** Returns the last Component in the traversal cycle. */
+    def getLastComponent(aContainer: Container): Component
 }

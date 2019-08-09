@@ -1,9 +1,10 @@
 package java.util.stream
 
 import java.lang.{Boolean, CharSequence, Double, Integer, Long, Object, String}
-import java.util.{Collection, Comparator, DoubleSummaryStatistics, IntSummaryStatistics, List, LongSummaryStatistics, Map, Optional}
+import java.util.{Collection, Comparator, DoubleSummaryStatistics, IntSummaryStatistics, List, LongSummaryStatistics, Map, Optional, Set}
 import java.util.concurrent.ConcurrentMap
 import java.util.function.{BinaryOperator, Function, Predicate, Supplier, ToDoubleFunction, ToIntFunction, ToLongFunction}
+import scala.scalanative.annotation.stub
 
 /** Implementations of Collector that implement various useful reduction
  *  operations, such as accumulating elements into collections, summarizing
@@ -296,4 +297,10 @@ object Collectors {
      */
     @stub
     def toMap[T, K, U, M <: Map[K, U]](keyMapper: Function[_ >: T, _ <: K], valueMapper: Function[_ >: T, _ <: U], mergeFunction: BinaryOperator[U], mapSupplier: Supplier[M]): Collector[T, _, M] = ???
+
+    /** Returns a Collector that accumulates the input elements into a
+     *  new Set.
+     */
+    @stub
+    def toSet[T](): Collector[T, _, Set[T]] = ???
 }

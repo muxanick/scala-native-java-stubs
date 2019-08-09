@@ -4,6 +4,7 @@ import java.awt.event.{ActionEvent, ActionListener}
 import java.lang.{Class, Object, String}
 import java.util.EventListener
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** This class creates a labeled button. The application can cause
  *  some action to happen when the button is pushed. This image
@@ -52,6 +53,16 @@ class Button extends Component with Accessible {
     /** Constructs a button with an empty string for its label. */
     @stub
     def this() = ???
+
+    /** Constructs a button with the specified label. */
+    @stub
+    def this(label: String) = ???
+
+    /** This class implements accessibility support for the
+     *  Button class.
+     */
+    @stub
+    protected object AccessibleAWTButton extends Button.AccessibleAWTButton
 
     /** Adds the specified action listener to receive action events from
      *  this button.
@@ -116,4 +127,8 @@ class Button extends Component with Accessible {
      */
     @stub
     def setActionCommand(command: String): Unit = ???
+
+    /** Sets the button's label to be the specified string. */
+    @stub
+    def setLabel(label: String): Unit = ???
 }

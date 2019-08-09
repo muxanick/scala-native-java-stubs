@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.{CharSequence, Object, String, StringBuffer}
+import scala.scalanative.annotation.stub
 
 /** A character stream that collects its output in a string buffer, which can
  *  then be used to construct a string.
@@ -16,6 +17,12 @@ class StringWriter extends Writer {
      */
     @stub
     def this() = ???
+
+    /** Create a new string writer using the specified initial string-buffer
+     *  size.
+     */
+    @stub
+    def this(initialSize: Int) = ???
 
     /** Appends the specified character to this writer. */
     @stub
@@ -56,4 +63,8 @@ class StringWriter extends Writer {
     /** Write a string. */
     @stub
     def write(str: String): Unit = ???
+
+    /** Write a portion of a string. */
+    @stub
+    def write(str: String, off: Int, len: Int): Unit = ???
 }

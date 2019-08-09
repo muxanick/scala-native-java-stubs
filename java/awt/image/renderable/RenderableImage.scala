@@ -4,6 +4,7 @@ import java.awt.RenderingHints
 import java.awt.image.RenderedImage
 import java.lang.{Object, String}
 import java.util.Vector
+import scala.scalanative.annotation.stub
 
 /** A RenderableImage is a common interface for rendering-independent
  *  images (a notion which subsumes resolution independence).  That is,
@@ -74,4 +75,20 @@ trait RenderableImage {
     /** Gets the width in user coordinate space. */
     @stub
     def getWidth(): Float = ???
+
+    /** Returns true if successive renderings (that is, calls to
+     *  createRendering() or createScaledRendering()) with the same arguments
+     *  may produce different results.
+     */
+    @stub
+    def isDynamic(): Boolean = ???
+}
+
+object RenderableImage {
+    /** String constant that can be used to identify a property on
+     *  a RenderedImage obtained via the createRendering or
+     *  createScaledRendering methods.
+     */
+    @stub
+    val HINTS_OBSERVED: String = ???
 }

@@ -1,6 +1,7 @@
 package javax.management
 
 import java.io.Serializable
+import scala.scalanative.annotation.stub
 
 /** Represents relational constraints similar to database query "where
  *  clauses". Instances of QueryExp are returned by the static methods of the
@@ -16,4 +17,8 @@ trait QueryExp extends Serializable {
     /** Applies the QueryExp on an MBean. */
     @stub
     def apply(name: ObjectName): Boolean = ???
+
+    /** Sets the MBean server on which the query is to be performed. */
+    @stub
+    def setMBeanServer(s: MBeanServer): Unit = ???
 }

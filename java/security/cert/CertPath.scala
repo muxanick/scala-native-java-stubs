@@ -3,6 +3,7 @@ package java.security.cert
 import java.io.Serializable
 import java.lang.{Object, String}
 import java.util.{Iterator, List}
+import scala.scalanative.annotation.stub
 
 /** An immutable sequence of certificates (a certification path).
  *  
@@ -83,6 +84,10 @@ import java.util.{Iterator, List}
  */
 abstract class CertPath extends Object with Serializable {
 
+    /** Creates a CertPath of the specified type. */
+    @stub
+    protected def this(type: String) = ???
+
     /** Compares this certification path for equality with the specified
      *  object.
      */
@@ -116,4 +121,15 @@ abstract class CertPath extends Object with Serializable {
 
     /** Returns a string representation of this certification path. */
     def toString(): String
+
+    /** Replaces the CertPath to be serialized with a
+     *  CertPathRep object.
+     */
+    protected def writeReplace(): Object
+}
+
+object CertPath {
+    /** Alternate CertPath class for serialization. */
+    @stub
+    protected object CertPathRep extends CertPath.CertPathRep
 }

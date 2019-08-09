@@ -1,7 +1,8 @@
 package javax.imageio.stream
 
-import java.io.File
+import java.io.{File, RandomAccessFile}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An implementation of ImageInputStream that gets its
  *  input from a File or RandomAccessFile.
@@ -15,6 +16,12 @@ class FileImageInputStream extends ImageInputStreamImpl {
      */
     @stub
     def this(f: File) = ???
+
+    /** Constructs a FileImageInputStream that will read
+     *  from a given RandomAccessFile.
+     */
+    @stub
+    def this(raf: RandomAccessFile) = ???
 
     /** Closes the stream. */
     @stub
@@ -41,4 +48,8 @@ class FileImageInputStream extends ImageInputStreamImpl {
      */
     @stub
     def read(b: Array[Byte], off: Int, len: Int): Int = ???
+
+    /** Sets the current stream position to the desired location. */
+    @stub
+    def seek(pos: Long): Unit = ???
 }

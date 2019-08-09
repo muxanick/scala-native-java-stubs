@@ -7,6 +7,7 @@ import java.net.URL
 import javax.accessibility.AccessibleContext
 import javax.swing.event.{HyperlinkEvent, HyperlinkListener}
 import javax.swing.text.{EditorKit, JTextComponent}
+import scala.scalanative.annotation.stub
 
 /** A text component to edit various kinds of content.
  *  You can find how-to information and examples of using editor panes in
@@ -167,6 +168,10 @@ class JEditorPane extends JTextComponent {
     @stub
     def this(type: String, text: String) = ???
 
+    /** Creates a JEditorPane based on a specified URL for input. */
+    @stub
+    def this(initialPage: URL) = ???
+
     /** This class implements accessibility support for the
      *  JEditorPane class.
      */
@@ -180,6 +185,12 @@ class JEditorPane extends JTextComponent {
      */
     @stub
     protected object AccessibleJEditorPaneHTML extends JEditorPane.AccessibleJEditorPaneHTML
+
+    /** What's returned by
+     *  AccessibleJEditorPaneHTML.getAccessibleText.
+     */
+    @stub
+    protected object JEditorPaneAccessibleHypertextSupport extends JEditorPane.JEditorPaneAccessibleHypertextSupport
 
     /** Adds a hyperlink listener for notification of any changes, for example
      *  when a link is selected and entered.
@@ -310,6 +321,14 @@ class JEditorPane extends JTextComponent {
     /** Sets the current URL being displayed. */
     @stub
     def setPage(page: URL): Unit = ???
+
+    /** Sets the text of this TextComponent to the specified
+     *  content,
+     *  which is expected to be in the format of the content type of
+     *  this editor.
+     */
+    @stub
+    def setText(t: String): Unit = ???
 }
 
 object JEditorPane {
@@ -320,6 +339,13 @@ object JEditorPane {
      */
     @stub
     val HONOR_DISPLAY_PROPERTIES: String = ???
+
+    /** Key for a client property used to indicate whether
+     *  
+     *  w3c compliant length units are used for html rendering.
+     */
+    @stub
+    val W3C_LENGTH_UNITS: String = ???
 
     /** Creates a handler for the given type from the default registry
      *  of editor kits.

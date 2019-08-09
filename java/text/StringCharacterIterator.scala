@@ -1,6 +1,7 @@
 package java.text
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** StringCharacterIterator implements the
  *  CharacterIterator protocol for a String.
@@ -16,6 +17,12 @@ final class StringCharacterIterator extends Object with CharacterIterator {
     /** Constructs an iterator with the specified initial index. */
     @stub
     def this(text: String, pos: Int) = ???
+
+    /** Constructs an iterator over the given range of the given string, with the
+     *  index set at the specified position.
+     */
+    @stub
+    def this(text: String, begin: Int, end: Int, pos: Int) = ???
 
     /** Creates a copy of this iterator. */
     @stub
@@ -64,4 +71,8 @@ final class StringCharacterIterator extends Object with CharacterIterator {
     /** Implements CharacterIterator.setIndex() for String. */
     @stub
     def setIndex(p: Int): Char = ???
+
+    /** Reset this iterator to point to a new string. */
+    @stub
+    def setText(text: String): Unit = ???
 }

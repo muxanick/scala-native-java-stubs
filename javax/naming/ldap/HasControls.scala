@@ -1,5 +1,7 @@
 package javax.naming.ldap
 
+import scala.scalanative.annotation.stub
+
 /** This interface is for returning controls with objects returned
  *  in NamingEnumerations.
  *  For example, suppose a server sends back controls with the results
@@ -23,4 +25,10 @@ package javax.naming.ldap
  * 
  */
 trait HasControls {
+
+    /** Retrieves an array of Controls from the object that
+     *  implements this interface.
+     */
+    @stub
+    def getControls(): Array[Control] = ???
 }

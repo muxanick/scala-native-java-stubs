@@ -2,6 +2,7 @@ package javax.swing.text
 
 import java.awt.Graphics
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An interface for an object that allows one to mark up the background
  *  with colored areas.
@@ -41,10 +42,18 @@ trait Highlighter {
     /** Removes all highlights this highlighter is responsible for. */
     @stub
     def removeAllHighlights(): Unit = ???
+
+    /** Removes a highlight from the view. */
+    @stub
+    def removeHighlight(tag: Object): Unit = ???
 }
 
 object Highlighter {
     /**  */
     @stub
     val Highlighter.Highlight: trait = ???
+
+    /** Highlight renderer. */
+    @stub
+    val Highlighter.HighlightPainter: trait = ???
 }

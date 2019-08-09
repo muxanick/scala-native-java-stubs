@@ -2,6 +2,7 @@ package java.security
 
 import java.io.File
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A description of a to-be-instantiated KeyStore object.
  * 
@@ -14,6 +15,10 @@ import java.lang.{Object, String}
  *  needed.
  */
 object abstract KeyStore.Builder extends Object {
+
+    /** Construct a new Builder. */
+    @stub
+    protected def Builder() = ???
 
     /** Returns the KeyStore described by this object. */
     @stub
@@ -32,4 +37,8 @@ object abstract KeyStore.Builder extends Object {
     /** Returns a new Builder object. */
     @stub
     def newInstance(type: String, provider: Provider, file: File, protection: KeyStore.ProtectionParameter): KeyStore.Builder = ???
+
+    /** Returns a new Builder object. */
+    @stub
+    def newInstance(type: String, provider: Provider, protection: KeyStore.ProtectionParameter): KeyStore.Builder = ???
 }

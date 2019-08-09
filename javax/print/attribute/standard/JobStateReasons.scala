@@ -1,8 +1,9 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import java.util.{AbstractCollection, AbstractSet, Collection, HashSet}
 import javax.print.attribute.{Attribute, PrintJobAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class JobStateReasons is a printing attribute class, a set of enumeration
  *  values, that provides additional information about the job's current state,
@@ -52,6 +53,12 @@ final class JobStateReasons extends HashSet[JobStateReason] with PrintJobAttribu
     @stub
     def this(initialCapacity: Int) = ???
 
+    /** Construct a new, empty job state reasons attribute; the underlying hash
+     *  set has the given initial capacity and load factor.
+     */
+    @stub
+    def this(initialCapacity: Int, loadFactor: Float) = ???
+
     /** Adds the specified element to this job state reasons attribute if it is
      *  not already present.
      */
@@ -63,4 +70,10 @@ final class JobStateReasons extends HashSet[JobStateReason] with PrintJobAttribu
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

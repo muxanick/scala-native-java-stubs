@@ -1,8 +1,9 @@
 package java.beans.beancontext
 
-import java.beans.{PropertyChangeListener, PropertyChangeSupport, VetoableChangeListener}
+import java.beans.{PropertyChangeListener, PropertyChangeSupport, VetoableChangeListener, VetoableChangeSupport}
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** 
  *  This is a general support class to provide support for implementing the
@@ -19,6 +20,13 @@ class BeanContextChildSupport extends Object with BeanContextChild with BeanCont
      */
     @stub
     def this() = ???
+
+    /** construct a BeanContextChildSupport where the JavaBean component
+     *  itself implements BeanContextChild, and encapsulates this, delegating
+     *  that interface to this implementation
+     */
+    @stub
+    def this(bcc: BeanContextChild) = ???
 
     /** The bean context. */
     @stub
@@ -42,6 +50,12 @@ class BeanContextChildSupport extends Object with BeanContextChild with BeanCont
      */
     @stub
     protected val rejectedSetBCOnce: Boolean = ???
+
+    /** The VetoableChangeSupport associated with this
+     *  BeanContextChildSupport.
+     */
+    @stub
+    protected val vcSupport: VetoableChangeSupport = ???
 
     /** Add a PropertyChangeListener for a specific property. */
     @stub
@@ -108,4 +122,10 @@ class BeanContextChildSupport extends Object with BeanContextChild with BeanCont
      */
     @stub
     def setBeanContext(bc: BeanContext): Unit = ???
+
+    /** Called from setBeanContext to validate (or otherwise) the
+     *  pending change in the nesting BeanContext property value.
+     */
+    @stub
+    def validatePendingSetBeanContext(newValue: BeanContext): Boolean = ???
 }

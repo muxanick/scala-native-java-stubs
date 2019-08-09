@@ -2,6 +2,7 @@ package java.util
 
 import java.io.IOException
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Thrown to indicate that an operation could not complete because
  *  the input did not conform to the appropriate XML document type
@@ -19,4 +20,10 @@ class InvalidPropertiesFormatException extends IOException {
      */
     @stub
     def this(message: String) = ???
+
+    /** Constructs an InvalidPropertiesFormatException with the specified
+     *  cause.
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

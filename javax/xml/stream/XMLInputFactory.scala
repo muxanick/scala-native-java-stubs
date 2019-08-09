@@ -4,6 +4,7 @@ import java.io.{InputStream, Reader}
 import java.lang.{ClassLoader, Object, String}
 import javax.xml.stream.util.XMLEventAllocator
 import javax.xml.transform.Source
+import scala.scalanative.annotation.stub
 
 /** Defines an abstract implementation of a factory for getting streams.
  * 
@@ -40,6 +41,10 @@ import javax.xml.transform.Source
  *   
  */
 abstract class XMLInputFactory extends Object {
+
+    /**  */
+    @stub
+    protected def this() = ???
 
     /** Create a filtered event reader that wraps the filter around the event reader */
     def createFilteredReader(reader: XMLEventReader, filter: EventFilter): XMLEventReader
@@ -117,6 +122,11 @@ abstract class XMLInputFactory extends Object {
      *  by this factory instance.
      */
     def setXMLReporter(reporter: XMLReporter): Unit
+
+    /** The resolver that will be set on any XMLStreamReader or XMLEventReader created
+     *  by this factory instance.
+     */
+    def setXMLResolver(resolver: XMLResolver): Unit
 }
 
 object XMLInputFactory {
@@ -159,6 +169,10 @@ object XMLInputFactory {
     /** The property used to set/get the implementation of the XMLResolver */
     @stub
     val RESOLVER: String = ???
+
+    /** The property that requires the parser to support DTDs */
+    @stub
+    val SUPPORT_DTD: String = ???
 
     /** Create a new instance of the factory. */
     @stub

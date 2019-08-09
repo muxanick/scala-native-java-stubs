@@ -4,6 +4,7 @@ import java.awt.event.{ItemEvent, ItemListener}
 import java.lang.{Class, Object, String}
 import java.util.EventListener
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** The Choice class presents a pop-up menu of choices.
  *  The current choice is displayed as the title of the menu.
@@ -36,6 +37,16 @@ import javax.accessibility.{Accessible, AccessibleContext}
  *  
  */
 class Choice extends Component with ItemSelectable with Accessible {
+
+    /** Creates a new choice menu. */
+    @stub
+    def this() = ???
+
+    /** This class implements accessibility support for the
+     *  Choice class.
+     */
+    @stub
+    protected object AccessibleAWTChoice extends Choice.AccessibleAWTChoice
 
     /** Adds an item to this Choice menu. */
     @stub
@@ -154,4 +165,10 @@ class Choice extends Component with ItemSelectable with Accessible {
      */
     @stub
     def select(pos: Int): Unit = ???
+
+    /** Sets the selected item in this Choice menu
+     *  to be the item whose name is equal to the specified string.
+     */
+    @stub
+    def select(str: String): Unit = ???
 }

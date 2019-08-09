@@ -2,6 +2,7 @@ package java.security.cert
 
 import java.lang.Object
 import java.util.Collection
+import scala.scalanative.annotation.stub
 
 /** The Service Provider Interface (SPI)
  *  for the CertStore class. All CertStore
@@ -28,8 +29,17 @@ import java.util.Collection
  */
 abstract class CertStoreSpi extends Object {
 
+    /** The sole constructor. */
+    @stub
+    def this(params: CertStoreParameters) = ???
+
     /** Returns a Collection of Certificates that
      *  match the specified selector.
      */
     def engineGetCertificates(selector: CertSelector): Collection[_ <: Certificate]
+
+    /** Returns a Collection of CRLs that
+     *  match the specified selector.
+     */
+    def engineGetCRLs(selector: CRLSelector): Collection[_ <: CRL]
 }

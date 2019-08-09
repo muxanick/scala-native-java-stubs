@@ -1,6 +1,7 @@
 package javax.swing.text
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Specification for building elements.
  *  
@@ -27,6 +28,13 @@ object DefaultStyledDocument.ElementSpec extends Object {
     @stub
     def ElementSpec(a: AttributeSet, type: Short, txt: Array[Char], offs: Int, len: Int) = ???
 
+    /** Constructor for parsing inside the document when
+     *  the data has already been added, but len information
+     *  is needed.
+     */
+    @stub
+    def ElementSpec(a: AttributeSet, type: Short, len: Int) = ???
+
     /** A possible value for getType. */
     @stub
     val ContentType: Short = ???
@@ -50,6 +58,10 @@ object DefaultStyledDocument.ElementSpec extends Object {
     /** A possible value for getDirection. */
     @stub
     val OriginateDirection: Short = ???
+
+    /** A possible value for getType. */
+    @stub
+    val StartTagType: Short = ???
 
     /** Gets the array of characters. */
     @stub
@@ -82,4 +94,8 @@ object DefaultStyledDocument.ElementSpec extends Object {
     /** Sets the element type. */
     @stub
     def setType(type: Short): Unit = ???
+
+    /** Converts the element to a string. */
+    @stub
+    def toString(): String = ???
 }

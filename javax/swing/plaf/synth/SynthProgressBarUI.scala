@@ -6,11 +6,16 @@ import java.lang.{Object, String}
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, ProgressBarUI}
 import javax.swing.plaf.basic.BasicProgressBarUI
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for
  *  JProgressBar.
  */
 class SynthProgressBarUI extends BasicProgressBarUI with SynthUI with PropertyChangeListener {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the baseline. */
     @stub
@@ -75,6 +80,10 @@ class SynthProgressBarUI extends BasicProgressBarUI with SynthUI with PropertyCh
     /** Removes all listeners installed by this object. */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthProgressBarUI {

@@ -1,6 +1,7 @@
 package javax.sql
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** An interface that must be implemented by a
  *  component that wants to be notified when a significant
@@ -23,4 +24,10 @@ trait RowSetListener extends EventListener {
      */
     @stub
     def rowChanged(event: RowSetEvent): Unit = ???
+
+    /** Notifies registered listeners that a RowSet object
+     *  in the given RowSetEvent object has changed its entire contents.
+     */
+    @stub
+    def rowSetChanged(event: RowSetEvent): Unit = ???
 }

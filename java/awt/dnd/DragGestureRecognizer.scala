@@ -5,6 +5,7 @@ import java.awt.event.InputEvent
 import java.io.Serializable
 import java.lang.Object
 import java.util.ArrayList
+import scala.scalanative.annotation.stub
 
 /** The DragGestureRecognizer is an
  *  abstract base class for the specification
@@ -74,6 +75,18 @@ abstract class DragGestureRecognizer extends Object with Serializable {
     @stub
     protected def this(ds: DragSource, c: Component, sa: Int) = ???
 
+    /** Construct a new DragGestureRecognizer
+     *  given the DragSource to be used
+     *  in this Drag and Drop operation, the Component
+     *  this DragGestureRecognizer should "observe"
+     *  for drag initiating gestures, the action(s) supported
+     *  for this Drag and Drop operation, and the
+     *  DragGestureListener to notify
+     *  once a drag initiating gesture has been detected.
+     */
+    @stub
+    protected def this(ds: DragSource, c: Component, sa: Int, dgl: DragGestureListener) = ???
+
     /** The Component
      *  associated with this DragGestureRecognizer.
      */
@@ -95,6 +108,12 @@ abstract class DragGestureRecognizer extends Object with Serializable {
      *  "recognized" as a "gesture" that triggers a drag.
      */
     protected val events: ArrayList[InputEvent]
+
+    /** An int representing
+     *  the type(s) of action(s) used
+     *  in this Drag and Drop operation.
+     */
+    protected val sourceActions: Int
 
     /** Register a new DragGestureListener. */
     def addDragGestureListener(dgl: DragGestureListener): Unit
@@ -161,4 +180,10 @@ abstract class DragGestureRecognizer extends Object with Serializable {
      *  for this Drag and Drop operation.
      */
     def setSourceActions(actions: Int): Unit
+
+    /** unregister this DragGestureRecognizer's Listeners with the Component
+     * 
+     *  subclasses must override this method
+     */
+    protected def unregisterListeners(): Unit
 }

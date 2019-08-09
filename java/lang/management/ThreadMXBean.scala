@@ -1,5 +1,7 @@
 package java.lang.management
 
+import scala.scalanative.annotation.stub
+
 /** The management interface for the thread system of
  *  the Java virtual machine.
  * 
@@ -226,4 +228,8 @@ trait ThreadMXBean extends PlatformManagedObject {
     /** Enables or disables thread contention monitoring. */
     @stub
     def setThreadContentionMonitoringEnabled(enable: Boolean): Unit = ???
+
+    /** Enables or disables thread CPU time measurement. */
+    @stub
+    def setThreadCpuTimeEnabled(enable: Boolean): Unit = ???
 }

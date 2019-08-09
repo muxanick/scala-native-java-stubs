@@ -2,6 +2,7 @@ package java.security
 
 import java.lang.Object
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** This class defines the Service Provider Interface (SPI)
  *  for the AlgorithmParameterGenerator class, which
@@ -19,6 +20,10 @@ import java.security.spec.AlgorithmParameterSpec
  */
 abstract class AlgorithmParameterGeneratorSpi extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Generates the parameters. */
     protected def engineGenerateParameters(): AlgorithmParameters
 
@@ -26,4 +31,9 @@ abstract class AlgorithmParameterGeneratorSpi extends Object {
      *  algorithm-specific parameter generation values.
      */
     protected def engineInit(genParamSpec: AlgorithmParameterSpec, random: SecureRandom): Unit
+
+    /** Initializes this parameter generator for a certain size
+     *  and source of randomness.
+     */
+    protected def engineInit(size: Int, random: SecureRandom): Unit
 }

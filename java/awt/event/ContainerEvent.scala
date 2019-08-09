@@ -1,8 +1,9 @@
 package java.awt.event
 
 import java.awt.{AWTEvent, Component, Container}
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** A low-level event which indicates that a container's contents
  *  changed because a component was added or removed.
@@ -27,6 +28,10 @@ import java.util.EventObject
  */
 class ContainerEvent extends ComponentEvent {
 
+    /** Constructs a ContainerEvent object. */
+    @stub
+    def this(source: Component, id: Int, child: Component) = ???
+
     /** Returns the component that was affected by the event. */
     @stub
     def getChild(): Component = ???
@@ -34,6 +39,10 @@ class ContainerEvent extends ComponentEvent {
     /** Returns the originator of the event. */
     @stub
     def getContainer(): Container = ???
+
+    /** Returns a parameter string identifying this event. */
+    @stub
+    def paramString(): String = ???
 }
 
 object ContainerEvent {
@@ -48,4 +57,8 @@ object ContainerEvent {
     /** The first number in the range of ids used for container events. */
     @stub
     val CONTAINER_FIRST: Int = ???
+
+    /** The last number in the range of ids used for container events. */
+    @stub
+    val CONTAINER_LAST: Int = ???
 }

@@ -1,6 +1,7 @@
 package java.awt
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Any top-level window can be marked not to be blocked by modal
  *  dialogs. This is called "modal exclusion". This enum specifies
@@ -18,7 +19,18 @@ object Dialog.ModalExclusionType {
     /** No modal exclusion. */
     final val NO_EXCLUDE = new Dialog.ModalExclusionType(NO_EXCLUDE, 1)
 
+    /** TOOLKIT_EXCLUDE indicates that a top-level window
+     *  won't be blocked by  application-modal or toolkit-modal dialogs.
+     */
+    final val TOOLKIT_EXCLUDE = new Dialog.ModalExclusionType(TOOLKIT_EXCLUDE, 2)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): Dialog.ModalExclusionType = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[Dialog.ModalExclusionType] = ???
 }

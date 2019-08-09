@@ -5,6 +5,7 @@ import java.nio.ByteBuffer
 import java.security.{AlgorithmParameters, Key, Provider, SecureRandom}
 import java.security.cert.Certificate
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** This class provides the functionality of a cryptographic cipher for
  *  encryption and decryption. It forms the core of the Java Cryptographic
@@ -115,6 +116,10 @@ import java.security.spec.AlgorithmParameterSpec
  *  other transformations are supported.
  */
 class Cipher extends Object {
+
+    /** Creates a Cipher object. */
+    @stub
+    protected def this(cipherSpi: CipherSpi, provider: Provider, transformation: String) = ???
 
     /** Finishes a multiple-part encryption or decryption operation, depending
      *  on how this cipher was initialized.
@@ -289,6 +294,10 @@ class Cipher extends Object {
      */
     @stub
     def updateAAD(src: ByteBuffer): Unit = ???
+
+    /** Wrap a key. */
+    @stub
+    def wrap(key: Key): Array[Byte] = ???
 }
 
 object Cipher {
@@ -315,6 +324,10 @@ object Cipher {
     /** Constant used to initialize cipher to key-unwrapping mode. */
     @stub
     val UNWRAP_MODE: Int = ???
+
+    /** Constant used to initialize cipher to key-wrapping mode. */
+    @stub
+    val WRAP_MODE: Int = ???
 
     /** Returns a Cipher object that implements the specified
      *  transformation.

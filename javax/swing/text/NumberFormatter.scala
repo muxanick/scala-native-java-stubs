@@ -1,7 +1,9 @@
 package javax.swing.text
 
 import java.lang.Object
+import java.text.{Format, NumberFormat}
 import javax.swing.JFormattedTextField.AbstractFormatter
+import scala.scalanative.annotation.stub
 
 /** NumberFormatter subclasses InternationalFormatter
  *  adding special behavior for numbers. Among the specializations are
@@ -69,4 +71,14 @@ class NumberFormatter extends InternationalFormatter {
      */
     @stub
     def this() = ???
+
+    /** Creates a NumberFormatter with the specified Format instance. */
+    @stub
+    def this(format: NumberFormat) = ???
+
+    /** Sets the format that dictates the legal values that can be edited
+     *  and displayed.
+     */
+    @stub
+    def setFormat(format: Format): Unit = ???
 }

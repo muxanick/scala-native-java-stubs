@@ -3,6 +3,7 @@ package java.rmi.server
 import java.io.IOException
 import java.lang.{Exception, Object, String, Throwable}
 import java.rmi.RemoteException
+import scala.scalanative.annotation.stub
 
 /** An ExportException is a RemoteException
  *  thrown if an attempt to export a remote object fails.  A remote object is
@@ -17,4 +18,10 @@ class ExportException extends RemoteException {
      */
     @stub
     def this(s: String) = ???
+
+    /** Constructs an ExportException with the specified
+     *  detail message and nested exception.
+     */
+    @stub
+    def this(s: String, ex: Exception) = ???
 }

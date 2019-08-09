@@ -1,5 +1,8 @@
 package javax.swing
 
+import java.awt.Graphics2D
+import scala.scalanative.annotation.stub
+
 /** A painting delegate. The Painter interface defines exactly one method,
  *  paint. It is used in situations where the developer can change
  *  the painting routine of a component without having to resort to subclassing
@@ -32,4 +35,8 @@ package javax.swing
  *  This interface makes no guarantees of threadsafety.
  */
 trait Painter[T] {
+
+    /** Renders to the given Graphics2D object. */
+    @stub
+    def paint(g: Graphics2D, object: T, width: Int, height: Int): Unit = ???
 }

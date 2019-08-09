@@ -2,7 +2,8 @@ package java.awt.image
 
 import java.awt.Transparency
 import java.awt.color.ColorSpace
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The ColorModel abstract class encapsulates the
  *  methods for translating a pixel value to color components
@@ -116,8 +117,17 @@ abstract class ColorModel extends Object with Transparency {
     @stub
     def this(bits: Int) = ???
 
+    /** Constructs a ColorModel that translates pixel values
+     *  to color/alpha components.
+     */
+    @stub
+    protected def this(pixel_bits: Int, bits: Array[Int], cspace: ColorSpace, hasAlpha: Boolean, isAlphaPremultiplied: Boolean, transparency: Int, transferType: Int) = ???
+
     /** The total number of bits in the pixel. */
     protected val pixel_bits: Int
+
+    /** Data type of the array used to represent pixel values. */
+    protected val transferType: Int
 
     /** Forces the raster data to match the state specified in the
      *  isAlphaPremultiplied variable, assuming the data is
@@ -316,6 +326,11 @@ abstract class ColorModel extends Object with Transparency {
      *  ColorModel.
      */
     def isCompatibleSampleModel(sm: SampleModel): Boolean
+
+    /** Returns the String representation of the contents of
+     *  this ColorModelobject.
+     */
+    def toString(): String
 }
 
 object ColorModel {

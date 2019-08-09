@@ -1,7 +1,8 @@
 package java.time.temporal
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The range of valid values for a date-time field.
  *  
@@ -68,6 +69,10 @@ final class ValueRange extends Object with Serializable {
     /** Checks if the value is within the valid range. */
     @stub
     def isValidValue(value: Long): Boolean = ???
+
+    /** Outputs this range as a String. */
+    @stub
+    def toString(): String = ???
 }
 
 object ValueRange {

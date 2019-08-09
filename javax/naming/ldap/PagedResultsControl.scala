@@ -1,6 +1,7 @@
 package javax.naming.ldap
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Requests that the results of a search operation be returned by the LDAP
  *  server in batches of a specified size.
@@ -85,4 +86,18 @@ final class PagedResultsControl extends BasicControl {
      */
     @stub
     def this(pageSize: Int, criticality: Boolean) = ???
+
+    /** Constructs a control to set the number of entries to be returned per
+     *  page of results.
+     */
+    @stub
+    def this(pageSize: Int, cookie: Array[Byte], criticality: Boolean) = ???
+}
+
+object PagedResultsControl {
+    /** The paged-results control's assigned object identifier
+     *  is 1.2.840.113556.1.4.319.
+     */
+    @stub
+    val OID: String = ???
 }

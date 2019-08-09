@@ -1,8 +1,9 @@
 package javax.swing.filechooser
 
 import java.io.File
-import java.lang.{Object, String}
+import java.lang.{Boolean, Object, String}
 import javax.swing.Icon
+import scala.scalanative.annotation.stub
 
 /** FileSystemView is JFileChooser's gateway to the
  *  file system. Since the JDK1.1 File API doesn't allow
@@ -17,6 +18,10 @@ import javax.swing.Icon
  *  FileSystemView to better handle a given operating system.
  */
 abstract class FileSystemView extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns a File object constructed in dir from the given filename. */
     def createFileObject(dir: File, filename: String): File
@@ -100,6 +105,9 @@ abstract class FileSystemView extends Object {
 
     /** Determines if the given file is a root in the navigable tree(s). */
     def isRoot(f: File): Boolean
+
+    /** Returns true if the file (directory) can be visited. */
+    def isTraversable(f: File): Boolean
 }
 
 object FileSystemView {

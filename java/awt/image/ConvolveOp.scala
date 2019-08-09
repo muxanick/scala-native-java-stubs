@@ -1,7 +1,9 @@
 package java.awt.image
 
+import java.awt.RenderingHints
 import java.awt.geom.{Point2D, Rectangle2D}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class implements a convolution from the source
  *  to the destination.
@@ -37,6 +39,12 @@ class ConvolveOp extends Object with BufferedImageOp with RasterOp {
     /** Constructs a ConvolveOp given a Kernel. */
     @stub
     def this(kernel: Kernel) = ???
+
+    /** Constructs a ConvolveOp given a Kernel, an edge condition, and a
+     *  RenderingHints object (which may be null).
+     */
+    @stub
+    def this(kernel: Kernel, edgeCondition: Int, hints: RenderingHints) = ???
 
     /** Creates a zeroed destination image with the correct size and number
      *  of bands.
@@ -79,6 +87,10 @@ class ConvolveOp extends Object with BufferedImageOp with RasterOp {
      */
     @stub
     def getPoint2D(srcPt: Point2D, dstPt: Point2D): Point2D = ???
+
+    /** Returns the rendering hints for this op. */
+    @stub
+    def getRenderingHints(): RenderingHints = ???
 }
 
 object ConvolveOp {
@@ -87,4 +99,8 @@ object ConvolveOp {
      */
     @stub
     val EDGE_NO_OP: Int = ???
+
+    /** Pixels at the edge of the destination image are set to zero. */
+    @stub
+    val EDGE_ZERO_FILL: Int = ???
 }

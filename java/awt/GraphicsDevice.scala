@@ -1,6 +1,7 @@
 package java.awt
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The GraphicsDevice class describes the graphics devices
  *  that might be available in a particular graphics environment.  These
@@ -42,6 +43,10 @@ import java.lang.{Object, String}
  *  Full-Screen Exclusive Mode API Tutorial.
  */
 abstract class GraphicsDevice extends Object {
+
+    /** This is an abstract class that cannot be instantiated directly. */
+    @stub
+    protected def this() = ???
 
     /** This method returns the number of bytes available in
      *  accelerated memory on this device.
@@ -103,9 +108,16 @@ abstract class GraphicsDevice extends Object {
 
     /** Sets the display mode of this graphics device. */
     def setDisplayMode(dm: DisplayMode): Unit
+
+    /** Enter full-screen mode, or return to windowed mode. */
+    def setFullScreenWindow(w: Window): Unit
 }
 
 object GraphicsDevice {
+    /** Kinds of translucency supported by the underlying system. */
+    @stub
+    object WindowTranslucency extends GraphicsDevice.WindowTranslucency
+
     /** Device is an image buffer. */
     @stub
     val TYPE_IMAGE_BUFFER: Int = ???
@@ -113,4 +125,8 @@ object GraphicsDevice {
     /** Device is a printer. */
     @stub
     val TYPE_PRINTER: Int = ???
+
+    /** Device is a raster screen. */
+    @stub
+    val TYPE_RASTER_SCREEN: Int = ???
 }

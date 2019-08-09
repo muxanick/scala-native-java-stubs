@@ -2,6 +2,7 @@ package javax.swing.filechooser
 
 import java.io.File
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** An implementation of FileFilter that filters using a
  *  specified set of extensions. The extension for a file is the
@@ -19,6 +20,12 @@ import java.lang.{Object, String}
  */
 final class FileNameExtensionFilter extends FileFilter {
 
+    /** Creates a FileNameExtensionFilter with the specified
+     *  description and file name extensions.
+     */
+    @stub
+    def this(description: String, extensions: String*) = ???
+
     /** Tests the specified file, returning true if the file is
      *  accepted, false otherwise.
      */
@@ -32,4 +39,8 @@ final class FileNameExtensionFilter extends FileFilter {
     /** Returns the set of file name extensions files are tested against. */
     @stub
     def getExtensions(): Array[String] = ???
+
+    /** Returns a string representation of the FileNameExtensionFilter. */
+    @stub
+    def toString(): String = ???
 }

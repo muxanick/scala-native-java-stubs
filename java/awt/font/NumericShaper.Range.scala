@@ -1,6 +1,7 @@
 package java.awt.font
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A NumericShaper.Range represents a Unicode range of a
  *  script having its own decimal digits. For example, the THAI range has the Thai digits, THAI DIGIT
@@ -129,7 +130,16 @@ object NumericShaper.Range {
     /** The Tibetan range with the Tibetan digits. */
     final val TIBETAN = new NumericShaper.Range(TIBETAN, 33)
 
+    /** The Vai range with the Vai digits. */
+    final val VAI = new NumericShaper.Range(VAI, 34)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): NumericShaper.Range = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[NumericShaper.Range] = ???
 }

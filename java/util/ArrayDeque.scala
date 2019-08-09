@@ -2,6 +2,7 @@ package java.util
 
 import java.io.Serializable
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** Resizable-array implementation of the Deque interface.  Array
  *  deques have no capacity restrictions; they grow as necessary to support
@@ -52,6 +53,12 @@ class ArrayDeque[E] extends AbstractCollection[E] with Deque[E] with Cloneable w
      */
     @stub
     def this(c: Collection[_ <: E]) = ???
+
+    /** Constructs an empty array deque with an initial capacity
+     *  sufficient to hold the specified number of elements.
+     */
+    @stub
+    def this(numElements: Int) = ???
 
     /** Inserts the specified element at the end of this deque. */
     @stub
@@ -206,4 +213,11 @@ class ArrayDeque[E] extends AbstractCollection[E] with Deque[E] with Cloneable w
      */
     @stub
     def toArray(): Array[Object] = ???
+
+    /** Returns an array containing all of the elements in this deque in
+     *  proper sequence (from first to last element); the runtime type of the
+     *  returned array is that of the specified array.
+     */
+    @stub
+    def toArray[T](a: Array[T]): Array[T] = ???
 }

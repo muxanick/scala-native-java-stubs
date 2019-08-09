@@ -1,7 +1,8 @@
 package java.beans
 
 import java.io.OutputStream
-import java.lang.{AutoCloseable, Object}
+import java.lang.{AutoCloseable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The XMLEncoder class is a complementary alternative to
  *  the ObjectOutputStream and can used to generate
@@ -175,6 +176,13 @@ class XMLEncoder extends Encoder with AutoCloseable {
     @stub
     def this(out: OutputStream) = ???
 
+    /** Creates a new XML encoder to write out JavaBeans
+     *  to the stream out using the given charset
+     *  starting from the given indentation.
+     */
+    @stub
+    def this(out: OutputStream, charset: String, declaration: Boolean, indentation: Int) = ???
+
     /** This method calls flush, writes the closing
      *  postamble and then closes the output stream associated
      *  with this stream.
@@ -208,4 +216,10 @@ class XMLEncoder extends Encoder with AutoCloseable {
     /** Write an XML representation of the specified object to the output. */
     @stub
     def writeObject(o: Object): Unit = ???
+
+    /** Records the Statement so that the Encoder will
+     *  produce the actual output when the stream is flushed.
+     */
+    @stub
+    def writeStatement(oldStm: Statement): Unit = ???
 }

@@ -1,7 +1,9 @@
 package java.security.cert
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.security.KeyStore
+import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** Parameters used as input for the PKIX CertPathBuilder
  *  algorithm.
@@ -47,6 +49,12 @@ class PKIXBuilderParameters extends PKIXParameters {
     @stub
     def this(keystore: KeyStore, targetConstraints: CertSelector) = ???
 
+    /** Creates an instance of PKIXBuilderParameters with
+     *  the specified Set of most-trusted CAs.
+     */
+    @stub
+    def this(trustAnchors: Set[TrustAnchor], targetConstraints: CertSelector) = ???
+
     /** Returns the value of the maximum number of intermediate non-self-issued
      *  certificates that may exist in a certification path.
      */
@@ -58,4 +66,8 @@ class PKIXBuilderParameters extends PKIXParameters {
      */
     @stub
     def setMaxPathLength(maxPathLength: Int): Unit = ???
+
+    /** Returns a formatted string describing the parameters. */
+    @stub
+    def toString(): String = ???
 }

@@ -4,6 +4,7 @@ import java.lang.{Object, String}
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, TextUI}
 import javax.swing.text.{Element, View}
+import scala.scalanative.annotation.stub
 
 /** Provides the Windows look and feel for a password field.
  *  The only difference from the standard text field is that
@@ -12,6 +13,10 @@ import javax.swing.text.{Element, View}
  *  real text contained in the field.
  */
 class BasicPasswordFieldUI extends BasicTextFieldUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Creates a view (PasswordView) for an element. */
     @stub
@@ -22,6 +27,10 @@ class BasicPasswordFieldUI extends BasicTextFieldUI {
      */
     @stub
     protected def getPropertyPrefix(): String = ???
+
+    /** Installs the necessary properties on the JPasswordField. */
+    @stub
+    protected def installDefaults(): Unit = ???
 }
 
 object BasicPasswordFieldUI {

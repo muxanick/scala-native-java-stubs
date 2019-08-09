@@ -2,6 +2,7 @@ package javax.xml.bind.annotation
 
 import java.lang.annotation.{ElementType, Inherited, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /**  Controls whether fields or Javabean properties are serialized by default. 
  * 
@@ -56,4 +57,8 @@ import scala.annotation.StaticAnnotation
 @Retention ( value = RUNTIME ) 
 @Target ( value ={ PACKAGE , TYPE } ) 
  final class XmlAccessorType extends StaticAnnotation {
+
+    /** Specifies whether fields or properties are serialized. */
+    @stub
+    val value: XmlAccessType = ???
 }

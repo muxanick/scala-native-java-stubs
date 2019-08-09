@@ -1,6 +1,7 @@
 package javax.naming.ldap
 
 import javax.naming.event.NamingListener
+import scala.scalanative.annotation.stub
 
 /** This interface is for handling UnsolicitedNotificationEvent.
  *  "Unsolicited notification" is defined in
@@ -21,4 +22,8 @@ import javax.naming.event.NamingListener
  * 
  */
 trait UnsolicitedNotificationListener extends NamingListener {
+
+    /** Called when an unsolicited notification has been received. */
+    @stub
+    def notificationReceived(evt: UnsolicitedNotificationEvent): Unit = ???
 }

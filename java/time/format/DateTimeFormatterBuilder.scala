@@ -5,6 +5,7 @@ import java.time.ZoneId
 import java.time.chrono.{ChronoLocalDate, Chronology}
 import java.time.temporal.TemporalField
 import java.util.{Locale, Map, Set}
+import scala.scalanative.annotation.stub
 
 /** Builder to create date-time formatters.
  *  
@@ -32,6 +33,10 @@ import java.util.{Locale, Map, Set}
  *  In practice, this simply parses the pattern and calls other methods on the builder.
  */
 final class DateTimeFormatterBuilder extends Object {
+
+    /** Constructs a new instance of the builder. */
+    @stub
+    def this() = ???
 
     /** Appends all the elements of a formatter to the builder. */
     @stub
@@ -200,6 +205,12 @@ final class DateTimeFormatterBuilder extends Object {
      */
     @stub
     def toFormatter(): DateTimeFormatter = ???
+
+    /** Completes this builder by creating the DateTimeFormatter
+     *  using the specified locale.
+     */
+    @stub
+    def toFormatter(locale: Locale): DateTimeFormatter = ???
 }
 
 object DateTimeFormatterBuilder {

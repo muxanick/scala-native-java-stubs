@@ -1,6 +1,7 @@
 package javax.management
 
 import java.lang.{Cloneable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The MBeanNotificationInfo class is used to describe the
  *  characteristics of the different notification instances
@@ -32,6 +33,10 @@ class MBeanNotificationInfo extends MBeanFeatureInfo with Cloneable {
     @stub
     def this(notifTypes: Array[String], name: String, description: String) = ???
 
+    /** Constructs an MBeanNotificationInfo object. */
+    @stub
+    def this(notifTypes: Array[String], name: String, description: String, descriptor: Descriptor) = ???
+
     /** Returns a shallow clone of this instance. */
     @stub
     def clone(): Object = ???
@@ -49,4 +54,8 @@ class MBeanNotificationInfo extends MBeanFeatureInfo with Cloneable {
     /** Returns a hash code value for the object. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }

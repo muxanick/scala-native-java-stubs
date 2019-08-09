@@ -2,6 +2,7 @@ package java.util.zip
 
 import java.io.{FilterInputStream, InputStream}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Implements an input stream filter for compressing data in the "deflate"
  *  compression format.
@@ -20,9 +21,19 @@ class DeflaterInputStream extends FilterInputStream {
     @stub
     def this(in: InputStream, defl: Deflater) = ???
 
+    /** Creates a new input stream with the specified compressor and buffer
+     *  size.
+     */
+    @stub
+    def this(in: InputStream, defl: Deflater, bufLen: Int) = ???
+
     /** Input buffer for reading compressed data. */
     @stub
     protected val buf: Array[Byte] = ???
+
+    /** Compressor for this stream. */
+    @stub
+    protected val def: Deflater = ???
 
     /** Returns 0 after EOF has been reached, otherwise always return 1. */
     @stub
@@ -55,4 +66,8 @@ class DeflaterInputStream extends FilterInputStream {
     /** This operation is not supported. */
     @stub
     def reset(): Unit = ???
+
+    /** Skips over and discards data from the input stream. */
+    @stub
+    def skip(n: Long): Long = ???
 }

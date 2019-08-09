@@ -1,6 +1,7 @@
 package javax.crypto
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The NullCipher class is a class that provides an
  *  "identity cipher" -- one that does not transform the plain text.  As
@@ -9,4 +10,8 @@ import java.lang.Object
  *  byte.
  */
 class NullCipher extends Cipher {
+
+    /** Creates a NullCipher object. */
+    @stub
+    def this() = ???
 }

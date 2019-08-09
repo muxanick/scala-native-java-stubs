@@ -1,7 +1,8 @@
 package java.security.cert
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.security.PublicKey
+import scala.scalanative.annotation.stub
 
 /** This class represents the successful result of the PKIX certification
  *  path validation algorithm.
@@ -26,6 +27,12 @@ import java.security.PublicKey
  */
 class PKIXCertPathValidatorResult extends Object with CertPathValidatorResult {
 
+    /** Creates an instance of PKIXCertPathValidatorResult
+     *  containing the specified parameters.
+     */
+    @stub
+    def this(trustAnchor: TrustAnchor, policyTree: PolicyNode, subjectPublicKey: PublicKey) = ???
+
     /** Returns a copy of this object. */
     @stub
     def clone(): Object = ???
@@ -47,4 +54,10 @@ class PKIXCertPathValidatorResult extends Object with CertPathValidatorResult {
      */
     @stub
     def getTrustAnchor(): TrustAnchor = ???
+
+    /** Return a printable representation of this
+     *  PKIXCertPathValidatorResult.
+     */
+    @stub
+    def toString(): String = ???
 }

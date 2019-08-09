@@ -6,11 +6,16 @@ import java.lang.Object
 import javax.swing.{Icon, JComponent}
 import javax.swing.plaf.{ButtonUI, ComponentUI, MenuItemUI}
 import javax.swing.plaf.basic.{BasicMenuItemUI, BasicMenuUI}
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for
  *  JMenu.
  */
 class SynthMenuUI extends BasicMenuUI with PropertyChangeListener with SynthUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the Context for the specified component. */
     @stub
@@ -57,6 +62,10 @@ class SynthMenuUI extends BasicMenuUI with PropertyChangeListener with SynthUI {
      */
     @stub
     def uninstallUI(c: JComponent): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthMenuUI {

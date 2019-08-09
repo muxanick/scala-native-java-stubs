@@ -2,6 +2,7 @@ package java.awt.image
 
 import java.awt.{Point, Rectangle}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class extends Raster to provide pixel writing capabilities.
  *  Refer to the class comment for Raster for descriptions of how
@@ -22,6 +23,10 @@ class WritableRaster extends Raster {
      */
     @stub
     protected def this(sampleModel: SampleModel, dataBuffer: DataBuffer, aRegion: Rectangle, sampleModelTranslate: Point, parent: WritableRaster) = ???
+
+    /** Constructs a WritableRaster with the given SampleModel. */
+    @stub
+    protected def this(sampleModel: SampleModel, origin: Point) = ???
 
     /** Returns a new WritableRaster which shares all or part of this
      *  WritableRaster's DataBuffer.
@@ -124,4 +129,10 @@ class WritableRaster extends Raster {
      */
     @stub
     def setSamples(x: Int, y: Int, w: Int, h: Int, b: Int, fArray: Array[Float]): Unit = ???
+
+    /** Sets the samples in the specified band for the specified rectangle
+     *  of pixels from an int array containing one sample per array element.
+     */
+    @stub
+    def setSamples(x: Int, y: Int, w: Int, h: Int, b: Int, iArray: Array[Int]): Unit = ???
 }

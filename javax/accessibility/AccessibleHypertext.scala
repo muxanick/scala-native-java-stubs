@@ -1,5 +1,7 @@
 package javax.accessibility
 
+import scala.scalanative.annotation.stub
+
 /** The AccessibleHypertext class is the base class for all
  *  classes that present hypertext information on the display.  This class
  *  provides the standard mechanism for an assistive technology to access
@@ -20,4 +22,11 @@ trait AccessibleHypertext extends AccessibleText {
     /** Returns the number of links within this hypertext document. */
     @stub
     def getLinkCount(): Int = ???
+
+    /** Returns the index into an array of hyperlinks that
+     *  is associated with this character index, or -1 if there
+     *  is no hyperlink associated with this index.
+     */
+    @stub
+    def getLinkIndex(charIndex: Int): Int = ???
 }

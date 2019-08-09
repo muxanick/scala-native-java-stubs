@@ -1,6 +1,7 @@
 package java.rmi.activation
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** General exception used by the activation interfaces.
  * 
@@ -26,7 +27,23 @@ class ActivationException extends Exception {
     @stub
     def this(s: String) = ???
 
+    /** Constructs an ActivationException with the specified
+     *  detail message and cause.
+     */
+    @stub
+    def this(s: String, cause: Throwable) = ???
+
+    /** The cause of the activation exception. */
+    @stub
+    val detail: Throwable = ???
+
     /** Returns the cause of this exception. */
     @stub
     def getCause(): Throwable = ???
+
+    /** Returns the detail message, including the message from the cause, if
+     *  any, of this exception.
+     */
+    @stub
+    def getMessage(): String = ???
 }

@@ -4,6 +4,7 @@ import java.lang.{Enum, Object, String}
 import java.time.format.TextStyle
 import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalField, TemporalQuery, ValueRange}
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** A day-of-week, such as 'Tuesday'.
  *  
@@ -48,6 +49,9 @@ object DayOfWeek {
 
     /** The singleton instance for the day-of-week of Tuesday. */
     final val TUESDAY = new DayOfWeek(TUESDAY, 5)
+
+    /** The singleton instance for the day-of-week of Wednesday. */
+    final val WEDNESDAY = new DayOfWeek(WEDNESDAY, 6)
 
     /** Adjusts the specified temporal object to have this day-of-week. */
     @stub
@@ -100,4 +104,10 @@ object DayOfWeek {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): DayOfWeek = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[DayOfWeek] = ???
 }

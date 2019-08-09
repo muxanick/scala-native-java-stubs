@@ -1,6 +1,7 @@
 package javax.xml.validation
 
 import java.lang.{Error, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Thrown when a problem with configuration with the Schema Factories
  *  exists. This error will typically be thrown when the class of a
@@ -26,4 +27,10 @@ final class SchemaFactoryConfigurationError extends Error {
      */
     @stub
     def this(message: String, cause: Throwable) = ???
+
+    /** Create a new SchemaFactoryConfigurationError with the
+     *  given Throwable base cause.
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

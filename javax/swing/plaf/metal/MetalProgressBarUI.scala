@@ -5,6 +5,7 @@ import java.lang.Object
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, ProgressBarUI}
 import javax.swing.plaf.basic.BasicProgressBarUI
+import scala.scalanative.annotation.stub
 
 /** The Metal implementation of ProgressBarUI.
  *  
@@ -19,9 +20,19 @@ import javax.swing.plaf.basic.BasicProgressBarUI
  */
 class MetalProgressBarUI extends BasicProgressBarUI {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Draws a bit of special highlighting on the progress bar. */
     @stub
     def paintDeterminate(g: Graphics, c: JComponent): Unit = ???
+
+    /** Draws a bit of special highlighting on the progress bar
+     *  and bouncing box.
+     */
+    @stub
+    def paintIndeterminate(g: Graphics, c: JComponent): Unit = ???
 }
 
 object MetalProgressBarUI {

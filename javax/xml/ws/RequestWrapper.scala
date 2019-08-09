@@ -3,6 +3,7 @@ package javax.xml.ws
 import java.lang.String
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Used to annotate methods in the Service Endpoint Interface with the request
  *  wrapper bean to be used at runtime. The default value of the localName is
@@ -28,4 +29,8 @@ import scala.annotation.StaticAnnotation
     /** wsdl:part name for the wrapper part */
     @stub
     val partName: String = ???
+
+    /** Element's namespace name. */
+    @stub
+    val targetNamespace: String = ???
 }

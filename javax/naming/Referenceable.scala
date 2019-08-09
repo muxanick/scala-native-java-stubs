@@ -1,5 +1,7 @@
 package javax.naming
 
+import scala.scalanative.annotation.stub
+
 /** This interface is implemented by an object that can provide a
  *  Reference to itself.
  * 
@@ -12,4 +14,8 @@ package javax.naming
  *  get its Reference to use for binding.
  */
 trait Referenceable {
+
+    /** Retrieves the Reference of this object. */
+    @stub
+    def getReference(): Reference = ???
 }

@@ -2,6 +2,7 @@ package java.awt.color
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This abstract class is used to serve as a color space tag to identify the
  *  specific color space of a Color object or, via a ColorModel object,
@@ -54,6 +55,12 @@ import java.lang.{Object, String}
  */
 abstract class ColorSpace extends Object with Serializable {
 
+    /** Constructs a ColorSpace object given a color space type
+     *  and the number of components.
+     */
+    @stub
+    protected def this(type: Int, numcomponents: Int) = ???
+
     /** Transforms a color value assumed to be in the CS_CIEXYZ conversion
      *  color space into this ColorSpace.
      */
@@ -92,6 +99,11 @@ abstract class ColorSpace extends Object with Serializable {
      *  into the CS_CIEXYZ conversion color space.
      */
     def toCIEXYZ(colorvalue: Array[Float]): Array[Float]
+
+    /** Transforms a color value assumed to be in this ColorSpace
+     *  into a value in the default CS_sRGB color space.
+     */
+    def toRGB(colorvalue: Array[Float]): Array[Float]
 }
 
 object ColorSpace {
@@ -214,6 +226,10 @@ object ColorSpace {
     /** Any of the family of YCbCr color spaces. */
     @stub
     val TYPE_YCbCr: Int = ???
+
+    /** Any of the family of Yxy color spaces. */
+    @stub
+    val TYPE_Yxy: Int = ???
 
     /** Returns a ColorSpace representing one of the specific
      *  predefined color spaces.

@@ -1,5 +1,7 @@
 package javax.sound.sampled
 
+import scala.scalanative.annotation.stub
+
 /** A mixer is an audio device with one or more lines.  It need not be
  *  designed for mixing audio signals.  A mixer that actually mixes audio
  *  has multiple input (source) lines and at least one output (target) line.
@@ -89,4 +91,17 @@ trait Mixer extends Line {
     /** Synchronizes two or more lines. */
     @stub
     def synchronize(lines: Array[Line], maintainSync: Boolean): Unit = ???
+
+    /** Releases synchronization for the specified lines. */
+    @stub
+    def unsynchronize(lines: Array[Line]): Unit = ???
+}
+
+object Mixer {
+    /** The Mixer.Info class represents information about an audio mixer,
+     *  including the product's name, version, and vendor, along with a textual
+     *  description.
+     */
+    @stub
+    object Info extends Mixer.Info
 }

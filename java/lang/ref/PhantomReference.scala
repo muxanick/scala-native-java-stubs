@@ -1,6 +1,7 @@
 package java.lang.ref
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Phantom reference objects, which are enqueued after the collector
  *  determines that their referents may otherwise be reclaimed.  Phantom
@@ -21,4 +22,14 @@ import java.lang.Object
  *  such references are cleared or themselves become unreachable.
  */
 class PhantomReference[T] extends Reference[T] {
+
+    /** Creates a new phantom reference that refers to the given object and
+     *  is registered with the given queue.
+     */
+    @stub
+    def this(referent: T, q: ReferenceQueue[_ >: T]) = ???
+
+    /** Returns this reference object's referent. */
+    @stub
+    def get(): T = ???
 }

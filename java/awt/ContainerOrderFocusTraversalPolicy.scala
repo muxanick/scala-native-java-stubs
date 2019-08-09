@@ -2,6 +2,7 @@ package java.awt
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A FocusTraversalPolicy that determines traversal order based on the order
  *  of child Components in a Container. From a particular focus cycle root, the
@@ -26,6 +27,10 @@ import java.lang.Object
  *  policy is used to perform the search operation.
  */
 class ContainerOrderFocusTraversalPolicy extends FocusTraversalPolicy with Serializable {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Determines whether a Component is an acceptable choice as the new
      *  focus owner.
@@ -58,4 +63,10 @@ class ContainerOrderFocusTraversalPolicy extends FocusTraversalPolicy with Seria
     /** Returns the last Component in the traversal cycle. */
     @stub
     def getLastComponent(aContainer: Container): Component = ???
+
+    /** Sets whether this ContainerOrderFocusTraversalPolicy transfers focus
+     *  down-cycle implicitly.
+     */
+    @stub
+    def setImplicitDownCycleTraversal(implicitDownCycleTraversal: Boolean): Unit = ???
 }

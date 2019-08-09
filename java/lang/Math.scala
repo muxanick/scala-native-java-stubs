@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** The class Math contains methods for performing basic
  *  numeric operations such as the elementary exponential, logarithm,
  *  square root, and trigonometric functions.
@@ -76,6 +78,13 @@ object Math {
      */
     @stub
     val E: Double = ???
+
+    /** The double value that is closer than any other to
+     *  pi, the ratio of the circumference of a circle to its
+     *  diameter.
+     */
+    @stub
+    val PI: Double = ???
 
     /** Returns the absolute value of a double value. */
     @stub
@@ -467,4 +476,8 @@ object Math {
     /** Returns the size of an ulp of the argument. */
     @stub
     def ulp(d: Double): Double = ???
+
+    /** Returns the size of an ulp of the argument. */
+    @stub
+    def ulp(f: Float): Float = ???
 }

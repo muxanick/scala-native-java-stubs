@@ -1,6 +1,7 @@
 package java.lang.reflect
 
-import java.lang.{Exception, Object, RuntimeException, Throwable}
+import java.lang.{Exception, Object, RuntimeException, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Thrown when the
  *  java.lang.reflect package attempts to read method parameters from
@@ -28,4 +29,8 @@ class MalformedParametersException extends RuntimeException {
      */
     @stub
     def this() = ???
+
+    /** Create a MalformedParametersException. */
+    @stub
+    def this(reason: String) = ???
 }

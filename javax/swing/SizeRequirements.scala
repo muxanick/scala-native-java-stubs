@@ -1,7 +1,8 @@
 package javax.swing
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** For the convenience of layout managers,
  *  calculates information about the size and position of components.
@@ -68,6 +69,12 @@ class SizeRequirements extends Object with Serializable {
     @stub
     def this() = ???
 
+    /** Creates a SizeRequirements object with the specified minimum, preferred,
+     *  and maximum sizes and the specified alignment.
+     */
+    @stub
+    def this(min: Int, pref: Int, max: Int, a: Float) = ???
+
     /** The alignment, specified as a value between 0.0 and 1.0,
      *  inclusive.
      */
@@ -81,6 +88,16 @@ class SizeRequirements extends Object with Serializable {
     /** The minimum size required. */
     @stub
     val minimum: Int = ???
+
+    /** The preferred (natural) size. */
+    @stub
+    val preferred: Int = ???
+
+    /** Returns a string describing the minimum, preferred, and maximum
+     *  size requirements, along with the alignment.
+     */
+    @stub
+    def toString(): String = ???
 }
 
 object SizeRequirements {

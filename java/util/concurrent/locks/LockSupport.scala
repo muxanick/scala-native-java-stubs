@@ -1,6 +1,7 @@
 package java.util.concurrent.locks
 
 import java.lang.{Object, Thread}
+import scala.scalanative.annotation.stub
 
 /** Basic thread blocking primitives for creating locks and other
  *  synchronization classes.
@@ -127,4 +128,10 @@ object LockSupport {
      */
     @stub
     def parkUntil(blocker: Object, deadline: Long): Unit = ???
+
+    /** Makes available the permit for the given thread, if it
+     *  was not already available.
+     */
+    @stub
+    def unpark(thread: Thread): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.lang.invoke
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A MutableCallSite is a CallSite whose target variable
  *  behaves like an ordinary field.
@@ -60,6 +61,10 @@ class MutableCallSite extends CallSite {
     @stub
     def this(target: MethodHandle) = ???
 
+    /** Creates a blank call site object with the given method type. */
+    @stub
+    def this(type: MethodType) = ???
+
     /** Produces a method handle equivalent to an invokedynamic instruction
      *  which has been linked to this call site.
      */
@@ -75,4 +80,13 @@ class MutableCallSite extends CallSite {
     /** Updates the target method of this call site, as a normal variable. */
     @stub
     def setTarget(newTarget: MethodHandle): Unit = ???
+}
+
+object MutableCallSite {
+    /** Performs a synchronization operation on each call site in the given array,
+     *  forcing all other threads to throw away any cached values previously
+     *  loaded from the target of any of the call sites.
+     */
+    @stub
+    def syncAll(sites: Array[MutableCallSite]): Unit = ???
 }

@@ -2,6 +2,7 @@ package javax.swing.border
 
 import java.awt.{Color, Component, Component.BaselineResizeBehavior, Dimension, Font, Graphics, Insets}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A class which implements an arbitrary border
  *  with the addition of a String title in a
@@ -59,6 +60,10 @@ class TitledBorder extends AbstractBorder {
      */
     @stub
     def this(border: Border, title: String, titleJustification: Int, titlePosition: Int, titleFont: Font, titleColor: Color) = ???
+
+    /** Creates a TitledBorder instance. */
+    @stub
+    def this(title: String) = ???
 
     /**  */
     @stub
@@ -161,6 +166,10 @@ class TitledBorder extends AbstractBorder {
     /** Sets the title-justification of the titled border. */
     @stub
     def setTitleJustification(titleJustification: Int): Unit = ???
+
+    /** Sets the title-position of the titled border. */
+    @stub
+    def setTitlePosition(titlePosition: Int): Unit = ???
 }
 
 object TitledBorder {
@@ -226,4 +235,11 @@ object TitledBorder {
     /** Position the title in the middle of the border's top line. */
     @stub
     val TOP: Int = ???
+
+    /** Position title text at the right side of the border line
+     *   for left to right orientation, at the left side of the
+     *   border line for right to left orientation.
+     */
+    @stub
+    val TRAILING: Int = ???
 }

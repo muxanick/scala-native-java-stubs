@@ -4,6 +4,7 @@ import java.awt.{Component, Point}
 import java.awt.datatransfer.FlavorMap
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The DropTarget is associated
  *  with a Component when that Component
@@ -45,6 +46,17 @@ class DropTarget extends Object with DropTargetListener with Serializable {
      */
     @stub
     def this(c: Component, ops: Int, dtl: DropTargetListener, act: Boolean) = ???
+
+    /** Creates a new DropTarget given the Component
+     *  to associate itself with, an int representing
+     *  the default acceptable action(s) to
+     *  support, a DropTargetListener
+     *  to handle event processing, a boolean indicating
+     *  if the DropTarget is currently accepting drops, and
+     *  a FlavorMap to use (or null for the default FlavorMap).
+     */
+    @stub
+    def this(c: Component, ops: Int, dtl: DropTargetListener, act: Boolean, fm: FlavorMap) = ???
 
     /** Adds a new DropTargetListener (UNICAST SOURCE). */
     @stub
@@ -180,4 +192,14 @@ class DropTarget extends Object with DropTargetListener with Serializable {
      */
     @stub
     def setFlavorMap(fm: FlavorMap): Unit = ???
+
+    /** update autoscrolling with current cursor location */
+    @stub
+    protected def updateAutoscroll(dragCursorLocn: Point): Unit = ???
+}
+
+object DropTarget {
+    /** this protected nested class implements autoscrolling */
+    @stub
+    protected object DropTargetAutoScroller extends DropTarget.DropTargetAutoScroller
 }

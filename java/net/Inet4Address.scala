@@ -1,6 +1,7 @@
 package java.net
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class represents an Internet Protocol version 4 (IPv4) address.
  *  Defined by 
@@ -111,4 +112,8 @@ final class Inet4Address extends InetAddress {
      */
     @stub
     def isMulticastAddress(): Boolean = ???
+
+    /** Utility routine to check if the InetAddress is a site local address. */
+    @stub
+    def isSiteLocalAddress(): Boolean = ???
 }

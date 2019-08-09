@@ -3,7 +3,7 @@ package javax.xml.crypto.dom
 import java.lang.{Object, String}
 import java.util.Iterator
 import javax.xml.crypto.{KeySelector, URIDereferencer, XMLCryptoContext}
-import org.w3c.dom.Element
+import scala.scalanative.annotation.stub
 
 /** This class provides a DOM-specific implementation of the
  *  XMLCryptoContext interface. It also includes additional
@@ -11,6 +11,10 @@ import org.w3c.dom.Element
  *  and retrieving elements that contain attributes of type ID.
  */
 class DOMCryptoContext extends Object with XMLCryptoContext {
+
+    /** Default constructor. */
+    @stub
+    protected def this() = ???
 
     /** This implementation uses an internal HashMap to get the object
      *  that the specified key maps to.
@@ -93,4 +97,10 @@ class DOMCryptoContext extends Object with XMLCryptoContext {
      */
     @stub
     def setProperty(name: String, value: Object): Object = ???
+
+    /** Sets a URIDereferencer that is used to dereference
+     *  URIReferences.
+     */
+    @stub
+    def setURIDereferencer(dereferencer: URIDereferencer): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.lang
 
 import java.io.Serializable
+import scala.scalanative.annotation.stub
 
 /** This is the common base class of all Java language enumeration types.
  * 
@@ -14,6 +15,10 @@ import java.io.Serializable
  *  set and map implementations are available.
  */
 abstract class Enum[E <: Enum[E]] extends Object with Comparable[E] with Serializable {
+
+    /** Sole constructor. */
+    @stub
+    protected def this(name: String, ordinal: Int) = ???
 
     /** Throws CloneNotSupportedException. */
     protected def clone(): Object
@@ -52,4 +57,12 @@ abstract class Enum[E <: Enum[E]] extends Object with Comparable[E] with Seriali
      *  declaration.
      */
     def toString(): String
+}
+
+object Enum {
+    /** Returns the enum constant of the specified enum type with the
+     *  specified name.
+     */
+    @stub
+    def valueOf[T <: Enum[T]](enumType: Class[T], name: String): T = ???
 }

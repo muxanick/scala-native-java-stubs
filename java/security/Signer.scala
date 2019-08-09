@@ -1,6 +1,7 @@
 package java.security
 
 import java.lang.{Deprecated, Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class is used to represent an Identity that can also digitally
  *  sign data.
@@ -20,8 +21,15 @@ import java.lang.{Deprecated, Object, String}
     def this(name: String) = ???
 
     /** Deprecated.  */
+    @stub
+    def this(name: String, scope: IdentityScope) = ???
+
+    /** Deprecated.  */
     def getPrivateKey(): PrivateKey
 
     /** Deprecated.  */
     def setKeyPair(pair: KeyPair): Unit
+
+    /** Deprecated.  */
+    def toString(): String
 }

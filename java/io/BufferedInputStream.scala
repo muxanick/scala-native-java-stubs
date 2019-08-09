@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A BufferedInputStream adds
  *  functionality to another input stream-namely,
@@ -28,6 +29,14 @@ class BufferedInputStream extends FilterInputStream {
     @stub
     def this(in: InputStream) = ???
 
+    /** Creates a BufferedInputStream
+     *  with the specified buffer size,
+     *  and saves its  argument, the input stream
+     *  in, for later use.
+     */
+    @stub
+    def this(in: InputStream, size: Int) = ???
+
     /** The internal buffer array where the data is stored. */
     @stub
     protected val buf: Array[Byte] = ???
@@ -50,6 +59,10 @@ class BufferedInputStream extends FilterInputStream {
      */
     @stub
     protected val markpos: Int = ???
+
+    /** The current position in the buffer. */
+    @stub
+    protected val pos: Int = ???
 
     /** Returns an estimate of the number of bytes that can be read (or
      *  skipped over) from this input stream without blocking by the next
@@ -94,4 +107,10 @@ class BufferedInputStream extends FilterInputStream {
      */
     @stub
     def reset(): Unit = ???
+
+    /** See the general contract of the skip
+     *  method of InputStream.
+     */
+    @stub
+    def skip(n: Long): Long = ???
 }

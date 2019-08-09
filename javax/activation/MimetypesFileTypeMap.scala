@@ -2,6 +2,7 @@ package javax.activation
 
 import java.io.{File, InputStream}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class extends FileTypeMap and provides data typing of files
  *  via their file extension. It uses the .mime.types format. 
@@ -44,6 +45,12 @@ class MimetypesFileTypeMap extends FileTypeMap {
     @stub
     def this(is: InputStream) = ???
 
+    /** Construct a MimetypesFileTypeMap with programmatic entries
+     *  added from the named file.
+     */
+    @stub
+    def this(mimeTypeFileName: String) = ???
+
     /** Prepend the MIME type values to the registry. */
     @stub
     def addMimeTypes(mime_types: String): Unit = ???
@@ -51,4 +58,8 @@ class MimetypesFileTypeMap extends FileTypeMap {
     /** Return the MIME type of the file object. */
     @stub
     def getContentType(f: File): String = ???
+
+    /** Return the MIME type based on the specified file name. */
+    @stub
+    def getContentType(filename: String): String = ???
 }

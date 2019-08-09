@@ -1,6 +1,7 @@
 package java.awt.geom
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The Ellipse2D class describes an ellipse that is defined
  *  by a framing rectangle.
@@ -11,6 +12,10 @@ import java.lang.Object
  *  the subclass.
  */
 abstract class Ellipse2D extends RectangularShape {
+
+    /** This is an abstract class that cannot be instantiated directly. */
+    @stub
+    protected def this() = ???
 
     /** Tests if the specified coordinates are inside the boundary of the
      *  Shape, as described by the
@@ -36,6 +41,11 @@ abstract class Ellipse2D extends RectangularShape {
 
     /** Returns the hashcode for this Ellipse2D. */
     def hashCode(): Int
+
+    /** Tests if the interior of the Shape intersects the
+     *  interior of a specified rectangular area.
+     */
+    def intersects(x: Double, y: Double, w: Double, h: Double): Boolean
 }
 
 object Ellipse2D {
@@ -44,4 +54,10 @@ object Ellipse2D {
      */
     @stub
     object Double extends Ellipse2D.Double
+
+    /** The Float class defines an ellipse specified
+     *  in float precision.
+     */
+    @stub
+    object Float extends Ellipse2D.Float
 }

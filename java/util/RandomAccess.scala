@@ -1,5 +1,7 @@
 package java.util
 
+import scala.scalanative.annotation.stub
+
 /** Marker interface used by List implementations to indicate that
  *  they support fast (generally constant time) random access.  The primary
  *  purpose of this interface is to allow generic algorithms to alter their

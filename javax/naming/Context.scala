@@ -2,6 +2,7 @@ package javax.naming
 
 import java.lang.{Object, String}
 import java.util.Hashtable
+import scala.scalanative.annotation.stub
 
 /** This interface represents a naming context, which
  *  consists of a set of name-to-object bindings.
@@ -382,6 +383,10 @@ trait Context {
     /** Unbinds the named object. */
     @stub
     def unbind(name: Name): Unit = ???
+
+    /** Unbinds the named object. */
+    @stub
+    def unbind(name: String): Unit = ???
 }
 
 object Context {
@@ -475,4 +480,11 @@ object Context {
      */
     @stub
     val STATE_FACTORIES: String = ???
+
+    /** Constant that holds the name of the environment property
+     *  for specifying the list of package prefixes to use when
+     *  loading in URL context factories.
+     */
+    @stub
+    val URL_PKG_PREFIXES: String = ???
 }

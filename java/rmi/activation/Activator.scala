@@ -1,6 +1,7 @@
 package java.rmi.activation
 
-import java.rmi.Remote
+import java.rmi.{MarshalledObject, Remote}
+import scala.scalanative.annotation.stub
 
 /** The Activator facilitates remote object activation. A
  *  "faulting" remote reference calls the activator's
@@ -27,4 +28,10 @@ import java.rmi.Remote
  *  to groups and active object's within those groups.
  */
 trait Activator extends Remote {
+
+    /** Activate the object associated with the activation identifier,
+     *  id.
+     */
+    @stub
+    def activate(id: ActivationID, force: Boolean): MarshalledObject[_ <: Remote] = ???
 }

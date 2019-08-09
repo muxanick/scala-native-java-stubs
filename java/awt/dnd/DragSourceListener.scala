@@ -1,6 +1,7 @@
 package java.awt.dnd
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The DragSourceListener defines the
  *  event interface for originators of
@@ -36,4 +37,8 @@ trait DragSourceListener extends EventListener {
     /** Called as the cursor's hotspot moves over a platform-dependent drop site. */
     @stub
     def dragOver(dsde: DragSourceDragEvent): Unit = ???
+
+    /** Called when the user has modified the drop gesture. */
+    @stub
+    def dropActionChanged(dsde: DragSourceDragEvent): Unit = ???
 }

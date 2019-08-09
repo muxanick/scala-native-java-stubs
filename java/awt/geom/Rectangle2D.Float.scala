@@ -1,7 +1,8 @@
 package java.awt.geom
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The Float class defines a rectangle specified in float
  *  coordinates.
@@ -14,6 +15,12 @@ object Rectangle2D.Float extends Rectangle2D with Serializable {
     @stub
     def Float() = ???
 
+    /** Constructs and initializes a Rectangle2D
+     *  from the specified float coordinates.
+     */
+    @stub
+    def Float(x: Float, y: Float, w: Float, h: Float) = ???
+
     /** The height of this Rectangle2D. */
     @stub
     val height: Float = ???
@@ -25,6 +32,10 @@ object Rectangle2D.Float extends Rectangle2D with Serializable {
     /** The X coordinate of this Rectangle2D. */
     @stub
     val x: Float = ???
+
+    /** The Y coordinate of this Rectangle2D. */
+    @stub
+    val y: Float = ???
 
     /** Returns a new Rectangle2D object representing the
      *  intersection of this Rectangle2D with the specified
@@ -97,4 +108,10 @@ object Rectangle2D.Float extends Rectangle2D with Serializable {
      */
     @stub
     def setRect(r: Rectangle2D): Unit = ???
+
+    /** Returns the String representation of this
+     *  Rectangle2D.
+     */
+    @stub
+    def toString(): String = ???
 }

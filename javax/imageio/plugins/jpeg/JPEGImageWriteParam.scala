@@ -1,7 +1,9 @@
 package javax.imageio.plugins.jpeg
 
 import java.lang.{Object, String}
+import java.util.Locale
 import javax.imageio.{IIOParam, ImageWriteParam}
+import scala.scalanative.annotation.stub
 
 /** This class adds the ability to set JPEG quantization and Huffman
  *  tables when using the built-in JPEG writer plug-in, and to request that
@@ -61,6 +63,10 @@ import javax.imageio.{IIOParam, ImageWriteParam}
  *  metadata format specification and usage notes.
  */
 class JPEGImageWriteParam extends ImageWriteParam {
+
+    /** Constructs a JPEGImageWriteParam. */
+    @stub
+    def this(locale: Locale) = ???
 
     /** Returns true if tables are currently set. */
     @stub
@@ -132,4 +138,10 @@ class JPEGImageWriteParam extends ImageWriteParam {
     /** Removes any previous compression quality setting. */
     @stub
     def unsetCompression(): Unit = ???
+
+    /** Removes any quantization and Huffman tables that are currently
+     *  set.
+     */
+    @stub
+    def unsetEncodeTables(): Unit = ???
 }

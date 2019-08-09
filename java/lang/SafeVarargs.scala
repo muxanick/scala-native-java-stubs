@@ -2,6 +2,7 @@ package java.lang
 
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** A programmer assertion that the body of the annotated method or
  *  constructor does not perform potentially unsafe operations on its

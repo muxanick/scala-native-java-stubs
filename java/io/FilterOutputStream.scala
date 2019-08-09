@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class is the superclass of all classes that filter output
  *  streams. These streams sit on top of an already existing output
@@ -15,6 +16,16 @@ import java.lang.Object
  *  methods as well as provide additional methods and fields.
  */
 class FilterOutputStream extends OutputStream {
+
+    /** Creates an output stream filter built on top of the specified
+     *  underlying output stream.
+     */
+    @stub
+    def this(out: OutputStream) = ???
+
+    /** The underlying output stream to be filtered. */
+    @stub
+    protected val out: OutputStream = ???
 
     /** Closes this output stream and releases any system resources
      *  associated with the stream.
@@ -38,4 +49,8 @@ class FilterOutputStream extends OutputStream {
      */
     @stub
     def write(b: Array[Byte], off: Int, len: Int): Unit = ???
+
+    /** Writes the specified byte to this output stream. */
+    @stub
+    def write(b: Int): Unit = ???
 }

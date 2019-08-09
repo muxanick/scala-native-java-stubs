@@ -2,6 +2,7 @@ package javax.management
 
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Additional metadata for a JMX element.  A Descriptor
  *  is associated with a MBeanInfo, MBeanAttributeInfo, etc.
@@ -419,4 +420,10 @@ trait Descriptor extends Serializable with Cloneable {
     /** Sets the value for a specific field name. */
     @stub
     def setField(fieldName: String, fieldValue: Object): Unit = ???
+
+    /** Sets all fields in the field names array to the new value with
+     *  the same index in the field values array.
+     */
+    @stub
+    def setFields(fieldNames: Array[String], fieldValues: Array[Object]): Unit = ???
 }

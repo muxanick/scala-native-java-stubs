@@ -8,8 +8,7 @@ import javax.xml.bind.attachment.AttachmentUnmarshaller
 import javax.xml.stream.{XMLEventReader, XMLStreamReader}
 import javax.xml.transform.Source
 import javax.xml.validation.Schema
-import org.w3c.dom.Node
-import org.xml.sax.InputSource
+import scala.scalanative.annotation.stub
 
 /** The Unmarshaller class governs the process of deserializing XML
  *  data into newly created Java content trees, optionally validating the XML
@@ -539,4 +538,19 @@ trait Unmarshaller {
      */
     @stub
     def unmarshal(reader: XMLStreamReader): Object = ???
+
+    /** Unmarshal root element to JAXB mapped declaredType
+     *  and return the resulting content tree.
+     */
+    @stub
+    def unmarshal[T](reader: XMLStreamReader, declaredType: Class[T]): JAXBElement[T] = ???
+}
+
+object Unmarshaller {
+    /** 
+     *  Register an instance of an implementation of this class with Unmarshaller to externally listen
+     *  for unmarshal events.
+     */
+    @stub
+    object Listener extends Unmarshaller.Listener
 }

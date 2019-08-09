@@ -2,6 +2,7 @@ package javax.management.relation
 
 import java.lang.Object
 import java.util.{AbstractCollection, AbstractList, ArrayList, Collection, List}
+import scala.scalanative.annotation.stub
 
 /** A RoleList represents a list of roles (Role objects). It is used as
  *  parameter when creating a relation, and when trying to set several roles in
@@ -19,6 +20,13 @@ class RoleList extends ArrayList[Object] {
      */
     @stub
     def this(initialCapacity: Int) = ???
+
+    /** Constructs a RoleList containing the elements of the
+     *  List specified, in the order in which they are returned by
+     *  the List's iterator.
+     */
+    @stub
+    def this(list: List[Role]) = ???
 
     /** Inserts the specified element at the specified position in this
      *  list.
@@ -74,4 +82,10 @@ class RoleList extends ArrayList[Object] {
      */
     @stub
     def set(index: Int, element: Object): Object = ???
+
+    /** Sets the element at the position specified to be the role
+     *  specified.
+     */
+    @stub
+    def set(index: Int, role: Role): Unit = ???
 }

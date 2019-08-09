@@ -1,6 +1,7 @@
 package javax.security.cert
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Certificate Expired Exception. This is thrown whenever the current
  *  Date or the specified Date is after the
@@ -18,4 +19,10 @@ class CertificateExpiredException extends CertificateException {
     /** Constructs a CertificateExpiredException with no detail message. */
     @stub
     def this() = ???
+
+    /** Constructs a CertificateExpiredException with the specified detail
+     *  message.
+     */
+    @stub
+    def this(message: String) = ???
 }

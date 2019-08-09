@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class provides a skeletal implementation of the Set
  *  interface to minimize the effort required to implement this
@@ -23,9 +24,18 @@ import java.lang.Object
  */
 abstract class AbstractSet[E] extends AbstractCollection[E] with Set[E] {
 
+    /** Sole constructor. */
+    @stub
+    protected def this() = ???
+
     /** Compares the specified object with this set for equality. */
     def equals(o: Object): Boolean
 
     /** Returns the hash code value for this set. */
     def hashCode(): Int
+
+    /** Removes from this set all of its elements that are contained in the
+     *  specified collection (optional operation).
+     */
+    def removeAll(c: Collection[_]): Boolean
 }

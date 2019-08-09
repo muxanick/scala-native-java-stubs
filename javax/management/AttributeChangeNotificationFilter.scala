@@ -2,6 +2,7 @@ package javax.management
 
 import java.lang.{Object, String}
 import java.util.Vector
+import scala.scalanative.annotation.stub
 
 /** This class implements of the NotificationFilter
  *  interface for the attribute change notification.
@@ -11,6 +12,10 @@ import java.util.Vector
  *  A method allows users to enable/disable as many attribute names as required.
  */
 class AttributeChangeNotificationFilter extends Object with NotificationFilter {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Disables all the attribute names. */
     @stub
@@ -31,4 +36,8 @@ class AttributeChangeNotificationFilter extends Object with NotificationFilter {
     /** Gets all the enabled attribute names for this filter. */
     @stub
     def getEnabledAttributes(): Vector[String] = ???
+
+    /** Invoked before sending the specified notification to the listener. */
+    @stub
+    def isNotificationEnabled(notification: Notification): Boolean = ???
 }

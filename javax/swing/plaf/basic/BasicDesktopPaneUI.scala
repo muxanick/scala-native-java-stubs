@@ -5,9 +5,14 @@ import java.beans.PropertyChangeListener
 import java.lang.Object
 import javax.swing.{DesktopManager, JComponent, JDesktopPane, KeyStroke}
 import javax.swing.plaf.{ComponentUI, DesktopPaneUI}
+import scala.scalanative.annotation.stub
 
 /** Basic L&F for a desktop. */
 class BasicDesktopPaneUI extends DesktopPaneUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Handles closing an internal frame. */
     @stub
@@ -24,6 +29,10 @@ class BasicDesktopPaneUI extends DesktopPaneUI {
     /** Handles navigating to the next internal frame. */
     @stub
     protected object NavigateAction extends BasicDesktopPaneUI.NavigateAction
+
+    /** Handles restoring a minimized or maximized internal frame. */
+    @stub
+    protected object OpenAction extends BasicDesktopPaneUI.OpenAction
 
     /** Deprecated. 
      * As of 1.3.
@@ -60,6 +69,13 @@ class BasicDesktopPaneUI extends DesktopPaneUI {
      */
     @stub
     protected val navigateKey: KeyStroke = ???
+
+    /** Deprecated. 
+     * As of 1.3.
+     * 
+     */
+    @stub
+    protected val navigateKey2: KeyStroke = ???
 
     /** Returns the PropertyChangeListener to install on
      *  the JDesktopPane.
@@ -140,6 +156,10 @@ class BasicDesktopPaneUI extends DesktopPaneUI {
      */
     @stub
     def uninstallUI(c: JComponent): Unit = ???
+
+    /**  */
+    @stub
+    protected def unregisterKeyboardActions(): Unit = ???
 }
 
 object BasicDesktopPaneUI {

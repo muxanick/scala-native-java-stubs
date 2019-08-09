@@ -3,7 +3,9 @@ package java.util.jar
 import java.io.{File, InputStream}
 import java.lang.{Object, String}
 import java.util.Enumeration
+import java.util.stream.Stream
 import java.util.zip.{ZipEntry, ZipFile}
+import scala.scalanative.annotation.stub
 
 /** The JarFile class is used to read the contents of a jar file
  *  from any file that can be opened with java.io.RandomAccessFile.
@@ -49,6 +51,12 @@ class JarFile extends ZipFile {
     @stub
     def this(name: String) = ???
 
+    /** Creates a new JarFile to read from the specified
+     *  file name.
+     */
+    @stub
+    def this(name: String, verify: Boolean) = ???
+
     /** Returns an enumeration of the zip file entries. */
     @stub
     def entries(): Enumeration[JarEntry] = ???
@@ -74,6 +82,10 @@ class JarFile extends ZipFile {
     /** Returns the jar file manifest, or null if none. */
     @stub
     def getManifest(): Manifest = ???
+
+    /** Return an ordered Stream over the ZIP file entries. */
+    @stub
+    def stream(): Stream[JarEntry] = ???
 }
 
 object JarFile {
@@ -236,4 +248,8 @@ object JarFile {
     /**  */
     @stub
     val LOCVER: Int = ???
+
+    /** The JAR manifest file name. */
+    @stub
+    val MANIFEST_NAME: String = ???
 }

@@ -7,6 +7,7 @@ import java.util.Set
 import javax.management.{AttributeList, MBeanInfo, ObjectInstance, ObjectName}
 import javax.management.remote.NotificationResult
 import javax.security.auth.Subject
+import scala.scalanative.annotation.stub
 
 /** RMI object used to forward an MBeanServer request from a client
  *  to its MBeanServer implementation on the server side.  There is one
@@ -186,4 +187,10 @@ trait RMIConnection extends Closeable with Remote {
      */
     @stub
     def setAttributes(name: ObjectName, attributes: MarshalledObject, delegationSubject: Subject): AttributeList = ???
+
+    /** Handles the method
+     *  MBeanServerConnection.unregisterMBean(ObjectName).
+     */
+    @stub
+    def unregisterMBean(name: ObjectName, delegationSubject: Subject): Unit = ???
 }

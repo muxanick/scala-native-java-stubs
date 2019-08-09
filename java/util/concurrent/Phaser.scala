@@ -1,6 +1,7 @@
 package java.util.concurrent
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A reusable synchronization barrier, similar in functionality to
  *  CyclicBarrier and
@@ -224,6 +225,12 @@ class Phaser extends Object {
     @stub
     def this(parent: Phaser) = ???
 
+    /** Creates a new phaser with the given parent and number of
+     *  registered unarrived parties.
+     */
+    @stub
+    def this(parent: Phaser, parties: Int) = ???
+
     /** Arrives at this phaser, without waiting for others to arrive. */
     @stub
     def arrive(): Int = ???
@@ -313,4 +320,10 @@ class Phaser extends Object {
     /** Adds a new unarrived party to this phaser. */
     @stub
     def register(): Int = ???
+
+    /** Returns a string identifying this phaser, as well as its
+     *  state.
+     */
+    @stub
+    def toString(): String = ???
 }

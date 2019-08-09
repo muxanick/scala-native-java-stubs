@@ -2,7 +2,7 @@ package javax.xml.transform.sax
 
 import java.lang.{Object, String}
 import javax.xml.transform.{Source, Templates, TransformerFactory}
-import org.xml.sax.XMLFilter
+import scala.scalanative.annotation.stub
 
 /** This class extends TransformerFactory to provide SAX-specific
  *  factory methods.  It provides two types of ContentHandlers,
@@ -15,6 +15,10 @@ import org.xml.sax.XMLFilter
  *  the XMLReader.
  */
 abstract class SAXTransformerFactory extends TransformerFactory {
+
+    /** The default constructor is protected on purpose. */
+    @stub
+    protected def this() = ???
 
     /** Get a TemplatesHandler object that can process SAX
      *  ContentHandler events into a Templates object.
@@ -41,6 +45,9 @@ abstract class SAXTransformerFactory extends TransformerFactory {
      *  transformation instructions.
      */
     def newXMLFilter(src: Source): XMLFilter
+
+    /** Create an XMLFilter, based on the Templates argument.. */
+    def newXMLFilter(templates: Templates): XMLFilter
 }
 
 object SAXTransformerFactory {
@@ -52,4 +59,12 @@ object SAXTransformerFactory {
      */
     @stub
     val FEATURE: String = ???
+
+    /** If TransformerFactory.getFeature(java.lang.String)
+     *  returns true when passed this value as an argument,
+     *  the newXMLFilter(Source src)
+     *  and newXMLFilter(Templates templates) methods are supported.
+     */
+    @stub
+    val FEATURE_XMLFILTER: String = ???
 }

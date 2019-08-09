@@ -1,6 +1,7 @@
 package java.security
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This is the general key management exception for all operations
  *  dealing with key management. Examples of subclasses of
@@ -30,4 +31,12 @@ class KeyManagementException extends KeyException {
      */
     @stub
     def this(message: String, cause: Throwable) = ???
+
+    /** Creates a KeyManagementException with the specified cause
+     *  and a detail message of (cause==null ? null : cause.toString())
+     *  (which typically contains the class and detail message of
+     *  cause).
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

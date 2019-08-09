@@ -1,6 +1,7 @@
 package javax.imageio
 
 import javax.imageio.metadata.IIOMetadata
+import scala.scalanative.annotation.stub
 
 /** An interface providing metadata transcoding capability.
  * 
@@ -65,4 +66,12 @@ trait ImageTranscoder {
      */
     @stub
     def convertImageMetadata(inData: IIOMetadata, imageType: ImageTypeSpecifier, param: ImageWriteParam): IIOMetadata = ???
+
+    /** Returns an IIOMetadata object that may be used for
+     *  encoding and optionally modified using its document interfaces
+     *  or other interfaces specific to the writer plug-in that will be
+     *  used for encoding.
+     */
+    @stub
+    def convertStreamMetadata(inData: IIOMetadata, param: ImageWriteParam): IIOMetadata = ???
 }

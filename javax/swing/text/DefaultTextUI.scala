@@ -3,6 +3,7 @@ package javax.swing.text
 import java.lang.{Deprecated, Object}
 import javax.swing.plaf.{ComponentUI, TextUI}
 import javax.swing.plaf.basic.BasicTextUI
+import scala.scalanative.annotation.stub
 
 /** 
  *  This class has been deprecated and should no longer be used.
@@ -11,4 +12,8 @@ import javax.swing.plaf.basic.BasicTextUI
  *  BasicTextUI replaces this class.
  */
 @Deprecated abstract class DefaultTextUI extends BasicTextUI {
+
+    /** Deprecated.  */
+    @stub
+    def this() = ???
 }

@@ -2,6 +2,7 @@ package java.awt.geom
 
 import java.awt.{Rectangle, Shape}
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** This Line2D represents a line segment in (x,y)
  *  coordinate space.  This class, like all of the Java 2D API, uses a
@@ -17,6 +18,10 @@ import java.lang.{Cloneable, Object}
  *  the subclass.
  */
 abstract class Line2D extends Object with Shape with Cloneable {
+
+    /** This is an abstract class that cannot be instantiated directly. */
+    @stub
+    protected def this() = ???
 
     /** Creates a new object of the same class as this object. */
     def clone(): Object
@@ -141,12 +146,21 @@ abstract class Line2D extends Object with Shape with Cloneable {
      *  the same as those end points of the specified Line2D.
      */
     def setLine(l: Line2D): Unit
+
+    /** Sets the location of the end points of this Line2D to
+     *  the specified Point2D coordinates.
+     */
+    def setLine(p1: Point2D, p2: Point2D): Unit
 }
 
 object Line2D {
     /** A line segment specified with double coordinates. */
     @stub
     object Double extends Line2D.Double
+
+    /** A line segment specified with float coordinates. */
+    @stub
+    object Float extends Line2D.Float
 
     /** Tests if the line segment from (x1,y1) to
      *  (x2,y2) intersects the line segment from (x3,y3)

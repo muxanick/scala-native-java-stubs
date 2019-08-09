@@ -1,7 +1,8 @@
 package javax.management.openmbean
 
 import java.lang.Object
-import java.lang.reflect.InvocationHandler
+import java.lang.reflect.{InvocationHandler, Method}
+import scala.scalanative.annotation.stub
 
 /** An InvocationHandler that forwards getter methods to a
  *    CompositeData.  If you have an interface that contains
@@ -71,9 +72,19 @@ import java.lang.reflect.InvocationHandler
  */
 class CompositeDataInvocationHandler extends Object with InvocationHandler {
 
+    /** Construct a handler backed by the given CompositeData. */
+    @stub
+    def this(compositeData: CompositeData) = ???
+
     /** Return the CompositeData that was supplied to the
      *        constructor.
      */
     @stub
     def getCompositeData(): CompositeData = ???
+
+    /** Processes a method invocation on a proxy instance and returns
+     *  the result.
+     */
+    @stub
+    def invoke(proxy: Object, method: Method, args: Array[Object]): Object = ???
 }

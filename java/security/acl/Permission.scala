@@ -1,6 +1,7 @@
 package java.security.acl
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This interface represents a permission, such as that used to grant
  *  a particular type of access to a resource.
@@ -12,4 +13,8 @@ trait Permission {
      */
     @stub
     def equals(another: Object): Boolean = ???
+
+    /** Prints a string representation of this permission. */
+    @stub
+    def toString(): String = ???
 }

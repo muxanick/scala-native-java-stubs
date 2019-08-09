@@ -5,6 +5,7 @@ import java.lang.{Object, String}
 import java.math.BigInteger
 import java.security.Principal
 import java.util.Date
+import scala.scalanative.annotation.stub
 
 /** Abstract class for X.509 v1 certificates. This provides a standard
  *  way to access all the version 1 attributes of an X.509 certificate.
@@ -86,6 +87,10 @@ import java.util.Date
  */
 abstract class X509Certificate extends Certificate {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Checks that the certificate is currently valid. */
     def checkValidity(): Unit
 
@@ -129,6 +134,11 @@ abstract class X509Certificate extends Certificate {
      *  from the certificate.
      */
     def getSubjectDN(): Principal
+
+    /** Gets the version (version number) value from the
+     *  certificate.
+     */
+    def getVersion(): Int
 }
 
 object X509Certificate {

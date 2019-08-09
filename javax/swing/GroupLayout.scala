@@ -2,6 +2,7 @@ package javax.swing
 
 import java.awt.{Component, Container, Dimension, LayoutManager2}
 import java.lang.{Boolean, Object, String}
+import scala.scalanative.annotation.stub
 
 /** GroupLayout is a LayoutManager that hierarchically
  *  groups components in order to position them in a Container.
@@ -164,6 +165,10 @@ import java.lang.{Boolean, Object, String}
  */
 class GroupLayout extends Object with LayoutManager2 {
 
+    /** Creates a GroupLayout for the specified Container. */
+    @stub
+    def this(host: Container) = ???
+
     /** Group provides the basis for the two types of
      *  operations supported by GroupLayout: laying out
      *  components one after another (SequentialGroup)
@@ -175,6 +180,12 @@ class GroupLayout extends Object with LayoutManager2 {
     /** A Group that aligns and sizes it's children. */
     @stub
     object ParallelGroup extends GroupLayout.ParallelGroup
+
+    /** A Group that positions and sizes its elements
+     *  sequentially, one after another.
+     */
+    @stub
+    object SequentialGroup extends GroupLayout.SequentialGroup
 
     /** Notification that a Component has been added to
      *  the parent container.
@@ -335,6 +346,10 @@ class GroupLayout extends Object with LayoutManager2 {
      */
     @stub
     def setVerticalGroup(group: GroupLayout.Group): Unit = ???
+
+    /** Returns a string representation of this GroupLayout. */
+    @stub
+    def toString(): String = ???
 }
 
 object GroupLayout {
@@ -349,4 +364,10 @@ object GroupLayout {
      */
     @stub
     val DEFAULT_SIZE: Int = ???
+
+    /** Indicates the preferred size from the component or gap should
+     *  be used for a particular range value.
+     */
+    @stub
+    val PREFERRED_SIZE: Int = ???
 }

@@ -1,7 +1,9 @@
 package javax.xml.ws
 
+import java.lang.{Class, Exception, String}
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** The FaultAction annotation is used inside an Action
  *  annotation to allow an explicit association of a WS-Addressing
@@ -120,4 +122,12 @@ import scala.annotation.StaticAnnotation
 @Retention ( value = RUNTIME ) 
 @Target ( value = METHOD ) 
  final class FaultAction extends StaticAnnotation {
+
+    /** Name of the exception class */
+    @stub
+    val className: Class[_ <: Exception] = ???
+
+    /** Value of WS-Addressing Action message addressing property for the exception */
+    @stub
+    val value: String = ???
 }

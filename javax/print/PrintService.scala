@@ -3,6 +3,7 @@ package javax.print
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, AttributeSet, PrintServiceAttribute, PrintServiceAttributeSet}
 import javax.print.event.PrintServiceAttributeListener
+import scala.scalanative.annotation.stub
 
 /** Interface PrintService is the factory for a DocPrintJob. A PrintService
  *  describes the capabilities of a Printer and can be queried regarding
@@ -121,4 +122,8 @@ trait PrintService {
      */
     @stub
     def isDocFlavorSupported(flavor: DocFlavor): Boolean = ???
+
+    /** Removes the print-service listener from this print service. */
+    @stub
+    def removePrintServiceAttributeListener(listener: PrintServiceAttributeListener): Unit = ???
 }

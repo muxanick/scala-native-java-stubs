@@ -2,6 +2,7 @@ package java.awt.geom
 
 import java.awt.{Rectangle, Shape}
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** An Area object stores and manipulates a
  *  resolution-independent description of an enclosed area of
@@ -67,6 +68,12 @@ class Area extends Object with Shape with Cloneable {
     /** Default constructor which creates an empty area. */
     @stub
     def this() = ???
+
+    /** The Area class creates an area geometry from the
+     *  specified Shape object.
+     */
+    @stub
+    def this(s: Shape) = ???
 
     /** Adds the shape of the specified Area to the
      *  shape of this Area.
@@ -199,4 +206,10 @@ class Area extends Object with Shape with Cloneable {
      */
     @stub
     def subtract(rhs: Area): Unit = ???
+
+    /** Transforms the geometry of this Area using the specified
+     *  AffineTransform.
+     */
+    @stub
+    def transform(t: AffineTransform): Unit = ???
 }

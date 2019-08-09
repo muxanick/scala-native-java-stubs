@@ -1,6 +1,7 @@
 package java.awt.image
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class represents image data which is stored in a pixel interleaved
  *   fashion and for
@@ -30,6 +31,10 @@ import java.lang.Object
  */
 class PixelInterleavedSampleModel extends ComponentSampleModel {
 
+    /** Constructs a PixelInterleavedSampleModel with the specified parameters. */
+    @stub
+    def this(dataType: Int, w: Int, h: Int, pixelStride: Int, scanlineStride: Int, bandOffsets: Array[Int]) = ???
+
     /** Creates a new PixelInterleavedSampleModel with the specified
      *  width and height.
      */
@@ -41,4 +46,8 @@ class PixelInterleavedSampleModel extends ComponentSampleModel {
      */
     @stub
     def createSubsetSampleModel(bands: Array[Int]): SampleModel = ???
+
+    /** Returns a hash code value for the object. */
+    @stub
+    def hashCode(): Int = ???
 }

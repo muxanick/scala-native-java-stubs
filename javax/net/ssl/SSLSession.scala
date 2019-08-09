@@ -4,6 +4,7 @@ import java.lang.{Object, String}
 import java.security.Principal
 import java.security.cert.Certificate
 import javax.security.cert.X509Certificate
+import scala.scalanative.annotation.stub
 
 /** In SSL, sessions are used to describe an ongoing relationship between
  *  two entities.  Each SSL connection involves one session at a time, but
@@ -147,4 +148,10 @@ trait SSLSession {
      */
     @stub
     def putValue(name: String, value: Object): Unit = ???
+
+    /** Removes the object bound to the given name in the session's
+     *  application layer data.
+     */
+    @stub
+    def removeValue(name: String): Unit = ???
 }

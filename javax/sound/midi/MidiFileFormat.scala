@@ -1,6 +1,8 @@
 package javax.sound.midi
 
 import java.lang.{Object, String}
+import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** A MidiFileFormat object encapsulates a MIDI file's
  *  type, as well as its length and timing information.
@@ -58,6 +60,10 @@ class MidiFileFormat extends Object {
     @stub
     def this(type: Int, divisionType: Float, resolution: Int, bytes: Int, microseconds: Long) = ???
 
+    /** Construct a MidiFileFormat with a set of properties. */
+    @stub
+    def this(type: Int, divisionType: Float, resolution: Int, bytes: Int, microseconds: Long, properties: Map[String, Object]) = ???
+
     /** The length of the MIDI file in bytes. */
     @stub
     protected val byteLength: Int = ???
@@ -101,4 +107,14 @@ class MidiFileFormat extends Object {
     /** Obtains the MIDI file type. */
     @stub
     def getType(): Int = ???
+
+    /** Obtain an unmodifiable map of properties. */
+    @stub
+    def properties(): Map[String, Object] = ???
+}
+
+object MidiFileFormat {
+    /** Represents unknown length. */
+    @stub
+    val UNKNOWN_LENGTH: Int = ???
 }

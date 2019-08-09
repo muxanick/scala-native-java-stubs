@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.{ClassLoader, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Resource bundles contain locale-specific objects.  When your program needs a
  *  locale-specific resource, a String for example, your program can
@@ -209,6 +210,13 @@ import java.lang.{ClassLoader, Object, String}
  */
 abstract class ResourceBundle extends Object {
 
+    /** Sole constructor. */
+    @stub
+    def this() = ???
+
+    /** The parent bundle of this bundle. */
+    protected val parent: ResourceBundle
+
     /** Determines whether the given key is contained in
      *  this ResourceBundle or its parent bundles.
      */
@@ -244,9 +252,19 @@ abstract class ResourceBundle extends Object {
      *  ResourceBundle and its parent bundles.
      */
     def keySet(): Set[String]
+
+    /** Sets the parent bundle of this bundle. */
+    protected def setParent(parent: ResourceBundle): Unit
 }
 
 object ResourceBundle {
+    /** ResourceBundle.Control defines a set of callback methods
+     *  that are invoked by the ResourceBundle.getBundle factory
+     *  methods during the bundle loading process.
+     */
+    @stub
+    object Control extends ResourceBundle.Control
+
     /** Removes all resource bundles from the cache that have been loaded
      *  using the caller's class loader.
      */

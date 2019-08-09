@@ -1,10 +1,11 @@
 package javax.swing.plaf.metal
 
-import java.awt.Dimension
+import java.awt.{Dimension, Graphics}
 import java.lang.Object
 import javax.swing.{JComponent, JSeparator}
 import javax.swing.plaf.{ComponentUI, SeparatorUI}
 import javax.swing.plaf.basic.BasicSeparatorUI
+import scala.scalanative.annotation.stub
 
 /** A Metal L&F implementation of SeparatorUI.  This implementation
  *  is a "combined" view/controller.
@@ -20,6 +21,10 @@ import javax.swing.plaf.basic.BasicSeparatorUI
  */
 class MetalSeparatorUI extends BasicSeparatorUI {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Returns the specified component's preferred size appropriate for
      *  the look and feel.
      */
@@ -29,6 +34,10 @@ class MetalSeparatorUI extends BasicSeparatorUI {
     /**  */
     @stub
     protected def installDefaults(s: JSeparator): Unit = ???
+
+    /** Paints the specified component appropriately for the look and feel. */
+    @stub
+    def paint(g: Graphics, c: JComponent): Unit = ???
 }
 
 object MetalSeparatorUI {

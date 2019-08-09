@@ -1,8 +1,10 @@
 package javax.crypto
 
 import java.lang.Object
+import java.nio.ByteBuffer
 import java.security.Key
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** This class defines the Service Provider Interface (SPI)
  *  for the Mac class.
@@ -13,6 +15,10 @@ import java.security.spec.AlgorithmParameterSpec
  *   Implementations are free to implement the Cloneable interface.
  */
 abstract class MacSpi extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns a clone if the implementation is cloneable. */
     def clone(): Object
@@ -42,4 +48,9 @@ abstract class MacSpi extends Object {
      *  starting at offset inclusive.
      */
     protected def engineUpdate(input: Array[Byte], offset: Int, len: Int): Unit
+
+    /** Processes input.remaining() bytes in the ByteBuffer
+     *  input, starting at input.position().
+     */
+    protected def engineUpdate(input: ByteBuffer): Unit
 }

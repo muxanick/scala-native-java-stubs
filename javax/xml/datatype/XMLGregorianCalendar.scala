@@ -4,6 +4,7 @@ import java.lang.{Cloneable, Object, String}
 import java.math.{BigDecimal, BigInteger}
 import java.util.{GregorianCalendar, Locale, TimeZone}
 import javax.xml.namespace.QName
+import scala.scalanative.annotation.stub
 
 /** Representation for W3C XML Schema 1.0 date/time datatypes.
  *  Specifically, these date/time datatypes are
@@ -146,6 +147,10 @@ import javax.xml.namespace.QName
  */
 abstract class XMLGregorianCalendar extends Object with Cloneable {
 
+    /** Default no-arg constructor. */
+    @stub
+    def this() = ???
+
     /** Add duration to this instance. */
     def add(duration: Duration): Unit
 
@@ -277,4 +282,7 @@ abstract class XMLGregorianCalendar extends Object with Cloneable {
 
     /** Returns a String representation of this XMLGregorianCalendar Object. */
     def toString(): String
+
+    /** Return the lexical representation of this instance. */
+    def toXMLFormat(): String
 }

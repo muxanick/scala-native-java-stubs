@@ -1,6 +1,7 @@
 package javax.security.sasl
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Performs SASL authentication as a server.
  * 
@@ -86,4 +87,8 @@ trait SaslServer {
     /** Unwraps a byte array received from the client. */
     @stub
     def unwrap(incoming: Array[Byte], offset: Int, len: Int): Array[Byte] = ???
+
+    /** Wraps a byte array to be sent to the client. */
+    @stub
+    def wrap(outgoing: Array[Byte], offset: Int, len: Int): Array[Byte] = ???
 }

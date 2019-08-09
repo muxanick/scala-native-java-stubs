@@ -2,6 +2,7 @@ package javax.crypto
 
 import java.security.Key
 import javax.security.auth.Destroyable
+import scala.scalanative.annotation.stub
 
 /** A secret (symmetric) key.
  *  The purpose of this interface is to group (and provide type safety
@@ -28,4 +29,12 @@ import javax.security.auth.Destroyable
  *  from the Key parent interface.)
  */
 trait SecretKey extends Key with Destroyable {
+}
+
+object SecretKey {
+    /** The class fingerprint that is set to indicate serialization
+     *  compatibility since J2SE 1.4.
+     */
+    @stub
+    val serialVersionUID: Long = ???
 }

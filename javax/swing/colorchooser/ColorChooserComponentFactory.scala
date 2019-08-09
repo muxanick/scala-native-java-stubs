@@ -1,6 +1,8 @@
 package javax.swing.colorchooser
 
 import java.lang.Object
+import javax.swing.JComponent
+import scala.scalanative.annotation.stub
 
 /** A class designed to produce preconfigured "accessory" objects to
  *  insert into color choosers.
@@ -22,4 +24,8 @@ object ColorChooserComponentFactory {
     /**  */
     @stub
     def getDefaultChooserPanels(): Array[AbstractColorChooserPanel] = ???
+
+    /**  */
+    @stub
+    def getPreviewPanel(): JComponent = ???
 }

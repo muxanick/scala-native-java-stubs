@@ -2,6 +2,7 @@ package java.awt.geom
 
 import java.awt.{Rectangle, Shape}
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** The Path2D class provides a simple, yet flexible
  *  shape which represents an arbitrary geometric path.
@@ -147,6 +148,11 @@ abstract class Path2D extends Object with Shape with Cloneable {
 
     /** Sets the winding rule for this path to the specified value. */
     def setWindingRule(rule: Int): Unit
+
+    /** Transforms the geometry of this path using the specified
+     *  AffineTransform.
+     */
+    def transform(at: AffineTransform): Unit
 }
 
 object Path2D {
@@ -156,11 +162,23 @@ object Path2D {
     @stub
     object Double extends Path2D.Double
 
+    /** The Float class defines a geometric path with
+     *  coordinates stored in single precision floating point.
+     */
+    @stub
+    object Float extends Path2D.Float
+
     /** An even-odd winding rule for determining the interior of
      *  a path.
      */
     @stub
     val WIND_EVEN_ODD: Int = ???
+
+    /** A non-zero winding rule for determining the interior of a
+     *  path.
+     */
+    @stub
+    val WIND_NON_ZERO: Int = ???
 
     /** Tests if the specified coordinates are inside the closed
      *  boundary of the specified PathIterator.

@@ -1,7 +1,9 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
+import java.net.URI
 import javax.print.attribute.{Attribute, PrintServiceAttribute, URISyntax}
+import scala.scalanative.annotation.stub
 
 /** Class PrinterMoreInfoManufacturer is a printing attribute class, a URI,
  *  that is used to obtain more information about this type of device.
@@ -26,6 +28,12 @@ import javax.print.attribute.{Attribute, PrintServiceAttribute, URISyntax}
  */
 final class PrinterMoreInfoManufacturer extends URISyntax with PrintServiceAttribute {
 
+    /** Constructs a new printer more info manufacturer attribute with the
+     *  specified URI.
+     */
+    @stub
+    def this(uri: URI) = ???
+
     /** Returns whether this printer more info manufacturer attribute is
      *  equivalent to the passed in object.
      */
@@ -37,4 +45,10 @@ final class PrinterMoreInfoManufacturer extends URISyntax with PrintServiceAttri
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

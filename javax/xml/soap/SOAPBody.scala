@@ -3,7 +3,7 @@ package javax.xml.soap
 import java.lang.String
 import java.util.Locale
 import javax.xml.namespace.QName
-import org.w3c.dom.Document
+import scala.scalanative.annotation.stub
 
 /** An object that represents the contents of the SOAP body
  *  element in a SOAP message. A SOAP body element consists of XML data
@@ -76,4 +76,10 @@ trait SOAPBody extends SOAPElement {
      */
     @stub
     def getFault(): SOAPFault = ???
+
+    /** Indicates whether a SOAPFault object exists in this
+     *  SOAPBody object.
+     */
+    @stub
+    def hasFault(): Boolean = ???
 }

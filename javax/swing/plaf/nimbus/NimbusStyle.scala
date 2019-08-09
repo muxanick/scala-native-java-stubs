@@ -4,6 +4,7 @@ import java.awt.{Color, Font, Insets}
 import java.lang.{Object, String}
 import javax.swing.Painter
 import javax.swing.plaf.synth.{ColorType, SynthContext, SynthPainter, SynthStyle}
+import scala.scalanative.annotation.stub
 
 /** A SynthStyle implementation used by Nimbus. Each Region that has been
  *  registered with the NimbusLookAndFeel will have an associated NimbusStyle.
@@ -117,6 +118,10 @@ final class NimbusStyle extends SynthStyle {
      */
     @stub
     def installDefaults(ctx: SynthContext): Unit = ???
+
+    /** Returns true if the region is opaque. */
+    @stub
+    def isOpaque(ctx: SynthContext): Boolean = ???
 }
 
 object NimbusStyle {
@@ -139,4 +144,8 @@ object NimbusStyle {
     /**  */
     @stub
     val SMALL_KEY: String = ???
+
+    /**  */
+    @stub
+    val SMALL_SCALE: Double = ???
 }

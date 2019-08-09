@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{Object, String}
 import java.time.DayOfWeek
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** Localized definitions of the day-of-week, week-of-month and week-of-year fields.
  *  
@@ -121,6 +122,10 @@ final class WeekFields extends Object with Serializable {
     /** Returns a field to access the week of a week-based-year based on this WeekFields. */
     @stub
     def weekOfWeekBasedYear(): TemporalField = ???
+
+    /** Returns a field to access the week of year based on this WeekFields. */
+    @stub
+    def weekOfYear(): TemporalField = ???
 }
 
 object WeekFields {
@@ -135,6 +140,10 @@ object WeekFields {
      */
     @stub
     val SUNDAY_START: WeekFields = ???
+
+    /** The unit that represents week-based-years for the purpose of addition and subtraction. */
+    @stub
+    val WEEK_BASED_YEARS: TemporalUnit = ???
 
     /** Obtains an instance of WeekFields from the first day-of-week and minimal days. */
     @stub

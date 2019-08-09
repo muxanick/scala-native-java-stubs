@@ -1,6 +1,7 @@
 package java.security.cert
 
-import java.lang.Cloneable
+import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** A specification of CertStore parameters.
  *  
@@ -18,4 +19,8 @@ import java.lang.Cloneable
  *  of CertStores.
  */
 trait CertStoreParameters extends Cloneable {
+
+    /** Makes a copy of this CertStoreParameters. */
+    @stub
+    def clone(): Object = ???
 }

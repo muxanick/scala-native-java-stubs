@@ -1,6 +1,8 @@
 package java.nio.channels
 
 import java.net.{SocketAddress, SocketOption}
+import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** A channel to a network socket.
  * 
@@ -34,4 +36,8 @@ trait NetworkChannel extends Channel {
     /** Sets the value of a socket option. */
     @stub
     def setOption[T](name: SocketOption[T], value: T): NetworkChannel = ???
+
+    /** Returns a set of the socket options supported by this channel. */
+    @stub
+    def supportedOptions(): Set[SocketOption[_]] = ???
 }

@@ -2,6 +2,7 @@ package javax.management
 
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Annotation to mark an interface explicitly as being an MXBean
  *     interface, or as not being an MXBean interface.  By default, an
@@ -1049,4 +1050,8 @@ import scala.annotation.StaticAnnotation
 @Retention ( value = RUNTIME ) 
 @Target ( value = TYPE ) 
  final class MXBean extends StaticAnnotation {
+
+    /** True if the annotated interface is an MXBean interface. */
+    @stub
+    val value: Boolean = ???
 }

@@ -4,6 +4,7 @@ import java.lang.String
 import java.math.{BigDecimal, BigInteger}
 import java.util.Calendar
 import javax.xml.namespace.{NamespaceContext, QName}
+import scala.scalanative.annotation.stub
 
 /** 
  *  The DatatypeConverterInterface is for JAXB provider use only. A
@@ -277,4 +278,10 @@ trait DatatypeConverterInterface {
      */
     @stub
     def printUnsignedInt(val: Long): String = ???
+
+    /** 
+     *  Converts an int value into a string.
+     */
+    @stub
+    def printUnsignedShort(val: Int): String = ???
 }

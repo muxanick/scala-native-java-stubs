@@ -2,6 +2,7 @@ package javax.print.attribute.standard
 
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, EnumSyntax, PrintJobAttribute, PrintRequestAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class MultipleDocumentHandling is a printing attribute class, an enumeration,
  *  that controls finishing operations and the placement of one or more
@@ -126,6 +127,12 @@ import javax.print.attribute.{Attribute, EnumSyntax, PrintJobAttribute, PrintReq
  */
 class MultipleDocumentHandling extends EnumSyntax with PrintRequestAttribute with PrintJobAttribute {
 
+    /** Construct a new multiple document handling enumeration value with the
+     *  given integer value.
+     */
+    @stub
+    protected def this(value: Int) = ???
+
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.
      */
@@ -141,6 +148,10 @@ class MultipleDocumentHandling extends EnumSyntax with PrintRequestAttribute wit
      */
     @stub
     def getName(): String = ???
+
+    /** Returns the string table for class MultipleDocumentHandling. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object MultipleDocumentHandling {
@@ -161,4 +172,10 @@ object MultipleDocumentHandling {
      */
     @stub
     val SINGLE_DOCUMENT: MultipleDocumentHandling = ???
+
+    /** Single document new sheet -- see above for
+     *  further information.
+     */
+    @stub
+    val SINGLE_DOCUMENT_NEW_SHEET: MultipleDocumentHandling = ???
 }

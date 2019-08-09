@@ -1,6 +1,7 @@
 package java.lang.ref
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Weak reference objects, which do not prevent their referents from being
  *  made finalizable, finalized, and then reclaimed.  Weak references are most
@@ -21,4 +22,10 @@ class WeakReference[T] extends Reference[T] {
     /** Creates a new weak reference that refers to the given object. */
     @stub
     def this(referent: T) = ???
+
+    /** Creates a new weak reference that refers to the given object and is
+     *  registered with the given queue.
+     */
+    @stub
+    def this(referent: T, q: ReferenceQueue[_ >: T]) = ???
 }

@@ -2,11 +2,12 @@ package javax.management.remote.rmi
 
 import java.lang.{Integer, Object, String}
 import java.rmi.MarshalledObject
-import java.rmi.server.{RemoteObject, RemoteStub}
+import java.rmi.server.{RemoteObject, RemoteRef, RemoteStub}
 import java.util.Set
 import javax.management.{AttributeList, MBeanInfo, ObjectInstance, ObjectName}
 import javax.management.remote.NotificationResult
 import javax.security.auth.Subject
+import scala.scalanative.annotation.stub
 
 /** 
  * See Also:
@@ -14,6 +15,10 @@ import javax.security.auth.Subject
  * 
  */
 final class RMIConnectionImpl_Stub extends RemoteStub with RMIConnection {
+
+    /**  */
+    @stub
+    def this(ref: RemoteRef) = ???
 
     /** Handles the method MBeanServerConnection.addNotificationListener(ObjectName,
      *  ObjectName, NotificationFilter, Object).
@@ -165,4 +170,10 @@ final class RMIConnectionImpl_Stub extends RemoteStub with RMIConnection {
      */
     @stub
     def setAttributes($param_ObjectName_1: ObjectName, $param_MarshalledObject_2: MarshalledObject, $param_Subject_3: Subject): AttributeList = ???
+
+    /** Handles the method
+     *  MBeanServerConnection.unregisterMBean(ObjectName).
+     */
+    @stub
+    def unregisterMBean($param_ObjectName_1: ObjectName, $param_Subject_2: Subject): Unit = ???
 }

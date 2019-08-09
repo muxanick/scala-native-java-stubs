@@ -1,6 +1,8 @@
 package javax.tools
 
+import java.lang.String
 import javax.lang.model.element.{Modifier, NestingKind}
+import scala.scalanative.annotation.stub
 
 /** File abstraction for tools operating on Java™ programming language
  *  source and class files.
@@ -28,4 +30,16 @@ trait JavaFileObject extends FileObject {
      */
     @stub
     def getNestingKind(): NestingKind = ???
+
+    /** Checks if this file object is compatible with the specified
+     *  simple name and kind.
+     */
+    @stub
+    def isNameCompatible(simpleName: String, kind: JavaFileObject.Kind): Boolean = ???
+}
+
+object JavaFileObject {
+    /** Kinds of JavaFileObjects. */
+    @stub
+    object Kind extends JavaFileObject.Kind
 }

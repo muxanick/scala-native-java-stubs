@@ -1,6 +1,7 @@
 package java.awt.print
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** The PrinterException class and its subclasses are used
  *  to indicate that an exceptional condition has occurred in the print
@@ -13,4 +14,10 @@ class PrinterException extends Exception {
      */
     @stub
     def this() = ???
+
+    /** Constructs a new PrinterException object
+     *  with the specified detail message.
+     */
+    @stub
+    def this(msg: String) = ???
 }

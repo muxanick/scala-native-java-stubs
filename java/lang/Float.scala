@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** The Float class wraps a value of primitive type
  *  float in an object. An object of type
  *  Float contains a single field whose type is
@@ -24,6 +26,13 @@ final class Float extends Number with Comparable[Float] {
      */
     @stub
     def this(value: Float) = ???
+
+    /** Constructs a newly allocated Float object that
+     *  represents the floating-point value of type float
+     *  represented by the string.
+     */
+    @stub
+    def this(s: String) = ???
 
     /** Returns the value of this Float as a byte after
      *  a narrowing primitive conversion.
@@ -141,6 +150,12 @@ object Float {
     @stub
     val SIZE: Int = ???
 
+    /** The Class instance representing the primitive type
+     *  float.
+     */
+    @stub
+    val TYPE: Class[Float] = ???
+
     /** Compares the two specified float values. */
     @stub
     def compare(f1: Float, f2: Float): Int = ???
@@ -230,4 +245,11 @@ object Float {
      */
     @stub
     def valueOf(f: Float): Float = ???
+
+    /** Returns a Float object holding the
+     *  float value represented by the argument string
+     *  s.
+     */
+    @stub
+    def valueOf(s: String): Float = ???
 }

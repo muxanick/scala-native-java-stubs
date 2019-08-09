@@ -1,5 +1,7 @@
 package javax.accessibility
 
+import scala.scalanative.annotation.stub
+
 /** This AccessibleSelection interface
  *  provides the standard mechanism for an assistive technology to determine
  *  what the current selected children are, as well as modify the selection set.
@@ -43,4 +45,10 @@ trait AccessibleSelection {
      */
     @stub
     def removeAccessibleSelection(i: Int): Unit = ???
+
+    /** Causes every child of the object to be selected
+     *  if the object supports multiple selections.
+     */
+    @stub
+    def selectAllAccessibleSelection(): Unit = ???
 }

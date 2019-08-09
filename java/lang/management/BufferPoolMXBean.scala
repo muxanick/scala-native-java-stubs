@@ -1,6 +1,7 @@
 package java.lang.management
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** The management interface for a buffer pool, for example a pool of
  *  direct or mapped buffers.
@@ -36,4 +37,8 @@ trait BufferPoolMXBean extends PlatformManagedObject {
     /** Returns the name representing this buffer pool. */
     @stub
     def getName(): String = ???
+
+    /** Returns an estimate of the total capacity of the buffers in this pool. */
+    @stub
+    def getTotalCapacity(): Long = ???
 }

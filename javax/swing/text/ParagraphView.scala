@@ -4,6 +4,7 @@ import java.awt.{Graphics, Shape}
 import java.lang.Object
 import javax.swing.SizeRequirements
 import javax.swing.event.DocumentEvent
+import scala.scalanative.annotation.stub
 
 /** View of a simple line-wrapping paragraph that supports
  *  multiple fonts, colors, components, icons, etc.  It is
@@ -17,6 +18,14 @@ import javax.swing.event.DocumentEvent
  *  that fit.
  */
 class ParagraphView extends FlowView with TabExpander {
+
+    /** Constructs a ParagraphView for the given element. */
+    @stub
+    def this(elem: Element) = ???
+
+    /** Indentation for the first line, from the left inset. */
+    @stub
+    protected val firstLineIndent: Int = ???
 
     /** Breaks this view on the given axis at the given length. */
     @stub
@@ -125,4 +134,8 @@ class ParagraphView extends FlowView with TabExpander {
     /** Sets the line spacing. */
     @stub
     protected def setLineSpacing(ls: Float): Unit = ???
+
+    /** Set the cached properties from the attributes. */
+    @stub
+    protected def setPropertiesFromAttributes(): Unit = ???
 }

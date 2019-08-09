@@ -2,6 +2,7 @@ package java.lang
 
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Indicates that a method declaration is intended to override a
  *  method declaration in a supertype. If a method is annotated with

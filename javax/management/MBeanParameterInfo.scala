@@ -1,6 +1,7 @@
 package javax.management
 
 import java.lang.{Cloneable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Describes an argument of an operation exposed by an MBean.
  *  Instances of this class are immutable.  Subclasses may be mutable
@@ -11,6 +12,10 @@ class MBeanParameterInfo extends MBeanFeatureInfo with Cloneable {
     /** Constructs an MBeanParameterInfo object. */
     @stub
     def this(name: String, type: String, description: String) = ???
+
+    /** Constructs an MBeanParameterInfo object. */
+    @stub
+    def this(name: String, type: String, description: String, descriptor: Descriptor) = ???
 
     /** Returns a shallow clone of this instance. */
     @stub
@@ -27,4 +32,8 @@ class MBeanParameterInfo extends MBeanFeatureInfo with Cloneable {
     /** Returns a hash code value for the object. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }

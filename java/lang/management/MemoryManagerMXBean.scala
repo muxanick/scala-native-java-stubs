@@ -1,6 +1,7 @@
 package java.lang.management
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** The management interface for a memory manager.
  *  A memory manager manages one or more memory pools of the
@@ -31,4 +32,10 @@ trait MemoryManagerMXBean extends PlatformManagedObject {
     /** Returns the name representing this memory manager. */
     @stub
     def getName(): String = ???
+
+    /** Tests if this memory manager is valid in the Java virtual
+     *  machine.
+     */
+    @stub
+    def isValid(): Boolean = ???
 }

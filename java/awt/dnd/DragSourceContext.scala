@@ -1,9 +1,10 @@
 package java.awt.dnd
 
-import java.awt.{Component, Cursor}
+import java.awt.{Component, Cursor, Image, Point}
 import java.awt.datatransfer.Transferable
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The DragSourceContext class is responsible for managing the
  *  initiator side of the Drag and Drop protocol. In particular, it is responsible
@@ -43,6 +44,20 @@ import java.lang.Object
  *  and the DragSourceContext classes.
  */
 class DragSourceContext extends Object with DragSourceListener with DragSourceMotionListener with Serializable {
+
+    /** Called from DragSource, this constructor creates a new
+     *  DragSourceContext given the
+     *  DragSourceContextPeer for this Drag, the
+     *  DragGestureEvent that triggered the Drag, the initial
+     *  Cursor to use for the Drag, an (optional)
+     *  Image to display while the Drag is taking place, the offset
+     *  of the Image origin from the hotspot at the instant of the
+     *  triggering event, the Transferable subject data, and the
+     *  DragSourceListener to use during the Drag and Drop
+     *  operation.
+     */
+    @stub
+    def this(dscp: java.awt.dnd.peer.DragSourceContextPeer, trigger: DragGestureEvent, dragCursor: Cursor, dragImage: Image, offset: Point, t: Transferable, dsl: DragSourceListener) = ???
 
     /** Add a DragSourceListener to this
      *  DragSourceContext if one has not already been added.
@@ -156,6 +171,14 @@ class DragSourceContext extends Object with DragSourceListener with DragSourceMo
      */
     @stub
     def transferablesFlavorsChanged(): Unit = ???
+
+    /** If the default drag cursor behavior is active, this method
+     *  sets the default drag cursor for the specified actions
+     *  supported by the drag source, the drop target action,
+     *  and status, otherwise this method does nothing.
+     */
+    @stub
+    protected def updateCurrentCursor(sourceAct: Int, targetAct: Int, status: Int): Unit = ???
 }
 
 object DragSourceContext {
@@ -178,4 +201,11 @@ object DragSourceContext {
      */
     @stub
     protected val ENTER: Int = ???
+
+    /** An int used by updateCurrentCursor()
+     *  indicating that the Cursor is
+     *  over a DropTarget.
+     */
+    @stub
+    protected val OVER: Int = ???
 }

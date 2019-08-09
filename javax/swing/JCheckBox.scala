@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component, Container}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** An implementation of a check box -- an item that can be selected or
  *  deselected, and which displays its state to the user.
@@ -70,6 +71,18 @@ class JCheckBox extends JToggleButton with Accessible {
     @stub
     def this(text: String, icon: Icon) = ???
 
+    /** Creates a check box with text and icon,
+     *  and specifies whether or not it is initially selected.
+     */
+    @stub
+    def this(text: String, icon: Icon, selected: Boolean) = ???
+
+    /** This class implements accessibility support for the
+     *  JCheckBox class.
+     */
+    @stub
+    protected object AccessibleJCheckBox extends JCheckBox.AccessibleJCheckBox
+
     /** Gets the AccessibleContext associated with this JCheckBox. */
     @stub
     def getAccessibleContext(): AccessibleContext = ???
@@ -94,4 +107,14 @@ class JCheckBox extends JToggleButton with Accessible {
      */
     @stub
     def setBorderPaintedFlat(b: Boolean): Unit = ???
+
+    /** Resets the UI property to a value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
+}
+
+object JCheckBox {
+    /** Identifies a change to the flat property. */
+    @stub
+    val BORDER_PAINTED_FLAT_CHANGED_PROPERTY: String = ???
 }

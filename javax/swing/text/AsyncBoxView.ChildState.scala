@@ -1,6 +1,7 @@
 package javax.swing.text
 
 import java.lang.{Object, Runnable}
+import scala.scalanative.annotation.stub
 
 /** A record representing the layout state of a
  *  child view.  It is runnable as a task on another
@@ -13,6 +14,10 @@ import java.lang.{Object, Runnable}
  *  synchronization on the ChildState instance.
  */
 class AsyncBoxView.ChildState extends Object with Runnable {
+
+    /** Construct a child status. */
+    @stub
+    def ChildState(v: View) = ???
 
     /** Fetch the child view this record represents */
     @stub
@@ -45,4 +50,11 @@ class AsyncBoxView.ChildState extends Object with Runnable {
     /** Update the child state. */
     @stub
     def run(): Unit = ???
+
+    /** This method should only be called by the ChildLocator,
+     *  it is simply a convenient place to hold the cached
+     *  location.
+     */
+    @stub
+    def setMajorOffset(offs: Float): Unit = ???
 }

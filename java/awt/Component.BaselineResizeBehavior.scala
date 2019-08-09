@@ -1,6 +1,7 @@
 package java.awt
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Enumeration of the common ways the baseline of a component can
  *  change as the size changes.  The baseline resize behavior is
@@ -34,7 +35,18 @@ object Component.BaselineResizeBehavior {
      */
     final val CONSTANT_DESCENT = new Component.BaselineResizeBehavior(CONSTANT_DESCENT, 2)
 
+    /** Indicates the baseline resize behavior can not be expressed using
+     *  any of the other constants.
+     */
+    final val OTHER = new Component.BaselineResizeBehavior(OTHER, 3)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): Component.BaselineResizeBehavior = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[Component.BaselineResizeBehavior] = ???
 }

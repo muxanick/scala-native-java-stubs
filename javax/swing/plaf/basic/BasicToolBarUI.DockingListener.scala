@@ -3,7 +3,9 @@ package javax.swing.plaf.basic
 import java.awt.Point
 import java.awt.event.MouseEvent
 import java.lang.Object
+import javax.swing.JToolBar
 import javax.swing.event.MouseInputListener
+import scala.scalanative.annotation.stub
 
 /** This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of BasicToolBarUI.
@@ -12,11 +14,19 @@ class BasicToolBarUI.DockingListener extends Object with MouseInputListener {
 
     /**  */
     @stub
+    def DockingListener(t: JToolBar) = ???
+
+    /**  */
+    @stub
     protected val isDragging: Boolean = ???
 
     /**  */
     @stub
     protected val origin: Point = ???
+
+    /**  */
+    @stub
+    protected val toolBar: JToolBar = ???
 
     /** Invoked when the mouse button has been clicked (pressed
      *  and released) on a component.
@@ -47,4 +57,8 @@ class BasicToolBarUI.DockingListener extends Object with MouseInputListener {
     /** Invoked when a mouse button has been pressed on a component. */
     @stub
     def mousePressed(e: MouseEvent): Unit = ???
+
+    /** Invoked when a mouse button has been released on a component. */
+    @stub
+    def mouseReleased(e: MouseEvent): Unit = ???
 }

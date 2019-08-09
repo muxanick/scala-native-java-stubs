@@ -1,8 +1,10 @@
 package javax.naming.ldap
 
 import java.lang.Object
+import java.util.Hashtable
 import javax.naming.InitialContext
 import javax.naming.directory.InitialDirContext
+import scala.scalanative.annotation.stub
 
 /** This class is the starting context for performing
  *  LDAPv3-style extended operations and controls.
@@ -57,6 +59,12 @@ class InitialLdapContext extends InitialDirContext with LdapContext {
     @stub
     def this() = ???
 
+    /** Constructs an initial context
+     *  using environment properties and connection request controls.
+     */
+    @stub
+    def this(environment: Hashtable[_, _], connCtls: Array[Control]) = ???
+
     /** Performs an extended operation. */
     @stub
     def extendedOperation(request: ExtendedRequest): ExtendedResponse = ???
@@ -84,4 +92,10 @@ class InitialLdapContext extends InitialDirContext with LdapContext {
      */
     @stub
     def reconnect(connCtls: Array[Control]): Unit = ???
+
+    /** Sets the request controls for methods subsequently
+     *  invoked on this context.
+     */
+    @stub
+    def setRequestControls(requestControls: Array[Control]): Unit = ???
 }

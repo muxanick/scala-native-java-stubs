@@ -1,8 +1,10 @@
 package javax.swing.plaf.metal
 
 import java.lang.Object
+import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, SplitPaneUI}
 import javax.swing.plaf.basic.{BasicSplitPaneDivider, BasicSplitPaneUI}
+import scala.scalanative.annotation.stub
 
 /** Metal split pane.
  *  
@@ -17,7 +19,17 @@ import javax.swing.plaf.basic.{BasicSplitPaneDivider, BasicSplitPaneUI}
  */
 class MetalSplitPaneUI extends BasicSplitPaneUI {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Creates the default divider. */
     @stub
     def createDefaultDivider(): BasicSplitPaneDivider = ???
+}
+
+object MetalSplitPaneUI {
+    /** Creates a new MetalSplitPaneUI instance */
+    @stub
+    def createUI(x: JComponent): ComponentUI = ???
 }

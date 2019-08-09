@@ -1,6 +1,7 @@
 package javax.management.relation
 
 import java.lang.Boolean
+import scala.scalanative.annotation.stub
 
 /** A RelationSupport object is used internally by the Relation Service to
  *  represent simple relations (only roles, no properties or methods), with an
@@ -26,4 +27,10 @@ trait RelationSupportMBean extends Relation {
      */
     @stub
     def isInRelationService(): Boolean = ???
+
+    /** Specifies whether this relation is handled by the Relation
+     *  Service.
+     */
+    @stub
+    def setRelationServiceManagementFlag(flag: Boolean): Unit = ???
 }

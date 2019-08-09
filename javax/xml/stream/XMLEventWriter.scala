@@ -4,6 +4,7 @@ import java.lang.String
 import javax.xml.namespace.NamespaceContext
 import javax.xml.stream.events.XMLEvent
 import javax.xml.stream.util.XMLEventConsumer
+import scala.scalanative.annotation.stub
 
 /** This is the top level interface for writing XML documents.
  * 
@@ -54,4 +55,8 @@ trait XMLEventWriter extends XMLEventConsumer {
     /** Sets the current namespace context for prefix and uri bindings. */
     @stub
     def setNamespaceContext(context: NamespaceContext): Unit = ???
+
+    /** Sets the prefix the uri is bound to. */
+    @stub
+    def setPrefix(prefix: String, uri: String): Unit = ???
 }

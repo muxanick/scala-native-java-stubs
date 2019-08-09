@@ -1,6 +1,7 @@
 package java.awt.geom
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The Rectangle2D class describes a rectangle
  *  defined by a location (x,y) and dimension
@@ -12,6 +13,10 @@ import java.lang.Object
  *  the subclass.
  */
 abstract class Rectangle2D extends RectangularShape {
+
+    /** This is an abstract class that cannot be instantiated directly. */
+    @stub
+    protected def this() = ???
 
     /** Adds a point, specified by the double precision arguments
      *  newx and newy, to this
@@ -124,6 +129,12 @@ object Rectangle2D {
     @stub
     object Double extends Rectangle2D.Double
 
+    /** The Float class defines a rectangle specified in float
+     *  coordinates.
+     */
+    @stub
+    object Float extends Rectangle2D.Float
+
     /** The bitmask that indicates that a point lies below
      *  this Rectangle2D.
      */
@@ -142,10 +153,23 @@ object Rectangle2D {
     @stub
     val OUT_RIGHT: Int = ???
 
+    /** The bitmask that indicates that a point lies above
+     *  this Rectangle2D.
+     */
+    @stub
+    val OUT_TOP: Int = ???
+
     /** Intersects the pair of specified source Rectangle2D
      *  objects and puts the result into the specified destination
      *  Rectangle2D object.
      */
     @stub
     def intersect(src1: Rectangle2D, src2: Rectangle2D, dest: Rectangle2D): Unit = ???
+
+    /** Unions the pair of source Rectangle2D objects
+     *  and puts the result into the specified destination
+     *  Rectangle2D object.
+     */
+    @stub
+    def union(src1: Rectangle2D, src2: Rectangle2D, dest: Rectangle2D): Unit = ???
 }

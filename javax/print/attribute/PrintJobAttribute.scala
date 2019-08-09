@@ -1,5 +1,7 @@
 package javax.print.attribute
 
+import scala.scalanative.annotation.stub
+
 /** PrintJobAttribute is a tagging interface which a printing attribute
  *  class implements to indicate the attribute describes the status of a Print
  *  Job or some other characteristic of a Print Job. A Print Service

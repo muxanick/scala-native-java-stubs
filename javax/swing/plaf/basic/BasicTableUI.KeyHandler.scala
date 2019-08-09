@@ -2,6 +2,7 @@ package javax.swing.plaf.basic
 
 import java.awt.event.{KeyEvent, KeyListener}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of BasicTableUI.
@@ -12,6 +13,10 @@ import java.lang.Object
  */
 class BasicTableUI.KeyHandler extends Object with KeyListener {
 
+    /**  */
+    @stub
+    def KeyHandler() = ???
+
     /** Invoked when a key has been pressed. */
     @stub
     def keyPressed(e: KeyEvent): Unit = ???
@@ -19,4 +24,8 @@ class BasicTableUI.KeyHandler extends Object with KeyListener {
     /** Invoked when a key has been released. */
     @stub
     def keyReleased(e: KeyEvent): Unit = ???
+
+    /** Invoked when a key has been typed. */
+    @stub
+    def keyTyped(e: KeyEvent): Unit = ???
 }

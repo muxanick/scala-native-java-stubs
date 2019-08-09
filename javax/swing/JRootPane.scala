@@ -4,6 +4,7 @@ import java.awt.{Component, Container, LayoutManager}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.plaf.RootPaneUI
+import scala.scalanative.annotation.stub
 
 /** A lightweight container used behind the scenes by
  *  JFrame, JDialog, JWindow,
@@ -147,11 +148,24 @@ import javax.swing.plaf.RootPaneUI
  */
 class JRootPane extends JComponent with Accessible {
 
+    /** Creates a JRootPane, setting up its
+     *  glassPane, layeredPane,
+     *  and contentPane.
+     */
+    @stub
+    def this() = ???
+
     /** This class implements accessibility support for the
      *  JRootPane class.
      */
     @stub
     protected object AccessibleJRootPane extends JRootPane.AccessibleJRootPane
+
+    /** A custom layout manager that is responsible for the layout of
+     *  layeredPane, glassPane, and menuBar.
+     */
+    @stub
+    protected object RootLayout extends JRootPane.RootLayout
 
     /** The content pane. */
     @stub
@@ -346,6 +360,10 @@ class JRootPane extends JComponent with Accessible {
      */
     @stub
     def setWindowDecorationStyle(windowDecorationStyle: Int): Unit = ???
+
+    /** Resets the UI property to a value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
 }
 
 object JRootPane {
@@ -380,4 +398,8 @@ object JRootPane {
     /** Constant used for the windowDecorationStyle property. */
     @stub
     val QUESTION_DIALOG: Int = ???
+
+    /** Constant used for the windowDecorationStyle property. */
+    @stub
+    val WARNING_DIALOG: Int = ???
 }

@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.{Appendable, CharSequence, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Abstract class for writing to character streams.  The only methods that a
  *  subclass must implement are write(char[], int, int), flush(), and close().
@@ -14,6 +15,15 @@ abstract class Writer extends Object with Appendable with Closeable with Flushab
      */
     @stub
     protected def this() = ???
+
+    /** Creates a new character-stream writer whose critical sections will
+     *  synchronize on the given object.
+     */
+    @stub
+    protected def this(lock: Object) = ???
+
+    /** The object used to synchronize operations on this stream. */
+    protected val lock: Object
 
     /** Appends the specified character to this writer. */
     def append(c: Char): Writer
@@ -41,4 +51,7 @@ abstract class Writer extends Object with Appendable with Closeable with Flushab
 
     /** Writes a string. */
     def write(str: String): Unit
+
+    /** Writes a portion of a string. */
+    def write(str: String, off: Int, len: Int): Unit
 }

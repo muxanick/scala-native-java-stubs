@@ -2,6 +2,7 @@ package java.awt.geom
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The Double class defines an ellipse specified
  *  in double precision.
@@ -13,6 +14,12 @@ object Ellipse2D.Double extends Ellipse2D with Serializable {
      */
     @stub
     def Double() = ???
+
+    /** Constructs and initializes an Ellipse2D from the
+     *  specified coordinates.
+     */
+    @stub
+    def Double(x: Double, y: Double, w: Double, h: Double) = ???
 
     /** The overall height of the Ellipse2D. */
     @stub
@@ -27,6 +34,12 @@ object Ellipse2D.Double extends Ellipse2D with Serializable {
      */
     @stub
     val x: Double = ???
+
+    /** The Y coordinate of the upper-left corner of the
+     *  framing rectangle of this Ellipse2D.
+     */
+    @stub
+    val y: Double = ???
 
     /** Returns a high precision and more accurate bounding box of
      *  the Shape than the getBounds method.
@@ -61,4 +74,10 @@ object Ellipse2D.Double extends Ellipse2D with Serializable {
     /** Determines whether the RectangularShape is empty. */
     @stub
     def isEmpty(): Boolean = ???
+
+    /** Sets the location and size of the framing rectangle of this
+     *  Shape to the specified rectangular values.
+     */
+    @stub
+    def setFrame(x: Double, y: Double, w: Double, h: Double): Unit = ???
 }

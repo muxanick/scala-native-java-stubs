@@ -1,8 +1,10 @@
 package javax.xml.crypto.dsig
 
+import java.io.OutputStream
 import java.lang.String
 import java.security.spec.AlgorithmParameterSpec
 import javax.xml.crypto.{AlgorithmMethod, Data, XMLCryptoContext, XMLStructure}
+import scala.scalanative.annotation.stub
 
 /** A representation of the XML Transform element as
  *  defined in the 
@@ -36,6 +38,10 @@ trait Transform extends XMLStructure with AlgorithmMethod {
     /** Transforms the specified data using the underlying transform algorithm. */
     @stub
     def transform(data: Data, context: XMLCryptoContext): Data = ???
+
+    /** Transforms the specified data using the underlying transform algorithm. */
+    @stub
+    def transform(data: Data, context: XMLCryptoContext, os: OutputStream): Data = ???
 }
 
 object Transform {
@@ -62,4 +68,10 @@ object Transform {
      */
     @stub
     val XPATH2: String = ???
+
+    /** The XSLT
+     *  transform algorithm URI.
+     */
+    @stub
+    val XSLT: String = ???
 }

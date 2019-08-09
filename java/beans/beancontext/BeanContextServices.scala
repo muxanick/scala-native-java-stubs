@@ -2,6 +2,7 @@ package java.beans.beancontext
 
 import java.lang.{Class, Object}
 import java.util.Iterator
+import scala.scalanative.annotation.stub
 
 /** 
  *  The BeanContextServices interface provides a mechanism for a BeanContext
@@ -58,4 +59,11 @@ trait BeanContextServices extends BeanContext with BeanContextServicesListener {
      */
     @stub
     def removeBeanContextServicesListener(bcsl: BeanContextServicesListener): Unit = ???
+
+    /** BeanContextServiceProviders wishing to remove
+     *  a currently registered service from this context
+     *  may do so via invocation of this method.
+     */
+    @stub
+    def revokeService(serviceClass: Class, serviceProvider: BeanContextServiceProvider, revokeCurrentServicesNow: Boolean): Unit = ???
 }

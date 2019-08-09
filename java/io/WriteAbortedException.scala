@@ -1,6 +1,7 @@
 package java.io
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Signals that one of the ObjectStreamExceptions was thrown during a
  *  write operation.  Thrown during a read operation when one of the
@@ -18,7 +19,23 @@ import java.lang.{Exception, Object, Throwable}
  */
 class WriteAbortedException extends ObjectStreamException {
 
+    /** Constructs a WriteAbortedException with a string describing
+     *  the exception and the exception causing the abort.
+     */
+    @stub
+    def this(s: String, ex: Exception) = ???
+
+    /** Exception that was caught while writing the ObjectStream. */
+    @stub
+    val detail: Exception = ???
+
     /** Returns the exception that terminated the operation (the cause). */
     @stub
     def getCause(): Throwable = ???
+
+    /** Produce the message and include the message from the nested
+     *  exception, if there is one.
+     */
+    @stub
+    def getMessage(): String = ???
 }

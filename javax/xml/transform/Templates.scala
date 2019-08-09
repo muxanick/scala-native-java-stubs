@@ -1,6 +1,7 @@
 package javax.xml.transform
 
 import java.util.Properties
+import scala.scalanative.annotation.stub
 
 /** An object that implements this interface is the runtime representation of processed
  *  transformation instructions.
@@ -14,4 +15,8 @@ trait Templates {
     /** Get the properties corresponding to the effective xsl:output element. */
     @stub
     def getOutputProperties(): Properties = ???
+
+    /** Create a new transformation context for this Templates object. */
+    @stub
+    def newTransformer(): Transformer = ???
 }

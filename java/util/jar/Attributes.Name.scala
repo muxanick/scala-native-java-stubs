@@ -1,6 +1,7 @@
 package java.util.jar
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The Attributes.Name class represents an attribute name stored in
  *  this Map. Valid attribute names are case-insensitive, are restricted
@@ -11,6 +12,10 @@ import java.lang.Object
  *  for more information about valid attribute names and values.
  */
 object Attributes.Name extends Object {
+
+    /** Constructs a new attribute name using the given string name. */
+    @stub
+    def Name(name: String) = ???
 
     /** Name object for Class-Path
      *  manifest attribute.
@@ -114,6 +119,12 @@ object Attributes.Name extends Object {
     @stub
     val SPECIFICATION_VENDOR: Attributes.Name = ???
 
+    /** Name object for Specification-Version
+     *  manifest attribute used for package versioning.
+     */
+    @stub
+    val SPECIFICATION_VERSION: Attributes.Name = ???
+
     /** Compares this attribute name to another for equality. */
     @stub
     def equals(o: Object): Boolean = ???
@@ -121,4 +132,8 @@ object Attributes.Name extends Object {
     /** Computes the hash value for this attribute name. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns the attribute name as a String. */
+    @stub
+    def toString(): String = ???
 }

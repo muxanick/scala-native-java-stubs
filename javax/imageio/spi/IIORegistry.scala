@@ -1,6 +1,7 @@
 package javax.imageio.spi
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A registry for service provider instances.  Service provider
  *  classes may be detected at run time by means of meta-information in
@@ -56,6 +57,13 @@ import java.lang.Object
  *  JAR File Specification.
  */
 final class IIORegistry extends ServiceRegistry {
+
+    /** Registers all available service providers found on the
+     *  application class path, using the default
+     *  ClassLoader.
+     */
+    @stub
+    def registerApplicationClasspathSpis(): Unit = ???
 }
 
 object IIORegistry {

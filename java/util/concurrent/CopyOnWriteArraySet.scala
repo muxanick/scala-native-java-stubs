@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.Object
 import java.util.{AbstractCollection, AbstractSet, Collection, Iterator, Spliterator}
 import java.util.function.{Consumer, Predicate}
+import scala.scalanative.annotation.stub
 
 /** A Set that uses an internal CopyOnWriteArrayList
  *  for all of its operations.  Thus, it shares the same basic properties:
@@ -54,6 +55,12 @@ class CopyOnWriteArraySet[E] extends AbstractSet[E] with Serializable {
     /** Creates an empty set. */
     @stub
     def this() = ???
+
+    /** Creates a set containing all of the elements of the specified
+     *  collection.
+     */
+    @stub
+    def this(c: Collection[_ <: E]) = ???
 
     /** Adds the specified element to this set if it is not already present. */
     @stub
@@ -135,4 +142,10 @@ class CopyOnWriteArraySet[E] extends AbstractSet[E] with Serializable {
     /** Returns an array containing all of the elements in this set. */
     @stub
     def toArray(): Array[Object] = ???
+
+    /** Returns an array containing all of the elements in this set; the
+     *  runtime type of the returned array is that of the specified array.
+     */
+    @stub
+    def toArray[T](a: Array[T]): Array[T] = ???
 }

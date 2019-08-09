@@ -1,6 +1,7 @@
 package java.util.stream
 
 import java.util.function.Consumer
+import scala.scalanative.annotation.stub
 
 /** A mutable builder for a Stream.  This allows the creation of a
  *  Stream by generating elements individually and adding them to the
@@ -23,4 +24,8 @@ object trait Stream.Builder[T] extends Consumer[T] {
     /** Adds an element to the stream being built. */
     @stub
     val Stream.Builder[T]: default = ???
+
+    /** Builds the stream, transitioning this builder to the built state. */
+    @stub
+    def build(): Stream[T] = ???
 }

@@ -1,6 +1,8 @@
 package java.awt.image
 
+import java.awt.RenderingHints
 import java.awt.geom.{Point2D, Rectangle2D}
+import scala.scalanative.annotation.stub
 
 /** This interface describes single-input/single-output
  *  operations performed on Raster objects.  It is implemented by such
@@ -38,4 +40,8 @@ trait RasterOp {
      */
     @stub
     def getPoint2D(srcPt: Point2D, dstPt: Point2D): Point2D = ???
+
+    /** Returns the rendering hints for this RasterOp. */
+    @stub
+    def getRenderingHints(): RenderingHints = ???
 }

@@ -1,6 +1,7 @@
 package javax.net.ssl
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Instances of this class represent a server name of type
  *  host_name in a Server Name
@@ -24,6 +25,10 @@ final class SNIHostName extends SNIServerName {
     @stub
     def this(encoded: Array[Byte]) = ???
 
+    /** Creates an SNIHostName using the specified hostname. */
+    @stub
+    def this(hostname: String) = ???
+
     /** Compares this server name to the specified object. */
     @stub
     def equals(other: Object): Boolean = ???
@@ -37,6 +42,12 @@ final class SNIHostName extends SNIServerName {
     /** Returns a hash code value for this SNIHostName. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a string representation of the object, including the DNS
+     *  hostname in this SNIHostName object.
+     */
+    @stub
+    def toString(): String = ???
 }
 
 object SNIHostName {

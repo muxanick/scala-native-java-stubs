@@ -3,9 +3,14 @@ package java.util.concurrent.locks
 import java.io.Serializable
 import java.lang.{Object, String}
 import java.util.concurrent.TimeUnit
+import scala.scalanative.annotation.stub
 
 /** The lock returned by method ReentrantReadWriteLock.writeLock(). */
 object ReentrantReadWriteLock.WriteLock extends Object with Lock with Serializable {
+
+    /** Constructor for use by subclasses */
+    @stub
+    protected def WriteLock(lock: ReentrantReadWriteLock) = ???
 
     /** Queries the number of holds on this write lock by the current
      *  thread.
@@ -51,4 +56,8 @@ object ReentrantReadWriteLock.WriteLock extends Object with Lock with Serializab
      */
     @stub
     def tryLock(timeout: Long, unit: TimeUnit): Boolean = ???
+
+    /** Attempts to release this lock. */
+    @stub
+    def unlock(): Unit = ???
 }

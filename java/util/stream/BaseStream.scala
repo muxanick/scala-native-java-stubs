@@ -2,6 +2,7 @@ package java.util.stream
 
 import java.lang.{AutoCloseable, Runnable}
 import java.util.{Iterator, Spliterator}
+import scala.scalanative.annotation.stub
 
 /** Base interface for streams, which are sequences of elements supporting
  *  sequential and parallel aggregate operations.  The following example
@@ -53,4 +54,10 @@ trait BaseStream[T, S <: BaseStream[T, S]] extends AutoCloseable {
     /** Returns a spliterator for the elements of this stream. */
     @stub
     def spliterator(): Spliterator[T] = ???
+
+    /** Returns an equivalent stream that is
+     *  unordered.
+     */
+    @stub
+    def unordered(): S = ???
 }

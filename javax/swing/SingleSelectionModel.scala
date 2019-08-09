@@ -1,6 +1,7 @@
 package javax.swing
 
 import javax.swing.event.ChangeListener
+import scala.scalanative.annotation.stub
 
 /** A model that supports at most one indexed selection. */
 trait SingleSelectionModel {
@@ -24,4 +25,8 @@ trait SingleSelectionModel {
     /** Removes listener as a listener to changes in the model. */
     @stub
     def removeChangeListener(listener: ChangeListener): Unit = ???
+
+    /** Sets the model's selected index to index. */
+    @stub
+    def setSelectedIndex(index: Int): Unit = ???
 }

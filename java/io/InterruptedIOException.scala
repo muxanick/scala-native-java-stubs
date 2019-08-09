@@ -1,6 +1,7 @@
 package java.io
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Signals that an I/O operation has been interrupted. An
  *  InterruptedIOException is thrown to indicate that an
@@ -16,4 +17,16 @@ class InterruptedIOException extends IOException {
      */
     @stub
     def this() = ???
+
+    /** Constructs an InterruptedIOException with the
+     *  specified detail message.
+     */
+    @stub
+    def this(s: String) = ???
+
+    /** Reports how many bytes had been transferred as part of the I/O
+     *  operation before it was interrupted.
+     */
+    @stub
+    val bytesTransferred: Int = ???
 }

@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class provides a skeletal implementation of the Map
  *  interface, to minimize the effort required to implement this interface.
@@ -31,6 +32,10 @@ import java.lang.{Object, String}
  *  Java Collections Framework.
  */
 abstract class AbstractMap[K, V] extends Object with Map[K, V] {
+
+    /** Sole constructor. */
+    @stub
+    protected def this() = ???
 
     /** Removes all of the mappings from this map (optional operation). */
     def clear(): Unit
@@ -90,10 +95,17 @@ abstract class AbstractMap[K, V] extends Object with Map[K, V] {
 
     /** Returns a string representation of this map. */
     def toString(): String
+
+    /** Returns a Collection view of the values contained in this map. */
+    def values(): Collection[V]
 }
 
 object AbstractMap {
     /** An Entry maintaining a key and a value. */
     @stub
     object SimpleEntry[K, V] extends AbstractMap.SimpleEntry[K, V]
+
+    /** An Entry maintaining an immutable key and value. */
+    @stub
+    object SimpleImmutableEntry[K, V] extends AbstractMap.SimpleImmutableEntry[K, V]
 }

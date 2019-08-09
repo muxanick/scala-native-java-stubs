@@ -1,6 +1,7 @@
 package java.sql
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** The subclass of SQLException thrown when an instance where a retry
  *  of the same operation would fail unless the cause of the SQLException
@@ -53,4 +54,10 @@ class SQLNonTransientException extends SQLException {
      */
     @stub
     def this(reason: String, cause: Throwable) = ???
+
+    /** Constructs a SQLNonTransientException object
+     *   with a given  cause.
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

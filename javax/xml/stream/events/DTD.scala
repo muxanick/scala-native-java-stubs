@@ -1,7 +1,8 @@
 package javax.xml.stream.events
 
-import java.lang.String
+import java.lang.{Object, String}
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** This is the top level interface for events dealing with DTDs */
 trait DTD extends XMLEvent {
@@ -21,4 +22,8 @@ trait DTD extends XMLEvent {
     /** Return a List containing the notations declared in the DTD. */
     @stub
     def getNotations(): List = ???
+
+    /** Returns an implementation defined representation of the DTD. */
+    @stub
+    def getProcessedDTD(): Object = ???
 }

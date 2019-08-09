@@ -6,9 +6,14 @@ import java.lang.{Object, String}
 import javax.swing.{Icon, JComponent, LookAndFeel, UIDefaults}
 import javax.swing.plaf.basic.BasicLookAndFeel
 import javax.swing.plaf.synth.{Region, SynthLookAndFeel}
+import scala.scalanative.annotation.stub
 
 /** The NimbusLookAndFeel class. */
 class NimbusLookAndFeel extends SynthLookAndFeel {
+
+    /** Create a new NimbusLookAndFeel. */
+    @stub
+    def this() = ???
 
     /** Returns the defaults for this SynthLookAndFeel. */
     @stub
@@ -68,6 +73,10 @@ class NimbusLookAndFeel extends SynthLookAndFeel {
      */
     @stub
     protected def shouldUpdateStyleOnEvent(ev: PropertyChangeEvent): Boolean = ???
+
+    /** Called by UIManager when this look and feel is uninstalled. */
+    @stub
+    def uninitialize(): Unit = ???
 }
 
 object NimbusLookAndFeel {

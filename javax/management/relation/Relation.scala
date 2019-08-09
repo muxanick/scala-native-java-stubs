@@ -3,6 +3,7 @@ package javax.management.relation
 import java.lang.{Integer, String}
 import java.util.{List, Map}
 import javax.management.ObjectName
+import scala.scalanative.annotation.stub
 
 /** This interface has to be implemented by any MBean class expected to
  *  represent a relation managed using the Relation Service.
@@ -67,4 +68,8 @@ trait Relation {
     /** Sets the given role. */
     @stub
     def setRole(role: Role): Unit = ???
+
+    /** Sets the given roles. */
+    @stub
+    def setRoles(roleList: RoleList): RoleResult = ???
 }

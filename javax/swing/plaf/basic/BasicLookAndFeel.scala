@@ -3,6 +3,7 @@ package javax.swing.plaf.basic
 import java.io.Serializable
 import java.lang.{Object, String}
 import javax.swing.{Action, ActionMap, LookAndFeel, UIDefaults}
+import scala.scalanative.annotation.stub
 
 /** A base class to use in creating a look and feel for Swing.
  *  
@@ -23,6 +24,10 @@ import javax.swing.{Action, ActionMap, LookAndFeel, UIDefaults}
  *  Please see XMLEncoder.
  */
 abstract class BasicLookAndFeel extends LookAndFeel with Serializable {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Creates and returns an Action used to play a sound. */
     protected def createAudioAction(key: Object): Action
@@ -60,4 +65,7 @@ abstract class BasicLookAndFeel extends LookAndFeel with Serializable {
      *  audioAction to play a sound.
      */
     protected def playSound(audioAction: Action): Unit
+
+    /** Uninitializes the look and feel. */
+    def uninitialize(): Unit
 }

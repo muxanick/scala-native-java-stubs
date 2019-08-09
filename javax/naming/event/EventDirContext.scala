@@ -3,6 +3,7 @@ package javax.naming.event
 import java.lang.{Object, String}
 import javax.naming.Name
 import javax.naming.directory.{DirContext, SearchControls}
+import scala.scalanative.annotation.stub
 
 /** Contains methods for registering listeners to be notified
  *  of events fired when objects named in a directory context changes.
@@ -53,4 +54,11 @@ trait EventDirContext extends EventContext with DirContext {
      */
     @stub
     def addNamingListener(target: String, filter: String, filterArgs: Array[Object], ctls: SearchControls, l: NamingListener): Unit = ???
+
+    /** Adds a listener for receiving naming events fired when
+     *  objects identified by the search filter filter at the
+     *  object named by the string target name are modified.
+     */
+    @stub
+    def addNamingListener(target: String, filter: String, ctls: SearchControls, l: NamingListener): Unit = ???
 }

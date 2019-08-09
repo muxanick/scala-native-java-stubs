@@ -1,6 +1,7 @@
 package javax.xml.bind
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception indicates that an error was encountered while getting or
  *  setting a property.
@@ -34,4 +35,8 @@ class PropertyException extends JAXBException {
      */
     @stub
     def this(message: String, exception: Throwable) = ???
+
+    /** Construct a PropertyException with a linkedException. */
+    @stub
+    def this(exception: Throwable) = ???
 }

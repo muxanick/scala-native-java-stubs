@@ -2,6 +2,7 @@ package java.util.concurrent
 
 import java.lang.Object
 import java.util.{Deque, Iterator}
+import scala.scalanative.annotation.stub
 
 /** A Deque that additionally supports blocking operations that wait
  *  for the deque to become non-empty when retrieving an element, and wait for
@@ -342,4 +343,10 @@ trait BlockingDeque[E] extends BlockingQueue[E] with Deque[E] {
      */
     @stub
     def takeFirst(): E = ???
+
+    /** Retrieves and removes the last element of this deque, waiting
+     *  if necessary until an element becomes available.
+     */
+    @stub
+    def takeLast(): E = ???
 }

@@ -1,6 +1,8 @@
 package javax.net.ssl
 
 import java.lang.{Object, String}
+import java.security.SecureRandom
+import scala.scalanative.annotation.stub
 
 /** This class defines the Service Provider Interface (SPI)
  *  for the SSLContext class.
@@ -10,6 +12,10 @@ import java.lang.{Object, String}
  *  of a particular SSL context.
  */
 abstract class SSLContextSpi extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Creates a new SSLEngine using this context. */
     protected def engineCreateSSLEngine(): SSLEngine
@@ -46,4 +52,7 @@ abstract class SSLContextSpi extends Object {
      *  settings for this SSL context.
      */
     protected def engineGetSupportedSSLParameters(): SSLParameters
+
+    /** Initializes this context. */
+    protected def engineInit(km: Array[KeyManager], tm: Array[TrustManager], sr: SecureRandom): Unit
 }

@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** The DataInput interface provides
  *  for reading bytes from a binary stream and
@@ -203,4 +204,12 @@ trait DataInput {
      */
     @stub
     def readUTF(): String = ???
+
+    /** Makes an attempt to skip over
+     *  n bytes
+     *  of data from the input
+     *  stream, discarding the skipped bytes.
+     */
+    @stub
+    def skipBytes(n: Int): Int = ???
 }

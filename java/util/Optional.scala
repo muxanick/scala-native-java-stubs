@@ -1,7 +1,8 @@
 package java.util
 
-import java.lang.{Object, Throwable}
+import java.lang.{Object, String, Throwable}
 import java.util.function.{Consumer, Function, Predicate, Supplier}
+import scala.scalanative.annotation.stub
 
 /** A container object which may or may not contain a non-null value.
  *  If a value is present, isPresent() will return true and
@@ -82,6 +83,12 @@ final class Optional[T] extends Object {
      */
     @stub
     def orElseThrow[X <: Throwable](exceptionSupplier: Supplier[_ <: X]): T = ???
+
+    /** Returns a non-empty string representation of this Optional suitable for
+     *  debugging.
+     */
+    @stub
+    def toString(): String = ???
 }
 
 object Optional {

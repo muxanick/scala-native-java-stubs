@@ -1,7 +1,9 @@
 package javax.xml.crypto
 
 import java.lang.Object
+import java.security.Key
 import javax.xml.crypto.dsig.keyinfo.KeyInfo
+import scala.scalanative.annotation.stub
 
 /** A selector that finds and returns a key using the data contained in a
  *  KeyInfo object. An example of an implementation of
@@ -13,6 +15,22 @@ import javax.xml.crypto.dsig.keyinfo.KeyInfo
  */
 abstract class KeySelector extends Object {
 
+    /** Default no-args constructor; intended for invocation by subclasses only. */
+    @stub
+    protected def this() = ???
+
     /** Attempts to find a key that satisfies the specified constraints. */
     def select(keyInfo: KeyInfo, purpose: KeySelector.Purpose, method: AlgorithmMethod, context: XMLCryptoContext): KeySelectorResult
+}
+
+object KeySelector {
+    /** The purpose of the key that is to be selected. */
+    @stub
+    object Purpose extends KeySelector.Purpose
+
+    /** Returns a KeySelector that always selects the specified
+     *  key, regardless of the KeyInfo passed to it.
+     */
+    @stub
+    def singletonKeySelector(key: Key): KeySelector = ???
 }

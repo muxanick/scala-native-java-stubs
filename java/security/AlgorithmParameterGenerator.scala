@@ -2,6 +2,7 @@ package java.security
 
 import java.lang.{Object, String}
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** The AlgorithmParameterGenerator class is used to generate a
  *  set of
@@ -56,6 +57,10 @@ import java.security.spec.AlgorithmParameterSpec
  */
 class AlgorithmParameterGenerator extends Object {
 
+    /** Creates an AlgorithmParameterGenerator object. */
+    @stub
+    protected def this(paramGenSpi: AlgorithmParameterGeneratorSpi, provider: Provider, algorithm: String) = ???
+
     /** Generates the parameters. */
     @stub
     def generateParameters(): AlgorithmParameters = ???
@@ -85,6 +90,12 @@ class AlgorithmParameterGenerator extends Object {
     /** Initializes this parameter generator for a certain size. */
     @stub
     def init(size: Int): Unit = ???
+
+    /** Initializes this parameter generator for a certain size and source
+     *  of randomness.
+     */
+    @stub
+    def init(size: Int, random: SecureRandom): Unit = ???
 }
 
 object AlgorithmParameterGenerator {

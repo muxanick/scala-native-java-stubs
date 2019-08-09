@@ -2,6 +2,7 @@ package java.security.cert
 
 import java.lang.{Object, String}
 import java.security.Provider
+import scala.scalanative.annotation.stub
 
 /** A class for building certification paths (also known as certificate chains).
  *  
@@ -58,6 +59,12 @@ import java.security.Provider
  */
 class CertPathBuilder extends Object {
 
+    /** Creates a CertPathBuilder object of the given algorithm,
+     *  and encapsulates the given provider implementation (SPI object) in it.
+     */
+    @stub
+    protected def this(builderSpi: CertPathBuilderSpi, provider: Provider, algorithm: String) = ???
+
     /** Attempts to build a certification path using the specified algorithm
      *  parameter set.
      */
@@ -71,6 +78,13 @@ class CertPathBuilder extends Object {
     /** Returns the provider of this CertPathBuilder. */
     @stub
     def getProvider(): Provider = ???
+
+    /** Returns a CertPathChecker that the encapsulated
+     *  CertPathBuilderSpi implementation uses to check the revocation
+     *  status of certificates.
+     */
+    @stub
+    def getRevocationChecker(): CertPathChecker = ???
 }
 
 object CertPathBuilder {

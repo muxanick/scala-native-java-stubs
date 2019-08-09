@@ -2,6 +2,7 @@ package java.util.zip
 
 import java.io.{FilterOutputStream, OutputStream}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Implements an output stream filter for uncompressing data stored in the
  *  "deflate" compression format.
@@ -20,9 +21,19 @@ class InflaterOutputStream extends FilterOutputStream {
     @stub
     def this(out: OutputStream, infl: Inflater) = ???
 
+    /** Creates a new output stream with the specified decompressor and
+     *  buffer size.
+     */
+    @stub
+    def this(out: OutputStream, infl: Inflater, bufLen: Int) = ???
+
     /** Output buffer for writing uncompressed data. */
     @stub
     protected val buf: Array[Byte] = ???
+
+    /** Decompressor for this stream. */
+    @stub
+    protected val inf: Inflater = ???
 
     /** Writes any remaining uncompressed data to the output stream and closes
      *  the underlying output stream.
@@ -45,4 +56,8 @@ class InflaterOutputStream extends FilterOutputStream {
     /** Writes an array of bytes to the uncompressed output stream. */
     @stub
     def write(b: Array[Byte], off: Int, len: Int): Unit = ???
+
+    /** Writes a byte to the uncompressed output stream. */
+    @stub
+    def write(b: Int): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.util.concurrent
 
 import java.lang.{Object, Void}
+import scala.scalanative.annotation.stub
 
 /** A recursive resultless ForkJoinTask.  This class
  *  establishes conventions to parameterize resultless actions as
@@ -127,6 +128,10 @@ import java.lang.{Object, Void}
  */
 abstract class RecursiveAction extends ForkJoinTask[Void] {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** The main computation performed by this task. */
     protected def compute(): Unit
 
@@ -135,4 +140,7 @@ abstract class RecursiveAction extends ForkJoinTask[Void] {
 
     /** Always returns null. */
     def getRawResult(): Void
+
+    /** Requires null completion value. */
+    protected def setRawResult(mustBeNull: Void): Unit
 }

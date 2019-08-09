@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.{Exception, IllegalArgumentException, Object, RuntimeException, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Unchecked exception thrown when there is a format specifier which does not
  *  have a corresponding argument or if an argument index refers to an argument
@@ -11,7 +12,17 @@ import java.lang.{Exception, IllegalArgumentException, Object, RuntimeException,
  */
 class MissingFormatArgumentException extends IllegalFormatException {
 
+    /** Constructs an instance of this class with the unmatched format
+     *  specifier.
+     */
+    @stub
+    def this(s: String) = ???
+
     /** Returns the unmatched format specifier. */
     @stub
     def getFormatSpecifier(): String = ???
+
+    /** Returns the detail message string of this throwable. */
+    @stub
+    def getMessage(): String = ???
 }

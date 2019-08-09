@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The StreamTokenizer class takes an input stream and
  *  parses it into "tokens", allowing the tokens to be
@@ -44,6 +45,10 @@ class StreamTokenizer extends Object {
     @stub
     def this(is: InputStream) = ???
 
+    /** Create a tokenizer that parses the given character stream. */
+    @stub
+    def this(r: Reader) = ???
+
     /** If the current token is a number, this field contains the value
      *  of that number.
      */
@@ -55,6 +60,12 @@ class StreamTokenizer extends Object {
      */
     @stub
     val sval: String = ???
+
+    /** After a call to the nextToken method, this field
+     *  contains the type of the token just read.
+     */
+    @stub
+    val ttype: Int = ???
 
     /** Specified that the character argument starts a single-line
      *  comment.
@@ -136,6 +147,13 @@ class StreamTokenizer extends Object {
      */
     @stub
     def whitespaceChars(low: Int, hi: Int): Unit = ???
+
+    /** Specifies that all characters c in the range
+     *  low <= c <= high
+     *  are word constituents.
+     */
+    @stub
+    def wordChars(low: Int, hi: Int): Unit = ???
 }
 
 object StreamTokenizer {

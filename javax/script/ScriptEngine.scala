@@ -2,6 +2,7 @@ package javax.script
 
 import java.io.Reader
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** ScriptEngine is the fundamental interface whose methods must be
  *  fully functional in every implementation of this specification.
@@ -85,6 +86,12 @@ trait ScriptEngine {
     /** Sets a scope of named values to be used by scripts. */
     @stub
     def setBindings(bindings: Bindings, scope: Int): Unit = ???
+
+    /** Sets the default ScriptContext of the ScriptEngine whose Bindings, Reader
+     *  and Writers are used for script executions when no ScriptContext is specified.
+     */
+    @stub
+    def setContext(context: ScriptContext): Unit = ???
 }
 
 object ScriptEngine {
@@ -123,4 +130,10 @@ object ScriptEngine {
      */
     @stub
     val LANGUAGE_VERSION: String = ???
+
+    /** Reserved key for a named value that identifies
+     *  the short name of the scripting language.
+     */
+    @stub
+    val NAME: String = ???
 }

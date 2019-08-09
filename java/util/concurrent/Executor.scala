@@ -1,5 +1,8 @@
 package java.util.concurrent
 
+import java.lang.Runnable
+import scala.scalanative.annotation.stub
+
 /** An object that executes submitted Runnable tasks. This
  *  interface provides a way of decoupling task submission from the
  *  mechanics of how each task will be run, including details of thread
@@ -87,4 +90,8 @@ package java.util.concurrent
  *  its execution begins, perhaps in another thread.
  */
 trait Executor {
+
+    /** Executes the given command at some time in the future. */
+    @stub
+    def execute(command: Runnable): Unit = ???
 }

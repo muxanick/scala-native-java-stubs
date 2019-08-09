@@ -1,6 +1,7 @@
 package javax.print.attribute.standard
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Class MediaSize.JIS includes MediaSize values for JIS
  *  (Japanese) media.      *
@@ -142,4 +143,8 @@ final object MediaSize.JIS extends Object {
     /** Specifies the JIS You ("Western") #6 envelope size, 98 mm by 190 mm. */
     @stub
     val YOU_6: MediaSize = ???
+
+    /** Specifies the JIS You ("Western") #7 envelope size, 92 mm by 165 mm. */
+    @stub
+    val YOU_7: MediaSize = ???
 }

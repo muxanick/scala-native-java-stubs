@@ -6,11 +6,20 @@ import javax.swing.{JColorChooser, JComponent}
 import javax.swing.colorchooser.AbstractColorChooserPanel
 import javax.swing.event.ChangeListener
 import javax.swing.plaf.{ColorChooserUI, ComponentUI}
+import scala.scalanative.annotation.stub
 
 /** Provides the basic look and feel for a JColorChooser.
  *  
  */
 class BasicColorChooserUI extends ColorChooserUI {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** This class should be treated as a "protected" inner class. */
+    @stub
+    object PropertyHandler extends BasicColorChooserUI.PropertyHandler
 
     /** JColorChooser this BasicColorChooserUI is installed on. */
     @stub
@@ -23,6 +32,10 @@ class BasicColorChooserUI extends ColorChooserUI {
     /**  */
     @stub
     protected val previewListener: ChangeListener = ???
+
+    /**  */
+    @stub
+    protected val propertyChangeListener: PropertyChangeListener = ???
 
     /**  */
     @stub
@@ -63,6 +76,12 @@ class BasicColorChooserUI extends ColorChooserUI {
     /** Removes installed preview panel from the UI delegate. */
     @stub
     protected def uninstallPreviewPanel(): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicColorChooserUI {

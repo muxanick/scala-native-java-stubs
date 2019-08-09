@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A collection that contains no duplicate elements.  More formally, sets
  *  contain no pair of elements e1 and e2 such that
@@ -116,4 +117,10 @@ trait Set[E] extends Collection[E] {
     /** Returns an array containing all of the elements in this set. */
     @stub
     def toArray(): Array[Object] = ???
+
+    /** Returns an array containing all of the elements in this set; the
+     *  runtime type of the returned array is that of the specified array.
+     */
+    @stub
+    def toArray[T](a: Array[T]): Array[T] = ???
 }

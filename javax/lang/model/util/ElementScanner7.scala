@@ -3,6 +3,8 @@ package javax.lang.model.util
 import java.lang.Object
 import javax.annotation.processing.SupportedSourceVersion
 import javax.lang.model.SourceVersion
+import javax.lang.model.element.VariableElement
+import scala.scalanative.annotation.stub
 
 /** A scanning visitor of program elements with default behavior
  *  appropriate for the RELEASE_7
@@ -56,4 +58,14 @@ import javax.lang.model.SourceVersion
      */
     @stub
     protected def this() = ???
+
+    /** Constructor for concrete subclasses; uses the argument for the
+     *  default value.
+     */
+    @stub
+    protected def this(defaultValue: R) = ???
+
+    /** This implementation scans the enclosed elements. */
+    @stub
+    def visitVariable(e: VariableElement, p: P): R = ???
 }

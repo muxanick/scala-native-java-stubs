@@ -3,6 +3,7 @@ package java.awt
 import java.awt.image.BufferedImage
 import java.lang.{Object, String}
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** The GraphicsEnvironment class describes the collection
  *  of GraphicsDevice objects and Font objects
@@ -16,6 +17,10 @@ import java.util.Locale
  *  GraphicsDevice can be used.
  */
 abstract class GraphicsEnvironment extends Object {
+
+    /** This is an abstract class and cannot be instantiated directly. */
+    @stub
+    protected def this() = ???
 
     /** Returns a Graphics2D object for rendering into the
      *  specified BufferedImage.
@@ -64,6 +69,11 @@ abstract class GraphicsEnvironment extends Object {
 
     /** Indicates a preference for proportional over non-proportional (e.g. */
     def preferProportionalFonts(): Unit
+
+    /** Registers a created Fontin this
+     *  GraphicsEnvironment.
+     */
+    def registerFont(font: Font): Boolean
 }
 
 object GraphicsEnvironment {

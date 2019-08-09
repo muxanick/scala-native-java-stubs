@@ -3,6 +3,7 @@ package java.time.temporal
 import java.lang.{Long, String}
 import java.time.format.ResolverStyle
 import java.util.{Locale, Map}
+import scala.scalanative.annotation.stub
 
 /** A field of date-time, such as month-of-year or hour-of-minute.
  *  
@@ -65,4 +66,8 @@ trait TemporalField {
     /** Resolves this field to provide a simpler alternative or a date. */
     @stub
     val TemporalAccessor: default = ???
+
+    /** Gets a descriptive name for the field. */
+    @stub
+    def toString(): String = ???
 }

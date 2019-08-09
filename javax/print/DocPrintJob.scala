@@ -2,6 +2,7 @@ package javax.print
 
 import javax.print.attribute.{PrintJobAttributeSet, PrintRequestAttributeSet}
 import javax.print.event.{PrintJobAttributeListener, PrintJobListener}
+import scala.scalanative.annotation.stub
 
 /** This interface represents a print job that can print a specified
  *  document with a set of job attributes.  An object implementing
@@ -34,4 +35,8 @@ trait DocPrintJob {
     /** Removes an attribute listener from this print job. */
     @stub
     def removePrintJobAttributeListener(listener: PrintJobAttributeListener): Unit = ???
+
+    /** Removes a listener from this print job. */
+    @stub
+    def removePrintJobListener(listener: PrintJobListener): Unit = ???
 }

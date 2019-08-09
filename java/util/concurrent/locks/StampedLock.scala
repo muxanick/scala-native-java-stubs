@@ -3,6 +3,7 @@ package java.util.concurrent.locks
 import java.io.Serializable
 import java.lang.{Object, String}
 import java.util.concurrent.TimeUnit
+import scala.scalanative.annotation.stub
 
 /** A capability-based lock with three modes for controlling read/write
  *  access.  The state of a StampedLock consists of a version and mode.
@@ -147,6 +148,10 @@ import java.util.concurrent.TimeUnit
  */
 class StampedLock extends Object with Serializable {
 
+    /** Creates a new lock, initially in unlocked state. */
+    @stub
+    def this() = ???
+
     /** Returns a plain Lock view of this StampedLock in which
      *  the Lock.lock() method is mapped to readLock(),
      *  and similarly for other methods.
@@ -285,4 +290,10 @@ class StampedLock extends Object with Serializable {
      */
     @stub
     def writeLock(): Long = ???
+
+    /** Exclusively acquires the lock, blocking if necessary
+     *  until available or the current thread is interrupted.
+     */
+    @stub
+    def writeLockInterruptibly(): Long = ???
 }

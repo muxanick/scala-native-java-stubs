@@ -8,9 +8,14 @@ import javax.swing.{Icon, JButton, JComponent, JTabbedPane, KeyStroke, SwingCons
 import javax.swing.event.ChangeListener
 import javax.swing.plaf.{ComponentUI, TabbedPaneUI}
 import javax.swing.text.View
+import scala.scalanative.annotation.stub
 
 /** A Basic L&F implementation of TabbedPaneUI. */
 class BasicTabbedPaneUI extends TabbedPaneUI with SwingConstants {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** This class should be treated as a "protected" inner class. */
     @stub
@@ -27,6 +32,10 @@ class BasicTabbedPaneUI extends TabbedPaneUI with SwingConstants {
     /** This class should be treated as a "protected" inner class. */
     @stub
     object TabbedPaneLayout extends BasicTabbedPaneUI.TabbedPaneLayout
+
+    /** This class should be treated as a "protected" inner class. */
+    @stub
+    object TabSelectionHandler extends BasicTabbedPaneUI.TabSelectionHandler
 
     /** A rectangle used for general layout calculations in order
      *  to avoid constructing many new Rectangles on the fly.
@@ -142,6 +151,13 @@ class BasicTabbedPaneUI extends TabbedPaneUI with SwingConstants {
     /**  */
     @stub
     protected val textIconGap: Int = ???
+
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
+    @stub
+    protected val upKey: KeyStroke = ???
 
     /**  */
     @stub
@@ -484,6 +500,12 @@ class BasicTabbedPaneUI extends TabbedPaneUI with SwingConstants {
     /**  */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicTabbedPaneUI {

@@ -2,6 +2,7 @@ package java.text
 
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String, StringBuffer}
+import scala.scalanative.annotation.stub
 
 /** Format is an abstract base class for formatting locale-sensitive
  *  information such as dates, messages, and numbers.
@@ -87,6 +88,10 @@ import java.lang.{Cloneable, Object, String, StringBuffer}
  */
 abstract class Format extends Object with Serializable with Cloneable {
 
+    /** Sole constructor. */
+    @stub
+    protected def this() = ???
+
     /** Creates and returns a copy of this object. */
     def clone(): Object
 
@@ -103,4 +108,17 @@ abstract class Format extends Object with Serializable with Cloneable {
 
     /** Parses text from the beginning of the given string to produce an object. */
     def parseObject(source: String): Object
+
+    /** Parses text from a string to produce an object. */
+    def parseObject(source: String, pos: ParsePosition): Object
+}
+
+object Format {
+    /** Defines constants that are used as attribute keys in the
+     *  AttributedCharacterIterator returned
+     *  from Format.formatToCharacterIterator and as
+     *  field identifiers in FieldPosition.
+     */
+    @stub
+    object Field extends Format.Field
 }

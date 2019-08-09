@@ -1,6 +1,7 @@
 package java.awt
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Enumeration of available window types.
  * 
@@ -22,7 +23,16 @@ object Window.Type {
     /** Represents a popup window. */
     final val POPUP = new Window.Type(POPUP, 1)
 
+    /** Represents a utility window. */
+    final val UTILITY = new Window.Type(UTILITY, 2)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): Window.Type = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[Window.Type] = ???
 }

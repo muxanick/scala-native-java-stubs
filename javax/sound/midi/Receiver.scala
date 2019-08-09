@@ -1,6 +1,7 @@
 package javax.sound.midi
 
 import java.lang.AutoCloseable
+import scala.scalanative.annotation.stub
 
 /** A Receiver receives MidiEvent objects and
  *  typically does something useful in response, such as interpreting them to
@@ -14,4 +15,8 @@ trait Receiver extends AutoCloseable {
      */
     @stub
     def close(): Unit = ???
+
+    /** Sends a MIDI message and time-stamp to this receiver. */
+    @stub
+    def send(message: MidiMessage, timeStamp: Long): Unit = ???
 }

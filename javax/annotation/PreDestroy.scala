@@ -2,6 +2,7 @@ package javax.annotation
 
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** The PreDestroy annotation is used on methods as a callback notification to
  *  signal that the instance is in the process of being removed by the

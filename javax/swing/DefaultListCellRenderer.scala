@@ -3,6 +3,8 @@ package javax.swing
 import java.awt.{Component, Container, Rectangle}
 import java.io.Serializable
 import java.lang.{Object, String}
+import javax.swing.border.Border
+import scala.scalanative.annotation.stub
 
 /** Renders an item in a list.
  *  
@@ -34,6 +36,12 @@ import java.lang.{Object, String}
  *  Please see XMLEncoder.
  */
 class DefaultListCellRenderer extends JLabel with ListCellRenderer[Object] with Serializable {
+
+    /** Constructs a default renderer object for an item
+     *  in a list.
+     */
+    @stub
+    def this() = ???
 
     /** Overridden for performance reasons. */
     @stub
@@ -100,4 +108,18 @@ class DefaultListCellRenderer extends JLabel with ListCellRenderer[Object] with 
     /** Overridden for performance reasons. */
     @stub
     def revalidate(): Unit = ???
+
+    /** Overridden for performance reasons. */
+    @stub
+    def validate(): Unit = ???
+}
+
+object DefaultListCellRenderer {
+    /** A subclass of DefaultListCellRenderer that implements UIResource. */
+    @stub
+    object UIResource extends DefaultListCellRenderer.UIResource
+
+    /**  */
+    @stub
+    protected val noFocusBorder: Border = ???
 }

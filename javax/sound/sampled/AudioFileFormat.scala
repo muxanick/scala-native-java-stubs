@@ -2,6 +2,7 @@ package javax.sound.sampled
 
 import java.lang.{Object, String}
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** An instance of the AudioFileFormat class describes
  *  an audio file, including the file type, the file's length in bytes,
@@ -76,6 +77,10 @@ class AudioFileFormat extends Object {
     @stub
     def this(type: AudioFileFormat.Type, format: AudioFormat, frameLength: Int, properties: Map[String, Object]) = ???
 
+    /** Constructs an audio file format object. */
+    @stub
+    protected def this(type: AudioFileFormat.Type, byteLength: Int, format: AudioFormat, frameLength: Int) = ???
+
     /** Obtains the size in bytes of the entire audio file (not just its audio data). */
     @stub
     def getByteLength(): Int = ???
@@ -99,4 +104,16 @@ class AudioFileFormat extends Object {
     /** Obtain an unmodifiable map of properties. */
     @stub
     def properties(): Map[String, Object] = ???
+
+    /** Provides a string representation of the file format. */
+    @stub
+    def toString(): String = ???
+}
+
+object AudioFileFormat {
+    /** An instance of the Type class represents one of the
+     *  standard types of audio file.
+     */
+    @stub
+    object Type extends AudioFileFormat.Type
 }

@@ -1,5 +1,7 @@
 package java.util
 
+import scala.scalanative.annotation.stub
+
 /** A base type for primitive specializations of Iterator.  Specialized
  *  subtypes are provided for int, long, and
  *  double values.
@@ -21,6 +23,13 @@ package java.util
  *  are encountered.
  */
 trait PrimitiveIterator[T, T_CONS] extends Iterator[T] {
+
+    /** Performs the given action for each remaining element, in the order
+     *  elements occur when iterating, until all elements have been processed
+     *  or the action throws an exception.
+     */
+    @stub
+    def forEachRemaining(action: T_CONS): Unit = ???
 }
 
 object PrimitiveIterator {
@@ -31,4 +40,8 @@ object PrimitiveIterator {
     /** An Iterator specialized for int values. */
     @stub
     val PrimitiveIterator.OfInt: trait = ???
+
+    /** An Iterator specialized for long values. */
+    @stub
+    val PrimitiveIterator.OfLong: trait = ???
 }

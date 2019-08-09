@@ -4,12 +4,17 @@ import java.io.{File, InputStream}
 import java.lang.Object
 import java.net.URL
 import javax.sound.sampled.{AudioFileFormat, AudioInputStream}
+import scala.scalanative.annotation.stub
 
 /** Provider for audio file reading services.  Classes providing concrete
  *  implementations can parse the format information from one or more types of
  *  audio file, and can produce audio input streams from files of these types.
  */
 abstract class AudioFileReader extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Obtains the audio file format of the File provided. */
     def getAudioFileFormat(file: File): AudioFileFormat
@@ -25,4 +30,7 @@ abstract class AudioFileReader extends Object {
 
     /** Obtains an audio input stream from the input stream provided. */
     def getAudioInputStream(stream: InputStream): AudioInputStream
+
+    /** Obtains an audio input stream from the URL provided. */
+    def getAudioInputStream(url: URL): AudioInputStream
 }

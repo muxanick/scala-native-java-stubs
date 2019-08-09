@@ -6,6 +6,7 @@ import java.beans.PropertyChangeListener
 import java.lang.{Object, String}
 import javax.swing.event.{ChangeEvent, ChangeListener}
 import javax.swing.plaf.ButtonUI
+import scala.scalanative.annotation.stub
 
 /** Defines common behaviors for buttons and menu items.
  *  
@@ -32,10 +33,17 @@ import javax.swing.plaf.ButtonUI
  */
 abstract class AbstractButton extends JComponent with ItemSelectable with SwingConstants {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** This class implements accessibility support for the
      *  AbstractButton class.
      */
     protected object AccessibleAbstractButton extends AbstractButton.AccessibleAbstractButton
+
+    /** Extends ChangeListener to be serializable. */
+    protected object ButtonChangeListener extends AbstractButton.ButtonChangeListener
 
     /** The button model's ActionListener. */
     protected val actionListener: ActionListener
@@ -397,6 +405,11 @@ abstract class AbstractButton extends JComponent with ItemSelectable with SwingC
 
     /** Sets the vertical position of the text relative to the icon. */
     def setVerticalTextPosition(textPosition: Int): Unit
+
+    /** Resets the UI property to a value from the current look
+     *  and feel.
+     */
+    def updateUI(): Unit
 }
 
 object AbstractButton {
@@ -489,4 +502,8 @@ object AbstractButton {
     /** Identifies a change in the button's vertical alignment. */
     @stub
     val VERTICAL_ALIGNMENT_CHANGED_PROPERTY: String = ???
+
+    /** Identifies a change in the button's vertical text position. */
+    @stub
+    val VERTICAL_TEXT_POSITION_CHANGED_PROPERTY: String = ???
 }

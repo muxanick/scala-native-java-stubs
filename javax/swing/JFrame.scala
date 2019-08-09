@@ -4,6 +4,7 @@ import java.awt.{Component, Container, Frame, Graphics, GraphicsConfiguration, I
 import java.awt.event.WindowEvent
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** An extended version of java.awt.Frame that adds support for
  *  the JFC/Swing component architecture.
@@ -84,6 +85,18 @@ class JFrame extends Frame with WindowConstants with Accessible with RootPaneCon
     @stub
     def this(title: String) = ???
 
+    /** Creates a JFrame with the specified title and the
+     *  specified GraphicsConfiguration of a screen device.
+     */
+    @stub
+    def this(title: String, gc: GraphicsConfiguration) = ???
+
+    /** This class implements accessibility support for the
+     *  JFrame class.
+     */
+    @stub
+    protected object AccessibleJFrame extends JFrame.AccessibleJFrame
+
     /** The accessible context property. */
     @stub
     protected val accessibleContext: AccessibleContext = ???
@@ -95,6 +108,12 @@ class JFrame extends Frame with WindowConstants with Accessible with RootPaneCon
      */
     @stub
     protected val rootPane: JRootPane = ???
+
+    /** If true then calls to add and setLayout
+     *  will be forwarded to the contentPane.
+     */
+    @stub
+    protected val rootPaneCheckingEnabled: Boolean = ???
 
     /** Adds the specified child Component. */
     @stub
@@ -217,6 +236,10 @@ class JFrame extends Frame with WindowConstants with Accessible with RootPaneCon
      */
     @stub
     def setTransferHandler(newHandler: TransferHandler): Unit = ???
+
+    /** Just calls paint(g). */
+    @stub
+    def update(g: Graphics): Unit = ???
 }
 
 object JFrame {

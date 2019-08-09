@@ -2,6 +2,7 @@ package javax.jws.soap
 
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /**  */
 @Retention ( value = RUNTIME ) 
@@ -15,4 +16,8 @@ import scala.annotation.StaticAnnotation
     /**  */
     @stub
     val style: SOAPBinding.Style = ???
+
+    /**  */
+    @stub
+    val use: SOAPBinding.Use = ???
 }

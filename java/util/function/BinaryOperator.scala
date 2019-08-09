@@ -2,6 +2,7 @@ package java.util.function
 
 import java.lang.FunctionalInterface
 import java.util.Comparator
+import scala.scalanative.annotation.stub
 
 /** Represents an operation upon two operands of the same type, producing a result
  *  of the same type as the operands.  This is a specialization of
@@ -20,4 +21,10 @@ object BinaryOperator {
      */
     @stub
     def maxBy[T](comparator: Comparator[_ >: T]): BinaryOperator[T] = ???
+
+    /** Returns a BinaryOperator which returns the lesser of two elements
+     *  according to the specified Comparator.
+     */
+    @stub
+    def minBy[T](comparator: Comparator[_ >: T]): BinaryOperator[T] = ???
 }

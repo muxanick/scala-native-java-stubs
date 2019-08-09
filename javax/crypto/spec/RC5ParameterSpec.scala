@@ -2,6 +2,7 @@ package javax.crypto.spec
 
 import java.lang.Object
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** This class specifies the parameters used with the
  *  RC5
@@ -29,6 +30,12 @@ class RC5ParameterSpec extends Object with AlgorithmParameterSpec {
     @stub
     def this(version: Int, rounds: Int, wordSize: Int, iv: Array[Byte]) = ???
 
+    /** Constructs a parameter set for RC5 from the given version, number of
+     *  rounds, word size (in bits), and IV.
+     */
+    @stub
+    def this(version: Int, rounds: Int, wordSize: Int, iv: Array[Byte], offset: Int) = ???
+
     /** Tests for equality between the specified object and this
      *  object.
      */
@@ -50,4 +57,8 @@ class RC5ParameterSpec extends Object with AlgorithmParameterSpec {
     /** Returns the word size in bits. */
     @stub
     def getWordSize(): Int = ???
+
+    /** Calculates a hash code value for the object. */
+    @stub
+    def hashCode(): Int = ???
 }

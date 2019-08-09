@@ -2,6 +2,7 @@ package javax.sql.rowset.spi
 
 import java.lang.{Exception, Object, String, Throwable}
 import java.sql.SQLException
+import scala.scalanative.annotation.stub
 
 /** Indicates an error with the SyncProvider mechanism. This exception
  *  is created by a SyncProvider abstract class extension if it
@@ -43,6 +44,12 @@ class SyncProviderException extends SQLException {
     @stub
     def this(msg: String) = ???
 
+    /** Constructs a SyncProviderException object with the specified
+     *  SyncResolver instance.
+     */
+    @stub
+    def this(syncResolver: SyncResolver) = ???
+
     /** Retrieves the SyncResolver object that has been set for
      *  this SyncProviderException object, or
      *  if none has been set, an instance of the default SyncResolver
@@ -50,4 +57,10 @@ class SyncProviderException extends SQLException {
      */
     @stub
     def getSyncResolver(): SyncResolver = ???
+
+    /** Sets the SyncResolver object for this
+     *  SyncProviderException object to the one supplied.
+     */
+    @stub
+    def setSyncResolver(syncResolver: SyncResolver): Unit = ???
 }

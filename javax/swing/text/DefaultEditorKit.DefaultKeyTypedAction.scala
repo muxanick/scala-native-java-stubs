@@ -1,7 +1,9 @@
 package javax.swing.text
 
+import java.awt.event.ActionEvent
 import java.lang.Object
 import javax.swing.AbstractAction
+import scala.scalanative.annotation.stub
 
 /** The action that is executed by default if
  *  a key typed event is received and there
@@ -30,3 +32,12 @@ import javax.swing.AbstractAction
  *  Please see XMLEncoder.
  */
 object DefaultEditorKit.DefaultKeyTypedAction extends TextAction {
+
+    /** Creates this object with the appropriate identifier. */
+    @stub
+    def DefaultKeyTypedAction() = ???
+
+    /** The operation to perform when this action is triggered. */
+    @stub
+    def actionPerformed(e: ActionEvent): Unit = ???
+}

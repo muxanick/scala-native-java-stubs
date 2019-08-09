@@ -1,6 +1,7 @@
 package java.net
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class represents a datagram packet.
  *  
@@ -45,6 +46,13 @@ final class DatagramPacket extends Object {
      */
     @stub
     def this(buf: Array[Byte], offset: Int, length: Int, address: SocketAddress) = ???
+
+    /** Constructs a datagram packet for sending packets of length
+     *  length to the specified port number on the specified
+     *  host.
+     */
+    @stub
+    def this(buf: Array[Byte], length: Int, address: SocketAddress) = ???
 
     /** Returns the IP address of the machine to which this datagram is being
      *  sent or from which the datagram was received.
@@ -103,4 +111,10 @@ final class DatagramPacket extends Object {
      */
     @stub
     def setPort(iport: Int): Unit = ???
+
+    /** Sets the SocketAddress (usually IP address + port number) of the remote
+     *  host to which this datagram is being sent.
+     */
+    @stub
+    def setSocketAddress(address: SocketAddress): Unit = ???
 }

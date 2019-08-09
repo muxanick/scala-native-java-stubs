@@ -1,5 +1,9 @@
 package java.awt
 
+import java.awt.geom.{AffineTransform, Rectangle2D}
+import java.awt.image.ColorModel
+import scala.scalanative.annotation.stub
+
 /** This Paint interface defines how color patterns
  *  can be generated for Graphics2D operations.  A class
  *  implementing the Paint interface is added to the
@@ -13,4 +17,10 @@ package java.awt
  *  object is itself cloned.
  */
 trait Paint extends Transparency {
+
+    /** Creates and returns a PaintContext used to
+     *  generate the color pattern.
+     */
+    @stub
+    def createContext(cm: ColorModel, deviceBounds: Rectangle, userBounds: Rectangle2D, xform: AffineTransform, hints: RenderingHints): PaintContext = ???
 }

@@ -4,6 +4,7 @@ import java.awt.{Component, Container, Dialog, Dialog.ModalityType, Frame, Graph
 import java.awt.event.WindowEvent
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** The main class for creating a dialog window. You can use this class
  *  to create a custom dialog, or invoke the many class methods
@@ -148,6 +149,18 @@ class JDialog extends Dialog with WindowConstants with Accessible with RootPaneC
     @stub
     def this(owner: Window, title: String, modalityType: Dialog.ModalityType) = ???
 
+    /** Creates a dialog with the specified title, owner Window,
+     *  modality and GraphicsConfiguration.
+     */
+    @stub
+    def this(owner: Window, title: String, modalityType: Dialog.ModalityType, gc: GraphicsConfiguration) = ???
+
+    /** This class implements accessibility support for the
+     *  JDialog class.
+     */
+    @stub
+    protected object AccessibleJDialog extends JDialog.AccessibleJDialog
+
     /**  */
     @stub
     protected val accessibleContext: AccessibleContext = ???
@@ -155,6 +168,12 @@ class JDialog extends Dialog with WindowConstants with Accessible with RootPaneC
     /**  */
     @stub
     protected val rootPane: JRootPane = ???
+
+    /** If true then calls to add and setLayout
+     *  will be forwarded to the contentPane.
+     */
+    @stub
+    protected val rootPaneCheckingEnabled: Boolean = ???
 
     /** Adds the specified child Component. */
     @stub
@@ -275,6 +294,10 @@ class JDialog extends Dialog with WindowConstants with Accessible with RootPaneC
      */
     @stub
     def setTransferHandler(newHandler: TransferHandler): Unit = ???
+
+    /** Calls paint(g). */
+    @stub
+    def update(g: Graphics): Unit = ???
 }
 
 object JDialog {

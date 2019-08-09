@@ -1,6 +1,7 @@
 package java.util.function
 
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** Represents a predicate (boolean-valued function) of two arguments.  This is
  *  the two-arity specialization of Predicate.
@@ -27,4 +28,8 @@ import java.lang.FunctionalInterface
      */
     @stub
     val BiPredicate[T, U]: default = ???
+
+    /** Evaluates this predicate on the given arguments. */
+    @stub
+    def test(t: T, u: U): Boolean = ???
 }

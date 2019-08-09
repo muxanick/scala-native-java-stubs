@@ -4,6 +4,7 @@ import java.awt.RenderingHints
 import java.awt.color.{ColorSpace, ICC_Profile}
 import java.awt.geom.{Point2D, Rectangle2D}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class performs a pixel-by-pixel color conversion of the data in
  *  the source image.  The resulting color values are scaled to the precision
@@ -36,6 +37,12 @@ class ColorConvertOp extends Object with BufferedImageOp with RasterOp {
     /** Constructs a new ColorConvertOp from an array of ICC_Profiles. */
     @stub
     def this(profiles: Array[ICC_Profile], hints: RenderingHints) = ???
+
+    /** Constructs a new ColorConvertOp which will convert
+     *  from a source color space to a destination color space.
+     */
+    @stub
+    def this(hints: RenderingHints) = ???
 
     /** Creates a zeroed destination image with the correct size and number of
      *  bands, given this source.
@@ -74,4 +81,8 @@ class ColorConvertOp extends Object with BufferedImageOp with RasterOp {
      */
     @stub
     def getPoint2D(srcPt: Point2D, dstPt: Point2D): Point2D = ???
+
+    /** Returns the rendering hints used by this op. */
+    @stub
+    def getRenderingHints(): RenderingHints = ???
 }

@@ -1,6 +1,7 @@
 package java.awt
 
-import java.lang.{Cloneable, Object}
+import java.lang.{Cloneable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A set of attributes which control the output of a printed page.
  *  
@@ -42,6 +43,12 @@ final class PageAttributes extends Object with Cloneable {
      */
     @stub
     def this(color: PageAttributes.ColorType, media: PageAttributes.MediaType, orientationRequested: PageAttributes.OrientationRequestedType, origin: PageAttributes.OriginType, printQuality: PageAttributes.PrintQualityType, printerResolution: Array[Int]) = ???
+
+    /** Constructs a PageAttributes instance which is a copy of the supplied
+     *  PageAttributes.
+     */
+    @stub
+    def this(obj: PageAttributes) = ???
 
     /** Creates and returns a copy of this PageAttributes. */
     @stub
@@ -154,6 +161,10 @@ final class PageAttributes extends Object with Cloneable {
     /** Sets the print quality for pages using these attributes to the default. */
     @stub
     def setPrintQualityToDefault(): Unit = ???
+
+    /** Returns a string representation of this PageAttributes. */
+    @stub
+    def toString(): String = ???
 }
 
 object PageAttributes {
@@ -172,4 +183,8 @@ object PageAttributes {
     /** A type-safe enumeration of possible origins. */
     @stub
     object OriginType extends PageAttributes.OriginType
+
+    /** A type-safe enumeration of possible print qualities. */
+    @stub
+    object PrintQualityType extends PageAttributes.PrintQualityType
 }

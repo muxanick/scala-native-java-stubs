@@ -1,6 +1,7 @@
 package javax.sound.sampled
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A Line.Info object contains information about a line.
  *  The only information provided by Line.Info itself
@@ -18,6 +19,10 @@ import java.lang.{Class, Object}
  */
 object Line.Info extends Object {
 
+    /** Constructs an info object that describes a line of the specified class. */
+    @stub
+    def Info(lineClass: Class[_]) = ???
+
     /** Obtains the class of the line that this Line.Info object describes. */
     @stub
     def getLineClass(): Class[_] = ???
@@ -25,4 +30,8 @@ object Line.Info extends Object {
     /** Indicates whether the specified info object matches this one. */
     @stub
     def matches(info: Line.Info): Boolean = ???
+
+    /** Obtains a textual description of the line info. */
+    @stub
+    def toString(): String = ???
 }

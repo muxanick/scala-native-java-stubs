@@ -1,6 +1,7 @@
 package javax.script
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** The generic Exception class for the Scripting APIs.  Checked
  *  exception types thrown by underlying scripting implementations must be wrapped in instances of
@@ -25,6 +26,12 @@ class ScriptException extends Exception {
     @stub
     def this(message: String, fileName: String, lineNumber: Int) = ???
 
+    /** ScriptException constructor specifying message, filename, line number
+     *  and column number.
+     */
+    @stub
+    def this(message: String, fileName: String, lineNumber: Int, columnNumber: Int) = ???
+
     /** Get the column number on which an error occurred. */
     @stub
     def getColumnNumber(): Int = ???
@@ -36,4 +43,10 @@ class ScriptException extends Exception {
     /** Get the line number on which an error occurred. */
     @stub
     def getLineNumber(): Int = ???
+
+    /** Returns a message containing the String passed to a constructor as well as
+     *  line and column numbers and filename if any of these are known.
+     */
+    @stub
+    def getMessage(): String = ???
 }

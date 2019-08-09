@@ -1,6 +1,7 @@
 package java.io
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Signals that a malformed string in
  *  modified UTF-8
@@ -19,4 +20,10 @@ class UTFDataFormatException extends IOException {
      */
     @stub
     def this() = ???
+
+    /** Constructs a UTFDataFormatException with the
+     *  specified detail message.
+     */
+    @stub
+    def this(s: String) = ???
 }

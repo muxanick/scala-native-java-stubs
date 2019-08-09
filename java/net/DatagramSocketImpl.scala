@@ -2,12 +2,20 @@ package java.net
 
 import java.io.FileDescriptor
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Abstract datagram and multicast socket implementation base class. */
 abstract class DatagramSocketImpl extends Object with SocketOptions {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** The file descriptor object. */
     protected val fd: FileDescriptor
+
+    /** The local port number. */
+    protected val localPort: Int
 
     /** Binds a datagram socket to a local port and address. */
     protected def bind(lport: Int, laddr: InetAddress): Unit
@@ -65,4 +73,10 @@ abstract class DatagramSocketImpl extends Object with SocketOptions {
 
     /** Set the TTL (time-to-live) option. */
     protected def setTimeToLive(ttl: Int): Unit
+
+    /** Deprecated. 
+     * use setTimeToLive instead.
+     * 
+     */
+    protected def setTTL(ttl: Byte): Unit
 }

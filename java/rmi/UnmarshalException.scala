@@ -2,6 +2,7 @@ package java.rmi
 
 import java.io.IOException
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** An UnmarshalException can be thrown while unmarshalling the
  *  parameters or results of a remote method call if any of the following
@@ -27,4 +28,10 @@ class UnmarshalException extends RemoteException {
      */
     @stub
     def this(s: String) = ???
+
+    /** Constructs an UnmarshalException with the specified
+     *  detail message and nested exception.
+     */
+    @stub
+    def this(s: String, ex: Exception) = ???
 }

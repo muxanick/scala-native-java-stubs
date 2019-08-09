@@ -1,5 +1,7 @@
 package java.security.cert
 
+import scala.scalanative.annotation.stub
+
 /** Performs one or more checks on each Certificate of a
  *  CertPath.
  * 
@@ -19,4 +21,8 @@ trait CertPathChecker {
     /** Initializes the internal state of this CertPathChecker. */
     @stub
     def init(forward: Boolean): Unit = ???
+
+    /** Indicates if forward checking is supported. */
+    @stub
+    def isForwardCheckingSupported(): Boolean = ???
 }

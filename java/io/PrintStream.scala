@@ -2,6 +2,7 @@ package java.io
 
 import java.lang.{Appendable, CharSequence, Object, String}
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** A PrintStream adds functionality to another output stream,
  *  namely the ability to print representations of various data values
@@ -50,6 +51,12 @@ class PrintStream extends FilterOutputStream with Appendable with Closeable {
      */
     @stub
     def this(fileName: String) = ???
+
+    /** Creates a new print stream, without automatic line flushing, with the
+     *  specified file name and charset.
+     */
+    @stub
+    def this(fileName: String, csn: String) = ???
 
     /** Appends the specified character to this output stream. */
     @stub
@@ -190,4 +197,8 @@ class PrintStream extends FilterOutputStream with Appendable with Closeable {
      */
     @stub
     def write(buf: Array[Byte], off: Int, len: Int): Unit = ???
+
+    /** Writes the specified byte to this stream. */
+    @stub
+    def write(b: Int): Unit = ???
 }

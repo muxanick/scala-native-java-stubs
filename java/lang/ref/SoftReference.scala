@@ -1,6 +1,7 @@
 package java.lang.ref
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Soft reference objects, which are cleared at the discretion of the garbage
  *  collector in response to memory demand.  Soft references are most often used
@@ -37,4 +38,14 @@ class SoftReference[T] extends Reference[T] {
     /** Creates a new soft reference that refers to the given object. */
     @stub
     def this(referent: T) = ???
+
+    /** Creates a new soft reference that refers to the given object and is
+     *  registered with the given queue.
+     */
+    @stub
+    def this(referent: T, q: ReferenceQueue[_ >: T]) = ???
+
+    /** Returns this reference object's referent. */
+    @stub
+    def get(): T = ???
 }

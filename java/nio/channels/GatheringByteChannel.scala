@@ -1,6 +1,7 @@
 package java.nio.channels
 
 import java.nio.ByteBuffer
+import scala.scalanative.annotation.stub
 
 /** A channel that can write bytes from a sequence of buffers.
  * 
@@ -16,4 +17,10 @@ trait GatheringByteChannel extends WritableByteChannel {
     /** Writes a sequence of bytes to this channel from the given buffers. */
     @stub
     def write(srcs: Array[ByteBuffer]): Long = ???
+
+    /** Writes a sequence of bytes to this channel from a subsequence of the
+     *  given buffers.
+     */
+    @stub
+    def write(srcs: Array[ByteBuffer], offset: Int, length: Int): Long = ???
 }

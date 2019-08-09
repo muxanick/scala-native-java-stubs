@@ -4,6 +4,7 @@ import java.awt.{Component, Container}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.plaf.SeparatorUI
+import scala.scalanative.annotation.stub
 
 /** JSeparator provides a general purpose component for
  *  implementing divider lines - most commonly used as a divider
@@ -39,6 +40,18 @@ class JSeparator extends JComponent with SwingConstants with Accessible {
     @stub
     def this() = ???
 
+    /** Creates a new separator with the specified horizontal or
+     *  vertical orientation.
+     */
+    @stub
+    def this(orientation: Int) = ???
+
+    /** This class implements accessibility support for the
+     *  JSeparator class.
+     */
+    @stub
+    protected object AccessibleJSeparator extends JSeparator.AccessibleJSeparator
+
     /** Gets the AccessibleContext associated with this JSeparator. */
     @stub
     def getAccessibleContext(): AccessibleContext = ???
@@ -66,4 +79,8 @@ class JSeparator extends JComponent with SwingConstants with Accessible {
     /** Sets the L&F object that renders this component. */
     @stub
     def setUI(ui: SeparatorUI): Unit = ???
+
+    /** Resets the UI property to a value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
 }

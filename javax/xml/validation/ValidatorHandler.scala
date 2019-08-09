@@ -1,8 +1,7 @@
 package javax.xml.validation
 
 import java.lang.{Object, String}
-import org.w3c.dom.ls.LSResourceResolver
-import org.xml.sax.{ContentHandler, ErrorHandler}
+import scala.scalanative.annotation.stub
 
 /** Streaming validator that works on SAX stream.
  * 
@@ -81,6 +80,10 @@ import org.xml.sax.{ContentHandler, ErrorHandler}
  */
 abstract class ValidatorHandler extends Object with ContentHandler {
 
+    /** Constructor for derived classes. */
+    @stub
+    protected def this() = ???
+
     /** Gets the ContentHandler which receives the
      *  augmented validation result.
      */
@@ -118,4 +121,9 @@ abstract class ValidatorHandler extends Object with ContentHandler {
 
     /** Set the value of a property. */
     def setProperty(name: String, object: Object): Unit
+
+    /** Sets the LSResourceResolver to customize
+     *  resource resolution while in a validation episode.
+     */
+    def setResourceResolver(resourceResolver: LSResourceResolver): Unit
 }

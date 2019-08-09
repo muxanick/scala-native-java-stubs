@@ -1,10 +1,9 @@
 package javax.xml.bind.helpers
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.net.URL
 import javax.xml.bind.ValidationEventLocator
-import org.w3c.dom.Node
-import org.xml.sax.Locator
+import scala.scalanative.annotation.stub
 
 /** Default implementation of the ValidationEventLocator interface.
  * 
@@ -30,6 +29,10 @@ class ValidationEventLocatorImpl extends Object with ValidationEventLocator {
     /** Constructs an object that points to a JAXB content object. */
     @stub
     def this(_object: Object) = ???
+
+    /** Constructs an object from the location information of a SAXParseException. */
+    @stub
+    def this(e: SAXParseException) = ???
 
     /** Return the column number if available */
     @stub
@@ -78,4 +81,10 @@ class ValidationEventLocatorImpl extends Object with ValidationEventLocator {
     /** Set the URL field on this event locator. */
     @stub
     def setURL(_url: URL): Unit = ???
+
+    /** Returns a string representation of this object in a format
+     *  helpful to debugging.
+     */
+    @stub
+    def toString(): String = ???
 }

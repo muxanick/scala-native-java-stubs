@@ -2,6 +2,7 @@ package java.nio.file
 
 import java.lang.{Class, Object, String}
 import java.nio.file.attribute.{FileAttributeView, FileStoreAttributeView}
+import scala.scalanative.annotation.stub
 
 /** Storage for files. A FileStore represents a storage pool, device,
  *  partition, volume, concrete file system or other implementation specific means
@@ -14,6 +15,10 @@ import java.nio.file.attribute.{FileAttributeView, FileStoreAttributeView}
  *  that provide a read-only or updatable view of a set of file store attributes.
  */
 abstract class FileStore extends Object {
+
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this() = ???
 
     /** Reads the value of a file store attribute. */
     def getAttribute(attribute: String): Object
@@ -47,4 +52,7 @@ abstract class FileStore extends Object {
      *  identified by the given file attribute view.
      */
     def supportsFileAttributeView(name: String): Boolean
+
+    /** Returns the type of this file store. */
+    def type(): String
 }

@@ -1,6 +1,7 @@
 package java.util.stream
 
 import java.util.function.LongConsumer
+import scala.scalanative.annotation.stub
 
 /** A mutable builder for a LongStream.
  * 
@@ -20,4 +21,8 @@ object trait LongStream.Builder extends LongConsumer {
     /** Adds an element to the stream being built. */
     @stub
     val this: default = ???
+
+    /** Builds the stream, transitioning this builder to the built state. */
+    @stub
+    def build(): LongStream = ???
 }

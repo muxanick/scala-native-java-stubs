@@ -5,9 +5,18 @@ import java.lang.Object
 import javax.swing.{JComponent, JInternalFrame, JInternalFrame.JDesktopIcon}
 import javax.swing.event.MouseInputListener
 import javax.swing.plaf.{ComponentUI, DesktopIconUI}
+import scala.scalanative.annotation.stub
 
 /** Basic L&F for a minimized window on a desktop. */
 class BasicDesktopIconUI extends DesktopIconUI {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** Listens for mouse movements and acts on them. */
+    @stub
+    object MouseInputHandler extends BasicDesktopIconUI.MouseInputHandler
 
     /**  */
     @stub
@@ -16,6 +25,10 @@ class BasicDesktopIconUI extends DesktopIconUI {
     /**  */
     @stub
     protected val frame: JInternalFrame = ???
+
+    /** The title pane component used in the desktop icon. */
+    @stub
+    protected val iconPane: JComponent = ???
 
     /**  */
     @stub
@@ -72,6 +85,12 @@ class BasicDesktopIconUI extends DesktopIconUI {
     /**  */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicDesktopIconUI {

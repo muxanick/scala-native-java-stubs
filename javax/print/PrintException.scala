@@ -1,6 +1,7 @@
 package javax.print
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Class PrintException encapsulates a printing-related error condition that
  *  occurred while using a Print Service instance. This base class
@@ -20,4 +21,10 @@ class PrintException extends Exception {
     /** Construct a print exception with the given detail message. */
     @stub
     def this(s: String) = ???
+
+    /** Construct a print exception with the given detail message
+     *  and chained exception.
+     */
+    @stub
+    def this(s: String, e: Exception) = ???
 }

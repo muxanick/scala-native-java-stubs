@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An abstract Spliterator.OfDouble that implements
  *  trySplit to permit limited parallelism.
@@ -13,6 +14,12 @@ import java.lang.Object
  */
 object abstract Spliterators.AbstractDoubleSpliterator extends Object with Spliterator.OfDouble {
 
+    /** Creates a spliterator reporting the given estimated size and
+     *  characteristics.
+     */
+    @stub
+    protected def AbstractDoubleSpliterator(est: Long, additionalCharacteristics: Int) = ???
+
     /** Returns a set of characteristics of this Spliterator and its
      *  elements.
      */
@@ -24,4 +31,11 @@ object abstract Spliterators.AbstractDoubleSpliterator extends Object with Split
      */
     @stub
     def estimateSize(): Long = ???
+
+    /** If this spliterator can be partitioned, returns a Spliterator
+     *  covering elements, that will, upon return from this method, not
+     *  be covered by this Spliterator.
+     */
+    @stub
+    def trySplit(): Spliterator.OfDouble = ???
 }

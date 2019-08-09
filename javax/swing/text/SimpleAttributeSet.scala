@@ -1,8 +1,9 @@
 package javax.swing.text
 
 import java.io.Serializable
-import java.lang.{Cloneable, Object}
+import java.lang.{Cloneable, Object, String}
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** A straightforward implementation of MutableAttributeSet using a
  *  hash table.
@@ -21,6 +22,10 @@ class SimpleAttributeSet extends Object with MutableAttributeSet with Serializab
     /** Creates a new attribute set. */
     @stub
     def this() = ???
+
+    /** Creates a new attribute set based on a supplied set of attributes. */
+    @stub
+    def this(source: AttributeSet) = ???
 
     /** Adds an attribute to the list. */
     @stub
@@ -101,4 +106,14 @@ class SimpleAttributeSet extends Object with MutableAttributeSet with Serializab
     /** Sets the resolving parent. */
     @stub
     def setResolveParent(parent: AttributeSet): Unit = ???
+
+    /** Converts the attribute set to a String. */
+    @stub
+    def toString(): String = ???
+}
+
+object SimpleAttributeSet {
+    /** An empty attribute set. */
+    @stub
+    val EMPTY: AttributeSet = ???
 }

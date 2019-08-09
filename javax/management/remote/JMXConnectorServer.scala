@@ -1,7 +1,9 @@
 package javax.management.remote
 
 import java.lang.{Boolean, Object, String}
+import java.util.Map
 import javax.management.{MBeanNotificationInfo, MBeanRegistration, MBeanServer, NotificationBroadcasterSupport, ObjectName}
+import scala.scalanative.annotation.stub
 
 /** Superclass of every connector server.  A connector server is
  *  attached to an MBean server.  It listens for client connection
@@ -31,6 +33,12 @@ abstract class JMXConnectorServer extends NotificationBroadcasterSupport with JM
      */
     @stub
     def this() = ???
+
+    /** Constructs a connector server that is attached to the given
+     *  MBean server.
+     */
+    @stub
+    def this(mbeanServer: MBeanServer) = ???
 
     /** Called by a subclass when a client connection is closed
      *  normally.
@@ -82,4 +90,15 @@ abstract class JMXConnectorServer extends NotificationBroadcasterSupport with JM
      *  that arrive through this connector server.
      */
     def setMBeanServerForwarder(mbsf: MBeanServerForwarder): Unit
+
+    /** Returns a client stub for this connector server. */
+    def toJMXConnector(env: Map[String, _]): JMXConnector
+}
+
+object JMXConnectorServer {
+    /** Name of the attribute that specifies the authenticator for a
+     *  connector server.
+     */
+    @stub
+    val AUTHENTICATOR: String = ???
 }

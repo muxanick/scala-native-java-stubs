@@ -1,7 +1,8 @@
 package java.util
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.function.IntConsumer
+import scala.scalanative.annotation.stub
 
 /** A state object for collecting statistics such as count, min, max, sum, and
  *  average.
@@ -28,6 +29,13 @@ import java.util.function.IntConsumer
  *  maximum, sum, and average of their number of dependents.
  */
 class IntSummaryStatistics extends Object with IntConsumer {
+
+    /** Construct an empty instance with zero count, zero sum,
+     *  Integer.MAX_VALUE min, Integer.MIN_VALUE max and zero
+     *  average.
+     */
+    @stub
+    def this() = ???
 
     /** Records a new value into the summary information */
     @stub
@@ -64,4 +72,8 @@ class IntSummaryStatistics extends Object with IntConsumer {
      */
     @stub
     def getSum(): Long = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }

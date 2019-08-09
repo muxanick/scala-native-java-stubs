@@ -1,5 +1,8 @@
 package javax.xml.crypto
 
+import java.security.Key
+import scala.scalanative.annotation.stub
+
 /** The result returned by the KeySelector.select
  *  method.
  *  
@@ -9,4 +12,8 @@ package javax.xml.crypto
  *  such as a chain of certificates or debugging information.
  */
 trait KeySelectorResult {
+
+    /** Returns the selected key. */
+    @stub
+    def getKey(): Key = ???
 }

@@ -1,5 +1,9 @@
 package javax.management.remote
 
+import java.lang.Object
+import javax.security.auth.Subject
+import scala.scalanative.annotation.stub
+
 /** Interface to define how remote credentials are converted into a
  *  JAAS Subject.  This interface is used by the RMI Connector Server,
  *  and can be used by other connector servers.
@@ -19,4 +23,10 @@ package javax.management.remote
  *  will be then performed based on the given set of principals.
  */
 trait JMXAuthenticator {
+
+    /** Authenticates the MBeanServerConnection client
+     *  with the given client credentials.
+     */
+    @stub
+    def authenticate(credentials: Object): Subject = ???
 }

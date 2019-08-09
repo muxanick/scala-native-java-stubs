@@ -1,8 +1,9 @@
 package java.time.zone
 
 import java.io.Serializable
-import java.lang.{Comparable, Object}
+import java.lang.{Comparable, Object, String}
 import java.time.{Duration, Instant, LocalDateTime, ZoneOffset}
+import scala.scalanative.annotation.stub
 
 /** A transition between two offsets caused by a discontinuity in the local time-line.
  *  
@@ -71,6 +72,10 @@ final class ZoneOffsetTransition extends Object with Comparable[ZoneOffsetTransi
     /** Gets the transition instant as an epoch second. */
     @stub
     def toEpochSecond(): Long = ???
+
+    /** Returns a string describing this object. */
+    @stub
+    def toString(): String = ???
 }
 
 object ZoneOffsetTransition {

@@ -1,6 +1,7 @@
 package javax.swing
 
 import java.awt.{Component, Container}
+import scala.scalanative.annotation.stub
 
 /** This interface is implemented by components that have a single
  *  JRootPane child: JDialog, JFrame, JWindow, JApplet, JInternalFrame.
@@ -71,4 +72,8 @@ trait RootPaneContainer {
      */
     @stub
     def setGlassPane(glassPane: Component): Unit = ???
+
+    /** A Container that manages the contentPane and in some cases a menu bar. */
+    @stub
+    def setLayeredPane(layeredPane: JLayeredPane): Unit = ???
 }

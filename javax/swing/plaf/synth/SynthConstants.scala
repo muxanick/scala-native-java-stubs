@@ -1,5 +1,7 @@
 package javax.swing.plaf.synth
 
+import scala.scalanative.annotation.stub
+
 /** Constants used by Synth. Not all Components support all states. A
  *  Component will at least be in one of the primary states. That is, the
  *  return value from SynthContext.getComponentState() will at
@@ -34,4 +36,8 @@ object SynthConstants {
     /** Primary state indicating the region is in a pressed state. */
     @stub
     val PRESSED: Int = ???
+
+    /** Indicates the region is selected. */
+    @stub
+    val SELECTED: Int = ???
 }

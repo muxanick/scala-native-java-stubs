@@ -1,8 +1,9 @@
 package javax.swing.tree
 
 import java.io.Serializable
-import java.lang.{Cloneable, Object}
+import java.lang.{Cloneable, Object, String}
 import java.util.{Enumeration, Vector}
+import scala.scalanative.annotation.stub
 
 /** A DefaultMutableTreeNode is a general-purpose node in a tree data
  *  structure.
@@ -66,6 +67,13 @@ class DefaultMutableTreeNode extends Object with Cloneable with MutableTreeNode 
     @stub
     def this(userObject: Object) = ???
 
+    /** Creates a tree node with no parent, no children, initialized with
+     *  the specified user object, and that allows children only if
+     *  specified.
+     */
+    @stub
+    def this(userObject: Object, allowsChildren: Boolean) = ???
+
     /** true if the node is able to have children */
     @stub
     protected val allowsChildren: Boolean = ???
@@ -77,6 +85,10 @@ class DefaultMutableTreeNode extends Object with Cloneable with MutableTreeNode 
     /** this node's parent, or null if this node has no parent */
     @stub
     protected val parent: MutableTreeNode = ???
+
+    /** optional user object */
+    @stub
+    protected val userObject: Object = ???
 
     /** Removes newChild from its parent and makes it a child of
      *  this node by adding it to the end of this node's child array.
@@ -336,6 +348,12 @@ class DefaultMutableTreeNode extends Object with Cloneable with MutableTreeNode 
     /** Sets the user object for this node to userObject. */
     @stub
     def setUserObject(userObject: Object): Unit = ???
+
+    /** Returns the result of sending toString() to this node's
+     *  user object, or the empty string if the node has no user object.
+     */
+    @stub
+    def toString(): String = ???
 }
 
 object DefaultMutableTreeNode {

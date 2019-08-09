@@ -1,6 +1,7 @@
 package java.lang
 
 import java.io.Serializable
+import scala.scalanative.annotation.stub
 
 /** A mutable sequence of characters.  This class provides an API compatible
  *  with StringBuffer, but with no guarantee of synchronization.
@@ -62,6 +63,12 @@ final class StringBuilder extends Object with Serializable with CharSequence {
      */
     @stub
     def this(capacity: Int) = ???
+
+    /** Constructs a string builder initialized to the contents of the
+     *  specified string.
+     */
+    @stub
+    def this(str: String) = ???
 
     /** Appends the string representation of the boolean
      *  argument to the sequence.
@@ -327,4 +334,8 @@ final class StringBuilder extends Object with Serializable with CharSequence {
     /** Returns a string representing the data in this sequence. */
     @stub
     def toString(): String = ???
+
+    /** Attempts to reduce storage used for the character sequence. */
+    @stub
+    def trimToSize(): Unit = ???
 }

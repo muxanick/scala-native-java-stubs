@@ -9,6 +9,7 @@ import java.util.{EventListener, Locale, Set}
 import javax.swing.border.Border
 import javax.swing.event.{AncestorListener, EventListenerList}
 import javax.swing.plaf.ComponentUI
+import scala.scalanative.annotation.stub
 
 /** The base class for all Swing components except top-level containers.
  *  To use a component that inherits from JComponent,
@@ -105,6 +106,15 @@ import javax.swing.plaf.ComponentUI
  *  Please see XMLEncoder.
  */
 abstract class JComponent extends Container with Serializable {
+
+    /** Default JComponent constructor. */
+    @stub
+    def this() = ???
+
+    /** Inner class of JComponent used to provide default support for
+     *  accessibility.
+     */
+    object AccessibleJComponent extends JComponent.AccessibleJComponent
 
     /** A list of event listeners for this component. */
     protected val listenerList: EventListenerList
@@ -677,6 +687,9 @@ abstract class JComponent extends Container with Serializable {
 
     /** Calls paint. */
     def update(g: Graphics): Unit
+
+    /** Resets the UI property to a value from the current look and feel. */
+    def updateUI(): Unit
 }
 
 object JComponent {
@@ -704,6 +717,14 @@ object JComponent {
      */
     @stub
     val WHEN_FOCUSED: Int = ???
+
+    /** Constant used for registerKeyboardAction that
+     *  means that the command should be invoked when
+     *  the receiving component is in the window that has the focus
+     *  or is itself the focused component.
+     */
+    @stub
+    val WHEN_IN_FOCUSED_WINDOW: Int = ???
 
     /** Returns the default locale used to initialize each JComponent's
      *  locale property upon creation.

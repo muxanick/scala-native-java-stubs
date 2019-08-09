@@ -2,6 +2,7 @@ package java.io
 
 import java.lang.{Object, String}
 import java.nio.charset.{Charset, CharsetDecoder}
+import scala.scalanative.annotation.stub
 
 /** An InputStreamReader is a bridge from byte streams to character streams: It
  *  reads bytes and decodes them into characters using a specified charset.  The charset that it uses
@@ -36,6 +37,10 @@ class InputStreamReader extends Reader {
     @stub
     def this(in: InputStream, dec: CharsetDecoder) = ???
 
+    /** Creates an InputStreamReader that uses the named charset. */
+    @stub
+    def this(in: InputStream, charsetName: String) = ???
+
     /** Closes the stream and releases any system resources associated with
      *  it.
      */
@@ -53,4 +58,8 @@ class InputStreamReader extends Reader {
     /** Reads characters into a portion of an array. */
     @stub
     def read(cbuf: Array[Char], offset: Int, length: Int): Int = ???
+
+    /** Tells whether this stream is ready to be read. */
+    @stub
+    def ready(): Boolean = ???
 }

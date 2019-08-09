@@ -7,6 +7,7 @@ import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.{JComponent, JTable}
 import javax.swing.event.{ChangeEvent, ListSelectionEvent, TableColumnModelEvent, TableColumnModelListener}
 import javax.swing.plaf.TableHeaderUI
+import scala.scalanative.annotation.stub
 
 /** This is the object which manages the header of the JTable.
  *  
@@ -26,6 +27,18 @@ class JTableHeader extends JComponent with TableColumnModelListener with Accessi
      */
     @stub
     def this() = ???
+
+    /** Constructs a JTableHeader which is initialized with
+     *   cm as the column model.
+     */
+    @stub
+    def this(cm: TableColumnModel) = ???
+
+    /** This class implements accessibility support for the
+     *  JTableHeader class.
+     */
+    @stub
+    protected object AccessibleJTableHeader extends JTableHeader.AccessibleJTableHeader
 
     /** The TableColumnModel of the table header. */
     @stub
@@ -60,6 +73,10 @@ class JTableHeader extends JComponent with TableColumnModelListener with Accessi
      */
     @stub
     protected val table: JTable = ???
+
+    /** Obsolete as of Java 2 platform v1.3. */
+    @stub
+    protected val updateTableInRealTime: Boolean = ???
 
     /** Invoked when a column is added to the table column model. */
     @stub
@@ -226,4 +243,10 @@ class JTableHeader extends JComponent with TableColumnModelListener with Accessi
     /** Obsolete as of Java 2 platform v1.3. */
     @stub
     def setUpdateTableInRealTime(flag: Boolean): Unit = ???
+
+    /** Notification from the UIManager that the look and feel
+     *  (L&F) has changed.
+     */
+    @stub
+    def updateUI(): Unit = ???
 }

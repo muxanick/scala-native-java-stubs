@@ -1,6 +1,7 @@
 package java.sql
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** The subclass of SQLException thrown when the SQLState class value
  *  is '40', or under vendor-specified conditions. This indicates that the
@@ -56,4 +57,10 @@ class SQLTransactionRollbackException extends SQLTransientException {
      */
     @stub
     def this(reason: String, cause: Throwable) = ???
+
+    /** Constructs a SQLTransactionRollbackException object
+     *  with a given  cause.
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

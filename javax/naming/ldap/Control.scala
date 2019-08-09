@@ -2,6 +2,7 @@ package javax.naming.ldap
 
 import java.io.Serializable
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** This interface represents an LDAPv3 control as defined in
  *  RFC 2251.
@@ -28,10 +29,18 @@ trait Control extends Serializable {
     /** Retrieves the object identifier assigned for the LDAP control. */
     @stub
     def getID(): String = ???
+
+    /** Determines the criticality of the LDAP control. */
+    @stub
+    def isCritical(): Boolean = ???
 }
 
 object Control {
     /** Indicates a critical control. */
     @stub
     val CRITICAL: Boolean = ???
+
+    /** Indicates a non-critical control. */
+    @stub
+    val NONCRITICAL: Boolean = ???
 }

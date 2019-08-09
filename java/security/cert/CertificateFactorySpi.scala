@@ -2,7 +2,8 @@ package java.security.cert
 
 import java.io.InputStream
 import java.lang.{Object, String}
-import java.util.{Collection, List}
+import java.util.{Collection, Iterator, List}
+import scala.scalanative.annotation.stub
 
 /** This class defines the Service Provider Interface (SPI)
  *  for the CertificateFactory class.
@@ -19,6 +20,10 @@ import java.util.{Collection, List}
  *  that are an instance of java.security.cert.X509CRL.
  */
 abstract class CertificateFactorySpi extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Generates a certificate object and initializes it with
      *  the data read from the input stream inStream.
@@ -54,4 +59,9 @@ abstract class CertificateFactorySpi extends Object {
      *  from the given input stream inStream.
      */
     def engineGenerateCRLs(inStream: InputStream): Collection[_ <: CRL]
+
+    /** Returns an iteration of the CertPath encodings supported
+     *  by this certificate factory, with the default encoding first.
+     */
+    def engineGetCertPathEncodings(): Iterator[String]
 }

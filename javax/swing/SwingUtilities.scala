@@ -4,6 +4,7 @@ import java.awt.{Component, Container, FontMetrics, Graphics, Point, Rectangle, 
 import java.awt.event.{KeyEvent, MouseEvent}
 import java.lang.{Class, Object, Runnable, String}
 import javax.accessibility.{Accessible, AccessibleStateSet}
+import scala.scalanative.annotation.stub
 
 /** A collection of utility methods for Swing. */
 class SwingUtilities extends Object with SwingConstants {
@@ -258,4 +259,10 @@ object SwingUtilities {
      */
     @stub
     def updateComponentTreeUI(c: Component): Unit = ???
+
+    /** Returns the first Window  ancestor of c, or
+     *  null if c is not contained inside a Window.
+     */
+    @stub
+    def windowForComponent(c: Component): Window = ???
 }

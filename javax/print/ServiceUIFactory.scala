@@ -1,6 +1,7 @@
 package javax.print
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Services may optionally provide UIs which allow different styles
  *  of interaction in different roles.
@@ -33,10 +34,19 @@ import java.lang.{Object, String}
  */
 abstract class ServiceUIFactory extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Get a UI object which may be cast to the requested UI type
      *  by the application and used in its user interface.
      */
     def getUI(role: Int, ui: String): Object
+
+    /** Given a UI role obtained from this factory obtain the UI
+     *  types available from this factory which implement this role.
+     */
+    def getUIClassNamesForRole(role: Int): Array[String]
 }
 
 object ServiceUIFactory {
@@ -67,4 +77,10 @@ object ServiceUIFactory {
     /** Denotes a UI implemented as an AWT panel. */
     @stub
     val PANEL_UI: String = ???
+
+    /** Not a valid role but role id's greater than this may be used
+     *  for private roles supported by a service.
+     */
+    @stub
+    val RESERVED_UIROLE: Int = ???
 }

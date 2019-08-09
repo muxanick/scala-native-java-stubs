@@ -1,6 +1,7 @@
 package java.security.cert
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** An immutable policy qualifier represented by the ASN.1 PolicyQualifierInfo
  *  structure.
@@ -50,6 +51,12 @@ import java.lang.{Object, String}
  */
 class PolicyQualifierInfo extends Object {
 
+    /** Creates an instance of PolicyQualifierInfo from the
+     *  encoded bytes.
+     */
+    @stub
+    def this(encoded: Array[Byte]) = ???
+
     /** Returns the ASN.1 DER encoded form of this
      *  PolicyQualifierInfo.
      */
@@ -67,4 +74,10 @@ class PolicyQualifierInfo extends Object {
      */
     @stub
     def getPolicyQualifierId(): String = ???
+
+    /** Return a printable representation of this
+     *  PolicyQualifierInfo.
+     */
+    @stub
+    def toString(): String = ???
 }

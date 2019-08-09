@@ -5,6 +5,7 @@ import java.lang.{Integer, Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.event.InternalFrameListener
 import javax.swing.plaf.InternalFrameUI
+import scala.scalanative.annotation.stub
 
 /** A lightweight object that provides many of the features of
  *  a native frame, including dragging, closing, becoming an icon,
@@ -88,6 +89,12 @@ class JInternalFrame extends JComponent with Accessible with WindowConstants wit
      */
     @stub
     def this(title: String, resizable: Boolean, closable: Boolean, maximizable: Boolean) = ???
+
+    /** Creates a JInternalFrame with the specified title,
+     *  resizability, closability, maximizability, and iconifiability.
+     */
+    @stub
+    def this(title: String, resizable: Boolean, closable: Boolean, maximizable: Boolean, iconifiable: Boolean) = ???
 
     /** This class implements accessibility support for the
      *  JInternalFrame class.
@@ -574,9 +581,21 @@ class JInternalFrame extends JComponent with Accessible with WindowConstants wit
     /** Brings this internal frame to the front. */
     @stub
     def toFront(): Unit = ???
+
+    /** Notification from the UIManager that the look and feel
+     *  has changed.
+     */
+    @stub
+    def updateUI(): Unit = ???
 }
 
 object JInternalFrame {
+    /** This component represents an iconified version of a
+     *  JInternalFrame.
+     */
+    @stub
+    object JDesktopIcon extends JInternalFrame.JDesktopIcon
+
     /** Bound property name. */
     @stub
     val CONTENT_PANE_PROPERTY: String = ???
@@ -618,4 +637,8 @@ object JInternalFrame {
     /** Bound property name. */
     @stub
     val ROOT_PANE_PROPERTY: String = ???
+
+    /** Bound property name. */
+    @stub
+    val TITLE_PROPERTY: String = ???
 }

@@ -2,6 +2,7 @@ package java.awt.font
 
 import java.lang.{Cloneable, Object}
 import java.text.AttributedCharacterIterator
+import scala.scalanative.annotation.stub
 
 /** The TextMeasurer class provides the primitive operations
  *  needed for line break: measuring up to a given advance, determining the
@@ -34,6 +35,10 @@ import java.text.AttributedCharacterIterator
  */
 final class TextMeasurer extends Object with Cloneable {
 
+    /** Constructs a TextMeasurer from the source text. */
+    @stub
+    def this(text: AttributedCharacterIterator, frc: FontRenderContext) = ???
+
     /** Creates and returns a copy of this object. */
     @stub
     protected def clone(): Object = ???
@@ -62,4 +67,12 @@ final class TextMeasurer extends Object with Cloneable {
      */
     @stub
     def getLineBreakIndex(start: Int, maxAdvance: Float): Int = ???
+
+    /** Updates the TextMeasurer after a single character has
+     *  been inserted
+     *  into the paragraph currently represented by this
+     *  TextMeasurer.
+     */
+    @stub
+    def insertChar(newParagraph: AttributedCharacterIterator, insertPos: Int): Unit = ???
 }

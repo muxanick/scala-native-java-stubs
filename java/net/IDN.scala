@@ -1,6 +1,7 @@
 package java.net
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Provides methods to convert internationalized domain names (IDNs) between
  *  a normal Unicode representation and an ASCII Compatible Encoding (ACE) representation.
@@ -44,6 +45,10 @@ object IDN {
     @stub
     val ALLOW_UNASSIGNED: Int = ???
 
+    /** Flag to turn on the check against STD-3 ASCII rules */
+    @stub
+    val USE_STD3_ASCII_RULES: Int = ???
+
     /** Translates a string from Unicode to ASCII Compatible Encoding (ACE),
      *  as defined by the ToASCII operation of RFC 3490.
      */
@@ -61,4 +66,10 @@ object IDN {
      */
     @stub
     def toUnicode(input: String): String = ???
+
+    /** Translates a string from ASCII Compatible Encoding (ACE) to Unicode,
+     *  as defined by the ToUnicode operation of RFC 3490.
+     */
+    @stub
+    def toUnicode(input: String, flag: Int): String = ???
 }

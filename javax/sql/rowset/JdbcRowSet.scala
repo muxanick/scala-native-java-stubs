@@ -2,6 +2,7 @@ package javax.sql.rowset
 
 import java.sql.Savepoint
 import javax.sql.RowSet
+import scala.scalanative.annotation.stub
 
 /** The standard interface that all standard implementations of
  *  JdbcRowSet must implement.
@@ -131,4 +132,10 @@ trait JdbcRowSet extends RowSet with Joinable {
      */
     @stub
     def setAutoCommit(autoCommit: Boolean): Unit = ???
+
+    /** Sets the property showDeleted to the given
+     *  boolean value.
+     */
+    @stub
+    def setShowDeleted(b: Boolean): Unit = ???
 }

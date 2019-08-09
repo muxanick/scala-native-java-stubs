@@ -2,6 +2,7 @@ package javax.management
 
 import java.lang.Object
 import java.util.concurrent.Executor
+import scala.scalanative.annotation.stub
 
 /** Provides an implementation of NotificationEmitter
  *  interface.  This can be used as the super class of an MBean that
@@ -45,6 +46,12 @@ class NotificationBroadcasterSupport extends Object with NotificationEmitter {
     @stub
     def this(executor: Executor, info: MBeanNotificationInfo*) = ???
 
+    /** Constructs a NotificationBroadcasterSupport with information
+     *  about the notifications that may be sent.
+     */
+    @stub
+    def this(info: MBeanNotificationInfo*) = ???
+
     /** Adds a listener. */
     @stub
     def addNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
@@ -69,4 +76,8 @@ class NotificationBroadcasterSupport extends Object with NotificationEmitter {
     /** Removes a listener from this MBean. */
     @stub
     def removeNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
+
+    /** Sends a notification. */
+    @stub
+    def sendNotification(notification: Notification): Unit = ???
 }

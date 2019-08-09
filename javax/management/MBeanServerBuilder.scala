@@ -1,6 +1,7 @@
 package javax.management
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class represents a builder that creates a default
  *  MBeanServer implementation.
@@ -10,7 +11,15 @@ import java.lang.{Object, String}
  */
 class MBeanServerBuilder extends Object {
 
+    /** Public default constructor. */
+    @stub
+    def this() = ???
+
     /** This method creates a new MBeanServer implementation object. */
     @stub
     def newMBeanServer(defaultDomain: String, outer: MBeanServer, delegate: MBeanServerDelegate): MBeanServer = ???
+
+    /** This method creates a new MBeanServerDelegate for a new MBeanServer. */
+    @stub
+    def newMBeanServerDelegate(): MBeanServerDelegate = ???
 }

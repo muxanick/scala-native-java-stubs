@@ -1,7 +1,9 @@
 package javax.management
 
+import java.lang.String
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Meta-annotation that describes how an annotation element relates
  *  to a field in a Descriptor.  This can be the Descriptor for
@@ -140,4 +142,8 @@ import scala.annotation.StaticAnnotation
 @Retention ( value = RUNTIME ) 
 @Target ( value = METHOD ) 
  final class DescriptorKey extends StaticAnnotation {
+
+    /**  */
+    @stub
+    val value: String = ???
 }

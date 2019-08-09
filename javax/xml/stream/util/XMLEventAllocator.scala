@@ -2,6 +2,7 @@ package javax.xml.stream.util
 
 import javax.xml.stream.XMLStreamReader
 import javax.xml.stream.events.XMLEvent
+import scala.scalanative.annotation.stub
 
 /** This interface defines a class that allows a user to register
  *  a way to allocate events given an XMLStreamReader.  An implementation
@@ -25,4 +26,8 @@ trait XMLEventAllocator {
      */
     @stub
     def allocate(reader: XMLStreamReader, consumer: XMLEventConsumer): Unit = ???
+
+    /** This method creates an instance of the XMLEventAllocator. */
+    @stub
+    def newInstance(): XMLEventAllocator = ???
 }

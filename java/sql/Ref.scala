@@ -2,6 +2,7 @@ package java.sql
 
 import java.lang.{Class, Object, String}
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** The mapping in the Java programming language of an SQL REF
  *  value, which is a reference to an SQL structured type value in the database.
@@ -44,4 +45,10 @@ trait Ref {
      */
     @stub
     def getObject(map: Map[String, Class[_]]): Object = ???
+
+    /** Sets the structured type value that this Ref
+     *  object references to the given instance of Object.
+     */
+    @stub
+    def setObject(value: Object): Unit = ???
 }

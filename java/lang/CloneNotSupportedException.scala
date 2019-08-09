@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** Thrown to indicate that the clone method in class
  *  Object has been called to clone an object, but that
  *  the object's class does not implement the Cloneable
@@ -16,4 +18,10 @@ class CloneNotSupportedException extends Exception {
      */
     @stub
     def this() = ???
+
+    /** Constructs a CloneNotSupportedException with the
+     *  specified detail message.
+     */
+    @stub
+    def this(s: String) = ???
 }

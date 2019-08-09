@@ -3,6 +3,7 @@ package javax.crypto
 import java.lang.{Object, String}
 import java.security.{Provider, SecureRandom}
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** This class provides the functionality of a secret (symmetric) key generator.
  * 
@@ -70,6 +71,10 @@ import java.security.spec.AlgorithmParameterSpec
  */
 class KeyGenerator extends Object {
 
+    /** Creates a KeyGenerator object. */
+    @stub
+    protected def this(keyGenSpi: KeyGeneratorSpi, provider: Provider, algorithm: String) = ???
+
     /** Generates a secret key. */
     @stub
     def generateKey(): SecretKey = ???
@@ -101,6 +106,10 @@ class KeyGenerator extends Object {
      */
     @stub
     def init(keysize: Int, random: SecureRandom): Unit = ???
+
+    /** Initializes this key generator. */
+    @stub
+    def init(random: SecureRandom): Unit = ???
 }
 
 object KeyGenerator {

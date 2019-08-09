@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class implements an output stream in which the data is
  *  written into a byte array. The buffer automatically grows as data
@@ -18,9 +19,19 @@ class ByteArrayOutputStream extends OutputStream {
     @stub
     def this() = ???
 
+    /** Creates a new byte array output stream, with a buffer capacity of
+     *  the specified size, in bytes.
+     */
+    @stub
+    def this(size: Int) = ???
+
     /** The buffer where data is stored. */
     @stub
     protected val buf: Array[Byte] = ???
+
+    /** The number of valid bytes in the buffer. */
+    @stub
+    protected val count: Int = ???
 
     /** Closing a ByteArrayOutputStream has no effect. */
     @stub
@@ -73,4 +84,11 @@ class ByteArrayOutputStream extends OutputStream {
     /** Writes the specified byte to this byte array output stream. */
     @stub
     def write(b: Int): Unit = ???
+
+    /** Writes the complete contents of this byte array output stream to
+     *  the specified output stream argument, as if by calling the output
+     *  stream's write method using out.write(buf, 0, count).
+     */
+    @stub
+    def writeTo(out: OutputStream): Unit = ???
 }

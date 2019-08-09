@@ -3,6 +3,7 @@ package java.util.stream
 import java.lang.Long
 import java.util.{LongSummaryStatistics, OptionalDouble, OptionalLong, PrimitiveIterator.OfLong, Spliterator.OfLong}
 import java.util.function.{BiConsumer, LongBinaryOperator, LongConsumer, LongFunction, LongPredicate, LongSupplier, LongToDoubleFunction, LongToIntFunction, LongUnaryOperator, ObjLongConsumer, Supplier}
+import scala.scalanative.annotation.stub
 
 /** A sequence of primitive long-valued elements supporting sequential and parallel
  *  aggregate operations.  This is the long primitive specialization of
@@ -211,9 +212,17 @@ trait LongStream extends BaseStream[Long, LongStream] {
      */
     @stub
     def summaryStatistics(): LongSummaryStatistics = ???
+
+    /** Returns an array containing the elements of this stream. */
+    @stub
+    def toArray(): Array[Long] = ???
 }
 
 object LongStream {
+    /** A mutable builder for a LongStream. */
+    @stub
+    val LongStream.Builder: trait = ???
+
     /** Returns a builder for a LongStream. */
     @stub
     def builder(): LongStream.Builder = ???

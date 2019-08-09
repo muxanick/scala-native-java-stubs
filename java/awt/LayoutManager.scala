@@ -1,6 +1,7 @@
 package java.awt
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** Defines the interface for classes that know how to lay out
  *  Containers.
@@ -36,4 +37,8 @@ trait LayoutManager {
      */
     @stub
     def preferredLayoutSize(parent: Container): Dimension = ???
+
+    /** Removes the specified component from the layout. */
+    @stub
+    def removeLayoutComponent(comp: Component): Unit = ???
 }

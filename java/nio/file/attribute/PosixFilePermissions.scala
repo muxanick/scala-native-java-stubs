@@ -2,6 +2,7 @@ package java.nio.file.attribute
 
 import java.lang.{Object, String}
 import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** This class consists exclusively of static methods that operate on sets of
  *  PosixFilePermission objects.
@@ -22,4 +23,8 @@ object PosixFilePermissions {
      */
     @stub
     def fromString(perms: String): Set[PosixFilePermission] = ???
+
+    /** Returns the String representation of a set of permissions. */
+    @stub
+    def toString(perms: Set[PosixFilePermission]): String = ???
 }

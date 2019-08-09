@@ -1,6 +1,7 @@
 package javax.security.auth.login
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class defines the Service Provider Interface (SPI)
  *  for the Configuration class.
@@ -15,6 +16,13 @@ import java.lang.{Object, String}
  */
 abstract class ConfigurationSpi extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Retrieve the AppConfigurationEntries for the specified name. */
     protected def engineGetAppConfigurationEntry(name: String): Array[AppConfigurationEntry]
+
+    /** Refresh and reload the Configuration. */
+    protected def engineRefresh(): Unit
 }

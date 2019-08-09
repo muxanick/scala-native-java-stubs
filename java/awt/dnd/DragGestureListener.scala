@@ -1,6 +1,7 @@
 package java.awt.dnd
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener interface for receiving drag gesture events.
  *  This interface is intended for a drag gesture recognition
@@ -11,4 +12,11 @@ import java.util.EventListener
  *  method and passes a DragGestureEvent.
  */
 trait DragGestureListener extends EventListener {
+
+    /** This method is invoked by the DragGestureRecognizer
+     *  when the DragGestureRecognizer detects a platform-dependent
+     *  drag initiating gesture.
+     */
+    @stub
+    def dragGestureRecognized(dge: DragGestureEvent): Unit = ???
 }

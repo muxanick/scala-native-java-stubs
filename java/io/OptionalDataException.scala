@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.{Exception, Object, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Exception indicating the failure of an object read operation due to
  *  unread primitive data, or the end of data belonging to a serialized
@@ -24,4 +25,10 @@ class OptionalDataException extends ObjectStreamException {
     /** True if there is no more data in the buffered part of the stream. */
     @stub
     val eof: Boolean = ???
+
+    /** The number of bytes of primitive data available to be read
+     *  in the current buffer.
+     */
+    @stub
+    val length: Int = ???
 }

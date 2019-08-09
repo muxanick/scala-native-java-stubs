@@ -1,5 +1,10 @@
 package javax.naming.spi
 
+import java.lang.Object
+import java.util.Hashtable
+import javax.naming.{Context, Name}
+import scala.scalanative.annotation.stub
+
 /** This interface represents a factory for creating an object.
  * 
  *  The JNDI framework allows for object implementations to
@@ -28,4 +33,10 @@ package javax.naming.spi
  *  class or Web browsers.
  */
 trait ObjectFactory {
+
+    /** Creates an object using the location or reference information
+     *  specified.
+     */
+    @stub
+    def getObjectInstance(obj: Object, name: Name, nameCtx: Context, environment: Hashtable[_, _]): Object = ???
 }

@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** Thrown to indicate that an array has been accessed with an
  *  illegal index. The index is either negative or greater than or
  *  equal to the size of the array.
@@ -17,4 +19,10 @@ class ArrayIndexOutOfBoundsException extends IndexOutOfBoundsException {
      */
     @stub
     def this(index: Int) = ???
+
+    /** Constructs an ArrayIndexOutOfBoundsException class
+     *  with the specified detail message.
+     */
+    @stub
+    def this(s: String) = ???
 }

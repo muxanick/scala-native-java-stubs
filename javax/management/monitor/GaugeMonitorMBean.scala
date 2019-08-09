@@ -2,6 +2,7 @@ package javax.management.monitor
 
 import java.lang.Number
 import javax.management.ObjectName
+import scala.scalanative.annotation.stub
 
 /** Exposes the remote management interface of the gauge monitor MBean. */
 trait GaugeMonitorMBean extends MonitorMBean {
@@ -59,4 +60,8 @@ trait GaugeMonitorMBean extends MonitorMBean {
     /** Sets the low notification's on/off switch value. */
     @stub
     def setNotifyLow(value: Boolean): Unit = ???
+
+    /** Sets the high and the low threshold values. */
+    @stub
+    def setThresholds(highValue: Number, lowValue: Number): Unit = ???
 }

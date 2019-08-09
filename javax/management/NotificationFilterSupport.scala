@@ -2,6 +2,7 @@ package javax.management
 
 import java.lang.{Object, String}
 import java.util.Vector
+import scala.scalanative.annotation.stub
 
 /** Provides an implementation of the NotificationFilter interface.
  *  The filtering is performed on the notification type attribute.
@@ -26,6 +27,10 @@ import java.util.Vector
  */
 class NotificationFilterSupport extends Object with NotificationFilter {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Disables all notification types. */
     @stub
     def disableAllTypes(): Unit = ???
@@ -43,4 +48,8 @@ class NotificationFilterSupport extends Object with NotificationFilter {
     /** Gets all the enabled notification types for this filter. */
     @stub
     def getEnabledTypes(): Vector[String] = ???
+
+    /** Invoked before sending the specified notification to the listener. */
+    @stub
+    def isNotificationEnabled(notification: Notification): Boolean = ???
 }

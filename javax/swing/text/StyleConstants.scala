@@ -3,6 +3,7 @@ package javax.swing.text
 import java.awt.{Color, Component}
 import java.lang.{Object, String}
 import javax.swing.Icon
+import scala.scalanative.annotation.stub
 
 /** 
  *  A collection of well known or common attribute keys
@@ -17,6 +18,10 @@ import javax.swing.Icon
  *  
  */
 class StyleConstants extends Object {
+
+    /** Returns the string representation. */
+    @stub
+    def toString(): String = ???
 }
 
 object StyleConstants {
@@ -37,6 +42,12 @@ object StyleConstants {
      */
     @stub
     object FontConstants extends StyleConstants.FontConstants
+
+    /** This is a typesafe enumeration of the well-known
+     *  attributes that contribute to a paragraph style.
+     */
+    @stub
+    object ParagraphConstants extends StyleConstants.ParagraphConstants
 
     /** A possible value for paragraph alignment. */
     @stub
@@ -187,6 +198,10 @@ object StyleConstants {
      */
     @stub
     val TabSet: Object = ???
+
+    /** Name of the underline attribute. */
+    @stub
+    val Underline: Object = ???
 
     /** Gets the alignment setting. */
     @stub

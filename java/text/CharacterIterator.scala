@@ -1,6 +1,7 @@
 package java.text
 
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** This interface defines a protocol for bidirectional iteration over text.
  *  The iterator iterates over a bounded sequence of characters.  Characters
@@ -103,4 +104,18 @@ trait CharacterIterator extends Cloneable {
      */
     @stub
     def previous(): Char = ???
+
+    /** Sets the position to the specified position in the text and returns that
+     *  character.
+     */
+    @stub
+    def setIndex(position: Int): Char = ???
+}
+
+object CharacterIterator {
+    /** Constant that is returned when the iterator has reached either the end
+     *  or the beginning of the text.
+     */
+    @stub
+    val DONE: Char = ???
 }

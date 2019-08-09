@@ -2,6 +2,7 @@ package javax.swing.text.html
 
 import java.lang.{Object, String}
 import javax.swing.text.MutableAttributeSet
+import scala.scalanative.annotation.stub
 
 /** The result of parsing drives these callback methods.
  *  The open and close actions should be balanced.  The
@@ -13,6 +14,17 @@ import javax.swing.text.MutableAttributeSet
  *  other info.
  */
 object HTMLEditorKit.ParserCallback extends Object {
+
+    /**  */
+    @stub
+    def ParserCallback() = ???
+
+    /** This is passed as an attribute in the attributeset to indicate
+     *  the element is implied eg, the string '<>foo<\t>'
+     *  contains an implied html element and an implied body element.
+     */
+    @stub
+    val IMPLIED: Object = ???
 
     /**  */
     @stub
@@ -43,4 +55,8 @@ object HTMLEditorKit.ParserCallback extends Object {
     /**  */
     @stub
     def handleStartTag(t: HTML.Tag, a: MutableAttributeSet, pos: Int): Unit = ???
+
+    /**  */
+    @stub
+    def handleText(data: Array[Char], pos: Int): Unit = ???
 }

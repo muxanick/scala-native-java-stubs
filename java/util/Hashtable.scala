@@ -3,6 +3,7 @@ package java.util
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
 import java.util.function.{BiConsumer, BiFunction, Function}
+import scala.scalanative.annotation.stub
 
 /** This class implements a hash table, which maps keys to values. Any
  *  non-null object can be used as a key or as a value. 
@@ -105,6 +106,12 @@ class Hashtable[K, V] extends Dictionary[K, V] with Map[K, V] with Cloneable wit
      */
     @stub
     def this(initialCapacity: Int, loadFactor: Float) = ???
+
+    /** Constructs a new hashtable with the same mappings as the given
+     *  Map.
+     */
+    @stub
+    def this(t: Map[_ <: K, _ <: V]) = ???
 
     /** Clears this hashtable so that it contains no keys. */
     @stub
@@ -266,4 +273,8 @@ class Hashtable[K, V] extends Dictionary[K, V] with Map[K, V] with Cloneable wit
      */
     @stub
     def toString(): String = ???
+
+    /** Returns a Collection view of the values contained in this map. */
+    @stub
+    def values(): Collection[V] = ???
 }

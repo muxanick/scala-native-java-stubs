@@ -3,6 +3,7 @@ package javax.swing.text
 import java.awt.{Graphics, Shape}
 import java.lang.Object
 import javax.swing.event.{DocumentEvent, DocumentEvent.ElementChange}
+import scala.scalanative.annotation.stub
 
 /** A box that does layout asynchronously.  This
  *  is useful to keep the GUI event thread moving by
@@ -20,12 +21,28 @@ import javax.swing.event.{DocumentEvent, DocumentEvent.ElementChange}
  */
 class AsyncBoxView extends View {
 
+    /** Construct a box view that does asynchronous layout. */
+    @stub
+    def this(elem: Element, axis: Int) = ???
+
     /** A class to manage the effective position of the
      *  child views in a localized area while changes are
      *  being made around the localized area.
      */
     @stub
     object ChildLocator extends AsyncBoxView.ChildLocator
+
+    /** A record representing the layout state of a
+     *  child view.
+     */
+    @stub
+    object ChildState extends AsyncBoxView.ChildState
+
+    /** Object that manages the offsets of the
+     *  children.
+     */
+    @stub
+    protected val locator: AsyncBoxView.ChildLocator = ???
 
     /** New ChildState records are created through
      *  this method to allow subclasses the extend
@@ -206,4 +223,10 @@ class AsyncBoxView extends View {
      */
     @stub
     protected def updateLayout(ec: DocumentEvent.ElementChange, e: DocumentEvent, a: Shape): Unit = ???
+
+    /** Provides a mapping from the view coordinate space to the logical
+     *  coordinate space of the model.
+     */
+    @stub
+    def viewToModel(x: Float, y: Float, a: Shape, biasReturn: Array[Position.Bias]): Int = ???
 }

@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener interface for receiving ancestor moved and resized events.
  *  The class that is interested in processing these events either implements
@@ -23,4 +24,8 @@ trait HierarchyBoundsListener extends EventListener {
     /** Called when an ancestor of the source is moved. */
     @stub
     def ancestorMoved(e: HierarchyEvent): Unit = ???
+
+    /** Called when an ancestor of the source is resized. */
+    @stub
+    def ancestorResized(e: HierarchyEvent): Unit = ???
 }

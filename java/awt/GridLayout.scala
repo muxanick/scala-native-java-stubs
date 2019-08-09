@@ -2,6 +2,7 @@ package java.awt
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The GridLayout class is a layout manager that
  *  lays out a container's components in a rectangular grid.
@@ -74,6 +75,12 @@ class GridLayout extends Object with LayoutManager with Serializable {
     @stub
     def this(rows: Int, cols: Int) = ???
 
+    /** Creates a grid layout with the specified number of rows and
+     *  columns.
+     */
+    @stub
+    def this(rows: Int, cols: Int, hgap: Int, vgap: Int) = ???
+
     /** Adds the specified component with the specified name to the layout. */
     @stub
     def addLayoutComponent(name: String, comp: Component): Unit = ???
@@ -129,4 +136,8 @@ class GridLayout extends Object with LayoutManager with Serializable {
     /** Sets the vertical gap between components to the specified value. */
     @stub
     def setVgap(vgap: Int): Unit = ???
+
+    /** Returns the string representation of this grid layout's values. */
+    @stub
+    def toString(): String = ???
 }

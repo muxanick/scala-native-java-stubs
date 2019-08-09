@@ -1,5 +1,7 @@
 package javax.swing.text.html.parser
 
+import scala.scalanative.annotation.stub
+
 /** SGML constants used in a DTD. The names of the
  *  constants correspond the the equivalent SGML constructs
  *  as described in "The SGML Handbook" by  Charles F. Goldfarb.
@@ -143,4 +145,8 @@ object DTDConstants {
     /**  */
     @stub
     val STARTTAG: Int = ???
+
+    /**  */
+    @stub
+    val SYSTEM: Int = ???
 }

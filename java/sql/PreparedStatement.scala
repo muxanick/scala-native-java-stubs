@@ -3,7 +3,9 @@ package java.sql
 import java.io.{InputStream, Reader}
 import java.lang.{Object, String}
 import java.math.BigDecimal
+import java.net.URL
 import java.util.Calendar
+import scala.scalanative.annotation.stub
 
 /** An object that represents a precompiled SQL statement.
  *  A SQL statement is precompiled and stored in a
@@ -306,4 +308,8 @@ trait PreparedStatement extends Statement {
      */
     @stub
     def setUnicodeStream(parameterIndex: Int, x: InputStream, length: Int): Unit = ???
+
+    /** Sets the designated parameter to the given java.net.URL value. */
+    @stub
+    def setURL(parameterIndex: Int, x: URL): Unit = ???
 }

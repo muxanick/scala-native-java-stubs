@@ -1,6 +1,7 @@
 package javax.naming
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown to indicate that the result being returned
  *  or returned so far is partial, and that the operation cannot
@@ -16,4 +17,10 @@ class PartialResultException extends NamingException {
     /** Constructs a new instance of PartialResultException. */
     @stub
     def this() = ???
+
+    /** Constructs a new instance of the exception using the explanation
+     *  message specified.
+     */
+    @stub
+    def this(explanation: String) = ???
 }

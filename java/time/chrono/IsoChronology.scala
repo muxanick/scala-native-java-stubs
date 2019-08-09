@@ -6,6 +6,7 @@ import java.time.{Clock, Instant, LocalDate, LocalDateTime, Period, ZoneId, Zone
 import java.time.format.ResolverStyle
 import java.time.temporal.{ChronoField, TemporalAccessor, TemporalField, ValueRange}
 import java.util.{List, Map}
+import scala.scalanative.annotation.stub
 
 /** The ISO calendar system.
  *  
@@ -116,4 +117,14 @@ final class IsoChronology extends AbstractChronology with Serializable {
     /** Obtains an ISO zoned date-time in this chronology from an Instant. */
     @stub
     def zonedDateTime(instant: Instant, zone: ZoneId): ZonedDateTime = ???
+
+    /** Obtains an ISO zoned date-time from another date-time object. */
+    @stub
+    def zonedDateTime(temporal: TemporalAccessor): ZonedDateTime = ???
+}
+
+object IsoChronology {
+    /** Singleton instance of the ISO chronology. */
+    @stub
+    val INSTANCE: IsoChronology = ???
 }

@@ -1,5 +1,8 @@
 package java.lang.reflect
 
+import java.lang.String
+import scala.scalanative.annotation.stub
+
 /** TypeVariable is the common superinterface for type variables of kinds.
  *  A type variable is created the first time it is needed by a reflective
  *  method, as specified in this package.  If a type variable t is referenced
@@ -37,4 +40,8 @@ trait TypeVariable[D <: GenericDeclaration] extends Type with AnnotatedElement {
      */
     @stub
     def getGenericDeclaration(): D = ???
+
+    /** Returns the name of this type variable, as it occurs in the source code. */
+    @stub
+    def getName(): String = ???
 }

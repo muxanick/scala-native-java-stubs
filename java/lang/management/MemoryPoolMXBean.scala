@@ -1,6 +1,7 @@
 package java.lang.management
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** The management interface for a memory pool.  A memory pool
  *  represents the memory resource managed by the Java virtual machine
@@ -415,4 +416,10 @@ trait MemoryPoolMXBean extends PlatformManagedObject {
      */
     @stub
     def setCollectionUsageThreshold(threshold: Long): Unit = ???
+
+    /** Sets the threshold of this memory pool to the given threshold
+     *  value if this memory pool supports the usage threshold.
+     */
+    @stub
+    def setUsageThreshold(threshold: Long): Unit = ???
 }

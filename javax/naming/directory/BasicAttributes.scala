@@ -2,6 +2,7 @@ package javax.naming.directory
 
 import java.lang.{Object, String}
 import javax.naming.NamingEnumeration
+import scala.scalanative.annotation.stub
 
 /** This class provides a basic implementation
  *  of the Attributes interface.
@@ -38,6 +39,10 @@ class BasicAttributes extends Object with Attributes {
     /** Constructs a new instance of Attributes with one attribute. */
     @stub
     def this(attrID: String, val: Object) = ???
+
+    /** Constructs a new instance of Attributes with one attribute. */
+    @stub
+    def this(attrID: String, val: Object, ignoreCase: Boolean) = ???
 
     /** Creates and returns a copy of this object. */
     @stub
@@ -96,4 +101,8 @@ class BasicAttributes extends Object with Attributes {
     /** Retrieves the number of attributes in the attribute set. */
     @stub
     def size(): Int = ???
+
+    /** Generates the string representation of this attribute set. */
+    @stub
+    def toString(): String = ???
 }

@@ -1,5 +1,8 @@
 package java.nio.channels
 
+import java.nio.ByteBuffer
+import scala.scalanative.annotation.stub
+
 /** A channel that can read bytes.
  * 
  *   Only one read operation upon a readable channel may be in progress at
@@ -10,4 +13,8 @@ package java.nio.channels
  *  the type of the channel. 
  */
 trait ReadableByteChannel extends Channel {
+
+    /** Reads a sequence of bytes from this channel into the given buffer. */
+    @stub
+    def read(dst: ByteBuffer): Int = ???
 }

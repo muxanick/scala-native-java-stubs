@@ -1,6 +1,7 @@
 package javax.xml.datatype
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Indicates a serious configuration error. */
 class DatatypeConfigurationException extends Exception {
@@ -22,4 +23,10 @@ class DatatypeConfigurationException extends Exception {
      */
     @stub
     def this(message: String, cause: Throwable) = ???
+
+    /** Create a new DatatypeConfigurationException with
+     *  the specified cause.
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

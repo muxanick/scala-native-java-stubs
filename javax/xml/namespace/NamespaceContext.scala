@@ -1,6 +1,8 @@
 package javax.xml.namespace
 
 import java.lang.String
+import java.util.Iterator
+import scala.scalanative.annotation.stub
 
 /** Interface for read only XML Namespace context processing.
  * 
@@ -50,4 +52,10 @@ trait NamespaceContext {
     /** Get prefix bound to Namespace URI in the current scope. */
     @stub
     def getPrefix(namespaceURI: String): String = ???
+
+    /** Get all prefixes bound to a Namespace URI in the current
+     *  scope.
+     */
+    @stub
+    def getPrefixes(namespaceURI: String): Iterator = ???
 }

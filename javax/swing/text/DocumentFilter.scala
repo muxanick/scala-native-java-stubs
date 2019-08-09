@@ -1,6 +1,7 @@
 package javax.swing.text
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** DocumentFilter, as the name implies, is a filter for the
  *  Document mutation methods. When a Document
@@ -32,6 +33,10 @@ import java.lang.{Object, String}
  */
 class DocumentFilter extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Invoked prior to insertion of text into the
      *  specified Document.
      */
@@ -43,4 +48,18 @@ class DocumentFilter extends Object {
      */
     @stub
     def remove(fb: DocumentFilter.FilterBypass, offset: Int, length: Int): Unit = ???
+
+    /** Invoked prior to replacing a region of text in the
+     *  specified Document.
+     */
+    @stub
+    def replace(fb: DocumentFilter.FilterBypass, offset: Int, length: Int, text: String, attrs: AttributeSet): Unit = ???
+}
+
+object DocumentFilter {
+    /** Used as a way to circumvent calling back into the Document to
+     *  change it.
+     */
+    @stub
+    object FilterBypass extends DocumentFilter.FilterBypass
 }

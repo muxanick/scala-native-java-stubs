@@ -1,6 +1,7 @@
 package javax.xml.transform.dom
 
 import javax.xml.transform.SourceLocator
+import scala.scalanative.annotation.stub
 
 /** Indicates the position of a node in a source DOM, intended
  *  primarily for error reporting.  To use a DOMLocator, the receiver of an
@@ -10,4 +11,8 @@ import javax.xml.transform.SourceLocator
  *  to indicate the source node that originated a result node.
  */
 trait DOMLocator extends SourceLocator {
+
+    /** Return the node where the event occurred. */
+    @stub
+    def getOriginatingNode(): Node = ???
 }

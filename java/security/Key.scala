@@ -2,6 +2,7 @@ package java.security
 
 import java.io.Serializable
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** The Key interface is the top-level interface for all keys. It
  *  defines the functionality shared by all key objects. All keys
@@ -74,4 +75,19 @@ trait Key extends Serializable {
      */
     @stub
     def getEncoded(): Array[Byte] = ???
+
+    /** Returns the name of the primary encoding format of this key,
+     *  or null if this key does not support encoding.
+     */
+    @stub
+    def getFormat(): String = ???
+}
+
+object Key {
+    /** The class fingerprint that is set to indicate
+     *  serialization compatibility with a previous
+     *  version of the class.
+     */
+    @stub
+    val serialVersionUID: Long = ???
 }

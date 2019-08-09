@@ -2,6 +2,7 @@ package javax.swing.event
 
 import java.lang.Object
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** MenuEvent is used to notify interested parties that
  *  the menu which is the event source has been posted,
@@ -17,4 +18,8 @@ import java.util.EventObject
  *  Please see XMLEncoder.
  */
 class MenuEvent extends EventObject {
+
+    /** Constructs a MenuEvent object. */
+    @stub
+    def this(source: Object) = ???
 }

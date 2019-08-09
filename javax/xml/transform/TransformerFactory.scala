@@ -1,6 +1,7 @@
 package javax.xml.transform
 
 import java.lang.{ClassLoader, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A TransformerFactory instance can be used to create
  *  Transformer and
@@ -13,6 +14,10 @@ import java.lang.{ClassLoader, Object, String}
  *  defined, a platform default is be used.
  */
 abstract class TransformerFactory extends Object {
+
+    /** Default constructor is protected on purpose. */
+    @stub
+    protected def this() = ???
 
     /** Get the stylesheet specification(s) associated with the
      *  XML Source document via the
@@ -67,6 +72,11 @@ abstract class TransformerFactory extends Object {
      *  or Templates created by this factory.
      */
     def setFeature(name: String, value: Boolean): Unit
+
+    /** Set an object that is used by default during the transformation
+     *  to resolve URIs used in document(), xsl:import, or xsl:include.
+     */
+    def setURIResolver(resolver: URIResolver): Unit
 }
 
 object TransformerFactory {

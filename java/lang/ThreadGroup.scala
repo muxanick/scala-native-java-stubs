@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** A thread group represents a set of threads. In addition, a thread
  *  group can also include other thread groups. The thread groups form
  *  a tree in which every thread group except the initial thread group
@@ -14,6 +16,10 @@ class ThreadGroup extends Object with Thread.UncaughtExceptionHandler {
     /** Constructs a new thread group. */
     @stub
     def this(name: String) = ???
+
+    /** Creates a new thread group. */
+    @stub
+    def this(parent: ThreadGroup, name: String) = ???
 
     /** Returns an estimate of the number of active threads in this thread
      *  group and its subgroups.
@@ -143,4 +149,12 @@ class ThreadGroup extends Object with Thread.UncaughtExceptionHandler {
     /** Returns a string representation of this Thread group. */
     @stub
     def toString(): String = ???
+
+    /** Called by the Java Virtual Machine when a thread in this
+     *  thread group stops because of an uncaught exception, and the thread
+     *  does not have a specific Thread.UncaughtExceptionHandler
+     *  installed.
+     */
+    @stub
+    def uncaughtException(t: Thread, e: Throwable): Unit = ???
 }

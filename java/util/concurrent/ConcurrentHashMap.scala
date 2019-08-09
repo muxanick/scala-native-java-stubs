@@ -2,8 +2,9 @@ package java.util.concurrent
 
 import java.io.Serializable
 import java.lang.{Boolean, Object, String}
-import java.util.{AbstractMap, Enumeration, Map, Map.Entry, Set}
+import java.util.{AbstractMap, Collection, Enumeration, Map, Map.Entry, Set}
 import java.util.function.{BiConsumer, BiFunction, Consumer, DoubleBinaryOperator, Function, IntBinaryOperator, LongBinaryOperator, ToDoubleBiFunction, ToDoubleFunction, ToIntBiFunction, ToIntFunction, ToLongBiFunction, ToLongFunction}
+import scala.scalanative.annotation.stub
 
 /** A hash table supporting full concurrency of retrievals and
  *  high expected concurrency for updates. This class obeys the
@@ -214,6 +215,10 @@ class ConcurrentHashMap[K, V] extends AbstractMap[K, V] with ConcurrentMap[K, V]
      */
     @stub
     def this(initialCapacity: Int, loadFactor: Float, concurrencyLevel: Int) = ???
+
+    /** Creates a new map with the same mappings as the given map. */
+    @stub
+    def this(m: Map[_ <: K, _ <: V]) = ???
 
     /** Removes all of the mappings from this map. */
     @stub
@@ -560,9 +565,20 @@ class ConcurrentHashMap[K, V] extends AbstractMap[K, V] with ConcurrentMap[K, V]
     /** Returns a string representation of this map. */
     @stub
     def toString(): String = ???
+
+    /** Returns a Collection view of the values contained in this map. */
+    @stub
+    def values(): Collection[V] = ???
 }
 
 object ConcurrentHashMap {
+    /** A view of a ConcurrentHashMap as a Set of keys, in
+     *  which additions may optionally be enabled by mapping to a
+     *  common value.
+     */
+    @stub
+    object KeySetView[K, V] extends ConcurrentHashMap.KeySetView[K, V]
+
     /** Creates a new Set backed by a ConcurrentHashMap
      *  from the given type to Boolean.TRUE.
      */

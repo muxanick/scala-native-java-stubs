@@ -1,6 +1,8 @@
 package java.awt
 
+import java.awt.event.KeyEvent
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** A KeyEventPostProcessor cooperates with the current KeyboardFocusManager
  *  in the final resolution of all unconsumed KeyEvents. KeyEventPostProcessors
@@ -23,4 +25,11 @@ import java.lang.FunctionalInterface
  *  not recommended.)
  */
 @FunctionalInterface trait KeyEventPostProcessor {
+
+    /** This method is called by the current KeyboardFocusManager, requesting
+     *  that this KeyEventPostProcessor perform any necessary post-processing
+     *  which should be part of the KeyEvent's final resolution.
+     */
+    @stub
+    def postProcessKeyEvent(e: KeyEvent): Boolean = ???
 }

@@ -6,6 +6,7 @@ import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.colorchooser.{AbstractColorChooserPanel, ColorSelectionModel}
 import javax.swing.plaf.ColorChooserUI
+import scala.scalanative.annotation.stub
 
 /** JColorChooser provides a pane of controls designed to allow
  *  a user to manipulate and select a color.
@@ -49,6 +50,18 @@ class JColorChooser extends JComponent with Accessible {
     /** Creates a color chooser pane with the specified initial color. */
     @stub
     def this(initialColor: Color) = ???
+
+    /** Creates a color chooser pane with the specified
+     *  ColorSelectionModel.
+     */
+    @stub
+    def this(model: ColorSelectionModel) = ???
+
+    /** This class implements accessibility support for the
+     *  JColorChooser class.
+     */
+    @stub
+    protected object AccessibleJColorChooser extends JColorChooser.AccessibleJColorChooser
 
     /**  */
     @stub
@@ -137,6 +150,10 @@ class JColorChooser extends JComponent with Accessible {
     /** Sets the L&F object that renders this component. */
     @stub
     def setUI(ui: ColorChooserUI): Unit = ???
+
+    /** Notification from the UIManager that the L&F has changed. */
+    @stub
+    def updateUI(): Unit = ???
 }
 
 object JColorChooser {
@@ -147,6 +164,10 @@ object JColorChooser {
     /** The preview panel property name. */
     @stub
     val PREVIEW_PANEL_PROPERTY: String = ???
+
+    /** The selection model property name. */
+    @stub
+    val SELECTION_MODEL_PROPERTY: String = ???
 
     /** Creates and returns a new dialog containing the specified
      *  ColorChooser pane along with "OK", "Cancel", and "Reset"

@@ -3,6 +3,7 @@ package java.sql
 import java.lang.{AutoCloseable, Class, Object, String}
 import java.util.{Map, Properties}
 import java.util.concurrent.Executor
+import scala.scalanative.annotation.stub
 
 /** A connection (session) with a specific
  *  database. SQL statements are executed and results are returned
@@ -334,6 +335,12 @@ trait Connection extends Wrapper with AutoCloseable {
      */
     @stub
     def setTransactionIsolation(level: Int): Unit = ???
+
+    /** Installs the given TypeMap object as the type map for
+     *  this Connection object.
+     */
+    @stub
+    def setTypeMap(map: Map[String, Class[_]]): Unit = ???
 }
 
 object Connection {
@@ -360,4 +367,10 @@ object Connection {
      */
     @stub
     val TRANSACTION_REPEATABLE_READ: Int = ???
+
+    /** A constant indicating that
+     *  dirty reads, non-repeatable reads and phantom reads are prevented.
+     */
+    @stub
+    val TRANSACTION_SERIALIZABLE: Int = ???
 }

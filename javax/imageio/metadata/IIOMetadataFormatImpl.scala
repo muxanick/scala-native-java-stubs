@@ -3,6 +3,7 @@ package javax.imageio.metadata
 import java.lang.{Class, Comparable, Object, String}
 import java.util.{List, Locale}
 import javax.imageio.ImageTypeSpecifier
+import scala.scalanative.annotation.stub
 
 /** A concrete class providing a reusable implementation of the
  *  IIOMetadataFormat interface.  In addition, a static
@@ -45,6 +46,13 @@ abstract class IIOMetadataFormatImpl extends Object with IIOMetadataFormat {
      */
     @stub
     def this(rootName: String, childPolicy: Int) = ???
+
+    /** Constructs a blank IIOMetadataFormatImpl instance,
+     *  with a given root element name and a child policy of
+     *  CHILD_POLICY_REPEAT.
+     */
+    @stub
+    def this(rootName: String, minChildren: Int, maxChildren: Int) = ???
 
     /** Adds a new attribute to a previously defined element that will
      *  be defined by a list of values.
@@ -264,9 +272,21 @@ abstract class IIOMetadataFormatImpl extends Object with IIOMetadataFormat {
      *  nodes implementing the named element.
      */
     protected def removeObjectValue(elementName: String): Unit
+
+    /** Sets a new base name for locating ResourceBundles
+     *  containing descriptions of elements and attributes for this
+     *  format.
+     */
+    protected def setResourceBaseName(resourceBaseName: String): Unit
 }
 
 object IIOMetadataFormatImpl {
+    /** A String constant containing the standard format
+     *  name, "javax_imageio_1.0".
+     */
+    @stub
+    val standardMetadataFormatName: String = ???
+
     /** Returns an IIOMetadataFormat object describing the
      *  standard, plug-in neutral javax.imageio_1.0
      *  metadata document format described in the comment of the

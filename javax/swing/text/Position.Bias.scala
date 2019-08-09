@@ -1,6 +1,7 @@
 package javax.swing.text
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A typesafe enumeration to indicate bias to a position
  *  in the model.  A position indicates a location between
@@ -16,4 +17,14 @@ final object Position.Bias extends Object {
      */
     @stub
     val Backward: Position.Bias = ???
+
+    /** Indicates to bias toward the next character
+     *  in the model.
+     */
+    @stub
+    val Forward: Position.Bias = ???
+
+    /** string representation */
+    @stub
+    def toString(): String = ???
 }

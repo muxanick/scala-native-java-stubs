@@ -1,6 +1,7 @@
 package java.util.logging
 
-import java.lang.Object
+import java.lang.{Exception, Object, String}
+import scala.scalanative.annotation.stub
 
 /** ErrorManager objects can be attached to Handlers to process
  *  any error that occurs on a Handler during Logging.
@@ -11,6 +12,14 @@ import java.lang.Object
  *  should call its associated ErrorManager.
  */
 class ErrorManager extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** The error method is called when a Handler failure occurs. */
+    @stub
+    def error(msg: String, ex: Exception, code: Int): Unit = ???
 }
 
 object ErrorManager {
@@ -35,4 +44,8 @@ object ErrorManager {
     /** OPEN_FAILURE is used when an open of an output stream fails. */
     @stub
     val OPEN_FAILURE: Int = ???
+
+    /** WRITE_FAILURE is used when a write to an output stream fails. */
+    @stub
+    val WRITE_FAILURE: Int = ???
 }

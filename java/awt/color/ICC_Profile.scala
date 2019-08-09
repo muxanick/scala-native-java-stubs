@@ -2,6 +2,7 @@ package java.awt.color
 
 import java.io.{InputStream, OutputStream, Serializable}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A representation of color profile data for device independent and
  *  device dependent color spaces based on the International Color
@@ -85,6 +86,10 @@ class ICC_Profile extends Object with Serializable {
     /** Write this ICC_Profile to an OutputStream. */
     @stub
     def write(s: OutputStream): Unit = ???
+
+    /** Write this ICC_Profile to a file. */
+    @stub
+    def write(fileName: String): Unit = ???
 }
 
 object ICC_Profile {
@@ -559,6 +564,10 @@ object ICC_Profile {
     /** ICC Profile Constant: tag type signaturE. */
     @stub
     val icTagType: Int = ???
+
+    /** ICC Profile Constant: XYZNumber X. */
+    @stub
+    val icXYZNumberX: Int = ???
 
     /** Constructs an ICC_Profile object corresponding to the data in
      *  a byte array.

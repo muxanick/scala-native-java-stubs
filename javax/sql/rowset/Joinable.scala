@@ -1,6 +1,7 @@
 package javax.sql.rowset
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** 1.0 Background
  *  The Joinable interface provides the methods for getting and
@@ -158,4 +159,10 @@ trait Joinable {
      */
     @stub
     def unsetMatchColumn(columnName: String): Unit = ???
+
+    /** Unsets the designated columns as the match columns for this RowSet
+     *  object.
+     */
+    @stub
+    def unsetMatchColumn(columnName: Array[String]): Unit = ???
 }

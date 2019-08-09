@@ -2,6 +2,7 @@ package java.util
 
 import java.io.Serializable
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** This class implements the Set interface, backed by a hash table
  *  (actually a HashMap instance).  It makes no guarantees as to the
@@ -70,6 +71,12 @@ class HashSet[E] extends AbstractSet[E] with Set[E] with Cloneable with Serializ
     @stub
     def this(initialCapacity: Int) = ???
 
+    /** Constructs a new, empty set; the backing HashMap instance has
+     *  the specified initial capacity and the specified load factor.
+     */
+    @stub
+    def this(initialCapacity: Int, loadFactor: Float) = ???
+
     /** Adds the specified element to this set if it is not already present. */
     @stub
     def add(e: E): Boolean = ???
@@ -103,4 +110,11 @@ class HashSet[E] extends AbstractSet[E] with Set[E] with Cloneable with Serializ
     /** Returns the number of elements in this set (its cardinality). */
     @stub
     def size(): Int = ???
+
+    /** Creates a late-binding
+     *  and fail-fast Spliterator over the elements in this
+     *  set.
+     */
+    @stub
+    def spliterator(): Spliterator[E] = ???
 }

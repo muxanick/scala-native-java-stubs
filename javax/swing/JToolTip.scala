@@ -4,6 +4,7 @@ import java.awt.{Component, Container}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.plaf.ToolTipUI
+import scala.scalanative.annotation.stub
 
 /** Used to display a "Tip" for a Component. Typically components provide api
  *  to automate the process of using ToolTips.
@@ -32,6 +33,16 @@ import javax.swing.plaf.ToolTipUI
  *  Please see XMLEncoder.
  */
 class JToolTip extends JComponent with Accessible {
+
+    /** Creates a tool tip. */
+    @stub
+    def this() = ???
+
+    /** This class implements accessibility support for the
+     *  JToolTip class.
+     */
+    @stub
+    protected object AccessibleJToolTip extends JToolTip.AccessibleJToolTip
 
     /** Gets the AccessibleContext associated with this JToolTip. */
     @stub
@@ -64,4 +75,8 @@ class JToolTip extends JComponent with Accessible {
     /** Sets the text to show when the tool tip is displayed. */
     @stub
     def setTipText(tipText: String): Unit = ???
+
+    /** Resets the UI property to a value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
 }

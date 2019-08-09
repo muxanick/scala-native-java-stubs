@@ -1,6 +1,8 @@
 package javax.xml.crypto.dsig.spec
 
 import java.lang.{Object, String}
+import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** The XML Schema Definition of the XPath element as defined in the
  *  
@@ -39,6 +41,12 @@ class XPathType extends Object {
     @stub
     def this(expression: String, filter: XPathType.Filter) = ???
 
+    /** Creates an XPathType instance with the specified XPath
+     *  expression, filter, and namespace map.
+     */
+    @stub
+    def this(expression: String, filter: XPathType.Filter, namespaceMap: Map) = ???
+
     /** Returns the XPath expression to be evaluated. */
     @stub
     def getExpression(): String = ???
@@ -46,4 +54,14 @@ class XPathType extends Object {
     /** Returns the filter operation. */
     @stub
     def getFilter(): XPathType.Filter = ???
+
+    /** Returns a map of namespace prefixes. */
+    @stub
+    def getNamespaceMap(): Map = ???
+}
+
+object XPathType {
+    /** Represents the filter set operation. */
+    @stub
+    object Filter extends XPathType.Filter
 }

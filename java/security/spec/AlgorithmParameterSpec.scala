@@ -1,5 +1,7 @@
 package java.security.spec
 
+import scala.scalanative.annotation.stub
+
 /** A (transparent) specification of cryptographic parameters.
  * 
  *   This interface contains no methods or constants. Its only purpose

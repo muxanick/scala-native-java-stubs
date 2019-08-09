@@ -3,6 +3,7 @@ package javax.swing.text.html
 import java.io.Serializable
 import java.lang.{Object, String}
 import javax.swing.text.AttributeSet
+import scala.scalanative.annotation.stub
 
 /** Value for the ListModel used to represent
  *  <option> elements.  This is the object
@@ -19,6 +20,10 @@ import javax.swing.text.AttributeSet
  *  Please see XMLEncoder.
  */
 class Option extends Object with Serializable {
+
+    /** Creates a new Option object. */
+    @stub
+    def this(attr: AttributeSet) = ???
 
     /** Fetch the attributes associated with this option. */
     @stub
@@ -45,4 +50,8 @@ class Option extends Object with Serializable {
     /** Sets the selected state. */
     @stub
     protected def setSelection(state: Boolean): Unit = ???
+
+    /** String representation is the label. */
+    @stub
+    def toString(): String = ???
 }

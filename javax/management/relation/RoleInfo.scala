@@ -2,6 +2,7 @@ package javax.management.relation
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A RoleInfo object summarises a role in a relation type.
  * 
@@ -20,6 +21,10 @@ class RoleInfo extends Object with Serializable {
     /** Constructor. */
     @stub
     def this(roleName: String, mbeanClassName: String, read: Boolean, write: Boolean) = ???
+
+    /** Constructor. */
+    @stub
+    def this(roleName: String, mbeanClassName: String, read: Boolean, write: Boolean, min: Int, max: Int, descr: String) = ???
 
     /** Returns true if the value parameter is lower than or equal to
      *  the expected maximum degree, false otherwise.
@@ -62,4 +67,14 @@ class RoleInfo extends Object with Serializable {
     /** Returns write access mode for the role (true if it is writable). */
     @stub
     def isWritable(): Boolean = ???
+
+    /** Returns a string describing the role info. */
+    @stub
+    def toString(): String = ???
+}
+
+object RoleInfo {
+    /** To specify an unlimited cardinality. */
+    @stub
+    val ROLE_CARDINALITY_INFINITY: Int = ???
 }

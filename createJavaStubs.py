@@ -346,10 +346,10 @@ def requestParseAndSave(classname, args, all_classes):
     methods = []
     for tag_members in tag_all_members:
         if tag_members.firstElementChild.firstElementChild and tag_members.firstElementChild.firstElementChild.innerText == 'Constructors':
-            for i in tag_members.children[2:-1]:
+            for i in tag_members.children[2:]:
                 constructors.append(parseMethod(i))
         else:
-            for i in tag_members.children[2:-1]:
+            for i in tag_members.children[2:]:
                     methods.append(parseMethod(i))
 
     if args.overwrite or not os.path.exists(scalafile):

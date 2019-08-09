@@ -1,6 +1,7 @@
 package java.awt.geom
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Arc2D is the abstract superclass for all objects that
  *  store a 2D arc defined by a framing rectangle,
@@ -29,6 +30,10 @@ abstract class Arc2D extends RectangularShape {
     /** This is an abstract class that cannot be instantiated directly. */
     @stub
     protected def this() = ???
+
+    /** This is an abstract class that cannot be instantiated directly. */
+    @stub
+    protected def this(type: Int) = ???
 
     /** Determines whether or not the specified point is inside the boundary
      *  of the arc.
@@ -151,12 +156,21 @@ abstract class Arc2D extends RectangularShape {
      *  OPEN, CHORD, or PIE.
      */
     def setArcType(type: Int): Unit
+
+    /** Sets the location and size of the framing rectangle of this
+     *  Shape to the specified rectangular values.
+     */
+    def setFrame(x: Double, y: Double, w: Double, h: Double): Unit
 }
 
 object Arc2D {
     /** This class defines an arc specified in double precision. */
     @stub
     object Double extends Arc2D.Double
+
+    /** This class defines an arc specified in float precision. */
+    @stub
+    object Float extends Arc2D.Float
 
     /** The closure type for an arc closed by drawing a straight
      *  line segment from the start of the arc segment to the end of the
@@ -170,4 +184,11 @@ object Arc2D {
      */
     @stub
     val OPEN: Int = ???
+
+    /** The closure type for an arc closed by drawing straight line
+     *  segments from the start of the arc segment to the center
+     *  of the full ellipse and from that point to the end of the arc segment.
+     */
+    @stub
+    val PIE: Int = ???
 }

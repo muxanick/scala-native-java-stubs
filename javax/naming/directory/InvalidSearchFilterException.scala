@@ -1,7 +1,8 @@
 package javax.naming.directory
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
 import javax.naming.NamingException
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown when the specification of
  *  a search filter is invalid.  The expression of the filter may
@@ -16,4 +17,10 @@ class InvalidSearchFilterException extends NamingException {
     /** Constructs a new instance of InvalidSearchFilterException. */
     @stub
     def this() = ???
+
+    /** Constructs a new instance of InvalidSearchFilterException
+     *  with an explanation.
+     */
+    @stub
+    def this(msg: String) = ???
 }

@@ -2,6 +2,7 @@ package java.io
 
 import java.lang.{Object, String}
 import java.nio.channels.FileChannel
+import scala.scalanative.annotation.stub
 
 /** Instances of this class support both reading and writing to a
  *  random access file. A random access file behaves like a large
@@ -32,6 +33,12 @@ class RandomAccessFile extends Object with DataOutput with DataInput with Closea
      */
     @stub
     def this(file: File, mode: String) = ???
+
+    /** Creates a random access file stream to read from, and optionally
+     *  to write to, a file with the specified name.
+     */
+    @stub
+    def this(name: String, mode: String) = ???
 
     /** Closes this random access file stream and releases any system
      *  resources associated with the stream.
@@ -216,4 +223,11 @@ class RandomAccessFile extends Object with DataOutput with DataInput with Closea
     /** Writes a short to the file as two bytes, high byte first. */
     @stub
     def writeShort(v: Int): Unit = ???
+
+    /** Writes a string to the file using
+     *  modified UTF-8
+     *  encoding in a machine-independent manner.
+     */
+    @stub
+    def writeUTF(str: String): Unit = ???
 }

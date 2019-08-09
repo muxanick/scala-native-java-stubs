@@ -2,11 +2,16 @@ package javax.management.openmbean
 
 import java.lang.{Object, String}
 import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** The CompositeType class is the open type class
  *  whose instances describe the types of CompositeData values.
  */
 class CompositeType extends OpenType[CompositeData] {
+
+    /** Constructs a CompositeType instance, checking for the validity of the given parameters. */
+    @stub
+    def this(typeName: String, description: String, itemNames: Array[String], itemDescriptions: Array[String], itemTypes: Array[OpenType[_]]) = ???
 
     /** Returns true if this CompositeType instance defines an item
      *  whose name is itemName.
@@ -45,4 +50,8 @@ class CompositeType extends OpenType[CompositeData] {
     /** Returns an unmodifiable Set view of all the item names defined by this CompositeType instance. */
     @stub
     def keySet(): Set[String] = ???
+
+    /** Returns a string representation of this CompositeType instance. */
+    @stub
+    def toString(): String = ???
 }

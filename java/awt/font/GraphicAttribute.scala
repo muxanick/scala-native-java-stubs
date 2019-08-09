@@ -1,8 +1,9 @@
 package java.awt.font
 
-import java.awt.Graphics2D
-import java.awt.geom.Rectangle2D
+import java.awt.{Graphics2D, Shape}
+import java.awt.geom.{AffineTransform, Rectangle2D}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class is used with the CHAR_REPLACEMENT attribute.
  *  
@@ -19,6 +20,10 @@ import java.lang.Object
  *  TextLayout.
  */
 abstract class GraphicAttribute extends Object {
+
+    /** Constructs a GraphicAttribute. */
+    @stub
+    protected def this(alignment: Int) = ???
 
     /** Renders this GraphicAttribute at the specified
      *  location.
@@ -47,6 +52,11 @@ abstract class GraphicAttribute extends Object {
      *  GraphicAttribute.
      */
     def getJustificationInfo(): GlyphJustificationInfo
+
+    /** Return a Shape that represents the region that
+     *  this GraphicAttribute renders.
+     */
+    def getOutline(tx: AffineTransform): Shape
 }
 
 object GraphicAttribute {
@@ -65,4 +75,8 @@ object GraphicAttribute {
     /** Aligns origin of graphic to roman baseline of line. */
     @stub
     val ROMAN_BASELINE: Int = ???
+
+    /** Aligns top of graphic to top of line. */
+    @stub
+    val TOP_ALIGNMENT: Int = ???
 }

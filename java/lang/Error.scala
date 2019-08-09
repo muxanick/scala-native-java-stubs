@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** An Error is a subclass of Throwable
  *  that indicates serious problems that a reasonable application
  *  should not try to catch. Most such errors are abnormal conditions.
@@ -37,4 +39,11 @@ class Error extends Throwable {
      */
     @stub
     protected def this(message: String, cause: Throwable, enableSuppression: Boolean, writableStackTrace: Boolean) = ???
+
+    /** Constructs a new error with the specified cause and a detail
+     *  message of (cause==null ? null : cause.toString()) (which
+     *  typically contains the class and detail message of cause).
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

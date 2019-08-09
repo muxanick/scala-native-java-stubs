@@ -4,11 +4,16 @@ import java.awt.{Dimension, Graphics}
 import java.lang.Object
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, ToolTipUI}
+import scala.scalanative.annotation.stub
 
 /** Standard tool tip L&F.
  *  
  */
 class BasicToolTipUI extends ToolTipUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the specified component's maximum size appropriate for
      *  the look and feel.
@@ -51,6 +56,12 @@ class BasicToolTipUI extends ToolTipUI {
     /**  */
     @stub
     protected def uninstallListeners(c: JComponent): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicToolTipUI {

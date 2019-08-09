@@ -1,8 +1,9 @@
 package javax.swing
 
-import java.awt.event.ComponentAdapter
+import java.awt.event.{ComponentAdapter, ComponentEvent}
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A listener for the view.
  *  
@@ -16,4 +17,12 @@ import java.lang.Object
  *  Please see XMLEncoder.
  */
 protected class JViewport.ViewListener extends ComponentAdapter with Serializable {
+
+    /**  */
+    @stub
+    protected def ViewListener() = ???
+
+    /** Invoked when the component's size changes. */
+    @stub
+    def componentResized(e: ComponentEvent): Unit = ???
 }

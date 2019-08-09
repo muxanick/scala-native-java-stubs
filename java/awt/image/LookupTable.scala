@@ -1,6 +1,7 @@
 package java.awt.image
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This abstract class defines a lookup table object.  ByteLookupTable
  *  and ShortLookupTable are subclasses, which
@@ -16,9 +17,20 @@ import java.lang.Object
  */
 abstract class LookupTable extends Object {
 
+    /** Constructs a new LookupTable from the number of components and an offset
+     *  into the lookup table.
+     */
+    @stub
+    protected def this(offset: Int, numComponents: Int) = ???
+
     /** Returns the number of components in the lookup table. */
     def getNumComponents(): Int
 
     /** Returns the offset. */
     def getOffset(): Int
+
+    /** Returns an int array of components for
+     *  one pixel.
+     */
+    def lookupPixel(src: Array[Int], dest: Array[Int]): Array[Int]
 }

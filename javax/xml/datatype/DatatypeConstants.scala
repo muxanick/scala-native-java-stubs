@@ -2,12 +2,19 @@ package javax.xml.datatype
 
 import java.lang.Object
 import javax.xml.namespace.QName
+import scala.scalanative.annotation.stub
 
 /** Utility class to contain basic Datatype values as constants. */
 final class DatatypeConstants extends Object {
 }
 
 object DatatypeConstants {
+    /** Type-safe enum class that represents six fields
+     *  of the Duration class.
+     */
+    @stub
+    object Field extends DatatypeConstants.Field
+
     /** Value for fourth month of year. */
     @stub
     val APRIL: Int = ???
@@ -147,4 +154,8 @@ object DatatypeConstants {
     /** Fully qualified name for W3C XML Schema 1.0 datatype time. */
     @stub
     val TIME: QName = ???
+
+    /** A constant that represents the years field. */
+    @stub
+    val YEARS: DatatypeConstants.Field = ???
 }

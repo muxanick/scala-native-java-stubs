@@ -1,7 +1,8 @@
 package java.rmi.server
 
-import java.io.{ObjectInput, Serializable}
+import java.io.{ObjectInput, ObjectOutput, Serializable}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** An ObjID is used to identify a remote object exported
  *  to an RMI runtime.  When a remote object is exported, it is assigned
@@ -36,6 +37,10 @@ final class ObjID extends Object with Serializable {
     @stub
     def this() = ???
 
+    /** Creates a "well-known" object identifier. */
+    @stub
+    def this(objNum: Int) = ???
+
     /** Compares the specified object with this ObjID for
      *  equality.
      */
@@ -51,6 +56,12 @@ final class ObjID extends Object with Serializable {
     /** Returns a string representation of this object identifier. */
     @stub
     def toString(): String = ???
+
+    /** Marshals a binary representation of this ObjID to
+     *  an ObjectOutput instance.
+     */
+    @stub
+    def write(out: ObjectOutput): Unit = ???
 }
 
 object ObjID {
@@ -63,6 +74,10 @@ object ObjID {
      */
     @stub
     val DGC_ID: Int = ???
+
+    /** Object number for well-known ObjID of the registry. */
+    @stub
+    val REGISTRY_ID: Int = ???
 
     /** Constructs and returns a new ObjID instance by
      *  unmarshalling a binary representation from an

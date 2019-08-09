@@ -2,6 +2,7 @@ package javax.swing
 
 import java.awt.Component
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Group provides the basis for the two types of
  *  operations supported by GroupLayout: laying out
@@ -68,4 +69,7 @@ abstract class GroupLayout.Group extends Object {
 
     /** Adds a gap to this Group with the specified size. */
     def addGap(min: Int, pref: Int, max: Int): GroupLayout.Group
+
+    /** Adds a Group to this Group. */
+    def addGroup(group: GroupLayout.Group): GroupLayout.Group
 }

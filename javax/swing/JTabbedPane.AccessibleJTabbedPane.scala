@@ -3,7 +3,8 @@ package javax.swing
 import java.awt.{Component.AccessibleAWTComponent, Container.AccessibleAWTContainer, Point}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole, AccessibleSelection}
-import javax.swing.event.ChangeListener
+import javax.swing.event.{ChangeEvent, ChangeListener}
+import scala.scalanative.annotation.stub
 
 /** This class implements accessibility support for the
  *  JTabbedPane class.  It provides an implementation of the
@@ -20,6 +21,10 @@ import javax.swing.event.ChangeListener
  *  Please see XMLEncoder.
  */
 protected class JTabbedPane.AccessibleJTabbedPane extends JComponent.AccessibleJComponent with AccessibleSelection with ChangeListener {
+
+    /** Constructs an AccessibleJTabbedPane */
+    @stub
+    def AccessibleJTabbedPane() = ???
 
     /** Adds the specified Accessible child of the object to the object's
      *  selection.
@@ -88,4 +93,8 @@ protected class JTabbedPane.AccessibleJTabbedPane extends JComponent.AccessibleJ
      */
     @stub
     def selectAllAccessibleSelection(): Unit = ???
+
+    /** Invoked when the target of the listener has changed its state. */
+    @stub
+    def stateChanged(e: ChangeEvent): Unit = ???
 }

@@ -2,6 +2,7 @@ package java.util.logging
 
 import java.lang.String
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** The management interface for the logging facility. It is recommended
  *  to use the PlatformLoggingMXBean management
@@ -39,4 +40,8 @@ trait LoggingMXBean {
     /** Returns the name of the parent for the specified logger. */
     @stub
     def getParentLoggerName(loggerName: String): String = ???
+
+    /** Sets the specified logger to the specified new level. */
+    @stub
+    def setLoggerLevel(loggerName: String, levelName: String): Unit = ???
 }

@@ -2,6 +2,7 @@ package java.awt.geom
 
 import java.awt.{Rectangle, Shape}
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** The QuadCurve2D class defines a quadratic parametric curve
  *  segment in (x,y) coordinate space.
@@ -12,6 +13,10 @@ import java.lang.{Cloneable, Object}
  *  the subclass.
  */
 abstract class QuadCurve2D extends Object with Shape with Cloneable {
+
+    /** This is an abstract class that cannot be instantiated directly. */
+    @stub
+    protected def this() = ???
 
     /** Creates a new object of the same class and with the same contents
      *  as this object.
@@ -162,6 +167,12 @@ object QuadCurve2D {
     @stub
     object Double extends QuadCurve2D.Double
 
+    /** A quadratic parametric curve segment specified with
+     *  float coordinates.
+     */
+    @stub
+    object Float extends QuadCurve2D.Float
+
     /** Returns the flatness, or maximum distance of a
      *  control point from the line connecting the end points, of the
      *  quadratic curve specified by the control points stored in the
@@ -214,4 +225,11 @@ object QuadCurve2D {
      */
     @stub
     def subdivide(src: Array[Double], srcoff: Int, left: Array[Double], leftoff: Int, right: Array[Double], rightoff: Int): Unit = ???
+
+    /** Subdivides the quadratic curve specified by the src
+     *  parameter and stores the resulting two subdivided curves into the
+     *  left and right curve parameters.
+     */
+    @stub
+    def subdivide(src: QuadCurve2D, left: QuadCurve2D, right: QuadCurve2D): Unit = ???
 }

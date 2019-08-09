@@ -2,6 +2,7 @@ package javax.print.attribute
 
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Class Size2DSyntax is an abstract base class providing the common
  *  implementation of all attributes denoting a size in two dimensions.
@@ -60,6 +61,12 @@ abstract class Size2DSyntax extends Object with Serializable with Cloneable {
     @stub
     protected def this(x: Float, y: Float, units: Int) = ???
 
+    /** Construct a new two-dimensional size attribute from the given integer
+     *  values.
+     */
+    @stub
+    protected def this(x: Int, y: Int, units: Int) = ???
+
     /** Returns whether this two-dimensional size attribute is equivalent to the
      *  passed in object.
      */
@@ -95,10 +102,19 @@ abstract class Size2DSyntax extends Object with Serializable with Cloneable {
 
     /** Returns a string version of this two-dimensional size attribute. */
     def toString(): String
+
+    /** Returns a string version of this two-dimensional size attribute in the
+     *  given units.
+     */
+    def toString(units: Int, unitsName: String): String
 }
 
 object Size2DSyntax {
     /** Value to indicate units of inches (in). */
     @stub
     val INCH: Int = ???
+
+    /** Value to indicate units of millimeters (mm). */
+    @stub
+    val MM: Int = ???
 }

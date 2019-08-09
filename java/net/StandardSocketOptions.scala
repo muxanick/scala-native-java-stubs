@@ -1,6 +1,7 @@
 package java.net
 
 import java.lang.{Boolean, Integer, Object}
+import scala.scalanative.annotation.stub
 
 /** Defines the standard socket options.
  * 
@@ -52,4 +53,8 @@ object StandardSocketOptions {
     /** The size of the socket send buffer. */
     @stub
     val SO_SNDBUF: SocketOption[Integer] = ???
+
+    /** Disable the Nagle algorithm. */
+    @stub
+    val TCP_NODELAY: SocketOption[Boolean] = ???
 }

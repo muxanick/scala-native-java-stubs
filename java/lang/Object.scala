@@ -1,10 +1,16 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** Class Object is the root of the class hierarchy.
  *  Every class has Object as a superclass. All objects,
  *  including arrays, implement the methods of this class.
  */
 class Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Creates and returns a copy of this object. */
     @stub
@@ -56,4 +62,13 @@ class Object {
      */
     @stub
     def wait(timeout: Long): Unit = ???
+
+    /** Causes the current thread to wait until another thread invokes the
+     *  notify() method or the
+     *  notifyAll() method for this object, or
+     *  some other thread interrupts the current thread, or a certain
+     *  amount of real time has elapsed.
+     */
+    @stub
+    def wait(timeout: Long, nanos: Int): Unit = ???
 }

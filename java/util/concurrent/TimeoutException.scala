@@ -1,6 +1,7 @@
 package java.util.concurrent
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Exception thrown when a blocking operation times out.  Blocking
  *  operations for which a timeout is specified need a means to
@@ -16,4 +17,10 @@ class TimeoutException extends Exception {
      */
     @stub
     def this() = ???
+
+    /** Constructs a TimeoutException with the specified detail
+     *  message.
+     */
+    @stub
+    def this(message: String) = ???
 }

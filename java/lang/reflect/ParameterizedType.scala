@@ -1,5 +1,7 @@
 package java.lang.reflect
 
+import scala.scalanative.annotation.stub
+
 /** ParameterizedType represents a parameterized type such as
  *  Collection<String>.
  * 
@@ -27,4 +29,10 @@ trait ParameterizedType extends Type {
      */
     @stub
     def getOwnerType(): Type = ???
+
+    /** Returns the Type object representing the class or interface
+     *  that declared this type.
+     */
+    @stub
+    def getRawType(): Type = ???
 }

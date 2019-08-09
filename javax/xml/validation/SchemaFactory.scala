@@ -4,8 +4,7 @@ import java.io.File
 import java.lang.{ClassLoader, Object, String}
 import java.net.URL
 import javax.xml.transform.Source
-import org.w3c.dom.ls.LSResourceResolver
-import org.xml.sax.ErrorHandler
+import scala.scalanative.annotation.stub
 
 /** Factory that creates Schema objects. Entry-point to
  *  the validation API.
@@ -74,6 +73,10 @@ import org.xml.sax.ErrorHandler
  */
 abstract class SchemaFactory extends Object {
 
+    /** Constructor for derived classes. */
+    @stub
+    protected def this() = ???
+
     /** Gets the current ErrorHandler set to this SchemaFactory. */
     def getErrorHandler(): ErrorHandler
 
@@ -118,6 +121,11 @@ abstract class SchemaFactory extends Object {
 
     /** Set the value of a property. */
     def setProperty(name: String, object: Object): Unit
+
+    /** Sets the LSResourceResolver to customize
+     *  resource resolution when parsing schemas.
+     */
+    def setResourceResolver(resourceResolver: LSResourceResolver): Unit
 }
 
 object SchemaFactory {

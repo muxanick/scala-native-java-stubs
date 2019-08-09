@@ -3,6 +3,7 @@ package javax.management.remote
 import java.io.Serializable
 import java.lang.{Object, String}
 import java.security.Principal
+import scala.scalanative.annotation.stub
 
 /** The identity of a remote client of the JMX Remote API.
  * 
@@ -15,6 +16,10 @@ import java.security.Principal
  *  the Principals associated with a Subject.
  */
 class JMXPrincipal extends Object with Principal with Serializable {
+
+    /** Creates a JMXPrincipal for a given identity. */
+    @stub
+    def this(name: String) = ???
 
     /** Compares the specified Object with this JMXPrincipal
      *  for equality.
@@ -29,4 +34,8 @@ class JMXPrincipal extends Object with Principal with Serializable {
     /** Returns a hash code for this JMXPrincipal. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a string representation of this JMXPrincipal. */
+    @stub
+    def toString(): String = ???
 }

@@ -1,5 +1,7 @@
 package java.time.temporal
 
+import scala.scalanative.annotation.stub
+
 /** Framework-level interface defining read-write access to a temporal object,
  *  such as a date, time, offset or some combination of these.
  *  
@@ -84,4 +86,8 @@ trait Temporal extends TemporalAccessor {
     /** Returns an adjusted object of the same type as this object with the adjustment made. */
     @stub
     val this: default = ???
+
+    /** Returns an object of the same type as this object with the specified field altered. */
+    @stub
+    def with(field: TemporalField, newValue: Long): Temporal = ???
 }

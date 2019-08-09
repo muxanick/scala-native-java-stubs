@@ -2,6 +2,7 @@ package javax.security.cert
 
 import java.lang.{Object, String}
 import java.security.PublicKey
+import scala.scalanative.annotation.stub
 
 /** Abstract class for managing a variety of identity certificates.
  *  An identity certificate is a guarantee by a principal that
@@ -27,6 +28,10 @@ import java.security.PublicKey
  */
 abstract class Certificate extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Compares this certificate for equality with the specified
      *  object.
      */
@@ -50,4 +55,9 @@ abstract class Certificate extends Object {
      *  private key that corresponds to the specified public key.
      */
     def verify(key: PublicKey): Unit
+
+    /** Verifies that this certificate was signed using the
+     *  private key that corresponds to the specified public key.
+     */
+    def verify(key: PublicKey, sigProvider: String): Unit
 }

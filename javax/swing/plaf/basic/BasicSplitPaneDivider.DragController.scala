@@ -2,6 +2,7 @@ package javax.swing.plaf.basic
 
 import java.awt.event.MouseEvent
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Handles the events during a dragging session for a
  *  HORIZONTAL_SPLIT oriented split pane. This continually
@@ -20,6 +21,10 @@ import java.lang.Object
  *  Please see XMLEncoder.
  */
 protected class BasicSplitPaneDivider.DragController extends Object {
+
+    /**  */
+    @stub
+    protected def DragController(e: MouseEvent) = ???
 
     /**  */
     @stub
@@ -50,4 +55,10 @@ protected class BasicSplitPaneDivider.DragController extends Object {
     /** Returns true if the dragging session is valid. */
     @stub
     protected def isValid(): Boolean = ???
+
+    /** Returns the new position to put the divider at based on
+     *  the passed in MouseEvent.
+     */
+    @stub
+    protected def positionForMouseEvent(e: MouseEvent): Int = ???
 }

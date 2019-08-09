@@ -5,6 +5,7 @@ import java.beans.PropertyChangeListener
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.plaf.ToolBarUI
+import scala.scalanative.annotation.stub
 
 /** JToolBar provides a component that is useful for
  *  displaying commonly used Actions or controls.
@@ -47,6 +48,12 @@ class JToolBar extends JComponent with SwingConstants with Accessible {
     /** Creates a new tool bar with the specified name. */
     @stub
     def this(name: String) = ???
+
+    /** Creates a new tool bar with a specified name and
+     *  orientation.
+     */
+    @stub
+    def this(name: String, orientation: Int) = ???
 
     /** This class implements accessibility support for the
      *  JToolBar class.
@@ -173,4 +180,14 @@ class JToolBar extends JComponent with SwingConstants with Accessible {
     /** Sets the L&F object that renders this component. */
     @stub
     def setUI(ui: ToolBarUI): Unit = ???
+
+    /** Notification from the UIFactory that the L&F has changed. */
+    @stub
+    def updateUI(): Unit = ???
+}
+
+object JToolBar {
+    /** A toolbar-specific separator. */
+    @stub
+    object Separator extends JToolBar.Separator
 }

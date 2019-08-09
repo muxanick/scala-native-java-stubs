@@ -2,11 +2,16 @@ package javax.management.openmbean
 
 import java.lang.{Object, String}
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** The TabularType class is the  open type class
  *  whose instances describe the types of TabularData values.
  */
 class TabularType extends OpenType[TabularData] {
+
+    /** Constructs a TabularType instance, checking for the validity of the given parameters. */
+    @stub
+    def this(typeName: String, description: String, rowType: CompositeType, indexNames: Array[String]) = ???
 
     /** Compares the specified obj parameter with this TabularType instance for equality. */
     @stub
@@ -36,4 +41,8 @@ class TabularType extends OpenType[TabularData] {
      */
     @stub
     def isValue(obj: Object): Boolean = ???
+
+    /** Returns a string representation of this TabularType instance. */
+    @stub
+    def toString(): String = ???
 }

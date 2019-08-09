@@ -4,6 +4,7 @@ import java.awt.Rectangle
 import java.lang.Object
 import java.util.Enumeration
 import javax.swing.event.TreeModelEvent
+import scala.scalanative.annotation.stub
 
 /** Warning:
  *  Serialized objects of this class will not be compatible with
@@ -15,6 +16,10 @@ import javax.swing.event.TreeModelEvent
  *  Please see XMLEncoder.
  */
 abstract class AbstractLayoutCache extends Object with RowMapper {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Object responsible for getting the size of a node. */
     protected val nodeDimensions: AbstractLayoutCache.NodeDimensions
@@ -29,6 +34,9 @@ abstract class AbstractLayoutCache extends Object with RowMapper {
 
     /** Model providing information. */
     protected val treeModel: TreeModel
+
+    /** Selection model. */
+    protected val treeSelectionModel: TreeSelectionModel
 
     /** Returns a rectangle giving the bounds needed to draw path. */
     def getBounds(path: TreePath, placeIn: Rectangle): Rectangle
@@ -145,4 +153,17 @@ abstract class AbstractLayoutCache extends Object with RowMapper {
 
     /** Invoked after nodes have been removed from the tree. */
     def treeNodesRemoved(e: TreeModelEvent): Unit
+
+    /** Invoked after the tree has drastically changed structure from a
+     *  given node down.
+     */
+    def treeStructureChanged(e: TreeModelEvent): Unit
+}
+
+object AbstractLayoutCache {
+    /** Used by AbstractLayoutCache to determine the size
+     *  and x origin of a particular node.
+     */
+    @stub
+    object NodeDimensions extends AbstractLayoutCache.NodeDimensions
 }

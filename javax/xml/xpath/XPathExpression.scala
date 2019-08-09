@@ -2,7 +2,7 @@ package javax.xml.xpath
 
 import java.lang.{Object, String}
 import javax.xml.namespace.QName
-import org.xml.sax.InputSource
+import scala.scalanative.annotation.stub
 
 /** XPathExpression provides access to compiled XPath expressions.
  * 
@@ -81,4 +81,8 @@ trait XPathExpression {
     /** Evaluate the compiled XPath expression in the specified context and return the result as a String. */
     @stub
     def evaluate(item: Object): String = ???
+
+    /** Evaluate the compiled XPath expression in the specified context and return the result as the specified type. */
+    @stub
+    def evaluate(item: Object, returnType: QName): Object = ???
 }

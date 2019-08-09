@@ -1,5 +1,8 @@
 package java.nio.channels
 
+import java.nio.ByteBuffer
+import scala.scalanative.annotation.stub
+
 /** A channel that can write bytes.
  * 
  *   Only one write operation upon a writable channel may be in progress at
@@ -10,4 +13,8 @@ package java.nio.channels
  *  the type of the channel. 
  */
 trait WritableByteChannel extends Channel {
+
+    /** Writes a sequence of bytes to this channel from the given buffer. */
+    @stub
+    def write(src: ByteBuffer): Int = ???
 }

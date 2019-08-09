@@ -1,7 +1,8 @@
 package javax.net.ssl
 
 import java.lang.{Object, String}
-import java.net.ServerSocket
+import java.net.{InetAddress, ServerSocket}
+import scala.scalanative.annotation.stub
 
 /** This class extends ServerSockets and
  *  provides secure server sockets using protocols such as the Secure
@@ -35,6 +36,10 @@ abstract class SSLServerSocket extends ServerSocket {
     /** Used only by subclasses. */
     @stub
     protected def this(port: Int, backlog: Int) = ???
+
+    /** Used only by subclasses. */
+    @stub
+    protected def this(port: Int, backlog: Int, address: InetAddress) = ???
 
     /** Returns the list of cipher suites which are currently enabled
      *  for use by newly accepted connections.
@@ -101,4 +106,10 @@ abstract class SSLServerSocket extends ServerSocket {
      *  server mode, or the SSL client mode.
      */
     def setUseClientMode(mode: Boolean): Unit
+
+    /** Controls whether accepted server-mode
+     *  SSLSockets will be initially configured to
+     *  request client authentication.
+     */
+    def setWantClientAuth(want: Boolean): Unit
 }

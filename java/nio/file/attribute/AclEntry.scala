@@ -2,6 +2,7 @@ package java.nio.file.attribute
 
 import java.lang.{Object, String}
 import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** An entry in an access control list (ACL).
  * 
@@ -57,9 +58,17 @@ final class AclEntry extends Object {
     /** Returns the string representation of this ACL entry. */
     @stub
     def toString(): String = ???
+
+    /** Returns the ACL entry type. */
+    @stub
+    def type(): AclEntryType = ???
 }
 
 object AclEntry {
+    /** A builder of AclEntry objects. */
+    @stub
+    object Builder extends AclEntry.Builder
+
     /** Constructs a new builder. */
     @stub
     def newBuilder(): AclEntry.Builder = ???

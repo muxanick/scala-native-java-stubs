@@ -2,6 +2,7 @@ package javax.print.attribute
 
 import java.io.Serializable
 import java.lang.{Class, Object}
+import scala.scalanative.annotation.stub
 
 /** Class HashAttributeSet provides an AttributeSet
  *  implementation with characteristics of a hash map.
@@ -51,6 +52,12 @@ class HashAttributeSet extends Object with AttributeSet with Serializable {
      */
     @stub
     protected def this(attributes: AttributeSet, interfaceName: Class[_]) = ???
+
+    /** Construct a new, empty attribute set, where the members of
+     *  the attribute set are restricted to the given interface.
+     */
+    @stub
+    protected def this(interfaceName: Class[_]) = ???
 
     /** Adds the specified attribute to this attribute set if it is not
      *  already present, first removing any existing in the same
@@ -112,4 +119,8 @@ class HashAttributeSet extends Object with AttributeSet with Serializable {
     /** Returns the number of attributes in this attribute set. */
     @stub
     def size(): Int = ???
+
+    /** Returns an array of the attributes contained in this set. */
+    @stub
+    def toArray(): Array[Attribute] = ???
 }

@@ -2,6 +2,7 @@ package java.util
 
 import java.lang.Object
 import java.util.function.{BiConsumer, BiFunction}
+import scala.scalanative.annotation.stub
 
 /** Hash table and linked list implementation of the Map interface,
  *  with predictable iteration order.  This implementation differs from
@@ -140,6 +141,12 @@ class LinkedHashMap[K, V] extends HashMap[K, V] with Map[K, V] {
     @stub
     def this(initialCapacity: Int, loadFactor: Float, accessOrder: Boolean) = ???
 
+    /** Constructs an insertion-ordered LinkedHashMap instance with
+     *  the same mappings as the specified map.
+     */
+    @stub
+    def this(m: Map[_ <: K, _ <: V]) = ???
+
     /** Removes all of the mappings from this map. */
     @stub
     def clear(): Unit = ???
@@ -186,4 +193,8 @@ class LinkedHashMap[K, V] extends HashMap[K, V] with Map[K, V] {
      */
     @stub
     def replaceAll(function: BiFunction[_ >: K, _ >: V, _ <: V]): Unit = ???
+
+    /** Returns a Collection view of the values contained in this map. */
+    @stub
+    def values(): Collection[V] = ???
 }

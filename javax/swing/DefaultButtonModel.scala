@@ -5,6 +5,7 @@ import java.io.Serializable
 import java.lang.{Class, Object, String}
 import java.util.EventListener
 import javax.swing.event.{ChangeEvent, ChangeListener, EventListenerList}
+import scala.scalanative.annotation.stub
 
 /** The default implementation of a Button component's data model.
  *  
@@ -18,6 +19,10 @@ import javax.swing.event.{ChangeEvent, ChangeListener, EventListenerList}
  *  Please see XMLEncoder.
  */
 class DefaultButtonModel extends Object with ButtonModel with Serializable {
+
+    /** Constructs a DefaultButtonModel. */
+    @stub
+    def this() = ???
 
     /** The action command string fired by the button. */
     @stub
@@ -40,6 +45,10 @@ class DefaultButtonModel extends Object with ButtonModel with Serializable {
     /** The button's mnemonic. */
     @stub
     protected val mnemonic: Int = ???
+
+    /** The bitmask used to store the state of the button. */
+    @stub
+    protected val stateMask: Int = ???
 
     /** Adds an ActionListener to the model. */
     @stub
@@ -182,6 +191,10 @@ class DefaultButtonModel extends Object with ButtonModel with Serializable {
     /** Sets or clears the button's rollover state */
     @stub
     def setRollover(b: Boolean): Unit = ???
+
+    /** Selects or deselects the button. */
+    @stub
+    def setSelected(b: Boolean): Unit = ???
 }
 
 object DefaultButtonModel {

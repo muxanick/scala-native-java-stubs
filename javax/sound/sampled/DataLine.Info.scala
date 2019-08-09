@@ -1,6 +1,7 @@
 package javax.sound.sampled
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Besides the class information inherited from its superclass,
  *  DataLine.Info provides additional information specific to data lines.
@@ -31,6 +32,12 @@ object DataLine.Info extends Line.Info {
     @stub
     def Info(lineClass: Class[_], formats: Array[AudioFormat], minBufferSize: Int, maxBufferSize: Int) = ???
 
+    /** Constructs a data line's info object from the specified information,
+     *  which includes a single audio format and a desired buffer size.
+     */
+    @stub
+    def Info(lineClass: Class[_], format: AudioFormat, bufferSize: Int) = ???
+
     /** Obtains a set of audio formats supported by the data line. */
     @stub
     def getFormats(): Array[AudioFormat] = ???
@@ -50,4 +57,8 @@ object DataLine.Info extends Line.Info {
     /** Determines whether the specified info object matches this one. */
     @stub
     def matches(info: Line.Info): Boolean = ???
+
+    /** Obtains a textual description of the data line info. */
+    @stub
+    def toString(): String = ???
 }

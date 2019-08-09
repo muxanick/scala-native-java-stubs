@@ -3,6 +3,7 @@ package javax.management.remote
 import java.lang.{Object, String}
 import java.util.EventObject
 import javax.management.Notification
+import scala.scalanative.annotation.stub
 
 /** Notification emitted when a client connection is opened or
  *  closed or when notifications are lost.  These notifications are
@@ -48,6 +49,14 @@ import javax.management.Notification
  *  when the notification was constructed.
  */
 class JMXConnectionNotification extends Notification {
+
+    /** Constructs a new connection notification. */
+    @stub
+    def this(type: String, source: Object, connectionId: String, sequenceNumber: Long, message: String, userData: Object) = ???
+
+    /** The connection ID to which this notification pertains. */
+    @stub
+    def getConnectionId(): String = ???
 }
 
 object JMXConnectionNotification {
@@ -64,4 +73,8 @@ object JMXConnectionNotification {
      */
     @stub
     val NOTIFS_LOST: String = ???
+
+    /** Notification type string for a connection-opened notification. */
+    @stub
+    val OPENED: String = ???
 }

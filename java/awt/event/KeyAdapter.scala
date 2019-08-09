@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An abstract adapter class for receiving keyboard events.
  *  The methods in this class are empty. This class exists as
@@ -20,9 +21,16 @@ import java.lang.Object
  */
 abstract class KeyAdapter extends Object with KeyListener {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Invoked when a key has been pressed. */
     def keyPressed(e: KeyEvent): Unit
 
     /** Invoked when a key has been released. */
     def keyReleased(e: KeyEvent): Unit
+
+    /** Invoked when a key has been typed. */
+    def keyTyped(e: KeyEvent): Unit
 }

@@ -1,6 +1,7 @@
 package javax.naming.ldap
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Indicates the end of a batch of search results.
  *  Contains an estimate of the total number of entries in the result set
@@ -28,7 +29,23 @@ import java.lang.Object
  */
 final class PagedResultsResponseControl extends BasicControl {
 
+    /** Constructs a paged-results response control. */
+    @stub
+    def this(id: String, criticality: Boolean, value: Array[Byte]) = ???
+
     /** Retrieves the server-generated cookie. */
     @stub
     def getCookie(): Array[Byte] = ???
+
+    /** Retrieves (an estimate of) the number of entries in the search result. */
+    @stub
+    def getResultSize(): Int = ???
+}
+
+object PagedResultsResponseControl {
+    /** The paged-results response control's assigned object identifier
+     *  is 1.2.840.113556.1.4.319.
+     */
+    @stub
+    val OID: String = ???
 }

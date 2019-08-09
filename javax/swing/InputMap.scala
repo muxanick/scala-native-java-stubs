@@ -2,6 +2,7 @@ package javax.swing
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** InputMap provides a binding between an input event
  *  (currently only KeyStrokes are used)
@@ -21,6 +22,10 @@ import java.lang.Object
  *  some of the methods will cause a StackOverflowError to be thrown.
  */
 class InputMap extends Object with Serializable {
+
+    /** Creates an InputMap with no parent and no mappings. */
+    @stub
+    def this() = ???
 
     /** Returns an array of the KeyStrokes defined in this
      *  InputMap and its parent.
@@ -59,4 +64,8 @@ class InputMap extends Object with Serializable {
     /** Sets this InputMap's parent. */
     @stub
     def setParent(map: InputMap): Unit = ???
+
+    /** Returns the number of KeyStroke bindings. */
+    @stub
+    def size(): Int = ???
 }

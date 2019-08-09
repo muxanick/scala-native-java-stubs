@@ -2,7 +2,8 @@ package javax.swing
 
 import java.awt.{Component.AccessibleAWTComponent, Container.AccessibleAWTContainer}
 import java.lang.Object
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole}
+import scala.scalanative.annotation.stub
 
 /** This class implements accessibility support for the
  *  JRootPane class.  It provides an implementation of the
@@ -19,6 +20,10 @@ import javax.accessibility.{Accessible, AccessibleContext}
  */
 protected class JRootPane.AccessibleJRootPane extends JComponent.AccessibleJComponent {
 
+    /**  */
+    @stub
+    protected def AccessibleJRootPane() = ???
+
     /** Returns the specified Accessible child of the object. */
     @stub
     def getAccessibleChild(i: Int): Accessible = ???
@@ -26,4 +31,8 @@ protected class JRootPane.AccessibleJRootPane extends JComponent.AccessibleJComp
     /** Returns the number of accessible children of the object. */
     @stub
     def getAccessibleChildrenCount(): Int = ???
+
+    /** Get the role of this object. */
+    @stub
+    def getAccessibleRole(): AccessibleRole = ???
 }

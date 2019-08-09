@@ -2,6 +2,7 @@ package javax.crypto
 
 import java.io.{FilterInputStream, InputStream}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A CipherInputStream is composed of an InputStream and a Cipher so
  *  that read() methods return data that are read in from the
@@ -44,6 +45,12 @@ class CipherInputStream extends FilterInputStream {
     @stub
     protected def this(is: InputStream) = ???
 
+    /** Constructs a CipherInputStream from an InputStream and a
+     *  Cipher.
+     */
+    @stub
+    def this(is: InputStream, c: Cipher) = ???
+
     /** Returns the number of bytes that can be read from this input
      *  stream without blocking.
      */
@@ -77,4 +84,10 @@ class CipherInputStream extends FilterInputStream {
      */
     @stub
     def read(b: Array[Byte], off: Int, len: Int): Int = ???
+
+    /** Skips n bytes of input from the bytes that can be read
+     *  from this input stream without blocking.
+     */
+    @stub
+    def skip(n: Long): Long = ???
 }

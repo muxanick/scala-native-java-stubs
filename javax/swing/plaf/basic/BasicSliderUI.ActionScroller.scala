@@ -2,7 +2,8 @@ package javax.swing.plaf.basic
 
 import java.awt.event.ActionEvent
 import java.lang.Object
-import javax.swing.AbstractAction
+import javax.swing.{AbstractAction, JSlider}
+import scala.scalanative.annotation.stub
 
 /** As of Java 2 platform v1.3 this undocumented class is no longer used.
  *  The recommended approach to creating bindings is to use a
@@ -18,7 +19,15 @@ import javax.swing.AbstractAction
  */
 class BasicSliderUI.ActionScroller extends AbstractAction {
 
+    /**  */
+    @stub
+    def ActionScroller(slider: JSlider, dir: Int, block: Boolean) = ???
+
     /** Invoked when an action occurs. */
     @stub
     def actionPerformed(e: ActionEvent): Unit = ???
+
+    /** Returns true if the action is enabled. */
+    @stub
+    def isEnabled(): Boolean = ???
 }

@@ -2,6 +2,7 @@ package javax.management.modelmbean
 
 import java.lang.{Object, String}
 import javax.management.{Descriptor, MBeanInfo}
+import scala.scalanative.annotation.stub
 
 /** This class represents the meta data for ModelMBeans.  Descriptors have been
  *  added on the meta data objects.
@@ -45,6 +46,12 @@ class ModelMBeanInfoSupport extends MBeanInfo with ModelMBeanInfo {
      */
     @stub
     def this(className: String, description: String, attributes: Array[ModelMBeanAttributeInfo], constructors: Array[ModelMBeanConstructorInfo], operations: Array[ModelMBeanOperationInfo], notifications: Array[ModelMBeanNotificationInfo]) = ???
+
+    /** Creates a ModelMBeanInfoSupport with the provided information
+     *  and the descriptor given in parameter.
+     */
+    @stub
+    def this(className: String, description: String, attributes: Array[ModelMBeanAttributeInfo], constructors: Array[ModelMBeanConstructorInfo], operations: Array[ModelMBeanOperationInfo], notifications: Array[ModelMBeanNotificationInfo], mbeandescriptor: Descriptor) = ???
 
     /** Returns a shallow clone of this instance. */
     @stub
@@ -99,4 +106,8 @@ class ModelMBeanInfoSupport extends MBeanInfo with ModelMBeanInfo {
     /** Adds or replaces descriptors in the ModelMBeanInfo. */
     @stub
     def setDescriptors(inDescriptors: Array[Descriptor]): Unit = ???
+
+    /** Sets the ModelMBean's descriptor. */
+    @stub
+    def setMBeanDescriptor(inMBeanDescriptor: Descriptor): Unit = ???
 }

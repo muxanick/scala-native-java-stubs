@@ -3,6 +3,7 @@ package javax.xml.crypto.dsig
 import java.lang.String
 import java.util.List
 import javax.xml.crypto.XMLStructure
+import scala.scalanative.annotation.stub
 
 /** A representation of the XML Object element as defined in
  *  the 
@@ -53,4 +54,17 @@ trait XMLObject extends XMLStructure {
     /** Returns the Id of this XMLObject. */
     @stub
     def getId(): String = ???
+
+    /** Returns the mime type of this XMLObject. */
+    @stub
+    def getMimeType(): String = ???
+}
+
+object XMLObject {
+    /** URI that identifies the Object element (this can be
+     *  specified as the value of the type parameter of the
+     *  Reference class to identify the referent's type).
+     */
+    @stub
+    val TYPE: String = ???
 }

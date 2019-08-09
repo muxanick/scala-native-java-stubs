@@ -2,6 +2,7 @@ package javax.print.attribute.standard
 
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, DocAttribute, EnumSyntax, PrintJobAttribute, PrintRequestAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class PrintQuality is a printing attribute class, an enumeration,
  *  that specifies the print quality that the printer uses for the job.
@@ -13,6 +14,12 @@ import javax.print.attribute.{Attribute, DocAttribute, EnumSyntax, PrintJobAttri
  *  
  */
 class PrintQuality extends EnumSyntax with DocAttribute with PrintRequestAttribute with PrintJobAttribute {
+
+    /** Construct a new print quality enumeration value with the given integer
+     *  value.
+     */
+    @stub
+    protected def this(value: Int) = ???
 
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.
@@ -33,6 +40,10 @@ class PrintQuality extends EnumSyntax with DocAttribute with PrintRequestAttribu
     /** Returns the lowest integer value used by class PrintQuality. */
     @stub
     protected def getOffset(): Int = ???
+
+    /** Returns the string table for class PrintQuality. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object PrintQuality {
@@ -43,4 +54,8 @@ object PrintQuality {
     /** Highest quality available on the printer. */
     @stub
     val HIGH: PrintQuality = ???
+
+    /** Normal or intermediate quality on the printer. */
+    @stub
+    val NORMAL: PrintQuality = ???
 }

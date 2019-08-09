@@ -1,6 +1,7 @@
 package java.text
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** FieldPosition is a simple class used by Format
  *  and its subclasses to identify fields in formatted output. Fields can
@@ -40,6 +41,10 @@ class FieldPosition extends Object {
     @stub
     def this(attribute: Format.Field, fieldID: Int) = ???
 
+    /** Creates a FieldPosition object for the given field. */
+    @stub
+    def this(field: Int) = ???
+
     /** Overrides equals */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -75,4 +80,8 @@ class FieldPosition extends Object {
     /** Sets the end index. */
     @stub
     def setEndIndex(ei: Int): Unit = ???
+
+    /** Return a string representation of this FieldPosition. */
+    @stub
+    def toString(): String = ???
 }

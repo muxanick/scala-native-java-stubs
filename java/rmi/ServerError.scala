@@ -1,7 +1,8 @@
 package java.rmi
 
 import java.io.IOException
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Error, Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** A ServerError is thrown as a result of a remote method
  *  invocation when an Error is thrown while processing
@@ -12,4 +13,10 @@ import java.lang.{Exception, Object, Throwable}
  *  Error that occurred as its cause.
  */
 class ServerError extends RemoteException {
+
+    /** Constructs a ServerError with the specified
+     *  detail message and nested error.
+     */
+    @stub
+    def this(s: String, err: Error) = ???
 }

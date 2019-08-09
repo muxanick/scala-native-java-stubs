@@ -1,5 +1,8 @@
 package javax.xml.xpath
 
+import javax.xml.namespace.QName
+import scala.scalanative.annotation.stub
+
 /** XPathFunctionResolver provides access to the set of user defined XPathFunctions.
  * 
  *  XPath functions are resolved by name and arity.
@@ -17,4 +20,8 @@ package javax.xml.xpath
  *  extend the underlying implementation directly.
  */
 trait XPathFunctionResolver {
+
+    /** Find a function in the set of available functions. */
+    @stub
+    def resolveFunction(functionName: QName, arity: Int): XPathFunction = ???
 }

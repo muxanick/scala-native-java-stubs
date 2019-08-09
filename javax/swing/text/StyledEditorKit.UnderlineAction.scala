@@ -1,7 +1,9 @@
 package javax.swing.text
 
+import java.awt.event.ActionEvent
 import java.lang.Object
 import javax.swing.AbstractAction
+import scala.scalanative.annotation.stub
 
 /** An action to toggle the underline attribute.
  *  
@@ -15,3 +17,12 @@ import javax.swing.AbstractAction
  *  Please see XMLEncoder.
  */
 object StyledEditorKit.UnderlineAction extends StyledEditorKit.StyledTextAction {
+
+    /** Constructs a new UnderlineAction. */
+    @stub
+    def UnderlineAction() = ???
+
+    /** Toggles the Underline attribute. */
+    @stub
+    def actionPerformed(e: ActionEvent): Unit = ???
+}

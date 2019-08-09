@@ -1,6 +1,7 @@
 package java.util.function
 
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** Represents a function that accepts one argument and produces a result.
  * 
@@ -24,4 +25,10 @@ import java.lang.FunctionalInterface
      */
     @stub
     val Function[V, R]: default[V] = ???
+}
+
+object Function {
+    /** Returns a function that always returns its input argument. */
+    @stub
+    def identity[T](): Function[T, T] = ???
 }

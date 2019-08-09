@@ -2,6 +2,7 @@ package javax.xml.bind.annotation
 
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** 
  *  A container for multiple @XmlElement annotations.
@@ -134,4 +135,8 @@ import scala.annotation.StaticAnnotation
 @Retention ( value = RUNTIME ) 
 @Target ( value ={ FIELD , METHOD } ) 
  final class XmlElements extends StaticAnnotation {
+
+    /** Collection of @XmlElement annotations */
+    @stub
+    val value: Array[XmlElement] = ???
 }

@@ -7,6 +7,7 @@ import java.awt.image.renderable.RenderableImage
 import java.lang.{Object, String}
 import java.text.AttributedCharacterIterator
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** This Graphics2D class extends the
  *  Graphics class to provide more sophisticated
@@ -372,6 +373,10 @@ import java.util.Map
  */
 abstract class Graphics2D extends Graphics {
 
+    /** Constructs a new Graphics2D object. */
+    @stub
+    protected def this() = ???
+
     /** Sets the values of an arbitrary number of preferences for the
      *  rendering algorithms.
      */
@@ -552,4 +557,9 @@ abstract class Graphics2D extends Graphics {
      *  with a translation transform.
      */
     def translate(tx: Double, ty: Double): Unit
+
+    /** Translates the origin of the Graphics2D context to the
+     *  point (x, y) in the current coordinate system.
+     */
+    def translate(x: Int, y: Int): Unit
 }

@@ -2,6 +2,7 @@ package java.lang
 
 import java.io.File
 import java.util.{List, Map}
+import scala.scalanative.annotation.stub
 
 /** This class is used to create operating system processes.
  * 
@@ -144,6 +145,12 @@ final class ProcessBuilder extends Object {
     @stub
     def this(command: List[String]) = ???
 
+    /** Constructs a process builder with the specified operating
+     *  system program and arguments.
+     */
+    @stub
+    def this(command: String*) = ???
+
     /** Returns this process builder's operating system program and
      *  arguments.
      */
@@ -225,4 +232,16 @@ final class ProcessBuilder extends Object {
     /** Sets this process builder's standard output destination. */
     @stub
     def redirectOutput(destination: ProcessBuilder.Redirect): ProcessBuilder = ???
+
+    /** Starts a new process using the attributes of this process builder. */
+    @stub
+    def start(): Process = ???
+}
+
+object ProcessBuilder {
+    /** Represents a source of subprocess input or a destination of
+     *  subprocess output.
+     */
+    @stub
+    object Redirect extends ProcessBuilder.Redirect
 }

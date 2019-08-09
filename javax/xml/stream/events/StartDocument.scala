@@ -1,6 +1,7 @@
 package javax.xml.stream.events
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** An interface for the start document event */
 trait StartDocument extends XMLEvent {
@@ -26,4 +27,10 @@ trait StartDocument extends XMLEvent {
     /** Returns if this XML is standalone */
     @stub
     def isStandalone(): Boolean = ???
+
+    /** Returns true if the standalone attribute was set in
+     *  the encoding declaration of the document.
+     */
+    @stub
+    def standaloneSet(): Boolean = ???
 }

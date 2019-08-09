@@ -1,8 +1,9 @@
 package java.time.zone
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
 import java.time.{DayOfWeek, LocalTime, Month, ZoneOffset}
+import scala.scalanative.annotation.stub
 
 /** A rule expressing how to create a transition.
  *  
@@ -67,9 +68,19 @@ final class ZoneOffsetTransitionRule extends Object with Serializable {
     /** Is the transition local time midnight at the end of day. */
     @stub
     def isMidnightEndOfDay(): Boolean = ???
+
+    /** Returns a string describing this object. */
+    @stub
+    def toString(): String = ???
 }
 
 object ZoneOffsetTransitionRule {
+    /** A definition of the way a local time can be converted to the actual
+     *  transition date-time.
+     */
+    @stub
+    object TimeDefinition extends ZoneOffsetTransitionRule.TimeDefinition
+
     /** Obtains an instance defining the yearly rule to create transitions between two offsets. */
     @stub
     def of(month: Month, dayOfMonthIndicator: Int, dayOfWeek: DayOfWeek, time: LocalTime, timeEndOfDay: Boolean, timeDefnition: ZoneOffsetTransitionRule.TimeDefinition, standardOffset: ZoneOffset, offsetBefore: ZoneOffset, offsetAfter: ZoneOffset): ZoneOffsetTransitionRule = ???

@@ -1,6 +1,7 @@
 package java.sql
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Enumeration for status of the reason that a property could not be set
  *  via a call to Connection.setClientInfo
@@ -20,7 +21,16 @@ object ClientInfoStatus {
     /** The value specified for the client info property was not valid. */
     final val REASON_VALUE_INVALID = new ClientInfoStatus(REASON_VALUE_INVALID, 2)
 
+    /** The value specified for the client info property was too large. */
+    final val REASON_VALUE_TRUNCATED = new ClientInfoStatus(REASON_VALUE_TRUNCATED, 3)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): ClientInfoStatus = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[ClientInfoStatus] = ???
 }

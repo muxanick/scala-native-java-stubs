@@ -4,11 +4,16 @@ import java.lang.{Object, String}
 import java.security.Principal
 import java.security.cert.Certificate
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** Represents a cache response originally retrieved through secure
  *  means, such as TLS.
  */
 abstract class SecureCacheResponse extends CacheResponse {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the cipher suite in use on the original connection that
      *  retrieved the network resource.
@@ -32,4 +37,10 @@ abstract class SecureCacheResponse extends CacheResponse {
      *  retrieved the network resource.
      */
     def getPeerPrincipal(): Principal
+
+    /** Returns the server's certificate chain, which was established as
+     *  part of defining the session in the original connection that
+     *  retrieved the network resource, from cache.
+     */
+    def getServerCertificateChain(): List[Certificate]
 }

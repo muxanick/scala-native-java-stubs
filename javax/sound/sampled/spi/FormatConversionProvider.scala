@@ -2,6 +2,7 @@ package javax.sound.sampled.spi
 
 import java.lang.Object
 import javax.sound.sampled.{AudioFormat, AudioFormat.Encoding, AudioInputStream}
+import scala.scalanative.annotation.stub
 
 /** A format conversion provider provides format conversion services
  *  from one or more input formats to one or more output formats.
@@ -18,6 +19,10 @@ import javax.sound.sampled.{AudioFormat, AudioFormat.Encoding, AudioInputStream}
  *  the stream returned by one of the getAudioInputStream methods.
  */
 abstract class FormatConversionProvider extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Obtains an audio input stream with the specified encoding from the given audio
      *  input stream.
@@ -65,4 +70,9 @@ abstract class FormatConversionProvider extends Object {
      *  specified source format encoding.
      */
     def isSourceEncodingSupported(sourceEncoding: AudioFormat.Encoding): Boolean
+
+    /** Indicates whether the format converter supports conversion to the
+     *  specified target format encoding.
+     */
+    def isTargetEncodingSupported(targetEncoding: AudioFormat.Encoding): Boolean
 }

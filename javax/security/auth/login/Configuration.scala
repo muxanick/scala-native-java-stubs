@@ -2,6 +2,7 @@ package javax.security.auth.login
 
 import java.lang.{Object, String}
 import java.security.Provider
+import scala.scalanative.annotation.stub
 
 /** A Configuration object is responsible for specifying which LoginModules
  *  should be used for a particular application, and in what order the
@@ -146,6 +147,10 @@ import java.security.Provider
  */
 abstract class Configuration extends Object {
 
+    /** Sole constructor. */
+    @stub
+    protected def this() = ???
+
     /** Retrieve the AppConfigurationEntries for the specified name
      *  from this Configuration.
      */
@@ -165,6 +170,10 @@ abstract class Configuration extends Object {
 }
 
 object Configuration {
+    /** This represents a marker interface for Configuration parameters. */
+    @stub
+    val Configuration.Parameters: trait = ???
+
     /** Get the installed login Configuration. */
     @stub
     def getConfiguration(): Configuration = ???
@@ -180,4 +189,8 @@ object Configuration {
     /** Returns a Configuration object of the specified type. */
     @stub
     def getInstance(type: String, params: Configuration.Parameters, provider: String): Configuration = ???
+
+    /** Set the login Configuration. */
+    @stub
+    def setConfiguration(configuration: Configuration): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.util
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** 
  *  The  TooManyListenersException  Exception is used as part of
@@ -21,4 +22,8 @@ class TooManyListenersException extends Exception {
     /** Constructs a TooManyListenersException with no detail message. */
     @stub
     def this() = ???
+
+    /** Constructs a TooManyListenersException with the specified detail message. */
+    @stub
+    def this(s: String) = ???
 }

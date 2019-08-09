@@ -2,6 +2,7 @@ package java.nio.channels.spi
 
 import java.lang.Object
 import java.nio.channels.{Channel, InterruptibleChannel}
+import scala.scalanative.annotation.stub
 
 /** Base implementation class for interruptible channels.
  * 
@@ -42,6 +43,10 @@ import java.nio.channels.{Channel, InterruptibleChannel}
  */
 abstract class AbstractInterruptibleChannel extends Object with Channel with InterruptibleChannel {
 
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this() = ???
+
     /** Marks the beginning of an I/O operation that might block indefinitely. */
     protected def begin(): Unit
 
@@ -53,4 +58,7 @@ abstract class AbstractInterruptibleChannel extends Object with Channel with Int
 
     /** Closes this channel. */
     protected def implCloseChannel(): Unit
+
+    /** Tells whether or not this channel is open. */
+    def isOpen(): Boolean
 }

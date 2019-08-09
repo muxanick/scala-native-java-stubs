@@ -1,5 +1,7 @@
 package java.util
 
+import scala.scalanative.annotation.stub
+
 /** A SortedSet extended with navigation methods reporting
  *  closest matches for given search targets. Methods lower,
  *  floor, ceiling, and higher return elements
@@ -117,4 +119,10 @@ trait NavigableSet[E] extends SortedSet[E] {
      */
     @stub
     def tailSet(fromElement: E): SortedSet[E] = ???
+
+    /** Returns a view of the portion of this set whose elements are greater
+     *  than (or equal to, if inclusive is true) fromElement.
+     */
+    @stub
+    def tailSet(fromElement: E, inclusive: Boolean): NavigableSet[E] = ???
 }

@@ -1,6 +1,7 @@
 package javax.xml.bind.annotation.adapters
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Adapts a Java type for custom marshaling.
  * 
@@ -128,6 +129,13 @@ import java.lang.Object
  */
 abstract class XmlAdapter[ValueType, BoundType] extends Object {
 
+    /** Do-nothing constructor for the derived classes. */
+    @stub
+    protected def this() = ???
+
     /** Convert a bound type to a value type. */
     def marshal(v: BoundType): ValueType
+
+    /** Convert a value type to a bound type. */
+    def unmarshal(v: ValueType): BoundType
 }

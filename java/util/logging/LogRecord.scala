@@ -3,6 +3,7 @@ package java.util.logging
 import java.io.Serializable
 import java.lang.{Object, String, Throwable}
 import java.util.ResourceBundle
+import scala.scalanative.annotation.stub
 
 /** LogRecord objects are used to pass logging requests between
  *  the logging framework and individual log Handlers.
@@ -37,6 +38,10 @@ import java.util.ResourceBundle
  *  
  */
 class LogRecord extends Object with Serializable {
+
+    /** Construct a LogRecord with the given level and message values. */
+    @stub
+    def this(level: Level, msg: String) = ???
 
     /** Get the logging message level, for example Level.SEVERE. */
     @stub
@@ -129,4 +134,8 @@ class LogRecord extends Object with Serializable {
     /** Set an identifier for the thread where the message originated. */
     @stub
     def setThreadID(threadID: Int): Unit = ???
+
+    /** Set a throwable associated with the log event. */
+    @stub
+    def setThrown(thrown: Throwable): Unit = ???
 }

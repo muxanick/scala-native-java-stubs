@@ -2,6 +2,7 @@ package javax.swing
 
 import java.lang.Object
 import javax.swing.event.ChangeListener
+import scala.scalanative.annotation.stub
 
 /** A model for a potentially unbounded sequence of object values.  This model
  *  is similar to ListModel however there are some important differences:
@@ -55,4 +56,10 @@ trait SpinnerModel {
     /** Removes a ChangeListener from the model's listener list. */
     @stub
     def removeChangeListener(l: ChangeListener): Unit = ???
+
+    /** Changes current value of the model, typically this value is displayed
+     *  by the editor part of a  JSpinner.
+     */
+    @stub
+    def setValue(value: Object): Unit = ???
 }

@@ -1,6 +1,7 @@
 package javax.tools
 
-import java.lang.Object
+import java.lang.{ClassLoader, Object}
+import scala.scalanative.annotation.stub
 
 /** Provides methods for locating tool providers, for example,
  *  providers of compilers.  This class complements the
@@ -21,4 +22,8 @@ object ToolProvider {
      */
     @stub
     def getSystemJavaCompiler(): JavaCompiler = ???
+
+    /** Returns the class loader for tools provided with this platform. */
+    @stub
+    def getSystemToolClassLoader(): ClassLoader = ???
 }

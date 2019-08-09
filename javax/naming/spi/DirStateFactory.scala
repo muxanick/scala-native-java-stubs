@@ -1,5 +1,11 @@
 package javax.naming.spi
 
+import java.lang.Object
+import java.util.Hashtable
+import javax.naming.{Context, Name}
+import javax.naming.directory.Attributes
+import scala.scalanative.annotation.stub
+
 /** This interface represents a factory for obtaining the state of an
  *  object and corresponding attributes for binding.
  * 
@@ -45,4 +51,18 @@ package javax.naming.spi
  *  parameters.  The implementation is thread-safe.
  */
 trait DirStateFactory extends StateFactory {
+
+    /** Retrieves the state of an object for binding given the object and attributes
+     *  to be transformed.
+     */
+    @stub
+    def getStateToBind(obj: Object, name: Name, nameCtx: Context, environment: Hashtable[_, _], inAttrs: Attributes): DirStateFactory.Result = ???
+}
+
+object DirStateFactory {
+    /** An object/attributes pair for returning the result of
+     *  DirStateFactory.getStateToBind().
+     */
+    @stub
+    object Result extends DirStateFactory.Result
 }

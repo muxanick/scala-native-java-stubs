@@ -2,6 +2,7 @@ package javax.imageio.stream
 
 import java.lang.{Object, String}
 import java.nio.ByteOrder
+import scala.scalanative.annotation.stub
 
 /** An abstract class implementing the ImageInputStream interface.
  *  This class is designed to reduce the number of methods that must
@@ -12,6 +13,10 @@ import java.nio.ByteOrder
  *  closing, and disposing.
  */
 abstract class ImageInputStreamImpl extends Object with ImageInputStream {
+
+    /** Constructs an ImageInputStreamImpl. */
+    @stub
+    def this() = ???
 
     /** The current bit offset within the stream. */
     protected val bitOffset: Int
@@ -26,6 +31,9 @@ abstract class ImageInputStreamImpl extends Object with ImageInputStream {
 
     /** The position prior to which data may be discarded. */
     protected val flushedPos: Long
+
+    /** The current read position within the stream. */
+    protected val streamPos: Long
 
     /** Throws an IOException if the stream has been closed. */
     protected def checkClosed(): Unit
@@ -267,4 +275,9 @@ abstract class ImageInputStreamImpl extends Object with ImageInputStream {
      *  seek(getStreamPosition() + n).
      */
     def skipBytes(n: Int): Int
+
+    /** Advances the current stream position by calling
+     *  seek(getStreamPosition() + n).
+     */
+    def skipBytes(n: Long): Long
 }

@@ -1,6 +1,7 @@
 package javax.xml.bind.annotation
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Used by XmlAccessorType to control serialization of fields or
  *  properties.
@@ -24,7 +25,18 @@ object XmlAccessType {
      */
     final val PROPERTY = new XmlAccessType(PROPERTY, 2)
 
+    /** Every public getter/setter pair and every public field will be
+     *  automatically bound to XML, unless annotated by XmlTransient.
+     */
+    final val PUBLIC_MEMBER = new XmlAccessType(PUBLIC_MEMBER, 3)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): XmlAccessType = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[XmlAccessType] = ???
 }

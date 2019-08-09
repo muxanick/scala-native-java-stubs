@@ -1,6 +1,7 @@
 package java.util.logging
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Simple file logging Handler.
  *  
@@ -118,7 +119,17 @@ class FileHandler extends StreamHandler {
     @stub
     def this(pattern: String, limit: Int, count: Int) = ???
 
+    /** Initialize a FileHandler to write to a set of files
+     *  with optional append.
+     */
+    @stub
+    def this(pattern: String, limit: Int, count: Int, append: Boolean) = ???
+
     /** Close all the files. */
     @stub
     def close(): Unit = ???
+
+    /** Format and publish a LogRecord. */
+    @stub
+    def publish(record: LogRecord): Unit = ???
 }

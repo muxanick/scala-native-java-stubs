@@ -2,7 +2,8 @@ package java.util.concurrent
 
 import java.io.Serializable
 import java.lang.{Cloneable, Object}
-import java.util.{AbstractCollection, AbstractSet, Collection, Comparator, Iterator, NavigableSet, Spliterator}
+import java.util.{AbstractCollection, AbstractSet, Collection, Comparator, Iterator, NavigableSet, SortedSet, Spliterator}
+import scala.scalanative.annotation.stub
 
 /** A scalable concurrent NavigableSet implementation based on
  *  a ConcurrentSkipListMap.  The elements of the set are kept
@@ -64,6 +65,12 @@ class ConcurrentSkipListSet[E] extends AbstractSet[E] with NavigableSet[E] with 
      */
     @stub
     def this(comparator: Comparator[_ >: E]) = ???
+
+    /** Constructs a new set containing the same elements and using the
+     *  same ordering as the specified sorted set.
+     */
+    @stub
+    def this(s: SortedSet[E]) = ???
 
     /** Adds the specified element to this set if it is not already present. */
     @stub
@@ -201,4 +208,10 @@ class ConcurrentSkipListSet[E] extends AbstractSet[E] with NavigableSet[E] with 
      */
     @stub
     def tailSet(fromElement: E): NavigableSet[E] = ???
+
+    /** Returns a view of the portion of this set whose elements are greater
+     *  than (or equal to, if inclusive is true) fromElement.
+     */
+    @stub
+    def tailSet(fromElement: E, inclusive: Boolean): NavigableSet[E] = ???
 }

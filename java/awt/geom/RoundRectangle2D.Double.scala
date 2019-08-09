@@ -2,6 +2,7 @@ package java.awt.geom
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The Double class defines a rectangle with rounded
  *  corners all specified in double coordinates.
@@ -14,6 +15,12 @@ object RoundRectangle2D.Double extends RoundRectangle2D with Serializable {
      */
     @stub
     def Double() = ???
+
+    /** Constructs and initializes a RoundRectangle2D
+     *  from the specified double coordinates.
+     */
+    @stub
+    def Double(x: Double, y: Double, w: Double, h: Double, arcw: Double, arch: Double) = ???
 
     /** The height of the arc that rounds off the corners. */
     @stub
@@ -34,6 +41,10 @@ object RoundRectangle2D.Double extends RoundRectangle2D with Serializable {
     /** The X coordinate of this RoundRectangle2D. */
     @stub
     val x: Double = ???
+
+    /** The Y coordinate of this RoundRectangle2D. */
+    @stub
+    val y: Double = ???
 
     /** Gets the height of the arc that rounds off the corners. */
     @stub
@@ -83,4 +94,10 @@ object RoundRectangle2D.Double extends RoundRectangle2D with Serializable {
      */
     @stub
     def setRoundRect(x: Double, y: Double, w: Double, h: Double, arcw: Double, arch: Double): Unit = ???
+
+    /** Sets this RoundRectangle2D to be the same as the
+     *  specified RoundRectangle2D.
+     */
+    @stub
+    def setRoundRect(rr: RoundRectangle2D): Unit = ???
 }

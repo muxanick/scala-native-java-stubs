@@ -3,6 +3,7 @@ package java.util
 import java.lang.{Class, Comparable, Object, String}
 import java.util.function.{BinaryOperator, DoubleBinaryOperator, IntBinaryOperator, IntFunction, IntToDoubleFunction, IntToLongFunction, IntUnaryOperator, LongBinaryOperator}
 import java.util.stream.{DoubleStream, IntStream, LongStream, Stream}
+import scala.scalanative.annotation.stub
 
 /** This class contains various methods for manipulating arrays (such as
  *  sorting and searching). This class also contains a static factory
@@ -845,4 +846,8 @@ object Arrays {
     /** Returns a string representation of the contents of the specified array. */
     @stub
     def toString(a: Array[Object]): String = ???
+
+    /** Returns a string representation of the contents of the specified array. */
+    @stub
+    def toString(a: Array[Short]): String = ???
 }

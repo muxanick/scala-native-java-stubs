@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, IntegerSyntax, PrintJobAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class NumberOfDocuments is an integer valued printing attribute that
  *  indicates the number of individual docs the printer has accepted for this
@@ -15,6 +16,12 @@ import javax.print.attribute.{Attribute, IntegerSyntax, PrintJobAttribute}
  */
 final class NumberOfDocuments extends IntegerSyntax with PrintJobAttribute {
 
+    /** Construct a new number of documents attribute with the given integer
+     *  value.
+     */
+    @stub
+    def this(value: Int) = ???
+
     /** Returns whether this number of documents attribute is equivalent to the
      *  passed in object.
      */
@@ -26,4 +33,10 @@ final class NumberOfDocuments extends IntegerSyntax with PrintJobAttribute {
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

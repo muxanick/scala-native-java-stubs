@@ -1,5 +1,7 @@
 package java.lang.management
 
+import scala.scalanative.annotation.stub
+
 /** The management interface for the class loading system of
  *  the Java virtual machine.
  * 
@@ -42,4 +44,10 @@ trait ClassLoadingMXBean extends PlatformManagedObject {
     /** Tests if the verbose output for the class loading system is enabled. */
     @stub
     def isVerbose(): Boolean = ???
+
+    /** Enables or disables the verbose output for the class loading
+     *  system.
+     */
+    @stub
+    def setVerbose(value: Boolean): Unit = ???
 }

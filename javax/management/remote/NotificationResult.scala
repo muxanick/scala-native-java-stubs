@@ -1,7 +1,8 @@
 package javax.management.remote
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Result of a query for buffered notifications.  Notifications in
  *  a notification buffer have positive, monotonically increasing
@@ -28,6 +29,10 @@ import java.lang.Object
  */
 class NotificationResult extends Object with Serializable {
 
+    /** Constructs a notification query result. */
+    @stub
+    def this(earliestSequenceNumber: Long, nextSequenceNumber: Long, targetedNotifications: Array[TargetedNotification]) = ???
+
     /** Returns the sequence number of the earliest notification still
      *  in the buffer.
      */
@@ -45,4 +50,8 @@ class NotificationResult extends Object with Serializable {
      */
     @stub
     def getTargetedNotifications(): Array[TargetedNotification] = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }

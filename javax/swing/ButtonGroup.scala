@@ -2,7 +2,8 @@ package javax.swing
 
 import java.io.Serializable
 import java.lang.Object
-import java.util.Enumeration
+import java.util.{Enumeration, Vector}
+import scala.scalanative.annotation.stub
 
 /** This class is used to create a multiple-exclusion scope for
  *  a set of buttons. Creating a set of buttons with the
@@ -39,6 +40,14 @@ import java.util.Enumeration
  */
 class ButtonGroup extends Object with Serializable {
 
+    /** Creates a new ButtonGroup. */
+    @stub
+    def this() = ???
+
+    /**  */
+    @stub
+    protected val buttons: Vector[AbstractButton] = ???
+
     /** Adds the button to the group. */
     @stub
     def add(b: AbstractButton): Unit = ???
@@ -70,4 +79,8 @@ class ButtonGroup extends Object with Serializable {
     /** Removes the button from the group. */
     @stub
     def remove(b: AbstractButton): Unit = ???
+
+    /** Sets the selected value for the ButtonModel. */
+    @stub
+    def setSelected(m: ButtonModel, b: Boolean): Unit = ???
 }

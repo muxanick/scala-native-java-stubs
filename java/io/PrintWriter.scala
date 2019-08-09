@@ -2,6 +2,7 @@ package java.io
 
 import java.lang.{CharSequence, Object, String}
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** Prints formatted representations of objects to a text-output stream.  This
  *  class implements all of the print methods found in PrintStream.  It does not contain methods for writing raw bytes, for which
@@ -56,6 +57,16 @@ class PrintWriter extends Writer {
     /** Creates a new PrintWriter, without automatic line flushing. */
     @stub
     def this(out: Writer) = ???
+
+    /** Creates a new PrintWriter. */
+    @stub
+    def this(out: Writer, autoFlush: Boolean) = ???
+
+    /** The underlying character-output stream of this
+     *  PrintWriter.
+     */
+    @stub
+    protected val out: Writer = ???
 
     /** Appends the specified character to this writer. */
     @stub
@@ -208,4 +219,8 @@ class PrintWriter extends Writer {
     /** Writes a string. */
     @stub
     def write(s: String): Unit = ???
+
+    /** Writes a portion of a string. */
+    @stub
+    def write(s: String, off: Int, len: Int): Unit = ???
 }

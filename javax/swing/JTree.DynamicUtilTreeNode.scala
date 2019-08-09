@@ -3,6 +3,7 @@ package javax.swing
 import java.lang.Object
 import java.util.Enumeration
 import javax.swing.tree.{DefaultMutableTreeNode, TreeNode}
+import scala.scalanative.annotation.stub
 
 /** DynamicUtilTreeNode can wrap
  *  vectors/hashtables/arrays/strings and
@@ -20,6 +21,12 @@ import javax.swing.tree.{DefaultMutableTreeNode, TreeNode}
  */
 object JTree.DynamicUtilTreeNode extends DefaultMutableTreeNode {
 
+    /** Creates a node with the specified object as its value and
+     *  with the specified children.
+     */
+    @stub
+    def DynamicUtilTreeNode(value: Object, children: Object) = ???
+
     /** Value to create children with. */
     @stub
     protected val childValue: Object = ???
@@ -29,6 +36,10 @@ object JTree.DynamicUtilTreeNode extends DefaultMutableTreeNode {
      */
     @stub
     protected val hasChildren: Boolean = ???
+
+    /** Have the children been loaded yet? */
+    @stub
+    protected val loadedChildren: Boolean = ???
 
     /** Subclassed to load the children, if necessary. */
     @stub
@@ -49,4 +60,8 @@ object JTree.DynamicUtilTreeNode extends DefaultMutableTreeNode {
     /** Returns true if this node allows children. */
     @stub
     def isLeaf(): Boolean = ???
+
+    /** Loads the children based on childValue. */
+    @stub
+    protected def loadChildren(): Unit = ???
 }

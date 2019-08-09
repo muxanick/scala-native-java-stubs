@@ -1,6 +1,7 @@
 package java.security
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A Policy object is responsible for determining whether code executing
  *  in the Java runtime environment has permission to perform a
@@ -44,6 +45,10 @@ import java.lang.{Object, String}
  */
 abstract class Policy extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Return Policy parameters. */
     def getParameters(): Policy.Parameters
 
@@ -74,6 +79,14 @@ abstract class Policy extends Object {
 }
 
 object Policy {
+    /** This represents a marker interface for Policy parameters. */
+    @stub
+    val Policy.Parameters: trait = ???
+
+    /** A read-only empty PermissionCollection instance. */
+    @stub
+    val UNSUPPORTED_EMPTY_COLLECTION: PermissionCollection = ???
+
     /** Returns a Policy object of the specified type. */
     @stub
     def getInstance(type: String, params: Policy.Parameters): Policy = ???
@@ -89,4 +102,8 @@ object Policy {
     /** Returns the installed Policy object. */
     @stub
     def getPolicy(): Policy = ???
+
+    /** Sets the system-wide Policy object. */
+    @stub
+    def setPolicy(p: Policy): Unit = ???
 }

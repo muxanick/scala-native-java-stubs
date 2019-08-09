@@ -3,6 +3,7 @@ package java.util
 import java.io.Serializable
 import java.lang.Object
 import java.util.stream.{DoubleStream, IntStream, LongStream}
+import scala.scalanative.annotation.stub
 
 /** An instance of this class is used to generate a stream of
  *  pseudorandom numbers. The class uses a 48-bit seed, which is
@@ -42,6 +43,10 @@ class Random extends Object with Serializable {
     /** Creates a new random number generator. */
     @stub
     def this() = ???
+
+    /** Creates a new random number generator using a single long seed. */
+    @stub
+    def this(seed: Long) = ???
 
     /** Returns an effectively unlimited stream of pseudorandom double values, each between zero (inclusive) and one
      *  (exclusive).
@@ -175,4 +180,10 @@ class Random extends Object with Serializable {
      */
     @stub
     def nextLong(): Long = ???
+
+    /** Sets the seed of this random number generator using a single
+     *  long seed.
+     */
+    @stub
+    def setSeed(seed: Long): Unit = ???
 }

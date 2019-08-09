@@ -1,6 +1,7 @@
 package javax.swing.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** TableColumnModelListener defines the interface for an object that listens
  *  to changes in a TableColumnModel.
@@ -22,4 +23,10 @@ trait TableColumnModelListener extends EventListener {
     /** Tells listeners that a column was removed from the model. */
     @stub
     def columnRemoved(e: TableColumnModelEvent): Unit = ???
+
+    /** Tells listeners that the selection model of the
+     *  TableColumnModel changed.
+     */
+    @stub
+    def columnSelectionChanged(e: ListSelectionEvent): Unit = ???
 }

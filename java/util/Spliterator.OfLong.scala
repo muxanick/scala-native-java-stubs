@@ -2,6 +2,7 @@ package java.util
 
 import java.lang.Long
 import java.util.function.{Consumer, LongConsumer}
+import scala.scalanative.annotation.stub
 
 /** A Spliterator specialized for long values. */
 object trait Spliterator.OfLong extends Spliterator.OfPrimitive[Long, LongConsumer, Spliterator.OfLong] {
@@ -31,4 +32,11 @@ object trait Spliterator.OfLong extends Spliterator.OfPrimitive[Long, LongConsum
      */
     @stub
     def tryAdvance(action: LongConsumer): Boolean = ???
+
+    /** If this spliterator can be partitioned, returns a Spliterator
+     *  covering elements, that will, upon return from this method, not
+     *  be covered by this Spliterator.
+     */
+    @stub
+    def trySplit(): Spliterator.OfLong = ???
 }

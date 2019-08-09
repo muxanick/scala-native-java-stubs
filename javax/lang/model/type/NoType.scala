@@ -1,5 +1,7 @@
 package javax.lang.model.type
 
+import scala.scalanative.annotation.stub
+
 /** A pseudo-type used where no actual type is appropriate.
  *  The kinds of NoType are:
  *  

@@ -2,6 +2,7 @@ package java.rmi.server
 
 import java.lang.{Class, ClassLoader, Object, String}
 import java.net.URL
+import scala.scalanative.annotation.stub
 
 /** RMIClassLoader comprises static methods to support
  *  dynamic class loading with RMI.  Included are methods for loading
@@ -120,4 +121,11 @@ object RMIClassLoader {
     /** Loads a class from a codebase URL. */
     @stub
     def loadClass(codebase: URL, name: String): Class[_] = ???
+
+    /** Loads a dynamic proxy class (see Proxy)
+     *  that implements a set of interfaces with the given names
+     *  from a codebase URL path.
+     */
+    @stub
+    def loadProxyClass(codebase: String, interfaces: Array[String], defaultLoader: ClassLoader): Class[_] = ???
 }

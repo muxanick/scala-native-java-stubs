@@ -1,6 +1,7 @@
 package java.rmi.server
 
 import java.lang.{CloneNotSupportedException, Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** A ServerCloneException is thrown if a remote exception occurs
  *  during the cloning of a UnicastRemoteObject.
@@ -23,7 +24,23 @@ class ServerCloneException extends CloneNotSupportedException {
     @stub
     def this(s: String) = ???
 
+    /** Constructs a ServerCloneException with the specified
+     *  detail message and cause.
+     */
+    @stub
+    def this(s: String, cause: Exception) = ???
+
+    /** The cause of the exception. */
+    @stub
+    val detail: Exception = ???
+
     /** Returns the cause of this exception. */
     @stub
     def getCause(): Throwable = ???
+
+    /** Returns the detail message, including the message from the cause, if
+     *  any, of this exception.
+     */
+    @stub
+    def getMessage(): String = ???
 }

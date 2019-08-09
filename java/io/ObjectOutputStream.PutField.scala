@@ -1,11 +1,16 @@
 package java.io
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Provide programmatic access to the persistent fields to be written
  *  to ObjectOutput.
  */
 object abstract ObjectOutputStream.PutField extends Object {
+
+    /**  */
+    @stub
+    def PutField() = ???
 
     /** Put the value of the named boolean field into the persistent field. */
     @stub
@@ -42,4 +47,16 @@ object abstract ObjectOutputStream.PutField extends Object {
     /** Put the value of the named short field into the persistent field. */
     @stub
     def put(name: String, val: Short): Unit
+
+    /** Deprecated. 
+     * This method does not write the values contained by this
+     *          PutField object in a proper format, and may
+     *          result in corruption of the serialization stream.  The
+     *          correct way to write PutField data is by
+     *          calling the ObjectOutputStream.writeFields()
+     *          method.
+     * 
+     */
+    @stub
+    def write(out: ObjectOutput): Unit
 }

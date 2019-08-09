@@ -2,6 +2,7 @@ package javax.net.ssl
 
 import java.lang.Object
 import java.security.KeyStore
+import scala.scalanative.annotation.stub
 
 /** This class defines the Service Provider Interface (SPI)
  *  for the TrustManagerFactory class.
@@ -12,6 +13,10 @@ import java.security.KeyStore
  */
 abstract class TrustManagerFactorySpi extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Returns one trust manager for each type of trust material. */
     protected def engineGetTrustManagers(): Array[TrustManager]
 
@@ -19,4 +24,9 @@ abstract class TrustManagerFactorySpi extends Object {
      *  authorities and related trust material.
      */
     protected def engineInit(ks: KeyStore): Unit
+
+    /** Initializes this factory with a source of provider-specific
+     *  key material.
+     */
+    protected def engineInit(spec: ManagerFactoryParameters): Unit
 }

@@ -2,6 +2,7 @@ package java.net
 
 import java.io.{FileDescriptor, InputStream, OutputStream}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The abstract class SocketImpl is a common superclass
  *  of all classes that actually implement sockets. It is used to
@@ -12,6 +13,10 @@ import java.lang.{Object, String}
  */
 abstract class SocketImpl extends Object with SocketOptions {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** The IP address of the remote end of this socket. */
     protected val address: InetAddress
 
@@ -20,6 +25,9 @@ abstract class SocketImpl extends Object with SocketOptions {
 
     /** The local port number to which this socket is connected. */
     protected val localport: Int
+
+    /** The port number on the remote host to which this socket is connected. */
+    protected val port: Int
 
     /** Accepts a connection. */
     protected def accept(s: SocketImpl): Unit
@@ -86,4 +94,7 @@ abstract class SocketImpl extends Object with SocketOptions {
      *  urgent data.
      */
     protected def supportsUrgentData(): Boolean
+
+    /** Returns the address and port of this socket as a String. */
+    def toString(): String
 }

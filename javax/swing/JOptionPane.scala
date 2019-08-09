@@ -4,6 +4,7 @@ import java.awt.{Component, Container, Frame}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.plaf.OptionPaneUI
+import scala.scalanative.annotation.stub
 
 /** JOptionPane makes it easy to pop up a standard dialog box that
  *  prompts users for a value or informs them of something.
@@ -284,6 +285,19 @@ class JOptionPane extends JComponent with Accessible {
     @stub
     def this(message: Object, messageType: Int, optionType: Int, icon: Icon, options: Array[Object]) = ???
 
+    /** Creates an instance of JOptionPane to display a message
+     *  with the specified message type, icon, and options, with the
+     *  initially-selected option specified.
+     */
+    @stub
+    def this(message: Object, messageType: Int, optionType: Int, icon: Icon, options: Array[Object], initialValue: Object) = ???
+
+    /** This class implements accessibility support for the
+     *  JOptionPane class.
+     */
+    @stub
+    protected object AccessibleJOptionPane extends JOptionPane.AccessibleJOptionPane
+
     /** Icon used in pane. */
     @stub
     protected val icon: Icon = ???
@@ -479,6 +493,10 @@ class JOptionPane extends JComponent with Accessible {
     /** Sets the wantsInput property. */
     @stub
     def setWantsInput(newValue: Boolean): Unit = ???
+
+    /** Notification from the UIManager that the L&F has changed. */
+    @stub
+    def updateUI(): Unit = ???
 }
 
 object JOptionPane {
@@ -586,6 +604,10 @@ object JOptionPane {
     /** Type used for showConfirmDialog. */
     @stub
     val YES_NO_OPTION: Int = ???
+
+    /** Return value from class method if YES is chosen. */
+    @stub
+    val YES_OPTION: Int = ???
 
     /** Returns the specified component's desktop pane. */
     @stub

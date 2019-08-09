@@ -3,6 +3,7 @@ package javax.xml.transform.stax
 import java.lang.{Object, String}
 import javax.xml.stream.{XMLEventReader, XMLStreamReader}
 import javax.xml.transform.Source
+import scala.scalanative.annotation.stub
 
 /** Acts as a holder for an XML Source in the
  *  form of a StAX reader,i.e.
@@ -23,6 +24,12 @@ class StAXSource extends Object with Source {
     @stub
     def this(xmlEventReader: XMLEventReader) = ???
 
+    /** Creates a new instance of a StAXSource
+     *  by supplying an XMLStreamReader.
+     */
+    @stub
+    def this(xmlStreamReader: XMLStreamReader) = ???
+
     /** Get the system identifier used by this
      *  StAXSource.
      */
@@ -40,4 +47,19 @@ class StAXSource extends Object with Source {
      */
     @stub
     def getXMLStreamReader(): XMLStreamReader = ???
+
+    /** In the context of a StAXSource, it is not appropriate
+     *  to explicitly set the system identifier.
+     */
+    @stub
+    def setSystemId(systemId: String): Unit = ???
+}
+
+object StAXSource {
+    /** If TransformerFactory.getFeature(String name)
+     *  returns true when passed this value as an argument,
+     *  the Transformer supports Source input of this type.
+     */
+    @stub
+    val FEATURE: String = ???
 }

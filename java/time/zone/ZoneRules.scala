@@ -1,9 +1,10 @@
 package java.time.zone
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
 import java.time.{Duration, Instant, LocalDateTime, ZoneOffset}
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** The rules defining how the zone offset varies for a single time-zone.
  *  
@@ -85,6 +86,10 @@ final class ZoneRules extends Object with Serializable {
     /** Gets the previous transition before the specified instant. */
     @stub
     def previousTransition(instant: Instant): ZoneOffsetTransition = ???
+
+    /** Returns a string describing this object. */
+    @stub
+    def toString(): String = ???
 }
 
 object ZoneRules {

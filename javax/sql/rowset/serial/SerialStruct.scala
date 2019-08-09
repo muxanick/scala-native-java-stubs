@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{Class, Cloneable, Object, String}
 import java.sql.{SQLData, Struct}
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** A serialized mapping in the Java programming language of an SQL
  *  structured type. Each attribute that is not already serialized
@@ -36,6 +37,14 @@ class SerialStruct extends Object with Struct with Serializable with Cloneable {
     @stub
     def this(in: SQLData, map: Map[String, Class[_]]) = ???
 
+    /** Constructs a SerialStruct object from the given
+     *  Struct object, using the given java.util.Map
+     *  object for custom mapping the SQL structured type or any of its
+     *  attributes that are SQL structured types.
+     */
+    @stub
+    def this(in: Struct, map: Map[String, Class[_]]) = ???
+
     /** Returns a clone of this SerialStruct. */
     @stub
     def clone(): Object = ???
@@ -64,4 +73,8 @@ class SerialStruct extends Object with Struct with Serializable with Cloneable {
      */
     @stub
     def getSQLTypeName(): String = ???
+
+    /** Returns a hash code for this SerialStruct. */
+    @stub
+    def hashCode(): Int = ???
 }

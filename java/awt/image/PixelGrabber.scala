@@ -3,6 +3,7 @@ package java.awt.image
 import java.awt.Image
 import java.lang.Object
 import java.util.Hashtable
+import scala.scalanative.annotation.stub
 
 /** The PixelGrabber class implements an ImageConsumer which can be attached
  *  to an Image or ImageProducer object to retrieve a subset of the pixels
@@ -52,6 +53,13 @@ class PixelGrabber extends Object with ImageConsumer {
      */
     @stub
     def this(img: Image, x: Int, y: Int, w: Int, h: Int, pix: Array[Int], off: Int, scansize: Int) = ???
+
+    /** Create a PixelGrabber object to grab the (x, y, w, h) rectangular
+     *  section of pixels from the image produced by the specified
+     *  ImageProducer into the given array.
+     */
+    @stub
+    def this(ip: ImageProducer, x: Int, y: Int, w: Int, h: Int, pix: Array[Int], off: Int, scansize: Int) = ???
 
     /** Request the PixelGrabber to abort the image fetch. */
     @stub
@@ -136,4 +144,8 @@ class PixelGrabber extends Object with ImageConsumer {
     /** Request the PixelGrabber to start fetching the pixels. */
     @stub
     def startGrabbing(): Unit = ???
+
+    /** Returns the status of the pixels. */
+    @stub
+    def status(): Int = ???
 }

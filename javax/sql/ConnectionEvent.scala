@@ -1,7 +1,9 @@
 package javax.sql
 
 import java.lang.Object
+import java.sql.SQLException
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** An Event object that provides information about the
  *  source of a connection-related event.  ConnectionEvent
@@ -21,4 +23,17 @@ class ConnectionEvent extends EventObject {
      */
     @stub
     def this(con: PooledConnection) = ???
+
+    /** Constructs a ConnectionEvent object initialized with
+     *  the given PooledConnection object and
+     *  SQLException object.
+     */
+    @stub
+    def this(con: PooledConnection, ex: SQLException) = ???
+
+    /** Retrieves the SQLException for this
+     *  ConnectionEvent object.
+     */
+    @stub
+    def getSQLException(): SQLException = ???
 }

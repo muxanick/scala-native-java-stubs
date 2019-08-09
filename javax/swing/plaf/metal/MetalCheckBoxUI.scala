@@ -4,6 +4,7 @@ import java.lang.{Object, String}
 import javax.swing.{AbstractButton, JComponent}
 import javax.swing.plaf.{ButtonUI, ComponentUI}
 import javax.swing.plaf.basic.{BasicButtonUI, BasicRadioButtonUI, BasicToggleButtonUI}
+import scala.scalanative.annotation.stub
 
 /** CheckboxUI implementation for MetalCheckboxUI
  *  
@@ -20,11 +21,19 @@ class MetalCheckBoxUI extends MetalRadioButtonUI {
 
     /**  */
     @stub
+    def this() = ???
+
+    /**  */
+    @stub
     def getPropertyPrefix(): String = ???
 
     /**  */
     @stub
     def installDefaults(b: AbstractButton): Unit = ???
+
+    /**  */
+    @stub
+    protected def uninstallDefaults(b: AbstractButton): Unit = ???
 }
 
 object MetalCheckBoxUI {

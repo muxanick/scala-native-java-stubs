@@ -1,8 +1,9 @@
 package java.awt.event
 
 import java.awt.{AWTEvent, Component, Container}
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** An event which indicates a change to the Component
  *  hierarchy to which Component belongs.
@@ -65,6 +66,12 @@ class HierarchyEvent extends AWTEvent {
     @stub
     def this(source: Component, id: Int, changed: Component, changedParent: Container) = ???
 
+    /** Constructs an HierarchyEvent object to identify
+     *  a change in the Component hierarchy.
+     */
+    @stub
+    def this(source: Component, id: Int, changed: Component, changedParent: Container, changeFlags: Long) = ???
+
     /** Returns the Component at the top of the hierarchy which was
      *  changed.
      */
@@ -86,6 +93,10 @@ class HierarchyEvent extends AWTEvent {
     /** Returns the originator of the event. */
     @stub
     def getComponent(): Component = ???
+
+    /** Returns a parameter string identifying this event. */
+    @stub
+    def paramString(): String = ???
 }
 
 object HierarchyEvent {
@@ -122,4 +133,10 @@ object HierarchyEvent {
      */
     @stub
     val PARENT_CHANGED: Int = ???
+
+    /** A change flag indicates that the HIERARCHY_CHANGED event
+     *  was generated due to the changing of the hierarchy showing state.
+     */
+    @stub
+    val SHOWING_CHANGED: Int = ???
 }

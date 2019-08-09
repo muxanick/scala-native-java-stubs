@@ -2,6 +2,7 @@ package javax.management.monitor
 
 import java.lang.{Number, Object}
 import javax.management.{MBeanNotificationInfo, NotificationBroadcasterSupport, ObjectName}
+import scala.scalanative.annotation.stub
 
 /** Defines a monitor MBean designed to observe the values of a counter
  *  attribute.
@@ -43,6 +44,10 @@ import javax.management.{MBeanNotificationInfo, NotificationBroadcasterSupport, 
  *  Integer, Short, Long).
  */
 class CounterMonitor extends Monitor with CounterMonitorMBean {
+
+    /** Default constructor. */
+    @stub
+    def this() = ???
 
     /** Deprecated. 
      * As of JMX 1.2, replaced by
@@ -148,4 +153,8 @@ class CounterMonitor extends Monitor with CounterMonitorMBean {
     /** Starts the counter monitor. */
     @stub
     def start(): Unit = ???
+
+    /** Stops the counter monitor. */
+    @stub
+    def stop(): Unit = ???
 }

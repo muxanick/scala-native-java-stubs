@@ -1,7 +1,8 @@
 package javax.activation
 
-import java.io.{Externalizable, ObjectInput}
+import java.io.{Externalizable, ObjectInput, ObjectOutput}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A Multipurpose Internet Mail Extension (MIME) type, as defined
  *  in RFC 2045 and 2046.
@@ -15,6 +16,12 @@ class MimeType extends Object with Externalizable {
     /** Constructor that builds a MimeType from a String. */
     @stub
     def this(rawdata: String) = ???
+
+    /** Constructor that builds a MimeType with the given primary and sub type
+     *  but has an empty parameter list.
+     */
+    @stub
+    def this(primary: String, sub: String) = ???
 
     /** Return a String representation of this object
      *  without the parameter list.
@@ -80,4 +87,12 @@ class MimeType extends Object with Externalizable {
     /** Return the String representation of this object. */
     @stub
     def toString(): String = ???
+
+    /** The object implements the writeExternal method to save its contents
+     *  by calling the methods of DataOutput for its primitive values or
+     *  calling the writeObject method of ObjectOutput for objects, strings
+     *  and arrays.
+     */
+    @stub
+    def writeExternal(out: ObjectOutput): Unit = ???
 }

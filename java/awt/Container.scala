@@ -5,6 +5,7 @@ import java.beans.PropertyChangeListener
 import java.io.{PrintStream, PrintWriter}
 import java.lang.{Class, Object, String}
 import java.util.{EventListener, Set}
+import scala.scalanative.annotation.stub
 
 /** A generic Abstract Window Toolkit(AWT) container object is a component
  *  that can contain other AWT components.
@@ -23,6 +24,16 @@ import java.util.{EventListener, Set}
  *  for more information.
  */
 class Container extends Component {
+
+    /** Constructs a new Container. */
+    @stub
+    def this() = ???
+
+    /** Inner class of Container used to provide default support for
+     *  accessibility.
+     */
+    @stub
+    protected object AccessibleAWTContainer extends Container.AccessibleAWTContainer
 
     /** Appends the specified component to the end of this container. */
     @stub
@@ -398,4 +409,11 @@ class Container extends Component {
     /** Validates this container and all of its subcomponents. */
     @stub
     def validate(): Unit = ???
+
+    /** Recursively descends the container tree and recomputes the
+     *  layout for any subtrees marked as needing it (those marked as
+     *  invalid).
+     */
+    @stub
+    protected def validateTree(): Unit = ???
 }

@@ -1,6 +1,7 @@
 package javax.naming.ldap
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Requests that the results of a search operation be sorted by the LDAP server
  *  before being returned.
@@ -82,4 +83,16 @@ final class SortControl extends BasicControl {
     /** Constructs a control to sort on a list of attributes in ascending order. */
     @stub
     def this(sortBy: Array[String], criticality: Boolean) = ???
+
+    /** Constructs a control to sort on a single attribute in ascending order. */
+    @stub
+    def this(sortBy: String, criticality: Boolean) = ???
+}
+
+object SortControl {
+    /** The server-side sort control's assigned object identifier
+     *  is 1.2.840.113556.1.4.473.
+     */
+    @stub
+    val OID: String = ???
 }

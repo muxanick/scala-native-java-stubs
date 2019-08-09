@@ -1,5 +1,7 @@
 package javax.accessibility
 
+import scala.scalanative.annotation.stub
+
 /** Class AccessibleExtendedTable provides extended information about
  *  a user-interface component that presents data in a two-dimensional
  *  table format.
@@ -19,4 +21,8 @@ trait AccessibleExtendedTable extends AccessibleTable {
     /** Returns the index at a row and column in the table. */
     @stub
     def getAccessibleIndex(r: Int, c: Int): Int = ???
+
+    /** Returns the row number of an index in the table. */
+    @stub
+    def getAccessibleRow(index: Int): Int = ???
 }

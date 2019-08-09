@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Calendar.Builder is used for creating a Calendar from
  *  various date-time parameters.
@@ -44,6 +45,10 @@ import java.lang.{Object, String}
  *                         .setFields(YEAR, 1, DAY_OF_YEAR, 1).build();
  */
 object Calendar.Builder extends Object {
+
+    /** Constructs a Calendar.Builder. */
+    @stub
+    def Builder() = ???
 
     /** Returns a Calendar built from the parameters set by the
      *  setter methods.
@@ -114,4 +119,12 @@ object Calendar.Builder extends Object {
      */
     @stub
     def setWeekDate(weekYear: Int, weekOfYear: Int, dayOfWeek: Int): Calendar.Builder = ???
+
+    /** Sets the week definition parameters to the values given by
+     *  firstDayOfWeek and minimalDaysInFirstWeek that are
+     *  used to determine the first
+     *  week of a year.
+     */
+    @stub
+    def setWeekDefinition(firstDayOfWeek: Int, minimalDaysInFirstWeek: Int): Calendar.Builder = ???
 }

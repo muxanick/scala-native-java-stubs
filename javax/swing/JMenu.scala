@@ -6,6 +6,7 @@ import java.beans.PropertyChangeListener
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.event.MenuListener
+import scala.scalanative.annotation.stub
 
 /** An implementation of a menu -- a popup window containing
  *  JMenuItems that
@@ -62,11 +63,25 @@ class JMenu extends JMenuItem with Accessible with MenuElement {
     @stub
     def this(s: String) = ???
 
+    /** Constructs a new JMenu with the supplied string as
+     *  its text and specified as a tear-off menu or not.
+     */
+    @stub
+    def this(s: String, b: Boolean) = ???
+
     /** This class implements accessibility support for the
      *  JMenu class.
      */
     @stub
     protected object AccessibleJMenu extends JMenu.AccessibleJMenu
+
+    /** A listener class that watches for a popup window closing. */
+    @stub
+    protected object WinListener extends JMenu.WinListener
+
+    /** The window-closing listener for the popup. */
+    @stub
+    protected val popupListener: JMenu.WinListener = ???
 
     /** Creates a new menu item attached to the specified
      *  Action object and appends it to the end of this menu.
@@ -319,4 +334,8 @@ class JMenu extends JMenuItem with Accessible with MenuElement {
     /** Sets the selection status of the menu. */
     @stub
     def setSelected(b: Boolean): Unit = ???
+
+    /** Resets the UI property with a value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
 }

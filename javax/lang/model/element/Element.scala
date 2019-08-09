@@ -5,6 +5,7 @@ import java.lang.annotation.Annotation
 import java.util.{List, Set}
 import javax.lang.model.AnnotatedConstruct
 import javax.lang.model.type.TypeMirror
+import scala.scalanative.annotation.stub
 
 /** Represents a program element such as a package, class, or method.
  *  Each element represents a static, language-level construct
@@ -71,4 +72,8 @@ trait Element extends AnnotatedConstruct {
     /** Returns the simple (unqualified) name of this element. */
     @stub
     def getSimpleName(): Name = ???
+
+    /** Obeys the general contract of Object.hashCode. */
+    @stub
+    def hashCode(): Int = ???
 }

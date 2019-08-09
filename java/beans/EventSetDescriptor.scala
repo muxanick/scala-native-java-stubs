@@ -2,6 +2,7 @@ package java.beans
 
 import java.lang.{Class, Object, String}
 import java.lang.reflect.Method
+import scala.scalanative.annotation.stub
 
 /** An EventSetDescriptor describes a group of events that a given Java
  *  bean fires.
@@ -47,6 +48,13 @@ class EventSetDescriptor extends FeatureDescriptor {
     @stub
     def this(eventSetName: String, listenerType: Class[_], listenerMethods: Array[Method], addListenerMethod: Method, removeListenerMethod: Method, getListenerMethod: Method) = ???
 
+    /** Creates an EventSetDescriptor from scratch using
+     *  java.lang.reflect.MethodDescriptor and java.lang.Class
+     *   objects.
+     */
+    @stub
+    def this(eventSetName: String, listenerType: Class[_], listenerMethodDescriptors: Array[MethodDescriptor], addListenerMethod: Method, removeListenerMethod: Method) = ???
+
     /** Gets the method used to add event listeners. */
     @stub
     def getAddListenerMethod(): Method = ???
@@ -82,4 +90,8 @@ class EventSetDescriptor extends FeatureDescriptor {
     /** Marks an event set as being in the "default" set (or not). */
     @stub
     def setInDefaultEventSet(inDefaultEventSet: Boolean): Unit = ???
+
+    /** Mark an event set as unicast (or not). */
+    @stub
+    def setUnicast(unicast: Boolean): Unit = ???
 }

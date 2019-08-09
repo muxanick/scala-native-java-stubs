@@ -1,6 +1,8 @@
 package javax.accessibility
 
 import java.awt.datatransfer.DataFlavor
+import java.io.InputStream
+import scala.scalanative.annotation.stub
 
 /** The AccessibleStreamable interface should be implemented
  *  by the AccessibleContext of any component that presents the
@@ -17,4 +19,8 @@ trait AccessibleStreamable {
      */
     @stub
     def getMimeTypes(): Array[DataFlavor] = ???
+
+    /** Returns an InputStream for a DataFlavor */
+    @stub
+    def getStream(flavor: DataFlavor): InputStream = ???
 }

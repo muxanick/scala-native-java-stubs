@@ -3,6 +3,7 @@ package javax.sql.rowset
 import java.io.Serializable
 import java.lang.{Class, Object, String}
 import javax.sql.RowSetMetaData
+import scala.scalanative.annotation.stub
 
 /** Provides implementations for the methods that set and get
  *  metadata information about a RowSet object's columns.
@@ -22,6 +23,10 @@ import javax.sql.RowSetMetaData
  *  before the RowSet object contains data.
  */
 class RowSetMetaDataImpl extends Object with RowSetMetaData with Serializable {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Retrieves the catalog name of the table from which the value
      *  in the designated column was derived.
@@ -254,4 +259,10 @@ class RowSetMetaDataImpl extends Object with RowSetMetaData with Serializable {
      */
     @stub
     def setTableName(columnIndex: Int, tableName: String): Unit = ???
+
+    /** Returns an object that implements the given interface to allow access to non-standard methods,
+     *  or standard methods not exposed by the proxy.
+     */
+    @stub
+    def unwrap[T](iface: Class[T]): T = ???
 }

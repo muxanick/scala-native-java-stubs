@@ -2,6 +2,7 @@ package java.rmi.server
 
 import java.io.{FilterOutputStream, OutputStream, PrintStream}
 import java.lang.{Deprecated, Object, String}
+import scala.scalanative.annotation.stub
 
 /** LogStream provides a mechanism for logging errors that are
  *  of possible interest to those monitoring a system.
@@ -35,6 +36,13 @@ import java.lang.{Deprecated, Object, String}
      */
     @stub
     def write(b: Array[Byte], off: Int, len: Int): Unit = ???
+
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
+    @stub
+    def write(b: Int): Unit = ???
 }
 
 object LogStream {
@@ -45,6 +53,10 @@ object LogStream {
     /** Deprecated.  */
     @stub
     val SILENT: Int = ???
+
+    /** Deprecated.  */
+    @stub
+    val VERBOSE: Int = ???
 
     /** Deprecated. 
      * no replacement

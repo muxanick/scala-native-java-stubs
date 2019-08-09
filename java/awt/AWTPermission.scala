@@ -2,6 +2,7 @@ package java.awt
 
 import java.lang.{Object, String}
 import java.security.{BasicPermission, Permission}
+import scala.scalanative.annotation.stub
 
 /** This class is for AWT permissions.
  *  An AWTPermission contains a target name but
@@ -161,4 +162,8 @@ final class AWTPermission extends BasicPermission {
     /** Creates a new AWTPermission with the specified name. */
     @stub
     def this(name: String) = ???
+
+    /** Creates a new AWTPermission object with the specified name. */
+    @stub
+    def this(name: String, actions: String) = ???
 }

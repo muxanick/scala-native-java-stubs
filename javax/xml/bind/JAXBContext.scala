@@ -2,7 +2,7 @@ package javax.xml.bind
 
 import java.lang.{Class, ClassLoader, Object, String}
 import java.util.Map
-import org.w3c.dom.Node
+import scala.scalanative.annotation.stub
 
 /** 
  *  The JAXBContext class provides the client's entry point to the
@@ -224,6 +224,10 @@ import org.w3c.dom.Node
  */
 abstract class JAXBContext extends Object {
 
+    /**  */
+    @stub
+    protected def this() = ???
+
     /** Creates a Binder for W3C DOM. */
     def createBinder(): Binder[Node]
 
@@ -258,6 +262,12 @@ abstract class JAXBContext extends Object {
 }
 
 object JAXBContext {
+    /** The name of the property that contains the name of the class capable
+     *  of creating new JAXBContext objects.
+     */
+    @stub
+    val JAXB_CONTEXT_FACTORY: String = ???
+
     /** 
      *  Obtain a new instance of a JAXBContext class.
      */
@@ -281,4 +291,10 @@ object JAXBContext {
      */
     @stub
     def newInstance(contextPath: String, classLoader: ClassLoader): JAXBContext = ???
+
+    /** 
+     *  Obtain a new instance of a JAXBContext class.
+     */
+    @stub
+    def newInstance(contextPath: String, classLoader: ClassLoader, properties: Map[String, _]): JAXBContext = ???
 }

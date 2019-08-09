@@ -1,7 +1,9 @@
 package javax.xml.bind.annotation
 
+import java.lang.Class
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Instructs JAXB to also bind other classes when binding this class.
  * 
@@ -43,4 +45,8 @@ import scala.annotation.StaticAnnotation
 @Target ( value = TYPE ) 
 @Retention ( value = RUNTIME ) 
  final class XmlSeeAlso extends StaticAnnotation {
+
+    /**  */
+    @stub
+    val value: Array[Class] = ???
 }

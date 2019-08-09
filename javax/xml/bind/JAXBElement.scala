@@ -3,6 +3,7 @@ package javax.xml.bind
 import java.io.Serializable
 import java.lang.{Class, Object}
 import javax.xml.namespace.QName
+import scala.scalanative.annotation.stub
 
 /** JAXB representation of an Xml Element.
  * 
@@ -38,6 +39,10 @@ class JAXBElement[T] extends Object with Serializable {
     @stub
     def this(name: QName, declaredType: Class[T], scope: Class, value: T) = ???
 
+    /** Construct an xml element instance. */
+    @stub
+    def this(name: QName, declaredType: Class[T], value: T) = ???
+
     /** Java datatype binding for xml element declaration's type. */
     @stub
     protected val declaredType: Class[T] = ???
@@ -53,6 +58,10 @@ class JAXBElement[T] extends Object with Serializable {
     /** Scope of xml element declaration representing this xml element instance. */
     @stub
     protected val scope: Class = ???
+
+    /** xml element value. */
+    @stub
+    protected val value: T = ???
 
     /** Returns the Java binding of the xml element declaration's type attribute. */
     @stub
@@ -89,4 +98,14 @@ class JAXBElement[T] extends Object with Serializable {
     /** Set whether this element has nil content. */
     @stub
     def setNil(value: Boolean): Unit = ???
+
+    /** Set the content model and attributes of this xml element. */
+    @stub
+    def setValue(t: T): Unit = ???
+}
+
+object JAXBElement {
+    /** Designates global scope for an xml element. */
+    @stub
+    object GlobalScope extends JAXBElement.GlobalScope
 }

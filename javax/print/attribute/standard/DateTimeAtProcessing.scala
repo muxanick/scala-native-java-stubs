@@ -1,7 +1,9 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
+import java.util.Date
 import javax.print.attribute.{Attribute, DateTimeSyntax, PrintJobAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class DateTimeAtProcessing is a printing attribute class, a date-time
  *  attribute, that indicates the date and time at which the Print Job first
@@ -21,6 +23,10 @@ import javax.print.attribute.{Attribute, DateTimeSyntax, PrintJobAttribute}
  */
 final class DateTimeAtProcessing extends DateTimeSyntax with PrintJobAttribute {
 
+    /** Construct a new date-time at processing attribute with the given Date value. */
+    @stub
+    def this(dateTime: Date) = ???
+
     /** Returns whether this date-time at processing attribute is equivalent to
      *  the passed in object.
      */
@@ -32,4 +38,10 @@ final class DateTimeAtProcessing extends DateTimeSyntax with PrintJobAttribute {
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

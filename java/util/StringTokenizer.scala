@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The string tokenizer class allows an application to break a
  *  string into tokens. The tokenization method is much simpler than
@@ -79,6 +80,10 @@ class StringTokenizer extends Object with Enumeration[Object] {
     @stub
     def this(str: String, delim: String) = ???
 
+    /** Constructs a string tokenizer for the specified string. */
+    @stub
+    def this(str: String, delim: String, returnDelims: Boolean) = ???
+
     /** Calculates the number of times that this tokenizer's
      *  nextToken method can be called before it generates an
      *  exception.
@@ -106,4 +111,8 @@ class StringTokenizer extends Object with Enumeration[Object] {
     /** Returns the next token from this string tokenizer. */
     @stub
     def nextToken(): String = ???
+
+    /** Returns the next token in this string tokenizer's string. */
+    @stub
+    def nextToken(delim: String): String = ???
 }

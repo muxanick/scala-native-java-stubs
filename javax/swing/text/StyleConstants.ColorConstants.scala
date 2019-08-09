@@ -1,6 +1,7 @@
 package javax.swing.text
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This is a typesafe enumeration of the well-known
  *  attributes that contribute to a color.  These are aliased

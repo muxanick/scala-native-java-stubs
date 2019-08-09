@@ -2,6 +2,7 @@ package javax.net.ssl
 
 import java.lang.{Object, Runnable, String}
 import java.nio.ByteBuffer
+import scala.scalanative.annotation.stub
 
 /** A class which enables secure communications using protocols such as
  *  the Secure Sockets Layer (SSL) or
@@ -324,6 +325,10 @@ abstract class SSLEngine extends Object {
     @stub
     protected def this() = ???
 
+    /** Constructor for an SSLEngine. */
+    @stub
+    protected def this(peerHost: String, peerPort: Int) = ???
+
     /** Initiates handshaking (initial or renegotiation) on this SSLEngine. */
     def beginHandshake(): Unit
 
@@ -455,4 +460,9 @@ abstract class SSLEngine extends Object {
      *  buffers into SSL/TLS network data.
      */
     def wrap(srcs: Array[ByteBuffer], offset: Int, length: Int, dst: ByteBuffer): SSLEngineResult
+
+    /** Attempts to encode a buffer of plaintext application data into
+     *  SSL/TLS network data.
+     */
+    def wrap(src: ByteBuffer, dst: ByteBuffer): SSLEngineResult
 }

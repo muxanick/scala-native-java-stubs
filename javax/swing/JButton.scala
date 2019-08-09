@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component, Container}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** An implementation of a "push" button.
  *  
@@ -51,6 +52,16 @@ class JButton extends AbstractButton with Accessible {
     @stub
     def this(text: String) = ???
 
+    /** Creates a button with initial text and an icon. */
+    @stub
+    def this(text: String, icon: Icon) = ???
+
+    /** This class implements accessibility support for the
+     *  JButton class.
+     */
+    @stub
+    protected object AccessibleJButton extends JButton.AccessibleJButton
+
     /** Gets the AccessibleContext associated with this
      *  JButton.
      */
@@ -93,4 +104,10 @@ class JButton extends AbstractButton with Accessible {
      */
     @stub
     def setDefaultCapable(defaultCapable: Boolean): Unit = ???
+
+    /** Resets the UI property to a value from the current look and
+     *  feel.
+     */
+    @stub
+    def updateUI(): Unit = ???
 }

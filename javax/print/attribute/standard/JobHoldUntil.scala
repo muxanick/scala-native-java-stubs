@@ -1,7 +1,9 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
+import java.util.Date
 import javax.print.attribute.{Attribute, DateTimeSyntax, PrintJobAttribute, PrintRequestAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class JobHoldUntil is a printing attribute class, a date-time attribute, that
  *  specifies the exact date and time at which the job must become a candidate
@@ -51,6 +53,12 @@ import javax.print.attribute.{Attribute, DateTimeSyntax, PrintJobAttribute, Prin
  */
 final class JobHoldUntil extends DateTimeSyntax with PrintRequestAttribute with PrintJobAttribute {
 
+    /** Construct a new job hold until date-time attribute with the given
+     *  Date value.
+     */
+    @stub
+    def this(dateTime: Date) = ???
+
     /** Returns whether this job hold until attribute is equivalent to the
      *  passed in object.
      */
@@ -62,4 +70,10 @@ final class JobHoldUntil extends DateTimeSyntax with PrintRequestAttribute with 
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

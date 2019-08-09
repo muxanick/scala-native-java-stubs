@@ -3,6 +3,7 @@ package javax.swing.plaf.metal
 import java.lang.Object
 import javax.swing.plaf.UIResource
 import javax.swing.plaf.basic.BasicComboBoxEditor
+import scala.scalanative.annotation.stub
 
 /** A subclass of BasicComboBoxEditor that implements UIResource.
  *  BasicComboBoxEditor doesn't implement UIResource
@@ -19,3 +20,7 @@ import javax.swing.plaf.basic.BasicComboBoxEditor
  *  Please see XMLEncoder.
  */
 object MetalComboBoxEditor.UIResource extends MetalComboBoxEditor with UIResource {
+
+    /**  */
+    @stub
+    def UIResource() = ???

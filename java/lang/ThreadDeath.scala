@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** An instance of ThreadDeath is thrown in the victim thread
  *  when the (deprecated) Thread.stop() method is invoked.
  * 
@@ -18,4 +20,8 @@ package java.lang
  *  occurrences of Exception and then discard the exception.
  */
 class ThreadDeath extends Error {
+
+    /**  */
+    @stub
+    def this() = ???
 }

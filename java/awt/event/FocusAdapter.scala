@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An abstract adapter class for receiving keyboard focus events.
  *  The methods in this class are empty. This class exists as
@@ -20,6 +21,13 @@ import java.lang.Object
  */
 abstract class FocusAdapter extends Object with FocusListener {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Invoked when a component gains the keyboard focus. */
     def focusGained(e: FocusEvent): Unit
+
+    /** Invoked when a component loses the keyboard focus. */
+    def focusLost(e: FocusEvent): Unit
 }

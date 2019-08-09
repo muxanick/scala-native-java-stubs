@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A buffered character-input stream that keeps track of line numbers.  This
  *  class defines methods setLineNumber(int) and getLineNumber() for setting and getting the current line number
@@ -24,6 +25,12 @@ class LineNumberReader extends BufferedReader {
      */
     @stub
     def this(in: Reader) = ???
+
+    /** Create a new line-numbering reader, reading characters into a buffer of
+     *  the given size.
+     */
+    @stub
+    def this(in: Reader, sz: Int) = ???
 
     /** Get the current line number. */
     @stub
@@ -52,4 +59,8 @@ class LineNumberReader extends BufferedReader {
     /** Set the current line number. */
     @stub
     def setLineNumber(lineNumber: Int): Unit = ???
+
+    /** Skip characters. */
+    @stub
+    def skip(n: Long): Long = ???
 }

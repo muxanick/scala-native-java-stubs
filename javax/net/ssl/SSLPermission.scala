@@ -2,6 +2,7 @@ package javax.net.ssl
 
 import java.lang.{Object, String}
 import java.security.{BasicPermission, Permission}
+import scala.scalanative.annotation.stub
 
 /** This class is for various network permissions.
  *  An SSLPermission contains a name (also referred to as a "target name") but
@@ -65,4 +66,8 @@ final class SSLPermission extends BasicPermission {
     /** Creates a new SSLPermission with the specified name. */
     @stub
     def this(name: String) = ???
+
+    /** Creates a new SSLPermission object with the specified name. */
+    @stub
+    def this(name: String, actions: String) = ???
 }

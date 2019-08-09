@@ -1,6 +1,8 @@
 package javax.lang.model.util
 
 import java.lang.Object
+import javax.lang.model.type.UnionType
+import scala.scalanative.annotation.stub
 
 /** A skeletal visitor of types with default behavior appropriate for
  *  the RELEASE_7
@@ -32,4 +34,11 @@ import java.lang.Object
  *  in this situation.
  */
 abstract class AbstractTypeVisitor7[R, P] extends AbstractTypeVisitor6[R, P] {
+
+    /** Constructor for concrete subclasses to call. */
+    @stub
+    protected def this() = ???
+
+    /** Visits a UnionType in a manner defined by a subclass. */
+    def visitUnion(t: UnionType, p: P): R
 }

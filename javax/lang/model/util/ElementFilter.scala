@@ -3,6 +3,7 @@ package javax.lang.model.util
 import java.lang.{Iterable, Object}
 import java.util.{List, Set}
 import javax.lang.model.element.{Element, ExecutableElement, PackageElement, TypeElement, VariableElement}
+import scala.scalanative.annotation.stub
 
 /** Filters for selecting just the elements of interest from a
  *  collection of elements.  The returned sets and lists are new
@@ -64,4 +65,8 @@ object ElementFilter {
     /** Returns a list of types in elements. */
     @stub
     def typesIn(elements: Iterable[_ <: Element]): List[TypeElement] = ???
+
+    /** Returns a set of types in elements. */
+    @stub
+    def typesIn(elements: Set[_ <: Element]): Set[TypeElement] = ???
 }

@@ -1,6 +1,7 @@
 package javax.management
 
 import java.lang.{Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Static methods from the JMX API.  There are no instances of this class. */
 class JMX extends Object {
@@ -39,6 +40,10 @@ object JMX {
     @stub
     val OPEN_TYPE_FIELD: String = ???
 
+    /** The name of the originalType field. */
+    @stub
+    val ORIGINAL_TYPE_FIELD: String = ???
+
     /** Test whether an interface is an MXBean interface. */
     @stub
     def isMXBeanInterface(interfaceClass: Class[_]): Boolean = ???
@@ -58,4 +63,10 @@ object JMX {
     /** Make a proxy for an MXBean in a local or remote MBean Server. */
     @stub
     def newMXBeanProxy[T](connection: MBeanServerConnection, objectName: ObjectName, interfaceClass: Class[T]): T = ???
+
+    /** Make a proxy for an MXBean in a local or remote MBean
+     *  Server that may also support the methods of NotificationEmitter.
+     */
+    @stub
+    def newMXBeanProxy[T](connection: MBeanServerConnection, objectName: ObjectName, interfaceClass: Class[T], notificationEmitter: Boolean): T = ???
 }

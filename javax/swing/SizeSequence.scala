@@ -1,6 +1,7 @@
 package javax.swing
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A SizeSequence object
  *  efficiently maintains an ordered list
@@ -103,6 +104,13 @@ class SizeSequence extends Object {
     @stub
     def this(sizes: Array[Int]) = ???
 
+    /** Creates a new SizeSequence object
+     *  that contains the specified number of entries,
+     *  all initialized to have size value.
+     */
+    @stub
+    def this(numEntries: Int, value: Int) = ???
+
     /** Returns the index of the entry
      *  that corresponds to the specified position.
      */
@@ -134,4 +142,10 @@ class SizeSequence extends Object {
     /** Sets the size of the specified entry. */
     @stub
     def setSize(index: Int, size: Int): Unit = ???
+
+    /** Resets this SizeSequence object,
+     *  using the data in the sizes argument.
+     */
+    @stub
+    def setSizes(sizes: Array[Int]): Unit = ???
 }

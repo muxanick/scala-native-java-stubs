@@ -1,7 +1,8 @@
 package javax.print.attribute
 
 import java.io.Serializable
-import java.lang.{Cloneable, Object}
+import java.lang.{Cloneable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Class SetOfIntegerSyntax is an abstract base class providing the common
  *  implementation of all attributes whose value is a set of nonnegative
@@ -68,6 +69,12 @@ abstract class SetOfIntegerSyntax extends Object with Serializable with Cloneabl
     @stub
     protected def this(lowerBound: Int, upperBound: Int) = ???
 
+    /** Construct a new set-of-integer attribute with the given members in
+     *  string form.
+     */
+    @stub
+    protected def this(members: String) = ???
+
     /** Determine if this set-of-integer attribute contains the given value. */
     def contains(x: Int): Boolean
 
@@ -91,4 +98,7 @@ abstract class SetOfIntegerSyntax extends Object with Serializable with Cloneabl
      *  greater than the given value.
      */
     def next(x: Int): Int
+
+    /** Returns a string value corresponding to this set-of-integer attribute. */
+    def toString(): String
 }

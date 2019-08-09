@@ -1,6 +1,7 @@
 package java.rmi.activation
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** An UnknownObjectException is thrown by methods of classes and
  *  interfaces in the java.rmi.activation package when the
@@ -12,4 +13,10 @@ import java.lang.{Exception, Object, Throwable}
  *  Activatable.register call.
  */
 class UnknownObjectException extends ActivationException {
+
+    /** Constructs an UnknownObjectException with the specified
+     *  detail message.
+     */
+    @stub
+    def this(s: String) = ???
 }

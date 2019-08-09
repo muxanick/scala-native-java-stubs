@@ -2,6 +2,7 @@ package java.awt.font
 
 import java.awt.geom.AffineTransform
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The FontRenderContext class is a container for the
  *    information needed to correctly measure text.  The measurement of text
@@ -42,6 +43,14 @@ class FontRenderContext extends Object {
      */
     @stub
     def this(tx: AffineTransform, isAntiAliased: Boolean, usesFractionalMetrics: Boolean) = ???
+
+    /** Constructs a FontRenderContext object from an
+     *  optional AffineTransform and two Object
+     *  values that determine if the newly constructed object has
+     *  anti-aliasing or fractional metrics.
+     */
+    @stub
+    def this(tx: AffineTransform, aaHint: Object, fmHint: Object) = ???
 
     /** Return true if rhs has the same transform, antialiasing,
      *  and fractional metrics values as this.
@@ -95,4 +104,10 @@ class FontRenderContext extends Object {
      */
     @stub
     def isTransformed(): Boolean = ???
+
+    /** Returns a boolean which whether text fractional metrics mode
+     *  is used in this FontRenderContext.
+     */
+    @stub
+    def usesFractionalMetrics(): Boolean = ???
 }

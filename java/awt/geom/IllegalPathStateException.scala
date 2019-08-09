@@ -1,6 +1,7 @@
 package java.awt.geom
 
-import java.lang.{Exception, Object, RuntimeException, Throwable}
+import java.lang.{Exception, Object, RuntimeException, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** The IllegalPathStateException represents an
  *  exception that is thrown if an operation is performed on a path
@@ -15,4 +16,10 @@ class IllegalPathStateException extends RuntimeException {
      */
     @stub
     def this() = ???
+
+    /** Constructs an IllegalPathStateException with the
+     *  specified detail message.
+     */
+    @stub
+    def this(s: String) = ???
 }

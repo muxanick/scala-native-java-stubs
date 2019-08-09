@@ -3,6 +3,7 @@ package javax.security.auth.login
 import java.lang.{Object, String}
 import javax.security.auth.Subject
 import javax.security.auth.callback.CallbackHandler
+import scala.scalanative.annotation.stub
 
 /**  The LoginContext class describes the basic methods used
  *  to authenticate Subjects and provides a way to develop an
@@ -172,6 +173,14 @@ class LoginContext extends Object {
     @stub
     def this(name: String, subject: Subject, callbackHandler: CallbackHandler) = ???
 
+    /** Instantiate a new LoginContext object with a name,
+     *  a Subject to be authenticated,
+     *  a CallbackHandler object, and a login
+     *  Configuration.
+     */
+    @stub
+    def this(name: String, subject: Subject, callbackHandler: CallbackHandler, config: Configuration) = ???
+
     /** Return the authenticated Subject. */
     @stub
     def getSubject(): Subject = ???
@@ -179,4 +188,8 @@ class LoginContext extends Object {
     /** Perform the authentication. */
     @stub
     def login(): Unit = ???
+
+    /** Logout the Subject. */
+    @stub
+    def logout(): Unit = ???
 }

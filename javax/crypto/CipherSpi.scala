@@ -4,6 +4,7 @@ import java.lang.{Object, String}
 import java.nio.ByteBuffer
 import java.security.{AlgorithmParameters, Key, SecureRandom}
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** This class defines the Service Provider Interface (SPI)
  *  for the Cipher class.
@@ -187,6 +188,10 @@ import java.security.spec.AlgorithmParameterSpec
  */
 abstract class CipherSpi extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Encrypts or decrypts data in a single-part operation,
      *  or finishes a multiple-part operation.
      */
@@ -272,4 +277,7 @@ abstract class CipherSpi extends Object {
      *  Data (AAD).
      */
     protected def engineUpdateAAD(src: ByteBuffer): Unit
+
+    /** Wrap a key. */
+    protected def engineWrap(key: Key): Array[Byte]
 }

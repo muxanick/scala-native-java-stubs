@@ -1,6 +1,7 @@
 package java.util.zip
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class provides support for general purpose decompression using the
  *  popular ZLIB compression library. The ZLIB compression library was
@@ -47,6 +48,10 @@ class Inflater extends Object {
     /** Creates a new decompressor. */
     @stub
     def this() = ???
+
+    /** Creates a new decompressor. */
+    @stub
+    def this(nowrap: Boolean) = ???
 
     /** Closes the decompressor and discards any unprocessed input. */
     @stub
@@ -117,4 +122,8 @@ class Inflater extends Object {
     /** Sets input data for decompression. */
     @stub
     def setInput(b: Array[Byte]): Unit = ???
+
+    /** Sets input data for decompression. */
+    @stub
+    def setInput(b: Array[Byte], off: Int, len: Int): Unit = ???
 }

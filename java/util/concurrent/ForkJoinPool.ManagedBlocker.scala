@@ -1,5 +1,7 @@
 package java.util.concurrent
 
+import scala.scalanative.annotation.stub
+
 /** Interface for extending managed parallelism for tasks running
  *  in ForkJoinPools.
  * 
@@ -61,4 +63,8 @@ object trait ForkJoinPool.ManagedBlocker {
      */
     @stub
     def block(): Boolean = ???
+
+    /** Returns true if blocking is unnecessary. */
+    @stub
+    def isReleasable(): Boolean = ???
 }

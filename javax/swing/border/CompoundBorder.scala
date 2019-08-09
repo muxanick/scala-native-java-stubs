@@ -1,7 +1,8 @@
 package javax.swing.border
 
-import java.awt.{Component, Insets}
+import java.awt.{Component, Graphics, Insets}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A composite Border class used to compose two Border objects
  *  into a single border by nesting an inside Border object within
@@ -31,9 +32,19 @@ class CompoundBorder extends AbstractBorder {
     @stub
     def this() = ???
 
+    /** Creates a compound border with the specified outside and
+     *  inside borders.
+     */
+    @stub
+    def this(outsideBorder: Border, insideBorder: Border) = ???
+
     /**  */
     @stub
     protected val insideBorder: Border = ???
+
+    /**  */
+    @stub
+    protected val outsideBorder: Border = ???
 
     /** Reinitialize the insets parameter with this Border's current Insets. */
     @stub
@@ -50,4 +61,12 @@ class CompoundBorder extends AbstractBorder {
     /** Returns whether or not the compound border is opaque. */
     @stub
     def isBorderOpaque(): Boolean = ???
+
+    /** Paints the compound border by painting the outside border
+     *  with the specified position and size and then painting the
+     *  inside border at the specified position and size offset by
+     *  the insets of the outside border.
+     */
+    @stub
+    def paintBorder(c: Component, g: Graphics, x: Int, y: Int, width: Int, height: Int): Unit = ???
 }

@@ -1,6 +1,7 @@
 package javax.management
 
 import java.lang.{Boolean, Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** An MBean whose management interface is determined by reflection
  *  on a Java interface.
@@ -94,6 +95,14 @@ class StandardMBean extends Object with DynamicMBean with MBeanRegistration {
      */
     @stub
     def this(implementation: T, mbeanInterface: Class[T]) = ???
+
+    /** Make a DynamicMBean out of the object
+     *  implementation, using the specified
+     *  mbeanInterface class, and choosing whether the
+     *  resultant MBean is an MXBean.
+     */
+    @stub
+    def this(implementation: T, mbeanInterface: Class[T], isMXBean: Boolean) = ???
 
     /** Customization hook:
      *  cache the MBeanInfo built for this object.
@@ -250,4 +259,8 @@ class StandardMBean extends Object with DynamicMBean with MBeanRegistration {
     /** Sets the values of several attributes of the Dynamic MBean. */
     @stub
     def setAttributes(attributes: AttributeList): AttributeList = ???
+
+    /** Replace the implementation object wrapped in this object. */
+    @stub
+    def setImplementation(implementation: Object): Unit = ???
 }

@@ -1,6 +1,7 @@
 package javax.transaction.xa
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** The XAException is thrown by the Resource Manager (RM) to inform the
  *  Transaction Manager of an error encountered by the involved transaction.
@@ -14,6 +15,10 @@ class XAException extends Exception {
     /** Create an XAException with a given error code. */
     @stub
     def this(errcode: Int) = ???
+
+    /** Create an XAException with a given string. */
+    @stub
+    def this(s: String) = ???
 
     /** The error code with which to create the SystemException. */
     @stub
@@ -120,4 +125,8 @@ object XAException {
     /** A resource manager error has occurred in the transaction branch. */
     @stub
     val XAER_RMERR: Int = ???
+
+    /** Resource manager is unavailable. */
+    @stub
+    val XAER_RMFAIL: Int = ???
 }

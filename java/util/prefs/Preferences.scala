@@ -2,6 +2,7 @@ package java.util.prefs
 
 import java.io.{InputStream, OutputStream}
 import java.lang.{Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A node in a hierarchical collection of preference data.  This class
  *  allows applications to store and retrieve user and system
@@ -177,6 +178,10 @@ import java.lang.{Class, Object, String}
  *  
  */
 abstract class Preferences extends Object {
+
+    /** Sole constructor. */
+    @stub
+    protected def this() = ???
 
     /** Returns this preference node's absolute path name. */
     def absolutePath(): String
@@ -356,6 +361,10 @@ object Preferences {
     @stub
     val MAX_NAME_LENGTH: Int = ???
 
+    /** Maximum length of string allowed as a value (8192 characters). */
+    @stub
+    val MAX_VALUE_LENGTH: Int = ???
+
     /** Imports all of the preferences represented by the XML document on the
      *  specified input stream.
      */
@@ -377,4 +386,8 @@ object Preferences {
      */
     @stub
     def userNodeForPackage(c: Class[_]): Preferences = ???
+
+    /** Returns the root preference node for the calling user. */
+    @stub
+    def userRoot(): Preferences = ???
 }

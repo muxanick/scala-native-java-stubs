@@ -5,6 +5,7 @@ import java.awt.event.{ComponentEvent, InputEvent, MouseEvent}
 import java.lang.Object
 import java.util.EventObject
 import javax.swing.{MenuElement, MenuSelectionManager}
+import scala.scalanative.annotation.stub
 
 /** MenuDragMouseEvent is used to notify interested parties that
  *  the menu element has received a MouseEvent forwarded to it
@@ -25,7 +26,15 @@ class MenuDragMouseEvent extends MouseEvent {
     @stub
     def this(source: Component, id: Int, when: Long, modifiers: Int, x: Int, y: Int, clickCount: Int, popupTrigger: Boolean, p: Array[MenuElement], m: MenuSelectionManager) = ???
 
+    /** Constructs a MenuDragMouseEvent object. */
+    @stub
+    def this(source: Component, id: Int, when: Long, modifiers: Int, x: Int, y: Int, xAbs: Int, yAbs: Int, clickCount: Int, popupTrigger: Boolean, p: Array[MenuElement], m: MenuSelectionManager) = ???
+
     /** Returns the current menu selection manager. */
     @stub
     def getMenuSelectionManager(): MenuSelectionManager = ???
+
+    /** Returns the path to the selected menu item. */
+    @stub
+    def getPath(): Array[MenuElement] = ???
 }

@@ -4,6 +4,7 @@ import java.awt.{Container, Graphics, Shape}
 import java.lang.{Object, String}
 import javax.swing.SwingConstants
 import javax.swing.event.{DocumentEvent, DocumentEvent.ElementChange}
+import scala.scalanative.annotation.stub
 
 /** 
  *  A very important part of the text package is the View class.
@@ -160,6 +161,10 @@ import javax.swing.event.{DocumentEvent, DocumentEvent.ElementChange}
  * 
  */
 abstract class View extends Object with SwingConstants {
+
+    /** Creates a new View object. */
+    @stub
+    def this(elem: Element) = ???
 
     /** Appends a single child view. */
     def append(v: View): Unit
@@ -347,6 +352,11 @@ abstract class View extends Object with SwingConstants {
 
     /** Deprecated.   */
     def viewToModel(x: Float, y: Float, a: Shape): Int
+
+    /** Provides a mapping from the view coordinate space to the logical
+     *  coordinate space of the model.
+     */
+    def viewToModel(x: Float, y: Float, a: Shape, biasReturn: Array[Position.Bias]): Int
 }
 
 object View {
@@ -380,4 +390,8 @@ object View {
     /** Axis for format/break operations. */
     @stub
     val X_AXIS: Int = ???
+
+    /** Axis for format/break operations. */
+    @stub
+    val Y_AXIS: Int = ???
 }

@@ -4,6 +4,7 @@ import java.awt.{Color, Font}
 import java.lang.{Object, String}
 import java.util.Enumeration
 import javax.swing.event.DocumentListener
+import scala.scalanative.annotation.stub
 
 /** A document that can be marked up with character and paragraph
  *  styles in a manner similar to the Rich Text Format.  The element
@@ -32,11 +33,21 @@ class DefaultStyledDocument extends AbstractDocument with StyledDocument {
     @stub
     def this(c: AbstractDocument.Content, styles: StyleContext) = ???
 
+    /** Constructs a styled document with the default content
+     *  storage implementation and a shared set of styles.
+     */
+    @stub
+    def this(styles: StyleContext) = ???
+
     /** Class to manage changes to the element
      *  hierarchy.
      */
     @stub
     object ElementBuffer extends DefaultStyledDocument.ElementBuffer
+
+    /** Default root element for a document... */
+    @stub
+    protected object SectionElement extends DefaultStyledDocument.SectionElement
 
     /**  */
     @stub
@@ -137,6 +148,10 @@ class DefaultStyledDocument extends AbstractDocument with StyledDocument {
     /** Sets attributes for a paragraph. */
     @stub
     def setParagraphAttributes(offset: Int, length: Int, s: AttributeSet, replace: Boolean): Unit = ???
+
+    /** Called when any of this document's styles have changed. */
+    @stub
+    protected def styleChanged(style: Style): Unit = ???
 }
 
 object DefaultStyledDocument {
@@ -149,4 +164,8 @@ object DefaultStyledDocument {
     /** Specification for building elements. */
     @stub
     object ElementSpec extends DefaultStyledDocument.ElementSpec
+
+    /** The default size of the initial content buffer. */
+    @stub
+    val BUFFER_SIZE_DEFAULT: Int = ???
 }

@@ -1,6 +1,7 @@
 package java.awt.geom
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The FlatteningPathIterator class returns a flattened view of
  *  another PathIterator object.  Other Shape
@@ -14,6 +15,12 @@ class FlatteningPathIterator extends Object with PathIterator {
      */
     @stub
     def this(src: PathIterator, flatness: Double) = ???
+
+    /** Constructs a new FlatteningPathIterator object
+     *  that flattens a path as it iterates over it.
+     */
+    @stub
+    def this(src: PathIterator, flatness: Double, limit: Int) = ???
 
     /** Returns the coordinates and type of the current path segment in
      *  the iteration.
@@ -44,4 +51,11 @@ class FlatteningPathIterator extends Object with PathIterator {
     /** Tests if the iteration is complete. */
     @stub
     def isDone(): Boolean = ???
+
+    /** Moves the iterator to the next segment of the path forwards
+     *  along the primary direction of traversal as long as there are
+     *  more points in that direction.
+     */
+    @stub
+    def next(): Unit = ???
 }

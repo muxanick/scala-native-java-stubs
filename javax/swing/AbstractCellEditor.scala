@@ -3,7 +3,8 @@ package javax.swing
 import java.io.Serializable
 import java.lang.Object
 import java.util.EventObject
-import javax.swing.event.{CellEditorListener, ChangeEvent}
+import javax.swing.event.{CellEditorListener, ChangeEvent, EventListenerList}
+import scala.scalanative.annotation.stub
 
 /** A base class for CellEditors, providing default
  *  implementations for the methods in the CellEditor
@@ -24,7 +25,14 @@ import javax.swing.event.{CellEditorListener, ChangeEvent}
 abstract class AbstractCellEditor extends Object with CellEditor with Serializable {
 
     /**  */
+    @stub
+    def this() = ???
+
+    /**  */
     protected val changeEvent: ChangeEvent
+
+    /**  */
+    protected val listenerList: EventListenerList
 
     /** Adds a CellEditorListener to the listener list. */
     def addCellEditorListener(l: CellEditorListener): Unit
@@ -55,4 +63,7 @@ abstract class AbstractCellEditor extends Object with CellEditor with Serializab
 
     /** Returns true. */
     def shouldSelectCell(anEvent: EventObject): Boolean
+
+    /** Calls fireEditingStopped and returns true. */
+    def stopCellEditing(): Boolean
 }

@@ -2,7 +2,9 @@ package java.nio.file
 
 import java.io.File
 import java.lang.{Comparable, Iterable, Object, String}
+import java.net.URI
 import java.util.Iterator
+import scala.scalanative.annotation.stub
 
 /** An object that may be used to locate a file in a file system. It will
  *  typically represent a system dependent file path.
@@ -192,4 +194,8 @@ trait Path extends Comparable[Path] with Iterable[Path] with Watchable {
     /** Returns the string representation of this path. */
     @stub
     def toString(): String = ???
+
+    /** Returns a URI to represent this path. */
+    @stub
+    def toUri(): URI = ???
 }

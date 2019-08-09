@@ -2,6 +2,7 @@ package javax.management.remote
 
 import java.lang.{Object, String}
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** Factory to create JMX API connector clients.  There
  *  are no instances of this class.
@@ -122,6 +123,12 @@ object JMXConnectorFactory {
     @stub
     val PROTOCOL_PROVIDER_CLASS_LOADER: String = ???
 
+    /** Name of the attribute that specifies the provider packages
+     *  that are consulted when looking for the handler for a protocol.
+     */
+    @stub
+    val PROTOCOL_PROVIDER_PACKAGES: String = ???
+
     /** Creates a connection to the connector server at the given
      *  address.
      */
@@ -133,4 +140,10 @@ object JMXConnectorFactory {
      */
     @stub
     def connect(serviceURL: JMXServiceURL, environment: Map[String, _]): JMXConnector = ???
+
+    /** Creates a connector client for the connector server at the
+     *  given address.
+     */
+    @stub
+    def newJMXConnector(serviceURL: JMXServiceURL, environment: Map[String, _]): JMXConnector = ???
 }

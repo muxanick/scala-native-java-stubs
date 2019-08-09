@@ -3,6 +3,7 @@ package java.lang.management
 import java.lang.{Class, Object, String}
 import java.util.{List, Set}
 import javax.management.{MBeanServer, MBeanServerConnection}
+import scala.scalanative.annotation.stub
 
 /** The ManagementFactory class is a factory class for getting
  *  managed beans for the Java platform.
@@ -213,6 +214,12 @@ object ManagementFactory {
     @stub
     val RUNTIME_MXBEAN_NAME: String = ???
 
+    /** String representation of the
+     *  ObjectName for the ThreadMXBean.
+     */
+    @stub
+    val THREAD_MXBEAN_NAME: String = ???
+
     /** Returns the managed bean for the class loading system of
      *  the Java virtual machine.
      */
@@ -307,4 +314,12 @@ object ManagementFactory {
      */
     @stub
     def getThreadMXBean(): ThreadMXBean = ???
+
+    /** Returns a proxy for a platform MXBean interface of a
+     *  given MXBean name
+     *  that forwards its method calls through the given
+     *  MBeanServerConnection.
+     */
+    @stub
+    def newPlatformMXBeanProxy[T](connection: MBeanServerConnection, mxbeanName: String, mxbeanInterface: Class[T]): T = ???
 }

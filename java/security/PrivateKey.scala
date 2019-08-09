@@ -1,6 +1,7 @@
 package java.security
 
 import javax.security.auth.Destroyable
+import scala.scalanative.annotation.stub
 
 /** A private key.
  *  The purpose of this interface is to group (and provide type safety
@@ -21,4 +22,12 @@ import javax.security.auth.Destroyable
  *  to prevent keys that have been destroyed from being serialized.
  */
 trait PrivateKey extends Key with Destroyable {
+}
+
+object PrivateKey {
+    /** The class fingerprint that is set to indicate serialization
+     *  compatibility with a previous version of the class.
+     */
+    @stub
+    val serialVersionUID: Long = ???
 }

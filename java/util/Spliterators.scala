@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Static classes and methods for operating on or creating instances of
  *  Spliterator and its primitive specializations
@@ -28,6 +29,12 @@ object Spliterators {
      */
     @stub
     object AbstractLongSpliterator extends Spliterators.AbstractLongSpliterator
+
+    /** An abstract Spliterator that implements trySplit to
+     *  permit limited parallelism.
+     */
+    @stub
+    object AbstractSpliterator[T] extends Spliterators.AbstractSpliterator[T]
 
     /** Creates an empty Spliterator.OfDouble */
     @stub
@@ -168,4 +175,11 @@ object Spliterators {
      */
     @stub
     def spliteratorUnknownSize(iterator: PrimitiveIterator.OfInt, characteristics: Int): Spliterator.OfInt = ???
+
+    /** Creates a Spliterator.OfLong using a given
+     *  LongStream.LongIterator as the source of elements, with no
+     *  initial size estimate.
+     */
+    @stub
+    def spliteratorUnknownSize(iterator: PrimitiveIterator.OfLong, characteristics: Int): Spliterator.OfLong = ???
 }

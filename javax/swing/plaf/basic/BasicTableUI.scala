@@ -3,12 +3,17 @@ package javax.swing.plaf.basic
 import java.awt.{Component.BaselineResizeBehavior, Dimension, Graphics}
 import java.awt.event.{FocusListener, KeyListener}
 import java.lang.Object
-import javax.swing.{CellRendererPane, JComponent}
+import javax.swing.{CellRendererPane, JComponent, JTable}
 import javax.swing.event.MouseInputListener
 import javax.swing.plaf.{ComponentUI, TableUI}
+import scala.scalanative.annotation.stub
 
 /** BasicTableUI implementation */
 class BasicTableUI extends TableUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** This class should be treated as a "protected" inner class. */
     @stub
@@ -17,6 +22,10 @@ class BasicTableUI extends TableUI {
     /** This class should be treated as a "protected" inner class. */
     @stub
     object KeyHandler extends BasicTableUI.KeyHandler
+
+    /** This class should be treated as a "protected" inner class. */
+    @stub
+    object MouseInputHandler extends BasicTableUI.MouseInputHandler
 
     /**  */
     @stub
@@ -33,6 +42,10 @@ class BasicTableUI extends TableUI {
     /**  */
     @stub
     protected val rendererPane: CellRendererPane = ???
+
+    /**  */
+    @stub
+    protected val table: JTable = ???
 
     /** Creates the focus listener for handling keyboard navigation in the JTable. */
     @stub
@@ -101,6 +114,12 @@ class BasicTableUI extends TableUI {
     /**  */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicTableUI {

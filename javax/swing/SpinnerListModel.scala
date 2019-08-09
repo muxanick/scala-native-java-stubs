@@ -3,6 +3,7 @@ package javax.swing
 import java.io.Serializable
 import java.lang.Object
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** A simple implementation of SpinnerModel whose
  *  values are defined by an array or a List.
@@ -33,6 +34,12 @@ class SpinnerListModel extends AbstractSpinnerModel with Serializable {
     @stub
     def this(values: List[_]) = ???
 
+    /** Constructs a SpinnerModel whose sequence of values
+     *  is defined by the specified array.
+     */
+    @stub
+    def this(values: Array[Object]) = ???
+
     /** Returns the List that defines the sequence for this model. */
     @stub
     def getList(): List[_] = ???
@@ -58,4 +65,10 @@ class SpinnerListModel extends AbstractSpinnerModel with Serializable {
      */
     @stub
     def setList(list: List[_]): Unit = ???
+
+    /** Changes the current element of the sequence and notifies
+     *  ChangeListeners.
+     */
+    @stub
+    def setValue(elt: Object): Unit = ???
 }

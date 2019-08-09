@@ -1,6 +1,7 @@
 package javax.lang.model.element
 
 import java.lang.{CharSequence, Object}
+import scala.scalanative.annotation.stub
 
 /** An immutable sequence of characters.  When created by the same
  *  implementation, objects implementing this interface must obey the
@@ -28,4 +29,8 @@ trait Name extends CharSequence {
      */
     @stub
     def equals(obj: Object): Boolean = ???
+
+    /** Obeys the general contract of Object.hashCode. */
+    @stub
+    def hashCode(): Int = ???
 }

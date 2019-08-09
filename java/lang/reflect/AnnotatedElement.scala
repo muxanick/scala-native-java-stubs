@@ -2,6 +2,7 @@ package java.lang.reflect
 
 import java.lang.Class
 import java.lang.annotation.Annotation
+import scala.scalanative.annotation.stub
 
 /** Represents an annotated element of the program currently running in this
  *  VM.  This interface allows annotations to be read reflectively.  All
@@ -216,4 +217,10 @@ trait AnnotatedElement {
      */
     @stub
     val Array[T]: default[T <: Annotation] = ???
+
+    /** Returns true if an annotation for the specified type
+     *  is present on this element, else false.
+     */
+    @stub
+    val Boolean: default = ???
 }

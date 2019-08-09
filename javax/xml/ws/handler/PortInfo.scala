@@ -2,6 +2,7 @@ package javax.xml.ws.handler
 
 import java.lang.String
 import javax.xml.namespace.QName
+import scala.scalanative.annotation.stub
 
 /** The PortInfo interface is used by a
  *   HandlerResolver to query information about
@@ -19,4 +20,10 @@ trait PortInfo {
     /** Gets the qualified name of the WSDL port being accessed. */
     @stub
     def getPortName(): QName = ???
+
+    /** Gets the qualified name of the WSDL service name containing
+     *   the port being accessed.
+     */
+    @stub
+    def getServiceName(): QName = ???
 }

@@ -1,6 +1,7 @@
 package java.sql
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** The subclass of SQLException thrown when the SQLState class value
  *  is '23', or under vendor-specified conditions.
@@ -56,4 +57,10 @@ class SQLIntegrityConstraintViolationException extends SQLNonTransientException 
      */
     @stub
     def this(reason: String, cause: Throwable) = ???
+
+    /** Constructs an SQLIntegrityConstraintViolationException object with
+     *   a given  cause.
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

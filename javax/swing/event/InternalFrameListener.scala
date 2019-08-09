@@ -1,6 +1,7 @@
 package javax.swing.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener interface for receiving internal frame events.
  *  This class is functionally equivalent to the WindowListener class
@@ -34,4 +35,8 @@ trait InternalFrameListener extends EventListener {
     /** Invoked when an internal frame is iconified. */
     @stub
     def internalFrameIconified(e: InternalFrameEvent): Unit = ???
+
+    /** Invoked when a internal frame has been opened. */
+    @stub
+    def internalFrameOpened(e: InternalFrameEvent): Unit = ???
 }

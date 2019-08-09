@@ -3,6 +3,7 @@ package javax.swing.text
 import java.awt.{Color, Font, Graphics, Shape}
 import java.lang.{Cloneable, Object}
 import javax.swing.event.DocumentEvent
+import scala.scalanative.annotation.stub
 
 /** A GlyphView is a styled chunk of text that represents a view
  *  mapped over an element in the text model. This view is generally
@@ -28,6 +29,10 @@ import javax.swing.event.DocumentEvent
  *  
  */
 class GlyphView extends View with TabableView with Cloneable {
+
+    /** Constructs a new view wrapped on an element. */
+    @stub
+    def this(elem: Element) = ???
 
     /** Breaks this view on the given axis at the given length. */
     @stub
@@ -174,4 +179,16 @@ class GlyphView extends View with TabableView with Cloneable {
     /** Sets the painter to use for rendering glyphs. */
     @stub
     def setGlyphPainter(p: GlyphView.GlyphPainter): Unit = ???
+
+    /** Provides a mapping from the view coordinate space to the logical
+     *  coordinate space of the model.
+     */
+    @stub
+    def viewToModel(x: Float, y: Float, a: Shape, biasReturn: Array[Position.Bias]): Int = ???
+}
+
+object GlyphView {
+    /** A class to perform rendering of the glyphs. */
+    @stub
+    object GlyphPainter extends GlyphView.GlyphPainter
 }

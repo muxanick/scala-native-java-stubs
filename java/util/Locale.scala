@@ -2,6 +2,7 @@ package java.util
 
 import java.io.Serializable
 import java.lang.{Character, Cloneable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A Locale object represents a specific geographical, political,
  *  or cultural region. An operation that requires a Locale to perform
@@ -420,6 +421,10 @@ final class Locale extends Object with Cloneable with Serializable {
     @stub
     def this(language: String, country: String) = ???
 
+    /** Construct a locale from language, country and variant. */
+    @stub
+    def this(language: String, country: String, variant: String) = ???
+
     /** Overrides Cloneable. */
     @stub
     def clone(): Object = ???
@@ -570,6 +575,19 @@ final class Locale extends Object with Cloneable with Serializable {
      */
     @stub
     def toLanguageTag(): String = ???
+
+    /** Returns a string representation of this Locale
+     *  object, consisting of language, country, variant, script,
+     *  and extensions as below:
+     *  
+     *  language + "_" + country + "_" + (variant + "_#" | "#") + script + "-" + extensions
+     *  
+     * 
+     *  Language is always lower case, country is always upper case, script is always title
+     *  case, and extensions are always lower case.
+     */
+    @stub
+    def toString(): String = ???
 }
 
 object Locale {
@@ -588,6 +606,13 @@ object Locale {
      */
     @stub
     object FilteringMode extends Locale.FilteringMode
+
+    /** This class expresses a Language Range defined in
+     *  RFC 4647 Matching of
+     *  Language Tags.
+     */
+    @stub
+    object LanguageRange extends Locale.LanguageRange
 
     /** Useful constant for country. */
     @stub
@@ -680,6 +705,10 @@ object Locale {
     /** The key for Unicode locale extension ('u'). */
     @stub
     val UNICODE_LOCALE_EXTENSION: Char = ???
+
+    /** Useful constant for country. */
+    @stub
+    val US: Locale = ???
 
     /** Returns a list of matching Locale instances using the filtering
      *  mechanism defined in RFC 4647.

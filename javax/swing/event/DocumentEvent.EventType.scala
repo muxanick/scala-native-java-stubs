@@ -1,6 +1,7 @@
 package javax.swing.event
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Enumeration for document event types */
 final object DocumentEvent.EventType extends Object {
@@ -12,4 +13,12 @@ final object DocumentEvent.EventType extends Object {
     /** Insert type. */
     @stub
     val INSERT: DocumentEvent.EventType = ???
+
+    /** Remove type. */
+    @stub
+    val REMOVE: DocumentEvent.EventType = ???
+
+    /** Converts the type to a string. */
+    @stub
+    def toString(): String = ???
 }

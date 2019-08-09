@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component.AccessibleAWTComponent, Container.AccessibleAWTContainer}
 import java.lang.{Number, Object, String}
 import javax.accessibility.{AccessibleContext, AccessibleRole, AccessibleValue}
+import scala.scalanative.annotation.stub
 
 /** This class implements accessibility support for the
  *  JInternalFrame class.  It provides an implementation of the
@@ -19,6 +20,10 @@ import javax.accessibility.{AccessibleContext, AccessibleRole, AccessibleValue}
  *  Please see XMLEncoder.
  */
 protected class JInternalFrame.AccessibleJInternalFrame extends JComponent.AccessibleJComponent with AccessibleValue {
+
+    /**  */
+    @stub
+    protected def AccessibleJInternalFrame() = ???
 
     /** Get the accessible name of this object. */
     @stub
@@ -43,4 +48,8 @@ protected class JInternalFrame.AccessibleJInternalFrame extends JComponent.Acces
     /** Get the minimum value of this object as a Number. */
     @stub
     def getMinimumAccessibleValue(): Number = ???
+
+    /** Set the value of this object as a Number. */
+    @stub
+    def setCurrentAccessibleValue(n: Number): Boolean = ???
 }

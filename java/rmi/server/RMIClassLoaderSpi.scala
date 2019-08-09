@@ -1,6 +1,7 @@
 package java.rmi.server
 
 import java.lang.{Class, ClassLoader, Object, String}
+import scala.scalanative.annotation.stub
 
 /** RMIClassLoaderSpi is the service provider interface for
  *  RMIClassLoader.
@@ -29,6 +30,10 @@ import java.lang.{Class, ClassLoader, Object, String}
  */
 abstract class RMIClassLoaderSpi extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Provides the implementation for
      *  RMIClassLoader.getClassAnnotation(Class).
      */
@@ -45,4 +50,9 @@ abstract class RMIClassLoaderSpi extends Object {
      *  RMIClassLoader.loadClass(String,String,ClassLoader).
      */
     def loadClass(codebase: String, name: String, defaultLoader: ClassLoader): Class[_]
+
+    /** Provides the implementation for
+     *  RMIClassLoader.loadProxyClass(String,String[],ClassLoader).
+     */
+    def loadProxyClass(codebase: String, interfaces: Array[String], defaultLoader: ClassLoader): Class[_]
 }

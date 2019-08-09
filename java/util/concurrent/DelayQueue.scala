@@ -2,6 +2,7 @@ package java.util.concurrent
 
 import java.lang.Object
 import java.util.{AbstractCollection, AbstractQueue, Collection, Iterator}
+import scala.scalanative.annotation.stub
 
 /** An unbounded blocking queue of
  *  Delayed elements, in which an element can only be taken
@@ -29,6 +30,12 @@ class DelayQueue[E <: Delayed] extends AbstractQueue[E] with BlockingQueue[E] {
     /** Creates a new DelayQueue that is initially empty. */
     @stub
     def this() = ???
+
+    /** Creates a DelayQueue initially containing the elements of the
+     *  given collection of Delayed instances.
+     */
+    @stub
+    def this(c: Collection[_ <: E]) = ???
 
     /** Inserts the specified element into this delay queue. */
     @stub
@@ -112,4 +119,10 @@ class DelayQueue[E <: Delayed] extends AbstractQueue[E] with BlockingQueue[E] {
     /** Returns an array containing all of the elements in this queue. */
     @stub
     def toArray(): Array[Object] = ???
+
+    /** Returns an array containing all of the elements in this queue; the
+     *  runtime type of the returned array is that of the specified array.
+     */
+    @stub
+    def toArray[T](a: Array[T]): Array[T] = ???
 }

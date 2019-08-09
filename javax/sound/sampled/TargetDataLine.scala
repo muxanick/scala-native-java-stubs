@@ -1,5 +1,7 @@
 package javax.sound.sampled
 
+import scala.scalanative.annotation.stub
+
 /** A target data line is a type of DataLine from which
  *  audio data can be read.  The most common example is a data line that gets
  *  its data from an audio capture device.  (The device is implemented as a
@@ -38,4 +40,8 @@ trait TargetDataLine extends DataLine {
      */
     @stub
     def open(format: AudioFormat, bufferSize: Int): Unit = ???
+
+    /** Reads audio data from the data line's input buffer. */
+    @stub
+    def read(b: Array[Byte], off: Int, len: Int): Int = ???
 }

@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** A filter for abstract pathnames.
  * 
@@ -8,4 +9,10 @@ import java.lang.FunctionalInterface
  *  of the File class.
  */
 @FunctionalInterface trait FileFilter {
+
+    /** Tests whether or not the specified abstract pathname should be
+     *  included in a pathname list.
+     */
+    @stub
+    def accept(pathname: File): Boolean = ???
 }

@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component, Container, Dimension, LayoutManager2}
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A layout manager that allows multiple components to be laid out either
  *  vertically or horizontally. The components will not wrap so, for
@@ -99,6 +100,12 @@ import java.lang.{Object, String}
  */
 class BoxLayout extends Object with LayoutManager2 with Serializable {
 
+    /** Creates a layout manager that will lay out components along the
+     *  given axis.
+     */
+    @stub
+    def this(target: Container, axis: Int) = ???
+
     /** Not used by this class. */
     @stub
     def addLayoutComponent(comp: Component, constraints: Object): Unit = ???
@@ -152,6 +159,10 @@ class BoxLayout extends Object with LayoutManager2 with Serializable {
      */
     @stub
     def preferredLayoutSize(target: Container): Dimension = ???
+
+    /** Not used by this class. */
+    @stub
+    def removeLayoutComponent(comp: Component): Unit = ???
 }
 
 object BoxLayout {
@@ -172,4 +183,8 @@ object BoxLayout {
     /** Specifies that components should be laid out left to right. */
     @stub
     val X_AXIS: Int = ???
+
+    /** Specifies that components should be laid out top to bottom. */
+    @stub
+    val Y_AXIS: Int = ???
 }

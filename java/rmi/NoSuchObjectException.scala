@@ -1,7 +1,8 @@
 package java.rmi
 
 import java.io.IOException
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** A NoSuchObjectException is thrown if an attempt is made to
  *  invoke a method on an object that no longer exists in the remote virtual
@@ -16,4 +17,10 @@ import java.lang.{Exception, Object, Throwable}
  *  java.rmi.activation.Activatable and
  */
 class NoSuchObjectException extends RemoteException {
+
+    /** Constructs a NoSuchObjectException with the specified
+     *  detail message.
+     */
+    @stub
+    def this(s: String) = ???
 }

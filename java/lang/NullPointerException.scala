@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** Thrown when an application attempts to use null in a
  *  case where an object is required. These include:
  *  
@@ -24,4 +26,10 @@ class NullPointerException extends RuntimeException {
     /** Constructs a NullPointerException with no detail message. */
     @stub
     def this() = ???
+
+    /** Constructs a NullPointerException with the specified
+     *  detail message.
+     */
+    @stub
+    def this(s: String) = ???
 }

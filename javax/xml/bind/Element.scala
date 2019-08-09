@@ -1,5 +1,7 @@
 package javax.xml.bind
 
+import scala.scalanative.annotation.stub
+
 /** This is an element marker interface.
  * 
  *  Under certain circumstances, it is necessary for the binding compiler to

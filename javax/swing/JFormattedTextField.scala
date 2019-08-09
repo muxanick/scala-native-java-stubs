@@ -5,6 +5,7 @@ import java.awt.event.{FocusEvent, InputMethodEvent}
 import java.lang.{Object, String}
 import java.text.Format
 import javax.swing.text.{Document, JTextComponent}
+import scala.scalanative.annotation.stub
 
 /** JFormattedTextField extends JTextField adding
  *  support for formatting arbitrary values, as well as retrieving a particular
@@ -174,6 +175,10 @@ class JFormattedTextField extends JTextField {
     @stub
     def this(factory: JFormattedTextField.AbstractFormatterFactory, currentValue: Object) = ???
 
+    /** Creates a JFormattedTextField with the specified value. */
+    @stub
+    def this(value: Object) = ???
+
     /** Forces the current value to be taken from the
      *  AbstractFormatter and set as the current value.
      */
@@ -243,6 +248,13 @@ class JFormattedTextField extends JTextField {
     /** Sets the AbstractFormatterFactory. */
     @stub
     def setFormatterFactory(tf: JFormattedTextField.AbstractFormatterFactory): Unit = ???
+
+    /** Sets the value that will be formatted by an
+     *  AbstractFormatter obtained from the current
+     *  AbstractFormatterFactory.
+     */
+    @stub
+    def setValue(value: Object): Unit = ???
 }
 
 object JFormattedTextField {
@@ -252,6 +264,13 @@ object JFormattedTextField {
      */
     @stub
     object AbstractFormatter extends JFormattedTextField.AbstractFormatter
+
+    /** Instances of AbstractFormatterFactory are used by
+     *  JFormattedTextField to obtain instances of
+     *  AbstractFormatter which in turn are used to format values.
+     */
+    @stub
+    object AbstractFormatterFactory extends JFormattedTextField.AbstractFormatterFactory
 
     /** Constant identifying that when focus is lost,
      *  commitEdit should be invoked.
@@ -270,4 +289,11 @@ object JFormattedTextField {
      */
     @stub
     val PERSIST: Int = ???
+
+    /** Constant identifying that when focus is lost, editing value should
+     *  be reverted to current value set on the
+     *  JFormattedTextField.
+     */
+    @stub
+    val REVERT: Int = ???
 }

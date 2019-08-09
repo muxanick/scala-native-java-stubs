@@ -1,5 +1,7 @@
 package java.time.temporal
 
+import scala.scalanative.annotation.stub
+
 /** Framework-level interface defining read-only access to a temporal object,
  *  such as a date, time, offset or some combination of these.
  *  
@@ -46,4 +48,8 @@ trait TemporalAccessor {
     /** Queries this date-time. */
     @stub
     val R: default[R] = ???
+
+    /** Gets the range of valid values for the specified field. */
+    @stub
+    val ValueRange: default = ???
 }

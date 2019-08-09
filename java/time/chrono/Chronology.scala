@@ -5,6 +5,7 @@ import java.time.{Clock, Instant, ZoneId}
 import java.time.format.{ResolverStyle, TextStyle}
 import java.time.temporal.{ChronoField, TemporalAccessor, TemporalField, ValueRange}
 import java.util.{List, Locale, Map, Set}
+import scala.scalanative.annotation.stub
 
 /** A calendar system, used to organize and identify dates.
  *  
@@ -177,6 +178,10 @@ trait Chronology extends Comparable[Chronology] {
     def toString(): String = ???
 
     /** Obtains a ChronoZonedDateTime in this chronology from an Instant. */
+    @stub
+    val ChronoZonedDateTime[_ <: ChronoLocalDate]: default = ???
+
+    /** Obtains a ChronoZonedDateTime in this chronology from another temporal object. */
     @stub
     val ChronoZonedDateTime[_ <: ChronoLocalDate]: default = ???
 }

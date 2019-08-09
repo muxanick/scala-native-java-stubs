@@ -1,6 +1,7 @@
 package java.awt.image
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class extends DataBuffer and stores data internally
  *  in double form.
@@ -51,6 +52,13 @@ final class DataBufferDouble extends DataBuffer {
      */
     @stub
     def this(size: Int) = ???
+
+    /** Constructs a double-based DataBuffer
+     *  with a specified number of banks, all of which are of a
+     *  specified size.
+     */
+    @stub
+    def this(size: Int, numBanks: Int) = ???
 
     /** Returns the data array for all banks. */
     @stub
@@ -129,4 +137,10 @@ final class DataBufferDouble extends DataBuffer {
      */
     @stub
     def setElemFloat(i: Int, val: Float): Unit = ???
+
+    /** Sets the requested data array element in the specified bank to
+     *  the given float.
+     */
+    @stub
+    def setElemFloat(bank: Int, i: Int, val: Float): Unit = ???
 }

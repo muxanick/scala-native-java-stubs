@@ -2,6 +2,7 @@ package java.util
 
 import java.lang.Object
 import java.util.function.{BiConsumer, BiFunction, Function}
+import scala.scalanative.annotation.stub
 
 /** An object that maps keys to values.  A map cannot contain duplicate keys;
  *  each key can map to at most one value.
@@ -219,4 +220,14 @@ trait Map[K, V] {
     /** Returns the number of key-value mappings in this map. */
     @stub
     def size(): Int = ???
+
+    /** Returns a Collection view of the values contained in this map. */
+    @stub
+    def values(): Collection[V] = ???
+}
+
+object Map {
+    /** A map entry (key-value pair). */
+    @stub
+    val Map.Entry[K, V]: trait = ???
 }

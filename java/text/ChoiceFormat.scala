@@ -1,6 +1,7 @@
 package java.text
 
 import java.lang.{Number, Object, String, StringBuffer}
+import scala.scalanative.annotation.stub
 
 /** A ChoiceFormat allows you to attach a format to a range of numbers.
  *  It is generally used in a MessageFormat for handling plurals.
@@ -123,6 +124,10 @@ class ChoiceFormat extends NumberFormat {
     @stub
     def this(limits: Array[Double], formats: Array[String]) = ???
 
+    /** Constructs with limits and corresponding formats based on the pattern. */
+    @stub
+    def this(newPattern: String) = ???
+
     /** Sets the pattern. */
     @stub
     def applyPattern(newPattern: String): Unit = ???
@@ -162,6 +167,10 @@ class ChoiceFormat extends NumberFormat {
     /** Set the choices to be used in formatting. */
     @stub
     def setChoices(limits: Array[Double], formats: Array[String]): Unit = ???
+
+    /** Gets the pattern. */
+    @stub
+    def toPattern(): String = ???
 }
 
 object ChoiceFormat {

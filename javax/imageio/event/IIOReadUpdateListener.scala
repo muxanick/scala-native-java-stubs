@@ -3,6 +3,7 @@ package javax.imageio.event
 import java.awt.image.BufferedImage
 import java.util.EventListener
 import javax.imageio.ImageReader
+import scala.scalanative.annotation.stub
 
 /** An interface used by ImageReader implementations to
  *  notify callers of their image and thumbnail reading methods of
@@ -37,4 +38,8 @@ trait IIOReadUpdateListener extends EventListener {
      */
     @stub
     def thumbnailPassStarted(source: ImageReader, theThumbnail: BufferedImage, pass: Int, minPass: Int, maxPass: Int, minX: Int, minY: Int, periodX: Int, periodY: Int, bands: Array[Int]): Unit = ???
+
+    /** Reports that a given region of a thumbnail image has been updated. */
+    @stub
+    def thumbnailUpdate(source: ImageReader, theThumbnail: BufferedImage, minX: Int, minY: Int, width: Int, height: Int, periodX: Int, periodY: Int, bands: Array[Int]): Unit = ???
 }

@@ -1,5 +1,7 @@
 package java.security
 
+import scala.scalanative.annotation.stub
+
 /** A DomainCombiner provides a means to dynamically
  *  update the ProtectionDomains associated with the current
  *  AccessControlContext.
@@ -49,4 +51,8 @@ package java.security
  *  as well as the DomainCombiner.
  */
 trait DomainCombiner {
+
+    /** Modify or update the provided ProtectionDomains. */
+    @stub
+    def combine(currentDomains: Array[ProtectionDomain], assignedDomains: Array[ProtectionDomain]): Array[ProtectionDomain] = ???
 }

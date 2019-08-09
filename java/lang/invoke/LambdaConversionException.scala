@@ -1,6 +1,7 @@
 package java.lang.invoke
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** LambdaConversionException */
 class LambdaConversionException extends Exception {
@@ -22,4 +23,8 @@ class LambdaConversionException extends Exception {
      */
     @stub
     def this(message: String, cause: Throwable, enableSuppression: Boolean, writableStackTrace: Boolean) = ???
+
+    /** Constructs a LambdaConversionException with a cause. */
+    @stub
+    def this(cause: Throwable) = ???
 }

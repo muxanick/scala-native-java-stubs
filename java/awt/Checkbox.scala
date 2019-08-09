@@ -4,6 +4,7 @@ import java.awt.event.{ItemEvent, ItemListener}
 import java.lang.{Class, Object, String}
 import java.util.EventListener
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** A check box is a graphical component that can be in either an
  *  "on" (true) or "off" (false) state.
@@ -59,6 +60,18 @@ class Checkbox extends Component with ItemSelectable with Accessible {
      */
     @stub
     def this(label: String, state: Boolean, group: CheckboxGroup) = ???
+
+    /** Creates a check box with the specified label, in the specified
+     *  check box group, and set to the specified state.
+     */
+    @stub
+    def this(label: String, group: CheckboxGroup, state: Boolean) = ???
+
+    /** This class implements accessibility support for the
+     *  Checkbox class.
+     */
+    @stub
+    protected object AccessibleAWTCheckbox extends Checkbox.AccessibleAWTCheckbox
 
     /** Adds the specified item listener to receive item events from
      *  this check box.
@@ -133,4 +146,8 @@ class Checkbox extends Component with ItemSelectable with Accessible {
     /** Sets this check box's label to be the string argument. */
     @stub
     def setLabel(label: String): Unit = ???
+
+    /** Sets the state of this check box to the specified state. */
+    @stub
+    def setState(state: Boolean): Unit = ???
 }

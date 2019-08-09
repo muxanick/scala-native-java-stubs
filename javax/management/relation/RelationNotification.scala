@@ -3,6 +3,7 @@ package javax.management.relation
 import java.lang.{Object, String}
 import java.util.{EventObject, List}
 import javax.management.{Notification, ObjectName}
+import scala.scalanative.annotation.stub
 
 /** A notification of a change in the Relation Service.
  *  A RelationNotification notification is sent when a relation is created via
@@ -20,6 +21,10 @@ class RelationNotification extends Notification {
      */
     @stub
     def this(notifType: String, sourceObj: Object, sequence: Long, timeStamp: Long, message: String, id: String, typeName: String, objectName: ObjectName, unregMBeanList: List[ObjectName]) = ???
+
+    /** Creates a notification for a role update in a relation. */
+    @stub
+    def this(notifType: String, sourceObj: Object, sequence: Long, timeStamp: Long, message: String, id: String, typeName: String, objectName: ObjectName, name: String, newValue: List[ObjectName], oldValue: List[ObjectName]) = ???
 
     /** Returns the list of ObjectNames of MBeans expected to be unregistered
      *  due to a relation removal (only for relation removal).
@@ -48,6 +53,10 @@ class RelationNotification extends Notification {
     /** Returns the relation type name of created/removed/updated relation. */
     @stub
     def getRelationTypeName(): String = ???
+
+    /** Returns name of updated role of updated relation (only for role update). */
+    @stub
+    def getRoleName(): String = ???
 }
 
 object RelationNotification {
@@ -70,4 +79,8 @@ object RelationNotification {
     /** Type for the removal from the Relation Service of a relation MBean. */
     @stub
     val RELATION_MBEAN_REMOVAL: String = ???
+
+    /** Type for the update of a relation MBean. */
+    @stub
+    val RELATION_MBEAN_UPDATE: String = ???
 }

@@ -1,5 +1,8 @@
 package java.nio.channels
 
+import java.lang.Throwable
+import scala.scalanative.annotation.stub
+
 /** A handler for consuming the result of an asynchronous I/O operation.
  * 
  *   The asynchronous channels defined in this package allow a completion
@@ -15,4 +18,8 @@ trait CompletionHandler[V, A] {
     /** Invoked when an operation has completed. */
     @stub
     def completed(result: V, attachment: A): Unit = ???
+
+    /** Invoked when an operation fails. */
+    @stub
+    def failed(exc: Throwable, attachment: A): Unit = ???
 }

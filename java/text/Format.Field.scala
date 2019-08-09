@@ -1,6 +1,7 @@
 package java.text
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Defines constants that are used as attribute keys in the
  *  AttributedCharacterIterator returned
@@ -8,3 +9,7 @@ import java.lang.Object
  *  field identifiers in FieldPosition.
  */
 object Format.Field extends AttributedCharacterIterator.Attribute {
+
+    /** Creates a Field with the specified name. */
+    @stub
+    protected def Field(name: String) = ???

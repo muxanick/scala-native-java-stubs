@@ -1,6 +1,8 @@
 package java.awt
 
+import java.awt.event.KeyEvent
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** A KeyEventDispatcher cooperates with the current KeyboardFocusManager in the
  *  targeting and dispatching of all KeyEvents. KeyEventDispatchers registered
@@ -20,4 +22,10 @@ import java.lang.FunctionalInterface
  *  usually unnecessary and not recommended.)
  */
 @FunctionalInterface trait KeyEventDispatcher {
+
+    /** This method is called by the current KeyboardFocusManager requesting
+     *  that this KeyEventDispatcher dispatch the specified event on its behalf.
+     */
+    @stub
+    def dispatchKeyEvent(e: KeyEvent): Boolean = ???
 }

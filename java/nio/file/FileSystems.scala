@@ -3,6 +3,7 @@ package java.nio.file
 import java.lang.{ClassLoader, Object, String}
 import java.net.URI
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** Factory methods for file systems. This class defines the getDefault method to get the default file system and factory methods to
  *  construct other types of file systems.
@@ -65,4 +66,8 @@ object FileSystems {
     /** Constructs a new file system that is identified by a URI */
     @stub
     def newFileSystem(uri: URI, env: Map[String, _]): FileSystem = ???
+
+    /** Constructs a new file system that is identified by a URI */
+    @stub
+    def newFileSystem(uri: URI, env: Map[String, _], loader: ClassLoader): FileSystem = ???
 }

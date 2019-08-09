@@ -1,6 +1,7 @@
 package java.lang.invoke
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** 
  *  A SwitchPoint is an object which can publish state transitions to other threads.
@@ -86,6 +87,10 @@ import java.lang.Object
  */
 class SwitchPoint extends Object {
 
+    /** Creates a new switch point. */
+    @stub
+    def this() = ???
+
     /** Returns a method handle which always delegates either to the target or the fallback. */
     @stub
     def guardWithTest(target: MethodHandle, fallback: MethodHandle): MethodHandle = ???
@@ -93,4 +98,10 @@ class SwitchPoint extends Object {
     /** Determines if this switch point has been invalidated yet. */
     @stub
     def hasBeenInvalidated(): Boolean = ???
+}
+
+object SwitchPoint {
+    /** Sets all of the given switch points into the invalid state. */
+    @stub
+    def invalidateAll(switchPoints: Array[SwitchPoint]): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.sql
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** The interface used for the custom mapping of an SQL user-defined type (UDT) to
  *  a class in the Java programming language. The class object for a class
@@ -46,4 +47,10 @@ trait SQLData {
     /** Populates this object with data read from the database. */
     @stub
     def readSQL(stream: SQLInput, typeName: String): Unit = ???
+
+    /** Writes this object to the given SQL data stream, converting it back to
+     *  its SQL value in the data source.
+     */
+    @stub
+    def writeSQL(stream: SQLOutput): Unit = ???
 }

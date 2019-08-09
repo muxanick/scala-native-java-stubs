@@ -1,12 +1,17 @@
 package javax.sound.sampled
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** An instance of the FloatControl.Type inner class identifies one kind of
  *  float control.  Static instances are provided for the
  *  common types.
  */
 object FloatControl.Type extends Control.Type {
+
+    /** Constructs a new float control type. */
+    @stub
+    protected def Type(name: String) = ???
 
     /** Represents a control for the auxiliary return gain on a line. */
     @stub
@@ -43,4 +48,8 @@ object FloatControl.Type extends Control.Type {
     /** Represents a control that changes the sample rate of audio playback. */
     @stub
     val SAMPLE_RATE: FloatControl.Type = ???
+
+    /** Represents a control for the volume on a line. */
+    @stub
+    val VOLUME: FloatControl.Type = ???
 }

@@ -1,7 +1,8 @@
 package javax.naming.directory
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
 import javax.naming.NamingException
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown when an attempt is
  *  made to add or modify an attribute set that has been specified
@@ -21,4 +22,10 @@ class InvalidAttributesException extends NamingException {
     /** Constructs a new instance of InvalidAttributesException. */
     @stub
     def this() = ???
+
+    /** Constructs a new instance of InvalidAttributesException using an
+     *  explanation.
+     */
+    @stub
+    def this(explanation: String) = ???
 }

@@ -1,6 +1,7 @@
 package javax.print.attribute.standard
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Class MediaSize.Engineering includes MediaSize values
  *  for engineering media.
@@ -22,4 +23,8 @@ final object MediaSize.Engineering extends Object {
     /** Specifies the engineering D size, 22 inch by 34 inch. */
     @stub
     val D: MediaSize = ???
+
+    /** Specifies the engineering E size, 34 inch by 44 inch. */
+    @stub
+    val E: MediaSize = ???
 }

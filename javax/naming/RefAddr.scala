@@ -2,6 +2,7 @@ package javax.naming
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class represents the address of a communications end-point.
  *  It consists of a type that describes the communication mechanism
@@ -19,6 +20,13 @@ import java.lang.{Object, String}
  */
 abstract class RefAddr extends Object with Serializable {
 
+    /** Constructs a new instance of RefAddr using its address type. */
+    @stub
+    protected def this(addrType: String) = ???
+
+    /** Contains the type of this address. */
+    protected val addrType: String
+
     /** Determines whether obj is equal to this RefAddr. */
     def equals(obj: Object): Boolean
 
@@ -30,4 +38,7 @@ abstract class RefAddr extends Object with Serializable {
 
     /** Computes the hash code of this address using its address type and contents. */
     def hashCode(): Int
+
+    /** Generates the string representation of this address. */
+    def toString(): String
 }

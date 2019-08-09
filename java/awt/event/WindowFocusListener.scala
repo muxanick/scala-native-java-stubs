@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener interface for receiving WindowEvents, including
  *  WINDOW_GAINED_FOCUS and WINDOW_LOST_FOCUS events.
@@ -25,4 +26,11 @@ trait WindowFocusListener extends EventListener {
      */
     @stub
     def windowGainedFocus(e: WindowEvent): Unit = ???
+
+    /** Invoked when the Window is no longer the focused Window, which means
+     *  that keyboard events will no longer be delivered to the Window or any of
+     *  its subcomponents.
+     */
+    @stub
+    def windowLostFocus(e: WindowEvent): Unit = ???
 }

@@ -6,6 +6,7 @@ import java.lang.Object
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.border.Border
 import javax.swing.plaf.LayerUI
+import scala.scalanative.annotation.stub
 
 /** JLayer is a universal decorator for Swing components
  *  which enables you to implement various advanced painting effects as well as
@@ -114,6 +115,12 @@ final class JLayer[V <: Component] extends JComponent with Scrollable with Prope
      */
     @stub
     def this(view: V) = ???
+
+    /** Creates a new JLayer object with the specified view component
+     *  and LayerUI object.
+     */
+    @stub
+    def this(view: V, ui: LayerUI[V]) = ???
 
     /** This method is not supported by JLayer
      *  and always throws UnsupportedOperationException
@@ -267,4 +274,10 @@ final class JLayer[V <: Component] extends JComponent with Scrollable with Prope
     /** Sets the JLayer's view component, which can be null. */
     @stub
     def setView(view: V): Unit = ???
+
+    /** Delegates its functionality to the LayerUI.updateUI(JLayer) method,
+     *  if LayerUI is set.
+     */
+    @stub
+    def updateUI(): Unit = ???
 }

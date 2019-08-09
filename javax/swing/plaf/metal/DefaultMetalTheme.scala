@@ -2,6 +2,7 @@ package javax.swing.plaf.metal
 
 import java.lang.{Object, String}
 import javax.swing.plaf.{ColorUIResource, FontUIResource}
+import scala.scalanative.annotation.stub
 
 /** A concrete implementation of MetalTheme providing
  *  the original look of the Java Look and Feel, code-named "Steel". Refer
@@ -54,6 +55,10 @@ import javax.swing.plaf.{ColorUIResource, FontUIResource}
  */
 class DefaultMetalTheme extends MetalTheme {
 
+    /** Creates and returns an instance of DefaultMetalTheme. */
+    @stub
+    def this() = ???
+
     /** Returns the control text font. */
     @stub
     def getControlTextFont(): FontUIResource = ???
@@ -101,4 +106,8 @@ class DefaultMetalTheme extends MetalTheme {
     /** Returns the user text font. */
     @stub
     def getUserTextFont(): FontUIResource = ???
+
+    /** Returns the window title font. */
+    @stub
+    def getWindowTitleFont(): FontUIResource = ???
 }

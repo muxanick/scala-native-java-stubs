@@ -6,11 +6,16 @@ import java.lang.Object
 import javax.swing.{JComponent, JRootPane}
 import javax.swing.plaf.{ComponentUI, RootPaneUI}
 import javax.swing.plaf.basic.BasicRootPaneUI
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for
  *  JRootPane.
  */
 class SynthRootPaneUI extends BasicRootPaneUI with SynthUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the Context for the specified component. */
     @stub
@@ -39,6 +44,10 @@ class SynthRootPaneUI extends BasicRootPaneUI with SynthUI {
     /**  */
     @stub
     protected def uninstallDefaults(root: JRootPane): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthRootPaneUI {

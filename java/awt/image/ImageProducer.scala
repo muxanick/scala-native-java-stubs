@@ -1,5 +1,7 @@
 package java.awt.image
 
+import scala.scalanative.annotation.stub
+
 /** The interface for objects which can produce the image data for Images.
  *  Each image contains an ImageProducer which is used to reconstruct
  *  the image whenever it is needed, for example, when a new size of the
@@ -38,4 +40,13 @@ trait ImageProducer {
      */
     @stub
     def requestTopDownLeftRightResend(ic: ImageConsumer): Unit = ???
+
+    /** Registers the specified ImageConsumer object
+     *  as a consumer and starts an immediate reconstruction of
+     *  the image data which will then be delivered to this
+     *  consumer and any other consumer which might have already
+     *  been registered with the producer.
+     */
+    @stub
+    def startProduction(ic: ImageConsumer): Unit = ???
 }

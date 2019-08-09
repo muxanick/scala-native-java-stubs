@@ -1,9 +1,10 @@
 package java.security
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.{Dictionary, Hashtable, Properties}
 import javax.security.auth.Subject
 import javax.security.auth.callback.CallbackHandler
+import scala.scalanative.annotation.stub
 
 /** This class defines login and logout methods for a provider.
  * 
@@ -14,9 +15,18 @@ import javax.security.auth.callback.CallbackHandler
  */
 abstract class AuthProvider extends Provider {
 
+    /** Constructs a provider with the specified name, version number,
+     *  and information.
+     */
+    @stub
+    protected def this(name: String, version: Double, info: String) = ???
+
     /** Log in to this provider. */
     def login(subject: Subject, handler: CallbackHandler): Unit
 
     /** Log out from this provider. */
     def logout(): Unit
+
+    /** Set a CallbackHandler. */
+    def setCallbackHandler(handler: CallbackHandler): Unit
 }

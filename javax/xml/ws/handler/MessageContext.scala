@@ -2,6 +2,7 @@ package javax.xml.ws.handler
 
 import java.lang.{Object, String}
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** The interface MessageContext abstracts the message
  *  context that is processed by a handler in the handle
@@ -17,9 +18,17 @@ trait MessageContext extends Map[String, Object] {
     /** Gets the scope of a property. */
     @stub
     def getScope(name: String): MessageContext.Scope = ???
+
+    /** Sets the scope of a property. */
+    @stub
+    def setScope(name: String, scope: MessageContext.Scope): Unit = ???
 }
 
 object MessageContext {
+    /** Property scope. */
+    @stub
+    object Scope extends MessageContext.Scope
+
     /** Standard property: HTTP request headers. */
     @stub
     val HTTP_REQUEST_HEADERS: String = ???
@@ -93,4 +102,8 @@ object MessageContext {
     /** Standard property: name of WSDL port. */
     @stub
     val WSDL_PORT: String = ???
+
+    /** Standard property: name of WSDL service. */
+    @stub
+    val WSDL_SERVICE: String = ???
 }

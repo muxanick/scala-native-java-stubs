@@ -2,8 +2,9 @@ package java.time.chrono
 
 import java.lang.String
 import java.time.format.TextStyle
-import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalField, TemporalQuery}
+import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalField, TemporalQuery, ValueRange}
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** An era of the time-line.
  *  
@@ -49,4 +50,8 @@ trait Era extends TemporalAccessor with TemporalAdjuster {
     /** Queries this era using the specified query. */
     @stub
     val R: default[R] = ???
+
+    /** Gets the range of valid values for the specified field. */
+    @stub
+    val ValueRange: default = ???
 }

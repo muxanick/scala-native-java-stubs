@@ -1,7 +1,8 @@
 package javax.security.auth.login
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
 import java.security.GeneralSecurityException
+import scala.scalanative.annotation.stub
 
 /** Signals that an account was locked.
  * 
@@ -14,4 +15,10 @@ class AccountLockedException extends AccountException {
     /** Constructs a AccountLockedException with no detail message. */
     @stub
     def this() = ???
+
+    /** Constructs a AccountLockedException with the specified
+     *  detail message.
+     */
+    @stub
+    def this(msg: String) = ???
 }

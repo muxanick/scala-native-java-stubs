@@ -2,6 +2,7 @@ package java.nio.charset
 
 import java.lang.{Object, String}
 import java.nio.{ByteBuffer, CharBuffer}
+import scala.scalanative.annotation.stub
 
 /** An engine that can transform a sequence of bytes in a specific charset into a sequence of
  *  sixteen-bit Unicode characters.
@@ -83,6 +84,10 @@ import java.nio.{ByteBuffer, CharBuffer}
  */
 abstract class CharsetDecoder extends Object {
 
+    /** Initializes a new decoder. */
+    @stub
+    protected def this(cs: Charset, averageCharsPerByte: Float, maxCharsPerByte: Float) = ???
+
     /** Returns the average number of characters that will be produced for each
      *  byte of input.
      */
@@ -157,4 +162,7 @@ abstract class CharsetDecoder extends Object {
 
     /** Resets this decoder, clearing any internal state. */
     def reset(): CharsetDecoder
+
+    /** Returns this decoder's current action for unmappable-character errors. */
+    def unmappableCharacterAction(): CodingErrorAction
 }

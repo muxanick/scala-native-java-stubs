@@ -2,6 +2,7 @@ package javax.xml.bind
 
 import java.io.PrintStream
 import java.lang.{Exception, Object, RuntimeException, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception indicates that a violation of a dynamically checked type
  *  constraint was detected.
@@ -41,6 +42,10 @@ class TypeConstraintException extends RuntimeException {
     @stub
     def this(message: String, exception: Throwable) = ???
 
+    /** Construct a TypeConstraintException with a linkedException. */
+    @stub
+    def this(exception: Throwable) = ???
+
     /** Get the vendor specific error code */
     @stub
     def getErrorCode(): String = ???
@@ -64,4 +69,8 @@ class TypeConstraintException extends RuntimeException {
     /** Add a linked Exception. */
     @stub
     def setLinkedException(exception: Throwable): Unit = ???
+
+    /** Returns a short description of this TypeConstraintException. */
+    @stub
+    def toString(): String = ???
 }

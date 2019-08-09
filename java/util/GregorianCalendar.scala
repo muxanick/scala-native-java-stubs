@@ -2,6 +2,7 @@ package java.util
 
 import java.lang.{Object, String}
 import java.time.ZonedDateTime
+import scala.scalanative.annotation.stub
 
 /** GregorianCalendar is a concrete subclass of
  *  Calendar and provides the standard calendar system
@@ -297,6 +298,12 @@ class GregorianCalendar extends Calendar {
     @stub
     def this(zone: TimeZone) = ???
 
+    /** Constructs a GregorianCalendar based on the current time
+     *  in the given time zone with the given locale.
+     */
+    @stub
+    def this(zone: TimeZone, aLocale: Locale) = ???
+
     /** Adds the specified (signed) amount of time to the given calendar field,
      *  based on the calendar's rules.
      */
@@ -431,6 +438,12 @@ class GregorianCalendar extends Calendar {
      */
     @stub
     def setWeekDate(weekYear: Int, weekOfYear: Int, dayOfWeek: Int): Unit = ???
+
+    /** Converts this object to a ZonedDateTime that represents
+     *  the same point on the time-line as this GregorianCalendar.
+     */
+    @stub
+    def toZonedDateTime(): ZonedDateTime = ???
 }
 
 object GregorianCalendar {
@@ -439,6 +452,12 @@ object GregorianCalendar {
      */
     @stub
     val AD: Int = ???
+
+    /** Value of the ERA field indicating
+     *  the period before the common era (before Christ), also known as BCE.
+     */
+    @stub
+    val BC: Int = ???
 
     /** Obtains an instance of GregorianCalendar with the default locale
      *  from a ZonedDateTime object.

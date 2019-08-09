@@ -1,6 +1,7 @@
 package javax.net.ssl
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** An SSLEngineResult enum describing the current
  *  handshaking state of this SSLEngine.
@@ -28,7 +29,16 @@ object SSLEngineResult.HandshakeStatus {
      */
     final val NEED_WRAP = new SSLEngineResult.HandshakeStatus(NEED_WRAP, 3)
 
+    /** The SSLEngine is not currently handshaking. */
+    final val NOT_HANDSHAKING = new SSLEngineResult.HandshakeStatus(NOT_HANDSHAKING, 4)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): SSLEngineResult.HandshakeStatus = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[SSLEngineResult.HandshakeStatus] = ???
 }

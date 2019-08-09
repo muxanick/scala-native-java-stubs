@@ -1,7 +1,9 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
+import java.util.Locale
 import javax.print.attribute.{Attribute, PrintJobAttribute, TextSyntax}
+import scala.scalanative.annotation.stub
 
 /** Class JobOriginatingUserName is a printing attribute class, a text
  *  attribute, that contains the name of the end user that submitted the
@@ -23,6 +25,12 @@ import javax.print.attribute.{Attribute, PrintJobAttribute, TextSyntax}
  */
 final class JobOriginatingUserName extends TextSyntax with PrintJobAttribute {
 
+    /** Constructs a new job originating user name attribute with the given
+     *  user name and locale.
+     */
+    @stub
+    def this(userName: String, locale: Locale) = ???
+
     /** Returns whether this job originating user name attribute is equivalent to
      *  the passed in object.
      */
@@ -34,4 +42,10 @@ final class JobOriginatingUserName extends TextSyntax with PrintJobAttribute {
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

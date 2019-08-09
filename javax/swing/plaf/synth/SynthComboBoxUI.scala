@@ -6,11 +6,16 @@ import java.lang.Object
 import javax.swing.{ComboBoxEditor, JButton, JComponent, ListCellRenderer}
 import javax.swing.plaf.{ComboBoxUI, ComponentUI}
 import javax.swing.plaf.basic.{BasicComboBoxUI, ComboPopup}
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for
  *  JComboBox.
  */
 class SynthComboBoxUI extends BasicComboBoxUI with PropertyChangeListener with SynthUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Creates a button which will be used as the control to show or hide
      *  the popup portion of the combo box.
@@ -91,6 +96,10 @@ class SynthComboBoxUI extends BasicComboBoxUI with PropertyChangeListener with S
      */
     @stub
     def uninstallUI(c: JComponent): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthComboBoxUI {

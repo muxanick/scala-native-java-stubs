@@ -9,8 +9,7 @@ import javax.xml.bind.attachment.AttachmentUnmarshaller
 import javax.xml.stream.{XMLEventReader, XMLStreamReader}
 import javax.xml.transform.Source
 import javax.xml.validation.Schema
-import org.w3c.dom.Node
-import org.xml.sax.{InputSource, SAXException, XMLReader}
+import scala.scalanative.annotation.stub
 
 /** Partial default Unmarshaller implementation.
  * 
@@ -24,6 +23,13 @@ import org.xml.sax.{InputSource, SAXException, XMLReader}
  *  unmarshal(XMLStreamReader), and unmarshal(XMLEventReader).
  */
 abstract class AbstractUnmarshallerImpl extends Object with Unmarshaller {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** whether or not the unmarshaller will validate */
+    protected val validating: Boolean
 
     /** Creates an UnmarshalException from a SAXException. */
     protected def createUnmarshalException(e: SAXException): UnmarshalException
@@ -154,4 +160,9 @@ abstract class AbstractUnmarshallerImpl extends Object with Unmarshaller {
      *  resulting content tree.
      */
     def unmarshal(reader: XMLStreamReader): Object
+
+    /** Unmarshal root element to JAXB mapped declaredType
+     *  and return the resulting content tree.
+     */
+    def unmarshal[T](reader: XMLStreamReader, expectedType: Class[T]): JAXBElement[T]
 }

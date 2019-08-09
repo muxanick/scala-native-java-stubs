@@ -1,6 +1,7 @@
 package java.io
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Writes text to a character-output stream, buffering characters so as to
  *  provide for the efficient writing of single characters, arrays, and strings.
@@ -37,6 +38,12 @@ class BufferedWriter extends Writer {
     @stub
     def this(out: Writer) = ???
 
+    /** Creates a new buffered character-output stream that uses an output
+     *  buffer of the given size.
+     */
+    @stub
+    def this(out: Writer, sz: Int) = ???
+
     /** Closes the stream, flushing it first. */
     @stub
     def close(): Unit = ???
@@ -56,4 +63,8 @@ class BufferedWriter extends Writer {
     /** Writes a single character. */
     @stub
     def write(c: Int): Unit = ???
+
+    /** Writes a portion of a String. */
+    @stub
+    def write(s: String, off: Int, len: Int): Unit = ???
 }

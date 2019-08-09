@@ -4,6 +4,7 @@ import java.awt.{Component, Container, LayoutManager}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.plaf.PanelUI
+import scala.scalanative.annotation.stub
 
 /** JPanel is a generic lightweight container.
  *  For examples and task-oriented documentation for JPanel, see
@@ -41,6 +42,18 @@ class JPanel extends JComponent with Accessible {
     @stub
     def this(layout: LayoutManager) = ???
 
+    /** Creates a new JPanel with the specified layout manager and buffering
+     *  strategy.
+     */
+    @stub
+    def this(layout: LayoutManager, isDoubleBuffered: Boolean) = ???
+
+    /** This class implements accessibility support for the
+     *  JPanel class.
+     */
+    @stub
+    protected object AccessibleJPanel extends JPanel.AccessibleJPanel
+
     /** Gets the AccessibleContext associated with this JPanel. */
     @stub
     def getAccessibleContext(): AccessibleContext = ???
@@ -62,4 +75,8 @@ class JPanel extends JComponent with Accessible {
     /** Sets the look and feel (L&F) object that renders this component. */
     @stub
     def setUI(ui: PanelUI): Unit = ???
+
+    /** Resets the UI property with a value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
 }

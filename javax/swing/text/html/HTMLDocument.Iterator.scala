@@ -2,6 +2,7 @@ package javax.swing.text.html
 
 import java.lang.Object
 import javax.swing.text.AttributeSet
+import scala.scalanative.annotation.stub
 
 /** An iterator to iterate over a particular type of
  *  tag.  The iterator is not thread safe.  If reliable
@@ -11,6 +12,10 @@ import javax.swing.text.AttributeSet
  *  Document.render.
  */
 object abstract HTMLDocument.Iterator extends Object {
+
+    /**  */
+    @stub
+    def Iterator() = ???
 
     /** Return the attributes for this tag. */
     @stub
@@ -37,4 +42,10 @@ object abstract HTMLDocument.Iterator extends Object {
      */
     @stub
     def isValid(): Boolean
+
+    /** Move the iterator forward to the next occurrence
+     *  of the tag it represents.
+     */
+    @stub
+    def next(): Unit
 }

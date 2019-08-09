@@ -3,6 +3,7 @@ package javax.lang.model.util
 import java.util.List
 import javax.lang.model.element.{Element, TypeElement}
 import javax.lang.model.type.{ArrayType, DeclaredType, ExecutableType, NoType, NullType, PrimitiveType, TypeKind, TypeMirror, WildcardType}
+import scala.scalanative.annotation.stub
 
 /** Utility methods for operating on types.
  * 
@@ -92,4 +93,8 @@ trait Types {
     /** Tests whether one type is a subtype of another. */
     @stub
     def isSubtype(t1: TypeMirror, t2: TypeMirror): Boolean = ???
+
+    /** Returns the type (a primitive type) of unboxed values of a given type. */
+    @stub
+    def unboxedType(t: TypeMirror): PrimitiveType = ???
 }

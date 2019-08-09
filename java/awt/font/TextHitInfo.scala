@@ -1,6 +1,7 @@
 package java.awt.font
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The TextHitInfo class represents a character position in a
  *  text model, and a bias, or "side," of the character.  Biases are
@@ -113,4 +114,10 @@ object TextHitInfo {
      */
     @stub
     def leading(charIndex: Int): TextHitInfo = ???
+
+    /** Creates a hit on the trailing edge of the character at
+     *  the specified charIndex.
+     */
+    @stub
+    def trailing(charIndex: Int): TextHitInfo = ???
 }

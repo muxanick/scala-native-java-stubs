@@ -4,6 +4,7 @@ import java.io.{Externalizable, ObjectOutput}
 import java.lang.{Object, String}
 import java.lang.reflect.Method
 import java.rmi.Remote
+import scala.scalanative.annotation.stub
 
 /** RemoteRef represents the handle for a remote object. A
  *  RemoteStub uses a remote reference to carry out a
@@ -67,6 +68,12 @@ trait RemoteRef extends Externalizable {
     /** Returns a hashcode for a remote object. */
     @stub
     def remoteHashCode(): Int = ???
+
+    /** Returns a String that represents the reference of this remote
+     *  object.
+     */
+    @stub
+    def remoteToString(): String = ???
 }
 
 object RemoteRef {
@@ -77,4 +84,8 @@ object RemoteRef {
      */
     @stub
     val packagePrefix: String = ???
+
+    /** indicate compatibility with JDK 1.1.x version of class. */
+    @stub
+    val serialVersionUID: Long = ???
 }

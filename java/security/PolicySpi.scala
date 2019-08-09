@@ -1,6 +1,7 @@
 package java.security
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class defines the Service Provider Interface (SPI)
  *  for the Policy class.
@@ -15,6 +16,10 @@ import java.lang.Object
  */
 abstract class PolicySpi extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Return a PermissionCollection object containing the set of
      *  permissions granted to the specified CodeSource.
      */
@@ -27,4 +32,7 @@ abstract class PolicySpi extends Object {
 
     /** Check whether the policy has granted a Permission to a ProtectionDomain. */
     protected def engineImplies(domain: ProtectionDomain, permission: Permission): Boolean
+
+    /** Refreshes/reloads the policy configuration. */
+    protected def engineRefresh(): Unit
 }

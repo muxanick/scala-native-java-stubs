@@ -2,6 +2,7 @@ package java.lang.reflect
 
 import java.lang.{Class, Object}
 import java.lang.annotation.Annotation
+import scala.scalanative.annotation.stub
 
 /** The AccessibleObject class is the base class for Field, Method and
  *  Constructor objects.  It provides the ability to flag a reflected
@@ -20,6 +21,10 @@ import java.lang.annotation.Annotation
  *  By default, a reflected object is not accessible.
  */
 class AccessibleObject extends Object with AnnotatedElement {
+
+    /** Constructor: only used by the Java Virtual Machine. */
+    @stub
+    protected def this() = ???
 
     /** Returns this element's annotation for the specified type if
      *  such an annotation is present, else null.
@@ -61,6 +66,12 @@ class AccessibleObject extends Object with AnnotatedElement {
      */
     @stub
     def isAnnotationPresent(annotationClass: Class[_ <: Annotation]): Boolean = ???
+
+    /** Set the accessible flag for this object to
+     *  the indicated boolean value.
+     */
+    @stub
+    def setAccessible(flag: Boolean): Unit = ???
 }
 
 object AccessibleObject {

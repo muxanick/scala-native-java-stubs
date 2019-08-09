@@ -1,7 +1,8 @@
 package java.util
 
 import java.lang.{Object, String}
-import java.security.{BasicPermission, Permission}
+import java.security.{BasicPermission, Permission, PermissionCollection}
+import scala.scalanative.annotation.stub
 
 /** This class is for property permissions.
  * 
@@ -40,6 +41,10 @@ import java.security.{BasicPermission, Permission}
  */
 final class PropertyPermission extends BasicPermission {
 
+    /** Creates a new PropertyPermission object with the specified name. */
+    @stub
+    def this(name: String, actions: String) = ???
+
     /** Checks two PropertyPermission objects for equality. */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -57,4 +62,10 @@ final class PropertyPermission extends BasicPermission {
      */
     @stub
     def implies(p: Permission): Boolean = ???
+
+    /** Returns a new PermissionCollection object for storing
+     *  PropertyPermission objects.
+     */
+    @stub
+    def newPermissionCollection(): PermissionCollection = ???
 }

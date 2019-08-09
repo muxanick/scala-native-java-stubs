@@ -1,6 +1,7 @@
 package java.util.prefs
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Thrown to indicate that an operation could not complete because
  *  the input did not conform to the appropriate XML document type
@@ -20,4 +21,10 @@ class InvalidPreferencesFormatException extends Exception {
      */
     @stub
     def this(message: String, cause: Throwable) = ???
+
+    /** Constructs an InvalidPreferencesFormatException with the specified
+     *  cause.
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

@@ -2,6 +2,7 @@ package java.awt.geom
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The Float class defines a rectangle with rounded
  *  corners all specified in float coordinates.
@@ -14,6 +15,12 @@ object RoundRectangle2D.Float extends RoundRectangle2D with Serializable {
      */
     @stub
     def Float() = ???
+
+    /** Constructs and initializes a RoundRectangle2D
+     *  from the specified float coordinates.
+     */
+    @stub
+    def Float(x: Float, y: Float, w: Float, h: Float, arcw: Float, arch: Float) = ???
 
     /** The height of the arc that rounds off the corners. */
     @stub
@@ -34,6 +41,10 @@ object RoundRectangle2D.Float extends RoundRectangle2D with Serializable {
     /** The X coordinate of this RoundRectangle2D. */
     @stub
     val x: Float = ???
+
+    /** The Y coordinate of this RoundRectangle2D. */
+    @stub
+    val y: Float = ???
 
     /** Gets the height of the arc that rounds off the corners. */
     @stub
@@ -90,4 +101,10 @@ object RoundRectangle2D.Float extends RoundRectangle2D with Serializable {
      */
     @stub
     def setRoundRect(x: Float, y: Float, w: Float, h: Float, arcw: Float, arch: Float): Unit = ???
+
+    /** Sets this RoundRectangle2D to be the same as the
+     *  specified RoundRectangle2D.
+     */
+    @stub
+    def setRoundRect(rr: RoundRectangle2D): Unit = ???
 }

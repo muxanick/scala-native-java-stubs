@@ -2,6 +2,7 @@ package java.beans
 
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Indicates that an attribute called "transient"
  *  should be declared with the given value
@@ -33,4 +34,10 @@ import scala.annotation.StaticAnnotation
 @Target ( value = METHOD ) 
 @Retention ( value = RUNTIME ) 
  final class Transient extends StaticAnnotation {
+
+    /** Returns whether or not the Introspector should
+     *  construct artifacts for the annotated method.
+     */
+    @stub
+    val value: Boolean = ???
 }

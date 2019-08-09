@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A piped input stream should be connected
  *  to a piped output stream; the piped  input
@@ -40,6 +41,14 @@ class PipedInputStream extends InputStream {
      */
     @stub
     def this(src: PipedOutputStream) = ???
+
+    /** Creates a PipedInputStream so that it is
+     *  connected to the piped output stream
+     *  src and uses the specified pipe size for
+     *  the pipe's buffer.
+     */
+    @stub
+    def this(src: PipedOutputStream, pipeSize: Int) = ???
 
     /** The circular buffer into which incoming data is placed. */
     @stub
@@ -85,4 +94,14 @@ class PipedInputStream extends InputStream {
      */
     @stub
     def read(b: Array[Byte], off: Int, len: Int): Int = ???
+
+    /** Receives a byte of data. */
+    @stub
+    protected def receive(b: Int): Unit = ???
+}
+
+object PipedInputStream {
+    /** The default size of the pipe's circular input buffer. */
+    @stub
+    protected val PIPE_SIZE: Int = ???
 }

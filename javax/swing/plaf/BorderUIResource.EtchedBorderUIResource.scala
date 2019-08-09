@@ -3,6 +3,7 @@ package javax.swing.plaf
 import java.awt.Color
 import java.lang.Object
 import javax.swing.border.{AbstractBorder, EtchedBorder}
+import scala.scalanative.annotation.stub
 
 /**  */
 object BorderUIResource.EtchedBorderUIResource extends EtchedBorder with UIResource {
@@ -18,3 +19,7 @@ object BorderUIResource.EtchedBorderUIResource extends EtchedBorder with UIResou
     /**  */
     @stub
     def EtchedBorderUIResource(etchType: Int) = ???
+
+    /**  */
+    @stub
+    def EtchedBorderUIResource(etchType: Int, highlight: Color, shadow: Color) = ???

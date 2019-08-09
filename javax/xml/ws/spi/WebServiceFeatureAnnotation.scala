@@ -1,9 +1,10 @@
 package javax.xml.ws.spi
 
-import java.lang.Class
+import java.lang.{Class, String}
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import javax.xml.ws.WebServiceFeature
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Annotation used to identify other annotations
  *  as a WebServiceFeature.
@@ -38,4 +39,8 @@ import scala.annotation.StaticAnnotation
      */
     @stub
     val bean: Class[_ <: WebServiceFeature] = ???
+
+    /** Unique identifier for the WebServiceFeature. */
+    @stub
+    val id: String = ???
 }

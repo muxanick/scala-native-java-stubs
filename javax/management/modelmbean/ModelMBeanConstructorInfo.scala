@@ -3,6 +3,7 @@ package javax.management.modelmbean
 import java.lang.{Object, String}
 import java.lang.reflect.Constructor
 import javax.management.{Descriptor, DescriptorAccess, MBeanConstructorInfo, MBeanFeatureInfo, MBeanParameterInfo}
+import scala.scalanative.annotation.stub
 
 /** The ModelMBeanConstructorInfo object describes a constructor of the ModelMBean.
  *  It is a subclass of MBeanConstructorInfo with the addition of an associated Descriptor
@@ -52,6 +53,10 @@ class ModelMBeanConstructorInfo extends MBeanConstructorInfo with DescriptorAcce
     @stub
     def this(name: String, description: String, signature: Array[MBeanParameterInfo]) = ???
 
+    /** Constructs a ModelMBeanConstructorInfo object. */
+    @stub
+    def this(name: String, description: String, signature: Array[MBeanParameterInfo], descriptor: Descriptor) = ???
+
     /** Creates and returns a new ModelMBeanConstructorInfo which is a duplicate of this ModelMBeanConstructorInfo. */
     @stub
     def clone(): Object = ???
@@ -65,4 +70,8 @@ class ModelMBeanConstructorInfo extends MBeanConstructorInfo with DescriptorAcce
      */
     @stub
     def setDescriptor(inDescriptor: Descriptor): Unit = ???
+
+    /** Returns a string containing the entire contents of the ModelMBeanConstructorInfo in human readable form. */
+    @stub
+    def toString(): String = ???
 }

@@ -2,6 +2,7 @@ package java.util
 
 import java.lang.Integer
 import java.util.function.{Consumer, IntConsumer}
+import scala.scalanative.annotation.stub
 
 /** An Iterator specialized for int values. */
 object trait PrimitiveIterator.OfInt extends PrimitiveIterator[Integer, IntConsumer] {
@@ -21,4 +22,8 @@ object trait PrimitiveIterator.OfInt extends PrimitiveIterator[Integer, IntConsu
     /** Returns the next element in the iteration. */
     @stub
     val Integer: default = ???
+
+    /** Returns the next int element in the iteration. */
+    @stub
+    def nextInt(): Int = ???
 }

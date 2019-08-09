@@ -2,6 +2,7 @@ package javax.xml.ws.soap
 
 import java.lang.{Object, String}
 import javax.xml.ws.WebServiceFeature
+import scala.scalanative.annotation.stub
 
 /** AddressingFeature represents the use of WS-Addressing with either
  *  the SOAP 1.1/HTTP or SOAP 1.2/HTTP binding. Using this feature
@@ -104,6 +105,18 @@ final class AddressingFeature extends WebServiceFeature {
     @stub
     def this(enabled: Boolean, required: Boolean) = ???
 
+    /** Creates and configures an AddressingFeature with the
+     *  use of addressing requirements.
+     */
+    @stub
+    def this(enabled: Boolean, required: Boolean, responses: AddressingFeature.Responses) = ???
+
+    /** If addressing is enabled, this property determines whether the endpoint
+     *  requires WS-Addressing.
+     */
+    @stub
+    protected val required: Boolean = ???
+
     /** Get the unique identifier for this WebServiceFeature. */
     @stub
     def getID(): String = ???
@@ -114,9 +127,21 @@ final class AddressingFeature extends WebServiceFeature {
      */
     @stub
     def getResponses(): AddressingFeature.Responses = ???
+
+    /** If addressing is enabled, this property determines whether the endpoint
+     *  requires WS-Addressing.
+     */
+    @stub
+    def isRequired(): Boolean = ???
 }
 
 object AddressingFeature {
+    /** If addressing is enabled, this property determines if endpoint requires
+     *  the use of only anonymous responses, or only non-anonymous responses, or all.
+     */
+    @stub
+    object Responses extends AddressingFeature.Responses
+
     /** Constant value identifying the AddressingFeature */
     @stub
     val ID: String = ???

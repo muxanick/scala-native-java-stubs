@@ -1,8 +1,9 @@
 package java.awt.event
 
 import java.awt.{AWTEvent, ActiveEvent}
-import java.lang.{Exception, Object, Runnable, Throwable}
+import java.lang.{Exception, Object, Runnable, String, Throwable}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** An event which executes the run() method on a Runnable
  *   when dispatched by the AWT event dispatcher thread. This class can
@@ -42,6 +43,13 @@ class InvocationEvent extends AWTEvent with ActiveEvent {
     @stub
     def this(source: Object, runnable: Runnable, notifier: Object, catchThrowables: Boolean) = ???
 
+    /** Constructs an InvocationEvent with the specified
+     *  source which will execute the runnable's run
+     *  method when dispatched.
+     */
+    @stub
+    def this(source: Object, runnable: Runnable, listener: Runnable, catchThrowables: Boolean) = ???
+
     /** Set to true if dispatch() catches Throwable and stores it in the
      *  exception instance variable.
      */
@@ -54,6 +62,10 @@ class InvocationEvent extends AWTEvent with ActiveEvent {
      */
     @stub
     protected val notifier: Object = ???
+
+    /** The Runnable whose run() method will be called. */
+    @stub
+    protected val runnable: Runnable = ???
 
     /** Executes the Runnable's run() method and notifies the
      *  notifier (if any) when run() has returned or thrown an exception.
@@ -82,6 +94,10 @@ class InvocationEvent extends AWTEvent with ActiveEvent {
      */
     @stub
     def isDispatched(): Boolean = ???
+
+    /** Returns a parameter string identifying this event. */
+    @stub
+    def paramString(): String = ???
 }
 
 object InvocationEvent {

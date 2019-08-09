@@ -1,6 +1,7 @@
 package javax.swing.event
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An abstract adapter class for receiving internal frame events.
  *  The methods in this class are empty. This class exists as
@@ -11,6 +12,10 @@ import java.lang.Object
  *  in The Java Tutorial
  */
 abstract class InternalFrameAdapter extends Object with InternalFrameListener {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Invoked when an internal frame is activated. */
     def internalFrameActivated(e: InternalFrameEvent): Unit
@@ -29,4 +34,7 @@ abstract class InternalFrameAdapter extends Object with InternalFrameListener {
 
     /** Invoked when an internal frame is iconified. */
     def internalFrameIconified(e: InternalFrameEvent): Unit
+
+    /** Invoked when an internal frame has been opened. */
+    def internalFrameOpened(e: InternalFrameEvent): Unit
 }

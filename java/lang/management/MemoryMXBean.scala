@@ -1,5 +1,7 @@
 package java.lang.management
 
+import scala.scalanative.annotation.stub
+
 /** The management interface for the memory system of
  *  the Java virtual machine.
  * 
@@ -185,4 +187,10 @@ trait MemoryMXBean extends PlatformManagedObject {
     /** Tests if verbose output for the memory system is enabled. */
     @stub
     def isVerbose(): Boolean = ???
+
+    /** Enables or disables verbose output for the memory
+     *  system.
+     */
+    @stub
+    def setVerbose(value: Boolean): Unit = ???
 }

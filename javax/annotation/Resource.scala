@@ -1,8 +1,9 @@
 package javax.annotation
 
-import java.lang.String
+import java.lang.{Class, String}
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** The Resource annotation marks a resource that is needed
  *  by the application.  This annotation may be applied to an
@@ -51,4 +52,8 @@ import scala.annotation.StaticAnnotation
      */
     @stub
     val shareable: Boolean = ???
+
+    /** The Java type of the resource. */
+    @stub
+    val type: Class[_] = ???
 }

@@ -1,6 +1,7 @@
 package javax.xml.soap
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The access point for the implementation classes of the factories defined in the
  *  SAAJ API. All of the newInstance methods defined on factories in
@@ -15,8 +16,17 @@ import java.lang.{Object, String}
  */
 abstract class SAAJMetaFactory extends Object {
 
+    /**  */
+    @stub
+    protected def this() = ???
+
     /** Creates a MessageFactory object for
      *  the given String protocol.
      */
     protected def newMessageFactory(protocol: String): MessageFactory
+
+    /** Creates a SOAPFactory object for
+     *  the given String protocol.
+     */
+    protected def newSOAPFactory(protocol: String): SOAPFactory
 }

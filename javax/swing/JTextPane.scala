@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component, Container}
 import java.lang.{Object, String}
 import javax.swing.text.{AttributeSet, Document, EditorKit, JTextComponent, MutableAttributeSet, Style, StyledDocument, StyledEditorKit}
+import scala.scalanative.annotation.stub
 
 /** A text component that can be marked up with attributes that are
  *  represented graphically.
@@ -44,6 +45,10 @@ class JTextPane extends JEditorPane {
     /** Creates a new JTextPane. */
     @stub
     def this() = ???
+
+    /** Creates a new JTextPane, with a specified document model. */
+    @stub
+    def this(doc: StyledDocument) = ???
 
     /** Adds a new style into the logical style hierarchy. */
     @stub
@@ -144,4 +149,8 @@ class JTextPane extends JEditorPane {
     /** Applies the given attributes to paragraphs. */
     @stub
     def setParagraphAttributes(attr: AttributeSet, replace: Boolean): Unit = ???
+
+    /** Associates the editor with a text document. */
+    @stub
+    def setStyledDocument(doc: StyledDocument): Unit = ???
 }

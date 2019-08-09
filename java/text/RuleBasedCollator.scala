@@ -1,6 +1,7 @@
 package java.text
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The RuleBasedCollator class is a concrete subclass of
  *  Collator that provides a simple, data-driven, table
@@ -200,6 +201,10 @@ import java.lang.{Object, String}
  */
 class RuleBasedCollator extends Collator {
 
+    /** RuleBasedCollator constructor. */
+    @stub
+    def this(rules: String) = ???
+
     /** Standard override; no change in semantics. */
     @stub
     def clone(): Object = ???
@@ -231,4 +236,8 @@ class RuleBasedCollator extends Collator {
     /** Gets the table-based rules for the collation object. */
     @stub
     def getRules(): String = ???
+
+    /** Generates the hash code for the table-based collation object */
+    @stub
+    def hashCode(): Int = ???
 }

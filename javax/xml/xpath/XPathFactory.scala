@@ -1,6 +1,7 @@
 package javax.xml.xpath
 
 import java.lang.{ClassLoader, Object, String}
+import scala.scalanative.annotation.stub
 
 /** An XPathFactory instance can be used to create
  *  XPath objects.
@@ -20,6 +21,13 @@ import java.lang.{ClassLoader, Object, String}
  */
 abstract class XPathFactory extends Object {
 
+    /** Protected constructor as newInstance() or newInstance(String uri)
+     *  or newInstance(String uri, String factoryClassName, ClassLoader classLoader)
+     *  should be used to create a new instance of an XPathFactory.
+     */
+    @stub
+    protected def this() = ???
+
     /** Get the state of the named feature. */
     def getFeature(name: String): Boolean
 
@@ -38,12 +46,19 @@ abstract class XPathFactory extends Object {
 
     /** Establish a default function resolver. */
     def setXPathFunctionResolver(resolver: XPathFunctionResolver): Unit
+
+    /** Establish a default variable resolver. */
+    def setXPathVariableResolver(resolver: XPathVariableResolver): Unit
 }
 
 object XPathFactory {
     /** Default Object Model URI. */
     @stub
     val DEFAULT_OBJECT_MODEL_URI: String = ???
+
+    /** The default property name according to the JAXP spec. */
+    @stub
+    val DEFAULT_PROPERTY_NAME: String = ???
 
     /** Get a new XPathFactory instance using the default object model,
      *  DEFAULT_OBJECT_MODEL_URI,

@@ -2,6 +2,7 @@ package javax.security.auth.callback
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /**  Underlying security services instantiate and pass a
  *  TextInputCallback to the handle
@@ -14,6 +15,12 @@ class TextInputCallback extends Object with Callback with Serializable {
     @stub
     def this(prompt: String) = ???
 
+    /** Construct a TextInputCallback with a prompt
+     *  and default input value.
+     */
+    @stub
+    def this(prompt: String, defaultText: String) = ???
+
     /** Get the default text. */
     @stub
     def getDefaultText(): String = ???
@@ -25,4 +32,8 @@ class TextInputCallback extends Object with Callback with Serializable {
     /** Get the retrieved text. */
     @stub
     def getText(): String = ???
+
+    /** Set the retrieved text. */
+    @stub
+    def setText(text: String): Unit = ???
 }

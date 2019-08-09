@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.{Exception, Object, RuntimeException, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception may be thrown by methods that have detected concurrent
  *  modification of an object when such modification is not permissible.
@@ -49,4 +50,11 @@ class ConcurrentModificationException extends RuntimeException {
      */
     @stub
     def this(message: String, cause: Throwable) = ???
+
+    /** Constructs a new exception with the specified cause and a detail
+     *  message of (cause==null ? null : cause.toString()) (which
+     *  typically contains the class and detail message of cause.
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

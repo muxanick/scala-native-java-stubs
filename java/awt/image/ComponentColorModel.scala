@@ -2,6 +2,7 @@ package java.awt.image
 
 import java.awt.color.ColorSpace
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A ColorModel class that works with pixel values that
  *  represent color and alpha information as separate samples and that
@@ -147,6 +148,12 @@ class ComponentColorModel extends ColorModel {
      */
     @stub
     def this(colorSpace: ColorSpace, hasAlpha: Boolean, isAlphaPremultiplied: Boolean, transparency: Int, transferType: Int) = ???
+
+    /** Constructs a ComponentColorModel from the specified
+     *  parameters.
+     */
+    @stub
+    def this(colorSpace: ColorSpace, bits: Array[Int], hasAlpha: Boolean, isAlphaPremultiplied: Boolean, transparency: Int, transferType: Int) = ???
 
     /** Forces the raster data to match the state specified in the
      *  isAlphaPremultiplied variable, assuming the data
@@ -307,4 +314,10 @@ class ComponentColorModel extends ColorModel {
      */
     @stub
     def isCompatibleRaster(raster: Raster): Boolean = ???
+
+    /** Checks whether or not the specified SampleModel
+     *  is compatible with this ColorModel.
+     */
+    @stub
+    def isCompatibleSampleModel(sm: SampleModel): Boolean = ???
 }

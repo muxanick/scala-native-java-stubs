@@ -2,8 +2,9 @@ package javax.swing
 
 import java.awt.{Component.AccessibleAWTComponent, Container.AccessibleAWTContainer}
 import java.lang.{Object, String}
-import javax.accessibility.AccessibleContext
+import javax.accessibility.{AccessibleContext, AccessibleStateSet}
 import javax.swing.text.JTextComponent.AccessibleJTextComponent
+import scala.scalanative.annotation.stub
 
 /** This class implements accessibility support for the
  *  JEditorPane class.  It provides an implementation of the
@@ -21,7 +22,15 @@ import javax.swing.text.JTextComponent.AccessibleJTextComponent
  */
 protected class JEditorPane.AccessibleJEditorPane extends JTextComponent.AccessibleJTextComponent {
 
+    /**  */
+    @stub
+    protected def AccessibleJEditorPane() = ???
+
     /** Gets the accessibleDescription property of this object. */
     @stub
     def getAccessibleDescription(): String = ???
+
+    /** Gets the state set of this object. */
+    @stub
+    def getAccessibleStateSet(): AccessibleStateSet = ???
 }

@@ -1,6 +1,7 @@
 package javax.swing.text
 
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** 
  *  ElementIterator, as the name suggests, iterates over the Element
@@ -43,6 +44,10 @@ class ElementIterator extends Object with Cloneable {
     @stub
     def this(document: Document) = ???
 
+    /** Creates a new ElementIterator. */
+    @stub
+    def this(root: Element) = ???
+
     /** Clones the ElementIterator. */
     @stub
     def clone(): Object = ???
@@ -62,4 +67,8 @@ class ElementIterator extends Object with Cloneable {
     /** Fetches the next Element. */
     @stub
     def next(): Element = ???
+
+    /** Fetches the previous Element. */
+    @stub
+    def previous(): Element = ???
 }

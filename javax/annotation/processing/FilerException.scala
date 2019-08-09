@@ -1,7 +1,8 @@
 package javax.annotation.processing
 
 import java.io.IOException
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Indicates a Filer detected an attempt to open a file that
  *  would violate the guarantees provided by the Filer.  Those
@@ -10,4 +11,8 @@ import java.lang.{Exception, Object, Throwable}
  *  creating files for types with invalid names.
  */
 class FilerException extends IOException {
+
+    /** Constructs an exception with the specified detail message. */
+    @stub
+    def this(s: String) = ???
 }

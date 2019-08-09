@@ -1,8 +1,9 @@
 package javax.xml.bind.util
 
 import java.lang.Object
-import javax.xml.bind.JAXBContext
+import javax.xml.bind.{JAXBContext, Marshaller}
 import javax.xml.transform.sax.SAXSource
+import scala.scalanative.annotation.stub
 
 /** JAXP Source implementation
  *  that marshals a JAXB-generated object.
@@ -50,4 +51,8 @@ class JAXBSource extends SAXSource {
     /** Creates a new Source for the given content object. */
     @stub
     def this(context: JAXBContext, contentObject: Object) = ???
+
+    /** Creates a new Source for the given content object. */
+    @stub
+    def this(marshaller: Marshaller, contentObject: Object) = ???
 }

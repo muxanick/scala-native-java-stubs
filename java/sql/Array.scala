@@ -2,6 +2,7 @@ package java.sql
 
 import java.lang.{Class, Object, String}
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** The mapping in the Java programming language for the SQL type
  *  ARRAY.
@@ -111,4 +112,10 @@ trait Array {
      */
     @stub
     def getResultSet(index: Long, count: Int, map: Map[String, Class[_]]): ResultSet = ???
+
+    /** Retrieves a result set that contains the elements of the SQL
+     *  ARRAY value designated by this Array object.
+     */
+    @stub
+    def getResultSet(map: Map[String, Class[_]]): ResultSet = ???
 }

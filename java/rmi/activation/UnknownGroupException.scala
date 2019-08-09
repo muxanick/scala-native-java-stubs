@@ -1,6 +1,7 @@
 package java.rmi.activation
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** An UnknownGroupException is thrown by methods of classes and
  *  interfaces in the java.rmi.activation package when the
@@ -11,4 +12,10 @@ import java.lang.{Exception, Object, Throwable}
  *  a group that is not registered with the ActivationSystem
  */
 class UnknownGroupException extends ActivationException {
+
+    /** Constructs an UnknownGroupException with the specified
+     *  detail message.
+     */
+    @stub
+    def this(s: String) = ???
 }

@@ -2,6 +2,7 @@ package javax.print.attribute.standard
 
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, EnumSyntax}
+import scala.scalanative.annotation.stub
 
 /** Class Severity is a printing attribute class, an enumeration, that denotes
  *  the severity of a PrinterStateReason attribute.
@@ -33,6 +34,12 @@ import javax.print.attribute.{Attribute, EnumSyntax}
  */
 final class Severity extends EnumSyntax with Attribute {
 
+    /** Construct a new severity enumeration value with the given integer
+     *  value.
+     */
+    @stub
+    protected def this(value: Int) = ???
+
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.
      */
@@ -48,6 +55,10 @@ final class Severity extends EnumSyntax with Attribute {
      */
     @stub
     def getName(): String = ???
+
+    /** Returns the string table for class Severity. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object Severity {
@@ -62,4 +73,10 @@ object Severity {
      */
     @stub
     val REPORT: Severity = ???
+
+    /** Indicates that the PrinterStateReason is a
+     *  "warning." An implementation may choose to omit some or all warnings.
+     */
+    @stub
+    val WARNING: Severity = ???
 }

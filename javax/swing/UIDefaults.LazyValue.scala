@@ -1,5 +1,8 @@
 package javax.swing
 
+import java.lang.Object
+import scala.scalanative.annotation.stub
+
 /** This class enables one to store an entry in the defaults
  *  table that isn't constructed until the first time it's
  *  looked up with one of the getXXX(key) methods.
@@ -23,3 +26,10 @@ package javax.swing
  *  
  */
 object trait UIDefaults.LazyValue {
+
+    /** Creates the actual value retrieved from the UIDefaults
+     *  table.
+     */
+    @stub
+    def createValue(table: UIDefaults): Object = ???
+}

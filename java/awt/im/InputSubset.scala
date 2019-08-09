@@ -1,6 +1,7 @@
 package java.awt.im
 
 import java.lang.{Character.Subset, Object}
+import scala.scalanative.annotation.stub
 
 /** Defines additional Unicode subsets for use by input methods.  Unlike the
  *  UnicodeBlock subsets defined in the Character.UnicodeBlock class, these constants do not
@@ -61,4 +62,11 @@ object InputSubset {
      */
     @stub
     val SIMPLIFIED_HANZI: InputSubset = ???
+
+    /** Constant for all Han characters used in writing Traditional Chinese,
+     *  including a subset of the CJK unified ideographs as well as Traditional
+     *  Chinese Han characters that may be defined as surrogate characters.
+     */
+    @stub
+    val TRADITIONAL_HANZI: InputSubset = ???
 }

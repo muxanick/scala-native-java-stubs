@@ -1,7 +1,8 @@
 package java.util
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** An Entry maintaining a key and a value.  The value may be
  *  changed using the setValue method.  This class
@@ -17,6 +18,12 @@ object AbstractMap.SimpleEntry[K, V] extends Object with Map.Entry[K, V] with Se
      */
     @stub
     def SimpleEntry(key: K, value: V) = ???
+
+    /** Creates an entry representing the same mapping as the
+     *  specified entry.
+     */
+    @stub
+    def SimpleEntry(entry: Map.Entry[_ <: K, _ <: V]) = ???
 
     /** Compares the specified object with this entry for equality. */
     @stub
@@ -39,4 +46,8 @@ object AbstractMap.SimpleEntry[K, V] extends Object with Map.Entry[K, V] with Se
      */
     @stub
     def setValue(value: V): V = ???
+
+    /** Returns a String representation of this map entry. */
+    @stub
+    def toString(): String = ???
 }

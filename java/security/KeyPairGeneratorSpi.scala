@@ -2,6 +2,7 @@ package java.security
 
 import java.lang.Object
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /**  This class defines the Service Provider Interface (SPI)
  *  for the KeyPairGenerator class, which is used to generate
@@ -19,6 +20,10 @@ import java.security.spec.AlgorithmParameterSpec
  */
 abstract class KeyPairGeneratorSpi extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Generates a key pair. */
     def generateKeyPair(): KeyPair
 
@@ -26,4 +31,9 @@ abstract class KeyPairGeneratorSpi extends Object {
      *  set and user-provided source of randomness.
      */
     def initialize(params: AlgorithmParameterSpec, random: SecureRandom): Unit
+
+    /** Initializes the key pair generator for a certain keysize, using
+     *  the default parameter set.
+     */
+    def initialize(keysize: Int, random: SecureRandom): Unit
 }

@@ -4,7 +4,7 @@ import java.awt.{Color, Component, ComponentOrientation, Container, Dimension, I
 import java.awt.event.{InputMethodEvent, InputMethodListener, MouseEvent}
 import java.awt.im.InputMethodRequests
 import java.awt.print.Printable
-import java.io.Reader
+import java.io.{Reader, Writer}
 import java.lang.{Object, String}
 import java.text.MessageFormat
 import javax.accessibility.{Accessible, AccessibleContext}
@@ -13,6 +13,7 @@ import javax.print.attribute.PrintRequestAttributeSet
 import javax.swing.{Action, DropMode, JComponent, Scrollable}
 import javax.swing.event.{CaretEvent, CaretListener}
 import javax.swing.plaf.TextUI
+import scala.scalanative.annotation.stub
 
 /** JTextComponent is the base class for swing text
  *  components.  It tries to be compatible with the
@@ -214,6 +215,10 @@ import javax.swing.plaf.TextUI
  *  Please see XMLEncoder.
  */
 abstract class JTextComponent extends JComponent with Scrollable with Accessible {
+
+    /** Creates a new JTextComponent. */
+    @stub
+    def this() = ???
 
     /** This class implements accessibility support for the
      *  JTextComponent class.
@@ -540,6 +545,11 @@ abstract class JTextComponent extends JComponent with Scrollable with Accessible
      *  to the nearest representative location in the model.
      */
     def viewToModel(pt: Point): Int
+
+    /** Stores the contents of the model into the given
+     *  stream.
+     */
+    def write(out: Writer): Unit
 }
 
 object JTextComponent {
@@ -547,12 +557,20 @@ object JTextComponent {
     @stub
     object DropLocation extends JTextComponent.DropLocation
 
+    /** Binding record for creating key bindings. */
+    @stub
+    object KeyBinding extends JTextComponent.KeyBinding
+
     /** The default keymap that will be shared by all
      *  JTextComponent instances unless they
      *  have had a different keymap set.
      */
     @stub
     val DEFAULT_KEYMAP: String = ???
+
+    /** The bound property name for the focus accelerator. */
+    @stub
+    val FOCUS_ACCELERATOR_KEY: String = ???
 
     /** Adds a new keymap into the keymap hierarchy. */
     @stub

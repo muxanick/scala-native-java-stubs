@@ -3,6 +3,7 @@ package java.rmi.activation
 import java.lang.{Object, String}
 import java.rmi.{MarshalledObject, Remote}
 import java.rmi.server.{RMIClientSocketFactory, RMIServerSocketFactory, RemoteObject, RemoteServer}
+import scala.scalanative.annotation.stub
 
 /** The Activatable class provides support for remote
  *  objects that require persistent access over time and that
@@ -36,6 +37,14 @@ abstract class Activatable extends RemoteServer {
      */
     @stub
     protected def this(location: String, data: MarshalledObject[_], restart: Boolean, port: Int) = ???
+
+    /** Constructs an activatable remote object by registering
+     *  an activation descriptor (with the specified location, data, and
+     *  restart mode) for this object, and exporting the object with the
+     *  specified port, and specified client and server socket factories.
+     */
+    @stub
+    protected def this(location: String, data: MarshalledObject[_], restart: Boolean, port: Int, csf: RMIClientSocketFactory, ssf: RMIServerSocketFactory) = ???
 
     /** Returns the object's activation identifier. */
     protected def getID(): ActivationID
@@ -84,4 +93,10 @@ object Activatable {
     /** Remove the remote object, obj, from the RMI runtime. */
     @stub
     def unexportObject(obj: Remote, force: Boolean): Boolean = ???
+
+    /** Revokes previous registration for the activation descriptor
+     *  associated with id.
+     */
+    @stub
+    def unregister(id: ActivationID): Unit = ???
 }

@@ -6,6 +6,7 @@ import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.event.{MenuDragMouseEvent, MenuDragMouseListener, MenuKeyEvent, MenuKeyListener}
 import javax.swing.plaf.MenuItemUI
+import scala.scalanative.annotation.stub
 
 /** An implementation of an item in a menu. A menu item is essentially a button
  *  sitting in a list. When the user selects the "button", the action
@@ -60,6 +61,18 @@ class JMenuItem extends AbstractButton with Accessible with MenuElement {
     /** Creates a JMenuItem with the specified text and icon. */
     @stub
     def this(text: String, icon: Icon) = ???
+
+    /** Creates a JMenuItem with the specified text and
+     *  keyboard mnemonic.
+     */
+    @stub
+    def this(text: String, mnemonic: Int) = ???
+
+    /** This class implements accessibility support for the
+     *  JMenuItem class.
+     */
+    @stub
+    protected object AccessibleJMenuItem extends JMenuItem.AccessibleJMenuItem
 
     /** Updates the button's state in response to property changes in the
      *  associated action.
@@ -235,4 +248,8 @@ class JMenuItem extends AbstractButton with Accessible with MenuElement {
     /** Sets the look and feel object that renders this component. */
     @stub
     def setUI(ui: MenuItemUI): Unit = ???
+
+    /** Resets the UI property with a value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
 }

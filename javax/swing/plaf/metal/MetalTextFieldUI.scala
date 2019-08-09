@@ -1,9 +1,11 @@
 package javax.swing.plaf.metal
 
+import java.beans.PropertyChangeEvent
 import java.lang.Object
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, TextUI}
 import javax.swing.plaf.basic.{BasicTextFieldUI, BasicTextUI}
+import scala.scalanative.annotation.stub
 
 /** Basis of a look and feel for a JTextField.
  *  
@@ -17,6 +19,16 @@ import javax.swing.plaf.basic.{BasicTextFieldUI, BasicTextUI}
  *  Please see XMLEncoder.
  */
 class MetalTextFieldUI extends BasicTextFieldUI {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** This method gets called when a bound property is changed
+     *  on the associated JTextComponent.
+     */
+    @stub
+    def propertyChange(evt: PropertyChangeEvent): Unit = ???
 }
 
 object MetalTextFieldUI {

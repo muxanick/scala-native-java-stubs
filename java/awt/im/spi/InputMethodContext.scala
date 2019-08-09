@@ -6,6 +6,7 @@ import java.awt.im.InputMethodRequests
 import java.lang.String
 import java.text.AttributedCharacterIterator
 import javax.swing.JFrame
+import scala.scalanative.annotation.stub
 
 /** Provides methods that input methods
  *  can use to communicate with their client components or to request
@@ -30,4 +31,10 @@ trait InputMethodContext extends InputMethodRequests {
      */
     @stub
     def dispatchInputMethodEvent(id: Int, text: AttributedCharacterIterator, committedCharacterCount: Int, caret: TextHitInfo, visiblePosition: TextHitInfo): Unit = ???
+
+    /** Enables or disables notification of the current client window's
+     *  location and state for the specified input method.
+     */
+    @stub
+    def enableClientWindowNotification(inputMethod: InputMethod, enable: Boolean): Unit = ???
 }

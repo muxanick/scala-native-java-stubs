@@ -1,6 +1,7 @@
 package javax.management
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Defines the methods that should be implemented by
  *  a Dynamic MBean (MBean that exposes a dynamic management interface).
@@ -26,4 +27,8 @@ trait DynamicMBean {
     /** Set the value of a specific attribute of the Dynamic MBean. */
     @stub
     def setAttribute(attribute: Attribute): Unit = ???
+
+    /** Sets the values of several attributes of the Dynamic MBean. */
+    @stub
+    def setAttributes(attributes: AttributeList): AttributeList = ???
 }

@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** Thrown when an application tries to access a type using a string
  *  representing the type's name, but no definition for the type with
  *  the specified name can be found.   This exception differs from
@@ -13,4 +15,14 @@ package java.lang
  *  reflectively.
  */
 class TypeNotPresentException extends RuntimeException {
+
+    /** Constructs a TypeNotPresentException for the named type
+     *  with the specified cause.
+     */
+    @stub
+    def this(typeName: String, cause: Throwable) = ???
+
+    /** Returns the fully qualified name of the unavailable type. */
+    @stub
+    def typeName(): String = ???
 }

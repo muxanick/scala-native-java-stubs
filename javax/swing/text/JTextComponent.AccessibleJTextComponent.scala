@@ -5,6 +5,7 @@ import java.lang.{Object, String}
 import javax.accessibility.{AccessibleAction, AccessibleContext, AccessibleEditableText, AccessibleExtendedText, AccessibleRole, AccessibleStateSet, AccessibleText, AccessibleTextSequence}
 import javax.swing.JComponent.AccessibleJComponent
 import javax.swing.event.{CaretEvent, CaretListener, DocumentEvent, DocumentListener}
+import scala.scalanative.annotation.stub
 
 /** This class implements accessibility support for the
  *  JTextComponent class.  It provides an implementation of
@@ -20,6 +21,10 @@ import javax.swing.event.{CaretEvent, CaretListener, DocumentEvent, DocumentList
  *  Please see XMLEncoder.
  */
 class JTextComponent.AccessibleJTextComponent extends JComponent.AccessibleJComponent with AccessibleText with CaretListener with DocumentListener with AccessibleAction with AccessibleEditableText with AccessibleExtendedText {
+
+    /** Constructs an AccessibleJTextComponent. */
+    @stub
+    def AccessibleJTextComponent() = ???
 
     /** Handles caret updates (fire appropriate property change event,
      *  which are AccessibleContext.ACCESSIBLE_CARET_PROPERTY and
@@ -192,4 +197,8 @@ class JTextComponent.AccessibleJTextComponent extends JComponent.AccessibleJComp
     /** Sets attributes for the text between two indices. */
     @stub
     def setAttributes(startIndex: Int, endIndex: Int, as: AttributeSet): Unit = ???
+
+    /** Sets the text contents to the specified string. */
+    @stub
+    def setTextContents(s: String): Unit = ???
 }

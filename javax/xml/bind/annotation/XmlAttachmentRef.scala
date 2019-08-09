@@ -2,6 +2,7 @@ package javax.xml.bind.annotation
 
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Marks a field/property that its XML form is a uri reference to mime content.
  *  The mime content is optimally stored out-of-line as an attachment.

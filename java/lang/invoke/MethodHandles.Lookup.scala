@@ -2,6 +2,7 @@ package java.lang.invoke
 
 import java.lang.{Class, Object, String}
 import java.lang.reflect.{Constructor, Field, Method}
+import scala.scalanative.annotation.stub
 
 /** A lookup object is a factory for creating method handles,
  *  when the creation requires access checking.
@@ -378,6 +379,12 @@ final object MethodHandles.Lookup extends Object {
     @stub
     val PROTECTED: Int = ???
 
+    /** A single-bit mask representing public access,
+     *   which may contribute to the result of lookupModes.
+     */
+    @stub
+    val PUBLIC: Int = ???
+
     /** Produces an early-bound method handle for a non-static method. */
     @stub
     def bind(receiver: Object, name: String, type: MethodType): MethodHandle = ???
@@ -455,4 +462,8 @@ final object MethodHandles.Lookup extends Object {
     /** Produces a method handle giving write access to a reflected field. */
     @stub
     def unreflectSetter(f: Field): MethodHandle = ???
+
+    /** Produces a method handle for a reflected method. */
+    @stub
+    def unreflectSpecial(m: Method, specialCaller: Class[_]): MethodHandle = ???
 }

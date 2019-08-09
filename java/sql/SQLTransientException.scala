@@ -1,6 +1,7 @@
 package java.sql
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** The subclass of SQLException is thrown in situations where a
  *  previously failed operation might be able to succeed when the operation is
@@ -53,4 +54,10 @@ class SQLTransientException extends SQLException {
      */
     @stub
     def this(reason: String, cause: Throwable) = ???
+
+    /** Constructs a SQLTransientException object
+     *  with a given  cause.
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

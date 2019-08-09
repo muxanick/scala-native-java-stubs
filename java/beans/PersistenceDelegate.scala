@@ -1,6 +1,7 @@
 package java.beans
 
 import java.lang.{Class, Object}
+import scala.scalanative.annotation.stub
 
 /** The PersistenceDelegate class takes the responsibility
  *  for expressing the state of an instance of a given class
@@ -58,6 +59,10 @@ import java.lang.{Class, Object}
  */
 abstract class PersistenceDelegate extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Produce a series of statements with side effects on newInstance
      *  so that the new instance becomes equivalent to oldInstance.
      */
@@ -70,4 +75,10 @@ abstract class PersistenceDelegate extends Object {
      *  created by applying a series of statements to newInstance.
      */
     protected def mutatesTo(oldInstance: Object, newInstance: Object): Boolean
+
+    /** The writeObject is a single entry point to the persistence
+     *  and is used by a Encoder in the traditional
+     *  mode of delegation.
+     */
+    def writeObject(oldInstance: Object, out: Encoder): Unit
 }

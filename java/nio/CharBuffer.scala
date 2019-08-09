@@ -2,6 +2,7 @@ package java.nio
 
 import java.lang.{Appendable, CharSequence, Comparable, Object, Readable, String}
 import java.util.stream.IntStream
+import scala.scalanative.annotation.stub
 
 /** A char buffer.
  * 
@@ -350,4 +351,8 @@ object CharBuffer {
     /** Wraps a character sequence into a buffer. */
     @stub
     def wrap(csq: CharSequence): CharBuffer = ???
+
+    /** Wraps a character sequence into a buffer. */
+    @stub
+    def wrap(csq: CharSequence, start: Int, end: Int): CharBuffer = ???
 }

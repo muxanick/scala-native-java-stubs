@@ -1,7 +1,8 @@
 package javax.sound.sampled
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** The LineEvent class encapsulates information that a line
  *  sends its listeners whenever the line opens, closes, starts, or stops.
@@ -16,6 +17,10 @@ import java.util.EventObject
  */
 class LineEvent extends EventObject {
 
+    /** Constructs a new event of the specified type, originating from the specified line. */
+    @stub
+    def this(line: Line, type: LineEvent.Type, position: Long) = ???
+
     /** Obtains the position in the line's audio data when the event occurred, expressed in sample frames. */
     @stub
     def getFramePosition(): Long = ???
@@ -27,4 +32,14 @@ class LineEvent extends EventObject {
     /** Obtains the event's type. */
     @stub
     def getType(): LineEvent.Type = ???
+
+    /** Obtains a string representation of the event. */
+    @stub
+    def toString(): String = ???
+}
+
+object LineEvent {
+    /** The LineEvent.Type inner class identifies what kind of event occurred on a line. */
+    @stub
+    object Type extends LineEvent.Type
 }

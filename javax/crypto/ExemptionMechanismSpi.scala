@@ -2,6 +2,8 @@ package javax.crypto
 
 import java.lang.Object
 import java.security.{AlgorithmParameters, Key}
+import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** This class defines the Service Provider Interface (SPI)
  *  for the ExemptionMechanism class.
@@ -10,6 +12,10 @@ import java.security.{AlgorithmParameters, Key}
  *  of a particular exemption mechanism.
  */
 abstract class ExemptionMechanismSpi extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Generates the exemption mechanism key blob. */
     protected def engineGenExemptionBlob(): Array[Byte]
@@ -34,4 +40,9 @@ abstract class ExemptionMechanismSpi extends Object {
      *  parameters.
      */
     protected def engineInit(key: Key, params: AlgorithmParameters): Unit
+
+    /** Initializes this exemption mechanism with a key and a set of algorithm
+     *  parameters.
+     */
+    protected def engineInit(key: Key, params: AlgorithmParameterSpec): Unit
 }

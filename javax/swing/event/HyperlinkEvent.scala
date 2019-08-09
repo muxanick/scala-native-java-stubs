@@ -5,6 +5,7 @@ import java.lang.{Object, String}
 import java.net.URL
 import java.util.EventObject
 import javax.swing.text.Element
+import scala.scalanative.annotation.stub
 
 /** HyperlinkEvent is used to notify interested parties that
  *  something has happened with respect to a hypertext link.
@@ -32,6 +33,10 @@ class HyperlinkEvent extends EventObject {
     @stub
     def this(source: Object, type: HyperlinkEvent.EventType, u: URL, desc: String, sourceElement: Element) = ???
 
+    /** Creates a new object representing a hypertext link event. */
+    @stub
+    def this(source: Object, type: HyperlinkEvent.EventType, u: URL, desc: String, sourceElement: Element, inputEvent: InputEvent) = ???
+
     /** Get the description of the link as a string. */
     @stub
     def getDescription(): String = ???
@@ -49,4 +54,16 @@ class HyperlinkEvent extends EventObject {
      */
     @stub
     def getSourceElement(): Element = ???
+
+    /** Gets the URL that the link refers to. */
+    @stub
+    def getURL(): URL = ???
+}
+
+object HyperlinkEvent {
+    /** Defines the ENTERED, EXITED, and ACTIVATED event types, along
+     *  with their string representations, returned by toString().
+     */
+    @stub
+    object EventType extends HyperlinkEvent.EventType
 }

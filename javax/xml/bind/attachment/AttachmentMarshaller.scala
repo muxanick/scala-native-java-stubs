@@ -2,6 +2,7 @@ package javax.xml.bind.attachment
 
 import java.lang.{Object, String}
 import javax.activation.DataHandler
+import scala.scalanative.annotation.stub
 
 /** Enable JAXB marshalling to optimize storage of binary data.
  * 
@@ -22,6 +23,10 @@ import javax.activation.DataHandler
  */
 abstract class AttachmentMarshaller extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Consider binary data for optimized binary storage as an attachment. */
     def addMtomAttachment(data: Array[Byte], offset: Int, length: Int, mimeType: String, elementNamespace: String, elementLocalName: String): String
 
@@ -30,4 +35,7 @@ abstract class AttachmentMarshaller extends Object {
 
     /** Add MIME data as an attachment and return attachment's content-id, cid. */
     def addSwaRefAttachment(data: DataHandler): String
+
+    /** Read-only property that returns true if JAXB marshaller should enable XOP creation. */
+    def isXOPPackage(): Boolean
 }

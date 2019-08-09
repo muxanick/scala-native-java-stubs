@@ -2,6 +2,7 @@ package java.security
 
 import java.lang.{Class, Object, String}
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** This class defines the Service Provider Interface (SPI)
  *  for the AlgorithmParameters class, which is used to manage
@@ -12,6 +13,10 @@ import java.security.spec.AlgorithmParameterSpec
  *  for a particular algorithm.
  */
 abstract class AlgorithmParametersSpi extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the parameters in their primary encoding format. */
     protected def engineGetEncoded(): Array[Byte]
@@ -38,4 +43,7 @@ abstract class AlgorithmParametersSpi extends Object {
      *  decodes them according to the specified decoding format.
      */
     protected def engineInit(params: Array[Byte], format: String): Unit
+
+    /** Returns a formatted string describing the parameters. */
+    protected def engineToString(): String
 }

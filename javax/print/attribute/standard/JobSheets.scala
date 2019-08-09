@@ -2,6 +2,7 @@ package javax.print.attribute.standard
 
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, EnumSyntax, PrintJobAttribute, PrintRequestAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class JobSheets is a printing attribute class, an enumeration, that
  *  determines which job start and end sheets, if any, must be printed with a
@@ -23,6 +24,12 @@ import javax.print.attribute.{Attribute, EnumSyntax, PrintJobAttribute, PrintReq
  */
 class JobSheets extends EnumSyntax with PrintRequestAttribute with PrintJobAttribute {
 
+    /** Construct a new job sheets enumeration value with the given integer
+     *  value.
+     */
+    @stub
+    protected def this(value: Int) = ???
+
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.
      */
@@ -38,10 +45,18 @@ class JobSheets extends EnumSyntax with PrintRequestAttribute with PrintJobAttri
      */
     @stub
     def getName(): String = ???
+
+    /** Returns the string table for class JobSheets. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object JobSheets {
     /** No job sheets are printed. */
     @stub
     val NONE: JobSheets = ???
+
+    /** One or more site specific standard job sheets are printed. */
+    @stub
+    val STANDARD: JobSheets = ???
 }

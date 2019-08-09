@@ -1,6 +1,7 @@
 package java.awt
 
 import java.awt.image.{Raster, WritableRaster}
+import scala.scalanative.annotation.stub
 
 /** The CompositeContext interface defines the encapsulated
  *  and optimized environment for a compositing operation.
@@ -17,4 +18,8 @@ trait CompositeContext {
      */
     @stub
     def compose(src: Raster, dstIn: Raster, dstOut: WritableRaster): Unit = ???
+
+    /** Releases resources allocated for a context. */
+    @stub
+    def dispose(): Unit = ???
 }

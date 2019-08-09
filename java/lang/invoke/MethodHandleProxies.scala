@@ -1,6 +1,7 @@
 package java.lang.invoke
 
 import java.lang.{Class, Object}
+import scala.scalanative.annotation.stub
 
 /** This class consists exclusively of static methods that help adapt
  *  method handles to other JVM types, such as interfaces.
@@ -24,4 +25,8 @@ object MethodHandleProxies {
      */
     @stub
     def wrapperInstanceTarget(x: Object): MethodHandle = ???
+
+    /** Recovers the unique single-method interface type for which this wrapper instance was created. */
+    @stub
+    def wrapperInstanceType(x: Object): Class[_] = ???
 }

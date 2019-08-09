@@ -1,6 +1,7 @@
 package java.nio.channels
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A pair of channels that implements a unidirectional pipe.
  * 
@@ -16,14 +17,25 @@ import java.lang.Object
  */
 abstract class Pipe extends Object {
 
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this() = ???
+
     /** Returns this pipe's sink channel. */
     def sink(): Pipe.SinkChannel
+
+    /** Returns this pipe's source channel. */
+    def source(): Pipe.SourceChannel
 }
 
 object Pipe {
     /** A channel representing the writable end of a Pipe. */
     @stub
     object SinkChannel extends Pipe.SinkChannel
+
+    /** A channel representing the readable end of a Pipe. */
+    @stub
+    object SourceChannel extends Pipe.SourceChannel
 
     /** Opens a pipe. */
     @stub

@@ -1,6 +1,7 @@
 package javax.imageio.metadata
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A class representing a node in a meta-data tree, which implements
  *  the 
@@ -32,6 +33,12 @@ class IIOMetadataNode extends Object with Element with NodeList {
     /** Constructs an empty IIOMetadataNode. */
     @stub
     def this() = ???
+
+    /** Constructs an IIOMetadataNode with a given node
+     *  name.
+     */
+    @stub
+    def this(nodeName: String) = ???
 
     /** Adds the node newChild to the end of the list of
      *  children of this node.
@@ -336,4 +343,8 @@ class IIOMetadataNode extends Object with Element with NodeList {
      */
     @stub
     def setUserData(key: String, data: Object, handler: UserDataHandler): Object = ???
+
+    /** Sets the value associated with this node. */
+    @stub
+    def setUserObject(userObject: Object): Unit = ???
 }

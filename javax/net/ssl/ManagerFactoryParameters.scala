@@ -1,5 +1,7 @@
 package javax.net.ssl
 
+import scala.scalanative.annotation.stub
+
 /** This class is the base interface for providing
  *  algorithm-specific information to a KeyManagerFactory or
  *  TrustManagerFactory.

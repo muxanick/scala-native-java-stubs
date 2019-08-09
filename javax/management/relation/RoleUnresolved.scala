@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{Object, String}
 import java.util.List
 import javax.management.ObjectName
+import scala.scalanative.annotation.stub
 
 /** Represents an unresolved role: a role not retrieved from a relation due
  *  to a problem. It provides the role name, value (if problem when trying to
@@ -13,6 +14,10 @@ import javax.management.ObjectName
  *  The serialVersionUID of this class is -48350262537070138L.
  */
 class RoleUnresolved extends Object with Serializable {
+
+    /** Constructor. */
+    @stub
+    def this(name: String, value: List[ObjectName], pbType: Int) = ???
 
     /** Clone this object. */
     @stub
@@ -41,4 +46,8 @@ class RoleUnresolved extends Object with Serializable {
     /** Sets role value. */
     @stub
     def setRoleValue(value: List[ObjectName]): Unit = ???
+
+    /** Return a string describing this object. */
+    @stub
+    def toString(): String = ???
 }

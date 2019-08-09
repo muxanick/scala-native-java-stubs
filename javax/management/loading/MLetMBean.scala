@@ -4,6 +4,7 @@ import java.io.InputStream
 import java.lang.{Object, String}
 import java.net.URL
 import java.util.{Enumeration, Set}
+import scala.scalanative.annotation.stub
 
 /** Exposes the remote management interface of the MLet
  *  MBean.
@@ -55,4 +56,10 @@ trait MLetMBean {
     /** Returns the search path of URLs for loading classes and resources. */
     @stub
     def getURLs(): Array[URL] = ???
+
+    /** Sets the directory used by the library loader for storing
+     *  native libraries before they are loaded into memory.
+     */
+    @stub
+    def setLibraryDirectory(libdir: String): Unit = ???
 }

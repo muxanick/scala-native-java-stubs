@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** Thrown by String methods to indicate that an index
  *  is either negative or greater than the size of the string.  For
  *  some methods such as the charAt method, this exception also is
@@ -18,4 +20,10 @@ class StringIndexOutOfBoundsException extends IndexOutOfBoundsException {
      */
     @stub
     def this(index: Int) = ???
+
+    /** Constructs a StringIndexOutOfBoundsException with
+     *  the specified detail message.
+     */
+    @stub
+    def this(s: String) = ???
 }

@@ -1,6 +1,7 @@
 package javax.sql.rowset
 
-import java.lang.Object
+import java.lang.{ClassLoader, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A factory API that enables applications to obtain a
  *  RowSetFactory implementation  that can be used to create different
@@ -21,6 +22,10 @@ import java.lang.Object
  *  
  */
 class RowSetProvider extends Object {
+
+    /** RowSetProvider constructor */
+    @stub
+    protected def this() = ???
 }
 
 object RowSetProvider {
@@ -29,4 +34,10 @@ object RowSetProvider {
      */
     @stub
     def newFactory(): RowSetFactory = ???
+
+    /** Creates  a new instance of a RowSetFactory from the
+     *  specified factory class name.
+     */
+    @stub
+    def newFactory(factoryClassName: String, cl: ClassLoader): RowSetFactory = ???
 }

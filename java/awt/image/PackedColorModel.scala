@@ -2,6 +2,7 @@ package java.awt.image
 
 import java.awt.color.ColorSpace
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The PackedColorModel class is an abstract
  *  ColorModel class that works with pixel values which represent
@@ -62,6 +63,13 @@ abstract class PackedColorModel extends ColorModel {
     @stub
     def this(space: ColorSpace, bits: Int, colorMaskArray: Array[Int], alphaMask: Int, isAlphaPremultiplied: Boolean, trans: Int, transferType: Int) = ???
 
+    /** Constructs a PackedColorModel from the specified
+     *  masks which indicate which bits in an int pixel
+     *  representation contain the alpha, red, green and blue color samples.
+     */
+    @stub
+    def this(space: ColorSpace, bits: Int, rmask: Int, gmask: Int, bmask: Int, amask: Int, isAlphaPremultiplied: Boolean, trans: Int, transferType: Int) = ???
+
     /** Creates a SampleModel with the specified width and
      *  height that has a data layout compatible with this
      *  ColorModel.
@@ -88,4 +96,9 @@ abstract class PackedColorModel extends ColorModel {
      *  contain the color and alpha samples.
      */
     def getMasks(): Array[Int]
+
+    /** Checks if the specified SampleModel is compatible
+     *  with this ColorModel.
+     */
+    def isCompatibleSampleModel(sm: SampleModel): Boolean
 }

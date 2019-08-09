@@ -1,6 +1,7 @@
 package javax.accessibility
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** The AccessibleAction interface should be supported by any object
  *  that can perform one or more actions.  This interface
@@ -24,6 +25,10 @@ trait AccessibleAction {
      */
     @stub
     def getAccessibleActionCount(): Int = ???
+
+    /** Returns a description of the specified action of the object. */
+    @stub
+    def getAccessibleActionDescription(i: Int): String = ???
 }
 
 object AccessibleAction {
@@ -44,4 +49,10 @@ object AccessibleAction {
      */
     @stub
     val TOGGLE_EXPAND: String = ???
+
+    /** An action which causes a popup to become visible if it is hidden and
+     *  hidden if it is visible.
+     */
+    @stub
+    val TOGGLE_POPUP: String = ???
 }

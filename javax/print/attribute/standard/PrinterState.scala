@@ -2,6 +2,7 @@ package javax.print.attribute.standard
 
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, EnumSyntax, PrintServiceAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class PrinterState is a printing attribute class, an enumeration, that
  *  identifies the current state of a printer. Class PrinterState defines
@@ -20,6 +21,12 @@ import javax.print.attribute.{Attribute, EnumSyntax, PrintServiceAttribute}
  */
 final class PrinterState extends EnumSyntax with PrintServiceAttribute {
 
+    /** Construct a new printer state enumeration value with the given integer
+     *  value.
+     */
+    @stub
+    protected def this(value: Int) = ???
+
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.
      */
@@ -35,6 +42,10 @@ final class PrinterState extends EnumSyntax with PrintServiceAttribute {
      */
     @stub
     def getName(): String = ???
+
+    /** Returns the string table for class PrinterState. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object PrinterState {
@@ -51,4 +62,8 @@ object PrinterState {
     /** Indicates that no jobs can be processed and intervention is required. */
     @stub
     val STOPPED: PrinterState = ???
+
+    /** The printer state is unknown. */
+    @stub
+    val UNKNOWN: PrinterState = ???
 }

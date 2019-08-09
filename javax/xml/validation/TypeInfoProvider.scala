@@ -1,7 +1,7 @@
 package javax.xml.validation
 
 import java.lang.Object
-import org.w3c.dom.TypeInfo
+import scala.scalanative.annotation.stub
 
 /** This class provides access to the type information determined
  *  by ValidatorHandler.
@@ -18,6 +18,10 @@ import org.w3c.dom.TypeInfo
  */
 abstract class TypeInfoProvider extends Object {
 
+    /** Constructor for the derived class. */
+    @stub
+    protected def this() = ???
+
     /** Returns the immutable TypeInfo object for the specified
      *  attribute of the current element.
      */
@@ -32,4 +36,7 @@ abstract class TypeInfoProvider extends Object {
      *  to be ID.
      */
     def isIdAttribute(index: Int): Boolean
+
+    /** Returns false if the attribute was added by the validator. */
+    def isSpecified(index: Int): Boolean
 }

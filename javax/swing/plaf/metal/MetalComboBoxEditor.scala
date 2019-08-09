@@ -1,7 +1,9 @@
 package javax.swing.plaf.metal
 
+import java.awt.Insets
 import java.lang.Object
 import javax.swing.plaf.basic.BasicComboBoxEditor
+import scala.scalanative.annotation.stub
 
 /** The default editor for Metal editable combo boxes
  *  
@@ -15,4 +17,18 @@ import javax.swing.plaf.basic.BasicComboBoxEditor
  *  Please see XMLEncoder.
  */
 class MetalComboBoxEditor extends BasicComboBoxEditor {
+
+    /**  */
+    @stub
+    def this() = ???
+}
+
+object MetalComboBoxEditor {
+    /** A subclass of BasicComboBoxEditor that implements UIResource. */
+    @stub
+    object UIResource extends MetalComboBoxEditor.UIResource
+
+    /** The default editor border Insets. */
+    @stub
+    protected val editorBorderInsets: Insets = ???
 }

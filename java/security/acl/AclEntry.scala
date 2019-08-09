@@ -1,8 +1,9 @@
 package java.security.acl
 
-import java.lang.{Cloneable, Object}
+import java.lang.{Cloneable, Object, String}
 import java.security.Principal
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** This is the interface used for representing one entry in an Access
  *  Control List (ACL).
@@ -68,4 +69,8 @@ trait AclEntry extends Cloneable {
      */
     @stub
     def setPrincipal(user: Principal): Boolean = ???
+
+    /** Returns a string representation of the contents of this ACL entry. */
+    @stub
+    def toString(): String = ???
 }

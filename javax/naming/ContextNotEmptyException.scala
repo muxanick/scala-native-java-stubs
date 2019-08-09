@@ -1,6 +1,7 @@
 package javax.naming
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown when attempting to destroy a context that
  *  is not empty.
@@ -21,4 +22,10 @@ class ContextNotEmptyException extends NamingException {
      */
     @stub
     def this() = ???
+
+    /** Constructs a new instance of ContextNotEmptyException using an
+     *  explanation.
+     */
+    @stub
+    def this(explanation: String) = ???
 }

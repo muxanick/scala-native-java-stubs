@@ -1,6 +1,7 @@
 package javax.naming
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This is the superclass of all exceptions thrown by
  *  operations in the Context and DirContext interfaces.
@@ -33,6 +34,10 @@ class NamingException extends Exception {
     @stub
     def this() = ???
 
+    /** Constructs a new NamingException with an explanation. */
+    @stub
+    def this(explanation: String) = ???
+
     /** Contains the remaining name that has not been resolved yet. */
     @stub
     protected val remainingName: Name = ???
@@ -46,6 +51,12 @@ class NamingException extends Exception {
      */
     @stub
     protected val resolvedObj: Object = ???
+
+    /** Contains the original exception that caused this NamingException to
+     *  be thrown.
+     */
+    @stub
+    protected val rootException: Throwable = ???
 
     /** Add name as the last component in remaining name. */
     @stub
@@ -106,4 +117,8 @@ class NamingException extends Exception {
     /** Generates the string representation of this exception. */
     @stub
     def toString(): String = ???
+
+    /** Generates the string representation in more detail. */
+    @stub
+    def toString(detail: Boolean): String = ???
 }

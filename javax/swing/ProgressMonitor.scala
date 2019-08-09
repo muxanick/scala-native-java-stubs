@@ -1,7 +1,9 @@
 package javax.swing
 
+import java.awt.Component
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** A class to monitor the progress of some operation. If it looks
  *  like the operation will take a while, a progress dialog will be popped up.
@@ -25,6 +27,22 @@ import javax.accessibility.{Accessible, AccessibleContext}
  *  a section in The Java Tutorial.
  */
 class ProgressMonitor extends Object with Accessible {
+
+    /** Constructs a graphic object that shows progress, typically by filling
+     *  in a rectangular bar as the process nears completion.
+     */
+    @stub
+    def this(parentComponent: Component, message: Object, note: String, min: Int, max: Int) = ???
+
+    /** AccessibleProgressMonitor implements accessibility
+     *  support for the ProgressMonitor class.
+     */
+    @stub
+    protected object AccessibleProgressMonitor extends ProgressMonitor.AccessibleProgressMonitor
+
+    /** The AccessibleContext for the ProgressMonitor */
+    @stub
+    protected val accessibleContext: AccessibleContext = ???
 
     /** Indicate that the operation is complete. */
     @stub
@@ -87,4 +105,8 @@ class ProgressMonitor extends Object with Accessible {
      */
     @stub
     def setNote(note: String): Unit = ???
+
+    /** Indicate the progress of the operation being monitored. */
+    @stub
+    def setProgress(nv: Int): Unit = ???
 }

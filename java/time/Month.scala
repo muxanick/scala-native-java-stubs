@@ -4,6 +4,7 @@ import java.lang.{Enum, Object, String}
 import java.time.format.TextStyle
 import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalField, TemporalQuery, ValueRange}
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** A month-of-year, such as 'July'.
  *  
@@ -59,6 +60,9 @@ object Month {
 
     /** The singleton instance for the month of October with 31 days. */
     final val OCTOBER = new Month(OCTOBER, 10)
+
+    /** The singleton instance for the month of September with 30 days. */
+    final val SEPTEMBER = new Month(SEPTEMBER, 11)
 
     /** Adjusts the specified temporal object to have this month-of-year. */
     @stub
@@ -131,4 +135,10 @@ object Month {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): Month = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[Month] = ???
 }

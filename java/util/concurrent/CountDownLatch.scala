@@ -1,6 +1,7 @@
 package java.util.concurrent
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A synchronization aid that allows one or more threads to wait until
  *  a set of operations being performed in other threads completes.
@@ -116,6 +117,10 @@ import java.lang.Object
  */
 class CountDownLatch extends Object {
 
+    /** Constructs a CountDownLatch initialized with the given count. */
+    @stub
+    def this(count: Int) = ???
+
     /** Causes the current thread to wait until the latch has counted down to
      *  zero, unless the thread is interrupted.
      */
@@ -138,4 +143,8 @@ class CountDownLatch extends Object {
     /** Returns the current count. */
     @stub
     def getCount(): Long = ???
+
+    /** Returns a string identifying this latch, as well as its state. */
+    @stub
+    def toString(): String = ???
 }

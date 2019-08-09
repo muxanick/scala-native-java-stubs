@@ -2,11 +2,16 @@ package javax.xml.parsers
 
 import java.lang.{ClassLoader, Object, String}
 import javax.xml.validation.Schema
+import scala.scalanative.annotation.stub
 
 /** Defines a factory API that enables applications to configure and
  *  obtain a SAX based parser to parse XML documents.
  */
 abstract class SAXParserFactory extends Object {
+
+    /** Protected constructor to force use of newInstance(). */
+    @stub
+    protected def this() = ???
 
     /** Returns the particular property requested for in the underlying
      *  implementation of org.xml.sax.XMLReader.
@@ -55,6 +60,9 @@ abstract class SAXParserFactory extends Object {
      *  validate documents as they are parsed.
      */
     def setValidating(validating: Boolean): Unit
+
+    /** Set state of XInclude processing. */
+    def setXIncludeAware(state: Boolean): Unit
 }
 
 object SAXParserFactory {

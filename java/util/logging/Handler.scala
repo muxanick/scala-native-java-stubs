@@ -1,6 +1,7 @@
 package java.util.logging
 
 import java.lang.{Exception, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A Handler object takes log messages from a Logger and
  *  exports them.  It might for example, write them to a console
@@ -16,6 +17,10 @@ import java.lang.{Exception, Object, String}
  *  Handler class.
  */
 abstract class Handler extends Object {
+
+    /** Default constructor. */
+    @stub
+    protected def this() = ???
 
     /** Close the Handler and free all associated resources. */
     def close(): Unit
@@ -62,4 +67,9 @@ abstract class Handler extends Object {
 
     /** Set a Formatter. */
     def setFormatter(newFormatter: Formatter): Unit
+
+    /** Set the log level specifying which message levels will be
+     *  logged by this Handler.
+     */
+    def setLevel(newLevel: Level): Unit
 }

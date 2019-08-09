@@ -4,6 +4,7 @@ import java.awt.Component
 import java.awt.event.MouseEvent
 import java.lang.Object
 import javax.swing.event.MouseInputListener
+import scala.scalanative.annotation.stub
 
 /** MouseInputHandler handles passing all mouse events,
  *  including mouse motion events, until the mouse is released to
@@ -12,9 +13,17 @@ import javax.swing.event.MouseInputListener
  */
 class BasicTreeUI.MouseInputHandler extends Object with MouseInputListener {
 
+    /**  */
+    @stub
+    def MouseInputHandler(source: Component, destination: Component, event: MouseEvent) = ???
+
     /** Destination that receives all events. */
     @stub
     protected val destination: Component = ???
+
+    /** Source that events are coming from. */
+    @stub
+    protected val source: Component = ???
 
     /** Invoked when the mouse button has been clicked (pressed
      *  and released) on a component.
@@ -49,4 +58,8 @@ class BasicTreeUI.MouseInputHandler extends Object with MouseInputListener {
     /** Invoked when a mouse button has been released on a component. */
     @stub
     def mouseReleased(e: MouseEvent): Unit = ???
+
+    /**  */
+    @stub
+    protected def removeFromSource(): Unit = ???
 }

@@ -3,6 +3,7 @@ package java.security.cert
 import java.io.Serializable
 import java.lang.{Object, String}
 import java.security.{Provider, PublicKey}
+import scala.scalanative.annotation.stub
 
 /** Abstract class for managing a variety of identity certificates.
  *  An identity certificate is a binding of a principal to a public key which
@@ -21,6 +22,10 @@ import java.security.{Provider, PublicKey}
  *  different ways.
  */
 abstract class Certificate extends Object with Serializable {
+
+    /** Creates a certificate of the specified type. */
+    @stub
+    protected def this(type: String) = ???
 
     /** Compares this certificate for equality with the specified
      *  object.
@@ -58,4 +63,13 @@ abstract class Certificate extends Object with Serializable {
      *  private key that corresponds to the specified public key.
      */
     def verify(key: PublicKey, sigProvider: String): Unit
+
+    /** Replace the Certificate to be serialized. */
+    protected def writeReplace(): Object
+}
+
+object Certificate {
+    /** Alternate Certificate class for serialization. */
+    @stub
+    protected object CertificateRep extends Certificate.CertificateRep
 }

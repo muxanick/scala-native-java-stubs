@@ -3,6 +3,7 @@ package javax.naming.directory
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
 import javax.naming.NamingEnumeration
+import scala.scalanative.annotation.stub
 
 /** This interface represents a collection of attributes.
  * 
@@ -67,4 +68,8 @@ trait Attributes extends Cloneable with Serializable {
      */
     @stub
     def remove(attrID: String): Attribute = ???
+
+    /** Retrieves the number of attributes in the attribute set. */
+    @stub
+    def size(): Int = ???
 }

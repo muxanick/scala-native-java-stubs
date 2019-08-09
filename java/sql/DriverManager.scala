@@ -3,6 +3,7 @@ package java.sql
 import java.io.{PrintStream, PrintWriter}
 import java.lang.{Object, String}
 import java.util.{Enumeration, Properties}
+import scala.scalanative.annotation.stub
 
 /** The basic service for managing a set of JDBC drivers.
  *  NOTE: The DataSource interface, new in the
@@ -119,4 +120,10 @@ object DriverManager {
      */
     @stub
     def setLogStream(out: PrintStream): Unit = ???
+
+    /** Sets the logging/tracing PrintWriter object
+     *  that is used by the DriverManager and all drivers.
+     */
+    @stub
+    def setLogWriter(out: PrintWriter): Unit = ???
 }

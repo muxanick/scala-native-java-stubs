@@ -6,10 +6,11 @@ import java.awt.event.AWTEventListener
 import java.awt.font.TextAttribute
 import java.awt.im.InputMethodHighlight
 import java.awt.image.{ColorModel, ImageObserver, ImageProducer}
-import java.beans.PropertyChangeListener
+import java.beans.{PropertyChangeListener, PropertyChangeSupport}
 import java.lang.{Class, Object, String}
 import java.net.URL
 import java.util.{Map, Properties}
+import scala.scalanative.annotation.stub
 
 /** This class is the abstract superclass of all actual
  *  implementations of the Abstract Window Toolkit. Subclasses of
@@ -61,7 +62,14 @@ import java.util.{Map, Properties}
 abstract class Toolkit extends Object {
 
     /**  */
+    @stub
+    def this() = ???
+
+    /**  */
     protected val desktopProperties: Map[String, Object]
+
+    /**  */
+    protected val desktopPropsSupport: PropertyChangeSupport
 
     /** Adds an AWTEventListener to receive all AWTEvents dispatched
      *  system-wide that conform to the given eventMask.
@@ -411,6 +419,9 @@ abstract class Toolkit extends Object {
 
     /** Sets the state of the given locking key on the keyboard. */
     def setLockingKeyState(keyCode: Int, on: Boolean): Unit
+
+    /** Synchronizes this toolkit's graphics state. */
+    def sync(): Unit
 }
 
 object Toolkit {

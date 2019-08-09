@@ -2,6 +2,7 @@ package java.lang.management
 
 import java.lang.{Object, String}
 import java.security.{BasicPermission, Permission}
+import scala.scalanative.annotation.stub
 
 /** The permission which the SecurityManager will check when code
  *  that is running with a SecurityManager calls methods defined
@@ -56,4 +57,8 @@ final class ManagementPermission extends BasicPermission {
     /** Constructs a ManagementPermission with the specified name. */
     @stub
     def this(name: String) = ???
+
+    /** Constructs a new ManagementPermission object. */
+    @stub
+    def this(name: String, actions: String) = ???
 }

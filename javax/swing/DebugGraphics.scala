@@ -5,6 +5,7 @@ import java.awt.image.ImageObserver
 import java.io.PrintStream
 import java.lang.{Object, String}
 import java.text.AttributedCharacterIterator
+import scala.scalanative.annotation.stub
 
 /** Graphics subclass supporting graphics debugging. Overrides most methods
  *  from Graphics.  DebugGraphics objects are rarely created by hand.  They
@@ -29,6 +30,12 @@ class DebugGraphics extends Graphics {
      */
     @stub
     def this(graphics: Graphics) = ???
+
+    /** Constructs a debug graphics context from an existing graphics
+     *  context that slows down drawing for the specified component.
+     */
+    @stub
+    def this(graphics: Graphics, component: JComponent) = ???
 
     /** Overrides Graphics.clearRect. */
     @stub
@@ -211,6 +218,10 @@ class DebugGraphics extends Graphics {
     /** Overrides Graphics.setXORMode. */
     @stub
     def setXORMode(aColor: Color): Unit = ???
+
+    /** Overrides Graphics.translate. */
+    @stub
+    def translate(x: Int, y: Int): Unit = ???
 }
 
 object DebugGraphics {
@@ -225,6 +236,10 @@ object DebugGraphics {
     /** Log graphics operations. */
     @stub
     val LOG_OPTION: Int = ???
+
+    /** Don't debug graphics operations. */
+    @stub
+    val NONE_OPTION: Int = ???
 
     /** Returns the Color used to flash drawing operations. */
     @stub

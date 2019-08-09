@@ -5,9 +5,14 @@ import java.lang.Object
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, DesktopIconUI}
 import javax.swing.plaf.basic.BasicDesktopIconUI
+import scala.scalanative.annotation.stub
 
 /** Metal desktop icon. */
 class MetalDesktopIconUI extends BasicDesktopIconUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Desktop icons can not be resized. */
     @stub
@@ -40,6 +45,10 @@ class MetalDesktopIconUI extends BasicDesktopIconUI {
     /**  */
     @stub
     protected def uninstallComponents(): Unit = ???
+
+    /**  */
+    @stub
+    protected def uninstallListeners(): Unit = ???
 }
 
 object MetalDesktopIconUI {

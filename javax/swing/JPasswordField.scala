@@ -4,6 +4,7 @@ import java.awt.{Component, Container}
 import java.lang.{Object, String}
 import javax.accessibility.AccessibleContext
 import javax.swing.text.{Document, JTextComponent}
+import scala.scalanative.annotation.stub
 
 /** JPasswordField is a lightweight component that allows
  *  the editing of a single line of text where the view indicates
@@ -64,6 +65,18 @@ class JPasswordField extends JTextField {
     @stub
     def this(text: String) = ???
 
+    /** Constructs a new JPasswordField initialized with
+     *  the specified text and columns.
+     */
+    @stub
+    def this(text: String, columns: Int) = ???
+
+    /** This class implements accessibility support for the
+     *  JPasswordField class.
+     */
+    @stub
+    protected object AccessibleJPasswordField extends JPasswordField.AccessibleJPasswordField
+
     /** Invokes provideErrorFeedback on the current
      *  look and feel, which typically initiates an error beep.
      */
@@ -123,4 +136,8 @@ class JPasswordField extends JTextField {
     /** Sets the echo character for this JPasswordField. */
     @stub
     def setEchoChar(c: Char): Unit = ???
+
+    /** Reloads the pluggable UI. */
+    @stub
+    def updateUI(): Unit = ???
 }

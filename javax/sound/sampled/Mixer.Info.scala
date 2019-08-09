@@ -1,6 +1,7 @@
 package javax.sound.sampled
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The Mixer.Info class represents information about an audio mixer,
  *  including the product's name, version, and vendor, along with a textual
@@ -9,6 +10,12 @@ import java.lang.{Object, String}
  *  method of the Mixer interface.
  */
 object Mixer.Info extends Object {
+
+    /** Constructs a mixer's info object, passing it the given
+     *  textual information.
+     */
+    @stub
+    protected def Info(name: String, vendor: String, description: String, version: String) = ???
 
     /** Indicates whether two info objects are equal, returning true if
      *  they are identical.
@@ -35,4 +42,8 @@ object Mixer.Info extends Object {
     /** Finalizes the hashcode method. */
     @stub
     def hashCode(): Int = ???
+
+    /** Provides a string representation of the mixer info. */
+    @stub
+    def toString(): String = ???
 }

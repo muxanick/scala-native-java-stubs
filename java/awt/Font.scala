@@ -6,6 +6,7 @@ import java.io.{File, InputStream, Serializable}
 import java.lang.{Object, String}
 import java.text.{AttributedCharacterIterator.Attribute, CharacterIterator}
 import java.util.{Locale, Map}
+import scala.scalanative.annotation.stub
 
 /** The Font class represents fonts, which are used to
  *  render text in a visible way.
@@ -172,6 +173,12 @@ class Font extends Object with Serializable {
     /** Creates a new Font with the specified attributes. */
     @stub
     def this(attributes: Map[_ <: AttributedCharacterIterator.Attribute, _]) = ???
+
+    /** Creates a new Font from the specified name, style and
+     *  point size.
+     */
+    @stub
+    def this(name: String, style: Int, size: Int) = ???
 
     /** The logical name of this Font, as passed to the
      *  constructor.
@@ -483,6 +490,12 @@ class Font extends Object with Serializable {
      */
     @stub
     def layoutGlyphVector(frc: FontRenderContext, text: Array[Char], start: Int, limit: Int, flags: Int): GlyphVector = ???
+
+    /** Converts this Font object to a String
+     *  representation.
+     */
+    @stub
+    def toString(): String = ???
 }
 
 object Font {
@@ -571,6 +584,10 @@ object Font {
     /** Identify a font resource of type TRUETYPE. */
     @stub
     val TRUETYPE_FONT: Int = ???
+
+    /** Identify a font resource of type TYPE1. */
+    @stub
+    val TYPE1_FONT: Int = ???
 
     /** Returns a new Font using the specified font type
      *  and the specified font file.

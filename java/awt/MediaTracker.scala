@@ -2,6 +2,7 @@ package java.awt
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The MediaTracker class is a utility class to track
  *  the status of a number of media objects. Media objects could
@@ -137,6 +138,10 @@ import java.lang.Object
  */
 class MediaTracker extends Object with Serializable {
 
+    /** Creates a media tracker to track images for a given component. */
+    @stub
+    def this(comp: Component) = ???
+
     /** Adds an image to the list of images being tracked by this media
      *  tracker.
      */
@@ -235,6 +240,12 @@ class MediaTracker extends Object with Serializable {
      */
     @stub
     def waitForID(id: Int): Unit = ???
+
+    /** Starts loading all images tracked by this media tracker with the
+     *  specified identifier.
+     */
+    @stub
+    def waitForID(id: Int, ms: Long): Boolean = ???
 }
 
 object MediaTracker {
@@ -253,4 +264,8 @@ object MediaTracker {
      */
     @stub
     val ERRORED: Int = ???
+
+    /** Flag indicating that media is currently being loaded. */
+    @stub
+    val LOADING: Int = ???
 }

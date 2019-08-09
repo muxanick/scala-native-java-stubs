@@ -1,6 +1,7 @@
 package java.util.logging
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A Formatter provides support for formatting LogRecords.
  *  
@@ -14,6 +15,10 @@ import java.lang.{Object, String}
  */
 abstract class Formatter extends Object {
 
+    /** Construct a new formatter. */
+    @stub
+    protected def this() = ???
+
     /** Format the given log record and return the formatted string. */
     def format(record: LogRecord): String
 
@@ -22,4 +27,7 @@ abstract class Formatter extends Object {
 
     /** Return the header string for a set of formatted records. */
     def getHead(h: Handler): String
+
+    /** Return the tail string for a set of formatted records. */
+    def getTail(h: Handler): String
 }

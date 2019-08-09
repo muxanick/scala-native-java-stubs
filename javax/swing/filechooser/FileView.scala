@@ -1,8 +1,9 @@
 package javax.swing.filechooser
 
 import java.io.File
-import java.lang.{Object, String}
+import java.lang.{Boolean, Object, String}
 import javax.swing.Icon
+import scala.scalanative.annotation.stub
 
 /** FileView defines an abstract class that can be implemented
  *  to provide the filechooser with UI information for a File.
@@ -36,6 +37,10 @@ import javax.swing.Icon
  */
 abstract class FileView extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** A human readable description of the file. */
     def getDescription(f: File): String
 
@@ -47,4 +52,7 @@ abstract class FileView extends Object {
 
     /** A human readable description of the type of the file. */
     def getTypeDescription(f: File): String
+
+    /** Whether the directory is traversable or not. */
+    def isTraversable(f: File): Boolean
 }

@@ -3,6 +3,7 @@ package java.awt
 import java.io.File
 import java.lang.Object
 import java.net.URI
+import scala.scalanative.annotation.stub
 
 /** The Desktop class allows a Java application to launch
  *  associated applications registered on the native desktop to handle
@@ -66,9 +67,19 @@ class Desktop extends Object {
     /** Launches the associated application to open the file. */
     @stub
     def open(file: File): Unit = ???
+
+    /** Prints a file with the native desktop printing facility, using
+     *  the associated application's print command.
+     */
+    @stub
+    def print(file: File): Unit = ???
 }
 
 object Desktop {
+    /** Represents an action type. */
+    @stub
+    object Action extends Desktop.Action
+
     /** Returns the Desktop instance of the current
      *  browser context.
      */

@@ -5,6 +5,7 @@ import java.io.{InputStream, ObjectInputStream, ObjectOutputStream, Serializable
 import java.lang.{Class, Object, String}
 import java.net.URL
 import java.util.{ArrayList, Collection, HashMap, Iterator, Locale}
+import scala.scalanative.annotation.stub
 
 /** This helper class provides a utility implementation of the
  *  java.beans.beancontext.BeanContext interface.
@@ -32,6 +33,10 @@ class BeanContextSupport extends BeanContextChildSupport with BeanContext with S
     @stub
     def this(peer: BeanContext, lcle: Locale, dtime: Boolean) = ???
 
+    /** Construct a BeanContextSupport instance */
+    @stub
+    def this(peer: BeanContext, lcle: Locale, dTime: Boolean, visible: Boolean) = ???
+
     /**  */
     @stub
     protected object BCSChild extends BeanContextSupport.BCSChild
@@ -57,6 +62,12 @@ class BeanContextSupport extends BeanContextChildSupport with BeanContext with S
     /** The current locale of this BeanContext. */
     @stub
     protected val locale: Locale = ???
+
+    /** A boolean indicating if this
+     *  instance may now render a GUI.
+     */
+    @stub
+    protected val okToUseGui: Boolean = ???
 
     /** Adds/nests a child within this BeanContext. */
     @stub
@@ -331,9 +342,21 @@ class BeanContextSupport extends BeanContextChildSupport with BeanContext with S
     /** subclasses may envelope to monitor veto child property changes. */
     @stub
     def vetoableChange(pce: PropertyChangeEvent): Unit = ???
+
+    /** Used to serialize all children of
+     *  this BeanContext.
+     */
+    @stub
+    def writeChildren(oos: ObjectOutputStream): Unit = ???
 }
 
 object BeanContextSupport {
+    /** protected final subclass that encapsulates an iterator but implements
+     *  a noop remove() method.
+     */
+    @stub
+    protected object BCSIterator extends BeanContextSupport.BCSIterator
+
     /** Tests to see if two class objects,
      *  or their names are equal.
      */

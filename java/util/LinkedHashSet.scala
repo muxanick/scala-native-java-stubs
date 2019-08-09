@@ -2,6 +2,7 @@ package java.util
 
 import java.io.Serializable
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** Hash table and linked list implementation of the Set interface,
  *  with predictable iteration order.  This implementation differs from
@@ -99,4 +100,16 @@ class LinkedHashSet[E] extends HashSet[E] with Set[E] with Cloneable with Serial
      */
     @stub
     def this(initialCapacity: Int) = ???
+
+    /** Constructs a new, empty linked hash set with the specified initial
+     *  capacity and load factor.
+     */
+    @stub
+    def this(initialCapacity: Int, loadFactor: Float) = ???
+
+    /** Creates a late-binding
+     *  and fail-fast Spliterator over the elements in this set.
+     */
+    @stub
+    def spliterator(): Spliterator[E] = ???
 }

@@ -2,6 +2,7 @@ package javax.xml.ws.soap
 
 import java.lang.{Object, String}
 import javax.xml.ws.WebServiceFeature
+import scala.scalanative.annotation.stub
 
 /** This feature represents the use of MTOM with a
  *  web service.
@@ -40,9 +41,23 @@ final class MTOMFeature extends WebServiceFeature {
     @stub
     def this(enabled: Boolean, threshold: Int) = ???
 
+    /** Creates an MTOMFeature. */
+    @stub
+    def this(threshold: Int) = ???
+
+    /** Property for MTOM threshold value. */
+    @stub
+    protected val threshold: Int = ???
+
     /** Get the unique identifier for this WebServiceFeature. */
     @stub
     def getID(): String = ???
+
+    /** Gets the threshold value used to determine when binary data
+     *  should be sent as an attachment.
+     */
+    @stub
+    def getThreshold(): Int = ???
 }
 
 object MTOMFeature {

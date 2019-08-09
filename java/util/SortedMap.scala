@@ -1,5 +1,7 @@
 package java.util
 
+import scala.scalanative.annotation.stub
+
 /** A Map that further provides a total ordering on its keys.
  *  The map is ordered according to the natural
  *  ordering of its keys, or by a Comparator typically
@@ -111,4 +113,8 @@ trait SortedMap[K, V] extends Map[K, V] {
      */
     @stub
     def tailMap(fromKey: K): SortedMap[K, V] = ???
+
+    /** Returns a Collection view of the values contained in this map. */
+    @stub
+    def values(): Collection[V] = ???
 }

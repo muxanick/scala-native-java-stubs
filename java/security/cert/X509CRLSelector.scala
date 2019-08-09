@@ -4,6 +4,7 @@ import java.lang.{Object, String}
 import java.math.BigInteger
 import java.util.{Collection, Date}
 import javax.security.auth.x500.X500Principal
+import scala.scalanative.annotation.stub
 
 /** A CRLSelector that selects X509CRLs that
  *  match all specified criteria. This class is particularly useful when
@@ -33,6 +34,10 @@ import javax.security.auth.x500.X500Principal
  *  separate objects need not synchronize.
  */
 class X509CRLSelector extends Object with CRLSelector {
+
+    /** Creates an X509CRLSelector. */
+    @stub
+    def this() = ???
 
     /** Adds a name to the issuerNames criterion. */
     @stub
@@ -107,4 +112,8 @@ class X509CRLSelector extends Object with CRLSelector {
     /** Sets the minCRLNumber criterion. */
     @stub
     def setMinCRLNumber(minCRL: BigInteger): Unit = ???
+
+    /** Returns a printable representation of the X509CRLSelector. */
+    @stub
+    def toString(): String = ???
 }

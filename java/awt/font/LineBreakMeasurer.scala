@@ -2,6 +2,7 @@ package java.awt.font
 
 import java.lang.Object
 import java.text.{AttributedCharacterIterator, BreakIterator}
+import scala.scalanative.annotation.stub
 
 /** The LineBreakMeasurer class allows styled text to be
  *  broken into lines (or segments) that fit within a particular visual
@@ -206,6 +207,10 @@ final class LineBreakMeasurer extends Object {
     @stub
     def this(text: AttributedCharacterIterator, breakIter: BreakIterator, frc: FontRenderContext) = ???
 
+    /** Constructs a LineBreakMeasurer for the specified text. */
+    @stub
+    def this(text: AttributedCharacterIterator, frc: FontRenderContext) = ???
+
     /** Updates this LineBreakMeasurer after a single
      *  character is deleted from the text, and sets the current
      *  position to the beginning of the paragraph.
@@ -239,4 +244,8 @@ final class LineBreakMeasurer extends Object {
     /** Returns the position at the end of the next layout. */
     @stub
     def nextOffset(wrappingWidth: Float, offsetLimit: Int, requireNextWord: Boolean): Int = ???
+
+    /** Sets the current position of this LineBreakMeasurer. */
+    @stub
+    def setPosition(newPosition: Int): Unit = ???
 }

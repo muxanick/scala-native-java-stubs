@@ -2,6 +2,7 @@ package java.awt
 
 import java.lang.Object
 import java.net.URL
+import scala.scalanative.annotation.stub
 
 /** The splash screen can be displayed at application startup, before the
  *  Java Virtual Machine (JVM) starts. The splash screen is displayed as an
@@ -94,6 +95,10 @@ final class SplashScreen extends Object {
     /** Changes the splash screen image. */
     @stub
     def setImageURL(imageURL: URL): Unit = ???
+
+    /** Updates the splash window with current contents of the overlay image. */
+    @stub
+    def update(): Unit = ???
 }
 
 object SplashScreen {

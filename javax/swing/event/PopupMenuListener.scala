@@ -1,6 +1,7 @@
 package javax.swing.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** A popup menu listener */
 trait PopupMenuListener extends EventListener {
@@ -14,4 +15,8 @@ trait PopupMenuListener extends EventListener {
      */
     @stub
     def popupMenuWillBecomeInvisible(e: PopupMenuEvent): Unit = ???
+
+    /** This method is called before the popup menu becomes visible */
+    @stub
+    def popupMenuWillBecomeVisible(e: PopupMenuEvent): Unit = ???
 }

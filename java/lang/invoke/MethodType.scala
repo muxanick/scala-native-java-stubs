@@ -3,6 +3,7 @@ package java.lang.invoke
 import java.io.Serializable
 import java.lang.{Class, ClassLoader, Object, String}
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** A method type represents the arguments and return type accepted and
  *  returned by a method handle, or the arguments and return type passed
@@ -137,6 +138,10 @@ final class MethodType extends Object with Serializable {
     /** Converts all wrapper types to their corresponding primitive types. */
     @stub
     def unwrap(): MethodType = ???
+
+    /** Converts all primitive types to their corresponding wrapper types. */
+    @stub
+    def wrap(): MethodType = ???
 }
 
 object MethodType {

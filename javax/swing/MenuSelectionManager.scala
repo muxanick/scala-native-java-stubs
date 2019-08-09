@@ -3,16 +3,25 @@ package javax.swing
 import java.awt.{Component, Point}
 import java.awt.event.{KeyEvent, MouseEvent}
 import java.lang.Object
-import javax.swing.event.{ChangeEvent, ChangeListener}
+import javax.swing.event.{ChangeEvent, ChangeListener, EventListenerList}
+import scala.scalanative.annotation.stub
 
 /** A MenuSelectionManager owns the selection in menu hierarchy. */
 class MenuSelectionManager extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Only one ChangeEvent is needed per button model instance since the
      *  event's only state is the source property.
      */
     @stub
     protected val changeEvent: ChangeEvent = ???
+
+    /**  */
+    @stub
+    protected val listenerList: EventListenerList = ???
 
     /** Adds a ChangeListener to the button. */
     @stub
@@ -63,6 +72,10 @@ class MenuSelectionManager extends Object {
     /** Removes a ChangeListener from the button. */
     @stub
     def removeChangeListener(l: ChangeListener): Unit = ???
+
+    /** Changes the selection in the menu hierarchy. */
+    @stub
+    def setSelectedPath(path: Array[MenuElement]): Unit = ???
 }
 
 object MenuSelectionManager {

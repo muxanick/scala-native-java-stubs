@@ -1,6 +1,7 @@
 package java.nio.file.attribute
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Defines the permissions for use with the permissions component of an ACL
  *  entry.
@@ -50,6 +51,9 @@ object AclEntryPermission {
     /** Permission to write the named attributes of a file. */
     final val WRITE_NAMED_ATTRS = new AclEntryPermission(WRITE_NAMED_ATTRS, 12)
 
+    /** Permission to change the owner. */
+    final val WRITE_OWNER = new AclEntryPermission(WRITE_OWNER, 13)
+
     /** Permission to add a new file to a directory (equal to WRITE_DATA) */
     @stub
     val ADD_FILE: AclEntryPermission = ???
@@ -58,7 +62,17 @@ object AclEntryPermission {
     @stub
     val ADD_SUBDIRECTORY: AclEntryPermission = ???
 
+    /** Permission to list the entries of a directory (equal to READ_DATA) */
+    @stub
+    val LIST_DIRECTORY: AclEntryPermission = ???
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): AclEntryPermission = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[AclEntryPermission] = ???
 }

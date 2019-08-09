@@ -2,6 +2,7 @@ package java.awt
 
 import java.awt.geom.AffineTransform
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This is the superclass for Paints which use a multiple color
  *  gradient to fill in their raster.  It provides storage for variables and
@@ -28,10 +29,17 @@ abstract class MultipleGradientPaint extends Object with Paint {
 
     /** Returns a copy of the transform applied to the gradient. */
     def getTransform(): AffineTransform
+
+    /** Returns the transparency mode for this Paint object. */
+    def getTransparency(): Int
 }
 
 object MultipleGradientPaint {
     /** The color space in which to perform the gradient interpolation. */
     @stub
     object ColorSpaceType extends MultipleGradientPaint.ColorSpaceType
+
+    /** The method to use when painting outside the gradient bounds. */
+    @stub
+    object CycleMethod extends MultipleGradientPaint.CycleMethod
 }

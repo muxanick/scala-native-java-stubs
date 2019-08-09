@@ -1,6 +1,7 @@
 package javax.xml.bind
 
-import org.xml.sax.ContentHandler
+import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Unmarshaller implemented as SAX ContentHandler.
  * 
@@ -30,4 +31,8 @@ import org.xml.sax.ContentHandler
  *  an object, s/he can still start a new round of unmarshalling.
  */
 trait UnmarshallerHandler extends ContentHandler {
+
+    /** Obtains the unmarshalled result. */
+    @stub
+    def getResult(): Object = ???
 }

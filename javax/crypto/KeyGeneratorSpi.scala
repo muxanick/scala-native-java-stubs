@@ -3,6 +3,7 @@ package javax.crypto
 import java.lang.Object
 import java.security.SecureRandom
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** This class defines the Service Provider Interface (SPI)
  *  for the KeyGenerator class.
@@ -11,6 +12,10 @@ import java.security.spec.AlgorithmParameterSpec
  *  of a key generator for a particular algorithm.
  */
 abstract class KeyGeneratorSpi extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Generates a secret key. */
     protected def engineGenerateKey(): SecretKey
@@ -24,4 +29,7 @@ abstract class KeyGeneratorSpi extends Object {
      *  source of randomness.
      */
     protected def engineInit(keysize: Int, random: SecureRandom): Unit
+
+    /** Initializes the key generator. */
+    protected def engineInit(random: SecureRandom): Unit
 }

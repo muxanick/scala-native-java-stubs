@@ -1,6 +1,7 @@
 package java.beans
 
 import java.lang.{Class, Object}
+import scala.scalanative.annotation.stub
 
 /** An Encoder is a class which can be used to create
  *  files or streams that encode the state of a collection of
@@ -12,6 +13,10 @@ import java.lang.{Class, Object}
  *  using some human readable form - like Java source code or XML.
  */
 class Encoder extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns a tentative value for oldInstance in
      *  the environment created by this stream.
@@ -48,4 +53,8 @@ class Encoder extends Object {
     /** Write the specified object to the output stream. */
     @stub
     protected def writeObject(o: Object): Unit = ???
+
+    /** Writes statement oldStm to the stream. */
+    @stub
+    def writeStatement(oldStm: Statement): Unit = ???
 }

@@ -2,6 +2,7 @@ package java.lang.management
 
 import java.lang.{Object, StackTraceElement, String, Thread.State}
 import javax.management.openmbean.CompositeData
+import scala.scalanative.annotation.stub
 
 /** Thread information. ThreadInfo contains the information
  *  about a thread including:
@@ -156,6 +157,10 @@ class ThreadInfo extends Object {
      */
     @stub
     def isSuspended(): Boolean = ???
+
+    /** Returns a string representation of this thread info. */
+    @stub
+    def toString(): String = ???
 }
 
 object ThreadInfo {

@@ -9,11 +9,16 @@ import javax.swing.{CellRendererPane, Icon, JComponent, JTree, JTree.DropLocatio
 import javax.swing.event.{CellEditorListener, TreeExpansionListener, TreeModelListener, TreeSelectionListener}
 import javax.swing.plaf.{ComponentUI, TreeUI}
 import javax.swing.tree.{AbstractLayoutCache, AbstractLayoutCache.NodeDimensions, TreeCellEditor, TreeCellRenderer, TreeModel, TreePath, TreeSelectionModel}
+import scala.scalanative.annotation.stub
 
 /** The basic L&F for a hierarchical data structure.
  *  
  */
 class BasicTreeUI extends TreeUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Listener responsible for getting cell editing events and updating
      *  the tree accordingly.
@@ -97,6 +102,10 @@ class BasicTreeUI extends TreeUI {
     /** For the first selected row expandedness will be toggled. */
     @stub
     object TreeToggleAction extends BasicTreeUI.TreeToggleAction
+
+    /** TreeTraverseAction is the action used for left/right keys. */
+    @stub
+    object TreeTraverseAction extends BasicTreeUI.TreeTraverseAction
 
     /** Editor for the tree. */
     @stub
@@ -215,6 +224,10 @@ class BasicTreeUI extends TreeUI {
     /** Object responsible for handling sizing and expanded issues. */
     @stub
     protected val treeState: AbstractLayoutCache = ???
+
+    /** Is the preferredSize valid? */
+    @stub
+    protected val validCachedPreferredSize: Boolean = ???
 
     /** Cancels the current editing session. */
     @stub
@@ -762,6 +775,12 @@ class BasicTreeUI extends TreeUI {
     /** Messaged from the tree we're in when the renderer has changed. */
     @stub
     protected def updateRenderer(): Unit = ???
+
+    /** Marks the cached size as being invalid, and messages the
+     *  tree with treeDidChange.
+     */
+    @stub
+    protected def updateSize(): Unit = ???
 }
 
 object BasicTreeUI {

@@ -2,6 +2,7 @@ package javax.print
 
 import java.lang.Object
 import javax.print.attribute.AttributeSet
+import scala.scalanative.annotation.stub
 
 /** Implementations of this class provide lookup services for
  *  print services (typically equivalent to printers) of a particular type.
@@ -35,6 +36,10 @@ import javax.print.attribute.AttributeSet
  *  installed and its checkPrintJobAccess() method denies access.
  */
 abstract class PrintServiceLookup extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Not called directly by applications. */
     def getDefaultPrintService(): PrintService
@@ -73,4 +78,10 @@ object PrintServiceLookup {
      */
     @stub
     def registerService(service: PrintService): Boolean = ???
+
+    /** Allows an application to explicitly register a class that
+     *  implements lookup services.
+     */
+    @stub
+    def registerServiceProvider(sp: PrintServiceLookup): Boolean = ???
 }

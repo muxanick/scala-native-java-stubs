@@ -2,6 +2,7 @@ package javax.swing.plaf.synth
 
 import java.awt.Graphics
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** SynthPainter is used for painting portions of
  *  JComponents. At a minimum each JComponent
@@ -33,6 +34,10 @@ import java.lang.Object
  *  IllegalArgumentException in response to invalid arguments.
  */
 abstract class SynthPainter extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Paints the background of an arrow button. */
     def paintArrowButtonBackground(context: SynthContext, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit
@@ -452,4 +457,7 @@ abstract class SynthPainter extends Object {
 
     /** Paints the background of the viewport. */
     def paintViewportBackground(context: SynthContext, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit
+
+    /** Paints the border of a viewport. */
+    def paintViewportBorder(context: SynthContext, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit
 }

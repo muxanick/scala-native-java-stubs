@@ -1,6 +1,7 @@
 package javax.swing
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** An exception that indicates the requested look & feel
  *  management classes are not present on the user's system.
@@ -15,4 +16,8 @@ import java.lang.{Exception, Object, Throwable}
  *  Please see XMLEncoder.
  */
 class UnsupportedLookAndFeelException extends Exception {
+
+    /** Constructs an UnsupportedLookAndFeelException object. */
+    @stub
+    def this(s: String) = ???
 }

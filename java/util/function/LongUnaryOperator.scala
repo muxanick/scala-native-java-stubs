@@ -1,6 +1,7 @@
 package java.util.function
 
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** Represents an operation on a single long-valued operand that produces
  *  a long-valued result.  This is the primitive type specialization of
@@ -26,4 +27,10 @@ import java.lang.FunctionalInterface
      */
     @stub
     val this: default = ???
+}
+
+object LongUnaryOperator {
+    /** Returns a unary operator that always returns its input argument. */
+    @stub
+    def identity(): LongUnaryOperator = ???
 }

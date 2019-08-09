@@ -2,8 +2,11 @@ package javax.management.remote.rmi
 
 import java.io.Closeable
 import java.lang.{ClassLoader, Object, String}
+import java.rmi.Remote
+import java.util.Map
 import javax.management.MBeanServer
 import javax.security.auth.Subject
+import scala.scalanative.annotation.stub
 
 /** An RMI object representing a connector server.  Remote clients
  *  can make connections using the newClient(Object) method.  This
@@ -19,6 +22,10 @@ import javax.security.auth.Subject
  *  JRMP or IIOP.
  */
 abstract class RMIServerImpl extends Object with Closeable with RMIServer {
+
+    /** Constructs a new RMIServerImpl. */
+    @stub
+    def this(env: Map[String, _]) = ???
 
     /** Method called when a client connection created by makeClient is closed. */
     protected def clientClosed(client: RMIConnection): Unit
@@ -68,4 +75,7 @@ abstract class RMIServerImpl extends Object with Closeable with RMIServer {
      *  server is attached.
      */
     def setMBeanServer(mbs: MBeanServer): Unit
+
+    /** Returns a remotable stub for this server object. */
+    def toStub(): Remote
 }

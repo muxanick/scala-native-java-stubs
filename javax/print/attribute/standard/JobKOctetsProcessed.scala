@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, IntegerSyntax, PrintJobAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class JobKOctetsProcessed is an integer valued printing attribute class that
  *  specifies the total number of print data octets processed so far in K octets,
@@ -34,6 +35,12 @@ import javax.print.attribute.{Attribute, IntegerSyntax, PrintJobAttribute}
  */
 final class JobKOctetsProcessed extends IntegerSyntax with PrintJobAttribute {
 
+    /** Construct a new job K octets processed attribute with the given integer
+     *  value.
+     */
+    @stub
+    def this(value: Int) = ???
+
     /** Returns whether this job K octets processed attribute is equivalent to
      *  the passed in object.
      */
@@ -45,4 +52,10 @@ final class JobKOctetsProcessed extends IntegerSyntax with PrintJobAttribute {
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

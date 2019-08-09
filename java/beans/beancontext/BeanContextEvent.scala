@@ -2,6 +2,7 @@ package java.beans.beancontext
 
 import java.lang.Object
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** 
  *  BeanContextEvent is the abstract root event class
@@ -17,6 +18,13 @@ import java.util.EventObject
  */
 abstract class BeanContextEvent extends EventObject {
 
+    /** Contruct a BeanContextEvent */
+    @stub
+    protected def this(bc: BeanContext) = ???
+
+    /** The BeanContext from which this event was propagated */
+    protected val propagatedFrom: BeanContext
+
     /** Gets the BeanContext associated with this event. */
     def getBeanContext(): BeanContext
 
@@ -27,4 +35,7 @@ abstract class BeanContextEvent extends EventObject {
      *  propagated from some other BeanContext.
      */
     def isPropagated(): Boolean
+
+    /** Sets the BeanContext from which this event was propagated. */
+    def setPropagatedFrom(bc: BeanContext): Unit
 }

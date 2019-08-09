@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener interface for receiving window events.
  *  The class that is interested in processing a window event
@@ -47,4 +48,8 @@ trait WindowListener extends EventListener {
      */
     @stub
     def windowIconified(e: WindowEvent): Unit = ???
+
+    /** Invoked the first time a window is made visible. */
+    @stub
+    def windowOpened(e: WindowEvent): Unit = ???
 }

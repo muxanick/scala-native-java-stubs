@@ -2,6 +2,8 @@ package java.nio.charset.spi
 
 import java.lang.{Object, String}
 import java.nio.charset.Charset
+import java.util.Iterator
+import scala.scalanative.annotation.stub
 
 /** Charset service-provider class.
  * 
@@ -36,6 +38,15 @@ import java.nio.charset.Charset
  */
 abstract class CharsetProvider extends Object {
 
+    /** Initializes a new charset provider. */
+    @stub
+    protected def this() = ???
+
     /** Retrieves a charset for the given charset name. */
     def charsetForName(charsetName: String): Charset
+
+    /** Creates an iterator that iterates over the charsets supported by this
+     *  provider.
+     */
+    def charsets(): Iterator[Charset]
 }

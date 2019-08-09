@@ -1,6 +1,7 @@
 package java.nio
 
 import java.lang.{Comparable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A short buffer.
  * 
@@ -269,4 +270,8 @@ object ShortBuffer {
     /** Wraps a short array into a buffer. */
     @stub
     def wrap(array: Array[Short]): ShortBuffer = ???
+
+    /** Wraps a short array into a buffer. */
+    @stub
+    def wrap(array: Array[Short], offset: Int, length: Int): ShortBuffer = ???
 }

@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{CharSequence, Comparable, Object, String}
 import java.time.format.DateTimeFormatter
 import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalField, TemporalQuery, ValueRange}
+import scala.scalanative.annotation.stub
 
 /** A month-day in the ISO-8601 calendar system, such as --12-03.
  *  
@@ -118,6 +119,10 @@ final class MonthDay extends Object with TemporalAccessor with TemporalAdjuster 
     /** Returns a copy of this MonthDay with the day-of-month altered. */
     @stub
     def withDayOfMonth(dayOfMonth: Int): MonthDay = ???
+
+    /** Returns a copy of this MonthDay with the month-of-year altered. */
+    @stub
+    def withMonth(month: Int): MonthDay = ???
 }
 
 object MonthDay {

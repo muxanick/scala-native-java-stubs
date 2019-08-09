@@ -1,6 +1,7 @@
 package java.security
 
-import java.lang.{ClassLoader, Object}
+import java.lang.{ClassLoader, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The ProtectionDomain class encapsulates the characteristics of a domain,
  *  which encloses a set of classes whose instances are granted a set
@@ -21,6 +22,12 @@ class ProtectionDomain extends Object {
      */
     @stub
     def this(codesource: CodeSource, permissions: PermissionCollection) = ???
+
+    /** Creates a new ProtectionDomain qualified by the given CodeSource,
+     *  Permissions, ClassLoader and array of Principals.
+     */
+    @stub
+    def this(codesource: CodeSource, permissions: PermissionCollection, classloader: ClassLoader, principals: Array[Principal]) = ???
 
     /** Returns the ClassLoader of this domain. */
     @stub
@@ -43,4 +50,8 @@ class ProtectionDomain extends Object {
      */
     @stub
     def implies(permission: Permission): Boolean = ???
+
+    /** Convert a ProtectionDomain to a String. */
+    @stub
+    def toString(): String = ???
 }

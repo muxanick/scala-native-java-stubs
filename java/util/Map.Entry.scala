@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.{Comparable, Object}
+import scala.scalanative.annotation.stub
 
 /** A map entry (key-value pair).  The Map.entrySet method returns
  *  a collection-view of the map, whose elements are of this class.  The
@@ -48,4 +49,10 @@ object trait Map.Entry[K, V] {
     /** Returns the hash code value for this map entry. */
     @stub
     def hashCode(): Int = ???
+
+    /** Replaces the value corresponding to this entry with the specified
+     *  value (optional operation).
+     */
+    @stub
+    def setValue(value: V): V = ???
 }

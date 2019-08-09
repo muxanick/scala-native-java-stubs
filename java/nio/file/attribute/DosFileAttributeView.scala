@@ -1,6 +1,7 @@
 package java.nio.file.attribute
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** A file attribute view that provides a view of the legacy "DOS" file attributes.
  *  These attributes are supported by file systems such as the File Allocation
@@ -69,4 +70,8 @@ trait DosFileAttributeView extends BasicFileAttributeView {
     /** Updates the value of the read-only attribute. */
     @stub
     def setReadOnly(value: Boolean): Unit = ???
+
+    /** Updates the value of the system attribute. */
+    @stub
+    def setSystem(value: Boolean): Unit = ???
 }

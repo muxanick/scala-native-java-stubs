@@ -1,6 +1,7 @@
 package java.awt.image
 
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** The Kernel class defines a matrix that describes how a
  *  specified pixel and its surrounding pixels affect the value
@@ -10,6 +11,10 @@ import java.lang.{Cloneable, Object}
  *  being computed.
  */
 class Kernel extends Object with Cloneable {
+
+    /** Constructs a Kernel object from an array of floats. */
+    @stub
+    def this(width: Int, height: Int, data: Array[Float]) = ???
 
     /** Clones this object. */
     @stub
@@ -30,4 +35,8 @@ class Kernel extends Object with Cloneable {
     /** Returns the X origin of this Kernel. */
     @stub
     def getXOrigin(): Int = ???
+
+    /** Returns the Y origin of this Kernel. */
+    @stub
+    def getYOrigin(): Int = ???
 }

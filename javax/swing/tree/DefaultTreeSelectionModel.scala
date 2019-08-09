@@ -6,6 +6,7 @@ import java.lang.{Class, Cloneable, Object, String}
 import java.util.{EventListener, Vector}
 import javax.swing.DefaultListSelectionModel
 import javax.swing.event.{EventListenerList, SwingPropertyChangeSupport, TreeSelectionEvent, TreeSelectionListener}
+import scala.scalanative.annotation.stub
 
 /** Default implementation of TreeSelectionModel.  Listeners are notified
  *  whenever
@@ -27,6 +28,12 @@ import javax.swing.event.{EventListenerList, SwingPropertyChangeSupport, TreeSel
  *  Please see XMLEncoder.
  */
 class DefaultTreeSelectionModel extends Object with Cloneable with Serializable with TreeSelectionModel {
+
+    /** Creates a new instance of DefaultTreeSelectionModel that is
+     *  empty, with a selection mode of DISCONTIGUOUS_TREE_SELECTION.
+     */
+    @stub
+    def this() = ???
 
     /** Used to messaged registered listeners. */
     @stub
@@ -59,6 +66,12 @@ class DefaultTreeSelectionModel extends Object with Cloneable with Serializable 
     /** Paths that are currently selected. */
     @stub
     protected val selection: Array[TreePath] = ???
+
+    /** Mode for the selection, will be either SINGLE_TREE_SELECTION,
+     *  CONTIGUOUS_TREE_SELECTION or DISCONTIGUOUS_TREE_SELECTION.
+     */
+    @stub
+    protected val selectionMode: Int = ???
 
     /** Adds a PropertyChangeListener to the listener list. */
     @stub
@@ -254,6 +267,10 @@ class DefaultTreeSelectionModel extends Object with Cloneable with Serializable 
      */
     @stub
     def toString(): String = ???
+
+    /** Updates the leadIndex instance variable. */
+    @stub
+    protected def updateLeadIndex(): Unit = ???
 }
 
 object DefaultTreeSelectionModel {

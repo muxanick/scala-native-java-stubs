@@ -1,6 +1,7 @@
 package javax.xml.soap
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** SOAPElementFactory is a factory for XML fragments that
  *  will eventually end up in the SOAP part. These fragments
@@ -41,4 +42,10 @@ class SOAPElementFactory extends Object {
      */
     @stub
     def create(localName: String, prefix: String, uri: String): SOAPElement = ???
+}
+
+object SOAPElementFactory {
+    /** Deprecated.  */
+    @stub
+    def newInstance(): SOAPElementFactory = ???
 }

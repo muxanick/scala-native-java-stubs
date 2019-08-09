@@ -2,6 +2,7 @@ package javax.management
 
 import java.lang.{Object, String}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** Represents a notification emitted by the MBean Server through the MBeanServerDelegate MBean.
  *  The MBean Server emits the following types of notifications: MBean registration, MBean
@@ -68,13 +69,28 @@ import java.util.EventObject
  */
 class MBeanServerNotification extends Notification {
 
+    /** Creates an MBeanServerNotification object specifying object names of
+     *  the MBeans that caused the notification and the specified notification
+     *  type.
+     */
+    @stub
+    def this(type: String, source: Object, sequenceNumber: Long, objectName: ObjectName) = ???
+
     /** Returns the  object name of the MBean that caused the notification. */
     @stub
     def getMBeanName(): ObjectName = ???
+
+    /** Returns a String representation of this notification. */
+    @stub
+    def toString(): String = ???
 }
 
 object MBeanServerNotification {
     /** Notification type denoting that an MBean has been registered. */
     @stub
     val REGISTRATION_NOTIFICATION: String = ???
+
+    /** Notification type denoting that an MBean has been unregistered. */
+    @stub
+    val UNREGISTRATION_NOTIFICATION: String = ???
 }

@@ -2,6 +2,7 @@ package java.util.concurrent.atomic
 
 import java.lang.{Class, Object, String}
 import java.util.function.{LongBinaryOperator, LongUnaryOperator}
+import scala.scalanative.annotation.stub
 
 /** A reflection-based utility that enables atomic updates to
  *  designated volatile long fields of designated classes.
@@ -17,6 +18,10 @@ import java.util.function.{LongBinaryOperator, LongUnaryOperator}
  *  compareAndSet and set on the same updater.
  */
 abstract class AtomicLongFieldUpdater[T] extends Object {
+
+    /** Protected do-nothing constructor for use by subclasses. */
+    @stub
+    protected def this() = ???
 
     /** Atomically updates the field of the given object managed by this
      *  updater with the results of applying the given function to the
@@ -97,6 +102,12 @@ abstract class AtomicLongFieldUpdater[T] extends Object {
      *  value.
      */
     def updateAndGet(obj: T, updateFunction: LongUnaryOperator): Long
+
+    /** Atomically sets the field of the given object managed by this updater
+     *  to the given updated value if the current value == the
+     *  expected value.
+     */
+    def weakCompareAndSet(obj: T, expect: Long, update: Long): Boolean
 }
 
 object AtomicLongFieldUpdater {

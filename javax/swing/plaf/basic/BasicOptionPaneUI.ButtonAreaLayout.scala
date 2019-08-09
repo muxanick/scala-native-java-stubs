@@ -2,6 +2,7 @@ package javax.swing.plaf.basic
 
 import java.awt.{Component, Container, Dimension, LayoutManager}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** ButtonAreaLayout behaves in a similar manner to
  *  FlowLayout. It lays out all components from left to
@@ -13,6 +14,10 @@ import java.lang.{Object, String}
  */
 object BasicOptionPaneUI.ButtonAreaLayout extends Object with LayoutManager {
 
+    /**  */
+    @stub
+    def ButtonAreaLayout(syncAllWidths: Boolean, padding: Int) = ???
+
     /** If true, children are lumped together in parent. */
     @stub
     protected val centersChildren: Boolean = ???
@@ -20,6 +25,10 @@ object BasicOptionPaneUI.ButtonAreaLayout extends Object with LayoutManager {
     /**  */
     @stub
     protected val padding: Int = ???
+
+    /**  */
+    @stub
+    protected val syncAllWidths: Boolean = ???
 
     /** If the layout manager uses a per-component string,
      *  adds the component comp to the layout,
@@ -68,4 +77,8 @@ object BasicOptionPaneUI.ButtonAreaLayout extends Object with LayoutManager {
     /**  */
     @stub
     def setPadding(newPadding: Int): Unit = ???
+
+    /**  */
+    @stub
+    def setSyncAllWidths(newValue: Boolean): Unit = ???
 }

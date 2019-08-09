@@ -1,7 +1,9 @@
 package java.util.concurrent.atomic
 
 import java.io.Serializable
-import java.lang.{Number, Object}
+import java.lang.{Number, Object, String}
+import java.util.function.DoubleBinaryOperator
+import scala.scalanative.annotation.stub
 
 /** One or more variables that together maintain a running double
  *  value updated using a supplied function.  When updates (method
@@ -36,6 +38,12 @@ import java.lang.{Number, Object}
  *  not useful as collection keys.
  */
 class DoubleAccumulator extends Number with Serializable {
+
+    /** Creates a new instance using the given accumulator function
+     *  and identity element.
+     */
+    @stub
+    def this(accumulatorFunction: DoubleBinaryOperator, identity: Double) = ???
 
     /** Updates with the given value. */
     @stub
@@ -74,4 +82,8 @@ class DoubleAccumulator extends Number with Serializable {
     /** Resets variables maintaining updates to the identity value. */
     @stub
     def reset(): Unit = ???
+
+    /** Returns the String representation of the current value. */
+    @stub
+    def toString(): String = ???
 }

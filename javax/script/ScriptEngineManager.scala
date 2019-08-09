@@ -1,7 +1,8 @@
 package javax.script
 
-import java.lang.{Object, String}
+import java.lang.{ClassLoader, Object, String}
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** The ScriptEngineManager implements a discovery and instantiation
  *  mechanism for ScriptEngine classes and also maintains a
@@ -24,6 +25,16 @@ class ScriptEngineManager extends Object {
      */
     @stub
     def this() = ???
+
+    /** This constructor loads the implementations of
+     *  ScriptEngineFactory visible to the given
+     *  ClassLoader using the service provider mechanism.
+     *  If loader is null, the script engine factories that are
+     *  bundled with the platform and that are in the usual extension
+     *  directories (installed extensions) are loaded.
+     */
+    @stub
+    def this(loader: ClassLoader) = ???
 
     /** Gets the value for the specified key in the Global Scope */
     @stub
@@ -68,4 +79,10 @@ class ScriptEngineManager extends Object {
      */
     @stub
     def registerEngineName(name: String, factory: ScriptEngineFactory): Unit = ???
+
+    /** setBindings stores the specified Bindings
+     *  in the globalScope field.
+     */
+    @stub
+    def setBindings(bindings: Bindings): Unit = ???
 }

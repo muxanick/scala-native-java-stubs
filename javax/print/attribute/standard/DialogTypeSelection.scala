@@ -2,6 +2,7 @@ package javax.print.attribute.standard
 
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{EnumSyntax, PrintRequestAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class DialogTypeSelection is a printing attribute class, an enumeration,
  *  that indicates the user dialog type to be used for specifying
@@ -23,6 +24,12 @@ import javax.print.attribute.{EnumSyntax, PrintRequestAttribute}
  */
 final class DialogTypeSelection extends EnumSyntax with PrintRequestAttribute {
 
+    /** Construct a new dialog type selection enumeration value with the
+     *  given integer value.
+     */
+    @stub
+    protected def this(value: Int) = ???
+
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.
      */
@@ -38,10 +45,18 @@ final class DialogTypeSelection extends EnumSyntax with PrintRequestAttribute {
      */
     @stub
     def getName(): String = ???
+
+    /** Returns the string table for class DialogTypeSelection. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object DialogTypeSelection {
     /**  */
     @stub
     val COMMON: DialogTypeSelection = ???
+
+    /**  */
+    @stub
+    val NATIVE: DialogTypeSelection = ???
 }

@@ -1,6 +1,7 @@
 package java.rmi.activation
 
 import java.rmi.Remote
+import scala.scalanative.annotation.stub
 
 /** The ActivationSystem provides a means for registering
  *  groups and "activatable" objects to be activated within those groups.
@@ -60,4 +61,17 @@ trait ActivationSystem extends Remote {
     /** Remove the activation group. */
     @stub
     def unregisterGroup(id: ActivationGroupID): Unit = ???
+
+    /** Remove the activation id and associated descriptor previously
+     *  registered with the ActivationSystem; the object
+     *  can no longer be activated via the object's activation id.
+     */
+    @stub
+    def unregisterObject(id: ActivationID): Unit = ???
+}
+
+object ActivationSystem {
+    /** The port to lookup the activation system. */
+    @stub
+    val SYSTEM_PORT: Int = ???
 }

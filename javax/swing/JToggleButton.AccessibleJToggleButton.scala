@@ -1,9 +1,10 @@
 package javax.swing
 
 import java.awt.{Component.AccessibleAWTComponent, Container.AccessibleAWTContainer}
-import java.awt.event.ItemListener
+import java.awt.event.{ItemEvent, ItemListener}
 import java.lang.Object
 import javax.accessibility.{AccessibleContext, AccessibleRole}
+import scala.scalanative.annotation.stub
 
 /** This class implements accessibility support for the
  *  JToggleButton class.  It provides an implementation of the
@@ -21,7 +22,17 @@ import javax.accessibility.{AccessibleContext, AccessibleRole}
  */
 protected class JToggleButton.AccessibleJToggleButton extends AbstractButton.AccessibleAbstractButton with ItemListener {
 
+    /**  */
+    @stub
+    def AccessibleJToggleButton() = ???
+
     /** Get the role of this object. */
     @stub
     def getAccessibleRole(): AccessibleRole = ???
+
+    /** Fire accessible property change events when the state of the
+     *  toggle button changes.
+     */
+    @stub
+    def itemStateChanged(e: ItemEvent): Unit = ???
 }

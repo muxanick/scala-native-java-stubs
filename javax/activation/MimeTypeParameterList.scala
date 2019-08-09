@@ -2,6 +2,7 @@ package javax.activation
 
 import java.lang.{Object, String}
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** A parameter list of a MimeType
  *  as defined in RFC 2045 and 2046. The Primary type of the
@@ -12,6 +13,10 @@ class MimeTypeParameterList extends Object {
     /** Default constructor. */
     @stub
     def this() = ???
+
+    /** Constructs a new MimeTypeParameterList with the passed in data. */
+    @stub
+    def this(parameterList: String) = ???
 
     /** Retrieve the value associated with the given name, or null if there
      *  is no current association.
@@ -44,4 +49,8 @@ class MimeTypeParameterList extends Object {
     /** Return the number of name-value pairs in this list. */
     @stub
     def size(): Int = ???
+
+    /** Return a string representation of this object. */
+    @stub
+    def toString(): String = ???
 }

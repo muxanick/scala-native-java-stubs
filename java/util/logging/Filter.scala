@@ -1,6 +1,7 @@
 package java.util.logging
 
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** A Filter can be used to provide fine grain control over
  *  what is logged, beyond the control provided by log levels.
@@ -11,4 +12,8 @@ import java.lang.FunctionalInterface
  *  false, the LogRecord will be discarded.
  */
 @FunctionalInterface trait Filter {
+
+    /** Check if a given log record should be published. */
+    @stub
+    def isLoggable(record: LogRecord): Boolean = ???
 }

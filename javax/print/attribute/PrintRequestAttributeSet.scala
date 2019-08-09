@@ -1,5 +1,7 @@
 package javax.print.attribute
 
+import scala.scalanative.annotation.stub
+
 /** Interface PrintRequestAttributeSet specifies the interface for a set of
  *  print request attributes, i.e. printing attributes that implement interface
  *  PrintRequestAttribute.
@@ -24,4 +26,8 @@ trait PrintRequestAttributeSet extends AttributeSet {
      */
     @stub
     def add(attribute: Attribute): Boolean = ???
+
+    /** Adds all of the elements in the specified set to this attribute. */
+    @stub
+    def addAll(attributes: AttributeSet): Boolean = ???
 }

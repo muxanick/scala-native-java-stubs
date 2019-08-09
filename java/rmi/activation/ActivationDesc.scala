@@ -3,6 +3,7 @@ package java.rmi.activation
 import java.io.Serializable
 import java.lang.{Object, String}
 import java.rmi.MarshalledObject
+import scala.scalanative.annotation.stub
 
 /** An activation descriptor contains the information necessary to
  *  activate an object: 
@@ -46,6 +47,14 @@ final class ActivationDesc extends Object with Serializable {
     @stub
     def this(className: String, location: String, data: MarshalledObject[_]) = ???
 
+    /** Constructs an object descriptor for an object whose class name
+     *  is className, that can be loaded from the
+     *  code location and whose initialization
+     *  information is data.
+     */
+    @stub
+    def this(className: String, location: String, data: MarshalledObject[_], restart: Boolean) = ???
+
     /** Compares two activation descriptors for content equality. */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -79,4 +88,8 @@ final class ActivationDesc extends Object with Serializable {
      */
     @stub
     def getRestartMode(): Boolean = ???
+
+    /** Return the same hashCode for similar ActivationDescs. */
+    @stub
+    def hashCode(): Int = ???
 }

@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.{AutoCloseable, Object}
+import scala.scalanative.annotation.stub
 
 /** ObjectInput extends the DataInput interface to include the reading of
  *  objects. DataInput includes methods for the input of primitive types,
@@ -33,4 +34,8 @@ trait ObjectInput extends DataInput with AutoCloseable {
     /** Read and return an object. */
     @stub
     def readObject(): Object = ???
+
+    /** Skips n bytes of input. */
+    @stub
+    def skip(n: Long): Long = ???
 }

@@ -4,6 +4,7 @@ import java.lang.{Object, String}
 import java.net.ServerSocket
 import java.rmi.server.RMIServerSocketFactory
 import javax.net.ssl.SSLContext
+import scala.scalanative.annotation.stub
 
 /** An SslRMIServerSocketFactory instance is used by the RMI
  *  runtime in order to obtain server sockets for RMI calls via SSL.
@@ -41,6 +42,12 @@ class SslRMIServerSocketFactory extends Object with RMIServerSocketFactory {
     @stub
     def this(context: SSLContext, enabledCipherSuites: Array[String], enabledProtocols: Array[String], needClientAuth: Boolean) = ???
 
+    /** Creates a new SslRMIServerSocketFactory with
+     *  the specified SSL socket configuration.
+     */
+    @stub
+    def this(enabledCipherSuites: Array[String], enabledProtocols: Array[String], needClientAuth: Boolean) = ???
+
     /** Creates a server socket that accepts SSL connections
      *  configured according to this factory's SSL socket configuration
      *  parameters.
@@ -74,4 +81,10 @@ class SslRMIServerSocketFactory extends Object with RMIServerSocketFactory {
      */
     @stub
     def getNeedClientAuth(): Boolean = ???
+
+    /** Returns a hash code value for this
+     *  SslRMIServerSocketFactory.
+     */
+    @stub
+    def hashCode(): Int = ???
 }

@@ -2,7 +2,8 @@ package java.net
 
 import java.io.Serializable
 import java.lang.{Object, String}
-import java.security.Permission
+import java.security.{Permission, PermissionCollection}
+import scala.scalanative.annotation.stub
 
 /** This class represents access to a network via sockets.
  *  A SocketPermission consists of a
@@ -90,6 +91,10 @@ import java.security.Permission
  */
 final class SocketPermission extends Permission with Serializable {
 
+    /** Creates a new SocketPermission object with the specified actions. */
+    @stub
+    def this(host: String, action: String) = ???
+
     /** Checks two SocketPermission objects for equality. */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -107,4 +112,10 @@ final class SocketPermission extends Permission with Serializable {
      */
     @stub
     def implies(p: Permission): Boolean = ???
+
+    /** Returns a new PermissionCollection object for storing SocketPermission
+     *  objects.
+     */
+    @stub
+    def newPermissionCollection(): PermissionCollection = ???
 }

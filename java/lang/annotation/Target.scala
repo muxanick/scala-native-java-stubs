@@ -1,6 +1,7 @@
 package java.lang.annotation
 
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Indicates the contexts in which an annotation type is applicable. The
  *  declaration contexts and type contexts in which an annotation type may be
@@ -49,4 +50,10 @@ import scala.annotation.StaticAnnotation
 @Retention ( value = RUNTIME ) 
 @Target ( value = ANNOTATION_TYPE ) 
  final class Target extends StaticAnnotation {
+
+    /** Returns an array of the kinds of elements an annotation type
+     *  can be applied to.
+     */
+    @stub
+    val value: Array[ElementType] = ???
 }

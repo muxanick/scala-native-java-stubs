@@ -1,5 +1,8 @@
 package javax.xml.stream.events
 
+import java.lang.String
+import scala.scalanative.annotation.stub
+
 /** An interface for handling Entity events.
  * 
  *  This event reports entities that have not been resolved
@@ -20,4 +23,8 @@ trait EntityReference extends XMLEvent {
     /** Return the declaration of this entity. */
     @stub
     def getDeclaration(): EntityDeclaration = ???
+
+    /** The name of the entity */
+    @stub
+    def getName(): String = ???
 }

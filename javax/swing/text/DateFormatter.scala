@@ -1,7 +1,9 @@
 package javax.swing.text
 
 import java.lang.Object
+import java.text.DateFormat
 import javax.swing.JFormattedTextField.AbstractFormatter
+import scala.scalanative.annotation.stub
 
 /** DateFormatter is an InternationalFormatter that does its
  *  formatting by way of an instance of java.text.DateFormat.
@@ -22,4 +24,16 @@ class DateFormatter extends InternationalFormatter {
      */
     @stub
     def this() = ???
+
+    /** Returns a DateFormatter configured with the specified
+     *  Format instance.
+     */
+    @stub
+    def this(format: DateFormat) = ???
+
+    /** Sets the format that dictates the legal values that can be edited
+     *  and displayed.
+     */
+    @stub
+    def setFormat(format: DateFormat): Unit = ???
 }

@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** Thrown to indicate that an attempt has been made to store the
  *  wrong type of object into an array of objects. For example, the
  *  following code generates an ArrayStoreException:
@@ -13,4 +15,10 @@ class ArrayStoreException extends RuntimeException {
     /** Constructs an ArrayStoreException with no detail message. */
     @stub
     def this() = ???
+
+    /** Constructs an ArrayStoreException with the specified
+     *  detail message.
+     */
+    @stub
+    def this(s: String) = ???
 }

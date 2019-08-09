@@ -6,11 +6,16 @@ import java.lang.Object
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, DesktopPaneUI}
 import javax.swing.plaf.basic.BasicDesktopPaneUI
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for
  *  JDesktopPane.
  */
 class SynthDesktopPaneUI extends BasicDesktopPaneUI with PropertyChangeListener with SynthUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the Context for the specified component. */
     @stub
@@ -61,6 +66,10 @@ class SynthDesktopPaneUI extends BasicDesktopPaneUI with PropertyChangeListener 
      */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthDesktopPaneUI {

@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.Object
+import java.lang.{Object, String}
 import javax.print.attribute.{Attribute, EnumSyntax}
+import scala.scalanative.annotation.stub
 
 /** Class MediaName is a subclass of Media, a printing attribute class (an
  *  enumeration) that specifies the media for a print job as a name.
@@ -18,9 +19,19 @@ import javax.print.attribute.{Attribute, EnumSyntax}
  */
 class MediaName extends Media with Attribute {
 
+    /** Constructs a new media name enumeration value with the given integer
+     *  value.
+     */
+    @stub
+    protected def this(value: Int) = ???
+
     /** Returns the enumeration value table for class MediaTray. */
     @stub
     protected def getEnumValueTable(): Array[EnumSyntax] = ???
+
+    /** Returns the string table for class MediaTray. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object MediaName {
@@ -35,4 +46,8 @@ object MediaName {
     /** letter transparency. */
     @stub
     val NA_LETTER_TRANSPARENT: MediaName = ???
+
+    /** white letter paper. */
+    @stub
+    val NA_LETTER_WHITE: MediaName = ???
 }

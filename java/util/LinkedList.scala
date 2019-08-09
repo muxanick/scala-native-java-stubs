@@ -2,6 +2,7 @@ package java.util
 
 import java.io.Serializable
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** Doubly-linked list implementation of the List and Deque
  *  interfaces.  Implements all optional list operations, and permits all
@@ -52,6 +53,13 @@ class LinkedList[E] extends AbstractSequentialList[E] with List[E] with Deque[E]
     /** Constructs an empty list. */
     @stub
     def this() = ???
+
+    /** Constructs a list containing the elements of the specified
+     *  collection, in the order they are returned by the collection's
+     *  iterator.
+     */
+    @stub
+    def this(c: Collection[_ <: E]) = ???
 
     /** Appends the specified element to the end of this list. */
     @stub
@@ -242,4 +250,11 @@ class LinkedList[E] extends AbstractSequentialList[E] with List[E] with Deque[E]
      */
     @stub
     def toArray(): Array[Object] = ???
+
+    /** Returns an array containing all of the elements in this list in
+     *  proper sequence (from first to last element); the runtime type of
+     *  the returned array is that of the specified array.
+     */
+    @stub
+    def toArray[T](a: Array[T]): Array[T] = ???
 }

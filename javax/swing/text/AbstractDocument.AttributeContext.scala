@@ -1,6 +1,8 @@
 package javax.swing.text
 
 import java.lang.Object
+import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** An interface that can be used to allow MutableAttributeSet
  *  implementations to use pluggable attribute compression
@@ -45,4 +47,8 @@ object trait AbstractDocument.AttributeContext {
     /** Removes a set of attributes for the element. */
     @stub
     def removeAttributes(old: AttributeSet, attrs: AttributeSet): AttributeSet = ???
+
+    /** Removes a set of attributes for the element. */
+    @stub
+    def removeAttributes(old: AttributeSet, names: Enumeration[_]): AttributeSet = ???
 }

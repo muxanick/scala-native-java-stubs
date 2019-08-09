@@ -1,6 +1,7 @@
 package java.util.function
 
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** Represents a function that accepts two arguments and produces a result.
  *  This is the two-arity specialization of Function.
@@ -15,4 +16,8 @@ import java.lang.FunctionalInterface
      */
     @stub
     val BiFunction[T, U, V]: default[V] = ???
+
+    /** Applies this function to the given arguments. */
+    @stub
+    def apply(t: T, u: U): R = ???
 }

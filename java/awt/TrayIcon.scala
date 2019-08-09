@@ -2,6 +2,7 @@ package java.awt
 
 import java.awt.event.{ActionListener, MouseListener, MouseMotionListener}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A TrayIcon object represents a tray icon that can be
  *  added to the system tray. A
@@ -47,6 +48,12 @@ class TrayIcon extends Object {
      */
     @stub
     def this(image: Image, tooltip: String) = ???
+
+    /** Creates a TrayIcon with the specified image,
+     *  tooltip and popup menu.
+     */
+    @stub
+    def this(image: Image, tooltip: String, popup: PopupMenu) = ???
 
     /** Adds the specified action listener to receive
      *  ActionEvents from this TrayIcon.
@@ -145,4 +152,17 @@ class TrayIcon extends Object {
     /** Sets the popup menu for this TrayIcon. */
     @stub
     def setPopupMenu(popup: PopupMenu): Unit = ???
+
+    /** Sets the tooltip string for this TrayIcon. */
+    @stub
+    def setToolTip(tooltip: String): Unit = ???
+}
+
+object TrayIcon {
+    /** The message type determines which icon will be displayed in the
+     *  caption of the message, and a possible system sound a message
+     *  may generate upon showing.
+     */
+    @stub
+    object MessageType extends TrayIcon.MessageType
 }

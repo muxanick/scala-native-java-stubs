@@ -1,6 +1,8 @@
 package javax.sound.midi
 
 import java.lang.Object
+import java.util.Vector
+import scala.scalanative.annotation.stub
 
 /** A Sequence is a data structure containing musical
  *  information (often an entire song or composition) that can be played
@@ -25,6 +27,12 @@ class Sequence extends Object {
     @stub
     def this(divisionType: Float, resolution: Int) = ???
 
+    /** Constructs a new MIDI sequence with the specified timing division
+     *  type, timing resolution, and number of tracks.
+     */
+    @stub
+    def this(divisionType: Float, resolution: Int, numTracks: Int) = ???
+
     /** The timing division type of the sequence. */
     @stub
     protected val divisionType: Float = ???
@@ -32,6 +40,10 @@ class Sequence extends Object {
     /** The timing resolution of the sequence. */
     @stub
     protected val resolution: Int = ???
+
+    /** The MIDI tracks in this sequence. */
+    @stub
+    protected val tracks: Vector[Track] = ???
 
     /** Creates a new, initially empty track as part of this sequence. */
     @stub
@@ -60,6 +72,10 @@ class Sequence extends Object {
     /** Obtains the duration of this sequence, expressed in MIDI ticks. */
     @stub
     def getTickLength(): Long = ???
+
+    /** Obtains an array containing all the tracks in this sequence. */
+    @stub
+    def getTracks(): Array[Track] = ???
 }
 
 object Sequence {

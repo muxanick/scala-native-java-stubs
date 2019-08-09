@@ -2,6 +2,7 @@ package java.awt
 
 import java.lang.{Object, String}
 import javax.accessibility.AccessibleContext
+import scala.scalanative.annotation.stub
 
 /** A Frame is a top-level window with a title and a border.
  *  
@@ -105,6 +106,19 @@ class Frame extends Window with MenuContainer {
      */
     @stub
     def this(title: String) = ???
+
+    /** Constructs a new, initially invisible Frame object
+     *  with the specified title and a
+     *  GraphicsConfiguration.
+     */
+    @stub
+    def this(title: String, gc: GraphicsConfiguration) = ???
+
+    /** This class implements accessibility support for the
+     *  Frame class.
+     */
+    @stub
+    protected object AccessibleAWTFrame extends Frame.AccessibleAWTFrame
 
     /** Makes this Frame displayable by connecting it to
      *  a native screen resource.
@@ -217,6 +231,10 @@ class Frame extends Window with MenuContainer {
     /** Sets the title for this frame to the specified string. */
     @stub
     def setTitle(title: String): Unit = ???
+
+    /** Disables or enables decorations for this frame. */
+    @stub
+    def setUndecorated(undecorated: Boolean): Unit = ???
 }
 
 object Frame {
@@ -336,6 +354,13 @@ object Frame {
      */
     @stub
     val W_RESIZE_CURSOR: Int = ???
+
+    /** Deprecated. 
+     * replaced by Cursor.WAIT_CURSOR.
+     * 
+     */
+    @stub
+    val WAIT_CURSOR: Int = ???
 
     /** Returns an array of all Frames created by this application. */
     @stub

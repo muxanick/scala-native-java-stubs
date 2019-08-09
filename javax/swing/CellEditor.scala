@@ -3,6 +3,7 @@ package javax.swing
 import java.lang.Object
 import java.util.EventObject
 import javax.swing.event.CellEditorListener
+import scala.scalanative.annotation.stub
 
 /** This interface defines the methods any general editor should be able
  *  to implement. 
@@ -58,4 +59,10 @@ trait CellEditor {
     /** Returns true if the editing cell should be selected, false otherwise. */
     @stub
     def shouldSelectCell(anEvent: EventObject): Boolean = ???
+
+    /** Tells the editor to stop editing and accept any partially edited
+     *  value as the value of the editor.
+     */
+    @stub
+    def stopCellEditing(): Boolean = ???
 }

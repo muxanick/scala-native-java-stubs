@@ -1,6 +1,7 @@
 package java.lang.annotation
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The common interface extended by all annotation types.  Note that an
  *  interface that manually extends this one does not define
@@ -29,4 +30,8 @@ trait Annotation {
     /** Returns the hash code of this annotation, as defined below: */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a string representation of this annotation. */
+    @stub
+    def toString(): String = ???
 }

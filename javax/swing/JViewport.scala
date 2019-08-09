@@ -6,6 +6,7 @@ import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.border.Border
 import javax.swing.event.ChangeListener
 import javax.swing.plaf.ViewportUI
+import scala.scalanative.annotation.stub
 
 /** The "viewport" or "porthole" through which you see the underlying
  *  information. When you scroll, what moves is the viewport. It is like
@@ -64,11 +65,19 @@ import javax.swing.plaf.ViewportUI
  */
 class JViewport extends JComponent with Accessible {
 
+    /** Creates a JViewport. */
+    @stub
+    def this() = ???
+
     /** This class implements accessibility support for the
      *  JViewport class.
      */
     @stub
     protected object AccessibleJViewport extends JViewport.AccessibleJViewport
+
+    /** A listener for the view. */
+    @stub
+    protected object ViewListener extends JViewport.ViewListener
 
     /** Deprecated. 
      * As of Java 2 platform v1.3
@@ -309,6 +318,10 @@ class JViewport extends JComponent with Accessible {
     /** Converts a point in pixel coordinates to view coordinates. */
     @stub
     def toViewCoordinates(p: Point): Point = ???
+
+    /** Resets the UI property to a value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
 }
 
 object JViewport {
@@ -319,4 +332,10 @@ object JViewport {
     /** Use graphics.copyArea to implement scrolling. */
     @stub
     val BLIT_SCROLL_MODE: Int = ???
+
+    /** This mode uses the very simple method of redrawing the entire
+     *  contents of the scrollpane each time it is scrolled.
+     */
+    @stub
+    val SIMPLE_SCROLL_MODE: Int = ???
 }

@@ -2,6 +2,7 @@ package javax.swing.text
 
 import java.awt.{Component, Graphics, Shape}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Component decorator that implements the view interface.  The
  *  entire element is used to represent the component.  This acts
@@ -37,6 +38,10 @@ import java.lang.Object
  *  views of a shared model.
  */
 class ComponentView extends View {
+
+    /** Creates a new ComponentView object. */
+    @stub
+    def this(elem: Element) = ???
 
     /** Create the component that is associated with
      *  this view.
@@ -88,4 +93,10 @@ class ComponentView extends View {
     /** Sets the parent for a child view. */
     @stub
     def setParent(p: View): Unit = ???
+
+    /** Provides a mapping from the view coordinate space to the logical
+     *  coordinate space of the model.
+     */
+    @stub
+    def viewToModel(x: Float, y: Float, a: Shape, bias: Array[Position.Bias]): Int = ???
 }

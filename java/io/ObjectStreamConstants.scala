@@ -1,5 +1,7 @@
 package java.io
 
+import scala.scalanative.annotation.stub
+
 /** Constants written into the Object Serialization Stream. */
 trait ObjectStreamConstants {
 }
@@ -118,4 +120,8 @@ object ObjectStreamConstants {
     /** Reset stream context. */
     @stub
     val TC_RESET: Byte = ???
+
+    /** new String. */
+    @stub
+    val TC_STRING: Byte = ???
 }

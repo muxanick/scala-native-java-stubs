@@ -1,8 +1,9 @@
 package java.time.chrono
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.time.temporal.{Temporal, TemporalAmount, TemporalUnit}
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** A date-based amount of time, such as '3 years, 4 months and 5 days' in an
  *  arbitrary chronology, intended for advanced globalization use cases.
@@ -76,6 +77,10 @@ trait ChronoPeriod extends TemporalAmount {
     /** Subtracts this period from the specified temporal object. */
     @stub
     def subtractFrom(temporal: Temporal): Temporal = ???
+
+    /** Outputs this period as a String. */
+    @stub
+    def toString(): String = ???
 }
 
 object ChronoPeriod {

@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component, Container}
 import java.lang.Object
 import javax.swing.plaf.UIResource
+import scala.scalanative.annotation.stub
 
 /** A subclass of DefaultListCellRenderer that implements UIResource.
  *  DefaultListCellRenderer doesn't implement UIResource
@@ -19,3 +20,7 @@ import javax.swing.plaf.UIResource
  *  Please see XMLEncoder.
  */
 object DefaultListCellRenderer.UIResource extends DefaultListCellRenderer with UIResource {
+
+    /**  */
+    @stub
+    def UIResource() = ???

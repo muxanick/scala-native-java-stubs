@@ -2,6 +2,7 @@ package java.time.zone
 
 import java.lang.{Enum, Object, String}
 import java.time.{LocalDateTime, ZoneOffset}
+import scala.scalanative.annotation.stub
 
 /** A definition of the way a local time can be converted to the actual
  *  transition date-time.
@@ -23,6 +24,9 @@ object ZoneOffsetTransitionRule.TimeDefinition {
     /** The local date-time is expressed in terms of the UTC offset. */
     final val UTC = new ZoneOffsetTransitionRule.TimeDefinition(UTC, 1)
 
+    /** The local date-time is expressed in terms of the wall offset. */
+    final val WALL = new ZoneOffsetTransitionRule.TimeDefinition(WALL, 2)
+
     /** Converts the specified local date-time to the local date-time actually
      *  seen on a wall clock.
      */
@@ -32,4 +36,10 @@ object ZoneOffsetTransitionRule.TimeDefinition {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): ZoneOffsetTransitionRule.TimeDefinition = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[ZoneOffsetTransitionRule.TimeDefinition] = ???
 }

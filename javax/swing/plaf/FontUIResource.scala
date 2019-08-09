@@ -1,7 +1,8 @@
 package javax.swing.plaf
 
 import java.awt.Font
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A subclass of java.awt.Font that implements UIResource.
  *  UI classes which set default font properties should use
@@ -21,4 +22,8 @@ class FontUIResource extends Font with UIResource {
     /**  */
     @stub
     def this(font: Font) = ???
+
+    /**  */
+    @stub
+    def this(name: String, style: Int, size: Int) = ???
 }

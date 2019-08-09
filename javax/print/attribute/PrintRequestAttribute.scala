@@ -1,5 +1,7 @@
 package javax.print.attribute
 
+import scala.scalanative.annotation.stub
+
 /** Interface PrintRequestAttribute is a tagging interface which a printing
  *  attribute class implements to indicate the attribute denotes a
  *  requested setting for a print job.

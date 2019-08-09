@@ -2,9 +2,14 @@ package javax.swing.text
 
 import java.awt.Rectangle
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** View of a row in a row-centric table. */
 class TableView.TableRow extends BoxView {
+
+    /** Constructs a TableView for the given element. */
+    @stub
+    def TableRow(elem: Element) = ???
 
     /** Determines the resizability of the view along the
      *  given axis.
@@ -25,4 +30,8 @@ class TableView.TableRow extends BoxView {
     /** Perform layout for the minor axis of the box (i.e. */
     @stub
     protected def layoutMinorAxis(targetSpan: Int, axis: Int, offsets: Array[Int], spans: Array[Int]): Unit = ???
+
+    /** Change the child views. */
+    @stub
+    def replace(offset: Int, length: Int, views: Array[View]): Unit = ???
 }

@@ -1,8 +1,9 @@
 package java.util.concurrent
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.{AbstractCollection, AbstractQueue, Collection, Iterator, Spliterator}
+import scala.scalanative.annotation.stub
 
 /** A bounded blocking queue backed by an
  *  array.  This queue orders elements FIFO (first-in-first-out).  The
@@ -46,6 +47,14 @@ class ArrayBlockingQueue[E] extends AbstractQueue[E] with BlockingQueue[E] with 
      */
     @stub
     def this(capacity: Int, fair: Boolean) = ???
+
+    /** Creates an ArrayBlockingQueue with the given (fixed)
+     *  capacity, the specified access policy and initially containing the
+     *  elements of the given collection,
+     *  added in traversal order of the collection's iterator.
+     */
+    @stub
+    def this(capacity: Int, fair: Boolean, c: Collection[_ <: E]) = ???
 
     /** Inserts the specified element at the tail of this queue if it is
      *  possible to do so immediately without exceeding the queue's capacity,
@@ -157,4 +166,8 @@ class ArrayBlockingQueue[E] extends AbstractQueue[E] with BlockingQueue[E] with 
      */
     @stub
     def toArray[T](a: Array[T]): Array[T] = ???
+
+    /** Returns a string representation of this collection. */
+    @stub
+    def toString(): String = ???
 }

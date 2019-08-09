@@ -1,6 +1,7 @@
 package java.security.cert
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class is an abstraction of certificate revocation lists (CRLs) that
  *  have different formats but important common uses. For example, all CRLs
@@ -12,9 +13,16 @@ import java.lang.{Object, String}
  */
 abstract class CRL extends Object {
 
+    /** Creates a CRL of the specified type. */
+    @stub
+    protected def this(type: String) = ???
+
     /** Returns the type of this CRL. */
     def getType(): String
 
     /** Checks whether the given certificate is on this CRL. */
     def isRevoked(cert: Certificate): Boolean
+
+    /** Returns a string representation of this CRL. */
+    def toString(): String
 }

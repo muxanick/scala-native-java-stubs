@@ -2,6 +2,7 @@ package javax.sql.rowset.spi
 
 import java.lang.{Object, String}
 import javax.sql.RowSet
+import scala.scalanative.annotation.stub
 
 /** Defines a framework that allows applications to use a manual decision tree
  *  to decide what should be done when a synchronization conflict occurs.
@@ -246,6 +247,12 @@ trait SyncResolver extends RowSet {
      */
     @stub
     def setResolvedValue(index: Int, obj: Object): Unit = ???
+
+    /** Sets obj as the value in column columnName in the current row of the
+     *  RowSet object that is being synchronized.
+     */
+    @stub
+    def setResolvedValue(columnName: String, obj: Object): Unit = ???
 }
 
 object SyncResolver {
@@ -266,4 +273,10 @@ object SyncResolver {
      */
     @stub
     val NO_ROW_CONFLICT: Int = ???
+
+    /** Indicates that a conflict occurred while the RowSet object was
+     *  attempting to update a row in the data source.
+     */
+    @stub
+    val UPDATE_ROW_CONFLICT: Int = ???
 }

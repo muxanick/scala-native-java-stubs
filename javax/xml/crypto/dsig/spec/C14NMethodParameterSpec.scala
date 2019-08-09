@@ -1,5 +1,7 @@
 package javax.xml.crypto.dsig.spec
 
+import scala.scalanative.annotation.stub
+
 /** A specification of algorithm parameters for a CanonicalizationMethod
  *  Algorithm. The purpose of this interface is to group (and provide type
  *  safety for) all canonicalization (C14N) parameter specifications. All

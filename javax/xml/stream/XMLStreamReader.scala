@@ -2,6 +2,7 @@ package javax.xml.stream
 
 import java.lang.{Object, String}
 import javax.xml.namespace.{NamespaceContext, QName}
+import scala.scalanative.annotation.stub
 
 /** The XMLStreamReader interface allows forward, read-only access to XML.
  *   It is designed to be the lowest level and most efficient way to
@@ -363,4 +364,8 @@ trait XMLStreamReader extends XMLStreamConstants {
      */
     @stub
     def require(type: Int, namespaceURI: String, localName: String): Unit = ???
+
+    /** Checks if standalone was set in the document */
+    @stub
+    def standaloneSet(): Boolean = ???
 }

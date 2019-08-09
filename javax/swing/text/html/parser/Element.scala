@@ -3,6 +3,7 @@ package javax.swing.text.html.parser
 import java.io.Serializable
 import java.lang.{Object, String}
 import java.util.BitSet
+import scala.scalanative.annotation.stub
 
 /** An element as described in a DTD using the ELEMENT construct.
  *  This is essential the description of a tag. It describes the
@@ -47,6 +48,10 @@ final class Element extends Object with DTDConstants with Serializable {
     @stub
     val oStart: Boolean = ???
 
+    /**  */
+    @stub
+    val type: Int = ???
+
     /** Get an attribute by name. */
     @stub
     def getAttribute(name: String): AttributeList = ???
@@ -86,6 +91,10 @@ final class Element extends Object with DTDConstants with Serializable {
     /** Return true if the start tag can be omitted. */
     @stub
     def omitStart(): Boolean = ???
+
+    /** Convert to a string. */
+    @stub
+    def toString(): String = ???
 }
 
 object Element {

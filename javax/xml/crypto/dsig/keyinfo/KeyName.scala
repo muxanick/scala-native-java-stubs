@@ -1,6 +1,8 @@
 package javax.xml.crypto.dsig.keyinfo
 
+import java.lang.String
 import javax.xml.crypto.XMLStructure
+import scala.scalanative.annotation.stub
 
 /** A representation of the XML KeyName element as
  *  defined in the 
@@ -23,4 +25,8 @@ import javax.xml.crypto.XMLStructure
  *  
  */
 trait KeyName extends XMLStructure {
+
+    /** Returns the name of this KeyName. */
+    @stub
+    def getName(): String = ???
 }

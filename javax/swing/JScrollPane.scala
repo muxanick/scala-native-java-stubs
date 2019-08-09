@@ -5,6 +5,7 @@ import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.border.Border
 import javax.swing.plaf.ScrollPaneUI
+import scala.scalanative.annotation.stub
 
 /** Provides a scrollable view of a lightweight component.
  *  A JScrollPane manages a viewport, optional
@@ -131,11 +132,25 @@ class JScrollPane extends JComponent with ScrollPaneConstants with Accessible {
     @stub
     def this(view: Component, vsbPolicy: Int, hsbPolicy: Int) = ???
 
+    /** Creates an empty (no viewport view) JScrollPane
+     *  with specified
+     *  scrollbar policies.
+     */
+    @stub
+    def this(vsbPolicy: Int, hsbPolicy: Int) = ???
+
     /** This class implements accessibility support for the
      *  JScrollPane class.
      */
     @stub
     protected object AccessibleJScrollPane extends JScrollPane.AccessibleJScrollPane
+
+    /** By default JScrollPane creates scrollbars
+     *  that are instances
+     *  of this class.
+     */
+    @stub
+    protected object ScrollBar extends JScrollPane.ScrollBar
 
     /** The column header child. */
     @stub
@@ -176,6 +191,10 @@ class JScrollPane extends JComponent with ScrollPaneConstants with Accessible {
     /** The display policy for the vertical scrollbar. */
     @stub
     protected val verticalScrollBarPolicy: Int = ???
+
+    /** The scrollpane's viewport child. */
+    @stub
+    protected val viewport: JViewport = ???
 
     /** Returns a JScrollPane.ScrollBar by default. */
     @stub
@@ -357,4 +376,10 @@ class JScrollPane extends JComponent with ScrollPaneConstants with Accessible {
     /** Enables/disables scrolling in response to movement of the mouse wheel. */
     @stub
     def setWheelScrollingEnabled(handleWheel: Boolean): Unit = ???
+
+    /** Replaces the current ScrollPaneUI object with a version
+     *  from the current default look and feel.
+     */
+    @stub
+    def updateUI(): Unit = ???
 }

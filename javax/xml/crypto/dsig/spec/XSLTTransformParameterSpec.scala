@@ -1,6 +1,8 @@
 package javax.xml.crypto.dsig.spec
 
 import java.lang.Object
+import javax.xml.crypto.XMLStructure
+import scala.scalanative.annotation.stub
 
 /** Parameters for the 
  *  XSLT Transform Algorithm.
@@ -16,4 +18,14 @@ import java.lang.Object
  *  the namespace-qualified stylesheet element.
  */
 final class XSLTTransformParameterSpec extends Object with TransformParameterSpec {
+
+    /** Creates an XSLTTransformParameterSpec with the specified
+     *  stylesheet.
+     */
+    @stub
+    def this(stylesheet: XMLStructure) = ???
+
+    /** Returns the stylesheet. */
+    @stub
+    def getStylesheet(): XMLStructure = ???
 }

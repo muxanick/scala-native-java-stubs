@@ -3,6 +3,7 @@ package javax.naming.directory
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
 import javax.naming.NamingEnumeration
+import scala.scalanative.annotation.stub
 
 /** This interface represents an attribute associated with a named object.
  * 
@@ -97,4 +98,14 @@ trait Attribute extends Cloneable with Serializable {
     /** Sets an attribute value in the ordered list of attribute values. */
     @stub
     def set(ix: Int, attrVal: Object): Object = ???
+
+    /** Retrieves the number of values in this attribute. */
+    @stub
+    def size(): Int = ???
+}
+
+object Attribute {
+    /** Use serialVersionUID from JNDI 1.1.1 for interoperability. */
+    @stub
+    val serialVersionUID: Long = ???
 }

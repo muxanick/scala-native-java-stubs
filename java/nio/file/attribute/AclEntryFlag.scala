@@ -1,6 +1,7 @@
 package java.nio.file.attribute
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Defines the flags for used by the flags component of an ACL entry.
  * 
@@ -26,7 +27,19 @@ object AclEntryFlag {
      */
     final val INHERIT_ONLY = new AclEntryFlag(INHERIT_ONLY, 2)
 
+    /** Can be placed on a directory to indicate that the ACL entry should not
+     *  be placed on the newly created directory which is inheritable by
+     *  subdirectories of the created directory.
+     */
+    final val NO_PROPAGATE_INHERIT = new AclEntryFlag(NO_PROPAGATE_INHERIT, 3)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): AclEntryFlag = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[AclEntryFlag] = ???
 }

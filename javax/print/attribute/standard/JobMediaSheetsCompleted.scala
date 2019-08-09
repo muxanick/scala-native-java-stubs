@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, IntegerSyntax, PrintJobAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class JobMediaSheetsCompleted is an integer valued printing attribute class
  *  that specifies the number of media sheets which have completed marking and
@@ -25,6 +26,12 @@ import javax.print.attribute.{Attribute, IntegerSyntax, PrintJobAttribute}
  */
 final class JobMediaSheetsCompleted extends IntegerSyntax with PrintJobAttribute {
 
+    /** Construct a new job media sheets completed attribute with the given
+     *  integer value.
+     */
+    @stub
+    def this(value: Int) = ???
+
     /** Returns whether this job media sheets completed attribute is equivalent
      *  to the passed in object.
      */
@@ -36,4 +43,10 @@ final class JobMediaSheetsCompleted extends IntegerSyntax with PrintJobAttribute
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

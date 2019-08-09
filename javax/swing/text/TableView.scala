@@ -4,6 +4,7 @@ import java.awt.{Rectangle, Shape}
 import java.lang.Object
 import javax.swing.SizeRequirements
 import javax.swing.event.{DocumentEvent, DocumentEvent.ElementChange}
+import scala.scalanative.annotation.stub
 
 /** 
  *  Implements View interface for a table, that is composed of an
@@ -38,11 +39,18 @@ import javax.swing.event.{DocumentEvent, DocumentEvent.ElementChange}
  */
 abstract class TableView extends BoxView {
 
+    /** Constructs a TableView for the given element. */
+    @stub
+    def this(elem: Element) = ???
+
     /** Deprecated. 
      * A table cell can now be any View implementation.
      * 
      */
-    val TableView.TableCell: class
+    object TableCell extends TableView.TableCell
+
+    /** View of a row in a row-centric table. */
+    object TableRow extends TableView.TableRow
 
     /** Calculate the requirements for the minor axis. */
     protected def calculateMinorAxisRequirements(axis: Int, r: SizeRequirements): SizeRequirements
@@ -73,4 +81,7 @@ abstract class TableView extends BoxView {
 
     /** Perform layout for the minor axis of the box (i.e. */
     protected def layoutMinorAxis(targetSpan: Int, axis: Int, offsets: Array[Int], spans: Array[Int]): Unit
+
+    /** Change the child views. */
+    def replace(offset: Int, length: Int, views: Array[View]): Unit
 }

@@ -6,6 +6,7 @@ import java.math.BigDecimal
 import java.net.URL
 import java.sql.{Array, Blob, Clob, Date, NClob, Ref, ResultSet, RowId, SQLXML, Time, Timestamp}
 import java.util.{Calendar, Map}
+import scala.scalanative.annotation.stub
 
 /** The interface that adds support to the JDBC API for the
  *  JavaBeans™ component model.
@@ -644,4 +645,10 @@ trait RowSet extends ResultSet {
      */
     @stub
     def setUrl(url: String): Unit = ???
+
+    /** Sets the username property for this RowSet object to the
+     *  given String.
+     */
+    @stub
+    def setUsername(name: String): Unit = ???
 }

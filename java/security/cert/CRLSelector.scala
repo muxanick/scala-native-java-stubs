@@ -1,6 +1,7 @@
 package java.security.cert
 
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** A selector that defines a set of criteria for selecting CRLs.
  *  Classes that implement this interface are often used to specify
@@ -19,4 +20,8 @@ trait CRLSelector extends Cloneable {
     /** Makes a copy of this CRLSelector. */
     @stub
     def clone(): Object = ???
+
+    /** Decides whether a CRL should be selected. */
+    @stub
+    def match(crl: CRL): Boolean = ???
 }

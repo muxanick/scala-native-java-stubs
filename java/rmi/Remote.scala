@@ -1,5 +1,7 @@
 package java.rmi
 
+import scala.scalanative.annotation.stub
+
 /** The Remote interface serves to identify interfaces whose
  *  methods may be invoked from a non-local virtual machine.  Any object that
  *  is a remote object must directly or indirectly implement this interface.

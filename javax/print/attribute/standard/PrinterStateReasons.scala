@@ -1,8 +1,9 @@
 package javax.print.attribute.standard
 
 import java.lang.{Class, Object, String}
-import java.util.{AbstractMap, HashMap, Set}
+import java.util.{AbstractMap, HashMap, Map, Set}
 import javax.print.attribute.{Attribute, PrintServiceAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class PrinterStateReasons is a printing attribute class, a set of
  *  enumeration values, that provides additional information about the
@@ -62,6 +63,12 @@ final class PrinterStateReasons extends HashMap[PrinterStateReason, Severity] wi
     @stub
     def this(initialCapacity: Int, loadFactor: Float) = ???
 
+    /** Construct a new printer state reasons attribute that contains the same
+     *  PrinterStateReason-to-Severity mappings as the given map.
+     */
+    @stub
+    def this(map: Map[PrinterStateReason, Severity]) = ???
+
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.
      */
@@ -80,4 +87,10 @@ final class PrinterStateReasons extends HashMap[PrinterStateReason, Severity] wi
      */
     @stub
     def printerStateReasonSet(severity: Severity): Set[PrinterStateReason] = ???
+
+    /** Adds the given printer state reason to this printer state reasons
+     *  attribute, associating it with the given severity level.
+     */
+    @stub
+    def put(reason: PrinterStateReason, severity: Severity): Severity = ???
 }

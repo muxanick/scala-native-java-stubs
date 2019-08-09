@@ -2,6 +2,7 @@ package javax.security.auth
 
 import java.lang.{Object, String}
 import java.security.{BasicPermission, Permission}
+import scala.scalanative.annotation.stub
 
 /** This class is for authentication permissions.
  *  An AuthPermission contains a name
@@ -107,4 +108,8 @@ final class AuthPermission extends BasicPermission {
     /** Creates a new AuthPermission with the specified name. */
     @stub
     def this(name: String) = ???
+
+    /** Creates a new AuthPermission object with the specified name. */
+    @stub
+    def this(name: String, actions: String) = ???
 }

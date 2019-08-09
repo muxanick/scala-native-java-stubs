@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.{Boolean, Class, Comparable, Object}
+import scala.scalanative.annotation.stub
 
 /** This class consists exclusively of static methods that operate on or return
  *  collections.  It contains polymorphic algorithms that operate on
@@ -42,6 +43,10 @@ object Collections {
     /** The empty map (immutable). */
     @stub
     val EMPTY_MAP: Map = ???
+
+    /** The empty set (immutable). */
+    @stub
+    val EMPTY_SET: Set = ???
 
     /** Adds all of the specified elements to the specified collection. */
     @stub
@@ -364,4 +369,8 @@ object Collections {
     /** Returns an unmodifiable view of the specified sorted map. */
     @stub
     def unmodifiableSortedMap[K, V](m: SortedMap[K, _ <: V]): SortedMap[K, V] = ???
+
+    /** Returns an unmodifiable view of the specified sorted set. */
+    @stub
+    def unmodifiableSortedSet[T](s: SortedSet[T]): SortedSet[T] = ???
 }

@@ -1,6 +1,7 @@
 package java.security.cert
 
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** A selector that defines a set of criteria for selecting
  *  Certificates. Classes that implement this interface
@@ -20,4 +21,8 @@ trait CertSelector extends Cloneable {
     /** Makes a copy of this CertSelector. */
     @stub
     def clone(): Object = ???
+
+    /** Decides whether a Certificate should be selected. */
+    @stub
+    def match(cert: Certificate): Boolean = ???
 }

@@ -2,6 +2,7 @@ package java.awt.image
 
 import java.lang.Object
 import java.util.Hashtable
+import scala.scalanative.annotation.stub
 
 /** This class is an implementation of the ImageProducer interface which
  *  uses an array to produce pixel values for an Image.  Here is an example
@@ -100,6 +101,12 @@ class MemoryImageSource extends Object with ImageProducer {
     @stub
     def this(w: Int, h: Int, pix: Array[Int], off: Int, scan: Int) = ???
 
+    /** Constructs an ImageProducer object which uses an array of integers
+     *  in the default RGB ColorModel to produce data for an Image object.
+     */
+    @stub
+    def this(w: Int, h: Int, pix: Array[Int], off: Int, scan: Int, props: Hashtable[_, _]) = ???
+
     /** Adds an ImageConsumer to the list of consumers interested in
      *  data for this image.
      */
@@ -165,4 +172,11 @@ class MemoryImageSource extends Object with ImageProducer {
      */
     @stub
     def setFullBufferUpdates(fullbuffers: Boolean): Unit = ???
+
+    /** Adds an ImageConsumer to the list of consumers interested in
+     *  data for this image and immediately starts delivery of the
+     *  image data through the ImageConsumer interface.
+     */
+    @stub
+    def startProduction(ic: ImageConsumer): Unit = ???
 }

@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.Component
 import java.awt.datatransfer.{DataFlavor, Transferable}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class encapsulates all relevant details of a clipboard
  *  or drag and drop transfer, and also allows for customizing
@@ -20,6 +21,13 @@ import java.lang.Object
  *  implementation to certain methods in TransferHandler.
  */
 final object TransferHandler.TransferSupport extends Object {
+
+    /** Create a TransferSupport with isDrop()
+     *  false for the given component and
+     *  Transferable.
+     */
+    @stub
+    def TransferSupport(component: Component, transferable: Transferable) = ???
 
     /** Returns the target component of this transfer. */
     @stub
@@ -73,4 +81,10 @@ final object TransferHandler.TransferSupport extends Object {
      */
     @stub
     def setDropAction(dropAction: Int): Unit = ???
+
+    /** Sets whether or not the drop location should be visually indicated
+     *  for the transfer - which must represent a drop.
+     */
+    @stub
+    def setShowDropLocation(showDropLocation: Boolean): Unit = ???
 }

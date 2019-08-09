@@ -3,6 +3,7 @@ package java.awt.geom
 import java.awt.Shape
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The AffineTransform class represents a 2D affine transform
  *  that performs a linear mapping from 2D coordinates to other 2D
@@ -119,6 +120,13 @@ class AffineTransform extends Object with Cloneable with Serializable {
      */
     @stub
     def this(flatmatrix: Array[Float]) = ???
+
+    /** Constructs a new AffineTransform from 6 floating point
+     *  values representing the 6 specifiable entries of the 3x3
+     *  transformation matrix.
+     */
+    @stub
+    def this(m00: Float, m10: Float, m01: Float, m11: Float, m02: Float, m12: Float) = ???
 
     /** Returns a copy of this AffineTransform object. */
     @stub
@@ -392,6 +400,10 @@ class AffineTransform extends Object with Cloneable with Serializable {
      */
     @stub
     def transform(ptSrc: Point2D, ptDst: Point2D): Point2D = ???
+
+    /** Concatenates this transform with a translation transformation. */
+    @stub
+    def translate(tx: Double, ty: Double): Unit = ???
 }
 
 object AffineTransform {
@@ -450,6 +462,13 @@ object AffineTransform {
      */
     @stub
     val TYPE_TRANSLATION: Int = ???
+
+    /** This flag bit indicates that the transform defined by this object
+     *  performs a uniform scale in addition to the conversions indicated
+     *  by other flag bits.
+     */
+    @stub
+    val TYPE_UNIFORM_SCALE: Int = ???
 
     /** Returns a transform that rotates coordinates by the specified
      *  number of quadrants.

@@ -1,7 +1,8 @@
 package java.lang.invoke
 
 import java.io.Serializable
-import java.lang.{Object, String}
+import java.lang.{Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Serialized form of a lambda expression.  The properties of this class
  *  represent the information that is present at the lambda factory site, including
@@ -25,6 +26,12 @@ import java.lang.{Object, String}
  *  lambda actually captured by that class.
  */
 final class SerializedLambda extends Object with Serializable {
+
+    /** Create a SerializedLambda from the low-level information present
+     *  at the lambda factory site.
+     */
+    @stub
+    def this(capturingClass: Class[_], functionalInterfaceClass: String, functionalInterfaceMethodName: String, functionalInterfaceMethodSignature: String, implMethodKind: Int, implClass: String, implMethodName: String, implMethodSignature: String, instantiatedMethodType: String, capturedArgs: Array[Object]) = ???
 
     /** Get a dynamic argument to the lambda capture site. */
     @stub
@@ -82,4 +89,8 @@ final class SerializedLambda extends Object with Serializable {
      */
     @stub
     def getInstantiatedMethodType(): String = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }

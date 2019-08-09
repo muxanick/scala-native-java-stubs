@@ -3,6 +3,7 @@ package javax.imageio.metadata
 import java.lang.{Class, Comparable, Object, String}
 import java.util.Locale
 import javax.imageio.ImageTypeSpecifier
+import scala.scalanative.annotation.stub
 
 /** An object describing the structure of metadata documents returned
  *  from IIOMetadata.getAsTree and passed to
@@ -205,6 +206,12 @@ trait IIOMetadataFormat {
     /** Returns the name of the root element of the format. */
     @stub
     def getRootName(): String = ???
+
+    /** Returns true if the named attribute must be
+     *  present within the named element.
+     */
+    @stub
+    def isAttributeRequired(elementName: String, attrName: String): Boolean = ???
 }
 
 object IIOMetadataFormat {
@@ -354,4 +361,11 @@ object IIOMetadataFormat {
      */
     @stub
     val VALUE_RANGE_MIN_INCLUSIVE_MASK: Int = ???
+
+    /** A constant returned by getAttributeValueType and
+     *  getObjectValueType to indicate that the attribute
+     *  or user object may be set a range of values.
+     */
+    @stub
+    val VALUE_RANGE_MIN_MAX_INCLUSIVE: Int = ???
 }

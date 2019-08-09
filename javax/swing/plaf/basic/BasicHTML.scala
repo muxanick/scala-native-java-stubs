@@ -3,6 +3,7 @@ package javax.swing.plaf.basic
 import java.lang.{Object, String}
 import javax.swing.JComponent
 import javax.swing.text.View
+import scala.scalanative.annotation.stub
 
 /** Support for providing html views for the swing components.
  *  This translates a simple html string to a javax.swing.text.View
@@ -10,6 +11,10 @@ import javax.swing.text.View
  *  layout semantics.
  */
 class BasicHTML extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 }
 
 object BasicHTML {
@@ -18,6 +23,12 @@ object BasicHTML {
      */
     @stub
     val documentBaseKey: String = ???
+
+    /** Key to use for the html renderer when stored as a
+     *  client property of a JComponent.
+     */
+    @stub
+    val propertyKey: String = ???
 
     /** Create an html renderer for the given component and
      *  string of html.
@@ -35,4 +46,10 @@ object BasicHTML {
      */
     @stub
     def isHTMLString(s: String): Boolean = ???
+
+    /** Stash the HTML render for the given text into the client
+     *  properties of the given JComponent.
+     */
+    @stub
+    def updateRenderer(c: JComponent, text: String): Unit = ???
 }

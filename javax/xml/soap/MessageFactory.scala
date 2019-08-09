@@ -1,7 +1,8 @@
 package javax.xml.soap
 
 import java.io.InputStream
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A factory for creating SOAPMessage objects.
  *  
@@ -39,6 +40,10 @@ import java.lang.Object
  */
 abstract class MessageFactory extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Creates a new SOAPMessage object with the default
      *  SOAPPart, SOAPEnvelope, SOAPBody,
      *  and SOAPHeader objects.
@@ -62,4 +67,10 @@ object MessageFactory {
      */
     @stub
     def newInstance(): MessageFactory = ???
+
+    /** Creates a new MessageFactory object that is an instance
+     *  of the specified implementation.
+     */
+    @stub
+    def newInstance(protocol: String): MessageFactory = ???
 }

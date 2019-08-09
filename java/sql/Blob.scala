@@ -1,6 +1,7 @@
 package java.sql
 
 import java.io.{InputStream, OutputStream}
+import scala.scalanative.annotation.stub
 
 /** The representation (mapping) in
  *  the Java™ programming
@@ -94,4 +95,10 @@ trait Blob {
      */
     @stub
     def setBytes(pos: Long, bytes: Array[Byte], offset: Int, len: Int): Int = ???
+
+    /** Truncates the BLOB value that this Blob
+     *  object represents to be len bytes in length.
+     */
+    @stub
+    def truncate(len: Long): Unit = ???
 }

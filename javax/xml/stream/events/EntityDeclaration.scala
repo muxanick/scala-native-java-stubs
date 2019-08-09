@@ -1,6 +1,7 @@
 package javax.xml.stream.events
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** An interface for handling Entity Declarations
  * 
@@ -29,4 +30,8 @@ trait EntityDeclaration extends XMLEvent {
     /** The replacement text of the entity. */
     @stub
     def getReplacementText(): String = ???
+
+    /** The entity's system identifier. */
+    @stub
+    def getSystemId(): String = ???
 }

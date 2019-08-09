@@ -4,6 +4,7 @@ import java.lang.{Object, String}
 import java.math.{BigDecimal, BigInteger}
 import java.util.Calendar
 import javax.xml.namespace.{NamespaceContext, QName}
+import scala.scalanative.annotation.stub
 
 /** 
  *  The javaType binding declaration can be used to customize the binding of
@@ -291,4 +292,8 @@ object DatatypeConverter {
      */
     @stub
     def printUnsignedShort(val: Int): String = ???
+
+    /** This method is for JAXB provider use only. */
+    @stub
+    def setDatatypeConverter(converter: DatatypeConverterInterface): Unit = ???
 }

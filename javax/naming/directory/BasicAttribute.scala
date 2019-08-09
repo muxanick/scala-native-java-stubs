@@ -1,7 +1,9 @@
 package javax.naming.directory
 
 import java.lang.{Object, String}
+import java.util.Vector
 import javax.naming.NamingEnumeration
+import scala.scalanative.annotation.stub
 
 /** This class provides a basic implementation of the Attribute interface.
  * 
@@ -47,6 +49,12 @@ class BasicAttribute extends Object with Attribute {
     @stub
     def this(id: String, value: Object) = ???
 
+    /** Constructs a new instance of a possibly ordered attribute with a
+     *  single value.
+     */
+    @stub
+    def this(id: String, value: Object, ordered: Boolean) = ???
+
     /** Holds the attribute's id. */
     @stub
     protected val attrID: String = ???
@@ -54,6 +62,10 @@ class BasicAttribute extends Object with Attribute {
     /** A flag for recording whether this attribute's values are ordered. */
     @stub
     protected val ordered: Boolean = ???
+
+    /** Holds the attribute's values. */
+    @stub
+    protected val values: Vector[Object] = ???
 
     /** Adds an attribute value to the ordered list of attribute values. */
     @stub
@@ -126,4 +138,8 @@ class BasicAttribute extends Object with Attribute {
     /** Retrieves the number of values in this attribute. */
     @stub
     def size(): Int = ???
+
+    /** Generates the string representation of this attribute. */
+    @stub
+    def toString(): String = ???
 }

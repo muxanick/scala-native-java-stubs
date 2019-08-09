@@ -1,6 +1,7 @@
 package javax.script
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Extended by classes that store results of compilations.  State
  *  might be stored in the form of Java classes, Java class files or scripting
@@ -14,6 +15,10 @@ import java.lang.Object
  */
 abstract class CompiledScript extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Executes the program stored in the CompiledScript object. */
     def eval(): Object
 
@@ -25,4 +30,7 @@ abstract class CompiledScript extends Object {
 
     /** Executes the program stored in this CompiledScript object. */
     def eval(context: ScriptContext): Object
+
+    /** Returns the ScriptEngine whose compile method created this CompiledScript. */
+    def getEngine(): ScriptEngine
 }

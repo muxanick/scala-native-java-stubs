@@ -1,7 +1,8 @@
 package javax.lang.model.type
 
-import java.lang.Object
+import java.lang.{Object, String}
 import javax.lang.model.AnnotatedConstruct
+import scala.scalanative.annotation.stub
 
 /** Represents a type in the Java programming language.
  *  Types include primitive types, declared types (class and interface types),
@@ -36,4 +37,8 @@ trait TypeMirror extends AnnotatedConstruct {
     /** Obeys the general contract of Object.hashCode. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns an informative string representation of this type. */
+    @stub
+    def toString(): String = ???
 }

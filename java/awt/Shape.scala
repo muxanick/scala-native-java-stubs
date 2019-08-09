@@ -1,6 +1,7 @@
 package java.awt
 
 import java.awt.geom.{AffineTransform, PathIterator, Point2D, Rectangle2D}
+import scala.scalanative.annotation.stub
 
 /** The Shape interface provides definitions for objects
  *  that represent some form of geometric shape.  The Shape
@@ -99,4 +100,10 @@ trait Shape {
      */
     @stub
     def intersects(x: Double, y: Double, w: Double, h: Double): Boolean = ???
+
+    /** Tests if the interior of the Shape intersects the
+     *  interior of a specified Rectangle2D.
+     */
+    @stub
+    def intersects(r: Rectangle2D): Boolean = ???
 }

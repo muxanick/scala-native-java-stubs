@@ -1,12 +1,17 @@
 package javax.imageio.stream
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** An abstract class implementing the ImageOutputStream interface.
  *  This class is designed to reduce the number of methods that must
  *  be implemented by subclasses.
  */
 abstract class ImageOutputStreamImpl extends ImageInputStreamImpl with ImageOutputStream {
+
+    /** Constructs an ImageOutputStreamImpl. */
+    @stub
+    def this() = ???
 
     /** If the bit offset is non-zero, forces the remaining bits
      *  in the current byte to 0 and advances the stream position
@@ -107,4 +112,12 @@ abstract class ImageOutputStreamImpl extends ImageInputStreamImpl with ImageOutp
      *  position.
      */
     def writeShorts(s: Array[Short], off: Int, len: Int): Unit
+
+    /** Writes two bytes of length information to the output stream in
+     *  network byte order, followed by the
+     *  modified
+     *  UTF-8
+     *  representation of every character in the string s.
+     */
+    def writeUTF(s: String): Unit
 }

@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** Thrown if an application tries to access or modify a specified
  *  field of an object, and that object no longer has that field.
  *  
@@ -12,4 +14,10 @@ class NoSuchFieldError extends IncompatibleClassChangeError {
     /** Constructs a NoSuchFieldError with no detail message. */
     @stub
     def this() = ???
+
+    /** Constructs a NoSuchFieldError with the specified
+     *  detail message.
+     */
+    @stub
+    def this(s: String) = ???
 }

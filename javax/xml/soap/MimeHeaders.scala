@@ -2,6 +2,7 @@ package javax.xml.soap
 
 import java.lang.{Object, String}
 import java.util.Iterator
+import scala.scalanative.annotation.stub
 
 /** A container for MimeHeader objects, which represent
  *  the MIME headers present in a MIME part of a message.
@@ -13,6 +14,12 @@ import java.util.Iterator
  *  API.
  */
 class MimeHeaders extends Object {
+
+    /** Constructs a default MimeHeaders object initialized with
+     *  an empty Vector object.
+     */
+    @stub
+    def this() = ???
 
     /** Adds a MimeHeader object with the specified name and value
      *  to this MimeHeaders object's list of headers.
@@ -51,4 +58,11 @@ class MimeHeaders extends Object {
      */
     @stub
     def removeHeader(name: String): Unit = ???
+
+    /** Replaces the current value of the first header entry whose name matches
+     *  the given name with the given value, adding a new header if no existing header
+     *  name matches.
+     */
+    @stub
+    def setHeader(name: String, value: String): Unit = ???
 }

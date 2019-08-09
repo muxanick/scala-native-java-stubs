@@ -3,6 +3,7 @@ package javax.net.ssl
 import java.lang.{Object, String}
 import java.net.Socket
 import java.security.cert.X509Certificate
+import scala.scalanative.annotation.stub
 
 /** Extensions to the X509TrustManager interface to support
  *  SSL/TLS connection sensitive trust management.
@@ -21,6 +22,10 @@ import java.security.cert.X509Certificate
  */
 abstract class X509ExtendedTrustManager extends Object with X509TrustManager {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Given the partial or complete certificate chain provided by the
      *  peer, build and validate the certificate path based on the
      *  authentication type and ssl parameters.
@@ -38,4 +43,10 @@ abstract class X509ExtendedTrustManager extends Object with X509TrustManager {
      *  authentication type and ssl parameters.
      */
     def checkServerTrusted(chain: Array[X509Certificate], authType: String, socket: Socket): Unit
+
+    /** Given the partial or complete certificate chain provided by the
+     *  peer, build and validate the certificate path based on the
+     *  authentication type and ssl parameters.
+     */
+    def checkServerTrusted(chain: Array[X509Certificate], authType: String, engine: SSLEngine): Unit
 }

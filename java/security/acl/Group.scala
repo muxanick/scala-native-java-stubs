@@ -2,6 +2,7 @@ package java.security.acl
 
 import java.security.Principal
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** This interface is used to represent a group of principals. (A principal
  *  represents an entity such as an individual user or a company). 
@@ -25,4 +26,8 @@ trait Group extends Principal {
     /** Returns an enumeration of the members in the group. */
     @stub
     def members(): Enumeration[_ <: Principal] = ???
+
+    /** Removes the specified member from the group. */
+    @stub
+    def removeMember(user: Principal): Boolean = ???
 }

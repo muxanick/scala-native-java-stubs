@@ -1,7 +1,8 @@
 package java.util
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.function.DoubleConsumer
+import scala.scalanative.annotation.stub
 
 /** A state object for collecting statistics such as count, min, max, sum, and
  *  average.
@@ -28,6 +29,13 @@ import java.util.function.DoubleConsumer
  *  maximum, sum, and average of their weights.
  */
 class DoubleSummaryStatistics extends Object with DoubleConsumer {
+
+    /** Construct an empty instance with zero count, zero sum,
+     *  Double.POSITIVE_INFINITY min, Double.NEGATIVE_INFINITY
+     *  max and zero average.
+     */
+    @stub
+    def this() = ???
 
     /** Records another value into the summary information. */
     @stub
@@ -68,4 +76,8 @@ class DoubleSummaryStatistics extends Object with DoubleConsumer {
      */
     @stub
     def getSum(): Double = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }

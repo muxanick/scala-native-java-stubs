@@ -1,9 +1,10 @@
 package java.nio.channels
 
 import java.lang.Object
-import java.net.SocketAddress
+import java.net.{SocketAddress, SocketOption}
 import java.nio.channels.spi.AsynchronousChannelProvider
 import java.util.concurrent.Future
+import scala.scalanative.annotation.stub
 
 /** An asynchronous channel for stream-oriented listening sockets.
  * 
@@ -62,6 +63,10 @@ import java.util.concurrent.Future
  */
 abstract class AsynchronousServerSocketChannel extends Object with AsynchronousChannel with NetworkChannel {
 
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this(provider: AsynchronousChannelProvider) = ???
+
     /** Accepts a connection. */
     def accept(): Future[AsynchronousSocketChannel]
 
@@ -83,6 +88,9 @@ abstract class AsynchronousServerSocketChannel extends Object with AsynchronousC
 
     /** Returns the provider that created this channel. */
     def provider(): AsynchronousChannelProvider
+
+    /** Sets the value of a socket option. */
+    val this: abstract[T]
 }
 
 object AsynchronousServerSocketChannel {

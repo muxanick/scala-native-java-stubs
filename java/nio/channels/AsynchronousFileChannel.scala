@@ -6,6 +6,7 @@ import java.nio.file.{OpenOption, Path}
 import java.nio.file.attribute.FileAttribute
 import java.util.Set
 import java.util.concurrent.{ExecutorService, Future}
+import scala.scalanative.annotation.stub
 
 /** An asynchronous channel for reading, writing, and manipulating a file.
  * 
@@ -79,6 +80,10 @@ import java.util.concurrent.{ExecutorService, Future}
  */
 abstract class AsynchronousFileChannel extends Object with AsynchronousChannel {
 
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this() = ???
+
     /** Forces any updates to this channel's file to be written to the storage
      *  device that contains it.
      */
@@ -122,6 +127,11 @@ abstract class AsynchronousFileChannel extends Object with AsynchronousChannel {
      *  at the given file position.
      */
     def write(src: ByteBuffer, position: Long): Future[Integer]
+
+    /** Writes a sequence of bytes to this channel from the given buffer, starting
+     *  at the given file position.
+     */
+    val Unit: abstract[A]
 }
 
 object AsynchronousFileChannel {

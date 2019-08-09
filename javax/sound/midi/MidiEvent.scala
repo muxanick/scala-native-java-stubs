@@ -1,6 +1,7 @@
 package javax.sound.midi
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** MIDI events contain a MIDI message and a corresponding time-stamp
  *  expressed in ticks, and can represent the MIDI event information
@@ -14,6 +15,10 @@ import java.lang.Object
  */
 class MidiEvent extends Object {
 
+    /** Constructs a new MidiEvent. */
+    @stub
+    def this(message: MidiMessage, tick: Long) = ???
+
     /** Obtains the MIDI message contained in the event. */
     @stub
     def getMessage(): MidiMessage = ???
@@ -21,4 +26,8 @@ class MidiEvent extends Object {
     /** Obtains the time-stamp for the event, in MIDI ticks */
     @stub
     def getTick(): Long = ???
+
+    /** Sets the time-stamp for the event, in MIDI ticks */
+    @stub
+    def setTick(tick: Long): Unit = ???
 }

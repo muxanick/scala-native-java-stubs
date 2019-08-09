@@ -3,6 +3,7 @@ package java.awt
 import java.awt.event.MouseWheelEvent
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** A container class which implements automatic horizontal and/or
  *  vertical scrolling for a single child component.  The display
@@ -58,6 +59,16 @@ class ScrollPane extends Container with Accessible {
      */
     @stub
     def this() = ???
+
+    /** Create a new scrollpane container. */
+    @stub
+    def this(scrollbarDisplayPolicy: Int) = ???
+
+    /** This class implements accessibility support for the
+     *  ScrollPane class.
+     */
+    @stub
+    protected object AccessibleAWTScrollPane extends ScrollPane.AccessibleAWTScrollPane
 
     /** Adds the specified component to this scroll pane container. */
     @stub
@@ -160,6 +171,10 @@ class ScrollPane extends Container with Accessible {
     /** Scrolls to the specified position within the child component. */
     @stub
     def setScrollPosition(p: Point): Unit = ???
+
+    /** Enables/disables scrolling in response to movement of the mouse wheel. */
+    @stub
+    def setWheelScrollingEnabled(handleWheel: Boolean): Unit = ???
 }
 
 object ScrollPane {
@@ -175,4 +190,10 @@ object ScrollPane {
      */
     @stub
     val SCROLLBARS_AS_NEEDED: Int = ???
+
+    /** Specifies that horizontal/vertical scrollbars should never be shown
+     *  regardless of the respective sizes of the scrollpane and child.
+     */
+    @stub
+    val SCROLLBARS_NEVER: Int = ???
 }

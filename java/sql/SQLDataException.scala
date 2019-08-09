@@ -1,6 +1,7 @@
 package java.sql
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** The subclass of SQLException thrown when the SQLState class value
  *  is '22', or under vendor-specified conditions.  This indicates
@@ -53,4 +54,10 @@ class SQLDataException extends SQLNonTransientException {
      */
     @stub
     def this(reason: String, cause: Throwable) = ???
+
+    /** Constructs a SQLDataException object with a given
+     *  cause.
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

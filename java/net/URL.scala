@@ -2,6 +2,7 @@ package java.net
 
 import java.io.{InputStream, Serializable}
 import java.lang.{Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Class URL represents a Uniform Resource
  *  Locator, a pointer to a "resource" on the World
@@ -130,6 +131,12 @@ final class URL extends Object with Serializable {
     @stub
     def this(context: URL, spec: String) = ???
 
+    /** Creates a URL by parsing the given spec with the specified handler
+     *  within a specified context.
+     */
+    @stub
+    def this(context: URL, spec: String, handler: URLStreamHandler) = ???
+
     /** Compares this URL for equality with another object. */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -222,6 +229,10 @@ final class URL extends Object with Serializable {
     /** Constructs a string representation of this URL. */
     @stub
     def toString(): String = ???
+
+    /** Returns a URI equivalent to this URL. */
+    @stub
+    def toURI(): URI = ???
 }
 
 object URL {

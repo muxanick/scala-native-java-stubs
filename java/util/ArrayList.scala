@@ -3,6 +3,7 @@ package java.util
 import java.io.Serializable
 import java.lang.{Cloneable, Object}
 import java.util.function.{Consumer, Predicate, UnaryOperator}
+import scala.scalanative.annotation.stub
 
 /** Resizable-array implementation of the List interface.  Implements
  *  all optional list operations, and permits all elements, including
@@ -80,6 +81,10 @@ class ArrayList[E] extends AbstractList[E] with List[E] with RandomAccess with C
      */
     @stub
     def this(c: Collection[_ <: E]) = ???
+
+    /** Constructs an empty list with the specified initial capacity. */
+    @stub
+    def this(initialCapacity: Int) = ???
 
     /** Appends the specified element to the end of this list. */
     @stub
@@ -247,4 +252,10 @@ class ArrayList[E] extends AbstractList[E] with List[E] with RandomAccess with C
      */
     @stub
     def toArray[T](a: Array[T]): Array[T] = ???
+
+    /** Trims the capacity of this ArrayList instance to be the
+     *  list's current size.
+     */
+    @stub
+    def trimToSize(): Unit = ???
 }

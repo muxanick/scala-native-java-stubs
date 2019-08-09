@@ -1,5 +1,7 @@
 package java.beans
 
+import scala.scalanative.annotation.stub
+
 /** Under some circumstances a bean may be run on servers where a GUI
  *  is not available.  This interface can be used to query a bean to
  *  determine whether it absolutely needs a gui, and to advise the
@@ -22,4 +24,8 @@ trait Visibility {
     /** Determines whether this bean needs a GUI. */
     @stub
     def needsGui(): Boolean = ???
+
+    /** This method instructs the bean that it is OK to use the Gui. */
+    @stub
+    def okToUseGui(): Unit = ???
 }

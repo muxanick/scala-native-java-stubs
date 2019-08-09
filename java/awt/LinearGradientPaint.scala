@@ -3,6 +3,7 @@ package java.awt
 import java.awt.geom.{AffineTransform, Point2D, Rectangle2D}
 import java.awt.image.ColorModel
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The LinearGradientPaint class provides a way to fill
  *  a Shape with a linear color gradient pattern.  The user
@@ -93,6 +94,10 @@ final class LinearGradientPaint extends MultipleGradientPaint {
     @stub
     def this(start: Point2D, end: Point2D, fractions: Array[Float], colors: Array[Color], cycleMethod: MultipleGradientPaint.CycleMethod) = ???
 
+    /** Constructs a LinearGradientPaint. */
+    @stub
+    def this(start: Point2D, end: Point2D, fractions: Array[Float], colors: Array[Color], cycleMethod: MultipleGradientPaint.CycleMethod, colorSpace: MultipleGradientPaint.ColorSpaceType, gradientTransform: AffineTransform) = ???
+
     /** Creates and returns a PaintContext used to
      *  generate a linear color gradient pattern.
      */
@@ -102,4 +107,8 @@ final class LinearGradientPaint extends MultipleGradientPaint {
     /** Returns a copy of the end point of the gradient axis. */
     @stub
     def getEndPoint(): Point2D = ???
+
+    /** Returns a copy of the start point of the gradient axis. */
+    @stub
+    def getStartPoint(): Point2D = ???
 }

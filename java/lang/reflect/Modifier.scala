@@ -1,6 +1,7 @@
 package java.lang.reflect
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The Modifier class provides static methods and
  *  constants to decode class and member access modifiers.  The sets of
@@ -10,6 +11,10 @@ import java.lang.Object
  *  The Java™ Virtual Machine Specification.
  */
 class Modifier extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 }
 
 object Modifier {
@@ -78,6 +83,12 @@ object Modifier {
      */
     @stub
     val TRANSIENT: Int = ???
+
+    /** The int value representing the volatile
+     *  modifier.
+     */
+    @stub
+    val VOLATILE: Int = ???
 
     /** Return an int value OR-ing together the source language
      *  modifiers that can be applied to a class.
@@ -186,4 +197,10 @@ object Modifier {
      */
     @stub
     def parameterModifiers(): Int = ???
+
+    /** Return a string describing the access modifier flags in
+     *  the specified modifier.
+     */
+    @stub
+    def toString(mod: Int): String = ???
 }

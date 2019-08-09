@@ -1,6 +1,7 @@
 package java.lang
 
 import java.io.{File, InputStream, OutputStream}
+import scala.scalanative.annotation.stub
 
 /** Every Java application has a single instance of class
  *  Runtime that allows the application to interface with
@@ -120,6 +121,10 @@ class Runtime extends Object {
     /** Enables/Disables tracing of instructions. */
     @stub
     def traceInstructions(on: Boolean): Unit = ???
+
+    /** Enables/Disables tracing of method calls. */
+    @stub
+    def traceMethodCalls(on: Boolean): Unit = ???
 }
 
 object Runtime {

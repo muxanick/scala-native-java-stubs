@@ -2,6 +2,7 @@ package java.nio.file.attribute
 
 import java.lang.String
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** A file attribute view that supports reading or updating a file's Access
  *  Control Lists (ACL) or file owner attributes.
@@ -107,4 +108,8 @@ trait AclFileAttributeView extends FileOwnerAttributeView {
     /** Returns the name of the attribute view. */
     @stub
     def name(): String = ???
+
+    /** Updates (replace) the access control list. */
+    @stub
+    def setAcl(acl: List[AclEntry]): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The Stack class represents a last-in-first-out
  *  (LIFO) stack of objects. It extends class Vector with five
@@ -19,6 +20,10 @@ import java.lang.Object
  *    Deque<Integer> stack = new ArrayDeque<Integer>();
  */
 class Stack[E] extends Vector[E] {
+
+    /** Creates an empty Stack. */
+    @stub
+    def this() = ???
 
     /** Tests if this stack is empty. */
     @stub
@@ -39,4 +44,8 @@ class Stack[E] extends Vector[E] {
     /** Pushes an item onto the top of this stack. */
     @stub
     def push(item: E): E = ???
+
+    /** Returns the 1-based position where an object is on this stack. */
+    @stub
+    def search(o: Object): Int = ???
 }

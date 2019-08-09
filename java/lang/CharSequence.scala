@@ -1,6 +1,7 @@
 package java.lang
 
 import java.util.stream.IntStream
+import scala.scalanative.annotation.stub
 
 /** A CharSequence is a readable sequence of char values. This
  *  interface provides uniform, read-only access to many different kinds of
@@ -39,4 +40,10 @@ trait CharSequence {
     /** Returns a CharSequence that is a subsequence of this sequence. */
     @stub
     def subSequence(start: Int, end: Int): CharSequence = ???
+
+    /** Returns a string containing the characters in this sequence in the same
+     *  order as this sequence.
+     */
+    @stub
+    def toString(): String = ???
 }

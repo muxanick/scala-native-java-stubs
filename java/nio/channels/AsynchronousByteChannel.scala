@@ -3,6 +3,7 @@ package java.nio.channels
 import java.lang.Integer
 import java.nio.ByteBuffer
 import java.util.concurrent.Future
+import scala.scalanative.annotation.stub
 
 /** An asynchronous channel that can read and write bytes.
  * 
@@ -32,4 +33,8 @@ trait AsynchronousByteChannel extends AsynchronousChannel {
     /** Writes a sequence of bytes to this channel from the given buffer. */
     @stub
     def write(src: ByteBuffer): Future[Integer] = ???
+
+    /** Writes a sequence of bytes to this channel from the given buffer. */
+    @stub
+    def write[A](src: ByteBuffer, attachment: A, handler: CompletionHandler[Integer, _ >: A]): Unit = ???
 }

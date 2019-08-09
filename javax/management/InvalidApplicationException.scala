@@ -1,6 +1,7 @@
 package javax.management
 
 import java.lang.{Exception, Object, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Thrown when an attempt is made to apply either of the following: A
  *  subquery expression to an MBean or a qualified attribute expression
@@ -9,4 +10,8 @@ import java.lang.{Exception, Object, Throwable}
  *  usually see it.
  */
 class InvalidApplicationException extends Exception {
+
+    /** Constructs an InvalidApplicationException with the specified Object. */
+    @stub
+    def this(val: Object) = ???
 }

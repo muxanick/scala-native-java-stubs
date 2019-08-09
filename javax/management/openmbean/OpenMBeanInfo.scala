@@ -2,6 +2,7 @@ package javax.management.openmbean
 
 import java.lang.{Object, String}
 import javax.management.{MBeanAttributeInfo, MBeanConstructorInfo, MBeanNotificationInfo, MBeanOperationInfo}
+import scala.scalanative.annotation.stub
 
 /** Describes an Open MBean: an Open MBean is recognized as such if
  *  its getMBeanInfo() method returns an instance of a class which
@@ -63,4 +64,8 @@ trait OpenMBeanInfo {
     /** Returns the hash code value for this OpenMBeanInfo instance. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a string representation of this OpenMBeanInfo instance. */
+    @stub
+    def toString(): String = ???
 }

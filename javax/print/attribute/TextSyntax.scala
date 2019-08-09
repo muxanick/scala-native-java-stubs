@@ -3,6 +3,7 @@ package javax.print.attribute
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** Class TextSyntax is an abstract base class providing the common
  *  implementation of all attributes whose value is a string. The text attribute
@@ -12,6 +13,10 @@ import java.util.Locale
  *  
  */
 abstract class TextSyntax extends Object with Serializable with Cloneable {
+
+    /** Constructs a TextAttribute with the specified string and locale. */
+    @stub
+    protected def this(value: String, locale: Locale) = ???
 
     /** Returns whether this text attribute is equivalent to the passed in
      *  object.
@@ -26,4 +31,7 @@ abstract class TextSyntax extends Object with Serializable with Cloneable {
 
     /** Returns a hashcode for this text attribute. */
     def hashCode(): Int
+
+    /** Returns a String identifying this text attribute. */
+    def toString(): String
 }

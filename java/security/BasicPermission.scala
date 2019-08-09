@@ -2,6 +2,7 @@ package java.security
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The BasicPermission class extends the Permission class, and
  *  can be used as the base class for permissions that want to
@@ -31,6 +32,10 @@ abstract class BasicPermission extends Permission with Serializable {
     @stub
     def this(name: String) = ???
 
+    /** Creates a new BasicPermission object with the specified name. */
+    @stub
+    def this(name: String, actions: String) = ???
+
     /** Checks two BasicPermission objects for equality. */
     def equals(obj: Object): Boolean
 
@@ -47,4 +52,9 @@ abstract class BasicPermission extends Permission with Serializable {
      *  this object.
      */
     def implies(p: Permission): Boolean
+
+    /** Returns a new PermissionCollection object for storing BasicPermission
+     *  objects.
+     */
+    def newPermissionCollection(): PermissionCollection
 }

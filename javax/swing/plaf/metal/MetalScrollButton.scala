@@ -4,6 +4,7 @@ import java.awt.{Component, Container, Dimension, Graphics}
 import java.lang.Object
 import javax.swing.{AbstractButton, JButton, JComponent}
 import javax.swing.plaf.basic.BasicArrowButton
+import scala.scalanative.annotation.stub
 
 /** JButton object for Metal scrollbar arrows.
  *  
@@ -17,6 +18,10 @@ import javax.swing.plaf.basic.BasicArrowButton
  *  Please see XMLEncoder.
  */
 class MetalScrollButton extends BasicArrowButton {
+
+    /**  */
+    @stub
+    def this(direction: Int, width: Int, freeStanding: Boolean) = ???
 
     /**  */
     @stub
@@ -37,4 +42,8 @@ class MetalScrollButton extends BasicArrowButton {
     /** Invoked by Swing to draw components. */
     @stub
     def paint(g: Graphics): Unit = ???
+
+    /**  */
+    @stub
+    def setFreeStanding(freeStanding: Boolean): Unit = ???
 }

@@ -6,6 +6,7 @@ import java.time.{Clock, Instant, ZoneId}
 import java.time.format.ResolverStyle
 import java.time.temporal.{ChronoField, TemporalAccessor, TemporalField, ValueRange}
 import java.util.{List, Map}
+import scala.scalanative.annotation.stub
 
 /** The Thai Buddhist calendar system.
  *  
@@ -114,4 +115,14 @@ final class ThaiBuddhistChronology extends AbstractChronology with Serializable 
     /** Obtains a ChronoZonedDateTime in this chronology from an Instant. */
     @stub
     def zonedDateTime(instant: Instant, zone: ZoneId): ChronoZonedDateTime[ThaiBuddhistDate] = ???
+
+    /** Obtains a ChronoZonedDateTime in this chronology from another temporal object. */
+    @stub
+    def zonedDateTime(temporal: TemporalAccessor): ChronoZonedDateTime[ThaiBuddhistDate] = ???
+}
+
+object ThaiBuddhistChronology {
+    /** Singleton instance of the Buddhist chronology. */
+    @stub
+    val INSTANCE: ThaiBuddhistChronology = ???
 }

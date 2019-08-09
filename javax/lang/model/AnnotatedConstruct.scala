@@ -4,6 +4,7 @@ import java.lang.Class
 import java.lang.annotation.Annotation
 import java.util.List
 import javax.lang.model.element.AnnotationMirror
+import scala.scalanative.annotation.stub
 
 /** Represents a construct that can be annotated.
  * 
@@ -97,4 +98,8 @@ trait AnnotatedConstruct {
      */
     @stub
     def getAnnotationMirrors(): List[_ <: AnnotationMirror] = ???
+
+    /** Returns annotations that are associated with this construct. */
+    @stub
+    def getAnnotationsByType[A <: Annotation](annotationType: Class[A]): Array[A] = ???
 }

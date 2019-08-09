@@ -1,6 +1,7 @@
 package java.security
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** An enumeration of cryptographic primitives. */
 class CryptoPrimitive private (name: String, ordinal: Int) extends Enum[CryptoPrimitive](name, ordinal) {
@@ -34,7 +35,16 @@ object CryptoPrimitive {
     /** Asymmetric primitive: signature scheme */
     final val SIGNATURE = new CryptoPrimitive(SIGNATURE, 8)
 
+    /** Symmetric primitive: stream cipher */
+    final val STREAM_CIPHER = new CryptoPrimitive(STREAM_CIPHER, 9)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): CryptoPrimitive = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[CryptoPrimitive] = ???
 }

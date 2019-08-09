@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An abstract adapter class for receiving mouse events.
  *  The methods in this class are empty. This class exists as
@@ -33,6 +34,10 @@ import java.lang.Object
  */
 abstract class MouseAdapter extends Object with MouseListener with MouseWheelListener with MouseMotionListener {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Invoked when the mouse button has been clicked (pressed
      *  and released) on a component.
      */
@@ -59,4 +64,7 @@ abstract class MouseAdapter extends Object with MouseListener with MouseWheelLis
 
     /** Invoked when a mouse button has been released on a component. */
     def mouseReleased(e: MouseEvent): Unit
+
+    /** Invoked when the mouse wheel is rotated. */
+    def mouseWheelMoved(e: MouseWheelEvent): Unit
 }

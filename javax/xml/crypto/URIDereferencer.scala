@@ -1,5 +1,7 @@
 package javax.xml.crypto
 
+import scala.scalanative.annotation.stub
+
 /** A dereferencer of URIReferences.
  *  
  *  The result of dereferencing a URIReference is either an
@@ -10,4 +12,10 @@ package javax.xml.crypto
  *  MUST be an OctetStreamData.
  */
 trait URIDereferencer {
+
+    /** Dereferences the specified URIReference and returns the
+     *  dereferenced data.
+     */
+    @stub
+    def dereference(uriReference: URIReference, context: XMLCryptoContext): Data = ???
 }

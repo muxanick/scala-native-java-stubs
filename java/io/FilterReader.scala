@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Abstract class for reading filtered character streams.
  *  The abstract class FilterReader itself
@@ -10,6 +11,13 @@ import java.lang.Object
  *  additional methods and fields.
  */
 abstract class FilterReader extends Reader {
+
+    /** Creates a new filtered reader. */
+    @stub
+    protected def this(in: Reader) = ???
+
+    /** The underlying character-input stream. */
+    protected val in: Reader
 
     /** Closes the stream and releases any system resources associated with
      *  it.
@@ -33,4 +41,7 @@ abstract class FilterReader extends Reader {
 
     /** Resets the stream. */
     def reset(): Unit
+
+    /** Skips characters. */
+    def skip(n: Long): Long
 }

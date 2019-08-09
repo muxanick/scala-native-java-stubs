@@ -3,8 +3,7 @@ package javax.xml.parsers
 import java.io.{File, InputStream}
 import java.lang.{Object, String}
 import javax.xml.validation.Schema
-import org.w3c.dom.{DOMImplementation, Document}
-import org.xml.sax.{EntityResolver, InputSource}
+import scala.scalanative.annotation.stub
 
 /** Defines the API to obtain DOM Document instances from an XML
  *  document. Using this class, an application programmer can obtain a
@@ -23,6 +22,10 @@ import org.xml.sax.{EntityResolver, InputSource}
  *  communicate with the application using these existing APIs.
  */
 abstract class DocumentBuilder extends Object {
+
+    /** Protected constructor */
+    @stub
+    protected def this() = ???
 
     /** Obtain an instance of a DOMImplementation object. */
     def getDOMImplementation(): DOMImplementation
@@ -82,4 +85,7 @@ abstract class DocumentBuilder extends Object {
      *  entities present in the XML document to be parsed.
      */
     def setEntityResolver(er: EntityResolver): Unit
+
+    /** Specify the ErrorHandler to be used by the parser. */
+    def setErrorHandler(eh: ErrorHandler): Unit
 }

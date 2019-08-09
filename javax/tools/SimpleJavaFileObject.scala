@@ -2,7 +2,9 @@ package javax.tools
 
 import java.io.{InputStream, OutputStream, Reader, Writer}
 import java.lang.{CharSequence, Object, String}
+import java.net.URI
 import javax.lang.model.element.{Modifier, NestingKind}
+import scala.scalanative.annotation.stub
 
 /** Provides simple implementations for most methods in JavaFileObject.
  *  This class is designed to be subclassed and used as a basis for
@@ -12,9 +14,19 @@ import javax.lang.model.element.{Modifier, NestingKind}
  */
 class SimpleJavaFileObject extends Object with JavaFileObject {
 
+    /** Construct a SimpleJavaFileObject of the given kind and with the
+     *  given URI.
+     */
+    @stub
+    protected def this(uri: URI, kind: JavaFileObject.Kind) = ???
+
     /** The kind of this file object. */
     @stub
     protected val kind: JavaFileObject.Kind = ???
+
+    /** A URI for this file object. */
+    @stub
+    protected val uri: URI = ???
 
     /** This implementation does nothing. */
     @stub
@@ -69,4 +81,8 @@ class SimpleJavaFileObject extends Object with JavaFileObject {
     /** Returns a string representation of the object. */
     @stub
     def toString(): String = ???
+
+    /** Returns a URI identifying this file object. */
+    @stub
+    def toUri(): URI = ???
 }

@@ -1,6 +1,7 @@
 package java.util.zip
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class provides support for general purpose compression using the
  *  popular ZLIB compression library. The ZLIB compression library was
@@ -52,6 +53,10 @@ class Deflater extends Object {
     /** Creates a new compressor using the specified compression level. */
     @stub
     def this(level: Int) = ???
+
+    /** Creates a new compressor using the specified compression level. */
+    @stub
+    def this(level: Int, nowrap: Boolean) = ???
 
     /** Compresses the input data and fills specified buffer with compressed
      *  data.
@@ -140,6 +145,10 @@ class Deflater extends Object {
     /** Sets the compression level to the specified value. */
     @stub
     def setLevel(level: Int): Unit = ???
+
+    /** Sets the compression strategy to the specified value. */
+    @stub
+    def setStrategy(strategy: Int): Unit = ???
 }
 
 object Deflater {
@@ -188,4 +197,10 @@ object Deflater {
     /** Compression flush mode used to achieve best compression result. */
     @stub
     val NO_FLUSH: Int = ???
+
+    /** Compression flush mode used to flush out all pending output; may
+     *  degrade compression for some compression algorithms.
+     */
+    @stub
+    val SYNC_FLUSH: Int = ???
 }

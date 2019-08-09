@@ -4,6 +4,7 @@ import java.io.{PrintStream, Serializable}
 import java.lang.{Class, Object, Runnable, String, Thread}
 import java.util.{Dictionary, EventListener}
 import javax.swing.event.{DocumentEvent, DocumentListener, EventListenerList, UndoableEditEvent, UndoableEditListener}
+import scala.scalanative.annotation.stub
 
 /** An implementation of the document interface to serve as a
  *  basis for implementing various kinds of documents.  At this
@@ -69,6 +70,12 @@ abstract class AbstractDocument extends Object with Document with Serializable {
     @stub
     protected def this(data: AbstractDocument.Content) = ???
 
+    /** Constructs a new AbstractDocument, wrapped around some
+     *  specified content storage mechanism.
+     */
+    @stub
+    protected def this(data: AbstractDocument.Content, context: AbstractDocument.AttributeContext) = ???
+
     /** Implements the abstract part of an element. */
     object AbstractElement extends AbstractDocument.AbstractElement
 
@@ -79,6 +86,11 @@ abstract class AbstractDocument extends Object with Document with Serializable {
      *  modified.
      */
     object DefaultDocumentEvent extends AbstractDocument.DefaultDocumentEvent
+
+    /** Implements an element that directly represents content of
+     *  some kind.
+     */
+    object LeafElement extends AbstractDocument.LeafElement
 
     /** The event listener list for the document. */
     protected val listenerList: EventListenerList
@@ -251,6 +263,9 @@ abstract class AbstractDocument extends Object with Document with Serializable {
      *  protects.
      */
     protected def writeLock(): Unit
+
+    /** Releases a write lock previously obtained via writeLock. */
+    protected def writeUnlock(): Unit
 }
 
 object AbstractDocument {
@@ -294,4 +309,8 @@ object AbstractDocument {
     /** Name of elements used to represent paragraphs */
     @stub
     val ParagraphElementName: String = ???
+
+    /** Name of elements used to hold sections (lines/paragraphs). */
+    @stub
+    val SectionElementName: String = ???
 }

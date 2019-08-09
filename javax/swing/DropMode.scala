@@ -1,6 +1,7 @@
 package javax.swing
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Drop modes, used to determine the method by which a component
  *  tracks and indicates a drop location during drag and drop.
@@ -52,7 +53,18 @@ object DropMode {
      */
     final val ON_OR_INSERT_ROWS = new DropMode(ON_OR_INSERT_ROWS, 6)
 
+    /** A component's own internal selection mechanism (or caret for text
+     *  components) should be used to track the drop location.
+     */
+    final val USE_SELECTION = new DropMode(USE_SELECTION, 7)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): DropMode = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[DropMode] = ???
 }

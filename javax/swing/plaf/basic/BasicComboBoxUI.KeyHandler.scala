@@ -1,7 +1,8 @@
 package javax.swing.plaf.basic
 
-import java.awt.event.KeyAdapter
+import java.awt.event.{KeyAdapter, KeyEvent}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This listener checks to see if the key event isn't a navigation key.  If
  *  it finds a key event that wasn't a navigation key it dispatches it to
@@ -12,4 +13,12 @@ import java.lang.Object
  *  BasicComboBoxUI.
  */
 class BasicComboBoxUI.KeyHandler extends KeyAdapter {
+
+    /**  */
+    @stub
+    def KeyHandler() = ???
+
+    /** Invoked when a key has been pressed. */
+    @stub
+    def keyPressed(e: KeyEvent): Unit = ???
 }

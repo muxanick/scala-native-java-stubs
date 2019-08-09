@@ -4,6 +4,7 @@ import java.awt.{Component.BaselineResizeBehavior, Dimension, Graphics}
 import java.lang.Object
 import javax.accessibility.Accessible
 import javax.swing.JComponent
+import scala.scalanative.annotation.stub
 
 /** The base class for all UI delegate objects in the Swing pluggable
  *  look and feel architecture.  The UI delegate object for a Swing
@@ -16,6 +17,10 @@ import javax.swing.JComponent
  *  on this class directly.
  */
 abstract class ComponentUI extends Object {
+
+    /** Sole constructor. */
+    @stub
+    def this() = ???
 
     /** Returns true if the specified x,y location is
      *  contained within the look and feel's defined shape of the specified
@@ -62,6 +67,11 @@ abstract class ComponentUI extends Object {
      *  installUI.
      */
     def uninstallUI(c: JComponent): Unit
+
+    /** Notifies this UI delegate that it is time to paint the specified
+     *  component.
+     */
+    def update(g: Graphics, c: JComponent): Unit
 }
 
 object ComponentUI {

@@ -3,6 +3,7 @@ package javax.imageio
 import java.awt.color.ColorSpace
 import java.awt.image.{BufferedImage, ColorModel, RenderedImage, SampleModel}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A class that allows the format of an image (in particular, its
  *  SampleModel and ColorModel) to be
@@ -16,9 +17,19 @@ class ImageTypeSpecifier extends Object {
     @stub
     def this(colorModel: ColorModel, sampleModel: SampleModel) = ???
 
+    /** Constructs an ImageTypeSpecifier from a
+     *  RenderedImage.
+     */
+    @stub
+    def this(image: RenderedImage) = ???
+
     /** The ColorModel to be used as a prototype. */
     @stub
     protected val colorModel: ColorModel = ???
+
+    /** A SampleModel to be used as a prototype. */
+    @stub
+    protected val sampleModel: SampleModel = ???
 
     /** Creates a BufferedImage with a given width and
      *  height according to the specification embodied in this object.
@@ -71,6 +82,10 @@ class ImageTypeSpecifier extends Object {
      */
     @stub
     def getSampleModel(width: Int, height: Int): SampleModel = ???
+
+    /** Returns the hash code for this ImageTypeSpecifier. */
+    @stub
+    def hashCode(): Int = ???
 }
 
 object ImageTypeSpecifier {

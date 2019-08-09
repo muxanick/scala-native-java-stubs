@@ -2,6 +2,7 @@ package javax.imageio.spi
 
 import java.lang.{Class, Object, String}
 import javax.imageio.ImageReader
+import scala.scalanative.annotation.stub
 
 /** The service provider interface (SPI) for ImageReaders.
  *  For more information on service provider classes, see the class comment
@@ -46,10 +47,22 @@ abstract class ImageReaderSpi extends ImageReaderWriterSpi {
     @stub
     protected def this() = ???
 
+    /** Constructs an ImageReaderSpi with a given
+     *  set of values.
+     */
+    @stub
+    def this(vendorName: String, version: String, names: Array[String], suffixes: Array[String], MIMETypes: Array[String], readerClassName: String, inputTypes: Array[Class], writerSpiNames: Array[String], supportsStandardStreamMetadataFormat: Boolean, nativeStreamMetadataFormatName: String, nativeStreamMetadataFormatClassName: String, extraStreamMetadataFormatNames: Array[String], extraStreamMetadataFormatClassNames: Array[String], supportsStandardImageMetadataFormat: Boolean, nativeImageMetadataFormatName: String, nativeImageMetadataFormatClassName: String, extraImageMetadataFormatNames: Array[String], extraImageMetadataFormatClassNames: Array[String]) = ???
+
     /** An array of Class objects to be returned from
      *  getInputTypes, initially null.
      */
     protected val inputTypes: Array[Class]
+
+    /** An array of strings to be returned from
+     *  getImageWriterSpiNames, initially
+     *  null.
+     */
+    protected val writerSpiNames: Array[String]
 
     /** Returns true if the supplied source object appears
      *  to be of the format supported by this reader.
@@ -80,6 +93,12 @@ abstract class ImageReaderSpi extends ImageReaderWriterSpi {
      *  setInput method.
      */
     def getInputTypes(): Array[Class]
+
+    /** Returns true if the ImageReader object
+     *  passed in is an instance of the ImageReader
+     *  associated with this service provider.
+     */
+    def isOwnReader(reader: ImageReader): Boolean
 }
 
 object ImageReaderSpi {

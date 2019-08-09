@@ -3,6 +3,7 @@ package javax.xml.bind.annotation
 import java.lang.String
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Maps a class or an enum type to an XML element.
  * 
@@ -133,4 +134,8 @@ import scala.annotation.StaticAnnotation
     /** local name of the XML element. */
     @stub
     val name: String = ???
+
+    /** namespace name of the XML element. */
+    @stub
+    val namespace: String = ???
 }

@@ -4,6 +4,7 @@ import java.awt.{Component, Container, Image}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.plaf.LabelUI
+import scala.scalanative.annotation.stub
 
 /** A display area for a short text string or an image,
  *  or both.
@@ -83,6 +84,20 @@ class JLabel extends JComponent with SwingConstants with Accessible {
      */
     @stub
     def this(text: String, icon: Icon, horizontalAlignment: Int) = ???
+
+    /** Creates a JLabel instance with the specified
+     *  text and horizontal alignment.
+     */
+    @stub
+    def this(text: String, horizontalAlignment: Int) = ???
+
+    /** The class used to obtain the accessible role for this object. */
+    @stub
+    protected object AccessibleJLabel extends JLabel.AccessibleJLabel
+
+    /**  */
+    @stub
+    protected val labelFor: Component = ???
 
     /** Verify that key is a legal value for the horizontalAlignment properties. */
     @stub
@@ -231,4 +246,8 @@ class JLabel extends JComponent with SwingConstants with Accessible {
      */
     @stub
     def setVerticalTextPosition(textPosition: Int): Unit = ???
+
+    /** Resets the UI property to a value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
 }

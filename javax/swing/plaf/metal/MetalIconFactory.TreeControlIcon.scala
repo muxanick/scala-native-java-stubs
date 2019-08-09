@@ -4,6 +4,7 @@ import java.awt.{Component, Graphics}
 import java.io.Serializable
 import java.lang.Object
 import javax.swing.Icon
+import scala.scalanative.annotation.stub
 
 /** 
  *  Warning:
@@ -17,6 +18,14 @@ import javax.swing.Icon
  */
 object MetalIconFactory.TreeControlIcon extends Object with Icon with Serializable {
 
+    /**  */
+    @stub
+    def TreeControlIcon(isCollapsed: Boolean) = ???
+
+    /**  */
+    @stub
+    protected val isLight: Boolean = ???
+
     /** Returns the icon's height. */
     @stub
     def getIconHeight(): Int = ???
@@ -28,4 +37,8 @@ object MetalIconFactory.TreeControlIcon extends Object with Icon with Serializab
     /** Draw the icon at the specified location. */
     @stub
     def paintIcon(c: Component, g: Graphics, x: Int, y: Int): Unit = ???
+
+    /**  */
+    @stub
+    def paintMe(c: Component, g: Graphics, x: Int, y: Int): Unit = ???
 }

@@ -5,6 +5,7 @@ import java.lang.annotation.Annotation
 import java.lang.reflect.{AnnotatedElement, AnnotatedType, Constructor, Field, GenericDeclaration, Method, Type, TypeVariable}
 import java.net.URL
 import java.security.ProtectionDomain
+import scala.scalanative.annotation.stub
 
 /** Instances of the class Class represent classes and
  *  interfaces in a running Java application.  An enum is a kind of
@@ -413,6 +414,10 @@ final class Class[T] extends Object with Serializable with GenericDeclaration wi
      */
     @stub
     def toGenericString(): String = ???
+
+    /** Converts the object to a string. */
+    @stub
+    def toString(): String = ???
 }
 
 object Class {

@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** A class implements the Cloneable interface to
  *  indicate to the Object.clone() method that it
  *  is legal for that method to make a

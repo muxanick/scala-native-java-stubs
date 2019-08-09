@@ -3,6 +3,7 @@ package javax.xml.ws.soap
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import javax.xml.ws.spi.WebServiceFeatureAnnotation
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** This annotation represents the use of WS-Addressing with either
  *  the SOAP 1.1/HTTP or SOAP 1.2/HTTP binding. Using this annotation
@@ -37,4 +38,11 @@ import scala.annotation.StaticAnnotation
      */
     @stub
     val required: Boolean = ???
+
+    /** If addressing is enabled, this property determines whether endpoint
+     *  requires the use of anonymous responses, or non-anonymous responses,
+     *  or all.
+     */
+    @stub
+    val responses: AddressingFeature.Responses = ???
 }

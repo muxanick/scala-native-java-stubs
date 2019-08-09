@@ -1,6 +1,7 @@
 package java.awt
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A type-safe enumeration of possible dialogs to display to the user. */
 final object JobAttributes.DialogType extends Object {
@@ -17,7 +18,17 @@ final object JobAttributes.DialogType extends Object {
     @stub
     val NATIVE: JobAttributes.DialogType = ???
 
+    /** The DialogType instance to use for
+     *  specifying no print dialog.
+     */
+    @stub
+    val NONE: JobAttributes.DialogType = ???
+
     /** Returns a hash code value for the object. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }

@@ -4,6 +4,7 @@ import java.awt.Shape
 import java.lang.Object
 import javax.swing.SizeRequirements
 import javax.swing.event.DocumentEvent
+import scala.scalanative.annotation.stub
 
 /** A View that tries to flow it's children into some
  *  partially constrained space.  This can be used to
@@ -22,6 +23,10 @@ import javax.swing.event.DocumentEvent
  */
 abstract class FlowView extends BoxView {
 
+    /** Constructs a FlowView for the given element. */
+    @stub
+    def this(elem: Element, axis: Int) = ???
+
     /** These are the views that represent the child elements
      *  of the element this view represents (The logical view
      *  to translate to a physical view).
@@ -32,6 +37,9 @@ abstract class FlowView extends BoxView {
      *  created against.
      */
     protected val layoutSpan: Int
+
+    /** The behavior for keeping the flow updated. */
+    protected val strategy: FlowView.FlowStrategy
 
     /** Calculate requirements along the minor axis. */
     protected def calculateMinorAxisRequirements(axis: Int, r: SizeRequirements): SizeRequirements
@@ -81,4 +89,15 @@ abstract class FlowView extends BoxView {
      *  in a location that this view is responsible for.
      */
     def removeUpdate(changes: DocumentEvent, a: Shape, f: ViewFactory): Unit
+
+    /** Sets the parent of the view. */
+    def setParent(parent: View): Unit
+}
+
+object FlowView {
+    /** Strategy for maintaining the physical form
+     *  of the flow.
+     */
+    @stub
+    object FlowStrategy extends FlowView.FlowStrategy
 }

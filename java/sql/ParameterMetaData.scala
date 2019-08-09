@@ -1,6 +1,7 @@
 package java.sql
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** An object that can be used to get information about the types
  *  and properties for each parameter marker in a
@@ -51,6 +52,10 @@ trait ParameterMetaData extends Wrapper {
     /** Retrieves whether null values are allowed in the designated parameter. */
     @stub
     def isNullable(param: Int): Int = ???
+
+    /** Retrieves whether values for the designated parameter can be signed numbers. */
+    @stub
+    def isSigned(param: Int): Boolean = ???
 }
 
 object ParameterMetaData {
@@ -81,4 +86,10 @@ object ParameterMetaData {
      */
     @stub
     val parameterNullable: Int = ???
+
+    /** The constant indicating that the
+     *  nullability of a parameter is unknown.
+     */
+    @stub
+    val parameterNullableUnknown: Int = ???
 }

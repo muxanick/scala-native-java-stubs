@@ -1,10 +1,12 @@
 package javax.swing
 
 import java.awt.{Component.AccessibleAWTComponent, Container.AccessibleAWTContainer}
+import java.awt.event.FocusListener
 import java.beans.PropertyChangeListener
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext, AccessibleExtendedComponent, AccessibleKeyBinding, AccessibleRole, AccessibleStateSet}
 import javax.swing.border.Border
+import scala.scalanative.annotation.stub
 
 /** Inner class of JComponent used to provide default support for
  *  accessibility.  This class is not meant to be used directly by
@@ -22,10 +24,24 @@ import javax.swing.border.Border
  */
 abstract class JComponent.AccessibleJComponent extends Container.AccessibleAWTContainer with AccessibleExtendedComponent {
 
+    /** Though the class is abstract, this should be called by
+     *  all sub-classes.
+     */
+    @stub
+    protected def AccessibleJComponent() = ???
+
     /** Fire PropertyChange listener, if one is registered,
      *  when children added/removed.
      */
-    protected val JComponent.AccessibleJComponent.AccessibleContainerHandler: class
+    protected object AccessibleContainerHandler extends JComponent.AccessibleJComponent.AccessibleContainerHandler
+
+    /** Fire PropertyChange listener, if one is registered,
+     *  when focus events happen
+     */
+    protected object AccessibleFocusHandler extends JComponent.AccessibleJComponent.AccessibleFocusHandler
+
+    /** Deprecated.  */
+    protected val accessibleFocusHandler: FocusListener
 
     /** Adds a PropertyChangeListener to the listener list. */
     def addPropertyChangeListener(listener: PropertyChangeListener): Unit
@@ -61,4 +77,7 @@ abstract class JComponent.AccessibleJComponent extends Container.AccessibleAWTCo
 
     /** Returns the tool tip text */
     def getToolTipText(): String
+
+    /** Removes a PropertyChangeListener from the listener list. */
+    def removePropertyChangeListener(listener: PropertyChangeListener): Unit
 }

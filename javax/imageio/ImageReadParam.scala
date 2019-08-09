@@ -3,6 +3,7 @@ package javax.imageio
 import java.awt.Dimension
 import java.awt.image.BufferedImage
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A class describing how a stream is to be decoded.  Instances of
  *  this class or its subclasses are used to supply prescriptive
@@ -98,6 +99,10 @@ import java.lang.Object
  */
 class ImageReadParam extends IIOParam {
 
+    /** Constructs an ImageReadParam. */
+    @stub
+    def this() = ???
+
     /** true if this ImageReadParam allows
      *  the source rendering dimensions to be set.
      */
@@ -127,6 +132,13 @@ class ImageReadParam extends IIOParam {
      */
     @stub
     protected val numProgressivePasses: Int = ???
+
+    /** The desired rendering width and height of the source, if
+     *  canSetSourceRenderSize is true, or
+     *  null.
+     */
+    @stub
+    protected val sourceRenderSize: Dimension = ???
 
     /** Returns true if this reader allows the source
      *  image to be rendered at an arbitrary size as part of the
@@ -194,4 +206,10 @@ class ImageReadParam extends IIOParam {
     /** Sets the range of progressive passes that will be decoded. */
     @stub
     def setSourceProgressivePasses(minPass: Int, numPasses: Int): Unit = ???
+
+    /** If the image is able to be rendered at an arbitrary size, sets
+     *  the source width and height to the supplied values.
+     */
+    @stub
+    def setSourceRenderSize(size: Dimension): Unit = ???
 }

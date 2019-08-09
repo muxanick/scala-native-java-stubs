@@ -1,5 +1,7 @@
 package java.awt
 
+import scala.scalanative.annotation.stub
+
 /** A helper interface to run the nested event loop.
  *  
  *  Objects that implement this interface are created with the
@@ -67,4 +69,8 @@ trait SecondaryLoop {
      */
     @stub
     def enter(): Boolean = ???
+
+    /** Unblocks the execution of the thread blocked by the enter() method and exits the secondary loop. */
+    @stub
+    def exit(): Boolean = ???
 }

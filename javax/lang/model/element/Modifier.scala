@@ -1,6 +1,7 @@
 package javax.lang.model.element
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Represents a modifier on a program element such
  *  as a class, method, or field.
@@ -50,6 +51,9 @@ object Modifier {
     /** The modifier transient */
     final val TRANSIENT = new Modifier(TRANSIENT, 10)
 
+    /** The modifier volatile */
+    final val VOLATILE = new Modifier(VOLATILE, 11)
+
     /** Returns this modifier's name in lowercase. */
     @stub
     def toString(): String = ???
@@ -57,4 +61,10 @@ object Modifier {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): Modifier = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[Modifier] = ???
 }

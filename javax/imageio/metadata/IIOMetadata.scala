@@ -1,7 +1,7 @@
 package javax.imageio.metadata
 
 import java.lang.{Object, String}
-import org.w3c.dom.Node
+import scala.scalanative.annotation.stub
 
 /** An abstract class to be extended by objects that represent metadata
  *  (non-image data) associated with images and streams.  Plug-ins
@@ -30,6 +30,13 @@ abstract class IIOMetadata extends Object {
     /** Constructs an empty IIOMetadata object. */
     @stub
     protected def this() = ???
+
+    /** Constructs an IIOMetadata object with the given
+     *  format names and format class names, as well as a boolean
+     *  indicating whether the standard format is supported.
+     */
+    @stub
+    protected def this(standardMetadataFormatSupported: Boolean, nativeMetadataFormatName: String, nativeMetadataFormatClassName: String, extraMetadataFormatNames: Array[String], extraMetadataFormatClassNames: Array[String]) = ???
 
     /** The IIOMetadataController that will be
      *  used to provide settings for this IIOMetadata
@@ -66,6 +73,11 @@ abstract class IIOMetadata extends Object {
      *  initialized to null and set via the constructor.
      */
     protected val nativeMetadataFormatName: String
+
+    /** A boolean indicating whether the concrete subclass supports the
+     *  standard metadata format, set via the constructor.
+     */
+    protected val standardFormatSupported: Boolean
 
     /** Activates the installed IIOMetadataController for
      *  this IIOMetadata object and returns the resulting
@@ -217,4 +229,10 @@ abstract class IIOMetadata extends Object {
      *  is called, overriding any default controller.
      */
     def setController(controller: IIOMetadataController): Unit
+
+    /** Sets the internal state of this IIOMetadata object
+     *  from a tree of XML DOM Nodes whose syntax is
+     *  defined by the given metadata format.
+     */
+    def setFromTree(formatName: String, root: Node): Unit
 }

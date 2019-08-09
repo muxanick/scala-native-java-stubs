@@ -1,7 +1,8 @@
 package javax.imageio.stream
 
-import java.io.File
+import java.io.{File, RandomAccessFile}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An implementation of ImageOutputStream that writes its
  *  output directly to a File or
@@ -14,6 +15,12 @@ class FileImageOutputStream extends ImageOutputStreamImpl {
      */
     @stub
     def this(f: File) = ???
+
+    /** Constructs a FileImageOutputStream that will write
+     *  to a given RandomAccessFile.
+     */
+    @stub
+    def this(raf: RandomAccessFile) = ???
 
     /** Closes the stream. */
     @stub
@@ -52,4 +59,8 @@ class FileImageOutputStream extends ImageOutputStreamImpl {
      */
     @stub
     def write(b: Array[Byte], off: Int, len: Int): Unit = ???
+
+    /** Writes a single byte to the stream at the current position. */
+    @stub
+    def write(b: Int): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.util.concurrent
 
 import java.lang.{Enum, Object, String, Thread}
+import scala.scalanative.annotation.stub
 
 /** A TimeUnit represents time durations at a given unit of
  *  granularity and provides utility methods to convert across units,
@@ -51,6 +52,9 @@ object TimeUnit {
 
     /** Time unit representing one thousandth of a microsecond */
     final val NANOSECONDS = new TimeUnit(NANOSECONDS, 5)
+
+    /** Time unit representing one second */
+    final val SECONDS = new TimeUnit(SECONDS, 6)
 
     /** Converts the given time duration in the given unit to this unit. */
     @stub
@@ -119,4 +123,10 @@ object TimeUnit {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): TimeUnit = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[TimeUnit] = ???
 }

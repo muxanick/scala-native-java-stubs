@@ -1,7 +1,8 @@
 package javax.naming.spi
 
-import java.lang.Class
+import java.lang.{Class, String}
 import javax.naming.{Context, Name}
+import scala.scalanative.annotation.stub
 
 /** This interface represents an "intermediate context" for name resolution.
  * 
@@ -21,4 +22,8 @@ trait Resolver {
     /** Partially resolves a name. */
     @stub
     def resolveToClass(name: Name, contextType: Class[_ <: Context]): ResolveResult = ???
+
+    /** Partially resolves a name. */
+    @stub
+    def resolveToClass(name: String, contextType: Class[_ <: Context]): ResolveResult = ???
 }

@@ -1,6 +1,7 @@
 package javax.lang.model.type
 
 import javax.lang.model.element.Element
+import scala.scalanative.annotation.stub
 
 /** Represents a type variable.
  *  A type variable may be explicitly declared by a
@@ -20,4 +21,8 @@ trait TypeVariable extends ReferenceType {
     /** Returns the lower bound of this type variable. */
     @stub
     def getLowerBound(): TypeMirror = ???
+
+    /** Returns the upper bound of this type variable. */
+    @stub
+    def getUpperBound(): TypeMirror = ???
 }

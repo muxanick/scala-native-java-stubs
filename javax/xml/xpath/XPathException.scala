@@ -1,7 +1,8 @@
 package javax.xml.xpath
 
-import java.io.PrintStream
+import java.io.{PrintStream, PrintWriter}
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** XPathException represents a generic XPath exception. */
 class XPathException extends Exception {
@@ -11,6 +12,12 @@ class XPathException extends Exception {
      */
     @stub
     def this(message: String) = ???
+
+    /** Constructs a new XPathException
+     *  with the specified cause.
+     */
+    @stub
+    def this(cause: Throwable) = ???
 
     /** Get the cause of this XPathException. */
     @stub
@@ -23,4 +30,8 @@ class XPathException extends Exception {
     /** Print stack trace to specified PrintStream. */
     @stub
     def printStackTrace(s: PrintStream): Unit = ???
+
+    /** Print stack trace to specified PrintWriter. */
+    @stub
+    def printStackTrace(s: PrintWriter): Unit = ???
 }

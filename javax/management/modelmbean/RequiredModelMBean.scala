@@ -3,6 +3,7 @@ package javax.management.modelmbean
 import java.lang.{Boolean, Object, String}
 import javax.management.{Attribute, AttributeChangeNotification, AttributeList, MBeanInfo, MBeanNotificationInfo, MBeanRegistration, MBeanServer, Notification, NotificationEmitter, NotificationFilter, NotificationListener, ObjectName}
 import javax.management.loading.ClassLoaderRepository
+import scala.scalanative.annotation.stub
 
 /** This class is the implementation of a ModelMBean. An appropriate
  *  implementation of a ModelMBean must be shipped with every JMX Agent
@@ -39,6 +40,10 @@ class RequiredModelMBean extends Object with ModelMBean with MBeanRegistration w
      */
     @stub
     def this() = ???
+
+    /** Constructs a RequiredModelMBean object using ModelMBeanInfo passed in. */
+    @stub
+    def this(mbi: ModelMBeanInfo) = ???
 
     /** Registers an object which implements the NotificationListener interface as a listener. */
     @stub
@@ -168,4 +173,10 @@ class RequiredModelMBean extends Object with ModelMBean with MBeanRegistration w
     /** Initializes a ModelMBean object using ModelMBeanInfo passed in. */
     @stub
     def setModelMBeanInfo(mbi: ModelMBeanInfo): Unit = ???
+
+    /** Captures the current state of this MBean instance and writes
+     *  it out to the persistent store.
+     */
+    @stub
+    def store(): Unit = ???
 }

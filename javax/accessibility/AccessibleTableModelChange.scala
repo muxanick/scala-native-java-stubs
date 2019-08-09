@@ -1,5 +1,7 @@
 package javax.accessibility
 
+import scala.scalanative.annotation.stub
+
 /** The AccessibleTableModelChange interface describes a change to
  *  the table model.  The attributes of the model change can be
  *  obtained by the following methods:
@@ -36,6 +38,10 @@ trait AccessibleTableModelChange {
     /** Returns the last row that changed. */
     @stub
     def getLastRow(): Int = ???
+
+    /** Returns the type of event. */
+    @stub
+    def getType(): Int = ???
 }
 
 object AccessibleTableModelChange {
@@ -46,4 +52,8 @@ object AccessibleTableModelChange {
     /** Identifies the insertion of new rows and/or columns. */
     @stub
     val INSERT: Int = ???
+
+    /** Identifies a change to existing data. */
+    @stub
+    val UPDATE: Int = ???
 }

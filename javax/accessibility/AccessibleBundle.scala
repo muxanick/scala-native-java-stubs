@@ -2,6 +2,7 @@ package javax.accessibility
 
 import java.lang.{Object, String}
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** Base class used to maintain a strongly typed enumeration.  This is
  *  the superclass of AccessibleState and AccessibleRole.
@@ -12,6 +13,13 @@ import java.util.Locale
  */
 abstract class AccessibleBundle extends Object {
 
+    /** Construct an AccessibleBundle. */
+    @stub
+    def this() = ???
+
+    /** The locale independent name of the state. */
+    protected val key: String
+
     /** Gets localized string describing the key using the default locale. */
     def toDisplayString(): String
 
@@ -20,4 +28,7 @@ abstract class AccessibleBundle extends Object {
 
     /** Obtains the key as a localized string. */
     protected def toDisplayString(resourceBundleName: String, locale: Locale): String
+
+    /** Gets localized string describing the key using the default locale. */
+    def toString(): String
 }

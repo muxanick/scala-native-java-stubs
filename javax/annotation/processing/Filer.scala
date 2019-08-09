@@ -3,6 +3,7 @@ package javax.annotation.processing
 import java.lang.CharSequence
 import javax.lang.model.element.Element
 import javax.tools.{FileObject, JavaFileManager.Location, JavaFileObject}
+import scala.scalanative.annotation.stub
 
 /** This interface supports the creation of new files by an annotation
  *  processor.  Files created in this way will be known to the
@@ -106,4 +107,8 @@ trait Filer {
      */
     @stub
     def createSourceFile(name: CharSequence, originatingElements: Element*): JavaFileObject = ???
+
+    /** Returns an object for reading an existing resource. */
+    @stub
+    def getResource(location: JavaFileManager.Location, pkg: CharSequence, relativeName: CharSequence): FileObject = ???
 }

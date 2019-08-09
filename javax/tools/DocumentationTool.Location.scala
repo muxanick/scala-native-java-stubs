@@ -1,6 +1,7 @@
 package javax.tools
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Locations specific to DocumentationTool. */
 class DocumentationTool.Location private (name: String, ordinal: Int) extends Enum[DocumentationTool.Location](name, ordinal) with JavaFileManager.Location {
@@ -13,6 +14,9 @@ object DocumentationTool.Location {
     /** Location of new documentation files. */
     final val DOCUMENTATION_OUTPUT = new DocumentationTool.Location(DOCUMENTATION_OUTPUT, 1)
 
+    /** Location to search for taglets. */
+    final val TAGLET_PATH = new DocumentationTool.Location(TAGLET_PATH, 2)
+
     /** Gets the name of this location. */
     @stub
     def getName(): String = ???
@@ -24,4 +28,10 @@ object DocumentationTool.Location {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): DocumentationTool.Location = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[DocumentationTool.Location] = ???
 }

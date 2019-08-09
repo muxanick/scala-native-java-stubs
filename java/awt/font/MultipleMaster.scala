@@ -2,6 +2,7 @@ package java.awt.font
 
 import java.awt.Font
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** The MultipleMaster interface represents Type 1
  *  Multiple Master fonts.
@@ -34,4 +35,8 @@ trait MultipleMaster {
      */
     @stub
     def getDesignAxisRanges(): Array[Float] = ???
+
+    /** Returns the number of multiple master design controls. */
+    @stub
+    def getNumDesignAxes(): Int = ???
 }

@@ -2,6 +2,7 @@ package java.awt
 
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** A Menu object is a pull-down menu component
  *  that is deployed from a menu bar.
@@ -28,6 +29,18 @@ class Menu extends MenuItem with MenuContainer with Accessible {
     /** Constructs a new menu with the specified label. */
     @stub
     def this(label: String) = ???
+
+    /** Constructs a new menu with the specified label,
+     *  indicating whether the menu can be torn off.
+     */
+    @stub
+    def this(label: String, tearOff: Boolean) = ???
+
+    /** Inner class of Menu used to provide default support for
+     *  accessibility.
+     */
+    @stub
+    protected object AccessibleAWTMenu extends Menu.AccessibleAWTMenu
 
     /** Adds the specified menu item to this menu. */
     @stub
@@ -100,4 +113,8 @@ class Menu extends MenuItem with MenuContainer with Accessible {
     /** Removes all items from this menu. */
     @stub
     def removeAll(): Unit = ???
+
+    /** Removes the menu's peer. */
+    @stub
+    def removeNotify(): Unit = ???
 }

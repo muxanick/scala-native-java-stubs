@@ -1,5 +1,8 @@
 package java.security
 
+import java.lang.Object
+import scala.scalanative.annotation.stub
+
 /**  This interface represents a guard, which is an object that is used
  *  to protect access to another object.
  * 
@@ -9,4 +12,10 @@ package java.security
  *  to determine whether or not to allow access to the object.
  */
 trait Guard {
+
+    /** Determines whether or not to allow access to the guarded object
+     *  object.
+     */
+    @stub
+    def checkGuard(object: Object): Unit = ???
 }

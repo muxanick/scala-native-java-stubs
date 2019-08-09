@@ -1,6 +1,7 @@
 package java.awt.datatransfer
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Defines the interface for classes that can be used to provide data
  *  for a transfer operation.
@@ -21,4 +22,10 @@ trait Transferable {
      */
     @stub
     def getTransferDataFlavors(): Array[DataFlavor] = ???
+
+    /** Returns whether or not the specified data flavor is supported for
+     *  this object.
+     */
+    @stub
+    def isDataFlavorSupported(flavor: DataFlavor): Boolean = ???
 }

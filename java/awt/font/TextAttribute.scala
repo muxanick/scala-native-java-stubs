@@ -1,7 +1,8 @@
 package java.awt.font
 
-import java.lang.{Boolean, Float, Integer, Object}
+import java.lang.{Boolean, Float, Integer, Object, String}
 import java.text.AttributedCharacterIterator.Attribute
+import scala.scalanative.annotation.stub
 
 /** The TextAttribute class defines attribute keys and
  *  attribute values used for text rendering.
@@ -204,6 +205,14 @@ import java.text.AttributedCharacterIterator.Attribute
  *  
  */
 final class TextAttribute extends AttributedCharacterIterator.Attribute {
+
+    /** Constructs a TextAttribute with the specified name. */
+    @stub
+    protected def this(name: String) = ???
+
+    /** Resolves instances being deserialized to the predefined constants. */
+    @stub
+    protected def readResolve(): Object = ???
 }
 
 object TextAttribute {
@@ -450,4 +459,8 @@ object TextAttribute {
     /** A moderately condensed width. */
     @stub
     val WIDTH_SEMI_CONDENSED: Float = ???
+
+    /** A moderately extended width. */
+    @stub
+    val WIDTH_SEMI_EXTENDED: Float = ???
 }

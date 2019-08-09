@@ -2,6 +2,7 @@ package java.awt.image
 
 import java.awt.{BufferCapabilities, Graphics}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The BufferStrategy class represents the mechanism with which
  *  to organize complex memory on a particular Canvas or
@@ -100,6 +101,10 @@ import java.lang.Object
  */
 abstract class BufferStrategy extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Returns whether the drawing buffer was lost since the last call to
      *  getDrawGraphics.
      */
@@ -123,4 +128,9 @@ abstract class BufferStrategy extends Object {
 
     /** Creates a graphics context for the drawing buffer. */
     def getDrawGraphics(): Graphics
+
+    /** Makes the next available buffer visible by either copying the memory
+     *  (blitting) or changing the display pointer (flipping).
+     */
+    def show(): Unit
 }

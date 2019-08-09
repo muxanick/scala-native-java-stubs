@@ -1,6 +1,7 @@
 package java.awt
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A FocusTraversalPolicy that determines traversal order based on the order
  *  of child Components in a Container. From a particular focus cycle root, the
@@ -35,4 +36,14 @@ import java.lang.Object
  *  for more information.
  */
 class DefaultFocusTraversalPolicy extends ContainerOrderFocusTraversalPolicy {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** Determines whether a Component is an acceptable choice as the new
+     *  focus owner.
+     */
+    @stub
+    protected def accept(aComponent: Component): Boolean = ???
 }

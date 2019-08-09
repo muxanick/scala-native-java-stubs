@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.{Exception, IllegalArgumentException, Object, RuntimeException, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Unchecked exception thrown when a conversion and flag are incompatible.
  * 
@@ -9,6 +10,12 @@ import java.lang.{Exception, IllegalArgumentException, Object, RuntimeException,
  */
 class FormatFlagsConversionMismatchException extends IllegalFormatException {
 
+    /** Constructs an instance of this class with the specified flag
+     *  and conversion.
+     */
+    @stub
+    def this(f: String, c: Char) = ???
+
     /** Returns the incompatible conversion. */
     @stub
     def getConversion(): Char = ???
@@ -16,4 +23,8 @@ class FormatFlagsConversionMismatchException extends IllegalFormatException {
     /** Returns the incompatible flag. */
     @stub
     def getFlags(): String = ???
+
+    /** Returns the detail message string of this throwable. */
+    @stub
+    def getMessage(): String = ???
 }

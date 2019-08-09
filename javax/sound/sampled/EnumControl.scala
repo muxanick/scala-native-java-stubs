@@ -1,6 +1,7 @@
 package javax.sound.sampled
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A EnumControl provides control over a set of
  *  discrete possible values, each represented by an object.  In a
@@ -24,6 +25,10 @@ import java.lang.Object
  */
 abstract class EnumControl extends Control {
 
+    /** Constructs a new enumerated control object with the given parameters. */
+    @stub
+    protected def this(type: EnumControl.Type, values: Array[Object], value: Object) = ???
+
     /** Obtains this control's current value. */
     def getValue(): Object
 
@@ -32,4 +37,15 @@ abstract class EnumControl extends Control {
 
     /** Sets the current value for the control. */
     def setValue(value: Object): Unit
+
+    /** Provides a string representation of the control. */
+    def toString(): String
+}
+
+object EnumControl {
+    /** An instance of the EnumControl.Type inner class identifies one kind of
+     *  enumerated control.
+     */
+    @stub
+    object Type extends EnumControl.Type
 }

@@ -2,7 +2,8 @@ package javax.security.auth.kerberos
 
 import java.io.Serializable
 import java.lang.{Object, String}
-import java.security.Permission
+import java.security.{Permission, PermissionCollection}
+import scala.scalanative.annotation.stub
 
 /** This class is used to protect Kerberos services and the
  *  credentials necessary to access those services. There is a one to
@@ -66,6 +67,13 @@ import java.security.Permission
  */
 final class ServicePermission extends Permission with Serializable {
 
+    /** Create a new ServicePermission
+     *  with the specified servicePrincipal
+     *  and action.
+     */
+    @stub
+    def this(servicePrincipal: String, action: String) = ???
+
     /** Checks two ServicePermission objects for equality. */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -83,4 +91,10 @@ final class ServicePermission extends Permission with Serializable {
      */
     @stub
     def implies(p: Permission): Boolean = ???
+
+    /** Returns a PermissionCollection object for storing
+     *  ServicePermission objects.
+     */
+    @stub
+    def newPermissionCollection(): PermissionCollection = ???
 }

@@ -2,6 +2,7 @@ package java.rmi.server
 
 import java.lang.Deprecated
 import java.rmi.Remote
+import scala.scalanative.annotation.stub
 
 /** The Skeleton interface is used solely by the RMI
  *  implementation.
@@ -20,4 +21,11 @@ import java.rmi.Remote
      */
     @stub
     def dispatch(obj: Remote, theCall: RemoteCall, opnum: Int, hash: Long): Unit = ???
+
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
+    @stub
+    def getOperations(): Array[Operation] = ???
 }

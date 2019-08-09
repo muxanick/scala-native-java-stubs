@@ -3,6 +3,7 @@ package java.util.concurrent
 import java.io.Serializable
 import java.lang.Object
 import java.util.{AbstractCollection, Collection, Deque, Iterator, Spliterator}
+import scala.scalanative.annotation.stub
 
 /** An unbounded concurrent deque based on linked nodes.
  *  Concurrent insertion, removal, and access operations execute safely
@@ -46,6 +47,13 @@ class ConcurrentLinkedDeque[E] extends AbstractCollection[E] with Deque[E] with 
     /** Constructs an empty deque. */
     @stub
     def this() = ???
+
+    /** Constructs a deque initially containing the elements of
+     *  the given collection, added in traversal order of the
+     *  collection's iterator.
+     */
+    @stub
+    def this(c: Collection[_ <: E]) = ???
 
     /** Inserts the specified element at the tail of this deque. */
     @stub
@@ -211,4 +219,11 @@ class ConcurrentLinkedDeque[E] extends AbstractCollection[E] with Deque[E] with 
      */
     @stub
     def toArray(): Array[Object] = ???
+
+    /** Returns an array containing all of the elements in this deque,
+     *  in proper sequence (from first to last element); the runtime
+     *  type of the returned array is that of the specified array.
+     */
+    @stub
+    def toArray[T](a: Array[T]): Array[T] = ???
 }

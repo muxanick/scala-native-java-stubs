@@ -1,11 +1,12 @@
 package javax.imageio
 
 import java.awt.image.{BufferedImage, RenderedImage}
-import java.io.{File, InputStream}
+import java.io.{File, InputStream, OutputStream}
 import java.lang.{Object, String}
 import java.net.URL
 import java.util.Iterator
 import javax.imageio.stream.{ImageInputStream, ImageOutputStream}
+import scala.scalanative.annotation.stub
 
 /** A class containing static convenience methods for locating
  *  ImageReaders and ImageWriters, and
@@ -226,4 +227,10 @@ object ImageIO {
      */
     @stub
     def write(im: RenderedImage, formatName: String, output: ImageOutputStream): Boolean = ???
+
+    /** Writes an image using an arbitrary ImageWriter
+     *  that supports the given format to an OutputStream.
+     */
+    @stub
+    def write(im: RenderedImage, formatName: String, output: OutputStream): Boolean = ???
 }

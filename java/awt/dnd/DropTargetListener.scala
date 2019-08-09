@@ -1,6 +1,7 @@
 package java.awt.dnd
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The DropTargetListener interface
  *  is the callback interface used by the
@@ -63,4 +64,10 @@ trait DropTargetListener extends EventListener {
      */
     @stub
     def drop(dtde: DropTargetDropEvent): Unit = ???
+
+    /** Called if the user has modified
+     *  the current drop gesture.
+     */
+    @stub
+    def dropActionChanged(dtde: DropTargetDragEvent): Unit = ???
 }

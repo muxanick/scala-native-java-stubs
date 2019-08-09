@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, IntegerSyntax, PrintJobAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class JobImpressionsCompleted is an integer valued printing attribute class
  *  that specifies the number of impressions completed for the job so far. For
@@ -25,6 +26,12 @@ import javax.print.attribute.{Attribute, IntegerSyntax, PrintJobAttribute}
  */
 final class JobImpressionsCompleted extends IntegerSyntax with PrintJobAttribute {
 
+    /** Construct a new job impressions completed attribute with the given
+     *  integer value.
+     */
+    @stub
+    def this(value: Int) = ???
+
     /** Returns whether this job impressions completed attribute is equivalent
      *  tp the passed in object.
      */
@@ -36,4 +43,10 @@ final class JobImpressionsCompleted extends IntegerSyntax with PrintJobAttribute
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

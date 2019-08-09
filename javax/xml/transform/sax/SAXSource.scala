@@ -2,7 +2,7 @@ package javax.xml.transform.sax
 
 import java.lang.{Object, String}
 import javax.xml.transform.Source
-import org.xml.sax.{InputSource, XMLReader}
+import scala.scalanative.annotation.stub
 
 /** Acts as an holder for SAX-style Source.
  * 
@@ -21,6 +21,12 @@ class SAXSource extends Object with Source {
     /** Create a SAXSource, using a SAX InputSource. */
     @stub
     def this(inputSource: InputSource) = ???
+
+    /** Create a SAXSource, using an XMLReader
+     *  and a SAX InputSource.
+     */
+    @stub
+    def this(reader: XMLReader, inputSource: InputSource) = ???
 
     /** Get the SAX InputSource to be used for the Source. */
     @stub
@@ -47,4 +53,19 @@ class SAXSource extends Object with Source {
     /** Set the XMLReader to be used for the Source. */
     @stub
     def setXMLReader(reader: XMLReader): Unit = ???
+}
+
+object SAXSource {
+    /** If TransformerFactory.getFeature(java.lang.String)
+     *  returns true when passed this value as an argument,
+     *  the Transformer supports Source input of this type.
+     */
+    @stub
+    val FEATURE: String = ???
+
+    /** Attempt to obtain a SAX InputSource object from a Source
+     *  object.
+     */
+    @stub
+    def sourceToInputSource(source: Source): InputSource = ???
 }

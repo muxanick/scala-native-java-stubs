@@ -1,6 +1,7 @@
 package java.lang.instrument
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Thrown by an implementation of
  *  Instrumentation.redefineClasses
@@ -13,4 +14,10 @@ class UnmodifiableClassException extends Exception {
      */
     @stub
     def this() = ???
+
+    /** Constructs an UnmodifiableClassException with the
+     *  specified detail message.
+     */
+    @stub
+    def this(s: String) = ???
 }

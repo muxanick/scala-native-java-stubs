@@ -2,6 +2,7 @@ package java.nio.channels.spi
 
 import java.lang.Object
 import java.nio.channels.{SelectableChannel, SelectionKey, Selector}
+import scala.scalanative.annotation.stub
 
 /** Base implementation class for selectable channels.
  * 
@@ -13,6 +14,10 @@ import java.nio.channels.{SelectableChannel, SelectionKey, Selector}
  *  against other threads that might be engaged in the same operations.  
  */
 abstract class AbstractSelectableChannel extends SelectableChannel {
+
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this(provider: SelectorProvider) = ???
 
     /** Retrieves the object upon which the configureBlocking and register methods synchronize. */
     def blockingLock(): Object
@@ -46,4 +51,7 @@ abstract class AbstractSelectableChannel extends SelectableChannel {
 
     /** Returns the provider that created this channel. */
     def provider(): SelectorProvider
+
+    /** Registers this channel with the given selector, returning a selection key. */
+    def register(sel: Selector, ops: Int, att: Object): SelectionKey
 }

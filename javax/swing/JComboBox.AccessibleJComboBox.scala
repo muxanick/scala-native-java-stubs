@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component.AccessibleAWTComponent, Container.AccessibleAWTContainer}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleAction, AccessibleContext, AccessibleRole, AccessibleSelection, AccessibleStateSet}
+import scala.scalanative.annotation.stub
 
 /** This class implements accessibility support for the
  *  JComboBox class.  It provides an implementation of the
@@ -18,6 +19,10 @@ import javax.accessibility.{Accessible, AccessibleAction, AccessibleContext, Acc
  *  Please see XMLEncoder.
  */
 protected class JComboBox.AccessibleJComboBox extends JComponent.AccessibleJComponent with AccessibleAction with AccessibleSelection {
+
+    /** Returns an AccessibleJComboBox instance */
+    @stub
+    def AccessibleJComboBox() = ???
 
     /** Adds the specified Accessible child of the object to the object's
      *  selection.
@@ -86,4 +91,10 @@ protected class JComboBox.AccessibleJComboBox extends JComponent.AccessibleJComp
      */
     @stub
     def removeAccessibleSelection(i: Int): Unit = ???
+
+    /** Causes every child of the object to be selected
+     *  if the object supports multiple selections.
+     */
+    @stub
+    def selectAllAccessibleSelection(): Unit = ???
 }

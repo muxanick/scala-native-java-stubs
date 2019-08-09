@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A ByteArrayInputStream contains
  *  an internal buffer that contains bytes that
@@ -21,6 +22,13 @@ class ByteArrayInputStream extends InputStream {
     @stub
     def this(buf: Array[Byte]) = ???
 
+    /** Creates ByteArrayInputStream
+     *  that uses buf as its
+     *  buffer array.
+     */
+    @stub
+    def this(buf: Array[Byte], offset: Int, length: Int) = ???
+
     /** An array of bytes that was provided
      *  by the creator of the stream.
      */
@@ -36,6 +44,10 @@ class ByteArrayInputStream extends InputStream {
     /** The currently marked position in the stream. */
     @stub
     protected val mark: Int = ???
+
+    /** The index of the next character to read from the input stream buffer. */
+    @stub
+    protected val pos: Int = ???
 
     /** Returns the number of remaining bytes that can be read (or skipped over)
      *  from this input stream.
@@ -68,4 +80,8 @@ class ByteArrayInputStream extends InputStream {
     /** Resets the buffer to the marked position. */
     @stub
     def reset(): Unit = ???
+
+    /** Skips n bytes of input from this input stream. */
+    @stub
+    def skip(n: Long): Long = ???
 }

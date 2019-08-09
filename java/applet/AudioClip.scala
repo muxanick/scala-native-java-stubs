@@ -1,5 +1,7 @@
 package java.applet
 
+import scala.scalanative.annotation.stub
+
 /** The AudioClip interface is a simple abstraction for
  *  playing a sound clip. Multiple AudioClip items can be
  *  playing at the same time, and the resulting sound is mixed
@@ -14,4 +16,8 @@ trait AudioClip {
     /** Starts playing this audio clip. */
     @stub
     def play(): Unit = ???
+
+    /** Stops playing this audio clip. */
+    @stub
+    def stop(): Unit = ???
 }

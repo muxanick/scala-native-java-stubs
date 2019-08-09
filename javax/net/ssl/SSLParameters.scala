@@ -3,6 +3,7 @@ package javax.net.ssl
 import java.lang.{Object, String}
 import java.security.AlgorithmConstraints
 import java.util.{Collection, List}
+import scala.scalanative.annotation.stub
 
 /** Encapsulates parameters for an SSL/TLS connection. The parameters
  *  are the list of ciphersuites to be accepted in an SSL/TLS handshake,
@@ -35,6 +36,12 @@ class SSLParameters extends Object {
     /** Constructs SSLParameters from the specified array of ciphersuites. */
     @stub
     def this(cipherSuites: Array[String]) = ???
+
+    /** Constructs SSLParameters from the specified array of ciphersuites
+     *  and protocols.
+     */
+    @stub
+    def this(cipherSuites: Array[String], protocols: Array[String]) = ???
 
     /** Returns the cryptographic algorithm constraints. */
     @stub
@@ -117,4 +124,8 @@ class SSLParameters extends Object {
     /** Sets whether the local cipher suites preference should be honored. */
     @stub
     def setUseCipherSuitesOrder(honorOrder: Boolean): Unit = ???
+
+    /** Sets whether client authentication should be requested. */
+    @stub
+    def setWantClientAuth(wantClientAuth: Boolean): Unit = ???
 }

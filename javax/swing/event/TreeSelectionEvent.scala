@@ -3,6 +3,7 @@ package javax.swing.event
 import java.lang.Object
 import java.util.EventObject
 import javax.swing.tree.TreePath
+import scala.scalanative.annotation.stub
 
 /** An event that characterizes a change in the current
  *  selection.  The change is based on any number of paths.
@@ -25,6 +26,10 @@ class TreeSelectionEvent extends EventObject {
     @stub
     def this(source: Object, paths: Array[TreePath], areNew: Array[Boolean], oldLeadSelectionPath: TreePath, newLeadSelectionPath: TreePath) = ???
 
+    /** Represents a change in the selection of a TreeSelectionModel. */
+    @stub
+    def this(source: Object, path: TreePath, isNew: Boolean, oldLeadSelectionPath: TreePath, newLeadSelectionPath: TreePath) = ???
+
     /** For each path identifies if that path is in fact new. */
     @stub
     protected val areNew: Array[Boolean] = ???
@@ -36,6 +41,10 @@ class TreeSelectionEvent extends EventObject {
     /** leadSelectionPath before the paths changed, may be null. */
     @stub
     protected val oldLeadSelectionPath: TreePath = ???
+
+    /** Paths this event represents. */
+    @stub
+    protected val paths: Array[TreePath] = ???
 
     /** Returns a copy of the receiver, but with the source being newSource. */
     @stub
@@ -70,4 +79,8 @@ class TreeSelectionEvent extends EventObject {
      */
     @stub
     def isAddedPath(index: Int): Boolean = ???
+
+    /** Returns whether the specified path was added to the selection. */
+    @stub
+    def isAddedPath(path: TreePath): Boolean = ???
 }

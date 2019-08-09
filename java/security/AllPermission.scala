@@ -1,6 +1,7 @@
 package java.security
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The AllPermission is a permission that implies all other permissions.
  *  
@@ -19,6 +20,10 @@ final class AllPermission extends Permission {
     @stub
     def this() = ???
 
+    /** Creates a new AllPermission object. */
+    @stub
+    def this(name: String, actions: String) = ???
+
     /** Checks two AllPermission objects for equality. */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -36,4 +41,10 @@ final class AllPermission extends Permission {
      */
     @stub
     def implies(p: Permission): Boolean = ???
+
+    /** Returns a new PermissionCollection object for storing AllPermission
+     *  objects.
+     */
+    @stub
+    def newPermissionCollection(): PermissionCollection = ???
 }

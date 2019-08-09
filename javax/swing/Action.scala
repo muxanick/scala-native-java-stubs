@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.event.ActionListener
 import java.beans.PropertyChangeListener
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The Action interface provides a useful extension to the
  *  ActionListener
@@ -207,6 +208,10 @@ trait Action extends ActionListener {
     /** Removes a PropertyChange listener. */
     @stub
     def removePropertyChangeListener(listener: PropertyChangeListener): Unit = ???
+
+    /** Sets the enabled state of the Action. */
+    @stub
+    def setEnabled(b: Boolean): Unit = ???
 }
 
 object Action {
@@ -269,4 +274,10 @@ object Action {
      */
     @stub
     val SHORT_DESCRIPTION: String = ???
+
+    /** The key used for storing a small Icon, such
+     *  as ImageIcon.
+     */
+    @stub
+    val SMALL_ICON: String = ???
 }

@@ -1,12 +1,19 @@
 package javax.swing.plaf
 
-import java.awt.{Component, Insets}
+import java.awt.{Component, Graphics, Insets}
 import java.io.Serializable
 import java.lang.Object
 import javax.swing.border.Border
+import scala.scalanative.annotation.stub
 
 /**  */
 class BorderUIResource extends Object with Border with UIResource with Serializable {
+
+    /** Creates a UIResource border object which wraps
+     *  an existing Border instance.
+     */
+    @stub
+    def this(delegate: Border) = ???
 
     /** Returns the insets of the border. */
     @stub
@@ -15,6 +22,12 @@ class BorderUIResource extends Object with Border with UIResource with Serializa
     /** Returns whether or not the border is opaque. */
     @stub
     def isBorderOpaque(): Boolean = ???
+
+    /** Paints the border for the specified component with the specified
+     *  position and size.
+     */
+    @stub
+    def paintBorder(c: Component, g: Graphics, x: Int, y: Int, width: Int, height: Int): Unit = ???
 }
 
 object BorderUIResource {
@@ -41,6 +54,10 @@ object BorderUIResource {
     /**  */
     @stub
     object MatteBorderUIResource extends BorderUIResource.MatteBorderUIResource
+
+    /**  */
+    @stub
+    object TitledBorderUIResource extends BorderUIResource.TitledBorderUIResource
 
     /**  */
     @stub

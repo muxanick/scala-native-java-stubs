@@ -1,5 +1,8 @@
 package java.lang.reflect
 
+import java.lang.Object
+import scala.scalanative.annotation.stub
+
 /** InvocationHandler is the interface implemented by
  *  the invocation handler of a proxy instance.
  * 
@@ -9,4 +12,10 @@ package java.lang.reflect
  *  method of its invocation handler.
  */
 trait InvocationHandler {
+
+    /** Processes a method invocation on a proxy instance and returns
+     *  the result.
+     */
+    @stub
+    def invoke(proxy: Object, method: Method, args: Array[Object]): Object = ???
 }

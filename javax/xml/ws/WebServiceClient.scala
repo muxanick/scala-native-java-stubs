@@ -3,6 +3,7 @@ package javax.xml.ws
 import java.lang.String
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Used to annotate a generated service interface.
  * 
@@ -24,4 +25,8 @@ import scala.annotation.StaticAnnotation
     /** The namespace for the Web service. */
     @stub
     val targetNamespace: String = ???
+
+    /** The location of the WSDL document for the service (a URL). */
+    @stub
+    val wsdlLocation: String = ???
 }

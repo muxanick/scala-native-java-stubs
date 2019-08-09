@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A data input stream lets an application read primitive Java data
  *  types from an underlying input stream in a machine-independent
@@ -12,6 +13,12 @@ import java.lang.{Object, String}
  *  methods in this class.
  */
 class DataInputStream extends FilterInputStream with DataInput {
+
+    /** Creates a DataInputStream that uses the specified
+     *  underlying InputStream.
+     */
+    @stub
+    def this(in: InputStream) = ???
 
     /** Reads some number of bytes from the contained input stream and
      *  stores them into the buffer array b.
@@ -121,6 +128,12 @@ class DataInputStream extends FilterInputStream with DataInput {
      */
     @stub
     def readUTF(): String = ???
+
+    /** See the general contract of the skipBytes
+     *  method of DataInput.
+     */
+    @stub
+    def skipBytes(n: Int): Int = ???
 }
 
 object DataInputStream {

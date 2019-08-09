@@ -4,6 +4,7 @@ import java.lang.Object
 import javax.annotation.processing.SupportedSourceVersion
 import javax.lang.model.SourceVersion
 import javax.lang.model.element.{Element, ElementVisitor}
+import scala.scalanative.annotation.stub
 
 /** A skeletal visitor of program elements with default behavior
  *  appropriate for the RELEASE_6
@@ -36,6 +37,10 @@ import javax.lang.model.element.{Element, ElementVisitor}
  */
 @SupportedSourceVersion ( value = RELEASE_6 ) abstract class AbstractElementVisitor6[R, P] extends Object with ElementVisitor[R, P] {
 
+    /** Constructor for concrete subclasses to call. */
+    @stub
+    protected def this() = ???
+
     /** Visits any program element as if by passing itself to that
      *  element's accept method and passing
      *  null for the additional parameter.
@@ -46,4 +51,7 @@ import javax.lang.model.element.{Element, ElementVisitor}
      *  element's accept method.
      */
     def visit(e: Element, p: P): R
+
+    /** Visits an unknown kind of element. */
+    def visitUnknown(e: Element, p: P): R
 }

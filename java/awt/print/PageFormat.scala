@@ -1,11 +1,18 @@
 package java.awt.print
 
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** The PageFormat class describes the size and
  *  orientation of a page to be printed.
  */
 class PageFormat extends Object with Cloneable {
+
+    /** Creates a default, portrait-oriented
+     *  PageFormat.
+     */
+    @stub
+    def this() = ???
 
     /** Makes a copy of this PageFormat with the same
      *  contents as this PageFormat.
@@ -67,6 +74,12 @@ class PageFormat extends Object with Cloneable {
     /** Sets the page orientation. */
     @stub
     def setOrientation(orientation: Int): Unit = ???
+
+    /** Sets the Paper object for this
+     *  PageFormat.
+     */
+    @stub
+    def setPaper(paper: Paper): Unit = ???
 }
 
 object PageFormat {
@@ -82,4 +95,10 @@ object PageFormat {
      */
     @stub
     val PORTRAIT: Int = ???
+
+    /** The origin is at the top right of the paper with x
+     *   running top to bottom and y running right to left.
+     */
+    @stub
+    val REVERSE_LANDSCAPE: Int = ???
 }

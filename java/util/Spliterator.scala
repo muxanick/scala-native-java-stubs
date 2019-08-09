@@ -1,6 +1,7 @@
 package java.util
 
 import java.util.function.Consumer
+import scala.scalanative.annotation.stub
 
 /** An object for traversing and partitioning elements of a source.  The source
  *  of elements covered by a Spliterator could be, for example, an array, a
@@ -136,6 +137,13 @@ trait Spliterator[T] {
      */
     @stub
     def tryAdvance(action: Consumer[_ >: T]): Boolean = ???
+
+    /** If this spliterator can be partitioned, returns a Spliterator
+     *  covering elements, that will, upon return from this method, not
+     *  be covered by this Spliterator.
+     */
+    @stub
+    def trySplit(): Spliterator[T] = ???
 }
 
 object Spliterator {
@@ -150,6 +158,10 @@ object Spliterator {
     /** A Spliterator specialized for long values. */
     @stub
     val Spliterator.OfLong: trait = ???
+
+    /** A Spliterator specialized for primitive values. */
+    @stub
+    val Spliterator.OfPrimitive[T, T_CONS, T_SPLITR <: Spliterator.OfPrimitive[T, T_CONS, T_SPLITR]]: trait = ???
 
     /** Characteristic value signifying that the element source may be safely
      *  concurrently modified (allowing additions, replacements, and/or removals)
@@ -197,4 +209,10 @@ object Spliterator {
      */
     @stub
     val SORTED: Int = ???
+
+    /** Characteristic value signifying that all Spliterators resulting from
+     *  trySplit() will be both SIZED and SUBSIZED.
+     */
+    @stub
+    val SUBSIZED: Int = ???
 }

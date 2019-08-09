@@ -1,6 +1,7 @@
 package javax.xml.bind
 
 import java.lang.{String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This event indicates that a problem was encountered while validating the
  *  incoming XML data during an unmarshal operation, while performing
@@ -20,6 +21,10 @@ trait ValidationEvent {
     /** Retrieve the text message for this warning/error. */
     @stub
     def getMessage(): String = ???
+
+    /** Retrieve the severity code for this warning/error. */
+    @stub
+    def getSeverity(): Int = ???
 }
 
 object ValidationEvent {
@@ -34,4 +39,10 @@ object ValidationEvent {
      */
     @stub
     val FATAL_ERROR: Int = ???
+
+    /** Conditions that are not errors or fatal errors as defined by the
+     *  XML 1.0 recommendation
+     */
+    @stub
+    val WARNING: Int = ???
 }

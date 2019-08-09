@@ -1,5 +1,7 @@
 package javax.naming.event
 
+import scala.scalanative.annotation.stub
+
 /** Specifies the method that a listener of a NamingEvent
  *  with event type of OBJECT_CHANGED must implement.
  * 
@@ -24,4 +26,8 @@ package javax.naming.event
  *  interface.
  */
 trait ObjectChangeListener extends NamingListener {
+
+    /** Called when an object has been changed. */
+    @stub
+    def objectChanged(evt: NamingEvent): Unit = ???
 }

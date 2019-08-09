@@ -1,7 +1,8 @@
 package javax.xml.bind
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.security.{BasicPermission, Permission}
+import scala.scalanative.annotation.stub
 
 /** This class is for JAXB permissions. A JAXBPermission
  *  contains a name (also referred to as a "target name") but
@@ -42,4 +43,8 @@ import java.security.{BasicPermission, Permission}
  *  
  */
 final class JAXBPermission extends BasicPermission {
+
+    /** Creates a new JAXBPermission with the specified name. */
+    @stub
+    def this(name: String) = ???
 }

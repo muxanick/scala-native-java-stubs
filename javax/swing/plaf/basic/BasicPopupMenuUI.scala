@@ -2,13 +2,22 @@ package javax.swing.plaf.basic
 
 import java.awt.event.MouseEvent
 import java.lang.Object
-import javax.swing.JComponent
+import javax.swing.{JComponent, JPopupMenu}
 import javax.swing.plaf.{ComponentUI, PopupMenuUI}
+import scala.scalanative.annotation.stub
 
 /** A Windows L&F implementation of PopupMenuUI.  This implementation
  *  is a "combined" view/controller.
  */
 class BasicPopupMenuUI extends PopupMenuUI {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /**  */
+    @stub
+    protected val popupMenu: JPopupMenu = ???
 
     /**  */
     @stub
@@ -41,6 +50,12 @@ class BasicPopupMenuUI extends PopupMenuUI {
     /**  */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicPopupMenuUI {

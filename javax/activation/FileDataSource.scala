@@ -2,6 +2,7 @@ package javax.activation
 
 import java.io.{File, InputStream, OutputStream}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The FileDataSource class implements a simple DataSource object
  *  that encapsulates a file. It provides data typing services via
@@ -21,6 +22,12 @@ class FileDataSource extends Object with DataSource {
     /** Creates a FileDataSource from a File object. */
     @stub
     def this(file: File) = ???
+
+    /** Creates a FileDataSource from
+     *  the specified path name.
+     */
+    @stub
+    def this(name: String) = ???
 
     /** This method returns the MIME type of the data in the form of a
      *  string.
@@ -49,4 +56,8 @@ class FileDataSource extends Object with DataSource {
      */
     @stub
     def getOutputStream(): OutputStream = ???
+
+    /** Set the FileTypeMap to use with this FileDataSource */
+    @stub
+    def setFileTypeMap(map: FileTypeMap): Unit = ???
 }

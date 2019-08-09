@@ -2,6 +2,7 @@ package java.util
 
 import java.io.{Closeable, File, Flushable, IOException, OutputStream, PrintStream}
 import java.lang.{Appendable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** An interpreter for printf-style format strings.  This class provides support
  *  for layout justification and alignment, common formats for numeric, string,
@@ -1764,6 +1765,12 @@ final class Formatter extends Object with Closeable with Flushable {
     @stub
     def this(fileName: String, csn: String) = ???
 
+    /** Constructs a new formatter with the specified file name, charset, and
+     *  locale.
+     */
+    @stub
+    def this(fileName: String, csn: String, l: Locale) = ???
+
     /** Closes this formatter. */
     @stub
     def close(): Unit = ???
@@ -1795,4 +1802,16 @@ final class Formatter extends Object with Closeable with Flushable {
     /** Returns the destination for the output. */
     @stub
     def out(): Appendable = ???
+
+    /** Returns the result of invoking toString() on the destination
+     *  for the output.
+     */
+    @stub
+    def toString(): String = ???
+}
+
+object Formatter {
+    /** Enum for BigDecimal formatting. */
+    @stub
+    object BigDecimalLayoutForm extends Formatter.BigDecimalLayoutForm
 }

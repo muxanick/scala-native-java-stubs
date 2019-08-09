@@ -2,6 +2,7 @@ package java.lang.reflect
 
 import java.lang.{Class, Object, String}
 import java.lang.annotation.Annotation
+import scala.scalanative.annotation.stub
 
 /** A shared superclass for the common functionality of Method
  *  and Constructor.
@@ -113,4 +114,9 @@ abstract class Executable extends AccessibleObject with Member with GenericDecla
      *  variable number of arguments; returns false otherwise.
      */
     def isVarArgs(): Boolean
+
+    /** Returns a string describing this Executable, including
+     *  any type parameters.
+     */
+    def toGenericString(): String
 }

@@ -1,6 +1,7 @@
 package javax.accessibility
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Class AccessibleRole determines the role of a component.  The role of a
  *  component describes its generic function. (E.G.,
@@ -16,6 +17,10 @@ import java.lang.Object
  *  from this class and it should provide constants in a similar manner.
  */
 class AccessibleRole extends AccessibleBundle {
+
+    /** Creates a new AccessibleRole using the given locale independent key. */
+    @stub
+    protected def this(key: String) = ???
 }
 
 object AccessibleRole {
@@ -329,4 +334,8 @@ object AccessibleRole {
     /** An object usually used in a scroll pane. */
     @stub
     val VIEWPORT: AccessibleRole = ???
+
+    /** A top level window with no title or border. */
+    @stub
+    val WINDOW: AccessibleRole = ???
 }

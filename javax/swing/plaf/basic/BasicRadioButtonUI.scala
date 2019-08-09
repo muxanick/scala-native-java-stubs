@@ -4,9 +4,18 @@ import java.awt.{Dimension, Graphics, Rectangle}
 import java.lang.{Object, String}
 import javax.swing.{AbstractButton, Icon, JComponent}
 import javax.swing.plaf.{ButtonUI, ComponentUI}
+import scala.scalanative.annotation.stub
 
 /** RadioButtonUI implementation for BasicRadioButtonUI */
 class BasicRadioButtonUI extends BasicToggleButtonUI {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** The icon. */
+    @stub
+    protected val icon: Icon = ???
 
     /** Returns the default icon. */
     @stub
@@ -39,6 +48,10 @@ class BasicRadioButtonUI extends BasicToggleButtonUI {
     /**  */
     @stub
     protected def uninstallDefaults(b: AbstractButton): Unit = ???
+
+    /**  */
+    @stub
+    protected def uninstallListeners(button: AbstractButton): Unit = ???
 }
 
 object BasicRadioButtonUI {

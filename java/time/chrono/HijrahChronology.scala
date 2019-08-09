@@ -6,6 +6,7 @@ import java.time.{Clock, Instant, ZoneId}
 import java.time.format.ResolverStyle
 import java.time.temporal.{ChronoField, TemporalAccessor, TemporalField, ValueRange}
 import java.util.{List, Map}
+import scala.scalanative.annotation.stub
 
 /** The Hijrah calendar is a lunar calendar supporting Islamic calendars.
  *  
@@ -141,4 +142,14 @@ final class HijrahChronology extends AbstractChronology with Serializable {
     /** Obtains a ChronoZonedDateTime in this chronology from an Instant. */
     @stub
     def zonedDateTime(instant: Instant, zone: ZoneId): ChronoZonedDateTime[HijrahDate] = ???
+
+    /** Obtains a ChronoZonedDateTime in this chronology from another temporal object. */
+    @stub
+    def zonedDateTime(temporal: TemporalAccessor): ChronoZonedDateTime[HijrahDate] = ???
+}
+
+object HijrahChronology {
+    /** Singleton instance of the Islamic Umm Al-Qura calendar of Saudi Arabia. */
+    @stub
+    val INSTANCE: HijrahChronology = ???
 }

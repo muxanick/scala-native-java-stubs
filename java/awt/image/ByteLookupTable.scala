@@ -1,6 +1,7 @@
 package java.awt.image
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class defines a lookup table object.  The output of a
  *  lookup operation using an object of this class is interpreted
@@ -21,6 +22,13 @@ class ByteLookupTable extends LookupTable {
     @stub
     def this(offset: Int, data: Array[Byte]) = ???
 
+    /** Constructs a ByteLookupTable object from an array of byte
+     *  arrays representing a lookup table for each
+     *  band.
+     */
+    @stub
+    def this(offset: Int, data: Array[Array[Byte]]) = ???
+
     /** Returns the lookup table data by reference. */
     @stub
     def getTable(): Array[Array[Byte]] = ???
@@ -30,4 +38,10 @@ class ByteLookupTable extends LookupTable {
      */
     @stub
     def lookupPixel(src: Array[Byte], dst: Array[Byte]): Array[Byte] = ???
+
+    /** Returns an array of samples of a pixel, translated with the lookup
+     *  table.
+     */
+    @stub
+    def lookupPixel(src: Array[Int], dst: Array[Int]): Array[Int] = ???
 }

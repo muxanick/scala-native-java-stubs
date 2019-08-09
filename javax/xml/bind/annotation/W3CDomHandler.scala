@@ -5,7 +5,7 @@ import javax.xml.bind.ValidationEventHandler
 import javax.xml.parsers.DocumentBuilder
 import javax.xml.transform.Source
 import javax.xml.transform.dom.DOMResult
-import org.w3c.dom.Element
+import scala.scalanative.annotation.stub
 
 /** DomHandler implementation for W3C DOM (org.w3c.dom package.) */
 class W3CDomHandler extends Object with DomHandler[Element, DOMResult] {
@@ -13,6 +13,12 @@ class W3CDomHandler extends Object with DomHandler[Element, DOMResult] {
     /** Default constructor. */
     @stub
     def this() = ???
+
+    /** Constructor that allows applications to specify which DOM implementation
+     *  to be used.
+     */
+    @stub
+    def this(builder: DocumentBuilder) = ???
 
     /** When a JAXB provider needs to unmarshal a part of a document into an
      *  infoset representation, it first calls this method to create a
@@ -34,4 +40,8 @@ class W3CDomHandler extends Object with DomHandler[Element, DOMResult] {
      */
     @stub
     def marshal(element: Element, errorHandler: ValidationEventHandler): Source = ???
+
+    /**  */
+    @stub
+    def setBuilder(builder: DocumentBuilder): Unit = ???
 }

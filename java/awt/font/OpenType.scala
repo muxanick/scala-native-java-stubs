@@ -1,6 +1,7 @@
 package java.awt.font
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** The OpenType interface represents OpenType and
  *  TrueType fonts.  This interface makes it possible to obtain
@@ -40,6 +41,10 @@ trait OpenType {
     /** Returns the size of the table for a specified tag. */
     @stub
     def getFontTableSize(strSfntTag: String): Int = ???
+
+    /** Returns the version of the OpenType font. */
+    @stub
+    def getVersion(): Int = ???
 }
 
 object OpenType {
@@ -242,4 +247,8 @@ object OpenType {
     /** Vertical metrics header. */
     @stub
     val TAG_VHEA: Int = ???
+
+    /** Vertical metrics. */
+    @stub
+    val TAG_VMTX: Int = ???
 }

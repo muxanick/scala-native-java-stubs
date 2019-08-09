@@ -1,5 +1,8 @@
 package java.awt.print
 
+import java.awt.Graphics
+import scala.scalanative.annotation.stub
+
 /** The Printable interface is implemented
  *  by the print methods of the current
  *  page painter, which is called by the printing
@@ -68,6 +71,13 @@ package java.awt.print
  *  
  */
 trait Printable {
+
+    /** Prints the page at the specified index into the specified
+     *  Graphics context in the specified
+     *  format.
+     */
+    @stub
+    def print(graphics: Graphics, pageFormat: PageFormat, pageIndex: Int): Int = ???
 }
 
 object Printable {
@@ -77,4 +87,10 @@ object Printable {
      */
     @stub
     val NO_SUCH_PAGE: Int = ???
+
+    /** Returned from print(Graphics, PageFormat, int)
+     *  to signify that the requested page was rendered.
+     */
+    @stub
+    val PAGE_EXISTS: Int = ???
 }

@@ -2,6 +2,7 @@ package java.util
 
 import java.lang.{Object, String}
 import java.util.function.Supplier
+import scala.scalanative.annotation.stub
 
 /** This class consists of static utility methods for operating
  *  on objects.  These utilities include null-safe or null-tolerant methods for computing the hash code of an object,
@@ -68,4 +69,11 @@ object Objects {
     /** Returns the result of calling toString for a non-null argument and "null" for a null argument. */
     @stub
     def toString(o: Object): String = ???
+
+    /** Returns the result of calling toString on the first
+     *  argument if the first argument is not null and returns
+     *  the second argument otherwise.
+     */
+    @stub
+    def toString(o: Object, nullDefault: String): String = ???
 }

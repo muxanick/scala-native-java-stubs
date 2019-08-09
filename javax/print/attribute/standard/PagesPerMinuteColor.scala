@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, IntegerSyntax, PrintServiceAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class PagesPerMinuteColor is an integer valued printing attribute that
  *  indicates the nominal number of pages per minute to the nearest whole number
@@ -28,6 +29,12 @@ import javax.print.attribute.{Attribute, IntegerSyntax, PrintServiceAttribute}
  */
 final class PagesPerMinuteColor extends IntegerSyntax with PrintServiceAttribute {
 
+    /** Construct a new pages per minute color attribute with the given integer
+     *  value.
+     */
+    @stub
+    def this(value: Int) = ???
+
     /** Returns whether this pages per minute color attribute is equivalent to
      *  the passed in object.
      */
@@ -39,4 +46,10 @@ final class PagesPerMinuteColor extends IntegerSyntax with PrintServiceAttribute
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

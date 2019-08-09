@@ -1,6 +1,7 @@
 package java.rmi
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** A NotBoundException is thrown if an attempt
  *  is made to lookup or unbind in the registry a name that has
@@ -13,4 +14,10 @@ class NotBoundException extends Exception {
      */
     @stub
     def this() = ???
+
+    /** Constructs a NotBoundException with the specified
+     *  detail message.
+     */
+    @stub
+    def this(s: String) = ???
 }

@@ -1,7 +1,8 @@
 package javax.swing.plaf.basic
 
-import java.awt.event.ComponentAdapter
+import java.awt.event.{ComponentAdapter, ComponentEvent}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Listener for resizing events.
  *  
@@ -9,4 +10,12 @@ import java.lang.Object
  *  Instantiate it only within subclasses of Foo.
  */
 class BasicSliderUI.ComponentHandler extends ComponentAdapter {
+
+    /**  */
+    @stub
+    def ComponentHandler() = ???
+
+    /** Invoked when the component's size changes. */
+    @stub
+    def componentResized(e: ComponentEvent): Unit = ???
 }

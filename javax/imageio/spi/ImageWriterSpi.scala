@@ -3,6 +3,7 @@ package javax.imageio.spi
 import java.awt.image.RenderedImage
 import java.lang.{Class, Object, String}
 import javax.imageio.{ImageTypeSpecifier, ImageWriter}
+import scala.scalanative.annotation.stub
 
 /** The service provider interface (SPI) for ImageWriters.
  *  For more information on service provider classes, see the class comment
@@ -45,6 +46,12 @@ abstract class ImageWriterSpi extends ImageReaderWriterSpi {
     /** Constructs a blank ImageWriterSpi. */
     @stub
     protected def this() = ???
+
+    /** Constructs an ImageWriterSpi with a given
+     *  set of values.
+     */
+    @stub
+    def this(vendorName: String, version: String, names: Array[String], suffixes: Array[String], MIMETypes: Array[String], writerClassName: String, outputTypes: Array[Class], readerSpiNames: Array[String], supportsStandardStreamMetadataFormat: Boolean, nativeStreamMetadataFormatName: String, nativeStreamMetadataFormatClassName: String, extraStreamMetadataFormatNames: Array[String], extraStreamMetadataFormatClassNames: Array[String], supportsStandardImageMetadataFormat: Boolean, nativeImageMetadataFormatName: String, nativeImageMetadataFormatClassName: String, extraImageMetadataFormatNames: Array[String], extraImageMetadataFormatClassNames: Array[String]) = ???
 
     /** An array of Class objects to be returned from
      *  getOutputTypes, initially null.
@@ -98,4 +105,20 @@ abstract class ImageWriterSpi extends ImageReaderWriterSpi {
      *  outputs preserves pixel data bit-accurately.
      */
     def isFormatLossless(): Boolean
+
+    /** Returns true if the ImageWriter object
+     *  passed in is an instance of the ImageWriter
+     *  associated with this service provider.
+     */
+    def isOwnWriter(writer: ImageWriter): Boolean
+}
+
+object ImageWriterSpi {
+    /** Deprecated. 
+     * Instead of using this field, directly create
+     *  the equivalent array { ImageOutputStream.class }.
+     * 
+     */
+    @stub
+    val STANDARD_OUTPUT_TYPE: Array[Class] = ???
 }

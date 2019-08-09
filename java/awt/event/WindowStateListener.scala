@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener interface for receiving window state events.
  *  
@@ -17,4 +18,8 @@ import java.util.EventListener
  *  invoked, and the WindowEvent is passed to it.
  */
 trait WindowStateListener extends EventListener {
+
+    /** Invoked when window state is changed. */
+    @stub
+    def windowStateChanged(e: WindowEvent): Unit = ???
 }

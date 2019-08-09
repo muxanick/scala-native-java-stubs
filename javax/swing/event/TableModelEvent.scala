@@ -3,6 +3,7 @@ package javax.swing.event
 import java.lang.Object
 import java.util.EventObject
 import javax.swing.table.TableModel
+import scala.scalanative.annotation.stub
 
 /** TableModelEvent is used to notify listeners that a table model
  *  has changed. The model event describes changes to a TableModel
@@ -59,6 +60,10 @@ class TableModelEvent extends EventObject {
     @stub
     def this(source: TableModel, firstRow: Int, lastRow: Int, column: Int) = ???
 
+    /** The cells from (firstRow, column) to (lastRow, column) have been changed. */
+    @stub
+    def this(source: TableModel, firstRow: Int, lastRow: Int, column: Int, type: Int) = ???
+
     /**  */
     @stub
     protected val column: Int = ???
@@ -86,6 +91,10 @@ class TableModelEvent extends EventObject {
     /** Returns the last row that changed. */
     @stub
     def getLastRow(): Int = ???
+
+    /** Returns the type of event - one of: INSERT, UPDATE and DELETE. */
+    @stub
+    def getType(): Int = ???
 }
 
 object TableModelEvent {
@@ -104,4 +113,8 @@ object TableModelEvent {
     /** Identifies the addition of new rows or columns. */
     @stub
     val INSERT: Int = ???
+
+    /** Identifies a change to existing data. */
+    @stub
+    val UPDATE: Int = ???
 }

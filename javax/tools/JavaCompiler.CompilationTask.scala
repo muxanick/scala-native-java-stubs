@@ -1,8 +1,10 @@
 package javax.tools
 
-import java.lang.Boolean
+import java.lang.{Boolean, Iterable}
 import java.util.Locale
 import java.util.concurrent.Callable
+import javax.annotation.processing.Processor
+import scala.scalanative.annotation.stub
 
 /** Interface representing a future for a compilation task.  The
  *  compilation task has not yet started.  To start the task, call
@@ -23,4 +25,8 @@ object trait JavaCompiler.CompilationTask extends Callable[Boolean] {
      */
     @stub
     def setLocale(locale: Locale): Unit = ???
+
+    /** Sets processors (for annotation processing). */
+    @stub
+    def setProcessors(processors: Iterable[_ <: Processor]): Unit = ???
 }

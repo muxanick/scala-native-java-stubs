@@ -3,6 +3,7 @@ package javax.swing.plaf.basic
 import java.awt.event.MouseEvent
 import java.lang.Object
 import javax.swing.event.MouseInputListener
+import scala.scalanative.annotation.stub
 
 /** Mouse input, and focus handling for JList.  An instance of this
  *  class is added to the appropriate java.awt.Component lists
@@ -19,6 +20,10 @@ import javax.swing.event.MouseInputListener
  *  Please see XMLEncoder.
  */
 class BasicListUI.MouseInputHandler extends Object with MouseInputListener {
+
+    /**  */
+    @stub
+    def MouseInputHandler() = ???
 
     /** Invoked when the mouse button has been clicked (pressed
      *  and released) on a component.
@@ -49,4 +54,8 @@ class BasicListUI.MouseInputHandler extends Object with MouseInputListener {
     /** Invoked when a mouse button has been pressed on a component. */
     @stub
     def mousePressed(e: MouseEvent): Unit = ???
+
+    /** Invoked when a mouse button has been released on a component. */
+    @stub
+    def mouseReleased(e: MouseEvent): Unit = ???
 }

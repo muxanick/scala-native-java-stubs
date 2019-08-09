@@ -2,6 +2,7 @@ package java.util
 
 import java.lang.Integer
 import java.util.function.{Consumer, IntConsumer}
+import scala.scalanative.annotation.stub
 
 /** A Spliterator specialized for int values. */
 object trait Spliterator.OfInt extends Spliterator.OfPrimitive[Integer, IntConsumer, Spliterator.OfInt] {
@@ -31,4 +32,11 @@ object trait Spliterator.OfInt extends Spliterator.OfPrimitive[Integer, IntConsu
      */
     @stub
     def tryAdvance(action: IntConsumer): Boolean = ???
+
+    /** If this spliterator can be partitioned, returns a Spliterator
+     *  covering elements, that will, upon return from this method, not
+     *  be covered by this Spliterator.
+     */
+    @stub
+    def trySplit(): Spliterator.OfInt = ???
 }

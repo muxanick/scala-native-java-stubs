@@ -4,6 +4,7 @@ import java.applet.Applet
 import java.awt.{Component, Container, Graphics, LayoutManager, Panel}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** An extended version of java.applet.Applet that adds support for
  *  the JFC/Swing component architecture.
@@ -53,6 +54,16 @@ import javax.accessibility.{Accessible, AccessibleContext}
  */
 class JApplet extends Applet with Accessible with RootPaneContainer {
 
+    /** Creates a swing applet instance. */
+    @stub
+    def this() = ???
+
+    /** This class implements accessibility support for the
+     *  JApplet class.
+     */
+    @stub
+    protected object AccessibleJApplet extends JApplet.AccessibleJApplet
+
     /**  */
     @stub
     protected val accessibleContext: AccessibleContext = ???
@@ -60,6 +71,12 @@ class JApplet extends Applet with Accessible with RootPaneContainer {
     /**  */
     @stub
     protected val rootPane: JRootPane = ???
+
+    /** If true then calls to add and setLayout
+     *  will be forwarded to the contentPane.
+     */
+    @stub
+    protected val rootPaneCheckingEnabled: Boolean = ???
 
     /** Adds the specified child Component. */
     @stub
@@ -156,4 +173,8 @@ class JApplet extends Applet with Accessible with RootPaneContainer {
      */
     @stub
     def setTransferHandler(newHandler: TransferHandler): Unit = ???
+
+    /** Just calls paint(g). */
+    @stub
+    def update(g: Graphics): Unit = ???
 }

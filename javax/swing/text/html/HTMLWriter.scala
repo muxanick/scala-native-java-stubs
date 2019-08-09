@@ -3,6 +3,7 @@ package javax.swing.text.html
 import java.io.Writer
 import java.lang.Object
 import javax.swing.text.{AbstractWriter, AttributeSet, Element}
+import scala.scalanative.annotation.stub
 
 /** This is a writer for HTMLDocuments. */
 class HTMLWriter extends AbstractWriter {
@@ -10,6 +11,10 @@ class HTMLWriter extends AbstractWriter {
     /** Creates a new HTMLWriter. */
     @stub
     def this(w: Writer, doc: HTMLDocument) = ???
+
+    /** Creates a new HTMLWriter. */
+    @stub
+    def this(w: Writer, doc: HTMLDocument, pos: Int, len: Int) = ???
 
     /** Searches the attribute set and for each tag
      *  that is stored in the tag vector.
@@ -93,4 +98,8 @@ class HTMLWriter extends AbstractWriter {
     /** Writes the line separator. */
     @stub
     protected def writeLineSeparator(): Unit = ???
+
+    /** Writes out the content of the Option form element. */
+    @stub
+    protected def writeOption(option: Option): Unit = ???
 }

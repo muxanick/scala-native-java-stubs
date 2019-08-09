@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{Class, Cloneable, Object, String}
 import java.sql.Ref
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** A serialized mapping of a Ref object, which is the mapping in the
  *  Java programming language of an SQL REF value.
@@ -19,6 +20,12 @@ import java.util.Map
  *  should be controlled by appropriate synchronization.
  */
 class SerialRef extends Object with Ref with Serializable with Cloneable {
+
+    /** Constructs a SerialRef object from the given Ref
+     *  object.
+     */
+    @stub
+    def this(ref: Ref) = ???
 
     /** Returns a clone of this SerialRef. */
     @stub
@@ -47,4 +54,10 @@ class SerialRef extends Object with Ref with Serializable with Cloneable {
     /** Returns a hash code for this SerialRef. */
     @stub
     def hashCode(): Int = ???
+
+    /** Sets the SQL structured type that this SerialRef object
+     *  references to the given Object object.
+     */
+    @stub
+    def setObject(obj: Object): Unit = ???
 }

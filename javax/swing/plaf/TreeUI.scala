@@ -4,9 +4,14 @@ import java.awt.Rectangle
 import java.lang.Object
 import javax.swing.JTree
 import javax.swing.tree.TreePath
+import scala.scalanative.annotation.stub
 
 /** Pluggable look and feel interface for JTree. */
 abstract class TreeUI extends ComponentUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Cancels the current editing session. */
     def cancelEditing(tree: JTree): Unit
@@ -38,4 +43,7 @@ abstract class TreeUI extends ComponentUI {
 
     /** Selects the last item in path and tries to edit it. */
     def startEditingAtPath(tree: JTree, path: TreePath): Unit
+
+    /** Stops the current editing session. */
+    def stopEditing(tree: JTree): Boolean
 }

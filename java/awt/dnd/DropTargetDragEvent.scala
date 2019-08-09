@@ -4,6 +4,7 @@ import java.awt.Point
 import java.awt.datatransfer.{DataFlavor, Transferable}
 import java.lang.Object
 import java.util.{EventObject, List}
+import scala.scalanative.annotation.stub
 
 /** The DropTargetDragEvent is delivered to a
  *  DropTargetListener via its
@@ -40,6 +41,15 @@ import java.util.{EventObject, List}
  *  is DnDConstants.ACTION_NONE.
  */
 class DropTargetDragEvent extends DropTargetEvent {
+
+    /** Construct a DropTargetDragEvent given the
+     *  DropTargetContext for this operation,
+     *  the location of the "Drag" Cursor's hotspot
+     *  in the Component's coordinates, the
+     *  user drop action, and the source drop actions.
+     */
+    @stub
+    def this(dtc: DropTargetContext, cursorLocn: Point, dropAction: Int, srcActions: Int) = ???
 
     /** Accepts the drag. */
     @stub
@@ -84,4 +94,11 @@ class DropTargetDragEvent extends DropTargetEvent {
      */
     @stub
     def isDataFlavorSupported(df: DataFlavor): Boolean = ???
+
+    /** Rejects the drag as a result of examining either the
+     *  dropAction or the available DataFlavor
+     *  types.
+     */
+    @stub
+    def rejectDrag(): Unit = ???
 }

@@ -1,9 +1,10 @@
 package javax.management.openmbean
 
-import java.lang.{Boolean, Byte, Character, Double, Float, Integer, Long, Object, Short, String}
+import java.lang.{Boolean, Byte, Character, Double, Float, Integer, Long, Object, Short, String, Void}
 import java.math.{BigDecimal, BigInteger}
 import java.util.Date
 import javax.management.ObjectName
+import scala.scalanative.annotation.stub
 
 /** The SimpleType class is the open type class whose instances describe
  *  all open data values which are neither arrays,
@@ -38,6 +39,10 @@ final class SimpleType[T] extends OpenType[T] {
      */
     @stub
     def readResolve(): Object = ???
+
+    /** Returns a string representation of this SimpleType instance. */
+    @stub
+    def toString(): String = ???
 }
 
 object SimpleType {
@@ -118,4 +123,10 @@ object SimpleType {
      */
     @stub
     val STRING: SimpleType[String] = ???
+
+    /** The SimpleType instance describing values whose
+     *  Java class name is java.lang.Void.
+     */
+    @stub
+    val VOID: SimpleType[Void] = ???
 }

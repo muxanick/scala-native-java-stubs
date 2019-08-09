@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A piped output stream can be connected to a piped input stream
  *  to create a communications pipe. The piped output stream is the
@@ -20,6 +21,12 @@ class PipedOutputStream extends OutputStream {
      */
     @stub
     def this() = ???
+
+    /** Creates a piped output stream connected to the specified piped
+     *  input stream.
+     */
+    @stub
+    def this(snk: PipedInputStream) = ???
 
     /** Closes this piped output stream and releases any system resources
      *  associated with this stream.
@@ -42,4 +49,8 @@ class PipedOutputStream extends OutputStream {
      */
     @stub
     def write(b: Array[Byte], off: Int, len: Int): Unit = ???
+
+    /** Writes the specified byte to the piped output stream. */
+    @stub
+    def write(b: Int): Unit = ???
 }

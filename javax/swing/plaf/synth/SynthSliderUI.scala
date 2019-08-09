@@ -6,11 +6,16 @@ import java.lang.Object
 import javax.swing.{JComponent, JSlider}
 import javax.swing.plaf.{ComponentUI, SliderUI}
 import javax.swing.plaf.basic.{BasicSliderUI, BasicSliderUI.TrackListener}
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for
  *  JSlider.
  */
 class SynthSliderUI extends BasicSliderUI with PropertyChangeListener with SynthUI {
+
+    /**  */
+    @stub
+    protected def this(c: JSlider) = ???
 
     /**  */
     @stub
@@ -115,6 +120,10 @@ class SynthSliderUI extends BasicSliderUI with PropertyChangeListener with Synth
     /**  */
     @stub
     protected def xPositionForValue(value: Int): Int = ???
+
+    /** Returns the y location for the specified value. */
+    @stub
+    protected def yPositionForValue(value: Int, trackY: Int, trackHeight: Int): Int = ???
 }
 
 object SynthSliderUI {

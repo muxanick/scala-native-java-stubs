@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener interface for receiving text events.
  * 
@@ -12,4 +13,8 @@ import java.util.EventListener
  *  textValueChanged method is invoked.
  */
 trait TextListener extends EventListener {
+
+    /** Invoked when the value of the text has changed. */
+    @stub
+    def textValueChanged(e: TextEvent): Unit = ???
 }

@@ -1,9 +1,15 @@
 package java.awt
 
+import scala.scalanative.annotation.stub
+
 /** The Transparency interface defines the common transparency
  *  modes for implementing classes.
  */
 trait Transparency {
+
+    /** Returns the type of this Transparency. */
+    @stub
+    def getTransparency(): Int = ???
 }
 
 object Transparency {
@@ -19,4 +25,10 @@ object Transparency {
      */
     @stub
     val OPAQUE: Int = ???
+
+    /** Represents image data that contains or might contain arbitrary
+     *  alpha values between and including 0.0 and 1.0.
+     */
+    @stub
+    val TRANSLUCENT: Int = ???
 }

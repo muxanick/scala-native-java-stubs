@@ -1,6 +1,8 @@
 package java.nio.file.spi
 
-import java.lang.Object
+import java.lang.{Object, String}
+import java.nio.file.Path
+import scala.scalanative.annotation.stub
 
 /** A file type detector for probing a file to guess its file type.
  * 
@@ -15,4 +17,11 @@ import java.lang.Object
  *  file may be examined to guess its file type.
  */
 abstract class FileTypeDetector extends Object {
+
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this() = ???
+
+    /** Probes the given file to guess its content type. */
+    def probeContentType(path: Path): String
 }

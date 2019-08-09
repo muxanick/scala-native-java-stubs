@@ -3,6 +3,7 @@ package javax.swing.text
 import java.awt.{FontMetrics, Graphics, Shape}
 import java.lang.Object
 import javax.swing.event.DocumentEvent
+import scala.scalanative.annotation.stub
 
 /** Extends the multi-line plain text view to be suitable
  *  for a single-line editor view.  If the view is
@@ -13,6 +14,10 @@ import javax.swing.event.DocumentEvent
  *  current visibility settings of the JTextField.
  */
 class FieldView extends PlainView {
+
+    /** Constructs a new FieldView wrapped on an element. */
+    @stub
+    def this(elem: Element) = ???
 
     /** Adjusts the allocation given to the view
      *  to be a suitable allocation for a text field.
@@ -59,4 +64,10 @@ class FieldView extends PlainView {
      */
     @stub
     def removeUpdate(changes: DocumentEvent, a: Shape, f: ViewFactory): Unit = ???
+
+    /** Provides a mapping from the view coordinate space to the logical
+     *  coordinate space of the model.
+     */
+    @stub
+    def viewToModel(fx: Float, fy: Float, a: Shape, bias: Array[Position.Bias]): Int = ???
 }

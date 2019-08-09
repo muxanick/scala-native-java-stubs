@@ -2,6 +2,7 @@ package javax.swing
 
 import java.awt.Component
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** PopupFactory, as the name implies, is used to obtain
  *  instances of Popups. Popups are used to
@@ -20,6 +21,10 @@ import java.lang.Object
  */
 class PopupFactory extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Creates a Popup for the Component owner
      *  containing the Component contents.
      */
@@ -33,4 +38,10 @@ object PopupFactory {
      */
     @stub
     def getSharedInstance(): PopupFactory = ???
+
+    /** Sets the PopupFactory that will be used to obtain
+     *  Popups.
+     */
+    @stub
+    def setSharedInstance(factory: PopupFactory): Unit = ???
 }

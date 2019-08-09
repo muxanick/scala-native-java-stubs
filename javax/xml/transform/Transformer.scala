@@ -2,6 +2,7 @@ package javax.xml.transform
 
 import java.lang.{Object, String}
 import java.util.Properties
+import scala.scalanative.annotation.stub
 
 /** An instance of this abstract class can transform a
  *  source tree into a result tree.
@@ -20,6 +21,10 @@ import java.util.Properties
  *  output properties are preserved across transformations.
  */
 abstract class Transformer extends Object {
+
+    /** Default constructor is protected on purpose. */
+    @stub
+    protected def this() = ???
 
     /** Clear all parameters set with setParameter. */
     def clearParameters(): Unit
@@ -62,4 +67,7 @@ abstract class Transformer extends Object {
      *  document().
      */
     def setURIResolver(resolver: URIResolver): Unit
+
+    /** Transform the XML Source to a Result. */
+    def transform(xmlSource: Source, outputTarget: Result): Unit
 }

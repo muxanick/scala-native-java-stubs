@@ -1,6 +1,9 @@
 package javax.sql.rowset.spi
 
+import java.io.Writer
 import javax.sql.RowSetWriter
+import javax.sql.rowset.WebRowSet
+import scala.scalanative.annotation.stub
 
 /** A specialized interface that facilitates an extension of the
  *  SyncProvider abstract class for XML orientated
@@ -16,4 +19,10 @@ import javax.sql.RowSetWriter
  *  appropriate XML tags.
  */
 trait XmlWriter extends RowSetWriter {
+
+    /** Writes the given WebRowSet object to the specified
+     *  java.io.Writer output stream as an XML document.
+     */
+    @stub
+    def writeXML(caller: WebRowSet, writer: Writer): Unit = ???
 }

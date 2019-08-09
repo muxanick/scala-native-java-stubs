@@ -1,5 +1,7 @@
 package javax.lang.model.element
 
+import scala.scalanative.annotation.stub
+
 /** A visitor of program elements, in the style of the visitor design
  *  pattern.  Classes implementing this interface are used to operate
  *  on an element when the kind of element is unknown at compile time.
@@ -63,4 +65,8 @@ trait ElementVisitor[R, P] {
     /** Visits an unknown kind of element. */
     @stub
     def visitUnknown(e: Element, p: P): R = ???
+
+    /** Visits a variable element. */
+    @stub
+    def visitVariable(e: VariableElement, p: P): R = ???
 }

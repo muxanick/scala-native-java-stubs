@@ -2,6 +2,7 @@ package javax.xml.bind
 
 import java.lang.Object
 import javax.xml.namespace.QName
+import scala.scalanative.annotation.stub
 
 /** Provide access to JAXB xml binding data for a JAXB object.
  * 
@@ -18,8 +19,15 @@ import javax.xml.namespace.QName
  */
 abstract class JAXBIntrospector extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Get xml element qname for jaxbElement. */
     def getElementName(jaxbElement: Object): QName
+
+    /** Return true if object represents a JAXB element. */
+    def isElement(object: Object): Boolean
 }
 
 object JAXBIntrospector {

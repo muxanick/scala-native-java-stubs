@@ -1,7 +1,8 @@
 package java.util.zip
 
 import java.io.IOException
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Signals that a Zip exception of some sort has occurred. */
 class ZipException extends IOException {
@@ -11,4 +12,10 @@ class ZipException extends IOException {
      */
     @stub
     def this() = ???
+
+    /** Constructs a ZipException with the specified detail
+     *  message.
+     */
+    @stub
+    def this(s: String) = ???
 }

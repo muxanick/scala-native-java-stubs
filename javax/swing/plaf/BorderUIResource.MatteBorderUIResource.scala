@@ -4,6 +4,7 @@ import java.awt.Color
 import java.lang.Object
 import javax.swing.Icon
 import javax.swing.border.{AbstractBorder, EmptyBorder, MatteBorder}
+import scala.scalanative.annotation.stub
 
 /**  */
 object BorderUIResource.MatteBorderUIResource extends MatteBorder with UIResource {
@@ -15,3 +16,7 @@ object BorderUIResource.MatteBorderUIResource extends MatteBorder with UIResourc
     /**  */
     @stub
     def MatteBorderUIResource(top: Int, left: Int, bottom: Int, right: Int, color: Color) = ???
+
+    /**  */
+    @stub
+    def MatteBorderUIResource(top: Int, left: Int, bottom: Int, right: Int, tileIcon: Icon) = ???

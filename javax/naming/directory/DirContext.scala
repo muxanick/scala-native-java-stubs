@@ -2,6 +2,7 @@ package javax.naming.directory
 
 import java.lang.{Object, String}
 import javax.naming.{Context, Name, NamingEnumeration}
+import scala.scalanative.annotation.stub
 
 /** The directory service interface, containing
  *  methods for examining and updating attributes
@@ -258,6 +259,12 @@ trait DirContext extends Context {
      */
     @stub
     def search(name: String, filterExpr: String, filterArgs: Array[Object], cons: SearchControls): NamingEnumeration[SearchResult] = ???
+
+    /** Searches in the named context or object for entries that satisfy the
+     *  given search filter.
+     */
+    @stub
+    def search(name: String, filter: String, cons: SearchControls): NamingEnumeration[SearchResult] = ???
 }
 
 object DirContext {
@@ -270,4 +277,8 @@ object DirContext {
      */
     @stub
     val REMOVE_ATTRIBUTE: Int = ???
+
+    /** This constant specifies to replace an attribute with specified values. */
+    @stub
+    val REPLACE_ATTRIBUTE: Int = ???
 }

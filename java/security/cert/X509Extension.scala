@@ -2,6 +2,7 @@ package java.security.cert
 
 import java.lang.String
 import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** Interface for an X.509 extension.
  * 
@@ -61,4 +62,8 @@ trait X509Extension {
      */
     @stub
     def getNonCriticalExtensionOIDs(): Set[String] = ???
+
+    /** Check if there is a critical extension that is not supported. */
+    @stub
+    def hasUnsupportedCriticalExtension(): Boolean = ???
 }

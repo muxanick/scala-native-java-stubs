@@ -1,8 +1,9 @@
 package java.awt.event
 
 import java.awt.{AWTEvent, Component}
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** A low-level event which indicates that a component moved, changed
  *  size, or changed visibility (also, the root class for the other
@@ -33,9 +34,17 @@ import java.util.EventObject
  */
 class ComponentEvent extends AWTEvent {
 
+    /** Constructs a ComponentEvent object. */
+    @stub
+    def this(source: Component, id: Int) = ???
+
     /** Returns the originator of the event. */
     @stub
     def getComponent(): Component = ???
+
+    /** Returns a parameter string identifying this event. */
+    @stub
+    def paramString(): String = ???
 }
 
 object ComponentEvent {
@@ -58,4 +67,8 @@ object ComponentEvent {
     /** This event indicates that the component's size changed. */
     @stub
     val COMPONENT_RESIZED: Int = ???
+
+    /** This event indicates that the component was made visible. */
+    @stub
+    val COMPONENT_SHOWN: Int = ???
 }

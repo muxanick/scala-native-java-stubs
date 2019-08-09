@@ -1,7 +1,9 @@
 package javax.xml.ws.wsaddressing
 
-import java.lang.Object
+import java.lang.{Object, String}
+import javax.xml.transform.{Result, Source}
 import javax.xml.ws.EndpointReference
+import scala.scalanative.annotation.stub
 
 /** This class represents a W3C Addressing EndpointReferece which is
  *  a remote reference to a web service endpoint that supports the
@@ -22,4 +24,18 @@ final class W3CEndpointReference extends EndpointReference {
     /**  */
     @stub
     protected def this() = ???
+
+    /** Creates an EPR from infoset representation */
+    @stub
+    def this(source: Source) = ???
+
+    /** write this EndpointReference to the specified infoset format */
+    @stub
+    def writeTo(result: Result): Unit = ???
+}
+
+object W3CEndpointReference {
+    /**  */
+    @stub
+    protected val NS: String = ???
 }

@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** This enum provides constants to select a filtering mode for locale
  *  matching. Refer to RFC 4647
@@ -111,7 +112,19 @@ object Locale.FilteringMode {
      */
     final val MAP_EXTENDED_RANGES = new Locale.FilteringMode(MAP_EXTENDED_RANGES, 3)
 
+    /** Specifies basic filtering: If any extended language ranges are
+     *  included in the given Language Priority List, the list is rejected
+     *  and the filtering method throws IllegalArgumentException.
+     */
+    final val REJECT_EXTENDED_RANGES = new Locale.FilteringMode(REJECT_EXTENDED_RANGES, 4)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): Locale.FilteringMode = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[Locale.FilteringMode] = ???
 }

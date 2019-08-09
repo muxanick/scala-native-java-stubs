@@ -3,6 +3,7 @@ package javax.sql.rowset
 import java.lang.String
 import java.util.Collection
 import javax.sql.RowSet
+import scala.scalanative.annotation.stub
 
 /** The JoinRowSet interface provides a mechanism for combining related
  *  data from different RowSet objects into one JoinRowSet
@@ -286,6 +287,14 @@ trait JoinRowSet extends WebRowSet {
      */
     @stub
     def supportsRightOuterJoin(): Boolean = ???
+
+    /** Creates a new CachedRowSet object containing the
+     *  data in this JoinRowSet object, which can be saved
+     *  to a data source using the SyncProvider object for
+     *  the CachedRowSet object.
+     */
+    @stub
+    def toCachedRowSet(): CachedRowSet = ???
 }
 
 object JoinRowSet {
@@ -306,4 +315,10 @@ object JoinRowSet {
      */
     @stub
     val LEFT_OUTER_JOIN: Int = ???
+
+    /** An ANSI-style JOIN providing a right outer join between
+     *  two tables.
+     */
+    @stub
+    val RIGHT_OUTER_JOIN: Int = ???
 }

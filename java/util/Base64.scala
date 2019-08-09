@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class consists exclusively of static methods for obtaining
  *  encoders and decoders for the Base64 encoding scheme. The
@@ -48,6 +49,12 @@ object Base64 {
     @stub
     object Decoder extends Base64.Decoder
 
+    /** This class implements an encoder for encoding byte data using
+     *  the Base64 encoding scheme as specified in RFC 4648 and RFC 2045.
+     */
+    @stub
+    object Encoder extends Base64.Encoder
+
     /** Returns a Base64.Decoder that decodes using the
      *  Basic type base64 encoding scheme.
      */
@@ -85,4 +92,11 @@ object Base64 {
      */
     @stub
     def getUrlDecoder(): Base64.Decoder = ???
+
+    /** Returns a Base64.Encoder that encodes using the
+     *  URL and Filename safe type base64
+     *  encoding scheme.
+     */
+    @stub
+    def getUrlEncoder(): Base64.Encoder = ???
 }

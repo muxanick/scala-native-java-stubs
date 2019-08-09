@@ -3,6 +3,7 @@ package java.util.concurrent.atomic
 import java.io.Serializable
 import java.lang.{Object, String}
 import java.util.function.{LongBinaryOperator, LongUnaryOperator}
+import scala.scalanative.annotation.stub
 
 /** A long array in which elements may be updated atomically.
  *  See the java.util.concurrent.atomic package specification
@@ -15,6 +16,12 @@ class AtomicLongArray extends Object with Serializable {
      */
     @stub
     def this(length: Int) = ???
+
+    /** Creates a new AtomicLongArray with the same length as, and
+     *  all elements copied from, the given array.
+     */
+    @stub
+    def this(array: Array[Long]) = ???
 
     /** Atomically updates the element at index i with the
      *  results of applying the given function to the current and
@@ -97,4 +104,10 @@ class AtomicLongArray extends Object with Serializable {
      */
     @stub
     def updateAndGet(i: Int, updateFunction: LongUnaryOperator): Long = ???
+
+    /** Atomically sets the element at position i to the given
+     *  updated value if the current value == the expected value.
+     */
+    @stub
+    def weakCompareAndSet(i: Int, expect: Long, update: Long): Boolean = ???
 }

@@ -5,6 +5,7 @@ import java.lang.Object
 import java.util.EventObject
 import javax.swing.table.TableCellEditor
 import javax.swing.tree.TreeCellEditor
+import scala.scalanative.annotation.stub
 
 /** The default editor for table and tree cells.
  *  
@@ -29,6 +30,14 @@ class DefaultCellEditor extends AbstractCellEditor with TableCellEditor with Tre
     @stub
     def this(comboBox: JComboBox) = ???
 
+    /** Constructs a DefaultCellEditor that uses a text field. */
+    @stub
+    def this(textField: JTextField) = ???
+
+    /** The protected EditorDelegate class. */
+    @stub
+    protected object EditorDelegate extends DefaultCellEditor.EditorDelegate
+
     /** An integer specifying the number of clicks needed to start editing. */
     @stub
     protected val clickCountToStart: Int = ???
@@ -38,6 +47,10 @@ class DefaultCellEditor extends AbstractCellEditor with TableCellEditor with Tre
      */
     @stub
     protected val delegate: DefaultCellEditor.EditorDelegate = ???
+
+    /** The Swing component being edited. */
+    @stub
+    protected val editorComponent: JComponent = ???
 
     /** Forwards the message from the CellEditor to
      *  the delegate.
@@ -82,4 +95,10 @@ class DefaultCellEditor extends AbstractCellEditor with TableCellEditor with Tre
      */
     @stub
     def shouldSelectCell(anEvent: EventObject): Boolean = ???
+
+    /** Forwards the message from the CellEditor to
+     *  the delegate.
+     */
+    @stub
+    def stopCellEditing(): Boolean = ???
 }

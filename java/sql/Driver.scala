@@ -3,6 +3,7 @@ package java.sql
 import java.lang.String
 import java.util.Properties
 import java.util.logging.Logger
+import scala.scalanative.annotation.stub
 
 /** The interface that every driver class must implement.
  *  The Java SQL framework allows for multiple database drivers.
@@ -55,4 +56,10 @@ trait Driver {
     /** Gets information about the possible properties for this driver. */
     @stub
     def getPropertyInfo(url: String, info: Properties): Array[DriverPropertyInfo] = ???
+
+    /** Reports whether this driver is a genuine JDBC
+     *  Compliant™ driver.
+     */
+    @stub
+    def jdbcCompliant(): Boolean = ???
 }

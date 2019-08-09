@@ -1,7 +1,8 @@
 package java.util
 
-import java.lang.{Object, Throwable}
+import java.lang.{Object, String, Throwable}
 import java.util.function.{LongConsumer, LongSupplier, Supplier}
+import scala.scalanative.annotation.stub
 
 /** A container object which may or may not contain a long value.
  *  If a value is present, isPresent() will return true and
@@ -61,6 +62,10 @@ final class OptionalLong extends Object {
      */
     @stub
     def orElseThrow[X <: Throwable](exceptionSupplier: Supplier[X]): Long = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }
 
 object OptionalLong {

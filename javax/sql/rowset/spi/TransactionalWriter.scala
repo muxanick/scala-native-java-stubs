@@ -1,6 +1,8 @@
 package javax.sql.rowset.spi
 
+import java.sql.Savepoint
 import javax.sql.RowSetWriter
+import scala.scalanative.annotation.stub
 
 /** A specialized interface that facilitates an extension of the standard
  *  SyncProvider abstract class so that it has finer grained
@@ -26,4 +28,10 @@ trait TransactionalWriter extends RowSetWriter {
     /** Undoes all changes made in the current transaction. */
     @stub
     def rollback(): Unit = ???
+
+    /** Undoes all changes made in the current transaction made prior to the given
+     *  Savepoint object.
+     */
+    @stub
+    def rollback(s: Savepoint): Unit = ???
 }

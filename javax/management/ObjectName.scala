@@ -2,6 +2,7 @@ package javax.management
 
 import java.lang.{Comparable, Object, String}
 import java.util.Hashtable
+import scala.scalanative.annotation.stub
 
 /** Represents the object name of an MBean, or a pattern that can
  *  match the names of several MBeans.  Instances of this class are
@@ -190,6 +191,10 @@ class ObjectName extends Object with Comparable[ObjectName] with QueryExp {
     @stub
     def this(domain: String, table: Hashtable[String, String]) = ???
 
+    /** Construct an object name with exactly one key property. */
+    @stub
+    def this(domain: String, key: String, value: String) = ???
+
     /** Test whether this ObjectName, which may be a pattern,
      *  matches another ObjectName.
      */
@@ -277,6 +282,10 @@ class ObjectName extends Object with Comparable[ObjectName] with QueryExp {
 }
 
 object ObjectName {
+    /** Defines the wildcard "*:*" ObjectName. */
+    @stub
+    val WILDCARD: ObjectName = ???
+
     /** Return an instance of ObjectName that can be used anywhere
      *  the given object can be used.
      */
@@ -307,4 +316,8 @@ object ObjectName {
      */
     @stub
     def quote(s: String): String = ???
+
+    /** Returns an unquoted form of the given String. */
+    @stub
+    def unquote(q: String): String = ???
 }

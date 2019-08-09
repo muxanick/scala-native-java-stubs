@@ -1,6 +1,7 @@
 package javax.lang.model
 
-import java.lang.{Exception, Object, RuntimeException, Throwable}
+import java.lang.{Exception, Object, RuntimeException, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Superclass of exceptions which indicate that an unknown kind of
  *  entity was encountered.  This situation can occur if the language
@@ -12,4 +13,10 @@ import java.lang.{Exception, Object, RuntimeException, Throwable}
  *  block to have code handling them uniformly.
  */
 class UnknownEntityException extends RuntimeException {
+
+    /** Creates a new UnknownEntityException with the specified
+     *  detail message.
+     */
+    @stub
+    protected def this(message: String) = ???
 }

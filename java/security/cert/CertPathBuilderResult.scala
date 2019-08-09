@@ -1,6 +1,7 @@
 package java.security.cert
 
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** A specification of the result of a certification path builder algorithm.
  *  All results returned by the CertPathBuilder.build method must implement this interface.
@@ -24,4 +25,8 @@ trait CertPathBuilderResult extends Cloneable {
     /** Makes a copy of this CertPathBuilderResult. */
     @stub
     def clone(): Object = ???
+
+    /** Returns the built certification path. */
+    @stub
+    def getCertPath(): CertPath = ???
 }

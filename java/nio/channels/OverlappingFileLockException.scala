@@ -1,6 +1,7 @@
 package java.nio.channels
 
 import java.lang.{Exception, IllegalStateException, Object, RuntimeException, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Unchecked exception thrown when an attempt is made to acquire a lock on a
  *  region of a file that overlaps a region already locked by the same Java
@@ -8,4 +9,8 @@ import java.lang.{Exception, IllegalStateException, Object, RuntimeException, Th
  *  overlapping region of the same file.
  */
 class OverlappingFileLockException extends IllegalStateException {
+
+    /** Constructs an instance of this class. */
+    @stub
+    def this() = ???
 }

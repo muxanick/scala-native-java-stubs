@@ -1,6 +1,7 @@
 package java.sql
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** An object that can be used to get information about the types
  *  and properties of the columns in a ResultSet object.
@@ -104,6 +105,10 @@ trait ResultSetMetaData extends Wrapper {
     /** Indicates whether values in the designated column are signed numbers. */
     @stub
     def isSigned(column: Int): Boolean = ???
+
+    /** Indicates whether it is possible for a write on the designated column to succeed. */
+    @stub
+    def isWritable(column: Int): Boolean = ???
 }
 
 object ResultSetMetaData {
@@ -118,4 +123,10 @@ object ResultSetMetaData {
      */
     @stub
     val columnNullable: Int = ???
+
+    /** The constant indicating that the
+     *  nullability of a column's values is unknown.
+     */
+    @stub
+    val columnNullableUnknown: Int = ???
 }

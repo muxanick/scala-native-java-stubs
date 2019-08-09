@@ -1,9 +1,10 @@
 package java.util.jar
 
 import java.beans.PropertyChangeListener
-import java.io.File
+import java.io.{File, InputStream}
 import java.lang.String
 import java.util.SortedMap
+import scala.scalanative.annotation.stub
 
 /** The unpacker engine converts the packed stream to a JAR file.
  *  An instance of the engine can be obtained
@@ -42,6 +43,10 @@ object trait Pack200.Unpacker {
     @stub
     val PROGRESS: String = ???
 
+    /** The string "true", a possible value for certain properties. */
+    @stub
+    val TRUE: String = ???
+
     /** Deprecated. 
      * The dependency on PropertyChangeListener creates
      *              a significant impediment to future modularization of the
@@ -73,4 +78,10 @@ object trait Pack200.Unpacker {
      */
     @stub
     def unpack(in: File, out: JarOutputStream): Unit = ???
+
+    /** Read a Pack200 archive, and write the encoded JAR to
+     *  a JarOutputStream.
+     */
+    @stub
+    def unpack(in: InputStream, out: JarOutputStream): Unit = ???
 }

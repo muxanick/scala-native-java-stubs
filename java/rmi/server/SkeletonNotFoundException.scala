@@ -3,6 +3,7 @@ package java.rmi.server
 import java.io.IOException
 import java.lang.{Deprecated, Exception, Object, String, Throwable}
 import java.rmi.RemoteException
+import scala.scalanative.annotation.stub
 
 /** A SkeletonNotFoundException is thrown if the
  *  Skeleton corresponding to the remote object being
@@ -14,4 +15,8 @@ import java.rmi.RemoteException
     /** Deprecated.  */
     @stub
     def this(s: String) = ???
+
+    /** Deprecated.  */
+    @stub
+    def this(s: String, ex: Exception) = ???
 }

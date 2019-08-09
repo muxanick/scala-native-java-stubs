@@ -3,9 +3,14 @@ package javax.swing.plaf.basic
 import java.awt.event.MouseEvent
 import java.lang.Object
 import javax.swing.event.MouseInputListener
+import scala.scalanative.annotation.stub
 
 /**  */
 protected class BasicInternalFrameUI.GlassPaneDispatcher extends Object with MouseInputListener {
+
+    /**  */
+    @stub
+    protected def GlassPaneDispatcher() = ???
 
     /** Invoked when the mouse button has been clicked (pressed
      *  and released) on a component.
@@ -36,4 +41,8 @@ protected class BasicInternalFrameUI.GlassPaneDispatcher extends Object with Mou
     /** Invoked when a mouse button has been pressed on a component. */
     @stub
     def mousePressed(e: MouseEvent): Unit = ???
+
+    /** Invoked when a mouse button has been released on a component. */
+    @stub
+    def mouseReleased(e: MouseEvent): Unit = ???
 }

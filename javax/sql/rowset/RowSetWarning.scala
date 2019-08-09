@@ -2,6 +2,7 @@ package javax.sql.rowset
 
 import java.lang.{Exception, Object, String, Throwable}
 import java.sql.SQLException
+import scala.scalanative.annotation.stub
 
 /** An extension of SQLException that provides information
  *  about database warnings set on RowSet objects.
@@ -45,9 +46,21 @@ class RowSetWarning extends SQLException {
     @stub
     def this(reason: String, SQLState: String) = ???
 
+    /** Constructs a fully specified RowSetWarning object initialized
+     *  with the given values for the reason, SQLState and vendorCode.
+     */
+    @stub
+    def this(reason: String, SQLState: String, vendorCode: Int) = ???
+
     /** Retrieves the warning chained to this RowSetWarning
      *  object.
      */
     @stub
     def getNextWarning(): RowSetWarning = ???
+
+    /** Sets warning as the next warning, that is, the warning chained
+     *  to this RowSetWarning object.
+     */
+    @stub
+    def setNextWarning(warning: RowSetWarning): Unit = ???
 }

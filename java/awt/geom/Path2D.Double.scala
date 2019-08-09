@@ -3,6 +3,7 @@ package java.awt.geom
 import java.awt.Shape
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The Double class defines a geometric path with
  *  coordinates stored in double precision floating point.
@@ -34,6 +35,13 @@ object Path2D.Double extends Path2D with Serializable {
      */
     @stub
     def Double(s: Shape) = ???
+
+    /** Constructs a new double precision Path2D object
+     *  from an arbitrary Shape object, transformed by an
+     *  AffineTransform object.
+     */
+    @stub
+    def Double(s: Shape, at: AffineTransform) = ???
 
     /** Appends the geometry of the specified
      *  PathIterator object
@@ -90,4 +98,10 @@ object Path2D.Double extends Path2D with Serializable {
      */
     @stub
     def quadTo(x1: Double, y1: Double, x2: Double, y2: Double): Unit = ???
+
+    /** Transforms the geometry of this path using the specified
+     *  AffineTransform.
+     */
+    @stub
+    def transform(at: AffineTransform): Unit = ???
 }

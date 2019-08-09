@@ -3,6 +3,7 @@ package javax.sql.rowset.serial
 import java.io.Serializable
 import java.lang.{Cloneable, Object}
 import java.lang.reflect.Field
+import scala.scalanative.annotation.stub
 
 /** A serializable mapping in the Java programming language of an SQL
  *  JAVA_OBJECT value. Assuming the Java object
@@ -24,6 +25,10 @@ import java.lang.reflect.Field
  */
 class SerialJavaObject extends Object with Serializable with Cloneable {
 
+    /** Constructor for SerialJavaObject helper class. */
+    @stub
+    def this(obj: Object) = ???
+
     /** Returns a clone of this SerialJavaObject. */
     @stub
     def clone(): Object = ???
@@ -43,4 +48,8 @@ class SerialJavaObject extends Object with Serializable with Cloneable {
      */
     @stub
     def getObject(): Object = ???
+
+    /** Returns a hash code for this SerialJavaObject. */
+    @stub
+    def hashCode(): Int = ???
 }

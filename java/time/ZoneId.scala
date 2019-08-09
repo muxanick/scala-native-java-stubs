@@ -6,6 +6,7 @@ import java.time.format.TextStyle
 import java.time.temporal.TemporalAccessor
 import java.time.zone.ZoneRules
 import java.util.{Locale, Map, Set}
+import scala.scalanative.annotation.stub
 
 /** A time-zone ID, such as Europe/Paris.
  *  
@@ -110,9 +111,16 @@ abstract class ZoneId extends Object with Serializable {
 
     /** Normalizes the time-zone ID, returning a ZoneOffset where possible. */
     def normalized(): ZoneId
+
+    /** Outputs this zone as a String, using the ID. */
+    def toString(): String
 }
 
 object ZoneId {
+    /** A map of zone overrides to enable the short time-zone names to be used. */
+    @stub
+    val SHORT_IDS: Map[String, String] = ???
+
     /** Obtains an instance of ZoneId from a temporal object. */
     @stub
     def from(temporal: TemporalAccessor): ZoneId = ???

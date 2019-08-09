@@ -1,8 +1,9 @@
 package javax.naming.ldap
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
 import java.util.Hashtable
 import javax.naming.{Context, NamingException, ReferralException}
+import scala.scalanative.annotation.stub
 
 /** This abstract class is used to represent an LDAP referral exception.
  *  It extends the base ReferralException by providing a
@@ -22,6 +23,12 @@ abstract class LdapReferralException extends ReferralException {
     @stub
     protected def this() = ???
 
+    /** Constructs a new instance of LdapReferralException using the
+     *  explanation supplied.
+     */
+    @stub
+    protected def this(explanation: String) = ???
+
     /** Retrieves the context at which to continue the method using the
      *  context's environment and no controls.
      */
@@ -31,4 +38,9 @@ abstract class LdapReferralException extends ReferralException {
      *  environment properties and no controls.
      */
     def getReferralContext(env: Hashtable[_, _]): Context
+
+    /** Retrieves the context at which to continue the method using
+     *  request controls and environment properties.
+     */
+    def getReferralContext(env: Hashtable[_, _], reqCtls: Array[Control]): Context
 }

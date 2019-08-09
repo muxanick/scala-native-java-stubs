@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** A family of character subsets representing the character scripts
  *  defined in the 
  *  Unicode Standard Annex #24: Script Names. Every Unicode
@@ -320,6 +322,9 @@ object Character.UnicodeScript {
     /** Unicode script "Vai". */
     final val VAI = new Character.UnicodeScript(VAI, 101)
 
+    /** Unicode script "Yi". */
+    final val YI = new Character.UnicodeScript(YI, 102)
+
     /** Returns the UnicodeScript constant with the given Unicode script
      *  name or the script name alias.
      */
@@ -335,4 +340,10 @@ object Character.UnicodeScript {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): Character.UnicodeScript = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[Character.UnicodeScript] = ???
 }

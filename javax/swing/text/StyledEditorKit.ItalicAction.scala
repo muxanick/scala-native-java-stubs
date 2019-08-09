@@ -1,7 +1,9 @@
 package javax.swing.text
 
+import java.awt.event.ActionEvent
 import java.lang.Object
 import javax.swing.AbstractAction
+import scala.scalanative.annotation.stub
 
 /** An action to toggle the italic attribute.
  *  
@@ -15,3 +17,12 @@ import javax.swing.AbstractAction
  *  Please see XMLEncoder.
  */
 object StyledEditorKit.ItalicAction extends StyledEditorKit.StyledTextAction {
+
+    /** Constructs a new ItalicAction. */
+    @stub
+    def ItalicAction() = ???
+
+    /** Toggles the italic attribute. */
+    @stub
+    def actionPerformed(e: ActionEvent): Unit = ???
+}

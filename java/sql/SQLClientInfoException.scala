@@ -2,6 +2,7 @@ package java.sql
 
 import java.lang.{Exception, Object, String, Throwable}
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** The subclass of SQLException is thrown when one or more client info properties
  *  could not be set on a Connection.  In addition to the information provided
@@ -70,4 +71,15 @@ class SQLClientInfoException extends SQLException {
      */
     @stub
     def this(reason: String, SQLState: String, failedProperties: Map[String, ClientInfoStatus]) = ???
+
+    /** Constructs a SQLClientInfoException object initialized with a
+     *  given  reason, SQLState, cause
+     *  and failedProperties.
+     */
+    @stub
+    def this(reason: String, SQLState: String, failedProperties: Map[String, ClientInfoStatus], cause: Throwable) = ???
+
+    /** Returns the list of client info properties that could not be set. */
+    @stub
+    def getFailedProperties(): Map[String, ClientInfoStatus] = ???
 }

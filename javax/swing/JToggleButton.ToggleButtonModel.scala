@@ -1,6 +1,7 @@
 package javax.swing
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The ToggleButton model
  *  
@@ -15,6 +16,10 @@ import java.lang.Object
  */
 object JToggleButton.ToggleButtonModel extends DefaultButtonModel {
 
+    /** Creates a new ToggleButton Model */
+    @stub
+    def ToggleButtonModel() = ???
+
     /** Checks if the button is selected. */
     @stub
     def isSelected(): Boolean = ???
@@ -22,4 +27,8 @@ object JToggleButton.ToggleButtonModel extends DefaultButtonModel {
     /** Sets the pressed state of the toggle button. */
     @stub
     def setPressed(b: Boolean): Unit = ???
+
+    /** Sets the selected state of the button. */
+    @stub
+    def setSelected(b: Boolean): Unit = ???
 }

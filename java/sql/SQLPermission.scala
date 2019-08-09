@@ -2,6 +2,7 @@ package java.sql
 
 import java.lang.{Object, String}
 import java.security.{BasicPermission, Permission}
+import scala.scalanative.annotation.stub
 
 /** The permission for which the SecurityManager will check
  *  when code that is running an application with a
@@ -85,4 +86,8 @@ final class SQLPermission extends BasicPermission {
     /** Creates a new SQLPermission object with the specified name. */
     @stub
     def this(name: String) = ???
+
+    /** Creates a new SQLPermission object with the specified name. */
+    @stub
+    def this(name: String, actions: String) = ???
 }

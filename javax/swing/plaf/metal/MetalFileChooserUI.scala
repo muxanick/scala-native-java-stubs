@@ -5,12 +5,17 @@ import java.beans.PropertyChangeListener
 import java.io.File
 import java.lang.{Object, String}
 import javax.swing.{ActionMap, JButton, JComponent, JFileChooser, JPanel}
-import javax.swing.event.ListSelectionListener
+import javax.swing.event.{ListSelectionEvent, ListSelectionListener}
 import javax.swing.plaf.{ComponentUI, FileChooserUI}
 import javax.swing.plaf.basic.BasicFileChooserUI
+import scala.scalanative.annotation.stub
 
 /** Metal L&F implementation of a FileChooser. */
 class MetalFileChooserUI extends BasicFileChooserUI {
+
+    /**  */
+    @stub
+    def this(filechooser: JFileChooser) = ???
 
     /** Acts when DirectoryComboBox has changed the selected item. */
     @stub
@@ -31,6 +36,10 @@ class MetalFileChooserUI extends BasicFileChooserUI {
     /** Render different type sizes and styles. */
     @stub
     object FilterComboBoxRenderer extends MetalFileChooserUI.FilterComboBoxRenderer
+
+    /**  */
+    @stub
+    protected object SingleClickListener extends MetalFileChooserUI.SingleClickListener
 
     /**  */
     @stub
@@ -159,6 +168,10 @@ class MetalFileChooserUI extends BasicFileChooserUI {
      */
     @stub
     def uninstallUI(c: JComponent): Unit = ???
+
+    /**  */
+    @stub
+    def valueChanged(e: ListSelectionEvent): Unit = ???
 }
 
 object MetalFileChooserUI {

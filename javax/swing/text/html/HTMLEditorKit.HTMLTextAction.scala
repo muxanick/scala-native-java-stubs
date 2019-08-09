@@ -1,8 +1,9 @@
 package javax.swing.text.html
 
-import java.lang.Object
+import java.lang.{Object, String}
 import javax.swing.{AbstractAction, JEditorPane}
 import javax.swing.text.{Element, StyledEditorKit.StyledTextAction, TextAction}
+import scala.scalanative.annotation.stub
 
 /** An abstract Action providing some convenience methods that may
  *  be useful in inserting HTML into an existing document.
@@ -11,6 +12,10 @@ import javax.swing.text.{Element, StyledEditorKit.StyledTextAction, TextAction}
  *  methods may have inconsistent behavior, or return the wrong thing.
  */
 object abstract HTMLEditorKit.HTMLTextAction extends StyledEditorKit.StyledTextAction {
+
+    /**  */
+    @stub
+    def HTMLTextAction(name: String) = ???
 
     /** Returns number of elements, starting at the deepest leaf, needed
      *  to get to an element representing tag.
@@ -31,4 +36,8 @@ object abstract HTMLEditorKit.HTMLTextAction extends StyledEditorKit.StyledTextA
     /**  */
     @stub
     protected def getHTMLDocument(e: JEditorPane): HTMLDocument = ???
+
+    /**  */
+    @stub
+    protected def getHTMLEditorKit(e: JEditorPane): HTMLEditorKit = ???
 }

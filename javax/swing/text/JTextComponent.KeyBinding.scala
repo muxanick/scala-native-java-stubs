@@ -1,6 +1,8 @@
 package javax.swing.text
 
 import java.lang.{Object, String}
+import javax.swing.KeyStroke
+import scala.scalanative.annotation.stub
 
 /** Binding record for creating key bindings.
  *  
@@ -15,7 +17,15 @@ import java.lang.{Object, String}
  */
 object JTextComponent.KeyBinding extends Object {
 
+    /** Creates a new key binding. */
+    @stub
+    def KeyBinding(key: KeyStroke, actionName: String) = ???
+
     /** The name of the action for the key. */
     @stub
     val actionName: String = ???
+
+    /** The key. */
+    @stub
+    val key: KeyStroke = ???
 }

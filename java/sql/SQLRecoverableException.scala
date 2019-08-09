@@ -1,6 +1,7 @@
 package java.sql
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** The subclass of SQLException thrown in situations where a
  *  previously failed operation might be able to succeed if the application performs
@@ -56,4 +57,10 @@ class SQLRecoverableException extends SQLException {
      */
     @stub
     def this(reason: String, cause: Throwable) = ???
+
+    /** Constructs a SQLRecoverableException object
+     *  with a given  cause.
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

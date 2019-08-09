@@ -1,5 +1,7 @@
 package javax.swing
 
+import scala.scalanative.annotation.stub
+
 /** DesktopManager objects are owned by a JDesktopPane object. They are responsible
  *  for implementing L&F specific behaviors for the JDesktopPane. JInternalFrame
  *  implementations should delegate specific behaviors to the DesktopManager. For
@@ -78,4 +80,8 @@ trait DesktopManager {
     /** The user has resized the component. */
     @stub
     def resizeFrame(f: JComponent, newX: Int, newY: Int, newWidth: Int, newHeight: Int): Unit = ???
+
+    /** This is a primitive reshape method. */
+    @stub
+    def setBoundsForFrame(f: JComponent, newX: Int, newY: Int, newWidth: Int, newHeight: Int): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.lang
 
 import java.io.Serializable
+import scala.scalanative.annotation.stub
 
 /** The Boolean class wraps a value of the primitive type
  *  boolean in an object. An object of type
@@ -20,6 +21,13 @@ final class Boolean extends Object with Serializable with Comparable[Boolean] {
      */
     @stub
     def this(value: Boolean) = ???
+
+    /** Allocates a Boolean object representing the value
+     *  true if the string argument is not null
+     *  and is equal, ignoring case, to the string "true".
+     */
+    @stub
+    def this(s: String) = ???
 
     /** Returns the value of this Boolean object as a boolean
      *  primitive.
@@ -61,6 +69,10 @@ object Boolean {
      */
     @stub
     val TRUE: Boolean = ???
+
+    /** The Class object representing the primitive type boolean. */
+    @stub
+    val TYPE: Class[Boolean] = ???
 
     /** Compares two boolean values. */
     @stub
@@ -112,4 +124,10 @@ object Boolean {
      */
     @stub
     def valueOf(b: Boolean): Boolean = ???
+
+    /** Returns a Boolean with a value represented by the
+     *  specified string.
+     */
+    @stub
+    def valueOf(s: String): Boolean = ???
 }

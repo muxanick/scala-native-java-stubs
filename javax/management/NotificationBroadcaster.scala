@@ -1,6 +1,7 @@
 package javax.management
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Interface implemented by an MBean that emits Notifications. It
  *  allows a listener to be registered with the MBean as a notification
@@ -53,4 +54,8 @@ trait NotificationBroadcaster {
      */
     @stub
     def getNotificationInfo(): Array[MBeanNotificationInfo] = ???
+
+    /** Removes a listener from this MBean. */
+    @stub
+    def removeNotificationListener(listener: NotificationListener): Unit = ???
 }

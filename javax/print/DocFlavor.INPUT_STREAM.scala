@@ -1,6 +1,7 @@
 package javax.print
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Class DocFlavor.INPUT_STREAM provides predefined static constant
  *  DocFlavor objects for example doc flavors using a byte stream (java.io.InputStream) as the print
@@ -8,6 +9,13 @@ import java.lang.Object
  *  
  */
 object DocFlavor.INPUT_STREAM extends DocFlavor {
+
+    /** Constructs a new doc flavor with the given MIME type and a print
+     *  data representation class name of
+     *  "java.io.InputStream" (byte stream).
+     */
+    @stub
+    def INPUT_STREAM(mimeType: String) = ???
 
     /** Doc flavor with MIME type =
      *  "application/octet-stream",
@@ -146,4 +154,12 @@ object DocFlavor.INPUT_STREAM extends DocFlavor {
      */
     @stub
     val TEXT_PLAIN_UTF_16LE: DocFlavor.INPUT_STREAM = ???
+
+    /** Doc flavor with MIME type =
+     *  "text/plain; charset=utf-8",
+     *  print data representation class name =
+     *  "java.io.InputStream" (byte stream).
+     */
+    @stub
+    val TEXT_PLAIN_UTF_8: DocFlavor.INPUT_STREAM = ???
 }

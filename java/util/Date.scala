@@ -3,6 +3,7 @@ package java.util
 import java.io.Serializable
 import java.lang.{Cloneable, Comparable, Object, String}
 import java.time.Instant
+import scala.scalanative.annotation.stub
 
 /** The class Date represents a specific instant
  *  in time, with millisecond precision.
@@ -128,6 +129,14 @@ class Date extends Object with Serializable with Cloneable with Comparable[Date]
      */
     @stub
     def this(date: Long) = ???
+
+    /** Deprecated. 
+     * As of JDK version 1.1,
+     *  replaced by DateFormat.parse(String s).
+     * 
+     */
+    @stub
+    def this(s: String) = ???
 
     /** Tests if this date is after the specified date. */
     @stub
@@ -319,4 +328,15 @@ object Date {
      */
     @stub
     def parse(s: String): Long = ???
+
+    /** Deprecated. 
+     * As of JDK version 1.1,
+     *  replaced by Calendar.set(year + 1900, month, date,
+     *  hrs, min, sec) or GregorianCalendar(year + 1900,
+     *  month, date, hrs, min, sec), using a UTC
+     *  TimeZone, followed by Calendar.getTime().getTime().
+     * 
+     */
+    @stub
+    def UTC(year: Int, month: Int, date: Int, hrs: Int, min: Int, sec: Int): Long = ???
 }

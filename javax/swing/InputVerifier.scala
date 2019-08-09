@@ -1,6 +1,7 @@
 package javax.swing
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The purpose of this class is to help clients support smooth focus
  *  navigation through GUIs with text fields. Such GUIs often need
@@ -67,6 +68,13 @@ import java.lang.Object
  */
 abstract class InputVerifier extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Calls verify(input) to ensure that the input is valid. */
     def shouldYieldFocus(input: JComponent): Boolean
+
+    /** Checks whether the JComponent's input is valid. */
+    def verify(input: JComponent): Boolean
 }

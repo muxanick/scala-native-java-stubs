@@ -1,6 +1,7 @@
 package java.time.temporal
 
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** Strategy for adjusting a temporal object.
  *  
@@ -34,4 +35,8 @@ import java.lang.FunctionalInterface
  *  
  */
 @FunctionalInterface trait TemporalAdjuster {
+
+    /** Adjusts the specified temporal object. */
+    @stub
+    def adjustInto(temporal: Temporal): Temporal = ???
 }

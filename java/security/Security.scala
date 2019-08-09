@@ -2,6 +2,7 @@ package java.security
 
 import java.lang.{Object, String}
 import java.util.{Map, Set}
+import scala.scalanative.annotation.stub
 
 /** This class centralizes all security properties and common security
  *  methods. One of its primary uses is to manage providers.
@@ -72,4 +73,8 @@ object Security {
     /** Removes the provider with the specified name. */
     @stub
     def removeProvider(name: String): Unit = ???
+
+    /** Sets a security property value. */
+    @stub
+    def setProperty(key: String, datum: String): Unit = ???
 }

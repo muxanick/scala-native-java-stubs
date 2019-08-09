@@ -2,6 +2,8 @@ package javax.tools
 
 import java.io.{InputStream, OutputStream, Reader, Writer}
 import java.lang.{CharSequence, String}
+import java.net.URI
+import scala.scalanative.annotation.stub
 
 /** File abstraction for tools.  In this context, file means
  *  an abstraction of regular files and other sources of data.  For
@@ -47,4 +49,8 @@ trait FileObject {
     /** Gets a Writer for this file object. */
     @stub
     def openWriter(): Writer = ???
+
+    /** Returns a URI identifying this file object. */
+    @stub
+    def toUri(): URI = ???
 }

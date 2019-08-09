@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This abstract class is the superclass of all classes representing
  *  an input stream of bytes.
@@ -9,6 +10,10 @@ import java.lang.Object
  *  must always provide a method that returns the next byte of input.
  */
 abstract class InputStream extends Object with Closeable {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns an estimate of the number of bytes that can be read (or
      *  skipped over) from this input stream without blocking by the next
@@ -46,4 +51,9 @@ abstract class InputStream extends Object with Closeable {
      *  mark method was last called on this input stream.
      */
     def reset(): Unit
+
+    /** Skips over and discards n bytes of data from this input
+     *  stream.
+     */
+    def skip(n: Long): Long
 }

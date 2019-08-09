@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component, Container}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** A menu item that can be selected or deselected. If selected, the menu
  *  item typically appears with a checkmark next to it. If unselected or
@@ -71,6 +72,16 @@ class JCheckBoxMenuItem extends JMenuItem with SwingConstants with Accessible {
     @stub
     def this(text: String, icon: Icon) = ???
 
+    /** Creates a check box menu item with the specified text, icon, and selection state. */
+    @stub
+    def this(text: String, icon: Icon, b: Boolean) = ???
+
+    /** This class implements accessibility support for the
+     *  JCheckBoxMenuItem class.
+     */
+    @stub
+    protected object AccessibleJCheckBoxMenuItem extends JCheckBoxMenuItem.AccessibleJCheckBoxMenuItem
+
     /** Gets the AccessibleContext associated with this JCheckBoxMenuItem. */
     @stub
     def getAccessibleContext(): AccessibleContext = ???
@@ -94,4 +105,8 @@ class JCheckBoxMenuItem extends JMenuItem with SwingConstants with Accessible {
     /** Returns a string representation of this JCheckBoxMenuItem. */
     @stub
     protected def paramString(): String = ???
+
+    /** Sets the selected-state of the item. */
+    @stub
+    def setState(b: Boolean): Unit = ???
 }

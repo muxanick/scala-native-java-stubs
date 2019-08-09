@@ -6,11 +6,16 @@ import java.lang.Object
 import javax.swing.{JComponent, JSplitPane}
 import javax.swing.plaf.{ComponentUI, SplitPaneUI}
 import javax.swing.plaf.basic.{BasicSplitPaneDivider, BasicSplitPaneUI}
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for
  *  JSplitPane.
  */
 class SynthSplitPaneUI extends BasicSplitPaneUI with PropertyChangeListener with SynthUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Creates the default divider. */
     @stub
@@ -63,6 +68,10 @@ class SynthSplitPaneUI extends BasicSplitPaneUI with PropertyChangeListener with
     /** Uninstalls the event listeners from the UI. */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthSplitPaneUI {

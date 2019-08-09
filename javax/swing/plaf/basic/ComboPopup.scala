@@ -2,6 +2,7 @@ package javax.swing.plaf.basic
 
 import java.awt.event.{KeyListener, MouseListener, MouseMotionListener}
 import javax.swing.JList
+import scala.scalanative.annotation.stub
 
 /** The interface which defines the methods required for the implementation of the popup
  *  portion of a combo box.
@@ -44,4 +45,8 @@ trait ComboPopup {
     /** Shows the popup */
     @stub
     def show(): Unit = ???
+
+    /** Called to inform the ComboPopup that the UI is uninstalling. */
+    @stub
+    def uninstallingUI(): Unit = ???
 }

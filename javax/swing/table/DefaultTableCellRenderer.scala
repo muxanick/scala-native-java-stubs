@@ -4,6 +4,8 @@ import java.awt.{Color, Component, Container, Rectangle}
 import java.io.Serializable
 import java.lang.{Object, String}
 import javax.swing.{JComponent, JLabel, JTable}
+import javax.swing.border.Border
+import scala.scalanative.annotation.stub
 
 /** The standard class for rendering (displaying) individual cells
  *  in a JTable.
@@ -48,6 +50,10 @@ import javax.swing.{JComponent, JLabel, JTable}
  *  Please see XMLEncoder.
  */
 class DefaultTableCellRenderer extends JLabel with TableCellRenderer with Serializable {
+
+    /** Creates a default table cell renderer. */
+    @stub
+    def this() = ???
 
     /** Overridden for performance reasons. */
     @stub
@@ -108,4 +114,20 @@ class DefaultTableCellRenderer extends JLabel with TableCellRenderer with Serial
      */
     @stub
     def updateUI(): Unit = ???
+
+    /** Overridden for performance reasons. */
+    @stub
+    def validate(): Unit = ???
+}
+
+object DefaultTableCellRenderer {
+    /** A subclass of DefaultTableCellRenderer that
+     *  implements UIResource.
+     */
+    @stub
+    object UIResource extends DefaultTableCellRenderer.UIResource
+
+    /**  */
+    @stub
+    protected val noFocusBorder: Border = ???
 }

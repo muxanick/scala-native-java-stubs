@@ -2,6 +2,7 @@ package javax.swing.event
 
 import java.lang.Object
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** PopupMenuEvent only contains the source of the event which is the JPoupMenu
  *  sending the event
@@ -16,4 +17,8 @@ import java.util.EventObject
  *  Please see XMLEncoder.
  */
 class PopupMenuEvent extends EventObject {
+
+    /** Constructs a PopupMenuEvent object. */
+    @stub
+    def this(source: Object) = ???
 }

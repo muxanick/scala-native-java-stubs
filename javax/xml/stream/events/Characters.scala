@@ -1,6 +1,7 @@
 package javax.xml.stream.events
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** This describes the interface to Characters events.
  *  All text events get reported as Characters events.
@@ -22,4 +23,10 @@ trait Characters extends XMLEvent {
     /** Return true if this is ignorableWhiteSpace. */
     @stub
     def isIgnorableWhiteSpace(): Boolean = ???
+
+    /** Returns true if this set of Characters
+     *  is all whitespace.
+     */
+    @stub
+    def isWhiteSpace(): Boolean = ???
 }

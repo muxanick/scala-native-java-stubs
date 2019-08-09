@@ -1,6 +1,7 @@
 package java.awt.image
 
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** The BufferedImageFilter class subclasses an
  *  ImageFilter to provide a simple means of
@@ -11,6 +12,12 @@ import java.lang.{Cloneable, Object}
  *  AffineTransformOp and LookupOp.
  */
 class BufferedImageFilter extends ImageFilter with Cloneable {
+
+    /** Constructs a BufferedImageFilter with the
+     *  specified single-source/single-destination operator.
+     */
+    @stub
+    def this(op: BufferedImageOp) = ???
 
     /** Returns the BufferedImageOp. */
     @stub
@@ -42,4 +49,11 @@ class BufferedImageFilter extends ImageFilter with Cloneable {
      */
     @stub
     def setPixels(x: Int, y: Int, w: Int, h: Int, model: ColorModel, pixels: Array[Byte], off: Int, scansize: Int): Unit = ???
+
+    /** Filters the information provided in the setPixels
+     *  method of the ImageConsumer interface which takes
+     *  an array of integers.
+     */
+    @stub
+    def setPixels(x: Int, y: Int, w: Int, h: Int, model: ColorModel, pixels: Array[Int], off: Int, scansize: Int): Unit = ???
 }

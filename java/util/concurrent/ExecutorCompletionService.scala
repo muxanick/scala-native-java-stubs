@@ -1,6 +1,7 @@
 package java.util.concurrent
 
 import java.lang.{Object, Runnable}
+import scala.scalanative.annotation.stub
 
 /** A CompletionService that uses a supplied Executor
  *  to execute tasks.  This class arranges that submitted tasks are,
@@ -79,6 +80,13 @@ class ExecutorCompletionService[V] extends Object with CompletionService[V] {
     @stub
     def this(executor: Executor) = ???
 
+    /** Creates an ExecutorCompletionService using the supplied
+     *  executor for base task execution and the supplied queue as its
+     *  completion queue.
+     */
+    @stub
+    def this(executor: Executor, completionQueue: BlockingQueue[Future[V]]) = ???
+
     /** Retrieves and removes the Future representing the next
      *  completed task, or null if none are present.
      */
@@ -103,4 +111,10 @@ class ExecutorCompletionService[V] extends Object with CompletionService[V] {
      */
     @stub
     def submit(task: Runnable, result: V): Future[V] = ???
+
+    /** Retrieves and removes the Future representing the next
+     *  completed task, waiting if none are yet present.
+     */
+    @stub
+    def take(): Future[V] = ???
 }

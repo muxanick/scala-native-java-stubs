@@ -5,6 +5,7 @@ import java.io.InputStream
 import java.lang.String
 import java.net.URL
 import java.util.{Enumeration, Iterator}
+import scala.scalanative.annotation.stub
 
 /** This interface corresponds to an applet's environment: the
  *  document containing the applet and the other applets in the same
@@ -64,4 +65,10 @@ trait AppletContext {
      */
     @stub
     def showDocument(url: URL, target: String): Unit = ???
+
+    /** Requests that the argument string be displayed in the
+     *  "status window".
+     */
+    @stub
+    def showStatus(status: String): Unit = ???
 }

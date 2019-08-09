@@ -1,6 +1,7 @@
 package javax.swing.undo
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** An UndoableEdit represents an edit.  The edit may
  *  be undone, or if already undone the edit may be redone.
@@ -86,4 +87,8 @@ trait UndoableEdit {
      */
     @stub
     def replaceEdit(anEdit: UndoableEdit): Boolean = ???
+
+    /** Undo the edit. */
+    @stub
+    def undo(): Unit = ???
 }

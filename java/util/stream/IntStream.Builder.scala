@@ -1,6 +1,7 @@
 package java.util.stream
 
 import java.util.function.IntConsumer
+import scala.scalanative.annotation.stub
 
 /** A mutable builder for an IntStream.
  * 
@@ -20,4 +21,8 @@ object trait IntStream.Builder extends IntConsumer {
     /** Adds an element to the stream being built. */
     @stub
     val this: default = ???
+
+    /** Builds the stream, transitioning this builder to the built state. */
+    @stub
+    def build(): IntStream = ???
 }

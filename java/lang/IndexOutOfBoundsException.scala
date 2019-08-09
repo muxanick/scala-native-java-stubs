@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** Thrown to indicate that an index of some sort (such as to an array, to a
  *  string, or to a vector) is out of range.
  *  
@@ -12,4 +14,10 @@ class IndexOutOfBoundsException extends RuntimeException {
      */
     @stub
     def this() = ???
+
+    /** Constructs an IndexOutOfBoundsException with the
+     *  specified detail message.
+     */
+    @stub
+    def this(s: String) = ???
 }

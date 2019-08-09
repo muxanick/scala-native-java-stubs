@@ -1,6 +1,7 @@
 package java.text
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Defines constants that are used as attribute keys in the
  *  AttributedCharacterIterator returned
@@ -11,6 +12,10 @@ import java.lang.Object
  *  between its constants and the corresponding Calendar constants.
  */
 object DateFormat.Field extends Format.Field {
+
+    /** Creates a Field. */
+    @stub
+    protected def Field(name: String, calendarField: Int) = ???
 
     /** Constant identifying the time of day indicator
      *  (e.g.
@@ -90,6 +95,10 @@ object DateFormat.Field extends Format.Field {
     @stub
     val WEEK_OF_YEAR: DateFormat.Field = ???
 
+    /** Constant identifying the year field. */
+    @stub
+    val YEAR: DateFormat.Field = ???
+
     /** Returns the Calendar field associated with this
      *  attribute.
      */
@@ -101,4 +110,8 @@ object DateFormat.Field extends Format.Field {
      */
     @stub
     def ofCalendarField(calendarField: Int): DateFormat.Field = ???
+
+    /** Resolves instances being deserialized to the predefined constants. */
+    @stub
+    protected def readResolve(): Object = ???
 }

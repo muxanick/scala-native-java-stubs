@@ -3,6 +3,7 @@ package java.sql
 import java.lang.{Object, String}
 import java.time.{Instant, LocalDate}
 import java.util.Date
+import scala.scalanative.annotation.stub
 
 /** A thin wrapper around a millisecond value that allows
  *  JDBC to identify this as an SQL DATE value.  A
@@ -23,6 +24,12 @@ class Date extends Date {
      */
     @stub
     def this(year: Int, month: Int, day: Int) = ???
+
+    /** Constructs a Date object using the given milliseconds
+     *  time value.
+     */
+    @stub
+    def this(date: Long) = ???
 
     /** Deprecated.   */
     @stub
@@ -77,4 +84,10 @@ object Date {
      */
     @stub
     def valueOf(date: LocalDate): Date = ???
+
+    /** Converts a string in JDBC date escape format to
+     *  a Date value.
+     */
+    @stub
+    def valueOf(s: String): Date = ???
 }

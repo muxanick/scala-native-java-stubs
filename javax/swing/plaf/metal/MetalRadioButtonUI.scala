@@ -5,6 +5,7 @@ import java.lang.Object
 import javax.swing.{AbstractButton, JComponent}
 import javax.swing.plaf.{ButtonUI, ComponentUI}
 import javax.swing.plaf.basic.{BasicButtonUI, BasicRadioButtonUI, BasicToggleButtonUI}
+import scala.scalanative.annotation.stub
 
 /** RadioButtonUI implementation for MetalRadioButtonUI
  *  
@@ -21,11 +22,19 @@ class MetalRadioButtonUI extends BasicRadioButtonUI {
 
     /**  */
     @stub
+    def this() = ???
+
+    /**  */
+    @stub
     protected val disabledTextColor: Color = ???
 
     /**  */
     @stub
     protected val focusColor: Color = ???
+
+    /**  */
+    @stub
+    protected val selectColor: Color = ???
 
     /**  */
     @stub
@@ -50,6 +59,10 @@ class MetalRadioButtonUI extends BasicRadioButtonUI {
     /** Paints focused radio button. */
     @stub
     protected def paintFocus(g: Graphics, t: Rectangle, d: Dimension): Unit = ???
+
+    /**  */
+    @stub
+    protected def uninstallDefaults(b: AbstractButton): Unit = ???
 }
 
 object MetalRadioButtonUI {

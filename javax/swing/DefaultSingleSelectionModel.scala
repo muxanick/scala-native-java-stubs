@@ -3,7 +3,8 @@ package javax.swing
 import java.io.Serializable
 import java.lang.{Class, Object}
 import java.util.EventListener
-import javax.swing.event.{ChangeEvent, ChangeListener}
+import javax.swing.event.{ChangeEvent, ChangeListener, EventListenerList}
+import scala.scalanative.annotation.stub
 
 /** A generic implementation of SingleSelectionModel.
  *  
@@ -20,7 +21,15 @@ class DefaultSingleSelectionModel extends Object with SingleSelectionModel with 
 
     /**  */
     @stub
+    def this() = ???
+
+    /**  */
+    @stub
     protected val changeEvent: ChangeEvent = ???
+
+    /** The collection of registered listeners */
+    @stub
+    protected val listenerList: EventListenerList = ???
 
     /** Adds a ChangeListener to the button. */
     @stub
@@ -60,4 +69,8 @@ class DefaultSingleSelectionModel extends Object with SingleSelectionModel with 
     /** Removes a ChangeListener from the button. */
     @stub
     def removeChangeListener(l: ChangeListener): Unit = ???
+
+    /** Sets the model's selected index to index. */
+    @stub
+    def setSelectedIndex(index: Int): Unit = ???
 }

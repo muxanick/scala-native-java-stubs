@@ -2,6 +2,7 @@ package java.awt
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The MenuShortcutclass represents a keyboard accelerator
  *  for a MenuItem.
@@ -35,6 +36,10 @@ class MenuShortcut extends Object with Serializable {
     @stub
     def this(key: Int) = ???
 
+    /** Constructs a new MenuShortcut for the specified virtual keycode. */
+    @stub
+    def this(key: Int, useShiftModifier: Boolean) = ???
+
     /** Returns whether this MenuShortcut is the same as another:
      *  equality is defined to mean that both MenuShortcuts use the same key
      *  and both either use or don't use the SHIFT key.
@@ -66,4 +71,8 @@ class MenuShortcut extends Object with Serializable {
     /** Returns an internationalized description of the MenuShortcut. */
     @stub
     def toString(): String = ???
+
+    /** Returns whether this MenuShortcut must be invoked using the SHIFT key. */
+    @stub
+    def usesShiftModifier(): Boolean = ???
 }

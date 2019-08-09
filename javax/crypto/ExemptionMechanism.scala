@@ -3,6 +3,7 @@ package javax.crypto
 import java.lang.{Object, String}
 import java.security.{AlgorithmParameters, Key, Provider}
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** This class provides the functionality of an exemption mechanism, examples
  *  of which are key recovery, key weakening, and
@@ -12,6 +13,10 @@ import java.security.spec.AlgorithmParameterSpec
  *  stronger encryption capabilities than those which don't.
  */
 class ExemptionMechanism extends Object {
+
+    /** Creates a ExemptionMechanism object. */
+    @stub
+    protected def this(exmechSpi: ExemptionMechanismSpi, provider: Provider, mechanism: String) = ???
 
     /** Ensures that the key stored away by this ExemptionMechanism
      *  object will be wiped out when there are no more references to it.
@@ -69,6 +74,12 @@ class ExemptionMechanism extends Object {
      */
     @stub
     def init(key: Key, params: AlgorithmParameterSpec): Unit = ???
+
+    /** Returns whether the result blob has been generated successfully by this
+     *  exemption mechanism.
+     */
+    @stub
+    def isCryptoAllowed(key: Key): Boolean = ???
 }
 
 object ExemptionMechanism {

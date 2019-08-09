@@ -2,6 +2,7 @@ package javax.script
 
 import java.io.Reader
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Provides a standard implementation for several of the variants of the eval
  *  method.
@@ -25,6 +26,15 @@ abstract class AbstractScriptEngine extends Object with ScriptEngine {
      */
     @stub
     def this() = ???
+
+    /** Creates a new instance using the specified Bindings as the
+     *  ENGINE_SCOPE Bindings in the protected context field.
+     */
+    @stub
+    def this(n: Bindings) = ???
+
+    /** The default ScriptContext of this AbstractScriptEngine. */
+    protected val context: ScriptContext
 
     /** eval(Reader) calls the abstract
      *  eval(Reader, ScriptContext) passing the value of the context
@@ -74,4 +84,9 @@ abstract class AbstractScriptEngine extends Object with ScriptEngine {
      *  context field.
      */
     def setBindings(bindings: Bindings, scope: Int): Unit
+
+    /** Sets the value of the protected context field to the specified
+     *  ScriptContext.
+     */
+    def setContext(ctxt: ScriptContext): Unit
 }

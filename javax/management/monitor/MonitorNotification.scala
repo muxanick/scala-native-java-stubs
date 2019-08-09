@@ -3,6 +3,7 @@ package javax.management.monitor
 import java.lang.{Object, String}
 import java.util.EventObject
 import javax.management.{Notification, ObjectName}
+import scala.scalanative.annotation.stub
 
 /** Provides definitions of the notifications sent by monitor MBeans.
  *  
@@ -53,6 +54,10 @@ class MonitorNotification extends Notification {
     /** Gets the observed object of this monitor notification. */
     @stub
     def getObservedObject(): ObjectName = ???
+
+    /** Gets the threshold/string (depending on the monitor type) that triggered off this monitor notification. */
+    @stub
+    def getTrigger(): Object = ???
 }
 
 object MonitorNotification {
@@ -91,4 +96,8 @@ object MonitorNotification {
     /** Notification type denoting that the observed attribute has exceeded the threshold low value. */
     @stub
     val THRESHOLD_LOW_VALUE_EXCEEDED: String = ???
+
+    /** Notification type denoting that the observed attribute has reached the threshold value. */
+    @stub
+    val THRESHOLD_VALUE_EXCEEDED: String = ???
 }

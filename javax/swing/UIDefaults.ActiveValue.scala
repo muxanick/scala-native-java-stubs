@@ -1,5 +1,8 @@
 package javax.swing
 
+import java.lang.Object
+import scala.scalanative.annotation.stub
+
 /** This class enables one to store an entry in the defaults
  *  table that's constructed each time it's looked up with one of
  *  the getXXX(key) methods. Here's an example of
@@ -16,3 +19,8 @@ package javax.swing
  *  
  */
 object trait UIDefaults.ActiveValue {
+
+    /** Creates the value retrieved from the UIDefaults table. */
+    @stub
+    def createValue(table: UIDefaults): Object = ???
+}

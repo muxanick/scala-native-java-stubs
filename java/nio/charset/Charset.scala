@@ -3,6 +3,7 @@ package java.nio.charset
 import java.lang.{Comparable, Object, String}
 import java.nio.{ByteBuffer, CharBuffer}
 import java.util.{Locale, Set, SortedMap}
+import scala.scalanative.annotation.stub
 
 /** A named mapping between sequences of sixteen-bit Unicode code units and sequences of
  *  bytes.  This class defines methods for creating decoders and encoders and
@@ -206,6 +207,12 @@ import java.util.{Locale, Set, SortedMap}
  */
 abstract class Charset extends Object with Comparable[Charset] {
 
+    /** Initializes a new charset with the given canonical name and alias
+     *  set.
+     */
+    @stub
+    protected def this(canonicalName: String, aliases: Array[String]) = ???
+
     /** Returns a set containing this charset's aliases. */
     def aliases(): Set[String]
 
@@ -256,6 +263,9 @@ abstract class Charset extends Object with Comparable[Charset] {
 
     /** Constructs a new encoder for this charset. */
     def newEncoder(): CharsetEncoder
+
+    /** Returns a string describing this charset. */
+    def toString(): String
 }
 
 object Charset {

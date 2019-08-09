@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** A family of character subsets representing the character blocks in the
  *  Unicode specification. Character blocks generally define characters
  *  used for a specific script or purpose. A character is contained by
@@ -947,6 +949,10 @@ final object Character.UnicodeBlock extends Character.Subset {
     @stub
     val YI_SYLLABLES: Character.UnicodeBlock = ???
 
+    /** Constant for the "Yijing Hexagram Symbols" Unicode character block. */
+    @stub
+    val YIJING_HEXAGRAM_SYMBOLS: Character.UnicodeBlock = ???
+
     /** Returns the UnicodeBlock with the given name. */
     @stub
     def forName(blockName: String): Character.UnicodeBlock = ???
@@ -957,4 +963,12 @@ final object Character.UnicodeBlock extends Character.Subset {
      */
     @stub
     def of(c: Char): Character.UnicodeBlock = ???
+
+    /** Returns the object representing the Unicode block
+     *  containing the given character (Unicode code point), or
+     *  null if the character is not a member of a
+     *  defined block.
+     */
+    @stub
+    def of(codePoint: Int): Character.UnicodeBlock = ???
 }

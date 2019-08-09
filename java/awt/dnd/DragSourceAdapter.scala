@@ -1,6 +1,7 @@
 package java.awt.dnd
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An abstract adapter class for receiving drag source events. The methods in
  *  this class are empty. This class exists only as a convenience for creating
@@ -25,6 +26,10 @@ import java.lang.Object
  */
 abstract class DragSourceAdapter extends Object with DragSourceListener with DragSourceMotionListener {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** This method is invoked to signify that the Drag and Drop
      *  operation is complete.
      */
@@ -41,4 +46,7 @@ abstract class DragSourceAdapter extends Object with DragSourceListener with Dra
 
     /** Called as the cursor's hotspot moves over a platform-dependent drop site. */
     def dragOver(dsde: DragSourceDragEvent): Unit
+
+    /** Called when the user has modified the drop gesture. */
+    def dropActionChanged(dsde: DragSourceDragEvent): Unit
 }

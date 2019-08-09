@@ -1,6 +1,7 @@
 package java.util.logging
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Handler that buffers requests in a circular buffer in memory.
  *  
@@ -68,6 +69,10 @@ class MemoryHandler extends Handler {
     @stub
     def this() = ???
 
+    /** Create a MemoryHandler. */
+    @stub
+    def this(target: Handler, size: Int, pushLevel: Level) = ???
+
     /** Close the Handler and free all associated resources. */
     @stub
     def close(): Unit = ???
@@ -93,4 +98,8 @@ class MemoryHandler extends Handler {
     /** Push any buffered output to the target Handler. */
     @stub
     def push(): Unit = ???
+
+    /** Set the pushLevel. */
+    @stub
+    def setPushLevel(newLevel: Level): Unit = ???
 }

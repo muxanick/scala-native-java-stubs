@@ -2,6 +2,7 @@ package javax.management.monitor
 
 import java.lang.Number
 import javax.management.ObjectName
+import scala.scalanative.annotation.stub
 
 /** Exposes the remote management interface of the counter monitor MBean. */
 trait CounterMonitorMBean extends MonitorMBean {
@@ -78,4 +79,11 @@ trait CounterMonitorMBean extends MonitorMBean {
     /** Sets the offset value. */
     @stub
     def setOffset(value: Number): Unit = ???
+
+    /** Deprecated. 
+     * As of JMX 1.2, replaced by setInitThreshold(java.lang.Number)
+     * 
+     */
+    @stub
+    def setThreshold(value: Number): Unit = ???
 }

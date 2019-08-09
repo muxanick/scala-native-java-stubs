@@ -2,6 +2,7 @@ package javax.swing.undo
 
 import java.lang.{Object, String}
 import javax.swing.event.{UndoableEditEvent, UndoableEditListener}
+import scala.scalanative.annotation.stub
 
 /** UndoManager manages a list of UndoableEdits,
  *  providing a way to undo or redo the appropriate edits.  There are
@@ -103,6 +104,10 @@ import javax.swing.event.{UndoableEditEvent, UndoableEditListener}
  *  Please see XMLEncoder.
  */
 class UndoManager extends CompoundEdit with UndoableEditListener {
+
+    /** Creates a new UndoManager. */
+    @stub
+    def this() = ???
 
     /** Adds an UndoableEdit to this
      *  UndoManager, if it's possible.
@@ -214,4 +219,10 @@ class UndoManager extends CompoundEdit with UndoableEditListener {
      */
     @stub
     def undoOrRedo(): Unit = ???
+
+    /** Undoes all changes from the index of the next edit to
+     *  edit, updating the index of the next edit appropriately.
+     */
+    @stub
+    protected def undoTo(edit: UndoableEdit): Unit = ???
 }

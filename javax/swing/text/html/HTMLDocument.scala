@@ -4,6 +4,7 @@ import java.lang.{Object, String}
 import java.net.URL
 import javax.swing.event.{DocumentEvent, UndoableEditEvent}
 import javax.swing.text.{AbstractDocument, AbstractDocument.AbstractElement, AbstractDocument.Content, AbstractDocument.DefaultDocumentEvent, AttributeSet, DefaultStyledDocument, DefaultStyledDocument.ElementSpec, Element}
+import scala.scalanative.annotation.stub
 
 /** A document that models HTML.  The purpose of this model is to
  *  support both browsing and editing.  As a result, the structure
@@ -245,6 +246,13 @@ class HTMLDocument extends DefaultStyledDocument {
     @stub
     def this(c: AbstractDocument.Content, styles: StyleSheet) = ???
 
+    /** Constructs an HTML document with the default content
+     *  storage implementation and the specified style/attribute
+     *  storage mechanism.
+     */
+    @stub
+    def this(styles: StyleSheet) = ???
+
     /** An element that represents a structural block of
      *  HTML.
      */
@@ -256,6 +264,13 @@ class HTMLDocument extends DefaultStyledDocument {
      */
     @stub
     object HTMLReader extends HTMLDocument.HTMLReader
+
+    /** An element that represents a chunk of text that has
+     *  a set of HTML character level attributes assigned to
+     *  it.
+     */
+    @stub
+    object RunElement extends HTMLDocument.RunElement
 
     /** Replaces the contents of the document with the given
      *  element specifications.
@@ -414,6 +429,12 @@ class HTMLDocument extends DefaultStyledDocument {
     /** Determines how unknown tags are handled by the parser. */
     @stub
     def setPreservesUnknownTags(preservesTags: Boolean): Unit = ???
+
+    /** Sets the number of tokens to buffer before trying to update
+     *  the documents element structure.
+     */
+    @stub
+    def setTokenThreshold(n: Int): Unit = ???
 }
 
 object HTMLDocument {
@@ -422,4 +443,8 @@ object HTMLDocument {
      */
     @stub
     object Iterator extends HTMLDocument.Iterator
+
+    /** Document property key value. */
+    @stub
+    val AdditionalComments: String = ???
 }

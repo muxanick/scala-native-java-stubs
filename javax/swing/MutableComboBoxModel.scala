@@ -1,6 +1,7 @@
 package javax.swing
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A mutable version of ComboBoxModel. */
 trait MutableComboBoxModel[E] extends ComboBoxModel[E] {
@@ -16,4 +17,8 @@ trait MutableComboBoxModel[E] extends ComboBoxModel[E] {
     /** Removes an item from the model. */
     @stub
     def removeElement(obj: Object): Unit = ???
+
+    /** Removes an item at a specific index. */
+    @stub
+    def removeElementAt(index: Int): Unit = ???
 }

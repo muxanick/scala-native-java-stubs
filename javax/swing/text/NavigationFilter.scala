@@ -1,6 +1,7 @@
 package javax.swing.text
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** NavigationFilter can be used to restrict where the cursor can
  *  be positioned. When the default cursor positioning actions attempt to
@@ -19,6 +20,10 @@ import java.lang.Object
  */
 class NavigationFilter extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Returns the next visual position to place the caret at from an
      *  existing position.
      */
@@ -28,4 +33,16 @@ class NavigationFilter extends Object {
     /** Invoked prior to the Caret moving the dot. */
     @stub
     def moveDot(fb: NavigationFilter.FilterBypass, dot: Int, bias: Position.Bias): Unit = ???
+
+    /** Invoked prior to the Caret setting the dot. */
+    @stub
+    def setDot(fb: NavigationFilter.FilterBypass, dot: Int, bias: Position.Bias): Unit = ???
+}
+
+object NavigationFilter {
+    /** Used as a way to circumvent calling back into the caret to
+     *  position the cursor.
+     */
+    @stub
+    object FilterBypass extends NavigationFilter.FilterBypass
 }

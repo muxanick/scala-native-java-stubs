@@ -1,7 +1,8 @@
 package javax.naming.directory
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
 import javax.naming.NamingException
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown when an attempt is
  *  made to add, or remove, or modify an attribute, its identifier,
@@ -23,6 +24,12 @@ class AttributeModificationException extends NamingException {
     @stub
     def this() = ???
 
+    /** Constructs a new instance of AttributeModificationException using
+     *  an explanation.
+     */
+    @stub
+    def this(explanation: String) = ???
+
     /** Retrieves the unexecuted modification list. */
     @stub
     def getUnexecutedModifications(): Array[ModificationItem] = ???
@@ -30,4 +37,11 @@ class AttributeModificationException extends NamingException {
     /** Sets the unexecuted modification list to be e. */
     @stub
     def setUnexecutedModifications(e: Array[ModificationItem]): Unit = ???
+
+    /** The string representation of this exception consists of
+     *  information about where the error occurred, and
+     *  the first unexecuted modification.
+     */
+    @stub
+    def toString(): String = ???
 }

@@ -3,6 +3,7 @@ package java.util.concurrent.atomic
 import java.io.Serializable
 import java.lang.{Object, String}
 import java.util.function.{IntBinaryOperator, IntUnaryOperator}
+import scala.scalanative.annotation.stub
 
 /** An int array in which elements may be updated atomically.
  *  See the java.util.concurrent.atomic package
@@ -16,6 +17,12 @@ class AtomicIntegerArray extends Object with Serializable {
      */
     @stub
     def this(length: Int) = ???
+
+    /** Creates a new AtomicIntegerArray with the same length as, and
+     *  all elements copied from, the given array.
+     */
+    @stub
+    def this(array: Array[Int]) = ???
 
     /** Atomically updates the element at index i with the
      *  results of applying the given function to the current and
@@ -98,4 +105,10 @@ class AtomicIntegerArray extends Object with Serializable {
      */
     @stub
     def updateAndGet(i: Int, updateFunction: IntUnaryOperator): Int = ???
+
+    /** Atomically sets the element at position i to the given
+     *  updated value if the current value == the expected value.
+     */
+    @stub
+    def weakCompareAndSet(i: Int, expect: Int, update: Int): Boolean = ???
 }

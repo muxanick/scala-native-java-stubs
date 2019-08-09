@@ -5,6 +5,7 @@ import java.math.BigInteger
 import java.security.{Principal, Provider, PublicKey}
 import java.util.{Date, Set}
 import javax.security.auth.x500.X500Principal
+import scala.scalanative.annotation.stub
 
 /** 
  *  Abstract class for an X.509 Certificate Revocation List (CRL).
@@ -66,6 +67,10 @@ import javax.security.auth.x500.X500Principal
  *  
  */
 abstract class X509CRL extends CRL with X509Extension {
+
+    /** Constructor for X.509 CRLs. */
+    @stub
+    protected def this() = ???
 
     /** Compares this CRL for equality with the given
      *  object.
@@ -138,4 +143,9 @@ abstract class X509CRL extends CRL with X509Extension {
      *  private key that corresponds to the given public key.
      */
     def verify(key: PublicKey, sigProvider: Provider): Unit
+
+    /** Verifies that this CRL was signed using the
+     *  private key that corresponds to the given public key.
+     */
+    def verify(key: PublicKey, sigProvider: String): Unit
 }

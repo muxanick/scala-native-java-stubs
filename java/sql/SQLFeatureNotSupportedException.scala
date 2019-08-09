@@ -1,6 +1,7 @@
 package java.sql
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** The subclass of SQLException thrown when the SQLState class value is '0A'
  *  ( the value is 'zero' A).
@@ -60,4 +61,10 @@ class SQLFeatureNotSupportedException extends SQLNonTransientException {
      */
     @stub
     def this(reason: String, cause: Throwable) = ???
+
+    /** Constructs a SQLFeatureNotSupportedException object
+     *    with a given  cause.
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

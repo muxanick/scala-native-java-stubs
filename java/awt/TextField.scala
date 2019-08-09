@@ -4,6 +4,7 @@ import java.awt.event.{ActionEvent, ActionListener}
 import java.lang.{Class, Object, String}
 import java.util.EventListener
 import javax.accessibility.AccessibleContext
+import scala.scalanative.annotation.stub
 
 /** A TextField object is a text component
  *  that allows for the editing of a single line of text.
@@ -68,6 +69,19 @@ class TextField extends TextComponent {
     /** Constructs a new text field initialized with the specified text. */
     @stub
     def this(text: String) = ???
+
+    /** Constructs a new text field initialized with the specified text
+     *  to be displayed, and wide enough to hold the specified
+     *  number of columns.
+     */
+    @stub
+    def this(text: String, columns: Int) = ???
+
+    /** This class implements accessibility support for the
+     *  TextField class.
+     */
+    @stub
+    protected object AccessibleAWTTextField extends TextField.AccessibleAWTTextField
 
     /** Adds the specified action listener to receive
      *  action events from this text field.
@@ -198,4 +212,10 @@ class TextField extends TextComponent {
      */
     @stub
     def setEchoCharacter(c: Char): Unit = ???
+
+    /** Sets the text that is presented by this
+     *  text component to be the specified text.
+     */
+    @stub
+    def setText(t: String): Unit = ???
 }

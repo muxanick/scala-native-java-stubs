@@ -1,6 +1,7 @@
 package javax.sound.midi
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The ControllerEventListener interface should be implemented
  *  by classes whose instances need to be notified when a Sequencer
@@ -12,4 +13,10 @@ import java.util.EventListener
  *  getting control-change notifications.
  */
 trait ControllerEventListener extends EventListener {
+
+    /** Invoked when a Sequencer has encountered and processed
+     *  a control-change event of interest to this listener.
+     */
+    @stub
+    def controlChange(event: ShortMessage): Unit = ???
 }

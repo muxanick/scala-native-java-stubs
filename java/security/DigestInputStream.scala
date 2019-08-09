@@ -1,7 +1,8 @@
 package java.security
 
 import java.io.{FilterInputStream, InputStream}
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A transparent stream that updates the associated message digest using
  *  the bits going through the stream.
@@ -26,6 +27,16 @@ import java.lang.Object
  */
 class DigestInputStream extends FilterInputStream {
 
+    /** Creates a digest input stream, using the specified input stream
+     *  and message digest.
+     */
+    @stub
+    def this(stream: InputStream, digest: MessageDigest) = ???
+
+    /** The message digest associated with this stream. */
+    @stub
+    protected val digest: MessageDigest = ???
+
     /** Returns the message digest associated with this stream. */
     @stub
     def getMessageDigest(): MessageDigest = ???
@@ -49,4 +60,10 @@ class DigestInputStream extends FilterInputStream {
     /** Associates the specified message digest with this stream. */
     @stub
     def setMessageDigest(digest: MessageDigest): Unit = ???
+
+    /** Prints a string representation of this digest input stream and
+     *  its associated message digest object.
+     */
+    @stub
+    def toString(): String = ???
 }

@@ -2,6 +2,7 @@ package javax.management.openmbean
 
 import java.lang.{Object, String}
 import javax.management.MBeanParameterInfo
+import scala.scalanative.annotation.stub
 
 /** Describes a constructor of an Open MBean.
  * 
@@ -42,4 +43,8 @@ trait OpenMBeanConstructorInfo {
     /** Returns the hash code value for this OpenMBeanConstructorInfo instance. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a string representation of this OpenMBeanConstructorInfo instance. */
+    @stub
+    def toString(): String = ???
 }

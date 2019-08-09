@@ -2,6 +2,7 @@ package java.awt
 
 import java.io.{File, FilenameFilter}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The FileDialog class displays a dialog window
  *  from which the user can select a file.
@@ -38,6 +39,12 @@ class FileDialog extends Dialog {
      */
     @stub
     def this(parent: Frame, title: String) = ???
+
+    /** Creates a file dialog window with the specified title for loading
+     *  or saving a file.
+     */
+    @stub
+    def this(parent: Frame, title: String, mode: Int) = ???
 
     /** Creates the file dialog's peer. */
     @stub
@@ -96,6 +103,10 @@ class FileDialog extends Dialog {
     /** Sets the mode of the file dialog. */
     @stub
     def setMode(mode: Int): Unit = ???
+
+    /** Enables or disables multiple file selection for the file dialog. */
+    @stub
+    def setMultipleMode(enable: Boolean): Unit = ???
 }
 
 object FileDialog {
@@ -104,4 +115,10 @@ object FileDialog {
      */
     @stub
     val LOAD: Int = ???
+
+    /** This constant value indicates that the purpose of the file
+     *  dialog window is to locate a file to which to write.
+     */
+    @stub
+    val SAVE: Int = ???
 }

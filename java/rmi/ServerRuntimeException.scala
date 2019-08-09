@@ -1,7 +1,8 @@
 package java.rmi
 
 import java.io.IOException
-import java.lang.{Deprecated, Exception, Object, Throwable}
+import java.lang.{Deprecated, Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** From a server executing on JDK 1.1, a
  *  ServerRuntimeException is thrown as a result of a
@@ -17,4 +18,11 @@ import java.lang.{Deprecated, Exception, Object, Throwable}
  *  executing on the Java 2 platform v1.2 or later versions.
  */
 @Deprecated class ServerRuntimeException extends RemoteException {
+
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
+    @stub
+    def this(s: String, ex: Exception) = ???
 }

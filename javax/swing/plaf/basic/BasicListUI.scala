@@ -7,6 +7,7 @@ import java.lang.Object
 import javax.swing.{CellRendererPane, JComponent, JList, ListCellRenderer, ListModel, ListSelectionModel}
 import javax.swing.event.{ListDataListener, ListSelectionListener, MouseInputListener}
 import javax.swing.plaf.{ComponentUI, ListUI}
+import scala.scalanative.annotation.stub
 
 /** An extensible implementation of ListUI.
  *  
@@ -14,6 +15,10 @@ import javax.swing.plaf.{ComponentUI, ListUI}
  *  lists.
  */
 class BasicListUI extends ListUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** This class should be treated as a "protected" inner class. */
     @stub
@@ -35,6 +40,12 @@ class BasicListUI extends ListUI {
     /** Mouse input, and focus handling for JList. */
     @stub
     object MouseInputHandler extends BasicListUI.MouseInputHandler
+
+    /** The PropertyChangeListener that's added to the JList at
+     *  installUI time.
+     */
+    @stub
+    object PropertyChangeHandler extends BasicListUI.PropertyChangeHandler
 
     /**  */
     @stub
@@ -75,6 +86,10 @@ class BasicListUI extends ListUI {
     /**  */
     @stub
     protected val rendererPane: CellRendererPane = ???
+
+    /**  */
+    @stub
+    protected val updateLayoutStateNeeded: Int = ???
 
     /** Return the JList relative Y coordinate of the origin of the specified
      *  row or -1 if row isn't valid.
@@ -223,6 +238,13 @@ class BasicListUI extends ListUI {
      */
     @stub
     def uninstallUI(c: JComponent): Unit = ???
+
+    /** Recompute the value of cellHeight or cellHeights based
+     *  and cellWidth, based on the current font and the current
+     *  values of fixedCellWidth, fixedCellHeight, and prototypeCellValue.
+     */
+    @stub
+    protected def updateLayoutState(): Unit = ???
 }
 
 object BasicListUI {

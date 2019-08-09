@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, DocAttribute, IntegerSyntax, PrintJobAttribute, PrintRequestAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class NumberUp is an integer valued printing attribute class that specifies
  *  the number of print-stream pages to impose upon a single side of an
@@ -94,6 +95,10 @@ import javax.print.attribute.{Attribute, DocAttribute, IntegerSyntax, PrintJobAt
  */
 final class NumberUp extends IntegerSyntax with DocAttribute with PrintRequestAttribute with PrintJobAttribute {
 
+    /** Construct a new number up attribute with the given integer value. */
+    @stub
+    def this(value: Int) = ???
+
     /** Returns whether this number up attribute is equivalent to the passed in
      *  object.
      */
@@ -105,4 +110,10 @@ final class NumberUp extends IntegerSyntax with DocAttribute with PrintRequestAt
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

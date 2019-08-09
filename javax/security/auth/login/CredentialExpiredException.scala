@@ -1,7 +1,8 @@
 package javax.security.auth.login
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
 import java.security.GeneralSecurityException
+import scala.scalanative.annotation.stub
 
 /** Signals that a Credential has expired.
  * 
@@ -19,4 +20,10 @@ class CredentialExpiredException extends CredentialException {
     /** Constructs a CredentialExpiredException with no detail message. */
     @stub
     def this() = ???
+
+    /** Constructs a CredentialExpiredException with the specified detail
+     *  message.
+     */
+    @stub
+    def this(msg: String) = ???
 }

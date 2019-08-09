@@ -3,6 +3,7 @@ package javax.xml.ws
 import java.lang.{Class, String}
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** The WebServiceRef annotation is used to
  *  define a reference to a web service and
@@ -70,4 +71,8 @@ import scala.annotation.StaticAnnotation
      */
     @stub
     val value: Class[_ <: Service] = ???
+
+    /** A URL pointing to the WSDL document for the web service. */
+    @stub
+    val wsdlLocation: String = ???
 }

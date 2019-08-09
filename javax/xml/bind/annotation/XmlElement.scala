@@ -1,8 +1,9 @@
 package javax.xml.bind.annotation
 
-import java.lang.String
+import java.lang.{Class, String}
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Maps a JavaBean property to a XML element derived from property name.
  * 
@@ -127,4 +128,8 @@ import scala.annotation.StaticAnnotation
     /** Customize the element declaration to be required. */
     @stub
     val required: Boolean = ???
+
+    /** The Java class being referenced. */
+    @stub
+    val type: Class = ???
 }

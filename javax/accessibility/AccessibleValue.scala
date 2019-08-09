@@ -1,6 +1,7 @@
 package javax.accessibility
 
 import java.lang.Number
+import scala.scalanative.annotation.stub
 
 /** The AccessibleValue interface should be supported by any object
  *  that supports a numerical value (e.g., a scroll bar).  This interface
@@ -26,4 +27,8 @@ trait AccessibleValue {
     /** Get the minimum value of this object as a Number. */
     @stub
     def getMinimumAccessibleValue(): Number = ???
+
+    /** Set the value of this object as a Number. */
+    @stub
+    def setCurrentAccessibleValue(n: Number): Boolean = ???
 }

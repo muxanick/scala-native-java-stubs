@@ -1,7 +1,8 @@
 package java.rmi.server
 
 import java.lang.Object
-import java.lang.reflect.InvocationHandler
+import java.lang.reflect.{InvocationHandler, Method}
+import scala.scalanative.annotation.stub
 
 /** An implementation of the InvocationHandler interface for
  *  use with Java Remote Method Invocation (Java RMI).  This invocation
@@ -14,4 +15,16 @@ import java.lang.reflect.InvocationHandler
  *  invocation handler.
  */
 class RemoteObjectInvocationHandler extends RemoteObject with InvocationHandler {
+
+    /** Creates a new RemoteObjectInvocationHandler constructed
+     *  with the specified RemoteRef.
+     */
+    @stub
+    def this(ref: RemoteRef) = ???
+
+    /** Processes a method invocation made on the encapsulating
+     *  proxy instance, proxy, and returns the result.
+     */
+    @stub
+    def invoke(proxy: Object, method: Method, args: Array[Object]): Object = ???
 }

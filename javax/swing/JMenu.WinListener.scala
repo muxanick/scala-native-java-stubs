@@ -1,8 +1,9 @@
 package javax.swing
 
-import java.awt.event.WindowAdapter
+import java.awt.event.{WindowAdapter, WindowEvent}
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A listener class that watches for a popup window closing.
  *  When the popup is closing, the listener deselects the menu.
@@ -17,4 +18,12 @@ import java.lang.Object
  *  Please see XMLEncoder.
  */
 protected class JMenu.WinListener extends WindowAdapter with Serializable {
+
+    /** Create the window listener for the specified popup. */
+    @stub
+    def WinListener(p: JPopupMenu) = ???
+
+    /** Deselect the menu when the popup is closed from outside. */
+    @stub
+    def windowClosing(e: WindowEvent): Unit = ???
 }

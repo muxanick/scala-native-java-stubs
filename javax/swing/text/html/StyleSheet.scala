@@ -6,6 +6,7 @@ import java.lang.{Object, String}
 import java.net.URL
 import java.util.Enumeration
 import javax.swing.text.{AttributeSet, Element, MutableAttributeSet, Style, StyleContext, StyleContext.SmallAttributeSet, View}
+import scala.scalanative.annotation.stub
 
 /** Support for defining the visual characteristics of
  *  HTML views being rendered.  The StyleSheet is used to
@@ -93,6 +94,10 @@ import javax.swing.text.{AttributeSet, Element, MutableAttributeSet, Style, Styl
  *  better CSS support.
  */
 class StyleSheet extends StyleContext {
+
+    /** Construct a StyleSheet */
+    @stub
+    def this() = ???
 
     /** Adds an attribute to the given set, and returns
      *  the new representative set.
@@ -247,6 +252,12 @@ class StyleSheet extends StyleContext {
     /** Converts a color string such as "RED" or "#NNNNNN" to a Color. */
     @stub
     def stringToColor(string: String): Color = ???
+
+    /** Converts a set of HTML attributes to an equivalent
+     *  set of CSS attributes.
+     */
+    @stub
+    def translateHTMLToCSS(htmlAttrSet: AttributeSet): AttributeSet = ???
 }
 
 object StyleSheet {
@@ -255,6 +266,12 @@ object StyleSheet {
      */
     @stub
     object BoxPainter extends StyleSheet.BoxPainter
+
+    /** Class to carry out some of the duties of CSS list
+     *  formatting.
+     */
+    @stub
+    object ListPainter extends StyleSheet.ListPainter
 
     /**  */
     @stub

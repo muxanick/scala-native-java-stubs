@@ -3,6 +3,7 @@ package java.awt
 import java.awt.geom.{AffineTransform, Point2D, Rectangle2D}
 import java.awt.image.ColorModel
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The GradientPaint class provides a way to fill
  *  a Shape with a linear color gradient pattern.
@@ -40,6 +41,12 @@ class GradientPaint extends Object with Paint {
     @stub
     def this(pt1: Point2D, color1: Color, pt2: Point2D, color2: Color) = ???
 
+    /** Constructs either a cyclic or acyclic GradientPaint
+     *  object depending on the boolean parameter.
+     */
+    @stub
+    def this(pt1: Point2D, color1: Color, pt2: Point2D, color2: Color, cyclic: Boolean) = ???
+
     /** Creates and returns a PaintContext used to
      *  generate a linear color gradient pattern.
      */
@@ -65,4 +72,10 @@ class GradientPaint extends Object with Paint {
     /** Returns the transparency mode for this GradientPaint. */
     @stub
     def getTransparency(): Int = ???
+
+    /** Returns true if the gradient cycles repeatedly
+     *  between the two colors C1 and C2.
+     */
+    @stub
+    def isCyclic(): Boolean = ???
 }

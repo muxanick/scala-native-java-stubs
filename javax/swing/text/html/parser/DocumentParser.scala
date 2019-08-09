@@ -1,6 +1,9 @@
 package javax.swing.text.html.parser
 
+import java.io.Reader
 import java.lang.{Object, String}
+import javax.swing.text.html.HTMLEditorKit.ParserCallback
+import scala.scalanative.annotation.stub
 
 /** A Parser for HTML Documents (actually, you can specify a DTD, but
  *  you should really only use this class with the html dtd in swing).
@@ -67,6 +70,10 @@ import java.lang.{Object, String}
  */
 class DocumentParser extends Parser {
 
+    /**  */
+    @stub
+    def this(dtd: DTD) = ???
+
     /** Called when an HTML comment is encountered. */
     @stub
     protected def handleComment(text: Array[Char]): Unit = ???
@@ -90,4 +97,8 @@ class DocumentParser extends Parser {
     /** Handle Text. */
     @stub
     protected def handleText(data: Array[Char]): Unit = ???
+
+    /**  */
+    @stub
+    def parse(in: Reader, callback: HTMLEditorKit.ParserCallback, ignoreCharSet: Boolean): Unit = ???
 }

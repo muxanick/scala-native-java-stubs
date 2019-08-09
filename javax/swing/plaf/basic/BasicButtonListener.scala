@@ -5,9 +5,14 @@ import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.Object
 import javax.swing.{AbstractButton, JComponent}
 import javax.swing.event.{ChangeEvent, ChangeListener}
+import scala.scalanative.annotation.stub
 
 /** Button Listener */
 class BasicButtonListener extends Object with MouseListener with MouseMotionListener with FocusListener with ChangeListener with PropertyChangeListener {
+
+    /**  */
+    @stub
+    def this(b: AbstractButton) = ???
 
     /**  */
     @stub
@@ -68,4 +73,8 @@ class BasicButtonListener extends Object with MouseListener with MouseMotionList
     /** Invoked when the target of the listener has changed its state. */
     @stub
     def stateChanged(e: ChangeEvent): Unit = ???
+
+    /** Unregister's default key actions */
+    @stub
+    def uninstallKeyboardActions(c: JComponent): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.io
 
-import java.lang.AutoCloseable
+import java.lang.{AutoCloseable, Object}
+import scala.scalanative.annotation.stub
 
 /** ObjectOutput extends the DataOutput interface to include writing of objects.
  *  DataOutput includes methods for output of primitive types, ObjectOutput
@@ -27,4 +28,8 @@ trait ObjectOutput extends DataOutput with AutoCloseable {
     /** Writes a byte. */
     @stub
     def write(b: Int): Unit = ???
+
+    /** Write an object to the underlying storage or stream. */
+    @stub
+    def writeObject(obj: Object): Unit = ???
 }

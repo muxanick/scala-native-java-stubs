@@ -6,9 +6,18 @@ import java.lang.{Object, String}
 import javax.swing.{Icon, JComponent, JMenuItem, MenuElement, MenuSelectionManager}
 import javax.swing.event.{MenuDragMouseListener, MenuKeyListener, MouseInputListener}
 import javax.swing.plaf.{ButtonUI, ComponentUI, MenuItemUI}
+import scala.scalanative.annotation.stub
 
 /** BasicMenuItem implementation */
 class BasicMenuItemUI extends MenuItemUI {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /**  */
+    @stub
+    protected object MouseInputHandler extends BasicMenuItemUI.MouseInputHandler
 
     /** Accelerator delimiter string, such as '+' in 'Ctrl+C'. */
     @stub
@@ -71,6 +80,10 @@ class BasicMenuItemUI extends MenuItemUI {
     /**  */
     @stub
     protected val selectionBackground: Color = ???
+
+    /**  */
+    @stub
+    protected val selectionForeground: Color = ???
 
     /**  */
     @stub
@@ -181,6 +194,13 @@ class BasicMenuItemUI extends MenuItemUI {
      */
     @stub
     def uninstallUI(c: JComponent): Unit = ???
+
+    /** We draw the background in paintMenuItem()
+     *  so override update (which fills the background of opaque
+     *  components by default) to just call paint().
+     */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object BasicMenuItemUI {

@@ -1,6 +1,7 @@
 package javax.xml.soap
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A factory for creating SOAPConnection objects. Implementation of this class
  *  is optional. If SOAPConnectionFactory.newInstance() throws an
@@ -11,6 +12,18 @@ import java.lang.Object
  */
 abstract class SOAPConnectionFactory extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Create a new SOAPConnection. */
     def createConnection(): SOAPConnection
+}
+
+object SOAPConnectionFactory {
+    /** Creates an instance of the default
+     *  SOAPConnectionFactory object.
+     */
+    @stub
+    def newInstance(): SOAPConnectionFactory = ???
 }

@@ -1,5 +1,7 @@
 package java.awt
 
+import scala.scalanative.annotation.stub
+
 /** An interface for events that know how to dispatch themselves.
  *  By implementing this interface an event can be placed upon the event
  *  queue and its dispatch() method will be called when the event
@@ -21,4 +23,10 @@ package java.awt
  *  potential deadlocks and denial-of-service attacks.
  */
 trait ActiveEvent {
+
+    /** Dispatch the event to its target, listeners of the events source,
+     *  or do whatever it is this event is supposed to do.
+     */
+    @stub
+    def dispatch(): Unit = ???
 }

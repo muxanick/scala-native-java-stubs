@@ -2,6 +2,7 @@ package java.net
 
 import java.lang.{Object, String}
 import java.util.{List, Map}
+import scala.scalanative.annotation.stub
 
 /** A CookieHandler object provides a callback mechanism to hook up a
  *  HTTP state management policy implementation into the HTTP protocol
@@ -19,6 +20,10 @@ import java.util.{List, Map}
  */
 abstract class CookieHandler extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Gets all the applicable cookies from a cookie cache for the
      *  specified uri in the request header.
      */
@@ -35,4 +40,8 @@ object CookieHandler {
     /** Gets the system-wide cookie handler. */
     @stub
     def getDefault(): CookieHandler = ???
+
+    /** Sets (or unsets) the system-wide cookie handler. */
+    @stub
+    def setDefault(cHandler: CookieHandler): Unit = ???
 }

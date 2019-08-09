@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, IntegerSyntax, PrintJobAttribute, PrintRequestAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class Copies is an integer valued printing attribute class that specifies the
  *  number of copies to be printed.
@@ -41,6 +42,10 @@ import javax.print.attribute.{Attribute, IntegerSyntax, PrintJobAttribute, Print
  */
 final class Copies extends IntegerSyntax with PrintRequestAttribute with PrintJobAttribute {
 
+    /** Construct a new copies attribute with the given integer value. */
+    @stub
+    def this(value: Int) = ???
+
     /** Returns whether this copies attribute is equivalent to the passed in
      *  object.
      */
@@ -52,4 +57,10 @@ final class Copies extends IntegerSyntax with PrintRequestAttribute with PrintJo
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

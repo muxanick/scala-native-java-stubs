@@ -3,9 +3,14 @@ package javax.swing.plaf
 import java.awt.Graphics
 import java.lang.Object
 import javax.swing.JSplitPane
+import scala.scalanative.annotation.stub
 
 /** Pluggable look and feel interface for JSplitPane. */
 abstract class SplitPaneUI extends ComponentUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Messaged after the JSplitPane the receiver is providing the look
      *  and feel for paints its children.
@@ -25,4 +30,7 @@ abstract class SplitPaneUI extends ComponentUI {
      *  of the children components.
      */
     def resetToPreferredSizes(jc: JSplitPane): Unit
+
+    /** Sets the location of the divider to location. */
+    def setDividerLocation(jc: JSplitPane, location: Int): Unit
 }

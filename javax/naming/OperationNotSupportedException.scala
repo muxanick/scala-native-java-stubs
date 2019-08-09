@@ -1,6 +1,7 @@
 package javax.naming
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown when a context implementation does not support
  *  the operation being invoked.
@@ -16,4 +17,10 @@ class OperationNotSupportedException extends NamingException {
     /** Constructs a new instance of OperationNotSupportedException. */
     @stub
     def this() = ???
+
+    /** Constructs a new instance of OperationNotSupportedException using an
+     *  explanation.
+     */
+    @stub
+    def this(explanation: String) = ???
 }

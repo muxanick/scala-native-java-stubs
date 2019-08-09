@@ -4,6 +4,7 @@ import java.beans.PropertyChangeListener
 import java.lang.Object
 import javax.swing.event.TreeSelectionListener
 import javax.swing.tree.{DefaultTreeSelectionModel, RowMapper, TreePath}
+import scala.scalanative.annotation.stub
 
 /** EmptySelectionModel is a TreeSelectionModel
  *  that does not allow anything to be selected.
@@ -18,6 +19,14 @@ import javax.swing.tree.{DefaultTreeSelectionModel, RowMapper, TreePath}
  *  Please see XMLEncoder.
  */
 object protected JTree.EmptySelectionModel extends DefaultTreeSelectionModel {
+
+    /**  */
+    @stub
+    protected def EmptySelectionModel() = ???
+
+    /** The single instance of EmptySelectionModel. */
+    @stub
+    protected val sharedInstance: JTree.EmptySelectionModel = ???
 
     /** This is overriden to do nothing; EmptySelectionModel
      *  does not allow a selection.
@@ -72,4 +81,8 @@ object protected JTree.EmptySelectionModel extends DefaultTreeSelectionModel {
      */
     @stub
     def setSelectionPaths(paths: Array[TreePath]): Unit = ???
+
+    /** Returns the single instance of EmptySelectionModel. */
+    @stub
+    def sharedInstance(): JTree.EmptySelectionModel = ???
 }

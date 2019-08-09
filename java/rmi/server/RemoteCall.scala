@@ -2,6 +2,7 @@ package java.rmi.server
 
 import java.io.{ObjectInput, ObjectOutput}
 import java.lang.Deprecated
+import scala.scalanative.annotation.stub
 
 /** RemoteCall is an abstraction used solely by the RMI runtime
  *  (in conjunction with stubs and skeletons of remote objects) to carry out a
@@ -52,4 +53,11 @@ import java.lang.Deprecated
      */
     @stub
     def releaseInputStream(): Unit = ???
+
+    /** Deprecated. 
+     * no replacement
+     * 
+     */
+    @stub
+    def releaseOutputStream(): Unit = ???
 }

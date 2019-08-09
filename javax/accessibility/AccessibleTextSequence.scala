@@ -1,6 +1,7 @@
 package javax.accessibility
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class collects together key details of a span of text.  It
  *  is used by implementors of the class AccessibleExtendedText in
@@ -10,6 +11,12 @@ import java.lang.Object
  */
 class AccessibleTextSequence extends Object {
 
+    /** Constructs an AccessibleTextSequence with the given
+     *  parameters.
+     */
+    @stub
+    def this(start: Int, end: Int, txt: String) = ???
+
     /** The end index of the text sequence */
     @stub
     val endIndex: Int = ???
@@ -17,4 +24,8 @@ class AccessibleTextSequence extends Object {
     /** The start index of the text sequence */
     @stub
     val startIndex: Int = ???
+
+    /** The text */
+    @stub
+    val text: String = ???
 }

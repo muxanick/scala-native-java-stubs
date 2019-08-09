@@ -2,6 +2,7 @@ package javax.xml.xpath
 
 import java.lang.{Object, String}
 import javax.xml.namespace.QName
+import scala.scalanative.annotation.stub
 
 /** XPath constants. */
 class XPathConstants extends Object {
@@ -27,4 +28,8 @@ object XPathConstants {
     /** The XPath 1.0 number data type. */
     @stub
     val NUMBER: QName = ???
+
+    /** The XPath 1.0 string data type. */
+    @stub
+    val STRING: QName = ???
 }

@@ -3,7 +3,8 @@ package javax.lang.model.util
 import java.lang.Object
 import javax.annotation.processing.SupportedSourceVersion
 import javax.lang.model.SourceVersion
-import javax.lang.model.element.{Element, ExecutableElement, PackageElement, TypeElement, TypeParameterElement}
+import javax.lang.model.element.{Element, ExecutableElement, PackageElement, TypeElement, TypeParameterElement, VariableElement}
+import scala.scalanative.annotation.stub
 
 /** A simple visitor of program elements with default behavior
  *  appropriate for the RELEASE_6
@@ -53,6 +54,18 @@ import javax.lang.model.element.{Element, ExecutableElement, PackageElement, Typ
     @stub
     protected def this() = ???
 
+    /** Constructor for concrete subclasses; uses the argument for the
+     *  default value.
+     */
+    @stub
+    protected def this(defaultValue: R) = ???
+
+    /** Default value to be returned; defaultAction returns this value unless the method is
+     *  overridden.
+     */
+    @stub
+    protected val DEFAULT_VALUE: R = ???
+
     /** The default action for visit methods. */
     @stub
     protected def defaultAction(e: Element, p: P): R = ???
@@ -72,4 +85,8 @@ import javax.lang.model.element.{Element, ExecutableElement, PackageElement, Typ
     /** Visits a type parameter element. */
     @stub
     def visitTypeParameter(e: TypeParameterElement, p: P): R = ???
+
+    /** Visits a variable element. */
+    @stub
+    def visitVariable(e: VariableElement, p: P): R = ???
 }

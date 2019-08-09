@@ -1,6 +1,7 @@
 package java.util.concurrent.atomic
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An AtomicMarkableReference maintains an object reference
  *  along with a mark bit, that can be updated atomically.
@@ -10,6 +11,12 @@ import java.lang.Object
  *  [reference, boolean] pairs.
  */
 class AtomicMarkableReference[V] extends Object {
+
+    /** Creates a new AtomicMarkableReference with the given
+     *  initial values.
+     */
+    @stub
+    def this(initialRef: V, initialMark: Boolean) = ???
 
     /** Atomically sets the value of the mark to the given update value
      *  if the current reference is == to the expected
@@ -41,4 +48,12 @@ class AtomicMarkableReference[V] extends Object {
     /** Unconditionally sets the value of both the reference and mark. */
     @stub
     def set(newReference: V, newMark: Boolean): Unit = ???
+
+    /** Atomically sets the value of both the reference and mark
+     *  to the given update values if the
+     *  current reference is == to the expected reference
+     *  and the current mark is equal to the expected mark.
+     */
+    @stub
+    def weakCompareAndSet(expectedReference: V, newReference: V, expectedMark: Boolean, newMark: Boolean): Boolean = ???
 }

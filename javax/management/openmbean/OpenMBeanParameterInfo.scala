@@ -2,6 +2,7 @@ package javax.management.openmbean
 
 import java.lang.{Comparable, Object, String}
 import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** Describes a parameter used in one or more operations or
  *  constructors of an open MBean.
@@ -91,4 +92,8 @@ trait OpenMBeanParameterInfo {
      */
     @stub
     def isValue(obj: Object): Boolean = ???
+
+    /** Returns a string representation of this OpenMBeanParameterInfo instance. */
+    @stub
+    def toString(): String = ???
 }

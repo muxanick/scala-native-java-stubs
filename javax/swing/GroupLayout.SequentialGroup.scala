@@ -2,6 +2,7 @@ package javax.swing
 
 import java.awt.Component
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A Group that positions and sizes its elements
  *  sequentially, one after another.  This class has no public
@@ -85,4 +86,10 @@ class GroupLayout.SequentialGroup extends GroupLayout.Group {
      */
     @stub
     def addPreferredGap(type: LayoutStyle.ComponentPlacement): GroupLayout.SequentialGroup = ???
+
+    /** Adds an element representing the preferred gap between the
+     *  nearest components.
+     */
+    @stub
+    def addPreferredGap(type: LayoutStyle.ComponentPlacement, pref: Int, max: Int): GroupLayout.SequentialGroup = ???
 }

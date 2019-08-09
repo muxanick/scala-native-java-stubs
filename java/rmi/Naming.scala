@@ -1,6 +1,7 @@
 package java.rmi
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The Naming class provides methods for storing and obtaining
  *  references to remote objects in a remote object registry.  Each method of
@@ -55,4 +56,10 @@ object Naming {
     /** Rebinds the specified name to a new remote object. */
     @stub
     def rebind(name: String, obj: Remote): Unit = ???
+
+    /** Destroys the binding for the specified name that is associated
+     *  with a remote object.
+     */
+    @stub
+    def unbind(name: String): Unit = ???
 }

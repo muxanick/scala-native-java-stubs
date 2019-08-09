@@ -2,6 +2,7 @@ package java.text
 
 import java.lang.{Object, String, StringBuffer}
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** MessageFormat provides a means to produce concatenated
  *  messages in a language-neutral way. Use this to construct messages
@@ -290,6 +291,12 @@ class MessageFormat extends Format {
     @stub
     def this(pattern: String) = ???
 
+    /** Constructs a MessageFormat for the specified locale and
+     *  pattern.
+     */
+    @stub
+    def this(pattern: String, locale: Locale) = ???
+
     /** Sets the pattern used by this message format. */
     @stub
     def applyPattern(pattern: String): Unit = ???
@@ -387,9 +394,20 @@ class MessageFormat extends Format {
     /** Sets the locale to be used when creating or comparing subformats. */
     @stub
     def setLocale(locale: Locale): Unit = ???
+
+    /** Returns a pattern representing the current state of the message format. */
+    @stub
+    def toPattern(): String = ???
 }
 
 object MessageFormat {
+    /** Defines constants that are used as attribute keys in the
+     *  AttributedCharacterIterator returned
+     *  from MessageFormat.formatToCharacterIterator.
+     */
+    @stub
+    object Field extends MessageFormat.Field
+
     /** Creates a MessageFormat with the given pattern and uses it
      *  to format the given arguments.
      */

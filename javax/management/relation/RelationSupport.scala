@@ -3,6 +3,7 @@ package javax.management.relation
 import java.lang.{Boolean, Integer, Object, String}
 import java.util.{List, Map}
 import javax.management.{MBeanRegistration, MBeanServer, ObjectName}
+import scala.scalanative.annotation.stub
 
 /** A RelationSupport object is used internally by the Relation Service to
  *  represent simple relations (only roles, no properties or methods), with an
@@ -29,6 +30,10 @@ class RelationSupport extends Object with RelationSupportMBean with MBeanRegistr
     /** Creates a RelationSupport object. */
     @stub
     def this(relationId: String, relationServiceName: ObjectName, relationServiceMBeanServer: MBeanServer, relationTypeName: String, list: RoleList) = ???
+
+    /** Creates a RelationSupport object. */
+    @stub
+    def this(relationId: String, relationServiceName: ObjectName, relationTypeName: String, list: RoleList) = ???
 
     /** Returns all roles present in the relation. */
     @stub
@@ -113,4 +118,8 @@ class RelationSupport extends Object with RelationSupportMBean with MBeanRegistr
     /** Sets the given role. */
     @stub
     def setRole(role: Role): Unit = ???
+
+    /** Sets the given roles. */
+    @stub
+    def setRoles(list: RoleList): RoleResult = ???
 }

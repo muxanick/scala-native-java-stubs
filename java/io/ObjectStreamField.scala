@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.{Class, Comparable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A description of a Serializable field from a Serializable class.  An array
  *  of ObjectStreamFields is used to declare the Serializable fields of a class.
@@ -10,6 +11,12 @@ class ObjectStreamField extends Object with Comparable[Object] {
     /** Create a Serializable field with the specified type. */
     @stub
     def this(name: String, type: Class[_]) = ???
+
+    /** Creates an ObjectStreamField representing a serializable field with the
+     *  given name and type.
+     */
+    @stub
+    def this(name: String, type: Class[_], unshared: Boolean) = ???
 
     /** Compare this field with another ObjectStreamField. */
     @stub
@@ -48,4 +55,8 @@ class ObjectStreamField extends Object with Comparable[Object] {
     /** Offset within instance data. */
     @stub
     protected def setOffset(offset: Int): Unit = ???
+
+    /** Return a string that describes this field. */
+    @stub
+    def toString(): String = ???
 }

@@ -2,6 +2,7 @@ package java.awt.geom
 
 import java.awt.{Rectangle, Shape}
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** The CubicCurve2D class defines a cubic parametric curve
  *  segment in (x,y) coordinate space.
@@ -12,6 +13,10 @@ import java.lang.{Cloneable, Object}
  *  the subclass.
  */
 abstract class CubicCurve2D extends Object with Shape with Cloneable {
+
+    /** This is an abstract class that cannot be instantiated directly. */
+    @stub
+    protected def this() = ???
 
     /** Creates a new object of the same class as this object. */
     def clone(): Object
@@ -151,6 +156,12 @@ object CubicCurve2D {
     @stub
     object Double extends CubicCurve2D.Double
 
+    /** A cubic parametric curve segment specified with
+     *  float coordinates.
+     */
+    @stub
+    object Float extends CubicCurve2D.Float
+
     /** Returns the flatness of the cubic curve specified
      *  by the control points stored in the indicated array at the
      *  indicated index.
@@ -197,4 +208,13 @@ object CubicCurve2D {
      */
     @stub
     def subdivide(src: CubicCurve2D, left: CubicCurve2D, right: CubicCurve2D): Unit = ???
+
+    /** Subdivides the cubic curve specified by the coordinates
+     *  stored in the src array at indices srcoff
+     *  through (srcoff + 7) and stores the
+     *  resulting two subdivided curves into the two result arrays at the
+     *  corresponding indices.
+     */
+    @stub
+    def subdivide(src: Array[Double], srcoff: Int, left: Array[Double], leftoff: Int, right: Array[Double], rightoff: Int): Unit = ???
 }

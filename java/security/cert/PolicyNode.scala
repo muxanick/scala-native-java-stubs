@@ -2,6 +2,7 @@ package java.security.cert
 
 import java.lang.String
 import java.util.{Iterator, Set}
+import scala.scalanative.annotation.stub
 
 /** An immutable valid policy tree node as defined by the PKIX certification
  *  path validation algorithm.
@@ -63,4 +64,10 @@ trait PolicyNode {
     /** Returns the valid policy represented by this node. */
     @stub
     def getValidPolicy(): String = ???
+
+    /** Returns the criticality indicator of the certificate policy extension
+     *  in the most recently processed certificate.
+     */
+    @stub
+    def isCritical(): Boolean = ???
 }

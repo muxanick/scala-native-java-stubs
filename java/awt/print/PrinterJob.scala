@@ -3,6 +3,7 @@ package java.awt.print
 import java.lang.{Object, String}
 import javax.print.{PrintService, StreamPrintServiceFactory}
 import javax.print.attribute.PrintRequestAttributeSet
+import scala.scalanative.annotation.stub
 
 /** The PrinterJob class is the principal class that controls
  *  printing. An application calls methods in this class to set up a job,
@@ -10,6 +11,12 @@ import javax.print.attribute.PrintRequestAttributeSet
  *  the pages of the job.
  */
 abstract class PrinterJob extends Object {
+
+    /** A PrinterJob object should be created using the
+     *  static getPrinterJob method.
+     */
+    @stub
+    def this() = ???
 
     /** Cancels a print job that is in progress. */
     def cancel(): Unit
@@ -100,6 +107,12 @@ abstract class PrinterJob extends Object {
 
     /** Associate this PrinterJob with a new PrintService. */
     def setPrintService(service: PrintService): Unit
+
+    /** Returns the clone of page with its settings
+     *  adjusted to be compatible with the current printer of this
+     *  PrinterJob.
+     */
+    def validatePage(page: PageFormat): PageFormat
 }
 
 object PrinterJob {

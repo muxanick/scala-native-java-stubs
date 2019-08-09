@@ -1,7 +1,8 @@
 package java.io
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.nio.channels.FileChannel
+import scala.scalanative.annotation.stub
 
 /** A FileInputStream obtains input bytes
  *  from a file in a file system. What files
@@ -27,6 +28,14 @@ class FileInputStream extends InputStream {
      */
     @stub
     def this(fdObj: FileDescriptor) = ???
+
+    /** Creates a FileInputStream by
+     *  opening a connection to an actual file,
+     *  the file named by the path name name
+     *  in the file system.
+     */
+    @stub
+    def this(name: String) = ???
 
     /** Returns an estimate of the number of remaining bytes that can be read (or
      *  skipped over) from this input stream without blocking by the next
@@ -76,4 +85,10 @@ class FileInputStream extends InputStream {
      */
     @stub
     def read(b: Array[Byte], off: Int, len: Int): Int = ???
+
+    /** Skips over and discards n bytes of data from the
+     *  input stream.
+     */
+    @stub
+    def skip(n: Long): Long = ???
 }

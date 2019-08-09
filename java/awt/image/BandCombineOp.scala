@@ -1,7 +1,9 @@
 package java.awt.image
 
+import java.awt.RenderingHints
 import java.awt.geom.{Point2D, Rectangle2D}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class performs an arbitrary linear combination of the bands
  *  in a Raster, using a specified matrix.
@@ -26,6 +28,10 @@ import java.lang.Object
  *  Note that the source and destination can be the same object.
  */
 class BandCombineOp extends Object with RasterOp {
+
+    /** Constructs a BandCombineOp with the specified matrix. */
+    @stub
+    def this(matrix: Array[Array[Float]], hints: RenderingHints) = ???
 
     /** Creates a zeroed destination Raster with the correct size
      *  and number of bands.
@@ -52,4 +58,8 @@ class BandCombineOp extends Object with RasterOp {
      */
     @stub
     def getPoint2D(srcPt: Point2D, dstPt: Point2D): Point2D = ???
+
+    /** Returns the rendering hints for this operation. */
+    @stub
+    def getRenderingHints(): RenderingHints = ???
 }

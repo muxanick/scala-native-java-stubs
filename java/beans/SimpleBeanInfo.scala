@@ -1,7 +1,8 @@
 package java.beans
 
 import java.awt.Image
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This is a support class to make it easier for people to provide
  *  BeanInfo classes.
@@ -13,6 +14,10 @@ import java.lang.Object
  *  the target bean.
  */
 class SimpleBeanInfo extends Object with BeanInfo {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Claim there are no other relevant BeanInfo objects. */
     @stub
@@ -45,4 +50,8 @@ class SimpleBeanInfo extends Object with BeanInfo {
     /** Deny knowledge of properties. */
     @stub
     def getPropertyDescriptors(): Array[PropertyDescriptor] = ???
+
+    /** This is a utility method to help in loading icon images. */
+    @stub
+    def loadImage(resourceName: String): Image = ???
 }

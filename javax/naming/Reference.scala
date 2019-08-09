@@ -3,6 +3,7 @@ package javax.naming
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
 import java.util.{Enumeration, Vector}
+import scala.scalanative.annotation.stub
 
 /** This class represents a reference to an object that is found outside of
  *  the naming/directory system.
@@ -57,6 +58,12 @@ class Reference extends Object with Cloneable with Serializable {
     @stub
     def this(className: String, addr: RefAddr, factory: String, factoryLocation: String) = ???
 
+    /** Constructs a new reference for an object with class name 'className',
+     *  and the class name and location of the object's factory.
+     */
+    @stub
+    def this(className: String, factory: String, factoryLocation: String) = ???
+
     /** Contains the addresses contained in this Reference. */
     @stub
     protected val addrs: Vector[RefAddr] = ???
@@ -70,6 +77,12 @@ class Reference extends Object with Cloneable with Serializable {
     /** Contains the location of the factory class. */
     @stub
     protected val classFactoryLocation: String = ???
+
+    /** Contains the fully-qualified name of the class of the object to which
+     *  this Reference refers.
+     */
+    @stub
+    protected val className: String = ???
 
     /** Adds an address to the list of addresses at index posn. */
     @stub
@@ -134,4 +147,8 @@ class Reference extends Object with Cloneable with Serializable {
     /** Retrieves the number of addresses in this reference. */
     @stub
     def size(): Int = ???
+
+    /** Generates the string representation of this reference. */
+    @stub
+    def toString(): String = ???
 }

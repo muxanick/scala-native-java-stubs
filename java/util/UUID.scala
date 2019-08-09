@@ -2,6 +2,7 @@ package java.util
 
 import java.io.Serializable
 import java.lang.{Comparable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A class that represents an immutable universally unique identifier (UUID).
  *  A UUID represents a 128-bit value.
@@ -39,6 +40,10 @@ import java.lang.{Comparable, Object, String}
  *  "Algorithms for Creating a Time-Based UUID".
  */
 final class UUID extends Object with Serializable with Comparable[UUID] {
+
+    /** Constructs a new UUID using the specified data. */
+    @stub
+    def this(mostSigBits: Long, leastSigBits: Long) = ???
 
     /** The clock sequence value associated with this UUID. */
     @stub
@@ -79,6 +84,10 @@ final class UUID extends Object with Serializable with Comparable[UUID] {
     /** The variant number associated with this UUID. */
     @stub
     def variant(): Int = ???
+
+    /** The version number associated with this UUID. */
+    @stub
+    def version(): Int = ???
 }
 
 object UUID {

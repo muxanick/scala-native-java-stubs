@@ -6,11 +6,16 @@ import java.lang.Object
 import javax.swing.{JComponent, JPanel}
 import javax.swing.plaf.{ComponentUI, PanelUI}
 import javax.swing.plaf.basic.BasicPanelUI
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for
  *  JPanel.
  */
 class SynthPanelUI extends BasicPanelUI with PropertyChangeListener with SynthUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the Context for the specified component. */
     @stub
@@ -57,6 +62,10 @@ class SynthPanelUI extends BasicPanelUI with PropertyChangeListener with SynthUI
      */
     @stub
     def uninstallUI(c: JComponent): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthPanelUI {

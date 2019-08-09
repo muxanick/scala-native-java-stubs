@@ -9,6 +9,7 @@ import java.io.{PrintStream, PrintWriter, Serializable}
 import java.lang.{Class, Object, String}
 import java.util.{EventListener, Locale, Set}
 import javax.accessibility.AccessibleContext
+import scala.scalanative.annotation.stub
 
 /** A component is an object having a graphical representation
  *  that can be displayed on the screen and that can interact with the
@@ -107,6 +108,10 @@ import javax.accessibility.AccessibleContext
  */
 abstract class Component extends Object with ImageObserver with MenuContainer with Serializable {
 
+    /** Constructs a new component. */
+    @stub
+    protected def this() = ???
+
     /** Inner class of Component used to provide default support for
      *  accessibility.
      */
@@ -114,6 +119,9 @@ abstract class Component extends Object with ImageObserver with MenuContainer wi
 
     /** Inner class for blitting offscreen surfaces to a component. */
     protected object BltBufferStrategy extends Component.BltBufferStrategy
+
+    /** Inner class for flipping buffers on a component. */
+    protected object FlipBufferStrategy extends Component.FlipBufferStrategy
 
     /** The AccessibleContext associated with this Component. */
     protected val accessibleContext: AccessibleContext
@@ -1161,6 +1169,9 @@ abstract class Component extends Object with ImageObserver with MenuContainer wi
 
     /** Updates this component. */
     def update(g: Graphics): Unit
+
+    /** Validates this component. */
+    def validate(): Unit
 }
 
 object Component {
@@ -1187,4 +1198,8 @@ object Component {
     /** Ease-of-use constant for getAlignmentX. */
     @stub
     val RIGHT_ALIGNMENT: Float = ???
+
+    /** Ease-of-use constant for getAlignmentY(). */
+    @stub
+    val TOP_ALIGNMENT: Float = ???
 }

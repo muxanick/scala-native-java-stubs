@@ -1,7 +1,9 @@
 package javax.swing.text
 
+import java.awt.event.ActionEvent
 import java.lang.Object
 import javax.swing.AbstractAction
+import scala.scalanative.annotation.stub
 
 /** Places a line/paragraph break into the document.
  *  If there is a selection, it is removed before
@@ -17,3 +19,12 @@ import javax.swing.AbstractAction
  *  Please see XMLEncoder.
  */
 object DefaultEditorKit.InsertBreakAction extends TextAction {
+
+    /** Creates this object with the appropriate identifier. */
+    @stub
+    def InsertBreakAction() = ???
+
+    /** The operation to perform when this action is triggered. */
+    @stub
+    def actionPerformed(e: ActionEvent): Unit = ???
+}

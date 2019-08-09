@@ -1,8 +1,9 @@
 package javax.swing.border
 
-import java.awt.{Color, Component, Insets}
+import java.awt.{Color, Component, Graphics, Insets}
 import java.lang.Object
 import javax.swing.Icon
+import scala.scalanative.annotation.stub
 
 /** A class which provides a matte-like border of either a solid color
  *  or a tiled icon.
@@ -34,9 +35,17 @@ class MatteBorder extends EmptyBorder {
     @stub
     def this(top: Int, left: Int, bottom: Int, right: Int, matteColor: Color) = ???
 
+    /** Creates a matte border with the specified insets and tile icon. */
+    @stub
+    def this(top: Int, left: Int, bottom: Int, right: Int, tileIcon: Icon) = ???
+
     /**  */
     @stub
     protected val color: Color = ???
+
+    /**  */
+    @stub
+    protected val tileIcon: Icon = ???
 
     /** Returns the insets of the border. */
     @stub
@@ -61,4 +70,8 @@ class MatteBorder extends EmptyBorder {
     /** Returns whether or not the border is opaque. */
     @stub
     def isBorderOpaque(): Boolean = ???
+
+    /** Paints the matte border. */
+    @stub
+    def paintBorder(c: Component, g: Graphics, x: Int, y: Int, width: Int, height: Int): Unit = ???
 }

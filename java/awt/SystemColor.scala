@@ -1,7 +1,8 @@
 package java.awt
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A class to encapsulate symbolic colors representing the color of
  *  native GUI objects on a system.  For systems which support the dynamic
@@ -19,6 +20,10 @@ import java.lang.Object
  *  method on java.awt.Toolkit.
  */
 final class SystemColor extends Color with Serializable {
+
+    /** Returns a string representation of this Color's values. */
+    @stub
+    def toString(): String = ???
 }
 
 object SystemColor {
@@ -293,4 +298,8 @@ object SystemColor {
     /** The color rendered for the border around interior regions inside windows. */
     @stub
     val windowBorder: SystemColor = ???
+
+    /** The color rendered for text of interior regions inside windows. */
+    @stub
+    val windowText: SystemColor = ???
 }

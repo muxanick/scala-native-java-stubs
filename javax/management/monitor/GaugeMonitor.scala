@@ -2,6 +2,7 @@ package javax.management.monitor
 
 import java.lang.{Number, Object}
 import javax.management.{MBeanNotificationInfo, NotificationBroadcasterSupport, ObjectName}
+import scala.scalanative.annotation.stub
 
 /** Defines a monitor MBean designed to observe the values of a gauge attribute.
  * 
@@ -50,6 +51,10 @@ import javax.management.{MBeanNotificationInfo, NotificationBroadcasterSupport, 
  *  Long, Float, Double).
  */
 class GaugeMonitor extends Monitor with GaugeMonitorMBean {
+
+    /** Default constructor. */
+    @stub
+    def this() = ???
 
     /** Deprecated. 
      * As of JMX 1.2, replaced by
@@ -136,4 +141,8 @@ class GaugeMonitor extends Monitor with GaugeMonitorMBean {
     /** Starts the gauge monitor. */
     @stub
     def start(): Unit = ???
+
+    /** Stops the gauge monitor. */
+    @stub
+    def stop(): Unit = ???
 }

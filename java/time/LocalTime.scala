@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{CharSequence, Comparable, Object, String}
 import java.time.format.DateTimeFormatter
 import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalAmount, TemporalField, TemporalQuery, TemporalUnit, ValueRange}
+import scala.scalanative.annotation.stub
 
 /** A time without a time-zone in the ISO-8601 calendar system,
  *  such as 10:15:30.
@@ -198,6 +199,10 @@ final class LocalTime extends Object with Temporal with TemporalAdjuster with Co
     /** Returns a copy of this LocalTime with the nano-of-second altered. */
     @stub
     def withNano(nanoOfSecond: Int): LocalTime = ???
+
+    /** Returns a copy of this LocalTime with the second-of-minute altered. */
+    @stub
+    def withSecond(second: Int): LocalTime = ???
 }
 
 object LocalTime {
@@ -212,6 +217,10 @@ object LocalTime {
     /** The minimum supported LocalTime, '00:00'. */
     @stub
     val MIN: LocalTime = ???
+
+    /** The time of noon in the middle of the day, '12:00'. */
+    @stub
+    val NOON: LocalTime = ???
 
     /** Obtains an instance of LocalTime from a temporal object. */
     @stub

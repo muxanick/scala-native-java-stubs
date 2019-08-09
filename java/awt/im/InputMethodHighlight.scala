@@ -3,6 +3,7 @@ package java.awt.im
 import java.awt.font.TextAttribute
 import java.lang.Object
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** An InputMethodHighlight is used to describe the highlight
  *  attributes of text being composed.
@@ -47,6 +48,10 @@ class InputMethodHighlight extends Object {
     @stub
     def this(selected: Boolean, state: Int, variation: Int) = ???
 
+    /** Constructs an input method highlight record. */
+    @stub
+    def this(selected: Boolean, state: Int, variation: Int, style: Map[TextAttribute, _]) = ???
+
     /** Returns the conversion state of the text range. */
     @stub
     def getState(): Int = ???
@@ -58,6 +63,10 @@ class InputMethodHighlight extends Object {
     /** Returns the variation of the text range. */
     @stub
     def getVariation(): Int = ???
+
+    /** Returns whether the text range is selected. */
+    @stub
+    def isSelected(): Boolean = ???
 }
 
 object InputMethodHighlight {
@@ -80,4 +89,8 @@ object InputMethodHighlight {
     /** Constant for the default highlight for unselected converted text. */
     @stub
     val UNSELECTED_CONVERTED_TEXT_HIGHLIGHT: InputMethodHighlight = ???
+
+    /** Constant for the default highlight for unselected raw text. */
+    @stub
+    val UNSELECTED_RAW_TEXT_HIGHLIGHT: InputMethodHighlight = ???
 }

@@ -1,7 +1,8 @@
 package java.util.jar
 
 import java.lang.{Cloneable, Object, String}
-import java.util.{Map, Map.Entry, Set}
+import java.util.{Collection, Map, Map.Entry, Set}
+import scala.scalanative.annotation.stub
 
 /** The Attributes class maps Manifest attribute names to associated string
  *  values. Valid attribute names are case-insensitive, are restricted to
@@ -22,6 +23,16 @@ class Attributes extends Object with Map[Object, Object] with Cloneable {
      */
     @stub
     def this(attr: Attributes) = ???
+
+    /** Constructs a new, empty Attributes object with the specified
+     *  initial size.
+     */
+    @stub
+    def this(size: Int) = ???
+
+    /** The attribute name-value mappings. */
+    @stub
+    protected val map: Map[Object, Object] = ???
 
     /** Removes all attributes from this Map. */
     @stub
@@ -106,4 +117,16 @@ class Attributes extends Object with Map[Object, Object] with Cloneable {
     /** Returns the number of attributes in this Map. */
     @stub
     def size(): Int = ???
+
+    /** Returns a Collection view of the attribute values contained in this Map. */
+    @stub
+    def values(): Collection[Object] = ???
+}
+
+object Attributes {
+    /** The Attributes.Name class represents an attribute name stored in
+     *  this Map.
+     */
+    @stub
+    object Name extends Attributes.Name
 }

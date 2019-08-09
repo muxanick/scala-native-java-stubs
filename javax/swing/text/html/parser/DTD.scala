@@ -3,6 +3,7 @@ package javax.swing.text.html.parser
 import java.io.DataInputStream
 import java.lang.{Object, String}
 import java.util.{BitSet, Hashtable, Vector}
+import scala.scalanative.annotation.stub
 
 /** The representation of an SGML DTD.  DTD describes a document
  *  syntax and is used in parsing of HTML documents.  It contains
@@ -10,6 +11,10 @@ import java.util.{BitSet, Hashtable, Vector}
  *  entities defined in the DTD.
  */
 class DTD extends Object with DTDConstants {
+
+    /** Creates a new DTD with the specified name. */
+    @stub
+    protected def this(name: String) = ???
 
     /**  */
     @stub
@@ -66,6 +71,10 @@ class DTD extends Object with DTDConstants {
     /**  */
     @stub
     val pcdata: Element = ???
+
+    /**  */
+    @stub
+    val title: Element = ???
 
     /** Creates and returns an AttributeList. */
     @stub
@@ -124,6 +133,10 @@ class DTD extends Object with DTDConstants {
     /** Recreates a DTD from an archived format. */
     @stub
     def read(in: DataInputStream): Unit = ???
+
+    /** Returns a string representation of this DTD. */
+    @stub
+    def toString(): String = ???
 }
 
 object DTD {

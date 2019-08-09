@@ -1,6 +1,7 @@
 package javax.xml.crypto
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Contains common context information for XML cryptographic operations.
  * 
@@ -71,4 +72,10 @@ trait XMLCryptoContext {
     /** Sets the specified property. */
     @stub
     def setProperty(name: String, value: Object): Object = ???
+
+    /** Sets a URIDereferencer that is used to dereference
+     *  URIReferences.
+     */
+    @stub
+    def setURIDereferencer(dereferencer: URIDereferencer): Unit = ???
 }

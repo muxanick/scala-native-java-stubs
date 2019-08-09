@@ -1,6 +1,7 @@
 package java.text
 
 import java.lang.{Comparable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A CollationKey represents a String under the
  *  rules of a specific Collator object. Comparing two
@@ -57,9 +58,16 @@ import java.lang.{Comparable, Object, String}
  */
 abstract class CollationKey extends Object with Comparable[CollationKey] {
 
+    /** CollationKey constructor. */
+    @stub
+    protected def this(source: String) = ???
+
     /** Compare this CollationKey to the target CollationKey. */
     def compareTo(target: CollationKey): Int
 
     /** Returns the String that this CollationKey represents. */
     def getSourceString(): String
+
+    /** Converts the CollationKey to a sequence of bits. */
+    def toByteArray(): Array[Byte]
 }

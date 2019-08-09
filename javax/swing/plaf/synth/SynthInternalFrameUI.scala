@@ -7,11 +7,16 @@ import java.lang.Object
 import javax.swing.{JComponent, JInternalFrame}
 import javax.swing.plaf.{ComponentUI, InternalFrameUI}
 import javax.swing.plaf.basic.BasicInternalFrameUI
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for
  *  JInternalFrame.
  */
 class SynthInternalFrameUI extends BasicInternalFrameUI with SynthUI with PropertyChangeListener {
+
+    /**  */
+    @stub
+    protected def this(b: JInternalFrame) = ???
 
     /**  */
     @stub
@@ -60,6 +65,10 @@ class SynthInternalFrameUI extends BasicInternalFrameUI with SynthUI with Proper
     /**  */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthInternalFrameUI {

@@ -3,6 +3,7 @@ package java.util
 import java.io.Serializable
 import java.lang.{Cloneable, Comparable, Integer, Object, String}
 import java.time.Instant
+import scala.scalanative.annotation.stub
 
 /** The Calendar class is an abstract class that provides methods
  *  for converting between a specific instant in time and a set of calendar fields such as YEAR, MONTH,
@@ -253,6 +254,10 @@ abstract class Calendar extends Object with Serializable with Cloneable with Com
     @stub
     protected def this() = ???
 
+    /** Constructs a calendar with the specified time zone and locale. */
+    @stub
+    protected def this(zone: TimeZone, aLocale: Locale) = ???
+
     /** True if fields[] are in sync with the currently set time. */
     protected val areFieldsSet: Boolean
 
@@ -483,9 +488,18 @@ abstract class Calendar extends Object with Serializable with Cloneable with Com
 
     /** Converts this object to an Instant. */
     def toInstant(): Instant
+
+    /** Return a string representation of this calendar. */
+    def toString(): String
 }
 
 object Calendar {
+    /** Calendar.Builder is used for creating a Calendar from
+     *  various date-time parameters.
+     */
+    @stub
+    object Builder extends Calendar.Builder
+
     /** A style specifier for getDisplayNames indicating names in all styles, such as
      *  "January" and "Jan".
      */
@@ -765,6 +779,12 @@ object Calendar {
      */
     @stub
     val YEAR: Int = ???
+
+    /** Field number for get and set
+     *  indicating the raw offset from GMT in milliseconds.
+     */
+    @stub
+    val ZONE_OFFSET: Int = ???
 
     /** Returns an unmodifiable Set containing all calendar types
      *  supported by Calendar in the runtime environment.

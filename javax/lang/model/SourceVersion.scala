@@ -1,6 +1,7 @@
 package javax.lang.model
 
 import java.lang.{CharSequence, Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Source versions of the Java™ programming language.
  * 
@@ -51,6 +52,11 @@ object SourceVersion {
      */
     final val RELEASE_7 = new SourceVersion(RELEASE_7, 7)
 
+    /** The version recognized by the Java Platform, Standard Edition
+     *  8.
+     */
+    final val RELEASE_8 = new SourceVersion(RELEASE_8, 8)
+
     /** Returns whether or not name is a syntactically valid
      *  identifier (simple name) or keyword in the latest source
      *  version.
@@ -83,4 +89,10 @@ object SourceVersion {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): SourceVersion = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[SourceVersion] = ???
 }

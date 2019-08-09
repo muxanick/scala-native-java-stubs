@@ -4,6 +4,7 @@ import java.lang.String
 import java.util.Map
 import javax.security.auth.Subject
 import javax.security.auth.callback.CallbackHandler
+import scala.scalanative.annotation.stub
 
 /**  LoginModule describes the interface
  *  implemented by authentication technology providers.  LoginModules
@@ -113,4 +114,8 @@ trait LoginModule {
     /** Method to authenticate a Subject (phase 1). */
     @stub
     def login(): Boolean = ???
+
+    /** Method which logs out a Subject. */
+    @stub
+    def logout(): Boolean = ???
 }

@@ -1,6 +1,7 @@
 package javax.xml.crypto.dsig
 
 import javax.xml.crypto.XMLCryptoContext
+import scala.scalanative.annotation.stub
 
 /** Contains context information for generating XML Signatures. This interface
  *  is primarily intended for type-safety.

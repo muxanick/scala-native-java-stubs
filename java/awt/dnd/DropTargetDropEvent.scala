@@ -4,6 +4,7 @@ import java.awt.Point
 import java.awt.datatransfer.{DataFlavor, Transferable}
 import java.lang.Object
 import java.util.{EventObject, List}
+import scala.scalanative.annotation.stub
 
 /** The DropTargetDropEvent is delivered
  *  via the DropTargetListener drop() method.
@@ -50,6 +51,18 @@ class DropTargetDropEvent extends DropTargetEvent {
      */
     @stub
     def this(dtc: DropTargetContext, cursorLocn: Point, dropAction: Int, srcActions: Int) = ???
+
+    /** Construct a DropTargetEvent given the
+     *  DropTargetContext for this operation,
+     *  the location of the drag Cursor's hotspot
+     *  in the Component's
+     *  coordinates, the currently selected user drop action,
+     *  the current set of actions supported by the source,
+     *  and a boolean indicating if the source is in the same JVM
+     *  as the target.
+     */
+    @stub
+    def this(dtc: DropTargetContext, cursorLocn: Point, dropAction: Int, srcActions: Int, isLocal: Boolean) = ???
 
     /** accept the drop, using the specified action. */
     @stub
@@ -104,4 +117,8 @@ class DropTargetDropEvent extends DropTargetEvent {
      */
     @stub
     def isLocalTransfer(): Boolean = ???
+
+    /** reject the Drop. */
+    @stub
+    def rejectDrop(): Unit = ???
 }

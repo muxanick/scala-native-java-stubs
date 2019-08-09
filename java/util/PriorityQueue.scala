@@ -2,6 +2,7 @@ package java.util
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An unbounded priority queue based on a priority heap.
  *  The elements of the priority queue are ordered according to their
@@ -87,6 +88,12 @@ class PriorityQueue[E] extends AbstractQueue[E] with Serializable {
     @stub
     def this(c: PriorityQueue[_ <: E]) = ???
 
+    /** Creates a PriorityQueue containing the elements in the
+     *  specified sorted set.
+     */
+    @stub
+    def this(c: SortedSet[_ <: E]) = ???
+
     /** Inserts the specified element into this priority queue. */
     @stub
     def add(e: E): Boolean = ???
@@ -146,4 +153,10 @@ class PriorityQueue[E] extends AbstractQueue[E] with Serializable {
     /** Returns an array containing all of the elements in this queue. */
     @stub
     def toArray(): Array[Object] = ???
+
+    /** Returns an array containing all of the elements in this queue; the
+     *  runtime type of the returned array is that of the specified array.
+     */
+    @stub
+    def toArray[T](a: Array[T]): Array[T] = ???
 }

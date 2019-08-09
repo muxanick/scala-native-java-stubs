@@ -2,6 +2,7 @@ package javax.management.modelmbean
 
 import java.lang.{Object, String}
 import javax.management.{Descriptor, MBeanAttributeInfo, MBeanConstructorInfo, MBeanNotificationInfo, MBeanOperationInfo}
+import scala.scalanative.annotation.stub
 
 /** This interface is implemented by the ModelMBeanInfo for every ModelMBean. An implementation of this interface
  *  must be shipped with every JMX Agent.
@@ -93,4 +94,8 @@ trait ModelMBeanInfo {
     /** Adds or replaces descriptors in the ModelMBeanInfo. */
     @stub
     def setDescriptors(inDescriptors: Array[Descriptor]): Unit = ???
+
+    /** Sets the ModelMBean's descriptor. */
+    @stub
+    def setMBeanDescriptor(inDescriptor: Descriptor): Unit = ???
 }

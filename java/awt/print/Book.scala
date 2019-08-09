@@ -1,6 +1,7 @@
 package java.awt.print
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The Book class provides a representation of a document in
  *  which pages may have different page formats and page painters. This
@@ -8,6 +9,10 @@ import java.lang.Object
  *  PrinterJob.
  */
 class Book extends Object with Pageable {
+
+    /** Creates a new, empty Book. */
+    @stub
+    def this() = ???
 
     /** Appends a single page to the end of this Book. */
     @stub
@@ -34,4 +39,10 @@ class Book extends Object with Pageable {
      */
     @stub
     def getPrintable(pageIndex: Int): Printable = ???
+
+    /** Sets the PageFormat and the Painter for a
+     *  specified page number.
+     */
+    @stub
+    def setPage(pageIndex: Int, painter: Printable, page: PageFormat): Unit = ???
 }

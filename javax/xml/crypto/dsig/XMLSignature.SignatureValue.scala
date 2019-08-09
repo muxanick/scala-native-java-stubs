@@ -2,6 +2,7 @@ package javax.xml.crypto.dsig
 
 import java.lang.String
 import javax.xml.crypto.XMLStructure
+import scala.scalanative.annotation.stub
 
 /** A representation of the XML SignatureValue element as
  *  defined in the 
@@ -31,4 +32,8 @@ object trait XMLSignature.SignatureValue extends XMLStructure {
     /** Returns the signature value of this SignatureValue. */
     @stub
     def getValue(): Array[Byte] = ???
+
+    /** Validates the signature value. */
+    @stub
+    def validate(validateContext: XMLValidateContext): Boolean = ???
 }

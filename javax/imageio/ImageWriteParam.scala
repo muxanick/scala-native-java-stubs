@@ -3,6 +3,7 @@ package javax.imageio
 import java.awt.Dimension
 import java.lang.{Object, String}
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** A class describing how a stream is to be encoded.  Instances of
  *  this class or its subclasses are used to supply prescriptive
@@ -59,6 +60,12 @@ class ImageWriteParam extends IIOParam {
     /** Constructs an empty ImageWriteParam. */
     @stub
     protected def this() = ???
+
+    /** Constructs an ImageWriteParam set to use a
+     *  given Locale.
+     */
+    @stub
+    def this(locale: Locale) = ???
 
     /** A boolean that is true if this
      *  ImageWriteParam allows tiling grid offset
@@ -156,6 +163,12 @@ class ImageWriteParam extends IIOParam {
      */
     @stub
     protected val tilingMode: Int = ???
+
+    /** A boolean that is true if tiling
+     *  parameters have been specified.
+     */
+    @stub
+    protected val tilingSet: Boolean = ???
 
     /** Returns true if the writer can perform tiling with
      *  non-zero grid offsets while writing.
@@ -325,6 +338,12 @@ class ImageWriteParam extends IIOParam {
     /** Removes any previous compression type and quality settings. */
     @stub
     def unsetCompression(): Unit = ???
+
+    /** Removes any previous tile grid parameters specified by calls to
+     *  setTiling.
+     */
+    @stub
+    def unsetTiling(): Unit = ???
 }
 
 object ImageWriteParam {

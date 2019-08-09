@@ -3,6 +3,7 @@ package java.util
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
 import java.util.function.{Consumer, Predicate, UnaryOperator}
+import scala.scalanative.annotation.stub
 
 /** The Vector class implements a growable array of
  *  objects. Like an array, it contains components that can be
@@ -69,6 +70,12 @@ class Vector[E] extends AbstractList[E] with List[E] with RandomAccess with Clon
     @stub
     def this(initialCapacity: Int) = ???
 
+    /** Constructs an empty vector with the specified initial capacity and
+     *  capacity increment.
+     */
+    @stub
+    def this(initialCapacity: Int, capacityIncrement: Int) = ???
+
     /** The amount by which the capacity of the vector is automatically
      *  incremented when its size becomes greater than its capacity.
      */
@@ -78,6 +85,12 @@ class Vector[E] extends AbstractList[E] with List[E] with RandomAccess with Clon
     /** The number of valid components in this Vector object. */
     @stub
     protected val elementCount: Int = ???
+
+    /** The array buffer into which the components of the vector are
+     *  stored.
+     */
+    @stub
+    protected val elementData: Array[Object] = ???
 
     /** Appends the specified element to the end of this Vector. */
     @stub
@@ -339,4 +352,10 @@ class Vector[E] extends AbstractList[E] with List[E] with RandomAccess with Clon
      */
     @stub
     def toString(): String = ???
+
+    /** Trims the capacity of this vector to be the vector's current
+     *  size.
+     */
+    @stub
+    def trimToSize(): Unit = ???
 }

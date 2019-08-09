@@ -2,6 +2,7 @@ package javax.tools
 
 import java.lang.String
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** Interface for diagnostics from tools.  A diagnostic usually reports
  *  a problem at a specific position in a source file.  However, not
@@ -59,4 +60,21 @@ trait Diagnostic[S] {
     /** Gets the source object associated with this diagnostic. */
     @stub
     def getSource(): S = ???
+
+    /** Gets the character offset from the beginning of the file
+     *  associated with this diagnostic that indicates the start of the
+     *  problem.
+     */
+    @stub
+    def getStartPosition(): Long = ???
+}
+
+object Diagnostic {
+    /** Kinds of diagnostics, for example, error or warning. */
+    @stub
+    object Kind extends Diagnostic.Kind
+
+    /** Used to signal that no position is available. */
+    @stub
+    val NOPOS: Long = ???
 }

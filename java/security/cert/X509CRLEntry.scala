@@ -1,9 +1,10 @@
 package java.security.cert
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.math.BigInteger
 import java.util.Date
 import javax.security.auth.x500.X500Principal
+import scala.scalanative.annotation.stub
 
 /** Abstract class for a revoked certificate in a CRL (Certificate
  *  Revocation List).
@@ -32,6 +33,10 @@ import javax.security.auth.x500.X500Principal
  *  
  */
 abstract class X509CRLEntry extends Object with X509Extension {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Compares this CRL entry for equality with the given
      *  object.
@@ -68,4 +73,7 @@ abstract class X509CRLEntry extends Object with X509Extension {
      *  encoded form.
      */
     def hashCode(): Int
+
+    /** Returns a string representation of this CRL entry. */
+    def toString(): String
 }

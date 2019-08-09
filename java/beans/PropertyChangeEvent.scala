@@ -2,6 +2,7 @@ package java.beans
 
 import java.lang.{Object, String}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** A "PropertyChange" event gets delivered whenever a bean changes a "bound"
  *  or "constrained" property.  A PropertyChangeEvent object is sent as an
@@ -20,6 +21,10 @@ import java.util.EventObject
  *  old and new values should also be null.
  */
 class PropertyChangeEvent extends EventObject {
+
+    /** Constructs a new PropertyChangeEvent. */
+    @stub
+    def this(source: Object, propertyName: String, oldValue: Object, newValue: Object) = ???
 
     /** Gets the new value for the property, expressed as an Object. */
     @stub
@@ -40,4 +45,8 @@ class PropertyChangeEvent extends EventObject {
     /** Sets the propagationId object for the event. */
     @stub
     def setPropagationId(propagationId: Object): Unit = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }

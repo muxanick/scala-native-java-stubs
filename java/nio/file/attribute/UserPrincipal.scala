@@ -1,6 +1,7 @@
 package java.nio.file.attribute
 
 import java.security.Principal
+import scala.scalanative.annotation.stub
 
 /** A Principal representing an identity used to determine access rights
  *  to objects in a file system.

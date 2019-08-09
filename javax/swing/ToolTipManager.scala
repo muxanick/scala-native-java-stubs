@@ -2,6 +2,7 @@ package javax.swing
 
 import java.awt.event.{MouseAdapter, MouseEvent, MouseMotionListener}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Manages all the ToolTips in the system.
  *  
@@ -31,7 +32,15 @@ class ToolTipManager extends MouseAdapter with MouseMotionListener {
 
     /**  */
     @stub
+    protected object stillInsideTimerAction extends ToolTipManager.stillInsideTimerAction
+
+    /**  */
+    @stub
     protected val heavyWeightPopupEnabled: Boolean = ???
+
+    /**  */
+    @stub
+    protected val lightWeightPopupEnabled: Boolean = ???
 
     /** Returns the dismissal delay value. */
     @stub
@@ -105,6 +114,10 @@ class ToolTipManager extends MouseAdapter with MouseMotionListener {
      */
     @stub
     def setReshowDelay(milliseconds: Int): Unit = ???
+
+    /** Removes a component from tooltip control. */
+    @stub
+    def unregisterComponent(component: JComponent): Unit = ???
 }
 
 object ToolTipManager {

@@ -1,7 +1,8 @@
 package javax.xml.bind
 
 import java.lang.Object
-import org.w3c.dom.Node
+import java.net.URL
+import scala.scalanative.annotation.stub
 
 /** Encapsulate the location of a ValidationEvent.
  * 
@@ -35,4 +36,8 @@ trait ValidationEventLocator {
     /** Return the byte offset if available */
     @stub
     def getOffset(): Int = ???
+
+    /** Return the name of the XML source as a URL if available */
+    @stub
+    def getURL(): URL = ???
 }

@@ -1,6 +1,7 @@
 package java.sql
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** Comprehensive information about the database as a whole.
  *  
@@ -974,6 +975,10 @@ trait DatabaseMetaData extends Wrapper {
     /** Retrieves whether this database uses a file for each table. */
     @stub
     def usesLocalFilePerTable(): Boolean = ???
+
+    /** Retrieves whether this database stores tables in a local file. */
+    @stub
+    def usesLocalFiles(): Boolean = ???
 }
 
 object DatabaseMetaData {
@@ -1285,4 +1290,8 @@ object DatabaseMetaData {
     /** Indicates that this version column is a pseudo column. */
     @stub
     val versionColumnPseudo: Int = ???
+
+    /** Indicates that this version column may or may not be a pseudo column. */
+    @stub
+    val versionColumnUnknown: Int = ???
 }

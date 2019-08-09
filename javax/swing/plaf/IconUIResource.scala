@@ -1,8 +1,10 @@
 package javax.swing.plaf
 
+import java.awt.{Component, Graphics}
 import java.io.Serializable
 import java.lang.Object
 import javax.swing.Icon
+import scala.scalanative.annotation.stub
 
 /** An Icon wrapper class which implements UIResource.  UI
  *  classes which set icon properties should use this class
@@ -22,6 +24,12 @@ import javax.swing.Icon
  */
 class IconUIResource extends Object with Icon with UIResource with Serializable {
 
+    /** Creates a UIResource icon object which wraps
+     *  an existing Icon instance.
+     */
+    @stub
+    def this(delegate: Icon) = ???
+
     /** Returns the icon's height. */
     @stub
     def getIconHeight(): Int = ???
@@ -29,4 +37,8 @@ class IconUIResource extends Object with Icon with UIResource with Serializable 
     /** Returns the icon's width. */
     @stub
     def getIconWidth(): Int = ???
+
+    /** Draw the icon at the specified location. */
+    @stub
+    def paintIcon(c: Component, g: Graphics, x: Int, y: Int): Unit = ???
 }

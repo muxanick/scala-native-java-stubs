@@ -7,6 +7,7 @@ import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.filechooser.{FileFilter, FileSystemView, FileView}
 import javax.swing.plaf.FileChooserUI
+import scala.scalanative.annotation.stub
 
 /** JFileChooser provides a simple mechanism for the user to
  *  choose a file.
@@ -63,6 +64,18 @@ class JFileChooser extends JComponent with Accessible {
     /** Constructs a JFileChooser using the given path. */
     @stub
     def this(currentDirectoryPath: String) = ???
+
+    /** Constructs a JFileChooser using the given current directory
+     *  path and FileSystemView.
+     */
+    @stub
+    def this(currentDirectoryPath: String, fsv: FileSystemView) = ???
+
+    /** This class implements accessibility support for the
+     *  JFileChooser class.
+     */
+    @stub
+    protected object AccessibleJFileChooser extends JFileChooser.AccessibleJFileChooser
 
     /**  */
     @stub
@@ -391,6 +404,10 @@ class JFileChooser extends JComponent with Accessible {
     /** Pops up a "Save File" file chooser dialog. */
     @stub
     def showSaveDialog(parent: Component): Int = ???
+
+    /** Resets the UI property to a value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
 }
 
 object JFileChooser {
@@ -527,4 +544,8 @@ object JFileChooser {
     /** Identifies change in user's single-file selection. */
     @stub
     val SELECTED_FILE_CHANGED_PROPERTY: String = ???
+
+    /** Identifies change in user's multiple-file selection. */
+    @stub
+    val SELECTED_FILES_CHANGED_PROPERTY: String = ???
 }

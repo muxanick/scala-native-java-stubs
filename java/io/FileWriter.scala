@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Convenience class for writing character files.  The constructors of this
  *  class assume that the default character encoding and the default byte-buffer
@@ -34,4 +35,10 @@ class FileWriter extends OutputStreamWriter {
     /** Constructs a FileWriter object given a file name. */
     @stub
     def this(fileName: String) = ???
+
+    /** Constructs a FileWriter object given a file name with a boolean
+     *  indicating whether or not to append the data written.
+     */
+    @stub
+    def this(fileName: String, append: Boolean) = ???
 }

@@ -1,6 +1,7 @@
 package java.lang.invoke
 
-import java.lang.{Exception, Object, RuntimeException, Throwable}
+import java.lang.{Exception, Object, RuntimeException, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Thrown to indicate that code has attempted to call a method handle
  *  via the wrong method type.  As with the bytecode representation of
@@ -18,4 +19,10 @@ class WrongMethodTypeException extends RuntimeException {
     /** Constructs a WrongMethodTypeException with no detail message. */
     @stub
     def this() = ???
+
+    /** Constructs a WrongMethodTypeException with the specified
+     *  detail message.
+     */
+    @stub
+    def this(s: String) = ???
 }

@@ -3,6 +3,7 @@ package javax.swing.table
 import java.lang.{Integer, Object}
 import java.util.Comparator
 import javax.swing.{DefaultRowSorter, RowSorter}
+import scala.scalanative.annotation.stub
 
 /** An implementation of RowSorter that provides sorting
  *  and filtering using a TableModel.
@@ -97,6 +98,12 @@ class TableRowSorter[M <: TableModel] extends DefaultRowSorter[M, Integer] {
     @stub
     def this() = ???
 
+    /** Creates a TableRowSorter using model
+     *  as the underlying TableModel.
+     */
+    @stub
+    def this(model: M) = ???
+
     /** Returns the Comparator for the specified
      *  column.
      */
@@ -120,4 +127,10 @@ class TableRowSorter[M <: TableModel] extends DefaultRowSorter[M, Integer] {
      */
     @stub
     def setStringConverter(stringConverter: TableStringConverter): Unit = ???
+
+    /** Returns whether or not to convert the value to a string before
+     *  doing comparisons when sorting.
+     */
+    @stub
+    protected def useToString(column: Int): Boolean = ???
 }

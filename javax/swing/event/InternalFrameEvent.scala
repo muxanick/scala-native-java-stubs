@@ -1,9 +1,10 @@
 package javax.swing.event
 
 import java.awt.AWTEvent
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.EventObject
 import javax.swing.JInternalFrame
+import scala.scalanative.annotation.stub
 
 /** An AWTEvent that adds support for
  *  JInternalFrame objects as the event source.  This class has the
@@ -25,9 +26,17 @@ import javax.swing.JInternalFrame
  */
 class InternalFrameEvent extends AWTEvent {
 
+    /** Constructs an InternalFrameEvent object. */
+    @stub
+    def this(source: JInternalFrame, id: Int) = ???
+
     /** Returns the originator of the event. */
     @stub
     def getInternalFrame(): JInternalFrame = ???
+
+    /** Returns a parameter string identifying this event. */
+    @stub
+    def paramString(): String = ???
 }
 
 object InternalFrameEvent {
@@ -62,4 +71,8 @@ object InternalFrameEvent {
     /** The last number in the range of IDs used for internal frame events. */
     @stub
     val INTERNAL_FRAME_LAST: Int = ???
+
+    /** The "window opened" event. */
+    @stub
+    val INTERNAL_FRAME_OPENED: Int = ???
 }

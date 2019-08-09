@@ -2,6 +2,7 @@ package javax.management.monitor
 
 import java.lang.String
 import javax.management.ObjectName
+import scala.scalanative.annotation.stub
 
 /** Exposes the remote management interface of the string monitor MBean. */
 trait StringMonitorMBean extends MonitorMBean {
@@ -47,4 +48,8 @@ trait StringMonitorMBean extends MonitorMBean {
     /** Sets the matching notification's on/off switch value. */
     @stub
     def setNotifyMatch(value: Boolean): Unit = ???
+
+    /** Sets the string to compare with the observed attribute. */
+    @stub
+    def setStringToCompare(value: String): Unit = ???
 }

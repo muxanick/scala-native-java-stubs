@@ -3,6 +3,7 @@ package java.text
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
 import java.util.{Currency, Locale}
+import scala.scalanative.annotation.stub
 
 /** This class represents the set of symbols (such as the decimal separator,
  *  the grouping separator, and so on) needed by DecimalFormat
@@ -18,6 +19,10 @@ class DecimalFormatSymbols extends Object with Cloneable with Serializable {
      */
     @stub
     def this() = ???
+
+    /** Create a DecimalFormatSymbols object for the given locale. */
+    @stub
+    def this(locale: Locale) = ???
 
     /** Standard override. */
     @stub
@@ -158,6 +163,10 @@ class DecimalFormatSymbols extends Object with Cloneable with Serializable {
     /** Sets the character used for per mille sign. */
     @stub
     def setPerMill(perMill: Char): Unit = ???
+
+    /** Sets the character used for zero. */
+    @stub
+    def setZeroDigit(zeroDigit: Char): Unit = ???
 }
 
 object DecimalFormatSymbols {

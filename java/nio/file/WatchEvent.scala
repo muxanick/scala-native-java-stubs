@@ -1,5 +1,7 @@
 package java.nio.file
 
+import scala.scalanative.annotation.stub
+
 /** An event or a repeated event for an object that is registered with a WatchService.
  * 
  *   An event is classified by its kind and has a count to indicate the number of times that the event has been
@@ -20,10 +22,20 @@ trait WatchEvent[T] {
     /** Returns the event count. */
     @stub
     def count(): Int = ???
+
+    /** Returns the event kind. */
+    @stub
+    def kind(): WatchEvent.Kind[T] = ???
 }
 
 object WatchEvent {
     /** An event kind, for the purposes of identification. */
     @stub
     val WatchEvent.Kind[T]: trait = ???
+
+    /** An event modifier that qualifies how a Watchable is registered
+     *  with a WatchService.
+     */
+    @stub
+    val WatchEvent.Modifier: trait = ???
 }

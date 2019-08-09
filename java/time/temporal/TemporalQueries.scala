@@ -3,6 +3,7 @@ package java.time.temporal
 import java.lang.Object
 import java.time.{LocalDate, LocalTime, ZoneId, ZoneOffset}
 import java.time.chrono.Chronology
+import scala.scalanative.annotation.stub
 
 /** Common implementations of TemporalQuery.
  *  
@@ -72,4 +73,8 @@ object TemporalQueries {
     /** A lenient query for the ZoneId, falling back to the ZoneOffset. */
     @stub
     def zone(): TemporalQuery[ZoneId] = ???
+
+    /** A strict query for the ZoneId. */
+    @stub
+    def zoneId(): TemporalQuery[ZoneId] = ???
 }

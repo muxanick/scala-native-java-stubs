@@ -3,6 +3,7 @@ package java.lang.invoke
 import java.lang.{Class, Object, Throwable}
 import java.lang.reflect.Member
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** This class consists exclusively of static methods that operate on or return
  *  method handles. They fall into several categories:
@@ -17,6 +18,12 @@ class MethodHandles extends Object {
 }
 
 object MethodHandles {
+    /** A lookup object is a factory for creating method handles,
+     *  when the creation requires access checking.
+     */
+    @stub
+    object Lookup extends MethodHandles.Lookup
+
     /** Produces a method handle giving read access to elements of an array. */
     @stub
     def arrayElementGetter(arrayClass: Class[_]): MethodHandle = ???
@@ -139,4 +146,8 @@ object MethodHandles {
      */
     @stub
     def spreadInvoker(type: MethodType, leadingArgCount: Int): MethodHandle = ???
+
+    /** Produces a method handle which will throw exceptions of the given exType. */
+    @stub
+    def throwException(returnType: Class[_], exType: Class[_ <: Throwable]): MethodHandle = ???
 }

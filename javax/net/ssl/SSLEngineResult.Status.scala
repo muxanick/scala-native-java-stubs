@@ -1,6 +1,7 @@
 package javax.net.ssl
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** An SSLEngineResult enum describing the overall result
  *  of the SSLEngine operation.
@@ -32,7 +33,18 @@ object SSLEngineResult.Status {
      */
     final val CLOSED = new SSLEngineResult.Status(CLOSED, 2)
 
+    /** The SSLEngine completed the operation, and
+     *  is available to process similar calls.
+     */
+    final val OK = new SSLEngineResult.Status(OK, 3)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): SSLEngineResult.Status = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[SSLEngineResult.Status] = ???
 }

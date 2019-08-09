@@ -2,6 +2,7 @@ package java.security
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A GuardedObject is an object that is used to protect access to
  *  another object.
@@ -17,4 +18,14 @@ import java.lang.Object
  *  an exception is thrown.
  */
 class GuardedObject extends Object with Serializable {
+
+    /** Constructs a GuardedObject using the specified object and guard. */
+    @stub
+    def this(object: Object, guard: Guard) = ???
+
+    /** Retrieves the guarded object, or throws an exception if access
+     *  to the guarded object is denied by the guard.
+     */
+    @stub
+    def getObject(): Object = ???
 }

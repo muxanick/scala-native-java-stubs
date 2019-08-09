@@ -1,6 +1,7 @@
 package javax.xml.ws.soap
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** If addressing is enabled, this property determines if endpoint requires
  *  the use of only anonymous responses, or only non-anonymous responses, or all.
@@ -35,7 +36,18 @@ object AddressingFeature.Responses {
      */
     final val ANONYMOUS = new AddressingFeature.Responses(ANONYMOUS, 1)
 
+    /** Specifies the use of only non-anonymous
+     *  responses.
+     */
+    final val NON_ANONYMOUS = new AddressingFeature.Responses(NON_ANONYMOUS, 2)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): AddressingFeature.Responses = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[AddressingFeature.Responses] = ???
 }

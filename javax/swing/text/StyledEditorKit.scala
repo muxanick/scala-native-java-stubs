@@ -2,6 +2,7 @@ package javax.swing.text
 
 import java.lang.Object
 import javax.swing.{Action, JEditorPane}
+import scala.scalanative.annotation.stub
 
 /** This is the set of things needed by a text component
  *  to be a reasonably functioning editor for some type
@@ -10,6 +11,10 @@ import javax.swing.{Action, JEditorPane}
  *  provides a minimal set of actions for editing styled text.
  */
 class StyledEditorKit extends DefaultEditorKit {
+
+    /** Creates a new EditorKit used for styled documents. */
+    @stub
+    def this() = ???
 
     /** Creates a copy of the editor kit. */
     @stub
@@ -53,6 +58,12 @@ class StyledEditorKit extends DefaultEditorKit {
      */
     @stub
     def getViewFactory(): ViewFactory = ???
+
+    /** Called when the kit is being installed into
+     *  a JEditorPane.
+     */
+    @stub
+    def install(c: JEditorPane): Unit = ???
 }
 
 object StyledEditorKit {
@@ -89,4 +100,8 @@ object StyledEditorKit {
      */
     @stub
     object StyledTextAction extends StyledEditorKit.StyledTextAction
+
+    /** An action to toggle the underline attribute. */
+    @stub
+    object UnderlineAction extends StyledEditorKit.UnderlineAction
 }

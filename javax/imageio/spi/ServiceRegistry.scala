@@ -2,6 +2,7 @@ package javax.imageio.spi
 
 import java.lang.{Class, ClassLoader, Object}
 import java.util.Iterator
+import scala.scalanative.annotation.stub
 
 /** A registry for service provider instances.
  * 
@@ -60,6 +61,13 @@ import java.util.Iterator
  *  JAR File Specification.
  */
 class ServiceRegistry extends Object {
+
+    /** Constructs a ServiceRegistry instance with a
+     *  set of categories taken from the categories
+     *  argument.
+     */
+    @stub
+    def this(categories: Iterator[Class[_]]) = ???
 
     /** Returns true if provider is currently
      *  registered.
@@ -138,9 +146,22 @@ class ServiceRegistry extends Object {
      */
     @stub
     def setOrdering[T](category: Class[T], firstProvider: T, secondProvider: T): Boolean = ???
+
+    /** Sets a pairwise ordering between two service provider objects
+     *  within a given category.
+     */
+    @stub
+    def unsetOrdering[T](category: Class[T], firstProvider: T, secondProvider: T): Boolean = ???
 }
 
 object ServiceRegistry {
+    /** A simple filter interface used by
+     *  ServiceRegistry.getServiceProviders to select
+     *  providers matching an arbitrary criterion.
+     */
+    @stub
+    val ServiceRegistry.Filter: trait = ???
+
     /** Locates and incrementally instantiates the available providers
      *  of a given service using the context class loader.
      */

@@ -2,6 +2,7 @@ package java.beans
 
 import java.lang.{Object, String}
 import java.util.EventListenerProxy
+import scala.scalanative.annotation.stub
 
 /** A class which extends the EventListenerProxy
  *  specifically for adding a VetoableChangeListener
@@ -16,7 +17,17 @@ import java.util.EventListenerProxy
  */
 class VetoableChangeListenerProxy extends EventListenerProxy[VetoableChangeListener] with VetoableChangeListener {
 
+    /** Constructor which binds the VetoableChangeListener
+     *  to a specific property.
+     */
+    @stub
+    def this(propertyName: String, listener: VetoableChangeListener) = ???
+
     /** Returns the name of the named property associated with the listener. */
     @stub
     def getPropertyName(): String = ???
+
+    /** Forwards the property change event to the listener delegate. */
+    @stub
+    def vetoableChange(event: PropertyChangeEvent): Unit = ???
 }

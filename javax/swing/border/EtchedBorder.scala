@@ -1,7 +1,8 @@
 package javax.swing.border
 
-import java.awt.{Color, Component, Insets}
+import java.awt.{Color, Component, Graphics, Insets}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A class which implements a simple etched border which can
  *  either be etched-in or etched-out.  If no highlight/shadow
@@ -42,6 +43,12 @@ class EtchedBorder extends AbstractBorder {
     @stub
     def this(etchType: Int) = ???
 
+    /** Creates an etched border with the specified etch-type,
+     *  highlight and shadow colors.
+     */
+    @stub
+    def this(etchType: Int, highlight: Color, shadow: Color) = ???
+
     /**  */
     @stub
     protected val etchType: Int = ???
@@ -49,6 +56,10 @@ class EtchedBorder extends AbstractBorder {
     /**  */
     @stub
     protected val highlight: Color = ???
+
+    /**  */
+    @stub
+    protected val shadow: Color = ???
 
     /** Reinitialize the insets parameter with this Border's current Insets. */
     @stub
@@ -81,6 +92,12 @@ class EtchedBorder extends AbstractBorder {
     /** Returns whether or not the border is opaque. */
     @stub
     def isBorderOpaque(): Boolean = ???
+
+    /** Paints the border for the specified component with the
+     *  specified position and size.
+     */
+    @stub
+    def paintBorder(c: Component, g: Graphics, x: Int, y: Int, width: Int, height: Int): Unit = ???
 }
 
 object EtchedBorder {

@@ -1,7 +1,8 @@
 package javax.naming.ldap
 
 import java.lang.{Object, String}
-import javax.net.ssl.{SSLSession, SSLSocketFactory}
+import javax.net.ssl.{HostnameVerifier, SSLSession, SSLSocketFactory}
+import scala.scalanative.annotation.stub
 
 /** This class implements the LDAPv3 Extended Response for StartTLS as
  *  defined in
@@ -44,6 +45,10 @@ import javax.net.ssl.{SSLSession, SSLSocketFactory}
  */
 abstract class StartTlsResponse extends Object with ExtendedResponse {
 
+    /** Constructs a StartTLS extended response. */
+    @stub
+    protected def this() = ???
+
     /** Closes the TLS connection gracefully and reverts back to the underlying
      *  connection.
      */
@@ -65,4 +70,18 @@ abstract class StartTlsResponse extends Object with ExtendedResponse {
      *  TLS connection.
      */
     def setEnabledCipherSuites(suites: Array[String]): Unit
+
+    /** Sets the hostname verifier used by negotiate()
+     *  after the TLS handshake has completed and the default hostname
+     *  verification has failed.
+     */
+    def setHostnameVerifier(verifier: HostnameVerifier): Unit
+}
+
+object StartTlsResponse {
+    /** The StartTLS extended response's assigned object identifier
+     *  is 1.3.6.1.4.1.1466.20037.
+     */
+    @stub
+    val OID: String = ???
 }

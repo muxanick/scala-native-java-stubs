@@ -3,6 +3,7 @@ package java.security.acl
 import java.lang.String
 import java.security.Principal
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** Interface representing an Access Control List (ACL).  An Access
  *  Control List is a data structure used to guard access to
@@ -90,4 +91,10 @@ trait Acl extends Owner {
     /** Sets the name of this ACL. */
     @stub
     def setName(caller: Principal, name: String): Unit = ???
+
+    /** Returns a string representation of the
+     *  ACL contents.
+     */
+    @stub
+    def toString(): String = ???
 }

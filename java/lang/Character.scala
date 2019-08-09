@@ -1,6 +1,7 @@
 package java.lang
 
 import java.io.Serializable
+import scala.scalanative.annotation.stub
 
 /** The Character class wraps a value of the primitive
  *  type char in an object. An object of class
@@ -98,6 +99,12 @@ import java.io.Serializable
  */
 final class Character extends Object with Serializable with Comparable[Character] {
 
+    /** Constructs a newly allocated Character object that
+     *  represents the specified char value.
+     */
+    @stub
+    def this(value: Char) = ???
+
     /** Returns the value of this Character object. */
     @stub
     def charValue(): Char = ???
@@ -135,6 +142,13 @@ object Character {
      */
     @stub
     object UnicodeBlock extends Character.UnicodeBlock
+
+    /** A family of character subsets representing the character scripts
+     *  defined in the 
+     *  Unicode Standard Annex #24: Script Names.
+     */
+    @stub
+    object UnicodeScript extends Character.UnicodeScript
 
     /** The number of bytes used to represent a char value in unsigned
      *  binary form.
@@ -434,6 +448,10 @@ object Character {
     /** General category "Cn" in the Unicode specification. */
     @stub
     val UNASSIGNED: Byte = ???
+
+    /** General category "Lu" in the Unicode specification. */
+    @stub
+    val UPPERCASE_LETTER: Byte = ???
 
     /** Determines the number of char values needed to
      *  represent the specified character (Unicode code point).
@@ -905,4 +923,10 @@ object Character {
      */
     @stub
     def toUpperCase(codePoint: Int): Int = ???
+
+    /** Returns a Character instance representing the specified
+     *  char value.
+     */
+    @stub
+    def valueOf(c: Char): Character = ???
 }

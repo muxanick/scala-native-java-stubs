@@ -1,6 +1,8 @@
 package javax.xml.crypto.dsig
 
 import java.lang.String
+import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** A representation of the XML CanonicalizationMethod
  *  element as defined in the
@@ -23,6 +25,12 @@ import java.lang.String
  *  the newCanonicalizationMethod method of the XMLSignatureFactory class.
  */
 trait CanonicalizationMethod extends Transform {
+
+    /** Returns the algorithm-specific input parameters associated with this
+     *  CanonicalizationMethod.
+     */
+    @stub
+    def getParameterSpec(): AlgorithmParameterSpec = ???
 }
 
 object CanonicalizationMethod {
@@ -45,4 +53,11 @@ object CanonicalizationMethod {
      */
     @stub
     val INCLUSIVE: String = ???
+
+    /** The
+     *  
+     *  Canonical XML with comments canonicalization method algorithm URI.
+     */
+    @stub
+    val INCLUSIVE_WITH_COMMENTS: String = ???
 }

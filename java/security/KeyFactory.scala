@@ -2,6 +2,7 @@ package java.security
 
 import java.lang.{Class, Object, String}
 import java.security.spec.KeySpec
+import scala.scalanative.annotation.stub
 
 /** Key factories are used to convert keys (opaque
  *  cryptographic keys of type Key) into key specifications
@@ -49,6 +50,10 @@ import java.security.spec.KeySpec
  */
 class KeyFactory extends Object {
 
+    /** Creates a KeyFactory object. */
+    @stub
+    protected def this(keyFacSpi: KeyFactorySpi, provider: Provider, algorithm: String) = ???
+
     /** Generates a private key object from the provided key specification
      *  (key material).
      */
@@ -74,6 +79,12 @@ class KeyFactory extends Object {
     /** Returns the provider of this key factory object. */
     @stub
     def getProvider(): Provider = ???
+
+    /** Translates a key object, whose provider may be unknown or potentially
+     *  untrusted, into a corresponding key object of this key factory.
+     */
+    @stub
+    def translateKey(key: Key): Key = ???
 }
 
 object KeyFactory {

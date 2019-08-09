@@ -2,6 +2,8 @@ package javax.swing
 
 import java.io.Serializable
 import java.lang.Object
+import java.util.Vector
+import scala.scalanative.annotation.stub
 
 /** The default model for combo boxes. */
 class DefaultComboBoxModel[E] extends AbstractListModel[E] with MutableComboBoxModel[E] with Serializable {
@@ -15,6 +17,12 @@ class DefaultComboBoxModel[E] extends AbstractListModel[E] with MutableComboBoxM
      */
     @stub
     def this(items: Array[E]) = ???
+
+    /** Constructs a DefaultComboBoxModel object initialized with
+     *  a vector.
+     */
+    @stub
+    def this(v: Vector[E]) = ???
 
     /** Adds an item at the end of the model. */
     @stub
@@ -51,4 +59,8 @@ class DefaultComboBoxModel[E] extends AbstractListModel[E] with MutableComboBoxM
     /** Removes an item at a specific index. */
     @stub
     def removeElementAt(index: Int): Unit = ???
+
+    /** Set the value of the selected item. */
+    @stub
+    def setSelectedItem(anObject: Object): Unit = ???
 }

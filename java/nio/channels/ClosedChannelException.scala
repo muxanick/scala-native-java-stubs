@@ -2,6 +2,7 @@ package java.nio.channels
 
 import java.io.IOException
 import java.lang.{Exception, Object, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Checked exception thrown when an attempt is made to invoke or complete an
  *  I/O operation upon channel that is closed, or at least closed to that
@@ -10,4 +11,8 @@ import java.lang.{Exception, Object, Throwable}
  *  been shut down, for example, may still be open for reading.
  */
 class ClosedChannelException extends IOException {
+
+    /** Constructs an instance of this class. */
+    @stub
+    def this() = ???
 }

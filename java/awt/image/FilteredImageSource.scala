@@ -1,6 +1,7 @@
 package java.awt.image
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class is an implementation of the ImageProducer interface which
  *  takes an existing image and a filter object and uses them to produce
@@ -17,6 +18,12 @@ import java.lang.Object
  *  
  */
 class FilteredImageSource extends Object with ImageProducer {
+
+    /** Constructs an ImageProducer object from an existing ImageProducer
+     *  and a filter object.
+     */
+    @stub
+    def this(orig: ImageProducer, imgf: ImageFilter) = ???
 
     /** Adds the specified ImageConsumer
      *  to the list of consumers interested in data for the filtered image.
@@ -41,4 +48,8 @@ class FilteredImageSource extends Object with ImageProducer {
      */
     @stub
     def requestTopDownLeftRightResend(ic: ImageConsumer): Unit = ???
+
+    /** Starts production of the filtered image. */
+    @stub
+    def startProduction(ic: ImageConsumer): Unit = ???
 }

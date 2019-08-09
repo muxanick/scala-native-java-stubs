@@ -3,6 +3,7 @@ package javax.lang.model.element
 import java.lang.String
 import java.util.List
 import javax.lang.model.type.TypeMirror
+import scala.scalanative.annotation.stub
 
 /** A visitor of the values of annotation type elements, using a
  *  variant of the visitor design pattern.  Unlike a standard visitor
@@ -105,4 +106,8 @@ trait AnnotationValueVisitor[R, P] {
     /** Visits a type value in an annotation. */
     @stub
     def visitType(t: TypeMirror, p: P): R = ???
+
+    /** Visits an unknown kind of annotation value. */
+    @stub
+    def visitUnknown(av: AnnotationValue, p: P): R = ???
 }

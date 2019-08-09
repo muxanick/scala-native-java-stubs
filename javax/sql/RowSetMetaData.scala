@@ -2,6 +2,7 @@ package javax.sql
 
 import java.lang.String
 import java.sql.ResultSetMetaData
+import scala.scalanative.annotation.stub
 
 /** An object that contains information about the columns in a
  *  RowSet object.  This interface is
@@ -102,4 +103,10 @@ trait RowSetMetaData extends ResultSetMetaData {
     /** Sets whether the designated column is a signed number. */
     @stub
     def setSigned(columnIndex: Int, property: Boolean): Unit = ???
+
+    /** Sets the designated column's table name, if any, to the given
+     *  String.
+     */
+    @stub
+    def setTableName(columnIndex: Int, tableName: String): Unit = ???
 }

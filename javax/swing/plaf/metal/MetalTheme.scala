@@ -3,6 +3,7 @@ package javax.swing.plaf.metal
 import java.lang.{Object, String}
 import javax.swing.UIDefaults
 import javax.swing.plaf.{ColorUIResource, FontUIResource}
+import scala.scalanative.annotation.stub
 
 /** MetalTheme provides the color palette and fonts used by
  *  the Java Look and Feel.
@@ -32,6 +33,10 @@ import javax.swing.plaf.{ColorUIResource, FontUIResource}
  *  To do otherwise may result in rendering problems, such as visual garbage.
  */
 abstract class MetalTheme extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Adds values specific to this theme to the defaults table. */
     def addCustomEntriesToTable(table: UIDefaults): Unit
@@ -179,4 +184,7 @@ abstract class MetalTheme extends Object {
 
     /** Returns the window title inactive background color. */
     def getWindowTitleInactiveBackground(): ColorUIResource
+
+    /** Returns the window title inactive foreground color. */
+    def getWindowTitleInactiveForeground(): ColorUIResource
 }

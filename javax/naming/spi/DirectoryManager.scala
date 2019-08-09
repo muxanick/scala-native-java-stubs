@@ -4,6 +4,7 @@ import java.lang.Object
 import java.util.Hashtable
 import javax.naming.{CannotProceedException, Context, Name}
 import javax.naming.directory.{Attributes, DirContext}
+import scala.scalanative.annotation.stub
 
 /** This class contains methods for supporting DirContext
  *  implementations.
@@ -34,4 +35,10 @@ object DirectoryManager {
      */
     @stub
     def getObjectInstance(refInfo: Object, name: Name, nameCtx: Context, environment: Hashtable[_, _], attrs: Attributes): Object = ???
+
+    /** Retrieves the state of an object for binding when given the original
+     *  object and its attributes.
+     */
+    @stub
+    def getStateToBind(obj: Object, name: Name, nameCtx: Context, environment: Hashtable[_, _], attrs: Attributes): DirStateFactory.Result = ???
 }

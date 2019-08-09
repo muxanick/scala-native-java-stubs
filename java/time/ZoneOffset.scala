@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{Comparable, Object, String}
 import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalField, TemporalQuery, ValueRange}
 import java.time.zone.ZoneRules
+import scala.scalanative.annotation.stub
 
 /** A time-zone offset from Greenwich/UTC, such as +02:00.
  *  
@@ -89,6 +90,10 @@ final class ZoneOffset extends ZoneId with TemporalAccessor with TemporalAdjuste
     /** Gets the range of valid values for the specified field. */
     @stub
     def range(field: TemporalField): ValueRange = ???
+
+    /** Outputs this offset as a String, using the normalized ID. */
+    @stub
+    def toString(): String = ???
 }
 
 object ZoneOffset {
@@ -99,6 +104,10 @@ object ZoneOffset {
     /** Constant for the maximum supported offset. */
     @stub
     val MIN: ZoneOffset = ???
+
+    /** The time-zone offset for UTC, with an ID of 'Z'. */
+    @stub
+    val UTC: ZoneOffset = ???
 
     /** Obtains an instance of ZoneOffset from a temporal object. */
     @stub

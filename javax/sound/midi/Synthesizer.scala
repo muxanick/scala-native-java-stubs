@@ -1,5 +1,7 @@
 package javax.sound.midi
 
+import scala.scalanative.annotation.stub
+
 /** A Synthesizer generates sound.  This usually happens when one of
  *  the Synthesizer's MidiChannel objects receives a
  *  noteOn message, either
@@ -103,4 +105,8 @@ trait Synthesizer extends MidiDevice {
     /** Unloads a particular instrument. */
     @stub
     def unloadInstrument(instrument: Instrument): Unit = ???
+
+    /** Unloads the instruments referenced by the specified patches, from the MIDI sound bank specified. */
+    @stub
+    def unloadInstruments(soundbank: Soundbank, patchList: Array[Patch]): Unit = ???
 }

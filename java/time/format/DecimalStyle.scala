@@ -2,6 +2,7 @@ package java.time.format
 
 import java.lang.{Object, String}
 import java.util.{Locale, Set}
+import scala.scalanative.annotation.stub
 
 /** Localized decimal style used in date and time formatting.
  *  
@@ -49,9 +50,17 @@ final class DecimalStyle extends Object {
     /** Returns a copy of the info with a new character that represents the positive sign. */
     @stub
     def withPositiveSign(positiveSign: Char): DecimalStyle = ???
+
+    /** Returns a copy of the info with a new character that represents zero. */
+    @stub
+    def withZeroDigit(zeroDigit: Char): DecimalStyle = ???
 }
 
 object DecimalStyle {
+    /** The standard set of non-localized decimal style symbols. */
+    @stub
+    val STANDARD: DecimalStyle = ???
+
     /** Lists all the locales that are supported. */
     @stub
     def getAvailableLocales(): Set[Locale] = ???

@@ -3,6 +3,7 @@ package javax.imageio.stream
 import java.io.{Closeable, DataInput}
 import java.lang.String
 import java.nio.ByteOrder
+import scala.scalanative.annotation.stub
 
 /** A seekable input stream interface for use by
  *  ImageReaders.  Various input sources, such as
@@ -297,4 +298,8 @@ trait ImageInputStream extends DataInput with Closeable {
     /** Moves the stream position forward by a given number of bytes. */
     @stub
     def skipBytes(n: Int): Int = ???
+
+    /** Moves the stream position forward by a given number of bytes. */
+    @stub
+    def skipBytes(n: Long): Long = ???
 }

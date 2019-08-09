@@ -2,6 +2,7 @@ package javax.swing.text
 
 import java.awt.{Graphics, Shape}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Implements a View suitable for use in JPasswordField
  *  UI implementations.  This is basically a field ui that
@@ -10,6 +11,10 @@ import java.lang.Object
  *  component to a JPasswordField).
  */
 class PasswordView extends FieldView {
+
+    /** Constructs a new view wrapped on an element. */
+    @stub
+    def this(elem: Element) = ???
 
     /** Renders the echo character, or whatever graphic should be used
      *  to display the password characters.
@@ -38,4 +43,10 @@ class PasswordView extends FieldView {
      */
     @stub
     def modelToView(pos: Int, a: Shape, b: Position.Bias): Shape = ???
+
+    /** Provides a mapping from the view coordinate space to the logical
+     *  coordinate space of the model.
+     */
+    @stub
+    def viewToModel(fx: Float, fy: Float, a: Shape, bias: Array[Position.Bias]): Int = ???
 }

@@ -1,6 +1,7 @@
 package javax.sound.midi
 
 import java.lang.AutoCloseable
+import scala.scalanative.annotation.stub
 
 /** A Transmitter sends MidiEvent objects to one or more
  *  Receivers. Common MIDI transmitters include sequencers
@@ -17,4 +18,8 @@ trait Transmitter extends AutoCloseable {
     /** Obtains the current receiver to which this transmitter will deliver MIDI messages. */
     @stub
     def getReceiver(): Receiver = ???
+
+    /** Sets the receiver to which this transmitter will deliver MIDI messages. */
+    @stub
+    def setReceiver(receiver: Receiver): Unit = ???
 }

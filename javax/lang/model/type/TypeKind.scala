@@ -1,6 +1,7 @@
 package javax.lang.model.type
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The kind of a type mirror.
  * 
@@ -72,6 +73,9 @@ object TypeKind {
     /** The pseudo-type corresponding to the keyword void. */
     final val VOID = new TypeKind(VOID, 19)
 
+    /** A wildcard type argument. */
+    final val WILDCARD = new TypeKind(WILDCARD, 20)
+
     /** Returns true if this kind corresponds to a primitive
      *  type and false otherwise.
      */
@@ -81,4 +85,10 @@ object TypeKind {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): TypeKind = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[TypeKind] = ???
 }

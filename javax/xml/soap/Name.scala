@@ -1,6 +1,7 @@
 package javax.xml.soap
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** A representation of an XML name.  This interface provides methods for
  *  getting the local and namespace-qualified names and also for getting the
@@ -67,4 +68,10 @@ trait Name {
      */
     @stub
     def getQualifiedName(): String = ???
+
+    /** Returns the URI of the namespace for the XML
+     *  name that this Name object represents.
+     */
+    @stub
+    def getURI(): String = ???
 }

@@ -1,8 +1,9 @@
 package java.awt.event
 
 import java.awt.{AWTEvent, Component}
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** An event which indicates that the mouse wheel was rotated in a component.
  *  
@@ -80,6 +81,13 @@ class MouseWheelEvent extends MouseEvent {
     @stub
     def this(source: Component, id: Int, when: Long, modifiers: Int, x: Int, y: Int, xAbs: Int, yAbs: Int, clickCount: Int, popupTrigger: Boolean, scrollType: Int, scrollAmount: Int, wheelRotation: Int) = ???
 
+    /** Constructs a MouseWheelEvent object with the specified
+     *  source component, type, modifiers, coordinates, absolute coordinates,
+     *  scroll type, scroll amount, and wheel rotation.
+     */
+    @stub
+    def this(source: Component, id: Int, when: Long, modifiers: Int, x: Int, y: Int, xAbs: Int, yAbs: Int, clickCount: Int, popupTrigger: Boolean, scrollType: Int, scrollAmount: Int, wheelRotation: Int, preciseWheelRotation: Double) = ???
+
     /** Returns the number of "clicks" the mouse wheel was rotated, as a double. */
     @stub
     def getPreciseWheelRotation(): Double = ???
@@ -106,6 +114,10 @@ class MouseWheelEvent extends MouseEvent {
     /** Returns the number of "clicks" the mouse wheel was rotated, as an integer. */
     @stub
     def getWheelRotation(): Int = ???
+
+    /** Returns a parameter string identifying this event. */
+    @stub
+    def paramString(): String = ???
 }
 
 object MouseWheelEvent {
@@ -114,4 +126,10 @@ object MouseWheelEvent {
      */
     @stub
     val WHEEL_BLOCK_SCROLL: Int = ???
+
+    /** Constant representing scrolling by "units" (like scrolling with the
+     *  arrow keys)
+     */
+    @stub
+    val WHEEL_UNIT_SCROLL: Int = ???
 }

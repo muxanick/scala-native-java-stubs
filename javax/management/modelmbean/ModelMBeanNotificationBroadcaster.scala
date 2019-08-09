@@ -2,6 +2,7 @@ package javax.management.modelmbean
 
 import java.lang.{Object, String}
 import javax.management.{Attribute, AttributeChangeNotification, Notification, NotificationBroadcaster, NotificationListener}
+import scala.scalanative.annotation.stub
 
 /** This interface must be implemented by the ModelMBeans. An implementation of this interface
  *  must be shipped with every JMX Agent.
@@ -54,4 +55,10 @@ trait ModelMBeanNotificationBroadcaster extends NotificationBroadcaster {
      */
     @stub
     def sendNotification(ntfyObj: Notification): Unit = ???
+
+    /** Sends a Notification which contains the text string that is passed in
+     *  to the registered Notification listeners on the ModelMBean.
+     */
+    @stub
+    def sendNotification(ntfyText: String): Unit = ???
 }

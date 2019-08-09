@@ -2,6 +2,7 @@ package java.lang.management
 
 import java.lang.String
 import java.util.{List, Map}
+import scala.scalanative.annotation.stub
 
 /** The management interface for the runtime system of
  *  the Java virtual machine.
@@ -94,4 +95,11 @@ trait RuntimeMXBean extends PlatformManagedObject {
     /** Returns the Java virtual machine implementation version. */
     @stub
     def getVmVersion(): String = ???
+
+    /** Tests if the Java virtual machine supports the boot class path
+     *  mechanism used by the bootstrap class loader to search for class
+     *  files.
+     */
+    @stub
+    def isBootClassPathSupported(): Boolean = ???
 }

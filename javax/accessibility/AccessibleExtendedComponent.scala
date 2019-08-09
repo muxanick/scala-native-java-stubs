@@ -1,6 +1,7 @@
 package javax.accessibility
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** The AccessibleExtendedComponent interface should be supported by any object
  *  that is rendered on the screen.  This interface provides the standard
@@ -22,4 +23,8 @@ trait AccessibleExtendedComponent extends AccessibleComponent {
     /** Returns the titled border text */
     @stub
     def getTitledBorderText(): String = ???
+
+    /** Returns the tool tip text */
+    @stub
+    def getToolTipText(): String = ???
 }

@@ -1,7 +1,9 @@
 package javax.naming.directory
 
 import java.lang.{Object, String}
+import java.util.Hashtable
 import javax.naming.{InitialContext, Name, NamingEnumeration}
+import scala.scalanative.annotation.stub
 
 /** This class is the starting context for performing
  *  directory operations. The documentation in the class description
@@ -18,6 +20,10 @@ class InitialDirContext extends InitialContext with DirContext {
      */
     @stub
     protected def this(lazy: Boolean) = ???
+
+    /** Constructs an initial DirContext using the supplied environment. */
+    @stub
+    def this(environment: Hashtable[_, _]) = ???
 
     /** Binds a name to an object, along with associated attributes. */
     @stub
@@ -144,4 +150,10 @@ class InitialDirContext extends InitialContext with DirContext {
      */
     @stub
     def search(name: String, filterExpr: String, filterArgs: Array[Object], cons: SearchControls): NamingEnumeration[SearchResult] = ???
+
+    /** Searches in the named context or object for entries that satisfy the
+     *  given search filter.
+     */
+    @stub
+    def search(name: String, filter: String, cons: SearchControls): NamingEnumeration[SearchResult] = ???
 }

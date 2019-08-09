@@ -3,6 +3,7 @@ package javax.swing.text.html
 import java.io.Writer
 import java.lang.{Object, String}
 import javax.swing.text.{AbstractWriter, AttributeSet, Element, StyledDocument}
+import scala.scalanative.annotation.stub
 
 /** MinimalHTMLWriter is a fallback writer used by the
  *  HTMLEditorKit to write out HTML for a document that
@@ -39,6 +40,10 @@ class MinimalHTMLWriter extends AbstractWriter {
     /** Creates a new MinimalHTMLWriter. */
     @stub
     def this(w: Writer, doc: StyledDocument) = ???
+
+    /** Creates a new MinimalHTMLWriter. */
+    @stub
+    def this(w: Writer, doc: StyledDocument, pos: Int, len: Int) = ???
 
     /** This is no longer used, instead <span> will be written out. */
     @stub
@@ -150,4 +155,10 @@ class MinimalHTMLWriter extends AbstractWriter {
      */
     @stub
     protected def writeStartTag(tag: String): Unit = ???
+
+    /** Writes out all the named styles as the
+     *  content of the <style> tag.
+     */
+    @stub
+    protected def writeStyles(): Unit = ???
 }

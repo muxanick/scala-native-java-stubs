@@ -7,11 +7,16 @@ import javax.swing.JComponent
 import javax.swing.colorchooser.AbstractColorChooserPanel
 import javax.swing.plaf.{ColorChooserUI, ComponentUI}
 import javax.swing.plaf.basic.BasicColorChooserUI
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for
  *  JColorChooser.
  */
 class SynthColorChooserUI extends BasicColorChooserUI with PropertyChangeListener with SynthUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /**  */
     @stub
@@ -52,6 +57,10 @@ class SynthColorChooserUI extends BasicColorChooserUI with PropertyChangeListene
     /**  */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthColorChooserUI {

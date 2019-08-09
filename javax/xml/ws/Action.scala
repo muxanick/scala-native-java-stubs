@@ -3,6 +3,7 @@ package javax.xml.ws
 import java.lang.String
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** The Action annotation allows explicit association of a
  *  WS-Addressing Action message addressing property with
@@ -104,4 +105,10 @@ import scala.annotation.StaticAnnotation
      */
     @stub
     val input: String = ???
+
+    /** Explicit value of the WS-Addressing Action message addressing property for the output
+     *  message of the operation.
+     */
+    @stub
+    val output: String = ???
 }

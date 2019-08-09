@@ -1,9 +1,14 @@
 package java.io
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Provide access to the persistent fields read from the input stream. */
 object abstract ObjectInputStream.GetField extends Object {
+
+    /**  */
+    @stub
+    def GetField() = ???
 
     /** Return true if the named field is defaulted and has no value in this
      *  stream.
@@ -46,4 +51,8 @@ object abstract ObjectInputStream.GetField extends Object {
     /** Get the value of the named short field from the persistent field. */
     @stub
     def get(name: String, val: Short): Short
+
+    /** Get the ObjectStreamClass that describes the fields in the stream. */
+    @stub
+    def getObjectStreamClass(): ObjectStreamClass
 }

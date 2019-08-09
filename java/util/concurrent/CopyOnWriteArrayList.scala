@@ -1,9 +1,10 @@
 package java.util.concurrent
 
 import java.io.Serializable
-import java.lang.{Cloneable, Object}
+import java.lang.{Cloneable, Object, String}
 import java.util.{Collection, Comparator, Iterator, List, ListIterator, RandomAccess, Spliterator}
 import java.util.function.{Consumer, Predicate, UnaryOperator}
+import scala.scalanative.annotation.stub
 
 /** A thread-safe variant of ArrayList in which all mutative
  *  operations (add, set, and so on) are implemented by
@@ -49,6 +50,10 @@ class CopyOnWriteArrayList[E] extends Object with List[E] with RandomAccess with
      */
     @stub
     def this(c: Collection[_ <: E]) = ???
+
+    /** Creates a list holding a copy of the given array. */
+    @stub
+    def this(toCopyIn: Array[E]) = ???
 
     /** Appends the specified element to the end of this list. */
     @stub
@@ -240,4 +245,8 @@ class CopyOnWriteArrayList[E] extends Object with List[E] with RandomAccess with
      */
     @stub
     def toArray[T](a: Array[T]): Array[T] = ???
+
+    /** Returns a string representation of this list. */
+    @stub
+    def toString(): String = ???
 }

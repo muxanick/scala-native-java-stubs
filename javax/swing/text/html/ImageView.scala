@@ -5,7 +5,8 @@ import java.lang.{Object, String}
 import java.net.URL
 import javax.swing.Icon
 import javax.swing.event.DocumentEvent
-import javax.swing.text.{AttributeSet, Position.Bias, View, ViewFactory}
+import javax.swing.text.{AttributeSet, Element, Position.Bias, View, ViewFactory}
+import scala.scalanative.annotation.stub
 
 /** View of an Image, intended to support the HTML <IMG> tag.
  *  Supports scaling via the HEIGHT and WIDTH attributes of the tag.
@@ -16,6 +17,10 @@ import javax.swing.text.{AttributeSet, Position.Bias, View, ViewFactory}
  *  as of 1.4.
  */
 class ImageView extends View {
+
+    /** Creates a new view that represents an IMG element. */
+    @stub
+    def this(elem: Element) = ???
 
     /** Invoked when the Elements attributes have changed. */
     @stub
@@ -98,4 +103,10 @@ class ImageView extends View {
     /** Sets the size of the view. */
     @stub
     def setSize(width: Float, height: Float): Unit = ???
+
+    /** Provides a mapping from the view coordinate space to the logical
+     *  coordinate space of the model.
+     */
+    @stub
+    def viewToModel(x: Float, y: Float, a: Shape, bias: Array[Position.Bias]): Int = ???
 }

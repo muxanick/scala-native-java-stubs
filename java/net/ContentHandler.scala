@@ -1,6 +1,7 @@
 package java.net
 
-import java.lang.Object
+import java.lang.{Class, Object}
+import scala.scalanative.annotation.stub
 
 /** The abstract class ContentHandler is the superclass
  *  of all classes that read an Object from a
@@ -35,9 +36,19 @@ import java.lang.Object
  */
 abstract class ContentHandler extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Given a URL connect stream positioned at the beginning of the
      *  representation of an object, this method reads that stream and
      *  creates an object from it.
      */
     def getContent(urlc: URLConnection): Object
+
+    /** Given a URL connect stream positioned at the beginning of the
+     *  representation of an object, this method reads that stream and
+     *  creates an object that matches one of the types specified.
+     */
+    def getContent(urlc: URLConnection, classes: Array[Class]): Object
 }

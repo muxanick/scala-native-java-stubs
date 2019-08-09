@@ -2,9 +2,14 @@ package javax.swing.plaf.metal
 
 import java.lang.Object
 import javax.swing.{AbstractListModel, ComboBoxModel}
+import scala.scalanative.annotation.stub
 
 /** Data model for a type-face selection combo-box. */
 protected class MetalFileChooserUI.DirectoryComboBoxModel extends AbstractListModel[Object] with ComboBoxModel[Object] {
+
+    /**  */
+    @stub
+    def DirectoryComboBoxModel() = ???
 
     /**  */
     @stub
@@ -21,4 +26,8 @@ protected class MetalFileChooserUI.DirectoryComboBoxModel extends AbstractListMo
     /** Returns the length of the list. */
     @stub
     def getSize(): Int = ???
+
+    /** Set the selected item. */
+    @stub
+    def setSelectedItem(selectedDirectory: Object): Unit = ???
 }

@@ -5,6 +5,7 @@ import java.lang.{CharSequence, Comparable, Object, String}
 import java.time.format.DateTimeFormatter
 import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalAmount, TemporalField, TemporalQuery, TemporalUnit, ValueRange}
 import java.util.Comparator
+import scala.scalanative.annotation.stub
 
 /** A date-time with an offset from UTC/Greenwich in the ISO-8601 calendar system,
  *  such as 2007-12-03T10:15:30+01:00.
@@ -315,12 +316,20 @@ final class OffsetDateTime extends Object with Temporal with TemporalAdjuster wi
     /** Returns a copy of this OffsetDateTime with the second-of-minute altered. */
     @stub
     def withSecond(second: Int): OffsetDateTime = ???
+
+    /** Returns a copy of this OffsetDateTime with the year altered. */
+    @stub
+    def withYear(year: Int): OffsetDateTime = ???
 }
 
 object OffsetDateTime {
     /** The maximum supported OffsetDateTime, '+999999999-12-31T23:59:59.999999999-18:00'. */
     @stub
     val MAX: OffsetDateTime = ???
+
+    /** The minimum supported OffsetDateTime, '-999999999-01-01T00:00:00+18:00'. */
+    @stub
+    val MIN: OffsetDateTime = ???
 
     /** Obtains an instance of OffsetDateTime from a temporal object. */
     @stub

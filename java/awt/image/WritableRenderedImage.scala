@@ -1,6 +1,7 @@
 package java.awt.image
 
 import java.awt.Point
+import scala.scalanative.annotation.stub
 
 /** WriteableRenderedImage is a common interface for objects which
  *  contain or can produce image data in the form of Rasters and
@@ -60,4 +61,10 @@ trait WritableRenderedImage extends RenderedImage {
     /** Removes an observer. */
     @stub
     def removeTileObserver(to: TileObserver): Unit = ???
+
+    /** Sets a rect of the image to the contents of the Raster r, which is
+     *  assumed to be in the same coordinate space as the WritableRenderedImage.
+     */
+    @stub
+    def setData(r: Raster): Unit = ???
 }

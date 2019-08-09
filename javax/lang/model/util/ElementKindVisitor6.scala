@@ -4,6 +4,7 @@ import java.lang.Object
 import javax.annotation.processing.SupportedSourceVersion
 import javax.lang.model.SourceVersion
 import javax.lang.model.element.{ExecutableElement, PackageElement, TypeElement, TypeParameterElement, VariableElement}
+import scala.scalanative.annotation.stub
 
 /** A visitor of program elements based on their kind with default behavior appropriate for the RELEASE_6 source version.  For elements XYZ that may have more than one
  *  kind, the visitXYZ methods in this class delegate
@@ -51,6 +52,12 @@ import javax.lang.model.element.{ExecutableElement, PackageElement, TypeElement,
      */
     @stub
     protected def this() = ???
+
+    /** Constructor for concrete subclasses; uses the argument for the
+     *  default value.
+     */
+    @stub
+    protected def this(defaultValue: R) = ???
 
     /** Visits an executable element, dispatching to the visit method
      *  for the specific kind of executable,
@@ -152,4 +159,10 @@ import javax.lang.model.element.{ExecutableElement, PackageElement, TypeElement,
      */
     @stub
     def visitVariableAsParameter(e: VariableElement, p: P): R = ???
+
+    /** Visits a RESOURCE_VARIABLE variable element by calling
+     *  visitUnknown.
+     */
+    @stub
+    def visitVariableAsResourceVariable(e: VariableElement, p: P): R = ???
 }

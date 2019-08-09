@@ -3,6 +3,7 @@ package java.util.concurrent.locks
 import java.io.Serializable
 import java.lang.{Object, String, Thread}
 import java.util.Collection
+import scala.scalanative.annotation.stub
 
 /** A version of AbstractQueuedSynchronizer in
  *  which synchronization state is maintained as a long.
@@ -18,6 +19,15 @@ import java.util.Collection
  *  notes and examples.
  */
 abstract class AbstractQueuedLongSynchronizer extends AbstractOwnableSynchronizer with Serializable {
+
+    /** Creates a new AbstractQueuedLongSynchronizer instance
+     *  with initial synchronization state of zero.
+     */
+    @stub
+    protected def this() = ???
+
+    /** Condition implementation for a AbstractQueuedLongSynchronizer serving as the basis of a Lock implementation. */
+    object ConditionObject extends AbstractQueuedLongSynchronizer.ConditionObject
 
     /** Acquires in exclusive mode, ignoring interrupts. */
     def acquire(arg: Long): Unit
@@ -138,4 +148,7 @@ abstract class AbstractQueuedLongSynchronizer extends AbstractOwnableSynchronize
      *  mode.
      */
     protected def tryRelease(arg: Long): Boolean
+
+    /** Attempts to set the state to reflect a release in shared mode. */
+    protected def tryReleaseShared(arg: Long): Boolean
 }

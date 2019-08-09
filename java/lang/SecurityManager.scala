@@ -3,6 +3,7 @@ package java.lang
 import java.io.FileDescriptor
 import java.net.InetAddress
 import java.security.Permission
+import scala.scalanative.annotation.stub
 
 /** The security manager is a class that allows
  *  applications to implement a security policy. It allows an
@@ -158,6 +159,19 @@ import java.security.Permission
  *  see the security documentation.
  */
 class SecurityManager extends Object {
+
+    /** Constructs a new SecurityManager. */
+    @stub
+    def this() = ???
+
+    /** Deprecated. 
+     * This type of security checking is not recommended.
+     *   It is recommended that the checkPermission
+     *   call be used instead.
+     * 
+     */
+    @stub
+    protected val inCheck: Boolean = ???
 
     /** Throws a SecurityException if the
      *  calling thread is not permitted to accept a socket connection from
@@ -458,4 +472,13 @@ class SecurityManager extends Object {
      */
     @stub
     protected def inClass(name: String): Boolean = ???
+
+    /** Deprecated. 
+     * This type of security checking is not recommended.
+     *   It is recommended that the checkPermission
+     *   call be used instead.
+     * 
+     */
+    @stub
+    protected def inClassLoader(): Boolean = ???
 }

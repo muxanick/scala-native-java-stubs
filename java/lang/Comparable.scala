@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** This interface imposes a total ordering on the objects of each class that
  *  implements it.  This ordering is referred to as the class's natural
  *  ordering, and the class's compareTo method is referred to as
@@ -61,4 +63,8 @@ package java.lang
  *  Java Collections Framework.
  */
 trait Comparable[T] {
+
+    /** Compares this object with the specified object for order. */
+    @stub
+    def compareTo(o: T): Int = ???
 }

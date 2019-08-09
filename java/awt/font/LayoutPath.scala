@@ -2,6 +2,7 @@ package java.awt.font
 
 import java.awt.geom.Point2D
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** LayoutPath provides a mapping between locations relative to the
  *  baseline and points in user space.  Locations consist of an advance
@@ -13,8 +14,17 @@ import java.lang.Object
  */
 abstract class LayoutPath extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Convert a location relative to the path to a point in user
      *  coordinates.
      */
     def pathToPoint(location: Point2D, preceding: Boolean, point: Point2D): Unit
+
+    /** Convert a point in user space to a location relative to the
+     *  path.
+     */
+    def pointToPath(point: Point2D, location: Point2D): Boolean
 }

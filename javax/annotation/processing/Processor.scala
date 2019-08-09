@@ -3,7 +3,8 @@ package javax.annotation.processing
 import java.lang.{Iterable, String}
 import java.util.Set
 import javax.lang.model.SourceVersion
-import javax.lang.model.element.{AnnotationMirror, Element, ExecutableElement}
+import javax.lang.model.element.{AnnotationMirror, Element, ExecutableElement, TypeElement}
+import scala.scalanative.annotation.stub
 
 /** The interface for an annotation processor.
  * 
@@ -169,4 +170,11 @@ trait Processor {
     /** Initializes the processor with the processing environment. */
     @stub
     def init(processingEnv: ProcessingEnvironment): Unit = ???
+
+    /** Processes a set of annotation types on type elements
+     *  originating from the prior round and returns whether or not
+     *  these annotation types are claimed by this processor.
+     */
+    @stub
+    def process(annotations: Set[_ <: TypeElement], roundEnv: RoundEnvironment): Boolean = ???
 }

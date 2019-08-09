@@ -1,6 +1,7 @@
 package java.beans
 
 import java.lang.{Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The PropertyEditorManager can be used to locate a property editor for
  *  any given type name.  This property editor must support the
@@ -26,6 +27,10 @@ import java.lang.{Class, Object, String}
  *  for the classes java.lang.String. java.awt.Color, and java.awt.Font.
  */
 class PropertyEditorManager extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 }
 
 object PropertyEditorManager {
@@ -40,4 +45,10 @@ object PropertyEditorManager {
     /** Registers an editor class to edit values of the given target class. */
     @stub
     def registerEditor(targetType: Class[_], editorClass: Class[_]): Unit = ???
+
+    /** Change the list of package names that will be used for
+     *           finding property editors.
+     */
+    @stub
+    def setEditorSearchPath(path: Array[String]): Unit = ???
 }

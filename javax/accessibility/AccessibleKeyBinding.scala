@@ -1,6 +1,7 @@
 package javax.accessibility
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The AccessibleKeyBinding interface should be supported by any object
  *  that has a keyboard bindings such as a keyboard mnemonic and/or keyboard
@@ -15,4 +16,8 @@ trait AccessibleKeyBinding {
     /** Returns a key binding for this object. */
     @stub
     def getAccessibleKeyBinding(i: Int): Object = ???
+
+    /** Returns the number of key bindings for this object */
+    @stub
+    def getAccessibleKeyBindingCount(): Int = ???
 }

@@ -6,9 +6,14 @@ import java.beans.PropertyChangeListener
 import java.lang.{Object, String}
 import javax.swing.{JComponent, JSplitPane, KeyStroke}
 import javax.swing.plaf.{ComponentUI, SplitPaneUI}
+import scala.scalanative.annotation.stub
 
 /** A Basic L&F implementation of the SplitPaneUI. */
 class BasicSplitPaneUI extends SplitPaneUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** LayoutManager for JSplitPanes that have an orientation of
      *  HORIZONTAL_SPLIT.
@@ -55,6 +60,12 @@ class BasicSplitPaneUI extends SplitPaneUI {
      */
     @stub
     object KeyboardUpLeftHandler extends BasicSplitPaneUI.KeyboardUpLeftHandler
+
+    /** Implementation of the PropertyChangeListener
+     *  that the JSplitPane UI uses.
+     */
+    @stub
+    object PropertyHandler extends BasicSplitPaneUI.PropertyHandler
 
     /** Location of the divider when the dragging session began. */
     @stub
@@ -174,6 +185,13 @@ class BasicSplitPaneUI extends SplitPaneUI {
      */
     @stub
     protected val splitPane: JSplitPane = ???
+
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
+    @stub
+    protected val upKey: KeyStroke = ???
 
     /** Creates the default divider. */
     @stub
@@ -389,6 +407,10 @@ class BasicSplitPaneUI extends SplitPaneUI {
     /** Uninstalls the event listeners for the UI. */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Uninstalls the UI. */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicSplitPaneUI {

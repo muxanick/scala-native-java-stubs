@@ -1,6 +1,8 @@
 package javax.naming.ldap
 
 import java.io.Serializable
+import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** This interface represents an LDAP extended operation response as defined in
  *  RFC 2251.
@@ -45,4 +47,8 @@ trait ExtendedResponse extends Serializable {
      */
     @stub
     def getEncodedValue(): Array[Byte] = ???
+
+    /** Retrieves the object identifier of the response. */
+    @stub
+    def getID(): String = ???
 }

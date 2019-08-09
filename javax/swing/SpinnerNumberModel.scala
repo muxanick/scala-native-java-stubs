@@ -2,6 +2,7 @@ package javax.swing
 
 import java.io.Serializable
 import java.lang.{Comparable, Number, Object}
+import scala.scalanative.annotation.stub
 
 /** A SpinnerModel for sequences of numbers.
  *  The upper and lower bounds of the sequence are defined
@@ -67,6 +68,13 @@ class SpinnerNumberModel extends AbstractSpinnerModel with Serializable {
     @stub
     def this(value: Int, minimum: Int, maximum: Int, stepSize: Int) = ???
 
+    /** Constructs a SpinnerModel that represents
+     *  a closed sequence of
+     *  numbers from minimum to maximum.
+     */
+    @stub
+    def this(value: Number, minimum: Comparable, maximum: Comparable, stepSize: Number) = ???
+
     /** Returns the last number in the sequence. */
     @stub
     def getMaximum(): Comparable = ???
@@ -112,4 +120,8 @@ class SpinnerNumberModel extends AbstractSpinnerModel with Serializable {
      */
     @stub
     def setStepSize(stepSize: Number): Unit = ???
+
+    /** Sets the current value for this sequence. */
+    @stub
+    def setValue(value: Object): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.nio.file
 
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** A token representing the registration of a watchable object
  *  with a WatchService.
@@ -70,4 +71,8 @@ trait WatchKey {
     /** Resets this watch key. */
     @stub
     def reset(): Boolean = ???
+
+    /** Returns the object for which this watch key was created. */
+    @stub
+    def watchable(): Watchable = ???
 }

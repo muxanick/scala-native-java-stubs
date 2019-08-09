@@ -3,6 +3,7 @@ package javax.security.sasl
 import java.io.Serializable
 import java.lang.{Object, String}
 import javax.security.auth.callback.Callback
+import scala.scalanative.annotation.stub
 
 /** This callback is used by SaslServer to determine whether
  *  one entity (identified by an authenticated authentication id)
@@ -10,6 +11,10 @@ import javax.security.auth.callback.Callback
  *  behalf of another entity (identified by an authorization id).
  */
 class AuthorizeCallback extends Object with Callback with Serializable {
+
+    /** Constructs an instance of AuthorizeCallback. */
+    @stub
+    def this(authnID: String, authzID: String) = ???
 
     /** Returns the authentication id to check. */
     @stub
@@ -32,4 +37,8 @@ class AuthorizeCallback extends Object with Callback with Serializable {
     /** Sets whether the authorization is allowed. */
     @stub
     def setAuthorized(ok: Boolean): Unit = ???
+
+    /** Sets the id of the authorized entity. */
+    @stub
+    def setAuthorizedID(id: String): Unit = ???
 }

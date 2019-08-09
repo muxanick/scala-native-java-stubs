@@ -1,6 +1,7 @@
 package javax.swing.event
 
 import javax.swing.text.{Document, Element}
+import scala.scalanative.annotation.stub
 
 /** Interface for document change notifications.  This provides
  *  detailed information to Document observers about how the
@@ -28,10 +29,18 @@ trait DocumentEvent {
      */
     @stub
     def getOffset(): Int = ???
+
+    /** Gets the type of event. */
+    @stub
+    def getType(): DocumentEvent.EventType = ???
 }
 
 object DocumentEvent {
     /** Describes changes made to a specific element. */
     @stub
     val DocumentEvent.ElementChange: trait = ???
+
+    /** Enumeration for document event types */
+    @stub
+    object EventType extends DocumentEvent.EventType
 }

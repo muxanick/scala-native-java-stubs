@@ -2,6 +2,7 @@ package java.security.cert
 
 import java.lang.{Cloneable, Object, String}
 import java.util.{Collection, Set}
+import scala.scalanative.annotation.stub
 
 /** An abstract class that performs one or more checks on an
  *  X509Certificate.
@@ -56,6 +57,10 @@ import java.util.{Collection, Set}
  */
 abstract class PKIXCertPathChecker extends Object with CertPathChecker with Cloneable {
 
+    /** Default constructor. */
+    @stub
+    protected def this() = ???
+
     /** Performs the check(s) on the specified certificate using its internal
      *  state.
      */
@@ -78,4 +83,7 @@ abstract class PKIXCertPathChecker extends Object with CertPathChecker with Clon
 
     /** Initializes the internal state of this PKIXCertPathChecker. */
     def init(forward: Boolean): Unit
+
+    /** Indicates if forward checking is supported. */
+    def isForwardCheckingSupported(): Boolean
 }

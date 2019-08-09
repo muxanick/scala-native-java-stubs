@@ -1,6 +1,8 @@
 package java.lang
 
 import java.io.{InputStream, OutputStream}
+import java.util.concurrent.TimeUnit
+import scala.scalanative.annotation.stub
 
 /** The ProcessBuilder.start() and
  *  Runtime.exec
@@ -46,6 +48,10 @@ import java.io.{InputStream, OutputStream}
  */
 abstract class Process extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Kills the subprocess. */
     def destroy(): Unit
 
@@ -80,4 +86,10 @@ abstract class Process extends Object {
      *  terminated.
      */
     def waitFor(): Int
+
+    /** Causes the current thread to wait, if necessary, until the
+     *  subprocess represented by this Process object has
+     *  terminated, or the specified waiting time elapses.
+     */
+    def waitFor(timeout: Long, unit: TimeUnit): Boolean
 }

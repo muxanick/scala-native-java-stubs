@@ -2,6 +2,7 @@ package javax.sql
 
 import java.io.PrintWriter
 import java.util.logging.Logger
+import scala.scalanative.annotation.stub
 
 /** Interface that defines the methods which are common between DataSource,
  *  XADataSource and ConnectionPoolDataSource.
@@ -29,4 +30,10 @@ trait CommonDataSource {
      */
     @stub
     def setLoginTimeout(seconds: Int): Unit = ???
+
+    /** Sets the log writer for this DataSource
+     *  object to the given java.io.PrintWriter object.
+     */
+    @stub
+    def setLogWriter(out: PrintWriter): Unit = ???
 }

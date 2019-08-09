@@ -2,6 +2,7 @@ package java.awt
 
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** A Label object is a component for placing text in a
  *  container. A label displays a single line of read-only text.
@@ -32,6 +33,18 @@ class Label extends Component with Accessible {
     @stub
     def this(text: String) = ???
 
+    /** Constructs a new label that presents the specified string of
+     *  text with the specified alignment.
+     */
+    @stub
+    def this(text: String, alignment: Int) = ???
+
+    /** This class implements accessibility support for the
+     *  Label class.
+     */
+    @stub
+    protected object AccessibleAWTLabel extends Label.AccessibleAWTLabel
+
     /** Creates the peer for this label. */
     @stub
     def addNotify(): Unit = ???
@@ -55,6 +68,10 @@ class Label extends Component with Accessible {
     /** Sets the alignment for this label to the specified alignment. */
     @stub
     def setAlignment(alignment: Int): Unit = ???
+
+    /** Sets the text for this label to the specified text. */
+    @stub
+    def setText(text: String): Unit = ???
 }
 
 object Label {
@@ -65,4 +82,8 @@ object Label {
     /** Indicates that the label should be left justified. */
     @stub
     val LEFT: Int = ???
+
+    /** Indicates that the label should be right justified. */
+    @stub
+    val RIGHT: Int = ???
 }

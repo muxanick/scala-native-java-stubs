@@ -1,6 +1,7 @@
 package java.nio.channels
 
 import java.net.{InetAddress, NetworkInterface}
+import scala.scalanative.annotation.stub
 
 /** A network channel that supports Internet Protocol (IP) multicasting.
  * 
@@ -90,4 +91,10 @@ trait MulticastChannel extends NetworkChannel {
      */
     @stub
     def join(group: InetAddress, interf: NetworkInterface): MembershipKey = ???
+
+    /** Joins a multicast group to begin receiving datagrams sent to the group
+     *  from a given source address.
+     */
+    @stub
+    def join(group: InetAddress, interf: NetworkInterface, source: InetAddress): MembershipKey = ???
 }

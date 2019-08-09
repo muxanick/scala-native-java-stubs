@@ -3,6 +3,7 @@ package java.util.stream
 import java.lang.Object
 import java.util.{Spliterator, Spliterator.OfDouble, Spliterator.OfInt, Spliterator.OfLong}
 import java.util.function.Supplier
+import scala.scalanative.annotation.stub
 
 /** Low-level utility methods for creating and manipulating streams.
  * 
@@ -55,4 +56,10 @@ object StreamSupport {
      */
     @stub
     def stream[T](spliterator: Spliterator[T], parallel: Boolean): Stream[T] = ???
+
+    /** Creates a new sequential or parallel Stream from a
+     *  Supplier of Spliterator.
+     */
+    @stub
+    def stream[T](supplier: Supplier[_ <: Spliterator[T]], characteristics: Int, parallel: Boolean): Stream[T] = ???
 }

@@ -2,6 +2,7 @@ package javax.crypto.spec
 
 import java.lang.Object
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** This class specifies the parameters used with the
  *  RC2
@@ -27,6 +28,12 @@ class RC2ParameterSpec extends Object with AlgorithmParameterSpec {
     @stub
     def this(effectiveKeyBits: Int, iv: Array[Byte]) = ???
 
+    /** Constructs a parameter set for RC2 from the given effective key size
+     *  (in bits) and IV.
+     */
+    @stub
+    def this(effectiveKeyBits: Int, iv: Array[Byte], offset: Int) = ???
+
     /** Tests for equality between the specified object and this
      *  object.
      */
@@ -40,4 +47,8 @@ class RC2ParameterSpec extends Object with AlgorithmParameterSpec {
     /** Returns the IV or null if this parameter set does not contain an IV. */
     @stub
     def getIV(): Array[Byte] = ???
+
+    /** Calculates a hash code value for the object. */
+    @stub
+    def hashCode(): Int = ???
 }

@@ -1,7 +1,9 @@
 package javax.swing.text
 
+import java.awt.event.ActionEvent
 import java.lang.Object
 import javax.swing.AbstractAction
+import scala.scalanative.annotation.stub
 
 /** Places content into the associated document.
  *  If there is a selection, it is removed before
@@ -17,3 +19,12 @@ import javax.swing.AbstractAction
  *  Please see XMLEncoder.
  */
 object DefaultEditorKit.InsertContentAction extends TextAction {
+
+    /** Creates this object with the appropriate identifier. */
+    @stub
+    def InsertContentAction() = ???
+
+    /** The operation to perform when this action is triggered. */
+    @stub
+    def actionPerformed(e: ActionEvent): Unit = ???
+}

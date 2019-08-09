@@ -1,7 +1,9 @@
 package java.awt
 
 import java.lang.Object
+import java.util.Enumeration
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** The MenuBar class encapsulates the platform's
  *  concept of a menu bar bound to a frame. In order to associate
@@ -26,6 +28,16 @@ import javax.accessibility.{Accessible, AccessibleContext}
  *  menu bar is managing.
  */
 class MenuBar extends MenuComponent with MenuContainer with Accessible {
+
+    /** Creates a new menu bar. */
+    @stub
+    def this() = ???
+
+    /** Inner class of MenuBar used to provide default support for
+     *  accessibility.
+     */
+    @stub
+    protected object AccessibleAWTMenuBar extends MenuBar.AccessibleAWTMenuBar
 
     /** Adds the specified menu to the menu bar. */
     @stub
@@ -89,4 +101,10 @@ class MenuBar extends MenuComponent with MenuContainer with Accessible {
     /** Sets the specified menu to be this menu bar's help menu. */
     @stub
     def setHelpMenu(m: Menu): Unit = ???
+
+    /** Gets an enumeration of all menu shortcuts this menu bar
+     *  is managing.
+     */
+    @stub
+    def shortcuts(): Enumeration[MenuShortcut] = ???
 }

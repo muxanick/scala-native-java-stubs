@@ -2,6 +2,7 @@ package javax.print.attribute
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Class HashPrintRequestAttributeSet inherits its implementation from
  *  class HashAttributeSet and enforces the
@@ -26,4 +27,11 @@ class HashPrintRequestAttributeSet extends HashAttributeSet with PrintRequestAtt
      */
     @stub
     def this(attributes: Array[PrintRequestAttribute]) = ???
+
+    /** Construct a new attribute set, initially populated with the
+     *  values from the  given set where the members of the attribute set
+     *  are restricted to the (PrintRequestAttributeSe interface.
+     */
+    @stub
+    def this(attributes: PrintRequestAttributeSet) = ???
 }

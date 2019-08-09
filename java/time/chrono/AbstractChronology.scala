@@ -1,9 +1,10 @@
 package java.time.chrono
 
-import java.lang.{Long, Object}
+import java.lang.{Long, Object, String}
 import java.time.format.ResolverStyle
 import java.time.temporal.TemporalField
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** An abstract implementation of a calendar system, used to organize and identify dates.
  *  
@@ -13,6 +14,10 @@ import java.util.Map
  *  See Chronology for more details.
  */
 abstract class AbstractChronology extends Object with Chronology {
+
+    /** Creates an instance. */
+    @stub
+    protected def this() = ???
 
     /** Compares this chronology to another chronology. */
     def compareTo(other: Chronology): Int
@@ -25,4 +30,7 @@ abstract class AbstractChronology extends Object with Chronology {
 
     /** Resolves parsed ChronoField values into a date during parsing. */
     def resolveDate(fieldValues: Map[TemporalField, Long], resolverStyle: ResolverStyle): ChronoLocalDate
+
+    /** Outputs this chronology as a String, using the chronology ID. */
+    def toString(): String
 }

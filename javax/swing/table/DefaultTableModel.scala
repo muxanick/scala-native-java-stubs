@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{Object, String}
 import java.util.Vector
 import javax.swing.event.TableModelEvent
+import scala.scalanative.annotation.stub
 
 /** This is an implementation of TableModel that
  *  uses a Vector of Vectors to store the
@@ -66,9 +67,22 @@ class DefaultTableModel extends AbstractTableModel with Serializable {
     @stub
     def this(columnNames: Vector, rowCount: Int) = ???
 
+    /** Constructs a DefaultTableModel and initializes the table
+     *   by passing data and columnNames
+     *   to the setDataVector method.
+     */
+    @stub
+    def this(data: Vector, columnNames: Vector) = ???
+
     /** The Vector of column identifiers. */
     @stub
     protected val columnIdentifiers: Vector = ???
+
+    /** The Vector of Vectors of
+     *  Object values.
+     */
+    @stub
+    protected val dataVector: Vector = ???
 
     /** Adds a column to the model. */
     @stub
@@ -180,6 +194,12 @@ class DefaultTableModel extends AbstractTableModel with Serializable {
     /** Sets the number of rows in the model. */
     @stub
     def setRowCount(rowCount: Int): Unit = ???
+
+    /** Sets the object value for the cell at column and
+     *  row.
+     */
+    @stub
+    def setValueAt(aValue: Object, row: Int, column: Int): Unit = ???
 }
 
 object DefaultTableModel {

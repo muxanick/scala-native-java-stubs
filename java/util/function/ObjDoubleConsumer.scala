@@ -1,6 +1,7 @@
 package java.util.function
 
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** Represents an operation that accepts an object-valued and a
  *  double-valued argument, and returns no result.  This is the
@@ -12,4 +13,8 @@ import java.lang.FunctionalInterface
  *  whose functional method is accept(Object, double).
  */
 @FunctionalInterface trait ObjDoubleConsumer[T] {
+
+    /** Performs this operation on the given arguments. */
+    @stub
+    def accept(t: T, value: Double): Unit = ???
 }

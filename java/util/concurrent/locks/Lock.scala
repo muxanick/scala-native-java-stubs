@@ -1,6 +1,7 @@
 package java.util.concurrent.locks
 
 import java.util.concurrent.TimeUnit
+import scala.scalanative.annotation.stub
 
 /** Lock implementations provide more extensive locking
  *  operations than can be obtained using synchronized methods
@@ -148,4 +149,8 @@ trait Lock {
      */
     @stub
     def tryLock(time: Long, unit: TimeUnit): Boolean = ???
+
+    /** Releases the lock. */
+    @stub
+    def unlock(): Unit = ???
 }

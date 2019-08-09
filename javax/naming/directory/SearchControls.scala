@@ -2,6 +2,7 @@ package javax.naming.directory
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class encapsulates
  *  factors that determine scope of search and what gets returned
@@ -16,6 +17,10 @@ class SearchControls extends Object with Serializable {
     /** Constructs a search constraints using defaults. */
     @stub
     def this() = ???
+
+    /** Constructs a search constraints using arguments. */
+    @stub
+    def this(scope: Int, countlim: Long, timelim: Int, attrs: Array[String], retobj: Boolean, deref: Boolean) = ???
 
     /** Retrieves the maximum number of entries that will be returned
      *  as a result of the search.
@@ -66,6 +71,10 @@ class SearchControls extends Object with Serializable {
      */
     @stub
     def setSearchScope(scope: Int): Unit = ???
+
+    /** Sets the time limit of these SearchControls in milliseconds. */
+    @stub
+    def setTimeLimit(ms: Int): Unit = ???
 }
 
 object SearchControls {
@@ -76,4 +85,8 @@ object SearchControls {
     /** Search one level of the named context. */
     @stub
     val ONELEVEL_SCOPE: Int = ???
+
+    /** Search the entire subtree rooted at the named object. */
+    @stub
+    val SUBTREE_SCOPE: Int = ???
 }

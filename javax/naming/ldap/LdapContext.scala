@@ -1,6 +1,8 @@
 package javax.naming.ldap
 
+import java.lang.String
 import javax.naming.directory.DirContext
+import scala.scalanative.annotation.stub
 
 /** This interface represents a context in which you can perform
  *  operations with LDAPv3-style controls and perform LDAPv3-style
@@ -164,4 +166,18 @@ trait LdapContext extends DirContext {
      */
     @stub
     def reconnect(connCtls: Array[Control]): Unit = ???
+
+    /** Sets the request controls for methods subsequently
+     *  invoked on this context.
+     */
+    @stub
+    def setRequestControls(requestControls: Array[Control]): Unit = ???
+}
+
+object LdapContext {
+    /** Constant that holds the name of the environment property
+     *  for specifying the list of control factories to use.
+     */
+    @stub
+    val CONTROL_FACTORIES: String = ???
 }

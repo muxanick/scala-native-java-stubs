@@ -1,6 +1,7 @@
 package java.time.chrono
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** An era in the Minguo calendar system.
  *  
@@ -46,6 +47,11 @@ object MinguoEra {
      */
     final val BEFORE_ROC = new MinguoEra(BEFORE_ROC, 0)
 
+    /** The singleton instance for the current era, 'Republic of China Era',
+     *  which has the numeric value 1.
+     */
+    final val ROC = new MinguoEra(ROC, 1)
+
     /** Gets the numeric era int value. */
     @stub
     def getValue(): Int = ???
@@ -57,4 +63,10 @@ object MinguoEra {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): MinguoEra = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[MinguoEra] = ???
 }

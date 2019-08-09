@@ -1,7 +1,9 @@
 package javax.xml.ws.soap
 
 import java.lang.{Exception, Object, RuntimeException, Throwable}
+import javax.xml.soap.SOAPFault
 import javax.xml.ws.{ProtocolException, WebServiceException}
+import scala.scalanative.annotation.stub
 
 /** The SOAPFaultException exception represents a
  *   SOAP 1.1 or 1.2 fault.
@@ -21,4 +23,12 @@ import javax.xml.ws.{ProtocolException, WebServiceException}
  *   description of SOAP faults.
  */
 class SOAPFaultException extends ProtocolException {
+
+    /** Constructor for SOAPFaultException */
+    @stub
+    def this(fault: SOAPFault) = ???
+
+    /** Gets the embedded SOAPFault instance. */
+    @stub
+    def getFault(): SOAPFault = ???
 }

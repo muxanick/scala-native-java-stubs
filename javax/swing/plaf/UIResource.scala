@@ -1,5 +1,7 @@
 package javax.swing.plaf
 
+import scala.scalanative.annotation.stub
+
 /** This interface is used to mark objects created by ComponentUI delegates.
  *  The ComponentUI.installUI() and
  *  ComponentUI.uninstallUI() methods can use this interface

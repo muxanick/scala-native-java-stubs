@@ -1,6 +1,9 @@
 package javax.sql.rowset.spi
 
+import java.io.Reader
 import javax.sql.RowSetReader
+import javax.sql.rowset.WebRowSet
+import scala.scalanative.annotation.stub
 
 /** A specialized interface that facilitates an extension of the
  *  SyncProvider abstract class for XML orientated
@@ -18,4 +21,10 @@ import javax.sql.RowSetReader
  *  its XML reader's readXML method.
  */
 trait XmlReader extends RowSetReader {
+
+    /** Reads and parses the given WebRowSet object from the given
+     *  input stream in XML format.
+     */
+    @stub
+    def readXML(caller: WebRowSet, reader: Reader): Unit = ???
 }

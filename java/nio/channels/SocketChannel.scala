@@ -3,7 +3,8 @@ package java.nio.channels
 import java.lang.Object
 import java.net.{Socket, SocketAddress, SocketOption}
 import java.nio.ByteBuffer
-import java.nio.channels.spi.{AbstractInterruptibleChannel, AbstractSelectableChannel}
+import java.nio.channels.spi.{AbstractInterruptibleChannel, AbstractSelectableChannel, SelectorProvider}
+import scala.scalanative.annotation.stub
 
 /** A selectable channel for stream-oriented connecting sockets.
  * 
@@ -78,6 +79,10 @@ import java.nio.channels.spi.{AbstractInterruptibleChannel, AbstractSelectableCh
  */
 abstract class SocketChannel extends AbstractSelectableChannel with ByteChannel with ScatteringByteChannel with GatheringByteChannel with NetworkChannel {
 
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this(provider: SelectorProvider) = ???
+
     /** Binds the channel's socket to a local address. */
     def bind(local: SocketAddress): SocketChannel
 
@@ -134,6 +139,11 @@ abstract class SocketChannel extends AbstractSelectableChannel with ByteChannel 
 
     /** Writes a sequence of bytes to this channel from the given buffers. */
     def write(srcs: Array[ByteBuffer]): Long
+
+    /** Writes a sequence of bytes to this channel from a subsequence of the
+     *  given buffers.
+     */
+    def write(srcs: Array[ByteBuffer], offset: Int, length: Int): Long
 }
 
 object SocketChannel {

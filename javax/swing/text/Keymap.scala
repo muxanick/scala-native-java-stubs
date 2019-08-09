@@ -2,6 +2,7 @@ package javax.swing.text
 
 import java.lang.String
 import javax.swing.{Action, KeyStroke}
+import scala.scalanative.annotation.stub
 
 /** A collection of bindings of KeyStrokes to actions.  The
  *  bindings are basically name-value pairs that potentially
@@ -64,4 +65,10 @@ trait Keymap {
     /** Set the default action to fire if a key is typed. */
     @stub
     def setDefaultAction(a: Action): Unit = ???
+
+    /** Sets the parent keymap, which will be used to
+     *  resolve key-bindings.
+     */
+    @stub
+    def setResolveParent(parent: Keymap): Unit = ???
 }

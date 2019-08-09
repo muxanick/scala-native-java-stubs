@@ -1,7 +1,9 @@
 package javax.xml.crypto.dsig
 
 import java.lang.String
+import java.security.spec.AlgorithmParameterSpec
 import javax.xml.crypto.{AlgorithmMethod, XMLStructure}
+import scala.scalanative.annotation.stub
 
 /** A representation of the XML SignatureMethod element
  *  as defined in the 
@@ -25,6 +27,12 @@ import javax.xml.crypto.{AlgorithmMethod, XMLStructure}
  *  of the XMLSignatureFactory class.
  */
 trait SignatureMethod extends XMLStructure with AlgorithmMethod {
+
+    /** Returns the algorithm-specific input parameters of this
+     *  SignatureMethod.
+     */
+    @stub
+    def getParameterSpec(): AlgorithmParameterSpec = ???
 }
 
 object SignatureMethod {
@@ -39,4 +47,10 @@ object SignatureMethod {
      */
     @stub
     val HMAC_SHA1: String = ???
+
+    /** The RSAwithSHA1
+     *  (PKCS #1) signature method algorithm URI.
+     */
+    @stub
+    val RSA_SHA1: String = ???
 }

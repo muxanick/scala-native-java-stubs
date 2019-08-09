@@ -1,8 +1,9 @@
 package javax.swing.plaf.basic
 
-import java.lang.Object
+import java.lang.{Object, String}
 import javax.swing.JComponent
 import javax.swing.plaf.{ButtonUI, ComponentUI}
+import scala.scalanative.annotation.stub
 
 /** CheckboxUI implementation for BasicCheckboxUI
  *  
@@ -16,6 +17,14 @@ import javax.swing.plaf.{ButtonUI, ComponentUI}
  *  Please see XMLEncoder.
  */
 class BasicCheckBoxUI extends BasicRadioButtonUI {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /**  */
+    @stub
+    def getPropertyPrefix(): String = ???
 }
 
 object BasicCheckBoxUI {

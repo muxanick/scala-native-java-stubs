@@ -2,8 +2,7 @@ package java.beans
 
 import java.io.InputStream
 import java.lang.{AutoCloseable, ClassLoader, Object}
-import org.xml.sax.InputSource
-import org.xml.sax.helpers.DefaultHandler
+import scala.scalanative.annotation.stub
 
 /** The XMLDecoder class is used to read XML documents
  *  created using the XMLEncoder and is used just like
@@ -50,6 +49,12 @@ class XMLDecoder extends Object with AutoCloseable {
     @stub
     def this(in: InputStream, owner: Object, exceptionListener: ExceptionListener) = ???
 
+    /** Creates a new input stream for reading archives
+     *  created by the XMLEncoder class.
+     */
+    @stub
+    def this(in: InputStream, owner: Object, exceptionListener: ExceptionListener, cl: ClassLoader) = ???
+
     /** This method closes the input stream associated
      *  with this stream.
      */
@@ -71,6 +76,10 @@ class XMLDecoder extends Object with AutoCloseable {
     /** Sets the exception handler for this stream to exceptionListener. */
     @stub
     def setExceptionListener(exceptionListener: ExceptionListener): Unit = ???
+
+    /** Sets the owner of this decoder to owner. */
+    @stub
+    def setOwner(owner: Object): Unit = ???
 }
 
 object XMLDecoder {

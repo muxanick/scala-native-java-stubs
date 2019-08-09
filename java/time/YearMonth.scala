@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{CharSequence, Comparable, Object, String}
 import java.time.format.DateTimeFormatter
 import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalAmount, TemporalField, TemporalQuery, TemporalUnit, ValueRange}
+import scala.scalanative.annotation.stub
 
 /** A year-month in the ISO-8601 calendar system, such as 2007-12.
  *  
@@ -171,6 +172,10 @@ final class YearMonth extends Object with Temporal with TemporalAdjuster with Co
     /** Returns a copy of this YearMonth with the month-of-year altered. */
     @stub
     def withMonth(month: Int): YearMonth = ???
+
+    /** Returns a copy of this YearMonth with the year altered. */
+    @stub
+    def withYear(year: Int): YearMonth = ???
 }
 
 object YearMonth {

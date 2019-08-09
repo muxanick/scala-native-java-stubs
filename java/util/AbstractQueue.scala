@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class provides skeletal implementations of some Queue
  *  operations. The implementations in this class are appropriate when
@@ -23,6 +24,10 @@ import java.lang.Object
  */
 abstract class AbstractQueue[E] extends AbstractCollection[E] with Queue[E] {
 
+    /** Constructor for use by subclasses. */
+    @stub
+    protected def this() = ???
+
     /** Inserts the specified element into this queue if it is possible to do so
      *  immediately without violating capacity restrictions, returning
      *  true upon success and throwing an IllegalStateException
@@ -40,4 +45,7 @@ abstract class AbstractQueue[E] extends AbstractCollection[E] with Queue[E] {
 
     /** Retrieves, but does not remove, the head of this queue. */
     def element(): E
+
+    /** Retrieves and removes the head of this queue. */
+    def remove(): E
 }

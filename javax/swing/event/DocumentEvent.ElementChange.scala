@@ -1,6 +1,7 @@
 package javax.swing.event
 
 import javax.swing.text.Element
+import scala.scalanative.annotation.stub
 
 /** Describes changes made to a specific element. */
 object trait DocumentEvent.ElementChange {
@@ -20,4 +21,8 @@ object trait DocumentEvent.ElementChange {
     /** Returns the element represented. */
     @stub
     def getElement(): Element = ???
+
+    /** Fetches the index within the element represented. */
+    @stub
+    def getIndex(): Int = ???
 }

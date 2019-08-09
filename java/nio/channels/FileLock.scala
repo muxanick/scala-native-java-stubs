@@ -1,6 +1,7 @@
 package java.nio.channels
 
-import java.lang.{AutoCloseable, Object}
+import java.lang.{AutoCloseable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A token representing a lock on a region of a file.
  * 
@@ -87,6 +88,10 @@ abstract class FileLock extends Object with AutoCloseable {
     @stub
     protected def this(channel: AsynchronousFileChannel, position: Long, size: Long, shared: Boolean) = ???
 
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this(channel: FileChannel, position: Long, size: Long, shared: Boolean) = ???
+
     /** Returns the channel upon whose file this lock was acquired. */
     def acquiredBy(): Channel
 
@@ -115,4 +120,7 @@ abstract class FileLock extends Object with AutoCloseable {
 
     /** Returns the size of the locked region in bytes. */
     def size(): Long
+
+    /** Returns a string describing the range, type, and validity of this lock. */
+    def toString(): String
 }

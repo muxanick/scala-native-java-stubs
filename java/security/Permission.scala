@@ -2,6 +2,7 @@ package java.security
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Abstract class for representing access to a system resource.
  *  All permissions have a name (whose interpretation depends on the subclass),
@@ -33,6 +34,10 @@ import java.lang.{Object, String}
  */
 abstract class Permission extends Object with Guard with Serializable {
 
+    /** Constructs a permission with the specified name. */
+    @stub
+    def this(name: String) = ???
+
     /** Implements the guard interface for a permission. */
     def checkGuard(object: Object): Unit
 
@@ -57,4 +62,7 @@ abstract class Permission extends Object with Guard with Serializable {
      *  one is not defined.
      */
     def newPermissionCollection(): PermissionCollection
+
+    /** Returns a string describing this Permission. */
+    def toString(): String
 }

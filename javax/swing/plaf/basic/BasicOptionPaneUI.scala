@@ -6,6 +6,7 @@ import java.beans.PropertyChangeListener
 import java.lang.{Object, String}
 import javax.swing.{Icon, JComponent, JOptionPane}
 import javax.swing.plaf.{ComponentUI, OptionPaneUI}
+import scala.scalanative.annotation.stub
 
 /** Provides the basic look and feel for a JOptionPane.
  *  BasicMessagePaneUI provides a means to place an icon,
@@ -37,9 +38,17 @@ import javax.swing.plaf.{ComponentUI, OptionPaneUI}
  */
 class BasicOptionPaneUI extends OptionPaneUI {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** This class should be treated as a "protected" inner class. */
     @stub
     object ButtonActionListener extends BasicOptionPaneUI.ButtonActionListener
+
+    /** This class should be treated as a "protected" inner class. */
+    @stub
+    object PropertyChangeHandler extends BasicOptionPaneUI.PropertyChangeHandler
 
     /** This is set to true in validateComponent if a Component is contained
      *  in either the message or the buttons.
@@ -66,6 +75,10 @@ class BasicOptionPaneUI extends OptionPaneUI {
      */
     @stub
     protected val optionPane: JOptionPane = ???
+
+    /**  */
+    @stub
+    protected val propertyChangeListener: PropertyChangeListener = ???
 
     /** Creates the appropriate object to represent each of the objects in
      *  buttons and adds it to container.
@@ -220,6 +233,12 @@ class BasicOptionPaneUI extends OptionPaneUI {
     /**  */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Removes the receiver from the L&F controller of the passed in split
+     *  pane.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicOptionPaneUI {

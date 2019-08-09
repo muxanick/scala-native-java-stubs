@@ -3,6 +3,7 @@ package javax.sql.rowset
 import java.io.{InputStream, OutputStream, Reader, Writer}
 import java.lang.String
 import java.sql.ResultSet
+import scala.scalanative.annotation.stub
 
 /** The standard interface that all implementations of a WebRowSet
  *  must implement.
@@ -410,6 +411,12 @@ trait WebRowSet extends CachedRowSet {
      */
     @stub
     def writeXml(rs: ResultSet, writer: Writer): Unit = ???
+
+    /** Writes the data, properties, and metadata for this WebRowSet object
+     *  to the given Writer object in XML format.
+     */
+    @stub
+    def writeXml(writer: Writer): Unit = ???
 }
 
 object WebRowSet {
@@ -418,4 +425,10 @@ object WebRowSet {
      */
     @stub
     val PUBLIC_XML_SCHEMA: String = ???
+
+    /** The URL for the XML Schema definition file that defines the XML tags and
+     *  their valid values for a WebRowSet implementation.
+     */
+    @stub
+    val SCHEMA_SYSTEM_ID: String = ???
 }

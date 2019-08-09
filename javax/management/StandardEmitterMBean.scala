@@ -1,6 +1,7 @@
 package javax.management
 
 import java.lang.{Class, Object}
+import scala.scalanative.annotation.stub
 
 /** An MBean whose management interface is determined by reflection
  *  on a Java interface, and that emits notifications.
@@ -55,6 +56,13 @@ class StandardEmitterMBean extends StandardMBean with NotificationEmitter {
     @stub
     def this(implementation: T, mbeanInterface: Class[T], isMXBean: Boolean, emitter: NotificationEmitter) = ???
 
+    /** Make an MBean whose management interface is specified by
+     *  mbeanInterface, with the given implementation and
+     *  where notifications are handled by the given NotificationEmitter.
+     */
+    @stub
+    def this(implementation: T, mbeanInterface: Class[T], emitter: NotificationEmitter) = ???
+
     /** Adds a listener to this MBean. */
     @stub
     def addNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
@@ -73,4 +81,8 @@ class StandardEmitterMBean extends StandardMBean with NotificationEmitter {
     /** Removes a listener from this MBean. */
     @stub
     def removeNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
+
+    /** Sends a notification. */
+    @stub
+    def sendNotification(n: Notification): Unit = ???
 }

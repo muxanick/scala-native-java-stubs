@@ -5,6 +5,8 @@ import java.util.List
 import javax.annotation.processing.SupportedSourceVersion
 import javax.lang.model.SourceVersion
 import javax.lang.model.element.{AnnotationMirror, AnnotationValue, VariableElement}
+import javax.lang.model.type.TypeMirror
+import scala.scalanative.annotation.stub
 
 /** A simple visitor for annotation values with default behavior
  *  appropriate for the RELEASE_6
@@ -48,6 +50,18 @@ import javax.lang.model.element.{AnnotationMirror, AnnotationValue, VariableElem
      */
     @stub
     protected def this() = ???
+
+    /** Constructor for concrete subclasses; uses the argument for the
+     *  default value.
+     */
+    @stub
+    protected def this(defaultValue: R) = ???
+
+    /** Default value to be returned; defaultAction returns this value unless the method is
+     *  overridden.
+     */
+    @stub
+    protected val DEFAULT_VALUE: R = ???
 
     /** The default action for visit methods. */
     @stub
@@ -100,4 +114,8 @@ import javax.lang.model.element.{AnnotationMirror, AnnotationValue, VariableElem
     /** Visits a string value in an annotation. */
     @stub
     def visitString(s: String, p: P): R = ???
+
+    /** Visits a type value in an annotation. */
+    @stub
+    def visitType(t: TypeMirror, p: P): R = ???
 }

@@ -2,6 +2,7 @@ package javax.management.monitor
 
 import java.lang.String
 import javax.management.ObjectName
+import scala.scalanative.annotation.stub
 
 /** Exposes the remote management interface of monitor MBeans. */
 trait MonitorMBean {
@@ -59,4 +60,8 @@ trait MonitorMBean {
     /** Starts the monitor. */
     @stub
     def start(): Unit = ???
+
+    /** Stops the monitor. */
+    @stub
+    def stop(): Unit = ???
 }

@@ -1,7 +1,8 @@
 package javax.swing.border
 
-import java.awt.{BasicStroke, Component, Insets, Paint}
+import java.awt.{BasicStroke, Component, Graphics, Insets, Paint}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A class which implements a border of an arbitrary stroke.
  *  
@@ -20,6 +21,10 @@ class StrokeBorder extends AbstractBorder {
     @stub
     def this(stroke: BasicStroke) = ???
 
+    /** Creates a border of the specified stroke and paint. */
+    @stub
+    def this(stroke: BasicStroke, paint: Paint) = ???
+
     /** Reinitializes the insets parameter
      *  with this border's current insets.
      */
@@ -37,4 +42,10 @@ class StrokeBorder extends AbstractBorder {
      */
     @stub
     def getStroke(): BasicStroke = ???
+
+    /** Paints the border for the specified component
+     *  with the specified position and size.
+     */
+    @stub
+    def paintBorder(c: Component, g: Graphics, x: Int, y: Int, width: Int, height: Int): Unit = ???
 }

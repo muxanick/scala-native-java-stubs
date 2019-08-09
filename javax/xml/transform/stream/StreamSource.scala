@@ -3,6 +3,7 @@ package javax.xml.transform.stream
 import java.io.{File, InputStream, Reader}
 import java.lang.{Object, String}
 import javax.xml.transform.Source
+import scala.scalanative.annotation.stub
 
 /** Acts as an holder for a transformation Source in the form
  *  of a stream of XML markup.
@@ -36,6 +37,10 @@ class StreamSource extends Object with Source {
     @stub
     def this(reader: Reader, systemId: String) = ???
 
+    /** Construct a StreamSource from a URL. */
+    @stub
+    def this(systemId: String) = ???
+
     /** Get the byte stream that was set with setByteStream. */
     @stub
     def getInputStream(): InputStream = ???
@@ -67,4 +72,17 @@ class StreamSource extends Object with Source {
     /** Set the system ID from a File reference. */
     @stub
     def setSystemId(f: File): Unit = ???
+
+    /** Set the system identifier for this Source. */
+    @stub
+    def setSystemId(systemId: String): Unit = ???
+}
+
+object StreamSource {
+    /** If TransformerFactory.getFeature(java.lang.String)
+     *  returns true when passed this value as an argument,
+     *  the Transformer supports Source input of this type.
+     */
+    @stub
+    val FEATURE: String = ???
 }

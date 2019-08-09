@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component, Container, Dimension, LayoutManager}
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The default layout manager for JViewport.
  *  ViewportLayout defines
@@ -24,6 +25,10 @@ import java.lang.{Object, String}
  */
 class ViewportLayout extends Object with LayoutManager with Serializable {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Adds the specified component to the layout. */
     @stub
     def addLayoutComponent(name: String, c: Component): Unit = ???
@@ -43,4 +48,8 @@ class ViewportLayout extends Object with LayoutManager with Serializable {
      */
     @stub
     def preferredLayoutSize(parent: Container): Dimension = ???
+
+    /** Removes the specified component from the layout. */
+    @stub
+    def removeLayoutComponent(c: Component): Unit = ???
 }

@@ -1,5 +1,8 @@
 package java.rmi.server
 
+import java.net.ServerSocket
+import scala.scalanative.annotation.stub
+
 /** An RMIServerSocketFactory instance is used by the RMI runtime
  *  in order to obtain server sockets for RMI calls.  A remote object can be
  *  associated with an RMIServerSocketFactory when it is
@@ -23,4 +26,10 @@ package java.rmi.server
  *  Object.equals implementation).
  */
 trait RMIServerSocketFactory {
+
+    /** Create a server socket on the specified port (port 0 indicates
+     *  an anonymous port).
+     */
+    @stub
+    def createServerSocket(port: Int): ServerSocket = ???
 }

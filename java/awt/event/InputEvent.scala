@@ -3,6 +3,7 @@ package java.awt.event
 import java.awt.AWTEvent
 import java.lang.{Object, String}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** The root event class for all component-level input events.
  * 
@@ -46,6 +47,9 @@ abstract class InputEvent extends ComponentEvent {
 
     /** Returns whether or not the Meta modifier is down on this event. */
     def isMetaDown(): Boolean
+
+    /** Returns whether or not the Shift modifier is down on this event. */
+    def isShiftDown(): Boolean
 }
 
 object InputEvent {
@@ -108,6 +112,10 @@ object InputEvent {
     /** The Shift key extended modifier constant. */
     @stub
     val SHIFT_DOWN_MASK: Int = ???
+
+    /** The Shift key modifier constant. */
+    @stub
+    val SHIFT_MASK: Int = ???
 
     /** A method to obtain a mask for any existing mouse button. */
     @stub

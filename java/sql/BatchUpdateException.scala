@@ -1,6 +1,7 @@
 package java.sql
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** The subclass of SQLException thrown when an error
  *  occurs during a batch update operation.  In addition to the
@@ -99,9 +100,21 @@ class BatchUpdateException extends SQLException {
     @stub
     def this(reason: String, SQLState: String, vendorCode: Int, updateCounts: Array[Long], cause: Throwable) = ???
 
+    /** Constructs a BatchUpdateException object initialized with
+     *   a given cause.
+     */
+    @stub
+    def this(cause: Throwable) = ???
+
     /** Retrieves the update count for each update statement in the batch
      *  update that executed successfully before this exception occurred.
      */
     @stub
     def getLargeUpdateCounts(): Array[Long] = ???
+
+    /** Retrieves the update count for each update statement in the batch
+     *  update that executed successfully before this exception occurred.
+     */
+    @stub
+    def getUpdateCounts(): Array[Int] = ???
 }

@@ -3,6 +3,7 @@ package java.security
 import java.io.Serializable
 import java.lang.Object
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** This class represents a heterogeneous collection of Permissions. That is,
  *  it contains different types of Permission objects, organized into
@@ -32,6 +33,10 @@ import java.util.Enumeration
  */
 final class Permissions extends PermissionCollection with Serializable {
 
+    /** Creates a new Permissions object containing no PermissionCollections. */
+    @stub
+    def this() = ???
+
     /** Adds a permission object to the PermissionCollection for the class the
      *  permission belongs to.
      */
@@ -43,4 +48,11 @@ final class Permissions extends PermissionCollection with Serializable {
      */
     @stub
     def elements(): Enumeration[Permission] = ???
+
+    /** Checks to see if this object's PermissionCollection for permissions of
+     *  the specified permission's class implies the permissions
+     *  expressed in the permission object.
+     */
+    @stub
+    def implies(permission: Permission): Boolean = ???
 }

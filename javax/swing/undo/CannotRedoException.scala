@@ -1,6 +1,7 @@
 package javax.swing.undo
 
 import java.lang.{Exception, Object, RuntimeException, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Thrown when an UndoableEdit is told to redo() and can't.
  *  
@@ -14,4 +15,8 @@ import java.lang.{Exception, Object, RuntimeException, Throwable}
  *  Please see XMLEncoder.
  */
 class CannotRedoException extends RuntimeException {
+
+    /**  */
+    @stub
+    def this() = ???
 }

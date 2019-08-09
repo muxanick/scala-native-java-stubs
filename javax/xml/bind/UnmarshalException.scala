@@ -1,6 +1,7 @@
 package javax.xml.bind
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception indicates that an error has occurred while performing
  *  an unmarshal operation that prevents the JAXB Provider from completing
@@ -34,4 +35,8 @@ class UnmarshalException extends JAXBException {
      */
     @stub
     def this(message: String, exception: Throwable) = ???
+
+    /** Construct an UnmarshalException with a linkedException. */
+    @stub
+    def this(exception: Throwable) = ???
 }

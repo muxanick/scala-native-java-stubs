@@ -2,6 +2,7 @@ package java.awt.geom
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A cubic parametric curve segment specified with
  *  float coordinates.
@@ -13,6 +14,12 @@ object CubicCurve2D.Float extends CubicCurve2D with Serializable {
      */
     @stub
     def Float() = ???
+
+    /** Constructs and initializes a CubicCurve2D from
+     *  the specified float coordinates.
+     */
+    @stub
+    def Float(x1: Float, y1: Float, ctrlx1: Float, ctrly1: Float, ctrlx2: Float, ctrly2: Float, x2: Float, y2: Float) = ???
 
     /** The X coordinate of the first control point
      *  of the cubic curve segment.
@@ -55,6 +62,12 @@ object CubicCurve2D.Float extends CubicCurve2D with Serializable {
      */
     @stub
     val y1: Float = ???
+
+    /** The Y coordinate of the end point
+     *  of the cubic curve segment.
+     */
+    @stub
+    val y2: Float = ???
 
     /** Returns a high precision and more accurate bounding box of
      *  the Shape than the getBounds method.
@@ -119,4 +132,10 @@ object CubicCurve2D.Float extends CubicCurve2D with Serializable {
      */
     @stub
     def setCurve(x1: Double, y1: Double, ctrlx1: Double, ctrly1: Double, ctrlx2: Double, ctrly2: Double, x2: Double, y2: Double): Unit = ???
+
+    /** Sets the location of the end points and control points
+     *  of this curve to the specified float coordinates.
+     */
+    @stub
+    def setCurve(x1: Float, y1: Float, ctrlx1: Float, ctrly1: Float, ctrlx2: Float, ctrly2: Float, x2: Float, y2: Float): Unit = ???
 }

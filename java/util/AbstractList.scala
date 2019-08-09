@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class provides a skeletal implementation of the List
  *  interface to minimize the effort required to implement this interface
@@ -40,6 +41,13 @@ import java.lang.Object
  *  Java Collections Framework.
  */
 abstract class AbstractList[E] extends AbstractCollection[E] with List[E] {
+
+    /** Sole constructor. */
+    @stub
+    protected def this() = ???
+
+    /** The number of times this list has been structurally modified. */
+    protected val modCount: Int
 
     /** Appends the specified element to the end of this list (optional
      *  operation).
@@ -105,4 +113,9 @@ abstract class AbstractList[E] extends AbstractCollection[E] with List[E] {
      *  specified element (optional operation).
      */
     def set(index: Int, element: E): E
+
+    /** Returns a view of the portion of this list between the specified
+     *  fromIndex, inclusive, and toIndex, exclusive.
+     */
+    def subList(fromIndex: Int, toIndex: Int): List[E]
 }

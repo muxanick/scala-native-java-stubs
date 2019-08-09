@@ -7,6 +7,7 @@ import java.lang.Object
 import javax.accessibility.AccessibleContext
 import javax.swing.{ComboBoxModel, JComboBox, JComponent, JList, JPopupMenu, JScrollPane, Timer}
 import javax.swing.event.{ListDataListener, ListSelectionListener}
+import scala.scalanative.annotation.stub
 
 /** This is a basic implementation of the ComboPopup interface.
  * 
@@ -28,6 +29,10 @@ import javax.swing.event.{ListDataListener, ListSelectionListener}
  *  Please see XMLEncoder.
  */
 class BasicComboPopup extends JPopupMenu with ComboPopup {
+
+    /**  */
+    @stub
+    def this(combo: JComboBox) = ???
 
     /** As of Java 2 platform v 1.4, this class is now obsolete and is only included for
      *  backwards API compatibility.
@@ -74,6 +79,12 @@ class BasicComboPopup extends JPopupMenu with ComboPopup {
      */
     @stub
     protected object ListSelectionHandler extends BasicComboPopup.ListSelectionHandler
+
+    /** This listener watches for bound properties that have changed in the
+     *  combo box.
+     */
+    @stub
+    protected object PropertyChangeHandler extends BasicComboPopup.PropertyChangeHandler
 
     /** This protected field is implementation specific. */
     @stub
@@ -138,6 +149,12 @@ class BasicComboPopup extends JPopupMenu with ComboPopup {
     /** This protected field is implementation specific. */
     @stub
     protected val scroller: JScrollPane = ???
+
+    /** As of Java 2 platform v1.4 this previously undocumented field is no
+     *  longer used.
+     */
+    @stub
+    protected val valueIsAdjusting: Boolean = ???
 
     /** This protected method is implementation specific and should be private. */
     @stub
@@ -338,6 +355,10 @@ class BasicComboPopup extends JPopupMenu with ComboPopup {
     /**  */
     @stub
     protected def uninstallKeyboardActions(): Unit = ???
+
+    /** A utility method used by the event listeners. */
+    @stub
+    protected def updateListBoxSelectionForEvent(anEvent: MouseEvent, shouldScroll: Boolean): Unit = ???
 }
 
 object BasicComboPopup {

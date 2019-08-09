@@ -2,6 +2,7 @@ package javax.imageio.event
 
 import java.util.EventListener
 import javax.imageio.ImageWriter
+import scala.scalanative.annotation.stub
 
 /** An interface used by ImageWriter implementations to notify
  *  callers of their image writing methods of progress.
@@ -36,4 +37,10 @@ trait IIOWriteProgressListener extends EventListener {
     /** Reports that a thumbnail write operation is beginning. */
     @stub
     def thumbnailStarted(source: ImageWriter, imageIndex: Int, thumbnailIndex: Int): Unit = ???
+
+    /** Reports that a write has been aborted via the writer's
+     *  abort method.
+     */
+    @stub
+    def writeAborted(source: ImageWriter): Unit = ???
 }

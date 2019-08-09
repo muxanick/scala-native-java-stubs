@@ -2,6 +2,7 @@ package java.beans
 
 import java.awt.{Component, Graphics, Rectangle}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A PropertyEditor class provides support for GUIs that want to
  *  allow users to edit a property value of a given type.
@@ -82,4 +83,8 @@ trait PropertyEditor {
     /** Set (or change) the object that is to be edited. */
     @stub
     def setValue(value: Object): Unit = ???
+
+    /** Determines whether this property editor supports a custom editor. */
+    @stub
+    def supportsCustomEditor(): Boolean = ???
 }

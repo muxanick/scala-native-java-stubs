@@ -1,8 +1,9 @@
 package javax.swing.border
 
-import java.awt.{Component, Component.BaselineResizeBehavior, Insets, Rectangle}
+import java.awt.{Component, Component.BaselineResizeBehavior, Graphics, Insets, Rectangle}
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A class that implements an empty border with no size.
  *  This provides a convenient base class from which other border
@@ -18,6 +19,10 @@ import java.lang.Object
  *  Please see XMLEncoder.
  */
 abstract class AbstractBorder extends Object with Border with Serializable {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the baseline. */
     def getBaseline(c: Component, width: Int, height: Int): Int
@@ -41,6 +46,9 @@ abstract class AbstractBorder extends Object with Border with Serializable {
 
     /** This default implementation returns false. */
     def isBorderOpaque(): Boolean
+
+    /** This default implementation does no painting. */
+    def paintBorder(c: Component, g: Graphics, x: Int, y: Int, width: Int, height: Int): Unit
 }
 
 object AbstractBorder {

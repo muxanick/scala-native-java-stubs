@@ -2,6 +2,7 @@ package java.beans
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This is a utility class that can be used by beans that support constrained
  *  properties.  It manages a list of listeners and dispatches
@@ -47,6 +48,10 @@ import java.lang.{Object, String}
  *  non-serializable listeners will be skipped during serialization.
  */
 class VetoableChangeSupport extends Object with Serializable {
+
+    /** Constructs a VetoableChangeSupport object. */
+    @stub
+    def this(sourceBean: Object) = ???
 
     /** Add a VetoableChangeListener for a specific property. */
     @stub
@@ -105,4 +110,8 @@ class VetoableChangeSupport extends Object with Serializable {
     /** Remove a VetoableChangeListener for a specific property. */
     @stub
     def removeVetoableChangeListener(propertyName: String, listener: VetoableChangeListener): Unit = ???
+
+    /** Remove a VetoableChangeListener from the listener list. */
+    @stub
+    def removeVetoableChangeListener(listener: VetoableChangeListener): Unit = ???
 }

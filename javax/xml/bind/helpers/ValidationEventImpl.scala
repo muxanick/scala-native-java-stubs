@@ -2,6 +2,7 @@ package javax.xml.bind.helpers
 
 import java.lang.{Object, String, Throwable}
 import javax.xml.bind.{ValidationEvent, ValidationEventLocator}
+import scala.scalanative.annotation.stub
 
 /** Default implementation of the ValidationEvent interface.
  * 
@@ -15,6 +16,10 @@ class ValidationEventImpl extends Object with ValidationEvent {
     /** Create a new ValidationEventImpl. */
     @stub
     def this(_severity: Int, _message: String, _locator: ValidationEventLocator) = ???
+
+    /** Create a new ValidationEventImpl. */
+    @stub
+    def this(_severity: Int, _message: String, _locator: ValidationEventLocator, _linkedException: Throwable) = ???
 
     /** Retrieve the linked exception for this warning/error. */
     @stub
@@ -47,4 +52,10 @@ class ValidationEventImpl extends Object with ValidationEvent {
     /** Set the severity field of this event. */
     @stub
     def setSeverity(_severity: Int): Unit = ???
+
+    /** Returns a string representation of this object in a format
+     *  helpful to debugging.
+     */
+    @stub
+    def toString(): String = ???
 }

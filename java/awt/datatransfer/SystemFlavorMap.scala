@@ -2,6 +2,7 @@ package java.awt.datatransfer
 
 import java.lang.{Object, String}
 import java.util.{List, Map}
+import scala.scalanative.annotation.stub
 
 /** The SystemFlavorMap is a configurable map between "natives" (Strings), which
  *  correspond to platform-specific data formats, and "flavors" (DataFlavors),
@@ -57,6 +58,14 @@ final class SystemFlavorMap extends Object with FlavorMap with FlavorTable {
      */
     @stub
     def setFlavorsForNative(nat: String, flavors: Array[DataFlavor]): Unit = ???
+
+    /** Discards the current mappings for the specified DataFlavor
+     *  and all DataFlavors equal to the specified
+     *  DataFlavor, and creates new mappings to the
+     *  specified String natives.
+     */
+    @stub
+    def setNativesForFlavor(flav: DataFlavor, natives: Array[String]): Unit = ???
 }
 
 object SystemFlavorMap {

@@ -1,6 +1,7 @@
 package java.nio.channels
 
 import java.nio.ByteBuffer
+import scala.scalanative.annotation.stub
 
 /** A byte channel that maintains a current position and allows the
  *  position to be changed.
@@ -42,4 +43,8 @@ trait SeekableByteChannel extends ByteChannel {
      */
     @stub
     def truncate(size: Long): SeekableByteChannel = ???
+
+    /** Writes a sequence of bytes to this channel from the given buffer. */
+    @stub
+    def write(src: ByteBuffer): Int = ???
 }

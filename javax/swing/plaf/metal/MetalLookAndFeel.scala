@@ -5,6 +5,7 @@ import java.lang.{Object, String}
 import javax.swing.{Icon, JComponent, LayoutStyle, LookAndFeel, UIDefaults}
 import javax.swing.plaf.{ColorUIResource, FontUIResource}
 import javax.swing.plaf.basic.BasicLookAndFeel
+import scala.scalanative.annotation.stub
 
 /** The Java Look and Feel, otherwise known as Metal.
  *  
@@ -33,6 +34,10 @@ import javax.swing.plaf.basic.BasicLookAndFeel
  *  Please see XMLEncoder.
  */
 class MetalLookAndFeel extends BasicLookAndFeel {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Ensures the current MetalTheme is non-null. */
     @stub
@@ -297,4 +302,8 @@ object MetalLookAndFeel {
      */
     @stub
     def getWindowTitleInactiveForeground(): ColorUIResource = ???
+
+    /** Set the theme used by MetalLookAndFeel. */
+    @stub
+    def setCurrentTheme(theme: MetalTheme): Unit = ???
 }

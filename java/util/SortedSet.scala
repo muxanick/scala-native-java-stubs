@@ -1,5 +1,7 @@
 package java.util
 
+import scala.scalanative.annotation.stub
+
 /** A Set that further provides a total ordering on its elements.
  *  The elements are ordered using their natural
  *  ordering, or by a Comparator typically provided at sorted
@@ -98,4 +100,10 @@ trait SortedSet[E] extends Set[E] {
      */
     @stub
     def subSet(fromElement: E, toElement: E): SortedSet[E] = ???
+
+    /** Returns a view of the portion of this set whose elements are
+     *  greater than or equal to fromElement.
+     */
+    @stub
+    def tailSet(fromElement: E): SortedSet[E] = ???
 }

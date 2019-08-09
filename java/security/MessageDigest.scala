@@ -1,6 +1,8 @@
 package java.security
 
 import java.lang.{Object, String}
+import java.nio.ByteBuffer
+import scala.scalanative.annotation.stub
 
 /** This MessageDigest class provides applications the functionality of a
  *  message digest algorithm, such as SHA-1 or SHA-256.
@@ -62,6 +64,10 @@ import java.lang.{Object, String}
  */
 abstract class MessageDigest extends MessageDigestSpi {
 
+    /** Creates a message digest with the specified algorithm name. */
+    @stub
+    protected def this(algorithm: String) = ???
+
     /** Returns a clone if the implementation is cloneable. */
     def clone(): Object
 
@@ -109,6 +115,9 @@ abstract class MessageDigest extends MessageDigestSpi {
      *  at the specified offset.
      */
     def update(input: Array[Byte], offset: Int, len: Int): Unit
+
+    /** Update the digest using the specified ByteBuffer. */
+    def update(input: ByteBuffer): Unit
 }
 
 object MessageDigest {

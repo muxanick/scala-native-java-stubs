@@ -3,6 +3,7 @@ package java.nio.channels
 import java.lang.Object
 import java.nio.channels.spi.AsynchronousChannelProvider
 import java.util.concurrent.{ExecutorService, ThreadFactory, TimeUnit}
+import scala.scalanative.annotation.stub
 
 /** A grouping of asynchronous channels for the purpose of resource sharing.
  * 
@@ -93,6 +94,10 @@ import java.util.concurrent.{ExecutorService, ThreadFactory, TimeUnit}
  */
 abstract class AsynchronousChannelGroup extends Object {
 
+    /** Initialize a new instance of this class. */
+    @stub
+    protected def this(provider: AsynchronousChannelProvider) = ???
+
     /** Awaits termination of the group. */
     def awaitTermination(timeout: Long, unit: TimeUnit): Boolean
 
@@ -122,4 +127,8 @@ object AsynchronousChannelGroup {
     /** Creates an asynchronous channel group with a fixed thread pool. */
     @stub
     def withFixedThreadPool(nThreads: Int, threadFactory: ThreadFactory): AsynchronousChannelGroup = ???
+
+    /** Creates an asynchronous channel group with a given thread pool. */
+    @stub
+    def withThreadPool(executor: ExecutorService): AsynchronousChannelGroup = ???
 }

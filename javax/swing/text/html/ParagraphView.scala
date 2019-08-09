@@ -3,12 +3,17 @@ package javax.swing.text.html
 import java.awt.{Graphics, Shape}
 import java.lang.Object
 import javax.swing.SizeRequirements
-import javax.swing.text.{AttributeSet, BoxView, CompositeView, FlowView, ParagraphView, View}
+import javax.swing.text.{AttributeSet, BoxView, CompositeView, Element, FlowView, ParagraphView, View}
+import scala.scalanative.annotation.stub
 
 /** Displays the a paragraph, and uses css attributes for its
  *  configuration.
  */
 class ParagraphView extends ParagraphView {
+
+    /** Constructs a ParagraphView for the given element. */
+    @stub
+    def this(elem: Element) = ???
 
     /** Calculate the needs for the paragraph along the minor axis. */
     @stub
@@ -53,4 +58,10 @@ class ParagraphView extends ParagraphView {
     /** Establishes the parent view for this view. */
     @stub
     def setParent(parent: View): Unit = ???
+
+    /** Sets up the paragraph from css attributes instead of
+     *  the values found in StyleConstants (i.e.
+     */
+    @stub
+    protected def setPropertiesFromAttributes(): Unit = ???
 }

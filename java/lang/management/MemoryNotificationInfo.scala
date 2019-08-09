@@ -2,6 +2,7 @@ package java.lang.management
 
 import java.lang.{Object, String}
 import javax.management.openmbean.CompositeData
+import scala.scalanative.annotation.stub
 
 /** The information about a memory notification.
  * 
@@ -74,6 +75,10 @@ import javax.management.openmbean.CompositeData
  */
 class MemoryNotificationInfo extends Object {
 
+    /** Constructs a MemoryNotificationInfo object. */
+    @stub
+    def this(poolName: String, usage: MemoryUsage, count: Long) = ???
+
     /** Returns the number of times that the memory usage has crossed
      *  a threshold when the notification was constructed.
      */
@@ -83,6 +88,12 @@ class MemoryNotificationInfo extends Object {
     /** Returns the name of the memory pool that triggers this notification. */
     @stub
     def getPoolName(): String = ???
+
+    /** Returns the memory usage of the memory pool
+     *  when this notification was constructed.
+     */
+    @stub
+    def getUsage(): MemoryUsage = ???
 }
 
 object MemoryNotificationInfo {
@@ -95,6 +106,14 @@ object MemoryNotificationInfo {
      */
     @stub
     val MEMORY_COLLECTION_THRESHOLD_EXCEEDED: String = ???
+
+    /** Notification type denoting that
+     *  the memory usage of a memory pool has
+     *  reached or exceeded its
+     *   usage threshold value.
+     */
+    @stub
+    val MEMORY_THRESHOLD_EXCEEDED: String = ???
 
     /** Returns a MemoryNotificationInfo object represented by the
      *  given CompositeData.

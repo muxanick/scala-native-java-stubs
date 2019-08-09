@@ -3,6 +3,7 @@ package javax.naming.spi
 import java.io.Serializable
 import java.lang.{Object, String}
 import javax.naming.Name
+import scala.scalanative.annotation.stub
 
 /** This class represents the result of resolution of a name.
  *  It contains the object to which name was resolved, and the portion
@@ -26,9 +27,19 @@ class ResolveResult extends Object with Serializable {
     @stub
     def this(robj: Object, rname: Name) = ???
 
+    /** Constructs a new instance of ResolveResult consisting of
+     *  the resolved object and the remaining unresolved component.
+     */
+    @stub
+    def this(robj: Object, rcomp: String) = ???
+
     /** Field containing the remaining name yet to be resolved. */
     @stub
     protected val remainingName: Name = ???
+
+    /** Field containing the Object that was resolved to successfully. */
+    @stub
+    protected val resolvedObj: Object = ???
 
     /** Adds a single component to the end of remaining name. */
     @stub
@@ -49,4 +60,8 @@ class ResolveResult extends Object with Serializable {
     /** Sets the remaining name field of this result to name. */
     @stub
     def setRemainingName(name: Name): Unit = ???
+
+    /** Sets the resolved Object field of this result to obj. */
+    @stub
+    def setResolvedObj(obj: Object): Unit = ???
 }

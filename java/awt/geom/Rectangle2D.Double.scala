@@ -1,7 +1,8 @@
 package java.awt.geom
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The Double class defines a rectangle specified in
  *  double coordinates.
@@ -14,6 +15,12 @@ object Rectangle2D.Double extends Rectangle2D with Serializable {
     @stub
     def Double() = ???
 
+    /** Constructs and initializes a Rectangle2D
+     *  from the specified double coordinates.
+     */
+    @stub
+    def Double(x: Double, y: Double, w: Double, h: Double) = ???
+
     /** The height of this Rectangle2D. */
     @stub
     val height: Double = ???
@@ -25,6 +32,10 @@ object Rectangle2D.Double extends Rectangle2D with Serializable {
     /** The X coordinate of this Rectangle2D. */
     @stub
     val x: Double = ???
+
+    /** The Y coordinate of this Rectangle2D. */
+    @stub
+    val y: Double = ???
 
     /** Returns a new Rectangle2D object representing the
      *  intersection of this Rectangle2D with the specified
@@ -91,4 +102,10 @@ object Rectangle2D.Double extends Rectangle2D with Serializable {
      */
     @stub
     def setRect(r: Rectangle2D): Unit = ???
+
+    /** Returns the String representation of this
+     *  Rectangle2D.
+     */
+    @stub
+    def toString(): String = ???
 }

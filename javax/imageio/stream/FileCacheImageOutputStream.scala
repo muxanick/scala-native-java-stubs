@@ -1,12 +1,20 @@
 package javax.imageio.stream
 
+import java.io.{File, OutputStream}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An implementation of ImageOutputStream that writes its
  *  output to a regular OutputStream.  A file is used to
  *  cache data until it is flushed to the output stream.
  */
 class FileCacheImageOutputStream extends ImageOutputStreamImpl {
+
+    /** Constructs a FileCacheImageOutputStream that will write
+     *  to a given outputStream.
+     */
+    @stub
+    def this(stream: OutputStream, cacheDir: File) = ???
 
     /** Closes this FileCacheImageOutputStream. */
     @stub
@@ -67,4 +75,8 @@ class FileCacheImageOutputStream extends ImageOutputStreamImpl {
      */
     @stub
     def write(b: Array[Byte], off: Int, len: Int): Unit = ???
+
+    /** Writes a single byte to the stream at the current position. */
+    @stub
+    def write(b: Int): Unit = ???
 }

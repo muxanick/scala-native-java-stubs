@@ -2,6 +2,8 @@ package java.nio.file
 
 import java.io.Closeable
 import java.lang.Iterable
+import java.util.Iterator
+import scala.scalanative.annotation.stub
 
 /** An object to iterate over the entries in a directory. A directory stream
  *  allows for the convenient use of the for-each construct to iterate over a
@@ -83,4 +85,16 @@ import java.lang.Iterable
  *  
  */
 trait DirectoryStream[T] extends Closeable with Iterable[T] {
+
+    /** Returns the iterator associated with this DirectoryStream. */
+    @stub
+    def iterator(): Iterator[T] = ???
+}
+
+object DirectoryStream {
+    /** An interface that is implemented by objects that decide if a directory
+     *  entry should be accepted or filtered.
+     */
+    @stub
+    val DirectoryStream.Filter[T]: trait = ???
 }

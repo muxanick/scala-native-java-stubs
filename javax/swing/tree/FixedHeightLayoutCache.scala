@@ -4,6 +4,7 @@ import java.awt.Rectangle
 import java.lang.Object
 import java.util.Enumeration
 import javax.swing.event.TreeModelEvent
+import scala.scalanative.annotation.stub
 
 /** NOTE: This will become more open in a future release.
  *  
@@ -17,6 +18,10 @@ import javax.swing.event.TreeModelEvent
  *  Please see XMLEncoder.
  */
 class FixedHeightLayoutCache extends AbstractLayoutCache {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns a rectangle giving the bounds needed to draw path. */
     @stub
@@ -103,4 +108,10 @@ class FixedHeightLayoutCache extends AbstractLayoutCache {
     /** Invoked after nodes have been removed from the tree. */
     @stub
     def treeNodesRemoved(e: TreeModelEvent): Unit = ???
+
+    /** Invoked after the tree has drastically changed structure from a
+     *  given node down.
+     */
+    @stub
+    def treeStructureChanged(e: TreeModelEvent): Unit = ???
 }

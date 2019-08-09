@@ -1,6 +1,7 @@
 package java.util.concurrent
 
 import java.lang.Runnable
+import scala.scalanative.annotation.stub
 
 /** An ExecutorService that can schedule commands to run after a given
  *  delay, or to execute periodically.
@@ -75,4 +76,12 @@ trait ScheduledExecutorService extends ExecutorService {
      */
     @stub
     def scheduleAtFixedRate(command: Runnable, initialDelay: Long, period: Long, unit: TimeUnit): ScheduledFuture[_] = ???
+
+    /** Creates and executes a periodic action that becomes enabled first
+     *  after the given initial delay, and subsequently with the
+     *  given delay between the termination of one execution and the
+     *  commencement of the next.
+     */
+    @stub
+    def scheduleWithFixedDelay(command: Runnable, initialDelay: Long, delay: Long, unit: TimeUnit): ScheduledFuture[_] = ???
 }

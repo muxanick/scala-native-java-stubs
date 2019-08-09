@@ -1,5 +1,7 @@
 package javax.accessibility
 
+import scala.scalanative.annotation.stub
+
 /** Class AccessibleTable describes a user-interface component that
  *  presents data in a two-dimensional table format.
  */
@@ -100,4 +102,8 @@ trait AccessibleTable {
     /** Sets the row headers. */
     @stub
     def setAccessibleRowHeader(table: AccessibleTable): Unit = ???
+
+    /** Sets the summary description of the table */
+    @stub
+    def setAccessibleSummary(a: Accessible): Unit = ???
 }

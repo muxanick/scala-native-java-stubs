@@ -2,12 +2,17 @@ package java.awt
 
 import java.awt.image.{ImageObserver, ImageProducer}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The abstract class Image is the superclass of all
  *  classes that represent graphical images. The image must be
  *  obtained in a platform-specific manner.
  */
 abstract class Image extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Priority for accelerating this image. */
     protected val accelerationPriority: Float
@@ -41,6 +46,9 @@ abstract class Image extends Object {
 
     /** Determines the width of the image. */
     def getWidth(observer: ImageObserver): Int
+
+    /** Sets a hint for this image about how important acceleration is. */
+    def setAccelerationPriority(priority: Float): Unit
 }
 
 object Image {
@@ -69,4 +77,10 @@ object Image {
      */
     @stub
     val SCALE_SMOOTH: Int = ???
+
+    /** The UndefinedProperty object should be returned whenever a
+     *  property which was not defined for a particular image is fetched.
+     */
+    @stub
+    val UndefinedProperty: Object = ???
 }

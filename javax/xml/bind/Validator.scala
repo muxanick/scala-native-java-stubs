@@ -1,6 +1,7 @@
 package javax.xml.bind
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** As of JAXB 2.0, this class is deprecated and optional.
  *  
@@ -159,4 +160,11 @@ trait Validator {
      */
     @stub
     def validate(subrootObj: Object): Boolean = ???
+
+    /** Deprecated. 
+     * since JAXB2.0
+     * 
+     */
+    @stub
+    def validateRoot(rootObj: Object): Boolean = ???
 }

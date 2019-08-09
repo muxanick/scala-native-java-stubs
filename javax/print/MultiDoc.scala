@@ -1,5 +1,7 @@
 package javax.print
 
+import scala.scalanative.annotation.stub
+
 /** Interface MultiDoc specifies the interface for an object that supplies more
  *  than one piece of print data for a Print Job. "Doc" is a short,
  *  easy-to-pronounce term that means "a piece of print data," and a "multidoc"
@@ -81,4 +83,10 @@ trait MultiDoc {
     /** Obtain the current doc object. */
     @stub
     def getDoc(): Doc = ???
+
+    /** Go to the multidoc object that contains the next doc object in the
+     *  sequence of doc objects.
+     */
+    @stub
+    def next(): MultiDoc = ???
 }

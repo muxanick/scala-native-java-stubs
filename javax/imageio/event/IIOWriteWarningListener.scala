@@ -1,6 +1,9 @@
 package javax.imageio.event
 
+import java.lang.String
 import java.util.EventListener
+import javax.imageio.ImageWriter
+import scala.scalanative.annotation.stub
 
 /** An interface used by ImageWriter implementations to
  *  notify callers of their image and thumbnail reading methods of
@@ -13,4 +16,8 @@ import java.util.EventListener
  *  ImageWriter to provide localized messages.
  */
 trait IIOWriteWarningListener extends EventListener {
+
+    /** Reports the occurrence of a non-fatal error in encoding. */
+    @stub
+    def warningOccurred(source: ImageWriter, imageIndex: Int, warning: String): Unit = ???
 }

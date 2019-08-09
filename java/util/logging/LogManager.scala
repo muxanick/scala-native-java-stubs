@@ -4,6 +4,7 @@ import java.beans.PropertyChangeListener
 import java.io.InputStream
 import java.lang.{Object, String}
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** There is a single global LogManager object that is used to
  *  maintain a set of shared state about Loggers and log services.
@@ -107,6 +108,10 @@ import java.util.Enumeration
  */
 class LogManager extends Object {
 
+    /** Protected constructor. */
+    @stub
+    protected def this() = ???
+
     /** Add a named logger. */
     @stub
     def addLogger(logger: Logger): Boolean = ???
@@ -160,9 +165,20 @@ class LogManager extends Object {
      */
     @stub
     def removePropertyChangeListener(l: PropertyChangeListener): Unit = ???
+
+    /** Reset the logging configuration. */
+    @stub
+    def reset(): Unit = ???
 }
 
 object LogManager {
+    /** String representation of the
+     *  ObjectName for the management interface
+     *  for the logging facility.
+     */
+    @stub
+    val LOGGING_MXBEAN_NAME: String = ???
+
     /** Returns LoggingMXBean for managing loggers. */
     @stub
     def getLoggingMXBean(): LoggingMXBean = ???

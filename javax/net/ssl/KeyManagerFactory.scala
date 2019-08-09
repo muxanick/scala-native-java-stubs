@@ -2,6 +2,7 @@ package javax.net.ssl
 
 import java.lang.{Object, String}
 import java.security.{KeyStore, Provider}
+import scala.scalanative.annotation.stub
 
 /** This class acts as a factory for key managers based on a
  *  source of key material. Each key manager manages a specific
@@ -9,6 +10,10 @@ import java.security.{KeyStore, Provider}
  *  material is based on a KeyStore and/or provider specific sources.
  */
 class KeyManagerFactory extends Object {
+
+    /** Creates a KeyManagerFactory object. */
+    @stub
+    protected def this(factorySpi: KeyManagerFactorySpi, provider: Provider, algorithm: String) = ???
 
     /** Returns the algorithm name of this KeyManagerFactory object. */
     @stub
@@ -25,6 +30,12 @@ class KeyManagerFactory extends Object {
     /** Initializes this factory with a source of key material. */
     @stub
     def init(ks: KeyStore, password: Array[Char]): Unit = ???
+
+    /** Initializes this factory with a source of provider-specific
+     *  key material.
+     */
+    @stub
+    def init(spec: ManagerFactoryParameters): Unit = ???
 }
 
 object KeyManagerFactory {

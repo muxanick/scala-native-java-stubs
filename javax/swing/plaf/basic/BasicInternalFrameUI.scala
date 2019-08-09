@@ -7,9 +7,14 @@ import java.lang.Object
 import javax.swing.{DesktopManager, JComponent, JInternalFrame, KeyStroke}
 import javax.swing.event.{MouseInputAdapter, MouseInputListener}
 import javax.swing.plaf.{ComponentUI, InternalFrameUI}
+import scala.scalanative.annotation.stub
 
 /** A basic L&F implementation of JInternalFrame. */
 class BasicInternalFrameUI extends InternalFrameUI {
+
+    /**  */
+    @stub
+    def this(b: JInternalFrame) = ???
 
     /**  */
     @stub
@@ -30,6 +35,10 @@ class BasicInternalFrameUI extends InternalFrameUI {
     /**  */
     @stub
     object InternalFrameLayout extends BasicInternalFrameUI.InternalFrameLayout
+
+    /**  */
+    @stub
+    object InternalFramePropertyChangeListener extends BasicInternalFrameUI.InternalFramePropertyChangeListener
 
     /**  */
     @stub
@@ -77,6 +86,10 @@ class BasicInternalFrameUI extends InternalFrameUI {
     /**  */
     @stub
     protected val titlePane: BasicInternalFrameTitlePane = ???
+
+    /**  */
+    @stub
+    protected val westPane: JComponent = ???
 
     /** This method is called when the frame becomes selected. */
     @stub
@@ -277,6 +290,12 @@ class BasicInternalFrameUI extends InternalFrameUI {
     /**  */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicInternalFrameUI {

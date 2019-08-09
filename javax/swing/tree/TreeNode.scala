@@ -1,6 +1,7 @@
 package javax.swing.tree
 
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** Defines the requirements for an object that can be used as a
  *  tree node in a JTree.
@@ -42,4 +43,8 @@ trait TreeNode {
     /** Returns the parent TreeNode of the receiver. */
     @stub
     def getParent(): TreeNode = ???
+
+    /** Returns true if the receiver is a leaf. */
+    @stub
+    def isLeaf(): Boolean = ???
 }

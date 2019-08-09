@@ -1,6 +1,7 @@
 package javax.net.ssl
 
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** A SSLSessionContext represents a set of
  *  SSLSessions associated with a single entity. For example,
@@ -51,4 +52,10 @@ trait SSLSessionContext {
      */
     @stub
     def setSessionCacheSize(size: Int): Unit = ???
+
+    /** Sets the timeout limit for SSLSession objects grouped
+     *  under this SSLSessionContext.
+     */
+    @stub
+    def setSessionTimeout(seconds: Int): Unit = ???
 }

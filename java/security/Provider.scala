@@ -2,8 +2,9 @@ package java.security
 
 import java.io.InputStream
 import java.lang.{Object, String}
-import java.util.{Dictionary, Enumeration, Hashtable, Map, Map.Entry, Properties, Set}
+import java.util.{Collection, Dictionary, Enumeration, Hashtable, Map, Map.Entry, Properties, Set}
 import java.util.function.{BiConsumer, BiFunction, Function}
+import scala.scalanative.annotation.stub
 
 /** This class represents a "provider" for the
  *  Java Security API, where a provider implements some or all parts of
@@ -52,6 +53,12 @@ import java.util.function.{BiConsumer, BiFunction, Function}
  *  
  */
 abstract class Provider extends Properties {
+
+    /** Constructs a provider with the specified name, version number,
+     *  and information.
+     */
+    @stub
+    protected def this(name: String, version: Double, info: String) = ???
 
     /** Clears this provider so that it no longer contains the properties
      *  used to look up facilities implemented by the provider.
@@ -192,4 +199,15 @@ abstract class Provider extends Properties {
      *  of this provider.
      */
     def toString(): String
+
+    /** Returns an unmodifiable Collection view of the property values
+     *  contained in this provider.
+     */
+    def values(): Collection[Object]
+}
+
+object Provider {
+    /** The description of a security service. */
+    @stub
+    object Service extends Provider.Service
 }

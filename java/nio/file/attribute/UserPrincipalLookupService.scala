@@ -1,6 +1,7 @@
 package java.nio.file.attribute
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** An object to lookup user and group principals by name. A UserPrincipal
  *  represents an identity that may be used to determine access rights to objects
@@ -19,6 +20,13 @@ import java.lang.{Object, String}
  */
 abstract class UserPrincipalLookupService extends Object {
 
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this() = ???
+
     /** Lookup a group principal by group name. */
     def lookupPrincipalByGroupName(group: String): GroupPrincipal
+
+    /** Lookup a user principal by name. */
+    def lookupPrincipalByName(name: String): UserPrincipal
 }

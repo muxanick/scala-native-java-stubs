@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** The DataOutput interface provides
  *  for converting data from any of the Java
@@ -93,4 +94,14 @@ trait DataOutput {
      */
     @stub
     def writeShort(v: Int): Unit = ???
+
+    /** Writes two bytes of length information
+     *  to the output stream, followed
+     *  by the
+     *  modified UTF-8
+     *  representation
+     *  of  every character in the string s.
+     */
+    @stub
+    def writeUTF(s: String): Unit = ???
 }

@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.Rectangle
 import java.io.Serializable
 import java.lang.{Boolean, Object}
+import scala.scalanative.annotation.stub
 
 /** This is an implementation of the DesktopManager.
  *  It currently implements the basic behaviors for managing
@@ -15,6 +16,10 @@ import java.lang.{Boolean, Object}
  *  methods will call into the DesktopManager.
  */
 class DefaultDesktopManager extends Object with DesktopManager with Serializable {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** This will activate f moving it to the front. */
     @stub
@@ -115,4 +120,11 @@ class DefaultDesktopManager extends Object with DesktopManager with Serializable
      */
     @stub
     protected def setWasIcon(f: JInternalFrame, value: Boolean): Unit = ???
+
+    /** Returns true if the component has been iconized
+     *  and the bounds of the desktopIcon are valid,
+     *  otherwise returns false.
+     */
+    @stub
+    protected def wasIcon(f: JInternalFrame): Boolean = ???
 }

@@ -1,5 +1,7 @@
 package javax.print.attribute
 
+import scala.scalanative.annotation.stub
+
 /** Interface PrintServiceAttributeSet specifies the interface for a set of
  *  print job attributes, i.e. printing attributes that implement interface
  *  PrintServiceAttribute. In the Print Service API,
@@ -25,4 +27,8 @@ trait PrintServiceAttributeSet extends AttributeSet {
      */
     @stub
     def add(attribute: Attribute): Boolean = ???
+
+    /** Adds all of the elements in the specified set to this attribute. */
+    @stub
+    def addAll(attributes: AttributeSet): Boolean = ???
 }

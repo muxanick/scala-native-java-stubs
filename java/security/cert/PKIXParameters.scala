@@ -3,6 +3,7 @@ package java.security.cert
 import java.lang.{Object, String}
 import java.security.KeyStore
 import java.util.{Date, List, Set}
+import scala.scalanative.annotation.stub
 
 /** Parameters used as input for the PKIX CertPathValidator
  *  algorithm.
@@ -50,6 +51,12 @@ class PKIXParameters extends Object with CertPathParameters {
      */
     @stub
     def this(keystore: KeyStore) = ???
+
+    /** Creates an instance of PKIXParameters with the specified
+     *  Set of most-trusted CAs.
+     */
+    @stub
+    def this(trustAnchors: Set[TrustAnchor]) = ???
 
     /** Adds a PKIXCertPathChecker to the list of certification
      *  path checkers.
@@ -186,4 +193,8 @@ class PKIXParameters extends Object with CertPathParameters {
     /** Sets the Set of most-trusted CAs. */
     @stub
     def setTrustAnchors(trustAnchors: Set[TrustAnchor]): Unit = ???
+
+    /** Returns a formatted string describing the parameters. */
+    @stub
+    def toString(): String = ???
 }

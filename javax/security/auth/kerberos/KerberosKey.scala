@@ -3,6 +3,7 @@ package javax.security.auth.kerberos
 import java.lang.{Object, String}
 import javax.crypto.SecretKey
 import javax.security.auth.Destroyable
+import scala.scalanative.annotation.stub
 
 /** This class encapsulates a long term secret key for a Kerberos
  *  principal.
@@ -33,6 +34,10 @@ class KerberosKey extends Object with SecretKey with Destroyable {
      */
     @stub
     def this(principal: KerberosPrincipal, keyBytes: Array[Byte], keyType: Int, versionNum: Int) = ???
+
+    /** Constructs a KerberosKey from a principal's password. */
+    @stub
+    def this(principal: KerberosPrincipal, password: Array[Char], algorithm: String) = ???
 
     /** Destroys this key. */
     @stub
@@ -73,4 +78,8 @@ class KerberosKey extends Object with SecretKey with Destroyable {
     /** Determines if this key has been destroyed. */
     @stub
     def isDestroyed(): Boolean = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }

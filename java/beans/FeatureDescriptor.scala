@@ -2,6 +2,7 @@ package java.beans
 
 import java.lang.{Object, String}
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** The FeatureDescriptor class is the common baseclass for PropertyDescriptor,
  *  EventSetDescriptor, and MethodDescriptor, etc.
@@ -13,6 +14,10 @@ import java.util.Enumeration
  *  attribute/value pairs can be associated with a design feature.
  */
 class FeatureDescriptor extends Object {
+
+    /** Constructs a FeatureDescriptor. */
+    @stub
+    def this() = ???
 
     /** Gets an enumeration of the locale-independent names of this
      *  feature.
@@ -87,4 +92,8 @@ class FeatureDescriptor extends Object {
     /** Associate a named attribute with this feature. */
     @stub
     def setValue(attributeName: String, value: Object): Unit = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }

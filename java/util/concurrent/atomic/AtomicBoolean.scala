@@ -2,6 +2,7 @@ package java.util.concurrent.atomic
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A boolean value that may be updated atomically. See the
  *  java.util.concurrent.atomic package specification for
@@ -15,6 +16,10 @@ class AtomicBoolean extends Object with Serializable {
     /** Creates a new AtomicBoolean with initial value false. */
     @stub
     def this() = ???
+
+    /** Creates a new AtomicBoolean with the given initial value. */
+    @stub
+    def this(initialValue: Boolean) = ???
 
     /** Atomically sets the value to the given updated value
      *  if the current value == the expected value.
@@ -41,4 +46,10 @@ class AtomicBoolean extends Object with Serializable {
     /** Returns the String representation of the current value. */
     @stub
     def toString(): String = ???
+
+    /** Atomically sets the value to the given updated value
+     *  if the current value == the expected value.
+     */
+    @stub
+    def weakCompareAndSet(expect: Boolean, update: Boolean): Boolean = ???
 }

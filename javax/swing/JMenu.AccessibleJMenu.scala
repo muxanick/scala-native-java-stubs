@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component.AccessibleAWTComponent, Container.AccessibleAWTContainer}
 import java.lang.Object
 import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole, AccessibleSelection}
+import scala.scalanative.annotation.stub
 
 /** This class implements accessibility support for the
  *  JMenu class.  It provides an implementation of the
@@ -18,6 +19,10 @@ import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole, Acces
  *  Please see XMLEncoder.
  */
 protected class JMenu.AccessibleJMenu extends JMenuItem.AccessibleJMenuItem with AccessibleSelection {
+
+    /**  */
+    @stub
+    protected def AccessibleJMenu() = ???
 
     /** Selects the ith menu in the menu. */
     @stub
@@ -66,4 +71,10 @@ protected class JMenu.AccessibleJMenu extends JMenuItem.AccessibleJMenuItem with
     /** Removes the nth item from the selection. */
     @stub
     def removeAccessibleSelection(i: Int): Unit = ???
+
+    /** Normally causes every selected item in the object to be selected
+     *  if the object supports multiple selections.
+     */
+    @stub
+    def selectAllAccessibleSelection(): Unit = ???
 }

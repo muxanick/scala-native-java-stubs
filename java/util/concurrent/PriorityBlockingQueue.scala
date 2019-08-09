@@ -1,8 +1,9 @@
 package java.util.concurrent
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.{AbstractCollection, AbstractQueue, Collection, Comparator, Iterator, Spliterator}
+import scala.scalanative.annotation.stub
 
 /** An unbounded blocking queue that uses
  *  the same ordering rules as class PriorityQueue and supplies
@@ -73,6 +74,13 @@ class PriorityBlockingQueue[E] extends AbstractQueue[E] with BlockingQueue[E] wi
      */
     @stub
     def this(initialCapacity: Int) = ???
+
+    /** Creates a PriorityBlockingQueue with the specified initial
+     *  capacity that orders its elements according to the specified
+     *  comparator.
+     */
+    @stub
+    def this(initialCapacity: Int, comparator: Comparator[_ >: E]) = ???
 
     /** Inserts the specified element into this priority queue. */
     @stub
@@ -173,4 +181,8 @@ class PriorityBlockingQueue[E] extends AbstractQueue[E] with BlockingQueue[E] wi
      */
     @stub
     def toArray[T](a: Array[T]): Array[T] = ???
+
+    /** Returns a string representation of this collection. */
+    @stub
+    def toString(): String = ???
 }

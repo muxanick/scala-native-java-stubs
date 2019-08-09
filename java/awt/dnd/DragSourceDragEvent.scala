@@ -2,6 +2,7 @@ package java.awt.dnd
 
 import java.lang.Object
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** The DragSourceDragEvent is
  *  delivered from the DragSourceContextPeer,
@@ -46,6 +47,13 @@ class DragSourceDragEvent extends DragSourceEvent {
     @stub
     def this(dsc: DragSourceContext, dropAction: Int, action: Int, modifiers: Int) = ???
 
+    /** Constructs a DragSourceDragEvent given the specified
+     *  DragSourceContext, user drop action, target drop action,
+     *  modifiers and coordinates.
+     */
+    @stub
+    def this(dsc: DragSourceContext, dropAction: Int, action: Int, modifiers: Int, x: Int, y: Int) = ???
+
     /** This method returns the logical intersection of
      *  the target drop action and the set of drop actions supported by
      *  the drag source.
@@ -70,4 +78,8 @@ class DragSourceDragEvent extends DragSourceEvent {
     /** This method returns the target drop action. */
     @stub
     def getTargetActions(): Int = ???
+
+    /** This method returns the user drop action. */
+    @stub
+    def getUserAction(): Int = ???
 }

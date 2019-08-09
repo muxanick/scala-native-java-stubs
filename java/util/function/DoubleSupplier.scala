@@ -1,6 +1,7 @@
 package java.util.function
 
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** Represents a supplier of double-valued results.  This is the
  *  double-producing primitive specialization of Supplier.
@@ -12,4 +13,8 @@ import java.lang.FunctionalInterface
  *  whose functional method is getAsDouble().
  */
 @FunctionalInterface trait DoubleSupplier {
+
+    /** Gets a result. */
+    @stub
+    def getAsDouble(): Double = ???
 }

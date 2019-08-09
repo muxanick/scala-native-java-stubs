@@ -1,8 +1,9 @@
 package javax.swing.undo
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.Vector
 import javax.swing.event.UndoableEditListener
+import scala.scalanative.annotation.stub
 
 /** A support class used for managing UndoableEdit listeners. */
 class UndoableEditSupport extends Object {
@@ -10,6 +11,10 @@ class UndoableEditSupport extends Object {
     /** Constructs an UndoableEditSupport object. */
     @stub
     def this() = ???
+
+    /** Constructs an UndoableEditSupport object. */
+    @stub
+    def this(r: Object) = ???
 
     /**  */
     @stub
@@ -22,6 +27,10 @@ class UndoableEditSupport extends Object {
     /**  */
     @stub
     protected val realSource: Object = ???
+
+    /**  */
+    @stub
+    protected val updateLevel: Int = ???
 
     /** Called only from postEdit and endUpdate. */
     @stub
@@ -64,4 +73,10 @@ class UndoableEditSupport extends Object {
     /** Removes an UndoableEditListener. */
     @stub
     def removeUndoableEditListener(l: UndoableEditListener): Unit = ???
+
+    /** Returns a string that displays and identifies this
+     *  object's properties.
+     */
+    @stub
+    def toString(): String = ???
 }

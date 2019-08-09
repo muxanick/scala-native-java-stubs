@@ -1,5 +1,7 @@
 package javax.imageio.metadata
 
+import scala.scalanative.annotation.stub
+
 /** An interface to be implemented by objects that can determine the
  *  settings of an IIOMetadata object, either by putting
  *  up a GUI to obtain values from a user, or by other means.  This
@@ -32,4 +34,8 @@ package javax.imageio.metadata
  *  set its state, and return true.
  */
 trait IIOMetadataController {
+
+    /** Activates the controller. */
+    @stub
+    def activate(metadata: IIOMetadata): Boolean = ???
 }

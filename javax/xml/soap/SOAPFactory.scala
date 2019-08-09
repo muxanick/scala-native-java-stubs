@@ -2,7 +2,7 @@ package javax.xml.soap
 
 import java.lang.{Object, String}
 import javax.xml.namespace.QName
-import org.w3c.dom.Element
+import scala.scalanative.annotation.stub
 
 /** SOAPFactory is a factory for creating various objects
  *  that exist in the SOAP XML tree.
@@ -18,6 +18,10 @@ import org.w3c.dom.Element
  *  java.xml.soap.Name objects.
  */
 abstract class SOAPFactory extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Creates a new Detail object which serves as a container
      *  for DetailEntry objects.
@@ -78,4 +82,11 @@ object SOAPFactory {
      */
     @stub
     def newInstance(): SOAPFactory = ???
+
+    /** Creates a new SOAPFactory object that is an instance of
+     *  the specified implementation, this method uses the SAAJMetaFactory to
+     *  locate the implementation class and create the SOAPFactory instance.
+     */
+    @stub
+    def newInstance(protocol: String): SOAPFactory = ???
 }

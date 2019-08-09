@@ -1,9 +1,10 @@
 package javax.swing
 
 import java.io.Serializable
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import java.util.EventListener
-import javax.swing.event.{ChangeEvent, ChangeListener}
+import javax.swing.event.{ChangeEvent, ChangeListener, EventListenerList}
+import scala.scalanative.annotation.stub
 
 /** A generic implementation of BoundedRangeModel.
  *  
@@ -22,11 +23,19 @@ class DefaultBoundedRangeModel extends Object with BoundedRangeModel with Serial
     @stub
     def this() = ???
 
+    /** Initializes value, extent, minimum and maximum. */
+    @stub
+    def this(value: Int, extent: Int, min: Int, max: Int) = ???
+
     /** Only one ChangeEvent is needed per model instance since the
      *  event's only (read-only) state is the source property.
      */
     @stub
     protected val changeEvent: ChangeEvent = ???
+
+    /** The listeners waiting for model changes. */
+    @stub
+    protected val listenerList: EventListenerList = ???
 
     /** Adds a ChangeListener. */
     @stub
@@ -107,4 +116,10 @@ class DefaultBoundedRangeModel extends Object with BoundedRangeModel with Serial
     /** Sets the valueIsAdjusting property. */
     @stub
     def setValueIsAdjusting(b: Boolean): Unit = ???
+
+    /** Returns a string that displays all of the
+     *  BoundedRangeModel properties.
+     */
+    @stub
+    def toString(): String = ???
 }

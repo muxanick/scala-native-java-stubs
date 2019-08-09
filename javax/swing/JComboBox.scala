@@ -4,9 +4,11 @@ import java.awt.{Component, Container, ItemSelectable}
 import java.awt.event.{ActionEvent, ActionListener, ItemEvent, ItemListener, KeyEvent}
 import java.beans.PropertyChangeListener
 import java.lang.{Object, String}
+import java.util.Vector
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.event.{ListDataEvent, ListDataListener, PopupMenuListener}
 import javax.swing.plaf.ComboBoxUI
+import scala.scalanative.annotation.stub
 
 /** A component that combines a button or editable field and a drop-down list.
  *  The user can select a value from the drop-down list, which appears at the
@@ -50,6 +52,12 @@ class JComboBox[E] extends JComponent with ItemSelectable with ListDataListener 
     @stub
     def this(items: Array[E]) = ???
 
+    /** Creates a JComboBox that contains the elements
+     *  in the specified Vector.
+     */
+    @stub
+    def this(items: Vector[E]) = ???
+
     /** This class implements accessibility support for the
      *  JComboBox class.
      */
@@ -87,6 +95,10 @@ class JComboBox[E] extends JComponent with ItemSelectable with ListDataListener 
     /** This protected field is implementation specific. */
     @stub
     protected val renderer: ListCellRenderer[_ >: E] = ???
+
+    /** This protected field is implementation specific. */
+    @stub
+    protected val selectedItemReminder: Object = ???
 
     /** This method is public as an implementation side effect. */
     @stub
@@ -435,4 +447,14 @@ class JComboBox[E] extends JComponent with ItemSelectable with ListDataListener 
     /** Causes the combo box to display its popup window. */
     @stub
     def showPopup(): Unit = ???
+
+    /** Resets the UI property to a value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
+}
+
+object JComboBox {
+    /** The interface that defines a KeySelectionManager. */
+    @stub
+    val JComboBox.KeySelectionManager: trait = ???
 }

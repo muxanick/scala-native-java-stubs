@@ -1,6 +1,7 @@
 package javax.swing
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A ComponentInputMap is an InputMap
  *  associated with a particular JComponent.
@@ -10,6 +11,12 @@ import java.lang.Object
  *  WHEN_IN_FOCUSED_WINDOW bindings.
  */
 class ComponentInputMap extends InputMap {
+
+    /** Creates a ComponentInputMap associated with the
+     *  specified component.
+     */
+    @stub
+    def this(component: JComponent) = ???
 
     /** Removes all the mappings from this object. */
     @stub
@@ -26,4 +33,11 @@ class ComponentInputMap extends InputMap {
     /** Removes the binding for key from this object. */
     @stub
     def remove(key: KeyStroke): Unit = ???
+
+    /** Sets the parent, which must be a ComponentInputMap
+     *  associated with the same component as this
+     *  ComponentInputMap.
+     */
+    @stub
+    def setParent(map: InputMap): Unit = ???
 }

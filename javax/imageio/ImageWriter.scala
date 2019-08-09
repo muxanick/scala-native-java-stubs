@@ -7,6 +7,7 @@ import java.util.{List, Locale}
 import javax.imageio.event.{IIOWriteProgressListener, IIOWriteWarningListener}
 import javax.imageio.metadata.IIOMetadata
 import javax.imageio.spi.ImageWriterSpi
+import scala.scalanative.annotation.stub
 
 /** An abstract superclass for encoding and writing images.  This class
  *  must be subclassed by classes that write out images in the context
@@ -21,6 +22,13 @@ import javax.imageio.spi.ImageWriterSpi
  *  
  */
 abstract class ImageWriter extends Object with ImageTranscoder {
+
+    /** Constructs an ImageWriter and sets its
+     *  originatingProvider instance variable to the
+     *  supplied value.
+     */
+    @stub
+    protected def this(originatingProvider: ImageWriterSpi) = ???
 
     /** An array of Locales that may be used to localize
      *  warning messages and compression setting values, or
@@ -58,6 +66,13 @@ abstract class ImageWriter extends Object with ImageTranscoder {
      *  List.
      */
     protected val warningListeners: List[IIOWriteWarningListener]
+
+    /** A List of Locales, one for each
+     *  element of warningListeners, initialized by default
+     *  null, which is synonymous with an empty
+     *  List.
+     */
+    protected val warningLocales: List[Locale]
 
     /** Requests that any current write operation be aborted. */
     def abort(): Unit
@@ -369,4 +384,9 @@ abstract class ImageWriter extends Object with ImageTranscoder {
 
     /** Inserts a new image into an existing image stream. */
     def writeInsert(imageIndex: Int, image: IIOImage, param: ImageWriteParam): Unit
+
+    /** Appends a single image and possibly associated metadata and
+     *  thumbnails, to the output.
+     */
+    def writeToSequence(image: IIOImage, param: ImageWriteParam): Unit
 }

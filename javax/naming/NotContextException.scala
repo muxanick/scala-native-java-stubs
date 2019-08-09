@@ -1,6 +1,7 @@
 package javax.naming
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown when a naming operation proceeds to a point
  *  where a context is required to continue the operation, but the
@@ -21,4 +22,10 @@ class NotContextException extends NamingException {
     /** Constructs a new instance of NotContextException. */
     @stub
     def this() = ???
+
+    /** Constructs a new instance of NotContextException using an
+     *  explanation.
+     */
+    @stub
+    def this(explanation: String) = ???
 }

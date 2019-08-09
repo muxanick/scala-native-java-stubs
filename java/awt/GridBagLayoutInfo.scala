@@ -2,6 +2,7 @@ package java.awt
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The GridBagLayoutInfo is an utility class for
  *  GridBagLayout layout manager.

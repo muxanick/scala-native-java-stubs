@@ -1,6 +1,7 @@
 package javax.management.modelmbean
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Exception thrown when an invalid target object type is specified.
  * 
@@ -16,4 +17,8 @@ class InvalidTargetObjectTypeException extends Exception {
     /** Constructor taking an exception and a string. */
     @stub
     def this(e: Exception, s: String) = ???
+
+    /** Constructor from a string. */
+    @stub
+    def this(s: String) = ???
 }

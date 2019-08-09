@@ -1,6 +1,7 @@
 package java.nio.channels
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A token representing the registration of a SelectableChannel with a
  *  Selector.
@@ -69,6 +70,10 @@ import java.lang.Object
  */
 abstract class SelectionKey extends Object {
 
+    /** Constructs an instance of this class. */
+    @stub
+    protected def this() = ???
+
     /** Attaches the given object to this key. */
     def attach(ob: Object): Object
 
@@ -110,6 +115,9 @@ abstract class SelectionKey extends Object {
 
     /** Retrieves this key's ready-operation set. */
     def readyOps(): Int
+
+    /** Returns the selector for which this key was created. */
+    def selector(): Selector
 }
 
 object SelectionKey {
@@ -124,4 +132,8 @@ object SelectionKey {
     /** Operation-set bit for read operations. */
     @stub
     val OP_READ: Int = ???
+
+    /** Operation-set bit for write operations. */
+    @stub
+    val OP_WRITE: Int = ???
 }

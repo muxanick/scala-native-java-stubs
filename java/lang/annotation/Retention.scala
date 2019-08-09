@@ -1,6 +1,7 @@
 package java.lang.annotation
 
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Indicates how long annotations with the annotated type are to
  *  be retained.  If no Retention annotation is present on
@@ -16,4 +17,8 @@ import scala.annotation.StaticAnnotation
 @Retention ( value = RUNTIME ) 
 @Target ( value = ANNOTATION_TYPE ) 
  final class Retention extends StaticAnnotation {
+
+    /** Returns the retention policy. */
+    @stub
+    val value: RetentionPolicy = ???
 }

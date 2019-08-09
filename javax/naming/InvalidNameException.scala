@@ -1,6 +1,7 @@
 package javax.naming
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception indicates that the name being specified does
  *  not conform to the naming syntax of a naming system.
@@ -17,4 +18,10 @@ class InvalidNameException extends NamingException {
      */
     @stub
     def this() = ???
+
+    /** Constructs an instance of InvalidNameException using an
+     *  explanation of the problem.
+     */
+    @stub
+    def this(explanation: String) = ???
 }

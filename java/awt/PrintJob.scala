@@ -1,12 +1,17 @@
 package java.awt
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An abstract class which initiates and executes a print job.
  *  It provides access to a print graphics object which renders
  *  to an appropriate print device.
  */
 abstract class PrintJob extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Ends the print job and does any necessary cleanup. */
     def end(): Unit
@@ -22,4 +27,7 @@ abstract class PrintJob extends Object {
 
     /** Returns the resolution of the page in pixels per inch. */
     def getPageResolution(): Int
+
+    /** Returns true if the last page will be printed first. */
+    def lastPageFirst(): Boolean
 }

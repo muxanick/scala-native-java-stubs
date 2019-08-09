@@ -1,6 +1,7 @@
 package javax.naming
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown when a method
  *  does not terminate within the specified time limit.
@@ -16,4 +17,10 @@ class TimeLimitExceededException extends LimitExceededException {
     /** Constructs a new instance of TimeLimitExceededException. */
     @stub
     def this() = ???
+
+    /** Constructs a new instance of TimeLimitExceededException
+     *  using the argument supplied.
+     */
+    @stub
+    def this(explanation: String) = ???
 }

@@ -1,5 +1,8 @@
 package javax.naming.spi
 
+import java.util.Hashtable
+import scala.scalanative.annotation.stub
+
 /** This interface represents a builder that creates initial context factories.
  * 
  *  The JNDI framework allows for different initial context implementations
@@ -12,4 +15,10 @@ package javax.naming.spi
  *  such a builder.
  */
 trait InitialContextFactoryBuilder {
+
+    /** Creates an initial context factory using the specified
+     *  environment.
+     */
+    @stub
+    def createInitialContextFactory(environment: Hashtable[_, _]): InitialContextFactory = ???
 }

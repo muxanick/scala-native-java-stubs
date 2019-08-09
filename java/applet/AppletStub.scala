@@ -2,6 +2,7 @@ package java.applet
 
 import java.lang.String
 import java.net.URL
+import scala.scalanative.annotation.stub
 
 /** When an applet is first created, an applet stub is attached to it
  *  using the applet's setStub method. This stub
@@ -30,4 +31,8 @@ trait AppletStub {
     /** Returns the value of the named parameter in the HTML tag. */
     @stub
     def getParameter(name: String): String = ???
+
+    /** Determines if the applet is active. */
+    @stub
+    def isActive(): Boolean = ???
 }

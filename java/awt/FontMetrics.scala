@@ -5,6 +5,7 @@ import java.awt.geom.Rectangle2D
 import java.io.Serializable
 import java.lang.{Object, String}
 import java.text.CharacterIterator
+import scala.scalanative.annotation.stub
 
 /** The FontMetrics class defines a font metrics object, which
  *  encapsulates information about the rendering of a particular font on a
@@ -66,6 +67,18 @@ import java.text.CharacterIterator
  *  possible grid hinting effects).  See Font.
  */
 abstract class FontMetrics extends Object with Serializable {
+
+    /** Creates a new FontMetrics object for finding out
+     *  height and width information about the specified Font
+     *  and specific character glyphs in that Font.
+     */
+    @stub
+    protected def this(font: Font) = ???
+
+    /** The actual Font from which the font metrics are
+     *  created.
+     */
+    protected val font: Font
 
     /** Returns the total advance width for showing the specified array
      *  of bytes in this Font.
@@ -198,4 +211,9 @@ abstract class FontMetrics extends Object with Serializable {
      *  String in this Font.
      */
     def stringWidth(str: String): Int
+
+    /** Returns a representation of this FontMetrics
+     *  object's values as a String.
+     */
+    def toString(): String
 }

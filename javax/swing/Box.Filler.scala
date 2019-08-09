@@ -1,8 +1,9 @@
 package javax.swing
 
-import java.awt.{Component, Container, Dimension}
+import java.awt.{Component, Container, Dimension, Graphics}
 import java.lang.Object
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** An implementation of a lightweight component that participates in
  *  layout but has no view.
@@ -18,6 +19,16 @@ import javax.accessibility.{Accessible, AccessibleContext}
  */
 object Box.Filler extends JComponent with Accessible {
 
+    /** Constructor to create shape with the given size ranges. */
+    @stub
+    def Filler(min: Dimension, pref: Dimension, max: Dimension) = ???
+
+    /** This class implements accessibility support for the
+     *  Box.Filler class.
+     */
+    @stub
+    protected object AccessibleBoxFiller extends Box.Filler.AccessibleBoxFiller
+
     /** Change the size requests for this shape. */
     @stub
     def changeShape(min: Dimension, pref: Dimension, max: Dimension): Unit = ???
@@ -25,4 +36,8 @@ object Box.Filler extends JComponent with Accessible {
     /** Gets the AccessibleContext associated with this Box.Filler. */
     @stub
     def getAccessibleContext(): AccessibleContext = ???
+
+    /** Paints this Filler. */
+    @stub
+    protected def paintComponent(g: Graphics): Unit = ???
 }

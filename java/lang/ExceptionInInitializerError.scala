@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** Signals that an unexpected exception has occurred in a static initializer.
  *  An ExceptionInInitializerError is thrown to indicate that an
  *  exception occurred during evaluation of a static initializer or the
@@ -27,9 +29,22 @@ class ExceptionInInitializerError extends LinkageError {
     @stub
     def this(s: String) = ???
 
+    /** Constructs a new ExceptionInInitializerError class by
+     *  saving a reference to the Throwable object thrown for
+     *  later retrieval by the getException() method.
+     */
+    @stub
+    def this(thrown: Throwable) = ???
+
     /** Returns the cause of this error (the exception that occurred
      *  during a static initialization that caused this error to be created).
      */
     @stub
     def getCause(): Throwable = ???
+
+    /** Returns the exception that occurred during a static initialization that
+     *  caused this error to be created.
+     */
+    @stub
+    def getException(): Throwable = ???
 }

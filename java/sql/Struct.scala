@@ -2,6 +2,7 @@ package java.sql
 
 import java.lang.{Class, Object, String}
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** The standard mapping in the Java programming language for an SQL
  *  structured type. A Struct object contains a
@@ -26,4 +27,10 @@ trait Struct {
      */
     @stub
     def getAttributes(map: Map[String, Class[_]]): Array[Object] = ???
+
+    /** Retrieves the SQL type name of the SQL structured type
+     *  that this Struct object represents.
+     */
+    @stub
+    def getSQLTypeName(): String = ???
 }

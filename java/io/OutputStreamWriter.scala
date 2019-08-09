@@ -2,6 +2,7 @@ package java.io
 
 import java.lang.{Object, String}
 import java.nio.charset.{Charset, CharsetEncoder}
+import scala.scalanative.annotation.stub
 
 /** An OutputStreamWriter is a bridge from character streams to byte streams:
  *  Characters written to it are encoded into bytes using a specified charset.  The charset that it uses
@@ -51,6 +52,10 @@ class OutputStreamWriter extends Writer {
     @stub
     def this(out: OutputStream, enc: CharsetEncoder) = ???
 
+    /** Creates an OutputStreamWriter that uses the named charset. */
+    @stub
+    def this(out: OutputStream, charsetName: String) = ???
+
     /** Closes the stream, flushing it first. */
     @stub
     def close(): Unit = ???
@@ -70,4 +75,8 @@ class OutputStreamWriter extends Writer {
     /** Writes a single character. */
     @stub
     def write(c: Int): Unit = ???
+
+    /** Writes a portion of a string. */
+    @stub
+    def write(str: String, off: Int, len: Int): Unit = ???
 }

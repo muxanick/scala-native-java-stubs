@@ -4,11 +4,20 @@ import java.awt.RenderingHints
 import java.awt.image.RenderedImage
 import java.lang.{Object, String}
 import java.util.Vector
+import scala.scalanative.annotation.stub
 
 /** This class handles the renderable aspects of an operation with help
  *  from its associated instance of a ContextualRenderedImageFactory.
  */
 class RenderableImageOp extends Object with RenderableImage {
+
+    /** Constructs a RenderedImageOp given a
+     *  ContextualRenderedImageFactory object, and
+     *  a ParameterBlock containing RenderableImage sources and other
+     *  parameters.
+     */
+    @stub
+    def this(CRIF: ContextualRenderedImageFactory, paramBlock: ParameterBlock) = ???
 
     /** Gets a RenderedImage instance of this image with a default
      *  width and height in pixels.
@@ -69,4 +78,10 @@ class RenderableImageOp extends Object with RenderableImage {
      */
     @stub
     def isDynamic(): Boolean = ???
+
+    /** Change the current ParameterBlock of the operation, allowing
+     *  editing of image rendering chains.
+     */
+    @stub
+    def setParameterBlock(paramBlock: ParameterBlock): ParameterBlock = ???
 }

@@ -1,7 +1,8 @@
 package java.io
 
 import java.lang.{Object, String}
-import java.security.Permission
+import java.security.{Permission, PermissionCollection}
+import scala.scalanative.annotation.stub
 
 /** This class represents access to a file or directory.  A FilePermission consists
  *  of a pathname and a set of actions valid for that pathname.
@@ -55,6 +56,10 @@ import java.security.Permission
  */
 final class FilePermission extends Permission with Serializable {
 
+    /** Creates a new FilePermission object with the specified actions. */
+    @stub
+    def this(path: String, actions: String) = ???
+
     /** Checks two FilePermission objects for equality. */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -70,4 +75,10 @@ final class FilePermission extends Permission with Serializable {
     /** Checks if this FilePermission object "implies" the specified permission. */
     @stub
     def implies(p: Permission): Boolean = ???
+
+    /** Returns a new PermissionCollection object for storing FilePermission
+     *  objects.
+     */
+    @stub
+    def newPermissionCollection(): PermissionCollection = ???
 }

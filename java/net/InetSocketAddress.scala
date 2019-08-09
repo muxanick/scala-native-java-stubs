@@ -1,6 +1,7 @@
 package java.net
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class implements an IP Socket Address (IP address + port number)
  *  It can also be a pair (hostname + port number), in which case an attempt
@@ -25,6 +26,10 @@ class InetSocketAddress extends SocketAddress {
      */
     @stub
     def this(port: Int) = ???
+
+    /** Creates a socket address from a hostname and a port number. */
+    @stub
+    def this(hostname: String, port: Int) = ???
 
     /** Compares this object against the specified object. */
     @stub
@@ -55,6 +60,10 @@ class InetSocketAddress extends SocketAddress {
     /** Checks whether the address has been resolved or not. */
     @stub
     def isUnresolved(): Boolean = ???
+
+    /** Constructs a string representation of this InetSocketAddress. */
+    @stub
+    def toString(): String = ???
 }
 
 object InetSocketAddress {

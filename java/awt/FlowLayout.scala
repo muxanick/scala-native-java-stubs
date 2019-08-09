@@ -2,6 +2,7 @@ package java.awt
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A flow layout arranges components in a directional flow, much
  *  like lines of text in a paragraph. The flow direction is
@@ -63,6 +64,12 @@ class FlowLayout extends Object with LayoutManager with Serializable {
      */
     @stub
     def this(align: Int) = ???
+
+    /** Creates a new flow layout manager with the indicated alignment
+     *  and the indicated horizontal and vertical gaps.
+     */
+    @stub
+    def this(align: Int, hgap: Int, vgap: Int) = ???
 
     /** Adds the specified component to the layout. */
     @stub
@@ -134,6 +141,12 @@ class FlowLayout extends Object with LayoutManager with Serializable {
      */
     @stub
     def setVgap(vgap: Int): Unit = ???
+
+    /** Returns a string representation of this FlowLayout
+     *  object and its values.
+     */
+    @stub
+    def toString(): String = ???
 }
 
 object FlowLayout {
@@ -161,4 +174,11 @@ object FlowLayout {
      */
     @stub
     val RIGHT: Int = ???
+
+    /** This value indicates that each row of components
+     *  should be justified to the trailing edge of the container's
+     *  orientation, for example, to the right in left-to-right orientations.
+     */
+    @stub
+    val TRAILING: Int = ???
 }

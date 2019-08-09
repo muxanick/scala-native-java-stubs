@@ -5,6 +5,7 @@ import java.lang.Object
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, RootPaneUI}
 import javax.swing.plaf.basic.BasicRootPaneUI
+import scala.scalanative.annotation.stub
 
 /** Provides the metal look and feel implementation of RootPaneUI.
  *  
@@ -30,6 +31,10 @@ import javax.swing.plaf.basic.BasicRootPaneUI
  */
 class MetalRootPaneUI extends BasicRootPaneUI {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Invokes supers implementation of installUI to install
      *  the necessary state onto the passed in JRootPane
      *  to render the metal look and feel implementation of
@@ -41,6 +46,10 @@ class MetalRootPaneUI extends BasicRootPaneUI {
     /** Invoked when a property changes. */
     @stub
     def propertyChange(e: PropertyChangeEvent): Unit = ???
+
+    /** Invokes supers implementation to uninstall any of its state. */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object MetalRootPaneUI {

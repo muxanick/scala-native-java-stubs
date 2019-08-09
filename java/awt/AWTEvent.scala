@@ -2,6 +2,7 @@ package java.awt
 
 import java.lang.{Object, String}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** The root event class for all AWT events.
  *  This class and its subclasses supercede the original
@@ -26,6 +27,10 @@ abstract class AWTEvent extends EventObject {
     @stub
     def this(event: Event) = ???
 
+    /** Constructs an AWTEvent object with the specified source object and type. */
+    @stub
+    def this(source: Object, id: Int) = ???
+
     /** Controls whether or not the event is sent back down to the peer once the
      *  source has processed it - false means it's sent to the peer; true means
      *  it's not.
@@ -49,6 +54,9 @@ abstract class AWTEvent extends EventObject {
 
     /** Retargets an event to a new source. */
     def setSource(newSource: Object): Unit
+
+    /** Returns a String representation of this object. */
+    def toString(): String
 }
 
 object AWTEvent {
@@ -127,4 +135,8 @@ object AWTEvent {
     /** The event mask for selecting window focus events. */
     @stub
     val WINDOW_FOCUS_EVENT_MASK: Long = ???
+
+    /** The event mask for selecting window state events. */
+    @stub
+    val WINDOW_STATE_EVENT_MASK: Long = ???
 }

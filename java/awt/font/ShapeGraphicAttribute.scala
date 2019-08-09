@@ -3,11 +3,18 @@ package java.awt.font
 import java.awt.{Graphics2D, Shape}
 import java.awt.geom.{AffineTransform, Rectangle2D}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The ShapeGraphicAttribute class is an implementation of
  *  GraphicAttribute that draws shapes in a TextLayout.
  */
 final class ShapeGraphicAttribute extends GraphicAttribute {
+
+    /** Constructs a ShapeGraphicAttribute for the specified
+     *  Shape.
+     */
+    @stub
+    def this(shape: Shape, alignment: Int, stroke: Boolean) = ???
 
     /** Renders this GraphicAttribute at the specified
      *  location.
@@ -51,10 +58,18 @@ final class ShapeGraphicAttribute extends GraphicAttribute {
      */
     @stub
     def getOutline(tx: AffineTransform): Shape = ???
+
+    /** Returns a hashcode for this ShapeGraphicAttribute. */
+    @stub
+    def hashCode(): Int = ???
 }
 
 object ShapeGraphicAttribute {
     /** A key indicating the shape should be filled. */
     @stub
     val FILL: Boolean = ???
+
+    /** A key indicating the shape should be stroked with a 1-pixel wide stroke. */
+    @stub
+    val STROKE: Boolean = ???
 }

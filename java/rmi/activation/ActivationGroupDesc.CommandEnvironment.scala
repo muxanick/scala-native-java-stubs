@@ -2,6 +2,7 @@ package java.rmi.activation
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Startup options for ActivationGroup implementations.
  * 
@@ -9,6 +10,12 @@ import java.lang.{Object, String}
  *  specifying implementation-defined options for ActivationGroups.
  */
 object ActivationGroupDesc.CommandEnvironment extends Object with Serializable {
+
+    /** Create a CommandEnvironment with all the necessary
+     *  information.
+     */
+    @stub
+    def CommandEnvironment(cmdpath: String, argv: Array[String]) = ???
 
     /** Compares two command environments for content equality. */
     @stub
@@ -21,4 +28,10 @@ object ActivationGroupDesc.CommandEnvironment extends Object with Serializable {
     /** Fetch the configured path-qualified java command name. */
     @stub
     def getCommandPath(): String = ???
+
+    /** Return identical values for similar
+     *  CommandEnvironments.
+     */
+    @stub
+    def hashCode(): Int = ???
 }

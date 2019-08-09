@@ -5,6 +5,7 @@ import java.lang.{CharSequence, Object, String}
 import java.time.chrono.{ChronoPeriod, IsoChronology}
 import java.time.temporal.{Temporal, TemporalAmount, TemporalUnit}
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** A date-based amount of time in the ISO-8601 calendar system,
  *  such as '2 years, 3 months and 4 days'.
@@ -153,9 +154,17 @@ final class Period extends Object with ChronoPeriod with Serializable {
     /** Returns a copy of this period with the specified amount of months. */
     @stub
     def withMonths(months: Int): Period = ???
+
+    /** Returns a copy of this period with the specified amount of years. */
+    @stub
+    def withYears(years: Int): Period = ???
 }
 
 object Period {
+    /** A constant for a period of zero. */
+    @stub
+    val ZERO: Period = ???
+
     /** Obtains a Period consisting of the number of years, months,
      *  and days between two dates.
      */

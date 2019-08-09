@@ -1,6 +1,7 @@
 package javax.sound.sampled
 
 import java.lang.AutoCloseable
+import scala.scalanative.annotation.stub
 
 /** The Line interface represents a mono or multi-channel
  *  audio feed. A line is an element of the digital audio
@@ -85,4 +86,14 @@ trait Line extends AutoCloseable {
      */
     @stub
     def open(): Unit = ???
+
+    /** Removes the specified listener from this line's list of listeners. */
+    @stub
+    def removeLineListener(listener: LineListener): Unit = ???
+}
+
+object Line {
+    /** A Line.Info object contains information about a line. */
+    @stub
+    object Info extends Line.Info
 }

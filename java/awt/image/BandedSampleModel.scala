@@ -1,6 +1,7 @@
 package java.awt.image
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class represents image data which is stored in a band interleaved
  *   fashion and for
@@ -33,6 +34,10 @@ final class BandedSampleModel extends ComponentSampleModel {
     /** Constructs a BandedSampleModel with the specified parameters. */
     @stub
     def this(dataType: Int, w: Int, h: Int, numBands: Int) = ???
+
+    /** Constructs a BandedSampleModel with the specified parameters. */
+    @stub
+    def this(dataType: Int, w: Int, h: Int, scanlineStride: Int, bankIndices: Array[Int], bandOffsets: Array[Int]) = ???
 
     /** Creates a new BandedSampleModel with the specified
      *  width and height.
@@ -130,4 +135,10 @@ final class BandedSampleModel extends ComponentSampleModel {
      */
     @stub
     def setSample(x: Int, y: Int, b: Int, s: Int, data: DataBuffer): Unit = ???
+
+    /** Sets the samples in the specified band for the specified rectangle
+     *  of pixels from an int array containing one sample per data array element.
+     */
+    @stub
+    def setSamples(x: Int, y: Int, w: Int, h: Int, b: Int, iArray: Array[Int], data: DataBuffer): Unit = ???
 }

@@ -1,7 +1,10 @@
 package javax.swing.text
 
-import java.lang.Object
+import java.awt.Color
+import java.awt.event.ActionEvent
+import java.lang.{Object, String}
 import javax.swing.AbstractAction
+import scala.scalanative.annotation.stub
 
 /** An action to set foreground color.  This sets the
  *  StyleConstants.Foreground attribute for the
@@ -28,3 +31,12 @@ import javax.swing.AbstractAction
  *  Please see XMLEncoder.
  */
 object StyledEditorKit.ForegroundAction extends StyledEditorKit.StyledTextAction {
+
+    /** Creates a new ForegroundAction. */
+    @stub
+    def ForegroundAction(nm: String, fg: Color) = ???
+
+    /** Sets the foreground color. */
+    @stub
+    def actionPerformed(e: ActionEvent): Unit = ???
+}

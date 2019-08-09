@@ -1,6 +1,7 @@
 package java.security.spec
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class specifies a parameter spec for RSA-PSS signature scheme,
  *  as defined in the
@@ -48,6 +49,14 @@ class PSSParameterSpec extends Object with AlgorithmParameterSpec {
     @stub
     def this(saltLen: Int) = ???
 
+    /** Creates a new PSSParameterSpec as defined in
+     *  the PKCS #1 standard using the specified message digest,
+     *  mask generation function, parameters for mask generation
+     *  function, salt length, and trailer field values.
+     */
+    @stub
+    def this(mdName: String, mgfName: String, mgfSpec: AlgorithmParameterSpec, saltLen: Int, trailerField: Int) = ???
+
     /** Returns the message digest algorithm name. */
     @stub
     def getDigestAlgorithm(): String = ???
@@ -63,4 +72,14 @@ class PSSParameterSpec extends Object with AlgorithmParameterSpec {
     /** Returns the salt length in bits. */
     @stub
     def getSaltLength(): Int = ???
+
+    /** Returns the value for the trailer field, i.e. */
+    @stub
+    def getTrailerField(): Int = ???
+}
+
+object PSSParameterSpec {
+    /** The PSS parameter set with all default values. */
+    @stub
+    val DEFAULT: PSSParameterSpec = ???
 }

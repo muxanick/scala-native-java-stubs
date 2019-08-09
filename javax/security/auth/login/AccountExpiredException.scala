@@ -1,7 +1,8 @@
 package javax.security.auth.login
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
 import java.security.GeneralSecurityException
+import scala.scalanative.annotation.stub
 
 /** Signals that a user account has expired.
  * 
@@ -17,4 +18,10 @@ class AccountExpiredException extends AccountException {
     /** Constructs a AccountExpiredException with no detail message. */
     @stub
     def this() = ???
+
+    /** Constructs a AccountExpiredException with the specified detail
+     *  message.
+     */
+    @stub
+    def this(msg: String) = ???
 }

@@ -2,7 +2,8 @@ package java.nio.channels
 
 import java.lang.Object
 import java.net.{ServerSocket, SocketAddress, SocketOption}
-import java.nio.channels.spi.{AbstractInterruptibleChannel, AbstractSelectableChannel}
+import java.nio.channels.spi.{AbstractInterruptibleChannel, AbstractSelectableChannel, SelectorProvider}
+import scala.scalanative.annotation.stub
 
 /** A selectable channel for stream-oriented listening sockets.
  * 
@@ -38,6 +39,10 @@ import java.nio.channels.spi.{AbstractInterruptibleChannel, AbstractSelectableCh
  */
 abstract class ServerSocketChannel extends AbstractSelectableChannel with NetworkChannel {
 
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this(provider: SelectorProvider) = ???
+
     /** Accepts a connection made to this channel's socket. */
     def accept(): SocketChannel
 
@@ -59,6 +64,11 @@ abstract class ServerSocketChannel extends AbstractSelectableChannel with Networ
 
     /** Retrieves a server socket associated with this channel. */
     def socket(): ServerSocket
+
+    /** Returns an operation set identifying this channel's supported
+     *  operations.
+     */
+    def validOps(): Int
 }
 
 object ServerSocketChannel {

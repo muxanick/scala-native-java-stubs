@@ -2,6 +2,7 @@ package javax.naming
 
 import java.lang.{Object, String}
 import java.util.{Enumeration, Properties}
+import scala.scalanative.annotation.stub
 
 /** This class represents a compound name -- a name from
  *  a hierarchical name space.
@@ -123,9 +124,19 @@ class CompoundName extends Object with Name {
     @stub
     protected def this(comps: Enumeration[String], syntax: Properties) = ???
 
+    /** Constructs a new compound name instance by parsing the string n
+     *  using the syntax specified by the syntax properties supplied.
+     */
+    @stub
+    def this(n: String, syntax: Properties) = ???
+
     /** Implementation of this compound name. */
     @stub
     protected val impl: javax.naming.NameImpl = ???
+
+    /** Syntax properties for this compound name. */
+    @stub
+    protected val mySyntax: Properties = ???
 
     /** Adds a single component at a specified position within this
      *  compound name.
@@ -206,4 +217,10 @@ class CompoundName extends Object with Name {
     /** Determines whether a compound name is a prefix of this compound name. */
     @stub
     def startsWith(n: Name): Boolean = ???
+
+    /** Generates the string representation of this compound name, using
+     *  the syntax rules of the compound name.
+     */
+    @stub
+    def toString(): String = ???
 }

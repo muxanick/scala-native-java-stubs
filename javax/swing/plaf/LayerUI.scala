@@ -6,6 +6,7 @@ import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.io.Serializable
 import java.lang.{Object, String}
 import javax.swing.{JComponent, JLayer}
+import scala.scalanative.annotation.stub
 
 /** The base class for all JLayer's UI delegates.
  *  
@@ -23,6 +24,10 @@ import javax.swing.{JComponent, JLayer}
  *  by multiple JLayers or not shareable.
  */
 class LayerUI[V <: Component] extends ComponentUI with Serializable {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Adds a PropertyChangeListener to the listener list. */
     @stub
@@ -178,4 +183,10 @@ class LayerUI[V <: Component] extends ComponentUI with Serializable {
      */
     @stub
     def uninstallUI(c: JComponent): Unit = ???
+
+    /** Invoked when JLayer.updateUI() is called
+     *  by the JLayer this LayerUI is set to.
+     */
+    @stub
+    def updateUI(l: JLayer[_ <: V]): Unit = ???
 }

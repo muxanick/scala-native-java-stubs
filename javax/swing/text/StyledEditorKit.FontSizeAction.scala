@@ -1,7 +1,9 @@
 package javax.swing.text
 
-import java.lang.Object
+import java.awt.event.ActionEvent
+import java.lang.{Object, String}
 import javax.swing.AbstractAction
+import scala.scalanative.annotation.stub
 
 /** An action to set the font size in the associated
  *  JEditorPane.  This will use the size specified as
@@ -18,3 +20,12 @@ import javax.swing.AbstractAction
  *  Please see XMLEncoder.
  */
 object StyledEditorKit.FontSizeAction extends StyledEditorKit.StyledTextAction {
+
+    /** Creates a new FontSizeAction. */
+    @stub
+    def FontSizeAction(nm: String, size: Int) = ???
+
+    /** Sets the font size. */
+    @stub
+    def actionPerformed(e: ActionEvent): Unit = ???
+}

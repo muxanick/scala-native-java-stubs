@@ -1,6 +1,8 @@
 package javax.xml.crypto.dsig.spec
 
-import java.lang.Object
+import java.lang.{Object, String}
+import java.util.List
+import scala.scalanative.annotation.stub
 
 /** Parameters for the W3C Recommendation:
  *  
@@ -28,4 +30,20 @@ final class ExcC14NParameterSpec extends Object with C14NMethodParameterSpec {
      */
     @stub
     def this() = ???
+
+    /** Creates a ExcC14NParameterSpec with the specified list
+     *  of prefixes.
+     */
+    @stub
+    def this(prefixList: List) = ???
+
+    /** Returns the inclusive namespace prefix list. */
+    @stub
+    def getPrefixList(): List = ???
+}
+
+object ExcC14NParameterSpec {
+    /** Indicates the default namespace ("#default"). */
+    @stub
+    val DEFAULT: String = ???
 }

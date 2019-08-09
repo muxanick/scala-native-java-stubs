@@ -6,6 +6,7 @@ import java.lang.Object
 import javax.swing.{ComboBoxEditor, JButton, JComponent}
 import javax.swing.plaf.{ComboBoxUI, ComponentUI}
 import javax.swing.plaf.basic.{BasicComboBoxUI, ComboPopup}
+import scala.scalanative.annotation.stub
 
 /** Metal UI for JComboBox
  *  
@@ -20,6 +21,10 @@ import javax.swing.plaf.basic.{BasicComboBoxUI, ComboPopup}
  */
 class MetalComboBoxUI extends BasicComboBoxUI {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** This class should be treated as a "protected" inner class. */
     @stub
     object MetalComboBoxLayoutManager extends MetalComboBoxUI.MetalComboBoxLayoutManager
@@ -30,6 +35,10 @@ class MetalComboBoxUI extends BasicComboBoxUI {
      */
     @stub
     object MetalComboPopup extends MetalComboBoxUI.MetalComboPopup
+
+    /** This class should be treated as a "protected" inner class. */
+    @stub
+    object MetalPropertyChangeListener extends MetalComboBoxUI.MetalPropertyChangeListener
 
     /** This protected method is implementation specific and should be private. */
     @stub
@@ -98,6 +107,10 @@ class MetalComboBoxUI extends BasicComboBoxUI {
      */
     @stub
     protected def removeListeners(): Unit = ???
+
+    /** This protected method is implementation specific and should be private. */
+    @stub
+    def unconfigureEditor(): Unit = ???
 }
 
 object MetalComboBoxUI {

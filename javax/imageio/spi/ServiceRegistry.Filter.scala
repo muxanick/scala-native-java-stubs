@@ -1,5 +1,8 @@
 package javax.imageio.spi
 
+import java.lang.Object
+import scala.scalanative.annotation.stub
+
 /** A simple filter interface used by
  *  ServiceRegistry.getServiceProviders to select
  *  providers matching an arbitrary criterion.  Classes that
@@ -8,3 +11,11 @@ package javax.imageio.spi
  *  ServiceRegistry that takes a Filter.
  */
 object trait ServiceRegistry.Filter {
+
+    /** Returns true if the given
+     *  provider object matches the criterion defined
+     *  by this Filter.
+     */
+    @stub
+    def filter(provider: Object): Boolean = ???
+}

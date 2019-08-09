@@ -1,7 +1,9 @@
 package javax.swing.text
 
-import java.lang.Object
+import java.awt.event.ActionEvent
+import java.lang.{Object, String}
 import javax.swing.AbstractAction
+import scala.scalanative.annotation.stub
 
 /** An action to set the font family in the associated
  *  JEditorPane.  This will use the family specified as
@@ -18,3 +20,12 @@ import javax.swing.AbstractAction
  *  Please see XMLEncoder.
  */
 object StyledEditorKit.FontFamilyAction extends StyledEditorKit.StyledTextAction {
+
+    /** Creates a new FontFamilyAction. */
+    @stub
+    def FontFamilyAction(nm: String, family: String) = ???
+
+    /** Sets the font family. */
+    @stub
+    def actionPerformed(e: ActionEvent): Unit = ???
+}

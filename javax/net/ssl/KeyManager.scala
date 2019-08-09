@@ -1,5 +1,7 @@
 package javax.net.ssl
 
+import scala.scalanative.annotation.stub
+
 /** This is the base interface for JSSE key managers.
  *  
  *  KeyManagers are responsible for managing the

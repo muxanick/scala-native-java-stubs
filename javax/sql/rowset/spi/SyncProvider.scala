@@ -2,6 +2,7 @@ package javax.sql.rowset.spi
 
 import java.lang.{Object, String}
 import javax.sql.{RowSetReader, RowSetWriter}
+import scala.scalanative.annotation.stub
 
 /** The synchronization mechanism that provides reader/writer capabilities for
  *  disconnected RowSet objects.
@@ -183,6 +184,10 @@ import javax.sql.{RowSetReader, RowSetWriter}
  */
 abstract class SyncProvider extends Object {
 
+    /** Creates a default SyncProvider object. */
+    @stub
+    def this() = ???
+
     /** Returns the current data source lock severity level active in this
      *  SyncProvider implementation.
      */
@@ -218,6 +223,13 @@ abstract class SyncProvider extends Object {
      *  datasource_lock.
      */
     def setDataSourceLock(datasource_lock: Int): Unit
+
+    /** Returns whether this SyncProvider implementation
+     *  can perform synchronization between a RowSet object
+     *  and the SQL VIEW in the data source from which
+     *  the RowSet object got its data.
+     */
+    def supportsUpdatableView(): Int
 }
 
 object SyncProvider {
@@ -283,4 +295,11 @@ object SyncProvider {
      */
     @stub
     val NONUPDATABLE_VIEW_SYNC: Int = ???
+
+    /** Indicates that a SyncProvider implementation
+     *  supports synchronization between a RowSet object and
+     *  the SQL VIEW used to populate it.
+     */
+    @stub
+    val UPDATABLE_VIEW_SYNC: Int = ???
 }

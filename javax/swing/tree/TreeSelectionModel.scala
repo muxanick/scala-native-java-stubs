@@ -2,6 +2,7 @@ package javax.swing.tree
 
 import java.beans.PropertyChangeListener
 import javax.swing.event.TreeSelectionListener
+import scala.scalanative.annotation.stub
 
 /** This interface represents the current state of the selection for
  *  the tree component.
@@ -180,6 +181,10 @@ trait TreeSelectionModel {
     /** Sets the selection to path. */
     @stub
     def setSelectionPath(path: TreePath): Unit = ???
+
+    /** Sets the selection to path. */
+    @stub
+    def setSelectionPaths(paths: Array[TreePath]): Unit = ???
 }
 
 object TreeSelectionModel {
@@ -192,4 +197,8 @@ object TreeSelectionModel {
      */
     @stub
     val DISCONTIGUOUS_TREE_SELECTION: Int = ???
+
+    /** Selection can only contain one path at a time. */
+    @stub
+    val SINGLE_TREE_SELECTION: Int = ???
 }

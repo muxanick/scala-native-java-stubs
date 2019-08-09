@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** ListResourceBundle is an abstract subclass of
  *  ResourceBundle that manages resources for a locale
@@ -72,6 +73,10 @@ import java.lang.{Object, String}
  */
 abstract class ListResourceBundle extends ResourceBundle {
 
+    /** Sole constructor. */
+    @stub
+    def this() = ???
+
     /** Returns an array in which each item is a pair of objects in an
      *  Object array.
      */
@@ -84,4 +89,9 @@ abstract class ListResourceBundle extends ResourceBundle {
 
     /** Gets an object for the given key from this resource bundle. */
     def handleGetObject(key: String): Object
+
+    /** Returns a Set of the keys contained
+     *  only in this ResourceBundle.
+     */
+    protected def handleKeySet(): Set[String]
 }

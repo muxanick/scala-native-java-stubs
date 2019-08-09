@@ -3,6 +3,7 @@ package java.awt.image.renderable
 import java.awt.geom.Rectangle2D
 import java.awt.image.RenderedImage
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** ContextualRenderedImageFactory provides an interface for the
  *  functionality that may differ between instances of
@@ -49,4 +50,10 @@ trait ContextualRenderedImageFactory extends RenderedImageFactory {
      */
     @stub
     def isDynamic(): Boolean = ???
+
+    /** Maps the operation's output RenderContext into a RenderContext
+     *  for each of the operation's sources.
+     */
+    @stub
+    def mapRenderContext(i: Int, renderContext: RenderContext, paramBlock: ParameterBlock, image: RenderableImage): RenderContext = ???
 }

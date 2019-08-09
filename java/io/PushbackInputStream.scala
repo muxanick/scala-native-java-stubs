@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A PushbackInputStream adds
  *  functionality to another input stream, namely
@@ -29,9 +30,23 @@ class PushbackInputStream extends FilterInputStream {
     @stub
     def this(in: InputStream) = ???
 
+    /** Creates a PushbackInputStream
+     *  with a pushback buffer of the specified size,
+     *  and saves its  argument, the input stream
+     *  in, for later use.
+     */
+    @stub
+    def this(in: InputStream, size: Int) = ???
+
     /** The pushback buffer. */
     @stub
     protected val buf: Array[Byte] = ???
+
+    /** The position within the pushback buffer from which the next byte will
+     *  be read.
+     */
+    @stub
+    protected val pos: Int = ???
 
     /** Returns an estimate of the number of bytes that can be read (or
      *  skipped over) from this input stream without blocking by the next
@@ -89,4 +104,8 @@ class PushbackInputStream extends FilterInputStream {
      */
     @stub
     def unread(b: Array[Byte], off: Int, len: Int): Unit = ???
+
+    /** Pushes back a byte by copying it to the front of the pushback buffer. */
+    @stub
+    def unread(b: Int): Unit = ???
 }

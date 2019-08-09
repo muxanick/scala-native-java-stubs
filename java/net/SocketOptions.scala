@@ -1,6 +1,7 @@
 package java.net
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Interface of methods to get/set socket options.  This interface is
  *  implemented by: SocketImpl and  DatagramSocketImpl.
@@ -19,6 +20,10 @@ trait SocketOptions {
     /** Fetch the value of an option. */
     @stub
     def getOption(optID: Int): Object = ???
+
+    /** Enable/disable the option specified by optID. */
+    @stub
+    def setOption(optID: Int, value: Object): Unit = ???
 }
 
 object SocketOptions {
@@ -88,4 +93,8 @@ object SocketOptions {
     /** Set a timeout on blocking Socket operations: */
     @stub
     val SO_TIMEOUT: Int = ???
+
+    /** Disable Nagle's algorithm for this connection. */
+    @stub
+    val TCP_NODELAY: Int = ???
 }

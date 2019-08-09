@@ -2,6 +2,7 @@ package javax.management.modelmbean
 
 import java.lang.{Object, String}
 import javax.management.{Descriptor, DescriptorAccess, MBeanFeatureInfo, MBeanNotificationInfo}
+import scala.scalanative.annotation.stub
 
 /** The ModelMBeanNotificationInfo object describes a notification emitted
  *  by a ModelMBean.
@@ -60,6 +61,10 @@ class ModelMBeanNotificationInfo extends MBeanNotificationInfo with DescriptorAc
     @stub
     def this(notifTypes: Array[String], name: String, description: String) = ???
 
+    /** Constructs a ModelMBeanNotificationInfo object. */
+    @stub
+    def this(notifTypes: Array[String], name: String, description: String, descriptor: Descriptor) = ???
+
     /** Creates and returns a new ModelMBeanNotificationInfo which is a
      *  duplicate of this ModelMBeanNotificationInfo.
      */
@@ -79,4 +84,10 @@ class ModelMBeanNotificationInfo extends MBeanNotificationInfo with DescriptorAc
      */
     @stub
     def setDescriptor(inDescriptor: Descriptor): Unit = ???
+
+    /** Returns a human readable string containing
+     *  ModelMBeanNotificationInfo.
+     */
+    @stub
+    def toString(): String = ???
 }

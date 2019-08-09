@@ -2,6 +2,7 @@ package javax.swing
 
 import java.awt.{Component, Container, DefaultKeyboardFocusManager, KeyboardFocusManager}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class has been obsoleted by the 1.4 focus APIs. While client code may
  *  still use this class, developers are strongly encouraged to use
@@ -19,6 +20,10 @@ class DefaultFocusManager extends FocusManager {
 
     /**  */
     @stub
+    def this() = ???
+
+    /**  */
+    @stub
     def compareTabOrder(a: Component, b: Component): Boolean = ???
 
     /**  */
@@ -32,4 +37,8 @@ class DefaultFocusManager extends FocusManager {
     /**  */
     @stub
     def getFirstComponent(aContainer: Container): Component = ???
+
+    /**  */
+    @stub
+    def getLastComponent(aContainer: Container): Component = ???
 }

@@ -1,5 +1,7 @@
 package javax.transaction.xa
 
+import scala.scalanative.annotation.stub
+
 /** The XAResource interface is a Java mapping of the industry standard
  *  XA interface based on the X/Open CAE Specification (Distributed
  *  Transaction Processing: The XA Specification).
@@ -82,6 +84,12 @@ trait XAResource {
      */
     @stub
     def setTransactionTimeout(seconds: Int): Boolean = ???
+
+    /** Starts work on behalf of a transaction branch specified in
+     *  xid.
+     */
+    @stub
+    def start(xid: Xid, flags: Int): Unit = ???
 }
 
 object XAResource {
@@ -130,4 +138,8 @@ object XAResource {
     /** The transaction work has been prepared normally. */
     @stub
     val XA_OK: Int = ???
+
+    /** The transaction branch has been read-only and has been committed. */
+    @stub
+    val XA_RDONLY: Int = ???
 }

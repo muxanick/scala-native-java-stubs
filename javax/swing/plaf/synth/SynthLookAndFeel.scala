@@ -1,5 +1,6 @@
 package javax.swing.plaf.synth
 
+import java.awt.Component
 import java.beans.PropertyChangeEvent
 import java.io.InputStream
 import java.lang.{Class, Object, String}
@@ -7,6 +8,7 @@ import java.net.URL
 import javax.swing.{JComponent, LookAndFeel, UIDefaults}
 import javax.swing.plaf.ComponentUI
 import javax.swing.plaf.basic.BasicLookAndFeel
+import scala.scalanative.annotation.stub
 
 /** SynthLookAndFeel provides the basis for creating a customized look and
  *  feel. SynthLookAndFeel does not directly provide a look, all painting is
@@ -26,6 +28,10 @@ import javax.swing.plaf.basic.BasicLookAndFeel
  *  result in NotSerializableException.
  */
 class SynthLookAndFeel extends BasicLookAndFeel {
+
+    /** Creates a SynthLookAndFeel. */
+    @stub
+    def this() = ???
 
     /** Returns the defaults for this SynthLookAndFeel. */
     @stub
@@ -109,4 +115,8 @@ object SynthLookAndFeel {
      */
     @stub
     def setStyleFactory(cache: SynthStyleFactory): Unit = ???
+
+    /** Updates the style associated with c, and all its children. */
+    @stub
+    def updateStyles(c: Component): Unit = ???
 }

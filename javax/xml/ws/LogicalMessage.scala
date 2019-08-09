@@ -3,6 +3,7 @@ package javax.xml.ws
 import java.lang.Object
 import javax.xml.bind.JAXBContext
 import javax.xml.transform.Source
+import scala.scalanative.annotation.stub
 
 /** The LogicalMessage interface represents a
  *   protocol agnostic XML message and contains methods that
@@ -25,4 +26,8 @@ trait LogicalMessage {
     /** Sets the message payload */
     @stub
     def setPayload(payload: Object, context: JAXBContext): Unit = ???
+
+    /** Sets the message payload */
+    @stub
+    def setPayload(payload: Source): Unit = ???
 }

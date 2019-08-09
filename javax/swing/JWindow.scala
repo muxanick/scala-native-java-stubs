@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component, Container, Frame, Graphics, GraphicsConfiguration, LayoutManager, Window}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** A JWindow is a container that can be displayed anywhere on the
  *  user's desktop. It does not have the title bar, window-management buttons,
@@ -70,6 +71,18 @@ class JWindow extends Window with Accessible with RootPaneContainer {
     @stub
     def this(owner: Window) = ???
 
+    /** Creates a window with the specified owner window and
+     *  GraphicsConfiguration of a screen device.
+     */
+    @stub
+    def this(owner: Window, gc: GraphicsConfiguration) = ???
+
+    /** This class implements accessibility support for the
+     *  JWindow class.
+     */
+    @stub
+    protected object AccessibleJWindow extends JWindow.AccessibleJWindow
+
     /** The accessible context property. */
     @stub
     protected val accessibleContext: AccessibleContext = ???
@@ -81,6 +94,12 @@ class JWindow extends Window with Accessible with RootPaneContainer {
      */
     @stub
     protected val rootPane: JRootPane = ???
+
+    /** If true then calls to add and setLayout
+     *  will be forwarded to the contentPane.
+     */
+    @stub
+    protected val rootPaneCheckingEnabled: Boolean = ???
 
     /** Adds the specified child Component. */
     @stub
@@ -177,4 +196,8 @@ class JWindow extends Window with Accessible with RootPaneContainer {
     /** Calls paint(g). */
     @stub
     def update(g: Graphics): Unit = ???
+
+    /** Called by the constructors to init the JWindow properly. */
+    @stub
+    protected def windowInit(): Unit = ???
 }

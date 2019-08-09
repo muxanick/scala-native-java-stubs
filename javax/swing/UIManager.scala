@@ -7,6 +7,7 @@ import java.lang.{Object, String}
 import java.util.Locale
 import javax.swing.border.Border
 import javax.swing.plaf.ComponentUI
+import scala.scalanative.annotation.stub
 
 /** UIManager manages the current look and feel, the set of
  *  available look and feels, PropertyChangeListeners that
@@ -112,9 +113,20 @@ import javax.swing.plaf.ComponentUI
  *  Please see XMLEncoder.
  */
 class UIManager extends Object with Serializable {
+
+    /**  */
+    @stub
+    def this() = ???
 }
 
 object UIManager {
+    /** Provides a little information about an installed
+     *  LookAndFeel for the sake of configuring a menu or
+     *  for initial application set up.
+     */
+    @stub
+    object LookAndFeelInfo extends UIManager.LookAndFeelInfo
+
     /** Adds a LookAndFeel to the list of auxiliary look and feels. */
     @stub
     def addAuxiliaryLookAndFeel(laf: LookAndFeel): Unit = ???
@@ -307,4 +319,11 @@ object UIManager {
     /** Sets the current look and feel to newLookAndFeel. */
     @stub
     def setLookAndFeel(newLookAndFeel: LookAndFeel): Unit = ???
+
+    /** Loads the LookAndFeel specified by the given class
+     *  name, using the current thread's context class loader, and
+     *  passes it to setLookAndFeel(LookAndFeel).
+     */
+    @stub
+    def setLookAndFeel(className: String): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.security.cert
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The CRLReason enumeration specifies the reason that a certificate
  *  is revoked, as defined in 
@@ -55,7 +56,16 @@ object CRLReason {
      */
     final val UNSPECIFIED = new CRLReason(UNSPECIFIED, 9)
 
+    /** Unused reason. */
+    final val UNUSED = new CRLReason(UNUSED, 10)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): CRLReason = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[CRLReason] = ???
 }

@@ -2,6 +2,7 @@ package java.awt
 
 import java.io.Serializable
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** The GridBagConstraints class specifies constraints
  *  for components that are laid out using the
@@ -14,6 +15,12 @@ class GridBagConstraints extends Object with Cloneable with Serializable {
      */
     @stub
     def this() = ???
+
+    /** Creates a GridBagConstraints object with
+     *  all of its fields set to the passed-in arguments.
+     */
+    @stub
+    def this(gridx: Int, gridy: Int, gridwidth: Int, gridheight: Int, weightx: Double, weighty: Double, anchor: Int, fill: Int, insets: Insets, ipadx: Int, ipady: Int) = ???
 
     /** This field is used when the component is smaller than its
      *  display area.
@@ -77,6 +84,10 @@ class GridBagConstraints extends Object with Cloneable with Serializable {
     /** Specifies how to distribute extra vertical space. */
     @stub
     val weighty: Double = ???
+
+    /** Creates a copy of this grid bag constraint. */
+    @stub
+    def clone(): Object = ???
 }
 
 object GridBagConstraints {
@@ -239,4 +250,10 @@ object GridBagConstraints {
     /** Resize the component vertically but not horizontally. */
     @stub
     val VERTICAL: Int = ???
+
+    /** Put the component on the left side of its display area,
+     *  centered vertically.
+     */
+    @stub
+    val WEST: Int = ???
 }

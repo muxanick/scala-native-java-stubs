@@ -1,6 +1,7 @@
 package javax.swing
 
 import javax.swing.event.ChangeListener
+import scala.scalanative.annotation.stub
 
 /** Defines the data model used by components like Sliders
  *  and ProgressBars.
@@ -101,4 +102,10 @@ trait BoundedRangeModel {
      */
     @stub
     def setValue(newValue: Int): Unit = ???
+
+    /** This attribute indicates that any upcoming changes to the value
+     *  of the model should be considered a single event.
+     */
+    @stub
+    def setValueIsAdjusting(b: Boolean): Unit = ???
 }

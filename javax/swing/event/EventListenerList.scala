@@ -1,8 +1,9 @@
 package javax.swing.event
 
 import java.io.Serializable
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** A class that holds a list of EventListeners.  A single instance
  *  can be used to hold all listeners (of all types) for the instance
@@ -69,6 +70,14 @@ import java.util.EventListener
  */
 class EventListenerList extends Object with Serializable {
 
+    /**  */
+    @stub
+    def this() = ???
+
+    /**  */
+    @stub
+    protected val listenerList: Array[Object] = ???
+
     /** Adds the listener as a listener of the specified type. */
     @stub
     def add[T <: EventListener](t: Class[T], l: T): Unit = ???
@@ -96,4 +105,8 @@ class EventListenerList extends Object with Serializable {
     /** Removes the listener as a listener of the specified type. */
     @stub
     def remove[T <: EventListener](t: Class[T], l: T): Unit = ???
+
+    /** Returns a string representation of the EventListenerList. */
+    @stub
+    def toString(): String = ???
 }

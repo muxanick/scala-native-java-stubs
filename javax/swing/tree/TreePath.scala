@@ -1,7 +1,8 @@
 package javax.swing.tree
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** TreePath represents an array of objects that uniquely
  *  identify the path to a node in a tree. The elements of the array
@@ -67,6 +68,10 @@ class TreePath extends Object with Serializable {
     @stub
     protected def this(path: Array[Object], length: Int) = ???
 
+    /** Creates a TreePath with the specified parent and element. */
+    @stub
+    protected def this(parent: TreePath, lastPathComponent: Object) = ???
+
     /** Compares this TreePath to the specified object. */
     @stub
     def equals(o: Object): Boolean = ???
@@ -107,4 +112,10 @@ class TreePath extends Object with Serializable {
      */
     @stub
     def pathByAddingChild(child: Object): TreePath = ???
+
+    /** Returns a string that displays and identifies this
+     *  object's properties.
+     */
+    @stub
+    def toString(): String = ???
 }

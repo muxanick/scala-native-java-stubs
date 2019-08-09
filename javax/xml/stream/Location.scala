@@ -1,6 +1,7 @@
 package javax.xml.stream
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** Provides information on the location of an event.
  * 
@@ -30,4 +31,8 @@ trait Location {
     /** Returns the public ID of the XML */
     @stub
     def getPublicId(): String = ???
+
+    /** Returns the system ID of the XML */
+    @stub
+    def getSystemId(): String = ???
 }

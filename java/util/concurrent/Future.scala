@@ -1,5 +1,7 @@
 package java.util.concurrent
 
+import scala.scalanative.annotation.stub
+
 /** A Future represents the result of an asynchronous
  *  computation.  Methods are provided to check if the computation is
  *  complete, to wait for its completion, and to retrieve the result of
@@ -74,4 +76,8 @@ trait Future[V] {
      */
     @stub
     def isCancelled(): Boolean = ???
+
+    /** Returns true if this task completed. */
+    @stub
+    def isDone(): Boolean = ???
 }

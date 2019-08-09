@@ -1,14 +1,19 @@
 package javax.sound.sampled.spi
 
-import java.io.File
+import java.io.{File, OutputStream}
 import java.lang.Object
 import javax.sound.sampled.{AudioFileFormat.Type, AudioInputStream}
+import scala.scalanative.annotation.stub
 
 /** Provider for audio file writing services.  Classes providing concrete
  *  implementations can write one or more types of audio file from an audio
  *  stream.
  */
 abstract class AudioFileWriter extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Obtains the file types for which file writing support is provided by this
      *  audio file writer.
@@ -34,4 +39,9 @@ abstract class AudioFileWriter extends Object {
      *  indicated to the external file provided.
      */
     def write(stream: AudioInputStream, fileType: AudioFileFormat.Type, out: File): Int
+
+    /** Writes a stream of bytes representing an audio file of the file type
+     *  indicated to the output stream provided.
+     */
+    def write(stream: AudioInputStream, fileType: AudioFileFormat.Type, out: OutputStream): Int
 }

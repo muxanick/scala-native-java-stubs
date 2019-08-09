@@ -6,6 +6,7 @@ import java.nio.channels.spi.AbstractInterruptibleChannel
 import java.nio.file.{OpenOption, Path}
 import java.nio.file.attribute.FileAttribute
 import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** A channel for reading, writing, mapping, and manipulating a file.
  * 
@@ -104,6 +105,10 @@ import java.util.Set
  */
 abstract class FileChannel extends AbstractInterruptibleChannel with SeekableByteChannel with GatheringByteChannel with ScatteringByteChannel {
 
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this() = ???
+
     /** Forces any updates to this channel's file to be written to the storage
      *  device that contains it.
      */
@@ -172,9 +177,18 @@ abstract class FileChannel extends AbstractInterruptibleChannel with SeekableByt
      *  given buffers.
      */
     def write(srcs: Array[ByteBuffer], offset: Int, length: Int): Long
+
+    /** Writes a sequence of bytes to this channel from the given buffer,
+     *  starting at the given file position.
+     */
+    def write(src: ByteBuffer, position: Long): Int
 }
 
 object FileChannel {
+    /** A typesafe enumeration for file-mapping modes. */
+    @stub
+    object MapMode extends FileChannel.MapMode
+
     /** Opens or creates a file, returning a file channel to access the file. */
     @stub
     def open(path: Path, options: OpenOption*): FileChannel = ???

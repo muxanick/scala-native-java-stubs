@@ -1,8 +1,10 @@
 package javax.lang.model.util
 
+import java.io.Writer
 import java.lang.{CharSequence, Object, String}
 import java.util.{List, Map}
 import javax.lang.model.element.{AnnotationMirror, AnnotationValue, Element, ExecutableElement, Name, PackageElement, TypeElement}
+import scala.scalanative.annotation.stub
 
 /** Utility methods for operating on program elements.
  * 
@@ -78,4 +80,10 @@ trait Elements {
      */
     @stub
     def overrides(overrider: ExecutableElement, overridden: ExecutableElement, type: TypeElement): Boolean = ???
+
+    /** Prints a representation of the elements to the given writer in
+     *  the specified order.
+     */
+    @stub
+    def printElements(w: Writer, elements: Element*): Unit = ???
 }

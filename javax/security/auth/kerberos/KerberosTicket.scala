@@ -1,11 +1,12 @@
 package javax.security.auth.kerberos
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
 import java.net.InetAddress
 import java.util.Date
 import javax.crypto.SecretKey
 import javax.security.auth.{Destroyable, Refreshable}
+import scala.scalanative.annotation.stub
 
 /** This class encapsulates a Kerberos ticket and associated
  *  information as viewed from the client's point of view. It captures all
@@ -34,6 +35,12 @@ import javax.security.auth.{Destroyable, Refreshable}
  *  special case of a more generalized service ticket.
  */
 class KerberosTicket extends Object with Destroyable with Refreshable with Serializable {
+
+    /** Constructs a KerberosTicket using credentials information that a
+     *  client either receives from a KDC or reads from a cache.
+     */
+    @stub
+    def this(asn1Encoding: Array[Byte], client: KerberosPrincipal, server: KerberosPrincipal, sessionKey: Array[Byte], keyType: Int, flags: Array[Boolean], authTime: Date, startTime: Date, endTime: Date, renewTill: Date, clientAddresses: Array[InetAddress]) = ???
 
     /** Destroys the ticket and destroys any sensitive information stored in
      *  it.
@@ -140,4 +147,8 @@ class KerberosTicket extends Object with Destroyable with Refreshable with Seria
     /** Extends the validity period of this ticket. */
     @stub
     def refresh(): Unit = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }

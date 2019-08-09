@@ -1,7 +1,8 @@
 package javax.xml.ws
 
 import java.lang.{Class, Object, String}
-import javax.xml.transform.Source
+import javax.xml.transform.{Result, Source}
+import scala.scalanative.annotation.stub
 
 /** This class represents an WS-Addressing EndpointReference
  *  which is a remote reference to a web service endpoint.
@@ -50,11 +51,18 @@ import javax.xml.transform.Source
  */
 abstract class EndpointReference extends Object {
 
+    /**  */
+    @stub
+    protected def this() = ???
+
     /** The getPort method returns a proxy. */
     def getPort[T](serviceEndpointInterface: Class[T], features: WebServiceFeature*): T
 
     /** Displays EPR infoset for debugging convenience. */
     def toString(): String
+
+    /** write this EndpointReference to the specified infoset format */
+    def writeTo(result: Result): Unit
 }
 
 object EndpointReference {

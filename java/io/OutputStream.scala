@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This abstract class is the superclass of all classes representing
  *  an output stream of bytes. An output stream accepts output bytes
@@ -11,6 +12,10 @@ import java.lang.Object
  *  that writes one byte of output.
  */
 abstract class OutputStream extends Object with Closeable with Flushable {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Closes this output stream and releases any system resources
      *  associated with this stream.
@@ -31,4 +36,7 @@ abstract class OutputStream extends Object with Closeable with Flushable {
      *  starting at offset off to this output stream.
      */
     def write(b: Array[Byte], off: Int, len: Int): Unit
+
+    /** Writes the specified byte to this output stream. */
+    def write(b: Int): Unit
 }

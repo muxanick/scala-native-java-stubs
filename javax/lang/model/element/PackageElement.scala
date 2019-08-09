@@ -1,6 +1,7 @@
 package javax.lang.model.element
 
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** Represents a package program element.  Provides access to information
  *  about the package and its members.
@@ -26,4 +27,8 @@ trait PackageElement extends Element with QualifiedNameable {
     /** Returns the simple name of this package. */
     @stub
     def getSimpleName(): Name = ???
+
+    /** Returns true is this is an unnamed package and false otherwise. */
+    @stub
+    def isUnnamed(): Boolean = ???
 }

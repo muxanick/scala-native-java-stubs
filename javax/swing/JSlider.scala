@@ -6,6 +6,7 @@ import java.util.{Dictionary, Hashtable}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.event.{ChangeEvent, ChangeListener}
 import javax.swing.plaf.SliderUI
+import scala.scalanative.annotation.stub
 
 /** A component that lets the user graphically select a value by sliding
  *  a knob within a bounded interval. The knob is always positioned
@@ -68,6 +69,18 @@ class JSlider extends JComponent with SwingConstants with Accessible {
     @stub
     def this(min: Int, max: Int, value: Int) = ???
 
+    /** Creates a slider with the specified orientation and the
+     *  specified minimum, maximum, and initial values.
+     */
+    @stub
+    def this(orientation: Int, min: Int, max: Int, value: Int) = ???
+
+    /** This class implements accessibility support for the
+     *  JSlider class.
+     */
+    @stub
+    protected object AccessibleJSlider extends JSlider.AccessibleJSlider
+
     /** Only one ChangeEvent is needed per slider instance since the
      *  event's only (read-only) state is the source property.
      */
@@ -103,6 +116,13 @@ class JSlider extends JComponent with SwingConstants with Accessible {
      */
     @stub
     protected val sliderModel: BoundedRangeModel = ???
+
+    /** If true, the knob (and the data value it represents)
+     *  resolve to the closest tick mark next to where the user
+     *  positioned the knob.
+     */
+    @stub
+    protected val snapToTicks: Boolean = ???
 
     /** Adds a ChangeListener to the slider. */
     @stub
@@ -318,4 +338,8 @@ class JSlider extends JComponent with SwingConstants with Accessible {
      */
     @stub
     protected def updateLabelUIs(): Unit = ???
+
+    /** Resets the UI property to a value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
 }

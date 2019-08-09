@@ -1,7 +1,8 @@
 package javax.management
 
-import java.lang.Object
+import java.lang.{Class, Object}
 import java.lang.reflect.{InvocationHandler, Method}
+import scala.scalanative.annotation.stub
 
 /** InvocationHandler that forwards methods in an MBean's
  *  management interface through the MBean server to the MBean.
@@ -55,6 +56,12 @@ class MBeanServerInvocationHandler extends Object with InvocationHandler {
     @stub
     def this(connection: MBeanServerConnection, objectName: ObjectName) = ???
 
+    /** Invocation handler that can forward methods through an MBean
+     *  server to a Standard MBean or MXBean.
+     */
+    @stub
+    def this(connection: MBeanServerConnection, objectName: ObjectName, isMXBean: Boolean) = ???
+
     /** The MBean server connection through which the methods of
      *  a proxy using this handler are forwarded.
      */
@@ -78,4 +85,13 @@ class MBeanServerInvocationHandler extends Object with InvocationHandler {
      */
     @stub
     def isMXBean(): Boolean = ???
+}
+
+object MBeanServerInvocationHandler {
+    /** Return a proxy that implements the given interface by
+     *  forwarding its methods through the given MBean server to the
+     *  named MBean.
+     */
+    @stub
+    def newProxyInstance[T](connection: MBeanServerConnection, objectName: ObjectName, interfaceClass: Class[T], notificationBroadcaster: Boolean): T = ???
 }

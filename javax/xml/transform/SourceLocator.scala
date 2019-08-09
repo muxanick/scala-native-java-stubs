@@ -1,6 +1,7 @@
 package javax.xml.transform
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** This interface is primarily for the purposes of reporting where
  *  an error occurred in the XML source or transformation instructions.
@@ -18,4 +19,8 @@ trait SourceLocator {
     /** Return the public identifier for the current document event. */
     @stub
     def getPublicId(): String = ???
+
+    /** Return the system identifier for the current document event. */
+    @stub
+    def getSystemId(): String = ???
 }

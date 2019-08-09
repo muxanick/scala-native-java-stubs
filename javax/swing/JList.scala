@@ -8,6 +8,7 @@ import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.event.ListSelectionListener
 import javax.swing.plaf.ListUI
 import javax.swing.text.Position.Bias
+import scala.scalanative.annotation.stub
 
 /** A component that displays a list of objects and allows the user to select
  *  one or more items. A separate model, ListModel, maintains the
@@ -233,6 +234,12 @@ class JList[E] extends JComponent with Scrollable with Accessible {
      */
     @stub
     def this(dataModel: ListModel[E]) = ???
+
+    /** Constructs a JList that displays the elements in
+     *  the specified Vector.
+     */
+    @stub
+    def this(listData: Vector[_ <: E]) = ???
 
     /** This class implements accessibility support for the
      *  JList class.
@@ -628,9 +635,21 @@ class JList[E] extends JComponent with Scrollable with Accessible {
      */
     @stub
     def setVisibleRowCount(visibleRowCount: Int): Unit = ???
+
+    /** Resets the ListUI property by setting it to the value provided
+     *  by the current look and feel.
+     */
+    @stub
+    def updateUI(): Unit = ???
 }
 
 object JList {
+    /** A subclass of TransferHandler.DropLocation representing
+     *  a drop location for a JList.
+     */
+    @stub
+    object DropLocation extends JList.DropLocation
+
     /** Indicates a "newspaper style" layout with cells flowing horizontally
      *  then vertically.
      */
@@ -642,4 +661,10 @@ object JList {
      */
     @stub
     val VERTICAL: Int = ???
+
+    /** Indicates a "newspaper style" layout with cells flowing vertically
+     *  then horizontally.
+     */
+    @stub
+    val VERTICAL_WRAP: Int = ???
 }

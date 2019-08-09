@@ -4,6 +4,7 @@ import java.awt.event.KeyEvent
 import java.beans.{PropertyChangeListener, VetoableChangeListener}
 import java.lang.{Object, String}
 import java.util.{List, Set}
+import scala.scalanative.annotation.stub
 
 /** The KeyboardFocusManager is responsible for managing the active and focused
  *  Windows, and the current focus owner. The focus owner is defined as the
@@ -38,6 +39,10 @@ import java.util.{List, Set}
  *  for more information.
  */
 abstract class KeyboardFocusManager extends Object with KeyEventDispatcher with KeyEventPostProcessor {
+
+    /** Initializes a KeyboardFocusManager. */
+    @stub
+    def this() = ???
 
     /** Adds a KeyEventDispatcher to this KeyboardFocusManager's dispatcher
      *  chain.
@@ -286,6 +291,9 @@ abstract class KeyboardFocusManager extends Object with KeyEventDispatcher with 
      *  owner.
      */
     def upFocusCycle(): Unit
+
+    /** Moves the focus up one focus traversal cycle. */
+    def upFocusCycle(aComponent: Component): Unit
 }
 
 object KeyboardFocusManager {
@@ -300,6 +308,10 @@ object KeyboardFocusManager {
     /** The identifier for the Forward focus traversal keys. */
     @stub
     val FORWARD_TRAVERSAL_KEYS: Int = ???
+
+    /** The identifier for the Up Cycle focus traversal keys. */
+    @stub
+    val UP_CYCLE_TRAVERSAL_KEYS: Int = ???
 
     /** Returns the current KeyboardFocusManager instance for the calling
      *  thread's context.

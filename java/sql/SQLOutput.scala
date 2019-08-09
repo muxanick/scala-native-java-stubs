@@ -3,6 +3,8 @@ package java.sql
 import java.io.{InputStream, Reader}
 import java.lang.{Object, String}
 import java.math.BigDecimal
+import java.net.URL
+import scala.scalanative.annotation.stub
 
 /** The output stream for writing the attributes of a user-defined
  *  type back to the database.  This interface, used
@@ -139,4 +141,8 @@ trait SQLOutput {
     /** Writes the next attribute to the stream as a java.sql.Timestamp object. */
     @stub
     def writeTimestamp(x: Timestamp): Unit = ???
+
+    /** Writes a SQL DATALINK value to the stream. */
+    @stub
+    def writeURL(x: URL): Unit = ???
 }

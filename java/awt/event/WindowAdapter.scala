@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An abstract adapter class for receiving window events.
  *  The methods in this class are empty. This class exists as
@@ -20,6 +21,10 @@ import java.lang.Object
  *  object is invoked, and the WindowEvent is passed to it.
  */
 abstract class WindowAdapter extends Object with WindowListener with WindowStateListener with WindowFocusListener {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Invoked when a window is activated. */
     def windowActivated(e: WindowEvent): Unit
@@ -53,4 +58,7 @@ abstract class WindowAdapter extends Object with WindowListener with WindowState
 
     /** Invoked when a window has been opened. */
     def windowOpened(e: WindowEvent): Unit
+
+    /** Invoked when a window state is changed. */
+    def windowStateChanged(e: WindowEvent): Unit
 }

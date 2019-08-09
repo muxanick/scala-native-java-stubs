@@ -1,6 +1,7 @@
 package java.awt
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A type-safe enumeration of the possible back buffer contents after
  *  page-flipping
@@ -28,7 +29,17 @@ final object BufferCapabilities.FlipContents extends Object {
     @stub
     val PRIOR: BufferCapabilities.FlipContents = ???
 
+    /** When flip contents are UNDEFINED, the
+     *  contents of the back buffer are undefined after flipping.
+     */
+    @stub
+    val UNDEFINED: BufferCapabilities.FlipContents = ???
+
     /** Returns a hash code value for the object. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }

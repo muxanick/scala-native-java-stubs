@@ -1,7 +1,8 @@
 package java.lang.management
 
-import java.lang.Object
+import java.lang.{Object, String}
 import javax.management.openmbean.CompositeData
+import scala.scalanative.annotation.stub
 
 /** A MemoryUsage object represents a snapshot of memory usage.
  *  Instances of the MemoryUsage class are usually constructed
@@ -76,6 +77,10 @@ import javax.management.openmbean.CompositeData
  */
 class MemoryUsage extends Object {
 
+    /** Constructs a MemoryUsage object. */
+    @stub
+    def this(init: Long, used: Long, committed: Long, max: Long) = ???
+
     /** Returns the amount of memory in bytes that is committed for
      *  the Java virtual machine to use.
      */
@@ -97,6 +102,10 @@ class MemoryUsage extends Object {
     /** Returns the amount of used memory in bytes. */
     @stub
     def getUsed(): Long = ???
+
+    /** Returns a descriptive representation of this memory usage. */
+    @stub
+    def toString(): String = ???
 }
 
 object MemoryUsage {

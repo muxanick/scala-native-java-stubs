@@ -3,6 +3,7 @@ package java.nio.channels
 import java.io.{InputStream, OutputStream, Reader, Writer}
 import java.lang.{Object, String}
 import java.nio.charset.{CharsetDecoder, CharsetEncoder}
+import scala.scalanative.annotation.stub
 
 /** Utility methods for channels and streams.
  * 
@@ -55,4 +56,10 @@ object Channels {
      */
     @stub
     def newWriter(ch: WritableByteChannel, enc: CharsetEncoder, minBufferCap: Int): Writer = ???
+
+    /** Constructs a writer that encodes characters according to the named
+     *  charset and writes the resulting bytes to the given channel.
+     */
+    @stub
+    def newWriter(ch: WritableByteChannel, csName: String): Writer = ???
 }

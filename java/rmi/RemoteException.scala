@@ -2,6 +2,7 @@ package java.rmi
 
 import java.io.IOException
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** A RemoteException is the common superclass for a number of
  *  communication-related exceptions that may occur during the execution of a
@@ -31,7 +32,23 @@ class RemoteException extends IOException {
     @stub
     def this(s: String) = ???
 
+    /** Constructs a RemoteException with the specified detail
+     *  message and cause.
+     */
+    @stub
+    def this(s: String, cause: Throwable) = ???
+
+    /** The cause of the remote exception. */
+    @stub
+    val detail: Throwable = ???
+
     /** Returns the cause of this exception. */
     @stub
     def getCause(): Throwable = ???
+
+    /** Returns the detail message, including the message from the cause, if
+     *  any, of this exception.
+     */
+    @stub
+    def getMessage(): String = ???
 }

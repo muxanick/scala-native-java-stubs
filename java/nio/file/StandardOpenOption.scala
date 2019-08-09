@@ -1,6 +1,7 @@
 package java.nio.file
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Defines the standard open options. */
 class StandardOpenOption private (name: String, ordinal: Int) extends Enum[StandardOpenOption](name, ordinal) with OpenOption {
@@ -42,7 +43,16 @@ object StandardOpenOption {
      */
     final val TRUNCATE_EXISTING = new StandardOpenOption(TRUNCATE_EXISTING, 8)
 
+    /** Open for write access. */
+    final val WRITE = new StandardOpenOption(WRITE, 9)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): StandardOpenOption = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[StandardOpenOption] = ???
 }

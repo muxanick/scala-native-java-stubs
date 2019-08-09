@@ -1,5 +1,7 @@
 package javax.xml.stream
 
+import scala.scalanative.annotation.stub
+
 /** This interface declares the constants used in this API.
  *  Numbers in the range 0 to 256 are reserved for the specification,
  *  user defined events must use event codes outside that range.
@@ -65,4 +67,8 @@ object XMLStreamConstants {
     /** Indicates an event is a start document */
     @stub
     val START_DOCUMENT: Int = ???
+
+    /** Indicates an event is a start element */
+    @stub
+    val START_ELEMENT: Int = ???
 }

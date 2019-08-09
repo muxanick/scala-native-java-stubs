@@ -1,6 +1,7 @@
 package java.awt.color
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The ICC_ColorSpace class is an implementation of the abstract
  *  ColorSpace class.  This representation of
@@ -40,6 +41,10 @@ import java.lang.Object
  */
 class ICC_ColorSpace extends ColorSpace {
 
+    /** Constructs a new ICC_ColorSpace from an ICC_Profile object. */
+    @stub
+    def this(profile: ICC_Profile) = ???
+
     /** Transforms a color value assumed to be in the CS_CIEXYZ conversion
      *  color space into this ColorSpace.
      */
@@ -73,4 +78,10 @@ class ICC_ColorSpace extends ColorSpace {
      */
     @stub
     def toCIEXYZ(colorvalue: Array[Float]): Array[Float] = ???
+
+    /** Transforms a color value assumed to be in this ColorSpace
+     *  into a value in the default CS_sRGB color space.
+     */
+    @stub
+    def toRGB(colorvalue: Array[Float]): Array[Float] = ???
 }

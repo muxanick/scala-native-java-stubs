@@ -5,6 +5,7 @@ import java.lang.{Object, String}
 import java.time.format.TextStyle
 import java.time.temporal.{TemporalField, ValueRange}
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** An era in the Japanese Imperial calendar system.
  *  
@@ -61,6 +62,12 @@ object JapaneseEra {
     @stub
     val SHOWA: JapaneseEra = ???
 
+    /** The singleton instance for the 'Taisho' era (1912-07-30 - 1926-12-24)
+     *  which has the value 0.
+     */
+    @stub
+    val TAISHO: JapaneseEra = ???
+
     /** Obtains an instance of JapaneseEra from an int value. */
     @stub
     def of(japaneseEra: Int): JapaneseEra = ???
@@ -68,4 +75,8 @@ object JapaneseEra {
     /** Returns the JapaneseEra with the name. */
     @stub
     def valueOf(japaneseEra: String): JapaneseEra = ???
+
+    /** Returns an array of JapaneseEras. */
+    @stub
+    def values(): Array[JapaneseEra] = ???
 }

@@ -2,6 +2,7 @@ package javax.swing.text
 
 import java.lang.Object
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** A collection of unique attributes.  This is a read-only,
  *  immutable interface.  An attribute is basically a key and
@@ -61,6 +62,10 @@ trait AttributeSet {
      */
     @stub
     def isDefined(attrName: Object): Boolean = ???
+
+    /** Determines if the two attribute sets are equivalent. */
+    @stub
+    def isEqual(attr: AttributeSet): Boolean = ???
 }
 
 object AttributeSet {
@@ -86,9 +91,22 @@ object AttributeSet {
     @stub
     val AttributeSet.FontAttribute: trait = ???
 
+    /** This interface is the type signature that is expected
+     *  to be present on any attribute key that contributes to
+     *  the paragraph level presentation.
+     */
+    @stub
+    val AttributeSet.ParagraphAttribute: trait = ???
+
     /** Attribute name used to name the collection of
      *  attributes.
      */
     @stub
     val NameAttribute: Object = ???
+
+    /** Attribute name used to identify the resolving parent
+     *  set of attributes, if one is defined.
+     */
+    @stub
+    val ResolveAttribute: Object = ???
 }

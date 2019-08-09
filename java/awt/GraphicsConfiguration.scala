@@ -3,6 +3,7 @@ package java.awt
 import java.awt.geom.AffineTransform
 import java.awt.image.{BufferedImage, ColorModel, VolatileImage}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The GraphicsConfiguration class describes the
  *  characteristics of a graphics destination such as a printer or monitor.
@@ -62,6 +63,10 @@ import java.lang.Object
  *       } 
  */
 abstract class GraphicsConfiguration extends Object {
+
+    /** This is an abstract class that cannot be instantiated directly. */
+    @stub
+    protected def this() = ???
 
     /** Returns a BufferedImage with a data layout and color model
      *  compatible with this GraphicsConfiguration.
@@ -138,4 +143,9 @@ abstract class GraphicsConfiguration extends Object {
      *  space equals 1 inch in device space.
      */
     def getNormalizingTransform(): AffineTransform
+
+    /** Returns whether this GraphicsConfiguration supports
+     *  the PERPIXEL_TRANSLUCENT kind of translucency.
+     */
+    def isTranslucencyCapable(): Boolean
 }

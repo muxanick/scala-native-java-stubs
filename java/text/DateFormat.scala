@@ -2,6 +2,7 @@ package java.text
 
 import java.lang.{Object, String, StringBuffer}
 import java.util.{Calendar, Date, Locale, TimeZone}
+import scala.scalanative.annotation.stub
 
 /** DateFormat is an abstract class for date/time formatting subclasses which
  *  formats and parses dates or time in a language-independent manner.
@@ -92,6 +93,10 @@ import java.util.{Calendar, Date, Locale, TimeZone}
  */
 abstract class DateFormat extends Format {
 
+    /** Create a new date format. */
+    @stub
+    protected def this() = ???
+
     /** The Calendar instance used for calculating the date-time fields
      *  and the instant of time.
      */
@@ -151,9 +156,20 @@ abstract class DateFormat extends Format {
 
     /** Allows you to set the number formatter. */
     def setNumberFormat(newNumberFormat: NumberFormat): Unit
+
+    /** Sets the time zone for the calendar of this DateFormat object. */
+    def setTimeZone(zone: TimeZone): Unit
 }
 
 object DateFormat {
+    /** Defines constants that are used as attribute keys in the
+     *  AttributedCharacterIterator returned
+     *  from DateFormat.formatToCharacterIterator and as
+     *  field identifiers in FieldPosition.
+     */
+    @stub
+    object Field extends DateFormat.Field
+
     /** Useful constant for AM_PM field alignment. */
     @stub
     val AM_PM_FIELD: Int = ???
@@ -241,6 +257,10 @@ object DateFormat {
     /** Useful constant for WEEK_OF_YEAR field alignment. */
     @stub
     val WEEK_OF_YEAR_FIELD: Int = ???
+
+    /** Useful constant for YEAR field alignment. */
+    @stub
+    val YEAR_FIELD: Int = ???
 
     /** Returns an array of all locales for which the
      *  get*Instance methods of this class can return

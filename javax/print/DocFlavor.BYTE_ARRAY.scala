@@ -1,6 +1,7 @@
 package javax.print
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Class DocFlavor.BYTE_ARRAY provides predefined static constant
  *  DocFlavor objects for example doc flavors using a byte array
@@ -8,6 +9,12 @@ import java.lang.Object
  *  
  */
 object DocFlavor.BYTE_ARRAY extends DocFlavor {
+
+    /** Constructs a new doc flavor with the given MIME type and a print
+     *  data representation class name of "[B" (byte array).
+     */
+    @stub
+    def BYTE_ARRAY(mimeType: String) = ???
 
     /** Doc flavor with MIME type =
      *  "application/octet-stream",
@@ -142,4 +149,12 @@ object DocFlavor.BYTE_ARRAY extends DocFlavor {
      */
     @stub
     val TEXT_PLAIN_UTF_16LE: DocFlavor.BYTE_ARRAY = ???
+
+    /** Doc flavor with MIME type =
+     *  "text/plain; charset=utf-8",
+     *  print data representation class name = "[B" (byte
+     *  array).
+     */
+    @stub
+    val TEXT_PLAIN_UTF_8: DocFlavor.BYTE_ARRAY = ???
 }

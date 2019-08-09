@@ -2,6 +2,7 @@ package javax.xml.namespace
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** QName represents a qualified name
  *  as defined in the XML specifications: XML Schema Part2:
@@ -35,6 +36,12 @@ class QName extends Object with Serializable {
     @stub
     def this(namespaceURI: String, localPart: String) = ???
 
+    /** QName constructor specifying the Namespace URI,
+     *  local part and prefix.
+     */
+    @stub
+    def this(namespaceURI: String, localPart: String, prefix: String) = ???
+
     /** Test this QName for equality with another
      *  Object.
      */
@@ -62,4 +69,12 @@ class QName extends Object with Serializable {
      */
     @stub
     def toString(): String = ???
+}
+
+object QName {
+    /** QName derived from parsing the formatted
+     *  String.
+     */
+    @stub
+    def valueOf(qNameAsString: String): QName = ???
 }

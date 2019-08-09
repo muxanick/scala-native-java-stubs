@@ -1,7 +1,8 @@
 package java.text
 
 import java.lang.{Object, String, StringBuffer}
-import java.util.Date
+import java.util.{Date, Locale}
+import scala.scalanative.annotation.stub
 
 /** SimpleDateFormat is a concrete class for formatting and
  *  parsing dates in a locale-sensitive manner. It allows for formatting
@@ -370,6 +371,12 @@ class SimpleDateFormat extends DateFormat {
     @stub
     def this(pattern: String, formatSymbols: DateFormatSymbols) = ???
 
+    /** Constructs a SimpleDateFormat using the given pattern and
+     *  the default date format symbols for the given locale.
+     */
+    @stub
+    def this(pattern: String, locale: Locale) = ???
+
     /** Applies the given localized pattern string to this date format. */
     @stub
     def applyLocalizedPattern(pattern: String): Unit = ???
@@ -429,4 +436,8 @@ class SimpleDateFormat extends DateFormat {
     /** Returns a localized pattern string describing this date format. */
     @stub
     def toLocalizedPattern(): String = ???
+
+    /** Returns a pattern string describing this date format. */
+    @stub
+    def toPattern(): String = ???
 }

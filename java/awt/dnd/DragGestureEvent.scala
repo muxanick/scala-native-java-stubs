@@ -4,7 +4,8 @@ import java.awt.{Component, Cursor, Image, Point}
 import java.awt.datatransfer.Transferable
 import java.awt.event.InputEvent
 import java.lang.Object
-import java.util.{EventObject, Iterator}
+import java.util.{EventObject, Iterator, List}
+import scala.scalanative.annotation.stub
 
 /** A DragGestureEvent is passed
  *  to DragGestureListener's
@@ -23,6 +24,16 @@ import java.util.{EventObject, Iterator}
  *  Assigning the value different from listed above will cause an unspecified behavior.
  */
 class DragGestureEvent extends EventObject {
+
+    /** Constructs a DragGestureEvent object given by the
+     *  DragGestureRecognizer instance firing this event,
+     *  an act parameter representing
+     *  the user's preferred action, an ori parameter
+     *  indicating the origin of the drag, and a List of
+     *  events that comprise the gesture(evs parameter).
+     */
+    @stub
+    def this(dgr: DragGestureRecognizer, act: Int, ori: Point, evs: List[_ <: InputEvent]) = ???
 
     /** Returns the Component associated
      *  with this DragGestureEvent.
@@ -88,4 +99,8 @@ class DragGestureEvent extends EventObject {
      */
     @stub
     def toArray(): Array[Object] = ???
+
+    /** Returns an array of the events comprising the drag gesture. */
+    @stub
+    def toArray(array: Array[Object]): Array[Object] = ???
 }

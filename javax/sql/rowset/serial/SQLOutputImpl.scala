@@ -3,7 +3,10 @@ package javax.sql.rowset.serial
 import java.io.{InputStream, Reader}
 import java.lang.{Object, String}
 import java.math.BigDecimal
+import java.net.URL
 import java.sql.{Array, Blob, Clob, Date, NClob, Ref, RowId, SQLData, SQLOutput, SQLXML, Struct, Time, Timestamp}
+import java.util.{Map, Vector}
+import scala.scalanative.annotation.stub
 
 /** The output stream for writing the attributes of a
  *  custom-mapped user-defined type (UDT) back to the database.
@@ -26,6 +29,13 @@ import java.sql.{Array, Blob, Clob, Date, NClob, Ref, RowId, SQLData, SQLOutput,
  *  representation of an SQL user-defined type.
  */
 class SQLOutputImpl extends Object with SQLOutput {
+
+    /** Creates a new SQLOutputImpl object
+     *  initialized with the given vector of attributes and
+     *  type map.
+     */
+    @stub
+    def this(attributes: Vector[_], map: Map[String, _]) = ???
 
     /** Writes an Array object in the Java
      *  programming language to this SQLOutputImpl
@@ -178,4 +188,10 @@ class SQLOutputImpl extends Object with SQLOutput {
      */
     @stub
     def writeTimestamp(x: Timestamp): Unit = ???
+
+    /** Writes an java.sql.Type.DATALINK object in the Java
+     *  programming language to this SQLOutputImpl object.
+     */
+    @stub
+    def writeURL(url: URL): Unit = ???
 }

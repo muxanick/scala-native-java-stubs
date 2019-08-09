@@ -3,6 +3,7 @@ package java.nio.channels.spi
 import java.lang.Object
 import java.nio.channels.{SelectionKey, Selector}
 import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** Base implementation class for selectors.
  * 
@@ -31,6 +32,10 @@ import java.util.Set
  */
 abstract class AbstractSelector extends Selector {
 
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this(provider: SelectorProvider) = ???
+
     /** Marks the beginning of an I/O operation that might block indefinitely. */
     protected def begin(): Unit
 
@@ -54,4 +59,7 @@ abstract class AbstractSelector extends Selector {
 
     /** Returns the provider that created this channel. */
     def provider(): SelectorProvider
+
+    /** Registers the given channel with this selector. */
+    protected def register(ch: AbstractSelectableChannel, ops: Int, att: Object): SelectionKey
 }

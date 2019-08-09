@@ -6,6 +6,7 @@ import java.lang.Object
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, TextUI}
 import javax.swing.plaf.basic.{BasicTextAreaUI, BasicTextUI}
+import scala.scalanative.annotation.stub
 
 /** Provides the look and feel for a plain text editor in the
  *  Synth look and feel. In this implementation the default UI
@@ -21,6 +22,10 @@ import javax.swing.plaf.basic.{BasicTextAreaUI, BasicTextUI}
  *  Please see XMLEncoder.
  */
 class SynthTextAreaUI extends BasicTextAreaUI with SynthUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the Context for the specified component. */
     @stub
@@ -56,6 +61,10 @@ class SynthTextAreaUI extends BasicTextAreaUI with SynthUI {
      */
     @stub
     protected def uninstallDefaults(): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthTextAreaUI {

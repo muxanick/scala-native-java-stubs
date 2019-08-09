@@ -1,6 +1,7 @@
 package java.util.concurrent
 
 import java.lang.Comparable
+import scala.scalanative.annotation.stub
 
 /** A mix-in style interface for marking objects that should be
  *  acted upon after a given delay.
@@ -10,4 +11,10 @@ import java.lang.Comparable
  *  its getDelay method.
  */
 trait Delayed extends Comparable[Delayed] {
+
+    /** Returns the remaining delay associated with this object, in the
+     *  given time unit.
+     */
+    @stub
+    def getDelay(unit: TimeUnit): Long = ???
 }

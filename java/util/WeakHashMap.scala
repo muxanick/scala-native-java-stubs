@@ -2,6 +2,7 @@ package java.util
 
 import java.lang.Object
 import java.util.function.{BiConsumer, BiFunction}
+import scala.scalanative.annotation.stub
 
 /** Hash table based implementation of the Map interface, with
  *  weak keys.
@@ -111,6 +112,12 @@ class WeakHashMap[K, V] extends AbstractMap[K, V] with Map[K, V] {
     @stub
     def this(initialCapacity: Int, loadFactor: Float) = ???
 
+    /** Constructs a new WeakHashMap with the same mappings as the
+     *  specified map.
+     */
+    @stub
+    def this(m: Map[_ <: K, _ <: V]) = ???
+
     /** Removes all of the mappings from this map. */
     @stub
     def clear(): Unit = ???
@@ -173,4 +180,8 @@ class WeakHashMap[K, V] extends AbstractMap[K, V] with Map[K, V] {
     /** Returns the number of key-value mappings in this map. */
     @stub
     def size(): Int = ???
+
+    /** Returns a Collection view of the values contained in this map. */
+    @stub
+    def values(): Collection[V] = ???
 }

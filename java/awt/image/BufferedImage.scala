@@ -3,6 +3,7 @@ package java.awt.image
 import java.awt.{Graphics, Graphics2D, Image, Point, Rectangle, Transparency}
 import java.lang.{Object, String}
 import java.util.{Hashtable, Vector}
+import scala.scalanative.annotation.stub
 
 /** The BufferedImage subclass describes an Image with an accessible buffer of image data.
  *  A BufferedImage is comprised of a ColorModel and a
@@ -32,6 +33,13 @@ class BufferedImage extends Image with WritableRenderedImage with Transparency {
      */
     @stub
     def this(width: Int, height: Int, imageType: Int) = ???
+
+    /** Constructs a BufferedImage of one of the predefined
+     *  image types:
+     *  TYPE_BYTE_BINARY or TYPE_BYTE_INDEXED.
+     */
+    @stub
+    def this(width: Int, height: Int, imageType: Int, cm: IndexColorModel) = ???
 
     /** Adds a tile observer. */
     @stub
@@ -266,6 +274,12 @@ class BufferedImage extends Image with WritableRenderedImage with Transparency {
      */
     @stub
     def setRGB(startX: Int, startY: Int, w: Int, h: Int, rgbArray: Array[Int], offset: Int, scansize: Int): Unit = ???
+
+    /** Returns a String representation of this
+     *  BufferedImage object and its values.
+     */
+    @stub
+    def toString(): String = ???
 }
 
 object BufferedImage {
@@ -342,4 +356,8 @@ object BufferedImage {
      */
     @stub
     val TYPE_USHORT_565_RGB: Int = ???
+
+    /** Represents an unsigned short grayscale image, non-indexed). */
+    @stub
+    val TYPE_USHORT_GRAY: Int = ???
 }

@@ -3,6 +3,7 @@ package javax.xml.ws
 import java.lang.String
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Used to annotate service specific exception classes to customize
  *  to the local and namespace name of the fault element and the name
@@ -24,4 +25,8 @@ import scala.annotation.StaticAnnotation
     /** Element's local name. */
     @stub
     val name: String = ???
+
+    /** Element's namespace name. */
+    @stub
+    val targetNamespace: String = ???
 }

@@ -1,6 +1,7 @@
 package java.security.cert
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Parameters used as input for the LDAP CertStore algorithm.
  *  
@@ -30,6 +31,12 @@ class LDAPCertStoreParameters extends Object with CertStoreParameters {
     @stub
     def this(serverName: String) = ???
 
+    /** Creates an instance of LDAPCertStoreParameters with the
+     *  specified parameter values.
+     */
+    @stub
+    def this(serverName: String, port: Int) = ???
+
     /** Returns a copy of this object. */
     @stub
     def clone(): Object = ???
@@ -41,4 +48,8 @@ class LDAPCertStoreParameters extends Object with CertStoreParameters {
     /** Returns the DNS name of the LDAP server. */
     @stub
     def getServerName(): String = ???
+
+    /** Returns a formatted string describing the parameters. */
+    @stub
+    def toString(): String = ???
 }

@@ -3,6 +3,7 @@ package java.security.cert
 import java.lang.Object
 import java.net.URI
 import java.util.{List, Map, Set}
+import scala.scalanative.annotation.stub
 
 /** A PKIXCertPathChecker for checking the revocation status of
  *  certificates with the PKIX algorithm.
@@ -58,6 +59,10 @@ import java.util.{List, Map, Set}
  */
 abstract class PKIXRevocationChecker extends PKIXCertPathChecker {
 
+    /** Default constructor. */
+    @stub
+    protected def this() = ???
+
     /** Returns a clone of this object. */
     def clone(): PKIXRevocationChecker
 
@@ -93,4 +98,15 @@ abstract class PKIXRevocationChecker extends PKIXCertPathChecker {
 
     /** Sets the OCSP responses. */
     def setOcspResponses(responses: Map[X509Certificate, Array[Byte]]): Unit
+
+    /** Sets the revocation options. */
+    def setOptions(options: Set[PKIXRevocationChecker.Option]): Unit
+}
+
+object PKIXRevocationChecker {
+    /** Various revocation options that can be specified for the revocation
+     *  checking mechanism.
+     */
+    @stub
+    object Option extends PKIXRevocationChecker.Option
 }

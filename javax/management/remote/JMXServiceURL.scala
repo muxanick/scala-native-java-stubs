@@ -2,6 +2,7 @@ package javax.management.remote
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The address of a JMX API connector server.  Instances of this class
  *  are immutable.
@@ -85,6 +86,10 @@ class JMXServiceURL extends Object with Serializable {
     @stub
     def this(protocol: String, host: String, port: Int) = ???
 
+    /** Constructs a JMXServiceURL with the given parts. */
+    @stub
+    def this(protocol: String, host: String, port: Int, urlPath: String) = ???
+
     /** Indicates whether some other object is equal to this one. */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -108,4 +113,8 @@ class JMXServiceURL extends Object with Serializable {
     /** Returns a hash code value for the object. */
     @stub
     def hashCode(): Int = ???
+
+    /** The string representation of this Service URL. */
+    @stub
+    def toString(): String = ???
 }

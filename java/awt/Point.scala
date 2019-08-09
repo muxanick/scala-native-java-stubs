@@ -3,6 +3,7 @@ package java.awt
 import java.awt.geom.Point2D
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A point representing a location in (x,y) coordinate space,
  *  specified in integer precision.
@@ -21,9 +22,19 @@ class Point extends Point2D with Serializable {
     @stub
     def this(x: Int, y: Int) = ???
 
+    /** Constructs and initializes a point with the same location as
+     *  the specified Point object.
+     */
+    @stub
+    def this(p: Point) = ???
+
     /** The X coordinate of this Point. */
     @stub
     val x: Int = ???
+
+    /** The Y coordinate of this Point. */
+    @stub
+    val y: Int = ???
 
     /** Determines whether or not two points are equal. */
     @stub
@@ -68,4 +79,12 @@ class Point extends Point2D with Serializable {
      */
     @stub
     def toString(): String = ???
+
+    /** Translates this point, at location (x,y),
+     *  by dx along the x axis and dy
+     *  along the y axis so that it now represents the point
+     *  (x+dx,y+dy).
+     */
+    @stub
+    def translate(dx: Int, dy: Int): Unit = ???
 }

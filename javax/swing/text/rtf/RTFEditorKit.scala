@@ -1,8 +1,9 @@
 package javax.swing.text.rtf
 
-import java.io.{InputStream, OutputStream, Reader}
+import java.io.{InputStream, OutputStream, Reader, Writer}
 import java.lang.{Object, String}
 import javax.swing.text.{DefaultEditorKit, Document, EditorKit, StyledEditorKit}
+import scala.scalanative.annotation.stub
 
 /** This is the default implementation of RTF editing
  *  functionality.  The RTF support was not written by the
@@ -10,6 +11,10 @@ import javax.swing.text.{DefaultEditorKit, Document, EditorKit, StyledEditorKit}
  *  provided.
  */
 class RTFEditorKit extends StyledEditorKit {
+
+    /** Constructs an RTFEditorKit. */
+    @stub
+    def this() = ???
 
     /** Get the MIME type of the data that this
      *  kit represents support for.
@@ -35,4 +40,10 @@ class RTFEditorKit extends StyledEditorKit {
      */
     @stub
     def write(out: OutputStream, doc: Document, pos: Int, len: Int): Unit = ???
+
+    /** Write content from a document to the given stream
+     *  as plain text.
+     */
+    @stub
+    def write(out: Writer, doc: Document, pos: Int, len: Int): Unit = ???
 }

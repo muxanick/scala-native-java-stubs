@@ -1,8 +1,9 @@
 package javax.imageio.spi
 
 import java.io.File
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.imageio.stream.ImageOutputStream
+import scala.scalanative.annotation.stub
 
 /** The service provider interface (SPI) for
  *  ImageOutputStreams.  For more information on service
@@ -29,6 +30,17 @@ abstract class ImageOutputStreamSpi extends IIOServiceProvider {
     @stub
     protected def this() = ???
 
+    /** Constructs an ImageOutputStreamSpi with a given
+     *  set of values.
+     */
+    @stub
+    def this(vendorName: String, version: String, outputClass: Class[_]) = ???
+
+    /** A Class object indicating the legal object type
+     *  for use by the createInputStreamInstance method.
+     */
+    protected val outputClass: Class[_]
+
     /** Returns true if the ImageOutputStream
      *  implementation associated with this service provider can
      *  optionally make use of a cache File for improved
@@ -53,4 +65,10 @@ abstract class ImageOutputStreamSpi extends IIOServiceProvider {
      *  createOutputStreamInstance method.
      */
     def getOutputClass(): Class[_]
+
+    /** Returns true if the ImageOutputStream
+     *  implementation associated with this service provider requires
+     *  the use of a cache File.
+     */
+    def needsCacheFile(): Boolean
 }

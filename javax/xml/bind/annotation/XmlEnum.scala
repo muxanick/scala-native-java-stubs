@@ -1,7 +1,9 @@
 package javax.xml.bind.annotation
 
+import java.lang.Class
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** 
  *  Maps an enum type Enum to XML representation.
@@ -37,4 +39,8 @@ import scala.annotation.StaticAnnotation
 @Retention ( value = RUNTIME ) 
 @Target ( value = TYPE ) 
  final class XmlEnum extends StaticAnnotation {
+
+    /** Java type that is mapped to a XML simple type. */
+    @stub
+    val value: Class[_] = ???
 }

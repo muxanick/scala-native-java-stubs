@@ -2,6 +2,7 @@ package java.util.zip
 
 import java.lang.{Cloneable, Object, String}
 import java.nio.file.attribute.FileTime
+import scala.scalanative.annotation.stub
 
 /** This class is used to represent a ZIP file entry. */
 class ZipEntry extends Object with Cloneable {
@@ -9,6 +10,12 @@ class ZipEntry extends Object with Cloneable {
     /** Creates a new zip entry with the specified name. */
     @stub
     def this(name: String) = ???
+
+    /** Creates a new zip entry with fields taken from the specified
+     *  zip entry.
+     */
+    @stub
+    def this(e: ZipEntry) = ???
 
     /** Returns a copy of this entry. */
     @stub
@@ -105,6 +112,10 @@ class ZipEntry extends Object with Cloneable {
     /** Sets the last modification time of the entry. */
     @stub
     def setTime(time: Long): Unit = ???
+
+    /** Returns a string representation of the ZIP entry. */
+    @stub
+    def toString(): String = ???
 }
 
 object ZipEntry {
@@ -271,4 +282,8 @@ object ZipEntry {
     /**  */
     @stub
     val LOCVER: Int = ???
+
+    /** Compression method for uncompressed entries. */
+    @stub
+    val STORED: Int = ???
 }

@@ -3,7 +3,8 @@ package javax.swing
 import java.io.Serializable
 import java.lang.{Class, Object}
 import java.util.EventListener
-import javax.swing.event.ListDataListener
+import javax.swing.event.{EventListenerList, ListDataListener}
+import scala.scalanative.annotation.stub
 
 /** The abstract definition for the data model that provides
  *  a List with its contents.
@@ -18,6 +19,13 @@ import javax.swing.event.ListDataListener
  *  Please see XMLEncoder.
  */
 abstract class AbstractListModel[E] extends Object with ListModel[E] with Serializable {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /**  */
+    protected val listenerList: EventListenerList
 
     /** Adds a listener to the list that's notified each time a change
      *  to the data model occurs.
@@ -51,4 +59,9 @@ abstract class AbstractListModel[E] extends Object with ListModel[E] with Serial
      *  upon this model.
      */
     def getListeners[T <: EventListener](listenerType: Class[T]): Array[T]
+
+    /** Removes a listener from the list that's notified each time a
+     *  change to the data model occurs.
+     */
+    def removeListDataListener(l: ListDataListener): Unit
 }

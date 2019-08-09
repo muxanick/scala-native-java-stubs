@@ -1,6 +1,7 @@
 package java.nio.file
 
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** An interface that is implemented by objects that decide if a directory
  *  entry should be accepted or filtered. A Filter is passed as the
@@ -10,3 +11,8 @@ import java.lang.FunctionalInterface
  */
 object 
 @FunctionalInterface trait DirectoryStream.Filter[T] {
+
+    /** Decides if the given directory entry should be accepted or filtered. */
+    @stub
+    def accept(entry: T): Boolean = ???
+}

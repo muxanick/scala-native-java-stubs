@@ -1,6 +1,8 @@
 package java.security
 
 import java.lang.Object
+import java.nio.ByteBuffer
+import scala.scalanative.annotation.stub
 
 /** This class defines the Service Provider Interface (SPI)
  *  for the MessageDigest class, which provides the functionality
@@ -15,6 +17,10 @@ import java.lang.Object
  *   Implementations are free to implement the Cloneable interface.
  */
 abstract class MessageDigestSpi extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns a clone if the implementation is cloneable. */
     def clone(): Object
@@ -42,4 +48,7 @@ abstract class MessageDigestSpi extends Object {
      *  starting at the specified offset.
      */
     protected def engineUpdate(input: Array[Byte], offset: Int, len: Int): Unit
+
+    /** Update the digest using the specified ByteBuffer. */
+    protected def engineUpdate(input: ByteBuffer): Unit
 }

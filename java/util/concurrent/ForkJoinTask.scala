@@ -3,6 +3,7 @@ package java.util.concurrent
 import java.io.Serializable
 import java.lang.{Object, Runnable, Throwable}
 import java.util.Collection
+import scala.scalanative.annotation.stub
 
 /** Abstract base class for tasks that run within a ForkJoinPool.
  *  A ForkJoinTask is a thread-like entity that is much
@@ -147,6 +148,10 @@ import java.util.Collection
  */
 abstract class ForkJoinTask[V] extends Object with Future[V] with Serializable {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Attempts to cancel execution of this task. */
     def cancel(mayInterruptIfRunning: Boolean): Boolean
 
@@ -253,6 +258,9 @@ abstract class ForkJoinTask[V] extends Object with Future[V] with Serializable {
 
     /** Forces the given value to be returned as a result. */
     protected def setRawResult(value: V): Unit
+
+    /** Tries to unschedule this task for execution. */
+    def tryUnfork(): Boolean
 }
 
 object ForkJoinTask {

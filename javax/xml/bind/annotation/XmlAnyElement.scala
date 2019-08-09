@@ -1,7 +1,9 @@
 package javax.xml.bind.annotation
 
+import java.lang.Class
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Maps a JavaBean property to XML infoset representation and/or JAXB element.
  * 
@@ -215,4 +217,10 @@ import scala.annotation.StaticAnnotation
      */
     @stub
     val lax: Boolean = ???
+
+    /** Specifies the DomHandler which is responsible for actually
+     *  converting XML from/to a DOM-like data structure.
+     */
+    @stub
+    val value: Class[_ <: DomHandler] = ???
 }

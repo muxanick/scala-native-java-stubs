@@ -1,6 +1,7 @@
 package java.lang.invoke
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A CallSite is a holder for a variable MethodHandle,
  *  which is called its target.
@@ -69,4 +70,7 @@ abstract class CallSite extends Object {
      *  behavior defined by this call site's specific class.
      */
     def setTarget(newTarget: MethodHandle): Unit
+
+    /** Returns the type of this call site's target. */
+    def type(): MethodType
 }

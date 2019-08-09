@@ -1,5 +1,7 @@
 package java.util
 
+import scala.scalanative.annotation.stub
+
 /** An iterator for lists that allows the programmer
  *  to traverse the list in either direction, modify
  *  the list during iteration, and obtain the iterator's
@@ -66,4 +68,10 @@ trait ListIterator[E] extends Iterator[E] {
     /** Removes from the list the last element that was returned by next() or previous() (optional operation). */
     @stub
     def remove(): Unit = ???
+
+    /** Replaces the last element returned by next() or
+     *  previous() with the specified element (optional operation).
+     */
+    @stub
+    def set(e: E): Unit = ???
 }

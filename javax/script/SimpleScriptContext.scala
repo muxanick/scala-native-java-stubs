@@ -3,9 +3,14 @@ package javax.script
 import java.io.{Reader, Writer}
 import java.lang.{Integer, Object, String}
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** Simple implementation of ScriptContext. */
 class SimpleScriptContext extends Object with ScriptContext {
+
+    /** Create a SimpleScriptContext. */
+    @stub
+    def this() = ???
 
     /** This is the engine scope bindings. */
     @stub
@@ -22,6 +27,10 @@ class SimpleScriptContext extends Object with ScriptContext {
     /** This is the reader to be used for input from scripts. */
     @stub
     protected val reader: Reader = ???
+
+    /** This is the writer to be used to output from scripts. */
+    @stub
+    protected val writer: Writer = ???
 
     /** Retrieves the value of the attribute with the given name in
      *  the scope occurring earliest in the search order.
@@ -84,4 +93,8 @@ class SimpleScriptContext extends Object with ScriptContext {
      */
     @stub
     def setReader(reader: Reader): Unit = ???
+
+    /** Sets the Writer for scripts to use when displaying output. */
+    @stub
+    def setWriter(writer: Writer): Unit = ???
 }

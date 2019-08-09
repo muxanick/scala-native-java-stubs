@@ -4,6 +4,7 @@ import java.awt.{Component, Container, Graphics}
 import java.lang.{Integer, Object, String}
 import java.util.Hashtable
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** JLayeredPane adds depth to a JFC/Swing container,
  *  allowing components to overlap each other when needed.
@@ -121,6 +122,16 @@ import javax.accessibility.{Accessible, AccessibleContext}
  */
 class JLayeredPane extends JComponent with Accessible {
 
+    /** Create a new JLayeredPane */
+    @stub
+    def this() = ???
+
+    /** This class implements accessibility support for the
+     *  JLayeredPane class.
+     */
+    @stub
+    protected object AccessibleJLayeredPane extends JLayeredPane.AccessibleJLayeredPane
+
     /** Adds the specified component to this container at the specified
      *  index.
      */
@@ -218,6 +229,13 @@ class JLayeredPane extends JComponent with Accessible {
      */
     @stub
     def setLayer(c: Component, layer: Int, position: Int): Unit = ???
+
+    /** Moves the component to position within its current layer,
+     *  where 0 is the topmost position within the layer and -1 is the bottommost
+     *  position.
+     */
+    @stub
+    def setPosition(c: Component, position: Int): Unit = ???
 }
 
 object JLayeredPane {
@@ -244,6 +262,10 @@ object JLayeredPane {
     /** Convenience object defining the Palette layer. */
     @stub
     val PALETTE_LAYER: Integer = ???
+
+    /** Convenience object defining the Popup layer. */
+    @stub
+    val POPUP_LAYER: Integer = ???
 
     /** Gets the layer property for a JComponent, it
      *  does not cause any side effects like setLayer().

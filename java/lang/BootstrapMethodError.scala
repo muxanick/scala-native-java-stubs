@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** Thrown to indicate that an invokedynamic instruction has
  *  failed to find its bootstrap method,
  *  or the bootstrap method has failed to provide a
@@ -23,4 +25,10 @@ class BootstrapMethodError extends LinkageError {
      */
     @stub
     def this(s: String, cause: Throwable) = ???
+
+    /** Constructs a BootstrapMethodError with the specified
+     *  cause.
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

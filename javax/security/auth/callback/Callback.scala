@@ -1,5 +1,7 @@
 package javax.security.auth.callback
 
+import scala.scalanative.annotation.stub
+
 /**  Implementations of this interface are passed to a
  *  CallbackHandler, allowing underlying security services
  *  the ability to interact with a calling application to retrieve specific

@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener interface for receiving container events.
  *  The class that is interested in processing a container event
@@ -23,4 +24,8 @@ trait ContainerListener extends EventListener {
     /** Invoked when a component has been added to the container. */
     @stub
     def componentAdded(e: ContainerEvent): Unit = ???
+
+    /** Invoked when a component has been removed from the container. */
+    @stub
+    def componentRemoved(e: ContainerEvent): Unit = ???
 }

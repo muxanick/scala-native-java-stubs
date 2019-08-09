@@ -1,6 +1,7 @@
 package javax.print.attribute.standard
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Class MediaSize.ISO includes MediaSize values for ISO
  *  media.
@@ -111,4 +112,8 @@ final object MediaSize.ISO extends Object {
     /** Specifies the ISO C6 size, 114 mm by 162 mm. */
     @stub
     val C6: MediaSize = ???
+
+    /** Specifies the ISO Designated Long size, 110 mm by 220 mm. */
+    @stub
+    val DESIGNATED_LONG: MediaSize = ???
 }

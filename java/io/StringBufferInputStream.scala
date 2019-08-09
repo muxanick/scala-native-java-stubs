@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.{Deprecated, Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class allows an application to create an input stream in
  *  which the bytes read are supplied by the contents of a string.
@@ -14,11 +15,19 @@ import java.lang.{Deprecated, Object, String}
 
     /** Deprecated.  */
     @stub
+    def this(s: String) = ???
+
+    /** Deprecated.  */
+    @stub
     protected val buffer: String = ???
 
     /** Deprecated.  */
     @stub
     protected val count: Int = ???
+
+    /** Deprecated.  */
+    @stub
+    protected val pos: Int = ???
 
     /** Deprecated.  */
     @stub
@@ -35,4 +44,8 @@ import java.lang.{Deprecated, Object, String}
     /** Deprecated.  */
     @stub
     def reset(): Unit = ???
+
+    /** Deprecated.  */
+    @stub
+    def skip(n: Long): Long = ???
 }

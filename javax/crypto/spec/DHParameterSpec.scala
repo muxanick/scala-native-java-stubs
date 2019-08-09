@@ -3,6 +3,7 @@ package javax.crypto.spec
 import java.lang.Object
 import java.math.BigInteger
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** This class specifies the set of parameters used with the Diffie-Hellman
  *  algorithm, as specified in PKCS #3: Diffie-Hellman Key-Agreement
@@ -30,6 +31,14 @@ class DHParameterSpec extends Object with AlgorithmParameterSpec {
     @stub
     def this(p: BigInteger, g: BigInteger) = ???
 
+    /** Constructs a parameter set for Diffie-Hellman, using a prime modulus
+     *  p, a base generator g,
+     *  and the size in bits, l, of the random exponent
+     *  (private value).
+     */
+    @stub
+    def this(p: BigInteger, g: BigInteger, l: Int) = ???
+
     /** Returns the base generator g. */
     @stub
     def getG(): BigInteger = ???
@@ -39,4 +48,8 @@ class DHParameterSpec extends Object with AlgorithmParameterSpec {
      */
     @stub
     def getL(): Int = ???
+
+    /** Returns the prime modulus p. */
+    @stub
+    def getP(): BigInteger = ???
 }

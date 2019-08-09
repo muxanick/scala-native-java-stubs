@@ -3,6 +3,7 @@ package javax.xml.soap
 import java.lang.String
 import java.util.Iterator
 import javax.xml.namespace.QName
+import scala.scalanative.annotation.stub
 
 /** A representation of the SOAP header
  *  element. A SOAP header element consists of XML data that affects
@@ -107,4 +108,12 @@ trait SOAPHeader extends SOAPElement {
      */
     @stub
     def extractAllHeaderElements(): Iterator = ???
+
+    /** Returns an Iterator over all the SOAPHeaderElement objects
+     *  in this SOAPHeader object
+     *  that have the specified actor and detaches them
+     *  from this SOAPHeader object.
+     */
+    @stub
+    def extractHeaderElements(actor: String): Iterator = ???
 }

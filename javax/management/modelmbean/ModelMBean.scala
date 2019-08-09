@@ -2,6 +2,7 @@ package javax.management.modelmbean
 
 import java.lang.{Object, String}
 import javax.management.{DynamicMBean, PersistentMBean}
+import scala.scalanative.annotation.stub
 
 /** This interface must be implemented by the ModelMBeans. An implementation of this interface
  *  must be shipped with every JMX Agent.
@@ -33,4 +34,8 @@ trait ModelMBean extends DynamicMBean with PersistentMBean with ModelMBeanNotifi
      */
     @stub
     def setManagedResource(mr: Object, mr_type: String): Unit = ???
+
+    /** Initializes a ModelMBean object using ModelMBeanInfo passed in. */
+    @stub
+    def setModelMBeanInfo(inModelMBeanInfo: ModelMBeanInfo): Unit = ???
 }

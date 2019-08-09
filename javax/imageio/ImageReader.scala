@@ -7,6 +7,7 @@ import java.util.{Iterator, List, Locale, Set}
 import javax.imageio.event.{IIOReadProgressListener, IIOReadUpdateListener, IIOReadWarningListener}
 import javax.imageio.metadata.IIOMetadata
 import javax.imageio.spi.ImageReaderSpi
+import scala.scalanative.annotation.stub
 
 /** An abstract superclass for parsing and decoding of images.  This
  *  class must be subclassed by classes that read in images in the
@@ -27,6 +28,12 @@ import javax.imageio.spi.ImageReaderSpi
  *  have been read previously.
  */
 abstract class ImageReader extends Object {
+
+    /** Constructs an ImageReader and sets its
+     *  originatingProvider field to the supplied value.
+     */
+    @stub
+    protected def this(originatingProvider: ImageReaderSpi) = ???
 
     /** An array of Locales which may be used to localize
      *  warning messages, or null if localization is not
@@ -84,6 +91,13 @@ abstract class ImageReader extends Object {
      *  List.
      */
     protected val warningListeners: List[IIOReadWarningListener]
+
+    /** A List of the Locales associated with
+     *  each currently registered IIOReadWarningListener,
+     *  initialized by default to null, which is
+     *  synonymous with an empty List.
+     */
+    protected val warningLocales: List[Locale]
 
     /** Requests that any current read operation be aborted. */
     def abort(): Unit
@@ -486,6 +500,11 @@ abstract class ImageReader extends Object {
      *  ImageInputStream or other Object.
      */
     def setInput(input: Object, seekForwardOnly: Boolean, ignoreMetadata: Boolean): Unit
+
+    /** Sets the current Locale of this
+     *  ImageReader to the given value.
+     */
+    def setLocale(locale: Locale): Unit
 }
 
 object ImageReader {

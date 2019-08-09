@@ -2,6 +2,7 @@ package java.security
 
 import java.lang.{Class, Object}
 import java.security.spec.KeySpec
+import scala.scalanative.annotation.stub
 
 /** This class defines the Service Provider Interface (SPI)
  *  for the KeyFactory class.
@@ -29,6 +30,10 @@ import java.security.spec.KeySpec
  */
 abstract class KeyFactorySpi extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Generates a private key object from the provided key
      *  specification (key material).
      */
@@ -43,4 +48,10 @@ abstract class KeyFactorySpi extends Object {
      *  object.
      */
     protected val T: abstract[T <: KeySpec]
+
+    /** Translates a key object, whose provider may be unknown or
+     *  potentially untrusted, into a corresponding key object of this key
+     *  factory.
+     */
+    protected def engineTranslateKey(key: Key): Key
 }

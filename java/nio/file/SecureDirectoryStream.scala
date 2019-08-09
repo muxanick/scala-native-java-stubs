@@ -4,6 +4,7 @@ import java.lang.Class
 import java.nio.channels.SeekableByteChannel
 import java.nio.file.attribute.{FileAttribute, FileAttributeView}
 import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** A DirectoryStream that defines operations on files that are located
  *  relative to an open directory. A SecureDirectoryStream is intended
@@ -57,4 +58,8 @@ trait SecureDirectoryStream[T] extends DirectoryStream[T] {
      */
     @stub
     def newByteChannel(path: T, options: Set[_ <: OpenOption], attrs: FileAttribute[_]*): SeekableByteChannel = ???
+
+    /** Opens the directory identified by the given path, returning a SecureDirectoryStream to iterate over the entries in the directory. */
+    @stub
+    def newDirectoryStream(path: T, options: LinkOption*): SecureDirectoryStream[T] = ???
 }

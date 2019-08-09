@@ -1,6 +1,7 @@
 package java.lang.annotation
 
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Indicates that an annotation type is automatically inherited.  If
  *  an Inherited meta-annotation is present on an annotation type

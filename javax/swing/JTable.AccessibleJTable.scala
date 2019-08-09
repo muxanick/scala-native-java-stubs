@@ -5,6 +5,7 @@ import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.Object
 import javax.accessibility.{Accessible, AccessibleContext, AccessibleExtendedTable, AccessibleRole, AccessibleSelection, AccessibleTable}
 import javax.swing.event.{CellEditorListener, ChangeEvent, ListSelectionEvent, ListSelectionListener, TableColumnModelEvent, TableColumnModelListener, TableModelEvent, TableModelListener}
+import scala.scalanative.annotation.stub
 
 /** This class implements accessibility support for the
  *  JTable class.  It provides an implementation of the
@@ -21,11 +22,19 @@ import javax.swing.event.{CellEditorListener, ChangeEvent, ListSelectionEvent, L
  */
 protected class JTable.AccessibleJTable extends JComponent.AccessibleJComponent with AccessibleSelection with ListSelectionListener with TableModelListener with TableColumnModelListener with CellEditorListener with PropertyChangeListener with AccessibleExtendedTable {
 
+    /** AccessibleJTable constructor */
+    @stub
+    protected def AccessibleJTable() = ???
+
     /** The class provides an implementation of the Java Accessibility
      *  API appropriate to table cells.
      */
     @stub
     protected object AccessibleJTableCell extends JTable.AccessibleJTable.AccessibleJTableCell
+
+    /**  */
+    @stub
+    protected object AccessibleJTableModelChange extends JTable.AccessibleJTable.AccessibleJTableModelChange
 
     /** Adds the specified Accessible child of the
      *  object to the object's selection.
@@ -263,4 +272,8 @@ protected class JTable.AccessibleJTable extends JComponent.AccessibleJComponent 
     /** Track changes to the table contents (row insertions) */
     @stub
     def tableRowsInserted(e: TableModelEvent): Unit = ???
+
+    /** Track changes to table cell selections */
+    @stub
+    def valueChanged(e: ListSelectionEvent): Unit = ???
 }

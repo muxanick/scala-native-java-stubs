@@ -2,6 +2,7 @@ package javax.swing.text
 
 import java.awt.{Graphics, Point}
 import javax.swing.event.ChangeListener
+import scala.scalanative.annotation.stub
 
 /** A place within a document view that represents where
  *  things can be inserted into the document model.  A caret
@@ -93,4 +94,8 @@ trait Caret {
     /** Sets the visibility of the selection */
     @stub
     def setSelectionVisible(v: Boolean): Unit = ???
+
+    /** Sets the visibility of the caret. */
+    @stub
+    def setVisible(v: Boolean): Unit = ???
 }

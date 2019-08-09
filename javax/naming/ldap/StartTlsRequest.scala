@@ -1,6 +1,7 @@
 package javax.naming.ldap
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class implements the LDAPv3 Extended Request for StartTLS as
  *  defined in
@@ -41,6 +42,10 @@ import java.lang.{Object, String}
  */
 class StartTlsRequest extends Object with ExtendedRequest {
 
+    /** Constructs a StartTLS extended request. */
+    @stub
+    def this() = ???
+
     /** Creates an extended response object that corresponds to the
      *  LDAP StartTLS extended request.
      */
@@ -50,4 +55,16 @@ class StartTlsRequest extends Object with ExtendedRequest {
     /** Retrieves the StartTLS request's ASN.1 BER encoded value. */
     @stub
     def getEncodedValue(): Array[Byte] = ???
+
+    /** Retrieves the StartTLS request's object identifier string. */
+    @stub
+    def getID(): String = ???
+}
+
+object StartTlsRequest {
+    /** The StartTLS extended request's assigned object identifier
+     *  is 1.3.6.1.4.1.1466.20037.
+     */
+    @stub
+    val OID: String = ???
 }

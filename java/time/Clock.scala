@@ -1,6 +1,7 @@
 package java.time
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A clock providing access to the current instant, date and time using a time-zone.
  *  
@@ -38,6 +39,10 @@ import java.lang.Object
  */
 abstract class Clock extends Object {
 
+    /** Constructor accessible by subclasses. */
+    @stub
+    protected def this() = ???
+
     /** Checks if this clock is equal to another clock. */
     def equals(obj: Object): Boolean
 
@@ -52,6 +57,9 @@ abstract class Clock extends Object {
 
     /** Gets the current millisecond instant of the clock. */
     def millis(): Long
+
+    /** Returns a copy of this clock with a different time-zone. */
+    def withZone(zone: ZoneId): Clock
 }
 
 object Clock {

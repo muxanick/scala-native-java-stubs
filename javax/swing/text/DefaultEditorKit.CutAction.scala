@@ -1,7 +1,9 @@
 package javax.swing.text
 
+import java.awt.event.ActionEvent
 import java.lang.Object
 import javax.swing.AbstractAction
+import scala.scalanative.annotation.stub
 
 /** Cuts the selected region and place its contents
  *  into the system clipboard.
@@ -16,3 +18,12 @@ import javax.swing.AbstractAction
  *  Please see XMLEncoder.
  */
 object DefaultEditorKit.CutAction extends TextAction {
+
+    /** Create this object with the appropriate identifier. */
+    @stub
+    def CutAction() = ???
+
+    /** The operation to perform when this action is triggered. */
+    @stub
+    def actionPerformed(e: ActionEvent): Unit = ???
+}

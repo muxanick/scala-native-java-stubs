@@ -1,7 +1,8 @@
 package javax.swing.text
 
-import java.lang.{Object, String}
+import java.lang.{Object, Runnable, String}
 import javax.swing.event.{DocumentListener, UndoableEditListener}
+import scala.scalanative.annotation.stub
 
 /** 
  *  The Document is a container for text that serves
@@ -228,6 +229,12 @@ trait Document {
      */
     @stub
     def removeUndoableEditListener(listener: UndoableEditListener): Unit = ???
+
+    /** Allows the model to be safely rendered in the presence
+     *  of concurrency, if the model supports being updated asynchronously.
+     */
+    @stub
+    def render(r: Runnable): Unit = ???
 }
 
 object Document {
@@ -236,4 +243,10 @@ object Document {
      */
     @stub
     val StreamDescriptionProperty: String = ???
+
+    /** The property name for the title of the document, if
+     *  there is one.
+     */
+    @stub
+    val TitleProperty: String = ???
 }

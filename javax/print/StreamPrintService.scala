@@ -2,6 +2,7 @@ package javax.print
 
 import java.io.OutputStream
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class extends PrintService and represents a
  *  print service that prints data in different formats to a
@@ -29,6 +30,10 @@ import java.lang.{Object, String}
  */
 abstract class StreamPrintService extends Object with PrintService {
 
+    /** Constructs a StreamPrintService object. */
+    @stub
+    protected def this(out: OutputStream) = ???
+
     /** Disposes this StreamPrintService. */
     def dispose(): Unit
 
@@ -37,4 +42,9 @@ abstract class StreamPrintService extends Object with PrintService {
 
     /** Gets the output stream. */
     def getOutputStream(): OutputStream
+
+    /** Returns a boolean indicating whether or not
+     *  this StreamPrintService has been disposed.
+     */
+    def isDisposed(): Boolean
 }

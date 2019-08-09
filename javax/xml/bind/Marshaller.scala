@@ -7,8 +7,7 @@ import javax.xml.bind.attachment.AttachmentMarshaller
 import javax.xml.stream.{XMLEventWriter, XMLStreamWriter}
 import javax.xml.transform.Result
 import javax.xml.validation.Schema
-import org.w3c.dom.Node
-import org.xml.sax.ContentHandler
+import scala.scalanative.annotation.stub
 
 /** 
  *  The Marshaller class is responsible for governing the process
@@ -388,9 +387,23 @@ trait Marshaller {
      */
     @stub
     def setProperty(name: String, value: Object): Unit = ???
+
+    /** Specify the JAXP 1.3 Schema
+     *  object that should be used to validate subsequent marshal operations
+     *  against.
+     */
+    @stub
+    def setSchema(schema: Schema): Unit = ???
 }
 
 object Marshaller {
+    /** 
+     *  Register an instance of an implementation of this class with a Marshaller to externally listen
+     *  for marshal events.
+     */
+    @stub
+    object Listener extends Marshaller.Listener
+
     /** The name of the property used to specify the output encoding in
      *  the marshalled XML data.
      */
@@ -415,4 +428,10 @@ object Marshaller {
      */
     @stub
     val JAXB_NO_NAMESPACE_SCHEMA_LOCATION: String = ???
+
+    /** The name of the property used to specify the xsi:schemaLocation
+     *  attribute value to place in the marshalled XML output.
+     */
+    @stub
+    val JAXB_SCHEMA_LOCATION: String = ???
 }

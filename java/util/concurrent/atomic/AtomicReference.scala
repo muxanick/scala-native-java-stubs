@@ -3,6 +3,7 @@ package java.util.concurrent.atomic
 import java.io.Serializable
 import java.lang.{Object, String}
 import java.util.function.{BinaryOperator, UnaryOperator}
+import scala.scalanative.annotation.stub
 
 /** An object reference that may be updated atomically. See the java.util.concurrent.atomic package specification for description
  *  of the properties of atomic variables.
@@ -12,6 +13,10 @@ class AtomicReference[V] extends Object with Serializable {
     /** Creates a new AtomicReference with null initial value. */
     @stub
     def this() = ???
+
+    /** Creates a new AtomicReference with the given initial value. */
+    @stub
+    def this(initialValue: V) = ???
 
     /** Atomically updates the current value with the results of
      *  applying the given function to the current and given values,
@@ -64,4 +69,10 @@ class AtomicReference[V] extends Object with Serializable {
      */
     @stub
     def updateAndGet(updateFunction: UnaryOperator[V]): V = ???
+
+    /** Atomically sets the value to the given updated value
+     *  if the current value == the expected value.
+     */
+    @stub
+    def weakCompareAndSet(expect: V, update: V): Boolean = ???
 }

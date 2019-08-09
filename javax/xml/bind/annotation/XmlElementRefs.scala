@@ -2,6 +2,7 @@ package javax.xml.bind.annotation
 
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Marks a property that refers to classes with XmlElement
  *  or JAXBElement.
@@ -19,4 +20,8 @@ import scala.annotation.StaticAnnotation
 @Retention ( value = RUNTIME ) 
 @Target ( value ={ FIELD , METHOD } ) 
  final class XmlElementRefs extends StaticAnnotation {
+
+    /**  */
+    @stub
+    val value: Array[XmlElementRef] = ???
 }

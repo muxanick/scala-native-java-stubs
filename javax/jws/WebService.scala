@@ -3,6 +3,7 @@ package javax.jws
 import java.lang.String
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /**  */
 @Retention ( value = RUNTIME ) 
@@ -28,4 +29,8 @@ import scala.annotation.StaticAnnotation
     /**  */
     @stub
     val targetNamespace: String = ???
+
+    /**  */
+    @stub
+    val wsdlLocation: String = ???
 }

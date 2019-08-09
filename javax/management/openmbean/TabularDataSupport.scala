@@ -2,7 +2,8 @@ package javax.management.openmbean
 
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
-import java.util.{Map, Map.Entry, Set}
+import java.util.{Collection, Map, Map.Entry, Set}
+import scala.scalanative.annotation.stub
 
 /** The TabularDataSupport class is the open data class which implements the TabularData
  *  and the Map interfaces, and which is internally based on a hash map data structure.
@@ -14,6 +15,12 @@ class TabularDataSupport extends Object with TabularData with Map[Object, Object
      */
     @stub
     def this(tabularType: TabularType) = ???
+
+    /** Creates an empty TabularDataSupport instance whose open-type is tabularType,
+     *  and whose underlying HashMap has the specified initial capacity and load factor.
+     */
+    @stub
+    def this(tabularType: TabularType, initialCapacity: Int, loadFactor: Float) = ???
 
     /** Calculates the index that would be used in this TabularData instance to refer to the specified
      *  composite data value parameter if it were added to this instance.
@@ -133,4 +140,10 @@ class TabularDataSupport extends Object with TabularData with Map[Object, Object
     /** Returns a string representation of this TabularDataSupport instance. */
     @stub
     def toString(): String = ???
+
+    /** Returns a collection view of the rows contained in this
+     *  TabularDataSupport instance.
+     */
+    @stub
+    def values(): Collection[Object] = ???
 }

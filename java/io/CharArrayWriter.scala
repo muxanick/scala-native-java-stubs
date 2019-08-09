@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.{CharSequence, Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class implements a character buffer that can be used as an Writer.
  *  The buffer automatically grows when data is written to the stream.  The data
@@ -16,9 +17,17 @@ class CharArrayWriter extends Writer {
     @stub
     def this() = ???
 
+    /** Creates a new CharArrayWriter with the specified initial size. */
+    @stub
+    def this(initialSize: Int) = ???
+
     /** The buffer where data is stored. */
     @stub
     protected val buf: Array[Char] = ???
+
+    /** The number of chars in the buffer. */
+    @stub
+    protected val count: Int = ???
 
     /** Appends the specified character to this writer. */
     @stub
@@ -69,4 +78,8 @@ class CharArrayWriter extends Writer {
     /** Write a portion of a string to the buffer. */
     @stub
     def write(str: String, off: Int, len: Int): Unit = ???
+
+    /** Writes the contents of the buffer to another character stream. */
+    @stub
+    def writeTo(out: Writer): Unit = ???
 }

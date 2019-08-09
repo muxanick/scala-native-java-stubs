@@ -1,7 +1,8 @@
 package javax.naming
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
 import java.util.Hashtable
+import scala.scalanative.annotation.stub
 
 /** This abstract class is used to represent a referral exception,
  *  which is generated in response to a referral
@@ -41,6 +42,12 @@ abstract class ReferralException extends NamingException {
     @stub
     protected def this() = ???
 
+    /** Constructs a new instance of ReferralException using the
+     *  explanation supplied.
+     */
+    @stub
+    protected def this(explanation: String) = ???
+
     /** Retrieves the context at which to continue the method. */
     def getReferralContext(): Context
 
@@ -54,4 +61,7 @@ abstract class ReferralException extends NamingException {
 
     /** Retries the referral currently being processed. */
     def retryReferral(): Unit
+
+    /** Discards the referral about to be processed. */
+    def skipReferral(): Boolean
 }

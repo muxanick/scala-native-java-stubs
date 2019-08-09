@@ -2,6 +2,7 @@ package java.time.temporal
 
 import java.lang.{Enum, Object, String}
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** A standard set of fields.
  *  
@@ -104,6 +105,9 @@ object ChronoField {
     /** The proleptic year, such as 2012. */
     final val YEAR = new ChronoField(YEAR, 28)
 
+    /** The year within the era. */
+    final val YEAR_OF_ERA = new ChronoField(YEAR_OF_ERA, 29)
+
     /** Returns a copy of the specified temporal object with the value of this field set. */
     @stub
     def adjustInto[R <: Temporal](temporal: R, newValue: Long): R = ???
@@ -163,4 +167,10 @@ object ChronoField {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): ChronoField = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[ChronoField] = ???
 }

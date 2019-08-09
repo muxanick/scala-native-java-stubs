@@ -2,6 +2,7 @@ package javax.sound.sampled
 
 import java.lang.{Object, String}
 import java.security.{BasicPermission, Permission}
+import scala.scalanative.annotation.stub
 
 /** The AudioPermission class represents access rights to the audio
  *  system resources.  An AudioPermission contains a target name
@@ -54,4 +55,10 @@ class AudioPermission extends BasicPermission {
      */
     @stub
     def this(name: String) = ???
+
+    /** Creates a new AudioPermission object that has the specified
+     *  symbolic name, such as "play" or "record".
+     */
+    @stub
+    def this(name: String, actions: String) = ???
 }

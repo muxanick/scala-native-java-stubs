@@ -1,6 +1,7 @@
 package java.util.concurrent
 
 import java.lang.{Object, Throwable}
+import scala.scalanative.annotation.stub
 
 /** A ForkJoinTask with a completion action performed when
  *  triggered and there are no remaining pending actions.
@@ -379,6 +380,12 @@ abstract class CountedCompleter[T] extends ForkJoinTask[T] {
     @stub
     protected def this(completer: CountedCompleter[_]) = ???
 
+    /** Creates a new CountedCompleter with the given completer
+     *  and initial pending count.
+     */
+    @stub
+    protected def this(completer: CountedCompleter[_], initialPendingCount: Int) = ???
+
     /** Adds (atomically) the given value to the pending count. */
     def addToPendingCount(delta: Int): Unit
 
@@ -461,4 +468,11 @@ abstract class CountedCompleter[T] extends ForkJoinTask[T] {
      *  use to help maintain result data.
      */
     protected def setRawResult(t: T): Unit
+
+    /** If the pending count is nonzero, decrements the count;
+     *  otherwise invokes onCompletion(CountedCompleter)
+     *  and then similarly tries to complete this task's completer,
+     *  if one exists, else marks this task as complete.
+     */
+    def tryComplete(): Unit
 }

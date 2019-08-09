@@ -1,8 +1,9 @@
 package javax.swing.text.html.parser
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.Vector
+import scala.scalanative.annotation.stub
 
 /** A representation of a content model. A content model is
  *  basically a restricted BNF expression. It is restricted in
@@ -24,6 +25,10 @@ final class ContentModel extends Object with Serializable {
     @stub
     def this(type: Int, content: ContentModel) = ???
 
+    /** Create a content model of a particular type. */
+    @stub
+    def this(type: Int, content: Object, next: ContentModel) = ???
+
     /** The content. */
     @stub
     val content: Object = ???
@@ -31,6 +36,10 @@ final class ContentModel extends Object with Serializable {
     /** The next content model (in a ',', '|' or '&' expression). */
     @stub
     val next: ContentModel = ???
+
+    /** Type. */
+    @stub
+    val type: Int = ???
 
     /** Return true if the content model could
      *  match an empty input stream.
@@ -53,4 +62,8 @@ final class ContentModel extends Object with Serializable {
      */
     @stub
     def getElements(elemVec: Vector[Element]): Unit = ???
+
+    /** Convert to a string. */
+    @stub
+    def toString(): String = ???
 }

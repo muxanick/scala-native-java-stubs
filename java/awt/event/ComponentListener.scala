@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener interface for receiving component events.
  *  The class that is interested in processing a component event
@@ -31,4 +32,8 @@ trait ComponentListener extends EventListener {
     /** Invoked when the component's size changes. */
     @stub
     def componentResized(e: ComponentEvent): Unit = ???
+
+    /** Invoked when the component has been made visible. */
+    @stub
+    def componentShown(e: ComponentEvent): Unit = ???
 }

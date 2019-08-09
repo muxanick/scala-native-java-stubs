@@ -4,6 +4,7 @@ import java.awt.event.{ActionEvent, ActionListener}
 import java.lang.{Class, Object, String}
 import java.util.EventListener
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** All items in a menu must belong to the class
  *  MenuItem, or one of its subclasses.
@@ -49,6 +50,16 @@ class MenuItem extends MenuComponent with Accessible {
      */
     @stub
     def this(label: String) = ???
+
+    /** Create a menu item with an associated keyboard shortcut. */
+    @stub
+    def this(label: String, s: MenuShortcut) = ???
+
+    /** Inner class of MenuItem used to provide default support for
+     *  accessibility.
+     */
+    @stub
+    protected object AccessibleAWTMenuItem extends MenuItem.AccessibleAWTMenuItem
 
     /** Adds the specified action listener to receive action events
      *  from this menu item.
@@ -173,4 +184,10 @@ class MenuItem extends MenuComponent with Accessible {
     /** Sets the label for this menu item to the specified label. */
     @stub
     def setLabel(label: String): Unit = ???
+
+    /** Set the MenuShortcut object associated with this
+     *  menu item.
+     */
+    @stub
+    def setShortcut(s: MenuShortcut): Unit = ???
 }

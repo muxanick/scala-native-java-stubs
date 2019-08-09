@@ -2,6 +2,7 @@ package java.awt.geom
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A cubic parametric curve segment specified with
  *  double coordinates.
@@ -13,6 +14,12 @@ object CubicCurve2D.Double extends CubicCurve2D with Serializable {
      */
     @stub
     def Double() = ???
+
+    /** Constructs and initializes a CubicCurve2D from
+     *  the specified double coordinates.
+     */
+    @stub
+    def Double(x1: Double, y1: Double, ctrlx1: Double, ctrly1: Double, ctrlx2: Double, ctrly2: Double, x2: Double, y2: Double) = ???
 
     /** The X coordinate of the first control point
      *  of the cubic curve segment.
@@ -55,6 +62,12 @@ object CubicCurve2D.Double extends CubicCurve2D with Serializable {
      */
     @stub
     val y1: Double = ???
+
+    /** The Y coordinate of the end point
+     *  of the cubic curve segment.
+     */
+    @stub
+    val y2: Double = ???
 
     /** Returns a high precision and more accurate bounding box of
      *  the Shape than the getBounds method.
@@ -113,4 +126,10 @@ object CubicCurve2D.Double extends CubicCurve2D with Serializable {
     /** Returns the Y coordinate of the end point in double precision. */
     @stub
     def getY2(): Double = ???
+
+    /** Sets the location of the end points and control points of this curve
+     *  to the specified double coordinates.
+     */
+    @stub
+    def setCurve(x1: Double, y1: Double, ctrlx1: Double, ctrly1: Double, ctrlx2: Double, ctrly2: Double, x2: Double, y2: Double): Unit = ???
 }

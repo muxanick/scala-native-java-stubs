@@ -1,5 +1,7 @@
 package java.security
 
+import scala.scalanative.annotation.stub
+
 /** A computation to be performed with privileges enabled.  The computation is
  *  performed by invoking AccessController.doPrivileged on the
  *  PrivilegedAction object.  This interface is used only for
@@ -8,4 +10,8 @@ package java.security
  *  instead.
  */
 trait PrivilegedAction[T] {
+
+    /** Performs the computation. */
+    @stub
+    def run(): T = ???
 }

@@ -3,6 +3,7 @@ package java.awt.event
 import java.awt.{AWTEvent, Component}
 import java.lang.{Object, String}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** An event which indicates that a keystroke occurred in a component.
  *  
@@ -123,6 +124,10 @@ class KeyEvent extends InputEvent {
     @stub
     def this(source: Component, id: Int, when: Long, modifiers: Int, keyCode: Int, keyChar: Char) = ???
 
+    /** Constructs a KeyEvent object. */
+    @stub
+    def this(source: Component, id: Int, when: Long, modifiers: Int, keyCode: Int, keyChar: Char, keyLocation: Int) = ???
+
     /** Returns an extended key code for the event. */
     @stub
     def getExtendedKeyCode(): Int = ???
@@ -154,6 +159,13 @@ class KeyEvent extends InputEvent {
     /** Set the keyCode value to indicate a physical key. */
     @stub
     def setKeyCode(keyCode: Int): Unit = ???
+
+    /** Deprecated. 
+     * as of JDK1.1.4
+     * 
+     */
+    @stub
+    def setModifiers(modifiers: Int): Unit = ???
 }
 
 object KeyEvent {
@@ -972,6 +984,10 @@ object KeyEvent {
     /**  */
     @stub
     val VK_Y: Int = ???
+
+    /**  */
+    @stub
+    val VK_Z: Int = ???
 
     /** Returns an extended key code for a unicode character. */
     @stub

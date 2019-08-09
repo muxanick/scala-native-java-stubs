@@ -1,6 +1,7 @@
 package javax.xml.crypto.dsig.spec
 
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** A specification of algorithm parameters for a DigestMethod
  *  algorithm. The purpose of this interface is to group (and provide type

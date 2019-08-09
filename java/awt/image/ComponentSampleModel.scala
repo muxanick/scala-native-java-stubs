@@ -1,6 +1,7 @@
 package java.awt.image
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class represents image data which is stored such that each sample
  *   of a pixel occupies one data element of the DataBuffer.  It stores the
@@ -40,6 +41,10 @@ class ComponentSampleModel extends SampleModel {
     @stub
     def this(dataType: Int, w: Int, h: Int, pixelStride: Int, scanlineStride: Int, bandOffsets: Array[Int]) = ???
 
+    /** Constructs a ComponentSampleModel with the specified parameters. */
+    @stub
+    def this(dataType: Int, w: Int, h: Int, pixelStride: Int, scanlineStride: Int, bankIndices: Array[Int], bandOffsets: Array[Int]) = ???
+
     /** Offsets for all bands in data array elements. */
     @stub
     protected val bandOffsets: Array[Int] = ???
@@ -65,6 +70,12 @@ class ComponentSampleModel extends SampleModel {
      */
     @stub
     protected val pixelStride: Int = ???
+
+    /** Line stride (in data array elements) of the region of image
+     *   data described by this ComponentSampleModel.
+     */
+    @stub
+    protected val scanlineStride: Int = ???
 
     /** Creates a new ComponentSampleModel with the specified
      *  width and height.
@@ -211,4 +222,10 @@ class ComponentSampleModel extends SampleModel {
      */
     @stub
     def setSample(x: Int, y: Int, b: Int, s: Int, data: DataBuffer): Unit = ???
+
+    /** Sets the samples in the specified band for the specified rectangle
+     *  of pixels from an int array containing one sample per data array element.
+     */
+    @stub
+    def setSamples(x: Int, y: Int, w: Int, h: Int, b: Int, iArray: Array[Int], data: DataBuffer): Unit = ???
 }

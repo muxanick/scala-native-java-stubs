@@ -2,6 +2,7 @@ package javax.naming.ldap
 
 import java.io.Serializable
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** This interface represents an LDAPv3 extended operation request as defined in
  *  RFC 2251.
@@ -62,4 +63,8 @@ trait ExtendedRequest extends Serializable {
      */
     @stub
     def getEncodedValue(): Array[Byte] = ???
+
+    /** Retrieves the object identifier of the request. */
+    @stub
+    def getID(): String = ???
 }

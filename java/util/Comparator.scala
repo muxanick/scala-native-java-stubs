@@ -2,6 +2,7 @@ package java.util
 
 import java.lang.{Comparable, FunctionalInterface, Object}
 import java.util.function.{Function, ToDoubleFunction, ToIntFunction, ToLongFunction}
+import scala.scalanative.annotation.stub
 
 /** A comparison function, which imposes a total ordering on some
  *  collection of objects.  Comparators can be passed to a sort method (such
@@ -106,6 +107,12 @@ import java.util.function.{Function, ToDoubleFunction, ToIntFunction, ToLongFunc
 
     /** Returns a lexicographic-order comparator with a function that
      *  extracts a int sort key.
+     */
+    @stub
+    val Comparator[T]: default = ???
+
+    /** Returns a lexicographic-order comparator with a function that
+     *  extracts a long sort key.
      */
     @stub
     val Comparator[T]: default = ???

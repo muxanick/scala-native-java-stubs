@@ -1,7 +1,9 @@
 package javax.imageio.plugins.bmp
 
 import java.lang.Object
+import java.util.Locale
 import javax.imageio.{IIOParam, ImageWriteParam}
+import scala.scalanative.annotation.stub
 
 /** A subclass of ImageWriteParam for encoding images in
  *  the BMP format.
@@ -42,7 +44,19 @@ class BMPImageWriteParam extends ImageWriteParam {
     @stub
     def this() = ???
 
+    /** Constructs a BMPImageWriteParam set to use a given
+     *  Locale and with default values for all parameters.
+     */
+    @stub
+    def this(locale: Locale) = ???
+
     /** Returns the value of the topDown parameter. */
     @stub
     def isTopDown(): Boolean = ???
+
+    /** If set, the data will be written out in a top-down manner, the first
+     *  scanline being written first.
+     */
+    @stub
+    def setTopDown(topDown: Boolean): Unit = ???
 }

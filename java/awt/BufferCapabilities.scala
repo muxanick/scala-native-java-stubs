@@ -1,9 +1,14 @@
 package java.awt
 
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** Capabilities and properties of buffers. */
 class BufferCapabilities extends Object with Cloneable {
+
+    /** Creates a new object for specifying buffering capabilities */
+    @stub
+    def this(frontCaps: ImageCapabilities, backCaps: ImageCapabilities, flipContents: BufferCapabilities.FlipContents) = ???
 
     /** Creates and returns a copy of this object. */
     @stub
@@ -28,4 +33,16 @@ class BufferCapabilities extends Object with Cloneable {
     /**  */
     @stub
     def isMultiBufferAvailable(): Boolean = ???
+
+    /**  */
+    @stub
+    def isPageFlipping(): Boolean = ???
+}
+
+object BufferCapabilities {
+    /** A type-safe enumeration of the possible back buffer contents after
+     *  page-flipping
+     */
+    @stub
+    object FlipContents extends BufferCapabilities.FlipContents
 }

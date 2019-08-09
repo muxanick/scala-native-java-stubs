@@ -4,6 +4,7 @@ import java.io.InputStream
 import java.lang.{Object, String}
 import java.util.Iterator
 import javax.activation.DataHandler
+import scala.scalanative.annotation.stub
 
 /** A single attachment to a SOAPMessage object. A SOAPMessage
  *  object may contain zero, one, or many AttachmentPart objects.
@@ -89,6 +90,10 @@ import javax.activation.DataHandler
  *  
  */
 abstract class AttachmentPart extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Adds a MIME header with the specified name and value to this
      *  AttachmentPart object.
@@ -209,4 +214,11 @@ abstract class AttachmentPart extends Object {
      *  contentType.
      */
     def setRawContent(content: InputStream, contentType: String): Unit
+
+    /** Sets the content of this attachment part to that contained by the
+     *  byte[] array content and sets the value of the
+     *  Content-Type header to the value contained in
+     *  contentType.
+     */
+    def setRawContentBytes(content: Array[Byte], offset: Int, len: Int, contentType: String): Unit
 }

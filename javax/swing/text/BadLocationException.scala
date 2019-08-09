@@ -1,6 +1,7 @@
 package javax.swing.text
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception is to report bad locations within a document model
  *  (that is, attempts to reference a location that doesn't exist).
@@ -15,4 +16,12 @@ import java.lang.{Exception, Object, Throwable}
  *  Please see XMLEncoder.
  */
 class BadLocationException extends Exception {
+
+    /** Creates a new BadLocationException object. */
+    @stub
+    def this(s: String, offs: Int) = ???
+
+    /** Returns the offset into the document that was not legal. */
+    @stub
+    def offsetRequested(): Int = ???
 }

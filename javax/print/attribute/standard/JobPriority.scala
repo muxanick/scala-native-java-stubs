@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, IntegerSyntax, PrintJobAttribute, PrintRequestAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class JobPriority is an integer valued printing attribute class that
  *  specifies a print job's priority.
@@ -31,6 +32,10 @@ import javax.print.attribute.{Attribute, IntegerSyntax, PrintJobAttribute, Print
  */
 final class JobPriority extends IntegerSyntax with PrintRequestAttribute with PrintJobAttribute {
 
+    /** Construct a new job priority attribute with the given integer value. */
+    @stub
+    def this(value: Int) = ???
+
     /** Returns whether this job priority attribute is equivalent to the passed
      *  in object.
      */
@@ -42,4 +47,10 @@ final class JobPriority extends IntegerSyntax with PrintRequestAttribute with Pr
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

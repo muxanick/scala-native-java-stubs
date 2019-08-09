@@ -5,9 +5,14 @@ import java.beans.PropertyChangeListener
 import java.lang.{Object, String}
 import javax.swing.{JButton, JComponent, JScrollBar, SwingConstants, Timer}
 import javax.swing.plaf.{ComponentUI, ScrollBarUI}
+import scala.scalanative.annotation.stub
 
 /** Implementation of ScrollBarUI for the Basic Look and Feel */
 class BasicScrollBarUI extends ScrollBarUI with LayoutManager with SwingConstants {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Listener for cursor keys. */
     @stub
@@ -26,6 +31,10 @@ class BasicScrollBarUI extends ScrollBarUI with LayoutManager with SwingConstant
      */
     @stub
     protected object ScrollListener extends BasicScrollBarUI.ScrollListener
+
+    /** Track mouse drags. */
+    @stub
+    protected object TrackListener extends BasicScrollBarUI.TrackListener
 
     /**  */
     @stub
@@ -120,6 +129,10 @@ class BasicScrollBarUI extends ScrollBarUI with LayoutManager with SwingConstant
     /**  */
     @stub
     protected val trackListener: BasicScrollBarUI.TrackListener = ???
+
+    /**  */
+    @stub
+    protected val trackRect: Rectangle = ???
 
     /** If the layout manager uses a per-component string,
      *  adds the component comp to the layout,
@@ -302,6 +315,12 @@ class BasicScrollBarUI extends ScrollBarUI with LayoutManager with SwingConstant
     /**  */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicScrollBarUI {

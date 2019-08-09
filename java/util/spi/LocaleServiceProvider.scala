@@ -2,6 +2,7 @@ package java.util.spi
 
 import java.lang.Object
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** 
  *  This is the super class of all the locale sensitive service provider
@@ -114,8 +115,17 @@ import java.util.Locale
  */
 abstract class LocaleServiceProvider extends Object {
 
+    /** Sole constructor. */
+    @stub
+    protected def this() = ???
+
     /** Returns an array of all locales for which this locale service provider
      *  can provide localized objects or names.
      */
     def getAvailableLocales(): Array[Locale]
+
+    /** Returns true if the given locale is supported by
+     *  this locale service provider.
+     */
+    def isSupportedLocale(locale: Locale): Boolean
 }

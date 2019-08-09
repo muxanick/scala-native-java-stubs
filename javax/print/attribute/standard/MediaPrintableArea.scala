@@ -2,6 +2,7 @@ package javax.print.attribute.standard
 
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, DocAttribute, PrintJobAttribute, PrintRequestAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class MediaPrintableArea is a printing attribute used to distinguish
  *  the printable and non-printable areas of media.
@@ -56,6 +57,10 @@ final class MediaPrintableArea extends Object with DocAttribute with PrintReques
     @stub
     def this(x: Float, y: Float, w: Float, h: Float, units: Int) = ???
 
+    /** Constructs a MediaPrintableArea object from integer values. */
+    @stub
+    def this(x: Int, y: Int, w: Int, h: Int, units: Int) = ???
+
     /** Returns whether this media margins attribute is equivalent to the passed
      *  in object.
      */
@@ -107,10 +112,20 @@ final class MediaPrintableArea extends Object with DocAttribute with PrintReques
     /** Returns a string version of this rectangular size attribute in mm. */
     @stub
     def toString(): String = ???
+
+    /** Returns a string version of this rectangular size attribute in the
+     *  given units.
+     */
+    @stub
+    def toString(units: Int, unitsName: String): String = ???
 }
 
 object MediaPrintableArea {
     /** Value to indicate units of inches (in). */
     @stub
     val INCH: Int = ???
+
+    /** Value to indicate units of millimeters (mm). */
+    @stub
+    val MM: Int = ???
 }

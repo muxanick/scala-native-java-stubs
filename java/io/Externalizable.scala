@@ -1,5 +1,7 @@
 package java.io
 
+import scala.scalanative.annotation.stub
+
 /** Only the identity of the class of an Externalizable instance is
  *  written in the serialization stream and it is the responsibility
  *  of the class to save and restore the contents of its instances.
@@ -34,4 +36,12 @@ trait Externalizable extends Serializable {
      */
     @stub
     def readExternal(in: ObjectInput): Unit = ???
+
+    /** The object implements the writeExternal method to save its contents
+     *  by calling the methods of DataOutput for its primitive values or
+     *  calling the writeObject method of ObjectOutput for objects, strings,
+     *  and arrays.
+     */
+    @stub
+    def writeExternal(out: ObjectOutput): Unit = ???
 }

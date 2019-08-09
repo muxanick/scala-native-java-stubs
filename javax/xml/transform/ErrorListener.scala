@@ -1,5 +1,7 @@
 package javax.xml.transform
 
+import scala.scalanative.annotation.stub
+
 /** To provide customized error handling, implement this interface and
  *  use the setErrorListener method to register an instance of the
  *  implmentation with the Transformer.  The
@@ -33,4 +35,8 @@ trait ErrorListener {
     /** Receive notification of a non-recoverable error. */
     @stub
     def fatalError(exception: TransformerException): Unit = ???
+
+    /** Receive notification of a warning. */
+    @stub
+    def warning(exception: TransformerException): Unit = ???
 }

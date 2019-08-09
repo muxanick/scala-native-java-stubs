@@ -1,8 +1,9 @@
 package javax.swing
 
-import java.awt.{Component, Container, Dimension, Graphics}
+import java.awt.{Component, Container, Dimension, Graphics, LayoutManager}
 import java.lang.Object
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** A lightweight container
  *  that uses a BoxLayout object as its layout manager.
@@ -43,6 +44,12 @@ import javax.accessibility.{Accessible, AccessibleContext}
  */
 class Box extends JComponent with Accessible {
 
+    /** Creates a Box that displays its components
+     *  along the the specified axis.
+     */
+    @stub
+    def this(axis: Int) = ???
+
     /** This class implements accessibility support for the
      *  Box class.
      */
@@ -56,9 +63,19 @@ class Box extends JComponent with Accessible {
     /** Paints this Box. */
     @stub
     protected def paintComponent(g: Graphics): Unit = ???
+
+    /** Throws an AWTError, since a Box can use only a BoxLayout. */
+    @stub
+    def setLayout(l: LayoutManager): Unit = ???
 }
 
 object Box {
+    /** An implementation of a lightweight component that participates in
+     *  layout but has no view.
+     */
+    @stub
+    object Filler extends Box.Filler
+
     /** Creates an invisible "glue" component
      *  that can be useful in a Box
      *  whose visible components have a maximum width

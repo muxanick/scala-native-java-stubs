@@ -4,11 +4,16 @@ import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.io.File
 import java.lang.{Object, String}
 import java.util.Vector
-import javax.swing.AbstractListModel
+import javax.swing.{AbstractListModel, JFileChooser}
 import javax.swing.event.ListDataEvent
+import scala.scalanative.annotation.stub
 
 /** Basic implementation of a file list. */
 class BasicDirectoryModel extends AbstractListModel[Object] with PropertyChangeListener {
+
+    /**  */
+    @stub
+    def this(filechooser: JFileChooser) = ???
 
     /** Adds a PropertyChangeListener to the listener list. */
     @stub
@@ -83,4 +88,8 @@ class BasicDirectoryModel extends AbstractListModel[Object] with PropertyChangeL
     /**  */
     @stub
     protected def sort(v: Vector[_ <: File]): Unit = ???
+
+    /**  */
+    @stub
+    def validateFileCache(): Unit = ???
 }

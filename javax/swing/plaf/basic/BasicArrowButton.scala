@@ -1,8 +1,9 @@
 package javax.swing.plaf.basic
 
-import java.awt.{Component, Container, Dimension, Graphics}
+import java.awt.{Color, Component, Container, Dimension, Graphics}
 import java.lang.Object
 import javax.swing.{AbstractButton, JButton, JComponent, SwingConstants}
+import scala.scalanative.annotation.stub
 
 /** JButton object that draws a scaled Arrow in one of the cardinal directions.
  *  
@@ -22,6 +23,17 @@ class BasicArrowButton extends JButton with SwingConstants {
      */
     @stub
     def this(direction: Int) = ???
+
+    /** Creates a BasicArrowButton whose arrow
+     *  is drawn in the specified direction and with the specified
+     *  colors.
+     */
+    @stub
+    def this(direction: Int, background: Color, shadow: Color, darkShadow: Color, highlight: Color) = ???
+
+    /** The direction of the arrow. */
+    @stub
+    protected val direction: Int = ???
 
     /** Returns the direction of the arrow. */
     @stub
@@ -50,4 +62,8 @@ class BasicArrowButton extends JButton with SwingConstants {
     /** Paints a triangle. */
     @stub
     def paintTriangle(g: Graphics, x: Int, y: Int, size: Int, direction: Int, isEnabled: Boolean): Unit = ???
+
+    /** Sets the direction of the arrow. */
+    @stub
+    def setDirection(direction: Int): Unit = ???
 }

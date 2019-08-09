@@ -1,6 +1,7 @@
 package java.nio
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A direct byte buffer whose content is a memory-mapped region of a file.
  * 
@@ -39,4 +40,7 @@ abstract class MappedByteBuffer extends ByteBuffer {
      *  memory.
      */
     def isLoaded(): Boolean
+
+    /** Loads this buffer's content into physical memory. */
+    def load(): MappedByteBuffer
 }

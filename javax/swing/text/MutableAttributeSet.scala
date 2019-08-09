@@ -2,6 +2,7 @@ package javax.swing.text
 
 import java.lang.Object
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** A generic interface for a mutable collection of unique attributes.
  * 
@@ -34,4 +35,8 @@ trait MutableAttributeSet extends AttributeSet {
     /** Removes an attribute set with the given names. */
     @stub
     def removeAttributes(names: Enumeration[_]): Unit = ???
+
+    /** Sets the resolving parent. */
+    @stub
+    def setResolveParent(parent: AttributeSet): Unit = ???
 }

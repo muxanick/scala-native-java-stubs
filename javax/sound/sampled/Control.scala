@@ -1,6 +1,7 @@
 package javax.sound.sampled
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Lines often have a set of controls, such as gain and pan, that affect
  *  the audio signal passing through the line.  Java Sound's Line objects
@@ -13,6 +14,21 @@ import java.lang.Object
  */
 abstract class Control extends Object {
 
+    /** Constructs a Control with the specified type. */
+    @stub
+    protected def this(type: Control.Type) = ???
+
     /** Obtains the control's type. */
     def getType(): Control.Type
+
+    /** Obtains a String describing the control type and its current state. */
+    def toString(): String
+}
+
+object Control {
+    /** An instance of the Type class represents the type of
+     *  the control.
+     */
+    @stub
+    object Type extends Control.Type
 }

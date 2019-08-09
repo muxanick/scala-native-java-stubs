@@ -6,6 +6,7 @@ import java.math.{BigDecimal, BigInteger}
 import java.nio.channels.ReadableByteChannel
 import java.nio.file.Path
 import java.util.regex.{MatchResult, Pattern}
+import scala.scalanative.annotation.stub
 
 /** A simple text scanner which can parse primitive types and strings using
  *  regular expressions.
@@ -300,6 +301,12 @@ final class Scanner extends Object with Iterator[String] with Closeable {
     @stub
     def this(source: ReadableByteChannel, charsetName: String) = ???
 
+    /** Constructs a new Scanner that produces values scanned
+     *  from the specified string.
+     */
+    @stub
+    def this(source: String) = ???
+
     /** Closes this scanner. */
     @stub
     def close(): Unit = ???
@@ -583,4 +590,8 @@ final class Scanner extends Object with Iterator[String] with Closeable {
     /** Sets this scanner's locale to the specified locale. */
     @stub
     def useLocale(locale: Locale): Scanner = ???
+
+    /** Sets this scanner's default radix to the specified radix. */
+    @stub
+    def useRadix(radix: Int): Scanner = ???
 }

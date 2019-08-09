@@ -1,7 +1,9 @@
 package javax.swing.text
 
-import java.lang.Object
+import java.awt.event.ActionEvent
+import java.lang.{Object, String}
 import javax.swing.AbstractAction
+import scala.scalanative.annotation.stub
 
 /** An action to set paragraph alignment.  This sets the
  *  StyleConstants.Alignment attribute for the
@@ -27,3 +29,12 @@ import javax.swing.AbstractAction
  *  Please see XMLEncoder.
  */
 object StyledEditorKit.AlignmentAction extends StyledEditorKit.StyledTextAction {
+
+    /** Creates a new AlignmentAction. */
+    @stub
+    def AlignmentAction(nm: String, a: Int) = ???
+
+    /** Sets the alignment. */
+    @stub
+    def actionPerformed(e: ActionEvent): Unit = ???
+}

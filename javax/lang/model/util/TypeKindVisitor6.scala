@@ -4,6 +4,7 @@ import java.lang.Object
 import javax.annotation.processing.SupportedSourceVersion
 import javax.lang.model.SourceVersion
 import javax.lang.model.type.{NoType, PrimitiveType}
+import scala.scalanative.annotation.stub
 
 /** A visitor of types based on their kind with
  *  default behavior appropriate for the RELEASE_6 source version.  For types XYZ that may have more than one
@@ -50,6 +51,12 @@ import javax.lang.model.type.{NoType, PrimitiveType}
      */
     @stub
     protected def this() = ???
+
+    /** Constructor for concrete subclasses to call; uses the argument
+     *  for the default value.
+     */
+    @stub
+    protected def this(defaultValue: R) = ???
 
     /** Visits a NoType instance, dispatching to the visit method for
      *  the specific kind of pseudo-type:
@@ -124,4 +131,10 @@ import javax.lang.model.type.{NoType, PrimitiveType}
      */
     @stub
     def visitPrimitiveAsLong(t: PrimitiveType, p: P): R = ???
+
+    /** Visits a SHORT primitive type by calling
+     *  defaultAction.
+     */
+    @stub
+    def visitPrimitiveAsShort(t: PrimitiveType, p: P): R = ???
 }

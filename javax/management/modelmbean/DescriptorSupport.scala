@@ -2,6 +2,7 @@ package javax.management.modelmbean
 
 import java.lang.{Object, String}
 import javax.management.Descriptor
+import scala.scalanative.annotation.stub
 
 /** This class represents the metadata set for a ModelMBean element.  A
  *  descriptor is part of the ModelMBeanInfo,
@@ -44,6 +45,10 @@ class DescriptorSupport extends Object with Descriptor {
     /** Descriptor constructor taking an XML String. */
     @stub
     def this(inStr: String) = ???
+
+    /** Constructor taking field names and field values. */
+    @stub
+    def this(fieldNames: Array[String], fieldValues: Array[Object]) = ???
 
     /** Returns a new Descriptor which is a duplicate of the Descriptor. */
     @stub
@@ -100,4 +105,8 @@ class DescriptorSupport extends Object with Descriptor {
      */
     @stub
     def toString(): String = ???
+
+    /** Returns an XML String representing the descriptor. */
+    @stub
+    def toXMLString(): String = ???
 }

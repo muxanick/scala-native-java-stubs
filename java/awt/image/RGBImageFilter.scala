@@ -1,6 +1,7 @@
 package java.awt.image
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class provides an easy way to create an ImageFilter which modifies
  *  the pixels of an image in the default RGB ColorModel.  It is meant to
@@ -33,6 +34,10 @@ import java.lang.Object
  */
 abstract class RGBImageFilter extends ImageFilter {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** This boolean indicates whether or not it is acceptable to apply
      *  the color filtering of the filterRGB method to the color table
      *  entries of an IndexColorModel object in lieu of pixel by pixel
@@ -45,6 +50,12 @@ abstract class RGBImageFilter extends ImageFilter {
      *  substituteColorModel.
      */
     protected val newmodel: ColorModel
+
+    /** The ColorModel to be replaced by
+     *  newmodel when the user calls
+     *  substituteColorModel.
+     */
+    protected val origmodel: ColorModel
 
     /** Filters an IndexColorModel object by running each entry in its
      *  color tables through the filterRGB function that RGBImageFilter
@@ -82,4 +93,7 @@ abstract class RGBImageFilter extends ImageFilter {
      *  buffer to the filterRGBPixels method to be converted one by one.
      */
     def setPixels(x: Int, y: Int, w: Int, h: Int, model: ColorModel, pixels: Array[Int], off: Int, scansize: Int): Unit
+
+    /** Registers two ColorModel objects for substitution. */
+    def substituteColorModel(oldcm: ColorModel, newcm: ColorModel): Unit
 }

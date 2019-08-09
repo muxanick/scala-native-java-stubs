@@ -1,6 +1,7 @@
 package javax.swing
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** Constants used with the JScrollPane component. */
 trait ScrollPaneConstants {
@@ -102,4 +103,10 @@ object ScrollPaneConstants {
     /** Identifies the vertical scroll bar policy property. */
     @stub
     val VERTICAL_SCROLLBAR_POLICY: String = ???
+
+    /** Identifies a "viewport" or display area, within which
+     *  scrolled contents are visible.
+     */
+    @stub
+    val VIEWPORT: String = ???
 }

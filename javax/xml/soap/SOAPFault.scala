@@ -3,6 +3,7 @@ package javax.xml.soap
 import java.lang.String
 import java.util.{Iterator, Locale}
 import javax.xml.namespace.QName
+import scala.scalanative.annotation.stub
 
 /** An element in the SOAPBody object that contains
  *  error and/or status information. This information may relate to
@@ -154,4 +155,10 @@ trait SOAPFault extends SOAPBodyElement {
      */
     @stub
     def setFaultString(faultString: String): Unit = ???
+
+    /** Sets the fault string for this SOAPFault object
+     *  to the given string and localized to the given locale.
+     */
+    @stub
+    def setFaultString(faultString: String, locale: Locale): Unit = ???
 }

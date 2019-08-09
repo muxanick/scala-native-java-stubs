@@ -1,5 +1,7 @@
 package javax.management.remote
 
+import scala.scalanative.annotation.stub
+
 /** Implemented by objects that can have a JMXServiceURL address.
  *  All JMXConnectorServer objects implement this interface.
  *  Depending on the connector implementation, a JMXConnector
@@ -13,4 +15,8 @@ package javax.management.remote
  *  getAddress().
  */
 trait JMXAddressable {
+
+    /** The address of this object. */
+    @stub
+    def getAddress(): JMXServiceURL = ???
 }

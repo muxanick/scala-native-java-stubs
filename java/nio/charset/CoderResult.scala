@@ -1,6 +1,7 @@
 package java.nio.charset
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A description of the result state of a coder.
  * 
@@ -91,9 +92,22 @@ object CoderResult {
     @stub
     val OVERFLOW: CoderResult = ???
 
+    /** Result object indicating underflow, meaning that either the input buffer
+     *  has been completely consumed or, if the input buffer is not yet empty,
+     *  that additional input is required.
+     */
+    @stub
+    val UNDERFLOW: CoderResult = ???
+
     /** Static factory method that returns the unique object describing a
      *  malformed-input error of the given length.
      */
     @stub
     def malformedForLength(length: Int): CoderResult = ???
+
+    /** Static factory method that returns the unique result object describing
+     *  an unmappable-character error of the given length.
+     */
+    @stub
+    def unmappableForLength(length: Int): CoderResult = ???
 }

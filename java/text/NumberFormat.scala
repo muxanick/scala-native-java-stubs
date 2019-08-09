@@ -3,6 +3,7 @@ package java.text
 import java.lang.{Number, Object, String, StringBuffer}
 import java.math.RoundingMode
 import java.util.{Currency, Locale}
+import scala.scalanative.annotation.stub
 
 /** NumberFormat is the abstract base class for all number
  *  formats. This class provides the interface for formatting and parsing
@@ -122,6 +123,10 @@ import java.util.{Currency, Locale}
  */
 abstract class NumberFormat extends Format {
 
+    /** Sole constructor. */
+    @stub
+    protected def this() = ???
+
     /** Overrides Cloneable. */
     def clone(): Object
 
@@ -223,12 +228,27 @@ abstract class NumberFormat extends Format {
 
     /** Sets whether or not numbers should be parsed as integers only. */
     def setParseIntegerOnly(value: Boolean): Unit
+
+    /** Sets the RoundingMode used in this NumberFormat. */
+    def setRoundingMode(roundingMode: RoundingMode): Unit
 }
 
 object NumberFormat {
+    /** Defines constants that are used as attribute keys in the
+     *  AttributedCharacterIterator returned
+     *  from NumberFormat.formatToCharacterIterator and as
+     *  field identifiers in FieldPosition.
+     */
+    @stub
+    object Field extends NumberFormat.Field
+
     /** Field constant used to construct a FieldPosition object. */
     @stub
     val FRACTION_FIELD: Int = ???
+
+    /** Field constant used to construct a FieldPosition object. */
+    @stub
+    val INTEGER_FIELD: Int = ???
 
     /** Returns an array of all locales for which the
      *  get*Instance methods of this class can return

@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** The Byte class wraps a value of primitive type byte
  *  in an object.  An object of type Byte contains a single
  *  field whose type is byte.
@@ -15,6 +17,13 @@ final class Byte extends Number with Comparable[Byte] {
      */
     @stub
     def this(value: Byte) = ???
+
+    /** Constructs a newly allocated Byte object that
+     *  represents the byte value indicated by the
+     *  String parameter.
+     */
+    @stub
+    def this(s: String) = ???
 
     /** Returns the value of this Byte as a
      *  byte.
@@ -98,6 +107,12 @@ object Byte {
     @stub
     val SIZE: Int = ???
 
+    /** The Class instance representing the primitive type
+     *  byte.
+     */
+    @stub
+    val TYPE: Class[Byte] = ???
+
     /** Compares two byte values numerically. */
     @stub
     def compare(x: Byte, y: Byte): Int = ???
@@ -151,4 +166,11 @@ object Byte {
      */
     @stub
     def valueOf(s: String): Byte = ???
+
+    /** Returns a Byte object holding the value
+     *  extracted from the specified String when parsed
+     *  with the radix given by the second argument.
+     */
+    @stub
+    def valueOf(s: String, radix: Int): Byte = ???
 }

@@ -1,6 +1,7 @@
 package javax.sound.sampled
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A FloatControl object provides control over a range of
  *  floating-point values.  Float controls are often
@@ -25,6 +26,10 @@ abstract class FloatControl extends Control {
     /** Constructs a new float control object with the given parameters. */
     @stub
     protected def this(type: FloatControl.Type, minimum: Float, maximum: Float, precision: Float, updatePeriod: Int, initialValue: Float, units: String) = ???
+
+    /** Constructs a new float control object with the given parameters */
+    @stub
+    protected def this(type: FloatControl.Type, minimum: Float, maximum: Float, precision: Float, updatePeriod: Int, initialValue: Float, units: String, minLabel: String, midLabel: String, maxLabel: String) = ???
 
     /** Obtains the maximum value permitted. */
     def getMaximum(): Float
@@ -66,4 +71,15 @@ abstract class FloatControl extends Control {
      *  value linearly over the specified time period, specified in microseconds.
      */
     def shift(from: Float, to: Float, microseconds: Int): Unit
+
+    /** Provides a string representation of the control */
+    def toString(): String
+}
+
+object FloatControl {
+    /** An instance of the FloatControl.Type inner class identifies one kind of
+     *  float control.
+     */
+    @stub
+    object Type extends FloatControl.Type
 }

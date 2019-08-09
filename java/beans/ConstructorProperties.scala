@@ -1,7 +1,9 @@
 package java.beans
 
+import java.lang.String
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** An annotation on a constructor that shows how the parameters of
  *    that constructor correspond to the constructed object's getter
@@ -40,4 +42,8 @@ import scala.annotation.StaticAnnotation
 @Target ( value = CONSTRUCTOR ) 
 @Retention ( value = RUNTIME ) 
  final class ConstructorProperties extends StaticAnnotation {
+
+    /** The getter names. */
+    @stub
+    val value: Array[String] = ???
 }

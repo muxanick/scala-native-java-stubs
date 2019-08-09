@@ -1,6 +1,7 @@
 package javax.xml
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Utility class to contain basic XML values as constants. */
 final class XMLConstants extends Object {
@@ -64,4 +65,10 @@ object XMLConstants {
      */
     @stub
     val XMLNS_ATTRIBUTE: String = ???
+
+    /** The official XML attribute used for specifying XML Namespace
+     *  declarations, XMLConstants.XMLNS_ATTRIBUTE, Namespace name URI.
+     */
+    @stub
+    val XMLNS_ATTRIBUTE_NS_URI: String = ???
 }

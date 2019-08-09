@@ -2,6 +2,7 @@ package java.awt.image.renderable
 
 import java.awt.image.{ImageConsumer, ImageProducer}
 import java.lang.{Object, Runnable}
+import scala.scalanative.annotation.stub
 
 /** An adapter class that implements ImageProducer to allow the
  *  asynchronous production of a RenderableImage.  The size of the
@@ -16,6 +17,12 @@ import java.lang.{Object, Runnable}
  *  a single resolution.
  */
 class RenderableImageProducer extends Object with ImageProducer with Runnable {
+
+    /** Constructs a new RenderableImageProducer from a RenderableImage
+     *  and a RenderContext.
+     */
+    @stub
+    def this(rdblImage: RenderableImage, rc: RenderContext) = ???
 
     /** Adds an ImageConsumer to the list of consumers interested in
      *  data for this image.
@@ -48,4 +55,11 @@ class RenderableImageProducer extends Object with ImageProducer with Runnable {
     /** Sets a new RenderContext to use for the next startProduction() call. */
     @stub
     def setRenderContext(rc: RenderContext): Unit = ???
+
+    /** Adds an ImageConsumer to the list of consumers interested in
+     *  data for this image, and immediately starts delivery of the
+     *  image data through the ImageConsumer interface.
+     */
+    @stub
+    def startProduction(ic: ImageConsumer): Unit = ???
 }

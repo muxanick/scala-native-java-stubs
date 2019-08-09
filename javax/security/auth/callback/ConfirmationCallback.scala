@@ -2,6 +2,7 @@ package javax.security.auth.callback
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /**  Underlying security services instantiate and pass a
  *  ConfirmationCallback to the handle
@@ -28,6 +29,12 @@ class ConfirmationCallback extends Object with Callback with Serializable {
     @stub
     def this(prompt: String, messageType: Int, optionType: Int, defaultOption: Int) = ???
 
+    /** Construct a ConfirmationCallback with a prompt,
+     *  message type, a list of options and a default option.
+     */
+    @stub
+    def this(prompt: String, messageType: Int, options: Array[String], defaultOption: Int) = ???
+
     /** Get the default option. */
     @stub
     def getDefaultOption(): Int = ???
@@ -51,6 +58,10 @@ class ConfirmationCallback extends Object with Callback with Serializable {
     /** Get the selected confirmation option. */
     @stub
     def getSelectedIndex(): Int = ???
+
+    /** Set the selected confirmation option. */
+    @stub
+    def setSelectedIndex(selection: Int): Unit = ???
 }
 
 object ConfirmationCallback {
@@ -93,4 +104,8 @@ object ConfirmationCallback {
     /** YES/NO/CANCEL confirmation confirmation option. */
     @stub
     val YES_NO_CANCEL_OPTION: Int = ???
+
+    /** YES/NO confirmation option. */
+    @stub
+    val YES_NO_OPTION: Int = ???
 }

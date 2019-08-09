@@ -1,6 +1,7 @@
 package java.util.function
 
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** Represents a predicate (boolean-valued function) of one int-valued
  *  argument. This is the int-consuming primitive type specialization of
@@ -28,4 +29,8 @@ import java.lang.FunctionalInterface
      */
     @stub
     val this: default = ???
+
+    /** Evaluates this predicate on the given argument. */
+    @stub
+    def test(value: Int): Boolean = ???
 }

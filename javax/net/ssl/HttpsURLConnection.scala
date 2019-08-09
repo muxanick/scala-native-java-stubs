@@ -1,9 +1,10 @@
 package javax.net.ssl
 
 import java.lang.{Object, String}
-import java.net.{HttpURLConnection, URLConnection}
+import java.net.{HttpURLConnection, URL, URLConnection}
 import java.security.Principal
 import java.security.cert.Certificate
+import scala.scalanative.annotation.stub
 
 /** HttpsURLConnection extends HttpURLConnection
  *  with support for https-specific features.
@@ -25,6 +26,15 @@ import java.security.cert.Certificate
  *  connecting.
  */
 abstract class HttpsURLConnection extends HttpURLConnection {
+
+    /** Creates an HttpsURLConnection using the
+     *  URL specified.
+     */
+    @stub
+    protected def this(url: URL) = ???
+
+    /** The hostnameVerifier for this object. */
+    protected val hostnameVerifier: HostnameVerifier
 
     /** Returns the cipher suite in use on this connection. */
     def getCipherSuite(): String
@@ -57,6 +67,11 @@ abstract class HttpsURLConnection extends HttpURLConnection {
 
     /** Sets the HostnameVerifier for this instance. */
     def setHostnameVerifier(v: HostnameVerifier): Unit
+
+    /** Sets the SSLSocketFactory to be used when this instance
+     *  creates sockets for secure https URL connections.
+     */
+    def setSSLSocketFactory(sf: SSLSocketFactory): Unit
 }
 
 object HttpsURLConnection {

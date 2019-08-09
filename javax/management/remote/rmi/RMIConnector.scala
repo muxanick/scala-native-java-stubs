@@ -6,6 +6,7 @@ import java.util.Map
 import javax.management.{MBeanServerConnection, NotificationFilter, NotificationListener}
 import javax.management.remote.{JMXAddressable, JMXConnector, JMXServiceURL}
 import javax.security.auth.Subject
+import scala.scalanative.annotation.stub
 
 /** A connection to a remote RMI connector.  Usually, such
  *  connections are made using JMXConnectorFactory.
@@ -20,6 +21,10 @@ class RMIConnector extends Object with JMXConnector with Serializable with JMXAd
      */
     @stub
     def this(url: JMXServiceURL, environment: Map[String, _]) = ???
+
+    /** Constructs an RMIConnector using the given RMI stub. */
+    @stub
+    def this(rmiServer: RMIServer, environment: Map[String, _]) = ???
 
     /** Adds a listener to be informed of changes in connection
      *  status.
@@ -71,4 +76,8 @@ class RMIConnector extends Object with JMXConnector with Serializable with JMXAd
      */
     @stub
     def removeConnectionNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
+
+    /** Returns a string representation of this object. */
+    @stub
+    def toString(): String = ???
 }

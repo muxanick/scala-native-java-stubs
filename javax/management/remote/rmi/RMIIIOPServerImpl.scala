@@ -1,13 +1,20 @@
 package javax.management.remote.rmi
 
 import java.lang.{Object, String}
+import java.rmi.Remote
+import java.util.Map
 import javax.security.auth.Subject
+import scala.scalanative.annotation.stub
 
 /** An RMIServerImpl that is exported through IIOP and that
  *  creates client connections as RMI objects exported through IIOP.
  *  User code does not usually reference this class directly.
  */
 class RMIIIOPServerImpl extends RMIServerImpl {
+
+    /** Creates a new RMIServerImpl. */
+    @stub
+    def this(env: Map[String, _]) = ???
 
     /** Closes a client connection made by makeClient. */
     @stub
@@ -32,4 +39,8 @@ class RMIIIOPServerImpl extends RMIServerImpl {
      */
     @stub
     protected def makeClient(connectionId: String, subject: Subject): RMIConnection = ???
+
+    /** Returns an IIOP stub. */
+    @stub
+    def toStub(): Remote = ???
 }

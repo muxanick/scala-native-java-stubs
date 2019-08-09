@@ -5,6 +5,7 @@ import java.lang.Object
 import javax.swing.{JComponent, JTextField}
 import javax.swing.border.Border
 import javax.swing.text.JTextComponent
+import scala.scalanative.annotation.stub
 
 /** TextField used when no editor is supplied.
  *  This textfield locks into the border it is constructed with.
@@ -13,6 +14,16 @@ import javax.swing.text.JTextComponent
  *  has been specified the preferred height is that of the renderer.
  */
 class DefaultTreeCellEditor.DefaultTextField extends JTextField {
+
+    /** Constructs a
+     *  DefaultTreeCellEditor.DefaultTextField object.
+     */
+    @stub
+    def DefaultTextField(border: Border) = ???
+
+    /** Border to use. */
+    @stub
+    protected val border: Border = ???
 
     /** Overrides JComponent.getBorder to
      *  returns the current border.
@@ -30,4 +41,8 @@ class DefaultTreeCellEditor.DefaultTextField extends JTextField {
      */
     @stub
     def getPreferredSize(): Dimension = ???
+
+    /** Sets the border of this component. */
+    @stub
+    def setBorder(border: Border): Unit = ???
 }

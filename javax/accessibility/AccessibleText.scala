@@ -3,6 +3,7 @@ package javax.accessibility
 import java.awt.{Point, Rectangle}
 import java.lang.String
 import javax.swing.text.AttributeSet
+import scala.scalanative.annotation.stub
 
 /** The AccessibleText interface should be implemented by all
  *  classes that present textual information on the display.  This interface
@@ -59,6 +60,10 @@ trait AccessibleText {
     /** Returns the end offset within the selected text. */
     @stub
     def getSelectionEnd(): Int = ???
+
+    /** Returns the start offset within the selected text. */
+    @stub
+    def getSelectionStart(): Int = ???
 }
 
 object AccessibleText {
@@ -73,4 +78,10 @@ object AccessibleText {
      */
     @stub
     val SENTENCE: Int = ???
+
+    /** Constant used to indicate that the part of the text that should be
+     *  retrieved is a word.
+     */
+    @stub
+    val WORD: Int = ???
 }

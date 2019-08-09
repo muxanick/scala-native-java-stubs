@@ -1,6 +1,7 @@
 package javax.sound.sampled
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The ReverbType class provides methods for
  *  accessing various reverberation settings to be applied to
@@ -113,6 +114,12 @@ import java.lang.{Object, String}
  */
 class ReverbType extends Object {
 
+    /** Constructs a new reverb type that has the specified reverberation
+     *  parameter values.
+     */
+    @stub
+    protected def this(name: String, earlyReflectionDelay: Int, earlyReflectionIntensity: Float, lateReflectionDelay: Int, lateReflectionIntensity: Float, decayTime: Int) = ???
+
     /** Indicates whether the specified object is equal to this reverb type,
      *  returning true if the objects are identical.
      */
@@ -148,4 +155,10 @@ class ReverbType extends Object {
     /** Finalizes the hashcode method. */
     @stub
     def hashCode(): Int = ???
+
+    /** Provides a String representation of the reverb type,
+     *  including its name and its parameter settings.
+     */
+    @stub
+    def toString(): String = ???
 }

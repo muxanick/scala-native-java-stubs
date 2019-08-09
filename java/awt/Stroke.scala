@@ -1,5 +1,7 @@
 package java.awt
 
+import scala.scalanative.annotation.stub
+
 /** The Stroke interface allows a
  *  Graphics2D object to obtain a Shape that is the
  *  decorated outline, or stylistic representation of the outline,
@@ -28,4 +30,12 @@ package java.awt
  *  of subsequent rendering would be undefined.
  */
 trait Stroke {
+
+    /** Returns an outline Shape which encloses the area that
+     *  should be painted when the Shape is stroked according
+     *  to the rules defined by the
+     *  object implementing the Stroke interface.
+     */
+    @stub
+    def createStrokedShape(p: Shape): Shape = ???
 }

@@ -1,7 +1,8 @@
 package javax.management.openmbean
 
 import java.lang.{Object, String}
-import javax.management.{MBeanInfo, MBeanNotificationInfo}
+import javax.management.{Descriptor, MBeanInfo, MBeanNotificationInfo}
+import scala.scalanative.annotation.stub
 
 /** The OpenMBeanInfoSupport class describes the management
  *  information of an open MBean: it is a subclass of MBeanInfo, and it implements the OpenMBeanInfo interface.  Note that an open MBean is
@@ -17,6 +18,12 @@ class OpenMBeanInfoSupport extends MBeanInfo with OpenMBeanInfo {
     @stub
     def this(className: String, description: String, openAttributes: Array[OpenMBeanAttributeInfo], openConstructors: Array[OpenMBeanConstructorInfo], openOperations: Array[OpenMBeanOperationInfo], notifications: Array[MBeanNotificationInfo]) = ???
 
+    /** Constructs an OpenMBeanInfoSupport instance, which
+     *  describes a class of open MBeans with the specified className, description, openAttributes, openConstructors , openOperations, notifications, and descriptor.
+     */
+    @stub
+    def this(className: String, description: String, openAttributes: Array[OpenMBeanAttributeInfo], openConstructors: Array[OpenMBeanConstructorInfo], openOperations: Array[OpenMBeanOperationInfo], notifications: Array[MBeanNotificationInfo], descriptor: Descriptor) = ???
+
     /** Compares the specified obj parameter with this
      *  OpenMBeanInfoSupport instance for equality.
      */
@@ -26,4 +33,8 @@ class OpenMBeanInfoSupport extends MBeanInfo with OpenMBeanInfo {
     /** Returns the hash code value for this OpenMBeanInfoSupport instance. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a string representation of this OpenMBeanInfoSupport instance. */
+    @stub
+    def toString(): String = ???
 }

@@ -6,11 +6,16 @@ import java.lang.Object
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, OptionPaneUI}
 import javax.swing.plaf.basic.BasicOptionPaneUI
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for
  *  JOptionPane.
  */
 class SynthOptionPaneUI extends BasicOptionPaneUI with PropertyChangeListener with SynthUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Called from installComponents() to create a Container
      *  containing the body of the message.
@@ -67,6 +72,10 @@ class SynthOptionPaneUI extends BasicOptionPaneUI with PropertyChangeListener wi
     /**  */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthOptionPaneUI {

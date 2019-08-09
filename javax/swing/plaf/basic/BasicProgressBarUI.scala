@@ -2,12 +2,21 @@ package javax.swing.plaf.basic
 
 import java.awt.{Color, Component.BaselineResizeBehavior, Dimension, Graphics, Insets, Point, Rectangle}
 import java.lang.{Object, String}
-import javax.swing.JComponent
+import javax.swing.{JComponent, JProgressBar}
 import javax.swing.event.ChangeListener
 import javax.swing.plaf.{ComponentUI, ProgressBarUI}
+import scala.scalanative.annotation.stub
 
 /** A Basic L&F implementation of ProgressBarUI. */
 class BasicProgressBarUI extends ProgressBarUI {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** This class should be treated as a "protected" inner class. */
+    @stub
+    object ChangeHandler extends BasicProgressBarUI.ChangeHandler
 
     /** Used to hold the location and size of the bouncing box (returned
      *  by getBox) to be painted.
@@ -18,6 +27,10 @@ class BasicProgressBarUI extends ProgressBarUI {
     /**  */
     @stub
     protected val changeListener: ChangeListener = ???
+
+    /**  */
+    @stub
+    protected val progressBar: JProgressBar = ???
 
     /** This determines the amount of the progress bar that should be filled
      *  based on the percent done gathered from the model.
@@ -184,6 +197,12 @@ class BasicProgressBarUI extends ProgressBarUI {
     /** Removes all listeners installed by this object. */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicProgressBarUI {

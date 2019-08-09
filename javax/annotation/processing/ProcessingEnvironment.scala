@@ -3,7 +3,8 @@ package javax.annotation.processing
 import java.lang.String
 import java.util.{Locale, Map}
 import javax.lang.model.SourceVersion
-import javax.lang.model.util.Elements
+import javax.lang.model.util.{Elements, Types}
+import scala.scalanative.annotation.stub
 
 /** An annotation processing tool framework will provide an annotation processor with an object
  *  implementing this interface so the processor can use facilities
@@ -60,4 +61,10 @@ trait ProcessingEnvironment {
     /** Returns the source version that any generated source and class files should conform to. */
     @stub
     def getSourceVersion(): SourceVersion = ???
+
+    /** Returns an implementation of some utility methods for
+     *  operating on types.
+     */
+    @stub
+    def getTypeUtils(): Types = ???
 }

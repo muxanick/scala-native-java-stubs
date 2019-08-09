@@ -3,6 +3,7 @@ package java.lang
 import java.lang.annotation.Annotation
 import java.lang.reflect.AnnotatedElement
 import java.net.URL
+import scala.scalanative.annotation.stub
 
 /** Package objects contain version information
  *  about the implementation and specification of a Java package.
@@ -147,6 +148,10 @@ class Package extends Object with AnnotatedElement {
      */
     @stub
     def isSealed(url: URL): Boolean = ???
+
+    /** Returns the string representation of this Package. */
+    @stub
+    def toString(): String = ???
 }
 
 object Package {

@@ -4,6 +4,7 @@ import java.lang.{Object, String}
 import java.nio.ByteBuffer
 import java.security.cert.Certificate
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** The Signature class is used to provide applications the functionality
  *  of a digital signature algorithm. Digital signatures are used for
@@ -69,6 +70,10 @@ import java.security.spec.AlgorithmParameterSpec
  *  other algorithms are supported.
  */
 abstract class Signature extends SignatureSpi {
+
+    /** Creates a Signature object for the specified algorithm. */
+    @stub
+    protected def this(algorithm: String) = ???
 
     /** Current state of this signature object. */
     protected val state: Int
@@ -147,6 +152,11 @@ abstract class Signature extends SignatureSpi {
 
     /** Verifies the passed-in signature. */
     def verify(signature: Array[Byte]): Boolean
+
+    /** Verifies the passed-in signature in the specified array
+     *  of bytes, starting at the specified offset.
+     */
+    def verify(signature: Array[Byte], offset: Int, length: Int): Boolean
 }
 
 object Signature {
@@ -161,6 +171,12 @@ object Signature {
      */
     @stub
     protected val UNINITIALIZED: Int = ???
+
+    /** Possible state value, signifying that
+     *  this signature object has been initialized for verification.
+     */
+    @stub
+    protected val VERIFY: Int = ???
 
     /** Returns a Signature object that implements the specified signature
      *  algorithm.

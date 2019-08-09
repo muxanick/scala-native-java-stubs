@@ -7,11 +7,16 @@ import javax.swing.{Icon, JComponent}
 import javax.swing.plaf.{ComponentUI, TreeUI}
 import javax.swing.plaf.basic.BasicTreeUI
 import javax.swing.tree.{TreeCellEditor, TreeCellRenderer, TreePath}
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for
  *  JTree.
  */
 class SynthTreeUI extends BasicTreeUI with PropertyChangeListener with SynthUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Creates a default cell editor. */
     @stub
@@ -96,6 +101,10 @@ class SynthTreeUI extends BasicTreeUI with PropertyChangeListener with SynthUI {
     /**  */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthTreeUI {

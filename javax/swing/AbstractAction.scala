@@ -4,6 +4,7 @@ import java.beans.PropertyChangeListener
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
 import javax.swing.event.SwingPropertyChangeSupport
+import scala.scalanative.annotation.stub
 
 /** This class provides default implementations for the JFC Action
  *  interface. Standard behaviors like the get and set methods for
@@ -30,10 +31,17 @@ abstract class AbstractAction extends Object with Action with Cloneable with Ser
     @stub
     def this(name: String) = ???
 
+    /** Creates an Action with the specified name and small icon. */
+    @stub
+    def this(name: String, icon: Icon) = ???
+
     /** If any PropertyChangeListeners have been registered, the
      *  changeSupport field describes them.
      */
     protected val changeSupport: SwingPropertyChangeSupport
+
+    /** Specifies whether action is enabled; the default is true. */
+    protected val enabled: Boolean
 
     /** Adds a PropertyChangeListener to the listener list. */
     def addPropertyChangeListener(listener: PropertyChangeListener): Unit
@@ -66,4 +74,7 @@ abstract class AbstractAction extends Object with Action with Cloneable with Ser
 
     /** Removes a PropertyChangeListener from the listener list. */
     def removePropertyChangeListener(listener: PropertyChangeListener): Unit
+
+    /** Sets whether the Action is enabled. */
+    def setEnabled(newValue: Boolean): Unit
 }

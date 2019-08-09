@@ -1,7 +1,8 @@
 package java.lang
 
-import java.util.Iterator
+import java.util.{Iterator, Spliterator}
 import java.util.function.Consumer
+import scala.scalanative.annotation.stub
 
 /** Implementing this interface allows an object to be the target of
  *  the "for-each loop" statement. See
@@ -21,4 +22,10 @@ trait Iterable[T] {
     /** Returns an iterator over elements of type T. */
     @stub
     def iterator(): Iterator[T] = ???
+
+    /** Creates a Spliterator over the elements described by this
+     *  Iterable.
+     */
+    @stub
+    val Spliterator[T]: default = ???
 }

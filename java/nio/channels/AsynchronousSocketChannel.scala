@@ -5,6 +5,7 @@ import java.net.{SocketAddress, SocketOption}
 import java.nio.ByteBuffer
 import java.nio.channels.spi.AsynchronousChannelProvider
 import java.util.concurrent.{Future, TimeUnit}
+import scala.scalanative.annotation.stub
 
 /** An asynchronous channel for stream-oriented connecting sockets.
  * 
@@ -83,6 +84,10 @@ import java.util.concurrent.{Future, TimeUnit}
  */
 abstract class AsynchronousSocketChannel extends Object with AsynchronousByteChannel with NetworkChannel {
 
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this(provider: AsynchronousChannelProvider) = ???
+
     /** Binds the channel's socket to a local address. */
     def bind(local: SocketAddress): AsynchronousSocketChannel
 
@@ -134,6 +139,9 @@ abstract class AsynchronousSocketChannel extends Object with AsynchronousByteCha
 
     /** Writes a sequence of bytes to this channel from the given buffer. */
     def write[A](src: ByteBuffer, attachment: A, handler: CompletionHandler[Integer, _ >: A]): Unit
+
+    /** Writes a sequence of bytes to this channel from the given buffer. */
+    val Unit: abstract[A]
 }
 
 object AsynchronousSocketChannel {

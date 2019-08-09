@@ -1,6 +1,7 @@
 package javax.swing
 
 import java.awt.{Dimension, Rectangle}
+import scala.scalanative.annotation.stub
 
 /** An interface that provides information to a scrolling container
  *  like JScrollPane.  A complex component that's likely to be used
@@ -31,4 +32,11 @@ trait Scrollable {
      */
     @stub
     def getScrollableTracksViewportWidth(): Boolean = ???
+
+    /** Components that display logical rows or columns should compute
+     *  the scroll increment that will completely expose one new row
+     *  or column, depending on the value of orientation.
+     */
+    @stub
+    def getScrollableUnitIncrement(visibleRect: Rectangle, orientation: Int, direction: Int): Int = ???
 }

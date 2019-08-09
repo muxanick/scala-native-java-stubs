@@ -2,12 +2,19 @@ package javax.swing.undo
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** An abstract implementation of UndoableEdit,
  *  implementing simple responses to all boolean methods in
  *  that interface.
  */
 class AbstractUndoableEdit extends Object with UndoableEdit with Serializable {
+
+    /** Creates an AbstractUndoableEdit which defaults
+     *  hasBeenDone and alive to true.
+     */
+    @stub
+    def this() = ???
 
     /** This default implementation returns false. */
     @stub
@@ -68,6 +75,12 @@ class AbstractUndoableEdit extends Object with UndoableEdit with Serializable {
      */
     @stub
     def toString(): String = ???
+
+    /** Throws CannotUndoException if canUndo
+     *  returns false.
+     */
+    @stub
+    def undo(): Unit = ???
 }
 
 object AbstractUndoableEdit {
@@ -76,4 +89,10 @@ object AbstractUndoableEdit {
      */
     @stub
     protected val RedoName: String = ???
+
+    /** String returned by getUndoPresentationName;
+     *  as of Java 2 platform v1.3.1 this field is no longer used.
+     */
+    @stub
+    protected val UndoName: String = ???
 }

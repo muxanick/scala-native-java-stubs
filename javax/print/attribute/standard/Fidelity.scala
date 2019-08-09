@@ -2,6 +2,7 @@ package javax.print.attribute.standard
 
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, EnumSyntax, PrintJobAttribute, PrintRequestAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class Fidelity is a printing attribute class, an enumeration,
  *  that indicates whether total fidelity to client supplied print request
@@ -23,6 +24,12 @@ import javax.print.attribute.{Attribute, EnumSyntax, PrintJobAttribute, PrintReq
  */
 final class Fidelity extends EnumSyntax with PrintJobAttribute with PrintRequestAttribute {
 
+    /** Construct a new fidelity enumeration value with the
+     *  given integer value.
+     */
+    @stub
+    protected def this(value: Int) = ???
+
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.
      */
@@ -38,6 +45,10 @@ final class Fidelity extends EnumSyntax with PrintJobAttribute with PrintRequest
      */
     @stub
     def getName(): String = ???
+
+    /** Returns the string table for class Fidelity. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object Fidelity {
@@ -46,4 +57,8 @@ object Fidelity {
      */
     @stub
     val FIDELITY_FALSE: Fidelity = ???
+
+    /** The job must be printed exactly as specified. */
+    @stub
+    val FIDELITY_TRUE: Fidelity = ???
 }

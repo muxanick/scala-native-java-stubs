@@ -2,6 +2,7 @@ package javax.naming
 
 import java.lang.{Object, String}
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** This class represents a composite name -- a sequence of
  *  component names spanning multiple namespaces.
@@ -180,6 +181,12 @@ class CompositeName extends Object with Name {
     @stub
     protected def this(comps: Enumeration[String]) = ???
 
+    /** Constructs a new composite name instance by parsing the string n
+     *  using the composite name syntax (left-to-right, slash separated).
+     */
+    @stub
+    def this(n: String) = ???
+
     /** Adds a single component at a specified position within this
      *  composite name.
      */
@@ -259,4 +266,8 @@ class CompositeName extends Object with Name {
     /** Determines whether a composite name is a prefix of this composite name. */
     @stub
     def startsWith(n: Name): Boolean = ???
+
+    /** Generates the string representation of this composite name. */
+    @stub
+    def toString(): String = ???
 }

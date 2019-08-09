@@ -5,6 +5,7 @@ import java.awt.im.InputMethodRequests
 import java.lang.{Class, Object, String}
 import java.util.EventListener
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** The TextComponent class is the superclass of
  *  any component that allows the editing of some text.
@@ -22,6 +23,16 @@ import javax.accessibility.{Accessible, AccessibleContext}
  *  to as the selected text.
  */
 class TextComponent extends Component with Accessible {
+
+    /** This class implements accessibility support for the
+     *  TextComponent class.
+     */
+    @stub
+    protected object AccessibleAWTTextComponent extends TextComponent.AccessibleAWTTextComponent
+
+    /**  */
+    @stub
+    protected val textListener: TextListener = ???
 
     /** Makes this Component displayable by connecting it to a
      *  native screen resource.
@@ -157,4 +168,10 @@ class TextComponent extends Component with Accessible {
      */
     @stub
     def setSelectionStart(selectionStart: Int): Unit = ???
+
+    /** Sets the text that is presented by this
+     *  text component to be the specified text.
+     */
+    @stub
+    def setText(t: String): Unit = ???
 }

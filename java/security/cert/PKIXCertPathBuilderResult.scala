@@ -1,6 +1,8 @@
 package java.security.cert
 
-import java.lang.Object
+import java.lang.{Object, String}
+import java.security.PublicKey
+import scala.scalanative.annotation.stub
 
 /** This class represents the successful result of the PKIX certification
  *  path builder algorithm. All certification paths that are built and
@@ -27,7 +29,19 @@ import java.lang.Object
  */
 class PKIXCertPathBuilderResult extends PKIXCertPathValidatorResult with CertPathBuilderResult {
 
+    /** Creates an instance of PKIXCertPathBuilderResult
+     *  containing the specified parameters.
+     */
+    @stub
+    def this(certPath: CertPath, trustAnchor: TrustAnchor, policyTree: PolicyNode, subjectPublicKey: PublicKey) = ???
+
     /** Returns the built and validated certification path. */
     @stub
     def getCertPath(): CertPath = ???
+
+    /** Return a printable representation of this
+     *  PKIXCertPathBuilderResult.
+     */
+    @stub
+    def toString(): String = ???
 }

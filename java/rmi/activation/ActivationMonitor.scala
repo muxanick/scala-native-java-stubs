@@ -1,6 +1,7 @@
 package java.rmi.activation
 
 import java.rmi.{MarshalledObject, Remote}
+import scala.scalanative.annotation.stub
 
 /** An ActivationMonitor is specific to an
  *  ActivationGroup and is obtained when a group is
@@ -19,4 +20,11 @@ trait ActivationMonitor extends Remote {
     /** Informs that the group is now inactive. */
     @stub
     def inactiveGroup(id: ActivationGroupID, incarnation: Long): Unit = ???
+
+    /** An activation group calls its monitor's
+     *  inactiveObject method when an object in its group
+     *  becomes inactive (deactivates).
+     */
+    @stub
+    def inactiveObject(id: ActivationID): Unit = ???
 }

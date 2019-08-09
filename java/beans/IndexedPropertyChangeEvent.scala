@@ -1,7 +1,8 @@
 package java.beans
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** An "IndexedPropertyChange" event gets delivered whenever a component that
  *  conforms to the JavaBeans™ specification (a "bean") changes a bound
@@ -16,4 +17,12 @@ import java.util.EventObject
  *  old and new values should also be null.
  */
 class IndexedPropertyChangeEvent extends PropertyChangeEvent {
+
+    /** Constructs a new IndexedPropertyChangeEvent object. */
+    @stub
+    def this(source: Object, propertyName: String, oldValue: Object, newValue: Object, index: Int) = ???
+
+    /** Gets the index of the property that was changed. */
+    @stub
+    def getIndex(): Int = ???
 }

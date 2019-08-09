@@ -3,6 +3,7 @@ package java.awt.event
 import java.awt.{AWTEvent, Component, Point}
 import java.lang.{Object, String}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** An event which indicates that a mouse action occurred in a component.
  *  A mouse action is considered to occur in a particular component if and only
@@ -160,6 +161,14 @@ class MouseEvent extends InputEvent {
     @stub
     def this(source: Component, id: Int, when: Long, modifiers: Int, x: Int, y: Int, clickCount: Int, popupTrigger: Boolean, button: Int) = ???
 
+    /** Constructs a MouseEvent object with the
+     *  specified source component,
+     *  type, time, modifiers, coordinates, absolute coordinates, click count, popupTrigger flag,
+     *  and button number.
+     */
+    @stub
+    def this(source: Component, id: Int, when: Long, modifiers: Int, x: Int, y: Int, xAbs: Int, yAbs: Int, clickCount: Int, popupTrigger: Boolean, button: Int) = ???
+
     /** Returns which, if any, of the mouse buttons has changed state. */
     @stub
     def getButton(): Int = ???
@@ -209,6 +218,13 @@ class MouseEvent extends InputEvent {
     /** Returns a parameter string identifying this event. */
     @stub
     def paramString(): String = ???
+
+    /** Translates the event's coordinates to a new position
+     *  by adding specified x (horizontal) and y
+     *  (vertical) offsets.
+     */
+    @stub
+    def translatePoint(x: Int, y: Int): Unit = ???
 }
 
 object MouseEvent {
@@ -263,6 +279,10 @@ object MouseEvent {
     /** The "mouse wheel" event. */
     @stub
     val MOUSE_WHEEL: Int = ???
+
+    /** Indicates no mouse buttons; used by getButton(). */
+    @stub
+    val NOBUTTON: Int = ???
 
     /** Returns a String instance describing the modifier keys and
      *  mouse buttons that were down during the event, such as "Shift",

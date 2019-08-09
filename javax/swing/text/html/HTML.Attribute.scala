@@ -1,6 +1,7 @@
 package javax.swing.text.html
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Typesafe enumeration representing an HTML
  *  attribute.
@@ -322,4 +323,12 @@ final object HTML.Attribute extends Object {
     /**  */
     @stub
     val VSPACE: HTML.Attribute = ???
+
+    /**  */
+    @stub
+    val WIDTH: HTML.Attribute = ???
+
+    /** Returns the string representation of this attribute. */
+    @stub
+    def toString(): String = ???
 }

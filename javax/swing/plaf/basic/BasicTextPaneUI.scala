@@ -1,8 +1,10 @@
 package javax.swing.plaf.basic
 
+import java.beans.PropertyChangeEvent
 import java.lang.{Object, String}
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, TextUI}
+import scala.scalanative.annotation.stub
 
 /** Provides the look and feel for a styled text editor.
  *  
@@ -17,6 +19,10 @@ import javax.swing.plaf.{ComponentUI, TextUI}
  */
 class BasicTextPaneUI extends BasicEditorPaneUI {
 
+    /** Creates a new BasicTextPaneUI. */
+    @stub
+    def this() = ???
+
     /** Fetches the name used as a key to lookup properties through the
      *  UIManager.
      */
@@ -26,6 +32,12 @@ class BasicTextPaneUI extends BasicEditorPaneUI {
     /** Installs the UI for a component. */
     @stub
     def installUI(c: JComponent): Unit = ???
+
+    /** This method gets called when a bound property is changed
+     *  on the associated JTextComponent.
+     */
+    @stub
+    protected def propertyChange(evt: PropertyChangeEvent): Unit = ???
 }
 
 object BasicTextPaneUI {

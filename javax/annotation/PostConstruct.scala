@@ -2,6 +2,7 @@ package javax.annotation
 
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** The PostConstruct annotation is used on a method that needs to be executed
  *  after dependency injection is done to perform any initialization. This

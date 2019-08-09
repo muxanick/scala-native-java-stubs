@@ -1,6 +1,8 @@
 package javax.management.relation
 
 import java.lang.{Object, String}
+import java.util.List
+import scala.scalanative.annotation.stub
 
 /** A RelationTypeSupport object implements the RelationType interface.
  *  It represents a relation type, providing role information for each role
@@ -24,6 +26,12 @@ class RelationTypeSupport extends Object with RelationType {
     @stub
     protected def this(relationTypeName: String) = ???
 
+    /** Constructor where all role definitions are dynamically created and
+     *  passed as parameter.
+     */
+    @stub
+    def this(relationTypeName: String, roleInfoArray: Array[RoleInfo]) = ???
+
     /** Add a role info. */
     @stub
     protected def addRoleInfo(roleInfo: RoleInfo): Unit = ???
@@ -37,4 +45,8 @@ class RelationTypeSupport extends Object with RelationType {
      */
     @stub
     def getRoleInfo(roleInfoName: String): RoleInfo = ???
+
+    /** Returns the list of role definitions (ArrayList of RoleInfo objects). */
+    @stub
+    def getRoleInfos(): List[RoleInfo] = ???
 }

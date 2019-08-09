@@ -2,6 +2,7 @@ package java.io
 
 import java.lang.{Object, Readable}
 import java.nio.CharBuffer
+import scala.scalanative.annotation.stub
 
 /** Abstract class for reading character streams.  The only methods that a
  *  subclass must implement are read(char[], int, int) and close().  Most
@@ -15,6 +16,15 @@ abstract class Reader extends Object with Readable with Closeable {
      */
     @stub
     protected def this() = ???
+
+    /** Creates a new character-stream reader whose critical sections will
+     *  synchronize on the given object.
+     */
+    @stub
+    protected def this(lock: Object) = ???
+
+    /** The object used to synchronize operations on this stream. */
+    protected val lock: Object
 
     /** Closes the stream and releases any system resources associated with
      *  it.
@@ -44,4 +54,7 @@ abstract class Reader extends Object with Readable with Closeable {
 
     /** Resets the stream. */
     def reset(): Unit
+
+    /** Skips characters. */
+    def skip(n: Long): Long
 }

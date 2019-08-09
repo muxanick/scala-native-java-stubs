@@ -1,6 +1,7 @@
 package java.awt.font
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The LineMetrics class allows access to the
  *  metrics needed to layout characters along a line
@@ -16,6 +17,10 @@ import java.lang.Object
  *  returned by getNumChars().
  */
 abstract class LineMetrics extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the ascent of the text. */
     def getAscent(): Float
@@ -55,4 +60,7 @@ abstract class LineMetrics extends Object {
      *  the baseline.
      */
     def getUnderlineOffset(): Float
+
+    /** Returns the thickness of the underline. */
+    def getUnderlineThickness(): Float
 }

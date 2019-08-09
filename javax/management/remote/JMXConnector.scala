@@ -5,6 +5,7 @@ import java.lang.{Object, String}
 import java.util.Map
 import javax.management.{MBeanServerConnection, NotificationFilter, NotificationListener}
 import javax.security.auth.Subject
+import scala.scalanative.annotation.stub
 
 /** The client end of a JMX API connector.  An object of this type can
  *  be used to establish a connection to a connector server.
@@ -54,4 +55,18 @@ trait JMXConnector extends Closeable {
      */
     @stub
     def removeConnectionNotificationListener(listener: NotificationListener): Unit = ???
+
+    /** Removes a listener from the list to be informed of changes
+     *  in status.
+     */
+    @stub
+    def removeConnectionNotificationListener(l: NotificationListener, f: NotificationFilter, handback: Object): Unit = ???
+}
+
+object JMXConnector {
+    /** Name of the attribute that specifies the credentials to send
+     *  to the connector server during connection.
+     */
+    @stub
+    val CREDENTIALS: String = ???
 }

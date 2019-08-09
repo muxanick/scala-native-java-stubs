@@ -1,11 +1,16 @@
 package javax.management.relation
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class describes the various problems which can be encountered when
  *  accessing a role.
  */
 class RoleStatus extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 }
 
 object RoleStatus {
@@ -40,4 +45,14 @@ object RoleStatus {
     /** Problem type when trying to read a non-readable attribute. */
     @stub
     val ROLE_NOT_READABLE: Int = ???
+
+    /** Problem type when trying to update a non-writable attribute. */
+    @stub
+    val ROLE_NOT_WRITABLE: Int = ???
+
+    /** Returns true if given value corresponds to a known role status, false
+     *  otherwise.
+     */
+    @stub
+    def isRoleStatus(status: Int): Boolean = ???
 }

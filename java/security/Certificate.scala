@@ -2,6 +2,7 @@ package java.security
 
 import java.io.{InputStream, OutputStream}
 import java.lang.{Deprecated, String}
+import scala.scalanative.annotation.stub
 
 /** This is an interface of abstract methods for managing a
  *  variety of identity certificates.
@@ -54,4 +55,8 @@ import java.lang.{Deprecated, String}
     /** Deprecated.  */
     @stub
     def getPublicKey(): PublicKey = ???
+
+    /** Deprecated.  */
+    @stub
+    def toString(detailed: Boolean): String = ???
 }

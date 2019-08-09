@@ -1,7 +1,9 @@
 package javax.swing.text.html
 
+import java.awt.Component
 import java.lang.Object
-import javax.swing.text.{ComponentView, View}
+import javax.swing.text.{ComponentView, Element, View}
+import scala.scalanative.annotation.stub
 
 /** Component decorator that implements the view interface
  *  for <object> elements.
@@ -37,4 +39,12 @@ import javax.swing.text.{ComponentView, View}
  *  
  */
 class ObjectView extends ComponentView {
+
+    /** Creates a new ObjectView object. */
+    @stub
+    def this(elem: Element) = ???
+
+    /** Create the component. */
+    @stub
+    protected def createComponent(): Component = ???
 }

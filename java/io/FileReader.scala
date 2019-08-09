@@ -1,6 +1,7 @@
 package java.io
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Convenience class for reading character files.  The constructors of this
  *  class assume that the default character encoding and the default byte-buffer
@@ -24,4 +25,10 @@ class FileReader extends InputStreamReader {
      */
     @stub
     def this(fd: FileDescriptor) = ???
+
+    /** Creates a new FileReader, given the name of the
+     *  file to read from.
+     */
+    @stub
+    def this(fileName: String) = ???
 }

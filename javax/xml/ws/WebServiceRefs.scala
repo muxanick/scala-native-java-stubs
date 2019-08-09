@@ -2,6 +2,7 @@ package javax.xml.ws
 
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** The WebServiceRefs annotation allows
  *  multiple web service references to be declared at the
@@ -43,4 +44,8 @@ import scala.annotation.StaticAnnotation
 @Retention ( value = RUNTIME ) 
 @Target ( value = TYPE ) 
  final class WebServiceRefs extends StaticAnnotation {
+
+    /** Array used for multiple web service reference declarations. */
+    @stub
+    val value: Array[WebServiceRef] = ???
 }

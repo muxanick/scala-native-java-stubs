@@ -2,6 +2,7 @@ package javax.crypto.spec
 
 import java.lang.{Object, String}
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** This class specifies the set of parameters used with OAEP Padding,
  *  as defined in the
@@ -42,6 +43,16 @@ import java.security.spec.AlgorithmParameterSpec
  */
 class OAEPParameterSpec extends Object with AlgorithmParameterSpec {
 
+    /** Constructs a parameter set for OAEP padding as defined in
+     *  the PKCS #1 standard using the specified message digest
+     *  algorithm mdName, mask generation function
+     *  algorithm mgfName, parameters for the mask
+     *  generation function mgfSpec, and source of
+     *  the encoding input P pSrc.
+     */
+    @stub
+    def this(mdName: String, mgfName: String, mgfSpec: AlgorithmParameterSpec, pSrc: PSource) = ???
+
     /** Returns the message digest algorithm name. */
     @stub
     def getDigestAlgorithm(): String = ???
@@ -53,4 +64,14 @@ class OAEPParameterSpec extends Object with AlgorithmParameterSpec {
     /** Returns the parameters for the mask generation function. */
     @stub
     def getMGFParameters(): AlgorithmParameterSpec = ???
+
+    /** Returns the source of encoding input P. */
+    @stub
+    def getPSource(): PSource = ???
+}
+
+object OAEPParameterSpec {
+    /** The OAEP parameter set with all default values. */
+    @stub
+    val DEFAULT: OAEPParameterSpec = ???
 }

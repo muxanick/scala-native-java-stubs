@@ -1,6 +1,7 @@
 package javax.management
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** Defines the management interface  of an object of class MBeanServerDelegate. */
 trait MBeanServerDelegateMBean {
@@ -32,4 +33,10 @@ trait MBeanServerDelegateMBean {
      */
     @stub
     def getSpecificationVendor(): String = ???
+
+    /** Returns the version of the JMX specification implemented
+     *  by this product.
+     */
+    @stub
+    def getSpecificationVersion(): String = ???
 }

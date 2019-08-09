@@ -5,6 +5,7 @@ import java.lang.Object
 import javax.swing.{JComponent, JScrollPane}
 import javax.swing.plaf.{ComponentUI, ScrollPaneUI}
 import javax.swing.plaf.basic.BasicScrollPaneUI
+import scala.scalanative.annotation.stub
 
 /** A Metal L&F implementation of ScrollPaneUI.
  *  
@@ -18,6 +19,10 @@ import javax.swing.plaf.basic.BasicScrollPaneUI
  *  Please see XMLEncoder.
  */
 class MetalScrollPaneUI extends BasicScrollPaneUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /**  */
     @stub
@@ -41,6 +46,12 @@ class MetalScrollPaneUI extends BasicScrollPaneUI {
      */
     @stub
     def uninstallListeners(scrollPane: JScrollPane): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object MetalScrollPaneUI {

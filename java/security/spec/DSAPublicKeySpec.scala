@@ -2,9 +2,14 @@ package java.security.spec
 
 import java.lang.Object
 import java.math.BigInteger
+import scala.scalanative.annotation.stub
 
 /** This class specifies a DSA public key with its associated parameters. */
 class DSAPublicKeySpec extends Object with KeySpec {
+
+    /** Creates a new DSAPublicKeySpec with the specified parameter values. */
+    @stub
+    def this(y: BigInteger, p: BigInteger, q: BigInteger, g: BigInteger) = ???
 
     /** Returns the base g. */
     @stub
@@ -17,4 +22,8 @@ class DSAPublicKeySpec extends Object with KeySpec {
     /** Returns the sub-prime q. */
     @stub
     def getQ(): BigInteger = ???
+
+    /** Returns the public key y. */
+    @stub
+    def getY(): BigInteger = ???
 }

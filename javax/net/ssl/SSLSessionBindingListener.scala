@@ -1,6 +1,7 @@
 package javax.net.ssl
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** This interface is implemented by objects which want to know when
  *  they are being bound or unbound from a SSLSession.  When either event
@@ -15,4 +16,10 @@ trait SSLSessionBindingListener extends EventListener {
      */
     @stub
     def valueBound(event: SSLSessionBindingEvent): Unit = ???
+
+    /** This is called to notify the listener that it is being unbound
+     *  from a SSLSession.
+     */
+    @stub
+    def valueUnbound(event: SSLSessionBindingEvent): Unit = ???
 }

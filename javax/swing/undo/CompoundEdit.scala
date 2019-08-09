@@ -1,11 +1,23 @@
 package javax.swing.undo
 
 import java.lang.{Object, String}
+import java.util.Vector
+import scala.scalanative.annotation.stub
 
 /** A concrete subclass of AbstractUndoableEdit, used to assemble little
  *  UndoableEdits into great big ones.
  */
 class CompoundEdit extends AbstractUndoableEdit {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** The collection of UndoableEdits
+     *  undone/redone en masse by this CompoundEdit.
+     */
+    @stub
+    protected val edits: Vector[UndoableEdit] = ???
 
     /** If this edit is inProgress,
      *  accepts anEdit and returns true.
@@ -87,4 +99,11 @@ class CompoundEdit extends AbstractUndoableEdit {
      */
     @stub
     def toString(): String = ???
+
+    /** Sends undo to all contained
+     *  UndoableEdits in the reverse of
+     *  the order in which they were added.
+     */
+    @stub
+    def undo(): Unit = ???
 }

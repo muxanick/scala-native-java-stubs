@@ -1,14 +1,23 @@
 package javax.swing.text
 
-import java.awt.{Component, Graphics, Rectangle, Shape}
+import java.awt.{Component, FontMetrics, Graphics, Rectangle, Shape}
 import java.lang.Object
 import javax.swing.event.DocumentEvent
+import scala.scalanative.annotation.stub
 
 /** Implements View interface for a simple multi-line text view
  *  that has text in one font and color.  The view represents each
  *  child element as a line of text.
  */
 class PlainView extends View with TabExpander {
+
+    /** Constructs a new PlainView wrapped on an element. */
+    @stub
+    def this(elem: Element) = ???
+
+    /** Font metrics for the current font. */
+    @stub
+    protected val metrics: FontMetrics = ???
 
     /** Gives notification from the document that attributes were changed
      *  in a location that this view is responsible for.
@@ -97,4 +106,10 @@ class PlainView extends View with TabExpander {
      */
     @stub
     protected def updateMetrics(): Unit = ???
+
+    /** Provides a mapping from the view coordinate space to the logical
+     *  coordinate space of the model.
+     */
+    @stub
+    def viewToModel(fx: Float, fy: Float, a: Shape, bias: Array[Position.Bias]): Int = ???
 }

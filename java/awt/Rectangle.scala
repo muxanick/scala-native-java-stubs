@@ -3,6 +3,7 @@ package java.awt
 import java.awt.geom.{Rectangle2D, RectangularShape}
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A Rectangle specifies an area in a coordinate space that is
  *  enclosed by the Rectangle object's upper-left point
@@ -133,6 +134,12 @@ class Rectangle extends Rectangle2D with Shape with Serializable {
     @stub
     def this(p: Point, d: Dimension) = ???
 
+    /** Constructs a new Rectangle, initialized to match
+     *  the values of the specified Rectangle.
+     */
+    @stub
+    def this(r: Rectangle) = ???
+
     /** The height of the Rectangle. */
     @stub
     val height: Int = ???
@@ -144,6 +151,10 @@ class Rectangle extends Rectangle2D with Shape with Serializable {
     /** The X coordinate of the upper-left corner of the Rectangle. */
     @stub
     val x: Int = ???
+
+    /** The Y coordinate of the upper-left corner of the Rectangle. */
+    @stub
+    val y: Int = ???
 
     /** Adds a point, specified by the integer arguments newx,newy
      *  to the bounds of this Rectangle.
@@ -360,4 +371,10 @@ class Rectangle extends Rectangle2D with Shape with Serializable {
      */
     @stub
     def translate(dx: Int, dy: Int): Unit = ???
+
+    /** Computes the union of this Rectangle with the
+     *  specified Rectangle.
+     */
+    @stub
+    def union(r: Rectangle): Rectangle = ???
 }

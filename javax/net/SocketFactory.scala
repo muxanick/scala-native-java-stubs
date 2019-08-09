@@ -2,6 +2,7 @@ package javax.net
 
 import java.lang.{Object, String}
 import java.net.{InetAddress, Socket}
+import scala.scalanative.annotation.stub
 
 /** This class creates sockets.  It may be subclassed by other factories,
  *  which create particular subclasses of sockets and thus provide a general
@@ -35,6 +36,10 @@ import java.net.{InetAddress, Socket}
  */
 abstract class SocketFactory extends Object {
 
+    /** Creates a SocketFactory. */
+    @stub
+    protected def this() = ???
+
     /** Creates an unconnected socket. */
     def createSocket(): Socket
 
@@ -57,4 +62,10 @@ abstract class SocketFactory extends Object {
      *  on the specified remote port.
      */
     def createSocket(host: String, port: Int, localHost: InetAddress, localPort: Int): Socket
+}
+
+object SocketFactory {
+    /** Returns a copy of the environment's default socket factory. */
+    @stub
+    def getDefault(): SocketFactory = ???
 }

@@ -3,6 +3,7 @@ package java.text
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** DateFormatSymbols is a public class for encapsulating
  *  localizable date-time formatting data, such as the names of the
@@ -51,6 +52,12 @@ class DateFormatSymbols extends Object with Serializable with Cloneable {
      */
     @stub
     def this() = ???
+
+    /** Construct a DateFormatSymbols object by loading format data from
+     *  resources for the given locale.
+     */
+    @stub
+    def this(locale: Locale) = ???
 
     /** Overrides Cloneable */
     @stub
@@ -123,6 +130,10 @@ class DateFormatSymbols extends Object with Serializable with Cloneable {
     /** Sets weekday strings. */
     @stub
     def setWeekdays(newWeekdays: Array[String]): Unit = ???
+
+    /** Sets time zone strings. */
+    @stub
+    def setZoneStrings(newZoneStrings: Array[Array[String]]): Unit = ???
 }
 
 object DateFormatSymbols {

@@ -1,7 +1,8 @@
 package javax.swing.event
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** Defines an event that encapsulates changes to a list.
  *  
@@ -16,6 +17,10 @@ import java.util.EventObject
  */
 class ListDataEvent extends EventObject {
 
+    /** Constructs a ListDataEvent object. */
+    @stub
+    def this(source: Object, type: Int, index0: Int, index1: Int) = ???
+
     /** Returns the lower index of the range. */
     @stub
     def getIndex0(): Int = ???
@@ -27,6 +32,10 @@ class ListDataEvent extends EventObject {
     /** Returns the event type. */
     @stub
     def getType(): Int = ???
+
+    /** Returns a string representation of this ListDataEvent. */
+    @stub
+    def toString(): String = ???
 }
 
 object ListDataEvent {
@@ -37,4 +46,8 @@ object ListDataEvent {
     /** Identifies the addition of one or more contiguous items to the list */
     @stub
     val INTERVAL_ADDED: Int = ???
+
+    /** Identifies the removal of one or more contiguous items from the list */
+    @stub
+    val INTERVAL_REMOVED: Int = ???
 }

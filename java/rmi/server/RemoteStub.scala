@@ -1,6 +1,7 @@
 package java.rmi.server
 
 import java.lang.{Deprecated, Object}
+import scala.scalanative.annotation.stub
 
 /** The RemoteStub class is the common superclass of
  *  statically generated client
@@ -14,4 +15,21 @@ import java.lang.{Deprecated, Object}
     /** Deprecated.  */
     @stub
     protected def this() = ???
+
+    /** Deprecated.  */
+    @stub
+    protected def this(ref: RemoteRef) = ???
+}
+
+object RemoteStub {
+    /** Deprecated. 
+     * No replacement.  The setRef method
+     *  was intended for setting the remote reference of a remote
+     *  stub. This is unnecessary, since RemoteStubs can be created
+     *  and initialized with a remote reference through use of
+     *  the RemoteStub(RemoteRef) constructor.
+     * 
+     */
+    @stub
+    protected def setRef(stub: RemoteStub, ref: RemoteRef): Unit = ???
 }

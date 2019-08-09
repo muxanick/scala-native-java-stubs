@@ -1,7 +1,9 @@
 package javax.activation
 
 import java.awt.datatransfer.DataFlavor
-import java.lang.Object
+import java.io.OutputStream
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The DataContentHandler interface is implemented by objects that can
  *  be used to extend the capabilities of the DataHandler's implementation
@@ -31,4 +33,10 @@ trait DataContentHandler {
      */
     @stub
     def getTransferDataFlavors(): Array[DataFlavor] = ???
+
+    /** Convert the object to a byte stream of the specified MIME type
+     *  and write it to the output stream.
+     */
+    @stub
+    def writeTo(obj: Object, mimeType: String, os: OutputStream): Unit = ???
 }

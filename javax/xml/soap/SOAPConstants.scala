@@ -2,6 +2,7 @@ package javax.xml.soap
 
 import java.lang.String
 import javax.xml.namespace.QName
+import scala.scalanative.annotation.stub
 
 /** The definition of constants pertaining to the SOAP protocol. */
 trait SOAPConstants {
@@ -101,4 +102,10 @@ object SOAPConstants {
     /** The URI identifying the ultimate receiver of the SOAP 1.2 message. */
     @stub
     val URI_SOAP_1_2_ROLE_ULTIMATE_RECEIVER: String = ???
+
+    /** The URI identifying the next application processing a SOAP request as the intended
+     *  actor for a SOAP 1.1 header entry (see section 4.2.2 of the SOAP 1.1 specification).
+     */
+    @stub
+    val URI_SOAP_ACTOR_NEXT: String = ???
 }

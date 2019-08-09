@@ -2,6 +2,7 @@ package java.util.concurrent
 
 import java.lang.{Object, Runnable}
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** A ThreadPoolExecutor that can additionally schedule
  *  commands to run after a given delay, or to execute
@@ -95,6 +96,12 @@ class ScheduledThreadPoolExecutor extends ThreadPoolExecutor with ScheduledExecu
      */
     @stub
     def this(corePoolSize: Int, threadFactory: ThreadFactory) = ???
+
+    /** Creates a new ScheduledThreadPoolExecutor with the given
+     *  initial parameters.
+     */
+    @stub
+    def this(corePoolSize: Int, threadFactory: ThreadFactory, handler: RejectedExecutionHandler) = ???
 
     /** Modifies or replaces the task used to execute a callable. */
     @stub
@@ -201,4 +208,10 @@ class ScheduledThreadPoolExecutor extends ThreadPoolExecutor with ScheduledExecu
      */
     @stub
     def submit(task: Runnable): Future[_] = ???
+
+    /** Submits a Runnable task for execution and returns a Future
+     *  representing that task.
+     */
+    @stub
+    def submit[T](task: Runnable, result: T): Future[T] = ???
 }

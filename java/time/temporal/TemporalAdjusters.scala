@@ -3,6 +3,7 @@ package java.time.temporal
 import java.lang.Object
 import java.time.{DayOfWeek, LocalDate}
 import java.util.function.UnaryOperator
+import scala.scalanative.annotation.stub
 
 /** Common and useful TemporalAdjusters.
  *  
@@ -114,4 +115,11 @@ object TemporalAdjusters {
      */
     @stub
     def previous(dayOfWeek: DayOfWeek): TemporalAdjuster = ???
+
+    /** Returns the previous-or-same day-of-week adjuster, which adjusts the date to the
+     *  first occurrence of the specified day-of-week before the date being adjusted
+     *  unless it is already on that day in which case the same object is returned.
+     */
+    @stub
+    def previousOrSame(dayOfWeek: DayOfWeek): TemporalAdjuster = ???
 }

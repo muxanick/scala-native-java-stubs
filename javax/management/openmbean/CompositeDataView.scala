@@ -1,5 +1,7 @@
 package javax.management.openmbean
 
+import scala.scalanative.annotation.stub
+
 /** A Java class can implement this interface to indicate how it is
  *  to be converted into a CompositeData by the MXBean framework.
  * 
@@ -77,4 +79,10 @@ package javax.management.openmbean
  *  value.
  */
 trait CompositeDataView {
+
+    /** Return a CompositeData corresponding to the values in
+     *  this object.
+     */
+    @stub
+    def toCompositeData(ct: CompositeType): CompositeData = ???
 }

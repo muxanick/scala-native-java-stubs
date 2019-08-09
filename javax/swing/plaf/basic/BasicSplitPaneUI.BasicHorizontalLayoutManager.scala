@@ -2,6 +2,7 @@ package javax.swing.plaf.basic
 
 import java.awt.{Component, Container, Dimension, Insets, LayoutManager2}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** LayoutManager for JSplitPanes that have an orientation of
  *  HORIZONTAL_SPLIT.
@@ -11,6 +12,10 @@ class BasicSplitPaneUI.BasicHorizontalLayoutManager extends Object with LayoutMa
     /**  */
     @stub
     protected val components: Array[Component] = ???
+
+    /**  */
+    @stub
+    protected val sizes: Array[Int] = ???
 
     /** Adds the specified component to the layout, using the specified
      *  constraint object.
@@ -100,4 +105,8 @@ class BasicSplitPaneUI.BasicHorizontalLayoutManager extends Object with LayoutMa
     /** Sets the sizes to newSizes. */
     @stub
     protected def setSizes(newSizes: Array[Int]): Unit = ???
+
+    /** Determines the components. */
+    @stub
+    protected def updateComponents(): Unit = ???
 }

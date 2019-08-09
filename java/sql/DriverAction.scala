@@ -1,5 +1,7 @@
 package java.sql
 
+import scala.scalanative.annotation.stub
+
 /** An interface that must be implemented when a Driver wants to be
  *  notified by DriverManager.
  * 
@@ -14,4 +16,11 @@ package java.sql
  *  call when the JDBC driver is de-registered.
  */
 trait DriverAction {
+
+    /** Method called by
+     *  DriverManager.deregisterDriver(Driver)
+     *   to notify the JDBC driver that it was de-registered.
+     */
+    @stub
+    def deregister(): Unit = ???
 }

@@ -2,9 +2,10 @@ package java.awt.event
 
 import java.awt.{AWTEvent, Component}
 import java.awt.font.TextHitInfo
-import java.lang.Object
+import java.lang.{Object, String}
 import java.text.AttributedCharacterIterator
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** Input method events contain information about text that is being
  *  composed using an input method. Whenever the text changes, the
@@ -37,6 +38,12 @@ class InputMethodEvent extends AWTEvent {
     @stub
     def this(source: Component, id: Int, when: Long, text: AttributedCharacterIterator, committedCharacterCount: Int, caret: TextHitInfo, visiblePosition: TextHitInfo) = ???
 
+    /** Constructs an InputMethodEvent with the
+     *  specified source component, type, caret, and visiblePosition.
+     */
+    @stub
+    def this(source: Component, id: Int, caret: TextHitInfo, visiblePosition: TextHitInfo) = ???
+
     /** Consumes this event so that it will not be processed
      *  in the default manner by the source which originated it.
      */
@@ -66,6 +73,10 @@ class InputMethodEvent extends AWTEvent {
     /** Returns whether or not this event has been consumed. */
     @stub
     def isConsumed(): Boolean = ???
+
+    /** Returns a parameter string identifying this event. */
+    @stub
+    def paramString(): String = ???
 }
 
 object InputMethodEvent {
@@ -80,4 +91,8 @@ object InputMethodEvent {
     /** Marks the last integer id for the range of input method event ids. */
     @stub
     val INPUT_METHOD_LAST: Int = ???
+
+    /** The event type indicating changed input method text. */
+    @stub
+    val INPUT_METHOD_TEXT_CHANGED: Int = ???
 }

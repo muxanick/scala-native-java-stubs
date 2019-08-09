@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, DocAttribute, PrintJobAttribute, PrintRequestAttribute, ResolutionSyntax}
+import scala.scalanative.annotation.stub
 
 /** Class PrinterResolution is a printing attribute class that specifies an
  *  exact resolution supported by a printer or to be used for a print job.
@@ -41,6 +42,10 @@ import javax.print.attribute.{Attribute, DocAttribute, PrintJobAttribute, PrintR
  */
 final class PrinterResolution extends ResolutionSyntax with DocAttribute with PrintRequestAttribute with PrintJobAttribute {
 
+    /** Construct a new printer resolution attribute from the given items. */
+    @stub
+    def this(crossFeedResolution: Int, feedResolution: Int, units: Int) = ???
+
     /** Returns whether this printer resolution attribute is equivalent to the
      *  passed in object.
      */
@@ -52,4 +57,10 @@ final class PrinterResolution extends ResolutionSyntax with DocAttribute with Pr
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

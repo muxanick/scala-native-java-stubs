@@ -7,6 +7,7 @@ import java.util.concurrent.Executor
 import javax.xml.bind.JAXBContext
 import javax.xml.namespace.QName
 import javax.xml.ws.handler.HandlerResolver
+import scala.scalanative.annotation.stub
 
 /** Service objects provide the client view of a Web service.
  *  Service acts as a factory of the following:
@@ -37,6 +38,10 @@ class Service extends Object {
     /**  */
     @stub
     protected def this(wsdlDocumentLocation: URL, serviceName: QName) = ???
+
+    /**  */
+    @stub
+    protected def this(wsdlDocumentLocation: URL, serviceName: QName, features: WebServiceFeature*) = ???
 
     /** Creates a new port for the service. */
     @stub
@@ -124,9 +129,19 @@ class Service extends Object {
     /** Sets the executor for this Service instance. */
     @stub
     def setExecutor(executor: Executor): Unit = ???
+
+    /** Sets the HandlerResolver for this Service
+     *  instance.
+     */
+    @stub
+    def setHandlerResolver(handlerResolver: HandlerResolver): Unit = ???
 }
 
 object Service {
+    /** The orientation of a dynamic client or service. */
+    @stub
+    object Mode extends Service.Mode
+
     /** Creates a Service instance. */
     @stub
     def create(serviceName: QName): Service = ???

@@ -1,7 +1,8 @@
 package javax.swing.text.html
 
 import java.lang.Object
-import javax.swing.text.ViewFactory
+import javax.swing.text.{Element, View, ViewFactory}
+import scala.scalanative.annotation.stub
 
 /** A factory to build views for HTML.  The following
  *  table describes what this factory will build by
@@ -84,3 +85,12 @@ import javax.swing.text.ViewFactory
  *  
  */
 object HTMLEditorKit.HTMLFactory extends Object with ViewFactory {
+
+    /**  */
+    @stub
+    def HTMLFactory() = ???
+
+    /** Creates a view from an element. */
+    @stub
+    def create(elem: Element): View = ???
+}

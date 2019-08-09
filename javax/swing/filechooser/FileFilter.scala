@@ -1,7 +1,8 @@
 package javax.swing.filechooser
 
 import java.io.File
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** FileFilter is an abstract class used by JFileChooser
  *  for filtering the set of files shown to the user. See
@@ -19,6 +20,13 @@ import java.lang.Object
  */
 abstract class FileFilter extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Whether the given file is accepted by this filter. */
     def accept(f: File): Boolean
+
+    /** The description of this filter. */
+    def getDescription(): String
 }

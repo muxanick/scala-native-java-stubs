@@ -2,9 +2,10 @@ package javax.xml.crypto.dsig.dom
 
 import java.lang.Object
 import java.security.Key
+import javax.xml.crypto.KeySelector
 import javax.xml.crypto.dom.DOMCryptoContext
 import javax.xml.crypto.dsig.XMLValidateContext
-import org.w3c.dom.Node
+import scala.scalanative.annotation.stub
 
 /** A DOM-specific XMLValidateContext. This class contains additional
  *  methods to specify the location in a DOM tree where an XMLSignature
@@ -29,7 +30,17 @@ class DOMValidateContext extends DOMCryptoContext with XMLValidateContext {
     @stub
     def this(validatingKey: Key, node: Node) = ???
 
+    /** Creates a DOMValidateContext containing the specified key
+     *  selector and node.
+     */
+    @stub
+    def this(ks: KeySelector, node: Node) = ???
+
     /** Returns the node. */
     @stub
     def getNode(): Node = ???
+
+    /** Sets the node. */
+    @stub
+    def setNode(node: Node): Unit = ???
 }

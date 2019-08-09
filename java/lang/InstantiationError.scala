@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** Thrown when an application tries to use the Java new
  *  construct to instantiate an abstract class or an interface.
  *  
@@ -12,4 +14,10 @@ class InstantiationError extends IncompatibleClassChangeError {
     /** Constructs an InstantiationError with no detail  message. */
     @stub
     def this() = ???
+
+    /** Constructs an InstantiationError with the specified
+     *  detail message.
+     */
+    @stub
+    def this(s: String) = ???
 }

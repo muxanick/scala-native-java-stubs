@@ -1,7 +1,9 @@
 package javax.swing.text
 
-import java.lang.Object
+import java.awt.event.ActionEvent
+import java.lang.{Object, String}
 import javax.swing.{AbstractAction, Action}
+import scala.scalanative.annotation.stub
 
 /** An Action implementation useful for key bindings that are
  *  shared across a number of different text components.  Because
@@ -27,8 +29,15 @@ import javax.swing.{AbstractAction, Action}
  */
 abstract class TextAction extends AbstractAction {
 
+    /** Creates a new JTextAction object. */
+    @stub
+    def this(name: String) = ???
+
     /** Fetches the text component that currently has focus. */
     protected def getFocusedComponent(): JTextComponent
+
+    /** Determines the component to use for the action. */
+    protected def getTextComponent(e: ActionEvent): JTextComponent
 }
 
 object TextAction {

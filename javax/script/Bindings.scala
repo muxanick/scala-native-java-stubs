@@ -2,6 +2,7 @@ package javax.script
 
 import java.lang.{Object, String}
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** A mapping of key/value pairs, all of whose keys are
  *  Strings.
@@ -25,4 +26,10 @@ trait Bindings extends Map[String, Object] {
     /** Adds all the mappings in a given Map to this Bindings. */
     @stub
     def putAll(toMerge: Map[_ <: String, _ <: Object]): Unit = ???
+
+    /** Removes the mapping for this key from this map if it is present
+     *  (optional operation).
+     */
+    @stub
+    def remove(key: Object): Object = ???
 }

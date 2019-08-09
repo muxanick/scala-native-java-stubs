@@ -1,5 +1,8 @@
 package java.beans
 
+import java.lang.String
+import scala.scalanative.annotation.stub
+
 /** 
  *  This interface is intended to be implemented by, or delegated from, instances
  *  of java.beans.beancontext.BeanContext, in order to propagate to its nested hierarchy
@@ -18,4 +21,16 @@ trait DesignMode {
      */
     @stub
     def isDesignTime(): Boolean = ???
+
+    /** Sets the "value" of the "designTime" property. */
+    @stub
+    def setDesignTime(designTime: Boolean): Unit = ???
+}
+
+object DesignMode {
+    /** The standard value of the propertyName as fired from a BeanContext or
+     *  other source of PropertyChangeEvents.
+     */
+    @stub
+    val PROPERTYNAME: String = ???
 }

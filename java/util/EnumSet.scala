@@ -2,6 +2,7 @@ package java.util
 
 import java.io.Serializable
 import java.lang.{Class, Cloneable, Enum, Object}
+import scala.scalanative.annotation.stub
 
 /** A specialized Set implementation for use with enum types.  All of
  *  the elements in an enum set must come from a single enum type that is
@@ -104,4 +105,10 @@ object EnumSet {
     /** Creates an enum set initially containing the specified elements. */
     @stub
     def of[E <: Enum[E]](e1: E, e2: E, e3: E, e4: E, e5: E): EnumSet[E] = ???
+
+    /** Creates an enum set initially containing all of the elements in the
+     *  range defined by the two specified endpoints.
+     */
+    @stub
+    def range[E <: Enum[E]](from: E, to: E): EnumSet[E] = ???
 }

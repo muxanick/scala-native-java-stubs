@@ -4,6 +4,7 @@ import java.lang.String
 import java.util.Set
 import javax.xml.soap.{MessageFactory, SOAPFactory}
 import javax.xml.ws.Binding
+import scala.scalanative.annotation.stub
 
 /** The SOAPBinding interface is an abstraction for
  *   the SOAP binding.
@@ -29,6 +30,10 @@ trait SOAPBinding extends Binding {
     /** Enables or disables use of MTOM. */
     @stub
     def setMTOMEnabled(flag: Boolean): Unit = ???
+
+    /** Sets the roles played by the SOAP binding instance. */
+    @stub
+    def setRoles(roles: Set[String]): Unit = ???
 }
 
 object SOAPBinding {
@@ -45,4 +50,10 @@ object SOAPBinding {
     /** A constant representing the identity of the SOAP 1.2 over HTTP binding. */
     @stub
     val SOAP12HTTP_BINDING: String = ???
+
+    /** A constant representing the identity of the SOAP 1.2 over HTTP binding
+     *  with MTOM enabled by default.
+     */
+    @stub
+    val SOAP12HTTP_MTOM_BINDING: String = ???
 }

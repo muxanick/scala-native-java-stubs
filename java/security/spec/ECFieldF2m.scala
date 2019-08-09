@@ -2,6 +2,7 @@ package java.security.spec
 
 import java.lang.Object
 import java.math.BigInteger
+import scala.scalanative.annotation.stub
 
 /** This immutable class defines an elliptic curve (EC)
  *  characteristic 2 finite field.
@@ -20,6 +21,13 @@ class ECFieldF2m extends Object with ECField {
      */
     @stub
     def this(m: Int, rp: BigInteger) = ???
+
+    /** Creates an elliptic curve characteristic 2 finite
+     *  field which has 2^m elements with
+     *  polynomial basis.
+     */
+    @stub
+    def this(m: Int, ks: Array[Int]) = ???
 
     /** Compares this finite field for equality with the
      *  specified object.
@@ -52,4 +60,10 @@ class ECFieldF2m extends Object with ECField {
      */
     @stub
     def getReductionPolynomial(): BigInteger = ???
+
+    /** Returns a hash code value for this characteristic 2
+     *  finite field.
+     */
+    @stub
+    def hashCode(): Int = ???
 }

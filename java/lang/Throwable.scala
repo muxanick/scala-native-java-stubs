@@ -1,6 +1,7 @@
 package java.lang
 
 import java.io.{PrintStream, PrintWriter, Serializable}
+import scala.scalanative.annotation.stub
 
 /** The Throwable class is the superclass of all errors and
  *  exceptions in the Java language. Only objects that are instances of this
@@ -100,6 +101,13 @@ class Throwable extends Object with Serializable {
     @stub
     protected def this(message: String, cause: Throwable, enableSuppression: Boolean, writableStackTrace: Boolean) = ???
 
+    /** Constructs a new throwable with the specified cause and a detail
+     *  message of (cause==null ? null : cause.toString()) (which
+     *  typically contains the class and detail message of cause).
+     */
+    @stub
+    def this(cause: Throwable) = ???
+
     /** Appends the specified exception to the exceptions that were
      *  suppressed in order to deliver this exception.
      */
@@ -163,4 +171,8 @@ class Throwable extends Object with Serializable {
      */
     @stub
     def setStackTrace(stackTrace: Array[StackTraceElement]): Unit = ???
+
+    /** Returns a short description of this throwable. */
+    @stub
+    def toString(): String = ???
 }

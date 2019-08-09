@@ -2,9 +2,14 @@ package java.awt
 
 import java.awt.image.{BufferStrategy, VolatileImage}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Inner class for blitting offscreen surfaces to a component. */
 protected class Component.BltBufferStrategy extends BufferStrategy {
+
+    /** Creates a new blt buffer strategy around a component */
+    @stub
+    protected def BltBufferStrategy(numBuffers: Int, caps: BufferCapabilities) = ???
 
     /** The back buffers */
     @stub
@@ -23,6 +28,10 @@ protected class Component.BltBufferStrategy extends BufferStrategy {
      */
     @stub
     protected val validatedContents: Boolean = ???
+
+    /** Size of the back buffers */
+    @stub
+    protected val width: Int = ???
 
     /** Returns whether the drawing buffer was lost since the last call to
      *  getDrawGraphics.
@@ -60,4 +69,8 @@ protected class Component.BltBufferStrategy extends BufferStrategy {
     /** Restore the drawing buffer if it has been lost */
     @stub
     protected def revalidate(): Unit = ???
+
+    /** Makes the next available buffer visible. */
+    @stub
+    def show(): Unit = ???
 }

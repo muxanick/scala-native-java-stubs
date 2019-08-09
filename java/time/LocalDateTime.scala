@@ -5,6 +5,7 @@ import java.lang.{CharSequence, Object, String}
 import java.time.chrono.ChronoLocalDateTime
 import java.time.format.DateTimeFormatter
 import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalAmount, TemporalField, TemporalQuery, TemporalUnit, ValueRange}
+import scala.scalanative.annotation.stub
 
 /** A date-time without a time-zone in the ISO-8601 calendar system,
  *  such as 2007-12-03T10:15:30.
@@ -277,12 +278,20 @@ final class LocalDateTime extends Object with Temporal with TemporalAdjuster wit
     /** Returns a copy of this LocalDateTime with the second-of-minute altered. */
     @stub
     def withSecond(second: Int): LocalDateTime = ???
+
+    /** Returns a copy of this LocalDateTime with the year altered. */
+    @stub
+    def withYear(year: Int): LocalDateTime = ???
 }
 
 object LocalDateTime {
     /** The maximum supported LocalDateTime, '+999999999-12-31T23:59:59.999999999'. */
     @stub
     val MAX: LocalDateTime = ???
+
+    /** The minimum supported LocalDateTime, '-999999999-01-01T00:00:00'. */
+    @stub
+    val MIN: LocalDateTime = ???
 
     /** Obtains an instance of LocalDateTime from a temporal object. */
     @stub

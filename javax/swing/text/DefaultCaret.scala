@@ -3,9 +3,10 @@ package javax.swing.text
 import java.awt.{Graphics, Point, Rectangle}
 import java.awt.event.{FocusEvent, FocusListener, MouseEvent, MouseListener, MouseMotionListener}
 import java.awt.geom.{Rectangle2D, RectangularShape}
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import java.util.EventListener
 import javax.swing.event.{ChangeEvent, ChangeListener, EventListenerList}
+import scala.scalanative.annotation.stub
 
 /** A default implementation of Caret.  The caret is rendered as
  *  a vertical line in the color specified by the CaretColor property
@@ -72,6 +73,10 @@ import javax.swing.event.{ChangeEvent, ChangeListener, EventListenerList}
  *  Please see XMLEncoder.
  */
 class DefaultCaret extends Rectangle with Caret with FocusListener with MouseListener with MouseMotionListener {
+
+    /** Constructs a default caret. */
+    @stub
+    def this() = ???
 
     /** The change event for the model. */
     @stub
@@ -297,6 +302,12 @@ class DefaultCaret extends Rectangle with Caret with FocusListener with MouseLis
     /** Sets the caret visibility, and repaints the caret. */
     @stub
     def setVisible(e: Boolean): Unit = ???
+
+    /** Returns a String representing this
+     *  Rectangle and its values.
+     */
+    @stub
+    def toString(): String = ???
 }
 
 object DefaultCaret {
@@ -315,4 +326,10 @@ object DefaultCaret {
      */
     @stub
     val NEVER_UPDATE: Int = ???
+
+    /** Indicates that the caret position is to be updated only when
+     *  document changes are performed on the Event Dispatching Thread.
+     */
+    @stub
+    val UPDATE_WHEN_ON_EDT: Int = ???
 }

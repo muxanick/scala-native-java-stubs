@@ -1,6 +1,7 @@
 package java.awt
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A type-safe enumeration of possible paper sizes. These sizes are in
  *  compliance with IPP 1.1.
@@ -601,7 +602,15 @@ final object PageAttributes.MediaType extends Object {
     @stub
     val STATEMENT: PageAttributes.MediaType = ???
 
+    /** An alias for LEDGER. */
+    @stub
+    val TABLOID: PageAttributes.MediaType = ???
+
     /** Returns a hash code value for the object. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }

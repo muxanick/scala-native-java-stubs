@@ -5,11 +5,16 @@ import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.Object
 import javax.swing.{JComponent, JSeparator}
 import javax.swing.plaf.{ComponentUI, SeparatorUI}
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for
  *  JSeparator.
  */
 class SynthSeparatorUI extends SeparatorUI with PropertyChangeListener with SynthUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the Context for the specified component. */
     @stub
@@ -74,6 +79,10 @@ class SynthSeparatorUI extends SeparatorUI with PropertyChangeListener with Synt
      */
     @stub
     def uninstallUI(c: JComponent): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthSeparatorUI {

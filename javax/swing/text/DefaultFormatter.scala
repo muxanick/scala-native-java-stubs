@@ -3,6 +3,7 @@ package javax.swing.text
 import java.io.Serializable
 import java.lang.{Class, Cloneable, Object, String}
 import javax.swing.{JFormattedTextField, JFormattedTextField.AbstractFormatter}
+import scala.scalanative.annotation.stub
 
 /** DefaultFormatter formats arbitrary objects. Formatting is done
  *  by invoking the toString method. In order to convert the
@@ -26,6 +27,10 @@ import javax.swing.{JFormattedTextField, JFormattedTextField.AbstractFormatter}
  *  Please see XMLEncoder.
  */
 class DefaultFormatter extends JFormattedTextField.AbstractFormatter with Cloneable with Serializable {
+
+    /** Creates a DefaultFormatter. */
+    @stub
+    def this() = ???
 
     /** Creates a copy of the DefaultFormatter. */
     @stub
@@ -96,4 +101,10 @@ class DefaultFormatter extends JFormattedTextField.AbstractFormatter with Clonea
      */
     @stub
     def stringToValue(string: String): Object = ???
+
+    /** Converts the passed in Object into a String by way of the
+     *  toString method.
+     */
+    @stub
+    def valueToString(value: Object): String = ???
 }

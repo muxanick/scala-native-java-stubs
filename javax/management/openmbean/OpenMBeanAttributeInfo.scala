@@ -1,6 +1,7 @@
 package javax.management.openmbean
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Describes an attribute of an open MBean.
  * 
@@ -36,4 +37,8 @@ trait OpenMBeanAttributeInfo extends OpenMBeanParameterInfo {
      */
     @stub
     def isWritable(): Boolean = ???
+
+    /** Returns a string representation of this OpenMBeanAttributeInfo instance. */
+    @stub
+    def toString(): String = ???
 }

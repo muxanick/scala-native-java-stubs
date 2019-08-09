@@ -4,6 +4,7 @@ import java.lang.{Object, String}
 import java.security.PrivateKey
 import java.security.cert.X509Certificate
 import javax.security.auth.Destroyable
+import scala.scalanative.annotation.stub
 
 /**  This class represents an X500PrivateCredential.
  *  It associates an X.509 certificate, corresponding private key and the
@@ -18,6 +19,12 @@ final class X500PrivateCredential extends Object with Destroyable {
      */
     @stub
     def this(cert: X509Certificate, key: PrivateKey) = ???
+
+    /** Creates an X500PrivateCredential that associates an X.509 certificate,
+     *  a private key and the KeyStore alias.
+     */
+    @stub
+    def this(cert: X509Certificate, key: PrivateKey, alias: String) = ???
 
     /** Clears the references to the X.509 certificate, private key and the
      *  KeyStore alias in this object.
@@ -36,4 +43,10 @@ final class X500PrivateCredential extends Object with Destroyable {
     /** Returns the PrivateKey. */
     @stub
     def getPrivateKey(): PrivateKey = ???
+
+    /** Determines if the references to the X.509 certificate and private key
+     *  in this object have been cleared.
+     */
+    @stub
+    def isDestroyed(): Boolean = ???
 }

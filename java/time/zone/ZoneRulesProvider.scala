@@ -2,6 +2,7 @@ package java.time.zone
 
 import java.lang.{Object, String}
 import java.util.{NavigableMap, Set}
+import scala.scalanative.annotation.stub
 
 /** Provider of time-zone rules to the system.
  *  
@@ -37,6 +38,10 @@ import java.util.{NavigableMap, Set}
  */
 abstract class ZoneRulesProvider extends Object {
 
+    /** Constructor. */
+    @stub
+    protected def this() = ???
+
     /** SPI method to refresh the rules from the underlying data provider. */
     protected def provideRefresh(): Boolean
 
@@ -66,4 +71,8 @@ object ZoneRulesProvider {
     /** Refreshes the rules from the underlying data provider. */
     @stub
     def refresh(): Boolean = ???
+
+    /** Registers a zone rules provider. */
+    @stub
+    def registerProvider(provider: ZoneRulesProvider): Unit = ???
 }

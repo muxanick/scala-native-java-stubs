@@ -3,7 +3,9 @@ package java.awt.font
 import java.awt.{Font, Graphics2D, Rectangle, Shape}
 import java.awt.geom.{AffineTransform, Point2D, Rectangle2D}
 import java.lang.{Cloneable, Object, String}
-import java.text.AttributedCharacterIterator
+import java.text.{AttributedCharacterIterator, AttributedCharacterIterator.Attribute}
+import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** TextLayout is an immutable graphical representation of styled
  *  character data.
@@ -177,6 +179,12 @@ final class TextLayout extends Object with Cloneable {
      */
     @stub
     def this(string: String, font: Font, frc: FontRenderContext) = ???
+
+    /** Constructs a TextLayout from a String
+     *  and an attribute set.
+     */
+    @stub
+    def this(string: String, attributes: Map[_ <: AttributedCharacterIterator.Attribute, _], frc: FontRenderContext) = ???
 
     /** Creates a copy of this TextLayout. */
     @stub
@@ -409,4 +417,20 @@ final class TextLayout extends Object with Cloneable {
     /** Returns true if this TextLayout is vertical. */
     @stub
     def isVertical(): Boolean = ???
+
+    /** Returns debugging information for this TextLayout. */
+    @stub
+    def toString(): String = ???
+}
+
+object TextLayout {
+    /** Defines a policy for determining the strong caret location. */
+    @stub
+    object CaretPolicy extends TextLayout.CaretPolicy
+
+    /** This CaretPolicy is used when a policy is not specified
+     *  by the client.
+     */
+    @stub
+    val DEFAULT_CARET_POLICY: TextLayout.CaretPolicy = ???
 }

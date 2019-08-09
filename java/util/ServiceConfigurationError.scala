@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.{Error, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Error thrown when something goes wrong while loading a service provider.
  * 
@@ -30,4 +31,8 @@ class ServiceConfigurationError extends Error {
     /** Constructs a new instance with the specified message. */
     @stub
     def this(msg: String) = ???
+
+    /** Constructs a new instance with the specified message and cause. */
+    @stub
+    def this(msg: String, cause: Throwable) = ???
 }

@@ -1,6 +1,7 @@
 package javax.xml.soap
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A point-to-point connection that a client can use for sending messages
  *  directly to a remote party (represented by a URL, for instance).
@@ -23,6 +24,10 @@ import java.lang.Object
  */
 abstract class SOAPConnection extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Sends the given message to the specified endpoint and blocks until
      *  it has returned the response.
      */
@@ -30,4 +35,7 @@ abstract class SOAPConnection extends Object {
 
     /** Closes this SOAPConnection object. */
     def close(): Unit
+
+    /** Gets a message from a specific endpoint and blocks until it receives, */
+    def get(to: Object): SOAPMessage
 }

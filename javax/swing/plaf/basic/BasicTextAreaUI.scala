@@ -1,10 +1,12 @@
 package javax.swing.plaf.basic
 
 import java.awt.{Component.BaselineResizeBehavior, Dimension}
+import java.beans.PropertyChangeEvent
 import java.lang.{Object, String}
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, TextUI}
 import javax.swing.text.{Element, View}
+import scala.scalanative.annotation.stub
 
 /** Provides the look and feel for a plain text editor.  In this
  *  implementation the default UI is extended to act as a simple
@@ -20,6 +22,10 @@ import javax.swing.text.{Element, View}
  *  Please see XMLEncoder.
  */
 class BasicTextAreaUI extends BasicTextUI {
+
+    /** Constructs a new BasicTextAreaUI object. */
+    @stub
+    def this() = ???
 
     /** Creates the view for an element. */
     @stub
@@ -55,6 +61,12 @@ class BasicTextAreaUI extends BasicTextUI {
      */
     @stub
     protected def installDefaults(): Unit = ???
+
+    /** This method gets called when a bound property is changed
+     *  on the associated JTextComponent.
+     */
+    @stub
+    protected def propertyChange(evt: PropertyChangeEvent): Unit = ???
 }
 
 object BasicTextAreaUI {

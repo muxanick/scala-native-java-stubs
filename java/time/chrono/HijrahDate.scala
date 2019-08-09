@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{Object, String}
 import java.time.{Clock, LocalTime, ZoneId}
 import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalAmount, TemporalField, TemporalUnit, ValueRange}
+import scala.scalanative.annotation.stub
 
 /** A date in the Hijrah calendar system.
  *  
@@ -111,6 +112,10 @@ final class HijrahDate extends Object with ChronoLocalDate with Serializable {
     /** Returns an object of the same type as this object with the specified field altered. */
     @stub
     def with(field: TemporalField, newValue: Long): HijrahDate = ???
+
+    /** Returns a HijrahDate with the Chronology requested. */
+    @stub
+    def withVariant(chronology: HijrahChronology): HijrahDate = ???
 }
 
 object HijrahDate {

@@ -2,6 +2,7 @@ package java.awt
 
 import java.beans.PropertyChangeListener
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The SystemTray class represents the system tray for a
  *  desktop.  On Microsoft Windows it is referred to as the "Taskbar
@@ -112,6 +113,12 @@ class SystemTray extends Object {
      */
     @stub
     def remove(trayIcon: TrayIcon): Unit = ???
+
+    /** Removes a PropertyChangeListener from the listener list
+     *  for a specific property.
+     */
+    @stub
+    def removePropertyChangeListener(propertyName: String, listener: PropertyChangeListener): Unit = ???
 }
 
 object SystemTray {

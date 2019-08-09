@@ -3,6 +3,7 @@ package javax.xml.soap
 import java.lang.String
 import java.util.Iterator
 import javax.xml.namespace.QName
+import scala.scalanative.annotation.stub
 
 /** An object representing an element of a SOAP message that is allowed but not
  *  specifically prescribed by a SOAP specification. This interface serves as the
@@ -177,4 +178,10 @@ trait SOAPElement extends Node with Element {
      */
     @stub
     def setElementQName(newName: QName): SOAPElement = ???
+
+    /** Sets the encoding style for this SOAPElement object
+     *  to one specified.
+     */
+    @stub
+    def setEncodingStyle(encodingStyle: String): Unit = ???
 }

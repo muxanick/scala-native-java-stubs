@@ -2,6 +2,7 @@ package java.text
 
 import java.lang.{Object, String}
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** An AttributedString holds text and related attribute information. It
  *  may be used as the actual data storage in some cases where a text
@@ -42,6 +43,10 @@ class AttributedString extends Object {
     @stub
     def this(text: String) = ???
 
+    /** Constructs an AttributedString instance with the given text and attributes. */
+    @stub
+    def this(text: String, attributes: Map[_ <: AttributedCharacterIterator.Attribute, _]) = ???
+
     /** Adds an attribute to the entire string. */
     @stub
     def addAttribute(attribute: AttributedCharacterIterator.Attribute, value: Object): Unit = ???
@@ -65,4 +70,10 @@ class AttributedString extends Object {
      */
     @stub
     def getIterator(attributes: Array[AttributedCharacterIterator.Attribute]): AttributedCharacterIterator = ???
+
+    /** Creates an AttributedCharacterIterator instance that provides access to
+     *  selected contents of this string.
+     */
+    @stub
+    def getIterator(attributes: Array[AttributedCharacterIterator.Attribute], beginIndex: Int, endIndex: Int): AttributedCharacterIterator = ???
 }

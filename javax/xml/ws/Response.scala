@@ -1,6 +1,9 @@
 package javax.xml.ws
 
+import java.lang.{Object, String}
+import java.util.Map
 import java.util.concurrent.Future
+import scala.scalanative.annotation.stub
 
 /** The Response interface provides methods used to obtain the
  *   payload and context of a message sent in response to an operation
@@ -14,4 +17,8 @@ import java.util.concurrent.Future
  *   asynchronous method invocation.
  */
 trait Response[T] extends Future[T] {
+
+    /** Gets the contained response context. */
+    @stub
+    def getContext(): Map[String, Object] = ???
 }

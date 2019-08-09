@@ -4,6 +4,7 @@ import java.awt.image.RenderedImage
 import java.io.Serializable
 import java.lang.{Class, Cloneable, Object}
 import java.util.Vector
+import scala.scalanative.annotation.stub
 
 /** A ParameterBlock encapsulates all the information about sources and
  *  parameters (Objects) required by a RenderableImageOp, or other
@@ -80,9 +81,19 @@ class ParameterBlock extends Object with Cloneable with Serializable {
     @stub
     def this(sources: Vector[Object]) = ???
 
+    /** Constructs a ParameterBlock with a given Vector of sources and
+     *  Vector of parameters.
+     */
+    @stub
+    def this(sources: Vector[Object], parameters: Vector[Object]) = ???
+
     /** A Vector of non-source parameters, stored as arbitrary Objects. */
     @stub
     protected val parameters: Vector[Object] = ???
+
+    /** A Vector of sources, stored as arbitrary Objects. */
+    @stub
+    protected val sources: Vector[Object] = ???
 
     /** Adds a Byte to the list of parameters. */
     @stub
@@ -241,4 +252,8 @@ class ParameterBlock extends Object with Cloneable with Serializable {
     /** Sets the entire Vector of sources to a given Vector. */
     @stub
     def setSources(sources: Vector[Object]): Unit = ???
+
+    /** Creates a shallow copy of a ParameterBlock. */
+    @stub
+    def shallowClone(): Object = ???
 }

@@ -2,6 +2,7 @@ package java.util.concurrent
 
 import java.lang.{Object, Runnable}
 import java.util.{Collection, List}
+import scala.scalanative.annotation.stub
 
 /** Provides default implementations of ExecutorService
  *  execution methods. This class implements the submit,
@@ -32,6 +33,10 @@ import java.util.{Collection, List}
  *  }
  */
 abstract class AbstractExecutorService extends Object with ExecutorService {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Executes the given tasks, returning a list of Futures holding
      *  their status and results when all complete.
@@ -73,4 +78,9 @@ abstract class AbstractExecutorService extends Object with ExecutorService {
      *  representing that task.
      */
     def submit(task: Runnable): Future[_]
+
+    /** Submits a Runnable task for execution and returns a Future
+     *  representing that task.
+     */
+    def submit[T](task: Runnable, result: T): Future[T]
 }

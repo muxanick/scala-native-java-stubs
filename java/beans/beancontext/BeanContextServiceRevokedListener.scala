@@ -1,6 +1,7 @@
 package java.beans.beancontext
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener interface for receiving
  *  BeanContextServiceRevokedEvent objects. A class that is
@@ -8,4 +9,8 @@ import java.util.EventListener
  *  implements this interface.
  */
 trait BeanContextServiceRevokedListener extends EventListener {
+
+    /** The service named has been revoked. */
+    @stub
+    def serviceRevoked(bcsre: BeanContextServiceRevokedEvent): Unit = ???
 }

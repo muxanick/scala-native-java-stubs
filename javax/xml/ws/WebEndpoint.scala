@@ -1,7 +1,9 @@
 package javax.xml.ws
 
+import java.lang.String
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Used to annotate the getPortName()
  *   methods of a generated service interface.
@@ -16,4 +18,8 @@ import scala.annotation.StaticAnnotation
 @Retention ( value = RUNTIME ) 
 @Documented 
  final class WebEndpoint extends StaticAnnotation {
+
+    /** The local name of the endpoint. */
+    @stub
+    val name: String = ???
 }

@@ -1,8 +1,10 @@
 package javax.xml.soap
 
+import java.io.OutputStream
 import java.lang.{Object, String}
 import java.util.Iterator
 import javax.activation.DataHandler
+import scala.scalanative.annotation.stub
 
 /** The root class for all SOAP messages. As transmitted on the "wire", a SOAP
  *  message is an XML document or a MIME message whose first body part is an
@@ -71,6 +73,10 @@ import javax.activation.DataHandler
  *  relative to the version of the specification against which it was written.
  */
 abstract class SOAPMessage extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Adds the given AttachmentPart object to this SOAPMessage
      *  object.
@@ -160,10 +166,21 @@ abstract class SOAPMessage extends Object {
 
     /** Associates the specified value with the specified property. */
     def setProperty(property: String, value: Object): Unit
+
+    /** Writes this SOAPMessage object to the given output
+     *  stream.
+     */
+    def writeTo(out: OutputStream): Unit
 }
 
 object SOAPMessage {
     /** Specifies the character type encoding for the SOAP Message. */
     @stub
     val CHARACTER_SET_ENCODING: String = ???
+
+    /** Specifies whether the SOAP Message will contain an XML declaration when
+     *  it is sent.
+     */
+    @stub
+    val WRITE_XML_DECLARATION: String = ???
 }

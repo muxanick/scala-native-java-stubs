@@ -1,6 +1,7 @@
 package java.awt.color
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The ICC_ProfileRGB class is a subclass of the ICC_Profile class
  *  that represents profiles which meet the following criteria:
@@ -65,6 +66,10 @@ class ICC_ProfileRGB extends ICC_Profile {
      */
     @stub
     def getMediaWhitePoint(): Array[Float] = ???
+
+    /** Returns the TRC for a particular component as an array. */
+    @stub
+    def getTRC(component: Int): Array[Short] = ???
 }
 
 object ICC_ProfileRGB {
@@ -75,4 +80,8 @@ object ICC_ProfileRGB {
     /** Used to get a gamma value or TRC for the green component. */
     @stub
     val GREENCOMPONENT: Int = ???
+
+    /** Used to get a gamma value or TRC for the red component. */
+    @stub
+    val REDCOMPONENT: Int = ???
 }

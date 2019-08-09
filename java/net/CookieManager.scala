@@ -2,6 +2,7 @@ package java.net
 
 import java.lang.{Object, String}
 import java.util.{List, Map}
+import scala.scalanative.annotation.stub
 
 /** CookieManager provides a concrete implementation of CookieHandler,
  *  which separates the storage of cookies from the policy surrounding accepting
@@ -86,6 +87,10 @@ class CookieManager extends CookieHandler {
     @stub
     def this() = ???
 
+    /** Create a new cookie manager with specified cookie store and cookie policy. */
+    @stub
+    def this(store: CookieStore, cookiePolicy: CookiePolicy) = ???
+
     /** Gets all the applicable cookies from a cookie cache for the
      *  specified uri in the request header.
      */
@@ -102,4 +107,8 @@ class CookieManager extends CookieHandler {
      */
     @stub
     def put(uri: URI, responseHeaders: Map[String, List[String]]): Unit = ???
+
+    /** To set the cookie policy of this cookie manager. */
+    @stub
+    def setCookiePolicy(cookiePolicy: CookiePolicy): Unit = ???
 }

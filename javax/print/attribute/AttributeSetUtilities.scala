@@ -1,6 +1,7 @@
 package javax.print.attribute
 
 import java.lang.{Class, Object}
+import scala.scalanative.annotation.stub
 
 /** Class AttributeSetUtilities provides static methods for manipulating
  *  AttributeSets.
@@ -92,4 +93,10 @@ object AttributeSetUtilities {
      */
     @stub
     def verifyAttributeValue(object: Object, interfaceName: Class[_]): Attribute = ???
+
+    /** Verify that the given attribute category object is equal to the
+     *  category of the given attribute value object.
+     */
+    @stub
+    def verifyCategoryForValue(category: Class[_], attribute: Attribute): Unit = ???
 }

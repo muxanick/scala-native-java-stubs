@@ -1,6 +1,7 @@
 package javax.imageio.stream
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A class representing a mutable reference to an array of bytes and
  *  an offset and length within that array.  IIOByteBuffer
@@ -14,6 +15,12 @@ import java.lang.Object
  *  considered read-only and must not be modified.
  */
 class IIOByteBuffer extends Object {
+
+    /** Constructs an IIOByteBuffer that references a
+     *  given byte array, offset, and length.
+     */
+    @stub
+    def this(data: Array[Byte], offset: Int, length: Int) = ???
 
     /** Returns a reference to the byte array. */
     @stub
@@ -42,4 +49,10 @@ class IIOByteBuffer extends Object {
      */
     @stub
     def setLength(length: Int): Unit = ???
+
+    /** Updates the value that will be returned by subsequent calls
+     *  to the getOffset method.
+     */
+    @stub
+    def setOffset(offset: Int): Unit = ???
 }

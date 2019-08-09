@@ -1,8 +1,9 @@
 package javax.sound.midi
 
-import java.io.{File, InputStream}
+import java.io.{File, InputStream, OutputStream}
 import java.lang.Object
 import java.net.URL
+import scala.scalanative.annotation.stub
 
 /** The MidiSystem class provides access to the installed MIDI
  *  system resources, including devices such as synthesizers, sequencers, and
@@ -222,4 +223,10 @@ object MidiSystem {
      */
     @stub
     def write(in: Sequence, type: Int, out: File): Int = ???
+
+    /** Writes a stream of bytes representing a file of the MIDI file type
+     *  indicated to the output stream provided.
+     */
+    @stub
+    def write(in: Sequence, fileType: Int, out: OutputStream): Int = ???
 }

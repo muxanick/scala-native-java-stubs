@@ -2,6 +2,7 @@ package javax.print.attribute
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Class HashPrintServiceAttributeSet provides an attribute set
  *  which inherits its implementation from class HashAttributeSet and enforces the semantic restrictions of interface
@@ -25,4 +26,11 @@ class HashPrintServiceAttributeSet extends HashAttributeSet with PrintServiceAtt
      */
     @stub
     def this(attributes: Array[PrintServiceAttribute]) = ???
+
+    /** Construct a new attribute set, initially populated with the
+     *  values from the  given set where the members of the attribute set
+     *  are restricted to the PrintServiceAttribute interface.
+     */
+    @stub
+    def this(attributes: PrintServiceAttributeSet) = ???
 }

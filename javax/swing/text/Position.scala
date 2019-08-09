@@ -1,5 +1,7 @@
 package javax.swing.text
 
+import scala.scalanative.annotation.stub
+
 /** Represents a location within a document.  It is intended to abstract away
  *  implementation details of the document and enable specification of
  *  positions within the document that are capable of tracking of change as
@@ -20,4 +22,16 @@ package javax.swing.text
  *  offset while document content is altered.
  */
 trait Position {
+
+    /** Fetches the current offset within the document. */
+    @stub
+    def getOffset(): Int = ???
+}
+
+object Position {
+    /** A typesafe enumeration to indicate bias to a position
+     *  in the model.
+     */
+    @stub
+    object Bias extends Position.Bias
 }

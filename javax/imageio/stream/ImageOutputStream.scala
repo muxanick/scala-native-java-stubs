@@ -2,6 +2,7 @@ package javax.imageio.stream
 
 import java.io.DataOutput
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** A seekable output stream interface for use by
  *  ImageWriters.  Various output destinations, such as
@@ -143,4 +144,13 @@ trait ImageOutputStream extends ImageInputStream with DataOutput {
      */
     @stub
     def writeShorts(s: Array[Short], off: Int, len: Int): Unit = ???
+
+    /** Writes two bytes of length information to the output stream in
+     *  network byte order, followed by the
+     *  modified
+     *  UTF-8
+     *  representation of every character in the string s.
+     */
+    @stub
+    def writeUTF(s: String): Unit = ???
 }

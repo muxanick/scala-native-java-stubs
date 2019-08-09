@@ -1,6 +1,7 @@
 package java.beans
 
 import java.lang.{Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The Introspector class provides a standard way for tools to learn about
  *  the properties, events, and methods supported by a target Java Bean.
@@ -53,6 +54,10 @@ object Introspector {
     @stub
     val IGNORE_IMMEDIATE_BEANINFO: Int = ???
 
+    /** Flag to indicate to use of all beaninfo. */
+    @stub
+    val USE_ALL_BEANINFO: Int = ???
+
     /** Utility method to take a string and convert it to normal Java variable
      *  name capitalization.
      */
@@ -97,4 +102,10 @@ object Introspector {
      */
     @stub
     def getBeanInfoSearchPath(): Array[String] = ???
+
+    /** Change the list of package names that will be used for
+     *           finding BeanInfo classes.
+     */
+    @stub
+    def setBeanInfoSearchPath(path: Array[String]): Unit = ???
 }

@@ -2,6 +2,7 @@ package java.awt.geom
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A line segment specified with float coordinates. */
 object Line2D.Float extends Line2D with Serializable {
@@ -14,6 +15,12 @@ object Line2D.Float extends Line2D with Serializable {
     @stub
     def Float(x1: Float, y1: Float, x2: Float, y2: Float) = ???
 
+    /** Constructs and initializes a Line2D from the
+     *  specified Point2D objects.
+     */
+    @stub
+    def Float(p1: Point2D, p2: Point2D) = ???
+
     /** The X coordinate of the start point of the line segment. */
     @stub
     val x1: Float = ???
@@ -25,6 +32,10 @@ object Line2D.Float extends Line2D with Serializable {
     /** The Y coordinate of the start point of the line segment. */
     @stub
     val y1: Float = ???
+
+    /** The Y coordinate of the end point of the line segment. */
+    @stub
+    val y2: Float = ???
 
     /** Returns a high precision and more accurate bounding box of
      *  the Shape than the getBounds method.
@@ -61,4 +72,10 @@ object Line2D.Float extends Line2D with Serializable {
      */
     @stub
     def setLine(x1: Double, y1: Double, x2: Double, y2: Double): Unit = ???
+
+    /** Sets the location of the end points of this Line2D
+     *  to the specified float coordinates.
+     */
+    @stub
+    def setLine(x1: Float, y1: Float, x2: Float, y2: Float): Unit = ???
 }

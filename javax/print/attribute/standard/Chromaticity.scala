@@ -2,6 +2,7 @@ package javax.print.attribute.standard
 
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, DocAttribute, EnumSyntax, PrintJobAttribute, PrintRequestAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class Chromaticity is a printing attribute class, an enumeration, that
  *  specifies monochrome or color printing. This is used by a print client
@@ -56,6 +57,12 @@ import javax.print.attribute.{Attribute, DocAttribute, EnumSyntax, PrintJobAttri
  */
 final class Chromaticity extends EnumSyntax with DocAttribute with PrintRequestAttribute with PrintJobAttribute {
 
+    /** Construct a new chromaticity enumeration value with the given integer
+     *  value.
+     */
+    @stub
+    protected def this(value: Int) = ???
+
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.
      */
@@ -71,10 +78,18 @@ final class Chromaticity extends EnumSyntax with DocAttribute with PrintRequestA
      */
     @stub
     def getName(): String = ???
+
+    /** Returns the string table for class Chromaticity. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object Chromaticity {
     /** Color printing. */
     @stub
     val COLOR: Chromaticity = ???
+
+    /** Monochrome printing. */
+    @stub
+    val MONOCHROME: Chromaticity = ???
 }

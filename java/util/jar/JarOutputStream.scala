@@ -2,7 +2,8 @@ package java.util.jar
 
 import java.io.{FilterOutputStream, OutputStream}
 import java.lang.Object
-import java.util.zip.{DeflaterOutputStream, ZipOutputStream}
+import java.util.zip.{DeflaterOutputStream, ZipEntry, ZipOutputStream}
+import scala.scalanative.annotation.stub
 
 /** The JarOutputStream class is used to write the contents
  *  of a JAR file to any output stream. It extends the class
@@ -16,6 +17,18 @@ class JarOutputStream extends ZipOutputStream {
     /** Creates a new JarOutputStream with no manifest. */
     @stub
     def this(out: OutputStream) = ???
+
+    /** Creates a new JarOutputStream with the specified
+     *  Manifest.
+     */
+    @stub
+    def this(out: OutputStream, man: Manifest) = ???
+
+    /** Begins writing a new JAR file entry and positions the stream
+     *  to the start of the entry data.
+     */
+    @stub
+    def putNextEntry(ze: ZipEntry): Unit = ???
 }
 
 object JarOutputStream {
@@ -174,4 +187,8 @@ object JarOutputStream {
     /**  */
     @stub
     val LOCTIM: Int = ???
+
+    /**  */
+    @stub
+    val LOCVER: Int = ???
 }

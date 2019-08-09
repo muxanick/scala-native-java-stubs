@@ -1,6 +1,7 @@
 package java.util.concurrent
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A synchronization point at which threads can pair and swap elements
  *  within pairs.  Each thread presents some object on entry to the
@@ -62,6 +63,10 @@ import java.lang.Object
  */
 class Exchanger[V] extends Object {
 
+    /** Creates a new Exchanger. */
+    @stub
+    def this() = ???
+
     /** Waits for another thread to arrive at this exchange point (unless
      *  the current thread is interrupted),
      *  and then transfers the given object to it, receiving its object
@@ -69,4 +74,12 @@ class Exchanger[V] extends Object {
      */
     @stub
     def exchange(x: V): V = ???
+
+    /** Waits for another thread to arrive at this exchange point (unless
+     *  the current thread is interrupted or
+     *  the specified waiting time elapses), and then transfers the given
+     *  object to it, receiving its object in return.
+     */
+    @stub
+    def exchange(x: V, timeout: Long, unit: TimeUnit): V = ???
 }

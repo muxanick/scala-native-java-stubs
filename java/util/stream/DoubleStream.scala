@@ -3,6 +3,7 @@ package java.util.stream
 import java.lang.Double
 import java.util.{DoubleSummaryStatistics, OptionalDouble, PrimitiveIterator.OfDouble, Spliterator.OfDouble}
 import java.util.function.{BiConsumer, DoubleBinaryOperator, DoubleConsumer, DoubleFunction, DoublePredicate, DoubleSupplier, DoubleToIntFunction, DoubleToLongFunction, DoubleUnaryOperator, ObjDoubleConsumer, Supplier}
+import scala.scalanative.annotation.stub
 
 /** A sequence of primitive double-valued elements supporting sequential and parallel
  *  aggregate operations.  This is the double primitive specialization of
@@ -206,9 +207,17 @@ trait DoubleStream extends BaseStream[Double, DoubleStream] {
      */
     @stub
     def summaryStatistics(): DoubleSummaryStatistics = ???
+
+    /** Returns an array containing the elements of this stream. */
+    @stub
+    def toArray(): Array[Double] = ???
 }
 
 object DoubleStream {
+    /** A mutable builder for a DoubleStream. */
+    @stub
+    val DoubleStream.Builder: trait = ???
+
     /** Returns a builder for a DoubleStream. */
     @stub
     def builder(): DoubleStream.Builder = ???

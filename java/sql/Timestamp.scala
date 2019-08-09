@@ -3,6 +3,7 @@ package java.sql
 import java.lang.{Object, String}
 import java.time.{Instant, LocalDateTime}
 import java.util.Date
+import scala.scalanative.annotation.stub
 
 /** A thin wrapper around java.util.Date that allows
  *  the JDBC API to identify this as an SQL TIMESTAMP value.
@@ -51,6 +52,12 @@ class Timestamp extends Date {
      */
     @stub
     def this(year: Int, month: Int, date: Int, hour: Int, minute: Int, second: Int, nano: Int) = ???
+
+    /** Constructs a Timestamp object
+     *  using a milliseconds time value.
+     */
+    @stub
+    def this(time: Long) = ???
 
     /** Indicates whether this Timestamp object is
      *  later than the given Timestamp object.
@@ -138,4 +145,10 @@ object Timestamp {
      */
     @stub
     def valueOf(dateTime: LocalDateTime): Timestamp = ???
+
+    /** Converts a String object in JDBC timestamp escape format to a
+     *  Timestamp value.
+     */
+    @stub
+    def valueOf(s: String): Timestamp = ???
 }

@@ -1,6 +1,7 @@
 package javax.swing.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** AncestorListener
  * 
@@ -21,4 +22,11 @@ trait AncestorListener extends EventListener {
     /** Called when either the source or one of its ancestors is moved. */
     @stub
     def ancestorMoved(event: AncestorEvent): Unit = ???
+
+    /** Called when the source or one of its ancestors is made invisible
+     *  either by setVisible(false) being called or by its being
+     *  remove from the component hierarchy.
+     */
+    @stub
+    def ancestorRemoved(event: AncestorEvent): Unit = ???
 }

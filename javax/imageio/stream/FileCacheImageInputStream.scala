@@ -1,12 +1,20 @@
 package javax.imageio.stream
 
+import java.io.{File, InputStream}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An implementation of ImageInputStream that gets its
  *  input from a regular InputStream.  A file is used to
  *  cache previously read data.
  */
 class FileCacheImageInputStream extends ImageInputStreamImpl {
+
+    /** Constructs a FileCacheImageInputStream that will read
+     *  from a given InputStream.
+     */
+    @stub
+    def this(stream: InputStream, cacheDir: File) = ???
 
     /** Closes this FileCacheImageInputStream, closing
      *  and removing the cache file.
@@ -43,4 +51,10 @@ class FileCacheImageInputStream extends ImageInputStreamImpl {
      */
     @stub
     def read(): Int = ???
+
+    /** Reads up to len bytes from the stream, and stores
+     *  them into b starting at index off.
+     */
+    @stub
+    def read(b: Array[Byte], off: Int, len: Int): Int = ???
 }

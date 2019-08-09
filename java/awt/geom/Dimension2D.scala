@@ -1,6 +1,7 @@
 package java.awt.geom
 
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** The Dimension2D class is to encapsulate a width
  *  and a height dimension.
@@ -11,6 +12,10 @@ import java.lang.{Cloneable, Object}
  *  the subclass.
  */
 abstract class Dimension2D extends Object with Cloneable {
+
+    /** This is an abstract class that cannot be instantiated directly. */
+    @stub
+    protected def this() = ???
 
     /** Creates a new object of the same class as this object. */
     def clone(): Object
@@ -29,4 +34,9 @@ abstract class Dimension2D extends Object with Cloneable {
      *  match the specified size.
      */
     def setSize(d: Dimension2D): Unit
+
+    /** Sets the size of this Dimension object to the
+     *  specified width and height.
+     */
+    def setSize(width: Double, height: Double): Unit
 }

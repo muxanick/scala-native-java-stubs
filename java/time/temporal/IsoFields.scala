@@ -1,6 +1,7 @@
 package java.time.temporal
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Fields and units specific to the ISO-8601 calendar system,
  *  including quarter-of-year and week-based-year.
@@ -87,4 +88,8 @@ object IsoFields {
     /** The unit that represents week-based-years for the purpose of addition and subtraction. */
     @stub
     val WEEK_BASED_YEARS: TemporalUnit = ???
+
+    /** The field that represents the week-of-week-based-year. */
+    @stub
+    val WEEK_OF_WEEK_BASED_YEAR: TemporalField = ???
 }

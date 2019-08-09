@@ -1,6 +1,7 @@
 package javax.xml.ws
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This feature clarifies the use of the wsdl:binding
  *  in a JAX-WS runtime.
@@ -57,4 +58,18 @@ final class RespectBindingFeature extends WebServiceFeature {
     /** Creates an RespectBindingFeature. */
     @stub
     def this() = ???
+
+    /** Creates an RespectBindingFeature */
+    @stub
+    def this(enabled: Boolean) = ???
+
+    /** Get the unique identifier for this WebServiceFeature. */
+    @stub
+    def getID(): String = ???
+}
+
+object RespectBindingFeature {
+    /** Constant value identifying the RespectBindingFeature */
+    @stub
+    val ID: String = ???
 }

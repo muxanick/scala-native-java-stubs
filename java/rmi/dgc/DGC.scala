@@ -2,6 +2,7 @@ package java.rmi.dgc
 
 import java.rmi.Remote
 import java.rmi.server.ObjID
+import scala.scalanative.annotation.stub
 
 /** The DGC abstraction is used for the server side of the distributed
  *  garbage collection algorithm. This interface contains the two
@@ -29,4 +30,11 @@ trait DGC extends Remote {
      */
     @stub
     def clean(ids: Array[ObjID], sequenceNum: Long, vmid: VMID, strong: Boolean): Unit = ???
+
+    /** The dirty call requests leases for the remote object references
+     *  associated with the object identifiers contained in the array
+     *  'ids'.
+     */
+    @stub
+    def dirty(ids: Array[ObjID], sequenceNum: Long, lease: Lease): Lease = ???
 }

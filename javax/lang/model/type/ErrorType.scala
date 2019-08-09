@@ -1,5 +1,7 @@
 package javax.lang.model.type
 
+import scala.scalanative.annotation.stub
+
 /** Represents a class or interface type that cannot be properly modeled.
  *  This may be the result of a processing error,
  *  such as a missing class file or erroneous source code.

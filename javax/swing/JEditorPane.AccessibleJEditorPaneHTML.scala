@@ -2,8 +2,9 @@ package javax.swing
 
 import java.awt.{Component.AccessibleAWTComponent, Container.AccessibleAWTContainer, Point}
 import java.lang.Object
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleText}
 import javax.swing.text.JTextComponent.AccessibleJTextComponent
+import scala.scalanative.annotation.stub
 
 /** This class provides support for AccessibleHypertext,
  *  and is used in instances where the EditorKit
@@ -21,6 +22,10 @@ import javax.swing.text.JTextComponent.AccessibleJTextComponent
  */
 protected class JEditorPane.AccessibleJEditorPaneHTML extends JEditorPane.AccessibleJEditorPane {
 
+    /**  */
+    @stub
+    protected def AccessibleJEditorPaneHTML() = ???
+
     /** Returns the Accessible child, if one exists, contained at the local
      *  coordinate Point.
      */
@@ -34,4 +39,8 @@ protected class JEditorPane.AccessibleJEditorPaneHTML extends JEditorPane.Access
     /** Returns the number of accessible children of the object. */
     @stub
     def getAccessibleChildrenCount(): Int = ???
+
+    /** Get the AccessibleText associated with this object. */
+    @stub
+    def getAccessibleText(): AccessibleText = ???
 }

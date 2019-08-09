@@ -3,6 +3,7 @@ package java.util.concurrent
 import java.io.Serializable
 import java.lang.Object
 import java.util.{AbstractCollection, AbstractQueue, Collection, Iterator, Spliterator}
+import scala.scalanative.annotation.stub
 
 /** An unbounded TransferQueue based on linked nodes.
  *  This queue orders elements FIFO (first-in-first-out) with respect
@@ -42,6 +43,13 @@ class LinkedTransferQueue[E] extends AbstractQueue[E] with TransferQueue[E] with
     /** Creates an initially empty LinkedTransferQueue. */
     @stub
     def this() = ???
+
+    /** Creates a LinkedTransferQueue
+     *  initially containing the elements of the given collection,
+     *  added in traversal order of the collection's iterator.
+     */
+    @stub
+    def this(c: Collection[_ <: E]) = ???
 
     /** Inserts the specified element at the tail of this queue. */
     @stub
@@ -148,4 +156,10 @@ class LinkedTransferQueue[E] extends AbstractQueue[E] with TransferQueue[E] with
     /** Transfers the element to a waiting consumer immediately, if possible. */
     @stub
     def tryTransfer(e: E): Boolean = ???
+
+    /** Transfers the element to a consumer if it is possible to do so
+     *  before the timeout elapses.
+     */
+    @stub
+    def tryTransfer(e: E, timeout: Long, unit: TimeUnit): Boolean = ???
 }

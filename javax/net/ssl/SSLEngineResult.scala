@@ -1,6 +1,7 @@
 package javax.net.ssl
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** An encapsulation of the result state produced by
  *  SSLEngine I/O calls.
@@ -15,6 +16,10 @@ import java.lang.Object
  *  and produced as a result of this operation.
  */
 class SSLEngineResult extends Object {
+
+    /** Initializes a new instance of this class. */
+    @stub
+    def this(status: SSLEngineResult.Status, handshakeStatus: SSLEngineResult.HandshakeStatus, bytesConsumed: Int, bytesProduced: Int) = ???
 
     /** Returns the number of bytes consumed from the input buffer. */
     @stub
@@ -33,6 +38,10 @@ class SSLEngineResult extends Object {
     /** Gets the return value of this SSLEngine operation. */
     @stub
     def getStatus(): SSLEngineResult.Status = ???
+
+    /** Returns a String representation of this object. */
+    @stub
+    def toString(): String = ???
 }
 
 object SSLEngineResult {
@@ -41,4 +50,10 @@ object SSLEngineResult {
      */
     @stub
     object HandshakeStatus extends SSLEngineResult.HandshakeStatus
+
+    /** An SSLEngineResult enum describing the overall result
+     *  of the SSLEngine operation.
+     */
+    @stub
+    object Status extends SSLEngineResult.Status
 }

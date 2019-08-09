@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, IntegerSyntax, SupportedValuesAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class JobPrioritySupported is an integer valued printing attribute class
  *  that specifies whether a Print Service instance supports the JobPriority attribute and the number of different job priority
@@ -21,6 +22,12 @@ import javax.print.attribute.{Attribute, IntegerSyntax, SupportedValuesAttribute
  */
 final class JobPrioritySupported extends IntegerSyntax with SupportedValuesAttribute {
 
+    /** Construct a new job priority supported attribute with the given integer
+     *  value.
+     */
+    @stub
+    def this(value: Int) = ???
+
     /** Returns whether this job priority supported attribute is equivalent to
      *  the passed in object.
      */
@@ -32,4 +39,10 @@ final class JobPrioritySupported extends IntegerSyntax with SupportedValuesAttri
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

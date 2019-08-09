@@ -1,6 +1,7 @@
 package javax.naming
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class represents the binary form of the address of
  *  a communications end-point.
@@ -31,6 +32,12 @@ class BinaryRefAddr extends RefAddr {
     @stub
     def this(addrType: String, src: Array[Byte]) = ???
 
+    /** Constructs a new instance of BinaryRefAddr using its address type and
+     *  a region of a byte array for contents.
+     */
+    @stub
+    def this(addrType: String, src: Array[Byte], offset: Int, count: Int) = ???
+
     /** Determines whether obj is equal to this address. */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -42,4 +49,8 @@ class BinaryRefAddr extends RefAddr {
     /** Computes the hash code of this address using its address type and contents. */
     @stub
     def hashCode(): Int = ???
+
+    /** Generates the string representation of this address. */
+    @stub
+    def toString(): String = ???
 }

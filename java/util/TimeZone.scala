@@ -3,6 +3,7 @@ package java.util
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
 import java.time.ZoneId
+import scala.scalanative.annotation.stub
 
 /** TimeZone represents a time zone offset, and also figures out daylight
  *  savings.
@@ -81,6 +82,10 @@ import java.time.ZoneId
  */
 abstract class TimeZone extends Object with Serializable with Cloneable {
 
+    /** Sole constructor. */
+    @stub
+    def this() = ???
+
     /** Creates a copy of this TimeZone. */
     def clone(): Object
 
@@ -149,6 +154,9 @@ abstract class TimeZone extends Object with Serializable with Cloneable {
 
     /** Converts this TimeZone object to a ZoneId. */
     def toZoneId(): ZoneId
+
+    /** Queries if this TimeZone uses Daylight Saving Time. */
+    def useDaylightTime(): Boolean
 }
 
 object TimeZone {
@@ -157,6 +165,12 @@ object TimeZone {
      */
     @stub
     val LONG: Int = ???
+
+    /** A style specifier for getDisplayName() indicating
+     *  a short name, such as "PST."
+     */
+    @stub
+    val SHORT: Int = ???
 
     /** Gets all the available IDs supported. */
     @stub

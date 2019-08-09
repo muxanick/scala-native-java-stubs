@@ -1,6 +1,7 @@
 package javax.sound.midi
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A MIDI track is an independent stream of MIDI events (time-stamped MIDI
  *  data) that can be stored along with other tracks in a standard MIDI file.
@@ -43,4 +44,8 @@ class Track extends Object {
     /** Obtains the number of events in this track. */
     @stub
     def size(): Int = ???
+
+    /** Obtains the length of the track, expressed in MIDI ticks. */
+    @stub
+    def ticks(): Long = ???
 }

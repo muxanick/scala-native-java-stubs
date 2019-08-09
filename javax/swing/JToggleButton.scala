@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component, Container}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** An implementation of a two-state button.
  *  The JRadioButton and JCheckBox classes
@@ -74,6 +75,12 @@ class JToggleButton extends AbstractButton with Accessible {
     @stub
     def this(text: String, icon: Icon) = ???
 
+    /** Creates a toggle button with the specified text, image, and
+     *  selection state.
+     */
+    @stub
+    def this(text: String, icon: Icon, selected: Boolean) = ???
+
     /** This class implements accessibility support for the
      *  JToggleButton class.
      */
@@ -93,4 +100,14 @@ class JToggleButton extends AbstractButton with Accessible {
     /** Returns a string representation of this JToggleButton. */
     @stub
     protected def paramString(): String = ???
+
+    /** Resets the UI property to a value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
+}
+
+object JToggleButton {
+    /** The ToggleButton model */
+    @stub
+    object ToggleButtonModel extends JToggleButton.ToggleButtonModel
 }

@@ -2,6 +2,7 @@ package javax.swing
 
 import java.awt.Component
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A Group that aligns and sizes it's children.
  *  ParallelGroup aligns it's children in
@@ -113,4 +114,8 @@ class GroupLayout.ParallelGroup extends GroupLayout.Group {
      */
     @stub
     def addGroup(alignment: GroupLayout.Alignment, group: GroupLayout.Group): GroupLayout.ParallelGroup = ???
+
+    /** Adds a Group to this Group. */
+    @stub
+    def addGroup(group: GroupLayout.Group): GroupLayout.ParallelGroup = ???
 }

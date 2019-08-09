@@ -1,9 +1,10 @@
 package java.security
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
 import java.net.URL
 import java.security.cert.Certificate
+import scala.scalanative.annotation.stub
 
 /** This class extends the concept of a codebase to
  *  encapsulate not only the location (URL) but also the certificate chains
@@ -16,6 +17,12 @@ class CodeSource extends Object with Serializable {
      */
     @stub
     def this(url: URL, certs: Array[Certificate]) = ???
+
+    /** Constructs a CodeSource and associates it with the specified
+     *  location and set of code signers.
+     */
+    @stub
+    def this(url: URL, signers: Array[CodeSigner]) = ???
 
     /** Tests for equality between the specified object and this
      *  object.
@@ -42,4 +49,10 @@ class CodeSource extends Object with Serializable {
     /** Returns true if this CodeSource object "implies" the specified CodeSource. */
     @stub
     def implies(codesource: CodeSource): Boolean = ???
+
+    /** Returns a string describing this CodeSource, telling its
+     *  URL and certificates.
+     */
+    @stub
+    def toString(): String = ???
 }

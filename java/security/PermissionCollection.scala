@@ -1,8 +1,9 @@
 package java.security
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** Abstract class representing a collection of Permission objects.
  * 
@@ -62,6 +63,10 @@ import java.util.Enumeration
  */
 abstract class PermissionCollection extends Object with Serializable {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Adds a permission object to the current collection of permission objects. */
     def add(permission: Permission): Unit
 
@@ -78,4 +83,9 @@ abstract class PermissionCollection extends Object with Serializable {
 
     /** Marks this PermissionCollection object as "readonly". */
     def setReadOnly(): Unit
+
+    /** Returns a string describing this PermissionCollection object,
+     *  providing information about all the permissions it contains.
+     */
+    def toString(): String
 }

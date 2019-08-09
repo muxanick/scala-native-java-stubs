@@ -5,6 +5,7 @@ import java.net.URL
 import java.nio.ByteBuffer
 import java.security.ProtectionDomain
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** A class loader is an object that is responsible for loading classes. The
  *  class ClassLoader is an abstract class.  Given the binary name of a class, a class loader should attempt to
@@ -118,6 +119,12 @@ abstract class ClassLoader extends Object {
     @stub
     protected def this() = ???
 
+    /** Creates a new class loader using the specified parent class loader for
+     *  delegation.
+     */
+    @stub
+    protected def this(parent: ClassLoader) = ???
+
     /** Sets the default assertion status for this class loader to
      *  false and discards any package defaults or class assertion
      *  status settings associated with the class loader.
@@ -216,6 +223,9 @@ abstract class ClassLoader extends Object {
 
     /** Sets the package default assertion status for the named package. */
     def setPackageAssertionStatus(packageName: String, enabled: Boolean): Unit
+
+    /** Sets the signers of a class. */
+    protected def setSigners(c: Class[_], signers: Array[Object]): Unit
 }
 
 object ClassLoader {

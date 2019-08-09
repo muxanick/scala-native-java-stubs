@@ -1,6 +1,7 @@
 package javax.xml.ws
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A WebServiceFeature is used to represent a feature that can be
  *  enabled or disabled for a web service.
@@ -17,6 +18,16 @@ import java.lang.{Object, String}
  */
 abstract class WebServiceFeature extends Object {
 
+    /**  */
+    @stub
+    protected def this() = ???
+
+    /** Specifies if the feature is enabled or disabled */
+    protected val enabled: Boolean
+
     /** Get the unique identifier for this WebServiceFeature. */
     def getID(): String
+
+    /** Returns true if this feature is enabled. */
+    def isEnabled(): Boolean
 }

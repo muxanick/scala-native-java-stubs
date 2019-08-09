@@ -1,6 +1,7 @@
 package java.util.logging
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This Handler publishes log records to System.err.
  *  By default the SimpleFormatter is used to generate brief summaries.
@@ -41,9 +42,17 @@ import java.lang.Object
  */
 class ConsoleHandler extends StreamHandler {
 
+    /** Create a ConsoleHandler for System.err. */
+    @stub
+    def this() = ???
+
     /** Override StreamHandler.close to do a flush but not
      *  to close the output stream.
      */
     @stub
     def close(): Unit = ???
+
+    /** Publish a LogRecord. */
+    @stub
+    def publish(record: LogRecord): Unit = ???
 }

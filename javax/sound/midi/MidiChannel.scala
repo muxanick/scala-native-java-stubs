@@ -1,5 +1,7 @@
 package javax.sound.midi
 
+import scala.scalanative.annotation.stub
+
 /** A MidiChannel object represents a single MIDI channel.
  *  Generally, each MidiChannel method processes a like-named MIDI
  *  "channel voice" or "channel mode" message as defined by the MIDI specification. However,
@@ -135,4 +137,8 @@ trait MidiChannel {
     /** Reacts to a change in the specified note's key pressure. */
     @stub
     def setPolyPressure(noteNumber: Int, pressure: Int): Unit = ???
+
+    /** Sets the solo state for this channel. */
+    @stub
+    def setSolo(soloState: Boolean): Unit = ???
 }

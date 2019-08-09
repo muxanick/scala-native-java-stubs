@@ -4,6 +4,7 @@ import java.lang.String
 import java.util.List
 import javax.xml.crypto.{KeySelectorResult, XMLStructure}
 import javax.xml.crypto.dsig.keyinfo.KeyInfo
+import scala.scalanative.annotation.stub
 
 /** A representation of the XML Signature element as
  *  defined in the 
@@ -69,4 +70,26 @@ trait XMLSignature extends XMLStructure {
     /** Signs this XMLSignature. */
     @stub
     def sign(signContext: XMLSignContext): Unit = ???
+
+    /** Validates the signature according to the
+     *  
+     *  core validation processing rules.
+     */
+    @stub
+    def validate(validateContext: XMLValidateContext): Boolean = ???
+}
+
+object XMLSignature {
+    /** A representation of the XML SignatureValue element as
+     *  defined in the 
+     *  W3C Recommendation for XML-Signature Syntax and Processing.
+     */
+    @stub
+    val XMLSignature.SignatureValue: trait = ???
+
+    /** The XML Namespace URI of the W3C Recommendation for XML-Signature
+     *  Syntax and Processing.
+     */
+    @stub
+    val XMLNS: String = ???
 }

@@ -2,6 +2,7 @@ package javax.activation
 
 import java.io.File
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The FileTypeMap is an abstract class that provides a data typing
  *  interface for files. Implementations of this class will
@@ -15,6 +16,10 @@ import java.lang.{Object, String}
  */
 abstract class FileTypeMap extends Object {
 
+    /** The default constructor. */
+    @stub
+    def this() = ???
+
     /** Return the type of the file object. */
     def getContentType(file: File): String
 
@@ -26,4 +31,8 @@ object FileTypeMap {
     /** Return the default FileTypeMap for the system. */
     @stub
     def getDefaultFileTypeMap(): FileTypeMap = ???
+
+    /** Sets the default FileTypeMap for the system. */
+    @stub
+    def setDefaultFileTypeMap(fileTypeMap: FileTypeMap): Unit = ???
 }

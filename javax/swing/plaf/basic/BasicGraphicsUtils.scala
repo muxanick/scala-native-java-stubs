@@ -1,10 +1,16 @@
 package javax.swing.plaf.basic
 
-import java.awt.{Color, Graphics, Insets}
+import java.awt.{Color, Dimension, Graphics, Insets}
 import java.lang.{Object, String}
+import javax.swing.AbstractButton
+import scala.scalanative.annotation.stub
 
 /**  */
 class BasicGraphicsUtils extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 }
 
 object BasicGraphicsUtils {
@@ -52,4 +58,8 @@ object BasicGraphicsUtils {
      */
     @stub
     def getGrooveInsets(): Insets = ???
+
+    /**  */
+    @stub
+    def getPreferredButtonSize(b: AbstractButton, textIconGap: Int): Dimension = ???
 }

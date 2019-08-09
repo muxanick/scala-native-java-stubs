@@ -2,6 +2,7 @@ package javax.crypto.spec
 
 import java.lang.Object
 import java.security.spec.AlgorithmParameterSpec
+import scala.scalanative.annotation.stub
 
 /** Specifies the set of parameters required by a Cipher using the Galois/Counter Mode (GCM) mode.
  *  
@@ -36,7 +37,18 @@ class GCMParameterSpec extends Object with AlgorithmParameterSpec {
     @stub
     def this(tLen: Int, src: Array[Byte]) = ???
 
+    /** Constructs a GCMParameterSpec object using the specified
+     *  authentication tag bit-length and a subset of the specified
+     *  buffer as the IV.
+     */
+    @stub
+    def this(tLen: Int, src: Array[Byte], offset: Int, len: Int) = ???
+
     /** Returns the Initialization Vector (IV). */
     @stub
     def getIV(): Array[Byte] = ???
+
+    /** Returns the authentication tag length. */
+    @stub
+    def getTLen(): Int = ???
 }

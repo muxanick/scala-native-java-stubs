@@ -1,7 +1,9 @@
 package javax.xml.crypto.dsig.keyinfo
 
 import java.lang.String
+import java.math.BigInteger
 import javax.xml.crypto.XMLStructure
+import scala.scalanative.annotation.stub
 
 /** A representation of the XML X509IssuerSerial element as
  *  defined in the 
@@ -41,4 +43,8 @@ trait X509IssuerSerial extends XMLStructure {
      */
     @stub
     def getIssuerName(): String = ???
+
+    /** Returns the serial number of this X509IssuerSerial. */
+    @stub
+    def getSerialNumber(): BigInteger = ???
 }

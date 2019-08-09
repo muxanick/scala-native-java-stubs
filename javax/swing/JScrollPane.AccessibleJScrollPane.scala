@@ -4,7 +4,8 @@ import java.awt.{Component.AccessibleAWTComponent, Container.AccessibleAWTContai
 import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.Object
 import javax.accessibility.{AccessibleContext, AccessibleRole}
-import javax.swing.event.ChangeListener
+import javax.swing.event.{ChangeEvent, ChangeListener}
+import scala.scalanative.annotation.stub
 
 /** This class implements accessibility support for the
  *  JScrollPane class.  It provides an implementation of the
@@ -22,6 +23,14 @@ import javax.swing.event.ChangeListener
  */
 protected class JScrollPane.AccessibleJScrollPane extends JComponent.AccessibleJComponent with ChangeListener with PropertyChangeListener {
 
+    /** AccessibleJScrollPane constructor */
+    @stub
+    def AccessibleJScrollPane() = ???
+
+    /**  */
+    @stub
+    protected val viewPort: JViewport = ???
+
     /** Get the role of this object. */
     @stub
     def getAccessibleRole(): AccessibleRole = ???
@@ -33,4 +42,8 @@ protected class JScrollPane.AccessibleJScrollPane extends JComponent.AccessibleJ
     /**  */
     @stub
     def resetViewPort(): Unit = ???
+
+    /** Invoked when the target of the listener has changed its state. */
+    @stub
+    def stateChanged(e: ChangeEvent): Unit = ???
 }

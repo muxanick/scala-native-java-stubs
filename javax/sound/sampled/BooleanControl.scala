@@ -1,6 +1,7 @@
 package javax.sound.sampled
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A BooleanControl provides the ability to switch between
  *  two possible settings that affect a line's audio.  The settings are boolean
@@ -21,6 +22,10 @@ abstract class BooleanControl extends Control {
     @stub
     protected def this(type: BooleanControl.Type, initialValue: Boolean) = ???
 
+    /** Constructs a new boolean control object with the given parameters. */
+    @stub
+    protected def this(type: BooleanControl.Type, initialValue: Boolean, trueStateLabel: String, falseStateLabel: String) = ???
+
     /** Obtains the label for the specified state. */
     def getStateLabel(state: Boolean): String
 
@@ -29,4 +34,15 @@ abstract class BooleanControl extends Control {
 
     /** Sets the current value for the control. */
     def setValue(value: Boolean): Unit
+
+    /** Provides a string representation of the control */
+    def toString(): String
+}
+
+object BooleanControl {
+    /** An instance of the BooleanControl.Type class identifies one kind of
+     *  boolean control.
+     */
+    @stub
+    object Type extends BooleanControl.Type
 }

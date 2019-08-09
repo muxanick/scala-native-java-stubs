@@ -4,6 +4,7 @@ import java.awt.ItemSelectable
 import java.awt.event.{ActionListener, ItemListener}
 import java.lang.String
 import javax.swing.event.ChangeListener
+import scala.scalanative.annotation.stub
 
 /** State model for buttons.
  *  
@@ -138,4 +139,8 @@ trait ButtonModel extends ItemSelectable {
     /** Sets or clears the button's rollover state */
     @stub
     def setRollover(b: Boolean): Unit = ???
+
+    /** Selects or deselects the button. */
+    @stub
+    def setSelected(b: Boolean): Unit = ???
 }

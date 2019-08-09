@@ -1,6 +1,7 @@
 package javax.imageio.plugins.jpeg
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A class encapsulating a single JPEG quantization table.
  *  The elements appear in natural order (as opposed to zig-zag order).
@@ -14,6 +15,12 @@ import java.lang.Object
  */
 class JPEGQTable extends Object {
 
+    /** Constructs a quantization table from the argument, which must
+     *  contain 64 elements in natural order (not zig-zag order).
+     */
+    @stub
+    def this(table: Array[Int]) = ???
+
     /** Returns a new quantization table where the values are multiplied
      *  by scaleFactor and then clamped to the range 1..32767
      *  (or to 1..255 if forceBaseline is true).
@@ -26,6 +33,10 @@ class JPEGQTable extends Object {
      */
     @stub
     def getTable(): Array[Int] = ???
+
+    /** Returns a String representing this quantization table. */
+    @stub
+    def toString(): String = ???
 }
 
 object JPEGQTable {
@@ -46,4 +57,10 @@ object JPEGQTable {
      */
     @stub
     val K2Chrominance: JPEGQTable = ???
+
+    /** The sample chrominance quantization table given in the JPEG
+     *  specification, table K.1, with all elements divided by 2.
+     */
+    @stub
+    val K2Div2Chrominance: JPEGQTable = ???
 }

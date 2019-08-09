@@ -2,6 +2,7 @@ package javax.swing.table
 
 import java.lang.{Class, Object, String}
 import javax.swing.event.TableModelListener
+import scala.scalanative.annotation.stub
 
 /** The TableModel interface specifies the methods the
  *   JTable will use to interrogate a tabular data model. 
@@ -61,4 +62,10 @@ trait TableModel {
      */
     @stub
     def removeTableModelListener(l: TableModelListener): Unit = ???
+
+    /** Sets the value in the cell at columnIndex and
+     *  rowIndex to aValue.
+     */
+    @stub
+    def setValueAt(aValue: Object, rowIndex: Int, columnIndex: Int): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.nio.channels
 
 import java.nio.ByteBuffer
+import scala.scalanative.annotation.stub
 
 /** A channel that can read bytes into a sequence of buffers.
  * 
@@ -16,4 +17,10 @@ trait ScatteringByteChannel extends ReadableByteChannel {
     /** Reads a sequence of bytes from this channel into the given buffers. */
     @stub
     def read(dsts: Array[ByteBuffer]): Long = ???
+
+    /** Reads a sequence of bytes from this channel into a subsequence of the
+     *  given buffers.
+     */
+    @stub
+    def read(dsts: Array[ByteBuffer], offset: Int, length: Int): Long = ???
 }

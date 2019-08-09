@@ -2,6 +2,7 @@ package javax.swing.text
 
 import java.lang.{Object, String}
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** Implements a composite element that contains other elements.
  *  
@@ -15,6 +16,12 @@ import java.util.Enumeration
  *  Please see XMLEncoder.
  */
 class AbstractDocument.BranchElement extends AbstractDocument.AbstractElement {
+
+    /** Constructs a composite element that initially contains
+     *  no children.
+     */
+    @stub
+    def BranchElement(parent: Element, a: AttributeSet) = ???
 
     /** Returns the children of the receiver as an
      *  Enumeration.
@@ -63,4 +70,8 @@ class AbstractDocument.BranchElement extends AbstractDocument.AbstractElement {
     /** Replaces content with a new set of elements. */
     @stub
     def replace(offset: Int, length: Int, elems: Array[Element]): Unit = ???
+
+    /** Converts the element to a string. */
+    @stub
+    def toString(): String = ???
 }

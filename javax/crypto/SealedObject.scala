@@ -3,6 +3,7 @@ package javax.crypto
 import java.io.Serializable
 import java.lang.{Object, String}
 import java.security.Key
+import scala.scalanative.annotation.stub
 
 /** This class enables a programmer to create an object and protect its
  *  confidentiality with a cryptographic algorithm.
@@ -59,6 +60,16 @@ class SealedObject extends Object with Serializable {
     @stub
     protected def this(so: SealedObject) = ???
 
+    /** Constructs a SealedObject from any Serializable object. */
+    @stub
+    def this(object: Serializable, c: Cipher) = ???
+
+    /** The cryptographic parameters used by the sealing Cipher,
+     *  encoded in the default format.
+     */
+    @stub
+    protected val encodedParams: Array[Byte] = ???
+
     /** Returns the algorithm that was used to seal this object. */
     @stub
     def getAlgorithm(): String = ???
@@ -70,4 +81,8 @@ class SealedObject extends Object with Serializable {
     /** Retrieves the original (encapsulated) object. */
     @stub
     def getObject(key: Key): Object = ???
+
+    /** Retrieves the original (encapsulated) object. */
+    @stub
+    def getObject(key: Key, provider: String): Object = ???
 }

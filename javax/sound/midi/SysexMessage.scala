@@ -1,6 +1,7 @@
 package javax.sound.midi
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A SysexMessage object represents a MIDI system exclusive message.
  *  
@@ -60,6 +61,10 @@ class SysexMessage extends MidiMessage {
     @stub
     def this(data: Array[Byte], length: Int) = ???
 
+    /** Constructs a new SysexMessage and sets the data for the message. */
+    @stub
+    def this(status: Int, data: Array[Byte], length: Int) = ???
+
     /** Creates a new object of the same class and with the same contents
      *  as this object.
      */
@@ -73,6 +78,10 @@ class SysexMessage extends MidiMessage {
     /** Sets the data for the system exclusive message. */
     @stub
     def setMessage(data: Array[Byte], length: Int): Unit = ???
+
+    /** Sets the data for the system exclusive message. */
+    @stub
+    def setMessage(status: Int, data: Array[Byte], length: Int): Unit = ???
 }
 
 object SysexMessage {
@@ -81,4 +90,8 @@ object SysexMessage {
      */
     @stub
     val SPECIAL_SYSTEM_EXCLUSIVE: Int = ???
+
+    /** Status byte for System Exclusive message (0xF0, or 240). */
+    @stub
+    val SYSTEM_EXCLUSIVE: Int = ???
 }

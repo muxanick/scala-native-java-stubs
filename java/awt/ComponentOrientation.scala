@@ -3,6 +3,7 @@ package java.awt
 import java.io.Serializable
 import java.lang.Object
 import java.util.{Locale, ResourceBundle}
+import scala.scalanative.annotation.stub
 
 /** The ComponentOrientation class encapsulates the language-sensitive
  *  orientation that is to be used to order the elements of a component
@@ -60,6 +61,14 @@ final class ComponentOrientation extends Object with Serializable {
      */
     @stub
     def isHorizontal(): Boolean = ???
+
+    /** HorizontalLines: Do items run left-to-right?
+     *  Vertical Lines:  Do lines run left-to-right?
+     *  This will return true for horizontal, left-to-right writing
+     *  systems such as Roman.
+     */
+    @stub
+    def isLeftToRight(): Boolean = ???
 }
 
 object ComponentOrientation {
@@ -74,6 +83,10 @@ object ComponentOrientation {
      */
     @stub
     val RIGHT_TO_LEFT: ComponentOrientation = ???
+
+    /** Indicates that a component's orientation has not been set. */
+    @stub
+    val UNKNOWN: ComponentOrientation = ???
 
     /** Returns the orientation that is appropriate for the given locale. */
     @stub

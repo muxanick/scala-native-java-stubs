@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component, Container, FocusTraversalPolicy}
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A SortingFocusTraversalPolicy which sorts Components based on their size,
  *  position, and orientation. Based on their size and position, Components are
@@ -14,6 +15,10 @@ import java.lang.Object
  *  row are fully traversed before proceeding to the next row.
  */
 class LayoutFocusTraversalPolicy extends SortingFocusTraversalPolicy with Serializable {
+
+    /** Constructs a LayoutFocusTraversalPolicy. */
+    @stub
+    def this() = ???
 
     /** Determines whether the specified Component
      *  is an acceptable choice as the new focus owner.
@@ -32,4 +37,8 @@ class LayoutFocusTraversalPolicy extends SortingFocusTraversalPolicy with Serial
     /** Returns the first Component in the traversal cycle. */
     @stub
     def getFirstComponent(aContainer: Container): Component = ???
+
+    /** Returns the last Component in the traversal cycle. */
+    @stub
+    def getLastComponent(aContainer: Container): Component = ???
 }

@@ -3,7 +3,8 @@ package javax.swing
 import java.io.Serializable
 import java.lang.{Class, Object}
 import java.util.EventListener
-import javax.swing.event.ChangeListener
+import javax.swing.event.{ChangeListener, EventListenerList}
+import scala.scalanative.annotation.stub
 
 /** This class provides the ChangeListener part of the
  *  SpinnerModel interface that should be suitable for most concrete SpinnerModel
@@ -12,6 +13,13 @@ import javax.swing.event.ChangeListener
  *  getPreviousValue methods.
  */
 abstract class AbstractSpinnerModel extends Object with SpinnerModel with Serializable {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** The list of ChangeListeners for this model. */
+    protected val listenerList: EventListenerList
 
     /** Adds a ChangeListener to the model's listener list. */
     def addChangeListener(l: ChangeListener): Unit
@@ -28,4 +36,7 @@ abstract class AbstractSpinnerModel extends Object with SpinnerModel with Serial
      *  were added to this model.
      */
     def getListeners[T <: EventListener](listenerType: Class[T]): Array[T]
+
+    /** Removes a ChangeListener from the model's listener list. */
+    def removeChangeListener(l: ChangeListener): Unit
 }

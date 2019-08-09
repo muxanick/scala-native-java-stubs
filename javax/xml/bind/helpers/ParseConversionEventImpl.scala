@@ -1,7 +1,8 @@
 package javax.xml.bind.helpers
 
-import java.lang.{Object, String}
+import java.lang.{Object, String, Throwable}
 import javax.xml.bind.{ParseConversionEvent, ValidationEventLocator}
+import scala.scalanative.annotation.stub
 
 /** Default implementation of the ParseConversionEvent interface.
  * 
@@ -15,4 +16,8 @@ class ParseConversionEventImpl extends ValidationEventImpl with ParseConversionE
     /** Create a new ParseConversionEventImpl. */
     @stub
     def this(_severity: Int, _message: String, _locator: ValidationEventLocator) = ???
+
+    /** Create a new ParseConversionEventImpl. */
+    @stub
+    def this(_severity: Int, _message: String, _locator: ValidationEventLocator, _linkedException: Throwable) = ???
 }

@@ -1,6 +1,7 @@
 package java.time.chrono
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** An era in the Thai Buddhist calendar system.
  *  
@@ -46,6 +47,11 @@ object ThaiBuddhistEra {
      */
     final val BE = new ThaiBuddhistEra(BE, 0)
 
+    /** The singleton instance for the era before the current one, 'Before Buddhist Era',
+     *  which has the numeric value 0.
+     */
+    final val BEFORE_BE = new ThaiBuddhistEra(BEFORE_BE, 1)
+
     /** Gets the numeric era int value. */
     @stub
     def getValue(): Int = ???
@@ -57,4 +63,10 @@ object ThaiBuddhistEra {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): ThaiBuddhistEra = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[ThaiBuddhistEra] = ???
 }

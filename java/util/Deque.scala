@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A linear collection that supports element insertion and removal at
  *  both ends.  The name deque is short for "double ended queue"
@@ -301,4 +302,8 @@ trait Deque[E] extends Queue[E] {
     /** Removes the last occurrence of the specified element from this deque. */
     @stub
     def removeLastOccurrence(o: Object): Boolean = ???
+
+    /** Returns the number of elements in this deque. */
+    @stub
+    def size(): Int = ???
 }

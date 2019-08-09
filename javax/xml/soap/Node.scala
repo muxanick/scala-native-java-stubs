@@ -1,7 +1,7 @@
 package javax.xml.soap
 
 import java.lang.String
-import org.w3c.dom.Node
+import scala.scalanative.annotation.stub
 
 /** A representation of a node (element) in an XML document.
  *  This interface extnends the standard DOM Node interface with methods for
@@ -37,4 +37,10 @@ trait Node extends Node {
      */
     @stub
     def setParentElement(parent: SOAPElement): Unit = ???
+
+    /** If this is a Text node then this method will set its value,
+     *  otherwise it sets the value of  the immediate (Text) child of this node.
+     */
+    @stub
+    def setValue(value: String): Unit = ???
 }

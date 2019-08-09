@@ -1,12 +1,19 @@
 package javax.swing
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Provides a little information about an installed
  *  LookAndFeel for the sake of configuring a menu or
  *  for initial application set up.
  */
 object UIManager.LookAndFeelInfo extends Object {
+
+    /** Constructs a UIManagers
+     *  LookAndFeelInfo object.
+     */
+    @stub
+    def LookAndFeelInfo(name: String, className: String) = ???
 
     /** Returns the name of the class that implements this look and feel. */
     @stub
@@ -17,4 +24,10 @@ object UIManager.LookAndFeelInfo extends Object {
      */
     @stub
     def getName(): String = ???
+
+    /** Returns a string that displays and identifies this
+     *  object's properties.
+     */
+    @stub
+    def toString(): String = ???
 }

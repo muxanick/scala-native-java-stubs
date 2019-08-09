@@ -1,6 +1,8 @@
 package java.awt.image
 
 import java.lang.{Cloneable, Object}
+import java.util.Hashtable
+import scala.scalanative.annotation.stub
 
 /** This class implements a filter for the set of interface methods that
  *  are used to deliver data from an ImageProducer to an ImageConsumer.
@@ -12,6 +14,16 @@ import java.lang.{Cloneable, Object}
  *  data that needs to be filtered and modify it as necessary.
  */
 class ImageFilter extends Object with ImageConsumer with Cloneable {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** The consumer of the particular image data stream for which this
+     *  instance of the ImageFilter is filtering data.
+     */
+    @stub
+    protected val consumer: ImageConsumer = ???
 
     /** Clones this object. */
     @stub
@@ -64,4 +76,10 @@ class ImageFilter extends Object with ImageConsumer with Cloneable {
      */
     @stub
     def setPixels(x: Int, y: Int, w: Int, h: Int, model: ColorModel, pixels: Array[Int], off: Int, scansize: Int): Unit = ???
+
+    /** Passes the properties from the source object along after adding a
+     *  property indicating the stream of filters it has been run through.
+     */
+    @stub
+    def setProperties(props: Hashtable[_, _]): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.nio.file.attribute
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Defines the bits for use with the permissions attribute.
  * 
@@ -35,7 +36,16 @@ object PosixFilePermission {
     /** Read permission, owner. */
     final val OWNER_READ = new PosixFilePermission(OWNER_READ, 7)
 
+    /** Write permission, owner. */
+    final val OWNER_WRITE = new PosixFilePermission(OWNER_WRITE, 8)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): PosixFilePermission = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[PosixFilePermission] = ???
 }

@@ -1,6 +1,7 @@
 package java.awt.dnd
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class contains constant values representing
  *  the type of action(s) to be performed by a Drag and Drop operation.
@@ -30,4 +31,10 @@ object DnDConstants {
     /** An int representing no action. */
     @stub
     val ACTION_NONE: Int = ???
+
+    /** An int representing a "reference"
+     *  action (synonym for ACTION_LINK).
+     */
+    @stub
+    val ACTION_REFERENCE: Int = ???
 }

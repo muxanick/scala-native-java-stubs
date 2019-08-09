@@ -1,6 +1,7 @@
 package java.awt.image
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class extends DataBuffer and stores data internally
  *  as integers.
@@ -50,6 +51,12 @@ final class DataBufferInt extends DataBuffer {
     @stub
     def this(dataArray: Array[Int], size: Int, offset: Int) = ???
 
+    /** Constructs an integer-based DataBuffer with the specified number of
+     *  banks, all of which are the specified size.
+     */
+    @stub
+    def this(size: Int, numBanks: Int) = ???
+
     /** Returns the data arrays for all banks. */
     @stub
     def getBankData(): Array[Array[Int]] = ???
@@ -75,4 +82,10 @@ final class DataBufferInt extends DataBuffer {
      */
     @stub
     def setElem(i: Int, val: Int): Unit = ???
+
+    /** Sets the requested data array element in the specified bank
+     *  to the integer value i.
+     */
+    @stub
+    def setElem(bank: Int, i: Int, val: Int): Unit = ???
 }

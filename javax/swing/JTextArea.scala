@@ -4,6 +4,7 @@ import java.awt.{Component, Container, Dimension, Font, Rectangle}
 import java.lang.{Object, String}
 import javax.accessibility.AccessibleContext
 import javax.swing.text.{Document, JTextComponent}
+import scala.scalanative.annotation.stub
 
 /** A JTextArea is a multi-line area that displays plain text.
  *  It is intended to be a lightweight component that provides source
@@ -108,6 +109,18 @@ class JTextArea extends JTextComponent {
     /** Constructs a new TextArea with the specified text displayed. */
     @stub
     def this(text: String) = ???
+
+    /** Constructs a new TextArea with the specified text and number
+     *  of rows and columns.
+     */
+    @stub
+    def this(text: String, rows: Int, columns: Int) = ???
+
+    /** This class implements accessibility support for the
+     *  JTextArea class.
+     */
+    @stub
+    protected object AccessibleJTextArea extends JTextArea.AccessibleJTextArea
 
     /** Appends the given text to the end of the document. */
     @stub
@@ -232,4 +245,10 @@ class JTextArea extends JTextComponent {
     /** Sets the number of characters to expand tabs to. */
     @stub
     def setTabSize(size: Int): Unit = ???
+
+    /** Sets the style of wrapping used if the text area is wrapping
+     *  lines.
+     */
+    @stub
+    def setWrapStyleWord(word: Boolean): Unit = ???
 }

@@ -1,8 +1,9 @@
 package java.net
 
 import java.io.Closeable
-import java.lang.Object
+import java.lang.{Object, String}
 import java.nio.channels.ServerSocketChannel
+import scala.scalanative.annotation.stub
 
 /** This class implements server sockets. A server socket waits for
  *  requests to come in over the network. It performs some operation
@@ -29,6 +30,12 @@ class ServerSocket extends Object with Closeable {
      */
     @stub
     def this(port: Int, backlog: Int) = ???
+
+    /** Create a server with the specified port, listen backlog, and
+     *  local IP address to bind to.
+     */
+    @stub
+    def this(port: Int, backlog: Int, bindAddr: InetAddress) = ???
 
     /** Listens for a connection to be made to this socket and accepts
      *  it.
@@ -121,6 +128,12 @@ class ServerSocket extends Object with Closeable {
      */
     @stub
     def setSoTimeout(timeout: Int): Unit = ???
+
+    /** Returns the implementation address and implementation port of
+     *  this socket as a String.
+     */
+    @stub
+    def toString(): String = ???
 }
 
 object ServerSocket {

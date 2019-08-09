@@ -4,7 +4,8 @@ import java.awt.{Image, Point}
 import java.awt.datatransfer.{Clipboard, DataFlavor, Transferable}
 import java.awt.event.InputEvent
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class is used to handle the transfer of a Transferable
  *  to and from Swing components.  The Transferable is used to
@@ -37,6 +38,13 @@ class TransferHandler extends Object with Serializable {
     /** Convenience constructor for subclasses. */
     @stub
     protected def this() = ???
+
+    /** Constructs a transfer handler that can transfer a Java Bean property
+     *  from one component to another via the clipboard or a drag and drop
+     *  operation.
+     */
+    @stub
+    def this(property: String) = ???
 
     /** Indicates whether a component will accept an import of the given
      *  set of data flavors prior to actually attempting to import it.
@@ -109,12 +117,23 @@ class TransferHandler extends Object with Serializable {
     /** Sets the drag image parameter. */
     @stub
     def setDragImage(img: Image): Unit = ???
+
+    /** Sets an anchor offset for the image to drag. */
+    @stub
+    def setDragImageOffset(p: Point): Unit = ???
 }
 
 object TransferHandler {
     /** Represents a location where dropped data should be inserted. */
     @stub
     object DropLocation extends TransferHandler.DropLocation
+
+    /** This class encapsulates all relevant details of a clipboard
+     *  or drag and drop transfer, and also allows for customizing
+     *  aspects of the drag and drop experience.
+     */
+    @stub
+    object TransferSupport extends TransferHandler.TransferSupport
 
     /** An int representing a "copy" transfer action. */
     @stub
@@ -133,6 +152,10 @@ object TransferHandler {
     /** An int representing a "move" transfer action. */
     @stub
     val MOVE: Int = ???
+
+    /** An int representing no transfer action. */
+    @stub
+    val NONE: Int = ???
 
     /** Returns an Action that performs copy operations to the
      *  clipboard.

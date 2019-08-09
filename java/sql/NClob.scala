@@ -1,5 +1,7 @@
 package java.sql
 
+import scala.scalanative.annotation.stub
+
 /** The mapping in the Java™ programming language
  *  for the SQL NCLOB type.
  *  An SQL NCLOB is a built-in type

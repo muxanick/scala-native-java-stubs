@@ -2,11 +2,16 @@ package javax.swing.text
 
 import java.awt.{FontMetrics, Graphics}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A collection of methods to deal with various text
  *  related activities.
  */
 class Utilities extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 }
 
 object Utilities {
@@ -78,4 +83,8 @@ object Utilities {
     /** Determines the end of a word for the given location. */
     @stub
     def getWordEnd(c: JTextComponent, offs: Int): Int = ???
+
+    /** Determines the start of a word for the given model location. */
+    @stub
+    def getWordStart(c: JTextComponent, offs: Int): Int = ???
 }

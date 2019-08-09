@@ -3,6 +3,7 @@ package java.util.concurrent
 import java.lang.Object
 import java.util.Map
 import java.util.function.{BiConsumer, BiFunction, Function}
+import scala.scalanative.annotation.stub
 
 /** A Map providing thread safety and atomicity
  *  guarantees.
@@ -74,4 +75,11 @@ trait ConcurrentMap[K, V] extends Map[K, V] {
     /** Replaces the entry for a key only if currently mapped to a given value. */
     @stub
     def replace(key: K, oldValue: V, newValue: V): Boolean = ???
+
+    /** Replaces each entry's value with the result of invoking the given
+     *  function on that entry until all entries have been processed or the
+     *  function throws an exception.
+     */
+    @stub
+    val Unit: default = ???
 }

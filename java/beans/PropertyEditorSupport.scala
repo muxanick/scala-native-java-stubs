@@ -2,6 +2,7 @@ package java.beans
 
 import java.awt.{Component, Graphics, Rectangle}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This is a support class to help build property editors.
  *  
@@ -12,6 +13,10 @@ class PropertyEditorSupport extends Object with PropertyEditor {
     /** Constructs a PropertyEditorSupport object. */
     @stub
     def this() = ???
+
+    /** Constructs a PropertyEditorSupport object. */
+    @stub
+    def this(source: Object) = ???
 
     /** Adds a listener for the value change. */
     @stub
@@ -80,4 +85,8 @@ class PropertyEditorSupport extends Object with PropertyEditor {
     /** Set (or change) the object that is to be edited. */
     @stub
     def setValue(value: Object): Unit = ???
+
+    /** Determines whether the propertyEditor can provide a custom editor. */
+    @stub
+    def supportsCustomEditor(): Boolean = ???
 }

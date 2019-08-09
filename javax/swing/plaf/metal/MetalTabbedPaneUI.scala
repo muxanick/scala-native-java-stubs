@@ -5,6 +5,7 @@ import java.lang.Object
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, TabbedPaneUI}
 import javax.swing.plaf.basic.BasicTabbedPaneUI
+import scala.scalanative.annotation.stub
 
 /** The Metal subclass of BasicTabbedPaneUI.
  *  
@@ -21,6 +22,14 @@ class MetalTabbedPaneUI extends BasicTabbedPaneUI {
 
     /**  */
     @stub
+    def this() = ???
+
+    /** This class should be treated as a "protected" inner class. */
+    @stub
+    object TabbedPaneLayout extends MetalTabbedPaneUI.TabbedPaneLayout
+
+    /**  */
+    @stub
     protected val minTabWidth: Int = ???
 
     /**  */
@@ -30,6 +39,10 @@ class MetalTabbedPaneUI extends BasicTabbedPaneUI {
     /**  */
     @stub
     protected val selectHighlight: Color = ???
+
+    /**  */
+    @stub
+    protected val tabAreaBackground: Color = ???
 
     /**  */
     @stub
@@ -131,6 +144,12 @@ class MetalTabbedPaneUI extends BasicTabbedPaneUI {
     /**  */
     @stub
     protected def shouldRotateTabRuns(tabPlacement: Int, selectedRun: Int): Boolean = ???
+
+    /** Notifies this UI delegate that it is time to paint the specified
+     *  component.
+     */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object MetalTabbedPaneUI {

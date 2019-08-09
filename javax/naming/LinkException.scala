@@ -1,6 +1,7 @@
 package javax.naming
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception is used to describe problems encounter while resolving links.
  *  Addition information is added to the base NamingException for pinpointing
@@ -28,6 +29,12 @@ class LinkException extends NamingException {
     @stub
     def this() = ???
 
+    /** Constructs a new instance of LinkException with an explanation
+     *  All the other fields are initialized to null.
+     */
+    @stub
+    def this(explanation: String) = ???
+
     /** Contains the exception of why resolution of the link failed. */
     @stub
     protected val linkExplanation: String = ???
@@ -39,6 +46,10 @@ class LinkException extends NamingException {
     /** Contains the part of the link that has been successfully resolved. */
     @stub
     protected val linkResolvedName: Name = ???
+
+    /** Contains the object to which resolution of the part of the link was successful. */
+    @stub
+    protected val linkResolvedObj: Object = ???
 
     /** Retrieves the explanation associated with the problem encounter
      *  when resolving a link.
@@ -81,4 +92,8 @@ class LinkException extends NamingException {
     /** Generates the string representation of this exception. */
     @stub
     def toString(): String = ???
+
+    /** Generates the string representation of this exception. */
+    @stub
+    def toString(detail: Boolean): String = ???
 }

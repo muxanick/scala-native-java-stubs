@@ -1,6 +1,7 @@
 package javax.print.event
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An abstract adapter class for receiving print job events.
  *  The methods in this class are empty.
@@ -12,6 +13,10 @@ import java.lang.Object
  *  only need to define the methods you need, rather than all of the methods.
  */
 abstract class PrintJobAdapter extends Object with PrintJobListener {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Called to notify the client that data has been successfully
      *  transferred to the print service, and the client may free
@@ -34,4 +39,9 @@ abstract class PrintJobAdapter extends Object with PrintJobListener {
 
     /** Called to notify the client that no more events will be delivered. */
     def printJobNoMoreEvents(pje: PrintJobEvent): Unit
+
+    /** Called to notify the client that some possibly user rectifiable
+     *  problem occurs (eg printer out of paper).
+     */
+    def printJobRequiresAttention(pje: PrintJobEvent): Unit
 }

@@ -1,6 +1,7 @@
 package java.security
 
 import java.lang.{Exception, Object, RuntimeException, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** A runtime exception for Provider exceptions (such as
  *  misconfiguration errors or unrecoverable internal errors),
@@ -24,4 +25,12 @@ class ProviderException extends RuntimeException {
      */
     @stub
     def this(message: String, cause: Throwable) = ???
+
+    /** Creates a ProviderException with the specified cause
+     *  and a detail message of (cause==null ? null : cause.toString())
+     *  (which typically contains the class and detail message of
+     *  cause).
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

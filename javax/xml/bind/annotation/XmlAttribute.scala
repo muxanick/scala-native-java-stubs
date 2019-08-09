@@ -3,6 +3,7 @@ package javax.xml.bind.annotation
 import java.lang.String
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** 
  *  Maps a JavaBean property to a XML attribute.
@@ -106,4 +107,10 @@ import scala.annotation.StaticAnnotation
      */
     @stub
     val namespace: String = ???
+
+    /** Specifies if the XML Schema attribute is optional or
+     *  required.
+     */
+    @stub
+    val required: Boolean = ???
 }

@@ -1,6 +1,7 @@
 package java.awt.image
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class extends DataBuffer and stores data internally as shorts.
  *  
@@ -49,6 +50,12 @@ final class DataBufferShort extends DataBuffer {
     @stub
     def this(dataArray: Array[Short], size: Int) = ???
 
+    /** Constructs a short-based DataBuffer with a single bank using the
+     *  specified array, size, and offset.
+     */
+    @stub
+    def this(dataArray: Array[Short], size: Int, offset: Int) = ???
+
     /** Returns the data arrays for all banks. */
     @stub
     def getBankData(): Array[Array[Short]] = ???
@@ -74,4 +81,10 @@ final class DataBufferShort extends DataBuffer {
      */
     @stub
     def setElem(i: Int, val: Int): Unit = ???
+
+    /** Sets the requested data array element in the specified bank
+     *  from the given integer.
+     */
+    @stub
+    def setElem(bank: Int, i: Int, val: Int): Unit = ???
 }

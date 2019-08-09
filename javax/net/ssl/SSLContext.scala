@@ -2,6 +2,7 @@ package javax.net.ssl
 
 import java.lang.{Object, String}
 import java.security.{Provider, SecureRandom}
+import scala.scalanative.annotation.stub
 
 /** Instances of this class represent a secure socket protocol
  *  implementation which acts as a factory for secure socket
@@ -21,6 +22,10 @@ import java.security.{Provider, SecureRandom}
  *  other algorithms are supported.
  */
 class SSLContext extends Object {
+
+    /** Creates an SSLContext object. */
+    @stub
+    protected def this(contextSpi: SSLContextSpi, provider: Provider, protocol: String) = ???
 
     /** Creates a new SSLEngine using this context. */
     @stub
@@ -105,4 +110,8 @@ object SSLContext {
      */
     @stub
     def getInstance(protocol: String, provider: String): SSLContext = ???
+
+    /** Sets the default SSL context. */
+    @stub
+    def setDefault(context: SSLContext): Unit = ???
 }

@@ -1,9 +1,14 @@
 package java.awt
 
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** Capabilities and properties of images. */
 class ImageCapabilities extends Object with Cloneable {
+
+    /** Creates a new object for specifying image capabilities. */
+    @stub
+    def this(accelerated: Boolean) = ???
 
     /** Creates and returns a copy of this object. */
     @stub
@@ -15,4 +20,11 @@ class ImageCapabilities extends Object with Cloneable {
      */
     @stub
     def isAccelerated(): Boolean = ???
+
+    /** Returns true if the VolatileImage
+     *  described by this ImageCapabilities can lose
+     *  its surfaces.
+     */
+    @stub
+    def isTrueVolatile(): Boolean = ???
 }

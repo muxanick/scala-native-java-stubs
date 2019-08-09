@@ -1,6 +1,8 @@
 package javax.naming.ldap
 
+import java.lang.String
 import javax.naming.NamingException
+import scala.scalanative.annotation.stub
 
 /** This interface represents an unsolicited notification as defined in
  *  RFC 2251.
@@ -15,4 +17,8 @@ trait UnsolicitedNotification extends ExtendedResponse with HasControls {
      */
     @stub
     def getException(): NamingException = ???
+
+    /** Retrieves the referral(s) sent by the server. */
+    @stub
+    def getReferrals(): Array[String] = ???
 }

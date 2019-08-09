@@ -1,7 +1,9 @@
 package javax.xml.crypto.dsig
 
 import java.lang.String
+import java.security.spec.AlgorithmParameterSpec
 import javax.xml.crypto.{AlgorithmMethod, XMLStructure}
+import scala.scalanative.annotation.stub
 
 /** A representation of the XML DigestMethod element as
  *  defined in the 
@@ -24,6 +26,12 @@ import javax.xml.crypto.{AlgorithmMethod, XMLStructure}
  *  of the XMLSignatureFactory class.
  */
 trait DigestMethod extends XMLStructure with AlgorithmMethod {
+
+    /** Returns the algorithm-specific input parameters associated with this
+     *  DigestMethod.
+     */
+    @stub
+    def getParameterSpec(): AlgorithmParameterSpec = ???
 }
 
 object DigestMethod {
@@ -44,4 +52,10 @@ object DigestMethod {
      */
     @stub
     val SHA256: String = ???
+
+    /** The 
+     *  SHA512 digest method algorithm URI.
+     */
+    @stub
+    val SHA512: String = ???
 }

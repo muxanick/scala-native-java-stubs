@@ -4,6 +4,7 @@ import java.io.{InputStream, Reader}
 import java.lang.{Class, Object, String}
 import java.math.BigDecimal
 import java.net.URL
+import scala.scalanative.annotation.stub
 
 /** An input stream that contains a stream of values representing an
  *  instance of an SQL structured type or an SQL distinct type.
@@ -183,4 +184,8 @@ trait SQLInput {
      */
     @stub
     def readURL(): URL = ???
+
+    /** Retrieves whether the last value read was SQL NULL. */
+    @stub
+    def wasNull(): Boolean = ???
 }

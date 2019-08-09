@@ -1,6 +1,7 @@
 package java.util.jar
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Transforms a JAR file to or from a packed stream in Pack200 format.
  *  Please refer to Network Transfer Format JSR 200 Specification at
@@ -80,7 +81,15 @@ object Pack200 {
     @stub
     val Pack200.Packer: trait = ???
 
+    /** The unpacker engine converts the packed stream to a JAR file. */
+    @stub
+    val Pack200.Unpacker: trait = ???
+
     /** Obtain new instance of a class that implements Packer. */
     @stub
     def newPacker(): Pack200.Packer = ???
+
+    /** Obtain new instance of a class that implements Unpacker. */
+    @stub
+    def newUnpacker(): Pack200.Unpacker = ???
 }

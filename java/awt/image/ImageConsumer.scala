@@ -1,5 +1,8 @@
 package java.awt.image
 
+import java.util.Hashtable
+import scala.scalanative.annotation.stub
+
 /** The interface for objects expressing interest in image data through
  *  the ImageProducer interfaces.  When a consumer is added to an image
  *  producer, the producer delivers all of the data about the image
@@ -46,6 +49,10 @@ trait ImageConsumer {
      */
     @stub
     def setPixels(x: Int, y: Int, w: Int, h: Int, model: ColorModel, pixels: Array[Int], off: Int, scansize: Int): Unit = ???
+
+    /** Sets the extensible list of properties associated with this image. */
+    @stub
+    def setProperties(props: Hashtable[_, _]): Unit = ???
 }
 
 object ImageConsumer {
@@ -86,4 +93,8 @@ object ImageConsumer {
      */
     @stub
     val STATICIMAGEDONE: Int = ???
+
+    /** The pixels will be delivered in top-down, left-to-right order. */
+    @stub
+    val TOPDOWNLEFTRIGHT: Int = ???
 }

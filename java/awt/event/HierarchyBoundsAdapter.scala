@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An abstract adapter class for receiving ancestor moved and resized events.
  *  The methods in this class are empty. This class exists as a
@@ -20,6 +21,13 @@ import java.lang.Object
  */
 abstract class HierarchyBoundsAdapter extends Object with HierarchyBoundsListener {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Called when an ancestor of the source is moved. */
     def ancestorMoved(e: HierarchyEvent): Unit
+
+    /** Called when an ancestor of the source is resized. */
+    def ancestorResized(e: HierarchyEvent): Unit
 }

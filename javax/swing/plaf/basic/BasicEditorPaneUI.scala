@@ -5,6 +5,7 @@ import java.lang.{Object, String}
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, TextUI}
 import javax.swing.text.{EditorKit, JTextComponent}
+import scala.scalanative.annotation.stub
 
 /** Provides the look and feel for a JEditorPane.
  *  
@@ -18,6 +19,10 @@ import javax.swing.text.{EditorKit, JTextComponent}
  *  Please see XMLEncoder.
  */
 class BasicEditorPaneUI extends BasicTextUI {
+
+    /** Creates a new BasicEditorPaneUI. */
+    @stub
+    def this() = ???
 
     /** Fetches the EditorKit for the UI. */
     @stub
@@ -38,6 +43,10 @@ class BasicEditorPaneUI extends BasicTextUI {
      */
     @stub
     protected def propertyChange(evt: PropertyChangeEvent): Unit = ???
+
+    /** Deinstalls the UI for a component. */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicEditorPaneUI {

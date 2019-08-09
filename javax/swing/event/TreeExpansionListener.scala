@@ -1,6 +1,7 @@
 package javax.swing.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener that's notified when a tree expands or collapses
  *  a node.
@@ -13,4 +14,8 @@ trait TreeExpansionListener extends EventListener {
     /** Called whenever an item in the tree has been collapsed. */
     @stub
     def treeCollapsed(event: TreeExpansionEvent): Unit = ???
+
+    /** Called whenever an item in the tree has been expanded. */
+    @stub
+    def treeExpanded(event: TreeExpansionEvent): Unit = ???
 }

@@ -2,6 +2,7 @@ package javax.swing
 
 import java.awt.{Component, Container, Dimension}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A toolbar-specific separator. An object with dimension but
  *  no contents used to divide buttons on a tool bar into groups.
@@ -13,6 +14,10 @@ object JToolBar.Separator extends JSeparator {
      */
     @stub
     def Separator() = ???
+
+    /** Creates a new toolbar separator with the specified size. */
+    @stub
+    def Separator(size: Dimension) = ???
 
     /** Returns the maximum size for the separator. */
     @stub
@@ -33,4 +38,8 @@ object JToolBar.Separator extends JSeparator {
     /** Returns the name of the L&F class that renders this component. */
     @stub
     def getUIClassID(): String = ???
+
+    /** Sets the size of the separator. */
+    @stub
+    def setSeparatorSize(size: Dimension): Unit = ???
 }

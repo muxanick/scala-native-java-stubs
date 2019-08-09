@@ -1,6 +1,7 @@
 package javax.sound.midi
 
 import java.lang.{Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A SoundbankResource represents any audio resource stored
  *  in a Soundbank.  Common soundbank resources include:
@@ -40,6 +41,12 @@ import java.lang.{Class, Object, String}
  */
 abstract class SoundbankResource extends Object {
 
+    /** Constructs a new SoundbankResource from the given sound bank
+     *  and wavetable index.
+     */
+    @stub
+    protected def this(soundBank: Soundbank, name: String, dataClass: Class[_]) = ???
+
     /** Obtains the sampled audio that is stored in this SoundbankResource. */
     def getData(): Object
 
@@ -48,4 +55,7 @@ abstract class SoundbankResource extends Object {
 
     /** Obtains the name of the resource. */
     def getName(): String
+
+    /** Obtains the sound bank that contains this SoundbankResource. */
+    def getSoundbank(): Soundbank
 }

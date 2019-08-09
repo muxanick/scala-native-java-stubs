@@ -2,6 +2,7 @@ package java.util
 
 import java.lang.Object
 import java.util.function.UnaryOperator
+import scala.scalanative.annotation.stub
 
 /** An ordered collection (also known as a sequence).  The user of this
  *  interface has precise control over where in the list each element is
@@ -212,4 +213,11 @@ trait List[E] extends Collection[E] {
      */
     @stub
     def toArray(): Array[Object] = ???
+
+    /** Returns an array containing all of the elements in this list in
+     *  proper sequence (from first to last element); the runtime type of
+     *  the returned array is that of the specified array.
+     */
+    @stub
+    def toArray[T](a: Array[T]): Array[T] = ???
 }

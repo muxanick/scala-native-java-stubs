@@ -1,7 +1,8 @@
 package javax.xml.bind.annotation
 
 import javax.xml.bind.ValidationEventHandler
-import javax.xml.transform.Result
+import javax.xml.transform.{Result, Source}
+import scala.scalanative.annotation.stub
 
 /** Converts an element (and its descendants)
  *  from/to DOM (or similar) representation.
@@ -33,4 +34,10 @@ trait DomHandler[ElementT, ResultT <: Result] {
     /** Once the portion is sent to the Result. */
     @stub
     def getElement(rt: ResultT): ElementT = ???
+
+    /** This method is called when a JAXB provider needs to marshal an element
+     *  to XML.
+     */
+    @stub
+    def marshal(n: ElementT, errorHandler: ValidationEventHandler): Source = ???
 }

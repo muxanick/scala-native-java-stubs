@@ -2,6 +2,7 @@ package java.beans
 
 import java.lang.{Class, Object, String}
 import java.lang.reflect.Method
+import scala.scalanative.annotation.stub
 
 /** A PropertyDescriptor describes one property that a Java Bean
  *  exports via a pair of accessor methods.
@@ -20,6 +21,12 @@ class PropertyDescriptor extends FeatureDescriptor {
      */
     @stub
     def this(propertyName: String, beanClass: Class[_], readMethodName: String, writeMethodName: String) = ???
+
+    /** This constructor takes the name of a simple property, and Method
+     *  objects for reading and writing the property.
+     */
+    @stub
+    def this(propertyName: String, readMethod: Method, writeMethod: Method) = ???
 
     /** Constructs an instance of a property editor using the current
      *  property editor class.
@@ -84,4 +91,8 @@ class PropertyDescriptor extends FeatureDescriptor {
     /** Sets the method that should be used to read the property value. */
     @stub
     def setReadMethod(readMethod: Method): Unit = ???
+
+    /** Sets the method that should be used to write the property value. */
+    @stub
+    def setWriteMethod(writeMethod: Method): Unit = ???
 }

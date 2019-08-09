@@ -1,6 +1,7 @@
 package java.awt.font
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The GlyphJustificationInfo class represents information
  *  about the justification properties of a glyph.  A glyph is the visual
@@ -36,6 +37,12 @@ import java.lang.Object
  *  the glyphs are to be moved together to fit a smaller width.
  */
 final class GlyphJustificationInfo extends Object {
+
+    /** Constructs information about the justification properties of a
+     *  glyph.
+     */
+    @stub
+    def this(weight: Float, growAbsorb: Boolean, growPriority: Int, growLeftLimit: Float, growRightLimit: Float, shrinkAbsorb: Boolean, shrinkPriority: Int, shrinkLeftLimit: Float, shrinkRightLimit: Float) = ???
 
     /** If true, this glyph absorbs all extra
      *  space at this and lower priority levels when it grows.
@@ -76,6 +83,10 @@ final class GlyphJustificationInfo extends Object {
      */
     @stub
     val shrinkRightLimit: Float = ???
+
+    /** The weight of this glyph. */
+    @stub
+    val weight: Float = ???
 }
 
 object GlyphJustificationInfo {

@@ -2,6 +2,7 @@ package java.sql
 
 import java.lang.{Exception, Iterable, Object, String, Throwable}
 import java.util.Iterator
+import scala.scalanative.annotation.stub
 
 /** An exception that provides information on a database access
  *  error or other errors.
@@ -67,6 +68,12 @@ class SQLException extends Exception with Iterable[Throwable] {
     @stub
     def this(reason: String, cause: Throwable) = ???
 
+    /** Constructs a SQLException object with a given
+     *  cause.
+     */
+    @stub
+    def this(cause: Throwable) = ???
+
     /** Retrieves the vendor-specific exception code
      *  for this SQLException object.
      */
@@ -86,4 +93,8 @@ class SQLException extends Exception with Iterable[Throwable] {
     /** Returns an iterator over the chained SQLExceptions. */
     @stub
     def iterator(): Iterator[Throwable] = ???
+
+    /** Adds an SQLException object to the end of the chain. */
+    @stub
+    def setNextException(ex: SQLException): Unit = ???
 }

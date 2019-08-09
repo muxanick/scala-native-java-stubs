@@ -3,6 +3,7 @@ package java.awt
 import java.awt.geom.{AffineTransform, PathIterator, Point2D, Rectangle2D}
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The Polygon class encapsulates a description of a
  *  closed, two-dimensional region within a coordinate space. This
@@ -28,6 +29,12 @@ class Polygon extends Object with Shape with Serializable {
     @stub
     def this() = ???
 
+    /** Constructs and initializes a Polygon from the specified
+     *  parameters.
+     */
+    @stub
+    def this(xpoints: Array[Int], ypoints: Array[Int], npoints: Int) = ???
+
     /** The bounds of this Polygon. */
     @stub
     protected val bounds: Rectangle = ???
@@ -39,6 +46,10 @@ class Polygon extends Object with Shape with Serializable {
     /** The array of X coordinates. */
     @stub
     val xpoints: Array[Int] = ???
+
+    /** The array of Y coordinates. */
+    @stub
+    val ypoints: Array[Int] = ???
 
     /** Appends the specified coordinates to this Polygon. */
     @stub
@@ -145,4 +156,11 @@ class Polygon extends Object with Shape with Serializable {
     /** Resets this Polygon object to an empty polygon. */
     @stub
     def reset(): Unit = ???
+
+    /** Translates the vertices of the Polygon by
+     *  deltaX along the x axis and by
+     *  deltaY along the y axis.
+     */
+    @stub
+    def translate(deltaX: Int, deltaY: Int): Unit = ???
 }

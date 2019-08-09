@@ -3,6 +3,7 @@ package javax.swing.text
 import java.awt.{Graphics, Shape}
 import java.lang.Object
 import javax.swing.event.DocumentEvent
+import scala.scalanative.annotation.stub
 
 /** View of plain text (text with only one font and color)
  *  that does line-wrapping.  This view expects that its
@@ -27,6 +28,10 @@ class WrappedPlainView extends BoxView with TabExpander {
     /** Creates a new WrappedPlainView. */
     @stub
     def this(elem: Element) = ???
+
+    /** Creates a new WrappedPlainView. */
+    @stub
+    def this(elem: Element, wordWrap: Boolean) = ???
 
     /** This is called by the nested wrapped line
      *  views to determine the break location.
@@ -109,4 +114,8 @@ class WrappedPlainView extends BoxView with TabExpander {
      */
     @stub
     def removeUpdate(e: DocumentEvent, a: Shape, f: ViewFactory): Unit = ???
+
+    /** Sets the size of the view. */
+    @stub
+    def setSize(width: Float, height: Float): Unit = ???
 }

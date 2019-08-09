@@ -3,6 +3,7 @@ package java.rmi.activation
 import java.lang.Object
 import java.rmi.{MarshalledObject, Remote}
 import java.rmi.server.{RemoteObject, RemoteServer, UnicastRemoteObject}
+import scala.scalanative.annotation.stub
 
 /** An ActivationGroup is responsible for creating new
  *  instances of "activatable" objects in its group, informing its
@@ -56,6 +57,12 @@ import java.rmi.server.{RemoteObject, RemoteServer, UnicastRemoteObject}
  */
 abstract class ActivationGroup extends UnicastRemoteObject with ActivationInstantiator {
 
+    /** Constructs an activation group with the given activation group
+     *  identifier.
+     */
+    @stub
+    protected def this(groupID: ActivationGroupID) = ???
+
     /** This protected method is necessary for subclasses to
      *  make the activeObject callback to the group's
      *  monitor.
@@ -94,4 +101,8 @@ object ActivationGroup {
     /** Returns the activation system for the VM. */
     @stub
     def getSystem(): ActivationSystem = ???
+
+    /** Set the activation system for the VM. */
+    @stub
+    def setSystem(system: ActivationSystem): Unit = ???
 }

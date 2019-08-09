@@ -1,6 +1,7 @@
 package java.util
 
-import java.lang.{CharSequence, Object}
+import java.lang.{CharSequence, Object, String}
+import scala.scalanative.annotation.stub
 
 /** StringJoiner is used to construct a sequence of characters separated
  *  by a delimiter and optionally starting with a supplied prefix
@@ -23,6 +24,12 @@ final class StringJoiner extends Object {
      */
     @stub
     def this(delimiter: CharSequence) = ???
+
+    /** Constructs a StringJoiner with no characters in it using copies
+     *  of the supplied prefix, delimiter and suffix.
+     */
+    @stub
+    def this(delimiter: CharSequence, prefix: CharSequence, suffix: CharSequence) = ???
 
     /** Adds a copy of the given CharSequence value as the next
      *  element of the StringJoiner value.
@@ -48,4 +55,12 @@ final class StringJoiner extends Object {
      */
     @stub
     def setEmptyValue(emptyValue: CharSequence): StringJoiner = ???
+
+    /** Returns the current value, consisting of the prefix, the values
+     *  added so far separated by the delimiter, and the suffix,
+     *  unless no elements have been added in which case, the
+     *  prefix + suffix or the emptyValue characters are returned
+     */
+    @stub
+    def toString(): String = ???
 }

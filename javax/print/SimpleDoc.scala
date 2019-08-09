@@ -1,8 +1,9 @@
 package javax.print
 
-import java.io.Reader
+import java.io.{InputStream, Reader}
 import java.lang.Object
 import javax.print.attribute.DocAttributeSet
+import scala.scalanative.annotation.stub
 
 /** This class is an implementation of interface Doc that can
  *  be used in many common printing requests.
@@ -30,6 +31,12 @@ import javax.print.attribute.DocAttributeSet
  */
 final class SimpleDoc extends Object with Doc {
 
+    /** Constructs a SimpleDoc with the specified
+     *  print data, doc flavor and doc attribute set.
+     */
+    @stub
+    def this(printData: Object, flavor: DocFlavor, attributes: DocAttributeSet) = ???
+
     /** Obtains the set of printing attributes for this doc object. */
     @stub
     def getAttributes(): DocAttributeSet = ???
@@ -50,4 +57,10 @@ final class SimpleDoc extends Object with Doc {
     /** Obtains a reader for extracting character print data from this doc. */
     @stub
     def getReaderForText(): Reader = ???
+
+    /** Obtains an input stream for extracting byte print data from
+     *  this doc.
+     */
+    @stub
+    def getStreamForBytes(): InputStream = ???
 }

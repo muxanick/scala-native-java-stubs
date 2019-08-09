@@ -3,6 +3,7 @@ package java.awt.font
 import java.awt.{Font, Rectangle, Shape}
 import java.awt.geom.{AffineTransform, Point2D, Rectangle2D}
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** A GlyphVector object is a collection of glyphs
  *  containing geometric information for the placement of each glyph
@@ -65,6 +66,10 @@ import java.lang.{Cloneable, Object}
  *  GlyphVector.
  */
 abstract class GlyphVector extends Object with Cloneable {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Tests if the specified GlyphVector exactly
      *  equals this GlyphVector.
@@ -185,6 +190,11 @@ abstract class GlyphVector extends Object with Cloneable {
      *  GlyphVector.
      */
     def setGlyphPosition(glyphIndex: Int, newPos: Point2D): Unit
+
+    /** Sets the transform of the specified glyph within this
+     *  GlyphVector.
+     */
+    def setGlyphTransform(glyphIndex: Int, newTX: AffineTransform): Unit
 }
 
 object GlyphVector {
@@ -210,4 +220,10 @@ object GlyphVector {
     /** A mask for supported flags from getLayoutFlags. */
     @stub
     val FLAG_MASK: Int = ???
+
+    /** A flag used with getLayoutFlags that indicates that this GlyphVector has
+     *  a right-to-left run direction.
+     */
+    @stub
+    val FLAG_RUN_RTL: Int = ???
 }

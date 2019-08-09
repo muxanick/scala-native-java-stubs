@@ -2,6 +2,7 @@ package java.nio.file
 
 import java.io.IOException
 import java.nio.file.attribute.BasicFileAttributes
+import scala.scalanative.annotation.stub
 
 /** A visitor of files. An implementation of this interface is provided to the
  *  Files.walkFileTree methods to visit each file in
@@ -81,4 +82,8 @@ trait FileVisitor[T] {
     /** Invoked for a file in a directory. */
     @stub
     def visitFile(file: T, attrs: BasicFileAttributes): FileVisitResult = ???
+
+    /** Invoked for a file that could not be visited. */
+    @stub
+    def visitFileFailed(file: T, exc: IOException): FileVisitResult = ???
 }

@@ -1,6 +1,7 @@
 package java.rmi.server
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** An ServerNotActiveException is an Exception
  *  thrown during a call to RemoteServer.getClientHost if
@@ -14,4 +15,10 @@ class ServerNotActiveException extends Exception {
      */
     @stub
     def this() = ???
+
+    /** Constructs an ServerNotActiveException with the specified
+     *  detail message.
+     */
+    @stub
+    def this(s: String) = ???
 }

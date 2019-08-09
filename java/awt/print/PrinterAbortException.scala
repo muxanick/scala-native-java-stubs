@@ -1,6 +1,7 @@
 package java.awt.print
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** The PrinterAbortException class is a subclass of
  *  PrinterException and is used to indicate that a user
@@ -14,4 +15,10 @@ class PrinterAbortException extends PrinterException {
      */
     @stub
     def this() = ???
+
+    /** Constructs a new PrinterAbortException with
+     *  the specified detail message.
+     */
+    @stub
+    def this(msg: String) = ???
 }

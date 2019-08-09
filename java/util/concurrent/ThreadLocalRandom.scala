@@ -3,6 +3,7 @@ package java.util.concurrent
 import java.lang.Object
 import java.util.Random
 import java.util.stream.{DoubleStream, IntStream, LongStream}
+import scala.scalanative.annotation.stub
 
 /** A random number generator isolated to the current thread.  Like the
  *  global Random generator used by the Math class, a ThreadLocalRandom is initialized
@@ -178,6 +179,10 @@ class ThreadLocalRandom extends Random {
      */
     @stub
     def nextLong(origin: Long, bound: Long): Long = ???
+
+    /** Throws UnsupportedOperationException. */
+    @stub
+    def setSeed(seed: Long): Unit = ???
 }
 
 object ThreadLocalRandom {

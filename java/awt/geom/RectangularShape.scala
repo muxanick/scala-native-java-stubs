@@ -2,6 +2,7 @@ package java.awt.geom
 
 import java.awt.{Rectangle, Shape}
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** RectangularShape is the base class for a number of
  *  Shape objects whose geometry is defined by a rectangular frame.
@@ -13,6 +14,10 @@ import java.lang.{Cloneable, Object}
  *  for the subclasses to define their geometry.
  */
 abstract class RectangularShape extends Object with Shape with Cloneable {
+
+    /** This is an abstract class that cannot be instantiated directly. */
+    @stub
+    protected def this() = ???
 
     /** Creates a new object of the same class and with the same
      *  contents as this object.
@@ -144,4 +149,9 @@ abstract class RectangularShape extends Object with Shape with Cloneable {
      *  based on the two specified coordinates.
      */
     def setFrameFromDiagonal(x1: Double, y1: Double, x2: Double, y2: Double): Unit
+
+    /** Sets the diagonal of the framing rectangle of this Shape
+     *  based on two specified Point2D objects.
+     */
+    def setFrameFromDiagonal(p1: Point2D, p2: Point2D): Unit
 }

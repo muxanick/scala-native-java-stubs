@@ -2,6 +2,7 @@ package javax.management
 
 import java.lang.{Object, String}
 import java.security.{BasicPermission, Permission}
+import scala.scalanative.annotation.stub
 
 /** This permission represents "trust" in a signer or codebase.
  *  
@@ -22,4 +23,8 @@ class MBeanTrustPermission extends BasicPermission {
     /** Create a new MBeanTrustPermission with the given name. */
     @stub
     def this(name: String) = ???
+
+    /** Create a new MBeanTrustPermission with the given name. */
+    @stub
+    def this(name: String, actions: String) = ???
 }

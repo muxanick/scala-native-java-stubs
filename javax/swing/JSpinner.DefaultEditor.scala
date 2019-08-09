@@ -3,7 +3,8 @@ package javax.swing
 import java.awt.{Component, Component.BaselineResizeBehavior, Container, Dimension, LayoutManager}
 import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.{Object, String}
-import javax.swing.event.ChangeListener
+import javax.swing.event.{ChangeEvent, ChangeListener}
+import scala.scalanative.annotation.stub
 
 /** A simple base class for more specialized editors
  *  that displays a read-only view of the model's current
@@ -34,6 +35,10 @@ import javax.swing.event.ChangeListener
  *  child is just centered with the parents insets.
  */
 object JSpinner.DefaultEditor extends JPanel with ChangeListener with PropertyChangeListener with LayoutManager {
+
+    /** Constructs an editor component for the specified JSpinner. */
+    @stub
+    def DefaultEditor(spinner: JSpinner) = ???
 
     /** This LayoutManager method does nothing. */
     @stub
@@ -99,4 +104,8 @@ object JSpinner.DefaultEditor extends JPanel with ChangeListener with PropertyCh
     /** This LayoutManager method does nothing. */
     @stub
     def removeLayoutComponent(child: Component): Unit = ???
+
+    /** This method is called when the spinner's model's state changes. */
+    @stub
+    def stateChanged(e: ChangeEvent): Unit = ???
 }

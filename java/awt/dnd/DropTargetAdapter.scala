@@ -1,6 +1,7 @@
 package java.awt.dnd
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** An abstract adapter class for receiving drop target events. The methods in
  *  this class are empty. This class exists only as a convenience for creating
@@ -42,6 +43,10 @@ import java.lang.Object
  */
 abstract class DropTargetAdapter extends Object with DropTargetListener {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Called while a drag operation is ongoing, when the mouse pointer enters
      *  the operable part of the drop site for the DropTarget
      *  registered with this listener.
@@ -59,4 +64,9 @@ abstract class DropTargetAdapter extends Object with DropTargetListener {
      *  registered with this listener.
      */
     def dragOver(dtde: DropTargetDragEvent): Unit
+
+    /** Called if the user has modified
+     *  the current drop gesture.
+     */
+    def dropActionChanged(dtde: DropTargetDragEvent): Unit
 }

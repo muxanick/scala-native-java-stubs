@@ -1,5 +1,7 @@
 package java.awt.geom
 
+import scala.scalanative.annotation.stub
+
 /** The PathIterator interface provides the mechanism
  *  for objects that implement the Shape
  *  interface to return the geometry of their boundary by allowing
@@ -49,6 +51,13 @@ trait PathIterator {
     /** Tests if the iteration is complete. */
     @stub
     def isDone(): Boolean = ???
+
+    /** Moves the iterator to the next segment of the path forwards
+     *  along the primary direction of traversal as long as there are
+     *  more points in that direction.
+     */
+    @stub
+    def next(): Unit = ???
 }
 
 object PathIterator {
@@ -91,4 +100,10 @@ object PathIterator {
      */
     @stub
     val WIND_EVEN_ODD: Int = ???
+
+    /** The winding rule constant for specifying a non-zero rule
+     *  for determining the interior of a path.
+     */
+    @stub
+    val WIND_NON_ZERO: Int = ???
 }

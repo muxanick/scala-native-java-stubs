@@ -2,6 +2,7 @@ package javax.xml.transform
 
 import java.io.{PrintStream, PrintWriter}
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This class specifies an exceptional condition that occurred
  *  during the transformation process.
@@ -23,6 +24,10 @@ class TransformerException extends Exception {
     /** Wrap an existing exception in a TransformerException. */
     @stub
     def this(message: String, e: Throwable) = ???
+
+    /** Create a new TransformerException wrapping an existing exception. */
+    @stub
+    def this(e: Throwable) = ???
 
     /** Returns the cause of this throwable or null if the
      *  cause is nonexistent or unknown.
@@ -71,4 +76,10 @@ class TransformerException extends Exception {
      */
     @stub
     def printStackTrace(s: PrintWriter): Unit = ???
+
+    /** Method setLocator sets an instance of a SourceLocator
+     *  object that specifies where an error occurred.
+     */
+    @stub
+    def setLocator(location: SourceLocator): Unit = ???
 }

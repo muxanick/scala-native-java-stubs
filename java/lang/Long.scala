@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** The Long class wraps a value of the primitive type long in an object. An object of type Long contains a
  *  single field whose type is long.
  * 
@@ -20,6 +22,13 @@ final class Long extends Number with Comparable[Long] {
      */
     @stub
     def this(value: Long) = ???
+
+    /** Constructs a newly allocated Long object that
+     *  represents the long value indicated by the
+     *  String parameter.
+     */
+    @stub
+    def this(s: String) = ???
 
     /** Returns the value of this Long as a byte after
      *  a narrowing primitive conversion.
@@ -100,6 +109,12 @@ object Long {
      */
     @stub
     val SIZE: Int = ???
+
+    /** The Class instance representing the primitive type
+     *  long.
+     */
+    @stub
+    val TYPE: Class[Long] = ???
 
     /** Returns the number of one-bits in the two's complement binary
      *  representation of the specified long value.
@@ -308,4 +323,11 @@ object Long {
      */
     @stub
     def valueOf(s: String): Long = ???
+
+    /** Returns a Long object holding the value
+     *  extracted from the specified String when parsed
+     *  with the radix given by the second argument.
+     */
+    @stub
+    def valueOf(s: String, radix: Int): Long = ???
 }

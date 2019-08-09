@@ -1,7 +1,8 @@
 package javax.xml.soap
 
-import java.lang.Object
+import java.lang.{Object, String}
 import javax.xml.transform.dom.DOMResult
+import scala.scalanative.annotation.stub
 
 /** Acts as a holder for the results of a JAXP transformation or a JAXB
  *  marshalling, in the form of a SAAJ tree. These results should be accessed
@@ -27,4 +28,14 @@ class SAAJResult extends DOMResult {
      */
     @stub
     def this(message: SOAPMessage) = ???
+
+    /** Creates a SAAJResult that will present results in the form
+     *  of a SAAJ tree that supports the specified protocol.
+     */
+    @stub
+    def this(protocol: String) = ???
+
+    /**  */
+    @stub
+    def getResult(): Node = ???
 }

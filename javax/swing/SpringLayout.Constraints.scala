@@ -2,6 +2,7 @@ package javax.swing
 
 import java.awt.Component
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A Constraints object holds the
  *  constraints that govern the way a component's size and position
@@ -85,6 +86,14 @@ object SpringLayout.Constraints extends Object {
     @stub
     def Constraints(x: Spring, y: Spring) = ???
 
+    /** Creates a Constraints object with the
+     *  specified values for its
+     *  x, y, width,
+     *  and height properties.
+     */
+    @stub
+    def Constraints(x: Spring, y: Spring, width: Spring, height: Spring) = ???
+
     /** Returns the value of the specified edge, which may be
      *  a derived value, or even null.
      */
@@ -129,4 +138,11 @@ object SpringLayout.Constraints extends Object {
      */
     @stub
     def setX(x: Spring): Unit = ???
+
+    /** Sets the y property,
+     *  which controls the y value
+     *  of a component's location.
+     */
+    @stub
+    def setY(y: Spring): Unit = ???
 }

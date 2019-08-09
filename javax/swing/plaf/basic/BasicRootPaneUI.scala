@@ -4,11 +4,16 @@ import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.Object
 import javax.swing.{JComponent, JRootPane}
 import javax.swing.plaf.{ComponentUI, RootPaneUI}
+import scala.scalanative.annotation.stub
 
 /** Basic implementation of RootPaneUI, there is one shared between all
  *  JRootPane instances.
  */
 class BasicRootPaneUI extends RootPaneUI with PropertyChangeListener {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /**  */
     @stub
@@ -49,6 +54,12 @@ class BasicRootPaneUI extends RootPaneUI with PropertyChangeListener {
     /**  */
     @stub
     protected def uninstallListeners(root: JRootPane): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicRootPaneUI {

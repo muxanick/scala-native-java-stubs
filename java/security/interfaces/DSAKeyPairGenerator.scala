@@ -1,6 +1,7 @@
 package java.security.interfaces
 
 import java.security.SecureRandom
+import scala.scalanative.annotation.stub
 
 /** An interface to an object capable of generating DSA key pairs.
  * 
@@ -46,4 +47,10 @@ trait DSAKeyPairGenerator {
      */
     @stub
     def initialize(params: DSAParams, random: SecureRandom): Unit = ???
+
+    /** Initializes the key pair generator for a given modulus length
+     *  (instead of parameters), and an optional SecureRandom bit source.
+     */
+    @stub
+    def initialize(modlen: Int, genParams: Boolean, random: SecureRandom): Unit = ???
 }

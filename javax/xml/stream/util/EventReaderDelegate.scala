@@ -3,6 +3,7 @@ package javax.xml.stream.util
 import java.lang.{Object, String}
 import javax.xml.stream.XMLEventReader
 import javax.xml.stream.events.XMLEvent
+import scala.scalanative.annotation.stub
 
 /** This is the base class for deriving an XMLEventReader
  *  filter.
@@ -17,6 +18,10 @@ class EventReaderDelegate extends Object with XMLEventReader {
     /** Construct an empty filter with no parent. */
     @stub
     def this() = ???
+
+    /** Construct an filter with the specified parent. */
+    @stub
+    def this(reader: XMLEventReader) = ???
 
     /** Frees any resources associated with this Reader. */
     @stub
@@ -61,4 +66,8 @@ class EventReaderDelegate extends Object with XMLEventReader {
      */
     @stub
     def remove(): Unit = ???
+
+    /** Set the parent of this instance. */
+    @stub
+    def setParent(reader: XMLEventReader): Unit = ???
 }

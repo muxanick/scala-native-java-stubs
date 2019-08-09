@@ -1,6 +1,7 @@
 package java.time.chrono
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** An era in the ISO calendar system.
  *  
@@ -44,6 +45,11 @@ object IsoEra {
      */
     final val BCE = new IsoEra(BCE, 0)
 
+    /** The singleton instance for the current era, 'Current Era',
+     *  which has the numeric value 1.
+     */
+    final val CE = new IsoEra(CE, 1)
+
     /** Gets the numeric era int value. */
     @stub
     def getValue(): Int = ???
@@ -55,4 +61,10 @@ object IsoEra {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): IsoEra = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[IsoEra] = ???
 }

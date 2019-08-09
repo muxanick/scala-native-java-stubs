@@ -8,6 +8,7 @@ import javax.xml.bind.JAXBContext
 import javax.xml.namespace.QName
 import javax.xml.ws.{Dispatch, EndpointReference, Service.Mode, WebServiceFeature}
 import javax.xml.ws.handler.HandlerResolver
+import scala.scalanative.annotation.stub
 
 /** Service delegates are used internally by Service objects
  *  to allow pluggability of JAX-WS implementations.
@@ -17,6 +18,10 @@ import javax.xml.ws.handler.HandlerResolver
  *  object delegates all of its instance methods to its delegate.
  */
 abstract class ServiceDelegate extends Object {
+
+    /**  */
+    @stub
+    protected def this() = ???
 
     /** Creates a new port for the service. */
     def addPort(portName: QName, bindingId: String, endpointAddress: String): Unit
@@ -86,4 +91,9 @@ abstract class ServiceDelegate extends Object {
 
     /** Sets the executor for this Service instance. */
     def setExecutor(executor: Executor): Unit
+
+    /** Sets the HandlerResolver for this Service
+     *  instance.
+     */
+    def setHandlerResolver(handlerResolver: HandlerResolver): Unit
 }

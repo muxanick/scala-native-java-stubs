@@ -1,6 +1,7 @@
 package javax.net.ssl
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Instances of this class represent a matcher that performs match
  *  operations on an SNIServerName instance.
@@ -19,6 +20,13 @@ import java.lang.Object
  */
 abstract class SNIMatcher extends Object {
 
+    /** Creates an SNIMatcher using the specified server name type. */
+    @stub
+    protected def this(type: Int) = ???
+
     /** Returns the server name type of this SNIMatcher object. */
     def getType(): Int
+
+    /** Attempts to match the given SNIServerName. */
+    def matches(serverName: SNIServerName): Boolean
 }

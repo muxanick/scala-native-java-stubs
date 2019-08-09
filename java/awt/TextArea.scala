@@ -2,6 +2,7 @@ package java.awt
 
 import java.lang.{Object, String}
 import javax.accessibility.AccessibleContext
+import scala.scalanative.annotation.stub
 
 /** A TextArea object is a multi-line region
  *  that displays text. It can be set to allow editing or
@@ -39,6 +40,19 @@ class TextArea extends TextComponent {
      */
     @stub
     def this(text: String, rows: Int, columns: Int) = ???
+
+    /** Constructs a new text area with the specified text,
+     *  and with the rows, columns, and scroll bar visibility
+     *  as specified.
+     */
+    @stub
+    def this(text: String, rows: Int, columns: Int, scrollbars: Int) = ???
+
+    /** This class implements accessibility support for the
+     *  TextArea class.
+     */
+    @stub
+    protected object AccessibleAWTTextArea extends TextArea.AccessibleAWTTextArea
 
     /** Creates the TextArea's peer. */
     @stub
@@ -163,6 +177,10 @@ class TextArea extends TextComponent {
     /** Sets the number of columns for this text area. */
     @stub
     def setColumns(columns: Int): Unit = ???
+
+    /** Sets the number of rows for this text area. */
+    @stub
+    def setRows(rows: Int): Unit = ???
 }
 
 object TextArea {
@@ -177,4 +195,8 @@ object TextArea {
     /** Do not create or display any scrollbars for the text area. */
     @stub
     val SCROLLBARS_NONE: Int = ???
+
+    /** Create and display vertical scrollbar only. */
+    @stub
+    val SCROLLBARS_VERTICAL_ONLY: Int = ???
 }

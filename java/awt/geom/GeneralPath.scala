@@ -1,6 +1,8 @@
 package java.awt.geom
 
+import java.awt.Shape
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The GeneralPath class represents a geometric path
  *  constructed from straight lines, and quadratic and cubic
@@ -40,4 +42,10 @@ final class GeneralPath extends Path2D.Float {
      */
     @stub
     def this(rule: Int, initialCapacity: Int) = ???
+
+    /** Constructs a new GeneralPath object from an arbitrary
+     *  Shape object.
+     */
+    @stub
+    def this(s: Shape) = ???
 }

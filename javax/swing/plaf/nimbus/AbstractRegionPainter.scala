@@ -3,11 +3,16 @@ package javax.swing.plaf.nimbus
 import java.awt.{Color, Graphics2D, LinearGradientPaint, RadialGradientPaint}
 import java.lang.{Object, String}
 import javax.swing.{JComponent, Painter}
+import scala.scalanative.annotation.stub
 
 /** Convenient base class for defining Painter instances for rendering a
  *  region or component in Nimbus.
  */
 abstract class AbstractRegionPainter extends Object with Painter[JComponent] {
+
+    /** Create a new AbstractRegionPainter */
+    @stub
+    protected def this() = ???
 
     /** Configures the given Graphics2D. */
     protected def configureGraphics(g: Graphics2D): Unit
@@ -67,4 +72,13 @@ abstract class AbstractRegionPainter extends Object with Painter[JComponent] {
 
     /** Gets the PaintContext for this painting operation. */
     protected def getPaintContext(): AbstractRegionPainter.PaintContext
+
+    /** Renders to the given Graphics2D object. */
+    def paint(g: Graphics2D, c: JComponent, w: Int, h: Int): Unit
+}
+
+object AbstractRegionPainter {
+    /** A class encapsulating state useful when painting. */
+    @stub
+    protected object PaintContext extends AbstractRegionPainter.PaintContext
 }

@@ -2,6 +2,7 @@ package javax.management.openmbean
 
 import java.lang.{Object, String}
 import javax.management.MBeanParameterInfo
+import scala.scalanative.annotation.stub
 
 /** Describes an operation of an Open MBean.
  * 
@@ -63,4 +64,8 @@ trait OpenMBeanOperationInfo {
     /** Returns the hash code value for this OpenMBeanOperationInfo instance. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a string representation of this OpenMBeanOperationInfo instance. */
+    @stub
+    def toString(): String = ???
 }

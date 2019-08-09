@@ -2,6 +2,7 @@ package java.rmi
 
 import java.io.IOException
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** A ServerException is thrown as a result of a remote method
  *  invocation when a RemoteException is thrown while processing
@@ -18,4 +19,10 @@ class ServerException extends RemoteException {
      */
     @stub
     def this(s: String) = ???
+
+    /** Constructs a ServerException with the specified
+     *  detail message and nested exception.
+     */
+    @stub
+    def this(s: String, ex: Exception) = ???
 }

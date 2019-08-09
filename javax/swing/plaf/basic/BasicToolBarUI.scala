@@ -8,12 +8,17 @@ import javax.swing.{AbstractButton, JComponent, JFrame, JToolBar, KeyStroke, Roo
 import javax.swing.border.Border
 import javax.swing.event.MouseInputListener
 import javax.swing.plaf.{ComponentUI, ToolBarUI}
+import scala.scalanative.annotation.stub
 
 /** A Basic L&F implementation of ToolBarUI.  This implementation
  *  is a "combined" view/controller.
  *  
  */
 class BasicToolBarUI extends ToolBarUI with SwingConstants {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** This class should be treated as a "protected" inner class. */
     @stub
@@ -34,6 +39,10 @@ class BasicToolBarUI extends ToolBarUI with SwingConstants {
     /**  */
     @stub
     protected object ToolBarContListener extends BasicToolBarUI.ToolBarContListener
+
+    /**  */
+    @stub
+    protected object ToolBarFocusListener extends BasicToolBarUI.ToolBarFocusListener
 
     /**  */
     @stub
@@ -103,6 +112,13 @@ class BasicToolBarUI extends ToolBarUI with SwingConstants {
     /**  */
     @stub
     protected val toolBarFocusListener: FocusListener = ???
+
+    /** Deprecated. 
+     * As of Java 2 platform v1.3.
+     * 
+     */
+    @stub
+    protected val upKey: KeyStroke = ???
 
     /**  */
     @stub
@@ -281,6 +297,12 @@ class BasicToolBarUI extends ToolBarUI with SwingConstants {
     /**  */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicToolBarUI {

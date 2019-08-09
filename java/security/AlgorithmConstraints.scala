@@ -2,6 +2,7 @@ package java.security
 
 import java.lang.String
 import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** This interface specifies constraints for cryptographic algorithms,
  *  keys (key sizes), and other algorithm parameters.
@@ -31,4 +32,10 @@ trait AlgorithmConstraints {
      */
     @stub
     def permits(primitives: Set[CryptoPrimitive], algorithm: String, parameters: AlgorithmParameters): Boolean = ???
+
+    /** Determines whether an algorithm and the corresponding key are granted
+     *  permission for the specified cryptographic primitives.
+     */
+    @stub
+    def permits(primitives: Set[CryptoPrimitive], algorithm: String, key: Key, parameters: AlgorithmParameters): Boolean = ???
 }

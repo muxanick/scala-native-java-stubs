@@ -2,6 +2,8 @@ package javax.swing.event
 
 import java.lang.Object
 import java.util.EventObject
+import javax.swing.tree.TreePath
+import scala.scalanative.annotation.stub
 
 /** An event used to identify a single path in a tree.  The source
  *  returned by getSource will be an instance of JTree.
@@ -21,4 +23,16 @@ import java.util.EventObject
  *  Please see XMLEncoder.
  */
 class TreeExpansionEvent extends EventObject {
+
+    /** Constructs a TreeExpansionEvent object. */
+    @stub
+    def this(source: Object, path: TreePath) = ???
+
+    /** Path to the value this event represents. */
+    @stub
+    protected val path: TreePath = ???
+
+    /** Returns the path to the value that has been expanded/collapsed. */
+    @stub
+    def getPath(): TreePath = ???
 }

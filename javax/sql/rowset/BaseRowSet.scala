@@ -7,6 +7,7 @@ import java.net.URL
 import java.sql.{Array, Blob, Clob, Date, NClob, Ref, RowId, SQLXML, Time, Timestamp}
 import java.util.{Calendar, Map}
 import javax.sql.RowSetListener
+import scala.scalanative.annotation.stub
 
 /** An abstract class providing a RowSet object with its basic functionality.
  *  The basic functions include having properties and sending event notifications,
@@ -268,6 +269,13 @@ import javax.sql.RowSetListener
  */
 abstract class BaseRowSet extends Object with Serializable with Cloneable {
 
+    /** Constructs a new BaseRowSet object initialized with
+     *  a default Vector object for its listeners
+     *  field.
+     */
+    @stub
+    def this() = ???
+
     /** The InputStream object that will be
      *  returned by the method getAsciiStream,
      *  which is specified in the ResultSet interface.
@@ -285,6 +293,12 @@ abstract class BaseRowSet extends Object with Serializable with Cloneable {
      *  which is specified in the ResultSet interface.
      */
     protected val charStream: Reader
+
+    /** The InputStream object that will be
+     *  returned by the method getUnicodeStream,
+     *  which is specified in the ResultSet interface.
+     */
+    protected val unicodeStream: InputStream
 
     /** The listener will be notified whenever an event occurs on this RowSet
      *  object.
@@ -829,6 +843,11 @@ abstract class BaseRowSet extends Object with Serializable with Cloneable {
      *  property to null.
      */
     def setUrl(url: String): Unit
+
+    /** Sets the username property for this RowSet object
+     *  to the given user name.
+     */
+    def setUsername(name: String): Unit
 }
 
 object BaseRowSet {

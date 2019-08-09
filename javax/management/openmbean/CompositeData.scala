@@ -1,6 +1,8 @@
 package javax.management.openmbean
 
 import java.lang.{Object, String}
+import java.util.Collection
+import scala.scalanative.annotation.stub
 
 /** The CompositeData interface specifies the behavior of a specific type of complex open data objects
  *  which represent composite data structures.
@@ -44,4 +46,8 @@ trait CompositeData {
     /** Returns a string representation of this CompositeData instance. */
     @stub
     def toString(): String = ???
+
+    /** Returns an unmodifiable Collection view of the item values contained in this CompositeData instance. */
+    @stub
+    def values(): Collection[_] = ???
 }

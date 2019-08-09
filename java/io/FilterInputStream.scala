@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A FilterInputStream contains
  *  some other input stream, which it uses as
@@ -16,6 +17,18 @@ import java.lang.Object
  *  and fields.
  */
 class FilterInputStream extends InputStream {
+
+    /** Creates a FilterInputStream
+     *  by assigning the  argument in
+     *  to the field this.in so as
+     *  to remember it for later use.
+     */
+    @stub
+    protected def this(in: InputStream) = ???
+
+    /** The input stream to be filtered. */
+    @stub
+    protected val in: InputStream = ???
 
     /** Returns an estimate of the number of bytes that can be read (or
      *  skipped over) from this input stream without blocking by the next
@@ -61,4 +74,10 @@ class FilterInputStream extends InputStream {
      */
     @stub
     def reset(): Unit = ???
+
+    /** Skips over and discards n bytes of data from the
+     *  input stream.
+     */
+    @stub
+    def skip(n: Long): Long = ???
 }

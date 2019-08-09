@@ -1,6 +1,7 @@
 package javax.lang.model.element
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The kind of an element.
  * 
@@ -64,6 +65,9 @@ object ElementKind {
     /** A static initializer. */
     final val STATIC_INIT = new ElementKind(STATIC_INIT, 15)
 
+    /** A type parameter. */
+    final val TYPE_PARAMETER = new ElementKind(TYPE_PARAMETER, 16)
+
     /** Returns true if this is a kind of class:
      *  either CLASS or ENUM.
      */
@@ -85,4 +89,10 @@ object ElementKind {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): ElementKind = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[ElementKind] = ???
 }

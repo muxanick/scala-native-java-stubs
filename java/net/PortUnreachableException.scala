@@ -1,7 +1,8 @@
 package java.net
 
 import java.io.IOException
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Signals that an ICMP Port Unreachable message has been
  *  received on a connected datagram.
@@ -13,4 +14,10 @@ class PortUnreachableException extends SocketException {
      */
     @stub
     def this() = ???
+
+    /** Constructs a new PortUnreachableException with a
+     *  detail message.
+     */
+    @stub
+    def this(msg: String) = ???
 }

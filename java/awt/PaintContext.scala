@@ -1,6 +1,7 @@
 package java.awt
 
-import java.awt.image.ColorModel
+import java.awt.image.{ColorModel, Raster}
+import scala.scalanative.annotation.stub
 
 /** The PaintContext interface defines the encapsulated
  *  and optimized environment to generate color patterns in device
@@ -21,4 +22,10 @@ trait PaintContext {
     /** Returns the ColorModel of the output. */
     @stub
     def getColorModel(): ColorModel = ???
+
+    /** Returns a Raster containing the colors generated for
+     *  the graphics operation.
+     */
+    @stub
+    def getRaster(x: Int, y: Int, w: Int, h: Int): Raster = ???
 }

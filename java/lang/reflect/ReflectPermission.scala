@@ -2,6 +2,7 @@ package java.lang.reflect
 
 import java.lang.{Object, String}
 import java.security.{BasicPermission, Permission}
+import scala.scalanative.annotation.stub
 
 /** The Permission class for reflective operations.
  *  
@@ -42,4 +43,8 @@ final class ReflectPermission extends BasicPermission {
     /** Constructs a ReflectPermission with the specified name. */
     @stub
     def this(name: String) = ???
+
+    /** Constructs a ReflectPermission with the specified name and actions. */
+    @stub
+    def this(name: String, actions: String) = ???
 }

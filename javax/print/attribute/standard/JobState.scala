@@ -2,6 +2,7 @@ package javax.print.attribute.standard
 
 import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, EnumSyntax, PrintJobAttribute}
+import scala.scalanative.annotation.stub
 
 /** JobState is a printing attribute class, an enumeration, that identifies
  *  the current state of a print job. Class JobState defines standard job state
@@ -18,6 +19,10 @@ import javax.print.attribute.{Attribute, EnumSyntax, PrintJobAttribute}
  */
 class JobState extends EnumSyntax with PrintJobAttribute {
 
+    /** Construct a new job state enumeration value with the given integer value. */
+    @stub
+    protected def this(value: Int) = ???
+
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.
      */
@@ -33,6 +38,10 @@ class JobState extends EnumSyntax with PrintJobAttribute {
      */
     @stub
     def getName(): String = ???
+
+    /** Returns the string table for class JobState. */
+    @stub
+    protected def getStringTable(): Array[String] = ???
 }
 
 object JobState {
@@ -80,4 +89,8 @@ object JobState {
      */
     @stub
     val PROCESSING_STOPPED: JobState = ???
+
+    /** The job state is unknown. */
+    @stub
+    val UNKNOWN: JobState = ???
 }

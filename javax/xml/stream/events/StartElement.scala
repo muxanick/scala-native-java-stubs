@@ -1,7 +1,9 @@
 package javax.xml.stream.events
 
+import java.lang.String
 import java.util.Iterator
 import javax.xml.namespace.{NamespaceContext, QName}
+import scala.scalanative.annotation.stub
 
 /** The StartElement interface provides access to information about
  *  start elements.  A StartElement is reported for each Start Tag
@@ -31,4 +33,10 @@ trait StartElement extends XMLEvent {
     /** Returns an Iterator of namespaces declared on this element. */
     @stub
     def getNamespaces(): Iterator = ???
+
+    /** Gets the value that the prefix is bound to in the
+     *  context of this element.
+     */
+    @stub
+    def getNamespaceURI(prefix: String): String = ???
 }

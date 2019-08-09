@@ -2,13 +2,22 @@ package javax.swing.plaf.basic
 
 import java.awt.{Dimension, Graphics}
 import java.lang.Object
-import javax.swing.JComponent
+import javax.swing.{CellRendererPane, JComponent}
 import javax.swing.event.MouseInputListener
 import javax.swing.plaf.{ComponentUI, TableHeaderUI}
 import javax.swing.table.JTableHeader
+import scala.scalanative.annotation.stub
 
 /** BasicTableHeaderUI implementation */
 class BasicTableHeaderUI extends TableHeaderUI {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** This class should be treated as a "protected" inner class. */
+    @stub
+    object MouseInputHandler extends BasicTableHeaderUI.MouseInputHandler
 
     /** The JTableHeader that is delegating the painting to this UI. */
     @stub
@@ -17,6 +26,10 @@ class BasicTableHeaderUI extends TableHeaderUI {
     /**  */
     @stub
     protected val mouseInputListener: MouseInputListener = ???
+
+    /**  */
+    @stub
+    protected val rendererPane: CellRendererPane = ???
 
     /** Creates the mouse listener for the JTableHeader. */
     @stub
@@ -81,6 +94,12 @@ class BasicTableHeaderUI extends TableHeaderUI {
     /**  */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicTableHeaderUI {

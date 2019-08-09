@@ -1,7 +1,8 @@
 package java.util
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** An Entry maintaining an immutable key and value.  This class
  *  does not support method setValue.  This class may be
@@ -15,6 +16,12 @@ object AbstractMap.SimpleImmutableEntry[K, V] extends Object with Map.Entry[K, V
      */
     @stub
     def SimpleImmutableEntry(key: K, value: V) = ???
+
+    /** Creates an entry representing the same mapping as the
+     *  specified entry.
+     */
+    @stub
+    def SimpleImmutableEntry(entry: Map.Entry[_ <: K, _ <: V]) = ???
 
     /** Compares the specified object with this entry for equality. */
     @stub
@@ -37,4 +44,8 @@ object AbstractMap.SimpleImmutableEntry[K, V] extends Object with Map.Entry[K, V
      */
     @stub
     def setValue(value: V): V = ???
+
+    /** Returns a String representation of this map entry. */
+    @stub
+    def toString(): String = ???
 }

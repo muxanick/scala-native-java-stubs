@@ -2,6 +2,7 @@ package javax.sound.midi
 
 import java.lang.AutoCloseable
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** MidiDevice is the base interface for all MIDI devices.
  *  Common devices include synthesizers, sequencers, MIDI input ports, and MIDI
@@ -127,4 +128,19 @@ trait MidiDevice extends AutoCloseable {
     /** Reports whether the device is open. */
     @stub
     def isOpen(): Boolean = ???
+
+    /** Opens the device, indicating that it should now acquire any
+     *  system resources it requires and become operational.
+     */
+    @stub
+    def open(): Unit = ???
+}
+
+object MidiDevice {
+    /** A MidiDevice.Info object contains assorted
+     *  data about a MidiDevice, including its
+     *  name, the company who created it, and descriptive text.
+     */
+    @stub
+    object Info extends MidiDevice.Info
 }

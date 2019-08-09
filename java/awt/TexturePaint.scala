@@ -3,6 +3,7 @@ package java.awt
 import java.awt.geom.{AffineTransform, Rectangle2D}
 import java.awt.image.{BufferedImage, ColorModel}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The TexturePaint class provides a way to fill a
  *  Shape with a texture that is specified as
@@ -18,6 +19,10 @@ import java.lang.Object
  *  replicated Rectangle2D.
  */
 class TexturePaint extends Object with Paint {
+
+    /** Constructs a TexturePaint object. */
+    @stub
+    def this(txtr: BufferedImage, anchor: Rectangle2D) = ???
 
     /** Creates and returns a PaintContext used to
      *  generate a tiled image pattern.
@@ -36,4 +41,8 @@ class TexturePaint extends Object with Paint {
      */
     @stub
     def getImage(): BufferedImage = ???
+
+    /** Returns the transparency mode for this TexturePaint. */
+    @stub
+    def getTransparency(): Int = ???
 }

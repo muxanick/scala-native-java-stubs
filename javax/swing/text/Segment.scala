@@ -1,7 +1,8 @@
 package javax.swing.text
 
-import java.lang.{CharSequence, Cloneable, Object}
+import java.lang.{CharSequence, Cloneable, Object, String}
 import java.text.CharacterIterator
+import scala.scalanative.annotation.stub
 
 /** A segment of a character array representing a fragment
  *  of text.  It should be treated as immutable even though
@@ -20,6 +21,10 @@ class Segment extends Object with Cloneable with CharacterIterator with CharSequ
     @stub
     def this() = ???
 
+    /** Creates a new segment referring to an existing array. */
+    @stub
+    def this(array: Array[Char], offset: Int, count: Int) = ???
+
     /** This is the array containing the text of
      *  interest.
      */
@@ -31,6 +36,12 @@ class Segment extends Object with Cloneable with CharacterIterator with CharSequ
      */
     @stub
     val count: Int = ???
+
+    /** This is the offset into the array that
+     *  the desired text begins.
+     */
+    @stub
+    val offset: Int = ???
 
     /** Returns the char value at the specified index. */
     @stub
@@ -101,4 +112,8 @@ class Segment extends Object with Cloneable with CharacterIterator with CharSequ
     /** Returns a CharSequence that is a subsequence of this sequence. */
     @stub
     def subSequence(start: Int, end: Int): CharSequence = ???
+
+    /** Converts a segment into a String. */
+    @stub
+    def toString(): String = ???
 }

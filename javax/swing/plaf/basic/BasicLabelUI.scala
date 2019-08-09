@@ -5,12 +5,17 @@ import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.{Object, String}
 import javax.swing.{Icon, JComponent, JLabel}
 import javax.swing.plaf.{ComponentUI, LabelUI}
+import scala.scalanative.annotation.stub
 
 /** A Windows L&F implementation of LabelUI.  This implementation
  *  is completely static, i.e. there's only one UIView implementation
  *  that's shared by all JLabel objects.
  */
 class BasicLabelUI extends LabelUI with PropertyChangeListener {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the baseline. */
     @stub
@@ -99,9 +104,19 @@ class BasicLabelUI extends LabelUI with PropertyChangeListener {
     /** Unregisters listeners. */
     @stub
     protected def uninstallListeners(c: JLabel): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicLabelUI {
+    /** The default BasicLabelUI instance. */
+    @stub
+    protected val labelUI: BasicLabelUI = ???
+
     /** Returns an instance of BasicLabelUI. */
     @stub
     def createUI(c: JComponent): ComponentUI = ???

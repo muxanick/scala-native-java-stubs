@@ -1,6 +1,7 @@
 package javax.print.attribute.standard
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Class MediaSize.NA includes MediaSize values for North
  *  American media.
@@ -74,4 +75,10 @@ final object MediaSize.NA extends Object {
      */
     @stub
     val NA_NUMBER_14_ENVELOPE: MediaSize = ???
+
+    /** Specifies the North American Number 9 business envelope size,
+     *  3.875 inches by 8.875 inches.
+     */
+    @stub
+    val NA_NUMBER_9_ENVELOPE: MediaSize = ???
 }

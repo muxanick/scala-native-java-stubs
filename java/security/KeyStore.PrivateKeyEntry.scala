@@ -1,8 +1,9 @@
 package java.security
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.security.cert.Certificate
 import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** A KeyStore entry that holds a PrivateKey
  *  and corresponding certificate chain.
@@ -14,6 +15,12 @@ final object KeyStore.PrivateKeyEntry extends Object with KeyStore.Entry {
      */
     @stub
     def PrivateKeyEntry(privateKey: PrivateKey, chain: Array[Certificate]) = ???
+
+    /** Constructs a PrivateKeyEntry with a PrivateKey and
+     *  corresponding certificate chain and associated entry attributes.
+     */
+    @stub
+    def PrivateKeyEntry(privateKey: PrivateKey, chain: Array[Certificate], attributes: Set[KeyStore.Entry.Attribute]) = ???
 
     /** Retrieves the attributes associated with an entry. */
     @stub
@@ -32,4 +39,8 @@ final object KeyStore.PrivateKeyEntry extends Object with KeyStore.Entry {
     /** Gets the PrivateKey from this entry. */
     @stub
     def getPrivateKey(): PrivateKey = ???
+
+    /** Returns a string representation of this PrivateKeyEntry. */
+    @stub
+    def toString(): String = ???
 }

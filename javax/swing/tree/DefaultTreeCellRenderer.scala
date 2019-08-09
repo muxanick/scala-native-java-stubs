@@ -3,6 +3,7 @@ package javax.swing.tree
 import java.awt.{Color, Component, Container, Dimension, Font, Graphics, Rectangle}
 import java.lang.{Object, String}
 import javax.swing.{Icon, JComponent, JLabel, JTree}
+import scala.scalanative.annotation.stub
 
 /** Displays an entry in a tree.
  *  DefaultTreeCellRenderer is not opaque and
@@ -59,6 +60,10 @@ import javax.swing.{Icon, JComponent, JLabel, JTree}
  */
 class DefaultTreeCellRenderer extends JLabel with TreeCellRenderer {
 
+    /** Creates a DefaultTreeCellRenderer. */
+    @stub
+    def this() = ???
+
     /** Color to use for the background when the node isn't selected. */
     @stub
     protected val backgroundNonSelectionColor: Color = ???
@@ -94,6 +99,10 @@ class DefaultTreeCellRenderer extends JLabel with TreeCellRenderer {
     /** Color to use for the foreground for non-selected nodes. */
     @stub
     protected val textNonSelectionColor: Color = ???
+
+    /** Color to use for the foreground for selected nodes. */
+    @stub
+    protected val textSelectionColor: Color = ???
 
     /** Overridden for performance reasons. */
     @stub
@@ -264,4 +273,8 @@ class DefaultTreeCellRenderer extends JLabel with TreeCellRenderer {
     /** Resets the UI property to a value from the current look and feel. */
     @stub
     def updateUI(): Unit = ???
+
+    /** Overridden for performance reasons. */
+    @stub
+    def validate(): Unit = ???
 }

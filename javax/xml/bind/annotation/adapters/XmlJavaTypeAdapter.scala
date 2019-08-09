@@ -1,7 +1,9 @@
 package javax.xml.bind.annotation.adapters
 
+import java.lang.Class
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Use an adapter that implements XmlAdapter for custom marshaling.
  * 
@@ -45,4 +47,14 @@ import scala.annotation.StaticAnnotation
 @Retention ( value = RUNTIME ) 
 @Target ( value ={ PACKAGE , FIELD , METHOD , TYPE , PARAMETER } ) 
  final class XmlJavaTypeAdapter extends StaticAnnotation {
+
+    /** Points to the class that converts a value type to a bound type or vice versa. */
+    @stub
+    val value: Class[_ <: XmlAdapter] = ???
+
+    /** If this annotation is used at the package level, then value of
+     *  the type() must be specified.
+     */
+    @stub
+    val type: Class = ???
 }

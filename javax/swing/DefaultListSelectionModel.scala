@@ -1,9 +1,10 @@
 package javax.swing
 
 import java.io.Serializable
-import java.lang.{Class, Cloneable, Object}
+import java.lang.{Class, Cloneable, Object, String}
 import java.util.EventListener
-import javax.swing.event.ListSelectionListener
+import javax.swing.event.{EventListenerList, ListSelectionListener}
+import scala.scalanative.annotation.stub
 
 /** Default data model for list selections.
  *  
@@ -20,7 +21,15 @@ class DefaultListSelectionModel extends Object with ListSelectionModel with Clon
 
     /**  */
     @stub
+    def this() = ???
+
+    /**  */
+    @stub
     protected val leadAnchorNotificationEnabled: Boolean = ???
+
+    /**  */
+    @stub
+    protected val listenerList: EventListenerList = ???
 
     /** Add a listener to the list that's notified each time a change
      *  to the selection occurs.
@@ -166,4 +175,10 @@ class DefaultListSelectionModel extends Object with ListSelectionModel with Clon
      */
     @stub
     def setValueIsAdjusting(isAdjusting: Boolean): Unit = ???
+
+    /** Returns a string that displays and identifies this
+     *  object's properties.
+     */
+    @stub
+    def toString(): String = ???
 }

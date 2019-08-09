@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A facility for threads to schedule tasks for future execution in a
  *  background thread.  Tasks may be scheduled for one-time execution, or for
@@ -67,6 +68,13 @@ class Timer extends Object {
     @stub
     def this(name: String) = ???
 
+    /** Creates a new timer whose associated thread has the specified name,
+     *  and may be specified to
+     *  run as a daemon.
+     */
+    @stub
+    def this(name: String, isDaemon: Boolean) = ???
+
     /** Terminates this timer, discarding any currently scheduled tasks. */
     @stub
     def cancel(): Unit = ???
@@ -100,4 +108,10 @@ class Timer extends Object {
      */
     @stub
     def scheduleAtFixedRate(task: TimerTask, firstTime: Date, period: Long): Unit = ???
+
+    /** Schedules the specified task for repeated fixed-rate execution,
+     *  beginning after the specified delay.
+     */
+    @stub
+    def scheduleAtFixedRate(task: TimerTask, delay: Long, period: Long): Unit = ???
 }

@@ -1,7 +1,8 @@
 package javax.activation
 
-import java.io.InputStream
+import java.io.{InputStream, OutputStream}
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** The DataSource interface provides the JavaBeans Activation Framework
  *  with an abstraction of an arbitrary collection of data.  It
@@ -29,4 +30,11 @@ trait DataSource {
      */
     @stub
     def getName(): String = ???
+
+    /** This method returns an OutputStream where the
+     *  data can be written and throws the appropriate exception if it can
+     *  not do so.
+     */
+    @stub
+    def getOutputStream(): OutputStream = ???
 }

@@ -3,6 +3,7 @@ package javax.management
 import java.lang.{Object, String}
 import java.util.ArrayList
 import javax.management.loading.ClassLoaderRepository
+import scala.scalanative.annotation.stub
 
 /** Provides MBean server references.  There are no instances of
  *  this class.
@@ -83,4 +84,10 @@ object MBeanServerFactory {
      */
     @stub
     def newMBeanServer(domain: String): MBeanServer = ???
+
+    /** Remove internal MBeanServerFactory references to a created
+     *  MBeanServer.
+     */
+    @stub
+    def releaseMBeanServer(mbeanServer: MBeanServer): Unit = ???
 }

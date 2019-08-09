@@ -1,8 +1,9 @@
 package java.io
 
 import java.lang.{Comparable, Object, String}
-import java.net.URI
+import java.net.{URI, URL}
 import java.nio.file.Path
+import scala.scalanative.annotation.stub
 
 /** An abstract representation of file and directory pathnames.
  * 
@@ -124,6 +125,12 @@ class File extends Object with Serializable with Comparable[File] {
      */
     @stub
     def this(parent: String, child: String) = ???
+
+    /** Creates a new File instance by converting the given
+     *  file: URI into an abstract pathname.
+     */
+    @stub
+    def this(uri: URI) = ???
 
     /** Tests whether the application can execute the file denoted by this
      *  abstract pathname.
@@ -372,6 +379,17 @@ class File extends Object with Serializable with Comparable[File] {
     /** Constructs a file: URI that represents this abstract pathname. */
     @stub
     def toURI(): URI = ???
+
+    /** Deprecated. 
+     * This method does not automatically escape characters that
+     *  are illegal in URLs.  It is recommended that new code convert an
+     *  abstract pathname into a URL by first converting it into a URI, via the
+     *  toURI method, and then converting the URI into a URL
+     *  via the URI.toURL method.
+     * 
+     */
+    @stub
+    def toURL(): URL = ???
 }
 
 object File {
@@ -390,6 +408,10 @@ object File {
      */
     @stub
     val separator: String = ???
+
+    /** The system-dependent default name-separator character. */
+    @stub
+    val separatorChar: Char = ???
 
     /** Creates an empty file in the default temporary-file directory, using
      *  the given prefix and suffix to generate its name.

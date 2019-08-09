@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class represents an observable object, or "data"
  *  in the model-view paradigm. It can be subclassed to represent an
@@ -29,6 +30,10 @@ import java.lang.Object
  *  equals method returns true for them.
  */
 class Observable extends Object {
+
+    /** Construct an Observable with zero Observers. */
+    @stub
+    def this() = ???
 
     /** Adds an observer to the set of observers for this object, provided
      *  that it is not the same as some observer already in the set.
@@ -74,4 +79,10 @@ class Observable extends Object {
      */
     @stub
     def notifyObservers(arg: Object): Unit = ???
+
+    /** Marks this Observable object as having been changed; the
+     *  hasChanged method will now return true.
+     */
+    @stub
+    protected def setChanged(): Unit = ???
 }

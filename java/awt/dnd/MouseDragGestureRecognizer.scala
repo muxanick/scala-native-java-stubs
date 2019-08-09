@@ -3,6 +3,7 @@ package java.awt.dnd
 import java.awt.Component
 import java.awt.event.{MouseEvent, MouseListener, MouseMotionListener}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This abstract subclass of DragGestureRecognizer
  *  defines a DragGestureRecognizer
@@ -52,6 +53,17 @@ abstract class MouseDragGestureRecognizer extends DragGestureRecognizer with Mou
     @stub
     protected def this(ds: DragSource, c: Component, act: Int) = ???
 
+    /** Construct a new MouseDragGestureRecognizer
+     *  given the DragSource for the
+     *  Component c, the Component
+     *  to observe, the action(s)
+     *  permitted for this drag operation, and
+     *  the DragGestureListener to
+     *  notify when a drag gesture is detected.
+     */
+    @stub
+    protected def this(ds: DragSource, c: Component, act: Int, dgl: DragGestureListener) = ???
+
     /** Invoked when the mouse has been clicked on a component. */
     def mouseClicked(e: MouseEvent): Unit
 
@@ -79,4 +91,10 @@ abstract class MouseDragGestureRecognizer extends DragGestureRecognizer with Mou
 
     /** register this DragGestureRecognizer's Listeners with the Component */
     protected def registerListeners(): Unit
+
+    /** unregister this DragGestureRecognizer's Listeners with the Component
+     * 
+     *  subclasses must override this method
+     */
+    protected def unregisterListeners(): Unit
 }

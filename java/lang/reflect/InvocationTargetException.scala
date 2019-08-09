@@ -1,6 +1,7 @@
 package java.lang.reflect
 
-import java.lang.{Exception, Object, ReflectiveOperationException, Throwable}
+import java.lang.{Exception, Object, ReflectiveOperationException, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** InvocationTargetException is a checked exception that wraps
  *  an exception thrown by an invoked method or constructor.
@@ -24,9 +25,19 @@ class InvocationTargetException extends ReflectiveOperationException {
     @stub
     def this(target: Throwable) = ???
 
+    /** Constructs a InvocationTargetException with a target exception
+     *  and a detail message.
+     */
+    @stub
+    def this(target: Throwable, s: String) = ???
+
     /** Returns the cause of this exception (the thrown target exception,
      *  which may be null).
      */
     @stub
     def getCause(): Throwable = ???
+
+    /** Get the thrown target exception. */
+    @stub
+    def getTargetException(): Throwable = ???
 }

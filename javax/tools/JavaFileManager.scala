@@ -1,8 +1,9 @@
 package javax.tools
 
 import java.io.{Closeable, Flushable}
-import java.lang.{ClassLoader, String}
-import java.util.Iterator
+import java.lang.{ClassLoader, Iterable, String}
+import java.util.{Iterator, Set}
+import scala.scalanative.annotation.stub
 
 /** File manager for tools operating on Java™ programming language
  *  source and class files.  In this context, file means an
@@ -129,4 +130,16 @@ trait JavaFileManager extends Closeable with Flushable with OptionChecker {
      */
     @stub
     def isSameFile(a: FileObject, b: FileObject): Boolean = ???
+
+    /** Lists all file objects matching the given criteria in the given
+     *  location.
+     */
+    @stub
+    def list(location: JavaFileManager.Location, packageName: String, kinds: Set[JavaFileObject.Kind], recurse: Boolean): Iterable[JavaFileObject] = ???
+}
+
+object JavaFileManager {
+    /** Interface for locations of file objects. */
+    @stub
+    val JavaFileManager.Location: trait = ???
 }

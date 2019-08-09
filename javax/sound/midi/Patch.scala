@@ -1,6 +1,7 @@
 package javax.sound.midi
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A Patch object represents a location, on a MIDI
  *  synthesizer, into which a single instrument is stored (loaded).
@@ -23,9 +24,21 @@ import java.lang.Object
  */
 class Patch extends Object {
 
+    /** Constructs a new patch object from the specified bank and program
+     *  numbers.
+     */
+    @stub
+    def this(bank: Int, program: Int) = ???
+
     /** Returns the number of the bank that contains the instrument
      *  whose location this Patch specifies.
      */
     @stub
     def getBank(): Int = ???
+
+    /** Returns the index, within
+     *  a bank, of the instrument whose location this Patch specifies.
+     */
+    @stub
+    def getProgram(): Int = ???
 }

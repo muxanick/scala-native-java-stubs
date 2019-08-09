@@ -1,6 +1,8 @@
 package javax.swing.plaf.synth
 
 import java.lang.Object
+import javax.swing.JComponent
+import scala.scalanative.annotation.stub
 
 /** Factory used for obtaining SynthStyles.  Each of the
  *  Synth ComponentUIs will call into the current
@@ -27,4 +29,11 @@ import java.lang.Object
  *  
  */
 abstract class SynthStyleFactory extends Object {
+
+    /** Creates a SynthStyleFactory. */
+    @stub
+    def this() = ???
+
+    /** Returns the style for the specified Component. */
+    def getStyle(c: JComponent, id: Region): SynthStyle
 }

@@ -1,6 +1,8 @@
 package java.net
 
+import java.io.OutputStream
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Represents channels for storing resources in the
  *  ResponseCache. Instances of such a class provide an
@@ -13,6 +15,15 @@ import java.lang.Object
  */
 abstract class CacheRequest extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Aborts the attempt to cache the response. */
     def abort(): Unit
+
+    /** Returns an OutputStream to which the response body can be
+     *  written.
+     */
+    def getBody(): OutputStream
 }

@@ -1,5 +1,8 @@
 package java.lang.management
 
+import javax.management.ObjectName
+import scala.scalanative.annotation.stub
+
 /** A platform managed object is a JMX MXBean
  *  for monitoring and managing a component in the Java platform.
  *  Each platform managed object has a unique
@@ -18,4 +21,10 @@ package java.lang.management
  *  not for applications.
  */
 trait PlatformManagedObject {
+
+    /** Returns an ObjectName instance representing
+     *  the object name of this platform managed object.
+     */
+    @stub
+    def getObjectName(): ObjectName = ???
 }

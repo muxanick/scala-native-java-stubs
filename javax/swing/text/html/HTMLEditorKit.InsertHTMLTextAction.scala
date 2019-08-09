@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent
 import java.lang.{Object, String}
 import javax.swing.{AbstractAction, JEditorPane}
 import javax.swing.text.{Element, StyledEditorKit.StyledTextAction, TextAction}
+import scala.scalanative.annotation.stub
 
 /** InsertHTMLTextAction can be used to insert an arbitrary string of HTML
  *  into an existing HTML document. At least two HTML.Tags need to be
@@ -27,6 +28,10 @@ object HTMLEditorKit.InsertHTMLTextAction extends HTMLEditorKit.HTMLTextAction {
     @stub
     def InsertHTMLTextAction(name: String, html: String, parentTag: HTML.Tag, addTag: HTML.Tag) = ???
 
+    /**  */
+    @stub
+    def InsertHTMLTextAction(name: String, html: String, parentTag: HTML.Tag, addTag: HTML.Tag, alternateParentTag: HTML.Tag, alternateAddTag: HTML.Tag) = ???
+
     /** Tag in HTML to start adding tags from. */
     @stub
     protected val addTag: HTML.Tag = ???
@@ -47,6 +52,10 @@ object HTMLEditorKit.InsertHTMLTextAction extends HTMLEditorKit.HTMLTextAction {
     @stub
     protected val html: String = ???
 
+    /** Tag to check for in the document. */
+    @stub
+    protected val parentTag: HTML.Tag = ???
+
     /** Inserts the HTML into the document. */
     @stub
     def actionPerformed(ae: ActionEvent): Unit = ???
@@ -61,4 +70,8 @@ object HTMLEditorKit.InsertHTMLTextAction extends HTMLEditorKit.HTMLTextAction {
      */
     @stub
     protected def insertAtBoundry(editor: JEditorPane, doc: HTMLDocument, offset: Int, insertElement: Element, html: String, parentTag: HTML.Tag, addTag: HTML.Tag): Unit = ???
+
+    /** A cover for HTMLEditorKit.insertHTML. */
+    @stub
+    protected def insertHTML(editor: JEditorPane, doc: HTMLDocument, offset: Int, html: String, popDepth: Int, pushDepth: Int, addTag: HTML.Tag): Unit = ???
 }

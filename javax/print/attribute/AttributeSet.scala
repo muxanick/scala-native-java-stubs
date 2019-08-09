@@ -1,6 +1,7 @@
 package javax.print.attribute
 
 import java.lang.{Class, Object}
+import scala.scalanative.annotation.stub
 
 /** Interface AttributeSet specifies the interface for a set of printing
  *  attributes. A printing attribute is an object whose class implements
@@ -126,4 +127,8 @@ trait AttributeSet {
     /** Returns the number of attributes in this attribute set. */
     @stub
     def size(): Int = ???
+
+    /** Returns an array of the attributes contained in this set. */
+    @stub
+    def toArray(): Array[Attribute] = ???
 }

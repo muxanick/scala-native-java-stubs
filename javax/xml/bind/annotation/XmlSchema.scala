@@ -3,6 +3,7 @@ package javax.xml.bind.annotation
 import java.lang.String
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /**  Maps a package name to a XML namespace. 
  * 
@@ -106,4 +107,17 @@ import scala.annotation.StaticAnnotation
     /** Name of the XML namespace. */
     @stub
     val namespace: String = ???
+
+    /** Customize the namespace URI, prefix associations. */
+    @stub
+    val xmlns: Array[XmlNs] = ???
+}
+
+object XmlSchema {
+    /** The default value of the location() attribute,
+     *  which indicates that the schema generator will generate
+     *  components in this namespace.
+     */
+    @stub
+    val NO_LOCATION: String = ???
 }

@@ -3,6 +3,7 @@ package java.net
 import java.io.Closeable
 import java.lang.Object
 import java.nio.channels.DatagramChannel
+import scala.scalanative.annotation.stub
 
 /** This class represents a socket for sending and receiving datagram packets.
  * 
@@ -54,6 +55,12 @@ class DatagramSocket extends Object with Closeable {
      */
     @stub
     def this(port: Int, laddr: InetAddress) = ???
+
+    /** Creates a datagram socket, bound to the specified local
+     *  socket address.
+     */
+    @stub
+    def this(bindaddr: SocketAddress) = ???
 
     /** Binds this DatagramSocket to a specific address and port. */
     @stub
@@ -184,6 +191,12 @@ class DatagramSocket extends Object with Closeable {
      */
     @stub
     def setSoTimeout(timeout: Int): Unit = ???
+
+    /** Sets traffic class or type-of-service octet in the IP
+     *  datagram header for datagrams sent from this DatagramSocket.
+     */
+    @stub
+    def setTrafficClass(tc: Int): Unit = ???
 }
 
 object DatagramSocket {

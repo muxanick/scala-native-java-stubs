@@ -1,6 +1,7 @@
 package java.text
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** An Annotation object is used as a wrapper for a text attribute value if
  *  the attribute has annotation characteristics. These characteristics are:
@@ -28,7 +29,17 @@ import java.lang.Object
  */
 class Annotation extends Object {
 
+    /** Constructs an annotation record with the given value, which
+     *  may be null.
+     */
+    @stub
+    def this(value: Object) = ???
+
     /** Returns the value of the attribute, which may be null. */
     @stub
     def getValue(): Object = ???
+
+    /** Returns the String representation of this Annotation. */
+    @stub
+    def toString(): String = ???
 }

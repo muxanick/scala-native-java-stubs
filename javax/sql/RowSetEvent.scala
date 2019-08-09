@@ -2,6 +2,7 @@ package javax.sql
 
 import java.lang.Object
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** An Event object generated when an event occurs to a
  *  RowSet object.  A RowSetEvent object is
@@ -16,4 +17,10 @@ import java.util.EventObject
  *  the source of the event.
  */
 class RowSetEvent extends EventObject {
+
+    /** Constructs a RowSetEvent object initialized with the
+     *  given RowSet object.
+     */
+    @stub
+    def this(source: RowSet) = ???
 }

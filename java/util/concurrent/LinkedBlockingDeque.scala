@@ -1,8 +1,9 @@
 package java.util.concurrent
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.{AbstractCollection, AbstractQueue, Collection, Iterator, Spliterator}
+import scala.scalanative.annotation.stub
 
 /** An optionally-bounded blocking deque based on
  *  linked nodes.
@@ -40,6 +41,10 @@ class LinkedBlockingDeque[E] extends AbstractQueue[E] with BlockingDeque[E] with
      */
     @stub
     def this(c: Collection[_ <: E]) = ???
+
+    /** Creates a LinkedBlockingDeque with the given (fixed) capacity. */
+    @stub
+    def this(capacity: Int) = ???
 
     /** Inserts the specified element at the end of this deque unless it would
      *  violate capacity restrictions.
@@ -313,4 +318,8 @@ class LinkedBlockingDeque[E] extends AbstractQueue[E] with BlockingDeque[E] with
      */
     @stub
     def toArray[T](a: Array[T]): Array[T] = ???
+
+    /** Returns a string representation of this collection. */
+    @stub
+    def toString(): String = ???
 }

@@ -1,7 +1,8 @@
 package java.awt.image
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.math.BigInteger
+import scala.scalanative.annotation.stub
 
 /** The IndexColorModel class is a ColorModel
  *  class that works with pixel values consisting of a
@@ -129,6 +130,14 @@ class IndexColorModel extends ColorModel {
      */
     @stub
     def this(bits: Int, size: Int, cmap: Array[Int], start: Int, hasalpha: Boolean, trans: Int, transferType: Int) = ???
+
+    /** Constructs an IndexColorModel from an
+     *  int array where each int is
+     *  comprised of red, green, blue, and alpha
+     *  components in the default RGB color model format.
+     */
+    @stub
+    def this(bits: Int, size: Int, cmap: Array[Int], start: Int, transferType: Int, validBits: BigInteger) = ???
 
     /** Returns a new BufferedImage of TYPE_INT_ARGB or
      *  TYPE_INT_RGB that has a Raster with pixel data
@@ -294,4 +303,10 @@ class IndexColorModel extends ColorModel {
     /** Returns whether or not the pixel is valid. */
     @stub
     def isValid(pixel: Int): Boolean = ???
+
+    /** Returns the String representation of the contents of
+     *  this ColorModelobject.
+     */
+    @stub
+    def toString(): String = ???
 }

@@ -3,6 +3,7 @@ package java.util.concurrent.atomic
 import java.io.Serializable
 import java.lang.{Number, Object, String}
 import java.util.function.{LongBinaryOperator, LongUnaryOperator}
+import scala.scalanative.annotation.stub
 
 /** A long value that may be updated atomically.  See the
  *  java.util.concurrent.atomic package specification for
@@ -18,6 +19,10 @@ class AtomicLong extends Number with Serializable {
     /** Creates a new AtomicLong with initial value 0. */
     @stub
     def this() = ???
+
+    /** Creates a new AtomicLong with the given initial value. */
+    @stub
+    def this(initialValue: Long) = ???
 
     /** Atomically updates the current value with the results of
      *  applying the given function to the current and given values,
@@ -116,4 +121,10 @@ class AtomicLong extends Number with Serializable {
      */
     @stub
     def updateAndGet(updateFunction: LongUnaryOperator): Long = ???
+
+    /** Atomically sets the value to the given updated value
+     *  if the current value == the expected value.
+     */
+    @stub
+    def weakCompareAndSet(expect: Long, update: Long): Boolean = ???
 }

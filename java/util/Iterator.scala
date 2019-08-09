@@ -1,6 +1,7 @@
 package java.util
 
 import java.util.function.Consumer
+import scala.scalanative.annotation.stub
 
 /** An iterator over a collection.  Iterator takes the place of
  *  Enumeration in the Java Collections Framework.  Iterators
@@ -32,4 +33,10 @@ trait Iterator[E] {
     /** Returns the next element in the iteration. */
     @stub
     def next(): E = ???
+
+    /** Removes from the underlying collection the last element returned
+     *  by this iterator (optional operation).
+     */
+    @stub
+    val Unit: default = ???
 }

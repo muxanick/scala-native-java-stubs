@@ -3,6 +3,7 @@ package java.util
 import java.lang.{Iterable, Object}
 import java.util.function.Predicate
 import java.util.stream.Stream
+import scala.scalanative.annotation.stub
 
 /** The root interface in the collection hierarchy.  A collection
  *  represents a group of objects, known as its elements.  Some
@@ -178,4 +179,10 @@ trait Collection[E] extends Iterable[E] {
     /** Returns an array containing all of the elements in this collection. */
     @stub
     def toArray(): Array[Object] = ???
+
+    /** Returns an array containing all of the elements in this collection;
+     *  the runtime type of the returned array is that of the specified array.
+     */
+    @stub
+    def toArray[T](a: Array[T]): Array[T] = ???
 }

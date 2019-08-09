@@ -1,6 +1,7 @@
 package javax.swing
 
 import javax.swing.event.ListDataListener
+import scala.scalanative.annotation.stub
 
 /** This interface defines the methods components like JList use
  *  to get the value of each cell in a list and the length of the list.
@@ -24,4 +25,10 @@ trait ListModel[E] {
     /** Returns the length of the list. */
     @stub
     def getSize(): Int = ???
+
+    /** Removes a listener from the list that's notified each time a
+     *  change to the data model occurs.
+     */
+    @stub
+    def removeListDataListener(l: ListDataListener): Unit = ???
 }

@@ -2,9 +2,14 @@ package javax.swing.plaf.metal
 
 import java.lang.Object
 import javax.swing.border.Border
+import scala.scalanative.annotation.stub
 
 /** Factory object that can vend Borders appropriate for the metal L & F. */
 class MetalBorders extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 }
 
 object MetalBorders {
@@ -60,6 +65,10 @@ object MetalBorders {
     @stub
     object ToggleButtonBorder extends MetalBorders.ToggleButtonBorder
 
+    /**  */
+    @stub
+    object ToolBarBorder extends MetalBorders.ToolBarBorder
+
     /** Returns a border instance for a JButton */
     @stub
     def getButtonBorder(): Border = ???
@@ -75,4 +84,8 @@ object MetalBorders {
     /** Returns a border instance for a JTextField */
     @stub
     def getTextFieldBorder(): Border = ???
+
+    /** Returns a border instance for a JToggleButton */
+    @stub
+    def getToggleButtonBorder(): Border = ???
 }

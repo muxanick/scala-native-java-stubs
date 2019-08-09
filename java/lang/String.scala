@@ -2,7 +2,8 @@ package java.lang
 
 import java.io.Serializable
 import java.nio.charset.Charset
-import java.util.Locale
+import java.util.{Comparator, Locale}
+import scala.scalanative.annotation.stub
 
 /** The String class represents character strings. All
  *  string literals in Java programs, such as "abc", are
@@ -156,6 +157,12 @@ final class String extends Object with Serializable with Comparable[String] with
      */
     @stub
     def this(buffer: StringBuffer) = ???
+
+    /** Allocates a new string that contains the sequence of characters
+     *  currently contained in the string builder argument.
+     */
+    @stub
+    def this(builder: StringBuilder) = ???
 
     /** Returns the char value at the
      *  specified index.
@@ -437,6 +444,12 @@ final class String extends Object with Serializable with Comparable[String] with
 }
 
 object String {
+    /** A Comparator that orders String objects as by
+     *  compareToIgnoreCase.
+     */
+    @stub
+    val CASE_INSENSITIVE_ORDER: Comparator[String] = ???
+
     /** Equivalent to valueOf(char[]). */
     @stub
     def copyValueOf(data: Array[Char]): String = ???
@@ -508,4 +521,8 @@ object String {
     /** Returns the string representation of the long argument. */
     @stub
     def valueOf(l: Long): String = ???
+
+    /** Returns the string representation of the Object argument. */
+    @stub
+    def valueOf(obj: Object): String = ???
 }

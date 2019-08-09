@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, SetOfIntegerSyntax, SupportedValuesAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class JobMediaSheetsSupported is a printing attribute class, a set of
  *  integers, that gives the supported values for a JobMediaSheets attribute. It is restricted to a single contiguous range of
@@ -18,6 +19,12 @@ import javax.print.attribute.{Attribute, SetOfIntegerSyntax, SupportedValuesAttr
  */
 final class JobMediaSheetsSupported extends SetOfIntegerSyntax with SupportedValuesAttribute {
 
+    /** Construct a new job media sheets supported attribute containing a single
+     *  range of integers.
+     */
+    @stub
+    def this(lowerBound: Int, upperBound: Int) = ???
+
     /** Returns whether this job media sheets supported attribute is equivalent
      *  to the passed in object.
      */
@@ -29,4 +36,10 @@ final class JobMediaSheetsSupported extends SetOfIntegerSyntax with SupportedVal
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

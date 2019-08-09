@@ -1,6 +1,7 @@
 package java.nio.file.attribute
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** A file attribute view that provides a view of a basic set of file
  *  attributes common to many file systems. The basic set of file attributes
@@ -75,4 +76,10 @@ trait BasicFileAttributeView extends FileAttributeView {
     /** Reads the basic file attributes as a bulk operation. */
     @stub
     def readAttributes(): BasicFileAttributes = ???
+
+    /** Updates any or all of the file's last modified time, last access time,
+     *  and create time attributes.
+     */
+    @stub
+    def setTimes(lastModifiedTime: FileTime, lastAccessTime: FileTime, createTime: FileTime): Unit = ???
 }

@@ -2,6 +2,7 @@ package java.awt.geom
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** This class defines an arc specified in float precision. */
 object Arc2D.Float extends Arc2D with Serializable {
@@ -24,6 +25,12 @@ object Arc2D.Float extends Arc2D with Serializable {
      */
     @stub
     def Float(type: Int) = ???
+
+    /** Constructs a new arc, initialized to the specified location,
+     *  size, angular extents, and closure type.
+     */
+    @stub
+    def Float(ellipseBounds: Rectangle2D, start: Float, extent: Float, type: Int) = ???
 
     /** The angular extent of the arc in degrees. */
     @stub
@@ -52,6 +59,12 @@ object Arc2D.Float extends Arc2D with Serializable {
      */
     @stub
     val x: Float = ???
+
+    /** The Y coordinate of the upper-left corner of the framing
+     *  rectangle of the arc.
+     */
+    @stub
+    val y: Float = ???
 
     /** Returns the angular extent of the arc. */
     @stub
@@ -107,4 +120,10 @@ object Arc2D.Float extends Arc2D with Serializable {
      */
     @stub
     def setAngleStart(angSt: Double): Unit = ???
+
+    /** Sets the location, size, angular extents, and closure type of
+     *  this arc to the specified double values.
+     */
+    @stub
+    def setArc(x: Double, y: Double, w: Double, h: Double, angSt: Double, angExt: Double, closure: Int): Unit = ???
 }

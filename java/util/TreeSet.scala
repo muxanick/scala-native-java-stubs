@@ -2,6 +2,7 @@ package java.util
 
 import java.io.Serializable
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** A NavigableSet implementation based on a TreeMap.
  *  The elements are ordered using their natural
@@ -74,6 +75,12 @@ class TreeSet[E] extends AbstractSet[E] with NavigableSet[E] with Cloneable with
      */
     @stub
     def this(comparator: Comparator[_ >: E]) = ???
+
+    /** Constructs a new tree set containing the same elements and
+     *  using the same ordering as the specified sorted set.
+     */
+    @stub
+    def this(s: SortedSet[E]) = ???
 
     /** Adds the specified element to this set if it is not already present. */
     @stub
@@ -206,4 +213,10 @@ class TreeSet[E] extends AbstractSet[E] with NavigableSet[E] with Cloneable with
      */
     @stub
     def tailSet(fromElement: E): SortedSet[E] = ???
+
+    /** Returns a view of the portion of this set whose elements are greater
+     *  than (or equal to, if inclusive is true) fromElement.
+     */
+    @stub
+    def tailSet(fromElement: E, inclusive: Boolean): NavigableSet[E] = ???
 }

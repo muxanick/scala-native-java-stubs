@@ -1,6 +1,9 @@
 package javax.print
 
+import java.awt.GraphicsConfiguration
 import java.lang.Object
+import javax.print.attribute.PrintRequestAttributeSet
+import scala.scalanative.annotation.stub
 
 /** This class is a collection of UI convenience methods which provide a
  *  graphical user dialog for browsing print services looked up through the Java
@@ -27,4 +30,14 @@ import java.lang.Object
  *  on the presence of the AWT packages.
  */
 class ServiceUI extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
+}
+
+object ServiceUI {
+    /** Presents a dialog to the user for selecting a print service (printer). */
+    @stub
+    def printDialog(gc: GraphicsConfiguration, x: Int, y: Int, services: Array[PrintService], defaultService: PrintService, flavor: DocFlavor, attributes: PrintRequestAttributeSet): PrintService = ???
 }

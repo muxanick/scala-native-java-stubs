@@ -1,6 +1,7 @@
 package java.lang
 
 import java.io.File
+import scala.scalanative.annotation.stub
 
 /** Represents a source of subprocess input or a destination of
  *  subprocess output.
@@ -23,11 +24,21 @@ import java.io.File
  */
 object abstract ProcessBuilder.Redirect extends Object {
 
+    /** The type of a ProcessBuilder.Redirect. */
+    @stub
+    object Type extends ProcessBuilder.Redirect.Type
+
     /** Indicates that subprocess I/O source or destination will be the
      *  same as those of the current process.
      */
     @stub
     val INHERIT: ProcessBuilder.Redirect = ???
+
+    /** Indicates that subprocess I/O will be connected to the
+     *  current Java process over a pipe.
+     */
+    @stub
+    val PIPE: ProcessBuilder.Redirect = ???
 
     /** Returns a redirect to append to the specified file. */
     @stub
@@ -56,4 +67,8 @@ object abstract ProcessBuilder.Redirect extends Object {
     /** Returns a redirect to write to the specified file. */
     @stub
     def to(file: File): ProcessBuilder.Redirect = ???
+
+    /** Returns the type of this Redirect. */
+    @stub
+    def type(): ProcessBuilder.Redirect.Type
 }

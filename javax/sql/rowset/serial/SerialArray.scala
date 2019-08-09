@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{Class, Cloneable, Object, String}
 import java.sql.{Array, ResultSet}
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** A serialized version of an Array
  *  object, which is the mapping in the Java programming language of an SQL
@@ -35,6 +36,13 @@ class SerialArray extends Object with Array with Serializable with Cloneable {
      */
     @stub
     def this(array: Array) = ???
+
+    /** Constructs a new SerialArray object from the given
+     *  Array object, using the given type map for the custom
+     *  mapping of each element when the elements are SQL UDTs.
+     */
+    @stub
+    def this(array: Array, map: Map[String, Class[_]]) = ???
 
     /** Returns a clone of this SerialArray. */
     @stub
@@ -120,4 +128,8 @@ class SerialArray extends Object with Array with Serializable with Cloneable {
      */
     @stub
     def getResultSet(map: Map[String, Class[_]]): ResultSet = ???
+
+    /** Returns a hash code for this SerialArray. */
+    @stub
+    def hashCode(): Int = ???
 }

@@ -3,6 +3,7 @@ package javax.swing.text
 import java.awt.Rectangle
 import java.lang.Object
 import javax.swing.event.DocumentEvent
+import scala.scalanative.annotation.stub
 
 /** Strategy for maintaining the physical form
  *  of the flow.  The default implementation is
@@ -14,6 +15,10 @@ import javax.swing.event.DocumentEvent
  *  or alternative breaking behavior.
  */
 object FlowView.FlowStrategy extends Object {
+
+    /**  */
+    @stub
+    def FlowStrategy() = ???
 
     /** Adjusts the given row if possible to fit within the
      *  layout span.
@@ -54,4 +59,10 @@ object FlowView.FlowStrategy extends Object {
      */
     @stub
     protected def layoutRow(fv: FlowView, rowIndex: Int, pos: Int): Int = ???
+
+    /** Gives notification that something was removed from the document
+     *  in a location that the given flow view is responsible for.
+     */
+    @stub
+    def removeUpdate(fv: FlowView, e: DocumentEvent, alloc: Rectangle): Unit = ???
 }

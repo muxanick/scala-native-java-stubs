@@ -1,7 +1,8 @@
 package javax.swing.text
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** This class holds a small number of attributes in an array.
  *  The storage format is key, value, key, value, etc.  The size
@@ -14,6 +15,10 @@ class StyleContext.SmallAttributeSet extends Object with AttributeSet {
     /**  */
     @stub
     def SmallAttributeSet(attrs: AttributeSet) = ???
+
+    /**  */
+    @stub
+    def SmallAttributeSet(attributes: Array[Object]) = ???
 
     /** Clones a set of attributes. */
     @stub
@@ -66,4 +71,8 @@ class StyleContext.SmallAttributeSet extends Object with AttributeSet {
     /** Checks whether two attribute sets are equal. */
     @stub
     def isEqual(attr: AttributeSet): Boolean = ???
+
+    /** Returns a string showing the key/value pairs */
+    @stub
+    def toString(): String = ???
 }

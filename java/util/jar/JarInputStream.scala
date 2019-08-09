@@ -3,6 +3,7 @@ package java.util.jar
 import java.io.{FilterInputStream, InputStream}
 import java.lang.{Object, String}
 import java.util.zip.{InflaterInputStream, ZipEntry, ZipInputStream}
+import scala.scalanative.annotation.stub
 
 /** The JarInputStream class is used to read the contents of
  *  a JAR file from any input stream. It extends the class
@@ -17,6 +18,12 @@ class JarInputStream extends ZipInputStream {
      */
     @stub
     def this(in: InputStream) = ???
+
+    /** Creates a new JarInputStream and reads the optional
+     *  manifest.
+     */
+    @stub
+    def this(in: InputStream, verify: Boolean) = ???
 
     /** Creates a new JarEntry (ZipEntry) for the
      *  specified JAR file entry name.
@@ -41,6 +48,10 @@ class JarInputStream extends ZipInputStream {
      */
     @stub
     def getNextJarEntry(): JarEntry = ???
+
+    /** Reads from the current JAR file entry into an array of bytes. */
+    @stub
+    def read(b: Array[Byte], off: Int, len: Int): Int = ???
 }
 
 object JarInputStream {
@@ -199,4 +210,8 @@ object JarInputStream {
     /**  */
     @stub
     val LOCTIM: Int = ???
+
+    /**  */
+    @stub
+    val LOCVER: Int = ???
 }

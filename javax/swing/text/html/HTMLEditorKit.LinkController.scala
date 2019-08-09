@@ -4,11 +4,16 @@ import java.awt.event.{MouseAdapter, MouseEvent, MouseMotionListener}
 import java.io.Serializable
 import java.lang.Object
 import javax.swing.JEditorPane
+import scala.scalanative.annotation.stub
 
 /** Class to watch the associated component and fire
  *  hyperlink events on it when appropriate.
  */
 object HTMLEditorKit.LinkController extends MouseAdapter with MouseMotionListener with Serializable {
+
+    /**  */
+    @stub
+    def LinkController() = ???
 
     /** Calls linkActivated on the associated JEditorPane
      *  if the given position represents a link.
@@ -25,4 +30,10 @@ object HTMLEditorKit.LinkController extends MouseAdapter with MouseMotionListene
      */
     @stub
     def mouseDragged(e: MouseEvent): Unit = ???
+
+    /** Invoked when the mouse cursor has been moved onto a component
+     *  but no buttons have been pushed.
+     */
+    @stub
+    def mouseMoved(e: MouseEvent): Unit = ???
 }

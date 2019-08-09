@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** The Integer class wraps a value of the primitive type
  *  int in an object. An object of type Integer
  *  contains a single field whose type is int.
@@ -22,6 +24,13 @@ final class Integer extends Number with Comparable[Integer] {
      */
     @stub
     def this(value: Int) = ???
+
+    /** Constructs a newly allocated Integer object that
+     *  represents the int value indicated by the
+     *  String parameter.
+     */
+    @stub
+    def this(s: String) = ???
 
     /** Returns the value of this Integer as a byte
      *  after a narrowing primitive conversion.
@@ -102,6 +111,12 @@ object Integer {
      */
     @stub
     val SIZE: Int = ???
+
+    /** The Class instance representing the primitive type
+     *  int.
+     */
+    @stub
+    val TYPE: Class[Integer] = ???
 
     /** Returns the number of one-bits in the two's complement binary
      *  representation of the specified int value.
@@ -316,4 +331,11 @@ object Integer {
      */
     @stub
     def valueOf(s: String): Integer = ???
+
+    /** Returns an Integer object holding the value
+     *  extracted from the specified String when parsed
+     *  with the radix given by the second argument.
+     */
+    @stub
+    def valueOf(s: String, radix: Int): Integer = ???
 }

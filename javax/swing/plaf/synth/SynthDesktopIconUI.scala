@@ -6,9 +6,14 @@ import java.lang.Object
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, DesktopIconUI}
 import javax.swing.plaf.basic.BasicDesktopIconUI
+import scala.scalanative.annotation.stub
 
 /** Provides the Synth L&F UI delegate for a minimized internal frame on a desktop. */
 class SynthDesktopIconUI extends BasicDesktopIconUI with SynthUI with PropertyChangeListener {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the Context for the specified component. */
     @stub
@@ -49,6 +54,10 @@ class SynthDesktopIconUI extends BasicDesktopIconUI with SynthUI with PropertyCh
     /**  */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Notifies this UI delegate to repaint the specified component. */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object SynthDesktopIconUI {

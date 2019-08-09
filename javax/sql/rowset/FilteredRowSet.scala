@@ -1,5 +1,7 @@
 package javax.sql.rowset
 
+import scala.scalanative.annotation.stub
+
 /** The standard interface that all standard implementations of
  *  FilteredRowSet must implement. The FilteredRowSetImpl class
  *  provides the reference implementation which may be extended if required.
@@ -94,4 +96,11 @@ trait FilteredRowSet extends WebRowSet {
     /** Retrieves the active filter for this FilteredRowSet object. */
     @stub
     def getFilter(): Predicate = ???
+
+    /** Applies the given Predicate object to this
+     *  FilteredRowSet
+     *  object.
+     */
+    @stub
+    def setFilter(p: Predicate): Unit = ???
 }

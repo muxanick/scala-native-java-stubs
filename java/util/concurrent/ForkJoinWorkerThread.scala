@@ -1,6 +1,7 @@
 package java.util.concurrent
 
 import java.lang.{Object, Thread, Throwable}
+import scala.scalanative.annotation.stub
 
 /** A thread managed by a ForkJoinPool, which executes
  *  ForkJoinTasks.
@@ -13,6 +14,10 @@ import java.lang.{Object, Thread, Throwable}
  *  use it in a ForkJoinPool.
  */
 class ForkJoinWorkerThread extends Thread {
+
+    /** Creates a ForkJoinWorkerThread operating in the given pool. */
+    @stub
+    protected def this(pool: ForkJoinPool) = ???
 
     /** Returns the pool hosting this thread. */
     @stub
@@ -33,4 +38,10 @@ class ForkJoinWorkerThread extends Thread {
      */
     @stub
     protected def onTermination(exception: Throwable): Unit = ???
+
+    /** This method is required to be public, but should never be
+     *  called explicitly.
+     */
+    @stub
+    def run(): Unit = ???
 }

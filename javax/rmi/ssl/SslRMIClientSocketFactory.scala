@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{Object, String}
 import java.net.Socket
 import java.rmi.server.RMIClientSocketFactory
+import scala.scalanative.annotation.stub
 
 /** An SslRMIClientSocketFactory instance is used by the RMI
  *  runtime in order to obtain client sockets for RMI calls via SSL.
@@ -34,6 +35,10 @@ import java.rmi.server.RMIClientSocketFactory
  */
 class SslRMIClientSocketFactory extends Object with RMIClientSocketFactory with Serializable {
 
+    /** Creates a new SslRMIClientSocketFactory. */
+    @stub
+    def this() = ???
+
     /** Creates an SSL socket. */
     @stub
     def createSocket(host: String, port: Int): Socket = ???
@@ -41,4 +46,10 @@ class SslRMIClientSocketFactory extends Object with RMIClientSocketFactory with 
     /** Indicates whether some other object is "equal to" this one. */
     @stub
     def equals(obj: Object): Boolean = ???
+
+    /** Returns a hash code value for this
+     *  SslRMIClientSocketFactory.
+     */
+    @stub
+    def hashCode(): Int = ???
 }

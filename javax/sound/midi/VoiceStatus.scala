@@ -1,6 +1,7 @@
 package javax.sound.midi
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A VoiceStatus object contains information about the current
  *  status of one of the voices produced by a Synthesizer.
@@ -54,6 +55,10 @@ import java.lang.Object
  */
 class VoiceStatus extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Indicates whether the voice is currently processing a MIDI note. */
     @stub
     val active: Boolean = ???
@@ -73,4 +78,8 @@ class VoiceStatus extends Object {
     /** The program number of the instrument that this voice is currently using. */
     @stub
     val program: Int = ???
+
+    /** The current MIDI volume level for the voice. */
+    @stub
+    val volume: Int = ???
 }

@@ -1,7 +1,8 @@
 package javax.swing.text
 
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class encapsulates a single tab stop (basically as tab stops
  *  are thought of by RTF). A tab stop is at a specified distance from the
@@ -25,6 +26,12 @@ class TabStop extends Object with Serializable {
     @stub
     def this(pos: Float) = ???
 
+    /** Creates a tab with the specified position pos,
+     *  alignment align and leader leader.
+     */
+    @stub
+    def this(pos: Float, align: Int, leader: Int) = ???
+
     /** Returns true if the tabs are equal. */
     @stub
     def equals(other: Object): Boolean = ???
@@ -44,6 +51,10 @@ class TabStop extends Object with Serializable {
     /** Returns the hashCode for the object. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }
 
 object TabStop {
@@ -94,4 +105,8 @@ object TabStop {
     /**  */
     @stub
     val LEAD_THICKLINE: Int = ???
+
+    /**  */
+    @stub
+    val LEAD_UNDERLINE: Int = ???
 }

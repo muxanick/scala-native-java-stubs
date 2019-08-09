@@ -2,6 +2,7 @@ package javax.management
 
 import java.lang.Object
 import java.util.{AbstractCollection, AbstractList, ArrayList, Collection, List}
+import scala.scalanative.annotation.stub
 
 /** Represents a list of values for attributes of an MBean.  See the
  *  getAttributes and
@@ -34,6 +35,13 @@ class AttributeList extends ArrayList[Object] {
      */
     @stub
     def this(initialCapacity: Int) = ???
+
+    /** Constructs an AttributeList containing the elements of the
+     *  List specified, in the order in which they are returned by
+     *  the List's iterator.
+     */
+    @stub
+    def this(list: List[Attribute]) = ???
 
     /** Adds the Attribute specified as the last element of the list. */
     @stub
@@ -87,4 +95,10 @@ class AttributeList extends ArrayList[Object] {
     /** Sets the element at the position specified to be the attribute specified. */
     @stub
     def set(index: Int, object: Attribute): Unit = ???
+
+    /** Replaces the element at the specified position in this list with
+     *  the specified element.
+     */
+    @stub
+    def set(index: Int, element: Object): Object = ???
 }

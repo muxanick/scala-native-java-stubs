@@ -2,6 +2,7 @@ package javax.imageio
 
 import java.awt.{Point, Rectangle}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A superclass of all classes describing how streams should be
  *  decoded or encoded.  This class contains all the variables and
@@ -20,6 +21,10 @@ import java.lang.Object
  *  Subsets of the source and destination bands may be selected.
  */
 abstract class IIOParam extends Object {
+
+    /** Protected constructor may be called only by subclasses. */
+    @stub
+    protected def this() = ???
 
     /** The IIOParamController that will be
      *  used to provide settings for this IIOParam
@@ -68,6 +73,11 @@ abstract class IIOParam extends Object {
      *  subsampling.
      */
     protected val subsamplingXOffset: Int
+
+    /** A vertical offset to be applied to the subsampling grid before
+     *  subsampling.
+     */
+    protected val subsamplingYOffset: Int
 
     /** Activates the installed IIOParamController for
      *  this IIOParam object and returns the resulting
@@ -143,4 +153,7 @@ abstract class IIOParam extends Object {
 
     /** Sets the source region of interest. */
     def setSourceRegion(sourceRegion: Rectangle): Unit
+
+    /** Specifies a decimation subsampling to apply on I/O. */
+    def setSourceSubsampling(sourceXSubsampling: Int, sourceYSubsampling: Int, subsamplingXOffset: Int, subsamplingYOffset: Int): Unit
 }

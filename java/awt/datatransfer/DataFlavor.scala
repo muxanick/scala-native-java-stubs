@@ -1,7 +1,8 @@
 package java.awt.datatransfer
 
-import java.io.{Externalizable, ObjectInput, Reader}
+import java.io.{Externalizable, ObjectInput, ObjectOutput, Reader}
 import java.lang.{Class, ClassLoader, Cloneable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A DataFlavor provides meta information about data. DataFlavor
  *  is typically used to access data on the clipboard, or during
@@ -84,6 +85,12 @@ class DataFlavor extends Object with Externalizable with Cloneable {
      */
     @stub
     def this(mimeType: String, humanPresentableName: String) = ???
+
+    /** Constructs a DataFlavor that represents a
+     *  MimeType.
+     */
+    @stub
+    def this(mimeType: String, humanPresentableName: String, classLoader: ClassLoader) = ???
 
     /** Returns a clone of this DataFlavor. */
     @stub
@@ -256,6 +263,10 @@ class DataFlavor extends Object with Externalizable with Cloneable {
      */
     @stub
     def toString(): String = ???
+
+    /** Serializes this DataFlavor. */
+    @stub
+    def writeExternal(os: ObjectOutput): Unit = ???
 }
 
 object DataFlavor {
@@ -317,6 +328,12 @@ object DataFlavor {
     /** Represents a piece of an HTML markup. */
     @stub
     val selectionHtmlFlavor: DataFlavor = ???
+
+    /** The DataFlavor representing a Java Unicode String class,
+     *  where:
+     */
+    @stub
+    val stringFlavor: DataFlavor = ???
 
     /** Returns a DataFlavor representing plain text with Unicode
      *  encoding, where:

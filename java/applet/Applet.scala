@@ -5,6 +5,7 @@ import java.lang.{Object, String}
 import java.net.URL
 import java.util.Locale
 import javax.accessibility.AccessibleContext
+import scala.scalanative.annotation.stub
 
 /** An applet is a small program that is intended not to be run on
  *  its own, but rather to be embedded inside another application.
@@ -15,6 +16,16 @@ import javax.accessibility.AccessibleContext
  *  interface between applets and their environment.
  */
 class Applet extends Panel {
+
+    /** Constructs a new Applet. */
+    @stub
+    def this() = ???
+
+    /** This class implements accessibility support for the
+     *  Applet class.
+     */
+    @stub
+    protected object AccessibleApplet extends Applet.AccessibleApplet
 
     /** Called by the browser or applet viewer to inform
      *  this applet that it is being reclaimed and that it should destroy
@@ -130,6 +141,12 @@ class Applet extends Panel {
      */
     @stub
     def start(): Unit = ???
+
+    /** Called by the browser or applet viewer to inform
+     *  this applet that it should stop its execution.
+     */
+    @stub
+    def stop(): Unit = ???
 }
 
 object Applet {

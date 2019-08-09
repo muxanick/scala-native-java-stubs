@@ -3,6 +3,7 @@ package java.util.logging
 import java.lang.{Object, String, Throwable}
 import java.util.ResourceBundle
 import java.util.function.Supplier
+import scala.scalanative.annotation.stub
 
 /** A Logger object is used to log messages for a specific
  *  system or application component.  Loggers are normally named,
@@ -173,6 +174,10 @@ import java.util.function.Supplier
  *  log(LogRecord) method.
  */
 class Logger extends Object {
+
+    /** Protected method to construct a logger for a named subsystem. */
+    @stub
+    protected def this(name: String, resourceBundleName: String) = ???
 
     /** Add a log Handler to receive logging messages. */
     @stub
@@ -451,6 +456,12 @@ class Logger extends Object {
     /** Log a WARNING message. */
     @stub
     def warning(msg: String): Unit = ???
+
+    /** Log a WARNING message, which is only to be constructed if the logging
+     *  level is such that the message will actually be logged.
+     */
+    @stub
+    def warning(msgSupplier: Supplier[String]): Unit = ???
 }
 
 object Logger {
@@ -469,6 +480,10 @@ object Logger {
      */
     @stub
     val global: Logger = ???
+
+    /** GLOBAL_LOGGER_NAME is a name for the global logger. */
+    @stub
+    val GLOBAL_LOGGER_NAME: String = ???
 
     /** Create an anonymous Logger. */
     @stub

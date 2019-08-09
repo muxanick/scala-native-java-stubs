@@ -3,6 +3,7 @@ package javax.activity
 import java.io.IOException
 import java.lang.{Exception, Object, String, Throwable}
 import java.rmi.RemoteException
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown by a container if Activity context is not received
  *  on a method for which Activity context is mandatory. This exception
@@ -23,4 +24,8 @@ class ActivityRequiredException extends RemoteException {
     /** Constructs a new throwable with the specified detail message and cause. */
     @stub
     def this(message: String, cause: Throwable) = ???
+
+    /** Constructs a new throwable with the specified cause. */
+    @stub
+    def this(cause: Throwable) = ???
 }

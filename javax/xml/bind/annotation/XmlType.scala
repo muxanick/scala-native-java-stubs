@@ -3,6 +3,7 @@ package javax.xml.bind.annotation
 import java.lang.{Class, String}
 import java.lang.annotation.{ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** 
  *  Maps a class or an enum type to a XML Schema type.
@@ -368,4 +369,10 @@ import scala.annotation.StaticAnnotation
     /** Name of the target namespace of the XML Schema type. */
     @stub
     val namespace: String = ???
+
+    /** Specifies the order for XML Schema elements when class is
+     *  mapped to a XML Schema complex type.
+     */
+    @stub
+    val propOrder: Array[String] = ???
 }

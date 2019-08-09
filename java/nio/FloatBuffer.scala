@@ -1,6 +1,7 @@
 package java.nio
 
 import java.lang.{Comparable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A float buffer.
  * 
@@ -269,4 +270,8 @@ object FloatBuffer {
     /** Wraps a float array into a buffer. */
     @stub
     def wrap(array: Array[Float]): FloatBuffer = ???
+
+    /** Wraps a float array into a buffer. */
+    @stub
+    def wrap(array: Array[Float], offset: Int, length: Int): FloatBuffer = ???
 }

@@ -1,6 +1,7 @@
 package javax.tools
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Standard locations of file objects. */
 class StandardLocation private (name: String, ordinal: Int) extends Enum[StandardLocation](name, ordinal) with JavaFileManager.Location {
@@ -25,6 +26,9 @@ object StandardLocation {
     /** Location of new source files. */
     final val SOURCE_OUTPUT = new StandardLocation(SOURCE_OUTPUT, 5)
 
+    /** Location to search for existing source files. */
+    final val SOURCE_PATH = new StandardLocation(SOURCE_PATH, 6)
+
     /** Gets the name of this location. */
     @stub
     def getName(): String = ???
@@ -40,4 +44,10 @@ object StandardLocation {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): StandardLocation = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[StandardLocation] = ???
 }

@@ -3,6 +3,7 @@ package java.util.concurrent.locks
 import java.io.Serializable
 import java.lang.{Object, String, Thread}
 import java.util.Collection
+import scala.scalanative.annotation.stub
 
 /** Provides a framework for implementing blocking locks and related
  *  synchronizers (semaphores, events, etc) that rely on
@@ -243,6 +244,15 @@ import java.util.Collection
  */
 abstract class AbstractQueuedSynchronizer extends AbstractOwnableSynchronizer with Serializable {
 
+    /** Creates a new AbstractQueuedSynchronizer instance
+     *  with initial synchronization state of zero.
+     */
+    @stub
+    protected def this() = ???
+
+    /** Condition implementation for a AbstractQueuedSynchronizer serving as the basis of a Lock implementation. */
+    object ConditionObject extends AbstractQueuedSynchronizer.ConditionObject
+
     /** Acquires in exclusive mode, ignoring interrupts. */
     def acquire(arg: Int): Unit
 
@@ -362,4 +372,7 @@ abstract class AbstractQueuedSynchronizer extends AbstractOwnableSynchronizer wi
      *  mode.
      */
     protected def tryRelease(arg: Int): Boolean
+
+    /** Attempts to set the state to reflect a release in shared mode. */
+    protected def tryReleaseShared(arg: Int): Boolean
 }

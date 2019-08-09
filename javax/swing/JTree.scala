@@ -3,12 +3,13 @@ package javax.swing
 import java.awt.{Component, Container, Dimension, Rectangle}
 import java.awt.event.MouseEvent
 import java.lang.{Object, String}
-import java.util.{Enumeration, Hashtable}
+import java.util.{Enumeration, Hashtable, Vector}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.event.{TreeExpansionListener, TreeModelListener, TreeSelectionEvent, TreeSelectionListener, TreeWillExpandListener}
 import javax.swing.plaf.TreeUI
 import javax.swing.text.Position.Bias
 import javax.swing.tree.{TreeCellEditor, TreeCellRenderer, TreeModel, TreeNode, TreePath, TreeSelectionModel}
+import scala.scalanative.annotation.stub
 
 /** 
  *  A control that displays a set of hierarchical data as an outline.
@@ -143,6 +144,13 @@ class JTree extends JComponent with Scrollable with Accessible {
     @stub
     def this(root: TreeNode, asksAllowsChildren: Boolean) = ???
 
+    /** Returns a JTree with each element of the specified
+     *  Vector as the
+     *  child of a new root node which is not displayed.
+     */
+    @stub
+    def this(value: Vector[_]) = ???
+
     /** This class implements accessibility support for the
      *  JTree class.
      */
@@ -154,6 +162,13 @@ class JTree extends JComponent with Scrollable with Accessible {
      */
     @stub
     protected object TreeModelHandler extends JTree.TreeModelHandler
+
+    /** Handles creating a new TreeSelectionEvent with the
+     *  JTree as the
+     *  source and passing it off to all the listeners.
+     */
+    @stub
+    protected object TreeSelectionRedirector extends JTree.TreeSelectionRedirector
 
     /** Editor for the entries. */
     @stub
@@ -219,6 +234,10 @@ class JTree extends JComponent with Scrollable with Accessible {
     /** Updates the expandedState. */
     @stub
     protected val treeModelListener: TreeModelListener = ???
+
+    /** Number of rows to make visible at one time. */
+    @stub
+    protected val visibleRowCount: Int = ???
 
     /** Adds the specified rows (inclusive) to the selection. */
     @stub
@@ -838,6 +857,10 @@ class JTree extends JComponent with Scrollable with Accessible {
      */
     @stub
     def treeDidChange(): Unit = ???
+
+    /** Notification from the UIManager that the L&F has changed. */
+    @stub
+    def updateUI(): Unit = ???
 }
 
 object JTree {

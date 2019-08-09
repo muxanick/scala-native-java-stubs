@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** A thread state.  A thread can be in one of the following states:
  *  
  *  NEW
@@ -49,7 +51,16 @@ object Thread.State {
     /** Thread state for a waiting thread with a specified waiting time. */
     final val TIMED_WAITING = new Thread.State(TIMED_WAITING, 4)
 
+    /** Thread state for a waiting thread. */
+    final val WAITING = new Thread.State(WAITING, 5)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): Thread.State = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[Thread.State] = ???
 }

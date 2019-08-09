@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener interface for receiving keyboard events (keystrokes).
  *  The class that is interested in processing a keyboard event
@@ -23,4 +24,8 @@ trait KeyListener extends EventListener {
     /** Invoked when a key has been released. */
     @stub
     def keyReleased(e: KeyEvent): Unit = ???
+
+    /** Invoked when a key has been typed. */
+    @stub
+    def keyTyped(e: KeyEvent): Unit = ???
 }

@@ -2,6 +2,7 @@ package java.beans.beancontext
 
 import java.lang.{Class, Object}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** 
  *  This event type is used by the
@@ -10,6 +11,14 @@ import java.util.EventObject
  *  
  */
 class BeanContextServiceRevokedEvent extends BeanContextEvent {
+
+    /** Construct a BeanContextServiceEvent. */
+    @stub
+    def this(bcs: BeanContextServices, sc: Class, invalidate: Boolean) = ???
+
+    /** A Class reference to the service that is being revoked. */
+    @stub
+    protected val serviceClass: Class = ???
 
     /** Gets the service class that is the subject of this notification */
     @stub
@@ -24,4 +33,10 @@ class BeanContextServiceRevokedEvent extends BeanContextEvent {
      */
     @stub
     def isCurrentServiceInvalidNow(): Boolean = ???
+
+    /** Checks this event to determine whether or not
+     *  the service being revoked is of a particular class.
+     */
+    @stub
+    def isServiceClass(service: Class): Boolean = ???
 }

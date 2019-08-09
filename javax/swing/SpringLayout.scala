@@ -2,6 +2,7 @@ package javax.swing
 
 import java.awt.{Component, Container, Dimension, LayoutManager2}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A SpringLayout lays out the children of its associated container
  *  according to a set of constraints.
@@ -147,6 +148,10 @@ import java.lang.{Object, String}
  */
 class SpringLayout extends Object with LayoutManager2 {
 
+    /** Constructs a new SpringLayout. */
+    @stub
+    def this() = ???
+
     /** If constraints is an instance of
      *  SpringLayout.Constraints,
      *  associates the constraints with the specified component.
@@ -220,9 +225,20 @@ class SpringLayout extends Object with LayoutManager2 {
      */
     @stub
     def putConstraint(e1: String, c1: Component, s: Spring, e2: String, c2: Component): Unit = ???
+
+    /** Removes the constraints associated with the specified component. */
+    @stub
+    def removeLayoutComponent(c: Component): Unit = ???
 }
 
 object SpringLayout {
+    /** A Constraints object holds the
+     *  constraints that govern the way a component's size and position
+     *  change in a container controlled by a SpringLayout.
+     */
+    @stub
+    object Constraints extends SpringLayout.Constraints
+
     /** Specifies the baseline of a component. */
     @stub
     val BASELINE: String = ???
@@ -254,4 +270,8 @@ object SpringLayout {
     /** Specifies the left edge of a component's bounding rectangle. */
     @stub
     val WEST: String = ???
+
+    /** Specifies the width of a component's bounding rectangle. */
+    @stub
+    val WIDTH: String = ???
 }

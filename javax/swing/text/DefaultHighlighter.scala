@@ -2,11 +2,16 @@ package javax.swing.text
 
 import java.awt.{Graphics, Shape}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Implements the Highlighter interfaces.  Implements a simple highlight
  *  painter that renders in a solid color.
  */
 class DefaultHighlighter extends LayeredHighlighter {
+
+    /** Creates a new DefaultHighlighther object. */
+    @stub
+    def this() = ???
 
     /** Adds a highlight to the view. */
     @stub
@@ -53,4 +58,22 @@ class DefaultHighlighter extends LayeredHighlighter {
     /** Removes a highlight from the view. */
     @stub
     def removeHighlight(tag: Object): Unit = ???
+
+    /** If true, highlights are drawn as the Views draw the text. */
+    @stub
+    def setDrawsLayeredHighlights(newValue: Boolean): Unit = ???
+}
+
+object DefaultHighlighter {
+    /** Simple highlight painter that fills a highlighted area with
+     *  a solid color.
+     */
+    @stub
+    object DefaultHighlightPainter extends DefaultHighlighter.DefaultHighlightPainter
+
+    /** Default implementation of LayeredHighlighter.LayerPainter that can
+     *  be used for painting highlights.
+     */
+    @stub
+    val DefaultPainter: LayeredHighlighter.LayerPainter = ???
 }

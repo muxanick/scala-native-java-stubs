@@ -1,6 +1,7 @@
 package javax.xml.soap
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** The container for the SOAPHeader and SOAPBody portions of a
  *  SOAPPart object. By default, a SOAPMessage
@@ -102,4 +103,10 @@ trait SOAPEnvelope extends SOAPElement {
      */
     @stub
     def getBody(): SOAPBody = ???
+
+    /** Returns the SOAPHeader object for
+     *  this SOAPEnvelope object.
+     */
+    @stub
+    def getHeader(): SOAPHeader = ???
 }

@@ -3,6 +3,7 @@ package java.text
 import java.lang.{Number, Object, String, StringBuffer}
 import java.math.RoundingMode
 import java.util.Currency
+import scala.scalanative.annotation.stub
 
 /** DecimalFormat is a concrete subclass of
  *  NumberFormat that formats decimal numbers. It has a variety of
@@ -331,6 +332,10 @@ class DecimalFormat extends NumberFormat {
     @stub
     def this(pattern: String) = ???
 
+    /** Creates a DecimalFormat using the given pattern and symbols. */
+    @stub
+    def this(pattern: String, symbols: DecimalFormatSymbols) = ???
+
     /** Apply the given pattern to this Format object. */
     @stub
     def applyLocalizedPattern(pattern: String): Unit = ???
@@ -534,4 +539,10 @@ class DecimalFormat extends NumberFormat {
      */
     @stub
     def toLocalizedPattern(): String = ???
+
+    /** Synthesizes a pattern string that represents the current state
+     *  of this Format object.
+     */
+    @stub
+    def toPattern(): String = ???
 }

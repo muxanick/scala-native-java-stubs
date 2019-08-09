@@ -3,6 +3,7 @@ package java.util
 import java.io.Serializable
 import java.lang.{Cloneable, Object}
 import java.util.function.{BiConsumer, BiFunction, Function}
+import scala.scalanative.annotation.stub
 
 /** Hash table based implementation of the Map interface.  This
  *  implementation provides all of the optional map operations, and permits
@@ -107,6 +108,12 @@ class HashMap[K, V] extends AbstractMap[K, V] with Map[K, V] with Cloneable with
      */
     @stub
     def this(initialCapacity: Int, loadFactor: Float) = ???
+
+    /** Constructs a new HashMap with the same mappings as the
+     *  specified Map.
+     */
+    @stub
+    def this(m: Map[_ <: K, _ <: V]) = ???
 
     /** Removes all of the mappings from this map. */
     @stub
@@ -232,4 +239,8 @@ class HashMap[K, V] extends AbstractMap[K, V] with Map[K, V] with Cloneable with
     /** Returns the number of key-value mappings in this map. */
     @stub
     def size(): Int = ???
+
+    /** Returns a Collection view of the values contained in this map. */
+    @stub
+    def values(): Collection[V] = ???
 }

@@ -1,5 +1,7 @@
 package javax.sound.sampled
 
+import scala.scalanative.annotation.stub
+
 /** A source data line is a data line to which data may be written.  It acts as
  *  a source to its mixer. An application writes audio bytes to a source data line,
  *  which handles the buffering of the bytes and delivers them to the mixer.
@@ -43,4 +45,8 @@ trait SourceDataLine extends DataLine {
      */
     @stub
     def open(format: AudioFormat, bufferSize: Int): Unit = ???
+
+    /** Writes audio data to the mixer via this source data line. */
+    @stub
+    def write(b: Array[Byte], off: Int, len: Int): Int = ???
 }

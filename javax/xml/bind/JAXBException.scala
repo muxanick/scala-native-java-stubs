@@ -2,6 +2,7 @@ package javax.xml.bind
 
 import java.io.{PrintStream, PrintWriter}
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This is the root exception class for all JAXB exceptions. */
 class JAXBException extends Exception {
@@ -27,6 +28,10 @@ class JAXBException extends Exception {
      */
     @stub
     def this(message: String, exception: Throwable) = ???
+
+    /** Construct a JAXBException with a linkedException. */
+    @stub
+    def this(exception: Throwable) = ???
 
     /** Returns the cause of this throwable or null if the
      *  cause is nonexistent or unknown.
@@ -63,4 +68,8 @@ class JAXBException extends Exception {
     /** Add a linked Exception. */
     @stub
     def setLinkedException(exception: Throwable): Unit = ???
+
+    /** Returns a short description of this JAXBException. */
+    @stub
+    def toString(): String = ???
 }

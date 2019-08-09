@@ -2,6 +2,7 @@ package javax.swing
 
 import java.lang.Object
 import java.util.{Comparator, List}
+import scala.scalanative.annotation.stub
 
 /** An implementation of RowSorter that provides sorting and
  *  filtering around a grid-based data model.
@@ -70,6 +71,10 @@ import java.util.{Comparator, List}
  *  RowFilter for more details on the type parameters.
  */
 abstract class DefaultRowSorter[M, I] extends RowSorter[M] {
+
+    /** Creates an empty DefaultRowSorter. */
+    @stub
+    def this() = ???
 
     /** Invoked when the contents of the underlying model have
      *  completely changed.
@@ -190,4 +195,17 @@ abstract class DefaultRowSorter[M, I] extends RowSorter[M] {
      *  the primary sorted column, with an ascending sort order.
      */
     def toggleSortOrder(column: Int): Unit
+
+    /** Returns whether or not to convert the value to a string before
+     *  doing comparisons when sorting.
+     */
+    protected def useToString(column: Int): Boolean
+}
+
+object DefaultRowSorter {
+    /** DefaultRowSorter.ModelWrapper is responsible for providing
+     *  the data that gets sorted by DefaultRowSorter.
+     */
+    @stub
+    protected object ModelWrapper[M, I] extends DefaultRowSorter.ModelWrapper[M, I]
 }

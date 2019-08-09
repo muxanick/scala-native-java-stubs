@@ -1,6 +1,7 @@
 package java.awt.print
 
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** The Paper class describes the physical characteristics of
  *  a piece of paper.
@@ -13,6 +14,12 @@ import java.lang.{Cloneable, Object}
  *  
  */
 class Paper extends Object with Cloneable {
+
+    /** Creates a letter sized piece of paper
+     *  with one inch margins.
+     */
+    @stub
+    def this() = ???
 
     /** Creates a copy of this Paper with the same contents
      *  as this Paper.
@@ -57,4 +64,11 @@ class Paper extends Object with Cloneable {
     /** Sets the imageable area of this Paper. */
     @stub
     def setImageableArea(x: Double, y: Double, width: Double, height: Double): Unit = ???
+
+    /** Sets the width and height of this Paper
+     *  object, which represents the properties of the page onto
+     *  which printing occurs.
+     */
+    @stub
+    def setSize(width: Double, height: Double): Unit = ???
 }

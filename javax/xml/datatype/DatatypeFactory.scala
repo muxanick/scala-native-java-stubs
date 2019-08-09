@@ -3,6 +3,7 @@ package javax.xml.datatype
 import java.lang.{ClassLoader, Object, String}
 import java.math.{BigDecimal, BigInteger}
 import java.util.GregorianCalendar
+import scala.scalanative.annotation.stub
 
 /** Factory that creates new javax.xml.datatype Objects that map XML to/from Java Objects.
  * 
@@ -38,6 +39,10 @@ import java.util.GregorianCalendar
  *  
  */
 abstract class DatatypeFactory extends Object {
+
+    /** Protected constructor to prevent instaniation outside of package. */
+    @stub
+    protected def this() = ???
 
     /** Obtain a new instance of a Duration
      *  specifying the Duration as isPositive, years, months, days, hours, minutes, seconds.
@@ -141,6 +146,9 @@ abstract class DatatypeFactory extends Object {
 
     /** Create a Java instance of XML Schema builtin datatype time. */
     def newXMLGregorianCalendarTime(hours: Int, minutes: Int, seconds: Int, timezone: Int): XMLGregorianCalendar
+
+    /** Create a Java instance of XML Schema builtin datatype time. */
+    def newXMLGregorianCalendarTime(hours: Int, minutes: Int, seconds: Int, milliseconds: Int, timezone: Int): XMLGregorianCalendar
 }
 
 object DatatypeFactory {
@@ -149,6 +157,10 @@ object DatatypeFactory {
      */
     @stub
     val DATATYPEFACTORY_IMPLEMENTATION_CLASS: String = ???
+
+    /** Default property name as defined in JSR 206: Java(TM) API for XML Processing (JAXP) 1.3. */
+    @stub
+    val DATATYPEFACTORY_PROPERTY: String = ???
 
     /** Obtain a new instance of a DatatypeFactory. */
     @stub

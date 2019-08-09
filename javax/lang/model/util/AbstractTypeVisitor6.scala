@@ -2,6 +2,7 @@ package javax.lang.model.util
 
 import java.lang.Object
 import javax.lang.model.type.{IntersectionType, TypeMirror, TypeVisitor, UnionType}
+import scala.scalanative.annotation.stub
 
 /** A skeletal visitor of types with default behavior appropriate for
  *  the RELEASE_6
@@ -34,6 +35,10 @@ import javax.lang.model.type.{IntersectionType, TypeMirror, TypeVisitor, UnionTy
  */
 abstract class AbstractTypeVisitor6[R, P] extends Object with TypeVisitor[R, P] {
 
+    /** Constructor for concrete subclasses to call. */
+    @stub
+    protected def this() = ???
+
     /** Visits any type mirror as if by passing itself to that type
      *  mirror's accept method and passing
      *  null for the additional parameter.
@@ -50,4 +55,7 @@ abstract class AbstractTypeVisitor6[R, P] extends Object with TypeVisitor[R, P] 
 
     /** Visits a UnionType element by calling visitUnknown. */
     def visitUnion(t: UnionType, p: P): R
+
+    /** Visits an unknown kind of type. */
+    def visitUnknown(t: TypeMirror, p: P): R
 }

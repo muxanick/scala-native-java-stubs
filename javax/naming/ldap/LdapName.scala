@@ -3,6 +3,7 @@ package javax.naming.ldap
 import java.lang.{Object, String}
 import java.util.{Enumeration, List}
 import javax.naming.Name
+import scala.scalanative.annotation.stub
 
 /** This class represents a distinguished name as specified by
  *  RFC 2253.
@@ -66,6 +67,10 @@ class LdapName extends Object with Name {
     /** Constructs an LDAP name given its parsed RDN components. */
     @stub
     def this(rdns: List[Rdn]) = ???
+
+    /** Constructs an LDAP name from the given distinguished name. */
+    @stub
+    def this(name: String) = ???
 
     /** Adds a single RDN at a specified position within this
      *  LDAP name.
@@ -188,4 +193,11 @@ class LdapName extends Object with Name {
      */
     @stub
     def startsWith(n: Name): Boolean = ???
+
+    /** Returns a string representation of this LDAP name in a format
+     *  defined by RFC 2253
+     *  and described in the class description.
+     */
+    @stub
+    def toString(): String = ???
 }

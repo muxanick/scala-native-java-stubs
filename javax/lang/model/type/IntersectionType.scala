@@ -1,5 +1,8 @@
 package javax.lang.model.type
 
+import java.util.List
+import scala.scalanative.annotation.stub
+
 /** Represents an intersection type.
  * 
  *  An intersection type can be either implicitly or explicitly
@@ -9,4 +12,8 @@ package javax.lang.model.type
  *  Number and Runnable as its bounds.
  */
 trait IntersectionType extends TypeMirror {
+
+    /** Return the bounds comprising this intersection type. */
+    @stub
+    def getBounds(): List[_ <: TypeMirror] = ???
 }

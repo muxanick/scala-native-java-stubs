@@ -1,6 +1,7 @@
 package java.awt.dnd
 
-import java.awt.Point
+import java.awt.{Insets, Point}
+import scala.scalanative.annotation.stub
 
 /** During DnD operations it is possible that a user may wish to drop the
  *  subject of the operation on a region of a scrollable GUI control that is
@@ -27,4 +28,11 @@ trait Autoscroll {
     /** notify the Component to autoscroll */
     @stub
     def autoscroll(cursorLocn: Point): Unit = ???
+
+    /** This method returns the Insets describing
+     *  the autoscrolling region or border relative
+     *  to the geometry of the implementing Component.
+     */
+    @stub
+    def getAutoscrollInsets(): Insets = ???
 }

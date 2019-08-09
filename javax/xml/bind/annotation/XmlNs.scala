@@ -3,6 +3,7 @@ package javax.xml.bind.annotation
 import java.lang.String
 import java.lang.annotation.{Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** 
  *  Associates a namespace prefix with a XML namespace URI.
@@ -23,4 +24,8 @@ import scala.annotation.StaticAnnotation
     /** Namespace URI */
     @stub
     val namespaceURI: String = ???
+
+    /** Namespace prefix */
+    @stub
+    val prefix: String = ???
 }

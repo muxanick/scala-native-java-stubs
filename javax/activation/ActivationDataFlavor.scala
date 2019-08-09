@@ -2,6 +2,7 @@ package javax.activation
 
 import java.awt.datatransfer.DataFlavor
 import java.lang.{Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The ActivationDataFlavor class is a special subclass of
  *  java.awt.datatransfer.DataFlavor. It allows the JAF to
@@ -21,6 +22,10 @@ class ActivationDataFlavor extends DataFlavor {
      */
     @stub
     def this(representationClass: Class, mimeType: String, humanPresentableName: String) = ???
+
+    /** Construct a DataFlavor that represents a MimeType. */
+    @stub
+    def this(mimeType: String, humanPresentableName: String) = ???
 
     /** Compares the DataFlavor passed in with this DataFlavor; calls
      *  the isMimeTypeEqual method.
@@ -53,4 +58,8 @@ class ActivationDataFlavor extends DataFlavor {
     /** Deprecated.   */
     @stub
     protected def normalizeMimeTypeParameter(parameterName: String, parameterValue: String): String = ???
+
+    /** Set the human presentable name. */
+    @stub
+    def setHumanPresentableName(humanPresentableName: String): Unit = ???
 }

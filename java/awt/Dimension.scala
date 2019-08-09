@@ -2,7 +2,8 @@ package java.awt
 
 import java.awt.geom.Dimension2D
 import java.io.Serializable
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The Dimension class encapsulates the width and
  *  height of a component (in integer precision) in a single object.
@@ -34,9 +35,19 @@ class Dimension extends Dimension2D with Serializable {
     @stub
     def this(d: Dimension) = ???
 
+    /** Constructs a Dimension and initializes
+     *  it to the specified width and specified height.
+     */
+    @stub
+    def this(width: Int, height: Int) = ???
+
     /** The height dimension; negative values can be used. */
     @stub
     val height: Int = ???
+
+    /** The width dimension; negative values can be used. */
+    @stub
+    val width: Int = ???
 
     /** Checks whether two dimension objects have equal values. */
     @stub
@@ -77,4 +88,11 @@ class Dimension extends Dimension2D with Serializable {
      */
     @stub
     def setSize(width: Int, height: Int): Unit = ???
+
+    /** Returns a string representation of the values of this
+     *  Dimension object's height and
+     *  width fields.
+     */
+    @stub
+    def toString(): String = ???
 }

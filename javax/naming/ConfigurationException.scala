@@ -1,6 +1,7 @@
 package javax.naming
 
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** This exception is thrown when there is a configuration problem.
  *  This can arise when installation of a provider was
@@ -23,4 +24,10 @@ class ConfigurationException extends NamingException {
      */
     @stub
     def this() = ???
+
+    /** Constructs a new instance of ConfigurationException using an
+     *  explanation.
+     */
+    @stub
+    def this(explanation: String) = ???
 }

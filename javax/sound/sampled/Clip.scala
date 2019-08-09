@@ -1,5 +1,7 @@
 package javax.sound.sampled
 
+import scala.scalanative.annotation.stub
+
 /** The Clip interface represents a special kind of data line whose
  *  audio data can be loaded prior to playback, instead of being streamed in
  *  real time.
@@ -56,4 +58,16 @@ trait Clip extends DataLine {
      */
     @stub
     def setLoopPoints(start: Int, end: Int): Unit = ???
+
+    /** Sets the media position in microseconds. */
+    @stub
+    def setMicrosecondPosition(microseconds: Long): Unit = ???
+}
+
+object Clip {
+    /** A value indicating that looping should continue indefinitely rather than
+     *  complete after a specific number of loops.
+     */
+    @stub
+    val LOOP_CONTINUOUSLY: Int = ???
 }

@@ -1,5 +1,8 @@
 package java.awt
 
+import java.awt.image.ColorModel
+import scala.scalanative.annotation.stub
+
 /** The Composite interface, along with
  *  CompositeContext, defines the methods to compose a draw
  *  primitive with the underlying graphics area.
@@ -35,4 +38,10 @@ package java.awt
  *  of a Graphics2D retrieved from a Component.
  */
 trait Composite {
+
+    /** Creates a context containing state that is used to perform
+     *  the compositing operation.
+     */
+    @stub
+    def createContext(srcColorModel: ColorModel, dstColorModel: ColorModel, hints: RenderingHints): CompositeContext = ???
 }

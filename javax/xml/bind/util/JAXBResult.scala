@@ -1,8 +1,9 @@
 package javax.xml.bind.util
 
 import java.lang.Object
-import javax.xml.bind.JAXBContext
+import javax.xml.bind.{JAXBContext, Unmarshaller}
 import javax.xml.transform.sax.SAXResult
+import scala.scalanative.annotation.stub
 
 /** JAXP Result implementation
  *  that unmarshals a JAXB object.
@@ -48,4 +49,14 @@ class JAXBResult extends SAXResult {
      */
     @stub
     def this(context: JAXBContext) = ???
+
+    /** Creates a new instance that uses the specified
+     *  Unmarshaller to unmarshal an object.
+     */
+    @stub
+    def this(_unmarshaller: Unmarshaller) = ???
+
+    /** Gets the unmarshalled object created by the transformation. */
+    @stub
+    def getResult(): Object = ???
 }

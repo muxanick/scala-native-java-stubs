@@ -1,7 +1,9 @@
 package javax.xml.crypto.dsig.keyinfo
 
+import java.lang.String
 import java.util.List
 import javax.xml.crypto.XMLStructure
+import scala.scalanative.annotation.stub
 
 /** A representation of the XML PGPData element as defined in
  *  the 
@@ -50,4 +52,19 @@ trait PGPData extends XMLStructure {
      */
     @stub
     def getKeyId(): Array[Byte] = ???
+
+    /** Returns the PGP key material packet of this PGPData as
+     *  defined in RFC 2440,
+     *  section 5.5.
+     */
+    @stub
+    def getKeyPacket(): Array[Byte] = ???
+}
+
+object PGPData {
+    /** URI identifying the PGPData KeyInfo type:
+     *  http://www.w3.org/2000/09/xmldsig#PGPData.
+     */
+    @stub
+    val TYPE: String = ???
 }

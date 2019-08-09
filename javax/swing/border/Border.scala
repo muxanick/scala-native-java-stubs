@@ -1,6 +1,7 @@
 package javax.swing.border
 
-import java.awt.{Component, Insets}
+import java.awt.{Component, Graphics, Insets}
+import scala.scalanative.annotation.stub
 
 /** Interface describing an object capable of rendering a border
  *  around the edges of a swing component.
@@ -36,4 +37,10 @@ trait Border {
     /** Returns whether or not the border is opaque. */
     @stub
     def isBorderOpaque(): Boolean = ???
+
+    /** Paints the border for the specified component with the specified
+     *  position and size.
+     */
+    @stub
+    def paintBorder(c: Component, g: Graphics, x: Int, y: Int, width: Int, height: Int): Unit = ???
 }

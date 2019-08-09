@@ -4,7 +4,8 @@ import java.awt.{Component.AccessibleAWTComponent, Container.AccessibleAWTContai
 import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.Object
 import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole, AccessibleSelection, AccessibleStateSet}
-import javax.swing.event.{ListDataEvent, ListDataListener, ListSelectionListener}
+import javax.swing.event.{ListDataEvent, ListDataListener, ListSelectionEvent, ListSelectionListener}
+import scala.scalanative.annotation.stub
 
 /** This class implements accessibility support for the
  *  JList class. It provides an implementation of the
@@ -21,6 +22,16 @@ import javax.swing.event.{ListDataEvent, ListDataListener, ListSelectionListener
  *  Please see XMLEncoder.
  */
 protected class JList.AccessibleJList extends JComponent.AccessibleJComponent with AccessibleSelection with PropertyChangeListener with ListSelectionListener with ListDataListener {
+
+    /**  */
+    @stub
+    def AccessibleJList() = ???
+
+    /** This class implements accessibility support appropriate
+     *  for list children.
+     */
+    @stub
+    protected object AccessibleJListChild extends JList.AccessibleJList.AccessibleJListChild
 
     /** Adds the specified selected item in the object to the object's
      *  selection.
@@ -101,4 +112,8 @@ protected class JList.AccessibleJList extends JComponent.AccessibleJComponent wi
      */
     @stub
     def selectAllAccessibleSelection(): Unit = ???
+
+    /** List Selection Listener value change method. */
+    @stub
+    def valueChanged(e: ListSelectionEvent): Unit = ???
 }

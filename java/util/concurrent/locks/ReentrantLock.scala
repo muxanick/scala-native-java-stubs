@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{Object, String, Thread}
 import java.util.Collection
 import java.util.concurrent.TimeUnit
+import scala.scalanative.annotation.stub
 
 /** A reentrant mutual exclusion Lock with the same basic
  *  behavior and semantics as the implicit monitor lock accessed using
@@ -71,6 +72,12 @@ class ReentrantLock extends Object with Lock with Serializable {
     /** Creates an instance of ReentrantLock. */
     @stub
     def this() = ???
+
+    /** Creates an instance of ReentrantLock with the
+     *  given fairness policy.
+     */
+    @stub
+    def this(fair: Boolean) = ???
 
     /** Queries the number of holds on this lock by the current thread. */
     @stub
@@ -166,4 +173,8 @@ class ReentrantLock extends Object with Lock with Serializable {
      */
     @stub
     def tryLock(timeout: Long, unit: TimeUnit): Boolean = ???
+
+    /** Attempts to release this lock. */
+    @stub
+    def unlock(): Unit = ???
 }

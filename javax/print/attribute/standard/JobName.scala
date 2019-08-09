@@ -1,7 +1,9 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
+import java.util.Locale
 import javax.print.attribute.{Attribute, PrintJobAttribute, PrintRequestAttribute, TextSyntax}
+import scala.scalanative.annotation.stub
 
 /** Class JobName is a printing attribute class, a text attribute, that specifies
  *  the name of a print job. A job's name is an arbitrary string defined by the
@@ -23,6 +25,10 @@ import javax.print.attribute.{Attribute, PrintJobAttribute, PrintRequestAttribut
  */
 final class JobName extends TextSyntax with PrintRequestAttribute with PrintJobAttribute {
 
+    /** Constructs a new job name attribute with the given job name and locale. */
+    @stub
+    def this(jobName: String, locale: Locale) = ???
+
     /** Returns whether this job name attribute is equivalent to the passed in
      *  object.
      */
@@ -34,4 +40,10 @@ final class JobName extends TextSyntax with PrintRequestAttribute with PrintJobA
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

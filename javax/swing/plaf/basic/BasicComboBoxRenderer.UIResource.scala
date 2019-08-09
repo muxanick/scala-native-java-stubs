@@ -4,6 +4,7 @@ import java.awt.{Component, Container}
 import java.lang.Object
 import javax.swing.{JComponent, JLabel}
 import javax.swing.plaf.UIResource
+import scala.scalanative.annotation.stub
 
 /** A subclass of BasicComboBoxRenderer that implements UIResource.
  *  BasicComboBoxRenderer doesn't implement UIResource
@@ -20,3 +21,7 @@ import javax.swing.plaf.UIResource
  *  Please see XMLEncoder.
  */
 object BasicComboBoxRenderer.UIResource extends BasicComboBoxRenderer with UIResource {
+
+    /**  */
+    @stub
+    def UIResource() = ???

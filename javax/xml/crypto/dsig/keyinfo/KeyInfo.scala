@@ -2,7 +2,8 @@ package javax.xml.crypto.dsig.keyinfo
 
 import java.lang.String
 import java.util.List
-import javax.xml.crypto.XMLStructure
+import javax.xml.crypto.{XMLCryptoContext, XMLStructure}
+import scala.scalanative.annotation.stub
 
 /** A representation of the XML KeyInfo element as defined in
  *  the 
@@ -57,4 +58,8 @@ trait KeyInfo extends XMLStructure {
      */
     @stub
     def getId(): String = ???
+
+    /** Marshals the key info to XML. */
+    @stub
+    def marshal(parent: XMLStructure, context: XMLCryptoContext): Unit = ???
 }

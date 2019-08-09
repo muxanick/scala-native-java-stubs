@@ -3,6 +3,7 @@ package javax.swing.text.html.parser
 import java.io.Reader
 import java.lang.{Object, String, StringBuffer}
 import javax.swing.text.SimpleAttributeSet
+import scala.scalanative.annotation.stub
 
 /** A simple DTD-driven HTML parser. The parser reads an
  *  HTML file from an InputStream and calls various methods
@@ -41,7 +42,17 @@ class Parser extends Object with DTDConstants {
 
     /**  */
     @stub
+    def this(dtd: DTD) = ???
+
+    /**  */
+    @stub
     protected val dtd: DTD = ???
+
+    /** This flag determines whether or not the Parser will be strict
+     *  in enforcing SGML compatibility.
+     */
+    @stub
+    protected val strict: Boolean = ???
 
     /** Handle an end tag. */
     @stub
@@ -134,4 +145,8 @@ class Parser extends Object with DTDConstants {
     /** Parse markup declarations. */
     @stub
     protected def parseMarkupDeclarations(strBuff: StringBuffer): Boolean = ???
+
+    /** Handle a start tag. */
+    @stub
+    protected def startTag(tag: TagElement): Unit = ???
 }

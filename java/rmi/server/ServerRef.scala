@@ -1,7 +1,8 @@
 package java.rmi.server
 
-import java.lang.{Deprecated, Object}
+import java.lang.{Deprecated, Object, String}
 import java.rmi.Remote
+import scala.scalanative.annotation.stub
 
 /** A ServerRef represents the server-side handle for a remote object
  *  implementation.
@@ -11,4 +12,14 @@ import java.rmi.Remote
     /** Deprecated.  */
     @stub
     def exportObject(obj: Remote, data: Object): RemoteStub = ???
+
+    /** Deprecated.  */
+    @stub
+    def getClientHost(): String = ???
+}
+
+object ServerRef {
+    /** Deprecated.  */
+    @stub
+    val serialVersionUID: Long = ???
 }

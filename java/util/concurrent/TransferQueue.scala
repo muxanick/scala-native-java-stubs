@@ -1,5 +1,7 @@
 package java.util.concurrent
 
+import scala.scalanative.annotation.stub
+
 /** A BlockingQueue in which producers may wait for consumers
  *  to receive elements.  A TransferQueue may be useful for
  *  example in message passing applications in which producers
@@ -47,4 +49,10 @@ trait TransferQueue[E] extends BlockingQueue[E] {
     /** Transfers the element to a waiting consumer immediately, if possible. */
     @stub
     def tryTransfer(e: E): Boolean = ???
+
+    /** Transfers the element to a consumer if it is possible to do so
+     *  before the timeout elapses.
+     */
+    @stub
+    def tryTransfer(e: E, timeout: Long, unit: TimeUnit): Boolean = ???
 }

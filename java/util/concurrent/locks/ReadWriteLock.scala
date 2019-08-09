@@ -1,5 +1,7 @@
 package java.util.concurrent.locks
 
+import scala.scalanative.annotation.stub
+
 /** A ReadWriteLock maintains a pair of associated locks, one for read-only operations and one for writing.
  *  The read lock may be held simultaneously by
  *  multiple reader threads, so long as there are no writers.  The
@@ -77,4 +79,8 @@ trait ReadWriteLock {
     /** Returns the lock used for reading. */
     @stub
     def readLock(): Lock = ???
+
+    /** Returns the lock used for writing. */
+    @stub
+    def writeLock(): Lock = ???
 }

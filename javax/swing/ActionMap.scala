@@ -2,6 +2,7 @@ package javax.swing
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** ActionMap provides mappings from
  *  Objects
@@ -22,6 +23,10 @@ import java.lang.Object
  *  some of the methods will cause a StackOverflowError to be thrown.
  */
 class ActionMap extends Object with Serializable {
+
+    /** Creates an ActionMap with no parent and no mappings. */
+    @stub
+    def this() = ???
 
     /** Returns an array of the keys defined in this ActionMap and
      *  its parent.
@@ -58,4 +63,8 @@ class ActionMap extends Object with Serializable {
     /** Sets this ActionMap's parent. */
     @stub
     def setParent(map: ActionMap): Unit = ???
+
+    /** Returns the number of bindings in this ActionMap. */
+    @stub
+    def size(): Int = ???
 }

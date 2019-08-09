@@ -3,6 +3,7 @@ package javax.swing.text
 import java.lang.{Comparable, Object, String}
 import java.text.{Format, Format.Field}
 import javax.swing.{Action, JFormattedTextField, JFormattedTextField.AbstractFormatter}
+import scala.scalanative.annotation.stub
 
 /** InternationalFormatter extends DefaultFormatter,
  *  using an instance of java.text.Format to handle the
@@ -67,6 +68,12 @@ class InternationalFormatter extends DefaultFormatter {
     @stub
     def this() = ???
 
+    /** Creates an InternationalFormatter with the specified
+     *  Format instance.
+     */
+    @stub
+    def this(format: Format) = ???
+
     /** Creates a copy of the DefaultFormatter. */
     @stub
     def clone(): Object = ???
@@ -122,4 +129,8 @@ class InternationalFormatter extends DefaultFormatter {
      */
     @stub
     def stringToValue(text: String): Object = ???
+
+    /** Returns a String representation of the Object value. */
+    @stub
+    def valueToString(value: Object): String = ???
 }

@@ -2,6 +2,7 @@ package java.nio.file
 
 import java.lang.{Object, String}
 import java.security.{BasicPermission, Permission}
+import scala.scalanative.annotation.stub
 
 /** The Permission class for link creation operations.
  * 
@@ -36,4 +37,8 @@ final class LinkPermission extends BasicPermission {
     /** Constructs a LinkPermission with the specified name. */
     @stub
     def this(name: String) = ???
+
+    /** Constructs a LinkPermission with the specified name. */
+    @stub
+    def this(name: String, actions: String) = ???
 }

@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component, Container, FocusTraversalPolicy}
 import java.lang.Object
 import java.util.Comparator
+import scala.scalanative.annotation.stub
 
 /** A FocusTraversalPolicy that determines traversal order by sorting the
  *  Components of a focus traversal cycle based on a given Comparator. Portions
@@ -29,6 +30,10 @@ class SortingFocusTraversalPolicy extends InternalFrameFocusTraversalPolicy {
     /** Constructs a SortingFocusTraversalPolicy without a Comparator. */
     @stub
     protected def this() = ???
+
+    /** Constructs a SortingFocusTraversalPolicy with the specified Comparator. */
+    @stub
+    def this(comparator: Comparator[_ >: Component]) = ???
 
     /** Determines whether a Component is an acceptable choice as the new
      *  focus owner.
@@ -73,4 +78,10 @@ class SortingFocusTraversalPolicy extends InternalFrameFocusTraversalPolicy {
      */
     @stub
     protected def setComparator(comparator: Comparator[_ >: Component]): Unit = ???
+
+    /** Sets whether this SortingFocusTraversalPolicy transfers focus down-cycle
+     *  implicitly.
+     */
+    @stub
+    def setImplicitDownCycleTraversal(implicitDownCycleTraversal: Boolean): Unit = ???
 }

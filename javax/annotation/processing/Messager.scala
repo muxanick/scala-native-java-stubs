@@ -1,8 +1,9 @@
 package javax.annotation.processing
 
 import java.lang.CharSequence
-import javax.lang.model.element.{AnnotationMirror, Element}
+import javax.lang.model.element.{AnnotationMirror, AnnotationValue, Element}
 import javax.tools.Diagnostic.Kind
+import scala.scalanative.annotation.stub
 
 /** A Messager provides the way for an annotation processor to
  *  report error messages, warnings, and other notices.  Elements,
@@ -35,4 +36,11 @@ trait Messager {
      */
     @stub
     def printMessage(kind: Diagnostic.Kind, msg: CharSequence, e: Element, a: AnnotationMirror): Unit = ???
+
+    /** Prints a message of the specified kind at the location of the
+     *  annotation value inside the annotation mirror of the annotated
+     *  element.
+     */
+    @stub
+    def printMessage(kind: Diagnostic.Kind, msg: CharSequence, e: Element, a: AnnotationMirror, v: AnnotationValue): Unit = ???
 }

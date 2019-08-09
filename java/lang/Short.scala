@@ -1,5 +1,7 @@
 package java.lang
 
+import scala.scalanative.annotation.stub
+
 /** The Short class wraps a value of primitive type short in an object.  An object of type Short contains a
  *  single field whose type is short.
  * 
@@ -15,6 +17,13 @@ final class Short extends Number with Comparable[Short] {
      */
     @stub
     def this(value: Short) = ???
+
+    /** Constructs a newly allocated Short object that
+     *  represents the short value indicated by the
+     *  String parameter.
+     */
+    @stub
+    def this(s: String) = ???
 
     /** Returns the value of this Short as a byte after
      *  a narrowing primitive conversion.
@@ -98,6 +107,12 @@ object Short {
     @stub
     val SIZE: Int = ???
 
+    /** The Class instance representing the primitive type
+     *  short.
+     */
+    @stub
+    val TYPE: Class[Short] = ???
+
     /** Compares two short values numerically. */
     @stub
     def compare(x: Short, y: Short): Int = ???
@@ -157,4 +172,11 @@ object Short {
      */
     @stub
     def valueOf(s: String): Short = ???
+
+    /** Returns a Short object holding the value
+     *  extracted from the specified String when parsed
+     *  with the radix given by the second argument.
+     */
+    @stub
+    def valueOf(s: String, radix: Int): Short = ???
 }

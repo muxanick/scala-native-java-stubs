@@ -2,6 +2,7 @@ package javax.swing.text
 
 import java.awt.{Color, Font}
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** Interface for a generic styled document. */
 trait StyledDocument extends Document {
@@ -63,4 +64,8 @@ trait StyledDocument extends Document {
      */
     @stub
     def setLogicalStyle(pos: Int, s: Style): Unit = ???
+
+    /** Sets paragraph attributes. */
+    @stub
+    def setParagraphAttributes(offset: Int, length: Int, s: AttributeSet, replace: Boolean): Unit = ???
 }

@@ -2,6 +2,7 @@ package javax.swing.plaf.basic
 
 import java.awt.{Component, Container, Dimension, LayoutManager}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This layout manager handles the 'standard' layout of combo boxes.  It puts
  *  the arrow button to the right and the editor to the left.  If there is no
@@ -12,6 +13,10 @@ import java.lang.{Object, String}
  *  BasicComboBoxUI.
  */
 class BasicComboBoxUI.ComboBoxLayoutManager extends Object with LayoutManager {
+
+    /**  */
+    @stub
+    def ComboBoxLayoutManager() = ???
 
     /** If the layout manager uses a per-component string,
      *  adds the component comp to the layout,
@@ -36,4 +41,8 @@ class BasicComboBoxUI.ComboBoxLayoutManager extends Object with LayoutManager {
      */
     @stub
     def preferredLayoutSize(parent: Container): Dimension = ???
+
+    /** Removes the specified component from the layout. */
+    @stub
+    def removeLayoutComponent(comp: Component): Unit = ???
 }

@@ -1,7 +1,8 @@
 package java.util.concurrent
 
-import java.lang.{Object, Runnable, Thread.UncaughtExceptionHandler}
+import java.lang.{Object, Runnable, String, Thread.UncaughtExceptionHandler}
 import java.util.{Collection, List}
+import scala.scalanative.annotation.stub
 
 /** An ExecutorService for running ForkJoinTasks.
  *  A ForkJoinPool provides the entry point for submissions
@@ -120,6 +121,10 @@ class ForkJoinPool extends AbstractExecutorService {
      */
     @stub
     def this(parallelism: Int) = ???
+
+    /** Creates a ForkJoinPool with the given parameters. */
+    @stub
+    def this(parallelism: Int, factory: ForkJoinPool.ForkJoinWorkerThreadFactory, handler: Thread.UncaughtExceptionHandler, asyncMode: Boolean) = ???
 
     /** If called by a ForkJoinTask operating in this pool, equivalent
      *  in effect to ForkJoinTask.helpQuiesce().
@@ -291,12 +296,29 @@ class ForkJoinPool extends AbstractExecutorService {
      */
     @stub
     def submit[T](task: Runnable, result: T): ForkJoinTask[T] = ???
+
+    /** Returns a string identifying this pool, as well as its state,
+     *  including indications of run state, parallelism level, and
+     *  worker and task counts.
+     */
+    @stub
+    def toString(): String = ???
 }
 
 object ForkJoinPool {
     /** Factory for creating new ForkJoinWorkerThreads. */
     @stub
     val ForkJoinPool.ForkJoinWorkerThreadFactory: trait = ???
+
+    /** Interface for extending managed parallelism for tasks running
+     *  in ForkJoinPools.
+     */
+    @stub
+    val ForkJoinPool.ManagedBlocker: trait = ???
+
+    /** Creates a new ForkJoinWorkerThread. */
+    @stub
+    val defaultForkJoinWorkerThreadFactory: ForkJoinPool.ForkJoinWorkerThreadFactory = ???
 
     /** Returns the common pool instance. */
     @stub

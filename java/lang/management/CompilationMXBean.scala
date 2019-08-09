@@ -1,6 +1,7 @@
 package java.lang.management
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** The management interface for the compilation system of
  *  the Java virtual machine.
@@ -32,4 +33,10 @@ trait CompilationMXBean extends PlatformManagedObject {
      */
     @stub
     def getTotalCompilationTime(): Long = ???
+
+    /** Tests if the Java virtual machine supports the monitoring of
+     *  compilation time.
+     */
+    @stub
+    def isCompilationTimeMonitoringSupported(): Boolean = ???
 }

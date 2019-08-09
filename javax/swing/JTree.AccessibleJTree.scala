@@ -3,7 +3,8 @@ package javax.swing
 import java.awt.{Component.AccessibleAWTComponent, Container.AccessibleAWTContainer, Point}
 import java.lang.Object
 import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole, AccessibleSelection}
-import javax.swing.event.{TreeExpansionEvent, TreeExpansionListener, TreeModelEvent, TreeModelListener, TreeSelectionListener}
+import javax.swing.event.{TreeExpansionEvent, TreeExpansionListener, TreeModelEvent, TreeModelListener, TreeSelectionEvent, TreeSelectionListener}
+import scala.scalanative.annotation.stub
 
 /** This class implements accessibility support for the
  *  JTree class.  It provides an implementation of the
@@ -19,6 +20,16 @@ import javax.swing.event.{TreeExpansionEvent, TreeExpansionListener, TreeModelEv
  *  Please see XMLEncoder.
  */
 protected class JTree.AccessibleJTree extends JComponent.AccessibleJComponent with AccessibleSelection with TreeSelectionListener with TreeModelListener with TreeExpansionListener {
+
+    /**  */
+    @stub
+    def AccessibleJTree() = ???
+
+    /** This class implements accessibility support for the
+     *  JTree child.
+     */
+    @stub
+    protected object AccessibleJTreeNode extends JTree.AccessibleJTree.AccessibleJTreeNode
 
     /** Adds the specified selected item in the object to the object's
      *  selection.
@@ -113,4 +124,8 @@ protected class JTree.AccessibleJTree extends JComponent.AccessibleJComponent wi
     /** Tree Model structure change change notification. */
     @stub
     def treeStructureChanged(e: TreeModelEvent): Unit = ???
+
+    /** Tree Selection Listener value change method. */
+    @stub
+    def valueChanged(e: TreeSelectionEvent): Unit = ???
 }

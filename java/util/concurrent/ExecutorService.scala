@@ -2,6 +2,7 @@ package java.util.concurrent
 
 import java.lang.Runnable
 import java.util.{Collection, List}
+import scala.scalanative.annotation.stub
 
 /** An Executor that provides methods to manage termination and
  *  methods that can produce a Future for tracking progress of
@@ -162,4 +163,10 @@ trait ExecutorService extends Executor {
      */
     @stub
     def submit(task: Runnable): Future[_] = ???
+
+    /** Submits a Runnable task for execution and returns a Future
+     *  representing that task.
+     */
+    @stub
+    def submit[T](task: Runnable, result: T): Future[T] = ???
 }

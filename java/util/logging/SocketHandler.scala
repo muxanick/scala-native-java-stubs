@@ -1,6 +1,7 @@
 package java.util.logging
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Simple network logging Handler.
  *  
@@ -55,7 +56,15 @@ class SocketHandler extends StreamHandler {
     @stub
     def this() = ???
 
+    /** Construct a SocketHandler using a specified host and port. */
+    @stub
+    def this(host: String, port: Int) = ???
+
     /** Close this output stream. */
     @stub
     def close(): Unit = ???
+
+    /** Format and publish a LogRecord. */
+    @stub
+    def publish(record: LogRecord): Unit = ???
 }

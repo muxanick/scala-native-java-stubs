@@ -1,6 +1,7 @@
 package java.security
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /**  The AccessController class is used for access control operations
  *  and decisions.
@@ -306,4 +307,11 @@ object AccessController {
      */
     @stub
     def doPrivilegedWithCombiner[T](action: PrivilegedExceptionAction[T], context: AccessControlContext, perms: Permission*): T = ???
+
+    /** This method takes a "snapshot" of the current calling context, which
+     *  includes the current Thread's inherited AccessControlContext and any
+     *  limited privilege scope, and places it in an AccessControlContext object.
+     */
+    @stub
+    def getContext(): AccessControlContext = ???
 }

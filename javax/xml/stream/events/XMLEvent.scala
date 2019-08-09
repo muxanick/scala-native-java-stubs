@@ -1,7 +1,9 @@
 package javax.xml.stream.events
 
+import java.io.Writer
 import javax.xml.namespace.QName
 import javax.xml.stream.{Location, XMLStreamConstants}
+import scala.scalanative.annotation.stub
 
 /** This is the base event interface for handling markup events.
  *  Events are value objects that are used to communicate the
@@ -77,4 +79,8 @@ trait XMLEvent extends XMLStreamConstants {
     /** A utility function to check if this event is a StartElement. */
     @stub
     def isStartElement(): Boolean = ???
+
+    /** This method will write the XMLEvent as per the XML 1.0 specification as Unicode characters. */
+    @stub
+    def writeAsEncodedUnicode(writer: Writer): Unit = ???
 }

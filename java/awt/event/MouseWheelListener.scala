@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener interface for receiving mouse wheel events on a component.
  *  (For clicks and other mouse events, use the MouseListener.
@@ -19,4 +20,8 @@ import java.util.EventListener
  *  the class description for MouseWheelEvent.
  */
 trait MouseWheelListener extends EventListener {
+
+    /** Invoked when the mouse wheel is rotated. */
+    @stub
+    def mouseWheelMoved(e: MouseWheelEvent): Unit = ???
 }

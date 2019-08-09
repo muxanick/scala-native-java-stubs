@@ -1,5 +1,7 @@
 package javax.sound.sampled
 
+import scala.scalanative.annotation.stub
+
 /** DataLine adds media-related functionality to its
  *  superinterface, Line.  This functionality includes
  *  transport-control methods that start, stop, drain, and flush
@@ -94,4 +96,16 @@ trait DataLine extends Line {
     /** Allows a line to engage in data I/O. */
     @stub
     def start(): Unit = ???
+
+    /** Stops the line. */
+    @stub
+    def stop(): Unit = ???
+}
+
+object DataLine {
+    /** Besides the class information inherited from its superclass,
+     *  DataLine.Info provides additional information specific to data lines.
+     */
+    @stub
+    object Info extends DataLine.Info
 }

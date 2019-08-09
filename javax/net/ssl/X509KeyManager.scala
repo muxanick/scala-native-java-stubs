@@ -4,6 +4,7 @@ import java.lang.String
 import java.net.Socket
 import java.security.{Principal, PrivateKey}
 import java.security.cert.X509Certificate
+import scala.scalanative.annotation.stub
 
 /** Instances of this interface manage which X509 certificate-based
  *  key pairs are used to authenticate the local side of a secure
@@ -52,4 +53,11 @@ trait X509KeyManager extends KeyManager {
     /** Returns the key associated with the given alias. */
     @stub
     def getPrivateKey(alias: String): PrivateKey = ???
+
+    /** Get the matching aliases for authenticating the server side of a secure
+     *  socket given the public key type and the list of
+     *  certificate issuer authorities recognized by the peer (if any).
+     */
+    @stub
+    def getServerAliases(keyType: String, issuers: Array[Principal]): Array[String] = ???
 }

@@ -3,6 +3,7 @@ package java.nio.channels.spi
 import java.lang.Object
 import java.net.ProtocolFamily
 import java.nio.channels.{Channel, DatagramChannel, Pipe, ServerSocketChannel, SocketChannel}
+import scala.scalanative.annotation.stub
 
 /** Service-provider class for selectors and selectable channels.
  * 
@@ -23,6 +24,10 @@ import java.nio.channels.{Channel, DatagramChannel, Pipe, ServerSocketChannel, S
  *  threads.  
  */
 abstract class SelectorProvider extends Object {
+
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this() = ???
 
     /** Returns the channel inherited from the entity that created this
      *  Java virtual machine.
@@ -46,4 +51,12 @@ abstract class SelectorProvider extends Object {
 
     /** Opens a socket channel. */
     def openSocketChannel(): SocketChannel
+}
+
+object SelectorProvider {
+    /** Returns the system-wide default selector provider for this invocation of
+     *  the Java virtual machine.
+     */
+    @stub
+    def provider(): SelectorProvider = ???
 }

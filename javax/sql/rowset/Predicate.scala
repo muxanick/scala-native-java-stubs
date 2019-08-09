@@ -1,6 +1,8 @@
 package javax.sql.rowset
 
 import java.lang.{Object, String}
+import javax.sql.RowSet
+import scala.scalanative.annotation.stub
 
 /** The standard interface that provides the framework for all
  *  FilteredRowSet objects to describe their filters.
@@ -84,4 +86,11 @@ trait Predicate {
      */
     @stub
     def evaluate(value: Object, columnName: String): Boolean = ???
+
+    /** This method is typically called a FilteredRowSet object
+     *  internal methods (not public) that control the RowSet object's
+     *  cursor moving  from row to the next.
+     */
+    @stub
+    def evaluate(rs: RowSet): Boolean = ???
 }

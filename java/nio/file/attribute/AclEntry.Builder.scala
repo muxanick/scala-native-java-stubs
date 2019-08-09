@@ -2,6 +2,7 @@ package java.nio.file.attribute
 
 import java.lang.Object
 import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** A builder of AclEntry objects.
  * 
@@ -36,4 +37,8 @@ final object AclEntry.Builder extends Object {
     /** Sets the principal component of this builder. */
     @stub
     def setPrincipal(who: UserPrincipal): AclEntry.Builder = ???
+
+    /** Sets the type component of this builder. */
+    @stub
+    def setType(type: AclEntryType): AclEntry.Builder = ???
 }

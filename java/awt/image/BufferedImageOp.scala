@@ -1,6 +1,8 @@
 package java.awt.image
 
+import java.awt.RenderingHints
 import java.awt.geom.{Point2D, Rectangle2D}
+import scala.scalanative.annotation.stub
 
 /** This interface describes single-input/single-output
  *  operations performed on BufferedImage objects.
@@ -44,4 +46,8 @@ trait BufferedImageOp {
      */
     @stub
     def getPoint2D(srcPt: Point2D, dstPt: Point2D): Point2D = ???
+
+    /** Returns the rendering hints for this operation. */
+    @stub
+    def getRenderingHints(): RenderingHints = ???
 }

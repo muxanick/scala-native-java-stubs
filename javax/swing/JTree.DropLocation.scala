@@ -1,7 +1,8 @@
 package javax.swing
 
-import java.lang.Object
+import java.lang.{Object, String}
 import javax.swing.tree.TreePath
+import scala.scalanative.annotation.stub
 
 /** A subclass of TransferHandler.DropLocation representing
  *  a drop location for a JTree.
@@ -19,4 +20,8 @@ final object JTree.DropLocation extends TransferHandler.DropLocation {
      */
     @stub
     def getPath(): TreePath = ???
+
+    /** Returns a string representation of this drop location. */
+    @stub
+    def toString(): String = ???
 }

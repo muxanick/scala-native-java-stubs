@@ -1,10 +1,12 @@
 package javax.sql.rowset.serial
 
 import java.io.{InputStream, Reader}
-import java.lang.{Object, String}
+import java.lang.{Class, Object, String}
 import java.math.BigDecimal
 import java.net.URL
 import java.sql.{Array, Blob, Clob, Date, NClob, Ref, RowId, SQLInput, SQLXML, Time, Timestamp}
+import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** An input stream used for custom mapping user-defined types (UDTs).
  *  An SQLInputImpl object is an input stream that contains a
@@ -34,6 +36,12 @@ import java.sql.{Array, Blob, Clob, Date, NClob, Ref, RowId, SQLInput, SQLXML, T
  *  to read the attributes from the input stream.
  */
 class SQLInputImpl extends Object with SQLInput {
+
+    /** Creates an SQLInputImpl object initialized with the
+     *  given array of attributes and the given type map.
+     */
+    @stub
+    def this(attributes: Array[Object], map: Map[String, Class[_]]) = ???
 
     /** Reads an SQL ARRAY value from the stream and
      *  returns it as an Array object in the Java programming
@@ -194,4 +202,10 @@ class SQLInputImpl extends Object with SQLInput {
      */
     @stub
     def readURL(): URL = ???
+
+    /** Ascertains whether the last value read from this
+     *  SQLInputImpl object was null.
+     */
+    @stub
+    def wasNull(): Boolean = ???
 }

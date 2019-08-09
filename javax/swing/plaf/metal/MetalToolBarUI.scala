@@ -1,6 +1,6 @@
 package javax.swing.plaf.metal
 
-import java.awt.{Component, Point}
+import java.awt.{Component, Graphics, Point}
 import java.awt.event.ContainerListener
 import java.beans.PropertyChangeListener
 import java.lang.Object
@@ -9,6 +9,7 @@ import javax.swing.border.Border
 import javax.swing.event.MouseInputListener
 import javax.swing.plaf.{ComponentUI, ToolBarUI}
 import javax.swing.plaf.basic.BasicToolBarUI
+import scala.scalanative.annotation.stub
 
 /** A Metal Look and Feel implementation of ToolBarUI.  This implementation
  *  is a "combined" view/controller.
@@ -18,15 +19,27 @@ class MetalToolBarUI extends BasicToolBarUI {
 
     /**  */
     @stub
+    def this() = ???
+
+    /**  */
+    @stub
     protected object MetalContainerListener extends MetalToolBarUI.MetalContainerListener
 
     /**  */
     @stub
     protected object MetalDockingListener extends MetalToolBarUI.MetalDockingListener
 
+    /**  */
+    @stub
+    protected object MetalRolloverListener extends MetalToolBarUI.MetalRolloverListener
+
     /** This protected field is implementation specific. */
     @stub
     protected val contListener: ContainerListener = ???
+
+    /** This protected field is implementation specific. */
+    @stub
+    protected val rolloverListener: PropertyChangeListener = ???
 
     /** Creates a container listener that will be added to the JToolBar. */
     @stub
@@ -75,6 +88,12 @@ class MetalToolBarUI extends BasicToolBarUI {
      */
     @stub
     def uninstallUI(c: JComponent): Unit = ???
+
+    /** If necessary paints the background of the component, then invokes
+     *  paint.
+     */
+    @stub
+    def update(g: Graphics, c: JComponent): Unit = ???
 }
 
 object MetalToolBarUI {

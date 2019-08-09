@@ -3,12 +3,17 @@ package javax.swing.text.html
 import java.awt.Shape
 import java.lang.Object
 import javax.swing.event.DocumentEvent
-import javax.swing.text.{AttributeSet, GlyphView, LabelView, View, ViewFactory}
+import javax.swing.text.{AttributeSet, Element, GlyphView, LabelView, View, ViewFactory}
+import scala.scalanative.annotation.stub
 
 /** Displays the inline element styles
  *  based upon css attributes.
  */
 class InlineView extends LabelView {
+
+    /** Constructs a new view wrapped on an element. */
+    @stub
+    def this(elem: Element) = ???
 
     /** Tries to break this view on the given axis. */
     @stub
@@ -45,4 +50,8 @@ class InlineView extends LabelView {
      */
     @stub
     def removeUpdate(e: DocumentEvent, a: Shape, f: ViewFactory): Unit = ???
+
+    /** Set the cached properties from the attributes. */
+    @stub
+    protected def setPropertiesFromAttributes(): Unit = ???
 }

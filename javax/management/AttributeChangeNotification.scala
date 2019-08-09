@@ -2,6 +2,7 @@ package javax.management
 
 import java.lang.{Object, String}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** Provides definitions of the attribute change notifications sent by MBeans.
  *  
@@ -24,6 +25,10 @@ import java.util.EventObject
  */
 class AttributeChangeNotification extends Notification {
 
+    /** Constructs an attribute change notification object. */
+    @stub
+    def this(source: Object, sequenceNumber: Long, timeStamp: Long, msg: String, attributeName: String, attributeType: String, oldValue: Object, newValue: Object) = ???
+
     /** Gets the name of the attribute which has changed. */
     @stub
     def getAttributeName(): String = ???
@@ -35,4 +40,14 @@ class AttributeChangeNotification extends Notification {
     /** Gets the new value of the attribute which has changed. */
     @stub
     def getNewValue(): Object = ???
+
+    /** Gets the old value of the attribute which has changed. */
+    @stub
+    def getOldValue(): Object = ???
+}
+
+object AttributeChangeNotification {
+    /** Notification type which indicates that the observed MBean attribute value has changed. */
+    @stub
+    val ATTRIBUTE_CHANGE: String = ???
 }

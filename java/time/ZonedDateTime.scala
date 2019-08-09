@@ -5,6 +5,7 @@ import java.lang.{CharSequence, Object, String}
 import java.time.chrono.ChronoZonedDateTime
 import java.time.format.DateTimeFormatter
 import java.time.temporal.{Temporal, TemporalAccessor, TemporalAdjuster, TemporalAmount, TemporalField, TemporalQuery, TemporalUnit, ValueRange}
+import scala.scalanative.annotation.stub
 
 /** A date-time with a time-zone in the ISO-8601 calendar system,
  *  such as 2007-12-03T10:15:30+01:00 Europe/Paris.
@@ -321,6 +322,12 @@ final class ZonedDateTime extends Object with Temporal with ChronoZonedDateTime[
      */
     @stub
     def withZoneSameInstant(zone: ZoneId): ZonedDateTime = ???
+
+    /** Returns a copy of this date-time with a different time-zone,
+     *  retaining the local date-time if possible.
+     */
+    @stub
+    def withZoneSameLocal(zone: ZoneId): ZonedDateTime = ???
 }
 
 object ZonedDateTime {

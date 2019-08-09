@@ -1,7 +1,8 @@
 package java.util.spi
 
-import java.lang.{Object, String}
-import java.util.Locale
+import java.lang.{Integer, Object, String}
+import java.util.{Locale, Map}
+import scala.scalanative.annotation.stub
 
 /** An abstract class for service providers that provide localized string
  *  representations (display names) of Calendar field values.
@@ -133,9 +134,19 @@ import java.util.Locale
  */
 abstract class CalendarNameProvider extends LocaleServiceProvider {
 
+    /** Sole constructor. */
+    @stub
+    protected def this() = ???
+
     /** Returns the string representation (display name) of the calendar
      *  field value in the given style and
      *  locale.
      */
     def getDisplayName(calendarType: String, field: Int, value: Int, style: Int, locale: Locale): String
+
+    /** Returns a Map containing all string representations (display
+     *  names) of the Calendar field in the given style
+     *  and locale and their corresponding field values.
+     */
+    def getDisplayNames(calendarType: String, field: Int, style: Int, locale: Locale): Map[String, Integer]
 }

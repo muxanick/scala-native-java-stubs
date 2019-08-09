@@ -1,7 +1,8 @@
 package javax.security.auth
 
 import java.lang.{Object, String}
-import java.security.Permission
+import java.security.{Permission, PermissionCollection}
+import scala.scalanative.annotation.stub
 
 /** This class is used to protect access to private Credentials
  *  belonging to a particular Subject.  The Subject
@@ -72,6 +73,12 @@ import java.security.Permission
  */
 final class PrivateCredentialPermission extends Permission {
 
+    /** Creates a new PrivateCredentialPermission
+     *  with the specified name.
+     */
+    @stub
+    def this(name: String, actions: String) = ???
+
     /** Checks two PrivateCredentialPermission objects for
      *  equality.
      */
@@ -103,4 +110,10 @@ final class PrivateCredentialPermission extends Permission {
      */
     @stub
     def implies(p: Permission): Boolean = ???
+
+    /** Return a homogeneous collection of PrivateCredentialPermissions
+     *  in a PermissionCollection.
+     */
+    @stub
+    def newPermissionCollection(): PermissionCollection = ???
 }

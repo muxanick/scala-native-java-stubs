@@ -1,6 +1,8 @@
 package java.time.temporal
 
+import java.lang.String
 import java.time.Duration
+import scala.scalanative.annotation.stub
 
 /** A unit of date-time, such as Days or Hours.
  *  
@@ -48,4 +50,8 @@ trait TemporalUnit {
     /** Checks if this unit represents a component of a time. */
     @stub
     def isTimeBased(): Boolean = ???
+
+    /** Gets a descriptive name for the unit. */
+    @stub
+    def toString(): String = ???
 }

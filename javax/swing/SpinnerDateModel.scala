@@ -3,6 +3,7 @@ package javax.swing
 import java.io.Serializable
 import java.lang.{Comparable, Object}
 import java.util.Date
+import scala.scalanative.annotation.stub
 
 /** A SpinnerModel for sequences of Dates.
  *  The upper and lower bounds of the sequence are defined by properties called
@@ -60,6 +61,12 @@ class SpinnerDateModel extends AbstractSpinnerModel with Serializable {
     @stub
     def this() = ???
 
+    /** Creates a SpinnerDateModel that represents a sequence of dates
+     *  between start and end.
+     */
+    @stub
+    def this(value: Date, start: Comparable, end: Comparable, calendarField: Int) = ???
+
     /** Returns the Calendar field that is added to or subtracted from
      *  by the nextValue and previousValue methods.
      */
@@ -107,4 +114,8 @@ class SpinnerDateModel extends AbstractSpinnerModel with Serializable {
     /** Changes the lower limit for Dates in this sequence. */
     @stub
     def setStart(start: Comparable): Unit = ???
+
+    /** Sets the current Date for this sequence. */
+    @stub
+    def setValue(value: Object): Unit = ???
 }

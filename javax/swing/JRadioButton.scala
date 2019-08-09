@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component, Container}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** An implementation of a radio button -- an item that can be selected or
  *  deselected, and which displays its state to the user.
@@ -85,6 +86,18 @@ class JRadioButton extends JToggleButton with Accessible {
     @stub
     def this(text: String, icon: Icon) = ???
 
+    /** Creates a radio button that has the specified text, image,
+     *  and selection state.
+     */
+    @stub
+    def this(text: String, icon: Icon, selected: Boolean) = ???
+
+    /** This class implements accessibility support for the
+     *  JRadioButton class.
+     */
+    @stub
+    protected object AccessibleJRadioButton extends JRadioButton.AccessibleJRadioButton
+
     /** Gets the AccessibleContext associated with this JRadioButton. */
     @stub
     def getAccessibleContext(): AccessibleContext = ???
@@ -98,4 +111,8 @@ class JRadioButton extends JToggleButton with Accessible {
     /** Returns a string representation of this JRadioButton. */
     @stub
     protected def paramString(): String = ???
+
+    /** Resets the UI property to a value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
 }

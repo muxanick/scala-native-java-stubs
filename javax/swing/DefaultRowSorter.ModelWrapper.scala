@@ -1,6 +1,7 @@
 package javax.swing
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** DefaultRowSorter.ModelWrapper is responsible for providing
  *  the data that gets sorted by DefaultRowSorter.  You
@@ -18,6 +19,10 @@ import java.lang.{Object, String}
  *  object.
  */
 object protected abstract DefaultRowSorter.ModelWrapper[M, I] extends Object {
+
+    /** Creates a new ModelWrapper. */
+    @stub
+    protected def ModelWrapper() = ???
 
     /** Returns the number of columns in the model. */
     @stub
@@ -42,4 +47,8 @@ object protected abstract DefaultRowSorter.ModelWrapper[M, I] extends Object {
      */
     @stub
     def getStringValueAt(row: Int, column: Int): String = ???
+
+    /** Returns the value at the specified index. */
+    @stub
+    def getValueAt(row: Int, column: Int): Object
 }

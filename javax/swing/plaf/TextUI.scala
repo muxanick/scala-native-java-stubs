@@ -3,9 +3,14 @@ package javax.swing.plaf
 import java.awt.{Point, Rectangle}
 import java.lang.{Object, String}
 import javax.swing.text.{EditorKit, JTextComponent, Position.Bias, View}
+import scala.scalanative.annotation.stub
 
 /** Text editor user interface */
 abstract class TextUI extends ComponentUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Causes the portion of the view responsible for the
      *  given part of the model to be repainted.
@@ -49,4 +54,9 @@ abstract class TextUI extends ComponentUI {
      *  to the nearest representative location in the model.
      */
     def viewToModel(t: JTextComponent, pt: Point): Int
+
+    /** Provides a mapping from the view coordinate space to the logical
+     *  coordinate space of the model.
+     */
+    def viewToModel(t: JTextComponent, pt: Point, biasReturn: Array[Position.Bias]): Int
 }

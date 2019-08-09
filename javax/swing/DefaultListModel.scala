@@ -2,6 +2,7 @@ package javax.swing
 
 import java.lang.{Object, String}
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** This class loosely implements the java.util.Vector
  *  API, in that it implements the 1.1.x version of
@@ -20,6 +21,10 @@ import java.util.Enumeration
  *  Please see XMLEncoder.
  */
 class DefaultListModel[E] extends AbstractListModel[E] {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Inserts the specified element at the specified position in this list. */
     @stub
@@ -163,4 +168,8 @@ class DefaultListModel[E] extends AbstractListModel[E] {
      */
     @stub
     def toString(): String = ???
+
+    /** Trims the capacity of this list to be the list's current size. */
+    @stub
+    def trimToSize(): Unit = ???
 }

@@ -1,9 +1,9 @@
 package javax.xml.ws
 
-import java.lang.Class
+import java.lang.{Class, String}
 import java.security.Principal
 import javax.xml.ws.handler.MessageContext
-import org.w3c.dom.Element
+import scala.scalanative.annotation.stub
 
 /** A WebServiceContext makes it possible for
  *   a web service endpoint implementation class to access
@@ -39,4 +39,11 @@ trait WebServiceContext {
      */
     @stub
     def getUserPrincipal(): Principal = ???
+
+    /** Returns a boolean indicating whether the
+     *  authenticated user is included in the specified
+     *  logical role.
+     */
+    @stub
+    def isUserInRole(role: String): Boolean = ???
 }

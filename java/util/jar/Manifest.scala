@@ -1,8 +1,9 @@
 package java.util.jar
 
-import java.io.InputStream
+import java.io.{InputStream, OutputStream}
 import java.lang.{Cloneable, Object, String}
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** The Manifest class is used to maintain Manifest entry names and their
  *  associated Attributes. There are main Manifest Attributes as well as
@@ -20,6 +21,10 @@ class Manifest extends Object with Cloneable {
     /** Constructs a new Manifest from the specified input stream. */
     @stub
     def this(is: InputStream) = ???
+
+    /** Constructs a new Manifest that is a copy of the specified Manifest. */
+    @stub
+    def this(man: Manifest) = ???
 
     /** Clears the main Attributes as well as the entries in this Manifest. */
     @stub
@@ -54,4 +59,8 @@ class Manifest extends Object with Cloneable {
     /** Reads the Manifest from the specified InputStream. */
     @stub
     def read(is: InputStream): Unit = ???
+
+    /** Writes the Manifest to the specified OutputStream. */
+    @stub
+    def write(out: OutputStream): Unit = ???
 }

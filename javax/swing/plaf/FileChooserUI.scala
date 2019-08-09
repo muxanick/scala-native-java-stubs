@@ -4,9 +4,14 @@ import java.io.File
 import java.lang.{Object, String}
 import javax.swing.{JButton, JFileChooser}
 import javax.swing.filechooser.{FileFilter, FileView}
+import scala.scalanative.annotation.stub
 
 /** Pluggable look and feel interface for JFileChooser. */
 abstract class FileChooserUI extends ComponentUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /**  */
     def ensureFileIsVisible(fc: JFileChooser, f: File): Unit
@@ -25,4 +30,7 @@ abstract class FileChooserUI extends ComponentUI {
 
     /**  */
     def getFileView(fc: JFileChooser): FileView
+
+    /**  */
+    def rescanCurrentDirectory(fc: JFileChooser): Unit
 }

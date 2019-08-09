@@ -1,6 +1,7 @@
 package javax.swing.text.html
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Definitions to be used as a key on AttributeSet's
  *  that might hold CSS attributes.  Since this is a
@@ -249,6 +250,10 @@ final object CSS.Attribute extends Object {
     @stub
     val WIDTH: CSS.Attribute = ???
 
+    /**  */
+    @stub
+    val WORD_SPACING: CSS.Attribute = ???
+
     /** Fetch the default value for the attribute. */
     @stub
     def getDefaultValue(): String = ???
@@ -258,4 +263,8 @@ final object CSS.Attribute extends Object {
      */
     @stub
     def isInherited(): Boolean = ???
+
+    /** The string representation of the attribute. */
+    @stub
+    def toString(): String = ???
 }

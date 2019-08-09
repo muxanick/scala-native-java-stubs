@@ -1,6 +1,7 @@
 package java.io
 
 import java.lang.{Class, Object, String}
+import scala.scalanative.annotation.stub
 
 /** An ObjectInputStream deserializes primitive data and objects previously
  *  written using an ObjectOutputStream.
@@ -162,6 +163,10 @@ class ObjectInputStream extends InputStream with ObjectInput with ObjectStreamCo
     @stub
     protected def this() = ???
 
+    /** Creates an ObjectInputStream that reads from the specified InputStream. */
+    @stub
+    def this(in: InputStream) = ???
+
     /** Returns the number of bytes that can be read without blocking. */
     @stub
     def available(): Int = ???
@@ -305,4 +310,14 @@ class ObjectInputStream extends InputStream with ObjectInput with ObjectStreamCo
      */
     @stub
     protected def resolveProxyClass(interfaces: Array[String]): Class[_] = ???
+
+    /** Skips bytes. */
+    @stub
+    def skipBytes(len: Int): Int = ???
+}
+
+object ObjectInputStream {
+    /** Provide access to the persistent fields read from the input stream. */
+    @stub
+    object GetField extends ObjectInputStream.GetField
 }

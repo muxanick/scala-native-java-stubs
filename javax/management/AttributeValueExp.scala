@@ -1,6 +1,7 @@
 package javax.management
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Represents attributes used as arguments to relational constraints.
  *  Instances of this class are usually obtained using Query.attr.
@@ -17,6 +18,12 @@ class AttributeValueExp extends Object with ValueExp {
      */
     @stub
     def this() = ???
+
+    /** Creates a new AttributeValueExp representing the
+     *  specified object attribute, named attr.
+     */
+    @stub
+    def this(attr: String) = ???
 
     /** Applies the AttributeValueExp on an MBean. */
     @stub
@@ -37,4 +44,8 @@ class AttributeValueExp extends Object with ValueExp {
      */
     @stub
     def setMBeanServer(s: MBeanServer): Unit = ???
+
+    /** Returns the string representing its value. */
+    @stub
+    def toString(): String = ???
 }

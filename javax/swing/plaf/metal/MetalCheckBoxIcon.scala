@@ -5,6 +5,7 @@ import java.io.Serializable
 import java.lang.Object
 import javax.swing.Icon
 import javax.swing.plaf.UIResource
+import scala.scalanative.annotation.stub
 
 /** CheckboxIcon implementation for OrganicCheckBoxUI
  *  
@@ -21,6 +22,10 @@ class MetalCheckBoxIcon extends Object with Icon with UIResource with Serializab
 
     /**  */
     @stub
+    def this() = ???
+
+    /**  */
+    @stub
     protected def drawCheck(c: Component, g: Graphics, x: Int, y: Int): Unit = ???
 
     /**  */
@@ -34,4 +39,8 @@ class MetalCheckBoxIcon extends Object with Icon with UIResource with Serializab
     /** Returns the icon's width. */
     @stub
     def getIconWidth(): Int = ???
+
+    /** Draw the icon at the specified location. */
+    @stub
+    def paintIcon(c: Component, g: Graphics, x: Int, y: Int): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.beans.beancontext
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** 
  * See Also:

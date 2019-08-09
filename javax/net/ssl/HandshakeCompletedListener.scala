@@ -1,6 +1,7 @@
 package javax.net.ssl
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** This interface is implemented by any class which wants to receive
  *  notifications about the completion of an SSL protocol handshake
@@ -13,4 +14,10 @@ import java.util.EventListener
  *  peer identity and a new SSL cipher suite.
  */
 trait HandshakeCompletedListener extends EventListener {
+
+    /** This method is invoked on registered objects
+     *  when a SSL handshake is completed.
+     */
+    @stub
+    def handshakeCompleted(event: HandshakeCompletedEvent): Unit = ???
 }

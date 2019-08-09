@@ -3,6 +3,7 @@ package javax.accessibility
 import java.beans.PropertyChangeListener
 import java.lang.{Object, String}
 import java.util.Locale
+import scala.scalanative.annotation.stub
 
 /** AccessibleContext represents the minimum information all accessible objects
  *  return.  This information includes the accessible name, description, role,
@@ -40,11 +41,18 @@ import java.util.Locale
  */
 abstract class AccessibleContext extends Object {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** A localized String containing the description of the object. */
     protected val accessibleDescription: String
 
     /** A localized String containing the name of the object. */
     protected val accessibleName: String
+
+    /** The accessible parent of this object. */
+    protected val accessibleParent: Accessible
 
     /** Adds a PropertyChangeListener to the listener list. */
     def addPropertyChangeListener(listener: PropertyChangeListener): Unit
@@ -128,6 +136,9 @@ abstract class AccessibleContext extends Object {
 
     /** Sets the localized accessible name of this object. */
     def setAccessibleName(s: String): Unit
+
+    /** Sets the Accessible parent of this object. */
+    def setAccessibleParent(a: Accessible): Unit
 }
 
 object AccessibleContext {

@@ -2,6 +2,7 @@ package java.awt.image
 
 import java.awt.{Point, Rectangle}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A class representing a rectangular array of pixels.  A Raster
  *  encapsulates a DataBuffer that stores the sample values and a
@@ -85,6 +86,10 @@ class Raster extends Object {
     @stub
     protected def this(sampleModel: SampleModel, dataBuffer: DataBuffer, aRegion: Rectangle, sampleModelTranslate: Point, parent: Raster) = ???
 
+    /** Constructs a Raster with the given SampleModel. */
+    @stub
+    protected def this(sampleModel: SampleModel, origin: Point) = ???
+
     /** The DataBuffer that stores the image data. */
     @stub
     protected val dataBuffer: DataBuffer = ???
@@ -130,6 +135,10 @@ class Raster extends Object {
      */
     @stub
     protected val sampleModelTranslateY: Int = ???
+
+    /** The width of this Raster. */
+    @stub
+    protected val width: Int = ???
 
     /** Returns a new Raster which shares all or part of this Raster's
      *  DataBuffer.
@@ -304,6 +313,10 @@ class Raster extends Object {
      */
     @stub
     def getTransferType(): Int = ???
+
+    /** Returns the width in pixels of the Raster. */
+    @stub
+    def getWidth(): Int = ???
 }
 
 object Raster {

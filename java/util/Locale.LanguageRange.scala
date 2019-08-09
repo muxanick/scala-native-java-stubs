@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class expresses a Language Range defined in
  *  RFC 4647 Matching of
@@ -34,11 +35,23 @@ final object Locale.LanguageRange extends Object {
     @stub
     def LanguageRange(range: String) = ???
 
+    /** Constructs a LanguageRange using the given range and
+     *  weight.
+     */
+    @stub
+    def LanguageRange(range: String, weight: Double) = ???
+
     /** A constant holding the maximum value of weight, 1.0, which indicates
      *  that the language range is a good fit for the user.
      */
     @stub
     val MAX_WEIGHT: Double = ???
+
+    /** A constant holding the minimum value of weight, 0.0, which indicates
+     *  that the language range is not a good fit for the user.
+     */
+    @stub
+    val MIN_WEIGHT: Double = ???
 
     /** Compares this object to the specified object. */
     @stub
@@ -65,4 +78,10 @@ final object Locale.LanguageRange extends Object {
     /** Parses the given ranges to generate a Language Priority List. */
     @stub
     def parse(ranges: String): List[Locale.LanguageRange] = ???
+
+    /** Parses the given ranges to generate a Language Priority
+     *  List, and then customizes the list using the given map.
+     */
+    @stub
+    def parse(ranges: String, map: Map[String, List[String]]): List[Locale.LanguageRange] = ???
 }

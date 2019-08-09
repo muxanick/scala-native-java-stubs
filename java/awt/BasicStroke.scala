@@ -1,6 +1,7 @@
 package java.awt
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The BasicStroke class defines a basic set of rendering
  *  attributes for the outlines of graphics primitives, which are rendered
@@ -108,6 +109,12 @@ class BasicStroke extends Object with Stroke {
     @stub
     def this(width: Float, cap: Int, join: Int, miterlimit: Float) = ???
 
+    /** Constructs a new BasicStroke with the specified
+     *  attributes.
+     */
+    @stub
+    def this(width: Float, cap: Int, join: Int, miterlimit: Float, dash: Array[Float], dash_phase: Float) = ???
+
     /** Returns a Shape whose interior defines the
      *  stroked outline of a specified Shape.
      */
@@ -145,6 +152,10 @@ class BasicStroke extends Object with Stroke {
     /** Returns the limit of miter joins. */
     @stub
     def getMiterLimit(): Float = ???
+
+    /** Returns the hashcode for this stroke. */
+    @stub
+    def hashCode(): Int = ???
 }
 
 object BasicStroke {
@@ -179,4 +190,10 @@ object BasicStroke {
      */
     @stub
     val JOIN_MITER: Int = ???
+
+    /** Joins path segments by rounding off the corner at a radius
+     *  of half the line width.
+     */
+    @stub
+    val JOIN_ROUND: Int = ???
 }

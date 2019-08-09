@@ -4,6 +4,8 @@ import java.io.{Closeable, File, InputStream}
 import java.lang.{Object, String}
 import java.nio.charset.Charset
 import java.util.Enumeration
+import java.util.stream.Stream
+import scala.scalanative.annotation.stub
 
 /** This class is used to read entries from a zip file.
  * 
@@ -36,6 +38,10 @@ class ZipFile extends Object with Closeable {
     /** Opens a zip file for reading. */
     @stub
     def this(name: String) = ???
+
+    /** Opens a zip file for reading. */
+    @stub
+    def this(name: String, charset: Charset) = ???
 
     /** Closes the ZIP file. */
     @stub
@@ -74,6 +80,10 @@ class ZipFile extends Object with Closeable {
     /** Returns the number of entries in the ZIP file. */
     @stub
     def size(): Int = ???
+
+    /** Return an ordered Stream over the ZIP file entries. */
+    @stub
+    def stream(): Stream[_ <: ZipEntry] = ???
 }
 
 object ZipFile {
@@ -240,4 +250,8 @@ object ZipFile {
     /** Mode flag to open a zip file and mark it for deletion. */
     @stub
     val OPEN_DELETE: Int = ???
+
+    /** Mode flag to open a zip file for reading. */
+    @stub
+    val OPEN_READ: Int = ???
 }

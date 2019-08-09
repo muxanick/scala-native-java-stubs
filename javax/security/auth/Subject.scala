@@ -1,9 +1,10 @@
 package javax.security.auth
 
 import java.io.Serializable
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import java.security.{AccessControlContext, Principal, PrivilegedAction, PrivilegedExceptionAction}
 import java.util.Set
+import scala.scalanative.annotation.stub
 
 /**  A Subject represents a grouping of related information
  *  for a single entity, such as a person.
@@ -66,6 +67,12 @@ final class Subject extends Object with Serializable {
     @stub
     def this() = ???
 
+    /** Create an instance of a Subject with
+     *  Principals and credentials.
+     */
+    @stub
+    def this(readOnly: Boolean, principals: Set[_ <: Principal], pubCredentials: Set[_], privCredentials: Set[_]) = ???
+
     /** Compares the specified Object with this Subject
      *  for equality.
      */
@@ -122,6 +129,10 @@ final class Subject extends Object with Serializable {
     /** Set this Subject to be read-only. */
     @stub
     def setReadOnly(): Unit = ???
+
+    /** Return the String representation of this Subject. */
+    @stub
+    def toString(): String = ???
 }
 
 object Subject {

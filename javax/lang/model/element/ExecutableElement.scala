@@ -2,6 +2,7 @@ package javax.lang.model.element
 
 import java.util.List
 import javax.lang.model.type.TypeMirror
+import scala.scalanative.annotation.stub
 
 /** Represents a method, constructor, or initializer (static or
  *  instance) of a class or interface, including annotation type
@@ -55,4 +56,10 @@ trait ExecutableElement extends Element with Parameterizable {
      */
     @stub
     def isDefault(): Boolean = ???
+
+    /** Returns true if this method or constructor accepts a variable
+     *  number of arguments and returns false otherwise.
+     */
+    @stub
+    def isVarArgs(): Boolean = ???
 }

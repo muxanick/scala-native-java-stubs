@@ -1,6 +1,7 @@
 package java.awt.datatransfer
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A Transferable which implements the capability required
  *  to transfer a String.
@@ -13,6 +14,12 @@ import java.lang.Object
  *  DataFlavors are supported.
  */
 class StringSelection extends Object with Transferable with ClipboardOwner {
+
+    /** Creates a Transferable capable of transferring
+     *  the specified String.
+     */
+    @stub
+    def this(data: String) = ???
 
     /** Returns the Transferable's data in the requested
      *  DataFlavor if possible.
@@ -31,4 +38,8 @@ class StringSelection extends Object with Transferable with ClipboardOwner {
      */
     @stub
     def isDataFlavorSupported(flavor: DataFlavor): Boolean = ???
+
+    /** Notifies this object that it is no longer the clipboard owner. */
+    @stub
+    def lostOwnership(clipboard: Clipboard, contents: Transferable): Unit = ???
 }

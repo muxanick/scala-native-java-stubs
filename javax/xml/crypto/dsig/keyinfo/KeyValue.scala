@@ -1,7 +1,9 @@
 package javax.xml.crypto.dsig.keyinfo
 
 import java.lang.String
+import java.security.PublicKey
 import javax.xml.crypto.XMLStructure
+import scala.scalanative.annotation.stub
 
 /** A representation of the XML KeyValue element as defined
  *  in the 
@@ -64,6 +66,10 @@ import javax.xml.crypto.XMLStructure
  *  types.
  */
 trait KeyValue extends XMLStructure {
+
+    /** Returns the public key of this KeyValue. */
+    @stub
+    def getPublicKey(): PublicKey = ???
 }
 
 object KeyValue {
@@ -72,4 +78,10 @@ object KeyValue {
      */
     @stub
     val DSA_TYPE: String = ???
+
+    /** URI identifying the RSA KeyValue KeyInfo type:
+     *  http://www.w3.org/2000/09/xmldsig#RSAKeyValue.
+     */
+    @stub
+    val RSA_TYPE: String = ???
 }

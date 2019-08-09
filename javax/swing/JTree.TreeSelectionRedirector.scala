@@ -2,7 +2,8 @@ package javax.swing
 
 import java.io.Serializable
 import java.lang.Object
-import javax.swing.event.TreeSelectionListener
+import javax.swing.event.{TreeSelectionEvent, TreeSelectionListener}
+import scala.scalanative.annotation.stub
 
 /** Handles creating a new TreeSelectionEvent with the
  *  JTree as the
@@ -18,4 +19,14 @@ import javax.swing.event.TreeSelectionListener
  *  Please see XMLEncoder.
  */
 protected class JTree.TreeSelectionRedirector extends Object with Serializable with TreeSelectionListener {
+
+    /**  */
+    @stub
+    protected def TreeSelectionRedirector() = ???
+
+    /** Invoked by the TreeSelectionModel when the
+     *  selection changes.
+     */
+    @stub
+    def valueChanged(e: TreeSelectionEvent): Unit = ???
 }

@@ -2,6 +2,7 @@ package java.util.concurrent.locks
 
 import java.util.Date
 import java.util.concurrent.TimeUnit
+import scala.scalanative.annotation.stub
 
 /** Condition factors out the Object monitor
  *  methods (wait, notify
@@ -171,4 +172,8 @@ trait Condition {
     /** Wakes up one waiting thread. */
     @stub
     def signal(): Unit = ???
+
+    /** Wakes up all waiting threads. */
+    @stub
+    def signalAll(): Unit = ???
 }

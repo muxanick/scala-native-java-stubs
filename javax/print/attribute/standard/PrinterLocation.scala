@@ -1,7 +1,9 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
+import java.util.Locale
 import javax.print.attribute.{Attribute, PrintServiceAttribute, TextSyntax}
+import scala.scalanative.annotation.stub
 
 /** Class PrinterLocation is a printing attribute class, a text attribute, that
  *  identifies the location of the device. This could include things like:
@@ -14,6 +16,12 @@ import javax.print.attribute.{Attribute, PrintServiceAttribute, TextSyntax}
  */
 final class PrinterLocation extends TextSyntax with PrintServiceAttribute {
 
+    /** Constructs a new printer location attribute with the given location and
+     *  locale.
+     */
+    @stub
+    def this(location: String, locale: Locale) = ???
+
     /** Returns whether this printer location attribute is equivalent to the
      *  passed in object.
      */
@@ -25,4 +33,10 @@ final class PrinterLocation extends TextSyntax with PrintServiceAttribute {
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

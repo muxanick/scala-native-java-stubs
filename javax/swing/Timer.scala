@@ -4,6 +4,8 @@ import java.awt.event.{ActionEvent, ActionListener}
 import java.io.Serializable
 import java.lang.{Class, Object, String}
 import java.util.EventListener
+import javax.swing.event.EventListenerList
+import scala.scalanative.annotation.stub
 
 /** Fires one or more ActionEvents at specified
  *  intervals. An example use is an animation object that uses a
@@ -101,6 +103,16 @@ import java.util.EventListener
  *  Please see XMLEncoder.
  */
 class Timer extends Object with Serializable {
+
+    /** Creates a Timer and initializes both the initial delay and
+     *  between-event delay to delay milliseconds.
+     */
+    @stub
+    def this(delay: Int, listener: ActionListener) = ???
+
+    /**  */
+    @stub
+    protected val listenerList: EventListenerList = ???
 
     /** Adds an action listener to the Timer. */
     @stub
@@ -208,6 +220,13 @@ class Timer extends Object with Serializable {
      */
     @stub
     def start(): Unit = ???
+
+    /** Stops the Timer,
+     *  causing it to stop sending action events
+     *  to its listeners.
+     */
+    @stub
+    def stop(): Unit = ???
 }
 
 object Timer {

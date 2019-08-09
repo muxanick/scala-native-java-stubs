@@ -1,5 +1,7 @@
 package javax.imageio
 
+import scala.scalanative.annotation.stub
+
 /** An interface to be implemented by objects that can determine the
  *  settings of an IIOParam object, either by putting up a
  *  GUI to obtain values from a user, or by other means.  This
@@ -64,4 +66,8 @@ package javax.imageio
  *  methods, and return true.
  */
 trait IIOParamController {
+
+    /** Activates the controller. */
+    @stub
+    def activate(param: IIOParam): Boolean = ???
 }

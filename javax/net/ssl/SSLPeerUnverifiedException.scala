@@ -1,7 +1,8 @@
 package javax.net.ssl
 
 import java.io.IOException
-import java.lang.{Exception, Object, Throwable}
+import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** Indicates that the peer's identity has not been verified.
  *  
@@ -12,4 +13,10 @@ import java.lang.{Exception, Object, Throwable}
  *  exception is thrown.
  */
 class SSLPeerUnverifiedException extends SSLException {
+
+    /** Constructs an exception reporting that the SSL peer's
+     *  identity has not been verified.
+     */
+    @stub
+    def this(reason: String) = ???
 }

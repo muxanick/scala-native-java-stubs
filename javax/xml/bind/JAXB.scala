@@ -4,6 +4,7 @@ import java.io.{File, InputStream, OutputStream, Reader, Writer}
 import java.lang.{Class, Object, String}
 import java.net.{URI, URL}
 import javax.xml.transform.{Result, Source}
+import scala.scalanative.annotation.stub
 
 /** Class that defines convenience methods for common, simple use of JAXB.
  * 
@@ -105,4 +106,8 @@ object JAXB {
     /** Reads in a Java object tree from the given XML input. */
     @stub
     def unmarshal[T](xml: URI, type: Class[T]): T = ???
+
+    /** Reads in a Java object tree from the given XML input. */
+    @stub
+    def unmarshal[T](xml: URL, type: Class[T]): T = ???
 }

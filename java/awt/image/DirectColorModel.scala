@@ -1,7 +1,8 @@
 package java.awt.image
 
 import java.awt.color.ColorSpace
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The DirectColorModel class is a ColorModel
  *  class that works with pixel values that represent RGB
@@ -87,6 +88,14 @@ class DirectColorModel extends PackedColorModel {
      */
     @stub
     def this(bits: Int, rmask: Int, gmask: Int, bmask: Int) = ???
+
+    /** Constructs a DirectColorModel from the specified masks
+     *  that indicate which bits in an int pixel representation
+     *  contain the red, green and blue color samples and the alpha sample,
+     *  if present.
+     */
+    @stub
+    def this(bits: Int, rmask: Int, gmask: Int, bmask: Int, amask: Int) = ???
 
     /** Forces the raster data to match the state specified in the
      *  isAlphaPremultiplied variable, assuming the data is
@@ -225,4 +234,10 @@ class DirectColorModel extends PackedColorModel {
      */
     @stub
     def isCompatibleRaster(raster: Raster): Boolean = ???
+
+    /** Returns a String that represents this
+     *  DirectColorModel.
+     */
+    @stub
+    def toString(): String = ???
 }

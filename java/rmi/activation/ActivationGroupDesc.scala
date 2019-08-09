@@ -4,6 +4,7 @@ import java.io.Serializable
 import java.lang.{Object, String}
 import java.rmi.MarshalledObject
 import java.util.Properties
+import scala.scalanative.annotation.stub
 
 /** An activation group descriptor contains the information necessary to
  *  create/recreate an activation group in which to activate objects.
@@ -31,6 +32,12 @@ final class ActivationGroupDesc extends Object with Serializable {
     @stub
     def this(overrides: Properties, cmd: ActivationGroupDesc.CommandEnvironment) = ???
 
+    /** Specifies an alternate group implementation and execution
+     *  environment to be used for the group.
+     */
+    @stub
+    def this(className: String, location: String, data: MarshalledObject[_], overrides: Properties, cmd: ActivationGroupDesc.CommandEnvironment) = ???
+
     /** Compares two activation group descriptors for content equality. */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -54,4 +61,14 @@ final class ActivationGroupDesc extends Object with Serializable {
     /** Returns the group's property-override list. */
     @stub
     def getPropertyOverrides(): Properties = ???
+
+    /** Produce identical numbers for similar ActivationGroupDescs. */
+    @stub
+    def hashCode(): Int = ???
+}
+
+object ActivationGroupDesc {
+    /** Startup options for ActivationGroup implementations. */
+    @stub
+    object CommandEnvironment extends ActivationGroupDesc.CommandEnvironment
 }

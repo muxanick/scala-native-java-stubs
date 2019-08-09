@@ -3,6 +3,7 @@ package javax.naming.event
 import java.lang.Object
 import java.util.EventObject
 import javax.naming.Binding
+import scala.scalanative.annotation.stub
 
 /** This class represents an event fired by a naming/directory service.
  * 
@@ -41,6 +42,10 @@ import javax.naming.Binding
  */
 class NamingEvent extends EventObject {
 
+    /** Constructs an instance of NamingEvent. */
+    @stub
+    def this(source: EventContext, type: Int, newBd: Binding, oldBd: Binding, changeInfo: Object) = ???
+
     /** Contains information about the change that generated this event. */
     @stub
     protected val changeInfo: Object = ???
@@ -52,6 +57,10 @@ class NamingEvent extends EventObject {
     /** Contains information about the object before the change. */
     @stub
     protected val oldBinding: Binding = ???
+
+    /** Contains the type of this event. */
+    @stub
+    protected val type: Int = ???
 
     /** Invokes the appropriate listener method on this event. */
     @stub
@@ -72,6 +81,10 @@ class NamingEvent extends EventObject {
     /** Retrieves the binding of the object before the change. */
     @stub
     def getOldBinding(): Binding = ???
+
+    /** Returns the type of this event. */
+    @stub
+    def getType(): Int = ???
 }
 
 object NamingEvent {

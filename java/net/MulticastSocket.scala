@@ -1,6 +1,7 @@
 package java.net
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The multicast datagram socket class is useful for sending
  *  and receiving IP multicast packets.  A MulticastSocket is
@@ -58,6 +59,10 @@ class MulticastSocket extends DatagramSocket {
     /** Create a multicast socket and bind it to a specific port. */
     @stub
     def this(port: Int) = ???
+
+    /** Create a MulticastSocket bound to the specified socket address. */
+    @stub
+    def this(bindaddr: SocketAddress) = ???
 
     /** Retrieve the address of the network interface used for
      *  multicast packets.
@@ -143,4 +148,12 @@ class MulticastSocket extends DatagramSocket {
      */
     @stub
     def setTimeToLive(ttl: Int): Unit = ???
+
+    /** Deprecated. 
+     * use the setTimeToLive method instead, which uses
+     *  int instead of byte as the type for ttl.
+     * 
+     */
+    @stub
+    def setTTL(ttl: Byte): Unit = ???
 }

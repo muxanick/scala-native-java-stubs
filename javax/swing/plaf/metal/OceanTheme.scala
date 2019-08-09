@@ -3,6 +3,7 @@ package javax.swing.plaf.metal
 import java.lang.{Object, String}
 import javax.swing.UIDefaults
 import javax.swing.plaf.ColorUIResource
+import scala.scalanative.annotation.stub
 
 /** The default theme for the MetalLookAndFeel.
  *  
@@ -18,6 +19,10 @@ import javax.swing.plaf.ColorUIResource
  *  opaque.
  */
 class OceanTheme extends DefaultMetalTheme {
+
+    /** Creates an instance of OceanTheme */
+    @stub
+    def this() = ???
 
     /** Add this theme's custom entries to the defaults table. */
     @stub
@@ -66,4 +71,8 @@ class OceanTheme extends DefaultMetalTheme {
     /** Returns the secondary 2 color. */
     @stub
     protected def getSecondary2(): ColorUIResource = ???
+
+    /** Returns the secondary 3 color. */
+    @stub
+    protected def getSecondary3(): ColorUIResource = ???
 }

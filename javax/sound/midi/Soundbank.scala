@@ -1,6 +1,7 @@
 package javax.sound.midi
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** A Soundbank contains a set of Instruments
  *  that can be loaded into a Synthesizer.
@@ -58,4 +59,8 @@ trait Soundbank {
      */
     @stub
     def getVendor(): String = ???
+
+    /** Obtains the version string for the sound bank. */
+    @stub
+    def getVersion(): String = ???
 }

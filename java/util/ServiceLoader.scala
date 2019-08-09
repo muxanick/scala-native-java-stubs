@@ -1,6 +1,7 @@
 package java.util
 
-import java.lang.{Class, ClassLoader, Iterable, Object}
+import java.lang.{Class, ClassLoader, Iterable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A simple service-provider loading facility.
  * 
@@ -145,6 +146,10 @@ final class ServiceLoader[S] extends Object with Iterable[S] {
      */
     @stub
     def reload(): Unit = ???
+
+    /** Returns a string describing this service. */
+    @stub
+    def toString(): String = ???
 }
 
 object ServiceLoader {

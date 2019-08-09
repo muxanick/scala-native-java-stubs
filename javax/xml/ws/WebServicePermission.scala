@@ -2,6 +2,7 @@ package javax.xml.ws
 
 import java.lang.{Object, String}
 import java.security.{BasicPermission, Permission}
+import scala.scalanative.annotation.stub
 
 /** This class defines web service permissions.
  *  
@@ -29,4 +30,8 @@ final class WebServicePermission extends BasicPermission {
     /** Creates a new permission with the specified name. */
     @stub
     def this(name: String) = ???
+
+    /** Creates a new permission with the specified name and actions. */
+    @stub
+    def this(name: String, actions: String) = ???
 }

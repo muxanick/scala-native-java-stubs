@@ -3,6 +3,7 @@ package java.awt
 import java.io.Serializable
 import java.lang.{Object, String}
 import java.util.Hashtable
+import scala.scalanative.annotation.stub
 
 /** The GridBagLayout class is a flexible layout
  *  manager that aligns components vertically, horizontally or along their
@@ -329,6 +330,10 @@ import java.util.Hashtable
  */
 class GridBagLayout extends Object with LayoutManager2 with Serializable {
 
+    /** Creates a grid bag layout manager. */
+    @stub
+    def this() = ???
+
     /** This field holds the overrides to the column weights. */
     @stub
     val columnWeights: Array[Double] = ???
@@ -365,6 +370,10 @@ class GridBagLayout extends Object with LayoutManager2 with Serializable {
      */
     @stub
     val rowHeights: Array[Int] = ???
+
+    /** This field holds the overrides to the row weights. */
+    @stub
+    val rowWeights: Array[Double] = ???
 
     /** Adds the specified component to the layout, using the specified
      *  constraints object.
@@ -493,6 +502,10 @@ class GridBagLayout extends Object with LayoutManager2 with Serializable {
     /** Sets the constraints for the specified component in this layout. */
     @stub
     def setConstraints(comp: Component, constraints: GridBagConstraints): Unit = ???
+
+    /** Returns a string representation of this grid bag layout's values. */
+    @stub
+    def toString(): String = ???
 }
 
 object GridBagLayout {

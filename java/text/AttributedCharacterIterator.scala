@@ -2,6 +2,7 @@ package java.text
 
 import java.lang.Object
 import java.util.{Map, Set}
+import scala.scalanative.annotation.stub
 
 /** An AttributedCharacterIterator allows iteration through both text and
  *  related attribute information.
@@ -87,4 +88,16 @@ trait AttributedCharacterIterator extends CharacterIterator {
      */
     @stub
     def getRunStart(attribute: AttributedCharacterIterator.Attribute): Int = ???
+
+    /** Returns the index of the first character of the run
+     *  with respect to the given attributes containing the current character.
+     */
+    @stub
+    def getRunStart(attributes: Set[_ <: AttributedCharacterIterator.Attribute]): Int = ???
+}
+
+object AttributedCharacterIterator {
+    /** Defines attribute keys that are used to identify text attributes. */
+    @stub
+    object Attribute extends AttributedCharacterIterator.Attribute
 }

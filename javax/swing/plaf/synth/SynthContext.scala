@@ -2,6 +2,7 @@ package javax.swing.plaf.synth
 
 import java.lang.Object
 import javax.swing.JComponent
+import scala.scalanative.annotation.stub
 
 /** An immutable transient object containing contextual information about
  *  a Region. A SynthContext should only be
@@ -11,6 +12,10 @@ import javax.swing.JComponent
  *  remain valid.
  */
 class SynthContext extends Object {
+
+    /** Creates a SynthContext with the specified values. */
+    @stub
+    def this(component: JComponent, region: Region, style: SynthStyle, state: Int) = ???
 
     /** Returns the hosting component containing the region. */
     @stub
@@ -25,4 +30,8 @@ class SynthContext extends Object {
     /** Returns the Region identifying this state. */
     @stub
     def getRegion(): Region = ???
+
+    /** Returns the style associated with this Region. */
+    @stub
+    def getStyle(): SynthStyle = ???
 }

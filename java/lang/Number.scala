@@ -1,6 +1,7 @@
 package java.lang
 
 import java.io.Serializable
+import scala.scalanative.annotation.stub
 
 /** The abstract class Number is the superclass of platform
  *  classes representing numeric values that are convertible to the
@@ -22,6 +23,10 @@ import java.io.Serializable
  *  conversion details.
  */
 abstract class Number extends Object with Serializable {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Returns the value of the specified number as a byte,
      *  which may involve rounding or truncation.
@@ -47,4 +52,9 @@ abstract class Number extends Object with Serializable {
      *  which may involve rounding or truncation.
      */
     def longValue(): Long
+
+    /** Returns the value of the specified number as a short,
+     *  which may involve rounding or truncation.
+     */
+    def shortValue(): Short
 }

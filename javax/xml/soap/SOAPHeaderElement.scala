@@ -1,6 +1,7 @@
 package javax.xml.soap
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** An object representing the contents in the SOAP header part of the
  *  SOAP envelope.
@@ -53,4 +54,10 @@ trait SOAPHeaderElement extends SOAPElement {
      */
     @stub
     def setRelay(relay: Boolean): Unit = ???
+
+    /** Sets the Role associated with this SOAPHeaderElement
+     *  object to the specified Role.
+     */
+    @stub
+    def setRole(uri: String): Unit = ???
 }

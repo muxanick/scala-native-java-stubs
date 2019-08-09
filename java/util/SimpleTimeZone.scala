@@ -1,6 +1,7 @@
 package java.util
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** SimpleTimeZone is a concrete subclass of TimeZone
  *  that represents a time zone for use with a Gregorian calendar.
@@ -111,6 +112,13 @@ class SimpleTimeZone extends TimeZone {
     @stub
     def this(rawOffset: Int, ID: String, startMonth: Int, startDay: Int, startDayOfWeek: Int, startTime: Int, endMonth: Int, endDay: Int, endDayOfWeek: Int, endTime: Int, dstSavings: Int) = ???
 
+    /** Constructs a SimpleTimeZone with the given base time zone offset from
+     *  GMT, time zone ID, and rules for starting and ending the daylight
+     *  time.
+     */
+    @stub
+    def this(rawOffset: Int, ID: String, startMonth: Int, startDay: Int, startDayOfWeek: Int, startTime: Int, startTimeMode: Int, endMonth: Int, endDay: Int, endDayOfWeek: Int, endTime: Int, endTimeMode: Int, dstSavings: Int) = ???
+
     /** Returns a clone of this SimpleTimeZone instance. */
     @stub
     def clone(): Object = ???
@@ -205,6 +213,10 @@ class SimpleTimeZone extends TimeZone {
     /** Returns a string representation of this time zone. */
     @stub
     def toString(): String = ???
+
+    /** Queries if this time zone uses daylight saving time. */
+    @stub
+    def useDaylightTime(): Boolean = ???
 }
 
 object SimpleTimeZone {
@@ -215,4 +227,10 @@ object SimpleTimeZone {
     /** Constant for a mode of start or end time specified as UTC. */
     @stub
     val UTC_TIME: Int = ???
+
+    /** Constant for a mode of start or end time specified as wall clock
+     *  time.
+     */
+    @stub
+    val WALL_TIME: Int = ???
 }

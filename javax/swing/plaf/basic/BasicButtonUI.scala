@@ -4,13 +4,22 @@ import java.awt.{Component.BaselineResizeBehavior, Dimension, Graphics, Rectangl
 import java.lang.{Object, String}
 import javax.swing.{AbstractButton, JComponent}
 import javax.swing.plaf.{ButtonUI, ComponentUI}
+import scala.scalanative.annotation.stub
 
 /** BasicButton implementation */
 class BasicButtonUI extends ButtonUI {
 
     /**  */
     @stub
+    def this() = ???
+
+    /**  */
+    @stub
     protected val defaultTextIconGap: Int = ???
+
+    /**  */
+    @stub
+    protected val defaultTextShiftOffset: Int = ???
 
     /**  */
     @stub
@@ -115,6 +124,12 @@ class BasicButtonUI extends ButtonUI {
     /**  */
     @stub
     protected def uninstallListeners(b: AbstractButton): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicButtonUI {

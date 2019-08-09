@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener interface for receiving keyboard focus events on
  *  a component.
@@ -19,4 +20,8 @@ trait FocusListener extends EventListener {
     /** Invoked when a component gains the keyboard focus. */
     @stub
     def focusGained(e: FocusEvent): Unit = ???
+
+    /** Invoked when a component loses the keyboard focus. */
+    @stub
+    def focusLost(e: FocusEvent): Unit = ???
 }

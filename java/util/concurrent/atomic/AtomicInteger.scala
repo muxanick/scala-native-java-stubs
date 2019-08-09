@@ -3,6 +3,7 @@ package java.util.concurrent.atomic
 import java.io.Serializable
 import java.lang.{Number, Object, String}
 import java.util.function.{IntBinaryOperator, IntUnaryOperator}
+import scala.scalanative.annotation.stub
 
 /** An int value that may be updated atomically.  See the
  *  java.util.concurrent.atomic package specification for
@@ -18,6 +19,10 @@ class AtomicInteger extends Number with Serializable {
     /** Creates a new AtomicInteger with initial value 0. */
     @stub
     def this() = ???
+
+    /** Creates a new AtomicInteger with the given initial value. */
+    @stub
+    def this(initialValue: Int) = ???
 
     /** Atomically updates the current value with the results of
      *  applying the given function to the current and given values,
@@ -116,4 +121,10 @@ class AtomicInteger extends Number with Serializable {
      */
     @stub
     def updateAndGet(updateFunction: IntUnaryOperator): Int = ???
+
+    /** Atomically sets the value to the given updated value
+     *  if the current value == the expected value.
+     */
+    @stub
+    def weakCompareAndSet(expect: Int, update: Int): Boolean = ???
 }

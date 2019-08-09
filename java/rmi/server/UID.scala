@@ -1,7 +1,8 @@
 package java.rmi.server
 
-import java.io.{DataInput, Serializable}
+import java.io.{DataInput, DataOutput, Serializable}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A UID represents an identifier that is unique over time
  *  with respect to the host it is generated on, or one of 216
@@ -44,6 +45,10 @@ final class UID extends Object with Serializable {
     @stub
     def this() = ???
 
+    /** Creates a "well-known" UID. */
+    @stub
+    def this(num: Short) = ???
+
     /** Compares the specified object with this UID for
      *  equality.
      */
@@ -57,6 +62,12 @@ final class UID extends Object with Serializable {
     /** Returns a string representation of this UID. */
     @stub
     def toString(): String = ???
+
+    /** Marshals a binary representation of this UID to
+     *  a DataOutput instance.
+     */
+    @stub
+    def write(out: DataOutput): Unit = ???
 }
 
 object UID {

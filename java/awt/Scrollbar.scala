@@ -4,6 +4,7 @@ import java.awt.event.{AdjustmentEvent, AdjustmentListener}
 import java.lang.{Class, Object, String}
 import java.util.EventListener
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** The Scrollbar class embodies a scroll bar, a
  *  familiar user-interface object. A scroll bar provides a
@@ -135,6 +136,18 @@ class Scrollbar extends Component with Adjustable with Accessible {
     /** Constructs a new scroll bar with the specified orientation. */
     @stub
     def this(orientation: Int) = ???
+
+    /** Constructs a new scroll bar with the specified orientation,
+     *  initial value, visible amount, and minimum and maximum values.
+     */
+    @stub
+    def this(orientation: Int, value: Int, visible: Int, minimum: Int, maximum: Int) = ???
+
+    /** This class implements accessibility support for the
+     *  Scrollbar class.
+     */
+    @stub
+    protected object AccessibleAWTScrollBar extends Scrollbar.AccessibleAWTScrollBar
 
     /** Adds the specified adjustment listener to receive instances of
      *  AdjustmentEvent from this scroll bar.
@@ -294,10 +307,18 @@ class Scrollbar extends Component with Adjustable with Accessible {
      */
     @stub
     def setValues(value: Int, visible: Int, minimum: Int, maximum: Int): Unit = ???
+
+    /** Sets the visible amount of this scroll bar. */
+    @stub
+    def setVisibleAmount(newAmount: Int): Unit = ???
 }
 
 object Scrollbar {
     /** A constant that indicates a horizontal scroll bar. */
     @stub
     val HORIZONTAL: Int = ???
+
+    /** A constant that indicates a vertical scroll bar. */
+    @stub
+    val VERTICAL: Int = ???
 }

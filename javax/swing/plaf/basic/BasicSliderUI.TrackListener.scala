@@ -3,6 +3,7 @@ package javax.swing.plaf.basic
 import java.awt.event.{MouseAdapter, MouseEvent}
 import java.lang.Object
 import javax.swing.event.MouseInputAdapter
+import scala.scalanative.annotation.stub
 
 /** Track mouse movements.
  * 
@@ -13,11 +14,19 @@ class BasicSliderUI.TrackListener extends MouseInputAdapter {
 
     /**  */
     @stub
+    def TrackListener() = ???
+
+    /**  */
+    @stub
     protected val currentMouseX: Int = ???
 
     /**  */
     @stub
     protected val currentMouseY: Int = ???
+
+    /**  */
+    @stub
+    protected val offset: Int = ???
 
     /** Set the models value to the position of the top/left
      *  of the thumb relative to the origin of the track.
@@ -41,4 +50,8 @@ class BasicSliderUI.TrackListener extends MouseInputAdapter {
     /** Invoked when a mouse button has been released on a component. */
     @stub
     def mouseReleased(e: MouseEvent): Unit = ???
+
+    /**  */
+    @stub
+    def shouldScroll(direction: Int): Boolean = ???
 }

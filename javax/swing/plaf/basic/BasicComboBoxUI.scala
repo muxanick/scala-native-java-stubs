@@ -8,6 +8,7 @@ import javax.accessibility.Accessible
 import javax.swing.{CellRendererPane, ComboBoxEditor, JButton, JComboBox, JComponent, JList, ListCellRenderer}
 import javax.swing.event.ListDataListener
 import javax.swing.plaf.{ComboBoxUI, ComponentUI}
+import scala.scalanative.annotation.stub
 
 /** Basic UI implementation for JComboBox.
  *  
@@ -27,6 +28,10 @@ import javax.swing.plaf.{ComboBoxUI, ComponentUI}
  *  KeyStroke bindings. See the article How to Use Key Bindings
  */
 class BasicComboBoxUI extends ComboBoxUI {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** This layout manager handles the 'standard' layout of combo boxes. */
     @stub
@@ -51,6 +56,12 @@ class BasicComboBoxUI extends ComboBoxUI {
      */
     @stub
     object ListDataHandler extends BasicComboBoxUI.ListDataHandler
+
+    /** This listener watches for bound properties that have changed in the
+     *  combo box.
+     */
+    @stub
+    object PropertyChangeHandler extends BasicComboBoxUI.PropertyChangeHandler
 
     /**  */
     @stub
@@ -125,6 +136,10 @@ class BasicComboBoxUI extends ComboBoxUI {
     /** This protected field is implementation specific. */
     @stub
     protected val propertyChangeListener: PropertyChangeListener = ???
+
+    /** Indicates whether or not the combo box button should be square. */
+    @stub
+    protected val squareButton: Boolean = ???
 
     /** This public method is implementation specific and should be private. */
     @stub
@@ -345,6 +360,12 @@ class BasicComboBoxUI extends ComboBoxUI {
     /** Removes the installed listeners from the combo box and its model. */
     @stub
     protected def uninstallListeners(): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicComboBoxUI {

@@ -3,6 +3,7 @@ package java.security.cert
 import java.lang.{Object, String}
 import java.security.PublicKey
 import javax.security.auth.x500.X500Principal
+import scala.scalanative.annotation.stub
 
 /** A trust anchor or most-trusted Certification Authority (CA).
  *  
@@ -38,6 +39,14 @@ class TrustAnchor extends Object {
     @stub
     def this(caPrincipal: X500Principal, pubKey: PublicKey, nameConstraints: Array[Byte]) = ???
 
+    /** Creates an instance of TrustAnchor with the specified
+     *  X509Certificate and optional name constraints, which
+     *  are intended to be used as additional constraints when validating
+     *  an X.509 certification path.
+     */
+    @stub
+    def this(trustedCert: X509Certificate, nameConstraints: Array[Byte]) = ???
+
     /** Returns the name of the most-trusted CA as an X500Principal. */
     @stub
     def getCA(): X500Principal = ???
@@ -59,4 +68,8 @@ class TrustAnchor extends Object {
     /** Returns the most-trusted CA certificate. */
     @stub
     def getTrustedCert(): X509Certificate = ???
+
+    /** Returns a formatted string describing the TrustAnchor. */
+    @stub
+    def toString(): String = ???
 }

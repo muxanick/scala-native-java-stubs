@@ -1,8 +1,9 @@
 package javax.swing.event
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.EventObject
 import javax.swing.tree.TreePath
+import scala.scalanative.annotation.stub
 
 /** Encapsulates information describing changes to a tree model, and
  *  used to notify tree model listeners of the change.
@@ -42,6 +43,13 @@ class TreeModelEvent extends EventObject {
     @stub
     def this(source: Object, path: TreePath) = ???
 
+    /** Used to create an event when nodes have been changed, inserted, or
+     *  removed, identifying the path to the parent of the modified items as
+     *  a TreePath object.
+     */
+    @stub
+    def this(source: Object, path: TreePath, childIndices: Array[Int], children: Array[Object]) = ???
+
     /** Indices identifying the position of where the children were. */
     @stub
     protected val childIndices: Array[Int] = ???
@@ -49,6 +57,10 @@ class TreeModelEvent extends EventObject {
     /** Children that have been removed. */
     @stub
     protected val children: Array[Object] = ???
+
+    /** Path to the parent of the nodes that have changed. */
+    @stub
+    protected val path: TreePath = ???
 
     /** Returns the values of the child indexes. */
     @stub
@@ -72,4 +84,10 @@ class TreeModelEvent extends EventObject {
      */
     @stub
     def getTreePath(): TreePath = ???
+
+    /** Returns a string that displays and identifies this object's
+     *  properties.
+     */
+    @stub
+    def toString(): String = ???
 }

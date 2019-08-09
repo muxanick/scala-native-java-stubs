@@ -4,6 +4,7 @@ import java.beans.{PropertyChangeListener, PropertyChangeSupport}
 import java.lang.{Object, String}
 import java.util.List
 import java.util.concurrent.{RunnableFuture, TimeUnit}
+import scala.scalanative.annotation.stub
 
 /** An abstract class to perform lengthy GUI-interaction tasks in a
  *  background thread. Several background threads can be used to execute such
@@ -178,6 +179,10 @@ import java.util.concurrent.{RunnableFuture, TimeUnit}
  */
 abstract class SwingWorker[T, V] extends Object with RunnableFuture[T] {
 
+    /** Constructs this SwingWorker. */
+    @stub
+    def this() = ???
+
     /** Adds a PropertyChangeListener to the listener list. */
     def addPropertyChangeListener(listener: PropertyChangeListener): Unit
 
@@ -242,4 +247,13 @@ abstract class SwingWorker[T, V] extends Object with RunnableFuture[T] {
      *  it has been cancelled.
      */
     def run(): Unit
+
+    /** Sets the progress bound property. */
+    protected def setProgress(progress: Int): Unit
+}
+
+object SwingWorker {
+    /** Values for the state bound property. */
+    @stub
+    object StateValue extends SwingWorker.StateValue
 }

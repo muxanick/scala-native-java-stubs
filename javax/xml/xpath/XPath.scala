@@ -2,7 +2,7 @@ package javax.xml.xpath
 
 import java.lang.{Object, String}
 import javax.xml.namespace.{NamespaceContext, QName}
-import org.xml.sax.InputSource
+import scala.scalanative.annotation.stub
 
 /** XPath provides access to the XPath evaluation environment and expressions.
  * 
@@ -116,4 +116,8 @@ trait XPath {
     /** Establish a function resolver. */
     @stub
     def setXPathFunctionResolver(resolver: XPathFunctionResolver): Unit = ???
+
+    /** Establish a variable resolver. */
+    @stub
+    def setXPathVariableResolver(resolver: XPathVariableResolver): Unit = ???
 }

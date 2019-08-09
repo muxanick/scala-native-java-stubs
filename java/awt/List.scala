@@ -4,6 +4,7 @@ import java.awt.event.{ActionEvent, ActionListener, ItemEvent, ItemListener}
 import java.lang.{Class, Object, String}
 import java.util.EventListener
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** The List component presents the user with a
  *  scrolling list of text items. The list can be set up so that
@@ -79,6 +80,18 @@ class List extends Component with ItemSelectable with Accessible {
      */
     @stub
     def this(rows: Int) = ???
+
+    /** Creates a new scrolling list initialized to display the specified
+     *  number of rows.
+     */
+    @stub
+    def this(rows: Int, multipleMode: Boolean) = ???
+
+    /** This class implements accessibility support for the
+     *  List class.
+     */
+    @stub
+    protected object AccessibleAWTList extends List.AccessibleAWTList
 
     /** Adds the specified item to the end of scrolling list. */
     @stub
@@ -376,4 +389,12 @@ class List extends Component with ItemSelectable with Accessible {
      */
     @stub
     def setMultipleMode(b: Boolean): Unit = ???
+
+    /** Deprecated. 
+     * As of JDK version 1.1,
+     *  replaced by setMultipleMode(boolean).
+     * 
+     */
+    @stub
+    def setMultipleSelections(b: Boolean): Unit = ???
 }

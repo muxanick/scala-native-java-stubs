@@ -3,6 +3,7 @@ package javax.xml.soap
 import java.lang.{Object, String}
 import java.util.Iterator
 import javax.xml.transform.Source
+import scala.scalanative.annotation.stub
 
 /** The container for the SOAP-specific portion of a SOAPMessage
  *  object. All messages are required to have a SOAP part, so when a
@@ -40,6 +41,10 @@ import javax.xml.transform.Source
  *  
  */
 abstract class SOAPPart extends Object with Document with Node {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Creates a MimeHeader object with the specified
      *  name and value and adds it to this SOAPPart object.
@@ -105,4 +110,11 @@ abstract class SOAPPart extends Object with Document with Node {
      *  to the given String.
      */
     def setContentLocation(contentLocation: String): Unit
+
+    /** Changes the first header entry that matches the given header name
+     *  so that its value is the given value, adding a new header with the
+     *  given name and value if no
+     *  existing header is a match.
+     */
+    def setMimeHeader(name: String, value: String): Unit
 }

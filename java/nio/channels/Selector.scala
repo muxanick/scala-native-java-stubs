@@ -4,6 +4,7 @@ import java.io.Closeable
 import java.lang.Object
 import java.nio.channels.spi.SelectorProvider
 import java.util.Set
+import scala.scalanative.annotation.stub
 
 /** A multiplexor of SelectableChannel objects.
  * 
@@ -162,6 +163,10 @@ import java.util.Set
  */
 abstract class Selector extends Object with Closeable {
 
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this() = ???
+
     /** Closes this selector. */
     def close(): Unit
 
@@ -191,6 +196,11 @@ abstract class Selector extends Object with Closeable {
      *  operations.
      */
     def selectNow(): Int
+
+    /** Causes the first selection operation that has not yet returned to return
+     *  immediately.
+     */
+    def wakeup(): Selector
 }
 
 object Selector {

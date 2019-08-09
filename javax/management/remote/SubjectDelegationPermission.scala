@@ -2,6 +2,7 @@ package javax.management.remote
 
 import java.lang.{Object, String}
 import java.security.{BasicPermission, Permission}
+import scala.scalanative.annotation.stub
 
 /** Permission required by an authentication identity to perform
  *  operations on behalf of an authorization identity.
@@ -33,4 +34,10 @@ final class SubjectDelegationPermission extends BasicPermission {
     /** Creates a new SubjectDelegationPermission with the specified name. */
     @stub
     def this(name: String) = ???
+
+    /** Creates a new SubjectDelegationPermission object with the
+     *  specified name.
+     */
+    @stub
+    def this(name: String, actions: String) = ???
 }

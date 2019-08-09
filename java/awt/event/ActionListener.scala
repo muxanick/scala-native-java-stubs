@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener interface for receiving action events.
  *  The class that is interested in processing an action event
@@ -11,4 +12,8 @@ import java.util.EventListener
  *  invoked.
  */
 trait ActionListener extends EventListener {
+
+    /** Invoked when an action occurs. */
+    @stub
+    def actionPerformed(e: ActionEvent): Unit = ???
 }

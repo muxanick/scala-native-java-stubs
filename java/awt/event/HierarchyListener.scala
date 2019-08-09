@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener interface for receiving hierarchy changed events.
  *  The class that is interested in processing a hierarchy changed event
@@ -17,4 +18,8 @@ import java.util.EventListener
  *  of whether a program registers a HierarchyListener or not.
  */
 trait HierarchyListener extends EventListener {
+
+    /** Called when the hierarchy has been changed. */
+    @stub
+    def hierarchyChanged(e: HierarchyEvent): Unit = ???
 }

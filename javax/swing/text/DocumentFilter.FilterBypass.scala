@@ -1,6 +1,7 @@
 package javax.swing.text
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Used as a way to circumvent calling back into the Document to
  *  change it. Document implementations that wish to support
@@ -9,6 +10,10 @@ import java.lang.{Object, String}
  *  are invoked from the DocumentFilter.
  */
 object abstract DocumentFilter.FilterBypass extends Object {
+
+    /**  */
+    @stub
+    def FilterBypass() = ???
 
     /** Returns the Document the mutation is occurring on. */
     @stub
@@ -25,4 +30,11 @@ object abstract DocumentFilter.FilterBypass extends Object {
      */
     @stub
     def remove(offset: Int, length: Int): Unit
+
+    /** Deletes the region of text from offset to
+     *  offset + length, and replaces it with
+     *   text.
+     */
+    @stub
+    def replace(offset: Int, length: Int, string: String, attrs: AttributeSet): Unit
 }

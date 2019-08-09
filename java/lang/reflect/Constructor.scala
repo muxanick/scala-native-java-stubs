@@ -2,6 +2,7 @@ package java.lang.reflect
 
 import java.lang.{Class, Object, String}
 import java.lang.annotation.Annotation
+import scala.scalanative.annotation.stub
 
 /** Constructor provides information about, and access to, a single
  *  constructor for a class.
@@ -134,4 +135,8 @@ final class Constructor[T] extends Executable {
      */
     @stub
     def toGenericString(): String = ???
+
+    /** Returns a string describing this Constructor. */
+    @stub
+    def toString(): String = ???
 }

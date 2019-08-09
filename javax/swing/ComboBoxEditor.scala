@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.Component
 import java.awt.event.ActionListener
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The editor component used for JComboBox components. */
 trait ComboBoxEditor {
@@ -28,4 +29,8 @@ trait ComboBoxEditor {
     /** Ask the editor to start editing and to select everything */
     @stub
     def selectAll(): Unit = ???
+
+    /** Set the item that should be edited. */
+    @stub
+    def setItem(anObject: Object): Unit = ???
 }

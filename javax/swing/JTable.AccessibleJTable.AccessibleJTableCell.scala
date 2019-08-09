@@ -6,11 +6,16 @@ import java.beans.PropertyChangeListener
 import java.lang.{Object, String}
 import java.util.Locale
 import javax.accessibility.{Accessible, AccessibleAction, AccessibleComponent, AccessibleContext, AccessibleRole, AccessibleSelection, AccessibleStateSet, AccessibleText, AccessibleValue}
+import scala.scalanative.annotation.stub
 
 /** The class provides an implementation of the Java Accessibility
  *  API appropriate to table cells.
  */
 protected class JTable.AccessibleJTable.AccessibleJTableCell extends AccessibleContext with Accessible with AccessibleComponent {
+
+    /** Constructs an AccessibleJTableHeaderEntry. */
+    @stub
+    def AccessibleJTableCell(t: JTable, r: Int, c: Int, i: Int) = ???
 
     /** Adds the specified focus listener to receive focus events from this
      *  component.
@@ -228,4 +233,8 @@ protected class JTable.AccessibleJTable.AccessibleJTableCell extends AccessibleC
     /** Resizes this object so that it has width and height. */
     @stub
     def setSize(d: Dimension): Unit = ???
+
+    /** Sets the visible state of the object. */
+    @stub
+    def setVisible(b: Boolean): Unit = ???
 }

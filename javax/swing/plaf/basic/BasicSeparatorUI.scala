@@ -4,6 +4,7 @@ import java.awt.{Color, Dimension, Graphics}
 import java.lang.Object
 import javax.swing.{JComponent, JSeparator}
 import javax.swing.plaf.{ComponentUI, SeparatorUI}
+import scala.scalanative.annotation.stub
 
 /** A Basic L&F implementation of SeparatorUI.  This implementation
  *  is a "combined" view/controller.
@@ -12,7 +13,15 @@ class BasicSeparatorUI extends SeparatorUI {
 
     /**  */
     @stub
+    def this() = ???
+
+    /**  */
+    @stub
     protected val highlight: Color = ???
+
+    /**  */
+    @stub
+    protected val shadow: Color = ???
 
     /** Returns the specified component's maximum size appropriate for
      *  the look and feel.
@@ -55,6 +64,12 @@ class BasicSeparatorUI extends SeparatorUI {
     /**  */
     @stub
     protected def uninstallListeners(s: JSeparator): Unit = ???
+
+    /** Reverses configuration which was done on the specified component during
+     *  installUI.
+     */
+    @stub
+    def uninstallUI(c: JComponent): Unit = ???
 }
 
 object BasicSeparatorUI {

@@ -2,6 +2,8 @@ package java.util.zip
 
 import java.io.{FilterOutputStream, OutputStream}
 import java.lang.{Object, String}
+import java.nio.charset.Charset
+import scala.scalanative.annotation.stub
 
 /** This class implements an output stream filter for writing files in the
  *  ZIP file format. Includes support for both compressed and uncompressed
@@ -12,6 +14,10 @@ class ZipOutputStream extends DeflaterOutputStream {
     /** Creates a new ZIP output stream. */
     @stub
     def this(out: OutputStream) = ???
+
+    /** Creates a new ZIP output stream. */
+    @stub
+    def this(out: OutputStream, charset: Charset) = ???
 
     /** Closes the ZIP output stream as well as the stream being filtered. */
     @stub
@@ -46,6 +52,10 @@ class ZipOutputStream extends DeflaterOutputStream {
     /** Sets the default compression method for subsequent entries. */
     @stub
     def setMethod(method: Int): Unit = ???
+
+    /** Writes an array of bytes to the current ZIP entry data. */
+    @stub
+    def write(b: Array[Byte], off: Int, len: Int): Unit = ???
 }
 
 object ZipOutputStream {
@@ -212,4 +222,8 @@ object ZipOutputStream {
     /**  */
     @stub
     val LOCVER: Int = ???
+
+    /** Compression method for uncompressed (STORED) entries. */
+    @stub
+    val STORED: Int = ???
 }

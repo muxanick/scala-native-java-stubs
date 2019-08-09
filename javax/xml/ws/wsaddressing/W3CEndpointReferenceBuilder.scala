@@ -2,7 +2,7 @@ package javax.xml.ws.wsaddressing
 
 import java.lang.{Object, String}
 import javax.xml.namespace.QName
-import org.w3c.dom.Element
+import scala.scalanative.annotation.stub
 
 /** This class is used to build W3CEndpointReference
  *  instances. The intended use of this clsss is for
@@ -29,6 +29,10 @@ import org.w3c.dom.Element
  *  in the WSDL document.
  */
 final class W3CEndpointReferenceBuilder extends Object {
+
+    /** Creates a new W3CEndpointReferenceBuilder instance. */
+    @stub
+    def this() = ???
 
     /** Sets the address to the
      *  W3CEndpointReference instance's
@@ -92,4 +96,10 @@ final class W3CEndpointReferenceBuilder extends Object {
      */
     @stub
     def serviceName(serviceName: QName): W3CEndpointReferenceBuilder = ???
+
+    /** Sets the wsdlDocumentLocation that will be referenced
+     *  as wsa:Metadata/@wsdli:wsdlLocation.
+     */
+    @stub
+    def wsdlDocumentLocation(wsdlDocumentLocation: String): W3CEndpointReferenceBuilder = ???
 }

@@ -2,6 +2,7 @@ package java.rmi.registry
 
 import java.lang.{Object, String}
 import java.rmi.server.{RMIClientSocketFactory, RMIServerSocketFactory}
+import scala.scalanative.annotation.stub
 
 /** LocateRegistry is used to obtain a reference to a bootstrap
  *  remote object registry on a particular host (including the local host), or
@@ -53,4 +54,11 @@ object LocateRegistry {
      */
     @stub
     def getRegistry(host: String, port: Int): Registry = ???
+
+    /** Returns a locally created remote reference to the remote object
+     *  Registry on the specified host and
+     *  port.
+     */
+    @stub
+    def getRegistry(host: String, port: Int, csf: RMIClientSocketFactory): Registry = ???
 }

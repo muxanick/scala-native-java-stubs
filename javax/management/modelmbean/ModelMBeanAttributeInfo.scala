@@ -3,6 +3,7 @@ package javax.management.modelmbean
 import java.lang.{Object, String}
 import java.lang.reflect.Method
 import javax.management.{Descriptor, DescriptorAccess, MBeanAttributeInfo, MBeanFeatureInfo}
+import scala.scalanative.annotation.stub
 
 /** The ModelMBeanAttributeInfo object describes an attribute of the ModelMBean.
  *  It is a subclass of MBeanAttributeInfo with the addition of an associated Descriptor
@@ -86,6 +87,10 @@ class ModelMBeanAttributeInfo extends MBeanAttributeInfo with DescriptorAccess {
     @stub
     def this(name: String, type: String, description: String, isReadable: Boolean, isWritable: Boolean, isIs: Boolean) = ???
 
+    /** Constructs a ModelMBeanAttributeInfo object. */
+    @stub
+    def this(name: String, type: String, description: String, isReadable: Boolean, isWritable: Boolean, isIs: Boolean, descriptor: Descriptor) = ???
+
     /** Creates and returns a new ModelMBeanAttributeInfo which is a duplicate of this ModelMBeanAttributeInfo. */
     @stub
     def clone(): Object = ???
@@ -101,4 +106,10 @@ class ModelMBeanAttributeInfo extends MBeanAttributeInfo with DescriptorAccess {
      */
     @stub
     def setDescriptor(inDescriptor: Descriptor): Unit = ???
+
+    /** Returns a human-readable version of the
+     *  ModelMBeanAttributeInfo instance.
+     */
+    @stub
+    def toString(): String = ???
 }

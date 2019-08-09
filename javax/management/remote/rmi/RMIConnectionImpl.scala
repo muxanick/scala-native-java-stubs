@@ -1,17 +1,22 @@
 package javax.management.remote.rmi
 
-import java.lang.{Integer, Object, String}
+import java.lang.{ClassLoader, Integer, Object, String}
 import java.rmi.MarshalledObject
 import java.rmi.server.Unreferenced
-import java.util.Set
+import java.util.{Map, Set}
 import javax.management.{AttributeList, MBeanInfo, ObjectInstance, ObjectName}
 import javax.management.remote.NotificationResult
 import javax.security.auth.Subject
+import scala.scalanative.annotation.stub
 
 /** Implementation of the RMIConnection interface.  User
  *  code will not usually reference this class.
  */
 class RMIConnectionImpl extends Object with RMIConnection with Unreferenced {
+
+    /** Constructs a new RMIConnection. */
+    @stub
+    def this(rmiServer: RMIServerImpl, connectionId: String, defaultClassLoader: ClassLoader, subject: Subject, env: Map[String, _]) = ???
 
     /** Handles the method MBeanServerConnection.addNotificationListener(ObjectName,
      *  ObjectName, NotificationFilter, Object).
@@ -174,4 +179,10 @@ class RMIConnectionImpl extends Object with RMIConnection with Unreferenced {
      */
     @stub
     def unreferenced(): Unit = ???
+
+    /** Handles the method
+     *  MBeanServerConnection.unregisterMBean(ObjectName).
+     */
+    @stub
+    def unregisterMBean(name: ObjectName, delegationSubject: Subject): Unit = ???
 }

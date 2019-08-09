@@ -1,10 +1,12 @@
 package javax.swing.plaf.synth
 
 import java.awt.Graphics
+import java.beans.PropertyChangeEvent
 import java.lang.{Object, String}
 import javax.swing.JComponent
 import javax.swing.plaf.{ComponentUI, TextUI}
 import javax.swing.plaf.basic.{BasicEditorPaneUI, BasicTextUI}
+import scala.scalanative.annotation.stub
 
 /** Provides the look and feel for a styled text editor in the
  *  Synth look and feel.
@@ -20,6 +22,10 @@ import javax.swing.plaf.basic.{BasicEditorPaneUI, BasicTextUI}
  */
 class SynthTextPaneUI extends SynthEditorPaneUI {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** Fetches the name used as a key to lookup properties through the
      *  UIManager.
      */
@@ -33,6 +39,12 @@ class SynthTextPaneUI extends SynthEditorPaneUI {
     /** Paints the border. */
     @stub
     def paintBorder(context: SynthContext, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
+
+    /** This method gets called when a bound property is changed
+     *  on the associated JTextComponent.
+     */
+    @stub
+    protected def propertyChange(evt: PropertyChangeEvent): Unit = ???
 }
 
 object SynthTextPaneUI {

@@ -1,5 +1,10 @@
 package javax.naming.spi
 
+import java.lang.Object
+import java.util.Hashtable
+import javax.naming.{Context, Name}
+import scala.scalanative.annotation.stub
+
 /** This interface represents a factory for obtaining the state of an
  *  object for binding.
  * 
@@ -41,4 +46,8 @@ package javax.naming.spi
  *  that implement the DirContext interface.
  */
 trait StateFactory {
+
+    /** Retrieves the state of an object for binding. */
+    @stub
+    def getStateToBind(obj: Object, name: Name, nameCtx: Context, environment: Hashtable[_, _]): Object = ???
 }

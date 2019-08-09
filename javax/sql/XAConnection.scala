@@ -1,5 +1,8 @@
 package javax.sql
 
+import javax.transaction.xa.XAResource
+import scala.scalanative.annotation.stub
+
 /** An object that provides support for distributed
  *  transactions.  An XAConnection object  may be enlisted
  *  in a distributed transaction by means of an XAResource object.
@@ -10,4 +13,12 @@ package javax.sql
  *  it is used by a transaction manager working in the middle tier server.
  */
 trait XAConnection extends PooledConnection {
+
+    /** Retrieves an XAResource object that
+     *  the transaction manager will use
+     *  to manage this XAConnection object's participation in a
+     *  distributed transaction.
+     */
+    @stub
+    def getXAResource(): XAResource = ???
 }

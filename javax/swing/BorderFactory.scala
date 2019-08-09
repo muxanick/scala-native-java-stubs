@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{BasicStroke, Color, Font, Paint}
 import java.lang.{Object, String}
 import javax.swing.border.{Border, CompoundBorder, MatteBorder, TitledBorder}
+import scala.scalanative.annotation.stub
 
 /** Factory class for vending standard Border objects.  Wherever
  *  possible, this factory will hand out references to shared
@@ -217,4 +218,13 @@ object BorderFactory {
      */
     @stub
     def createTitledBorder(border: Border, title: String, titleJustification: Int, titlePosition: Int, titleFont: Font, titleColor: Color): TitledBorder = ???
+
+    /** Creates a new titled border with the specified title,
+     *  the default border type (determined by the current look and feel),
+     *  the default text position (determined by the current look and feel),
+     *  the default justification (leading), and the default
+     *  font and text color (determined by the current look and feel).
+     */
+    @stub
+    def createTitledBorder(title: String): TitledBorder = ???
 }

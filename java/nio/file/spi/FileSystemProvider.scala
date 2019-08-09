@@ -8,6 +8,7 @@ import java.nio.file.{AccessMode, CopyOption, DirectoryStream, DirectoryStream.F
 import java.nio.file.attribute.{BasicFileAttributes, FileAttribute, FileAttributeView}
 import java.util.{List, Map, Set}
 import java.util.concurrent.ExecutorService
+import scala.scalanative.annotation.stub
 
 /** Service-provider class for file systems. The methods defined by the Files class will typically delegate to an instance of this
  *  class.
@@ -40,6 +41,10 @@ import java.util.concurrent.ExecutorService
  *  threads.
  */
 abstract class FileSystemProvider extends Object {
+
+    /** Initializes a new instance of this class. */
+    @stub
+    protected def this() = ???
 
     /** Checks the existence, and optionally the accessibility, of a file. */
     def checkAccess(path: Path, modes: AccessMode*): Unit
@@ -132,6 +137,9 @@ abstract class FileSystemProvider extends Object {
 
     /** Reads the target of a symbolic link. */
     def readSymbolicLink(link: Path): Path
+
+    /** Sets the value of a file attribute. */
+    def setAttribute(path: Path, attribute: String, value: Object, options: LinkOption*): Unit
 }
 
 object FileSystemProvider {

@@ -2,9 +2,10 @@ package java.security.cert
 
 import java.lang.{Object, String}
 import java.math.BigInteger
-import java.security.Principal
+import java.security.{Principal, Provider, PublicKey}
 import java.util.{Collection, Date, List}
 import javax.security.auth.x500.X500Principal
+import scala.scalanative.annotation.stub
 
 /** 
  *  Abstract class for X.509 certificates. This provides a standard
@@ -66,6 +67,10 @@ import javax.security.auth.x500.X500Principal
  *  
  */
 abstract class X509Certificate extends Certificate with X509Extension {
+
+    /** Constructor for X.509 certificates. */
+    @stub
+    protected def this() = ???
 
     /** Checks that the certificate is currently valid. */
     def checkValidity(): Unit
@@ -163,4 +168,9 @@ abstract class X509Certificate extends Certificate with X509Extension {
      *  certificate.
      */
     def getVersion(): Int
+
+    /** Verifies that this certificate was signed using the
+     *  private key that corresponds to the specified public key.
+     */
+    def verify(key: PublicKey, sigProvider: Provider): Unit
 }

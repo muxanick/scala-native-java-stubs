@@ -3,6 +3,8 @@ package javax.lang.model.util
 import java.lang.Object
 import javax.annotation.processing.SupportedSourceVersion
 import javax.lang.model.SourceVersion
+import javax.lang.model.type.IntersectionType
+import scala.scalanative.annotation.stub
 
 /** A visitor of types based on their kind with
  *  default behavior appropriate for the RELEASE_8 source version.  For types XYZ that may have more than one
@@ -49,4 +51,16 @@ import javax.lang.model.SourceVersion
      */
     @stub
     protected def this() = ???
+
+    /** Constructor for concrete subclasses to call; uses the argument
+     *  for the default value.
+     */
+    @stub
+    protected def this(defaultValue: R) = ???
+
+    /** This implementation visits an IntersectionType by calling
+     *  defaultAction.
+     */
+    @stub
+    def visitIntersection(t: IntersectionType, p: P): R = ???
 }

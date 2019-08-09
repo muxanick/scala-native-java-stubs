@@ -1,6 +1,7 @@
 package javax.xml.bind
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** 
  *  Register an instance of an implementation of this class with Unmarshaller to externally listen
@@ -22,9 +23,19 @@ import java.lang.Object
  */
 object abstract Unmarshaller.Listener extends Object {
 
+    /**  */
+    @stub
+    def Listener() = ???
+
     /** 
      *  Callback method invoked after unmarshalling XML data into target.
      */
     @stub
     def afterUnmarshal(target: Object, parent: Object): Unit = ???
+
+    /** 
+     *  Callback method invoked before unmarshalling into target.
+     */
+    @stub
+    def beforeUnmarshal(target: Object, parent: Object): Unit = ???
 }

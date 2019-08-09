@@ -7,6 +7,7 @@ import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import javax.swing.event.{MenuKeyListener, PopupMenuListener}
 import javax.swing.plaf.PopupMenuUI
+import scala.scalanative.annotation.stub
 
 /** An implementation of a popup menu -- a small window that pops up
  *  and displays a series of choices. A JPopupMenu is used for the
@@ -38,6 +39,10 @@ class JPopupMenu extends JComponent with Accessible with MenuElement {
     /** Constructs a JPopupMenu without an "invoker". */
     @stub
     def this() = ???
+
+    /** Constructs a JPopupMenu with the specified title. */
+    @stub
+    def this(label: String) = ???
 
     /** This class implements accessibility support for the
      *  JPopupMenu class.
@@ -317,9 +322,17 @@ class JPopupMenu extends JComponent with Accessible with MenuElement {
      */
     @stub
     def show(invoker: Component, x: Int, y: Int): Unit = ???
+
+    /** Resets the UI property to a value from the current look and feel. */
+    @stub
+    def updateUI(): Unit = ???
 }
 
 object JPopupMenu {
+    /** A popup menu-specific separator. */
+    @stub
+    object Separator extends JPopupMenu.Separator
+
     /** Gets the defaultLightWeightPopupEnabled property,
      *   which by default is true.
      */

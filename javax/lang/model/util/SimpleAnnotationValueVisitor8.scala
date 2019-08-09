@@ -3,6 +3,7 @@ package javax.lang.model.util
 import java.lang.Object
 import javax.annotation.processing.SupportedSourceVersion
 import javax.lang.model.SourceVersion
+import scala.scalanative.annotation.stub
 
 /** A simple visitor for annotation values with default behavior
  *  appropriate for the RELEASE_8
@@ -46,4 +47,10 @@ import javax.lang.model.SourceVersion
      */
     @stub
     protected def this() = ???
+
+    /** Constructor for concrete subclasses; uses the argument for the
+     *  default value.
+     */
+    @stub
+    protected def this(defaultValue: R) = ???
 }

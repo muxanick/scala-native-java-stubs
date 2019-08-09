@@ -1,7 +1,8 @@
 package java.beans
 
 import java.lang.{Class, Object, String}
-import java.lang.reflect.InvocationHandler
+import java.lang.reflect.{InvocationHandler, Method}
+import scala.scalanative.annotation.stub
 
 /** The EventHandler class provides
  *  support for dynamically generating event listeners whose methods
@@ -235,6 +236,13 @@ import java.lang.reflect.InvocationHandler
  */
 class EventHandler extends Object with InvocationHandler {
 
+    /** Creates a new EventHandler object;
+     *  you generally use one of the create methods
+     *  instead of invoking this constructor directly.
+     */
+    @stub
+    def this(target: Object, action: String, eventPropertyName: String, listenerMethodName: String) = ???
+
     /** Returns the name of the target's writable property
      *  that this event handler will set,
      *  or the name of the method that this event handler
@@ -256,6 +264,13 @@ class EventHandler extends Object with InvocationHandler {
     /** Returns the object to which this event handler will send a message. */
     @stub
     def getTarget(): Object = ???
+
+    /** Extract the appropriate property value from the event and
+     *  pass it to the action associated with
+     *  this EventHandler.
+     */
+    @stub
+    def invoke(proxy: Object, method: Method, arguments: Array[Object]): Object = ???
 }
 
 object EventHandler {

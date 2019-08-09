@@ -1,6 +1,7 @@
 package java.nio.file.attribute
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** A file attribute view that supports reading or updating the owner of a file.
  *  This file attribute view is intended for file system implementations that
@@ -26,4 +27,8 @@ trait FileOwnerAttributeView extends FileAttributeView {
     /** Returns the name of the attribute view. */
     @stub
     def name(): String = ???
+
+    /** Updates the file owner. */
+    @stub
+    def setOwner(owner: UserPrincipal): Unit = ???
 }

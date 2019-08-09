@@ -3,11 +3,16 @@ package javax.swing.plaf.metal
 import java.awt.{Component, Container, Graphics, LayoutManager}
 import java.beans.PropertyChangeListener
 import java.lang.Object
-import javax.swing.{Icon, JComponent, JMenu}
+import javax.swing.{Icon, JComponent, JInternalFrame, JMenu}
 import javax.swing.plaf.basic.BasicInternalFrameTitlePane
+import scala.scalanative.annotation.stub
 
 /** Class that manages a JLF title bar */
 class MetalInternalFrameTitlePane extends BasicInternalFrameTitlePane {
+
+    /**  */
+    @stub
+    def this(f: JInternalFrame) = ???
 
     /**  */
     @stub
@@ -16,6 +21,10 @@ class MetalInternalFrameTitlePane extends BasicInternalFrameTitlePane {
     /**  */
     @stub
     protected val paletteCloseIcon: Icon = ???
+
+    /**  */
+    @stub
+    protected val paletteTitleHeight: Int = ???
 
     /** Notifies this component that it now has a parent component. */
     @stub
@@ -66,4 +75,8 @@ class MetalInternalFrameTitlePane extends BasicInternalFrameTitlePane {
     /** Override the parent's method to do nothing. */
     @stub
     protected def showSystemMenu(): Unit = ???
+
+    /**  */
+    @stub
+    protected def uninstallDefaults(): Unit = ???
 }

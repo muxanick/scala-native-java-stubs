@@ -1,7 +1,10 @@
 package java.text.spi
 
 import java.lang.Object
+import java.text.DecimalFormatSymbols
+import java.util.Locale
 import java.util.spi.LocaleServiceProvider
+import scala.scalanative.annotation.stub
 
 /** An abstract class for service providers that
  *  provide instances of the
@@ -15,4 +18,13 @@ import java.util.spi.LocaleServiceProvider
  *  Language (LDML) specification for numbering systems.
  */
 abstract class DecimalFormatSymbolsProvider extends LocaleServiceProvider {
+
+    /** Sole constructor. */
+    @stub
+    protected def this() = ???
+
+    /** Returns a new DecimalFormatSymbols instance for the
+     *  specified locale.
+     */
+    def getInstance(locale: Locale): DecimalFormatSymbols
 }

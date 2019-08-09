@@ -1,6 +1,7 @@
 package java.util.concurrent
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A recursive result-bearing ForkJoinTask.
  * 
@@ -30,6 +31,10 @@ import java.lang.Object
  */
 abstract class RecursiveTask[V] extends ForkJoinTask[V] {
 
+    /**  */
+    @stub
+    def this() = ???
+
     /** The main computation performed by this task. */
     protected def compute(): V
 
@@ -41,4 +46,7 @@ abstract class RecursiveTask[V] extends ForkJoinTask[V] {
      *  is not known to have been completed.
      */
     def getRawResult(): V
+
+    /** Forces the given value to be returned as a result. */
+    protected def setRawResult(value: V): Unit
 }

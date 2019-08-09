@@ -2,6 +2,7 @@ package javax.print.attribute
 
 import java.io.Serializable
 import java.lang.{Cloneable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Class EnumSyntax is an abstract base class providing the common
  *  implementation of all "type safe enumeration" objects. An enumeration class
@@ -75,6 +76,10 @@ import java.lang.{Cloneable, Object, String}
  */
 abstract class EnumSyntax extends Object with Serializable with Cloneable {
 
+    /** Construct a new enumeration value with the given integer value. */
+    @stub
+    protected def this(value: Int) = ???
+
     /** Returns a clone of this enumeration value, which to preserve the
      *  semantics of enumeration values is the same object as this enumeration
      *  value.
@@ -104,4 +109,7 @@ abstract class EnumSyntax extends Object with Serializable with Cloneable {
      *  the proper enumeration value defined in the enumeration attribute class.
      */
     protected def readResolve(): Object
+
+    /** Returns a string value corresponding to this enumeration value. */
+    def toString(): String
 }

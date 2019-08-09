@@ -3,7 +3,8 @@ package javax.annotation.processing
 import java.lang.{Iterable, Object, String}
 import java.util.Set
 import javax.lang.model.SourceVersion
-import javax.lang.model.element.{AnnotationMirror, Element, ExecutableElement}
+import javax.lang.model.element.{AnnotationMirror, Element, ExecutableElement, TypeElement}
+import scala.scalanative.annotation.stub
 
 /** An abstract annotation processor designed to be a convenient
  *  superclass for most concrete annotation processors.  This class
@@ -20,6 +21,13 @@ import javax.lang.model.element.{AnnotationMirror, Element, ExecutableElement}
  *  contract for that method is obeyed.
  */
 abstract class AbstractProcessor extends Object with Processor {
+
+    /** Constructor for subclasses to call. */
+    @stub
+    protected def this() = ???
+
+    /** Processing environment providing by the tool framework. */
+    protected val processingEnv: ProcessingEnvironment
 
     /** Returns an empty iterable of completions. */
     def getCompletions(element: Element, annotation: AnnotationMirror, member: ExecutableElement, userText: String): Iterable[_ <: Completion]
@@ -47,4 +55,10 @@ abstract class AbstractProcessor extends Object with Processor {
 
     /** Returns true if this object has been initialized, false otherwise. */
     protected def isInitialized(): Boolean
+
+    /** Processes a set of annotation types on type elements
+     *  originating from the prior round and returns whether or not
+     *  these annotation types are claimed by this processor.
+     */
+    def process(annotations: Set[_ <: TypeElement], roundEnv: RoundEnvironment): Boolean
 }

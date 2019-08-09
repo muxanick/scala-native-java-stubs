@@ -3,6 +3,7 @@ package javax.annotation
 import java.lang.String
 import java.lang.annotation.{Documented, ElementType, Retention, RetentionPolicy, Target}
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** The Generated annotation is used to mark source code that has been generated.
  *  It can also be used to differentiate user written code from generated code
@@ -23,9 +24,17 @@ import scala.annotation.StaticAnnotation
 @Target ( value ={ PACKAGE , TYPE , ANNOTATION_TYPE , METHOD , CONSTRUCTOR , FIELD , LOCAL_VARIABLE , PARAMETER } ) 
  final class Generated extends StaticAnnotation {
 
+    /** The value element MUST have the name of the code generator. */
+    @stub
+    val value: Array[String] = ???
+
     /** A place holder for any comments that the code generator may want to
      *  include in the generated code.
      */
     @stub
     val comments: String = ???
+
+    /** Date when the source was generated. */
+    @stub
+    val date: String = ???
 }

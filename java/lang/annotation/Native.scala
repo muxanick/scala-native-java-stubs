@@ -1,6 +1,7 @@
 package java.lang.annotation
 
 import scala.annotation.StaticAnnotation
+import scala.scalanative.annotation.stub
 
 /** Indicates that a field defining a constant value may be referenced
  *  from native code.

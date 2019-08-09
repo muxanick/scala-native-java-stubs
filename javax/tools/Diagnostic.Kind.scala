@@ -1,6 +1,7 @@
 package javax.tools
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** Kinds of diagnostics, for example, error or warning.
  * 
@@ -31,7 +32,18 @@ object Diagnostic.Kind {
     /** Diagnostic which does not fit within the other kinds. */
     final val OTHER = new Diagnostic.Kind(OTHER, 3)
 
+    /** Problem which does not usually prevent the tool from
+     *  completing normally.
+     */
+    final val WARNING = new Diagnostic.Kind(WARNING, 4)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): Diagnostic.Kind = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[Diagnostic.Kind] = ???
 }

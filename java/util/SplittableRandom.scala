@@ -2,6 +2,7 @@ package java.util
 
 import java.lang.Object
 import java.util.stream.{DoubleStream, IntStream, LongStream}
+import scala.scalanative.annotation.stub
 
 /** A generator of uniform pseudorandom values applicable for use in
  *  (among other contexts) isolated parallel computations that may
@@ -55,6 +56,12 @@ final class SplittableRandom extends Object {
      */
     @stub
     def this() = ???
+
+    /** Creates a new SplittableRandom instance using the specified
+     *  initial seed.
+     */
+    @stub
+    def this(seed: Long) = ???
 
     /** Returns an effectively unlimited stream of pseudorandom double values from this generator and/or one split from it; each value
      *  is between zero (inclusive) and one (exclusive).
@@ -188,4 +195,10 @@ final class SplittableRandom extends Object {
      */
     @stub
     def nextLong(origin: Long, bound: Long): Long = ???
+
+    /** Constructs and returns a new SplittableRandom instance that
+     *  shares no mutable state with this instance.
+     */
+    @stub
+    def split(): SplittableRandom = ???
 }

@@ -1,6 +1,7 @@
 package java.sql
 
-import java.lang.Object
+import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The representation (mapping) in the Java programming language of an SQL ROWID
  *  value. An SQL ROWID is a built-in type, a value of which can be thought of as
@@ -46,4 +47,10 @@ trait RowId {
     /** Returns a hash code value of this RowId object. */
     @stub
     def hashCode(): Int = ???
+
+    /** Returns a String representing the value of the SQL ROWID designated by this
+     *  java.sql.RowId object.
+     */
+    @stub
+    def toString(): String = ???
 }

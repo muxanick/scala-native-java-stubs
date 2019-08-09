@@ -2,6 +2,7 @@ package java.nio.file
 
 import java.io.Closeable
 import java.util.concurrent.TimeUnit
+import scala.scalanative.annotation.stub
 
 /** A watch service that watches registered objects for changes and
  *  events. For example a file manager may use a watch service to monitor a
@@ -83,4 +84,8 @@ trait WatchService extends Closeable {
      */
     @stub
     def poll(timeout: Long, unit: TimeUnit): WatchKey = ???
+
+    /** Retrieves and removes next watch key, waiting if none are yet present. */
+    @stub
+    def take(): WatchKey = ???
 }

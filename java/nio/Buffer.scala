@@ -1,6 +1,7 @@
 package java.nio
 
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A container for data of a specific primitive type.
  * 
@@ -200,4 +201,7 @@ abstract class Buffer extends Object {
 
     /** Resets this buffer's position to the previously-marked position. */
     def reset(): Buffer
+
+    /** Rewinds this buffer. */
+    def rewind(): Buffer
 }

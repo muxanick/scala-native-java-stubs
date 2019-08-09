@@ -1,6 +1,7 @@
 package java.awt
 
 import java.lang.{Enum, Object, String}
+import scala.scalanative.annotation.stub
 
 /** The message type determines which icon will be displayed in the
  *  caption of the message, and a possible system sound a message
@@ -19,7 +20,16 @@ object TrayIcon.MessageType {
     /** Simple message */
     final val NONE = new TrayIcon.MessageType(NONE, 2)
 
+    /** A warning message */
+    final val WARNING = new TrayIcon.MessageType(WARNING, 3)
+
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): TrayIcon.MessageType = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[TrayIcon.MessageType] = ???
 }

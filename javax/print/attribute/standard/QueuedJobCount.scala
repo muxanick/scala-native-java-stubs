@@ -1,7 +1,8 @@
 package javax.print.attribute.standard
 
-import java.lang.{Class, Object}
+import java.lang.{Class, Object, String}
 import javax.print.attribute.{Attribute, IntegerSyntax, PrintServiceAttribute}
+import scala.scalanative.annotation.stub
 
 /** Class QueuedJobCount is an integer valued printing attribute that indicates
  *  the number of jobs in the printer whose JobState is either
@@ -14,6 +15,12 @@ import javax.print.attribute.{Attribute, IntegerSyntax, PrintServiceAttribute}
  */
 final class QueuedJobCount extends IntegerSyntax with PrintServiceAttribute {
 
+    /** Construct a new queued job count attribute with the given integer
+     *  value.
+     */
+    @stub
+    def this(value: Int) = ???
+
     /** Returns whether this queued job count attribute is equivalent to the
      *  passed in object.
      */
@@ -25,4 +32,10 @@ final class QueuedJobCount extends IntegerSyntax with PrintServiceAttribute {
      */
     @stub
     def getCategory(): Class[_ <: Attribute] = ???
+
+    /** Get the name of the category of which this attribute value is an
+     *  instance.
+     */
+    @stub
+    def getName(): String = ???
 }

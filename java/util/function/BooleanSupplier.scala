@@ -1,6 +1,7 @@
 package java.util.function
 
 import java.lang.FunctionalInterface
+import scala.scalanative.annotation.stub
 
 /** Represents a supplier of boolean-valued results.  This is the
  *  boolean-producing primitive specialization of Supplier.
@@ -12,4 +13,8 @@ import java.lang.FunctionalInterface
  *  whose functional method is getAsBoolean().
  */
 @FunctionalInterface trait BooleanSupplier {
+
+    /** Gets a result. */
+    @stub
+    def getAsBoolean(): Boolean = ???
 }

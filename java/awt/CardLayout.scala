@@ -2,6 +2,7 @@ package java.awt
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** A CardLayout object is a layout manager for a
  *  container. It treats each component in the container as a card.
@@ -23,6 +24,12 @@ class CardLayout extends Object with LayoutManager2 with Serializable {
     /** Creates a new card layout with gaps of size zero. */
     @stub
     def this() = ???
+
+    /** Creates a new card layout with the specified horizontal and
+     *  vertical gaps.
+     */
+    @stub
+    def this(hgap: Int, vgap: Int) = ???
 
     /** Adds the specified component to this card layout's internal
      *  table of names.
@@ -113,4 +120,8 @@ class CardLayout extends Object with LayoutManager2 with Serializable {
      */
     @stub
     def show(parent: Container, name: String): Unit = ???
+
+    /** Returns a string representation of the state of this card layout. */
+    @stub
+    def toString(): String = ???
 }

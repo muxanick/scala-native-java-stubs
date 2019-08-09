@@ -2,6 +2,7 @@ package javax.crypto.spec
 
 import java.lang.Object
 import java.security.spec.KeySpec
+import scala.scalanative.annotation.stub
 
 /** A user-chosen password that can be used with password-based encryption
  *  (PBE).
@@ -40,6 +41,13 @@ class PBEKeySpec extends Object with KeySpec {
     @stub
     def this(password: Array[Char], salt: Array[Byte], iterationCount: Int) = ???
 
+    /** Constructor that takes a password, salt, iteration count, and
+     *  to-be-derived key length for generating PBEKey of variable-key-size
+     *  PBE ciphers.
+     */
+    @stub
+    def this(password: Array[Char], salt: Array[Byte], iterationCount: Int, keyLength: Int) = ???
+
     /** Clears the internal copy of the password. */
     @stub
     def clearPassword(): Unit = ???
@@ -55,4 +63,8 @@ class PBEKeySpec extends Object with KeySpec {
     /** Returns a copy of the password. */
     @stub
     def getPassword(): Array[Char] = ???
+
+    /** Returns a copy of the salt or null if not specified. */
+    @stub
+    def getSalt(): Array[Byte] = ???
 }

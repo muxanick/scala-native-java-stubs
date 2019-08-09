@@ -1,7 +1,8 @@
 package javax.swing.event
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.util.EventObject
+import scala.scalanative.annotation.stub
 
 /** An event that characterizes a change in selection. The change is limited to a
  *  a single inclusive interval. The selection of at least one index within the
@@ -21,6 +22,12 @@ import java.util.EventObject
  */
 class ListSelectionEvent extends EventObject {
 
+    /** Represents a change in selection status between firstIndex and
+     *  lastIndex, inclusive.
+     */
+    @stub
+    def this(source: Object, firstIndex: Int, lastIndex: Int, isAdjusting: Boolean) = ???
+
     /** Returns the index of the first row whose selection may have changed. */
     @stub
     def getFirstIndex(): Int = ???
@@ -34,4 +41,10 @@ class ListSelectionEvent extends EventObject {
      */
     @stub
     def getValueIsAdjusting(): Boolean = ???
+
+    /** Returns a String that displays and identifies this
+     *  object's properties.
+     */
+    @stub
+    def toString(): String = ???
 }

@@ -3,6 +3,7 @@ package java.util.concurrent
 import java.io.Serializable
 import java.lang.Object
 import java.util.{AbstractCollection, AbstractQueue, Collection, Iterator, Queue, Spliterator}
+import scala.scalanative.annotation.stub
 
 /** An unbounded thread-safe queue based on linked nodes.
  *  This queue orders elements FIFO (first-in-first-out).
@@ -59,6 +60,13 @@ class ConcurrentLinkedQueue[E] extends AbstractQueue[E] with Queue[E] with Seria
     /** Creates a ConcurrentLinkedQueue that is initially empty. */
     @stub
     def this() = ???
+
+    /** Creates a ConcurrentLinkedQueue
+     *  initially containing the elements of the given collection,
+     *  added in traversal order of the collection's iterator.
+     */
+    @stub
+    def this(c: Collection[_ <: E]) = ???
 
     /** Inserts the specified element at the tail of this queue. */
     @stub
@@ -118,4 +126,11 @@ class ConcurrentLinkedQueue[E] extends AbstractQueue[E] with Queue[E] with Seria
      */
     @stub
     def toArray(): Array[Object] = ???
+
+    /** Returns an array containing all of the elements in this queue, in
+     *  proper sequence; the runtime type of the returned array is that of
+     *  the specified array.
+     */
+    @stub
+    def toArray[T](a: Array[T]): Array[T] = ???
 }

@@ -2,6 +2,7 @@ package javax.swing.text
 
 import java.lang.String
 import javax.swing.undo.UndoableEdit
+import scala.scalanative.annotation.stub
 
 /** Interface to describe a sequence of character content that
  *  can be edited.  Implementations may or may not support a
@@ -31,4 +32,8 @@ object trait AbstractDocument.Content {
     /** Current length of the sequence of character content. */
     @stub
     def length(): Int = ???
+
+    /** Removes some portion of the sequence. */
+    @stub
+    def remove(where: Int, nitems: Int): UndoableEdit = ???
 }

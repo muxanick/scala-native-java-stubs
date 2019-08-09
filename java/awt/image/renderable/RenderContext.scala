@@ -3,6 +3,7 @@ package java.awt.image.renderable
 import java.awt.{RenderingHints, Shape}
 import java.awt.geom.AffineTransform
 import java.lang.{Cloneable, Object}
+import scala.scalanative.annotation.stub
 
 /** A RenderContext encapsulates the information needed to produce a
  *  specific rendering from a RenderableImage.  It contains the area to
@@ -35,6 +36,10 @@ class RenderContext extends Object with Cloneable {
     /** Constructs a RenderContext with a given transform and area of interest. */
     @stub
     def this(usr2dev: AffineTransform, aoi: Shape) = ???
+
+    /** Constructs a RenderContext with a given transform. */
+    @stub
+    def this(usr2dev: AffineTransform, aoi: Shape, hints: RenderingHints) = ???
 
     /** Makes a copy of a RenderContext. */
     @stub
@@ -89,4 +94,10 @@ class RenderContext extends Object with Cloneable {
     /** Sets the rendering hints of this RenderContext. */
     @stub
     def setRenderingHints(hints: RenderingHints): Unit = ???
+
+    /** Sets the current user-to-device AffineTransform contained
+     *  in the RenderContext to a given transform.
+     */
+    @stub
+    def setTransform(newTransform: AffineTransform): Unit = ???
 }

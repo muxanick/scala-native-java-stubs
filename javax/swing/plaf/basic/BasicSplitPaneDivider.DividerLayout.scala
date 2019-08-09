@@ -2,12 +2,17 @@ package javax.swing.plaf.basic
 
 import java.awt.{Component, Container, Dimension, LayoutManager}
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Used to layout a BasicSplitPaneDivider.
  *  Layout for the divider
  *  involves appropriately moving the left/right buttons around.
  */
 protected class BasicSplitPaneDivider.DividerLayout extends Object with LayoutManager {
+
+    /**  */
+    @stub
+    protected def DividerLayout() = ???
 
     /** If the layout manager uses a per-component string,
      *  adds the component comp to the layout,
@@ -32,4 +37,8 @@ protected class BasicSplitPaneDivider.DividerLayout extends Object with LayoutMa
      */
     @stub
     def preferredLayoutSize(c: Container): Dimension = ???
+
+    /** Removes the specified component from the layout. */
+    @stub
+    def removeLayoutComponent(c: Component): Unit = ???
 }

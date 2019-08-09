@@ -1,6 +1,7 @@
 package java.lang
 
 import java.io.Serializable
+import scala.scalanative.annotation.stub
 
 /** An element in a stack trace, as returned by Throwable.getStackTrace().  Each element represents a single stack frame.
  *  All stack frames except for the one at the top of the stack represent
@@ -10,6 +11,12 @@ import java.io.Serializable
  *  was created.
  */
 final class StackTraceElement extends Object with Serializable {
+
+    /** Creates a stack trace element representing the specified execution
+     *  point.
+     */
+    @stub
+    def this(declaringClass: String, methodName: String, fileName: String, lineNumber: Int) = ???
 
     /** Returns true if the specified object is another
      *  StackTraceElement instance representing the same execution
@@ -51,4 +58,8 @@ final class StackTraceElement extends Object with Serializable {
      */
     @stub
     def isNativeMethod(): Boolean = ???
+
+    /** Returns a string representation of this stack trace element. */
+    @stub
+    def toString(): String = ???
 }

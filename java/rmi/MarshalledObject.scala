@@ -2,6 +2,7 @@ package java.rmi
 
 import java.io.Serializable
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** A MarshalledObject contains a byte stream with the serialized
  *  representation of an object given to its constructor.  The get
@@ -28,6 +29,12 @@ import java.lang.Object
  */
 final class MarshalledObject[T] extends Object with Serializable {
 
+    /** Creates a new MarshalledObject that contains the
+     *  serialized representation of the current state of the supplied object.
+     */
+    @stub
+    def this(obj: T) = ???
+
     /** Compares this MarshalledObject to another object. */
     @stub
     def equals(obj: Object): Boolean = ???
@@ -35,4 +42,8 @@ final class MarshalledObject[T] extends Object with Serializable {
     /** Returns a new copy of the contained marshalledobject. */
     @stub
     def get(): T = ???
+
+    /** Return a hash code for this MarshalledObject. */
+    @stub
+    def hashCode(): Int = ???
 }

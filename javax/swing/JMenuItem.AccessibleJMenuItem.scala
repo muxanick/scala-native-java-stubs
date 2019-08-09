@@ -3,7 +3,8 @@ package javax.swing
 import java.awt.{Component.AccessibleAWTComponent, Container.AccessibleAWTContainer}
 import java.lang.Object
 import javax.accessibility.{AccessibleContext, AccessibleRole}
-import javax.swing.event.ChangeListener
+import javax.swing.event.{ChangeEvent, ChangeListener}
+import scala.scalanative.annotation.stub
 
 /** This class implements accessibility support for the
  *  JMenuItem class.  It provides an implementation of the
@@ -24,4 +25,8 @@ protected class JMenuItem.AccessibleJMenuItem extends AbstractButton.AccessibleA
     /** Get the role of this object. */
     @stub
     def getAccessibleRole(): AccessibleRole = ???
+
+    /** Supports the change listener interface and fires property changes. */
+    @stub
+    def stateChanged(e: ChangeEvent): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.sql
 
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** The subclass of SQLException thrown for the SQLState
  *  class value '08', or under vendor-specified conditions.  This
@@ -56,4 +57,10 @@ class SQLNonTransientConnectionException extends SQLNonTransientException {
      */
     @stub
     def this(reason: String, cause: Throwable) = ???
+
+    /** Constructs a SQLNonTransientConnectionException object
+     *  with a given  cause.
+     */
+    @stub
+    def this(cause: Throwable) = ???
 }

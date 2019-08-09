@@ -1,6 +1,7 @@
 package javax.activation
 
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** The CommandMap class provides an interface to a registry of
  *  command objects available in the system.
@@ -10,6 +11,10 @@ import java.lang.{Object, String}
  *  abstract.
  */
 abstract class CommandMap extends Object {
+
+    /**  */
+    @stub
+    def this() = ???
 
     /** Locate a DataContentHandler that corresponds to the MIME type. */
     def createDataContentHandler(mimeType: String): DataContentHandler
@@ -43,4 +48,8 @@ object CommandMap {
     /** Get the default CommandMap. */
     @stub
     def getDefaultCommandMap(): CommandMap = ???
+
+    /** Set the default CommandMap. */
+    @stub
+    def setDefaultCommandMap(commandMap: CommandMap): Unit = ???
 }

@@ -1,6 +1,8 @@
 package java.util.logging
 
+import java.io.OutputStream
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** Stream based logging Handler.
  *  
@@ -49,6 +51,12 @@ class StreamHandler extends Handler {
     @stub
     def this() = ???
 
+    /** Create a StreamHandler with a given Formatter
+     *  and output stream.
+     */
+    @stub
+    def this(out: OutputStream, formatter: Formatter) = ???
+
     /** Close the current output stream. */
     @stub
     def close(): Unit = ???
@@ -68,4 +76,8 @@ class StreamHandler extends Handler {
     /** Set (or change) the character encoding used by this Handler. */
     @stub
     def setEncoding(encoding: String): Unit = ???
+
+    /** Change the output stream. */
+    @stub
+    protected def setOutputStream(out: OutputStream): Unit = ???
 }

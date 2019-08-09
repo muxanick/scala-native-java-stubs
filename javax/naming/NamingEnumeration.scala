@@ -1,6 +1,7 @@
 package javax.naming
 
 import java.util.Enumeration
+import scala.scalanative.annotation.stub
 
 /** This interface is for enumerating lists returned by
  *  methods in the javax.naming and javax.naming.directory packages.
@@ -50,4 +51,8 @@ trait NamingEnumeration[T] extends Enumeration[T] {
     /** Determines whether there are any more elements in the enumeration. */
     @stub
     def hasMore(): Boolean = ???
+
+    /** Retrieves the next element in the enumeration. */
+    @stub
+    def next(): T = ???
 }

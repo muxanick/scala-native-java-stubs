@@ -2,6 +2,7 @@ package javax.management
 
 import java.lang.{Object, String}
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** An immutable descriptor. */
 class ImmutableDescriptor extends Object with Descriptor {
@@ -15,6 +16,10 @@ class ImmutableDescriptor extends Object with Descriptor {
     /** Construct a descriptor containing the given fields. */
     @stub
     def this(fields: String*) = ???
+
+    /** Construct a descriptor containing the given fields and values. */
+    @stub
+    def this(fieldNames: Array[String], fieldValues: Array[Object]) = ???
 
     /** Returns a descriptor which is equal to this descriptor. */
     @stub
@@ -67,4 +72,16 @@ class ImmutableDescriptor extends Object with Descriptor {
     /** Returns a string representation of the object. */
     @stub
     def toString(): String = ???
+}
+
+object ImmutableDescriptor {
+    /** An empty descriptor. */
+    @stub
+    val EMPTY_DESCRIPTOR: ImmutableDescriptor = ???
+
+    /** Return an ImmutableDescriptor whose contents are the union of
+     *  the given descriptors.
+     */
+    @stub
+    def union(descriptors: Descriptor*): ImmutableDescriptor = ???
 }

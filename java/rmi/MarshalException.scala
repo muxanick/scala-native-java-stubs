@@ -2,6 +2,7 @@ package java.rmi
 
 import java.io.IOException
 import java.lang.{Exception, Object, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /** A MarshalException is thrown if a
  *  java.io.IOException occurs while marshalling the remote call
@@ -22,4 +23,10 @@ class MarshalException extends RemoteException {
      */
     @stub
     def this(s: String) = ???
+
+    /** Constructs a MarshalException with the specified
+     *  detail message and nested exception.
+     */
+    @stub
+    def this(s: String, ex: Exception) = ???
 }

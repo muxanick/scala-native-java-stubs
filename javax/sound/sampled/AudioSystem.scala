@@ -1,8 +1,9 @@
 package javax.sound.sampled
 
-import java.io.{File, InputStream}
+import java.io.{File, InputStream, OutputStream}
 import java.lang.Object
 import java.net.URL
+import scala.scalanative.annotation.stub
 
 /** The AudioSystem class acts as the entry point to the
  *  sampled-audio system resources. This class lets you query and
@@ -112,6 +113,10 @@ class AudioSystem extends Object {
 }
 
 object AudioSystem {
+    /** An integer that stands for an unknown numeric value. */
+    @stub
+    val NOT_SPECIFIED: Int = ???
+
     /** Obtains the audio file format of the specified File. */
     @stub
     def getAudioFileFormat(file: File): AudioFileFormat = ???
@@ -285,4 +290,10 @@ object AudioSystem {
      */
     @stub
     def write(stream: AudioInputStream, fileType: AudioFileFormat.Type, out: File): Int = ???
+
+    /** Writes a stream of bytes representing an audio file of the specified file type
+     *  to the output stream provided.
+     */
+    @stub
+    def write(stream: AudioInputStream, fileType: AudioFileFormat.Type, out: OutputStream): Int = ???
 }

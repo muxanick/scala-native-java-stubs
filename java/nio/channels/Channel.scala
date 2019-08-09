@@ -1,6 +1,7 @@
 package java.nio.channels
 
 import java.io.Closeable
+import scala.scalanative.annotation.stub
 
 /** A nexus for I/O operations.
  * 
@@ -24,4 +25,8 @@ trait Channel extends Closeable {
     /** Closes this channel. */
     @stub
     def close(): Unit = ???
+
+    /** Tells whether or not this channel is open. */
+    @stub
+    def isOpen(): Boolean = ???
 }

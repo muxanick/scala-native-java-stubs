@@ -2,6 +2,7 @@ package javax.management.timer
 
 import java.lang.{Boolean, Integer, Long, Object, String}
 import java.util.{Date, Vector}
+import scala.scalanative.annotation.stub
 
 /** Exposes the management interface of the timer MBean. */
 trait TimerMBean {
@@ -109,4 +110,8 @@ trait TimerMBean {
     /** Starts the timer. */
     @stub
     def start(): Unit = ???
+
+    /** Stops the timer. */
+    @stub
+    def stop(): Unit = ???
 }

@@ -1,6 +1,7 @@
 package java.util.concurrent
 
 import java.lang.Runnable
+import scala.scalanative.annotation.stub
 
 /** A service that decouples the production of new asynchronous tasks
  *  from the consumption of the results of completed tasks.  Producers
@@ -50,4 +51,10 @@ trait CompletionService[V] {
      */
     @stub
     def submit(task: Runnable, result: V): Future[V] = ???
+
+    /** Retrieves and removes the Future representing the next
+     *  completed task, waiting if none are yet present.
+     */
+    @stub
+    def take(): Future[V] = ???
 }

@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component, Container}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
+import scala.scalanative.annotation.stub
 
 /** An implementation of a radio button menu item.
  *  A JRadioButtonMenuItem is
@@ -76,6 +77,18 @@ class JRadioButtonMenuItem extends JMenuItem with Accessible {
     @stub
     def this(text: String, icon: Icon) = ???
 
+    /** Creates a radio button menu item that has the specified
+     *  text, image, and selection state.
+     */
+    @stub
+    def this(text: String, icon: Icon, selected: Boolean) = ???
+
+    /** This class implements accessibility support for the
+     *  JRadioButtonMenuItem class.
+     */
+    @stub
+    protected object AccessibleJRadioButtonMenuItem extends JRadioButtonMenuItem.AccessibleJRadioButtonMenuItem
+
     /** Gets the AccessibleContext associated with this JRadioButtonMenuItem. */
     @stub
     def getAccessibleContext(): AccessibleContext = ???
@@ -83,4 +96,10 @@ class JRadioButtonMenuItem extends JMenuItem with Accessible {
     /** Returns the name of the L&F class that renders this component. */
     @stub
     def getUIClassID(): String = ???
+
+    /** Returns a string representation of this
+     *  JRadioButtonMenuItem.
+     */
+    @stub
+    protected def paramString(): String = ???
 }

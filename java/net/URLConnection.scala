@@ -4,6 +4,7 @@ import java.io.{InputStream, OutputStream}
 import java.lang.{Class, Object, String}
 import java.security.Permission
 import java.util.{List, Map}
+import scala.scalanative.annotation.stub
 
 /** The abstract class URLConnection is the superclass
  *  of all classes that represent a communications link between the
@@ -101,6 +102,10 @@ import java.util.{List, Map}
  */
 abstract class URLConnection extends Object {
 
+    /** Constructs a URL connection to the specified URL. */
+    @stub
+    protected def this(url: URL) = ???
+
     /** If true, this URL is being examined in
      *  a context in which it makes sense to allow user interactions such
      *  as popping up an authentication dialog.
@@ -127,6 +132,11 @@ abstract class URLConnection extends Object {
      *  which this connection is opened.
      */
     protected val url: URL
+
+    /** If true, the protocol is allowed to use caching
+     *  whenever it can.
+     */
+    protected val useCaches: Boolean
 
     /** Adds a general request property specified by a
      *  key-value pair.
@@ -292,6 +302,9 @@ abstract class URLConnection extends Object {
      *  URLConnection to the specified value.
      */
     def setUseCaches(usecaches: Boolean): Unit
+
+    /** Returns a String representation of this URL connection. */
+    def toString(): String
 }
 
 object URLConnection {

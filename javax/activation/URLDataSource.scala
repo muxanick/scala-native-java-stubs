@@ -2,6 +2,8 @@ package javax.activation
 
 import java.io.{InputStream, OutputStream}
 import java.lang.{Object, String}
+import java.net.URL
+import scala.scalanative.annotation.stub
 
 /** The URLDataSource class provides an object that wraps a URL
  *  object in a DataSource interface. URLDataSource simplifies the handling
@@ -11,6 +13,10 @@ import java.lang.{Object, String}
  *  when it is constructed with a URL.
  */
 class URLDataSource extends Object with DataSource {
+
+    /** URLDataSource constructor. */
+    @stub
+    def this(url: URL) = ???
 
     /** Returns the value of the URL content-type header field. */
     @stub
@@ -29,4 +35,8 @@ class URLDataSource extends Object with DataSource {
     /** The getOutputStream method from the URL. */
     @stub
     def getOutputStream(): OutputStream = ???
+
+    /** Return the URL used to create this DataSource. */
+    @stub
+    def getURL(): URL = ???
 }

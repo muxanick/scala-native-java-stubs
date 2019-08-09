@@ -2,6 +2,7 @@ package java.time.chrono
 
 import java.lang.{Enum, Object, String}
 import java.time.temporal.{TemporalField, ValueRange}
+import scala.scalanative.annotation.stub
 
 /** An era in the Hijrah calendar system.
  *  
@@ -15,6 +16,11 @@ class HijrahEra private (name: String, ordinal: Int) extends Enum[HijrahEra](nam
 }
 
 object HijrahEra {
+    /** The singleton instance for the current era, 'Anno Hegirae',
+     *  which has the numeric value 1.
+     */
+    final val AH = new HijrahEra(AH, 0)
+
     /** Gets the numeric era int value. */
     @stub
     def getValue(): Int = ???
@@ -30,4 +36,10 @@ object HijrahEra {
     /** Returns the enum constant of this type with the specified name. */
     @stub
     def valueOf(name: String): HijrahEra = ???
+
+    /** Returns an array containing the constants of this enum type, in
+     * the order they are declared.
+     */
+    @stub
+    def values(): Array[HijrahEra] = ???
 }

@@ -2,6 +2,7 @@ package java.net
 
 import java.io.Serializable
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** This class represents an Internet Protocol (IP) address.
  * 
@@ -204,6 +205,10 @@ class InetAddress extends Object with Serializable {
     /** Utility routine to check if the InetAddress is a site local address. */
     @stub
     def isSiteLocalAddress(): Boolean = ???
+
+    /** Converts this IP address to a String. */
+    @stub
+    def toString(): String = ???
 }
 
 object InetAddress {

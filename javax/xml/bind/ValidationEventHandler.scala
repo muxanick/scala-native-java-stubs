@@ -1,5 +1,7 @@
 package javax.xml.bind
 
+import scala.scalanative.annotation.stub
+
 /** A basic event handler interface for validation errors.
  * 
  *  
@@ -34,4 +36,8 @@ package javax.xml.bind
  *  
  */
 trait ValidationEventHandler {
+
+    /** Receive notification of a validation warning or error. */
+    @stub
+    def handleEvent(event: ValidationEvent): Boolean = ???
 }

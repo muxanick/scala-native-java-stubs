@@ -1,6 +1,7 @@
 package java.nio
 
 import java.lang.{Comparable, Object, String}
+import scala.scalanative.annotation.stub
 
 /** A byte buffer.
  * 
@@ -401,4 +402,8 @@ object ByteBuffer {
     /** Wraps a byte array into a buffer. */
     @stub
     def wrap(array: Array[Byte]): ByteBuffer = ???
+
+    /** Wraps a byte array into a buffer. */
+    @stub
+    def wrap(array: Array[Byte], offset: Int, length: Int): ByteBuffer = ???
 }

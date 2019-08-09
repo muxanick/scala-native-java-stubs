@@ -2,6 +2,7 @@ package javax.swing.text
 
 import java.awt.{Graphics, Shape}
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** Icon decorator that implements the view interface.  The
  *  entire element is used to represent the icon.  This acts
@@ -12,6 +13,10 @@ import java.lang.Object
  *  factory.
  */
 class IconView extends View {
+
+    /** Creates a new icon view that represents an element. */
+    @stub
+    def this(elem: Element) = ???
 
     /** Determines the desired alignment for this view along an
      *  axis.
@@ -34,4 +39,10 @@ class IconView extends View {
     /** Paints the icon. */
     @stub
     def paint(g: Graphics, a: Shape): Unit = ???
+
+    /** Provides a mapping from the view coordinate space to the logical
+     *  coordinate space of the model.
+     */
+    @stub
+    def viewToModel(x: Float, y: Float, a: Shape, bias: Array[Position.Bias]): Int = ???
 }

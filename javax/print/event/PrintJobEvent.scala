@@ -2,6 +2,8 @@ package javax.print.event
 
 import java.lang.Object
 import java.util.EventObject
+import javax.print.DocPrintJob
+import scala.scalanative.annotation.stub
 
 /** Class PrintJobEvent encapsulates common events a print job
  *  reports to let a listener know of progress in the processing of the
@@ -9,9 +11,19 @@ import java.util.EventObject
  */
 class PrintJobEvent extends PrintEvent {
 
+    /** Constructs a PrintJobEvent object. */
+    @stub
+    def this(source: DocPrintJob, reason: Int) = ???
+
     /** Gets the reason for this event. */
     @stub
     def getPrintEventType(): Int = ???
+
+    /** Determines the DocPrintJob to which this print job
+     *  event pertains.
+     */
+    @stub
+    def getPrintJob(): DocPrintJob = ???
 }
 
 object PrintJobEvent {
@@ -38,4 +50,11 @@ object PrintJobEvent {
      */
     @stub
     val NO_MORE_EVENTS: Int = ???
+
+    /** The print service indicates that a - possibly transient - problem
+     *  may require external intervention before the print service can
+     *  continue.
+     */
+    @stub
+    val REQUIRES_ATTENTION: Int = ???
 }

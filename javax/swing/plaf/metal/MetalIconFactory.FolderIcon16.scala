@@ -1,8 +1,10 @@
 package javax.swing.plaf.metal
 
+import java.awt.{Component, Graphics}
 import java.io.Serializable
 import java.lang.Object
 import javax.swing.Icon
+import scala.scalanative.annotation.stub
 
 /** 
  *  Warning:
@@ -15,6 +17,10 @@ import javax.swing.Icon
  *  Please see XMLEncoder.
  */
 object MetalIconFactory.FolderIcon16 extends Object with Icon with Serializable {
+
+    /**  */
+    @stub
+    def FolderIcon16() = ???
 
     /**  */
     @stub
@@ -31,4 +37,8 @@ object MetalIconFactory.FolderIcon16 extends Object with Icon with Serializable 
     /**  */
     @stub
     def getShift(): Int = ???
+
+    /** Draw the icon at the specified location. */
+    @stub
+    def paintIcon(c: Component, g: Graphics, x: Int, y: Int): Unit = ???
 }

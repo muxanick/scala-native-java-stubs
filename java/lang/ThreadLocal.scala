@@ -1,5 +1,8 @@
 package java.lang
 
+import java.util.function.Supplier
+import scala.scalanative.annotation.stub
+
 /** This class provides thread-local variables.  These variables differ from
  *  their normal counterparts in that each thread that accesses one (via its
  *  get or set method) has its own, independently initialized
@@ -40,6 +43,10 @@ package java.lang
  */
 class ThreadLocal[T] extends Object {
 
+    /** Creates a thread local variable. */
+    @stub
+    def this() = ???
+
     /** Returns the value in the current thread's copy of this
      *  thread-local variable.
      */
@@ -63,4 +70,10 @@ class ThreadLocal[T] extends Object {
      */
     @stub
     def set(value: T): Unit = ???
+}
+
+object ThreadLocal {
+    /** Creates a thread local variable. */
+    @stub
+    def withInitial[S](supplier: Supplier[_ <: S]): ThreadLocal[S] = ???
 }

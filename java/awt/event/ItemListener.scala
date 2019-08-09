@@ -1,6 +1,7 @@
 package java.awt.event
 
 import java.util.EventListener
+import scala.scalanative.annotation.stub
 
 /** The listener interface for receiving item events.
  *  The class that is interested in processing an item event
@@ -11,4 +12,8 @@ import java.util.EventListener
  *  itemStateChanged method is invoked.
  */
 trait ItemListener extends EventListener {
+
+    /** Invoked when an item has been selected or deselected by the user. */
+    @stub
+    def itemStateChanged(e: ItemEvent): Unit = ???
 }

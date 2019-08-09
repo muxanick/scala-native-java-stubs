@@ -3,9 +3,14 @@ package java.util.concurrent.locks
 import java.io.Serializable
 import java.lang.{Object, String}
 import java.util.concurrent.TimeUnit
+import scala.scalanative.annotation.stub
 
 /** The lock returned by method ReentrantReadWriteLock.readLock(). */
 object ReentrantReadWriteLock.ReadLock extends Object with Lock with Serializable {
+
+    /** Constructor for use by subclasses */
+    @stub
+    protected def ReadLock(lock: ReentrantReadWriteLock) = ???
 
     /** Acquires the read lock. */
     @stub
@@ -39,4 +44,8 @@ object ReentrantReadWriteLock.ReadLock extends Object with Lock with Serializabl
      */
     @stub
     def tryLock(timeout: Long, unit: TimeUnit): Boolean = ???
+
+    /** Attempts to release this lock. */
+    @stub
+    def unlock(): Unit = ???
 }

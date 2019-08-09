@@ -2,6 +2,7 @@ package javax.management
 
 import java.lang.{Cloneable, Object, String}
 import java.lang.reflect.Method
+import scala.scalanative.annotation.stub
 
 /** Describes an MBean attribute exposed for management.  Instances of
  *  this class are immutable.  Subclasses may be mutable but this is
@@ -18,6 +19,10 @@ class MBeanAttributeInfo extends MBeanFeatureInfo with Cloneable {
     /** Constructs an MBeanAttributeInfo object. */
     @stub
     def this(name: String, type: String, description: String, isReadable: Boolean, isWritable: Boolean, isIs: Boolean) = ???
+
+    /** Constructs an MBeanAttributeInfo object. */
+    @stub
+    def this(name: String, type: String, description: String, isReadable: Boolean, isWritable: Boolean, isIs: Boolean, descriptor: Descriptor) = ???
 
     /** Returns a shallow clone of this instance. */
     @stub
@@ -46,4 +51,8 @@ class MBeanAttributeInfo extends MBeanFeatureInfo with Cloneable {
     /** Whether new values can be written to the attribute. */
     @stub
     def isWritable(): Boolean = ???
+
+    /** Returns a string representation of the object. */
+    @stub
+    def toString(): String = ???
 }

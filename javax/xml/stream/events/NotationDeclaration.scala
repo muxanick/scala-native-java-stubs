@@ -1,6 +1,7 @@
 package javax.xml.stream.events
 
 import java.lang.String
+import scala.scalanative.annotation.stub
 
 /** An interface for handling Notation Declarations
  * 
@@ -19,4 +20,8 @@ trait NotationDeclaration extends XMLEvent {
     /** The notation's public identifier, or null if none was given. */
     @stub
     def getPublicId(): String = ???
+
+    /** The notation's system identifier, or null if none was given. */
+    @stub
+    def getSystemId(): String = ???
 }

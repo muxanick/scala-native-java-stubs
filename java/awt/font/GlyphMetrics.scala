@@ -2,6 +2,7 @@ package java.awt.font
 
 import java.awt.geom.Rectangle2D
 import java.lang.Object
+import scala.scalanative.annotation.stub
 
 /** The GlyphMetrics class represents information for a
  *  single glyph.   A glyph is the visual representation of one or more
@@ -69,6 +70,10 @@ final class GlyphMetrics extends Object {
     @stub
     def this(horizontal: Boolean, advanceX: Float, advanceY: Float, bounds: Rectangle2D, glyphType: Byte) = ???
 
+    /** Constructs a GlyphMetrics object. */
+    @stub
+    def this(advance: Float, bounds: Rectangle2D, glyphType: Byte) = ???
+
     /** Returns the advance of the glyph along the baseline (either
      *  horizontal or vertical).
      */
@@ -114,6 +119,10 @@ final class GlyphMetrics extends Object {
     /** Returns true if this is a standard glyph. */
     @stub
     def isStandard(): Boolean = ???
+
+    /** Returns true if this is a whitespace glyph. */
+    @stub
+    def isWhitespace(): Boolean = ???
 }
 
 object GlyphMetrics {
@@ -140,4 +149,8 @@ object GlyphMetrics {
      */
     @stub
     val STANDARD: Byte = ???
+
+    /** Indicates a glyph with no visual representation. */
+    @stub
+    val WHITESPACE: Byte = ???
 }

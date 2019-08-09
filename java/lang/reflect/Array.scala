@@ -1,6 +1,7 @@
 package java.lang.reflect
 
 import java.lang.{Class, Object}
+import scala.scalanative.annotation.stub
 
 /** The Array class provides static methods to dynamically create and
  *  access Java arrays.
@@ -130,4 +131,10 @@ object Array {
      */
     @stub
     def setLong(array: Object, index: Int, l: Long): Unit = ???
+
+    /** Sets the value of the indexed component of the specified array
+     *  object to the specified short value.
+     */
+    @stub
+    def setShort(array: Object, index: Int, s: Short): Unit = ???
 }

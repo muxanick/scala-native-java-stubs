@@ -1,5 +1,7 @@
 package java.util
 
+import scala.scalanative.annotation.stub
+
 /** An object that implements the Enumeration interface generates a
  *  series of elements, one at a time. Successive calls to the
  *  nextElement method return successive elements of the
@@ -25,4 +27,10 @@ trait Enumeration[E] {
     /** Tests if this enumeration contains more elements. */
     @stub
     def hasMoreElements(): Boolean = ???
+
+    /** Returns the next element of this enumeration if this enumeration
+     *  object has at least one more element to provide.
+     */
+    @stub
+    def nextElement(): E = ???
 }

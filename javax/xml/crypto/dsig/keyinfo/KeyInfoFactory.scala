@@ -4,7 +4,8 @@ import java.lang.{Object, String}
 import java.math.BigInteger
 import java.security.{Provider, PublicKey}
 import java.util.List
-import javax.xml.crypto.URIDereferencer
+import javax.xml.crypto.{URIDereferencer, XMLStructure}
+import scala.scalanative.annotation.stub
 
 /** A factory for creating KeyInfo objects from scratch or for
  *  unmarshalling a KeyInfo object from a corresponding XML
@@ -60,6 +61,10 @@ import javax.xml.crypto.URIDereferencer
  *  instance need not synchronize.
  */
 abstract class KeyInfoFactory extends Object {
+
+    /** Default constructor, for invocation by subclasses. */
+    @stub
+    protected def this() = ???
 
     /** Returns the type of the XML processing mechanism and representation
      *  supported by this KeyInfoFactory (ex: "DOM")
@@ -124,6 +129,12 @@ abstract class KeyInfoFactory extends Object {
      *  distinguished name and serial number.
      */
     def newX509IssuerSerial(issuerName: String, serialNumber: BigInteger): X509IssuerSerial
+
+    /** Unmarshals a new KeyInfo instance from a
+     *  mechanism-specific XMLStructure (ex: DOMStructure)
+     *  instance.
+     */
+    def unmarshalKeyInfo(xmlStructure: XMLStructure): KeyInfo
 }
 
 object KeyInfoFactory {

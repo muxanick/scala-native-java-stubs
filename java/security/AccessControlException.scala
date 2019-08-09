@@ -1,6 +1,7 @@
 package java.security
 
 import java.lang.{Exception, Object, RuntimeException, SecurityException, String, Throwable}
+import scala.scalanative.annotation.stub
 
 /**  This exception is thrown by the AccessController to indicate
  *  that a requested access (to a critical system resource such as the
@@ -19,4 +20,17 @@ class AccessControlException extends SecurityException {
      */
     @stub
     def this(s: String) = ???
+
+    /** Constructs an AccessControlException with the
+     *  specified, detailed message, and the requested permission that caused
+     *  the exception.
+     */
+    @stub
+    def this(s: String, p: Permission) = ???
+
+    /** Gets the Permission object associated with this exception, or
+     *  null if there was no corresponding Permission object.
+     */
+    @stub
+    def getPermission(): Permission = ???
 }

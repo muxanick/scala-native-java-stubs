@@ -3,6 +3,7 @@ package java.rmi.activation
 import java.io.Serializable
 import java.lang.Object
 import java.rmi.Remote
+import scala.scalanative.annotation.stub
 
 /** Activation makes use of special identifiers to denote remote
  *  objects that can be activated over time. An activation identifier
@@ -26,6 +27,14 @@ import java.rmi.Remote
  */
 class ActivationID extends Object with Serializable {
 
+    /** The constructor for ActivationID takes a single
+     *  argument, activator, that specifies a remote reference to the
+     *  activator responsible for activating the object associated with
+     *  this identifier.
+     */
+    @stub
+    def this(activator: Activator) = ???
+
     /** Activate the object for this id. */
     @stub
     def activate(force: Boolean): Remote = ???
@@ -33,4 +42,8 @@ class ActivationID extends Object with Serializable {
     /** Compares two activation ids for content equality. */
     @stub
     def equals(obj: Object): Boolean = ???
+
+    /** Returns a hashcode for the activation id. */
+    @stub
+    def hashCode(): Int = ???
 }

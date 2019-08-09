@@ -3,6 +3,7 @@ package javax.sql.rowset.serial
 import java.io.Serializable
 import java.lang.{Cloneable, Object}
 import java.net.URL
+import scala.scalanative.annotation.stub
 
 /** A serialized mapping in the Java programming language of an SQL
  *  DATALINK value. A DATALINK value
@@ -24,6 +25,12 @@ import java.net.URL
  */
 class SerialDatalink extends Object with Serializable with Cloneable {
 
+    /** Constructs a new SerialDatalink object from the given
+     *  java.net.URL object.
+     */
+    @stub
+    def this(url: URL) = ???
+
     /** Returns a clone of this SerialDatalink. */
     @stub
     def clone(): Object = ???
@@ -37,4 +44,8 @@ class SerialDatalink extends Object with Serializable with Cloneable {
      */
     @stub
     def getDatalink(): URL = ???
+
+    /** Returns a hash code for this SerialDatalink. */
+    @stub
+    def hashCode(): Int = ???
 }

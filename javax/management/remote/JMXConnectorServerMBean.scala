@@ -2,6 +2,7 @@ package javax.management.remote
 
 import java.lang.String
 import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** MBean interface for connector servers.  A JMX API connector server
  *  is attached to an MBean server, and establishes connections to that
@@ -48,4 +49,8 @@ trait JMXConnectorServerMBean {
      */
     @stub
     def stop(): Unit = ???
+
+    /** Returns a client stub for this connector server. */
+    @stub
+    def toJMXConnector(env: Map[String, _]): JMXConnector = ???
 }

@@ -1,7 +1,9 @@
 package java.security
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.net.URI
+import java.util.Map
+import scala.scalanative.annotation.stub
 
 /** Configuration data that specifies the keystores in a keystore domain.
  *  A keystore domain is a collection of keystores that are presented as a
@@ -77,6 +79,12 @@ import java.net.URI
  */
 final class DomainLoadStoreParameter extends Object with KeyStore.LoadStoreParameter {
 
+    /** Constructs a DomainLoadStoreParameter for a keystore domain with
+     *  the parameters used to protect keystore data.
+     */
+    @stub
+    def this(configuration: URI, protectionParams: Map[String, KeyStore.ProtectionParameter]) = ???
+
     /** Gets the identifier for the domain configuration data. */
     @stub
     def getConfiguration(): URI = ???
@@ -84,4 +92,10 @@ final class DomainLoadStoreParameter extends Object with KeyStore.LoadStoreParam
     /** Gets the keystore protection parameters for this domain. */
     @stub
     def getProtectionParameter(): KeyStore.ProtectionParameter = ???
+
+    /** Gets the keystore protection parameters for keystores in this
+     *  domain.
+     */
+    @stub
+    def getProtectionParams(): Map[String, KeyStore.ProtectionParameter] = ???
 }

@@ -3,7 +3,8 @@ package javax.swing.table
 import java.io.Serializable
 import java.lang.{Class, Object, String}
 import java.util.EventListener
-import javax.swing.event.{TableModelEvent, TableModelListener}
+import javax.swing.event.{EventListenerList, TableModelEvent, TableModelListener}
+import scala.scalanative.annotation.stub
 
 /** This abstract class provides default implementations for most of
  *   the methods in the TableModel interface. It takes care of
@@ -29,6 +30,13 @@ import javax.swing.event.{TableModelEvent, TableModelListener}
  *  Please see XMLEncoder.
  */
 abstract class AbstractTableModel extends Object with TableModel with Serializable {
+
+    /**  */
+    @stub
+    def this() = ???
+
+    /** List of listeners */
+    protected val listenerList: EventListenerList
 
     /** Adds a listener to the list that's notified each time a change
      *  to the data model occurs.
@@ -98,4 +106,9 @@ abstract class AbstractTableModel extends Object with TableModel with Serializab
      *  change to the data model occurs.
      */
     def removeTableModelListener(l: TableModelListener): Unit
+
+    /** This empty implementation is provided so users don't have to implement
+     *   this method if their data model is not editable.
+     */
+    def setValueAt(aValue: Object, rowIndex: Int, columnIndex: Int): Unit
 }

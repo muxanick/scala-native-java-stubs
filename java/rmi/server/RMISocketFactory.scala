@@ -2,6 +2,7 @@ package java.rmi.server
 
 import java.lang.{Object, String}
 import java.net.{ServerSocket, Socket}
+import scala.scalanative.annotation.stub
 
 /** An RMISocketFactory instance is used by the RMI runtime
  *  in order to obtain client and server sockets for RMI calls.  An
@@ -30,6 +31,10 @@ import java.net.{ServerSocket, Socket}
  *  interfaces.
  */
 abstract class RMISocketFactory extends Object with RMIClientSocketFactory with RMIServerSocketFactory {
+
+    /** Constructs an RMISocketFactory. */
+    @stub
+    def this() = ???
 
     /** Create a server socket on the specified port (port 0 indicates
      *  an anonymous port).
@@ -64,4 +69,11 @@ object RMISocketFactory {
      */
     @stub
     def setFailureHandler(fh: RMIFailureHandler): Unit = ???
+
+    /** Set the global socket factory from which RMI gets sockets (if the
+     *  remote object is not associated with a specific client and/or server
+     *  socket factory).
+     */
+    @stub
+    def setSocketFactory(fac: RMISocketFactory): Unit = ???
 }

@@ -2,6 +2,7 @@ package javax.swing.text
 
 import java.io.Writer
 import java.lang.{Object, String}
+import scala.scalanative.annotation.stub
 
 /** AbstractWriter is an abstract class that actually
  *  does the work of writing out the element tree
@@ -22,6 +23,10 @@ abstract class AbstractWriter extends Object {
     /** Creates a new AbstractWriter. */
     @stub
     protected def this(w: Writer, root: Element) = ???
+
+    /** Creates a new AbstractWriter. */
+    @stub
+    protected def this(w: Writer, root: Element, pos: Int, len: Int) = ???
 
     /** Decrements the indent level. */
     protected def decrIndent(): Unit
@@ -119,4 +124,13 @@ abstract class AbstractWriter extends Object {
      *  pairs.
      */
     protected def writeAttributes(attr: AttributeSet): Unit
+
+    /** Writes the line separator. */
+    protected def writeLineSeparator(): Unit
+}
+
+object AbstractWriter {
+    /** How the text packages models newlines. */
+    @stub
+    protected val NEWLINE: Char = ???
 }

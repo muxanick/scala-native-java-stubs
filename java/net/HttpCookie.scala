@@ -2,6 +2,7 @@ package java.net
 
 import java.lang.{Cloneable, Object, String}
 import java.util.List
+import scala.scalanative.annotation.stub
 
 /** An HttpCookie object represents an HTTP cookie, which carries state
  *  information between server and user agent. Cookie is widely adopted
@@ -19,6 +20,10 @@ import java.util.List
  *   HttpCookie class can accept all these 3 forms of syntax.
  */
 final class HttpCookie extends Object with Cloneable {
+
+    /** Constructs a cookie with a specified name and value. */
+    @stub
+    def this(name: String, value: String) = ???
 
     /** Create and return a copy of this object. */
     @stub
@@ -144,6 +149,13 @@ final class HttpCookie extends Object with Cloneable {
      */
     @stub
     def setVersion(v: Int): Unit = ???
+
+    /** Constructs a cookie header string representation of this cookie,
+     *  which is in the format defined by corresponding cookie specification,
+     *  but without the leading "Cookie:" token.
+     */
+    @stub
+    def toString(): String = ???
 }
 
 object HttpCookie {
