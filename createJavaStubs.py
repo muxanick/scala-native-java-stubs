@@ -12,6 +12,7 @@ def parseCommandLine():
     parser.add_argument('--java', help='Java version, for example default value: 8')
     parser.add_argument('--outputFolder', help='Root folder of all scala files, default is working dir')
     parser.add_argument('--all', default=False, action='store_true', help='Load all classes')
+    parser.add_argument('--overwrite', default=False, action='store_true', help='Ovewrite existent files')
     parser.add_argument('--classname', help='Full java class name which you want to create,\nFor instance: java.net.URLClassLoader')
     args = parser.parse_args()
     if not args.java:
@@ -146,8 +147,9 @@ def requestParseAndSave(classname, args, all_classes):
         return result
     
     def makeComment(indent, desc):
-        spaces = (' ' * indent) + '//'
-        return spaces + ' ' + desc.replace('\n', '\n' + spaces) + '\n'
+        spaces = (' ' * indent)
+        multiline = desc.split('\n')
+        return spaces + '/** ' + ('\n' + spaces + ' * ').join(multiline) + (' */\n' if len(multiline) == 1 else '\n' + spaces +' */\n')
 
     def translateGenericParams(tokens):
         idx = 0
@@ -181,6 +183,8 @@ def requestParseAndSave(classname, args, all_classes):
             'short' : 'Short',
             'int' : 'Int',
             'long' : 'Long',
+            'float' : 'Float',
+            'double' : 'Double',
             'boolean' : 'Boolean'
         }
         while idx < len(tokens):
@@ -198,6 +202,8 @@ def requestParseAndSave(classname, args, all_classes):
                 idx = idx - 1
             elif token == '...':
                 tokens[idx-1:idx + 1] = [tokens[idx-1] + '*']
+            elif token.endswith('...'):
+                tokens[idx] = tokens[idx].replace('...', '*')
             elif token == '>':
                 idx_start = idx - 1
                 while idx_start >=0 and tokens[idx_start] != '<':
@@ -233,9 +239,24 @@ def requestParseAndSave(classname, args, all_classes):
                     else:
                         j += 1
                 new_tokens[idx:] = ['with ' + ', with '.join(new_tokens[idx+1:])]
+            elif new_tokens[idx] == '@interface':
+                new_tokens[idx:] = ['\n', 'final', 'class', new_tokens[idx+1], 'extends', 'StaticAnnotation']
+            elif new_tokens[idx] == 'extends':
+                j = idx + 1
+                while j < len(new_tokens):
+                    if new_tokens[j] == ',':
+                        new_tokens.pop(j)
+                    elif new_tokens[j].startswith('implements') or new_tokens[j].startswith('with'):
+                        break;
+                    else:
+                        j += 1
+                if j > idx + 2:
+                    new_tokens[idx:j] = ['extends ' + ', with '.join(new_tokens[idx+1:])]
+                else:
+                    idx = j
             else:
                 idx += 1
-        return ' '.join(new_tokens).strip() + ' {\n'
+        return ' '.join(new_tokens).replace('@', '\n@').strip() + ' {\n'
 
     def splitByComma(tokens):
         if ',' not in tokens:
@@ -255,6 +276,10 @@ def requestParseAndSave(classname, args, all_classes):
     enum_value = [0]
     def makeMethod(indent, method, class_abstract, class_enum):
         tokens = transformTokens(method['tokens'])
+        generic = None
+        if tokens[0][0] == '[':
+            generic = tokens[0]
+            tokens.pop(0)
         access = None
         if tokens[0] in ['protected', 'private']:
             access = tokens[0]
@@ -284,15 +309,15 @@ def requestParseAndSave(classname, args, all_classes):
             enum_value_line = True
             enum_value[0] += 1
         else:
-            line += 'def ' + name
+            line += ('def ' if params != None else 'val ') + name + (generic if generic != None else '')
         if params != None:
             line += '(' + ', '.join(params) + ')'
         if lineType != None:
             line += ': ' + lineType
         result = ''
+        result += makeComment(indent, method['desc'])
         if not class_abstract and not enum_value_line:
             result += (' ' * indent) + '@stub\n'
-        result += makeComment(indent, method['desc'])
         result += (' ' * indent) + line + (' = ???\n' if not abstract and not class_abstract and not enum_value_line else '\n')
         return result
 
@@ -323,13 +348,16 @@ def requestParseAndSave(classname, args, all_classes):
             for i in tag_members.children[2:-1]:
                     methods.append(parseMethod(i))
 
-    if not os.path.exists(scalafile):
+    if args.overwrite or not os.path.exists(scalafile):
         ###### Create a code
         # Package
         code = 'package ' + classpackage + '\n'
         # Imports
         indent = 0
-        code += makeImports(links)
+        imports_list = links
+        if '@interface' in definition['tokens']:
+            imports_list.append('scala.annotation.StaticAnnotation')
+        code += makeImports(imports_list)
         code += '\n' + makeComment(0, definition['desc'])
         class_abstract = 'abstract' in definition['tokens']
         class_static = not set(['static', 'enum']).isdisjoint(definition['tokens'])
@@ -384,7 +412,8 @@ def getAllClassNames(args):
             url = tag.attributesDict['href']
             url = url.split("#")[0].split('.html')[0]
             url = url.replace('/', '.')
-            result.append(url)
+            if url.startswith('java'):
+                result.append(url)
     return result
 def main():
     args = parseCommandLine()
