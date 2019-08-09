@@ -359,6 +359,7 @@ def requestParseAndSave(classname, args, all_classes):
         # Imports
         indent = 0
         imports_list = links.copy()
+        imports_list.append('scala.scalanative.annotation.stub')
         if '@interface' in definition['tokens']:
             imports_list.append('scala.annotation.StaticAnnotation')
         code += makeImports(imports_list)
