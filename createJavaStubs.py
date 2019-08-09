@@ -358,7 +358,7 @@ def requestParseAndSave(classname, args, all_classes):
         code = 'package ' + classpackage + '\n'
         # Imports
         indent = 0
-        imports_list = links
+        imports_list = links.copy()
         if '@interface' in definition['tokens']:
             imports_list.append('scala.annotation.StaticAnnotation')
         code += makeImports(imports_list)
