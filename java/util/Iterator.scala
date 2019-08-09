@@ -24,7 +24,7 @@ trait Iterator[E] {
      *  have been processed or the action throws an exception.
      */
     @stub
-    val Unit: default = ???
+    def forEachRemaining(action: Consumer[_ >: E]): Unit = ???
 
     /** Returns true if the iteration has more elements. */
     @stub
@@ -38,5 +38,5 @@ trait Iterator[E] {
      *  by this iterator (optional operation).
      */
     @stub
-    val Unit: default = ???
+    def remove(): Unit = ???
 }

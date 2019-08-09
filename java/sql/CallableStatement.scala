@@ -456,18 +456,18 @@ trait CallableStatement extends PreparedStatement {
      *  sqlType.
      */
     @stub
-    val Unit: default = ???
+    def registerOutParameter(parameterIndex: Int, sqlType: SQLType): Unit = ???
 
     /** Registers the parameter in ordinal position
      *  parameterIndex to be of JDBC type
      *  sqlType.
      */
     @stub
-    val Unit: default = ???
+    def registerOutParameter(parameterIndex: Int, sqlType: SQLType, scale: Int): Unit = ???
 
     /** Registers the designated output parameter. */
     @stub
-    val Unit: default = ???
+    def registerOutParameter(parameterIndex: Int, sqlType: SQLType, typeName: String): Unit = ???
 
     /** Registers the OUT parameter named
      *  parameterName to the JDBC type
@@ -492,18 +492,18 @@ trait CallableStatement extends PreparedStatement {
      *  sqlType.
      */
     @stub
-    val Unit: default = ???
+    def registerOutParameter(parameterName: String, sqlType: SQLType): Unit = ???
 
     /** Registers the parameter named
      *  parameterName to be of JDBC type
      *  sqlType.
      */
     @stub
-    val Unit: default = ???
+    def registerOutParameter(parameterName: String, sqlType: SQLType, scale: Int): Unit = ???
 
     /** Registers the designated output parameter. */
     @stub
-    val Unit: default = ???
+    def registerOutParameter(parameterName: String, sqlType: SQLType, typeName: String): Unit = ???
 
     /** Sets the designated parameter to the given input stream. */
     @stub
@@ -672,11 +672,11 @@ trait CallableStatement extends PreparedStatement {
 
     /** Sets the value of the designated parameter with the given object. */
     @stub
-    val Unit: default = ???
+    def setObject(parameterName: String, x: Object, targetSqlType: SQLType): Unit = ???
 
     /** Sets the value of the designated parameter with the given object. */
     @stub
-    val Unit: default = ???
+    def setObject(parameterName: String, x: Object, targetSqlType: SQLType, scaleOrLength: Int): Unit = ???
 
     /** Sets the designated parameter to the given java.sql.RowId object. */
     @stub

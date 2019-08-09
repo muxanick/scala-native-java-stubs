@@ -21,5 +21,5 @@ import scala.scalanative.annotation.stub
      *  operation followed by the after operation.
      */
     @stub
-    val BiConsumer[T, U]: default = ???
+    def andThen(after: BiConsumer[_ >: T, _ >: U]): BiConsumer[T, U] = ???
 }

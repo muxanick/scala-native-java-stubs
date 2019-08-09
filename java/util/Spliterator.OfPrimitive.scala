@@ -10,7 +10,7 @@ object trait Spliterator.OfPrimitive[T, T_CONS, T_SPLITR <: Spliterator.OfPrimit
      *  action throws an exception.
      */
     @stub
-    val Unit: default = ???
+    def forEachRemaining(action: T_CONS): Unit = ???
 
     /** If a remaining element exists, performs the given action on it,
      *  returning true; else returns false.

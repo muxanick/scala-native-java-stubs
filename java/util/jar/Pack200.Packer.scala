@@ -188,7 +188,7 @@ object trait Pack200.Packer {
      * 
      */
     @stub
-    val Unit: default = ???
+    def addPropertyChangeListener(listener: PropertyChangeListener): Unit = ???
 
     /** Takes a JarFile and converts it into a Pack200 archive. */
     @stub
@@ -210,5 +210,5 @@ object trait Pack200.Packer {
      * 
      */
     @stub
-    val Unit: default = ???
+    def removePropertyChangeListener(listener: PropertyChangeListener): Unit = ???
 }

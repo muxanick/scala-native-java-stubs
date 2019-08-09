@@ -14,19 +14,19 @@ import scala.scalanative.annotation.stub
      *  AND of this predicate and another.
      */
     @stub
-    val Predicate[T]: default = ???
+    def and(other: Predicate[_ >: T]): Predicate[T] = ???
 
     /** Returns a predicate that represents the logical negation of this
      *  predicate.
      */
     @stub
-    val Predicate[T]: default = ???
+    def negate(): Predicate[T] = ???
 
     /** Returns a composed predicate that represents a short-circuiting logical
      *  OR of this predicate and another.
      */
     @stub
-    val Predicate[T]: default = ???
+    def or(other: Predicate[_ >: T]): Predicate[T] = ???
 
     /** Evaluates this predicate on the given argument. */
     @stub

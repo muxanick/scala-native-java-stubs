@@ -57,7 +57,7 @@ object trait Pack200.Unpacker {
      * 
      */
     @stub
-    val Unit: default = ???
+    def addPropertyChangeListener(listener: PropertyChangeListener): Unit = ???
 
     /** Get the set of this engine's properties. */
     @stub
@@ -71,7 +71,7 @@ object trait Pack200.Unpacker {
      * 
      */
     @stub
-    val Unit: default = ???
+    def removePropertyChangeListener(listener: PropertyChangeListener): Unit = ???
 
     /** Read a Pack200 archive, and write the encoded JAR to
      *  a JarOutputStream.

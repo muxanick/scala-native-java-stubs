@@ -96,20 +96,20 @@ trait Map[K, V] {
      *  mapped value (or null if there is no current mapping).
      */
     @stub
-    val V: default = ???
+    def compute(key: K, remappingFunction: BiFunction[_ >: K, _ >: V, _ <: V]): V = ???
 
     /** If the specified key is not already associated with a value (or is mapped
      *  to null), attempts to compute its value using the given mapping
      *  function and enters it into this map unless null.
      */
     @stub
-    val V: default = ???
+    def computeIfAbsent(key: K, mappingFunction: Function[_ >: K, _ <: V]): V = ???
 
     /** If the value for the specified key is present and non-null, attempts to
      *  compute a new mapping given the key and its current mapped value.
      */
     @stub
-    val V: default = ???
+    def computeIfPresent(key: K, remappingFunction: BiFunction[_ >: K, _ >: V, _ <: V]): V = ???
 
     /** Returns true if this map contains a mapping for the specified
      *  key.
@@ -135,7 +135,7 @@ trait Map[K, V] {
      *  have been processed or the action throws an exception.
      */
     @stub
-    val Unit: default = ???
+    def forEach(action: BiConsumer[_ >: K, _ >: V]): Unit = ???
 
     /** Returns the value to which the specified key is mapped,
      *  or null if this map contains no mapping for the key.
@@ -147,7 +147,7 @@ trait Map[K, V] {
      *  defaultValue if this map contains no mapping for the key.
      */
     @stub
-    val V: default = ???
+    def getOrDefault(key: Object, defaultValue: V): V = ???
 
     /** Returns the hash code value for this map. */
     @stub
@@ -165,7 +165,7 @@ trait Map[K, V] {
      *  associated with null, associates it with the given non-null value.
      */
     @stub
-    val V: default = ???
+    def merge(key: K, value: V, remappingFunction: BiFunction[_ >: V, _ >: V, _ <: V]): V = ???
 
     /** Associates the specified value with the specified key in this map
      *  (optional operation).
@@ -184,7 +184,7 @@ trait Map[K, V] {
      *  null, else returns the current value.
      */
     @stub
-    val V: default = ???
+    def putIfAbsent(key: K, value: V): V = ???
 
     /** Removes the mapping for a key from this map if it is present
      *  (optional operation).
@@ -196,26 +196,26 @@ trait Map[K, V] {
      *  mapped to the specified value.
      */
     @stub
-    val Boolean: default = ???
+    def remove(key: Object, value: Object): Boolean = ???
 
     /** Replaces the entry for the specified key only if it is
      *  currently mapped to some value.
      */
     @stub
-    val V: default = ???
+    def replace(key: K, value: V): V = ???
 
     /** Replaces the entry for the specified key only if currently
      *  mapped to the specified value.
      */
     @stub
-    val Boolean: default = ???
+    def replace(key: K, oldValue: V, newValue: V): Boolean = ???
 
     /** Replaces each entry's value with the result of invoking the given
      *  function on that entry until all entries have been processed or the
      *  function throws an exception.
      */
     @stub
-    val Unit: default = ???
+    def replaceAll(function: BiFunction[_ >: K, _ >: V, _ <: V]): Unit = ???
 
     /** Returns the number of key-value mappings in this map. */
     @stub

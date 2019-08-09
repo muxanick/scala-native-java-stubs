@@ -45,7 +45,7 @@ trait TemporalUnit {
 
     /** Checks if this unit is supported by the specified temporal object. */
     @stub
-    val Boolean: default = ???
+    def isSupportedBy(temporal: Temporal): Boolean = ???
 
     /** Checks if this unit represents a component of a time. */
     @stub

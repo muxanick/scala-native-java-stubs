@@ -23,7 +23,7 @@ object trait Stream.Builder[T] extends Consumer[T] {
 
     /** Adds an element to the stream being built. */
     @stub
-    val Stream.Builder[T]: default = ???
+    def add(t: T): Stream.Builder[T] = ???
 
     /** Builds the stream, transitioning this builder to the built state. */
     @stub

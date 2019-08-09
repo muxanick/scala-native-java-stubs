@@ -32,7 +32,7 @@ trait ChronoLocalDateTime[D <: ChronoLocalDate] extends Temporal with TemporalAd
 
     /** Adjusts the specified temporal object to have the same date and time as this object. */
     @stub
-    val Temporal: default = ???
+    def adjustInto(temporal: Temporal): Temporal = ???
 
     /** Combines this time with a time-zone to create a ChronoZonedDateTime. */
     @stub
@@ -40,7 +40,7 @@ trait ChronoLocalDateTime[D <: ChronoLocalDate] extends Temporal with TemporalAd
 
     /** Compares this date-time to another date-time, including the chronology. */
     @stub
-    val Int: default = ???
+    def compareTo(other: ChronoLocalDateTime[_]): Int = ???
 
     /** Checks if this date-time is equal to another date-time, including the chronology. */
     @stub
@@ -48,11 +48,11 @@ trait ChronoLocalDateTime[D <: ChronoLocalDate] extends Temporal with TemporalAd
 
     /** Formats this date-time using the specified formatter. */
     @stub
-    val String: default = ???
+    def format(formatter: DateTimeFormatter): String = ???
 
     /** Gets the chronology of this date-time. */
     @stub
-    val Chronology: default = ???
+    def getChronology(): Chronology = ???
 
     /** A hash code for this date-time. */
     @stub
@@ -60,15 +60,15 @@ trait ChronoLocalDateTime[D <: ChronoLocalDate] extends Temporal with TemporalAd
 
     /** Checks if this date-time is after the specified date-time ignoring the chronology. */
     @stub
-    val Boolean: default = ???
+    def isAfter(other: ChronoLocalDateTime[_]): Boolean = ???
 
     /** Checks if this date-time is before the specified date-time ignoring the chronology. */
     @stub
-    val Boolean: default = ???
+    def isBefore(other: ChronoLocalDateTime[_]): Boolean = ???
 
     /** Checks if this date-time is equal to the specified date-time ignoring the chronology. */
     @stub
-    val Boolean: default = ???
+    def isEqual(other: ChronoLocalDateTime[_]): Boolean = ???
 
     /** Checks if the specified field is supported. */
     @stub
@@ -76,15 +76,15 @@ trait ChronoLocalDateTime[D <: ChronoLocalDate] extends Temporal with TemporalAd
 
     /** Checks if the specified unit is supported. */
     @stub
-    val Boolean: default = ???
+    def isSupported(unit: TemporalUnit): Boolean = ???
 
     /** Returns an object of the same type as this object with the specified period subtracted. */
     @stub
-    val ChronoLocalDateTime[D]: default = ???
+    def minus(amountToSubtract: Long, unit: TemporalUnit): ChronoLocalDateTime[D] = ???
 
     /** Returns an object of the same type as this object with an amount subtracted. */
     @stub
-    val ChronoLocalDateTime[D]: default = ???
+    def minus(amount: TemporalAmount): ChronoLocalDateTime[D] = ???
 
     /** Returns an object of the same type as this object with the specified period added. */
     @stub
@@ -92,7 +92,7 @@ trait ChronoLocalDateTime[D <: ChronoLocalDate] extends Temporal with TemporalAd
 
     /** Returns an object of the same type as this object with an amount added. */
     @stub
-    val ChronoLocalDateTime[D]: default = ???
+    def plus(amount: TemporalAmount): ChronoLocalDateTime[D] = ???
 
     /** Queries this date-time using the specified query. */
     @stub
@@ -102,11 +102,11 @@ trait ChronoLocalDateTime[D <: ChronoLocalDate] extends Temporal with TemporalAd
      *  of 1970-01-01T00:00:00Z.
      */
     @stub
-    val Long: default = ???
+    def toEpochSecond(offset: ZoneOffset): Long = ???
 
     /** Converts this date-time to an Instant. */
     @stub
-    val Instant: default = ???
+    def toInstant(offset: ZoneOffset): Instant = ???
 
     /** Gets the local date part of this date-time. */
     @stub
@@ -122,7 +122,7 @@ trait ChronoLocalDateTime[D <: ChronoLocalDate] extends Temporal with TemporalAd
 
     /** Returns an adjusted object of the same type as this object with the adjustment made. */
     @stub
-    val ChronoLocalDateTime[D]: default = ???
+    def with(adjuster: TemporalAdjuster): ChronoLocalDateTime[D] = ???
 
     /** Returns an object of the same type as this object with the specified field altered. */
     @stub

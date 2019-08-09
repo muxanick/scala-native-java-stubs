@@ -1121,11 +1121,11 @@ trait ResultSet extends Wrapper with AutoCloseable {
 
     /** Updates the designated column with an Object value. */
     @stub
-    val Unit: default = ???
+    def updateObject(columnIndex: Int, x: Object, targetSqlType: SQLType): Unit = ???
 
     /** Updates the designated column with an Object value. */
     @stub
-    val Unit: default = ???
+    def updateObject(columnIndex: Int, x: Object, targetSqlType: SQLType, scaleOrLength: Int): Unit = ???
 
     /** Updates the designated column with an Object value. */
     @stub
@@ -1137,11 +1137,11 @@ trait ResultSet extends Wrapper with AutoCloseable {
 
     /** Updates the designated column with an Object value. */
     @stub
-    val Unit: default = ???
+    def updateObject(columnLabel: String, x: Object, targetSqlType: SQLType): Unit = ???
 
     /** Updates the designated column with an Object value. */
     @stub
-    val Unit: default = ???
+    def updateObject(columnLabel: String, x: Object, targetSqlType: SQLType, scaleOrLength: Int): Unit = ???
 
     /** Updates the designated column with a java.sql.Ref value. */
     @stub

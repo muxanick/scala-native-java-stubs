@@ -11,17 +11,17 @@ object trait PrimitiveIterator.OfInt extends PrimitiveIterator[Integer, IntConsu
      *  have been processed or the action throws an exception.
      */
     @stub
-    val Unit: default = ???
+    def forEachRemaining(action: Consumer[_ >: Integer]): Unit = ???
 
     /** Performs the given action for each remaining element until all elements
      *  have been processed or the action throws an exception.
      */
     @stub
-    val Unit: default = ???
+    def forEachRemaining(action: IntConsumer): Unit = ???
 
     /** Returns the next element in the iteration. */
     @stub
-    val Integer: default = ???
+    def next(): Integer = ???
 
     /** Returns the next int element in the iteration. */
     @stub

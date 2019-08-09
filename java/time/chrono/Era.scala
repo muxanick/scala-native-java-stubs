@@ -25,19 +25,19 @@ trait Era extends TemporalAccessor with TemporalAdjuster {
 
     /** Adjusts the specified temporal object to have the same era as this object. */
     @stub
-    val Temporal: default = ???
+    def adjustInto(temporal: Temporal): Temporal = ???
 
     /** Gets the value of the specified field from this era as an int. */
     @stub
-    val Int: default = ???
+    def get(field: TemporalField): Int = ???
 
     /** Gets the textual representation of this era. */
     @stub
-    val String: default = ???
+    def getDisplayName(style: TextStyle, locale: Locale): String = ???
 
     /** Gets the value of the specified field from this era as a long. */
     @stub
-    val Long: default = ???
+    def getLong(field: TemporalField): Long = ???
 
     /** Gets the numeric value associated with the era as defined by the chronology. */
     @stub
@@ -45,7 +45,7 @@ trait Era extends TemporalAccessor with TemporalAdjuster {
 
     /** Checks if the specified field is supported. */
     @stub
-    val Boolean: default = ???
+    def isSupported(field: TemporalField): Boolean = ???
 
     /** Queries this era using the specified query. */
     @stub
@@ -53,5 +53,5 @@ trait Era extends TemporalAccessor with TemporalAdjuster {
 
     /** Gets the range of valid values for the specified field. */
     @stub
-    val ValueRange: default = ???
+    def range(field: TemporalField): ValueRange = ???
 }

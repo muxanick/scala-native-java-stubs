@@ -27,11 +27,11 @@ trait CharSequence {
      *  from this sequence.
      */
     @stub
-    val IntStream: default = ???
+    def chars(): IntStream = ???
 
     /** Returns a stream of code point values from this sequence. */
     @stub
-    val IntStream: default = ???
+    def codePoints(): IntStream = ???
 
     /** Returns the length of this character sequence. */
     @stub

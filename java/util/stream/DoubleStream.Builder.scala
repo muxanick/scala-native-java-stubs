@@ -20,7 +20,7 @@ object trait DoubleStream.Builder extends DoubleConsumer {
 
     /** Adds an element to the stream being built. */
     @stub
-    val this: default = ???
+    def add(t: Double): DoubleStream.Builder = ???
 
     /** Builds the stream, transitioning this builder to the built state. */
     @stub

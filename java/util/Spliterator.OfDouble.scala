@@ -12,20 +12,20 @@ object trait Spliterator.OfDouble extends Spliterator.OfPrimitive[Double, Double
      *  throws an exception.
      */
     @stub
-    val Unit: default = ???
+    def forEachRemaining(action: Consumer[_ >: Double]): Unit = ???
 
     /** Performs the given action for each remaining element, sequentially in
      *  the current thread, until all elements have been processed or the
      *  action throws an exception.
      */
     @stub
-    val Unit: default = ???
+    def forEachRemaining(action: DoubleConsumer): Unit = ???
 
     /** If a remaining element exists, performs the given action on it,
      *  returning true; else returns false.
      */
     @stub
-    val Boolean: default = ???
+    def tryAdvance(action: Consumer[_ >: Double]): Boolean = ???
 
     /** If a remaining element exists, performs the given action on it,
      *  returning true; else returns false.

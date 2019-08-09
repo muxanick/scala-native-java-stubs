@@ -81,11 +81,11 @@ import scala.scalanative.annotation.stub
      *  comparator.
      */
     @stub
-    val Comparator[T]: default = ???
+    def reversed(): Comparator[T] = ???
 
     /** Returns a lexicographic-order comparator with another comparator. */
     @stub
-    val Comparator[T]: default = ???
+    def thenComparing(other: Comparator[_ >: T]): Comparator[T] = ???
 
     /** Returns a lexicographic-order comparator with a function that
      *  extracts a Comparable sort key.
@@ -103,19 +103,19 @@ import scala.scalanative.annotation.stub
      *  extracts a double sort key.
      */
     @stub
-    val Comparator[T]: default = ???
+    def thenComparingDouble(keyExtractor: ToDoubleFunction[_ >: T]): Comparator[T] = ???
 
     /** Returns a lexicographic-order comparator with a function that
      *  extracts a int sort key.
      */
     @stub
-    val Comparator[T]: default = ???
+    def thenComparingInt(keyExtractor: ToIntFunction[_ >: T]): Comparator[T] = ???
 
     /** Returns a lexicographic-order comparator with a function that
      *  extracts a long sort key.
      */
     @stub
-    val Comparator[T]: default = ???
+    def thenComparingLong(keyExtractor: ToLongFunction[_ >: T]): Comparator[T] = ???
 }
 
 object Comparator {

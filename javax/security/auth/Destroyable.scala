@@ -9,9 +9,9 @@ trait Destroyable {
 
     /** Destroy this Object. */
     @stub
-    val Unit: default = ???
+    def destroy(): Unit = ???
 
     /** Determine if this Object has been destroyed. */
     @stub
-    val Boolean: default = ???
+    def isDestroyed(): Boolean = ???
 }

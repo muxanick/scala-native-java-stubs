@@ -119,7 +119,7 @@ trait MethodHandleInfo {
 
     /** Determines if the underlying member was a variable arity method or constructor. */
     @stub
-    val Boolean: default = ???
+    def isVarArgs(): Boolean = ???
 
     /** Reflects the underlying member as a method, constructor, or field object. */
     @stub

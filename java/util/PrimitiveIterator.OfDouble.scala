@@ -11,17 +11,17 @@ object trait PrimitiveIterator.OfDouble extends PrimitiveIterator[Double, Double
      *  have been processed or the action throws an exception.
      */
     @stub
-    val Unit: default = ???
+    def forEachRemaining(action: Consumer[_ >: Double]): Unit = ???
 
     /** Performs the given action for each remaining element until all elements
      *  have been processed or the action throws an exception.
      */
     @stub
-    val Unit: default = ???
+    def forEachRemaining(action: DoubleConsumer): Unit = ???
 
     /** Returns the next element in the iteration. */
     @stub
-    val Double: default = ???
+    def next(): Double = ???
 
     /** Returns the next double element in the iteration. */
     @stub

@@ -20,7 +20,7 @@ object trait LongStream.Builder extends LongConsumer {
 
     /** Adds an element to the stream being built. */
     @stub
-    val this: default = ???
+    def add(t: Long): LongStream.Builder = ???
 
     /** Builds the stream, transitioning this builder to the built state. */
     @stub

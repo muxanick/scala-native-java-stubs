@@ -11,17 +11,17 @@ object trait PrimitiveIterator.OfLong extends PrimitiveIterator[Long, LongConsum
      *  have been processed or the action throws an exception.
      */
     @stub
-    val Unit: default = ???
+    def forEachRemaining(action: Consumer[_ >: Long]): Unit = ???
 
     /** Performs the given action for each remaining element until all elements
      *  have been processed or the action throws an exception.
      */
     @stub
-    val Unit: default = ???
+    def forEachRemaining(action: LongConsumer): Unit = ???
 
     /** Returns the next element in the iteration. */
     @stub
-    val Long: default = ???
+    def next(): Long = ???
 
     /** Returns the next long element in the iteration. */
     @stub

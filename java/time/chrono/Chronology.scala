@@ -81,7 +81,7 @@ trait Chronology extends Comparable[Chronology] {
      *  month-of-year and day-of-month fields.
      */
     @stub
-    val ChronoLocalDate: default = ???
+    def date(era: Era, yearOfEra: Int, month: Int, dayOfMonth: Int): ChronoLocalDate = ???
 
     /** Obtains a local date in this chronology from the proleptic-year,
      *  month-of-year and day-of-month fields.
@@ -99,21 +99,21 @@ trait Chronology extends Comparable[Chronology] {
 
     /** Obtains the current local date in this chronology from the system clock in the default time-zone. */
     @stub
-    val ChronoLocalDate: default = ???
+    def dateNow(): ChronoLocalDate = ???
 
     /** Obtains the current local date in this chronology from the specified clock. */
     @stub
-    val ChronoLocalDate: default = ???
+    def dateNow(clock: Clock): ChronoLocalDate = ???
 
     /** Obtains the current local date in this chronology from the system clock in the specified time-zone. */
     @stub
-    val ChronoLocalDate: default = ???
+    def dateNow(zone: ZoneId): ChronoLocalDate = ???
 
     /** Obtains a local date in this chronology from the era, year-of-era and
      *  day-of-year fields.
      */
     @stub
-    val ChronoLocalDate: default = ???
+    def dateYearDay(era: Era, yearOfEra: Int, dayOfYear: Int): ChronoLocalDate = ???
 
     /** Obtains a local date in this chronology from the proleptic-year and
      *  day-of-year fields.
@@ -139,7 +139,7 @@ trait Chronology extends Comparable[Chronology] {
 
     /** Gets the textual representation of this chronology. */
     @stub
-    val String: default = ???
+    def getDisplayName(style: TextStyle, locale: Locale): String = ???
 
     /** Gets the ID of the chronology. */
     @stub
@@ -155,11 +155,11 @@ trait Chronology extends Comparable[Chronology] {
 
     /** Obtains a local date-time in this chronology from another temporal object. */
     @stub
-    val ChronoLocalDateTime[_ <: ChronoLocalDate]: default = ???
+    def localDateTime(temporal: TemporalAccessor): ChronoLocalDateTime[_ <: ChronoLocalDate] = ???
 
     /** Obtains a period for this chronology based on years, months and days. */
     @stub
-    val ChronoPeriod: default = ???
+    def period(years: Int, months: Int, days: Int): ChronoPeriod = ???
 
     /** Calculates the proleptic-year given the era and year-of-era. */
     @stub
@@ -179,11 +179,11 @@ trait Chronology extends Comparable[Chronology] {
 
     /** Obtains a ChronoZonedDateTime in this chronology from an Instant. */
     @stub
-    val ChronoZonedDateTime[_ <: ChronoLocalDate]: default = ???
+    def zonedDateTime(instant: Instant, zone: ZoneId): ChronoZonedDateTime[_ <: ChronoLocalDate] = ???
 
     /** Obtains a ChronoZonedDateTime in this chronology from another temporal object. */
     @stub
-    val ChronoZonedDateTime[_ <: ChronoLocalDate]: default = ???
+    def zonedDateTime(temporal: TemporalAccessor): ChronoZonedDateTime[_ <: ChronoLocalDate] = ???
 }
 
 object Chronology {

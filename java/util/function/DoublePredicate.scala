@@ -16,19 +16,19 @@ import scala.scalanative.annotation.stub
      *  AND of this predicate and another.
      */
     @stub
-    val this: default = ???
+    def and(other: DoublePredicate): DoublePredicate = ???
 
     /** Returns a predicate that represents the logical negation of this
      *  predicate.
      */
     @stub
-    val this: default = ???
+    def negate(): DoublePredicate = ???
 
     /** Returns a composed predicate that represents a short-circuiting logical
      *  OR of this predicate and another.
      */
     @stub
-    val this: default = ???
+    def or(other: DoublePredicate): DoublePredicate = ???
 
     /** Evaluates this predicate on the given argument. */
     @stub

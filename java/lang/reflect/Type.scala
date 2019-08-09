@@ -13,5 +13,5 @@ trait Type {
      *  about any type parameters.
      */
     @stub
-    val String: default = ???
+    def getTypeName(): String = ???
 }

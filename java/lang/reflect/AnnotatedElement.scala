@@ -222,5 +222,5 @@ trait AnnotatedElement {
      *  is present on this element, else false.
      */
     @stub
-    val Boolean: default = ???
+    def isAnnotationPresent(annotationClass: Class[_ <: Annotation]): Boolean = ???
 }

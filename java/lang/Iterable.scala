@@ -17,7 +17,7 @@ trait Iterable[T] {
      *  exception.
      */
     @stub
-    val Unit: default = ???
+    def forEach(action: Consumer[_ >: T]): Unit = ???
 
     /** Returns an iterator over elements of type T. */
     @stub
@@ -27,5 +27,5 @@ trait Iterable[T] {
      *  Iterable.
      */
     @stub
-    val Spliterator[T]: default = ???
+    def spliterator(): Spliterator[T] = ???
 }

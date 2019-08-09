@@ -21,5 +21,5 @@ import scala.scalanative.annotation.stub
      *  operation followed by the after operation.
      */
     @stub
-    val this: default = ???
+    def andThen(after: IntConsumer): IntConsumer = ???
 }

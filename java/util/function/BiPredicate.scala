@@ -15,19 +15,19 @@ import scala.scalanative.annotation.stub
      *  AND of this predicate and another.
      */
     @stub
-    val BiPredicate[T, U]: default = ???
+    def and(other: BiPredicate[_ >: T, _ >: U]): BiPredicate[T, U] = ???
 
     /** Returns a predicate that represents the logical negation of this
      *  predicate.
      */
     @stub
-    val BiPredicate[T, U]: default = ???
+    def negate(): BiPredicate[T, U] = ???
 
     /** Returns a composed predicate that represents a short-circuiting logical
      *  OR of this predicate and another.
      */
     @stub
-    val BiPredicate[T, U]: default = ???
+    def or(other: BiPredicate[_ >: T, _ >: U]): BiPredicate[T, U] = ???
 
     /** Evaluates this predicate on the given arguments. */
     @stub

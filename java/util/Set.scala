@@ -112,7 +112,7 @@ trait Set[E] extends Collection[E] {
 
     /** Creates a Spliterator over the elements in this set. */
     @stub
-    val Spliterator[E]: default = ???
+    def spliterator(): Spliterator[E] = ???
 
     /** Returns an array containing all of the elements in this set. */
     @stub

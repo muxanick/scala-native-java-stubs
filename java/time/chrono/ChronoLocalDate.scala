@@ -153,15 +153,15 @@ trait ChronoLocalDate extends Temporal with TemporalAdjuster with Comparable[Chr
 
     /** Adjusts the specified temporal object to have the same date as this object. */
     @stub
-    val Temporal: default = ???
+    def adjustInto(temporal: Temporal): Temporal = ???
 
     /** Combines this date with a time to create a ChronoLocalDateTime. */
     @stub
-    val ChronoLocalDateTime[_]: default = ???
+    def atTime(localTime: LocalTime): ChronoLocalDateTime[_] = ???
 
     /** Compares this date to another date, including the chronology. */
     @stub
-    val Int: default = ???
+    def compareTo(other: ChronoLocalDate): Int = ???
 
     /** Checks if this date is equal to another date, including the chronology. */
     @stub
@@ -169,7 +169,7 @@ trait ChronoLocalDate extends Temporal with TemporalAdjuster with Comparable[Chr
 
     /** Formats this date using the specified formatter. */
     @stub
-    val String: default = ???
+    def format(formatter: DateTimeFormatter): String = ???
 
     /** Gets the chronology of this date. */
     @stub
@@ -177,7 +177,7 @@ trait ChronoLocalDate extends Temporal with TemporalAdjuster with Comparable[Chr
 
     /** Gets the era, as defined by the chronology. */
     @stub
-    val Era: default = ???
+    def getEra(): Era = ???
 
     /** A hash code for this date. */
     @stub
@@ -185,27 +185,27 @@ trait ChronoLocalDate extends Temporal with TemporalAdjuster with Comparable[Chr
 
     /** Checks if this date is after the specified date ignoring the chronology. */
     @stub
-    val Boolean: default = ???
+    def isAfter(other: ChronoLocalDate): Boolean = ???
 
     /** Checks if this date is before the specified date ignoring the chronology. */
     @stub
-    val Boolean: default = ???
+    def isBefore(other: ChronoLocalDate): Boolean = ???
 
     /** Checks if this date is equal to the specified date ignoring the chronology. */
     @stub
-    val Boolean: default = ???
+    def isEqual(other: ChronoLocalDate): Boolean = ???
 
     /** Checks if the year is a leap year, as defined by the calendar system. */
     @stub
-    val Boolean: default = ???
+    def isLeapYear(): Boolean = ???
 
     /** Checks if the specified field is supported. */
     @stub
-    val Boolean: default = ???
+    def isSupported(field: TemporalField): Boolean = ???
 
     /** Checks if the specified unit is supported. */
     @stub
-    val Boolean: default = ???
+    def isSupported(unit: TemporalUnit): Boolean = ???
 
     /** Returns the length of the month represented by this date, as defined by the calendar system. */
     @stub
@@ -213,23 +213,23 @@ trait ChronoLocalDate extends Temporal with TemporalAdjuster with Comparable[Chr
 
     /** Returns the length of the year represented by this date, as defined by the calendar system. */
     @stub
-    val Int: default = ???
+    def lengthOfYear(): Int = ???
 
     /** Returns an object of the same type as this object with the specified period subtracted. */
     @stub
-    val this: default = ???
+    def minus(amountToSubtract: Long, unit: TemporalUnit): ChronoLocalDate = ???
 
     /** Returns an object of the same type as this object with an amount subtracted. */
     @stub
-    val this: default = ???
+    def minus(amount: TemporalAmount): ChronoLocalDate = ???
 
     /** Returns an object of the same type as this object with the specified period added. */
     @stub
-    val this: default = ???
+    def plus(amountToAdd: Long, unit: TemporalUnit): ChronoLocalDate = ???
 
     /** Returns an object of the same type as this object with an amount added. */
     @stub
-    val this: default = ???
+    def plus(amount: TemporalAmount): ChronoLocalDate = ???
 
     /** Queries this date using the specified query. */
     @stub
@@ -237,7 +237,7 @@ trait ChronoLocalDate extends Temporal with TemporalAdjuster with Comparable[Chr
 
     /** Converts this date to the Epoch Day. */
     @stub
-    val Long: default = ???
+    def toEpochDay(): Long = ???
 
     /** Outputs this date as a String. */
     @stub
@@ -253,11 +253,11 @@ trait ChronoLocalDate extends Temporal with TemporalAdjuster with Comparable[Chr
 
     /** Returns an adjusted object of the same type as this object with the adjustment made. */
     @stub
-    val this: default = ???
+    def with(adjuster: TemporalAdjuster): ChronoLocalDate = ???
 
     /** Returns an object of the same type as this object with the specified field altered. */
     @stub
-    val this: default = ???
+    def with(field: TemporalField, newValue: Long): ChronoLocalDate = ???
 }
 
 object ChronoLocalDate {

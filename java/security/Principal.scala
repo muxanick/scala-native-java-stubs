@@ -24,7 +24,7 @@ trait Principal {
 
     /** Returns true if the specified subject is implied by this principal. */
     @stub
-    val Boolean: default = ???
+    def implies(subject: Subject): Boolean = ???
 
     /** Returns a string representation of this principal. */
     @stub

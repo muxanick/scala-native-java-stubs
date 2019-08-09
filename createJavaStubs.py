@@ -288,6 +288,9 @@ def requestParseAndSave(classname, args, all_classes):
         if tokens[0] in ['abstract']:
             abstract = True
             tokens.pop(0)
+        if tokens[0] in ['default']:
+            abstract = False
+            tokens.pop(0)
         lineType = None
         if len(tokens)>1 and tokens[1] != '(':
             lineType = tokens[0]

@@ -92,7 +92,7 @@ trait SortedSet[E] extends Set[E] {
 
     /** Creates a Spliterator over the elements in this sorted set. */
     @stub
-    val Spliterator[E]: default = ???
+    def spliterator(): Spliterator[E] = ???
 
     /** Returns a view of the portion of this set whose elements range
      *  from fromElement, inclusive, to toElement,

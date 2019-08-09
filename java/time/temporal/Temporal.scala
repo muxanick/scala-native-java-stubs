@@ -65,11 +65,11 @@ trait Temporal extends TemporalAccessor {
 
     /** Returns an object of the same type as this object with the specified period subtracted. */
     @stub
-    val this: default = ???
+    def minus(amountToSubtract: Long, unit: TemporalUnit): Temporal = ???
 
     /** Returns an object of the same type as this object with an amount subtracted. */
     @stub
-    val this: default = ???
+    def minus(amount: TemporalAmount): Temporal = ???
 
     /** Returns an object of the same type as this object with the specified period added. */
     @stub
@@ -77,7 +77,7 @@ trait Temporal extends TemporalAccessor {
 
     /** Returns an object of the same type as this object with an amount added. */
     @stub
-    val this: default = ???
+    def plus(amount: TemporalAmount): Temporal = ???
 
     /** Calculates the amount of time until another temporal in terms of the specified unit. */
     @stub
@@ -85,7 +85,7 @@ trait Temporal extends TemporalAccessor {
 
     /** Returns an adjusted object of the same type as this object with the adjustment made. */
     @stub
-    val this: default = ???
+    def with(adjuster: TemporalAdjuster): Temporal = ???
 
     /** Returns an object of the same type as this object with the specified field altered. */
     @stub

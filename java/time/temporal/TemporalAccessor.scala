@@ -35,7 +35,7 @@ trait TemporalAccessor {
 
     /** Gets the value of the specified field as an int. */
     @stub
-    val Int: default = ???
+    def get(field: TemporalField): Int = ???
 
     /** Gets the value of the specified field as a long. */
     @stub
@@ -51,5 +51,5 @@ trait TemporalAccessor {
 
     /** Gets the range of valid values for the specified field. */
     @stub
-    val ValueRange: default = ???
+    def range(field: TemporalField): ValueRange = ???
 }

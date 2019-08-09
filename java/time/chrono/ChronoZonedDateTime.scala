@@ -32,7 +32,7 @@ trait ChronoZonedDateTime[D <: ChronoLocalDate] extends Temporal with Comparable
 
     /** Compares this date-time to another date-time, including the chronology. */
     @stub
-    val Int: default = ???
+    def compareTo(other: ChronoZonedDateTime[_]): Int = ???
 
     /** Checks if this date-time is equal to another date-time. */
     @stub
@@ -40,19 +40,19 @@ trait ChronoZonedDateTime[D <: ChronoLocalDate] extends Temporal with Comparable
 
     /** Formats this date-time using the specified formatter. */
     @stub
-    val String: default = ???
+    def format(formatter: DateTimeFormatter): String = ???
 
     /** Gets the value of the specified field as an int. */
     @stub
-    val Int: default = ???
+    def get(field: TemporalField): Int = ???
 
     /** Gets the chronology of this date-time. */
     @stub
-    val Chronology: default = ???
+    def getChronology(): Chronology = ???
 
     /** Gets the value of the specified field as a long. */
     @stub
-    val Long: default = ???
+    def getLong(field: TemporalField): Long = ???
 
     /** Gets the zone offset, such as '+01:00'. */
     @stub
@@ -68,15 +68,15 @@ trait ChronoZonedDateTime[D <: ChronoLocalDate] extends Temporal with Comparable
 
     /** Checks if the instant of this date-time is after that of the specified date-time. */
     @stub
-    val Boolean: default = ???
+    def isAfter(other: ChronoZonedDateTime[_]): Boolean = ???
 
     /** Checks if the instant of this date-time is before that of the specified date-time. */
     @stub
-    val Boolean: default = ???
+    def isBefore(other: ChronoZonedDateTime[_]): Boolean = ???
 
     /** Checks if the instant of this date-time is equal to that of the specified date-time. */
     @stub
-    val Boolean: default = ???
+    def isEqual(other: ChronoZonedDateTime[_]): Boolean = ???
 
     /** Checks if the specified field is supported. */
     @stub
@@ -84,15 +84,15 @@ trait ChronoZonedDateTime[D <: ChronoLocalDate] extends Temporal with Comparable
 
     /** Checks if the specified unit is supported. */
     @stub
-    val Boolean: default = ???
+    def isSupported(unit: TemporalUnit): Boolean = ???
 
     /** Returns an object of the same type as this object with the specified period subtracted. */
     @stub
-    val ChronoZonedDateTime[D]: default = ???
+    def minus(amountToSubtract: Long, unit: TemporalUnit): ChronoZonedDateTime[D] = ???
 
     /** Returns an object of the same type as this object with an amount subtracted. */
     @stub
-    val ChronoZonedDateTime[D]: default = ???
+    def minus(amount: TemporalAmount): ChronoZonedDateTime[D] = ???
 
     /** Returns an object of the same type as this object with the specified period added. */
     @stub
@@ -100,7 +100,7 @@ trait ChronoZonedDateTime[D <: ChronoLocalDate] extends Temporal with Comparable
 
     /** Returns an object of the same type as this object with an amount added. */
     @stub
-    val ChronoZonedDateTime[D]: default = ???
+    def plus(amount: TemporalAmount): ChronoZonedDateTime[D] = ???
 
     /** Queries this date-time using the specified query. */
     @stub
@@ -108,21 +108,21 @@ trait ChronoZonedDateTime[D <: ChronoLocalDate] extends Temporal with Comparable
 
     /** Gets the range of valid values for the specified field. */
     @stub
-    val ValueRange: default = ???
+    def range(field: TemporalField): ValueRange = ???
 
     /** Converts this date-time to the number of seconds from the epoch
      *  of 1970-01-01T00:00:00Z.
      */
     @stub
-    val Long: default = ???
+    def toEpochSecond(): Long = ???
 
     /** Converts this date-time to an Instant. */
     @stub
-    val Instant: default = ???
+    def toInstant(): Instant = ???
 
     /** Gets the local date part of this date-time. */
     @stub
-    val D: default = ???
+    def toLocalDate(): D = ???
 
     /** Gets the local date-time part of this date-time. */
     @stub
@@ -130,7 +130,7 @@ trait ChronoZonedDateTime[D <: ChronoLocalDate] extends Temporal with Comparable
 
     /** Gets the local time part of this date-time. */
     @stub
-    val LocalTime: default = ???
+    def toLocalTime(): LocalTime = ???
 
     /** Outputs this date-time as a String. */
     @stub
@@ -138,7 +138,7 @@ trait ChronoZonedDateTime[D <: ChronoLocalDate] extends Temporal with Comparable
 
     /** Returns an adjusted object of the same type as this object with the adjustment made. */
     @stub
-    val ChronoZonedDateTime[D]: default = ???
+    def with(adjuster: TemporalAdjuster): ChronoZonedDateTime[D] = ???
 
     /** Returns an object of the same type as this object with the specified field altered. */
     @stub

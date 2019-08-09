@@ -46,11 +46,11 @@ trait ChronoPeriod extends TemporalAmount {
 
     /** Checks if any of the supported units of this period are negative. */
     @stub
-    val Boolean: default = ???
+    def isNegative(): Boolean = ???
 
     /** Checks if all the supported units of this period are zero. */
     @stub
-    val Boolean: default = ???
+    def isZero(): Boolean = ???
 
     /** Returns a copy of this period with the specified period subtracted. */
     @stub
@@ -64,7 +64,7 @@ trait ChronoPeriod extends TemporalAmount {
 
     /** Returns a new instance with each amount in this period negated. */
     @stub
-    val this: default = ???
+    def negated(): ChronoPeriod = ???
 
     /** Returns a copy of this period with the amounts of each unit normalized. */
     @stub

@@ -12,5 +12,5 @@ object trait KeyStore.Entry {
 
     /** Retrieves the attributes associated with an entry. */
     @stub
-    val Set[KeyStore.Entry.Attribute]: default = ???
+    def getAttributes(): Set[KeyStore.Entry.Attribute] = ???
 }

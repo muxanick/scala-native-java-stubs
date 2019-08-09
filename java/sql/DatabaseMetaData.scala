@@ -310,7 +310,7 @@ trait DatabaseMetaData extends Wrapper {
      *  the logical size for a LOB.
      */
     @stub
-    val Long: default = ???
+    def getMaxLogicalLobSize(): Long = ???
 
     /** Retrieves the maximum number of characters that this database allows in a
      *  procedure name.
@@ -860,7 +860,7 @@ trait DatabaseMetaData extends Wrapper {
 
     /** Retrieves whether this database supports REF CURSOR. */
     @stub
-    val Boolean: default = ???
+    def supportsRefCursors(): Boolean = ???
 
     /** Retrieves whether this database supports the given concurrency type
      *  in combination with the given result set type.

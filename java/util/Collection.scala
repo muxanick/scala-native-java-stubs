@@ -138,7 +138,7 @@ trait Collection[E] extends Iterable[E] {
      *  source.
      */
     @stub
-    val Stream[E]: default = ???
+    def parallelStream(): Stream[E] = ???
 
     /** Removes a single instance of the specified element from this
      *  collection, if it is present (optional operation).
@@ -156,7 +156,7 @@ trait Collection[E] extends Iterable[E] {
      *  predicate.
      */
     @stub
-    val Boolean: default = ???
+    def removeIf(filter: Predicate[_ >: E]): Boolean = ???
 
     /** Retains only the elements in this collection that are contained in the
      *  specified collection (optional operation).
@@ -170,11 +170,11 @@ trait Collection[E] extends Iterable[E] {
 
     /** Creates a Spliterator over the elements in this collection. */
     @stub
-    val Spliterator[E]: default = ???
+    def spliterator(): Spliterator[E] = ???
 
     /** Returns a sequential Stream with this collection as its source. */
     @stub
-    val Stream[E]: default = ???
+    def stream(): Stream[E] = ???
 
     /** Returns an array containing all of the elements in this collection. */
     @stub

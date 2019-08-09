@@ -31,7 +31,7 @@ trait TemporalField {
 
     /** Gets the display name for the field in the requested locale. */
     @stub
-    val String: default = ???
+    def getDisplayName(locale: Locale): String = ???
 
     /** Gets the value of this field from the specified temporal object. */
     @stub
@@ -65,7 +65,7 @@ trait TemporalField {
 
     /** Resolves this field to provide a simpler alternative or a date. */
     @stub
-    val TemporalAccessor: default = ???
+    def resolve(fieldValues: Map[TemporalField, Long], partialTemporal: TemporalAccessor, resolverStyle: ResolverStyle): TemporalAccessor = ???
 
     /** Gets a descriptive name for the field. */
     @stub

@@ -20,7 +20,7 @@ object trait IntStream.Builder extends IntConsumer {
 
     /** Adds an element to the stream being built. */
     @stub
-    val this: default = ???
+    def add(t: Int): IntStream.Builder = ???
 
     /** Builds the stream, transitioning this builder to the built state. */
     @stub

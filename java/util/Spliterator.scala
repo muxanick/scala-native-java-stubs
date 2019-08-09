@@ -114,23 +114,23 @@ trait Spliterator[T] {
      *  throws an exception.
      */
     @stub
-    val Unit: default = ???
+    def forEachRemaining(action: Consumer[_ >: T]): Unit = ???
 
     /** If this Spliterator's source is SORTED by a Comparator,
      *  returns that Comparator.
      */
     @stub
-    val Comparator[_ >: T]: default = ???
+    def getComparator(): Comparator[_ >: T] = ???
 
     /** Convenience method that returns estimateSize() if this
      *  Spliterator is SIZED, else -1.
      */
     @stub
-    val Long: default = ???
+    def getExactSizeIfKnown(): Long = ???
 
     /** Returns true if this Spliterator's characteristics() contain all of the given characteristics. */
     @stub
-    val Boolean: default = ???
+    def hasCharacteristics(characteristics: Int): Boolean = ???
 
     /** If a remaining element exists, performs the given action on it,
      *  returning true; else returns false.

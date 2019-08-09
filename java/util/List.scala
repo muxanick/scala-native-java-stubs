@@ -174,7 +174,7 @@ trait List[E] extends Collection[E] {
      *  operator to that element.
      */
     @stub
-    val Unit: default = ???
+    def replaceAll(operator: UnaryOperator[E]): Unit = ???
 
     /** Retains only the elements in this list that are contained in the
      *  specified collection (optional operation).
@@ -196,11 +196,11 @@ trait List[E] extends Collection[E] {
      *  Comparator.
      */
     @stub
-    val Unit: default = ???
+    def sort(c: Comparator[_ >: E]): Unit = ???
 
     /** Creates a Spliterator over the elements in this list. */
     @stub
-    val Spliterator[E]: default = ???
+    def spliterator(): Spliterator[E] = ???
 
     /** Returns a view of the portion of this list between the specified
      *  fromIndex, inclusive, and toIndex, exclusive.

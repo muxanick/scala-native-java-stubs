@@ -16,7 +16,7 @@ import scala.scalanative.annotation.stub
      *  its input, and then applies the after operator to the result.
      */
     @stub
-    val this: default = ???
+    def andThen(after: IntUnaryOperator): IntUnaryOperator = ???
 
     /** Applies this operator to the given operand. */
     @stub
@@ -26,7 +26,7 @@ import scala.scalanative.annotation.stub
      *  operator to its input, and then applies this operator to the result.
      */
     @stub
-    val this: default = ???
+    def compose(before: IntUnaryOperator): IntUnaryOperator = ???
 }
 
 object IntUnaryOperator {
