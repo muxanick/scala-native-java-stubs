@@ -26,24 +26,32 @@ class StyleConstants extends Object {
 
 object StyleConstants {
     /** This is a typesafe enumeration of the well-known
-     *  attributes that contribute to a character style.
+     *  attributes that contribute to a character style.  These are
+     *  aliased by the outer class for general presentation.
      */
-    type CharacterConstants = StyleConstants_CharacterConstants
+    object CharacterConstants extends StyleConstants with AttributeSet.CharacterAttribute {
+
 
     /** This is a typesafe enumeration of the well-known
-     *  attributes that contribute to a color.
+     *  attributes that contribute to a color.  These are aliased
+     *  by the outer class for general presentation.
      */
-    type ColorConstants = StyleConstants_ColorConstants
+    object ColorConstants extends StyleConstants with AttributeSet.ColorAttribute with AttributeSet.CharacterAttribute {
+
 
     /** This is a typesafe enumeration of the well-known
-     *  attributes that contribute to a font.
+     *  attributes that contribute to a font.  These are aliased
+     *  by the outer class for general presentation.
      */
-    type FontConstants = StyleConstants_FontConstants
+    object FontConstants extends StyleConstants with AttributeSet.FontAttribute with AttributeSet.CharacterAttribute {
+
 
     /** This is a typesafe enumeration of the well-known
-     *  attributes that contribute to a paragraph style.
+     *  attributes that contribute to a paragraph style.  These are
+     *  aliased by the outer class for general presentation.
      */
-    type ParagraphConstants = StyleConstants_ParagraphConstants
+    object ParagraphConstants extends StyleConstants with AttributeSet.ParagraphAttribute {
+
 
     /** A possible value for paragraph alignment. */
     @stub

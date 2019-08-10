@@ -1,7 +1,7 @@
 package javax.swing
 
-import java.applet.Applet
-import java.awt.{Component, Container, Graphics, LayoutManager, Panel}
+import java.applet.{Applet, Applet.AccessibleApplet}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, Graphics, LayoutManager, Panel, Panel.AccessibleAWTPanel}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import scala.scalanative.annotation.stub
@@ -61,7 +61,13 @@ class JApplet extends Applet with Accessible with RootPaneContainer {
     /** This class implements accessibility support for the
      *  JApplet class.
      */
-    protected type AccessibleJApplet = JApplet_AccessibleJApplet
+    protected class AccessibleJApplet extends Applet.AccessibleApplet {
+
+        /**  */
+        @stub
+        protected def this() = ???
+    }
+
 
     /**  */
     @stub

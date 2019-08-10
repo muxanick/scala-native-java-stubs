@@ -1,9 +1,9 @@
 package javax.swing
 
-import java.awt.{Component, Container, Dimension, Graphics, Insets, LayoutManager}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, Dimension, Graphics, Insets, LayoutManager}
 import java.beans.PropertyChangeListener
 import java.lang.{Object, String}
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole, AccessibleStateSet}
 import javax.swing.plaf.ToolBarUI
 import scala.scalanative.annotation.stub
 
@@ -56,9 +56,24 @@ class JToolBar extends JComponent with SwingConstants with Accessible {
     def this(name: String, orientation: Int) = ???
 
     /** This class implements accessibility support for the
-     *  JToolBar class.
+     *  JToolBar class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to toolbar user-interface elements.
      */
-    protected type AccessibleJToolBar = JToolBar_AccessibleJToolBar
+    protected class AccessibleJToolBar extends JComponent.AccessibleJComponent {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+
+        /** Get the state of this object. */
+        @stub
+        def getAccessibleStateSet(): AccessibleStateSet = ???
+    }
+
 
     /** Adds a new JButton which dispatches the action. */
     @stub
@@ -186,6 +201,44 @@ class JToolBar extends JComponent with SwingConstants with Accessible {
 }
 
 object JToolBar {
-    /** A toolbar-specific separator. */
-    type Separator = JToolBar_Separator
+    /** A toolbar-specific separator. An object with dimension but
+     *  no contents used to divide buttons on a tool bar into groups.
+     */
+    object Separator extends JSeparator {
+
+        /** Creates a new toolbar separator with the default size
+         *  as defined by the current look and feel.
+         */
+        @stub
+        def apply() = ???
+
+        /** Creates a new toolbar separator with the specified size. */
+        @stub
+        def apply(size: Dimension) = ???
+
+        /** Returns the maximum size for the separator. */
+        @stub
+        def getMaximumSize(): Dimension = ???
+
+        /** Returns the minimum size for the separator. */
+        @stub
+        def getMinimumSize(): Dimension = ???
+
+        /** Returns the preferred size for the separator. */
+        @stub
+        def getPreferredSize(): Dimension = ???
+
+        /** Returns the size of the separator */
+        @stub
+        def getSeparatorSize(): Dimension = ???
+
+        /** Returns the name of the L&F class that renders this component. */
+        @stub
+        def getUIClassID(): String = ???
+
+        /** Sets the size of the separator. */
+        @stub
+        def setSeparatorSize(size: Dimension): Unit = ???
+    }
+
 }

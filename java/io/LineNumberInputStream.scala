@@ -15,7 +15,8 @@ import scala.scalanative.annotation.stub
  *  The line number begins at 0, and is incremented by
  *  1 when a read returns a newline character.
  */
-@Deprecated class LineNumberInputStream extends FilterInputStream {
+@Deprecated
+class LineNumberInputStream extends FilterInputStream {
 
     /** Deprecated.  */
     @stub

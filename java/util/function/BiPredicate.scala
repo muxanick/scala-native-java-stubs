@@ -9,7 +9,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is test(Object, Object).
  */
-@FunctionalInterface trait BiPredicate[T, U] {
+@FunctionalInterface
+trait BiPredicate[T, U] {
 
     /** Returns a composed predicate that represents a short-circuiting logical
      *  AND of this predicate and another.

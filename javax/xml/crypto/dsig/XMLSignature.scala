@@ -83,8 +83,37 @@ object XMLSignature {
     /** A representation of the XML SignatureValue element as
      *  defined in the 
      *  W3C Recommendation for XML-Signature Syntax and Processing.
+     *  The XML Schema Definition is defined as:
+     *  
+     *  
+     *    <element name="SignatureValue" type="ds:SignatureValueType"/>
+     *      <complexType name="SignatureValueType">
+     *        <simpleContent>
+     *          <extension base="base64Binary">
+     *            <attribute name="Id" type="ID" use="optional"/>
+     *          </extension>
+     *        </simpleContent>
+     *      </complexType>
+     *  
      */
-    type SignatureValue = XMLSignature_SignatureValue
+    trait SignatureValue extends XMLStructure {
+
+        /** Returns the optional Id attribute of this
+         *  SignatureValue, which permits this element to be
+         *  referenced from elsewhere.
+         */
+        @stub
+        def getId(): String = ???
+
+        /** Returns the signature value of this SignatureValue. */
+        @stub
+        def getValue(): Array[Byte] = ???
+
+        /** Validates the signature value. */
+        @stub
+        def validate(validateContext: XMLValidateContext): Boolean = ???
+    }
+
 
     /** The XML Namespace URI of the W3C Recommendation for XML-Signature
      *  Syntax and Processing.

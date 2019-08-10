@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is accept(Object).
  */
-@FunctionalInterface trait Consumer[T] {
+@FunctionalInterface
+trait Consumer[T] {
 
     /** Performs this operation on the given argument. */
     @stub

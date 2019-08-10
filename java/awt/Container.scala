@@ -5,6 +5,7 @@ import java.beans.PropertyChangeListener
 import java.io.{PrintStream, PrintWriter}
 import java.lang.{Class, Object, String}
 import java.util.{EventListener, Set}
+import javax.accessibility.{Accessible, AccessibleContext}
 import scala.scalanative.annotation.stub
 
 /** A generic Abstract Window Toolkit(AWT) container object is a component
@@ -30,9 +31,66 @@ class Container extends Component {
     def this() = ???
 
     /** Inner class of Container used to provide default support for
-     *  accessibility.
+     *  accessibility.  This class is not meant to be used directly by
+     *  application developers, but is instead meant only to be
+     *  subclassed by container developers.
+     *  
+     *  The class used to obtain the accessible role for this object,
+     *  as well as implementing many of the methods in the
+     *  AccessibleContainer interface.
      */
-    protected type AccessibleAWTContainer = Container_AccessibleAWTContainer
+    protected class AccessibleAWTContainer extends Component.AccessibleAWTComponent {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Fire PropertyChange listener, if one is registered,
+         *  when children are added or removed.
+         */
+        protected class AccessibleContainerHandler extends Object with ContainerListener {
+
+            /**  */
+            @stub
+            protected def this() = ???
+
+            /** Invoked when a component has been added to the container. */
+            @stub
+            def componentAdded(e: ContainerEvent): Unit = ???
+
+            /** Invoked when a component has been removed from the container. */
+            @stub
+            def componentRemoved(e: ContainerEvent): Unit = ???
+        }
+
+
+        /**  */
+        @stub
+        protected val accessibleContainerHandler: ContainerListener = ???
+
+        /** Adds a PropertyChangeListener to the listener list. */
+        @stub
+        def addPropertyChangeListener(listener: PropertyChangeListener): Unit = ???
+
+        /** Returns the Accessible child, if one exists,
+         *  contained at the local coordinate Point.
+         */
+        @stub
+        def getAccessibleAt(p: Point): Accessible = ???
+
+        /** Returns the nth Accessible child of the object. */
+        @stub
+        def getAccessibleChild(i: Int): Accessible = ???
+
+        /** Returns the number of accessible children in the object. */
+        @stub
+        def getAccessibleChildrenCount(): Int = ???
+
+        /** Remove a PropertyChangeListener from the listener list. */
+        @stub
+        def removePropertyChangeListener(listener: PropertyChangeListener): Unit = ???
+    }
+
 
     /** Appends the specified component to the end of this container. */
     @stub

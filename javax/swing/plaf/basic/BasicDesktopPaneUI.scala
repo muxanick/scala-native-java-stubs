@@ -1,9 +1,10 @@
 package javax.swing.plaf.basic
 
 import java.awt.{Dimension, Graphics}
+import java.awt.event.ActionEvent
 import java.beans.PropertyChangeListener
 import java.lang.Object
-import javax.swing.{DesktopManager, JComponent, JDesktopPane, KeyStroke}
+import javax.swing.{AbstractAction, DesktopManager, JComponent, JDesktopPane, KeyStroke}
 import javax.swing.plaf.{ComponentUI, DesktopPaneUI}
 import scala.scalanative.annotation.stub
 
@@ -15,19 +16,89 @@ class BasicDesktopPaneUI extends DesktopPaneUI {
     def this() = ???
 
     /** Handles closing an internal frame. */
-    protected type CloseAction = BasicDesktopPaneUI_CloseAction
+    protected class CloseAction extends AbstractAction {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(evt: ActionEvent): Unit = ???
+
+        /** Returns true if the action is enabled. */
+        @stub
+        def isEnabled(): Boolean = ???
+    }
+
 
     /** Handles maximizing an internal frame. */
-    protected type MaximizeAction = BasicDesktopPaneUI_MaximizeAction
+    protected class MaximizeAction extends AbstractAction {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(evt: ActionEvent): Unit = ???
+
+        /** Returns true if the action is enabled. */
+        @stub
+        def isEnabled(): Boolean = ???
+    }
+
 
     /** Handles minimizing an internal frame. */
-    protected type MinimizeAction = BasicDesktopPaneUI_MinimizeAction
+    protected class MinimizeAction extends AbstractAction {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(evt: ActionEvent): Unit = ???
+
+        /** Returns true if the action is enabled. */
+        @stub
+        def isEnabled(): Boolean = ???
+    }
+
 
     /** Handles navigating to the next internal frame. */
-    protected type NavigateAction = BasicDesktopPaneUI_NavigateAction
+    protected class NavigateAction extends AbstractAction {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(evt: ActionEvent): Unit = ???
+
+        /** Returns true if the action is enabled. */
+        @stub
+        def isEnabled(): Boolean = ???
+    }
+
 
     /** Handles restoring a minimized or maximized internal frame. */
-    protected type OpenAction = BasicDesktopPaneUI_OpenAction
+    protected class OpenAction extends AbstractAction {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(evt: ActionEvent): Unit = ???
+
+        /** Returns true if the action is enabled. */
+        @stub
+        def isEnabled(): Boolean = ???
+    }
+
 
     /** Deprecated. 
      * As of 1.3.

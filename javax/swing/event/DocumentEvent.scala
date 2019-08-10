@@ -1,5 +1,6 @@
 package javax.swing.event
 
+import java.lang.{Object, String}
 import javax.swing.text.{Document, Element}
 import scala.scalanative.annotation.stub
 
@@ -37,8 +38,48 @@ trait DocumentEvent {
 
 object DocumentEvent {
     /** Describes changes made to a specific element. */
-    type ElementChange = DocumentEvent_ElementChange
+    trait ElementChange {
+
+        /** Gets the child elements that were added to the given
+         *  parent element.
+         */
+        @stub
+        def getChildrenAdded(): Array[Element] = ???
+
+        /** Gets the child elements that were removed from the
+         *  given parent element.
+         */
+        @stub
+        def getChildrenRemoved(): Array[Element] = ???
+
+        /** Returns the element represented. */
+        @stub
+        def getElement(): Element = ???
+
+        /** Fetches the index within the element represented. */
+        @stub
+        def getIndex(): Int = ???
+    }
+
 
     /** Enumeration for document event types */
-    type EventType = DocumentEvent_EventType
+    final object EventType extends Object {
+
+        /** Change type. */
+        @stub
+        val CHANGE: EventType = ???
+
+        /** Insert type. */
+        @stub
+        val INSERT: EventType = ???
+
+        /** Remove type. */
+        @stub
+        val REMOVE: EventType = ???
+
+        /** Converts the type to a string. */
+        @stub
+        def toString(): String = ???
+    }
+
 }

@@ -1,9 +1,9 @@
 package javax.swing
 
-import java.awt.{Component, Container, Dialog, Dialog.ModalityType, Frame, Graphics, GraphicsConfiguration, LayoutManager, Window}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, Dialog, Dialog.AccessibleAWTDialog, Dialog.ModalityType, Frame, Graphics, GraphicsConfiguration, LayoutManager, Window, Window.AccessibleAWTWindow}
 import java.awt.event.WindowEvent
 import java.lang.{Object, String}
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleStateSet}
 import scala.scalanative.annotation.stub
 
 /** The main class for creating a dialog window. You can use this class
@@ -156,9 +156,25 @@ class JDialog extends Dialog with WindowConstants with Accessible with RootPaneC
     def this(owner: Window, title: String, modalityType: Dialog.ModalityType, gc: GraphicsConfiguration) = ???
 
     /** This class implements accessibility support for the
-     *  JDialog class.
+     *  JDialog class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to dialog user-interface
+     *  elements.
      */
-    protected type AccessibleJDialog = JDialog_AccessibleJDialog
+    protected class AccessibleJDialog extends Dialog.AccessibleAWTDialog {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the accessible name of this object. */
+        @stub
+        def getAccessibleName(): String = ???
+
+        /** Get the state of this object. */
+        @stub
+        def getAccessibleStateSet(): AccessibleStateSet = ???
+    }
+
 
     /**  */
     @stub

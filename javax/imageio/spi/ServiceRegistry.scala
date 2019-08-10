@@ -157,9 +157,21 @@ class ServiceRegistry extends Object {
 object ServiceRegistry {
     /** A simple filter interface used by
      *  ServiceRegistry.getServiceProviders to select
-     *  providers matching an arbitrary criterion.
+     *  providers matching an arbitrary criterion.  Classes that
+     *  implement this interface should be defined in order to make use
+     *  of the getServiceProviders method of
+     *  ServiceRegistry that takes a Filter.
      */
-    type Filter = ServiceRegistry_Filter
+    trait Filter {
+
+        /** Returns true if the given
+         *  provider object matches the criterion defined
+         *  by this Filter.
+         */
+        @stub
+        def filter(provider: Any): Boolean = ???
+    }
+
 
     /** Locates and incrementally instantiates the available providers
      *  of a given service using the context class loader.

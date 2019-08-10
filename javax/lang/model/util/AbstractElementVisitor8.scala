@@ -34,7 +34,8 @@ import scala.scalanative.annotation.stub
  *  to run on Java SE 8 and later may take advantage of default methods
  *  in this situation.
  */
-@SupportedSourceVersion ( value = RELEASE_8 ) abstract class AbstractElementVisitor8[R, P] extends AbstractElementVisitor7[R, P] {
+@SupportedSourceVersion(value=RELEASE_8)
+abstract class AbstractElementVisitor8[R, P] extends AbstractElementVisitor7[R, P] {
 
     /** Constructor for concrete subclasses to call. */
     @stub

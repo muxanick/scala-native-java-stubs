@@ -12,7 +12,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is BiFunction.apply(Object, Object).
  */
-@FunctionalInterface trait BinaryOperator[T] extends BiFunction[T, T, T] {
+@FunctionalInterface
+trait BinaryOperator[T] extends BiFunction[T, T, T] {
 }
 
 object BinaryOperator {

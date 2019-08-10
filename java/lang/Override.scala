@@ -17,7 +17,7 @@ import scala.scalanative.annotation.stub
  *  any public method declared in Object.
  *  
  */
-@Target ( value = METHOD ) 
-@Retention ( value = SOURCE ) 
- final class Override extends StaticAnnotation {
+@Target(value=METHOD)
+@Retention(value=SOURCE)
+final class Override extends StaticAnnotation {
 }

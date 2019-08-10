@@ -1,11 +1,12 @@
 package javax.swing.plaf.metal
 
-import java.awt.{Container, Dimension, Graphics, LayoutManager, Rectangle}
+import java.awt.{Component, Container, Dimension, Graphics, LayoutManager, Rectangle}
+import java.awt.event.MouseEvent
 import java.beans.{PropertyChangeEvent, PropertyChangeListener}
-import java.lang.Object
-import javax.swing.{ComboBoxEditor, JButton, JComponent}
+import java.lang.{Deprecated, Object}
+import javax.swing.{ComboBoxEditor, JButton, JComboBox, JComponent, JPopupMenu}
 import javax.swing.plaf.{ComboBoxUI, ComponentUI}
-import javax.swing.plaf.basic.{BasicComboBoxUI, ComboPopup}
+import javax.swing.plaf.basic.{BasicComboBoxUI, BasicComboBoxUI.ComboBoxLayoutManager, BasicComboBoxUI.PropertyChangeHandler, BasicComboPopup, ComboPopup}
 import scala.scalanative.annotation.stub
 
 /** Metal UI for JComboBox
@@ -25,17 +26,59 @@ class MetalComboBoxUI extends BasicComboBoxUI {
     @stub
     def this() = ???
 
-    /** This class should be treated as a "protected" inner class. */
-    type MetalComboBoxLayoutManager = MetalComboBoxUI_MetalComboBoxLayoutManager
-
-    /** Deprecated. 
-     * As of Java 2 platform v1.4.
-     * 
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of MetalComboBoxUI.
      */
-    type MetalComboPopup = MetalComboBoxUI_MetalComboPopup
+    class MetalComboBoxLayoutManager extends BasicComboBoxUI.ComboBoxLayoutManager {
 
-    /** This class should be treated as a "protected" inner class. */
-    type MetalPropertyChangeListener = MetalComboBoxUI_MetalPropertyChangeListener
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Lays out the specified container. */
+        @stub
+        def layoutContainer(parent: Container): Unit = ???
+
+        /**  */
+        @stub
+        def superLayout(parent: Container): Unit = ???
+    }
+
+
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of MetalComboBoxUI.
+     * 
+     *  This class is now obsolete and doesn't do anything and
+     *  is only included for backwards API compatibility. Do not call or
+     *  override.
+     */
+@Deprecated
+    class MetalComboPopup extends BasicComboPopup {
+
+        /** Deprecated.  */
+        @stub
+        def this(cBox: JComboBox) = ???
+
+        /** Deprecated.  */
+        @stub
+        def delegateFocus(e: MouseEvent): Unit = ???
+    }
+
+
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of MetalComboBoxUI.
+     */
+    class MetalPropertyChangeListener extends BasicComboBoxUI.PropertyChangeHandler {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** This method gets called when a bound property is changed. */
+        @stub
+        def propertyChange(e: PropertyChangeEvent): Unit = ???
+    }
+
 
     /** This protected method is implementation specific and should be private. */
     @stub

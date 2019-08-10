@@ -13,10 +13,10 @@ import scala.scalanative.annotation.stub
  *  effect if the meta-annotated type is used as a member type in
  *  another annotation type.
  */
-@Documented 
-@Retention ( value = RUNTIME ) 
-@Target ( value = ANNOTATION_TYPE ) 
- final class Retention extends StaticAnnotation {
+@Documented
+@Retention(value=RUNTIME)
+@Target(value=ANNOTATION_TYPE)
+final class Retention extends StaticAnnotation {
 
     /** Returns the retention policy. */
     @stub

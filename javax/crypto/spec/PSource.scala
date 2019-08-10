@@ -32,5 +32,21 @@ object PSource {
     /** This class is used to explicitly specify the value for
      *  encoding input P in OAEP Padding.
      */
-    type PSpecified = PSource_PSpecified
+    final object PSpecified extends PSource {
+
+        /** Constructs the source explicitly with the specified
+         *  value p as the encoding input P.
+         */
+        @stub
+        def apply(p: Array[Byte]) = ???
+
+        /** The encoding input P whose value equals byte[0]. */
+        @stub
+        val DEFAULT: PSpecified = ???
+
+        /** Returns the value of encoding input P. */
+        @stub
+        def getValue(): Array[Byte] = ???
+    }
+
 }

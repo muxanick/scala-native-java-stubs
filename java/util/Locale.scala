@@ -1,7 +1,7 @@
 package java.util
 
 import java.io.Serializable
-import java.lang.{Character, Cloneable, Object, String}
+import java.lang.{Character, Cloneable, Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** A Locale object represents a specific geographical, political,
@@ -592,23 +592,344 @@ final class Locale extends Object with Cloneable with Serializable {
 
 object Locale {
     /** Builder is used to build instances of Locale
-     *  from values configured by the setters.
+     *  from values configured by the setters.  Unlike the Locale
+     *  constructors, the Builder checks if a value configured by a
+     *  setter satisfies the syntax requirements defined by the Locale
+     *  class.  A Locale object created by a Builder is
+     *  well-formed and can be transformed to a well-formed IETF BCP 47 language tag
+     *  without losing information.
+     * 
+     *  Note: The Locale class does not provide any
+     *  syntactic restrictions on variant, while BCP 47 requires each variant
+     *  subtag to be 5 to 8 alphanumerics or a single numeric followed by 3
+     *  alphanumerics.  The method setVariant throws
+     *  IllformedLocaleException for a variant that does not satisfy
+     *  this restriction. If it is necessary to support such a variant, use a
+     *  Locale constructor.  However, keep in mind that a Locale
+     *  object created this way might lose the variant information when
+     *  transformed to a BCP 47 language tag.
+     * 
+     *  The following example shows how to create a Locale object
+     *  with the Builder.
+     *  
+     *  
+     *      Locale aLocale = new Builder().setLanguage("sr").setScript("Latn").setRegion("RS").build();
+     *  
+     *  
+     * 
+     *  Builders can be reused; clear() resets all
+     *  fields to their default values.
      */
-    type Builder = Locale_Builder
+    final object Builder extends Object {
 
-    /** Enum for locale categories. */
-    type Category = Locale_Category
+        /** Constructs an empty Builder. */
+        @stub
+        def apply() = ???
+
+        /** Adds a unicode locale attribute, if not already present, otherwise
+         *  has no effect.
+         */
+        @stub
+        def addUnicodeLocaleAttribute(attribute: String): Builder = ???
+
+        /** Returns an instance of Locale created from the fields set
+         *  on this builder.
+         */
+        @stub
+        def build(): Locale = ???
+
+        /** Resets the builder to its initial, empty state. */
+        @stub
+        def clear(): Builder = ???
+
+        /** Resets the extensions to their initial, empty state. */
+        @stub
+        def clearExtensions(): Builder = ???
+
+        /** Removes a unicode locale attribute, if present, otherwise has no
+         *  effect.
+         */
+        @stub
+        def removeUnicodeLocaleAttribute(attribute: String): Builder = ???
+
+        /** Sets the extension for the given key. */
+        @stub
+        def setExtension(key: Char, value: String): Builder = ???
+
+        /** Sets the language. */
+        @stub
+        def setLanguage(language: String): Builder = ???
+
+        /** Resets the Builder to match the provided IETF BCP 47
+         *  language tag.
+         */
+        @stub
+        def setLanguageTag(languageTag: String): Builder = ???
+
+        /** Resets the Builder to match the provided
+         *  locale.
+         */
+        @stub
+        def setLocale(locale: Locale): Builder = ???
+
+        /** Sets the region. */
+        @stub
+        def setRegion(region: String): Builder = ???
+
+        /** Sets the script. */
+        @stub
+        def setScript(script: String): Builder = ???
+
+        /** Sets the Unicode locale keyword type for the given key. */
+        @stub
+        def setUnicodeLocaleKeyword(key: String, type: String): Builder = ???
+
+        /** Sets the variant. */
+        @stub
+        def setVariant(variant: String): Builder = ???
+    }
+
+
+    /** Enum for locale categories.  These locale categories are used to get/set
+     *  the default locale for the specific functionality represented by the
+     *  category.
+     */
+    class Category private (name: String, ordinal: Int) extends Enum[Category](name, ordinal) {
+    }
+
+    object Category {
+        /** Category used to represent the default locale for
+         *  displaying user interfaces.
+         */
+        final val DISPLAY: Category = new Category("DISPLAY", 0)
+
+        /** Category used to represent the default locale for
+         *  formatting dates, numbers, and/or currencies.
+         */
+        final val FORMAT: Category = new Category("FORMAT", 1)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): Category = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[Category] = ???
+    }
+
 
     /** This enum provides constants to select a filtering mode for locale
-     *  matching.
+     *  matching. Refer to RFC 4647
+     *  Matching of Language Tags for details.
+     * 
+     *  As an example, think of two Language Priority Lists each of which
+     *  includes only one language range and a set of following language tags:
+     * 
+     *  
+     *     de (German)
+     *     de-DE (German, Germany)
+     *     de-Deva (German, in Devanagari script)
+     *     de-Deva-DE (German, in Devanagari script, Germany)
+     *     de-DE-1996 (German, Germany, orthography of 1996)
+     *     de-Latn-DE (German, in Latin script, Germany)
+     *     de-Latn-DE-1996 (German, in Latin script, Germany, orthography of 1996)
+     *  
+     * 
+     *  The filtering method will behave as follows:
+     * 
+     *  
+     *  
+     *  Filtering Mode
+     *  Language Priority List: "de-DE"
+     *  Language Priority List: "de-*-DE"
+     *  
+     *  
+     *  
+     *  AUTOSELECT_FILTERING
+     *  
+     *  
+     *  Performs basic filtering and returns "de-DE" and
+     *  "de-DE-1996".
+     *  
+     *  
+     *  Performs extended filtering and returns "de-DE",
+     *  "de-Deva-DE", "de-DE-1996", "de-Latn-DE", and
+     *  "de-Latn-DE-1996".
+     *  
+     *  
+     *  
+     *  
+     *  EXTENDED_FILTERING
+     *  
+     *  
+     *  Performs extended filtering and returns "de-DE",
+     *  "de-Deva-DE", "de-DE-1996", "de-Latn-DE", and
+     *  "de-Latn-DE-1996".
+     *  
+     *  Same as above.
+     *  
+     *  
+     *  
+     *  IGNORE_EXTENDED_RANGES
+     *  
+     *  
+     *  Performs basic filtering and returns "de-DE" and
+     *  "de-DE-1996".
+     *  
+     *  
+     *  Performs basic filtering and returns null because
+     *  nothing matches.
+     *  
+     *  
+     *  
+     *  
+     *  MAP_EXTENDED_RANGES
+     *  
+     *  Same as above.
+     *  
+     *  Performs basic filtering and returns "de-DE" and
+     *  "de-DE-1996" because "de-*-DE" is mapped to
+     *  "de-DE".
+     *  
+     *  
+     *  
+     *  
+     *  REJECT_EXTENDED_RANGES
+     *  
+     *  Same as above.
+     *  
+     *  Throws IllegalArgumentException because "de-*-DE" is
+     *  not a valid basic language range.
+     *  
+     *  
+     *  
      */
-    type FilteringMode = Locale_FilteringMode
+    class FilteringMode private (name: String, ordinal: Int) extends Enum[FilteringMode](name, ordinal) {
+    }
+
+    object FilteringMode {
+        /** Specifies automatic filtering mode based on the given Language
+         *  Priority List consisting of language ranges.
+         */
+        final val AUTOSELECT_FILTERING: FilteringMode = new FilteringMode("AUTOSELECT_FILTERING", 0)
+
+        /** Specifies extended filtering. */
+        final val EXTENDED_FILTERING: FilteringMode = new FilteringMode("EXTENDED_FILTERING", 1)
+
+        /** Specifies basic filtering: Note that any extended language ranges
+         *  included in the given Language Priority List are ignored.
+         */
+        final val IGNORE_EXTENDED_RANGES: FilteringMode = new FilteringMode("IGNORE_EXTENDED_RANGES", 2)
+
+        /** Specifies basic filtering: If any extended language ranges are
+         *  included in the given Language Priority List, they are mapped to the
+         *  basic language range.
+         */
+        final val MAP_EXTENDED_RANGES: FilteringMode = new FilteringMode("MAP_EXTENDED_RANGES", 3)
+
+        /** Specifies basic filtering: If any extended language ranges are
+         *  included in the given Language Priority List, the list is rejected
+         *  and the filtering method throws IllegalArgumentException.
+         */
+        final val REJECT_EXTENDED_RANGES: FilteringMode = new FilteringMode("REJECT_EXTENDED_RANGES", 4)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): FilteringMode = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[FilteringMode] = ???
+    }
+
 
     /** This class expresses a Language Range defined in
      *  RFC 4647 Matching of
-     *  Language Tags.
+     *  Language Tags. A language range is an identifier which is used to
+     *  select language tag(s) meeting specific requirements by using the
+     *  mechanisms described in Locale
+     *  Matching. A list which represents a user's preferences and consists
+     *  of language ranges is called a Language Priority List.
+     * 
+     *  There are two types of language ranges: basic and extended. In RFC
+     *  4647, the syntax of language ranges is expressed in
+     *  ABNF as follows:
+     *  
+     *  
+     *      basic-language-range    = (1*8ALPHA *("-" 1*8alphanum)) / "*"
+     *      extended-language-range = (1*8ALPHA / "*")
+     *                                *("-" (1*8alphanum / "*"))
+     *      alphanum                = ALPHA / DIGIT
+     *  
+     *  
+     *  For example, "en" (English), "ja-JP" (Japanese, Japan),
+     *  "*" (special language range which matches any language tag) are
+     *  basic language ranges, whereas "*-CH" (any languages,
+     *  Switzerland), "es-*" (Spanish, any regions), and
+     *  "zh-Hant-*" (Traditional Chinese, any regions) are extended
+     *  language ranges.
      */
-    type LanguageRange = Locale_LanguageRange
+    final object LanguageRange extends Object {
+
+        /** Constructs a LanguageRange using the given range. */
+        @stub
+        def apply(range: String) = ???
+
+        /** Constructs a LanguageRange using the given range and
+         *  weight.
+         */
+        @stub
+        def apply(range: String, weight: Double) = ???
+
+        /** A constant holding the maximum value of weight, 1.0, which indicates
+         *  that the language range is a good fit for the user.
+         */
+        @stub
+        val MAX_WEIGHT: Double = ???
+
+        /** A constant holding the minimum value of weight, 0.0, which indicates
+         *  that the language range is not a good fit for the user.
+         */
+        @stub
+        val MIN_WEIGHT: Double = ???
+
+        /** Compares this object to the specified object. */
+        @stub
+        def equals(obj: Any): Boolean = ???
+
+        /** Returns the language range of this LanguageRange. */
+        @stub
+        def getRange(): String = ???
+
+        /** Returns the weight of this LanguageRange. */
+        @stub
+        def getWeight(): Double = ???
+
+        /** Returns a hash code value for the object. */
+        @stub
+        def hashCode(): Int = ???
+
+        /** Generates a new customized Language Priority List using the given
+         *  priorityList and map.
+         */
+        @stub
+        def mapEquivalents(priorityList: List[Locale.LanguageRange], map: Map[String, List[String]]): List[LanguageRange] = ???
+
+        /** Parses the given ranges to generate a Language Priority List. */
+        @stub
+        def parse(ranges: String): List[LanguageRange] = ???
+
+        /** Parses the given ranges to generate a Language Priority
+         *  List, and then customizes the list using the given map.
+         */
+        @stub
+        def parse(ranges: String, map: Map[String, List[String]]): List[LanguageRange] = ???
+    }
+
 
     /** Useful constant for country. */
     @stub

@@ -6,7 +6,8 @@ import scala.scalanative.annotation.stub
 /** An interface that is implemented by objects that perform match operations on
  *  paths.
  */
-@FunctionalInterface trait PathMatcher {
+@FunctionalInterface
+trait PathMatcher {
 
     /** Tells if given path matches this matcher's pattern. */
     @stub

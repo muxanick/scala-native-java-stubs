@@ -1,9 +1,13 @@
 package java.security
 
-import java.io.{InputStream, OutputStream}
+import java.io.{File, InputStream, OutputStream}
 import java.lang.{Class, Object, String}
 import java.security.cert.Certificate
-import java.util.{Date, Enumeration}
+import java.security.spec.AlgorithmParameterSpec
+import java.util.{Date, Enumeration, Set}
+import javax.crypto.SecretKey
+import javax.security.auth.Destroyable
+import javax.security.auth.callback.CallbackHandler
 import scala.scalanative.annotation.stub
 
 /** This class represents a storage facility for cryptographic
@@ -258,14 +262,82 @@ class KeyStore extends Object {
 }
 
 object KeyStore {
-    /** A description of a to-be-instantiated KeyStore object. */
-    type Builder = KeyStore_Builder
+    /** A description of a to-be-instantiated KeyStore object.
+     * 
+     *  An instance of this class encapsulates the information needed to
+     *  instantiate and initialize a KeyStore object. That process is
+     *  triggered when the getKeyStore() method is called.
+     * 
+     *  This makes it possible to decouple configuration from KeyStore
+     *  object creation and e.g. delay a password prompt until it is
+     *  needed.
+     */
+    abstract object Builder extends Object {
+
+        /** Construct a new Builder. */
+        @stub
+        protected def apply() = ???
+
+        /** Returns the KeyStore described by this object. */
+        def getKeyStore(): KeyStore
+
+        /** Returns the ProtectionParameters that should be used to obtain
+         *  the Entry with the given alias.
+         */
+        def getProtectionParameter(alias: String): KeyStore.ProtectionParameter
+
+        /** Returns a new Builder that encapsulates the given KeyStore. */
+        @stub
+        def newInstance(keyStore: KeyStore, protectionParameter: KeyStore.ProtectionParameter): Builder = ???
+
+        /** Returns a new Builder object. */
+        @stub
+        def newInstance(type: String, provider: Provider, file: File, protection: KeyStore.ProtectionParameter): Builder = ???
+
+        /** Returns a new Builder object. */
+        @stub
+        def newInstance(type: String, provider: Provider, protection: KeyStore.ProtectionParameter): Builder = ???
+    }
+
 
     /** A ProtectionParameter encapsulating a CallbackHandler. */
-    type CallbackHandlerProtection = KeyStore_CallbackHandlerProtection
+    object CallbackHandlerProtection extends Object with KeyStore.ProtectionParameter {
+
+        /** Constructs a new CallbackHandlerProtection from a
+         *  CallbackHandler.
+         */
+        @stub
+        def apply(handler: CallbackHandler) = ???
+
+        /** Returns the CallbackHandler. */
+        @stub
+        def getCallbackHandler(): CallbackHandler = ???
+    }
+
 
     /** A marker interface for KeyStore entry types. */
-    type Entry = KeyStore_Entry
+    trait Entry {
+
+        /** An attribute associated with a keystore entry.
+         *  It comprises a name and one or more values.
+         */
+        trait Attribute {
+
+            /** Returns the attribute's name. */
+            @stub
+            def getName(): String = ???
+
+            /** Returns the attribute's value. */
+            @stub
+            def getValue(): String = ???
+        }
+
+
+        /** Retrieves the attributes associated with an entry. */
+        @stub
+        def getAttributes(): Set[Entry.Attribute] = ???
+    }
+
 
     /** A marker interface for KeyStore
      *  load
@@ -273,26 +345,161 @@ object KeyStore {
      *  store
      *  parameters.
      */
-    type LoadStoreParameter = KeyStore_LoadStoreParameter
+    trait LoadStoreParameter {
+
+        /** Gets the parameter used to protect keystore data. */
+        @stub
+        def getProtectionParameter(): KeyStore.ProtectionParameter = ???
+    }
+
 
     /** A password-based implementation of ProtectionParameter. */
-    type PasswordProtection = KeyStore_PasswordProtection
+    object PasswordProtection extends Object with KeyStore.ProtectionParameter with Destroyable {
+
+        /** Creates a password parameter. */
+        @stub
+        def apply(password: Array[Char]) = ???
+
+        /** Creates a password parameter and specifies the protection algorithm
+         *  and associated parameters to use when encrypting a keystore entry.
+         */
+        @stub
+        def apply(password: Array[Char], protectionAlgorithm: String, protectionParameters: AlgorithmParameterSpec) = ???
+
+        /** Clears the password. */
+        @stub
+        def destroy(): Unit = ???
+
+        /** Gets the password. */
+        @stub
+        def getPassword(): Array[Char] = ???
+
+        /** Gets the name of the protection algorithm. */
+        @stub
+        def getProtectionAlgorithm(): String = ???
+
+        /** Gets the parameters supplied for the protection algorithm. */
+        @stub
+        def getProtectionParameters(): AlgorithmParameterSpec = ???
+
+        /** Determines if password has been cleared. */
+        @stub
+        def isDestroyed(): Boolean = ???
+    }
+
 
     /** A KeyStore entry that holds a PrivateKey
      *  and corresponding certificate chain.
      */
-    type PrivateKeyEntry = KeyStore_PrivateKeyEntry
+    final object PrivateKeyEntry extends Object with KeyStore.Entry {
 
-    /** A marker interface for keystore protection parameters. */
-    type ProtectionParameter = KeyStore_ProtectionParameter
+        /** Constructs a PrivateKeyEntry with a
+         *  PrivateKey and corresponding certificate chain.
+         */
+        @stub
+        def apply(privateKey: PrivateKey, chain: Array[Certificate]) = ???
+
+        /** Constructs a PrivateKeyEntry with a PrivateKey and
+         *  corresponding certificate chain and associated entry attributes.
+         */
+        @stub
+        def apply(privateKey: PrivateKey, chain: Array[Certificate], attributes: Set[KeyStore.Entry.Attribute]) = ???
+
+        /** Retrieves the attributes associated with an entry. */
+        @stub
+        def getAttributes(): Set[KeyStore.Entry.Attribute] = ???
+
+        /** Gets the end entity Certificate
+         *  from the certificate chain in this entry.
+         */
+        @stub
+        def getCertificate(): Certificate = ???
+
+        /** Gets the Certificate chain from this entry. */
+        @stub
+        def getCertificateChain(): Array[Certificate] = ???
+
+        /** Gets the PrivateKey from this entry. */
+        @stub
+        def getPrivateKey(): PrivateKey = ???
+
+        /** Returns a string representation of this PrivateKeyEntry. */
+        @stub
+        def toString(): String = ???
+    }
+
+
+    /** A marker interface for keystore protection parameters.
+     * 
+     *   The information stored in a ProtectionParameter
+     *  object protects the contents of a keystore.
+     *  For example, protection parameters may be used to check
+     *  the integrity of keystore data, or to protect the
+     *  confidentiality of sensitive keystore data
+     *  (such as a PrivateKey).
+     */
+    trait ProtectionParameter {
+
 
     /** A KeyStore entry that holds a SecretKey. */
-    type SecretKeyEntry = KeyStore_SecretKeyEntry
+    final object SecretKeyEntry extends Object with KeyStore.Entry {
+
+        /** Constructs a SecretKeyEntry with a
+         *  SecretKey.
+         */
+        @stub
+        def apply(secretKey: SecretKey) = ???
+
+        /** Constructs a SecretKeyEntry with a SecretKey and
+         *  associated entry attributes.
+         */
+        @stub
+        def apply(secretKey: SecretKey, attributes: Set[KeyStore.Entry.Attribute]) = ???
+
+        /** Retrieves the attributes associated with an entry. */
+        @stub
+        def getAttributes(): Set[KeyStore.Entry.Attribute] = ???
+
+        /** Gets the SecretKey from this entry. */
+        @stub
+        def getSecretKey(): SecretKey = ???
+
+        /** Returns a string representation of this SecretKeyEntry. */
+        @stub
+        def toString(): String = ???
+    }
+
 
     /** A KeyStore entry that holds a trusted
      *  Certificate.
      */
-    type TrustedCertificateEntry = KeyStore_TrustedCertificateEntry
+    final object TrustedCertificateEntry extends Object with KeyStore.Entry {
+
+        /** Constructs a TrustedCertificateEntry with a
+         *  trusted Certificate.
+         */
+        @stub
+        def apply(trustedCert: Certificate) = ???
+
+        /** Constructs a TrustedCertificateEntry with a
+         *  trusted Certificate and associated entry attributes.
+         */
+        @stub
+        def apply(trustedCert: Certificate, attributes: Set[KeyStore.Entry.Attribute]) = ???
+
+        /** Retrieves the attributes associated with an entry. */
+        @stub
+        def getAttributes(): Set[KeyStore.Entry.Attribute] = ???
+
+        /** Gets the trusted Certficate from this entry. */
+        @stub
+        def getTrustedCertificate(): Certificate = ???
+
+        /** Returns a string representation of this TrustedCertificateEntry. */
+        @stub
+        def toString(): String = ???
+    }
+
 
     /** Returns the default keystore type as specified by the
      *  keystore.type security property, or the string

@@ -19,10 +19,10 @@ import scala.scalanative.annotation.stub
  *  The comment element is a place holder for any comments that the code
  *  generator may want to include in the generated code.
  */
-@Documented 
-@Retention ( value = SOURCE ) 
-@Target ( value ={ PACKAGE , TYPE , ANNOTATION_TYPE , METHOD , CONSTRUCTOR , FIELD , LOCAL_VARIABLE , PARAMETER } ) 
- final class Generated extends StaticAnnotation {
+@Documented
+@Retention(value=SOURCE)
+@Target(value={PACKAGE,TYPE,ANNOTATION_TYPE,METHOD,CONSTRUCTOR,FIELD,LOCAL_VARIABLE,PARAMETER})
+final class Generated extends StaticAnnotation {
 
     /** The value element MUST have the name of the code generator. */
     @stub

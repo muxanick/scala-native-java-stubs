@@ -1,6 +1,7 @@
 package java.util
 
-import java.util.function.Consumer
+import java.lang.{Double, Integer, Long}
+import java.util.function.{Consumer, DoubleConsumer, IntConsumer, LongConsumer}
 import scala.scalanative.annotation.stub
 
 /** An object for traversing and partitioning elements of a source.  The source
@@ -148,16 +149,143 @@ trait Spliterator[T] {
 
 object Spliterator {
     /** A Spliterator specialized for double values. */
-    type OfDouble = Spliterator_OfDouble
+    trait OfDouble extends Spliterator.OfPrimitive[Double, DoubleConsumer, Spliterator.OfDouble] {
+
+        /** Performs the given action for each remaining element, sequentially in
+         *  the current thread, until all elements have been processed or the action
+         *  throws an exception.
+         */
+        @stub
+        def forEachRemaining(action: Consumer[_ >: Double]): Unit = ???
+
+        /** Performs the given action for each remaining element, sequentially in
+         *  the current thread, until all elements have been processed or the
+         *  action throws an exception.
+         */
+        @stub
+        def forEachRemaining(action: DoubleConsumer): Unit = ???
+
+        /** If a remaining element exists, performs the given action on it,
+         *  returning true; else returns false.
+         */
+        @stub
+        def tryAdvance(action: Consumer[_ >: Double]): Boolean = ???
+
+        /** If a remaining element exists, performs the given action on it,
+         *  returning true; else returns false.
+         */
+        @stub
+        def tryAdvance(action: DoubleConsumer): Boolean = ???
+
+        /** If this spliterator can be partitioned, returns a Spliterator
+         *  covering elements, that will, upon return from this method, not
+         *  be covered by this Spliterator.
+         */
+        @stub
+        def trySplit(): OfDouble = ???
+    }
+
 
     /** A Spliterator specialized for int values. */
-    type OfInt = Spliterator_OfInt
+    trait OfInt extends Spliterator.OfPrimitive[Integer, IntConsumer, Spliterator.OfInt] {
+
+        /** Performs the given action for each remaining element, sequentially in
+         *  the current thread, until all elements have been processed or the action
+         *  throws an exception.
+         */
+        @stub
+        def forEachRemaining(action: Consumer[_ >: Integer]): Unit = ???
+
+        /** Performs the given action for each remaining element, sequentially in
+         *  the current thread, until all elements have been processed or the
+         *  action throws an exception.
+         */
+        @stub
+        def forEachRemaining(action: IntConsumer): Unit = ???
+
+        /** If a remaining element exists, performs the given action on it,
+         *  returning true; else returns false.
+         */
+        @stub
+        def tryAdvance(action: Consumer[_ >: Integer]): Boolean = ???
+
+        /** If a remaining element exists, performs the given action on it,
+         *  returning true; else returns false.
+         */
+        @stub
+        def tryAdvance(action: IntConsumer): Boolean = ???
+
+        /** If this spliterator can be partitioned, returns a Spliterator
+         *  covering elements, that will, upon return from this method, not
+         *  be covered by this Spliterator.
+         */
+        @stub
+        def trySplit(): OfInt = ???
+    }
+
 
     /** A Spliterator specialized for long values. */
-    type OfLong = Spliterator_OfLong
+    trait OfLong extends Spliterator.OfPrimitive[Long, LongConsumer, Spliterator.OfLong] {
+
+        /** Performs the given action for each remaining element, sequentially in
+         *  the current thread, until all elements have been processed or the action
+         *  throws an exception.
+         */
+        @stub
+        def forEachRemaining(action: Consumer[_ >: Long]): Unit = ???
+
+        /** Performs the given action for each remaining element, sequentially in
+         *  the current thread, until all elements have been processed or the
+         *  action throws an exception.
+         */
+        @stub
+        def forEachRemaining(action: LongConsumer): Unit = ???
+
+        /** If a remaining element exists, performs the given action on it,
+         *  returning true; else returns false.
+         */
+        @stub
+        def tryAdvance(action: Consumer[_ >: Long]): Boolean = ???
+
+        /** If a remaining element exists, performs the given action on it,
+         *  returning true; else returns false.
+         */
+        @stub
+        def tryAdvance(action: LongConsumer): Boolean = ???
+
+        /** If this spliterator can be partitioned, returns a Spliterator
+         *  covering elements, that will, upon return from this method, not
+         *  be covered by this Spliterator.
+         */
+        @stub
+        def trySplit(): OfLong = ???
+    }
+
 
     /** A Spliterator specialized for primitive values. */
-    type OfPrimitive[T, T_CONS, T_SPLITR]] = Spliterator_OfPrimitive[T, T_CONS, T_SPLITR <: Spliterator_OfPrimitive[T, T_CONS, T_SPLITR]]
+    trait OfPrimitive[T, T_CONS, T_SPLITR <: OfPrimitive[T, T_CONS, T_SPLITR]] extends Spliterator[T] {
+
+        /** Performs the given action for each remaining element, sequentially in
+         *  the current thread, until all elements have been processed or the
+         *  action throws an exception.
+         */
+        @stub
+        def forEachRemaining(action: T_CONS): Unit = ???
+
+        /** If a remaining element exists, performs the given action on it,
+         *  returning true; else returns false.
+         */
+        @stub
+        def tryAdvance(action: T_CONS): Boolean = ???
+
+        /** If this spliterator can be partitioned, returns a Spliterator
+         *  covering elements, that will, upon return from this method, not
+         *  be covered by this Spliterator.
+         */
+        @stub
+        def trySplit(): T_SPLITR = ???
+    }
+
 
     /** Characteristic value signifying that the element source may be safely
      *  concurrently modified (allowing additions, replacements, and/or removals)

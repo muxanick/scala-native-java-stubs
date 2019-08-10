@@ -89,9 +89,271 @@ class CSS extends Object with Serializable {
 
 object CSS {
     /** Definitions to be used as a key on AttributeSet's
-     *  that might hold CSS attributes.
+     *  that might hold CSS attributes.  Since this is a
+     *  closed set (i.e. defined exactly by the specification),
+     *  it is final and cannot be extended.
      */
-    type Attribute = CSS_Attribute
+    final object Attribute extends Object {
+
+        /**  */
+        @stub
+        val BACKGROUND: Attribute = ???
+
+        /**  */
+        @stub
+        val BACKGROUND_ATTACHMENT: Attribute = ???
+
+        /**  */
+        @stub
+        val BACKGROUND_COLOR: Attribute = ???
+
+        /**  */
+        @stub
+        val BACKGROUND_IMAGE: Attribute = ???
+
+        /**  */
+        @stub
+        val BACKGROUND_POSITION: Attribute = ???
+
+        /**  */
+        @stub
+        val BACKGROUND_REPEAT: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_BOTTOM: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_BOTTOM_COLOR: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_BOTTOM_STYLE: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_BOTTOM_WIDTH: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_COLOR: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_LEFT: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_LEFT_COLOR: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_LEFT_STYLE: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_LEFT_WIDTH: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_RIGHT: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_RIGHT_COLOR: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_RIGHT_STYLE: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_RIGHT_WIDTH: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_STYLE: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_TOP: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_TOP_COLOR: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_TOP_STYLE: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_TOP_WIDTH: Attribute = ???
+
+        /**  */
+        @stub
+        val BORDER_WIDTH: Attribute = ???
+
+        /**  */
+        @stub
+        val CLEAR: Attribute = ???
+
+        /**  */
+        @stub
+        val COLOR: Attribute = ???
+
+        /**  */
+        @stub
+        val DISPLAY: Attribute = ???
+
+        /**  */
+        @stub
+        val FLOAT: Attribute = ???
+
+        /**  */
+        @stub
+        val FONT: Attribute = ???
+
+        /**  */
+        @stub
+        val FONT_FAMILY: Attribute = ???
+
+        /**  */
+        @stub
+        val FONT_SIZE: Attribute = ???
+
+        /**  */
+        @stub
+        val FONT_STYLE: Attribute = ???
+
+        /**  */
+        @stub
+        val FONT_VARIANT: Attribute = ???
+
+        /**  */
+        @stub
+        val FONT_WEIGHT: Attribute = ???
+
+        /**  */
+        @stub
+        val HEIGHT: Attribute = ???
+
+        /**  */
+        @stub
+        val LETTER_SPACING: Attribute = ???
+
+        /**  */
+        @stub
+        val LINE_HEIGHT: Attribute = ???
+
+        /**  */
+        @stub
+        val LIST_STYLE: Attribute = ???
+
+        /**  */
+        @stub
+        val LIST_STYLE_IMAGE: Attribute = ???
+
+        /**  */
+        @stub
+        val LIST_STYLE_POSITION: Attribute = ???
+
+        /**  */
+        @stub
+        val LIST_STYLE_TYPE: Attribute = ???
+
+        /**  */
+        @stub
+        val MARGIN: Attribute = ???
+
+        /**  */
+        @stub
+        val MARGIN_BOTTOM: Attribute = ???
+
+        /**  */
+        @stub
+        val MARGIN_LEFT: Attribute = ???
+
+        /**  */
+        @stub
+        val MARGIN_RIGHT: Attribute = ???
+
+        /**  */
+        @stub
+        val MARGIN_TOP: Attribute = ???
+
+        /**  */
+        @stub
+        val PADDING: Attribute = ???
+
+        /**  */
+        @stub
+        val PADDING_BOTTOM: Attribute = ???
+
+        /**  */
+        @stub
+        val PADDING_LEFT: Attribute = ???
+
+        /**  */
+        @stub
+        val PADDING_RIGHT: Attribute = ???
+
+        /**  */
+        @stub
+        val PADDING_TOP: Attribute = ???
+
+        /**  */
+        @stub
+        val TEXT_ALIGN: Attribute = ???
+
+        /**  */
+        @stub
+        val TEXT_DECORATION: Attribute = ???
+
+        /**  */
+        @stub
+        val TEXT_INDENT: Attribute = ???
+
+        /**  */
+        @stub
+        val TEXT_TRANSFORM: Attribute = ???
+
+        /**  */
+        @stub
+        val VERTICAL_ALIGN: Attribute = ???
+
+        /**  */
+        @stub
+        val WHITE_SPACE: Attribute = ???
+
+        /**  */
+        @stub
+        val WIDTH: Attribute = ???
+
+        /**  */
+        @stub
+        val WORD_SPACING: Attribute = ???
+
+        /** Fetch the default value for the attribute. */
+        @stub
+        def getDefaultValue(): String = ???
+
+        /** Indicates if the attribute should be inherited
+         *  from the parent or not.
+         */
+        @stub
+        def isInherited(): Boolean = ???
+
+        /** The string representation of the attribute. */
+        @stub
+        def toString(): String = ???
+    }
+
 
     /** Return the set of all possible CSS attribute keys. */
     @stub

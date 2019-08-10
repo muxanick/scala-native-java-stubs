@@ -1,8 +1,8 @@
 package javax.swing.plaf.basic
 
-import java.awt.{Color, Component, Graphics, Point}
-import java.awt.event.{ContainerListener, FocusListener, WindowListener}
-import java.beans.PropertyChangeListener
+import java.awt.{Color, Component, Container, Graphics, Insets, Point, Window}
+import java.awt.event.{ContainerEvent, ContainerListener, FocusEvent, FocusListener, MouseEvent, WindowAdapter, WindowEvent, WindowListener}
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.{Object, String}
 import javax.swing.{AbstractButton, JComponent, JFrame, JToolBar, KeyStroke, RootPaneContainer, SwingConstants}
 import javax.swing.border.Border
@@ -20,23 +20,163 @@ class BasicToolBarUI extends ToolBarUI with SwingConstants {
     @stub
     def this() = ???
 
-    /** This class should be treated as a "protected" inner class. */
-    type DockingListener = BasicToolBarUI_DockingListener
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicToolBarUI.
+     */
+    class DockingListener extends Object with MouseInputListener {
+
+        /**  */
+        @stub
+        def this(t: JToolBar) = ???
+
+        /**  */
+        @stub
+        protected val isDragging: Boolean = ???
+
+        /**  */
+        @stub
+        protected val origin: Point = ???
+
+        /**  */
+        @stub
+        protected val toolBar: JToolBar = ???
+
+        /** Invoked when the mouse button has been clicked (pressed
+         *  and released) on a component.
+         */
+        @stub
+        def mouseClicked(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button is pressed on a component and then
+         *  dragged.
+         */
+        @stub
+        def mouseDragged(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse enters a component. */
+        @stub
+        def mouseEntered(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse exits a component. */
+        @stub
+        def mouseExited(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse cursor has been moved onto a component
+         *  but no buttons have been pushed.
+         */
+        @stub
+        def mouseMoved(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button has been pressed on a component. */
+        @stub
+        def mousePressed(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button has been released on a component. */
+        @stub
+        def mouseReleased(e: MouseEvent): Unit = ???
+    }
+
 
     /**  */
-    protected type DragWindow = BasicToolBarUI_DragWindow
+    protected class DragWindow extends Window {
+
+        /**  */
+        @stub
+        def getBorderColor(): Color = ???
+
+        /** Determines the insets of this container, which indicate the size
+         *  of the container's border.
+         */
+        @stub
+        def getInsets(): Insets = ???
+
+        /**  */
+        @stub
+        def getOffset(): Point = ???
+
+        /** Returns the orientation of the toolbar window when the toolbar is
+         *  floating.
+         */
+        @stub
+        def getOrientation(): Int = ???
+
+        /** Paints the container. */
+        @stub
+        def paint(g: Graphics): Unit = ???
+
+        /**  */
+        @stub
+        def setBorderColor(c: Color): Unit = ???
+
+        /**  */
+        @stub
+        def setOffset(p: Point): Unit = ???
+
+        /**  */
+        @stub
+        def setOrientation(o: Int): Unit = ???
+    }
+
 
     /**  */
-    protected type FrameListener = BasicToolBarUI_FrameListener
+    protected class FrameListener extends WindowAdapter {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when a window is in the process of being closed. */
+        @stub
+        def windowClosing(w: WindowEvent): Unit = ???
+    }
+
 
     /**  */
-    protected type PropertyListener = BasicToolBarUI_PropertyListener
+    protected class PropertyListener extends Object with PropertyChangeListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** This method gets called when a bound property is changed. */
+        @stub
+        def propertyChange(e: PropertyChangeEvent): Unit = ???
+    }
+
 
     /**  */
-    protected type ToolBarContListener = BasicToolBarUI_ToolBarContListener
+    protected class ToolBarContListener extends Object with ContainerListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when a component has been added to the container. */
+        @stub
+        def componentAdded(e: ContainerEvent): Unit = ???
+
+        /** Invoked when a component has been removed from the container. */
+        @stub
+        def componentRemoved(e: ContainerEvent): Unit = ???
+    }
+
 
     /**  */
-    protected type ToolBarFocusListener = BasicToolBarUI_ToolBarFocusListener
+    protected class ToolBarFocusListener extends Object with FocusListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when a component gains the keyboard focus. */
+        @stub
+        def focusGained(e: FocusEvent): Unit = ???
+
+        /** Invoked when a component loses the keyboard focus. */
+        @stub
+        def focusLost(e: FocusEvent): Unit = ???
+    }
+
 
     /**  */
     @stub

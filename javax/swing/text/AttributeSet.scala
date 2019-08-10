@@ -71,28 +71,38 @@ trait AttributeSet {
 object AttributeSet {
     /** This interface is the type signature that is expected
      *  to be present on any attribute key that contributes to
-     *  character level presentation.
+     *  character level presentation.  This would be any attribute
+     *  that applies to a so-called run of
+     *  style.
      */
-    type CharacterAttribute = AttributeSet_CharacterAttribute
+    trait CharacterAttribute {
+
 
     /** This interface is the type signature that is expected
      *  to be present on any attribute key that contributes to
      *  presentation of color.
      */
-    type ColorAttribute = AttributeSet_ColorAttribute
+    trait ColorAttribute {
+
 
     /** This interface is the type signature that is expected
      *  to be present on any attribute key that contributes to
      *  the determination of what font to use to render some
-     *  text.
+     *  text.  This is not considered to be a closed set, the
+     *  definition can change across version of the platform and can
+     *  be amended by additional user added entries that
+     *  correspond to logical settings that are specific to
+     *  some type of content.
      */
-    type FontAttribute = AttributeSet_FontAttribute
+    trait FontAttribute {
+
 
     /** This interface is the type signature that is expected
      *  to be present on any attribute key that contributes to
      *  the paragraph level presentation.
      */
-    type ParagraphAttribute = AttributeSet_ParagraphAttribute
+    trait ParagraphAttribute {
+
 
     /** Attribute name used to name the collection of
      *  attributes.

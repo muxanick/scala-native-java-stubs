@@ -119,5 +119,10 @@ object Format {
      *  from Format.formatToCharacterIterator and as
      *  field identifiers in FieldPosition.
      */
-    type Field = Format_Field
+    object Field extends AttributedCharacterIterator.Attribute {
+
+        /** Creates a Field with the specified name. */
+        @stub
+        protected def apply(name: String) = ???
+
 }

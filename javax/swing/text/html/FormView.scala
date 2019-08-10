@@ -1,7 +1,7 @@
 package javax.swing.text.html
 
 import java.awt.Component
-import java.awt.event.{ActionEvent, ActionListener}
+import java.awt.event.{ActionEvent, ActionListener, MouseAdapter, MouseEvent}
 import java.lang.{Object, String}
 import javax.swing.text.{ComponentView, Element, View}
 import scala.scalanative.annotation.stub
@@ -81,8 +81,21 @@ class FormView extends ComponentView with ActionListener {
 
     /** MouseEventListener class to handle form submissions when
      *  an input with type equal to image is clicked on.
+     *  A MouseListener is necessary since along with the image
+     *  data the coordinates associated with the mouse click
+     *  need to be submitted.
      */
-    protected type MouseEventListener = FormView_MouseEventListener
+    protected class MouseEventListener extends MouseAdapter {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when a mouse button has been released on a component. */
+        @stub
+        def mouseReleased(evt: MouseEvent): Unit = ???
+    }
+
 
     /** Responsible for processing the ActionEvent. */
     @stub

@@ -1,7 +1,7 @@
 package java.awt
 
 import java.lang.{Object, String}
-import javax.accessibility.AccessibleContext
+import javax.accessibility.{AccessibleContext, AccessibleRole, AccessibleStateSet}
 import scala.scalanative.annotation.stub
 
 /** A Frame is a top-level window with a title and a border.
@@ -115,9 +115,24 @@ class Frame extends Window with MenuContainer {
     def this(title: String, gc: GraphicsConfiguration) = ???
 
     /** This class implements accessibility support for the
-     *  Frame class.
+     *  Frame class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to frame user-interface elements.
      */
-    protected type AccessibleAWTFrame = Frame_AccessibleAWTFrame
+    protected class AccessibleAWTFrame extends Window.AccessibleAWTWindow {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+
+        /** Get the state of this object. */
+        @stub
+        def getAccessibleStateSet(): AccessibleStateSet = ???
+    }
+
 
     /** Makes this Frame displayable by connecting it to
      *  a native screen resource.

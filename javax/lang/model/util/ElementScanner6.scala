@@ -51,7 +51,8 @@ import scala.scalanative.annotation.stub
  *  visit method in question.  When the new visitor is introduced, all
  *  or portions of this visitor may be deprecated.
  */
-@SupportedSourceVersion ( value = RELEASE_6 ) class ElementScanner6[R, P] extends AbstractElementVisitor6[R, P] {
+@SupportedSourceVersion(value=RELEASE_6)
+class ElementScanner6[R, P] extends AbstractElementVisitor6[R, P] {
 
     /** Constructor for concrete subclasses; uses null for the
      *  default value.

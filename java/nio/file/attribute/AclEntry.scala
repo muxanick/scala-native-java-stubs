@@ -65,8 +65,45 @@ final class AclEntry extends Object {
 }
 
 object AclEntry {
-    /** A builder of AclEntry objects. */
-    type Builder = AclEntry_Builder
+    /** A builder of AclEntry objects.
+     * 
+     *   A Builder object is obtained by invoking one of the newBuilder methods defined by the AclEntry
+     *  class.
+     * 
+     *   Builder objects are mutable and are not safe for use by multiple
+     *  concurrent threads without appropriate synchronization.
+     */
+    final object Builder extends Object {
+
+        /** Constructs an AclEntry from the components of this builder. */
+        @stub
+        def build(): AclEntry = ???
+
+        /** Sets the flags component of this builder. */
+        @stub
+        def setFlags(flags: AclEntryFlag*): Builder = ???
+
+        /** Sets the flags component of this builder. */
+        @stub
+        def setFlags(flags: Set[AclEntryFlag]): Builder = ???
+
+        /** Sets the permissions component of this builder. */
+        @stub
+        def setPermissions(perms: AclEntryPermission*): Builder = ???
+
+        /** Sets the permissions component of this builder. */
+        @stub
+        def setPermissions(perms: Set[AclEntryPermission]): Builder = ???
+
+        /** Sets the principal component of this builder. */
+        @stub
+        def setPrincipal(who: UserPrincipal): Builder = ???
+
+        /** Sets the type component of this builder. */
+        @stub
+        def setType(type: AclEntryType): Builder = ???
+    }
+
 
     /** Constructs a new builder. */
     @stub

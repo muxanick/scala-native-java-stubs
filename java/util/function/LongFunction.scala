@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is apply(long).
  */
-@FunctionalInterface trait LongFunction[R] {
+@FunctionalInterface
+trait LongFunction[R] {
 
     /** Applies this function to the given argument. */
     @stub

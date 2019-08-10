@@ -17,7 +17,8 @@ import scala.scalanative.annotation.stub
  *  A ServerRuntimeException is not thrown from servers
  *  executing on the Java 2 platform v1.2 or later versions.
  */
-@Deprecated class ServerRuntimeException extends RemoteException {
+@Deprecated
+class ServerRuntimeException extends RemoteException {
 
     /** Deprecated. 
      * no replacement

@@ -15,13 +15,13 @@ class ResolverStyle private (name: String, ordinal: Int) extends Enum[ResolverSt
 
 object ResolverStyle {
     /** Style to resolve dates and times leniently. */
-    final val LENIENT = new ResolverStyle(LENIENT, 0)
+    final val LENIENT: ResolverStyle = new ResolverStyle("LENIENT", 0)
 
     /** Style to resolve dates and times in a smart, or intelligent, manner. */
-    final val SMART = new ResolverStyle(SMART, 1)
+    final val SMART: ResolverStyle = new ResolverStyle("SMART", 1)
 
     /** Style to resolve dates and times strictly. */
-    final val STRICT = new ResolverStyle(STRICT, 2)
+    final val STRICT: ResolverStyle = new ResolverStyle("STRICT", 2)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

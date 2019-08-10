@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is apply(int).
  */
-@FunctionalInterface trait IntFunction[R] {
+@FunctionalInterface
+trait IntFunction[R] {
 
     /** Applies this function to the given argument. */
     @stub

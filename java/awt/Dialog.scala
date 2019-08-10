@@ -1,7 +1,7 @@
 package java.awt
 
-import java.lang.{Object, String}
-import javax.accessibility.AccessibleContext
+import java.lang.{Enum, Object, String}
+import javax.accessibility.{AccessibleContext, AccessibleRole, AccessibleStateSet}
 import scala.scalanative.annotation.stub
 
 /** A Dialog is a top-level window with a title and a border
@@ -138,9 +138,24 @@ class Dialog extends Window {
     def this(owner: Window, title: String, modalityType: Dialog.ModalityType, gc: GraphicsConfiguration) = ???
 
     /** This class implements accessibility support for the
-     *  Dialog class.
+     *  Dialog class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to dialog user-interface elements.
      */
-    protected type AccessibleAWTDialog = Dialog_AccessibleAWTDialog
+    protected class AccessibleAWTDialog extends Window.AccessibleAWTWindow {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+
+        /** Get the state of this object. */
+        @stub
+        def getAccessibleStateSet(): AccessibleStateSet = ???
+    }
+
 
     /** Makes this Dialog displayable by connecting it to
      *  a native screen resource.
@@ -239,12 +254,77 @@ class Dialog extends Window {
 
 object Dialog {
     /** Any top-level window can be marked not to be blocked by modal
-     *  dialogs.
+     *  dialogs. This is called "modal exclusion". This enum specifies
+     *  the possible modal exclusion types.
      */
-    type ModalExclusionType = Dialog_ModalExclusionType
+    class ModalExclusionType private (name: String, ordinal: Int) extends Enum[ModalExclusionType](name, ordinal) {
+    }
 
-    /** Modal dialogs block all input to some top-level windows. */
-    type ModalityType = Dialog_ModalityType
+    object ModalExclusionType {
+        /** APPLICATION_EXCLUDE indicates that a top-level window
+         *  won't be blocked by any application-modal dialogs.
+         */
+        final val APPLICATION_EXCLUDE: ModalExclusionType = new ModalExclusionType("APPLICATION_EXCLUDE", 0)
+
+        /** No modal exclusion. */
+        final val NO_EXCLUDE: ModalExclusionType = new ModalExclusionType("NO_EXCLUDE", 1)
+
+        /** TOOLKIT_EXCLUDE indicates that a top-level window
+         *  won't be blocked by  application-modal or toolkit-modal dialogs.
+         */
+        final val TOOLKIT_EXCLUDE: ModalExclusionType = new ModalExclusionType("TOOLKIT_EXCLUDE", 2)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): ModalExclusionType = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[ModalExclusionType] = ???
+    }
+
+
+    /** Modal dialogs block all input to some top-level windows.
+     *  Whether a particular window is blocked depends on dialog's type
+     *  of modality; this is called the "scope of blocking". The
+     *  ModalityType enum specifies modal types and their
+     *  associated scopes.
+     */
+    class ModalityType private (name: String, ordinal: Int) extends Enum[ModalityType](name, ordinal) {
+    }
+
+    object ModalityType {
+        /** An APPLICATION_MODAL dialog blocks all top-level windows
+         *  from the same Java application except those from its own child hierarchy.
+         */
+        final val APPLICATION_MODAL: ModalityType = new ModalityType("APPLICATION_MODAL", 0)
+
+        /** A DOCUMENT_MODAL dialog blocks input to all top-level windows
+         *  from the same document except those from its own child hierarchy.
+         */
+        final val DOCUMENT_MODAL: ModalityType = new ModalityType("DOCUMENT_MODAL", 1)
+
+        /** MODELESS dialog doesn't block any top-level windows. */
+        final val MODELESS: ModalityType = new ModalityType("MODELESS", 2)
+
+        /** A TOOLKIT_MODAL dialog blocks all top-level windows run
+         *  from the same toolkit except those from its own child hierarchy.
+         */
+        final val TOOLKIT_MODAL: ModalityType = new ModalityType("TOOLKIT_MODAL", 3)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): ModalityType = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[ModalityType] = ???
+    }
+
 
     /** Default modality type for modal dialogs. */
     @stub

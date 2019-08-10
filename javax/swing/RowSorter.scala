@@ -144,6 +144,33 @@ abstract class RowSorter[M] extends Object {
 }
 
 object RowSorter {
-    /** SortKey describes the sort order for a particular column. */
-    type SortKey = RowSorter_SortKey
+    /** SortKey describes the sort order for a particular column.  The
+     *  column index is in terms of the underlying model, which may differ
+     *  from that of the view.
+     */
+    object SortKey extends Object {
+
+        /** Creates a SortKey for the specified column with
+         *  the specified sort order.
+         */
+        @stub
+        def apply(column: Int, sortOrder: SortOrder) = ???
+
+        /** Returns true if this object equals the specified object. */
+        @stub
+        def equals(o: Any): Boolean = ???
+
+        /** Returns the index of the column. */
+        @stub
+        def getColumn(): Int = ???
+
+        /** Returns the sort order of the column. */
+        @stub
+        def getSortOrder(): SortOrder = ???
+
+        /** Returns the hash code for this SortKey. */
+        @stub
+        def hashCode(): Int = ???
+    }
+
 }

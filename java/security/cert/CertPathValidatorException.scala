@@ -1,6 +1,7 @@
 package java.security.cert
 
-import java.lang.{Exception, Object, String, Throwable}
+import java.io.Serializable
+import java.lang.{Enum, Exception, Object, String, Throwable}
 import java.security.GeneralSecurityException
 import scala.scalanative.annotation.stub
 
@@ -86,8 +87,44 @@ object CertPathValidatorException {
     /** The BasicReason enumerates the potential reasons that a certification
      *  path of any type may be invalid.
      */
-    type BasicReason = CertPathValidatorException_BasicReason
+    class BasicReason private (name: String, ordinal: Int) extends Enum[BasicReason](name, ordinal) with CertPathValidatorException.Reason {
+    }
+
+    object BasicReason {
+        /** The public key or the signature algorithm has been constrained. */
+        final val ALGORITHM_CONSTRAINED: BasicReason = new BasicReason("ALGORITHM_CONSTRAINED", 0)
+
+        /** The certificate is expired. */
+        final val EXPIRED: BasicReason = new BasicReason("EXPIRED", 1)
+
+        /** The signature is invalid. */
+        final val INVALID_SIGNATURE: BasicReason = new BasicReason("INVALID_SIGNATURE", 2)
+
+        /** The certificate is not yet valid. */
+        final val NOT_YET_VALID: BasicReason = new BasicReason("NOT_YET_VALID", 3)
+
+        /** The certificate is revoked. */
+        final val REVOKED: BasicReason = new BasicReason("REVOKED", 4)
+
+        /** The revocation status of the certificate could not be determined. */
+        final val UNDETERMINED_REVOCATION_STATUS: BasicReason = new BasicReason("UNDETERMINED_REVOCATION_STATUS", 5)
+
+        /** Unspecified reason. */
+        final val UNSPECIFIED: BasicReason = new BasicReason("UNSPECIFIED", 6)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): BasicReason = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[BasicReason] = ???
+    }
+
 
     /** The reason the validation algorithm failed. */
-    type Reason = CertPathValidatorException_Reason
+    trait Reason extends Serializable {
+
 }

@@ -62,38 +62,38 @@ class RoundingMode private (name: String, ordinal: Int) extends Enum[RoundingMod
 
 object RoundingMode {
     /** Rounding mode to round towards positive infinity. */
-    final val CEILING = new RoundingMode(CEILING, 0)
+    final val CEILING: RoundingMode = new RoundingMode("CEILING", 0)
 
     /** Rounding mode to round towards zero. */
-    final val DOWN = new RoundingMode(DOWN, 1)
+    final val DOWN: RoundingMode = new RoundingMode("DOWN", 1)
 
     /** Rounding mode to round towards negative infinity. */
-    final val FLOOR = new RoundingMode(FLOOR, 2)
+    final val FLOOR: RoundingMode = new RoundingMode("FLOOR", 2)
 
     /** Rounding mode to round towards "nearest neighbor"
      *  unless both neighbors are equidistant, in which case round
      *  down.
      */
-    final val HALF_DOWN = new RoundingMode(HALF_DOWN, 3)
+    final val HALF_DOWN: RoundingMode = new RoundingMode("HALF_DOWN", 3)
 
     /** Rounding mode to round towards the "nearest neighbor"
      *  unless both neighbors are equidistant, in which case, round
      *  towards the even neighbor.
      */
-    final val HALF_EVEN = new RoundingMode(HALF_EVEN, 4)
+    final val HALF_EVEN: RoundingMode = new RoundingMode("HALF_EVEN", 4)
 
     /** Rounding mode to round towards "nearest neighbor"
      *  unless both neighbors are equidistant, in which case round up.
      */
-    final val HALF_UP = new RoundingMode(HALF_UP, 5)
+    final val HALF_UP: RoundingMode = new RoundingMode("HALF_UP", 5)
 
     /** Rounding mode to assert that the requested operation has an exact
      *  result, hence no rounding is necessary.
      */
-    final val UNNECESSARY = new RoundingMode(UNNECESSARY, 6)
+    final val UNNECESSARY: RoundingMode = new RoundingMode("UNNECESSARY", 6)
 
     /** Rounding mode to round away from zero. */
-    final val UP = new RoundingMode(UP, 7)
+    final val UP: RoundingMode = new RoundingMode("UP", 7)
 
     /** Returns the RoundingMode object corresponding to a
      *  legacy integer rounding mode constant in BigDecimal.

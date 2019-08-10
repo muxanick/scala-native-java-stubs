@@ -1,11 +1,11 @@
 package javax.swing.plaf.basic
 
 import java.awt.{Component.BaselineResizeBehavior, Dimension, Graphics, Point, Rectangle}
-import java.awt.event.FocusListener
-import java.beans.PropertyChangeListener
+import java.awt.event.{FocusEvent, FocusListener, MouseEvent}
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.Object
 import javax.swing.{CellRendererPane, JComponent, JList, ListCellRenderer, ListModel, ListSelectionModel}
-import javax.swing.event.{ListDataListener, ListSelectionListener, MouseInputListener}
+import javax.swing.event.{ListDataEvent, ListDataListener, ListSelectionEvent, ListSelectionListener, MouseInputListener}
 import javax.swing.plaf.{ComponentUI, ListUI}
 import scala.scalanative.annotation.stub
 
@@ -20,27 +20,175 @@ class BasicListUI extends ListUI {
     @stub
     def this() = ???
 
-    /** This class should be treated as a "protected" inner class. */
-    type FocusHandler = BasicListUI_FocusHandler
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicListUI.
+     */
+    class FocusHandler extends Object with FocusListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when a component gains the keyboard focus. */
+        @stub
+        def focusGained(e: FocusEvent): Unit = ???
+
+        /** Invoked when a component loses the keyboard focus. */
+        @stub
+        def focusLost(e: FocusEvent): Unit = ???
+
+        /**  */
+        @stub
+        protected def repaintCellFocus(): Unit = ???
+    }
+
 
     /** The ListDataListener that's added to the JLists model at
      *  installUI time, and whenever the JList.model property changes.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    type ListDataHandler = BasicListUI_ListDataHandler
+    class ListDataHandler extends Object with ListDataListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Sent when the contents of the list has changed in a way
+         *  that's too complex to characterize with the previous
+         *  methods.
+         */
+        @stub
+        def contentsChanged(e: ListDataEvent): Unit = ???
+
+        /** Sent after the indices in the index0,index1
+         *  interval have been inserted in the data model.
+         */
+        @stub
+        def intervalAdded(e: ListDataEvent): Unit = ???
+
+        /** Sent after the indices in the index0,index1 interval
+         *  have been removed from the data model.
+         */
+        @stub
+        def intervalRemoved(e: ListDataEvent): Unit = ???
+    }
+
 
     /** The ListSelectionListener that's added to the JLists selection
      *  model at installUI time, and whenever the JList.selectionModel property
-     *  changes.
+     *  changes.  When the selection changes we repaint the affected rows.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    type ListSelectionHandler = BasicListUI_ListSelectionHandler
+    class ListSelectionHandler extends Object with ListSelectionListener {
 
-    /** Mouse input, and focus handling for JList. */
-    type MouseInputHandler = BasicListUI_MouseInputHandler
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Called whenever the value of the selection changes. */
+        @stub
+        def valueChanged(e: ListSelectionEvent): Unit = ???
+    }
+
+
+    /** Mouse input, and focus handling for JList.  An instance of this
+     *  class is added to the appropriate java.awt.Component lists
+     *  at installUI() time.  Note keyboard input is handled with JComponent
+     *  KeyboardActions, see installKeyboardActions().
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
+     */
+    class MouseInputHandler extends Object with MouseInputListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when the mouse button has been clicked (pressed
+         *  and released) on a component.
+         */
+        @stub
+        def mouseClicked(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button is pressed on a component and then
+         *  dragged.
+         */
+        @stub
+        def mouseDragged(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse enters a component. */
+        @stub
+        def mouseEntered(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse exits a component. */
+        @stub
+        def mouseExited(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse cursor has been moved onto a component
+         *  but no buttons have been pushed.
+         */
+        @stub
+        def mouseMoved(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button has been pressed on a component. */
+        @stub
+        def mousePressed(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button has been released on a component. */
+        @stub
+        def mouseReleased(e: MouseEvent): Unit = ???
+    }
+
 
     /** The PropertyChangeListener that's added to the JList at
-     *  installUI time.
+     *  installUI time.  When the value of a JList property that
+     *  affects layout changes, we set a bit in updateLayoutStateNeeded.
+     *  If the JLists model changes we additionally remove our listeners
+     *  from the old model.  Likewise for the JList selectionModel.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    type PropertyChangeHandler = BasicListUI_PropertyChangeHandler
+    class PropertyChangeHandler extends Object with PropertyChangeListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** This method gets called when a bound property is changed. */
+        @stub
+        def propertyChange(e: PropertyChangeEvent): Unit = ???
+    }
+
 
     /**  */
     @stub

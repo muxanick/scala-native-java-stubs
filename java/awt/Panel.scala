@@ -1,7 +1,7 @@
 package java.awt
 
 import java.lang.Object
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole}
 import scala.scalanative.annotation.stub
 
 /** Panel is the simplest container class. A panel
@@ -22,9 +22,20 @@ class Panel extends Container with Accessible {
     def this(layout: LayoutManager) = ???
 
     /** This class implements accessibility support for the
-     *  Panel class.
+     *  Panel class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to panel user-interface elements.
      */
-    protected type AccessibleAWTPanel = Panel_AccessibleAWTPanel
+    protected class AccessibleAWTPanel extends Container.AccessibleAWTContainer {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+    }
+
 
     /** Creates the Panel's peer. */
     @stub

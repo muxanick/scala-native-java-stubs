@@ -7,7 +7,8 @@ import scala.scalanative.annotation.stub
  *  runtime in previous implementation versions.  It should never be accessed
  *  by application code.
  */
-@Deprecated trait RegistryHandler {
+@Deprecated
+trait RegistryHandler {
 
     /** Deprecated. 
      * no replacement.  As of the Java 2 platform v1.2, RMI no

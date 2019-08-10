@@ -405,7 +405,23 @@ object MessageFormat {
      *  AttributedCharacterIterator returned
      *  from MessageFormat.formatToCharacterIterator.
      */
-    type Field = MessageFormat_Field
+    object Field extends Format.Field {
+
+        /** Creates a Field with the specified name. */
+        @stub
+        protected def apply(name: String) = ???
+
+        /** Constant identifying a portion of a message that was generated
+         *  from an argument passed into formatToCharacterIterator.
+         */
+        @stub
+        val ARGUMENT: Field = ???
+
+        /** Resolves instances being deserialized to the predefined constants. */
+        @stub
+        protected def readResolve(): Any = ???
+    }
+
 
     /** Creates a MessageFormat with the given pattern and uses it
      *  to format the given arguments.

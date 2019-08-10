@@ -101,9 +101,9 @@ import scala.scalanative.annotation.stub
  *  since both of them map to a XML schema element with the same local
  *  name "foo".
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value = METHOD ) 
- final class XmlElementDecl extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value=METHOD)
+final class XmlElementDecl extends StaticAnnotation {
 
     /** local name of the XML element. */
     @stub

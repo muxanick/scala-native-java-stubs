@@ -14,19 +14,19 @@ class SignStyle private (name: String, ordinal: Int) extends Enum[SignStyle](nam
 
 object SignStyle {
     /** Style to always output the sign, where zero will output '+'. */
-    final val ALWAYS = new SignStyle(ALWAYS, 0)
+    final val ALWAYS: SignStyle = new SignStyle("ALWAYS", 0)
 
     /** Style to always output the sign if the value exceeds the pad width. */
-    final val EXCEEDS_PAD = new SignStyle(EXCEEDS_PAD, 1)
+    final val EXCEEDS_PAD: SignStyle = new SignStyle("EXCEEDS_PAD", 1)
 
     /** Style to never output sign, only outputting the absolute value. */
-    final val NEVER = new SignStyle(NEVER, 2)
+    final val NEVER: SignStyle = new SignStyle("NEVER", 2)
 
     /** Style to output the sign only if the value is negative. */
-    final val NORMAL = new SignStyle(NORMAL, 3)
+    final val NORMAL: SignStyle = new SignStyle("NORMAL", 3)
 
     /** Style to block negative values, throwing an exception on printing. */
-    final val NOT_NEGATIVE = new SignStyle(NOT_NEGATIVE, 4)
+    final val NOT_NEGATIVE: SignStyle = new SignStyle("NOT_NEGATIVE", 4)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

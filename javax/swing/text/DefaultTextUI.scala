@@ -11,7 +11,8 @@ import scala.scalanative.annotation.stub
  *  in the javax.swing.plaf.basic package and the class
  *  BasicTextUI replaces this class.
  */
-@Deprecated abstract class DefaultTextUI extends BasicTextUI {
+@Deprecated
+abstract class DefaultTextUI extends BasicTextUI {
 
     /** Deprecated.  */
     @stub

@@ -1,9 +1,11 @@
 package javax.swing.text
 
 import java.awt.{Color, Font}
+import java.io.Serializable
 import java.lang.{Object, String}
 import java.util.Enumeration
 import javax.swing.event.DocumentListener
+import javax.swing.undo.AbstractUndoableEdit
 import scala.scalanative.annotation.stub
 
 /** A document that can be marked up with character and paragraph
@@ -41,11 +43,85 @@ class DefaultStyledDocument extends AbstractDocument with StyledDocument {
 
     /** Class to manage changes to the element
      *  hierarchy.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    type ElementBuffer = DefaultStyledDocument_ElementBuffer
+    class ElementBuffer extends Object with Serializable {
 
-    /** Default root element for a document... */
-    protected type SectionElement = DefaultStyledDocument_SectionElement
+        /** Creates a new ElementBuffer. */
+        @stub
+        def this(root: Element) = ???
+
+        /** Changes content. */
+        @stub
+        def change(offset: Int, length: Int, de: AbstractDocument.DefaultDocumentEvent): Unit = ???
+
+        /** Updates the element structure in response to a change in the
+         *  document.
+         */
+        @stub
+        protected def changeUpdate(): Unit = ???
+
+        /** Creates a copy of this element, with a different
+         *  parent.
+         */
+        @stub
+        def clone(parent: Element, clonee: Element): Element = ???
+
+        /** Gets the root element. */
+        @stub
+        def getRootElement(): Element = ???
+
+        /** Inserts new content. */
+        @stub
+        def insert(offset: Int, length: Int, data: Array[DefaultStyledDocument.ElementSpec], de: AbstractDocument.DefaultDocumentEvent): Unit = ???
+
+        /** Inserts an update into the document. */
+        @stub
+        protected def insertUpdate(data: Array[DefaultStyledDocument.ElementSpec]): Unit = ???
+
+        /** Removes content. */
+        @stub
+        def remove(offset: Int, length: Int, de: AbstractDocument.DefaultDocumentEvent): Unit = ???
+
+        /** Updates the element structure in response to a removal from the
+         *  associated sequence in the document.
+         */
+        @stub
+        protected def removeUpdate(): Unit = ???
+    }
+
+
+    /** Default root element for a document... maps out the
+     *  paragraphs/lines contained.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
+     */
+    protected class SectionElement extends AbstractDocument.BranchElement {
+
+        /** Creates a new SectionElement. */
+        @stub
+        def this() = ???
+
+        /** Gets the name of the element. */
+        @stub
+        def getName(): String = ???
+    }
+
 
     /**  */
     @stub
@@ -156,10 +232,135 @@ object DefaultStyledDocument {
     /** An UndoableEdit used to remember AttributeSet changes to an
      *  Element.
      */
-    type AttributeUndoableEdit = DefaultStyledDocument_AttributeUndoableEdit
+    object AttributeUndoableEdit extends AbstractUndoableEdit {
 
-    /** Specification for building elements. */
-    type ElementSpec = DefaultStyledDocument_ElementSpec
+        /**  */
+        @stub
+        def apply(element: Element, newAttributes: AttributeSet, isReplacing: Boolean) = ???
+
+        /**  */
+        @stub
+        protected val copy: AttributeSet = ???
+
+        /**  */
+        @stub
+        protected val element: Element = ???
+
+        /**  */
+        @stub
+        protected val isReplacing: Boolean = ???
+
+        /**  */
+        @stub
+        protected val newAttributes: AttributeSet = ???
+
+        /** Redoes a change. */
+        @stub
+        def redo(): Unit = ???
+
+        /** Undoes a change. */
+        @stub
+        def undo(): Unit = ???
+    }
+
+
+    /** Specification for building elements.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
+     */
+    object ElementSpec extends Object {
+
+        /** Constructor useful for markup when the markup will not
+         *  be stored in the document.
+         */
+        @stub
+        def apply(a: AttributeSet, type: Short) = ???
+
+        /** Constructor for creating a spec externally for batch
+         *  input of content and markup into the document.
+         */
+        @stub
+        def apply(a: AttributeSet, type: Short, txt: Array[Char], offs: Int, len: Int) = ???
+
+        /** Constructor for parsing inside the document when
+         *  the data has already been added, but len information
+         *  is needed.
+         */
+        @stub
+        def apply(a: AttributeSet, type: Short, len: Int) = ???
+
+        /** A possible value for getType. */
+        @stub
+        val ContentType: Short = ???
+
+        /** A possible value for getType. */
+        @stub
+        val EndTagType: Short = ???
+
+        /** A possible value for getDirection. */
+        @stub
+        val JoinFractureDirection: Short = ???
+
+        /** A possible value for getDirection. */
+        @stub
+        val JoinNextDirection: Short = ???
+
+        /** A possible value for getDirection. */
+        @stub
+        val JoinPreviousDirection: Short = ???
+
+        /** A possible value for getDirection. */
+        @stub
+        val OriginateDirection: Short = ???
+
+        /** A possible value for getType. */
+        @stub
+        val StartTagType: Short = ???
+
+        /** Gets the array of characters. */
+        @stub
+        def getArray(): Array[Char] = ???
+
+        /** Gets the element attributes. */
+        @stub
+        def getAttributes(): AttributeSet = ???
+
+        /** Gets the direction. */
+        @stub
+        def getDirection(): Short = ???
+
+        /** Gets the length. */
+        @stub
+        def getLength(): Int = ???
+
+        /** Gets the starting offset. */
+        @stub
+        def getOffset(): Int = ???
+
+        /** Gets the element type. */
+        @stub
+        def getType(): Short = ???
+
+        /** Sets the direction. */
+        @stub
+        def setDirection(direction: Short): Unit = ???
+
+        /** Sets the element type. */
+        @stub
+        def setType(type: Short): Unit = ???
+
+        /** Converts the element to a string. */
+        @stub
+        def toString(): String = ???
+    }
+
 
     /** The default size of the initial content buffer. */
     @stub

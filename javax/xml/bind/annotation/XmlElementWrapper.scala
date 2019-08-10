@@ -54,9 +54,9 @@ import scala.scalanative.annotation.stub
  *  See "Package Specification" in javax.xml.bind.package javadoc for
  *  additional common information.
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value ={ FIELD , METHOD } ) 
- final class XmlElementWrapper extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value={FIELD,METHOD})
+final class XmlElementWrapper extends StaticAnnotation {
 
     /** Name of the XML wrapper element. */
     @stub

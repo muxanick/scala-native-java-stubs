@@ -45,8 +45,8 @@ import scala.scalanative.annotation.stub
  *  service except in the case of EJBs where the EJB can handle exceptions and
  *  even recover from them.
  */
-@Documented 
-@Retention ( value = RUNTIME ) 
-@Target ( value = METHOD ) 
- final class PostConstruct extends StaticAnnotation {
+@Documented
+@Retention(value=RUNTIME)
+@Target(value=METHOD)
+final class PostConstruct extends StaticAnnotation {
 }

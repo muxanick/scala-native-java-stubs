@@ -13,10 +13,10 @@ import scala.scalanative.annotation.stub
  *  overloading conflicts in document literal mode. Only the className
  *  is required in this case.
  */
-@Target ( value = METHOD ) 
-@Retention ( value = RUNTIME ) 
-@Documented 
- final class ResponseWrapper extends StaticAnnotation {
+@Target(value=METHOD)
+@Retention(value=RUNTIME)
+@Documented
+final class ResponseWrapper extends StaticAnnotation {
 
     /** Response wrapper bean name. */
     @stub

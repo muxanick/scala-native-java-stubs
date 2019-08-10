@@ -1,6 +1,6 @@
 package javax.swing
 
-import java.awt.event.{MouseAdapter, MouseEvent, MouseMotionListener}
+import java.awt.event.{ActionEvent, ActionListener, MouseAdapter, MouseEvent, MouseMotionListener}
 import java.lang.Object
 import scala.scalanative.annotation.stub
 
@@ -23,13 +23,43 @@ import scala.scalanative.annotation.stub
 class ToolTipManager extends MouseAdapter with MouseMotionListener {
 
     /**  */
-    protected type insideTimerAction = ToolTipManager_insideTimerAction
+    protected class insideTimerAction extends Object with ActionListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
 
     /**  */
-    protected type outsideTimerAction = ToolTipManager_outsideTimerAction
+    protected class outsideTimerAction extends Object with ActionListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
 
     /**  */
-    protected type stillInsideTimerAction = ToolTipManager_stillInsideTimerAction
+    protected class stillInsideTimerAction extends Object with ActionListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
 
     /**  */
     @stub

@@ -1,14 +1,14 @@
 package javax.swing.plaf.metal
 
 import java.awt.{Component, Graphics, Point}
-import java.awt.event.ContainerListener
+import java.awt.event.{ContainerListener, MouseEvent}
 import java.beans.PropertyChangeListener
 import java.lang.Object
-import javax.swing.JComponent
+import javax.swing.{JComponent, JToolBar}
 import javax.swing.border.Border
 import javax.swing.event.MouseInputListener
 import javax.swing.plaf.{ComponentUI, ToolBarUI}
-import javax.swing.plaf.basic.BasicToolBarUI
+import javax.swing.plaf.basic.{BasicToolBarUI, BasicToolBarUI.DockingListener, BasicToolBarUI.PropertyListener, BasicToolBarUI.ToolBarContListener}
 import scala.scalanative.annotation.stub
 
 /** A Metal Look and Feel implementation of ToolBarUI.  This implementation
@@ -22,13 +22,41 @@ class MetalToolBarUI extends BasicToolBarUI {
     def this() = ???
 
     /**  */
-    protected type MetalContainerListener = MetalToolBarUI_MetalContainerListener
+    protected class MetalContainerListener extends BasicToolBarUI.ToolBarContListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+    }
+
 
     /**  */
-    protected type MetalDockingListener = MetalToolBarUI_MetalDockingListener
+    protected class MetalDockingListener extends BasicToolBarUI.DockingListener {
+
+        /**  */
+        @stub
+        def this(t: JToolBar) = ???
+
+        /** Invoked when a mouse button is pressed on a component and then
+         *  dragged.
+         */
+        @stub
+        def mouseDragged(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button has been pressed on a component. */
+        @stub
+        def mousePressed(e: MouseEvent): Unit = ???
+    }
+
 
     /**  */
-    protected type MetalRolloverListener = MetalToolBarUI_MetalRolloverListener
+    protected class MetalRolloverListener extends BasicToolBarUI.PropertyListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+    }
+
 
     /** This protected field is implementation specific. */
     @stub

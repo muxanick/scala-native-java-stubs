@@ -3,7 +3,7 @@ package javax.swing.plaf.basic
 import java.awt.{Color, Component.BaselineResizeBehavior, Dimension, Graphics, Insets, Point, Rectangle}
 import java.lang.{Object, String}
 import javax.swing.{JComponent, JProgressBar}
-import javax.swing.event.ChangeListener
+import javax.swing.event.{ChangeEvent, ChangeListener}
 import javax.swing.plaf.{ComponentUI, ProgressBarUI}
 import scala.scalanative.annotation.stub
 
@@ -14,8 +14,20 @@ class BasicProgressBarUI extends ProgressBarUI {
     @stub
     def this() = ???
 
-    /** This class should be treated as a "protected" inner class. */
-    type ChangeHandler = BasicProgressBarUI_ChangeHandler
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicProgressBarUI.
+     */
+    class ChangeHandler extends Object with ChangeListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when the target of the listener has changed its state. */
+        @stub
+        def stateChanged(e: ChangeEvent): Unit = ???
+    }
+
 
     /** Used to hold the location and size of the bouncing box (returned
      *  by getBox) to be painted.

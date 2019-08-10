@@ -1,7 +1,7 @@
 package javax.swing.text
 
-import java.awt.{Graphics, Shape}
-import java.lang.Object
+import java.awt.{Graphics, Rectangle, Shape}
+import java.lang.{Object, Runnable}
 import javax.swing.event.{DocumentEvent, DocumentEvent.ElementChange}
 import scala.scalanative.annotation.stub
 
@@ -27,14 +27,125 @@ class AsyncBoxView extends View {
 
     /** A class to manage the effective position of the
      *  child views in a localized area while changes are
-     *  being made around the localized area.
+     *  being made around the localized area.  The AsyncBoxView
+     *  may be continuously changing, but the visible area
+     *  needs to remain fairly stable until the layout thread
+     *  decides to publish an update to the parent.
      */
-    type ChildLocator = AsyncBoxView_ChildLocator
+    class ChildLocator extends Object {
+
+        /** construct a child locator. */
+        @stub
+        def this() = ???
+
+        /** A shape to use for the child allocation to avoid
+         *  creating a lot of garbage.
+         */
+        @stub
+        protected val childAlloc: Rectangle = ???
+
+        /** The last seen allocation (for repainting when changes
+         *  are flushed upward).
+         */
+        @stub
+        protected val lastAlloc: Rectangle = ???
+
+        /** The location of the last offset calculation
+         *  that is valid.
+         */
+        @stub
+        protected val lastValidOffset: AsyncBoxView.ChildState = ???
+
+        /** Notification that a child changed. */
+        @stub
+        def childChanged(cs: AsyncBoxView.ChildState): Unit = ???
+
+        /** Fetch the allocation to use for a child view. */
+        @stub
+        protected def getChildAllocation(index: Int): Shape = ???
+
+        /** Fetch the allocation to use for a child view. */
+        @stub
+        def getChildAllocation(index: Int, a: Shape): Shape = ???
+
+        /** Fetches the child view index at the given point. */
+        @stub
+        def getViewIndexAtPoint(x: Float, y: Float, a: Shape): Int = ???
+
+        /** Locate the view responsible for an offset into the box
+         *  along the major axis.
+         */
+        @stub
+        protected def getViewIndexAtVisualOffset(targetOffset: Float): Int = ???
+
+        /** Paint the children that intersect the clip area. */
+        @stub
+        def paintChildren(g: Graphics): Unit = ???
+
+        /** Copy the currently allocated shape into the Rectangle
+         *  used to store the current allocation.
+         */
+        @stub
+        protected def setAllocation(a: Shape): Unit = ???
+    }
+
 
     /** A record representing the layout state of a
-     *  child view.
+     *  child view.  It is runnable as a task on another
+     *  thread.  All access to the child view that is
+     *  based upon a read-lock on the model should synchronize
+     *  on this object (i.e. The layout thread and the GUI
+     *  thread can both have a read lock on the model at the
+     *  same time and are not protected from each other).
+     *  Access to a child view hierarchy is serialized via
+     *  synchronization on the ChildState instance.
      */
-    type ChildState = AsyncBoxView_ChildState
+    class ChildState extends Object with Runnable {
+
+        /** Construct a child status. */
+        @stub
+        def this(v: View) = ???
+
+        /** Fetch the child view this record represents */
+        @stub
+        def getChildView(): View = ???
+
+        /** Get the offset along the major axis */
+        @stub
+        def getMajorOffset(): Float = ???
+
+        /** What is the span along the major axis. */
+        @stub
+        def getMajorSpan(): Float = ???
+
+        /** What is the offset along the minor axis */
+        @stub
+        def getMinorOffset(): Float = ???
+
+        /** What is the span along the minor axis. */
+        @stub
+        def getMinorSpan(): Float = ???
+
+        /** Has the child view been laid out. */
+        @stub
+        def isLayoutValid(): Boolean = ???
+
+        /** Mark preferences changed for this child. */
+        @stub
+        def preferenceChanged(width: Boolean, height: Boolean): Unit = ???
+
+        /** Update the child state. */
+        @stub
+        def run(): Unit = ???
+
+        /** This method should only be called by the ChildLocator,
+         *  it is simply a convenient place to hold the cached
+         *  location.
+         */
+        @stub
+        def setMajorOffset(offs: Float): Unit = ???
+    }
+
 
     /** Object that manages the offsets of the
      *  children.

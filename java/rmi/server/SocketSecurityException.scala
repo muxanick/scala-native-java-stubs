@@ -6,7 +6,8 @@ import java.rmi.RemoteException
 import scala.scalanative.annotation.stub
 
 /** An obsolete subclass of ExportException. */
-@Deprecated class SocketSecurityException extends ExportException {
+@Deprecated
+class SocketSecurityException extends ExportException {
 
     /** Deprecated.  */
     @stub

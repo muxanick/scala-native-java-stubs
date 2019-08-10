@@ -27,7 +27,26 @@ abstract class Control extends Object {
 
 object Control {
     /** An instance of the Type class represents the type of
-     *  the control.
+     *  the control.  Static instances are provided for the
+     *  common types.
      */
-    type Type = Control_Type
+    object Type extends Object {
+
+        /** Constructs a new control type with the name specified. */
+        @stub
+        protected def apply(name: String) = ???
+
+        /** Finalizes the equals method */
+        @stub
+        def equals(obj: Any): Boolean = ???
+
+        /** Finalizes the hashCode method */
+        @stub
+        def hashCode(): Int = ???
+
+        /** Provides the String representation of the control type. */
+        @stub
+        def toString(): String = ???
+    }
+
 }

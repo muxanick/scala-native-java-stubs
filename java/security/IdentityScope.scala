@@ -23,7 +23,8 @@ import scala.scalanative.annotation.stub
  *  "Acme Software". No other named Identity in the scope has the same
  *  public  key. Of course, none has the same name as well.
  */
-@Deprecated abstract class IdentityScope extends Identity {
+@Deprecated
+abstract class IdentityScope extends Identity {
 
     /** Deprecated.  */
     @stub

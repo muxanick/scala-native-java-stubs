@@ -13,7 +13,8 @@ import scala.scalanative.annotation.stub
  *  a server-side entity that dispatches calls to the actual remote object
  *  implementation.
  */
-@Deprecated trait Skeleton {
+@Deprecated
+trait Skeleton {
 
     /** Deprecated. 
      * no replacement

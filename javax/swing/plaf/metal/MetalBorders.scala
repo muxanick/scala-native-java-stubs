@@ -1,7 +1,10 @@
 package javax.swing.plaf.metal
 
+import java.awt.{Component, Graphics, Insets}
 import java.lang.Object
-import javax.swing.border.Border
+import javax.swing.SwingConstants
+import javax.swing.border.{AbstractBorder, Border}
+import javax.swing.plaf.UIResource
 import scala.scalanative.annotation.stub
 
 /** Factory object that can vend Borders appropriate for the metal L & F. */
@@ -14,46 +17,258 @@ class MetalBorders extends Object {
 
 object MetalBorders {
     /**  */
-    type ButtonBorder = MetalBorders_ButtonBorder
+    object ButtonBorder extends AbstractBorder with UIResource {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /**  */
+        @stub
+        protected val borderInsets: Insets = ???
+
+        /** Reinitializes the insets parameter with this Border's current Insets. */
+        @stub
+        def getBorderInsets(c: Component, newInsets: Insets): Insets = ???
+
+        /** This default implementation does no painting. */
+        @stub
+        def paintBorder(c: Component, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
+    }
+
 
     /**  */
-    type Flush3DBorder = MetalBorders_Flush3DBorder
+    object Flush3DBorder extends AbstractBorder with UIResource {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /** Reinitializes the insets parameter with this Border's current Insets. */
+        @stub
+        def getBorderInsets(c: Component, newInsets: Insets): Insets = ???
+
+        /** This default implementation does no painting. */
+        @stub
+        def paintBorder(c: Component, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
+    }
+
 
     /**  */
-    type InternalFrameBorder = MetalBorders_InternalFrameBorder
+    object InternalFrameBorder extends AbstractBorder with UIResource {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /** Reinitializes the insets parameter with this Border's current Insets. */
+        @stub
+        def getBorderInsets(c: Component, newInsets: Insets): Insets = ???
+
+        /** This default implementation does no painting. */
+        @stub
+        def paintBorder(c: Component, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
+    }
+
 
     /**  */
-    type MenuBarBorder = MetalBorders_MenuBarBorder
+    object MenuBarBorder extends AbstractBorder with UIResource {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /**  */
+        @stub
+        protected val borderInsets: Insets = ???
+
+        /** Reinitializes the insets parameter with this Border's current Insets. */
+        @stub
+        def getBorderInsets(c: Component, newInsets: Insets): Insets = ???
+
+        /** This default implementation does no painting. */
+        @stub
+        def paintBorder(c: Component, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
+    }
+
 
     /**  */
-    type MenuItemBorder = MetalBorders_MenuItemBorder
+    object MenuItemBorder extends AbstractBorder with UIResource {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /**  */
+        @stub
+        protected val borderInsets: Insets = ???
+
+        /** Reinitializes the insets parameter with this Border's current Insets. */
+        @stub
+        def getBorderInsets(c: Component, newInsets: Insets): Insets = ???
+
+        /** This default implementation does no painting. */
+        @stub
+        def paintBorder(c: Component, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
+    }
+
 
     /**  */
-    type OptionDialogBorder = MetalBorders_OptionDialogBorder
+    object OptionDialogBorder extends AbstractBorder with UIResource {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /** Reinitializes the insets parameter with this Border's current Insets. */
+        @stub
+        def getBorderInsets(c: Component, newInsets: Insets): Insets = ???
+
+        /** This default implementation does no painting. */
+        @stub
+        def paintBorder(c: Component, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
+    }
+
 
     /** Border for a Palette. */
-    type PaletteBorder = MetalBorders_PaletteBorder
+    object PaletteBorder extends AbstractBorder with UIResource {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /** Reinitializes the insets parameter with this Border's current Insets. */
+        @stub
+        def getBorderInsets(c: Component, newInsets: Insets): Insets = ???
+
+        /** This default implementation does no painting. */
+        @stub
+        def paintBorder(c: Component, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
+    }
+
 
     /**  */
-    type PopupMenuBorder = MetalBorders_PopupMenuBorder
+    object PopupMenuBorder extends AbstractBorder with UIResource {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /**  */
+        @stub
+        protected val borderInsets: Insets = ???
+
+        /** Reinitializes the insets parameter with this Border's current Insets. */
+        @stub
+        def getBorderInsets(c: Component, newInsets: Insets): Insets = ???
+
+        /** This default implementation does no painting. */
+        @stub
+        def paintBorder(c: Component, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
+    }
+
 
     /**  */
-    type RolloverButtonBorder = MetalBorders_RolloverButtonBorder
+    object RolloverButtonBorder extends MetalBorders.ButtonBorder {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /** This default implementation does no painting. */
+        @stub
+        def paintBorder(c: Component, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
+    }
+
 
     /**  */
-    type ScrollPaneBorder = MetalBorders_ScrollPaneBorder
+    object ScrollPaneBorder extends AbstractBorder with UIResource {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /** Reinitializes the insets parameter with this Border's current Insets. */
+        @stub
+        def getBorderInsets(c: Component, insets: Insets): Insets = ???
+
+        /** This default implementation does no painting. */
+        @stub
+        def paintBorder(c: Component, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
+    }
+
 
     /** Border for a Table Header */
-    type TableHeaderBorder = MetalBorders_TableHeaderBorder
+    object TableHeaderBorder extends AbstractBorder {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /**  */
+        @stub
+        protected val editorBorderInsets: Insets = ???
+
+        /** Reinitializes the insets parameter with this Border's current Insets. */
+        @stub
+        def getBorderInsets(c: Component, insets: Insets): Insets = ???
+
+        /** This default implementation does no painting. */
+        @stub
+        def paintBorder(c: Component, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
+    }
+
 
     /**  */
-    type TextFieldBorder = MetalBorders_TextFieldBorder
+    object TextFieldBorder extends MetalBorders.Flush3DBorder {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /** This default implementation does no painting. */
+        @stub
+        def paintBorder(c: Component, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
+    }
+
+
+    /** 
+     * Since:
+     * 1.3
+     * 
+     */
+    object ToggleButtonBorder extends MetalBorders.ButtonBorder {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /** This default implementation does no painting. */
+        @stub
+        def paintBorder(c: Component, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
+    }
+
 
     /**  */
-    type ToggleButtonBorder = MetalBorders_ToggleButtonBorder
+    object ToolBarBorder extends AbstractBorder with UIResource with SwingConstants {
 
-    /**  */
-    type ToolBarBorder = MetalBorders_ToolBarBorder
+        /**  */
+        @stub
+        def apply() = ???
+
+        /**  */
+        @stub
+        protected val bumps: javax.swing.plaf.metal.MetalBumps = ???
+
+        /** Reinitializes the insets parameter with this Border's current Insets. */
+        @stub
+        def getBorderInsets(c: Component, newInsets: Insets): Insets = ???
+
+        /** This default implementation does no painting. */
+        @stub
+        def paintBorder(c: Component, g: Graphics, x: Int, y: Int, w: Int, h: Int): Unit = ???
+    }
+
 
     /** Returns a border instance for a JButton */
     @stub

@@ -14,24 +14,24 @@ object AclEntryFlag {
     /** Can be placed on a directory and indicates that the ACL entry should be
      *  added to each new directory created.
      */
-    final val DIRECTORY_INHERIT = new AclEntryFlag(DIRECTORY_INHERIT, 0)
+    final val DIRECTORY_INHERIT: AclEntryFlag = new AclEntryFlag("DIRECTORY_INHERIT", 0)
 
     /** Can be placed on a directory and indicates that the ACL entry should be
      *  added to each new non-directory file created.
      */
-    final val FILE_INHERIT = new AclEntryFlag(FILE_INHERIT, 1)
+    final val FILE_INHERIT: AclEntryFlag = new AclEntryFlag("FILE_INHERIT", 1)
 
     /** Can be placed on a directory but does not apply to the directory,
      *  only to newly created files/directories as specified by the
      *  FILE_INHERIT and DIRECTORY_INHERIT flags.
      */
-    final val INHERIT_ONLY = new AclEntryFlag(INHERIT_ONLY, 2)
+    final val INHERIT_ONLY: AclEntryFlag = new AclEntryFlag("INHERIT_ONLY", 2)
 
     /** Can be placed on a directory to indicate that the ACL entry should not
      *  be placed on the newly created directory which is inheritable by
      *  subdirectories of the created directory.
      */
-    final val NO_PROPAGATE_INHERIT = new AclEntryFlag(NO_PROPAGATE_INHERIT, 3)
+    final val NO_PROPAGATE_INHERIT: AclEntryFlag = new AclEntryFlag("NO_PROPAGATE_INHERIT", 3)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

@@ -1,6 +1,6 @@
 package javax.xml.crypto
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.security.Key
 import javax.xml.crypto.dsig.keyinfo.KeyInfo
 import scala.scalanative.annotation.stub
@@ -25,7 +25,31 @@ abstract class KeySelector extends Object {
 
 object KeySelector {
     /** The purpose of the key that is to be selected. */
-    type Purpose = KeySelector_Purpose
+    object Purpose extends Object {
+
+        /** A key for decrypting. */
+        @stub
+        val DECRYPT: Purpose = ???
+
+        /** A key for encrypting. */
+        @stub
+        val ENCRYPT: Purpose = ???
+
+        /** A key for signing. */
+        @stub
+        val SIGN: Purpose = ???
+
+        /** A key for verifying. */
+        @stub
+        val VERIFY: Purpose = ???
+
+        /** Returns a string representation of this purpose ("sign",
+         *  "verify", "encrypt", or "decrypt").
+         */
+        @stub
+        def toString(): String = ???
+    }
+
 
     /** Returns a KeySelector that always selects the specified
      *  key, regardless of the KeyInfo passed to it.

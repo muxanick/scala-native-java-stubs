@@ -1,6 +1,6 @@
 package java.awt
 
-import java.lang.{Object, String}
+import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** The GraphicsDevice class describes the graphics devices
@@ -115,7 +115,40 @@ abstract class GraphicsDevice extends Object {
 
 object GraphicsDevice {
     /** Kinds of translucency supported by the underlying system. */
-    type WindowTranslucency = GraphicsDevice_WindowTranslucency
+    class WindowTranslucency private (name: String, ordinal: Int) extends Enum[WindowTranslucency](name, ordinal) {
+    }
+
+    object WindowTranslucency {
+        /** Represents support in the underlying system for windows that
+         *  contain or might contain pixels with arbitrary alpha values
+         *  between and including 0.0 and 1.0.
+         */
+        final val PERPIXEL_TRANSLUCENT: WindowTranslucency = new WindowTranslucency("PERPIXEL_TRANSLUCENT", 0)
+
+        /** Represents support in the underlying system for windows each pixel
+         *  of which is guaranteed to be either completely opaque, with
+         *  an alpha value of 1.0, or completely transparent, with an alpha
+         *  value of 0.0.
+         */
+        final val PERPIXEL_TRANSPARENT: WindowTranslucency = new WindowTranslucency("PERPIXEL_TRANSPARENT", 1)
+
+        /** Represents support in the underlying system for windows all of
+         *  the pixels of which have the same alpha value between or including
+         *  0.0 and 1.0.
+         */
+        final val TRANSLUCENT: WindowTranslucency = new WindowTranslucency("TRANSLUCENT", 2)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): WindowTranslucency = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[WindowTranslucency] = ???
+    }
+
 
     /** Device is an image buffer. */
     @stub

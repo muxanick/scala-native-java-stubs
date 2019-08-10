@@ -23,11 +23,11 @@ import scala.scalanative.annotation.stub
  *  This annotation's behaviour is defined by the corresponding feature
  *  RespectBindingFeature.
  */
-@Target ( value ={ TYPE , METHOD , FIELD } ) 
-@Retention ( value = RUNTIME ) 
-@Documented 
-@WebServiceFeatureAnnotation ( id ="javax.xml.ws.RespectBindingFeature" , bean = RespectBindingFeature.class ) 
- final class RespectBinding extends StaticAnnotation {
+@Target(value={TYPE,METHOD,FIELD})
+@Retention(value=RUNTIME)
+@Documented
+@WebServiceFeatureAnnotation(id="javax.xml.ws.RespectBindingFeature",bean=RespectBindingFeature.class)
+final class RespectBinding extends StaticAnnotation {
 
     /** Specifies if this feature is enabled or disabled. */
     @stub

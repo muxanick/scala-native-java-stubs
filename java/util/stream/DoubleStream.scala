@@ -214,8 +214,30 @@ trait DoubleStream extends BaseStream[Double, DoubleStream] {
 }
 
 object DoubleStream {
-    /** A mutable builder for a DoubleStream. */
-    type Builder = DoubleStream_Builder
+    /** A mutable builder for a DoubleStream.
+     * 
+     *  A stream builder has a lifecycle, which starts in a building
+     *  phase, during which elements can be added, and then transitions to a built
+     *  phase, after which elements may not be added.  The built phase
+     *  begins when the build() method is called, which creates an
+     *  ordered stream whose elements are the elements that were added to the
+     *  stream builder, in the order they were added.
+     */
+    trait Builder extends DoubleConsumer {
+
+        /** Adds an element to the stream being built. */
+        @stub
+        def accept(t: Double): Unit = ???
+
+        /** Adds an element to the stream being built. */
+        @stub
+        def add(t: Double): Builder = ???
+
+        /** Builds the stream, transitioning this builder to the built state. */
+        @stub
+        def build(): DoubleStream = ???
+    }
+
 
     /** Returns a builder for a DoubleStream. */
     @stub

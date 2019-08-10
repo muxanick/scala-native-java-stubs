@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is applyAsInt(int, int).
  */
-@FunctionalInterface trait IntBinaryOperator {
+@FunctionalInterface
+trait IntBinaryOperator {
 
     /** Applies this operator to the given operands. */
     @stub

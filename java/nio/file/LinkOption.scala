@@ -9,7 +9,7 @@ class LinkOption private (name: String, ordinal: Int) extends Enum[LinkOption](n
 
 object LinkOption {
     /** Do not follow symbolic links. */
-    final val NOFOLLOW_LINKS = new LinkOption(NOFOLLOW_LINKS, 0)
+    final val NOFOLLOW_LINKS: LinkOption = new LinkOption("NOFOLLOW_LINKS", 0)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

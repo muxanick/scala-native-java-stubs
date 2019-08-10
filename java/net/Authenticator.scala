@@ -1,6 +1,6 @@
 package java.net
 
-import java.lang.{Object, String}
+import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** The class Authenticator represents an object that knows how to obtain
@@ -69,7 +69,27 @@ abstract class Authenticator extends Object {
 
 object Authenticator {
     /** The type of the entity requesting authentication. */
-    type RequestorType = Authenticator_RequestorType
+    class RequestorType private (name: String, ordinal: Int) extends Enum[RequestorType](name, ordinal) {
+    }
+
+    object RequestorType {
+        /** Entity requesting authentication is a HTTP proxy server. */
+        final val PROXY: RequestorType = new RequestorType("PROXY", 0)
+
+        /** Entity requesting authentication is a HTTP origin server. */
+        final val SERVER: RequestorType = new RequestorType("SERVER", 1)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): RequestorType = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[RequestorType] = ???
+    }
+
 
     /** Ask the authenticator that has been registered with the system
      *  for a password.

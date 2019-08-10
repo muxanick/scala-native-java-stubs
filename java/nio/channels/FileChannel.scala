@@ -1,6 +1,6 @@
 package java.nio.channels
 
-import java.lang.Object
+import java.lang.{Object, String}
 import java.nio.{ByteBuffer, MappedByteBuffer}
 import java.nio.channels.spi.AbstractInterruptibleChannel
 import java.nio.file.{OpenOption, Path}
@@ -186,7 +186,25 @@ abstract class FileChannel extends AbstractInterruptibleChannel with SeekableByt
 
 object FileChannel {
     /** A typesafe enumeration for file-mapping modes. */
-    type MapMode = FileChannel_MapMode
+    object MapMode extends Object {
+
+        /** Mode for a private (copy-on-write) mapping. */
+        @stub
+        val PRIVATE: MapMode = ???
+
+        /** Mode for a read-only mapping. */
+        @stub
+        val READ_ONLY: MapMode = ???
+
+        /** Mode for a read/write mapping. */
+        @stub
+        val READ_WRITE: MapMode = ???
+
+        /** Returns a string describing this file-mapping mode. */
+        @stub
+        def toString(): String = ???
+    }
+
 
     /** Opens or creates a file, returning a file channel to access the file. */
     @stub

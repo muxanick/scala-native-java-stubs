@@ -1,5 +1,6 @@
 package javax.swing.text
 
+import java.lang.{Object, String}
 import scala.scalanative.annotation.stub
 
 /** Represents a location within a document.  It is intended to abstract away
@@ -30,7 +31,29 @@ trait Position {
 
 object Position {
     /** A typesafe enumeration to indicate bias to a position
-     *  in the model.
+     *  in the model.  A position indicates a location between
+     *  two characters.  The bias can be used to indicate an
+     *  interest toward one of the two sides of the position
+     *  in boundary conditions where a simple offset is
+     *  ambiguous.
      */
-    type Bias = Position_Bias
+    final object Bias extends Object {
+
+        /** Indicates a bias toward the previous character
+         *  in the model.
+         */
+        @stub
+        val Backward: Bias = ???
+
+        /** Indicates to bias toward the next character
+         *  in the model.
+         */
+        @stub
+        val Forward: Bias = ???
+
+        /** string representation */
+        @stub
+        def toString(): String = ???
+    }
+
 }

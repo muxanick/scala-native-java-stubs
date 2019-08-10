@@ -230,25 +230,121 @@ class UIDefaults extends Hashtable[Object, Object] {
 object UIDefaults {
     /** This class enables one to store an entry in the defaults
      *  table that's constructed each time it's looked up with one of
-     *  the getXXX(key) methods.
+     *  the getXXX(key) methods. Here's an example of
+     *  an ActiveValue that constructs a
+     *  DefaultListCellRenderer:
+     *  
+     *   Object cellRendererActiveValue = new UIDefaults.ActiveValue() {
+     *       public Object createValue(UIDefaults table) {
+     *           return new DefaultListCellRenderer();
+     *       }
+     *   };
+     * 
+     *   uiDefaultsTable.put("MyRenderer", cellRendererActiveValue);
+     *  
      */
-    type ActiveValue = UIDefaults_ActiveValue
+    trait ActiveValue {
+
+        /** Creates the value retrieved from the UIDefaults table. */
+        @stub
+        def createValue(table: UIDefaults): Any = ???
+    }
+
 
     /** LazyInputMap will create a InputMap
      *  in its createValue
-     *  method.
+     *  method. The bindings are passed in in the constructor.
+     *  The bindings are an array with
+     *  the even number entries being string KeyStrokes
+     *  (eg "alt SPACE") and
+     *  the odd number entries being the value to use in the
+     *  InputMap (and the key in the ActionMap).
      */
-    type LazyInputMap = UIDefaults_LazyInputMap
+    object LazyInputMap extends Object with UIDefaults.LazyValue {
+
+        /**  */
+        @stub
+        def apply(bindings: Array[Object]) = ???
+
+        /** Creates an InputMap with the bindings that are
+         *  passed in.
+         */
+        @stub
+        def createValue(table: UIDefaults): Any = ???
+    }
+
 
     /** This class enables one to store an entry in the defaults
      *  table that isn't constructed until the first time it's
      *  looked up with one of the getXXX(key) methods.
+     *  Lazy values are useful for defaults that are expensive
+     *  to construct or are seldom retrieved.  The first time
+     *  a LazyValue is retrieved its "real value" is computed
+     *  by calling LazyValue.createValue() and the real
+     *  value is used to replace the LazyValue in the
+     *  UIDefaults
+     *  table.  Subsequent lookups for the same key return
+     *  the real value.  Here's an example of a LazyValue
+     *  that constructs a Border:
+     *  
+     *   Object borderLazyValue = new UIDefaults.LazyValue() {
+     *       public Object createValue(UIDefaults table) {
+     *           return new BorderFactory.createLoweredBevelBorder();
+     *       }
+     *   };
+     * 
+     *   uiDefaultsTable.put("MyBorder", borderLazyValue);
+     *  
      */
-    type LazyValue = UIDefaults_LazyValue
+    trait LazyValue {
+
+        /** Creates the actual value retrieved from the UIDefaults
+         *  table.
+         */
+        @stub
+        def createValue(table: UIDefaults): Any = ???
+    }
+
 
     /** This class provides an implementation of LazyValue
      *  which can be
      *  used to delay loading of the Class for the instance to be created.
+     *  It also avoids creation of an anonymous inner class for the
+     *  LazyValue
+     *  subclass.  Both of these improve performance at the time that a
+     *  a Look and Feel is loaded, at the cost of a slight performance
+     *  reduction the first time createValue is called
+     *  (since Reflection APIs are used).
      */
-    type ProxyLazyValue = UIDefaults_ProxyLazyValue
+    object ProxyLazyValue extends Object with UIDefaults.LazyValue {
+
+        /** Creates a LazyValue which will construct an instance
+         *  when asked.
+         */
+        @stub
+        def apply(c: String) = ???
+
+        /** Creates a LazyValue which will construct an instance
+         *  when asked.
+         */
+        @stub
+        def apply(c: String, o: Array[Object]) = ???
+
+        /** Creates a LazyValue which will construct an instance
+         *  when asked.
+         */
+        @stub
+        def apply(c: String, m: String) = ???
+
+        /** Creates a LazyValue which will construct an instance
+         *  when asked.
+         */
+        @stub
+        def apply(c: String, m: String, o: Array[Object]) = ???
+
+        /** Creates the value retrieved from the UIDefaults table. */
+        @stub
+        def createValue(table: UIDefaults): Any = ???
+    }
+
 }

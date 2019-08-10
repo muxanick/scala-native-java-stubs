@@ -12,7 +12,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is getAsDouble().
  */
-@FunctionalInterface trait DoubleSupplier {
+@FunctionalInterface
+trait DoubleSupplier {
 
     /** Gets a result. */
     @stub

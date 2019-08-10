@@ -42,13 +42,13 @@ class XmlNsForm private (name: String, ordinal: Int) extends Enum[XmlNsForm](nam
 
 object XmlNsForm {
     /**  */
-    final val QUALIFIED = new XmlNsForm(QUALIFIED, 0)
+    final val QUALIFIED: XmlNsForm = new XmlNsForm("QUALIFIED", 0)
 
     /**  */
-    final val UNQUALIFIED = new XmlNsForm(UNQUALIFIED, 1)
+    final val UNQUALIFIED: XmlNsForm = new XmlNsForm("UNQUALIFIED", 1)
 
     /**  */
-    final val UNSET = new XmlNsForm(UNSET, 2)
+    final val UNSET: XmlNsForm = new XmlNsForm("UNSET", 2)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

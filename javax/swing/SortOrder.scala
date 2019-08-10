@@ -9,13 +9,13 @@ class SortOrder private (name: String, ordinal: Int) extends Enum[SortOrder](nam
 
 object SortOrder {
     /** Enumeration value indicating the items are sorted in increasing order. */
-    final val ASCENDING = new SortOrder(ASCENDING, 0)
+    final val ASCENDING: SortOrder = new SortOrder("ASCENDING", 0)
 
     /** Enumeration value indicating the items are sorted in decreasing order. */
-    final val DESCENDING = new SortOrder(DESCENDING, 1)
+    final val DESCENDING: SortOrder = new SortOrder("DESCENDING", 1)
 
     /** Enumeration value indicating the items are unordered. */
-    final val UNSORTED = new SortOrder(UNSORTED, 2)
+    final val UNSORTED: SortOrder = new SortOrder("UNSORTED", 2)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

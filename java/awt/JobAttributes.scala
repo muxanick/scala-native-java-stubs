@@ -250,17 +250,157 @@ final class JobAttributes extends Object with Cloneable {
 
 object JobAttributes {
     /** A type-safe enumeration of possible default selection states. */
-    type DefaultSelectionType = JobAttributes_DefaultSelectionType
+    final object DefaultSelectionType extends Object {
+
+        /** The DefaultSelectionType instance to use for
+         *  specifying that all pages of the job should be printed.
+         */
+        @stub
+        val ALL: DefaultSelectionType = ???
+
+        /** The DefaultSelectionType instance to use for
+         *  specifying that a range of pages of the job should be printed.
+         */
+        @stub
+        val RANGE: DefaultSelectionType = ???
+
+        /** The DefaultSelectionType instance to use for
+         *  specifying that the current selection should be printed.
+         */
+        @stub
+        val SELECTION: DefaultSelectionType = ???
+
+        /** Returns a hash code value for the object. */
+        @stub
+        def hashCode(): Int = ???
+
+        /** Returns a string representation of the object. */
+        @stub
+        def toString(): String = ???
+    }
+
 
     /** A type-safe enumeration of possible job destinations. */
-    type DestinationType = JobAttributes_DestinationType
+    final object DestinationType extends Object {
+
+        /** The DestinationType instance to use for
+         *  specifying print to file.
+         */
+        @stub
+        val FILE: DestinationType = ???
+
+        /** The DestinationType instance to use for
+         *  specifying print to printer.
+         */
+        @stub
+        val PRINTER: DestinationType = ???
+
+        /** Returns a hash code value for the object. */
+        @stub
+        def hashCode(): Int = ???
+
+        /** Returns a string representation of the object. */
+        @stub
+        def toString(): String = ???
+    }
+
 
     /** A type-safe enumeration of possible dialogs to display to the user. */
-    type DialogType = JobAttributes_DialogType
+    final object DialogType extends Object {
 
-    /** A type-safe enumeration of possible multiple copy handling states. */
-    type MultipleDocumentHandlingType = JobAttributes_MultipleDocumentHandlingType
+        /** The DialogType instance to use for
+         *  specifying the cross-platform, pure Java print dialog.
+         */
+        @stub
+        val COMMON: DialogType = ???
 
-    /** A type-safe enumeration of possible multi-page impositions. */
-    type SidesType = JobAttributes_SidesType
+        /** The DialogType instance to use for
+         *  specifying the platform's native print dialog.
+         */
+        @stub
+        val NATIVE: DialogType = ???
+
+        /** The DialogType instance to use for
+         *  specifying no print dialog.
+         */
+        @stub
+        val NONE: DialogType = ???
+
+        /** Returns a hash code value for the object. */
+        @stub
+        def hashCode(): Int = ???
+
+        /** Returns a string representation of the object. */
+        @stub
+        def toString(): String = ???
+    }
+
+
+    /** A type-safe enumeration of possible multiple copy handling states.
+     *  It is used to control how the sheets of multiple copies of a single
+     *  document are collated.
+     */
+    final object MultipleDocumentHandlingType extends Object {
+
+        /** The MultipleDocumentHandlingType instance to use for specifying
+         *  that the job should be divided into separate, collated copies.
+         */
+        @stub
+        val SEPARATE_DOCUMENTS_COLLATED_COPIES: MultipleDocumentHandlingType = ???
+
+        /** The MultipleDocumentHandlingType instance to use for specifying
+         *  that the job should be divided into separate, uncollated copies.
+         */
+        @stub
+        val SEPARATE_DOCUMENTS_UNCOLLATED_COPIES: MultipleDocumentHandlingType = ???
+
+        /** Returns a hash code value for the object. */
+        @stub
+        def hashCode(): Int = ???
+
+        /** Returns a string representation of the object. */
+        @stub
+        def toString(): String = ???
+    }
+
+
+    /** A type-safe enumeration of possible multi-page impositions. These
+     *  impositions are in compliance with IPP 1.1.
+     */
+    final object SidesType extends Object {
+
+        /** The SidesType instance to use for specifying that
+         *  consecutive job pages should be printed upon the same side of
+         *  consecutive media sheets.
+         */
+        @stub
+        val ONE_SIDED: SidesType = ???
+
+        /** The SidesType instance to use for specifying that
+         *  consecutive job pages should be printed upon front and back sides
+         *  of consecutive media sheets, such that the orientation of each pair
+         *  of pages on the medium would be correct for the reader as if for
+         *  binding on the long edge.
+         */
+        @stub
+        val TWO_SIDED_LONG_EDGE: SidesType = ???
+
+        /** The SidesType instance to use for specifying that
+         *  consecutive job pages should be printed upon front and back sides
+         *  of consecutive media sheets, such that the orientation of each pair
+         *  of pages on the medium would be correct for the reader as if for
+         *  binding on the short edge.
+         */
+        @stub
+        val TWO_SIDED_SHORT_EDGE: SidesType = ???
+
+        /** Returns a hash code value for the object. */
+        @stub
+        def hashCode(): Int = ???
+
+        /** Returns a string representation of the object. */
+        @stub
+        def toString(): String = ???
+    }
+
 }

@@ -88,9 +88,9 @@ import scala.scalanative.annotation.stub
  *      </xs:simpleType>
  *  
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value = FIELD ) 
- final class XmlEnumValue extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value=FIELD)
+final class XmlEnumValue extends StaticAnnotation {
 
     /**  */
     @stub

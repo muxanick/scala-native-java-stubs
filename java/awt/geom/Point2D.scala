@@ -1,6 +1,7 @@
 package java.awt.geom
 
-import java.lang.{Cloneable, Object}
+import java.io.Serializable
+import java.lang.{Cloneable, Object, String}
 import scala.scalanative.annotation.stub
 
 /** The Point2D class defines a point representing a location
@@ -73,12 +74,110 @@ object Point2D {
     /** The Double class defines a point specified in
      *  double precision.
      */
-    type Double = Point2D_Double
+    object Double extends Point2D with Serializable {
+
+        /** Constructs and initializes a Point2D with
+         *  coordinates (0, 0).
+         */
+        @stub
+        def apply() = ???
+
+        /** Constructs and initializes a Point2D with the
+         *  specified coordinates.
+         */
+        @stub
+        def apply(x: Double, y: Double) = ???
+
+        /** The X coordinate of this Point2D. */
+        @stub
+        val x: Double = ???
+
+        /** The Y coordinate of this Point2D. */
+        @stub
+        val y: Double = ???
+
+        /** Returns the X coordinate of this Point2D in
+         *  double precision.
+         */
+        @stub
+        def getX(): Double = ???
+
+        /** Returns the Y coordinate of this Point2D in
+         *  double precision.
+         */
+        @stub
+        def getY(): Double = ???
+
+        /** Sets the location of this Point2D to the
+         *  specified double coordinates.
+         */
+        @stub
+        def setLocation(x: Double, y: Double): Unit = ???
+
+        /** Returns a String that represents the value
+         *  of this Point2D.
+         */
+        @stub
+        def toString(): String = ???
+    }
+
 
     /** The Float class defines a point specified in float
      *  precision.
      */
-    type Float = Point2D_Float
+    object Float extends Point2D with Serializable {
+
+        /** Constructs and initializes a Point2D with
+         *  coordinates (0, 0).
+         */
+        @stub
+        def apply() = ???
+
+        /** Constructs and initializes a Point2D with
+         *  the specified coordinates.
+         */
+        @stub
+        def apply(x: Float, y: Float) = ???
+
+        /** The X coordinate of this Point2D. */
+        @stub
+        val x: Float = ???
+
+        /** The Y coordinate of this Point2D. */
+        @stub
+        val y: Float = ???
+
+        /** Returns the X coordinate of this Point2D in
+         *  double precision.
+         */
+        @stub
+        def getX(): Double = ???
+
+        /** Returns the Y coordinate of this Point2D in
+         *  double precision.
+         */
+        @stub
+        def getY(): Double = ???
+
+        /** Sets the location of this Point2D to the
+         *  specified double coordinates.
+         */
+        @stub
+        def setLocation(x: Double, y: Double): Unit = ???
+
+        /** Sets the location of this Point2D to the
+         *  specified float coordinates.
+         */
+        @stub
+        def setLocation(x: Float, y: Float): Unit = ???
+
+        /** Returns a String that represents the value
+         *  of this Point2D.
+         */
+        @stub
+        def toString(): String = ???
+    }
+
 
     /** Returns the distance between two points. */
     @stub

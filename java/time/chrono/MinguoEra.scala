@@ -39,22 +39,22 @@ import scala.scalanative.annotation.stub
  *  Use getValue() instead.
  */
 class MinguoEra private (name: String, ordinal: Int) extends Enum[MinguoEra](name, ordinal) with Era {
+
+    /** Gets the numeric era int value. */
+    @stub
+    def getValue(): Int = ???
 }
 
 object MinguoEra {
     /** The singleton instance for the era before the current one, 'Before Republic of China Era',
      *  which has the numeric value 0.
      */
-    final val BEFORE_ROC = new MinguoEra(BEFORE_ROC, 0)
+    final val BEFORE_ROC: MinguoEra = new MinguoEra("BEFORE_ROC", 0)
 
     /** The singleton instance for the current era, 'Republic of China Era',
      *  which has the numeric value 1.
      */
-    final val ROC = new MinguoEra(ROC, 1)
-
-    /** Gets the numeric era int value. */
-    @stub
-    def getValue(): Int = ???
+    final val ROC: MinguoEra = new MinguoEra("ROC", 1)
 
     /** Obtains an instance of MinguoEra from an int value. */
     @stub

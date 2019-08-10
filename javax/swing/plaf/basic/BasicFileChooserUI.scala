@@ -1,11 +1,12 @@
 package javax.swing.plaf.basic
 
-import java.awt.event.MouseListener
+import java.awt.event.{ActionEvent, MouseAdapter, MouseEvent, MouseListener}
 import java.beans.PropertyChangeListener
 import java.io.File
-import java.lang.{Object, String}
-import javax.swing.{Action, Icon, JButton, JComponent, JFileChooser, JList, JPanel}
-import javax.swing.event.ListSelectionListener
+import java.lang.{Boolean, Object, String}
+import java.util.Hashtable
+import javax.swing.{AbstractAction, Action, Icon, JButton, JComponent, JFileChooser, JList, JPanel}
+import javax.swing.event.{ListSelectionEvent, ListSelectionListener}
 import javax.swing.filechooser.{FileFilter, FileView}
 import javax.swing.plaf.{ComponentUI, FileChooserUI}
 import scala.scalanative.annotation.stub
@@ -18,34 +19,178 @@ class BasicFileChooserUI extends FileChooserUI {
     def this(b: JFileChooser) = ???
 
     /**  */
-    protected type AcceptAllFileFilter = BasicFileChooserUI_AcceptAllFileFilter
+    protected class AcceptAllFileFilter extends FileFilter {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Whether the given file is accepted by this filter. */
+        @stub
+        def accept(f: File): Boolean = ???
+
+        /** The description of this filter. */
+        @stub
+        def getDescription(): String = ???
+    }
+
 
     /** Responds to an Open or Save request */
-    protected type ApproveSelectionAction = BasicFileChooserUI_ApproveSelectionAction
+    protected class ApproveSelectionAction extends AbstractAction {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
 
     /**  */
-    protected type BasicFileView = BasicFileChooserUI_BasicFileView
+    protected class BasicFileView extends FileView {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /**  */
+        @stub
+        protected val iconCache: Hashtable[File, Icon] = ???
+
+        /**  */
+        @stub
+        def cacheIcon(f: File, i: Icon): Unit = ???
+
+        /**  */
+        @stub
+        def clearIconCache(): Unit = ???
+
+        /**  */
+        @stub
+        def getCachedIcon(f: File): Icon = ???
+
+        /** A human readable description of the file. */
+        @stub
+        def getDescription(f: File): String = ???
+
+        /** The icon that represents this file in the JFileChooser. */
+        @stub
+        def getIcon(f: File): Icon = ???
+
+        /** The name of the file. */
+        @stub
+        def getName(f: File): String = ???
+
+        /** A human readable description of the type of the file. */
+        @stub
+        def getTypeDescription(f: File): String = ???
+
+        /**  */
+        @stub
+        def isHidden(f: File): Boolean = ???
+    }
+
 
     /** Responds to a cancel request. */
-    protected type CancelSelectionAction = BasicFileChooserUI_CancelSelectionAction
+    protected class CancelSelectionAction extends AbstractAction {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
 
     /**  */
-    protected type ChangeToParentDirectoryAction = BasicFileChooserUI_ChangeToParentDirectoryAction
+    protected class ChangeToParentDirectoryAction extends AbstractAction {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
 
     /**  */
-    protected type DoubleClickListener = BasicFileChooserUI_DoubleClickListener
+    protected class DoubleClickListener extends MouseAdapter {
+
+        /**  */
+        @stub
+        def this(list: JList) = ???
+
+        /** Invoked when the mouse button has been clicked (pressed
+         *  and released) on a component.
+         */
+        @stub
+        def mouseClicked(e: MouseEvent): Unit = ???
+
+        /** The JList used for representing the files is created by subclasses, but the
+         *  selection is monitored in this class.
+         */
+        @stub
+        def mouseEntered(e: MouseEvent): Unit = ???
+    }
+
 
     /** Acts on the "home" key event or equivalent event. */
-    protected type GoHomeAction = BasicFileChooserUI_GoHomeAction
+    protected class GoHomeAction extends AbstractAction {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
 
     /** Creates a new folder. */
-    protected type NewFolderAction = BasicFileChooserUI_NewFolderAction
+    protected class NewFolderAction extends AbstractAction {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
 
     /**  */
-    protected type SelectionListener = BasicFileChooserUI_SelectionListener
+    protected class SelectionListener extends Object with ListSelectionListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Called whenever the value of the selection changes. */
+        @stub
+        def valueChanged(e: ListSelectionEvent): Unit = ???
+    }
+
 
     /** Rescans the files in the current directory */
-    protected type UpdateAction = BasicFileChooserUI_UpdateAction
+    protected class UpdateAction extends AbstractAction {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
 
     /**  */
     @stub

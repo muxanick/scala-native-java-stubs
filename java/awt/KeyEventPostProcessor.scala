@@ -24,7 +24,8 @@ import scala.scalanative.annotation.stub
  *  a KeyEventPostProcessor one or more times, this is usually unnecessary and
  *  not recommended.)
  */
-@FunctionalInterface trait KeyEventPostProcessor {
+@FunctionalInterface
+trait KeyEventPostProcessor {
 
     /** This method is called by the current KeyboardFocusManager, requesting
      *  that this KeyEventPostProcessor perform any necessary post-processing

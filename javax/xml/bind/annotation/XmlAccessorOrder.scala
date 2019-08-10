@@ -39,10 +39,10 @@ import scala.scalanative.annotation.stub
  *     , XmlJavaTypeAdapter. It can also be used with the
  *     following annotations at the package level: XmlJavaTypeAdapter.
  */
-@Inherited 
-@Retention ( value = RUNTIME ) 
-@Target ( value ={ PACKAGE , TYPE } ) 
- final class XmlAccessorOrder extends StaticAnnotation {
+@Inherited
+@Retention(value=RUNTIME)
+@Target(value={PACKAGE,TYPE})
+final class XmlAccessorOrder extends StaticAnnotation {
 
     /**  */
     @stub

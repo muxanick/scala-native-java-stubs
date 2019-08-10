@@ -1,9 +1,9 @@
 package javax.swing
 
-import java.awt.{Component, Container, Font, Image}
-import java.lang.{Object, String}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, Font, Image}
+import java.lang.{Number, Object, String}
 import java.util.{Dictionary, Hashtable}
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole, AccessibleStateSet, AccessibleValue}
 import javax.swing.event.{ChangeEvent, ChangeListener}
 import javax.swing.plaf.SliderUI
 import scala.scalanative.annotation.stub
@@ -76,9 +76,53 @@ class JSlider extends JComponent with SwingConstants with Accessible {
     def this(orientation: Int, min: Int, max: Int, value: Int) = ???
 
     /** This class implements accessibility support for the
-     *  JSlider class.
+     *  JSlider class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to slider user-interface elements.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type AccessibleJSlider = JSlider_AccessibleJSlider
+    protected class AccessibleJSlider extends JComponent.AccessibleJComponent with AccessibleValue {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+
+        /** Get the state set of this object. */
+        @stub
+        def getAccessibleStateSet(): AccessibleStateSet = ???
+
+        /** Get the AccessibleValue associated with this object. */
+        @stub
+        def getAccessibleValue(): AccessibleValue = ???
+
+        /** Get the accessible value of this object. */
+        @stub
+        def getCurrentAccessibleValue(): Number = ???
+
+        /** Get the maximum accessible value of this object. */
+        @stub
+        def getMaximumAccessibleValue(): Number = ???
+
+        /** Get the minimum accessible value of this object. */
+        @stub
+        def getMinimumAccessibleValue(): Number = ???
+
+        /** Set the value of this object as a Number. */
+        @stub
+        def setCurrentAccessibleValue(n: Number): Boolean = ???
+    }
+
 
     /** Only one ChangeEvent is needed per slider instance since the
      *  event's only (read-only) state is the source property.

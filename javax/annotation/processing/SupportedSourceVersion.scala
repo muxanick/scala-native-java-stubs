@@ -9,10 +9,10 @@ import scala.scalanative.annotation.stub
  *  annotation processor supports.  The Processor.getSupportedSourceVersion() method can construct its
  *  result from the value of this annotation, as done by AbstractProcessor.getSupportedSourceVersion().
  */
-@Documented 
-@Target ( value = TYPE ) 
-@Retention ( value = RUNTIME ) 
- final class SupportedSourceVersion extends StaticAnnotation {
+@Documented
+@Target(value=TYPE)
+@Retention(value=RUNTIME)
+final class SupportedSourceVersion extends StaticAnnotation {
 
     /** Returns the latest supported source version. */
     @stub

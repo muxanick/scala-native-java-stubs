@@ -183,9 +183,9 @@ import scala.scalanative.annotation.stub
  *      </math>
  *  
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value ={ FIELD , METHOD } ) 
- final class XmlElementRef extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value={FIELD,METHOD})
+final class XmlElementRef extends StaticAnnotation {
 
     /**  */
     @stub

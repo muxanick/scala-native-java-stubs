@@ -9,7 +9,7 @@ class FileVisitOption private (name: String, ordinal: Int) extends Enum[FileVisi
 
 object FileVisitOption {
     /** Follow symbolic links. */
-    final val FOLLOW_LINKS = new FileVisitOption(FOLLOW_LINKS, 0)
+    final val FOLLOW_LINKS: FileVisitOption = new FileVisitOption("FOLLOW_LINKS", 0)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

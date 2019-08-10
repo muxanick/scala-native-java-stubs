@@ -30,7 +30,8 @@ import scala.scalanative.annotation.stub
  *  the duty of the application implementing this interface to verify
  *  the certificate and satisfy itself of its validity.
  */
-@Deprecated trait Certificate {
+@Deprecated
+trait Certificate {
 
     /** Deprecated.  */
     @stub

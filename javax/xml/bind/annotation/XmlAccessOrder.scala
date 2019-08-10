@@ -14,10 +14,10 @@ object XmlAccessOrder {
      *  alphabetical order as determined by the
      *  method java.lang.String.compareTo(String anotherString).
      */
-    final val ALPHABETICAL = new XmlAccessOrder(ALPHABETICAL, 0)
+    final val ALPHABETICAL: XmlAccessOrder = new XmlAccessOrder("ALPHABETICAL", 0)
 
     /** The ordering of fields and properties in a class is undefined. */
-    final val UNDEFINED = new XmlAccessOrder(UNDEFINED, 1)
+    final val UNDEFINED: XmlAccessOrder = new XmlAccessOrder("UNDEFINED", 1)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

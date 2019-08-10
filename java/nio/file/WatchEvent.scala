@@ -1,5 +1,6 @@
 package java.nio.file
 
+import java.lang.{Class, String}
 import scala.scalanative.annotation.stub
 
 /** An event or a repeated event for an object that is registered with a WatchService.
@@ -30,10 +31,28 @@ trait WatchEvent[T] {
 
 object WatchEvent {
     /** An event kind, for the purposes of identification. */
-    type Kind[T] = WatchEvent_Kind[T]
+    trait Kind[T] {
+
+        /** Returns the name of the event kind. */
+        @stub
+        def name(): String = ???
+
+        /** Returns the type of the context value. */
+        @stub
+        def type(): Class[T] = ???
+    }
+
 
     /** An event modifier that qualifies how a Watchable is registered
      *  with a WatchService.
+     * 
+     *   This release does not define any standard modifiers.
      */
-    type Modifier = WatchEvent_Modifier
+    trait Modifier {
+
+        /** Returns the name of the modifier. */
+        @stub
+        def name(): String = ???
+    }
+
 }

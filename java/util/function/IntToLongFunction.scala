@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is applyAsLong(int).
  */
-@FunctionalInterface trait IntToLongFunction {
+@FunctionalInterface
+trait IntToLongFunction {
 
     /** Applies this function to the given argument. */
     @stub

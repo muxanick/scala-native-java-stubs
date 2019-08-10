@@ -1,6 +1,6 @@
 package javax.swing.text
 
-import java.awt.Graphics
+import java.awt.{Graphics, Shape}
 import java.lang.Object
 import scala.scalanative.annotation.stub
 
@@ -50,8 +50,28 @@ trait Highlighter {
 
 object Highlighter {
     /**  */
-    type Highlight = Highlighter_Highlight
+    trait Highlight {
+
+        /** Gets the ending model offset for the highlight. */
+        @stub
+        def getEndOffset(): Int = ???
+
+        /** Gets the painter for the highlighter. */
+        @stub
+        def getPainter(): HighlightPainter = ???
+
+        /** Gets the starting model offset for the highlight. */
+        @stub
+        def getStartOffset(): Int = ???
+    }
+
 
     /** Highlight renderer. */
-    type HighlightPainter = Highlighter_HighlightPainter
+    trait HighlightPainter {
+
+        /** Renders the highlight. */
+        @stub
+        def paint(g: Graphics, p0: Int, p1: Int, bounds: Shape, c: JTextComponent): Unit = ???
+    }
+
 }

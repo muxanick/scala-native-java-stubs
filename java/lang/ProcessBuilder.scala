@@ -241,6 +241,105 @@ final class ProcessBuilder extends Object {
 object ProcessBuilder {
     /** Represents a source of subprocess input or a destination of
      *  subprocess output.
+     * 
+     *  Each Redirect instance is one of the following:
+     * 
+     *  
+     *  the special value Redirect.PIPE
+     *  the special value Redirect.INHERIT
+     *  a redirection to read from a file, created by an invocation of
+     *      Redirect.from(File)
+     *  a redirection to write to a file,  created by an invocation of
+     *      Redirect.to(File)
+     *  a redirection to append to a file, created by an invocation of
+     *      Redirect.appendTo(File)
+     *  
+     * 
+     *  Each of the above categories has an associated unique
+     *  Type.
      */
-    type Redirect = ProcessBuilder_Redirect
+    abstract object Redirect extends Object {
+
+        /** The type of a ProcessBuilder.Redirect. */
+        class Type private (name: String, ordinal: Int) extends Enum[Type](name, ordinal) {
+        }
+
+        object Type {
+            /** The type of redirects returned from
+             *  Redirect.appendTo(File).
+             */
+            final val APPEND: Type = new Type("APPEND", 0)
+
+            /** The type of Redirect.INHERIT. */
+            final val INHERIT: Type = new Type("INHERIT", 1)
+
+            /** The type of Redirect.PIPE. */
+            final val PIPE: Type = new Type("PIPE", 2)
+
+            /** The type of redirects returned from
+             *  Redirect.from(File).
+             */
+            final val READ: Type = new Type("READ", 3)
+
+            /** The type of redirects returned from
+             *  Redirect.to(File).
+             */
+            final val WRITE: Type = new Type("WRITE", 4)
+
+            /** Returns the enum constant of this type with the specified name. */
+            @stub
+            def valueOf(name: String): Type = ???
+
+            /** Returns an array containing the constants of this enum type, in
+             * the order they are declared.
+             */
+            @stub
+            def values(): Array[Type] = ???
+        }
+
+
+        /** Indicates that subprocess I/O source or destination will be the
+         *  same as those of the current process.
+         */
+        @stub
+        val INHERIT: Redirect = ???
+
+        /** Indicates that subprocess I/O will be connected to the
+         *  current Java process over a pipe.
+         */
+        @stub
+        val PIPE: Redirect = ???
+
+        /** Returns a redirect to append to the specified file. */
+        @stub
+        def appendTo(file: File): Redirect = ???
+
+        /** Compares the specified object with this Redirect for
+         *  equality.
+         */
+        @stub
+        def equals(obj: Any): Boolean = ???
+
+        /** Returns the File source or destination associated
+         *  with this redirect, or null if there is no such file.
+         */
+        @stub
+        def file(): File = ???
+
+        /** Returns a redirect to read from the specified file. */
+        @stub
+        def from(file: File): Redirect = ???
+
+        /** Returns a hash code value for this Redirect. */
+        @stub
+        def hashCode(): Int = ???
+
+        /** Returns a redirect to write to the specified file. */
+        @stub
+        def to(file: File): Redirect = ???
+
+        /** Returns the type of this Redirect. */
+        def type(): Redirect.Type
+    }
+
 }

@@ -12,7 +12,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is getAsBoolean().
  */
-@FunctionalInterface trait BooleanSupplier {
+@FunctionalInterface
+trait BooleanSupplier {
 
     /** Gets a result. */
     @stub

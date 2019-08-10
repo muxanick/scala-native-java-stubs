@@ -1,9 +1,9 @@
 package javax.swing
 
-import java.awt.{Component, Container, Frame, Graphics, GraphicsConfiguration, Image, LayoutManager, Window}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, Frame, Frame.AccessibleAWTFrame, Graphics, GraphicsConfiguration, Image, LayoutManager, Window, Window.AccessibleAWTWindow}
 import java.awt.event.WindowEvent
 import java.lang.{Object, String}
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleStateSet}
 import scala.scalanative.annotation.stub
 
 /** An extended version of java.awt.Frame that adds support for
@@ -92,9 +92,25 @@ class JFrame extends Frame with WindowConstants with Accessible with RootPaneCon
     def this(title: String, gc: GraphicsConfiguration) = ???
 
     /** This class implements accessibility support for the
-     *  JFrame class.
+     *  JFrame class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to frame user-interface
+     *  elements.
      */
-    protected type AccessibleJFrame = JFrame_AccessibleJFrame
+    protected class AccessibleJFrame extends Frame.AccessibleAWTFrame {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the accessible name of this object. */
+        @stub
+        def getAccessibleName(): String = ???
+
+        /** Get the state of this object. */
+        @stub
+        def getAccessibleStateSet(): AccessibleStateSet = ???
+    }
+
 
     /** The accessible context property. */
     @stub

@@ -17,7 +17,7 @@ import scala.scalanative.annotation.stub
  *  AttachmentMarshaller.addMtomAttachment(byte[], int, int, String, String, String) is
  *  ever called for the property. The binary data will always be inlined.
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value ={ FIELD , METHOD , TYPE } ) 
- final class XmlInlineBinaryData extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value={FIELD,METHOD,TYPE})
+final class XmlInlineBinaryData extends StaticAnnotation {
 }

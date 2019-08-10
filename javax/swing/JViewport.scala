@@ -1,8 +1,10 @@
 package javax.swing
 
-import java.awt.{Component, Container, Dimension, Graphics, Image, Insets, LayoutManager, Point, Rectangle}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, Dimension, Graphics, Image, Insets, LayoutManager, Point, Rectangle}
+import java.awt.event.{ComponentAdapter, ComponentEvent}
+import java.io.Serializable
 import java.lang.{Object, String}
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole}
 import javax.swing.border.Border
 import javax.swing.event.ChangeListener
 import javax.swing.plaf.ViewportUI
@@ -70,12 +72,52 @@ class JViewport extends JComponent with Accessible {
     def this() = ???
 
     /** This class implements accessibility support for the
-     *  JViewport class.
+     *  JViewport class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to viewport user-interface elements.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type AccessibleJViewport = JViewport_AccessibleJViewport
+    protected class AccessibleJViewport extends JComponent.AccessibleJComponent {
 
-    /** A listener for the view. */
-    protected type ViewListener = JViewport_ViewListener
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+    }
+
+
+    /** A listener for the view.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
+     */
+    protected class ViewListener extends ComponentAdapter with Serializable {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when the component's size changes. */
+        @stub
+        def componentResized(e: ComponentEvent): Unit = ???
+    }
+
 
     /** Deprecated. 
      * As of Java 2 platform v1.3

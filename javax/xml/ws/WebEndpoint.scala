@@ -14,10 +14,10 @@ import scala.scalanative.annotation.stub
  *   determined based on the value of the WebServiceClient
  *   annotation on the generated service interface itself.
  */
-@Target ( value = METHOD ) 
-@Retention ( value = RUNTIME ) 
-@Documented 
- final class WebEndpoint extends StaticAnnotation {
+@Target(value=METHOD)
+@Retention(value=RUNTIME)
+@Documented
+final class WebEndpoint extends StaticAnnotation {
 
     /** The local name of the endpoint. */
     @stub

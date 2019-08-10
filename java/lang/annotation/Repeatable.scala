@@ -10,10 +10,10 @@ import scala.scalanative.annotation.stub
  *  @Repeatable indicates the containing annotation
  *  type for the repeatable annotation type.
  */
-@Documented 
-@Retention ( value = RUNTIME ) 
-@Target ( value = ANNOTATION_TYPE ) 
- final class Repeatable extends StaticAnnotation {
+@Documented
+@Retention(value=RUNTIME)
+@Target(value=ANNOTATION_TYPE)
+final class Repeatable extends StaticAnnotation {
 
     /** Indicates the containing annotation type for the
      *  repeatable annotation type.

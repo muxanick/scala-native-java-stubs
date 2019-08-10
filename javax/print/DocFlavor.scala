@@ -461,42 +461,605 @@ object DocFlavor {
     /** Class DocFlavor.BYTE_ARRAY provides predefined static constant
      *  DocFlavor objects for example doc flavors using a byte array
      *  (byte[]) as the print data representation class.
+     *  
      */
-    type BYTE_ARRAY = DocFlavor_BYTE_ARRAY
+    object BYTE_ARRAY extends DocFlavor {
+
+        /** Constructs a new doc flavor with the given MIME type and a print
+         *  data representation class name of "[B" (byte array).
+         */
+        @stub
+        def apply(mimeType: String) = ???
+
+        /** Doc flavor with MIME type =
+         *  "application/octet-stream",
+         *  print data representation class name = "[B" (byte
+         *  array).
+         */
+        @stub
+        val AUTOSENSE: BYTE_ARRAY = ???
+
+        /** Doc flavor with MIME type = "image/gif", print data
+         *  representation class name = "[B" (byte array).
+         */
+        @stub
+        val GIF: BYTE_ARRAY = ???
+
+        /** Doc flavor with MIME type = "image/jpeg", print data
+         *  representation class name = "[B" (byte array).
+         */
+        @stub
+        val JPEG: BYTE_ARRAY = ???
+
+        /** Doc flavor with MIME type = "application/vnd.hp-PCL",
+         *  print data representation class name = "[B" (byte
+         *  array).
+         */
+        @stub
+        val PCL: BYTE_ARRAY = ???
+
+        /** Doc flavor with MIME type = "application/pdf", print
+         *  data representation class name = "[B" (byte array).
+         */
+        @stub
+        val PDF: BYTE_ARRAY = ???
+
+        /** Doc flavor with MIME type = "image/png", print data
+         *  representation class name = "[B" (byte array).
+         */
+        @stub
+        val PNG: BYTE_ARRAY = ???
+
+        /** Doc flavor with MIME type = "application/postscript",
+         *  print data representation class name = "[B" (byte
+         *  array).
+         */
+        @stub
+        val POSTSCRIPT: BYTE_ARRAY = ???
+
+        /** Doc flavor with MIME type = "text/html",
+         *  encoded in the host platform encoding.
+         */
+        @stub
+        val TEXT_HTML_HOST: BYTE_ARRAY = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/html; charset=us-ascii",
+         *  print data representation class name =
+         *  "[B" (byte array).
+         */
+        @stub
+        val TEXT_HTML_US_ASCII: BYTE_ARRAY = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/html; charset=utf-16",
+         *  print data representation class name = "[B" (byte
+         *  array).
+         */
+        @stub
+        val TEXT_HTML_UTF_16: BYTE_ARRAY = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/html; charset=utf-16be"
+         *  (big-endian byte ordering),
+         *  print data representation class name = "[B" (byte
+         *  array).
+         */
+        @stub
+        val TEXT_HTML_UTF_16BE: BYTE_ARRAY = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/html; charset=utf-16le"
+         *  (little-endian byte ordering),
+         *  print data representation class name = "[B" (byte
+         *  array).
+         */
+        @stub
+        val TEXT_HTML_UTF_16LE: BYTE_ARRAY = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/html; charset=utf-8",
+         *  print data representation class name = "[B" (byte
+         *  array).
+         */
+        @stub
+        val TEXT_HTML_UTF_8: BYTE_ARRAY = ???
+
+        /** Doc flavor with MIME type = "text/plain",
+         *  encoded in the host platform encoding.
+         */
+        @stub
+        val TEXT_PLAIN_HOST: BYTE_ARRAY = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/plain; charset=us-ascii",
+         *  print data representation class name =
+         *  "[B" (byte array).
+         */
+        @stub
+        val TEXT_PLAIN_US_ASCII: BYTE_ARRAY = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/plain; charset=utf-16",
+         *  print data representation class name = "[B" (byte
+         *  array).
+         */
+        @stub
+        val TEXT_PLAIN_UTF_16: BYTE_ARRAY = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/plain; charset=utf-16be"
+         *  (big-endian byte ordering),
+         *  print data representation class name = "[B" (byte
+         *  array).
+         */
+        @stub
+        val TEXT_PLAIN_UTF_16BE: BYTE_ARRAY = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/plain; charset=utf-16le"
+         *  (little-endian byte ordering),
+         *  print data representation class name = "[B" (byte
+         *  array).
+         */
+        @stub
+        val TEXT_PLAIN_UTF_16LE: BYTE_ARRAY = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/plain; charset=utf-8",
+         *  print data representation class name = "[B" (byte
+         *  array).
+         */
+        @stub
+        val TEXT_PLAIN_UTF_8: BYTE_ARRAY = ???
+    }
+
 
     /** Class DocFlavor.CHAR_ARRAY provides predefined static constant
      *  DocFlavor objects for example doc flavors using a character array
-     *  (char[]) as the print data representation class.
+     *  (char[]) as the print data representation class. As such,
+     *  the character set is Unicode.
+     *  
      */
-    type CHAR_ARRAY = DocFlavor_CHAR_ARRAY
+    object CHAR_ARRAY extends DocFlavor {
+
+        /** Constructs a new doc flavor with the given MIME type and a print
+         *  data representation class name of
+         *  "[C" (character array).
+         */
+        @stub
+        def apply(mimeType: String) = ???
+
+        /** Doc flavor with MIME type = "text/html;
+         *  charset=utf-16", print data representation class name =
+         *  "[C" (character array).
+         */
+        @stub
+        val TEXT_HTML: CHAR_ARRAY = ???
+
+        /** Doc flavor with MIME type = "text/plain;
+         *  charset=utf-16", print data representation class name =
+         *  "[C" (character array).
+         */
+        @stub
+        val TEXT_PLAIN: CHAR_ARRAY = ???
+    }
+
 
     /** Class DocFlavor.INPUT_STREAM provides predefined static constant
      *  DocFlavor objects for example doc flavors using a byte stream (java.io.InputStream) as the print
      *  data representation class.
+     *  
      */
-    type INPUT_STREAM = DocFlavor_INPUT_STREAM
+    object INPUT_STREAM extends DocFlavor {
+
+        /** Constructs a new doc flavor with the given MIME type and a print
+         *  data representation class name of
+         *  "java.io.InputStream" (byte stream).
+         */
+        @stub
+        def apply(mimeType: String) = ???
+
+        /** Doc flavor with MIME type =
+         *  "application/octet-stream",
+         *  print data representation class name =
+         *  "java.io.InputStream" (byte stream).
+         */
+        @stub
+        val AUTOSENSE: INPUT_STREAM = ???
+
+        /** Doc flavor with MIME type = "image/gif", print data
+         *  representation class name =
+         *  "java.io.InputStream" (byte stream).
+         */
+        @stub
+        val GIF: INPUT_STREAM = ???
+
+        /** Doc flavor with MIME type = "image/jpeg", print data
+         *  representation class name =
+         *  "java.io.InputStream" (byte stream).
+         */
+        @stub
+        val JPEG: INPUT_STREAM = ???
+
+        /** Doc flavor with MIME type = "application/vnd.hp-PCL",
+         *  print data representation class name =
+         *  "java.io.InputStream" (byte stream).
+         */
+        @stub
+        val PCL: INPUT_STREAM = ???
+
+        /** Doc flavor with MIME type = "application/pdf", print
+         *  data representation class name = "java.io.InputStream"
+         *  (byte stream).
+         */
+        @stub
+        val PDF: INPUT_STREAM = ???
+
+        /** Doc flavor with MIME type = "image/png", print data
+         *  representation class name =
+         *  "java.io.InputStream" (byte stream).
+         */
+        @stub
+        val PNG: INPUT_STREAM = ???
+
+        /** Doc flavor with MIME type = "application/postscript",
+         *  print data representation class name =
+         *  "java.io.InputStream" (byte stream).
+         */
+        @stub
+        val POSTSCRIPT: INPUT_STREAM = ???
+
+        /** Doc flavor with MIME type = "text/html",
+         *  encoded in the host platform encoding.
+         */
+        @stub
+        val TEXT_HTML_HOST: INPUT_STREAM = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/html; charset=us-ascii",
+         *  print data representation class name =
+         *  "java.io.InputStream" (byte stream).
+         */
+        @stub
+        val TEXT_HTML_US_ASCII: INPUT_STREAM = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/html; charset=utf-16",
+         *  print data representation class name =
+         *  "java.io.InputStream" (byte stream).
+         */
+        @stub
+        val TEXT_HTML_UTF_16: INPUT_STREAM = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/html; charset=utf-16be"
+         *  (big-endian byte ordering),
+         *  print data representation class name =
+         *  "java.io.InputStream" (byte stream).
+         */
+        @stub
+        val TEXT_HTML_UTF_16BE: INPUT_STREAM = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/html; charset=utf-16le"
+         *  (little-endian byte ordering),
+         *  print data representation class name =
+         *  "java.io.InputStream" (byte stream).
+         */
+        @stub
+        val TEXT_HTML_UTF_16LE: INPUT_STREAM = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/html; charset=utf-8",
+         *  print data representation class name =
+         *  "java.io.InputStream" (byte stream).
+         */
+        @stub
+        val TEXT_HTML_UTF_8: INPUT_STREAM = ???
+
+        /** Doc flavor with MIME type = "text/plain",
+         *  encoded in the host platform encoding.
+         */
+        @stub
+        val TEXT_PLAIN_HOST: INPUT_STREAM = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/plain; charset=us-ascii",
+         *  print data representation class name =
+         *  "java.io.InputStream" (byte stream).
+         */
+        @stub
+        val TEXT_PLAIN_US_ASCII: INPUT_STREAM = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/plain; charset=utf-16",
+         *  print data representation class name =
+         *  "java.io.InputStream" (byte stream).
+         */
+        @stub
+        val TEXT_PLAIN_UTF_16: INPUT_STREAM = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/plain; charset=utf-16be"
+         *  (big-endian byte ordering),
+         *  print data representation class name =
+         *  "java.io.InputStream" (byte stream).
+         */
+        @stub
+        val TEXT_PLAIN_UTF_16BE: INPUT_STREAM = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/plain; charset=utf-16le"
+         *  (little-endian byte ordering),
+         *  print data representation class name =
+         *  "java.io.InputStream" (byte stream).
+         */
+        @stub
+        val TEXT_PLAIN_UTF_16LE: INPUT_STREAM = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/plain; charset=utf-8",
+         *  print data representation class name =
+         *  "java.io.InputStream" (byte stream).
+         */
+        @stub
+        val TEXT_PLAIN_UTF_8: INPUT_STREAM = ???
+    }
+
 
     /** Class DocFlavor.READER provides predefined static constant DocFlavor
      *  objects for example doc flavors using a character stream (java.io.Reader) as the print data
-     *  representation class.
+     *  representation class. As such, the character set is Unicode.
+     *  
      */
-    type READER = DocFlavor_READER
+    object READER extends DocFlavor {
+
+        /** Constructs a new doc flavor with the given MIME type and a print
+         *  data representation class name of\
+         *  "java.io.Reader" (character stream).
+         */
+        @stub
+        def apply(mimeType: String) = ???
+
+        /** Doc flavor with MIME type = "text/html;
+         *  charset=utf-16", print data representation class name =
+         *  "java.io.Reader" (character stream).
+         */
+        @stub
+        val TEXT_HTML: READER = ???
+
+        /** Doc flavor with MIME type = "text/plain;
+         *  charset=utf-16", print data representation class name =
+         *  "java.io.Reader" (character stream).
+         */
+        @stub
+        val TEXT_PLAIN: READER = ???
+    }
+
 
     /** Class DocFlavor.SERVICE_FORMATTED provides predefined static constant
      *  DocFlavor objects for example doc flavors for service formatted print
      *  data.
+     *  
      */
-    type SERVICE_FORMATTED = DocFlavor_SERVICE_FORMATTED
+    object SERVICE_FORMATTED extends DocFlavor {
+
+        /** Constructs a new doc flavor with a MIME type of
+         *  "application/x-java-jvm-local-objectref" indicating
+         *  service formatted print data and the given print data
+         *  representation class name.
+         */
+        @stub
+        def apply(className: String) = ???
+
+        /** Service formatted print data doc flavor with print data
+         *  representation class name = "java.awt.print.Pageable"
+         *  (pageable object).
+         */
+        @stub
+        val PAGEABLE: SERVICE_FORMATTED = ???
+
+        /** Service formatted print data doc flavor with print data
+         *  representation class name = "java.awt.print.Printable"
+         *  (printable object).
+         */
+        @stub
+        val PRINTABLE: SERVICE_FORMATTED = ???
+
+        /** Service formatted print data doc flavor with print data
+         *  representation class name =
+         *  "java.awt.image.renderable.RenderableImage"
+         *  (renderable image object).
+         */
+        @stub
+        val RENDERABLE_IMAGE: SERVICE_FORMATTED = ???
+    }
+
 
     /** Class DocFlavor.STRING provides predefined static constant DocFlavor
      *  objects for example doc flavors using a string (java.lang.String) as the print data representation class.
+     *  As such, the character set is Unicode.
+     *  
      */
-    type STRING = DocFlavor_STRING
+    object STRING extends DocFlavor {
+
+        /** Constructs a new doc flavor with the given MIME type and a print
+         *  data representation class name of "java.lang.String".
+         */
+        @stub
+        def apply(mimeType: String) = ???
+
+        /** Doc flavor with MIME type = "text/html;
+         *  charset=utf-16", print data representation class name =
+         *  "java.lang.String".
+         */
+        @stub
+        val TEXT_HTML: STRING = ???
+
+        /** Doc flavor with MIME type = "text/plain;
+         *  charset=utf-16", print data representation class name =
+         *  "java.lang.String".
+         */
+        @stub
+        val TEXT_PLAIN: STRING = ???
+    }
+
 
     /** Class DocFlavor.URL provides predefined static constant DocFlavor
      *  objects.
+     *  For example doc flavors using a Uniform Resource Locator (java.net.URL) as the print data
+     *  representation  class.
+     *  
      */
-    type URL = DocFlavor_URL
+    object URL extends DocFlavor {
+
+        /** Constructs a new doc flavor with the given MIME type and a print
+         *  data representation class name of "java.net.URL".
+         */
+        @stub
+        def apply(mimeType: String) = ???
+
+        /** Doc flavor with MIME type =
+         *  "application/octet-stream",
+         *  print data representation class name = "java.net.URL".
+         */
+        @stub
+        val AUTOSENSE: URL = ???
+
+        /** Doc flavor with MIME type = "image/gif", print data
+         *  representation class name = "java.net.URL".
+         */
+        @stub
+        val GIF: URL = ???
+
+        /** Doc flavor with MIME type = "image/jpeg", print data
+         *  representation class name = "java.net.URL".
+         */
+        @stub
+        val JPEG: URL = ???
+
+        /** Doc flavor with MIME type = "application/vnd.hp-PCL",
+         *  print data representation class name = "java.net.URL".
+         */
+        @stub
+        val PCL: URL = ???
+
+        /** Doc flavor with MIME type = "application/pdf", print
+         *  data representation class name = "java.net.URL".
+         */
+        @stub
+        val PDF: URL = ???
+
+        /** Doc flavor with MIME type = "image/png", print data
+         *  representation class name = "java.net.URL".
+         */
+        @stub
+        val PNG: URL = ???
+
+        /** Doc flavor with MIME type = "application/postscript",
+         *  print data representation class name = "java.net.URL".
+         */
+        @stub
+        val POSTSCRIPT: URL = ???
+
+        /** Doc flavor with MIME type = "text/html",
+         *  encoded in the host platform encoding.
+         */
+        @stub
+        val TEXT_HTML_HOST: URL = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/html; charset=us-ascii",
+         *  print data representation class name =
+         *  "java.net.URL" (byte stream).
+         */
+        @stub
+        val TEXT_HTML_US_ASCII: URL = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/html; charset=utf-16",
+         *  print data representation class name =
+         *  "java.net.URL" (byte stream).
+         */
+        @stub
+        val TEXT_HTML_UTF_16: URL = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/html; charset=utf-16be"
+         *  (big-endian byte ordering),
+         *  print data representation class name =
+         *  "java.net.URL" (byte stream).
+         */
+        @stub
+        val TEXT_HTML_UTF_16BE: URL = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/html; charset=utf-16le"
+         *  (little-endian byte ordering),
+         *  print data representation class name =
+         *  "java.net.URL" (byte stream).
+         */
+        @stub
+        val TEXT_HTML_UTF_16LE: URL = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/html; charset=utf-8",
+         *  print data representation class name =
+         *  "java.net.URL" (byte stream).
+         */
+        @stub
+        val TEXT_HTML_UTF_8: URL = ???
+
+        /** Doc flavor with MIME type = "text/plain",
+         *  encoded in the host platform encoding.
+         */
+        @stub
+        val TEXT_PLAIN_HOST: URL = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/plain; charset=us-ascii",
+         *  print data representation class name =
+         *  "java.net.URL" (byte stream).
+         */
+        @stub
+        val TEXT_PLAIN_US_ASCII: URL = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/plain; charset=utf-16",
+         *  print data representation class name =
+         *  java.net.URL"" (byte stream).
+         */
+        @stub
+        val TEXT_PLAIN_UTF_16: URL = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/plain; charset=utf-16be"
+         *  (big-endian byte ordering),
+         *  print data representation class name =
+         *  "java.net.URL" (byte stream).
+         */
+        @stub
+        val TEXT_PLAIN_UTF_16BE: URL = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/plain; charset=utf-16le"
+         *  (little-endian byte ordering),
+         *  print data representation class name =
+         *  "java.net.URL" (byte stream).
+         */
+        @stub
+        val TEXT_PLAIN_UTF_16LE: URL = ???
+
+        /** Doc flavor with MIME type =
+         *  "text/plain; charset=utf-8",
+         *  print data representation class name =
+         *  "java.net.URL" (byte stream).
+         */
+        @stub
+        val TEXT_PLAIN_UTF_8: URL = ???
+    }
+
 
     /** A String representing the host operating system encoding. */
     @stub

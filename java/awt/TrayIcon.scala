@@ -1,7 +1,7 @@
 package java.awt
 
 import java.awt.event.{ActionListener, MouseListener, MouseMotionListener}
-import java.lang.{Object, String}
+import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** A TrayIcon object represents a tray icon that can be
@@ -163,5 +163,31 @@ object TrayIcon {
      *  caption of the message, and a possible system sound a message
      *  may generate upon showing.
      */
-    type MessageType = TrayIcon_MessageType
+    class MessageType private (name: String, ordinal: Int) extends Enum[MessageType](name, ordinal) {
+    }
+
+    object MessageType {
+        /** An error message */
+        final val ERROR: MessageType = new MessageType("ERROR", 0)
+
+        /** An information message */
+        final val INFO: MessageType = new MessageType("INFO", 1)
+
+        /** Simple message */
+        final val NONE: MessageType = new MessageType("NONE", 2)
+
+        /** A warning message */
+        final val WARNING: MessageType = new MessageType("WARNING", 3)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): MessageType = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[MessageType] = ???
+    }
+
 }

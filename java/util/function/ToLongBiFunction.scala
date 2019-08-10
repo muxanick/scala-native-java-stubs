@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is applyAsLong(Object, Object).
  */
-@FunctionalInterface trait ToLongBiFunction[T, U] {
+@FunctionalInterface
+trait ToLongBiFunction[T, U] {
 
     /** Applies this function to the given arguments. */
     @stub

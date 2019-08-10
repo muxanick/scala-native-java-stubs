@@ -23,9 +23,9 @@ import scala.scalanative.annotation.stub
  *  appear on private fields and methods of superclasses; the container
  *  is required to perform injection in these cases as well.
  */
-@Target ( value ={ TYPE , FIELD , METHOD } ) 
-@Retention ( value = RUNTIME ) 
- final class Resource extends StaticAnnotation {
+@Target(value={TYPE,FIELD,METHOD})
+@Retention(value=RUNTIME)
+final class Resource extends StaticAnnotation {
 
     /** The authentication type to use for this resource. */
     @stub

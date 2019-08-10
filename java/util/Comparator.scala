@@ -65,7 +65,8 @@ import scala.scalanative.annotation.stub
  *  
  *  Java Collections Framework.
  */
-@FunctionalInterface trait Comparator[T] {
+@FunctionalInterface
+trait Comparator[T] {
 
     /** Compares its two arguments for order. */
     @stub

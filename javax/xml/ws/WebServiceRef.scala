@@ -43,10 +43,10 @@ import scala.scalanative.annotation.stub
  *  annotation annotated with the WebServiceFeatureAnnotation
  *  that is specified with WebServiceRef, an ERROR MUST be given.
  */
-@Target ( value ={ TYPE , METHOD , FIELD } ) 
-@Retention ( value = RUNTIME ) 
-@Documented 
- final class WebServiceRef extends StaticAnnotation {
+@Target(value={TYPE,METHOD,FIELD})
+@Retention(value=RUNTIME)
+@Documented
+final class WebServiceRef extends StaticAnnotation {
 
     /** A portable JNDI lookup name that resolves to the target
      *  web service reference.

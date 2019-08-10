@@ -10,10 +10,10 @@ import scala.scalanative.annotation.stub
  *  result from the value of this annotation, as done by AbstractProcessor.getSupportedAnnotationTypes().  Only strings conforming to the
  *  grammar should be used as values.
  */
-@Documented 
-@Target ( value = TYPE ) 
-@Retention ( value = RUNTIME ) 
- final class SupportedAnnotationTypes extends StaticAnnotation {
+@Documented
+@Target(value=TYPE)
+@Retention(value=RUNTIME)
+final class SupportedAnnotationTypes extends StaticAnnotation {
 
     /** Returns the names of the supported annotation types. */
     @stub

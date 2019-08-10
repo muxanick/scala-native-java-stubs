@@ -6,9 +6,9 @@ import scala.annotation.StaticAnnotation
 import scala.scalanative.annotation.stub
 
 /**  */
-@Retention ( value = RUNTIME ) 
-@Target ( value = METHOD ) 
- final class WebResult extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value=METHOD)
+final class WebResult extends StaticAnnotation {
 
     /**  */
     @stub

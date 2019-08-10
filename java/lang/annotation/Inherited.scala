@@ -19,8 +19,8 @@ import scala.scalanative.annotation.stub
  *  from superclasses; annotations on implemented interfaces have no
  *  effect.
  */
-@Documented 
-@Retention ( value = RUNTIME ) 
-@Target ( value = ANNOTATION_TYPE ) 
- final class Inherited extends StaticAnnotation {
+@Documented
+@Retention(value=RUNTIME)
+@Target(value=ANNOTATION_TYPE)
+final class Inherited extends StaticAnnotation {
 }

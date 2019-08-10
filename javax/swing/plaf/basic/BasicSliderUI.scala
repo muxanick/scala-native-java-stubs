@@ -1,11 +1,11 @@
 package javax.swing.plaf.basic
 
 import java.awt.{Color, Component, Component.BaselineResizeBehavior, Dimension, Graphics, Insets, Rectangle}
-import java.awt.event.{ComponentListener, FocusListener}
-import java.beans.PropertyChangeListener
+import java.awt.event.{ActionEvent, ActionListener, ComponentAdapter, ComponentEvent, ComponentListener, FocusEvent, FocusListener, MouseAdapter, MouseEvent}
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.{Integer, Object}
-import javax.swing.{JComponent, JSlider, Timer}
-import javax.swing.event.ChangeListener
+import javax.swing.{AbstractAction, JComponent, JSlider, Timer}
+import javax.swing.event.{ChangeEvent, ChangeListener, MouseInputAdapter}
 import javax.swing.plaf.{ComponentUI, SliderUI}
 import scala.scalanative.annotation.stub
 
@@ -16,26 +16,182 @@ class BasicSliderUI extends SliderUI {
     @stub
     def this(b: JSlider) = ???
 
-    /** As of Java 2 platform v1.3 this undocumented class is no longer used. */
-    type ActionScroller = BasicSliderUI_ActionScroller
+    /** As of Java 2 platform v1.3 this undocumented class is no longer used.
+     *  The recommended approach to creating bindings is to use a
+     *  combination of an ActionMap, to contain the action,
+     *  and an InputMap to contain the mapping from KeyStroke
+     *  to action description. The InputMap is is usually described in the
+     *  LookAndFeel tables.
+     *  
+     *  Please refer to the key bindings specification for further details.
+     *  
+     *  This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of Foo.
+     */
+    class ActionScroller extends AbstractAction {
 
-    /** Data model listener. */
-    type ChangeHandler = BasicSliderUI_ChangeHandler
+        /**  */
+        @stub
+        def this(slider: JSlider, dir: Int, block: Boolean) = ???
 
-    /** Listener for resizing events. */
-    type ComponentHandler = BasicSliderUI_ComponentHandler
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
 
-    /** Focus-change listener. */
-    type FocusHandler = BasicSliderUI_FocusHandler
+        /** Returns true if the action is enabled. */
+        @stub
+        def isEnabled(): Boolean = ???
+    }
+
+
+    /** Data model listener.
+     * 
+     *  This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of Foo.
+     */
+    class ChangeHandler extends Object with ChangeListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when the target of the listener has changed its state. */
+        @stub
+        def stateChanged(e: ChangeEvent): Unit = ???
+    }
+
+
+    /** Listener for resizing events.
+     *  
+     *  This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of Foo.
+     */
+    class ComponentHandler extends ComponentAdapter {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when the component's size changes. */
+        @stub
+        def componentResized(e: ComponentEvent): Unit = ???
+    }
+
+
+    /** Focus-change listener.
+     *  
+     *  This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of Foo.
+     */
+    class FocusHandler extends Object with FocusListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when a component gains the keyboard focus. */
+        @stub
+        def focusGained(e: FocusEvent): Unit = ???
+
+        /** Invoked when a component loses the keyboard focus. */
+        @stub
+        def focusLost(e: FocusEvent): Unit = ???
+    }
+
 
     /**  */
-    type PropertyChangeHandler = BasicSliderUI_PropertyChangeHandler
+    class PropertyChangeHandler extends Object with PropertyChangeListener {
 
-    /** Scroll-event listener. */
-    type ScrollListener = BasicSliderUI_ScrollListener
+        /**  */
+        @stub
+        def this() = ???
 
-    /** Track mouse movements. */
-    type TrackListener = BasicSliderUI_TrackListener
+        /** This method gets called when a bound property is changed. */
+        @stub
+        def propertyChange(e: PropertyChangeEvent): Unit = ???
+    }
+
+
+    /** Scroll-event listener.
+     * 
+     *  This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of Foo.
+     */
+    class ScrollListener extends Object with ActionListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /**  */
+        @stub
+        def this(dir: Int, block: Boolean) = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+
+        /**  */
+        @stub
+        def setDirection(direction: Int): Unit = ???
+
+        /**  */
+        @stub
+        def setScrollByBlock(block: Boolean): Unit = ???
+    }
+
+
+    /** Track mouse movements.
+     * 
+     *  This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of Foo.
+     */
+    class TrackListener extends MouseInputAdapter {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /**  */
+        @stub
+        protected val currentMouseX: Int = ???
+
+        /**  */
+        @stub
+        protected val currentMouseY: Int = ???
+
+        /**  */
+        @stub
+        protected val offset: Int = ???
+
+        /** Set the models value to the position of the top/left
+         *  of the thumb relative to the origin of the track.
+         */
+        @stub
+        def mouseDragged(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse cursor has been moved onto a component
+         *  but no buttons have been pushed.
+         */
+        @stub
+        def mouseMoved(e: MouseEvent): Unit = ???
+
+        /** If the mouse is pressed above the "thumb" component
+         *  then reduce the scrollbars value by one page ("page up"),
+         *  otherwise increase it by one page.
+         */
+        @stub
+        def mousePressed(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button has been released on a component. */
+        @stub
+        def mouseReleased(e: MouseEvent): Unit = ???
+
+        /**  */
+        @stub
+        def shouldScroll(direction: Int): Boolean = ???
+    }
+
 
     /**  */
     @stub

@@ -36,9 +36,9 @@ import scala.scalanative.annotation.stub
  * 
  *  Examples: See examples in XmlEnumValue
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value = TYPE ) 
- final class XmlEnum extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value=TYPE)
+final class XmlEnum extends StaticAnnotation {
 
     /** Java type that is mapped to a XML simple type. */
     @stub

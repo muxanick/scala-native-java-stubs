@@ -94,9 +94,9 @@ import scala.scalanative.annotation.stub
  * 
  *  
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value ={ FIELD , METHOD } ) 
- final class XmlAttribute extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value={FIELD,METHOD})
+final class XmlAttribute extends StaticAnnotation {
 
     /** Name of the XML Schema attribute. */
     @stub

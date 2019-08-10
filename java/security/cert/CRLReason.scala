@@ -15,49 +15,49 @@ object CRLReason {
     /** This reason indicates that it is known or suspected that the
      *  certificate subject's private key has been compromised.
      */
-    final val AA_COMPROMISE = new CRLReason(AA_COMPROMISE, 0)
+    final val AA_COMPROMISE: CRLReason = new CRLReason("AA_COMPROMISE", 0)
 
     /** This reason indicates that the subject's name or other information
      *  has changed.
      */
-    final val AFFILIATION_CHANGED = new CRLReason(AFFILIATION_CHANGED, 1)
+    final val AFFILIATION_CHANGED: CRLReason = new CRLReason("AFFILIATION_CHANGED", 1)
 
     /** This reason indicates that it is known or suspected that the
      *  certificate subject's private key has been compromised.
      */
-    final val CA_COMPROMISE = new CRLReason(CA_COMPROMISE, 2)
+    final val CA_COMPROMISE: CRLReason = new CRLReason("CA_COMPROMISE", 2)
 
     /** This reason indicates that the certificate has been put on hold. */
-    final val CERTIFICATE_HOLD = new CRLReason(CERTIFICATE_HOLD, 3)
+    final val CERTIFICATE_HOLD: CRLReason = new CRLReason("CERTIFICATE_HOLD", 3)
 
     /** This reason indicates that the certificate is no longer needed. */
-    final val CESSATION_OF_OPERATION = new CRLReason(CESSATION_OF_OPERATION, 4)
+    final val CESSATION_OF_OPERATION: CRLReason = new CRLReason("CESSATION_OF_OPERATION", 4)
 
     /** This reason indicates that it is known or suspected that the
      *  certificate subject's private key has been compromised.
      */
-    final val KEY_COMPROMISE = new CRLReason(KEY_COMPROMISE, 5)
+    final val KEY_COMPROMISE: CRLReason = new CRLReason("KEY_COMPROMISE", 5)
 
     /** This reason indicates that the privileges granted to the subject of
      *  the certificate have been withdrawn.
      */
-    final val PRIVILEGE_WITHDRAWN = new CRLReason(PRIVILEGE_WITHDRAWN, 6)
+    final val PRIVILEGE_WITHDRAWN: CRLReason = new CRLReason("PRIVILEGE_WITHDRAWN", 6)
 
     /** This reason indicates that the certificate was previously on hold
      *  and should be removed from the CRL.
      */
-    final val REMOVE_FROM_CRL = new CRLReason(REMOVE_FROM_CRL, 7)
+    final val REMOVE_FROM_CRL: CRLReason = new CRLReason("REMOVE_FROM_CRL", 7)
 
     /** This reason indicates that the certificate has been superseded. */
-    final val SUPERSEDED = new CRLReason(SUPERSEDED, 8)
+    final val SUPERSEDED: CRLReason = new CRLReason("SUPERSEDED", 8)
 
     /** This reason indicates that it is unspecified as to why the
      *  certificate has been revoked.
      */
-    final val UNSPECIFIED = new CRLReason(UNSPECIFIED, 9)
+    final val UNSPECIFIED: CRLReason = new CRLReason("UNSPECIFIED", 9)
 
     /** Unused reason. */
-    final val UNUSED = new CRLReason(UNUSED, 10)
+    final val UNUSED: CRLReason = new CRLReason("UNUSED", 10)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

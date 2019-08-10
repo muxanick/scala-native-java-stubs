@@ -1,11 +1,11 @@
 package javax.swing
 
-import java.awt.{Component, Container, Dimension, Font, Rectangle}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, Dimension, Font, Rectangle}
 import java.awt.event.ActionListener
 import java.beans.PropertyChangeListener
 import java.lang.{Object, String}
-import javax.accessibility.AccessibleContext
-import javax.swing.text.{Document, JTextComponent}
+import javax.accessibility.{AccessibleContext, AccessibleStateSet}
+import javax.swing.text.{Document, JTextComponent, JTextComponent.AccessibleJTextComponent}
 import scala.scalanative.annotation.stub
 
 /** JTextField is a lightweight component that allows the editing
@@ -150,9 +150,30 @@ class JTextField extends JTextComponent with SwingConstants {
     def this(text: String, columns: Int) = ???
 
     /** This class implements accessibility support for the
-     *  JTextField class.
+     *  JTextField class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to text field user-interface
+     *  elements.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type AccessibleJTextField = JTextField_AccessibleJTextField
+    protected class AccessibleJTextField extends JTextComponent.AccessibleJTextComponent {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Gets the state set of this object. */
+        @stub
+        def getAccessibleStateSet(): AccessibleStateSet = ???
+    }
+
 
     /** Updates the textfield's state in response to property changes in
      *  associated action.

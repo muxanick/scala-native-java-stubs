@@ -44,7 +44,18 @@ abstract class EnumControl extends Control {
 
 object EnumControl {
     /** An instance of the EnumControl.Type inner class identifies one kind of
-     *  enumerated control.
+     *  enumerated control.  Static instances are provided for the
+     *  common types.
      */
-    type Type = EnumControl_Type
+    object Type extends Control.Type {
+
+        /** Constructs a new enumerated control type. */
+        @stub
+        protected def apply(name: String) = ???
+
+        /** Represents a control over a set of possible reverberation settings. */
+        @stub
+        val REVERB: Type = ???
+    }
+
 }

@@ -7,7 +7,8 @@ import scala.scalanative.annotation.stub
 /** A ServerRef represents the server-side handle for a remote object
  *  implementation.
  */
-@Deprecated trait ServerRef extends RemoteRef {
+@Deprecated
+trait ServerRef extends RemoteRef {
 
     /** Deprecated.  */
     @stub

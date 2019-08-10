@@ -13,25 +13,25 @@ import scala.scalanative.annotation.stub
  *  Use getValue() instead.
  */
 class HijrahEra private (name: String, ordinal: Int) extends Enum[HijrahEra](name, ordinal) with Era {
+
+    /** Gets the numeric era int value. */
+    @stub
+    def getValue(): Int = ???
+
+    /** Gets the range of valid values for the specified field. */
+    @stub
+    def range(field: TemporalField): ValueRange = ???
 }
 
 object HijrahEra {
     /** The singleton instance for the current era, 'Anno Hegirae',
      *  which has the numeric value 1.
      */
-    final val AH = new HijrahEra(AH, 0)
-
-    /** Gets the numeric era int value. */
-    @stub
-    def getValue(): Int = ???
+    final val AH: HijrahEra = new HijrahEra("AH", 0)
 
     /** Obtains an instance of HijrahEra from an int value. */
     @stub
     def of(hijrahEra: Int): HijrahEra = ???
-
-    /** Gets the range of valid values for the specified field. */
-    @stub
-    def range(field: TemporalField): ValueRange = ???
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

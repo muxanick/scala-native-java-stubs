@@ -44,8 +44,8 @@ import scala.scalanative.annotation.stub
  *  case of EJBs where the EJB can handle exceptions.
  *  
  */
-@Documented 
-@Retention ( value = RUNTIME ) 
-@Target ( value = METHOD ) 
- final class PreDestroy extends StaticAnnotation {
+@Documented
+@Retention(value=RUNTIME)
+@Target(value=METHOD)
+final class PreDestroy extends StaticAnnotation {
 }

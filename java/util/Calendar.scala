@@ -496,8 +496,130 @@ abstract class Calendar extends Object with Serializable with Cloneable with Com
 object Calendar {
     /** Calendar.Builder is used for creating a Calendar from
      *  various date-time parameters.
+     * 
+     *  There are two ways to set a Calendar to a date-time value. One
+     *  is to set the instant parameter to a millisecond offset from the Epoch. The other is to set individual
+     *  field parameters, such as YEAR, to their desired
+     *  values. These two ways can't be mixed. Trying to set both the instant and
+     *  individual fields will cause an IllegalStateException to be
+     *  thrown. However, it is permitted to override previous values of the
+     *  instant or field parameters.
+     * 
+     *  If no enough field parameters are given for determining date and/or
+     *  time, calendar specific default values are used when building a
+     *  Calendar. For example, if the YEAR value
+     *  isn't given for the Gregorian calendar, 1970 will be used. If there are
+     *  any conflicts among field parameters, the  resolution rules are applied.
+     *  Therefore, the order of field setting matters.
+     * 
+     *  In addition to the date-time parameters,
+     *  the locale,
+     *  time zone,
+     *  week definition, and
+     *  leniency mode parameters can be set.
+     * 
+     *  Examples
+     *  The following are sample usages. Sample code assumes that the
+     *  Calendar constants are statically imported.
+     * 
+     *  The following code produces a Calendar with date 2012-12-31
+     *  (Gregorian) because Monday is the first day of a week with the  ISO 8601
+     *  compatible week parameters.
+     *  
+     *    Calendar cal = new Calendar.Builder().setCalendarType("iso8601")
+     *                         .setWeekDate(2013, 1, MONDAY).build();
+     *  The following code produces a Japanese Calendar with date
+     *  1989-01-08 (Gregorian), assuming that the default ERA
+     *  is Heisei that started on that day.
+     *  
+     *    Calendar cal = new Calendar.Builder().setCalendarType("japanese")
+     *                         .setFields(YEAR, 1, DAY_OF_YEAR, 1).build();
      */
-    type Builder = Calendar_Builder
+    object Builder extends Object {
+
+        /** Constructs a Calendar.Builder. */
+        @stub
+        def apply() = ???
+
+        /** Returns a Calendar built from the parameters set by the
+         *  setter methods.
+         */
+        @stub
+        def build(): Calendar = ???
+
+        /** Sets the field parameter to the given value. */
+        @stub
+        def set(field: Int, value: Int): Builder = ???
+
+        /** Sets the calendar type parameter to the given type. */
+        @stub
+        def setCalendarType(type: String): Builder = ???
+
+        /** Sets the date field parameters to the values given by year,
+         *  month, and dayOfMonth.
+         */
+        @stub
+        def setDate(year: Int, month: Int, dayOfMonth: Int): Builder = ???
+
+        /** Sets field parameters to their values given by
+         *  fieldValuePairs that are pairs of a field and its value.
+         */
+        @stub
+        def setFields(fieldValuePairs: int*): Builder = ???
+
+        /** Sets the instant parameter to the instant value given by a
+         *  Date.
+         */
+        @stub
+        def setInstant(instant: Date): Builder = ???
+
+        /** Sets the instant parameter to the given instant value that is
+         *  a millisecond offset from the
+         *  Epoch.
+         */
+        @stub
+        def setInstant(instant: Long): Builder = ???
+
+        /** Sets the lenient mode parameter to the value given by lenient. */
+        @stub
+        def setLenient(lenient: Boolean): Builder = ???
+
+        /** Sets the locale parameter to the given locale. */
+        @stub
+        def setLocale(locale: Locale): Builder = ???
+
+        /** Sets the time of day field parameters to the values given by
+         *  hourOfDay, minute, and second.
+         */
+        @stub
+        def setTimeOfDay(hourOfDay: Int, minute: Int, second: Int): Builder = ???
+
+        /** Sets the time of day field parameters to the values given by
+         *  hourOfDay, minute, second, and
+         *  millis.
+         */
+        @stub
+        def setTimeOfDay(hourOfDay: Int, minute: Int, second: Int, millis: Int): Builder = ???
+
+        /** Sets the time zone parameter to the given zone. */
+        @stub
+        def setTimeZone(zone: TimeZone): Builder = ???
+
+        /** Sets the week-based date parameters to the values with the given
+         *  date specifiers - week year, week of year, and day of week.
+         */
+        @stub
+        def setWeekDate(weekYear: Int, weekOfYear: Int, dayOfWeek: Int): Builder = ???
+
+        /** Sets the week definition parameters to the values given by
+         *  firstDayOfWeek and minimalDaysInFirstWeek that are
+         *  used to determine the first
+         *  week of a year.
+         */
+        @stub
+        def setWeekDefinition(firstDayOfWeek: Int, minimalDaysInFirstWeek: Int): Builder = ???
+    }
+
 
     /** A style specifier for getDisplayNames indicating names in all styles, such as
      *  "January" and "Jan".

@@ -1,8 +1,8 @@
 package javax.swing
 
-import java.awt.{Component, Container, LayoutManager}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, LayoutManager}
 import java.lang.{Object, String}
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole}
 import javax.swing.plaf.PanelUI
 import scala.scalanative.annotation.stub
 
@@ -49,9 +49,30 @@ class JPanel extends JComponent with Accessible {
     def this(layout: LayoutManager, isDoubleBuffered: Boolean) = ???
 
     /** This class implements accessibility support for the
-     *  JPanel class.
+     *  JPanel class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to panel user-interface
+     *  elements.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type AccessibleJPanel = JPanel_AccessibleJPanel
+    protected class AccessibleJPanel extends JComponent.AccessibleJComponent {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+    }
+
 
     /** Gets the AccessibleContext associated with this JPanel. */
     @stub

@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is test(long).
  */
-@FunctionalInterface trait LongPredicate {
+@FunctionalInterface
+trait LongPredicate {
 
     /** Returns a composed predicate that represents a short-circuiting logical
      *  AND of this predicate and another.

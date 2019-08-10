@@ -70,5 +70,17 @@ abstract class Certificate extends Object with Serializable {
 
 object Certificate {
     /** Alternate Certificate class for serialization. */
-    protected type CertificateRep = Certificate_CertificateRep
+    protected object CertificateRep extends Object with Serializable {
+
+        /** Construct the alternate Certificate class with the Certificate
+         *  type and Certificate encoding bytes.
+         */
+        @stub
+        protected def apply(type: String, data: Array[Byte]) = ???
+
+        /** Resolve the Certificate Object. */
+        @stub
+        protected def readResolve(): Any = ???
+    }
+
 }

@@ -46,10 +46,10 @@ import scala.scalanative.annotation.stub
  *     }
  *  
  */
-@Documented 
-@Retention ( value = RUNTIME ) 
-@Target ( value = ANNOTATION_TYPE ) 
- final class Target extends StaticAnnotation {
+@Documented
+@Retention(value=RUNTIME)
+@Target(value=ANNOTATION_TYPE)
+final class Target extends StaticAnnotation {
 
     /** Returns an array of the kinds of elements an annotation type
      *  can be applied to.

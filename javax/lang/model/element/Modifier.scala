@@ -15,48 +15,48 @@ import scala.scalanative.annotation.stub
  *  future versions of the platform.
  */
 class Modifier private (name: String, ordinal: Int) extends Enum[Modifier](name, ordinal) {
-}
-
-object Modifier {
-    /** The modifier abstract */
-    final val ABSTRACT = new Modifier(ABSTRACT, 0)
-
-    /** The modifier default */
-    final val DEFAULT = new Modifier(DEFAULT, 1)
-
-    /** The modifier final */
-    final val FINAL = new Modifier(FINAL, 2)
-
-    /** The modifier native */
-    final val NATIVE = new Modifier(NATIVE, 3)
-
-    /** The modifier private */
-    final val PRIVATE = new Modifier(PRIVATE, 4)
-
-    /** The modifier protected */
-    final val PROTECTED = new Modifier(PROTECTED, 5)
-
-    /** The modifier public */
-    final val PUBLIC = new Modifier(PUBLIC, 6)
-
-    /** The modifier static */
-    final val STATIC = new Modifier(STATIC, 7)
-
-    /** The modifier strictfp */
-    final val STRICTFP = new Modifier(STRICTFP, 8)
-
-    /** The modifier synchronized */
-    final val SYNCHRONIZED = new Modifier(SYNCHRONIZED, 9)
-
-    /** The modifier transient */
-    final val TRANSIENT = new Modifier(TRANSIENT, 10)
-
-    /** The modifier volatile */
-    final val VOLATILE = new Modifier(VOLATILE, 11)
 
     /** Returns this modifier's name in lowercase. */
     @stub
     def toString(): String = ???
+}
+
+object Modifier {
+    /** The modifier abstract */
+    final val ABSTRACT: Modifier = new Modifier("ABSTRACT", 0)
+
+    /** The modifier default */
+    final val DEFAULT: Modifier = new Modifier("DEFAULT", 1)
+
+    /** The modifier final */
+    final val FINAL: Modifier = new Modifier("FINAL", 2)
+
+    /** The modifier native */
+    final val NATIVE: Modifier = new Modifier("NATIVE", 3)
+
+    /** The modifier private */
+    final val PRIVATE: Modifier = new Modifier("PRIVATE", 4)
+
+    /** The modifier protected */
+    final val PROTECTED: Modifier = new Modifier("PROTECTED", 5)
+
+    /** The modifier public */
+    final val PUBLIC: Modifier = new Modifier("PUBLIC", 6)
+
+    /** The modifier static */
+    final val STATIC: Modifier = new Modifier("STATIC", 7)
+
+    /** The modifier strictfp */
+    final val STRICTFP: Modifier = new Modifier("STRICTFP", 8)
+
+    /** The modifier synchronized */
+    final val SYNCHRONIZED: Modifier = new Modifier("SYNCHRONIZED", 9)
+
+    /** The modifier transient */
+    final val TRANSIENT: Modifier = new Modifier("TRANSIENT", 10)
+
+    /** The modifier volatile */
+    final val VOLATILE: Modifier = new Modifier("VOLATILE", 11)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

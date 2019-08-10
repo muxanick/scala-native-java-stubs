@@ -21,7 +21,8 @@ import scala.scalanative.annotation.stub
  *  An Identity can be subclassed, to include postal and email addresses,
  *  telephone numbers, images of faces and logos, and so on.
  */
-@Deprecated abstract class Identity extends Object with Principal with Serializable {
+@Deprecated
+abstract class Identity extends Object with Principal with Serializable {
 
     /** Deprecated.  */
     @stub

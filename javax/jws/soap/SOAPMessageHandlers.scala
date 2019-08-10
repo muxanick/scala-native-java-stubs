@@ -6,10 +6,10 @@ import scala.annotation.StaticAnnotation
 import scala.scalanative.annotation.stub
 
 /**  */
-@Retention ( value = RUNTIME ) 
-@Target ( value = TYPE ) 
-@Deprecated 
- final class SOAPMessageHandlers extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value=TYPE)
+@Deprecated
+final class SOAPMessageHandlers extends StaticAnnotation {
 
     /** Deprecated.  */
     @stub

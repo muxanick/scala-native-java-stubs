@@ -1,6 +1,6 @@
 package java.text
 
-import java.lang.{CharSequence, Object, String}
+import java.lang.{CharSequence, Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** This class provides the method normalize which transforms Unicode
@@ -76,7 +76,33 @@ object Normalizer {
      *  Unicode Standard Annex #15 — Unicode Normalization Forms
      *  and two methods to access them.
      */
-    type Form = Normalizer_Form
+    class Form private (name: String, ordinal: Int) extends Enum[Form](name, ordinal) {
+    }
+
+    object Form {
+        /** Canonical decomposition, followed by canonical composition. */
+        final val NFC: Form = new Form("NFC", 0)
+
+        /** Canonical decomposition. */
+        final val NFD: Form = new Form("NFD", 1)
+
+        /** Compatibility decomposition, followed by canonical composition. */
+        final val NFKC: Form = new Form("NFKC", 2)
+
+        /** Compatibility decomposition. */
+        final val NFKD: Form = new Form("NFKD", 3)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): Form = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[Form] = ???
+    }
+
 
     /** Determines if the given sequence of char values is normalized. */
     @stub

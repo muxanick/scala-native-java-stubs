@@ -16,9 +16,9 @@ import scala.scalanative.annotation.stub
  *  suppress a warning in a particular method, you should annotate that
  *  method rather than its class.
  */
-@Target ( value ={ TYPE , FIELD , METHOD , PARAMETER , CONSTRUCTOR , LOCAL_VARIABLE } ) 
-@Retention ( value = SOURCE ) 
- final class SuppressWarnings extends StaticAnnotation {
+@Target(value={TYPE,FIELD,METHOD,PARAMETER,CONSTRUCTOR,LOCAL_VARIABLE})
+@Retention(value=SOURCE)
+final class SuppressWarnings extends StaticAnnotation {
 
     /** The set of warnings that are to be suppressed by the compiler in the
      *  annotated element.

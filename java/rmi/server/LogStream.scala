@@ -7,7 +7,8 @@ import scala.scalanative.annotation.stub
 /** LogStream provides a mechanism for logging errors that are
  *  of possible interest to those monitoring a system.
  */
-@Deprecated class LogStream extends PrintStream {
+@Deprecated
+class LogStream extends PrintStream {
 
     /** Deprecated. 
      * no replacement

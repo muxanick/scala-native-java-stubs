@@ -9,10 +9,10 @@ class StandardProtocolFamily private (name: String, ordinal: Int) extends Enum[S
 
 object StandardProtocolFamily {
     /** Internet Protocol Version 4 (IPv4) */
-    final val INET = new StandardProtocolFamily(INET, 0)
+    final val INET: StandardProtocolFamily = new StandardProtocolFamily("INET", 0)
 
     /** Internet Protocol Version 6 (IPv6) */
-    final val INET6 = new StandardProtocolFamily(INET6, 1)
+    final val INET6: StandardProtocolFamily = new StandardProtocolFamily("INET6", 1)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

@@ -1,7 +1,7 @@
 package javax.swing.text
 
 import java.awt.{Rectangle, Shape}
-import java.lang.Object
+import java.lang.{Deprecated, Object}
 import javax.swing.SizeRequirements
 import javax.swing.event.{DocumentEvent, DocumentEvent.ElementChange}
 import scala.scalanative.annotation.stub
@@ -43,14 +43,68 @@ abstract class TableView extends BoxView {
     @stub
     def this(elem: Element) = ???
 
-    /** Deprecated. 
-     * A table cell can now be any View implementation.
-     * 
-     */
-    type TableCell = TableView_TableCell
+    /**  */
+@Deprecated
+    class TableCell extends BoxView {
+
+        /** Deprecated.  */
+        @stub
+        def this(elem: Element) = ???
+
+        /** Deprecated.  */
+        @stub
+        def getColumnCount(): Int = ???
+
+        /** Deprecated.  */
+        @stub
+        def getGridColumn(): Int = ???
+
+        /** Deprecated.  */
+        @stub
+        def getGridRow(): Int = ???
+
+        /** Deprecated.  */
+        @stub
+        def getRowCount(): Int = ???
+
+        /** Deprecated.  */
+        @stub
+        def setGridLocation(row: Int, col: Int): Unit = ???
+    }
+
 
     /** View of a row in a row-centric table. */
-    type TableRow = TableView_TableRow
+    class TableRow extends BoxView {
+
+        /** Constructs a TableView for the given element. */
+        @stub
+        def this(elem: Element) = ???
+
+        /** Determines the resizability of the view along the
+         *  given axis.
+         */
+        @stub
+        def getResizeWeight(axis: Int): Int = ???
+
+        /** Fetches the child view that represents the given position in
+         *  the model.
+         */
+        @stub
+        protected def getViewAtPosition(pos: Int, a: Rectangle): View = ???
+
+        /** Perform layout for the major axis of the box (i.e. */
+        @stub
+        protected def layoutMajorAxis(targetSpan: Int, axis: Int, offsets: Array[Int], spans: Array[Int]): Unit = ???
+
+        /** Perform layout for the minor axis of the box (i.e. */
+        @stub
+        protected def layoutMinorAxis(targetSpan: Int, axis: Int, offsets: Array[Int], spans: Array[Int]): Unit = ???
+
+        /** Change the child views. */
+        @stub
+        def replace(offset: Int, length: Int, views: Array[View]): Unit = ???
+    }
+
 
     /** Calculate the requirements for the minor axis. */
     protected def calculateMinorAxisRequirements(axis: Int, r: SizeRequirements): SizeRequirements

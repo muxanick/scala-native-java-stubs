@@ -39,22 +39,22 @@ import scala.scalanative.annotation.stub
  *  Use getValue() instead.
  */
 class ThaiBuddhistEra private (name: String, ordinal: Int) extends Enum[ThaiBuddhistEra](name, ordinal) with Era {
+
+    /** Gets the numeric era int value. */
+    @stub
+    def getValue(): Int = ???
 }
 
 object ThaiBuddhistEra {
     /** The singleton instance for the current era, 'Buddhist Era',
      *  which has the numeric value 1.
      */
-    final val BE = new ThaiBuddhistEra(BE, 0)
+    final val BE: ThaiBuddhistEra = new ThaiBuddhistEra("BE", 0)
 
     /** The singleton instance for the era before the current one, 'Before Buddhist Era',
      *  which has the numeric value 0.
      */
-    final val BEFORE_BE = new ThaiBuddhistEra(BEFORE_BE, 1)
-
-    /** Gets the numeric era int value. */
-    @stub
-    def getValue(): Int = ???
+    final val BEFORE_BE: ThaiBuddhistEra = new ThaiBuddhistEra("BEFORE_BE", 1)
 
     /** Obtains an instance of ThaiBuddhistEra from an int value. */
     @stub

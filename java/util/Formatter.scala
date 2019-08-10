@@ -1,7 +1,7 @@
 package java.util
 
 import java.io.{Closeable, File, Flushable, IOException, OutputStream, PrintStream}
-import java.lang.{Appendable, Object, String}
+import java.lang.{Appendable, Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** An interpreter for printf-style format strings.  This class provides support
@@ -1812,5 +1812,25 @@ final class Formatter extends Object with Closeable with Flushable {
 
 object Formatter {
     /** Enum for BigDecimal formatting. */
-    type BigDecimalLayoutForm = Formatter_BigDecimalLayoutForm
+    class BigDecimalLayoutForm private (name: String, ordinal: Int) extends Enum[BigDecimalLayoutForm](name, ordinal) {
+    }
+
+    object BigDecimalLayoutForm {
+        /** Format the BigDecimal as a decimal number. */
+        final val DECIMAL_FLOAT: BigDecimalLayoutForm = new BigDecimalLayoutForm("DECIMAL_FLOAT", 0)
+
+        /** Format the BigDecimal in computerized scientific notation. */
+        final val SCIENTIFIC: BigDecimalLayoutForm = new BigDecimalLayoutForm("SCIENTIFIC", 1)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): BigDecimalLayoutForm = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[BigDecimalLayoutForm] = ???
+    }
+
 }

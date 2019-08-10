@@ -38,10 +38,10 @@ import scala.scalanative.annotation.stub
  *    no way to know whether the parameters correspond to getX()
  *    and getY() or the other way around.
  */
-@Documented 
-@Target ( value = CONSTRUCTOR ) 
-@Retention ( value = RUNTIME ) 
- final class ConstructorProperties extends StaticAnnotation {
+@Documented
+@Target(value=CONSTRUCTOR)
+@Retention(value=RUNTIME)
+final class ConstructorProperties extends StaticAnnotation {
 
     /** The getter names. */
     @stub

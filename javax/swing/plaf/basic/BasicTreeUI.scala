@@ -1,12 +1,12 @@
 package javax.swing.plaf.basic
 
 import java.awt.{Color, Component, Component.BaselineResizeBehavior, Dimension, Graphics, Insets, Rectangle}
-import java.awt.event.{ComponentListener, FocusListener, KeyListener, MouseEvent, MouseListener}
-import java.beans.PropertyChangeListener
-import java.lang.{Boolean, Object}
+import java.awt.event.{ActionEvent, ActionListener, ComponentAdapter, ComponentEvent, ComponentListener, FocusEvent, FocusListener, KeyAdapter, KeyEvent, KeyListener, MouseAdapter, MouseEvent, MouseListener, MouseMotionListener}
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
+import java.lang.{Boolean, Object, String}
 import java.util.Hashtable
-import javax.swing.{CellRendererPane, Icon, JComponent, JTree, JTree.DropLocation}
-import javax.swing.event.{CellEditorListener, TreeExpansionListener, TreeModelListener, TreeSelectionListener}
+import javax.swing.{AbstractAction, Action, CellRendererPane, Icon, JComponent, JScrollBar, JScrollPane, JTree, JTree.DropLocation, Timer}
+import javax.swing.event.{CellEditorListener, ChangeEvent, MouseInputListener, TreeExpansionEvent, TreeExpansionListener, TreeModelEvent, TreeModelListener, TreeSelectionEvent, TreeSelectionListener}
 import javax.swing.plaf.{ComponentUI, TreeUI}
 import javax.swing.tree.{AbstractLayoutCache, AbstractLayoutCache.NodeDimensions, TreeCellEditor, TreeCellRenderer, TreeModel, TreePath, TreeSelectionModel}
 import scala.scalanative.annotation.stub
@@ -23,71 +23,443 @@ class BasicTreeUI extends TreeUI {
     /** Listener responsible for getting cell editing events and updating
      *  the tree accordingly.
      */
-    type CellEditorHandler = BasicTreeUI_CellEditorHandler
+    class CellEditorHandler extends Object with CellEditorListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Messaged when editing has been canceled in the tree. */
+        @stub
+        def editingCanceled(e: ChangeEvent): Unit = ???
+
+        /** Messaged when editing has stopped in the tree. */
+        @stub
+        def editingStopped(e: ChangeEvent): Unit = ???
+    }
+
 
     /** Updates the preferred size when scrolling (if necessary). */
-    type ComponentHandler = BasicTreeUI_ComponentHandler
+    class ComponentHandler extends ComponentAdapter with ActionListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** ScrollBar that is being adjusted. */
+        @stub
+        protected val scrollBar: JScrollBar = ???
+
+        /** Timer used when inside a scrollpane and the scrollbar is
+         *  adjusting.
+         */
+        @stub
+        protected val timer: Timer = ???
+
+        /** Public as a result of Timer. */
+        @stub
+        def actionPerformed(ae: ActionEvent): Unit = ???
+
+        /** Invoked when the component's position changes. */
+        @stub
+        def componentMoved(e: ComponentEvent): Unit = ???
+
+        /** Returns the JScrollPane housing the JTree, or null if one isn't
+         *  found.
+         */
+        @stub
+        protected def getScrollPane(): JScrollPane = ???
+
+        /** Creates, if necessary, and starts a Timer to check if need to
+         *  resize the bounds.
+         */
+        @stub
+        protected def startTimer(): Unit = ???
+    }
+
 
     /** Repaints the lead selection row when focus is lost/gained. */
-    type FocusHandler = BasicTreeUI_FocusHandler
+    class FocusHandler extends Object with FocusListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when focus is activated on the tree we're in, redraws the
+         *  lead row.
+         */
+        @stub
+        def focusGained(e: FocusEvent): Unit = ???
+
+        /** Invoked when focus is activated on the tree we're in, redraws the
+         *  lead row.
+         */
+        @stub
+        def focusLost(e: FocusEvent): Unit = ???
+    }
+
 
     /** This is used to get multiple key down events to appropriately generate
      *  events.
      */
-    type KeyHandler = BasicTreeUI_KeyHandler
+    class KeyHandler extends KeyAdapter {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Set to true while keyPressed is active. */
+        @stub
+        protected val isKeyDown: Boolean = ???
+
+        /** Key code that is being generated for. */
+        @stub
+        protected val repeatKeyAction: Action = ???
+
+        /** Invoked when a key has been pressed. */
+        @stub
+        def keyPressed(e: KeyEvent): Unit = ???
+
+        /** Invoked when a key has been released. */
+        @stub
+        def keyReleased(e: KeyEvent): Unit = ???
+
+        /** Invoked when a key has been typed. */
+        @stub
+        def keyTyped(e: KeyEvent): Unit = ???
+    }
+
 
     /** TreeMouseListener is responsible for updating the selection
      *  based on mouse events.
      */
-    type MouseHandler = BasicTreeUI_MouseHandler
+    class MouseHandler extends MouseAdapter with MouseMotionListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when a mouse button is pressed on a component and then
+         *  dragged.
+         */
+        @stub
+        def mouseDragged(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse button has been moved on a component
+         *  (with no buttons no down).
+         */
+        @stub
+        def mouseMoved(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button has been pressed on a component. */
+        @stub
+        def mousePressed(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button has been released on a component. */
+        @stub
+        def mouseReleased(e: MouseEvent): Unit = ???
+    }
+
 
     /** MouseInputHandler handles passing all mouse events,
      *  including mouse motion events, until the mouse is released to
-     *  the destination it is constructed with.
+     *  the destination it is constructed with. It is assumed all the
+     *  events are currently target at source.
      */
-    type MouseInputHandler = BasicTreeUI_MouseInputHandler
+    class MouseInputHandler extends Object with MouseInputListener {
+
+        /**  */
+        @stub
+        def this(source: Component, destination: Component, event: MouseEvent) = ???
+
+        /** Destination that receives all events. */
+        @stub
+        protected val destination: Component = ???
+
+        /** Source that events are coming from. */
+        @stub
+        protected val source: Component = ???
+
+        /** Invoked when the mouse button has been clicked (pressed
+         *  and released) on a component.
+         */
+        @stub
+        def mouseClicked(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button is pressed on a component and then
+         *  dragged.
+         */
+        @stub
+        def mouseDragged(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse enters a component. */
+        @stub
+        def mouseEntered(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse exits a component. */
+        @stub
+        def mouseExited(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse cursor has been moved onto a component
+         *  but no buttons have been pushed.
+         */
+        @stub
+        def mouseMoved(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button has been pressed on a component. */
+        @stub
+        def mousePressed(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button has been released on a component. */
+        @stub
+        def mouseReleased(e: MouseEvent): Unit = ???
+
+        /**  */
+        @stub
+        protected def removeFromSource(): Unit = ???
+    }
+
 
     /** Class responsible for getting size of node, method is forwarded
-     *  to BasicTreeUI method.
+     *  to BasicTreeUI method. X location does not include insets, that is
+     *  handled in getPathBounds.
      */
-    type NodeDimensionsHandler = BasicTreeUI_NodeDimensionsHandler
+    class NodeDimensionsHandler extends AbstractLayoutCache.NodeDimensions {
 
-    /** PropertyChangeListener for the tree. */
-    type PropertyChangeHandler = BasicTreeUI_PropertyChangeHandler
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Responsible for getting the size of a particular node. */
+        @stub
+        def getNodeDimensions(value: Any, row: Int, depth: Int, expanded: Boolean, size: Rectangle): Rectangle = ???
+
+        /**  */
+        @stub
+        protected def getRowX(row: Int, depth: Int): Int = ???
+    }
+
+
+    /** PropertyChangeListener for the tree. Updates the appropriate
+     *  variable, or TreeState, based on what changes.
+     */
+    class PropertyChangeHandler extends Object with PropertyChangeListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** This method gets called when a bound property is changed. */
+        @stub
+        def propertyChange(event: PropertyChangeEvent): Unit = ???
+    }
+
 
     /** Listener on the TreeSelectionModel, resets the row selection if
      *  any of the properties of the model change.
      */
-    type SelectionModelPropertyChangeHandler = BasicTreeUI_SelectionModelPropertyChangeHandler
+    class SelectionModelPropertyChangeHandler extends Object with PropertyChangeListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** This method gets called when a bound property is changed. */
+        @stub
+        def propertyChange(event: PropertyChangeEvent): Unit = ???
+    }
+
 
     /** ActionListener that invokes cancelEditing when action performed. */
-    type TreeCancelEditingAction = BasicTreeUI_TreeCancelEditingAction
+    class TreeCancelEditingAction extends AbstractAction {
+
+        /**  */
+        @stub
+        def this(name: String) = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+
+        /** Returns true if the action is enabled. */
+        @stub
+        def isEnabled(): Boolean = ???
+    }
+
 
     /** Updates the TreeState in response to nodes expanding/collapsing. */
-    type TreeExpansionHandler = BasicTreeUI_TreeExpansionHandler
+    class TreeExpansionHandler extends Object with TreeExpansionListener {
 
-    /** TreeHomeAction is used to handle end/home actions. */
-    type TreeHomeAction = BasicTreeUI_TreeHomeAction
+        /**  */
+        @stub
+        def this() = ???
 
-    /** TreeIncrementAction is used to handle up/down actions. */
-    type TreeIncrementAction = BasicTreeUI_TreeIncrementAction
+        /** Called whenever an item in the tree has been collapsed. */
+        @stub
+        def treeCollapsed(event: TreeExpansionEvent): Unit = ???
+
+        /** Called whenever an item in the tree has been expanded. */
+        @stub
+        def treeExpanded(event: TreeExpansionEvent): Unit = ???
+    }
+
+
+    /** TreeHomeAction is used to handle end/home actions.
+     *  Scrolls either the first or last cell to be visible based on
+     *  direction.
+     */
+    class TreeHomeAction extends AbstractAction {
+
+        /**  */
+        @stub
+        def this(direction: Int, name: String) = ???
+
+        /**  */
+        @stub
+        protected val direction: Int = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+
+        /** Returns true if the action is enabled. */
+        @stub
+        def isEnabled(): Boolean = ???
+    }
+
+
+    /** TreeIncrementAction is used to handle up/down actions.  Selection
+     *  is moved up or down based on direction.
+     */
+    class TreeIncrementAction extends AbstractAction {
+
+        /**  */
+        @stub
+        def this(direction: Int, name: String) = ???
+
+        /** Specifies the direction to adjust the selection by. */
+        @stub
+        protected val direction: Int = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+
+        /** Returns true if the action is enabled. */
+        @stub
+        def isEnabled(): Boolean = ???
+    }
+
 
     /** Forwards all TreeModel events to the TreeState. */
-    type TreeModelHandler = BasicTreeUI_TreeModelHandler
+    class TreeModelHandler extends Object with TreeModelListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked after a node (or a set of siblings) has changed in some
+         *  way.
+         */
+        @stub
+        def treeNodesChanged(e: TreeModelEvent): Unit = ???
+
+        /** Invoked after nodes have been inserted into the tree. */
+        @stub
+        def treeNodesInserted(e: TreeModelEvent): Unit = ???
+
+        /** Invoked after nodes have been removed from the tree. */
+        @stub
+        def treeNodesRemoved(e: TreeModelEvent): Unit = ???
+
+        /** Invoked after the tree has drastically changed structure from a
+         *  given node down.
+         */
+        @stub
+        def treeStructureChanged(e: TreeModelEvent): Unit = ???
+    }
+
 
     /** TreePageAction handles page up and page down events. */
-    type TreePageAction = BasicTreeUI_TreePageAction
+    class TreePageAction extends AbstractAction {
+
+        /**  */
+        @stub
+        def this(direction: Int, name: String) = ???
+
+        /** Specifies the direction to adjust the selection by. */
+        @stub
+        protected val direction: Int = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+
+        /** Returns true if the action is enabled. */
+        @stub
+        def isEnabled(): Boolean = ???
+    }
+
 
     /** Listens for changes in the selection model and updates the display
      *  accordingly.
      */
-    type TreeSelectionHandler = BasicTreeUI_TreeSelectionHandler
+    class TreeSelectionHandler extends Object with TreeSelectionListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Messaged when the selection changes in the tree we're displaying
+         *  for.
+         */
+        @stub
+        def valueChanged(event: TreeSelectionEvent): Unit = ???
+    }
+
 
     /** For the first selected row expandedness will be toggled. */
-    type TreeToggleAction = BasicTreeUI_TreeToggleAction
+    class TreeToggleAction extends AbstractAction {
 
-    /** TreeTraverseAction is the action used for left/right keys. */
-    type TreeTraverseAction = BasicTreeUI_TreeTraverseAction
+        /**  */
+        @stub
+        def this(name: String) = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+
+        /** Returns true if the action is enabled. */
+        @stub
+        def isEnabled(): Boolean = ???
+    }
+
+
+    /** TreeTraverseAction is the action used for left/right keys.
+     *  Will toggle the expandedness of a node, as well as potentially
+     *  incrementing the selection.
+     */
+    class TreeTraverseAction extends AbstractAction {
+
+        /**  */
+        @stub
+        def this(direction: Int, name: String) = ???
+
+        /** Determines direction to traverse, 1 means expand, -1 means
+         *  collapse.
+         */
+        @stub
+        protected val direction: Int = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+
+        /** Returns true if the action is enabled. */
+        @stub
+        def isEnabled(): Boolean = ???
+    }
+
 
     /** Editor for the tree. */
     @stub

@@ -9,7 +9,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is applyAsLong(Object).
  */
-@FunctionalInterface trait ToLongFunction[T] {
+@FunctionalInterface
+trait ToLongFunction[T] {
 
     /** Applies this function to the given argument. */
     @stub

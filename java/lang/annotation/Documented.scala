@@ -10,8 +10,8 @@ import scala.scalanative.annotation.stub
  *  Documented, its annotations become part of the public API
  *  of the annotated elements.
  */
-@Documented 
-@Retention ( value = RUNTIME ) 
-@Target ( value = ANNOTATION_TYPE ) 
- final class Documented extends StaticAnnotation {
+@Documented
+@Retention(value=RUNTIME)
+@Target(value=ANNOTATION_TYPE)
+final class Documented extends StaticAnnotation {
 }

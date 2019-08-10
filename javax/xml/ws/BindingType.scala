@@ -12,10 +12,10 @@ import scala.scalanative.annotation.stub
  *   This annotation may be overriden programmatically or via
  *   deployment descriptors, depending on the platform in use.
  */
-@Target ( value = TYPE ) 
-@Retention ( value = RUNTIME ) 
-@Documented 
- final class BindingType extends StaticAnnotation {
+@Target(value=TYPE)
+@Retention(value=RUNTIME)
+@Documented
+final class BindingType extends StaticAnnotation {
 
     /** A binding identifier (a URI). */
     @stub

@@ -1,6 +1,6 @@
 package javax.swing
 
-import java.awt.{Component, Container, Frame, Graphics, GraphicsConfiguration, LayoutManager, Window}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, Frame, Graphics, GraphicsConfiguration, LayoutManager, Window, Window.AccessibleAWTWindow}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
 import scala.scalanative.annotation.stub
@@ -78,9 +78,17 @@ class JWindow extends Window with Accessible with RootPaneContainer {
     def this(owner: Window, gc: GraphicsConfiguration) = ???
 
     /** This class implements accessibility support for the
-     *  JWindow class.
+     *  JWindow class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to window user-interface
+     *  elements.
      */
-    protected type AccessibleJWindow = JWindow_AccessibleJWindow
+    protected class AccessibleJWindow extends Window.AccessibleAWTWindow {
+
+        /**  */
+        @stub
+        protected def this() = ???
+    }
+
 
     /** The accessible context property. */
     @stub

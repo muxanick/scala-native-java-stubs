@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is applyAsInt(int).
  */
-@FunctionalInterface trait IntUnaryOperator {
+@FunctionalInterface
+trait IntUnaryOperator {
 
     /** Returns a composed operator that first applies this operator to
      *  its input, and then applies the after operator to the result.

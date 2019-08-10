@@ -1,6 +1,6 @@
 package java.beans.beancontext
 
-import java.io.{ObjectInputStream, ObjectOutputStream}
+import java.io.{ObjectInputStream, ObjectOutputStream, Serializable}
 import java.lang.{Class, Object}
 import java.util.{ArrayList, HashMap, Iterator, Locale}
 import scala.scalanative.annotation.stub
@@ -40,11 +40,44 @@ class BeanContextServicesSupport extends BeanContextSupport with BeanContextServ
     @stub
     def this(peer: BeanContextServices, lcle: Locale, dTime: Boolean, visible: Boolean) = ???
 
-    /**  */
-    protected type BCSSChild = BeanContextServicesSupport_BCSSChild
+    /** 
+     * See Also:
+     * Serialized Form
+     * 
+     */
+    protected class BCSSChild extends BeanContextSupport.BCSChild {
+    }
+
 
     /**  */
-    protected type BCSSProxyServiceProvider = BeanContextServicesSupport_BCSSProxyServiceProvider
+    protected class BCSSProxyServiceProvider extends Object with BeanContextServiceProvider with BeanContextServiceRevokedListener {
+
+        /** Invoked by BeanContextServices, this method
+         *  gets the current service selectors for the specified service.
+         */
+        @stub
+        def getCurrentServiceSelectors(bcs: BeanContextServices, serviceClass: Class): Iterator = ???
+
+        /** Invoked by BeanContextServices, this method
+         *  requests an instance of a
+         *  service from this BeanContextServiceProvider.
+         */
+        @stub
+        def getService(bcs: BeanContextServices, requestor: Any, serviceClass: Class, serviceSelector: Any): Any = ???
+
+        /** Invoked by BeanContextServices,
+         *  this method releases a nested BeanContextChild's
+         *  (or any arbitrary object associated with a
+         *  BeanContextChild) reference to the specified service.
+         */
+        @stub
+        def releaseService(bcs: BeanContextServices, requestor: Any, service: Any): Unit = ???
+
+        /** The service named has been revoked. */
+        @stub
+        def serviceRevoked(bcsre: BeanContextServiceRevokedEvent): Unit = ???
+    }
+
 
     /** List of BeanContextServicesListener objects. */
     @stub
@@ -207,7 +240,17 @@ object BeanContextServicesSupport {
     /** subclasses may subclass this nested class to add behaviors for
      *  each BeanContextServicesProvider.
      */
-    protected type BCSSServiceProvider = BeanContextServicesSupport_BCSSServiceProvider
+    protected object BCSSServiceProvider extends Object with Serializable {
+
+        /** The service provider. */
+        @stub
+        protected val serviceProvider: BeanContextServiceProvider = ???
+
+        /** Returns the service provider. */
+        @stub
+        protected def getServiceProvider(): BeanContextServiceProvider = ???
+    }
+
 
     /** Gets the BeanContextServicesListener (if any) of the specified
      *  child.

@@ -9,13 +9,13 @@ class StandardCopyOption private (name: String, ordinal: Int) extends Enum[Stand
 
 object StandardCopyOption {
     /** Move the file as an atomic file system operation. */
-    final val ATOMIC_MOVE = new StandardCopyOption(ATOMIC_MOVE, 0)
+    final val ATOMIC_MOVE: StandardCopyOption = new StandardCopyOption("ATOMIC_MOVE", 0)
 
     /** Copy attributes to the new file. */
-    final val COPY_ATTRIBUTES = new StandardCopyOption(COPY_ATTRIBUTES, 1)
+    final val COPY_ATTRIBUTES: StandardCopyOption = new StandardCopyOption("COPY_ATTRIBUTES", 1)
 
     /** Replace an existing file if it exists. */
-    final val REPLACE_EXISTING = new StandardCopyOption(REPLACE_EXISTING, 2)
+    final val REPLACE_EXISTING: StandardCopyOption = new StandardCopyOption("REPLACE_EXISTING", 2)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

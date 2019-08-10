@@ -13,30 +13,30 @@ class PKIXReason private (name: String, ordinal: Int) extends Enum[PKIXReason](n
 
 object PKIXReason {
     /** The certificate's key usage is invalid. */
-    final val INVALID_KEY_USAGE = new PKIXReason(INVALID_KEY_USAGE, 0)
+    final val INVALID_KEY_USAGE: PKIXReason = new PKIXReason("INVALID_KEY_USAGE", 0)
 
     /** The name constraints have been violated. */
-    final val INVALID_NAME = new PKIXReason(INVALID_NAME, 1)
+    final val INVALID_NAME: PKIXReason = new PKIXReason("INVALID_NAME", 1)
 
     /** The policy constraints have been violated. */
-    final val INVALID_POLICY = new PKIXReason(INVALID_POLICY, 2)
+    final val INVALID_POLICY: PKIXReason = new PKIXReason("INVALID_POLICY", 2)
 
     /** The certificate does not chain correctly. */
-    final val NAME_CHAINING = new PKIXReason(NAME_CHAINING, 3)
+    final val NAME_CHAINING: PKIXReason = new PKIXReason("NAME_CHAINING", 3)
 
     /** No acceptable trust anchor found. */
-    final val NO_TRUST_ANCHOR = new PKIXReason(NO_TRUST_ANCHOR, 4)
+    final val NO_TRUST_ANCHOR: PKIXReason = new PKIXReason("NO_TRUST_ANCHOR", 4)
 
     /** The certificate is not a CA certificate. */
-    final val NOT_CA_CERT = new PKIXReason(NOT_CA_CERT, 5)
+    final val NOT_CA_CERT: PKIXReason = new PKIXReason("NOT_CA_CERT", 5)
 
     /** The path length constraint has been violated. */
-    final val PATH_TOO_LONG = new PKIXReason(PATH_TOO_LONG, 6)
+    final val PATH_TOO_LONG: PKIXReason = new PKIXReason("PATH_TOO_LONG", 6)
 
     /** The certificate contains one or more unrecognized critical
      *  extensions.
      */
-    final val UNRECOGNIZED_CRIT_EXT = new PKIXReason(UNRECOGNIZED_CRIT_EXT, 7)
+    final val UNRECOGNIZED_CRIT_EXT: PKIXReason = new PKIXReason("UNRECOGNIZED_CRIT_EXT", 7)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

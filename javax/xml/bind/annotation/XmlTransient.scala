@@ -60,7 +60,7 @@ import scala.scalanative.annotation.stub
  *    </xs:complexType>
  *  
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value ={ FIELD , METHOD , TYPE } ) 
- final class XmlTransient extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value={FIELD,METHOD,TYPE})
+final class XmlTransient extends StaticAnnotation {
 }

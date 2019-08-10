@@ -1,6 +1,7 @@
 package java.text
 
-import java.lang.Object
+import java.io.Serializable
+import java.lang.{Object, String}
 import java.util.{Map, Set}
 import scala.scalanative.annotation.stub
 
@@ -97,6 +98,46 @@ trait AttributedCharacterIterator extends CharacterIterator {
 }
 
 object AttributedCharacterIterator {
-    /** Defines attribute keys that are used to identify text attributes. */
-    type Attribute = AttributedCharacterIterator_Attribute
+    /** Defines attribute keys that are used to identify text attributes. These
+     *  keys are used in AttributedCharacterIterator and AttributedString.
+     */
+    object Attribute extends Object with Serializable {
+
+        /** Constructs an Attribute with the given name. */
+        @stub
+        protected def apply(name: String) = ???
+
+        /** Attribute key for input method segments. */
+        @stub
+        val INPUT_METHOD_SEGMENT: Attribute = ???
+
+        /** Attribute key for the language of some text. */
+        @stub
+        val LANGUAGE: Attribute = ???
+
+        /** Attribute key for the reading of some text. */
+        @stub
+        val READING: Attribute = ???
+
+        /** Compares two objects for equality. */
+        @stub
+        def equals(obj: Any): Boolean = ???
+
+        /** Returns the name of the attribute. */
+        @stub
+        protected def getName(): String = ???
+
+        /** Returns a hash code value for the object. */
+        @stub
+        def hashCode(): Int = ???
+
+        /** Resolves instances being deserialized to the predefined constants. */
+        @stub
+        protected def readResolve(): Any = ???
+
+        /** Returns a string representation of the object. */
+        @stub
+        def toString(): String = ???
+    }
+
 }

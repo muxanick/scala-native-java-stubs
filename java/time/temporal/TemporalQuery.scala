@@ -30,7 +30,8 @@ import scala.scalanative.annotation.stub
  *  LocalDate::from and ZoneId::from.
  *  Additional common queries are provided as static methods in TemporalQueries.
  */
-@FunctionalInterface trait TemporalQuery[R] {
+@FunctionalInterface
+trait TemporalQuery[R] {
 
     /** Queries the specified temporal object. */
     @stub

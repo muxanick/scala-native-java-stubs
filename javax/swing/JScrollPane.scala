@@ -1,10 +1,12 @@
 package javax.swing
 
-import java.awt.{Component, ComponentOrientation, Container, LayoutManager, Rectangle}
+import java.awt.{Component, Component.AccessibleAWTComponent, ComponentOrientation, Container, Container.AccessibleAWTContainer, LayoutManager, Rectangle}
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.{Object, String}
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole}
 import javax.swing.border.Border
-import javax.swing.plaf.ScrollPaneUI
+import javax.swing.event.{ChangeEvent, ChangeListener}
+import javax.swing.plaf.{ScrollPaneUI, UIResource}
 import scala.scalanative.annotation.stub
 
 /** Provides a scrollable view of a lightweight component.
@@ -140,15 +142,95 @@ class JScrollPane extends JComponent with ScrollPaneConstants with Accessible {
     def this(vsbPolicy: Int, hsbPolicy: Int) = ???
 
     /** This class implements accessibility support for the
-     *  JScrollPane class.
+     *  JScrollPane class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to scroll pane user-interface
+     *  elements.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type AccessibleJScrollPane = JScrollPane_AccessibleJScrollPane
+    protected class AccessibleJScrollPane extends JComponent.AccessibleJComponent with ChangeListener with PropertyChangeListener {
+
+        /** AccessibleJScrollPane constructor */
+        @stub
+        def this() = ???
+
+        /**  */
+        @stub
+        protected val viewPort: JViewport = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+
+        /** This method gets called when a bound property is changed. */
+        @stub
+        def propertyChange(e: PropertyChangeEvent): Unit = ???
+
+        /**  */
+        @stub
+        def resetViewPort(): Unit = ???
+
+        /** Invoked when the target of the listener has changed its state. */
+        @stub
+        def stateChanged(e: ChangeEvent): Unit = ???
+    }
+
 
     /** By default JScrollPane creates scrollbars
      *  that are instances
-     *  of this class.
+     *  of this class.  Scrollbar overrides the
+     *  getUnitIncrement and getBlockIncrement
+     *  methods so that, if the viewport's view is a Scrollable,
+     *  the view is asked to compute these values. Unless
+     *  the unit/block increment have been explicitly set.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type ScrollBar = JScrollPane_ScrollBar
+    protected class ScrollBar extends JScrollBar with UIResource {
+
+        /** Creates a scrollbar with the specified orientation. */
+        @stub
+        def this(orientation: Int) = ???
+
+        /** Computes the block increment for scrolling if the viewport's
+         *  view is a Scrollable object.
+         */
+        @stub
+        def getBlockIncrement(direction: Int): Int = ???
+
+        /** Computes the unit increment for scrolling if the viewport's
+         *  view is a Scrollable object.
+         */
+        @stub
+        def getUnitIncrement(direction: Int): Int = ???
+
+        /** Messages super to set the value, and resets the
+         *  blockIncrementSet instance variable to true.
+         */
+        @stub
+        def setBlockIncrement(blockIncrement: Int): Unit = ???
+
+        /** Messages super to set the value, and resets the
+         *  unitIncrementSet instance variable to true.
+         */
+        @stub
+        def setUnitIncrement(unitIncrement: Int): Unit = ???
+    }
+
 
     /** The column header child. */
     @stub

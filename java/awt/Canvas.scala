@@ -2,7 +2,7 @@ package java.awt
 
 import java.awt.image.BufferStrategy
 import java.lang.Object
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole}
 import scala.scalanative.annotation.stub
 
 /** A Canvas component represents a blank rectangular
@@ -25,9 +25,20 @@ class Canvas extends Component with Accessible {
     def this(config: GraphicsConfiguration) = ???
 
     /** This class implements accessibility support for the
-     *  Canvas class.
+     *  Canvas class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to canvas user-interface elements.
      */
-    protected type AccessibleAWTCanvas = Canvas_AccessibleAWTCanvas
+    protected class AccessibleAWTCanvas extends Component.AccessibleAWTComponent {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+    }
+
 
     /** Creates the peer of the canvas. */
     @stub

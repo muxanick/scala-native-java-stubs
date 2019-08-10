@@ -1,7 +1,7 @@
 package java.awt
 
 import java.lang.{Object, String}
-import javax.accessibility.AccessibleContext
+import javax.accessibility.{AccessibleContext, AccessibleRole}
 import scala.scalanative.annotation.stub
 
 /** A class that implements a menu which can be dynamically popped up
@@ -24,9 +24,23 @@ class PopupMenu extends Menu {
     def this(label: String) = ???
 
     /** Inner class of PopupMenu used to provide default support for
-     *  accessibility.
+     *  accessibility.  This class is not meant to be used directly by
+     *  application developers, but is instead meant only to be
+     *  subclassed by menu component developers.
+     *  
+     *  The class used to obtain the accessible role for this object.
      */
-    protected type AccessibleAWTPopupMenu = PopupMenu_AccessibleAWTPopupMenu
+    protected class AccessibleAWTPopupMenu extends Menu.AccessibleAWTMenu {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+    }
+
 
     /** Creates the popup menu's peer. */
     @stub

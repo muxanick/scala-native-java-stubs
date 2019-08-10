@@ -1,7 +1,7 @@
 package javax.swing
 
 import java.awt.{Component, Container, Dimension, LayoutManager2}
-import java.lang.{Boolean, Object, String}
+import java.lang.{Boolean, Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** GroupLayout is a LayoutManager that hierarchically
@@ -172,17 +172,281 @@ class GroupLayout extends Object with LayoutManager2 {
     /** Group provides the basis for the two types of
      *  operations supported by GroupLayout: laying out
      *  components one after another (SequentialGroup)
-     *  or aligned (ParallelGroup).
+     *  or aligned (ParallelGroup). Group and
+     *  its subclasses have no public constructor; to create one use
+     *  one of createSequentialGroup or
+     *  createParallelGroup. Additionally, taking a Group
+     *  created from one GroupLayout and using it with another
+     *  will produce undefined results.
+     *  
+     *  Various methods in Group and its subclasses allow you
+     *  to explicitly specify the range. The arguments to these methods
+     *  can take two forms, either a value greater than or equal to 0,
+     *  or one of DEFAULT_SIZE or PREFERRED_SIZE. A
+     *  value greater than or equal to 0 indicates a specific
+     *  size. DEFAULT_SIZE indicates the corresponding size
+     *  from the component should be used.  For example, if DEFAULT_SIZE is passed as the minimum size argument, the
+     *  minimum size is obtained from invoking getMinimumSize
+     *  on the component. Likewise, PREFERRED_SIZE indicates
+     *  the value from getPreferredSize should be used.
+     *  The following example adds myComponent to group
+     *  with specific values for the range. That is, the minimum is
+     *  explicitly specified as 100, preferred as 200, and maximum as
+     *  300.
+     *  
+     *    group.addComponent(myComponent, 100, 200, 300);
+     *  
+     *  The following example adds myComponent to group using
+     *  a combination of the forms. The minimum size is forced to be the
+     *  same as the preferred size, the preferred size is determined by
+     *  using myComponent.getPreferredSize and the maximum is
+     *  determined by invoking getMaximumSize on the component.
+     *  
+     *    group.addComponent(myComponent, GroupLayout.PREFERRED_SIZE,
+     *              GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE);
+     *  
+     *  
+     *  Unless otherwise specified all the methods of Group and
+     *  its subclasses that allow you to specify a range throw an
+     *  IllegalArgumentException if passed an invalid range. An
+     *  invalid range is one in which any of the values are < 0 and
+     *  not one of PREFERRED_SIZE or DEFAULT_SIZE, or
+     *  the following is not met (for specific values): min
+     *  <= pref <= max.
+     *  
+     *  Similarly any methods that take a Component throw a
+     *  IllegalArgumentException if passed null and any methods
+     *  that take a Group throw an NullPointerException if
+     *  passed null.
      */
-    type Group = GroupLayout_Group
+    abstract class Group extends Object {
 
-    /** A Group that aligns and sizes it's children. */
-    type ParallelGroup = GroupLayout_ParallelGroup
+        /** Adds a Component to this Group. */
+        def addComponent(component: Component): Group
+
+        /** Adds a Component to this Group
+         *  with the specified size.
+         */
+        def addComponent(component: Component, min: Int, pref: Int, max: Int): Group
+
+        /** Adds a rigid gap to this Group. */
+        def addGap(size: Int): Group
+
+        /** Adds a gap to this Group with the specified size. */
+        def addGap(min: Int, pref: Int, max: Int): Group
+
+        /** Adds a Group to this Group. */
+        def addGroup(group: GroupLayout.Group): Group
+    }
+
+
+    /** A Group that aligns and sizes it's children.
+     *  ParallelGroup aligns it's children in
+     *  four possible ways: along the baseline, centered, anchored to the
+     *  leading edge, or anchored to the trailing edge.
+     *  Baseline
+     *  A ParallelGroup that aligns it's children along the
+     *  baseline must first decide where the baseline is
+     *  anchored. The baseline can either be anchored to the top, or
+     *  anchored to the bottom of the group. That is, the distance between the
+     *  baseline and the beginning of the group can be a constant
+     *  distance, or the distance between the end of the group and the
+     *  baseline can be a constant distance. The possible choices
+     *  correspond to the BaselineResizeBehavior constants
+     *  CONSTANT_ASCENT and
+     *  CONSTANT_DESCENT.
+     *  
+     *  The baseline anchor may be explicitly specified by the
+     *  createBaselineGroup method, or determined based on the elements.
+     *  If not explicitly specified, the baseline will be anchored to
+     *  the bottom if all the elements with a baseline, and that are
+     *  aligned to the baseline, have a baseline resize behavior of
+     *  CONSTANT_DESCENT; otherwise the baseline is anchored to the top
+     *  of the group.
+     *  
+     *  Elements aligned to the baseline are resizable if they have have
+     *  a baseline resize behavior of CONSTANT_ASCENT or
+     *  CONSTANT_DESCENT. Elements with a baseline resize
+     *  behavior of OTHER or CENTER_OFFSET are not resizable.
+     *  
+     *  The baseline is calculated based on the preferred height of each
+     *  of the elements that have a baseline. The baseline is
+     *  calculated using the following algorithm:
+     *  max(maxNonBaselineHeight, maxAscent + maxDescent), where the
+     *  maxNonBaselineHeight is the maximum height of all elements
+     *  that do not have a baseline, or are not aligned along the baseline.
+     *  maxAscent is the maximum ascent (baseline) of all elements that
+     *  have a baseline and are aligned along the baseline.
+     *  maxDescent is the maximum descent (preferred height - baseline)
+     *  of all elements that have a baseline and are aligned along the baseline.
+     *  
+     *  A ParallelGroup that aligns it's elements along the baseline
+     *  is only useful along the vertical axis. If you create a
+     *  baseline group and use it along the horizontal axis an
+     *  IllegalStateException is thrown when you ask
+     *  GroupLayout for the minimum, preferred or maximum size or
+     *  attempt to layout the components.
+     *  
+     *  Elements that are not aligned to the baseline and smaller than the size
+     *  of the ParallelGroup are positioned in one of three
+     *  ways: centered, anchored to the leading edge, or anchored to the
+     *  trailing edge.
+     * 
+     *  Non-baseline ParallelGroup
+     *  ParallelGroups created with an alignment other than
+     *  BASELINE align elements that are smaller than the size
+     *  of the group in one of three ways: centered, anchored to the
+     *  leading edge, or anchored to the trailing edge.
+     *  
+     *  The leading edge is based on the axis and ComponentOrientation.  For the vertical axis the top edge is
+     *  always the leading edge, and the bottom edge is always the
+     *  trailing edge. When the ComponentOrientation is LEFT_TO_RIGHT, the leading edge is the left edge and the
+     *  trailing edge the right edge. A ComponentOrientation of
+     *  RIGHT_TO_LEFT flips the left and right edges. Child
+     *  elements are aligned based on the specified alignment the
+     *  element was added with. If you do not specify an alignment, the
+     *  alignment specified for the ParallelGroup is used.
+     *  
+     *  To align elements along the baseline you createBaselineGroup,
+     *  or createParallelGroup with an alignment of BASELINE.
+     *  If the group was not created with a baseline alignment, and you attempt
+     *  to add an element specifying a baseline alignment, an
+     *  IllegalArgumentException is thrown.
+     */
+    class ParallelGroup extends GroupLayout.Group {
+
+        /** Adds a Component to this Group. */
+        @stub
+        def addComponent(component: Component): ParallelGroup = ???
+
+        /** Adds a Component to this ParallelGroup with
+         *  the specified alignment.
+         */
+        @stub
+        def addComponent(component: Component, alignment: GroupLayout.Alignment): ParallelGroup = ???
+
+        /** Adds a Component to this ParallelGroup with the
+         *  specified alignment and size.
+         */
+        @stub
+        def addComponent(component: Component, alignment: GroupLayout.Alignment, min: Int, pref: Int, max: Int): ParallelGroup = ???
+
+        /** Adds a Component to this Group
+         *  with the specified size.
+         */
+        @stub
+        def addComponent(component: Component, min: Int, pref: Int, max: Int): ParallelGroup = ???
+
+        /** Adds a rigid gap to this Group. */
+        @stub
+        def addGap(pref: Int): ParallelGroup = ???
+
+        /** Adds a gap to this Group with the specified size. */
+        @stub
+        def addGap(min: Int, pref: Int, max: Int): ParallelGroup = ???
+
+        /** Adds a Group to this ParallelGroup with the
+         *  specified alignment.
+         */
+        @stub
+        def addGroup(alignment: GroupLayout.Alignment, group: GroupLayout.Group): ParallelGroup = ???
+
+        /** Adds a Group to this Group. */
+        @stub
+        def addGroup(group: GroupLayout.Group): ParallelGroup = ???
+    }
+
 
     /** A Group that positions and sizes its elements
-     *  sequentially, one after another.
+     *  sequentially, one after another.  This class has no public
+     *  constructor, use the createSequentialGroup method
+     *  to create one.
+     *  
+     *  In order to align a SequentialGroup along the baseline
+     *  of a baseline aligned ParallelGroup you need to specify
+     *  which of the elements of the SequentialGroup is used to
+     *  determine the baseline.  The element used to calculate the
+     *  baseline is specified using one of the add methods that
+     *  take a boolean. The last element added with a value of
+     *  true for useAsBaseline is used to calculate the
+     *  baseline.
      */
-    type SequentialGroup = GroupLayout_SequentialGroup
+    class SequentialGroup extends GroupLayout.Group {
+
+        /** Adds a Component to this Group. */
+        @stub
+        def addComponent(useAsBaseline: Boolean, component: Component): SequentialGroup = ???
+
+        /** Adds a Component to this Group
+         *  with the specified size.
+         */
+        @stub
+        def addComponent(useAsBaseline: Boolean, component: Component, min: Int, pref: Int, max: Int): SequentialGroup = ???
+
+        /** Adds a Component to this Group. */
+        @stub
+        def addComponent(component: Component): SequentialGroup = ???
+
+        /** Adds a Component to this Group
+         *  with the specified size.
+         */
+        @stub
+        def addComponent(component: Component, min: Int, pref: Int, max: Int): SequentialGroup = ???
+
+        /** Adds an element representing the preferred gap between an edge
+         *  the container and components that touch the border of the
+         *  container.
+         */
+        @stub
+        def addContainerGap(): SequentialGroup = ???
+
+        /** Adds an element representing the preferred gap between one
+         *  edge of the container and the next or previous Component with the specified size.
+         */
+        @stub
+        def addContainerGap(pref: Int, max: Int): SequentialGroup = ???
+
+        /** Adds a rigid gap to this Group. */
+        @stub
+        def addGap(size: Int): SequentialGroup = ???
+
+        /** Adds a gap to this Group with the specified size. */
+        @stub
+        def addGap(min: Int, pref: Int, max: Int): SequentialGroup = ???
+
+        /** Adds a Group to this Group. */
+        @stub
+        def addGroup(useAsBaseline: Boolean, group: GroupLayout.Group): SequentialGroup = ???
+
+        /** Adds a Group to this Group. */
+        @stub
+        def addGroup(group: GroupLayout.Group): SequentialGroup = ???
+
+        /** Adds an element representing the preferred gap between two
+         *  components.
+         */
+        @stub
+        def addPreferredGap(comp1: JComponent, comp2: JComponent, type: LayoutStyle.ComponentPlacement): SequentialGroup = ???
+
+        /** Adds an element representing the preferred gap between two
+         *  components.
+         */
+        @stub
+        def addPreferredGap(comp1: JComponent, comp2: JComponent, type: LayoutStyle.ComponentPlacement, pref: Int, max: Int): SequentialGroup = ???
+
+        /** Adds an element representing the preferred gap between the
+         *  nearest components.
+         */
+        @stub
+        def addPreferredGap(type: LayoutStyle.ComponentPlacement): SequentialGroup = ???
+
+        /** Adds an element representing the preferred gap between the
+         *  nearest components.
+         */
+        @stub
+        def addPreferredGap(type: LayoutStyle.ComponentPlacement, pref: Int, max: Int): SequentialGroup = ???
+    }
+
 
     /** Notification that a Component has been added to
      *  the parent container.
@@ -353,7 +617,41 @@ object GroupLayout {
     /** Enumeration of the possible ways ParallelGroup can align
      *  its children.
      */
-    type Alignment = GroupLayout_Alignment
+    class Alignment private (name: String, ordinal: Int) extends Enum[Alignment](name, ordinal) {
+    }
+
+    object Alignment {
+        /** Indicates the elements should be aligned along
+         *  their baseline.
+         */
+        final val BASELINE: Alignment = new Alignment("BASELINE", 0)
+
+        /** Indicates the elements should be centered in
+         *  the region.
+         */
+        final val CENTER: Alignment = new Alignment("CENTER", 1)
+
+        /** Indicates the elements should be
+         *  aligned to the origin.
+         */
+        final val LEADING: Alignment = new Alignment("LEADING", 2)
+
+        /** Indicates the elements should be aligned to the end of the
+         *  region.
+         */
+        final val TRAILING: Alignment = new Alignment("TRAILING", 3)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): Alignment = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[Alignment] = ???
+    }
+
 
     /** Indicates the size from the component or gap should be used for a
      *  particular range value.

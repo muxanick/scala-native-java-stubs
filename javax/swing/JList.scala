@@ -1,11 +1,12 @@
 package javax.swing
 
-import java.awt.{Color, Component, Container, Dimension, Point, Rectangle}
-import java.awt.event.MouseEvent
+import java.awt.{Color, Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, Cursor, Dimension, Font, FontMetrics, Point, Rectangle}
+import java.awt.event.{FocusListener, MouseEvent}
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.{Object, String}
-import java.util.{List, Vector}
-import javax.accessibility.{Accessible, AccessibleContext}
-import javax.swing.event.ListSelectionListener
+import java.util.{List, Locale, Vector}
+import javax.accessibility.{Accessible, AccessibleComponent, AccessibleContext, AccessibleIcon, AccessibleRole, AccessibleSelection, AccessibleStateSet, AccessibleText, AccessibleValue}
+import javax.swing.event.{ListDataEvent, ListDataListener, ListSelectionEvent, ListSelectionListener}
 import javax.swing.plaf.ListUI
 import javax.swing.text.Position.Bias
 import scala.scalanative.annotation.stub
@@ -242,9 +243,322 @@ class JList[E] extends JComponent with Scrollable with Accessible {
     def this(listData: Vector[_ <: E]) = ???
 
     /** This class implements accessibility support for the
-     *  JList class.
+     *  JList class. It provides an implementation of the
+     *  Java Accessibility API appropriate to list user-interface
+     *  elements.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type AccessibleJList = JList_AccessibleJList
+    protected class AccessibleJList extends JComponent.AccessibleJComponent with AccessibleSelection with PropertyChangeListener with ListSelectionListener with ListDataListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** This class implements accessibility support appropriate
+         *  for list children.
+         */
+        protected class AccessibleJListChild extends AccessibleContext with Accessible with AccessibleComponent {
+
+            /**  */
+            @stub
+            def this(parent: JList[E], indexInParent: Int) = ???
+
+            /** Adds the specified focus listener to receive focus events from this
+             *  component.
+             */
+            @stub
+            def addFocusListener(l: FocusListener): Unit = ???
+
+            /** Adds a PropertyChangeListener to the listener list. */
+            @stub
+            def addPropertyChangeListener(l: PropertyChangeListener): Unit = ???
+
+            /** Checks whether the specified point is within this object's bounds,
+             *  where the point's x and y coordinates are defined to be relative to the
+             *  coordinate system of the object.
+             */
+            @stub
+            def contains(p: Point): Boolean = ???
+
+            /** Returns the Accessible child, if one exists, contained at the local
+             *  coordinate Point.
+             */
+            @stub
+            def getAccessibleAt(p: Point): Accessible = ???
+
+            /** Returns the specified Accessible child of the object. */
+            @stub
+            def getAccessibleChild(i: Int): Accessible = ???
+
+            /** Returns the number of accessible children of the object. */
+            @stub
+            def getAccessibleChildrenCount(): Int = ???
+
+            /** Get the AccessibleComponent associated with this object. */
+            @stub
+            def getAccessibleComponent(): AccessibleComponent = ???
+
+            /** Get the AccessibleContext for this object. */
+            @stub
+            def getAccessibleContext(): AccessibleContext = ???
+
+            /** Gets the accessibleDescription property of this object. */
+            @stub
+            def getAccessibleDescription(): String = ???
+
+            /** Returns the icon for the element renderer, as the only item
+             *  of an array of AccessibleIcons or a null array
+             *  if the renderer component contains no icons.
+             */
+            @stub
+            def getAccessibleIcon(): Array[AccessibleIcon] = ???
+
+            /** Gets the 0-based index of this object in its accessible parent. */
+            @stub
+            def getAccessibleIndexInParent(): Int = ???
+
+            /** Gets the accessibleName property of this object. */
+            @stub
+            def getAccessibleName(): String = ???
+
+            /** Gets the role of this object. */
+            @stub
+            def getAccessibleRole(): AccessibleRole = ???
+
+            /** Gets the AccessibleSelection associated with this object which allows its
+             *  Accessible children to be selected.
+             */
+            @stub
+            def getAccessibleSelection(): AccessibleSelection = ???
+
+            /** Gets the state set of this object. */
+            @stub
+            def getAccessibleStateSet(): AccessibleStateSet = ???
+
+            /** Gets the AccessibleText associated with this object presenting
+             *  text on the display.
+             */
+            @stub
+            def getAccessibleText(): AccessibleText = ???
+
+            /** Gets the AccessibleValue associated with this object that supports a
+             *  Numerical value.
+             */
+            @stub
+            def getAccessibleValue(): AccessibleValue = ???
+
+            /** Gets the background color of this object. */
+            @stub
+            def getBackground(): Color = ???
+
+            /** Gets the bounds of this object in the form of a Rectangle object. */
+            @stub
+            def getBounds(): Rectangle = ???
+
+            /** Gets the Cursor of this object. */
+            @stub
+            def getCursor(): Cursor = ???
+
+            /** Gets the Font of this object. */
+            @stub
+            def getFont(): Font = ???
+
+            /** Gets the FontMetrics of this object. */
+            @stub
+            def getFontMetrics(f: Font): FontMetrics = ???
+
+            /** Gets the foreground color of this object. */
+            @stub
+            def getForeground(): Color = ???
+
+            /** Gets the locale of the component. */
+            @stub
+            def getLocale(): Locale = ???
+
+            /** Gets the location of the object relative to the parent in the form
+             *  of a point specifying the object's top-left corner in the screen's
+             *  coordinate space.
+             */
+            @stub
+            def getLocation(): Point = ???
+
+            /** Returns the location of the object on the screen. */
+            @stub
+            def getLocationOnScreen(): Point = ???
+
+            /** Returns the size of this object in the form of a Dimension object. */
+            @stub
+            def getSize(): Dimension = ???
+
+            /** Determines if the object is enabled. */
+            @stub
+            def isEnabled(): Boolean = ???
+
+            /** Returns whether this object can accept focus or not. */
+            @stub
+            def isFocusTraversable(): Boolean = ???
+
+            /** Determines if the object is showing. */
+            @stub
+            def isShowing(): Boolean = ???
+
+            /** Determines if the object is visible. */
+            @stub
+            def isVisible(): Boolean = ???
+
+            /** Removes the specified focus listener so it no longer receives focus
+             *  events from this component.
+             */
+            @stub
+            def removeFocusListener(l: FocusListener): Unit = ???
+
+            /** Removes a PropertyChangeListener from the listener list. */
+            @stub
+            def removePropertyChangeListener(l: PropertyChangeListener): Unit = ???
+
+            /** Requests focus for this object. */
+            @stub
+            def requestFocus(): Unit = ???
+
+            /** Sets the accessible description of this object. */
+            @stub
+            def setAccessibleDescription(s: String): Unit = ???
+
+            /** Sets the localized accessible name of this object. */
+            @stub
+            def setAccessibleName(s: String): Unit = ???
+
+            /** Sets the background color of this object. */
+            @stub
+            def setBackground(c: Color): Unit = ???
+
+            /** Sets the bounds of this object in the form of a Rectangle object. */
+            @stub
+            def setBounds(r: Rectangle): Unit = ???
+
+            /** Sets the Cursor of this object. */
+            @stub
+            def setCursor(c: Cursor): Unit = ???
+
+            /** Sets the enabled state of the object. */
+            @stub
+            def setEnabled(b: Boolean): Unit = ???
+
+            /** Sets the Font of this object. */
+            @stub
+            def setFont(f: Font): Unit = ???
+
+            /** Sets the foreground color of this object. */
+            @stub
+            def setForeground(c: Color): Unit = ???
+
+            /** Sets the location of the object relative to the parent. */
+            @stub
+            def setLocation(p: Point): Unit = ???
+
+            /** Resizes this object so that it has width and height. */
+            @stub
+            def setSize(d: Dimension): Unit = ???
+
+            /** Sets the visible state of the object. */
+            @stub
+            def setVisible(b: Boolean): Unit = ???
+        }
+
+
+        /** Adds the specified selected item in the object to the object's
+         *  selection.
+         */
+        @stub
+        def addAccessibleSelection(i: Int): Unit = ???
+
+        /** Clears the selection in the object, so that nothing in the
+         *  object is selected.
+         */
+        @stub
+        def clearAccessibleSelection(): Unit = ???
+
+        /** List Data Listener contents changed method. */
+        @stub
+        def contentsChanged(e: ListDataEvent): Unit = ???
+
+        /** Returns the Accessible child contained at
+         *  the local coordinate Point, if one exists.
+         */
+        @stub
+        def getAccessibleAt(p: Point): Accessible = ???
+
+        /** Return the nth Accessible child of the object. */
+        @stub
+        def getAccessibleChild(i: Int): Accessible = ???
+
+        /** Returns the number of accessible children in the object. */
+        @stub
+        def getAccessibleChildrenCount(): Int = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+
+        /** Get the AccessibleSelection associated with this object. */
+        @stub
+        def getAccessibleSelection(): AccessibleSelection = ???
+
+        /** Returns an Accessible representing the specified selected item
+         *  in the object.
+         */
+        @stub
+        def getAccessibleSelection(i: Int): Accessible = ???
+
+        /** Returns the number of items currently selected. */
+        @stub
+        def getAccessibleSelectionCount(): Int = ???
+
+        /** Get the state set of this object. */
+        @stub
+        def getAccessibleStateSet(): AccessibleStateSet = ???
+
+        /** List Data Listener interval added method. */
+        @stub
+        def intervalAdded(e: ListDataEvent): Unit = ???
+
+        /** List Data Listener interval removed method. */
+        @stub
+        def intervalRemoved(e: ListDataEvent): Unit = ???
+
+        /** Returns true if the current child of this object is selected. */
+        @stub
+        def isAccessibleChildSelected(i: Int): Boolean = ???
+
+        /** Property Change Listener change method. */
+        @stub
+        def propertyChange(e: PropertyChangeEvent): Unit = ???
+
+        /** Removes the specified selected item in the object from the object's
+         *  selection.
+         */
+        @stub
+        def removeAccessibleSelection(i: Int): Unit = ???
+
+        /** Causes every selected item in the object to be selected
+         *  if the object supports multiple selections.
+         */
+        @stub
+        def selectAllAccessibleSelection(): Unit = ???
+
+        /** List Selection Listener value change method. */
+        @stub
+        def valueChanged(e: ListSelectionEvent): Unit = ???
+    }
+
 
     /** Adds a listener to the list, to be notified each time a change to the
      *  selection occurs; the preferred way of listening for selection state
@@ -646,7 +960,25 @@ object JList {
     /** A subclass of TransferHandler.DropLocation representing
      *  a drop location for a JList.
      */
-    type DropLocation = JList_DropLocation
+    final object DropLocation extends TransferHandler.DropLocation {
+
+        /** Returns the index where dropped data should be placed in the
+         *  list.
+         */
+        @stub
+        def getIndex(): Int = ???
+
+        /** Returns whether or not this location represents an insert
+         *  location.
+         */
+        @stub
+        def isInsert(): Boolean = ???
+
+        /** Returns a string representation of this drop location. */
+        @stub
+        def toString(): String = ???
+    }
+
 
     /** Indicates a "newspaper style" layout with cells flowing horizontally
      *  then vertically.

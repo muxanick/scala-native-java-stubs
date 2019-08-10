@@ -1,5 +1,7 @@
 package java.util
 
+import java.lang.{Double, Integer, Long}
+import java.util.function.{Consumer, DoubleConsumer, IntConsumer, LongConsumer}
 import scala.scalanative.annotation.stub
 
 /** A base type for primitive specializations of Iterator.  Specialized
@@ -34,11 +36,77 @@ trait PrimitiveIterator[T, T_CONS] extends Iterator[T] {
 
 object PrimitiveIterator {
     /** An Iterator specialized for double values. */
-    type OfDouble = PrimitiveIterator_OfDouble
+    trait OfDouble extends PrimitiveIterator[Double, DoubleConsumer] {
+
+        /** Performs the given action for each remaining element until all elements
+         *  have been processed or the action throws an exception.
+         */
+        @stub
+        def forEachRemaining(action: Consumer[_ >: Double]): Unit = ???
+
+        /** Performs the given action for each remaining element until all elements
+         *  have been processed or the action throws an exception.
+         */
+        @stub
+        def forEachRemaining(action: DoubleConsumer): Unit = ???
+
+        /** Returns the next element in the iteration. */
+        @stub
+        def next(): Double = ???
+
+        /** Returns the next double element in the iteration. */
+        @stub
+        def nextDouble(): Double = ???
+    }
+
 
     /** An Iterator specialized for int values. */
-    type OfInt = PrimitiveIterator_OfInt
+    trait OfInt extends PrimitiveIterator[Integer, IntConsumer] {
+
+        /** Performs the given action for each remaining element until all elements
+         *  have been processed or the action throws an exception.
+         */
+        @stub
+        def forEachRemaining(action: Consumer[_ >: Integer]): Unit = ???
+
+        /** Performs the given action for each remaining element until all elements
+         *  have been processed or the action throws an exception.
+         */
+        @stub
+        def forEachRemaining(action: IntConsumer): Unit = ???
+
+        /** Returns the next element in the iteration. */
+        @stub
+        def next(): Integer = ???
+
+        /** Returns the next int element in the iteration. */
+        @stub
+        def nextInt(): Int = ???
+    }
+
 
     /** An Iterator specialized for long values. */
-    type OfLong = PrimitiveIterator_OfLong
+    trait OfLong extends PrimitiveIterator[Long, LongConsumer] {
+
+        /** Performs the given action for each remaining element until all elements
+         *  have been processed or the action throws an exception.
+         */
+        @stub
+        def forEachRemaining(action: Consumer[_ >: Long]): Unit = ???
+
+        /** Performs the given action for each remaining element until all elements
+         *  have been processed or the action throws an exception.
+         */
+        @stub
+        def forEachRemaining(action: LongConsumer): Unit = ???
+
+        /** Returns the next element in the iteration. */
+        @stub
+        def next(): Long = ???
+
+        /** Returns the next long element in the iteration. */
+        @stub
+        def nextLong(): Long = ???
+    }
+
 }

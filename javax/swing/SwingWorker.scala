@@ -1,7 +1,7 @@
 package javax.swing
 
 import java.beans.{PropertyChangeListener, PropertyChangeSupport}
-import java.lang.{Object, String}
+import java.lang.{Enum, Object, String}
 import java.util.List
 import java.util.concurrent.{RunnableFuture, TimeUnit}
 import scala.scalanative.annotation.stub
@@ -254,5 +254,33 @@ abstract class SwingWorker[T, V] extends Object with RunnableFuture[T] {
 
 object SwingWorker {
     /** Values for the state bound property. */
-    type StateValue = SwingWorker_StateValue
+    class StateValue private (name: String, ordinal: Int) extends Enum[StateValue](name, ordinal) {
+    }
+
+    object StateValue {
+        /** SwingWorker is DONE
+         *  after doInBackground method
+         *  is finished.
+         */
+        final val DONE: StateValue = new StateValue("DONE", 0)
+
+        /** Initial SwingWorker state. */
+        final val PENDING: StateValue = new StateValue("PENDING", 1)
+
+        /** SwingWorker is STARTED
+         *  before invoking doInBackground.
+         */
+        final val STARTED: StateValue = new StateValue("STARTED", 2)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): StateValue = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[StateValue] = ???
+    }
+
 }

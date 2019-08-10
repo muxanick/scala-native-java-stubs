@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is applyAsLong(long, long).
  */
-@FunctionalInterface trait LongBinaryOperator {
+@FunctionalInterface
+trait LongBinaryOperator {
 
     /** Applies this operator to the given operands. */
     @stub

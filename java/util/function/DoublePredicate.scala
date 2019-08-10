@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is test(double).
  */
-@FunctionalInterface trait DoublePredicate {
+@FunctionalInterface
+trait DoublePredicate {
 
     /** Returns a composed predicate that represents a short-circuiting logical
      *  AND of this predicate and another.

@@ -46,34 +46,34 @@ class ElementType private (name: String, ordinal: Int) extends Enum[ElementType]
 
 object ElementType {
     /** Annotation type declaration */
-    final val ANNOTATION_TYPE = new ElementType(ANNOTATION_TYPE, 0)
+    final val ANNOTATION_TYPE: ElementType = new ElementType("ANNOTATION_TYPE", 0)
 
     /** Constructor declaration */
-    final val CONSTRUCTOR = new ElementType(CONSTRUCTOR, 1)
+    final val CONSTRUCTOR: ElementType = new ElementType("CONSTRUCTOR", 1)
 
     /** Field declaration (includes enum constants) */
-    final val FIELD = new ElementType(FIELD, 2)
+    final val FIELD: ElementType = new ElementType("FIELD", 2)
 
     /** Local variable declaration */
-    final val LOCAL_VARIABLE = new ElementType(LOCAL_VARIABLE, 3)
+    final val LOCAL_VARIABLE: ElementType = new ElementType("LOCAL_VARIABLE", 3)
 
     /** Method declaration */
-    final val METHOD = new ElementType(METHOD, 4)
+    final val METHOD: ElementType = new ElementType("METHOD", 4)
 
     /** Package declaration */
-    final val PACKAGE = new ElementType(PACKAGE, 5)
+    final val PACKAGE: ElementType = new ElementType("PACKAGE", 5)
 
     /** Formal parameter declaration */
-    final val PARAMETER = new ElementType(PARAMETER, 6)
+    final val PARAMETER: ElementType = new ElementType("PARAMETER", 6)
 
     /** Class, interface (including annotation type), or enum declaration */
-    final val TYPE = new ElementType(TYPE, 7)
+    final val TYPE: ElementType = new ElementType("TYPE", 7)
 
     /** Type parameter declaration */
-    final val TYPE_PARAMETER = new ElementType(TYPE_PARAMETER, 8)
+    final val TYPE_PARAMETER: ElementType = new ElementType("TYPE_PARAMETER", 8)
 
     /** Use of a type */
-    final val TYPE_USE = new ElementType(TYPE_USE, 9)
+    final val TYPE_USE: ElementType = new ElementType("TYPE_USE", 9)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

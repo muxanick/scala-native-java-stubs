@@ -3,7 +3,7 @@ package java.awt
 import java.awt.event.{ActionEvent, ActionListener}
 import java.lang.{Class, Object, String}
 import java.util.EventListener
-import javax.accessibility.AccessibleContext
+import javax.accessibility.{AccessibleContext, AccessibleStateSet}
 import scala.scalanative.annotation.stub
 
 /** A TextField object is a text component
@@ -78,9 +78,20 @@ class TextField extends TextComponent {
     def this(text: String, columns: Int) = ???
 
     /** This class implements accessibility support for the
-     *  TextField class.
+     *  TextField class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to text field user-interface elements.
      */
-    protected type AccessibleAWTTextField = TextField_AccessibleAWTTextField
+    protected class AccessibleAWTTextField extends TextComponent.AccessibleAWTTextComponent {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Gets the state set of this object. */
+        @stub
+        def getAccessibleStateSet(): AccessibleStateSet = ???
+    }
+
 
     /** Adds the specified action listener to receive
      *  action events from this text field.

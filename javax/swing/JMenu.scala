@@ -1,10 +1,11 @@
 package javax.swing
 
-import java.awt.{Component, ComponentOrientation, Container, Point}
-import java.awt.event.KeyEvent
+import java.awt.{Component, Component.AccessibleAWTComponent, ComponentOrientation, Container, Container.AccessibleAWTContainer, Point}
+import java.awt.event.{KeyEvent, WindowAdapter, WindowEvent}
 import java.beans.PropertyChangeListener
+import java.io.Serializable
 import java.lang.{Object, String}
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole, AccessibleSelection}
 import javax.swing.event.MenuListener
 import scala.scalanative.annotation.stub
 
@@ -70,12 +71,103 @@ class JMenu extends JMenuItem with Accessible with MenuElement {
     def this(s: String, b: Boolean) = ???
 
     /** This class implements accessibility support for the
-     *  JMenu class.
+     *  JMenu class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to menu user-interface elements.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type AccessibleJMenu = JMenu_AccessibleJMenu
+    protected class AccessibleJMenu extends JMenuItem.AccessibleJMenuItem with AccessibleSelection {
 
-    /** A listener class that watches for a popup window closing. */
-    protected type WinListener = JMenu_WinListener
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Selects the ith menu in the menu. */
+        @stub
+        def addAccessibleSelection(i: Int): Unit = ???
+
+        /** Clears the selection in the object, so that nothing in the
+         *  object is selected.
+         */
+        @stub
+        def clearAccessibleSelection(): Unit = ???
+
+        /** Returns the nth Accessible child of the object. */
+        @stub
+        def getAccessibleChild(i: Int): Accessible = ???
+
+        /** Returns the number of accessible children in the object. */
+        @stub
+        def getAccessibleChildrenCount(): Int = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+
+        /** Get the AccessibleSelection associated with this object. */
+        @stub
+        def getAccessibleSelection(): AccessibleSelection = ???
+
+        /** Returns the currently selected sub-menu if one is selected,
+         *  otherwise null (there can only be one selection, and it can
+         *  only be a sub-menu, as otherwise menu items don't remain
+         *  selected).
+         */
+        @stub
+        def getAccessibleSelection(i: Int): Accessible = ???
+
+        /** Returns 1 if a sub-menu is currently selected in this menu. */
+        @stub
+        def getAccessibleSelectionCount(): Int = ???
+
+        /** Returns true if the current child of this object is selected
+         *  (that is, if this child is a popped-up submenu).
+         */
+        @stub
+        def isAccessibleChildSelected(i: Int): Boolean = ???
+
+        /** Removes the nth item from the selection. */
+        @stub
+        def removeAccessibleSelection(i: Int): Unit = ???
+
+        /** Normally causes every selected item in the object to be selected
+         *  if the object supports multiple selections.
+         */
+        @stub
+        def selectAllAccessibleSelection(): Unit = ???
+    }
+
+
+    /** A listener class that watches for a popup window closing.
+     *  When the popup is closing, the listener deselects the menu.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
+     */
+    protected class WinListener extends WindowAdapter with Serializable {
+
+        /** Create the window listener for the specified popup. */
+        @stub
+        def this(p: JPopupMenu) = ???
+
+        /** Deselect the menu when the popup is closed from outside. */
+        @stub
+        def windowClosing(e: WindowEvent): Unit = ???
+    }
+
 
     /** The window-closing listener for the popup. */
     @stub

@@ -12,7 +12,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is getAsLong().
  */
-@FunctionalInterface trait LongSupplier {
+@FunctionalInterface
+trait LongSupplier {
 
     /** Gets a result. */
     @stub

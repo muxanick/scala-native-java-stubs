@@ -1,6 +1,6 @@
 package javax.swing.event
 
-import java.lang.Object
+import java.lang.{Enum, Object, String}
 import java.util.EventObject
 import javax.swing.RowSorter
 import scala.scalanative.annotation.stub
@@ -48,5 +48,27 @@ class RowSorterEvent extends EventObject {
 
 object RowSorterEvent {
     /** Enumeration of the types of RowSorterEvents. */
-    type Type = RowSorterEvent_Type
+    class Type private (name: String, ordinal: Int) extends Enum[Type](name, ordinal) {
+    }
+
+    object Type {
+        /** Indicates the sort order has changed. */
+        final val SORT_ORDER_CHANGED: Type = new Type("SORT_ORDER_CHANGED", 0)
+
+        /** Indicates the contents have been newly sorted or
+         *  transformed in some way.
+         */
+        final val SORTED: Type = new Type("SORTED", 1)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): Type = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[Type] = ???
+    }
+
 }

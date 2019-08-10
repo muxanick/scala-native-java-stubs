@@ -41,7 +41,24 @@ abstract class BooleanControl extends Control {
 
 object BooleanControl {
     /** An instance of the BooleanControl.Type class identifies one kind of
-     *  boolean control.
+     *  boolean control.  Static instances are provided for the
+     *  common types.
      */
-    type Type = BooleanControl_Type
+    object Type extends Control.Type {
+
+        /** Constructs a new boolean control type. */
+        @stub
+        protected def apply(name: String) = ???
+
+        /** Represents a control for whether reverberation is applied
+         *  to a line.
+         */
+        @stub
+        val APPLY_REVERB: Type = ???
+
+        /** Represents a control for the mute status of a line. */
+        @stub
+        val MUTE: Type = ???
+    }
+
 }

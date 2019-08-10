@@ -17,45 +17,45 @@ class SourceVersion private (name: String, ordinal: Int) extends Enum[SourceVers
 
 object SourceVersion {
     /** The original version. */
-    final val RELEASE_0 = new SourceVersion(RELEASE_0, 0)
+    final val RELEASE_0: SourceVersion = new SourceVersion("RELEASE_0", 0)
 
     /** The version recognized by the Java Platform 1.1. */
-    final val RELEASE_1 = new SourceVersion(RELEASE_1, 1)
+    final val RELEASE_1: SourceVersion = new SourceVersion("RELEASE_1", 1)
 
     /** The version recognized by the Java 2 Platform, Standard Edition,
      *  v 1.2.
      */
-    final val RELEASE_2 = new SourceVersion(RELEASE_2, 2)
+    final val RELEASE_2: SourceVersion = new SourceVersion("RELEASE_2", 2)
 
     /** The version recognized by the Java 2 Platform, Standard Edition,
      *  v 1.3.
      */
-    final val RELEASE_3 = new SourceVersion(RELEASE_3, 3)
+    final val RELEASE_3: SourceVersion = new SourceVersion("RELEASE_3", 3)
 
     /** The version recognized by the Java 2 Platform, Standard Edition,
      *  v 1.4.
      */
-    final val RELEASE_4 = new SourceVersion(RELEASE_4, 4)
+    final val RELEASE_4: SourceVersion = new SourceVersion("RELEASE_4", 4)
 
     /** The version recognized by the Java 2 Platform, Standard
      *  Edition 5.0.
      */
-    final val RELEASE_5 = new SourceVersion(RELEASE_5, 5)
+    final val RELEASE_5: SourceVersion = new SourceVersion("RELEASE_5", 5)
 
     /** The version recognized by the Java Platform, Standard Edition
      *  6.
      */
-    final val RELEASE_6 = new SourceVersion(RELEASE_6, 6)
+    final val RELEASE_6: SourceVersion = new SourceVersion("RELEASE_6", 6)
 
     /** The version recognized by the Java Platform, Standard Edition
      *  7.
      */
-    final val RELEASE_7 = new SourceVersion(RELEASE_7, 7)
+    final val RELEASE_7: SourceVersion = new SourceVersion("RELEASE_7", 7)
 
     /** The version recognized by the Java Platform, Standard Edition
      *  8.
      */
-    final val RELEASE_8 = new SourceVersion(RELEASE_8, 8)
+    final val RELEASE_8: SourceVersion = new SourceVersion("RELEASE_8", 8)
 
     /** Returns whether or not name is a syntactically valid
      *  identifier (simple name) or keyword in the latest source

@@ -62,5 +62,23 @@ class XPathType extends Object {
 
 object XPathType {
     /** Represents the filter set operation. */
-    type Filter = XPathType_Filter
+    object Filter extends Object {
+
+        /** The intersect filter operation. */
+        @stub
+        val INTERSECT: Filter = ???
+
+        /** The subtract filter operation. */
+        @stub
+        val SUBTRACT: Filter = ???
+
+        /** The union filter operation. */
+        @stub
+        val UNION: Filter = ???
+
+        /** Returns the string form of the operation. */
+        @stub
+        def toString(): String = ???
+    }
+
 }

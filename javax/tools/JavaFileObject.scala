@@ -1,6 +1,6 @@
 package javax.tools
 
-import java.lang.String
+import java.lang.{Enum, Object, String}
 import javax.lang.model.element.{Modifier, NestingKind}
 import scala.scalanative.annotation.stub
 
@@ -40,5 +40,37 @@ trait JavaFileObject extends FileObject {
 
 object JavaFileObject {
     /** Kinds of JavaFileObjects. */
-    type Kind = JavaFileObject_Kind
+    class Kind private (name: String, ordinal: Int) extends Enum[Kind](name, ordinal) {
+    }
+
+    object Kind {
+        /** Class files for the Java Virtual Machine. */
+        final val CLASS: Kind = new Kind("CLASS", 0)
+
+        /** HTML files. */
+        final val HTML: Kind = new Kind("HTML", 1)
+
+        /** Any other kind. */
+        final val OTHER: Kind = new Kind("OTHER", 2)
+
+        /** Source files written in the Java programming language. */
+        final val SOURCE: Kind = new Kind("SOURCE", 3)
+
+        /** The extension which (by convention) is normally used for
+         *  this kind of file object.
+         */
+        @stub
+        val extension: String = ???
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): Kind = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[Kind] = ???
+    }
+
 }

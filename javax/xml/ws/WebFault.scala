@@ -9,10 +9,10 @@ import scala.scalanative.annotation.stub
  *  to the local and namespace name of the fault element and the name
  *  of the fault bean.
  */
-@Target ( value = TYPE ) 
-@Retention ( value = RUNTIME ) 
-@Documented 
- final class WebFault extends StaticAnnotation {
+@Target(value=TYPE)
+@Retention(value=RUNTIME)
+@Documented
+final class WebFault extends StaticAnnotation {
 
     /** Fault bean name. */
     @stub

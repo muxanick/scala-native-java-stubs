@@ -346,9 +346,9 @@ import scala.scalanative.annotation.stub
  *       }
  *  
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value = TYPE ) 
- final class XmlType extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value=TYPE)
+final class XmlType extends StaticAnnotation {
 
     /** Class containing a no-arg factory method for creating an
      *  instance of this class.

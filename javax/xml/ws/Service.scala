@@ -1,6 +1,6 @@
 package javax.xml.ws
 
-import java.lang.{Class, Object, String}
+import java.lang.{Class, Enum, Object, String}
 import java.net.URL
 import java.util.Iterator
 import java.util.concurrent.Executor
@@ -138,8 +138,31 @@ class Service extends Object {
 }
 
 object Service {
-    /** The orientation of a dynamic client or service. */
-    type Mode = Service_Mode
+    /** The orientation of a dynamic client or service. MESSAGE provides
+     *  access to entire protocol message, PAYLOAD to protocol message
+     *  payload only.
+     */
+    class Mode private (name: String, ordinal: Int) extends Enum[Mode](name, ordinal) {
+    }
+
+    object Mode {
+        /**  */
+        final val MESSAGE: Mode = new Mode("MESSAGE", 0)
+
+        /**  */
+        final val PAYLOAD: Mode = new Mode("PAYLOAD", 1)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): Mode = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[Mode] = ???
+    }
+
 
     /** Creates a Service instance. */
     @stub

@@ -2,7 +2,7 @@ package java.awt
 
 import java.lang.Object
 import java.util.Enumeration
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole}
 import scala.scalanative.annotation.stub
 
 /** The MenuBar class encapsulates the platform's
@@ -34,9 +34,25 @@ class MenuBar extends MenuComponent with MenuContainer with Accessible {
     def this() = ???
 
     /** Inner class of MenuBar used to provide default support for
-     *  accessibility.
+     *  accessibility.  This class is not meant to be used directly by
+     *  application developers, but is instead meant only to be
+     *  subclassed by menu component developers.
+     *  
+     *  This class implements accessibility support for the
+     *  MenuBar class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to menu bar user-interface elements.
      */
-    protected type AccessibleAWTMenuBar = MenuBar_AccessibleAWTMenuBar
+    protected class AccessibleAWTMenuBar extends MenuComponent.AccessibleAWTMenuComponent {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+    }
+
 
     /** Adds the specified menu to the menu bar. */
     @stub

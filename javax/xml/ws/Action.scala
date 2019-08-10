@@ -89,10 +89,10 @@ import scala.scalanative.annotation.stub
  *  how to specify an explicit value for Action message addressing property for the
  *  fault message.
  */
-@Documented 
-@Retention ( value = RUNTIME ) 
-@Target ( value = METHOD ) 
- final class Action extends StaticAnnotation {
+@Documented
+@Retention(value=RUNTIME)
+@Target(value=METHOD)
+final class Action extends StaticAnnotation {
 
     /** Explicit value of the WS-Addressing Action message addressing property for the fault
      *  message(s) of the operation.

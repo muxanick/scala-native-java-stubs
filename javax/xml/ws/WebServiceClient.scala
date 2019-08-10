@@ -13,10 +13,10 @@ import scala.scalanative.annotation.stub
  *   element represents the Web service for which the generated
  *   service interface provides a client view.
  */
-@Target ( value = TYPE ) 
-@Retention ( value = RUNTIME ) 
-@Documented 
- final class WebServiceClient extends StaticAnnotation {
+@Target(value=TYPE)
+@Retention(value=RUNTIME)
+@Documented
+final class WebServiceClient extends StaticAnnotation {
 
     /** The local name of the Web service. */
     @stub

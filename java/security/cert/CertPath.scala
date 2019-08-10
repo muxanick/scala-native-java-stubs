@@ -130,5 +130,17 @@ abstract class CertPath extends Object with Serializable {
 
 object CertPath {
     /** Alternate CertPath class for serialization. */
-    protected type CertPathRep = CertPath_CertPathRep
+    protected object CertPathRep extends Object with Serializable {
+
+        /** Creates a CertPathRep with the specified
+         *  type and encoded form of a certification path.
+         */
+        @stub
+        protected def apply(type: String, data: Array[Byte]) = ???
+
+        /** Returns a CertPath constructed from the type and data. */
+        @stub
+        protected def readResolve(): Any = ???
+    }
+
 }

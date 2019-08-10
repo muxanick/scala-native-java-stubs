@@ -34,7 +34,8 @@ import scala.scalanative.annotation.stub
  *  finding the next or previous day-of-week, such as "next Thursday"
  *  
  */
-@FunctionalInterface trait TemporalAdjuster {
+@FunctionalInterface
+trait TemporalAdjuster {
 
     /** Adjusts the specified temporal object. */
     @stub

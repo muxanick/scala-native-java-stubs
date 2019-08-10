@@ -1,7 +1,7 @@
 package javax.swing
 
 import java.awt.Container
-import java.lang.Object
+import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** LayoutStyle provides information about how to position
@@ -30,9 +30,40 @@ abstract class LayoutStyle extends Object {
 object LayoutStyle {
     /** ComponentPlacement is an enumeration of the
      *  possible ways two components can be placed relative to each
-     *  other.
+     *  other.  ComponentPlacement is used by the
+     *  LayoutStyle method getPreferredGap.  Refer to
+     *  LayoutStyle for more information.
      */
-    type ComponentPlacement = LayoutStyle_ComponentPlacement
+    class ComponentPlacement private (name: String, ordinal: Int) extends Enum[ComponentPlacement](name, ordinal) {
+    }
+
+    object ComponentPlacement {
+        /** Enumeration value indicating the distance to indent a component
+         *  is being requested.
+         */
+        final val INDENT: ComponentPlacement = new ComponentPlacement("INDENT", 0)
+
+        /** Enumeration value indicating the two components are
+         *  visually related and will be placed in the same parent.
+         */
+        final val RELATED: ComponentPlacement = new ComponentPlacement("RELATED", 1)
+
+        /** Enumeration value indicating the two components are
+         *  visually unrelated and will be placed in the same parent.
+         */
+        final val UNRELATED: ComponentPlacement = new ComponentPlacement("UNRELATED", 2)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): ComponentPlacement = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[ComponentPlacement] = ???
+    }
+
 
     /** Returns the shared instance of LayoutStyle. */
     @stub

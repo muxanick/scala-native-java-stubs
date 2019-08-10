@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  exactly the same set of remote interfaces defined by the actual
  *  implementation of the remote object.
  */
-@Deprecated abstract class RemoteStub extends RemoteObject {
+@Deprecated
+abstract class RemoteStub extends RemoteObject {
 
     /** Deprecated.  */
     @stub

@@ -1,9 +1,9 @@
 package java.awt
 
 import java.awt.event.{AdjustmentEvent, AdjustmentListener}
-import java.lang.{Class, Object, String}
+import java.lang.{Class, Number, Object, String}
 import java.util.EventListener
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole, AccessibleStateSet, AccessibleValue}
 import scala.scalanative.annotation.stub
 
 /** The Scrollbar class embodies a scroll bar, a
@@ -144,9 +144,47 @@ class Scrollbar extends Component with Adjustable with Accessible {
     def this(orientation: Int, value: Int, visible: Int, minimum: Int, maximum: Int) = ???
 
     /** This class implements accessibility support for the
-     *  Scrollbar class.
+     *  Scrollbar class.  It provides an implementation of
+     *  the Java Accessibility API appropriate to scrollbar
+     *  user-interface elements.
      */
-    protected type AccessibleAWTScrollBar = Scrollbar_AccessibleAWTScrollBar
+    protected class AccessibleAWTScrollBar extends Component.AccessibleAWTComponent with AccessibleValue {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+
+        /** Get the state set of this object. */
+        @stub
+        def getAccessibleStateSet(): AccessibleStateSet = ???
+
+        /** Get the AccessibleValue associated with this
+         *  object.
+         */
+        @stub
+        def getAccessibleValue(): AccessibleValue = ???
+
+        /** Get the accessible value of this object. */
+        @stub
+        def getCurrentAccessibleValue(): Number = ???
+
+        /** Get the maximum accessible value of this object. */
+        @stub
+        def getMaximumAccessibleValue(): Number = ???
+
+        /** Get the minimum accessible value of this object. */
+        @stub
+        def getMinimumAccessibleValue(): Number = ???
+
+        /** Set the value of this object as a Number. */
+        @stub
+        def setCurrentAccessibleValue(n: Number): Boolean = ???
+    }
+
 
     /** Adds the specified adjustment listener to receive instances of
      *  AdjustmentEvent from this scroll bar.

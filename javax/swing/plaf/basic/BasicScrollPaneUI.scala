@@ -1,11 +1,11 @@
 package javax.swing.plaf.basic
 
 import java.awt.{Component.BaselineResizeBehavior, Dimension, Graphics}
-import java.awt.event.MouseWheelListener
+import java.awt.event.{MouseWheelEvent, MouseWheelListener}
 import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.Object
 import javax.swing.{JComponent, JScrollPane, ScrollPaneConstants}
-import javax.swing.event.ChangeListener
+import javax.swing.event.{ChangeEvent, ChangeListener}
 import javax.swing.plaf.{ComponentUI, ScrollPaneUI}
 import scala.scalanative.annotation.stub
 
@@ -17,21 +17,77 @@ class BasicScrollPaneUI extends ScrollPaneUI with ScrollPaneConstants {
     def this() = ???
 
     /** Horizontal scrollbar listener. */
-    type HSBChangeListener = BasicScrollPaneUI_HSBChangeListener
+    class HSBChangeListener extends Object with ChangeListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when the target of the listener has changed its state. */
+        @stub
+        def stateChanged(e: ChangeEvent): Unit = ???
+    }
+
 
     /** MouseWheelHandler is an inner class which implements the
-     *  MouseWheelListener interface.
+     *  MouseWheelListener interface.  MouseWheelHandler responds to
+     *  MouseWheelEvents by scrolling the JScrollPane appropriately.
+     *  If the scroll pane's
+     *  isWheelScrollingEnabled
+     *  method returns false, no scrolling occurs.
      */
-    protected type MouseWheelHandler = BasicScrollPaneUI_MouseWheelHandler
+    protected class MouseWheelHandler extends Object with MouseWheelListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Called when the mouse wheel is rotated while over a
+         *  JScrollPane.
+         */
+        @stub
+        def mouseWheelMoved(e: MouseWheelEvent): Unit = ???
+    }
+
 
     /**  */
-    type PropertyChangeHandler = BasicScrollPaneUI_PropertyChangeHandler
+    class PropertyChangeHandler extends Object with PropertyChangeListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** This method gets called when a bound property is changed. */
+        @stub
+        def propertyChange(e: PropertyChangeEvent): Unit = ???
+    }
+
 
     /** Listener for viewport events. */
-    type ViewportChangeHandler = BasicScrollPaneUI_ViewportChangeHandler
+    class ViewportChangeHandler extends Object with ChangeListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when the target of the listener has changed its state. */
+        @stub
+        def stateChanged(e: ChangeEvent): Unit = ???
+    }
+
 
     /** Vertical scrollbar listener. */
-    type VSBChangeListener = BasicScrollPaneUI_VSBChangeListener
+    class VSBChangeListener extends Object with ChangeListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when the target of the listener has changed its state. */
+        @stub
+        def stateChanged(e: ChangeEvent): Unit = ???
+    }
+
 
     /**  */
     @stub

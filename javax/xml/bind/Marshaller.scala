@@ -400,8 +400,36 @@ object Marshaller {
     /** 
      *  Register an instance of an implementation of this class with a Marshaller to externally listen
      *  for marshal events.
+     *  
+     *  
+     *  This class enables pre and post processing of each marshalled object.
+     *  The event callbacks are called when marshalling from an instance that maps to an xml element or
+     *  complex type definition. The event callbacks are not called when marshalling from an instance of a
+     *  Java datatype that represents a simple type definition.
+     *  
+     *  
+     *  External listener is one of two different mechanisms for defining marshal event callbacks.
+     *  See Marshal Event Callbacks for an overview.
      */
-    type Listener = Marshaller_Listener
+    abstract object Listener extends Object {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /** 
+         *  Callback method invoked after marshalling source to XML.
+         */
+        @stub
+        def afterMarshal(source: Any): Unit = ???
+
+        /** 
+         *  Callback method invoked before marshalling from source to XML.
+         */
+        @stub
+        def beforeMarshal(source: Any): Unit = ???
+    }
+
 
     /** The name of the property used to specify the output encoding in
      *  the marshalled XML data.

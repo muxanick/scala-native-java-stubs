@@ -57,8 +57,8 @@ import scala.scalanative.annotation.stub
  * 
  *  
  */
-@Documented 
-@Retention ( value = RUNTIME ) 
-@Target ( value ={ CONSTRUCTOR , METHOD } ) 
- final class SafeVarargs extends StaticAnnotation {
+@Documented
+@Retention(value=RUNTIME)
+@Target(value={CONSTRUCTOR,METHOD})
+final class SafeVarargs extends StaticAnnotation {
 }

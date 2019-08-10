@@ -20,26 +20,6 @@ import scala.scalanative.annotation.stub
  *  to the word used for month in association with a day and year in a date.
  */
 class TextStyle private (name: String, ordinal: Int) extends Enum[TextStyle](name, ordinal) {
-}
-
-object TextStyle {
-    /** Full text, typically the full description. */
-    final val FULL = new TextStyle(FULL, 0)
-
-    /** Full text for stand-alone use, typically the full description. */
-    final val FULL_STANDALONE = new TextStyle(FULL_STANDALONE, 1)
-
-    /** Narrow text, typically a single letter. */
-    final val NARROW = new TextStyle(NARROW, 2)
-
-    /** Narrow text for stand-alone use, typically a single letter. */
-    final val NARROW_STANDALONE = new TextStyle(NARROW_STANDALONE, 3)
-
-    /** Short text, typically an abbreviation. */
-    final val SHORT = new TextStyle(SHORT, 4)
-
-    /** Short text for stand-alone use, typically an abbreviation. */
-    final val SHORT_STANDALONE = new TextStyle(SHORT_STANDALONE, 5)
 
     /** Returns the normal style with the same size. */
     @stub
@@ -52,6 +32,26 @@ object TextStyle {
     /** Returns true if the Style is a stand-alone style. */
     @stub
     def isStandalone(): Boolean = ???
+}
+
+object TextStyle {
+    /** Full text, typically the full description. */
+    final val FULL: TextStyle = new TextStyle("FULL", 0)
+
+    /** Full text for stand-alone use, typically the full description. */
+    final val FULL_STANDALONE: TextStyle = new TextStyle("FULL_STANDALONE", 1)
+
+    /** Narrow text, typically a single letter. */
+    final val NARROW: TextStyle = new TextStyle("NARROW", 2)
+
+    /** Narrow text for stand-alone use, typically a single letter. */
+    final val NARROW_STANDALONE: TextStyle = new TextStyle("NARROW_STANDALONE", 3)
+
+    /** Short text, typically an abbreviation. */
+    final val SHORT: TextStyle = new TextStyle("SHORT", 4)
+
+    /** Short text for stand-alone use, typically an abbreviation. */
+    final val SHORT_STANDALONE: TextStyle = new TextStyle("SHORT_STANDALONE", 5)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

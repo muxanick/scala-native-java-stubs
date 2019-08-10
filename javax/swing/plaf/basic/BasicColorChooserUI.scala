@@ -1,6 +1,6 @@
 package javax.swing.plaf.basic
 
-import java.beans.PropertyChangeListener
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.Object
 import javax.swing.{JColorChooser, JComponent}
 import javax.swing.colorchooser.AbstractColorChooserPanel
@@ -17,8 +17,20 @@ class BasicColorChooserUI extends ColorChooserUI {
     @stub
     def this() = ???
 
-    /** This class should be treated as a "protected" inner class. */
-    type PropertyHandler = BasicColorChooserUI_PropertyHandler
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicColorChooserUI.
+     */
+    class PropertyHandler extends Object with PropertyChangeListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** This method gets called when a bound property is changed. */
+        @stub
+        def propertyChange(e: PropertyChangeEvent): Unit = ???
+    }
+
 
     /** JColorChooser this BasicColorChooserUI is installed on. */
     @stub

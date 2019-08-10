@@ -1,11 +1,13 @@
 package javax.swing.plaf.metal
 
-import java.awt.Dimension
-import java.beans.PropertyChangeListener
+import java.awt.{Component, Container, Dimension}
+import java.awt.event.{ActionEvent, MouseAdapter}
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.io.File
 import java.lang.{Object, String}
-import javax.swing.{ActionMap, JButton, JComponent, JFileChooser, JPanel}
+import javax.swing.{AbstractAction, AbstractListModel, ActionMap, ComboBoxModel, DefaultListCellRenderer, JButton, JComponent, JFileChooser, JLabel, JList, JPanel}
 import javax.swing.event.{ListSelectionEvent, ListSelectionListener}
+import javax.swing.filechooser.FileFilter
 import javax.swing.plaf.{ComponentUI, FileChooserUI}
 import javax.swing.plaf.basic.BasicFileChooserUI
 import scala.scalanative.annotation.stub
@@ -18,22 +20,112 @@ class MetalFileChooserUI extends BasicFileChooserUI {
     def this(filechooser: JFileChooser) = ???
 
     /** Acts when DirectoryComboBox has changed the selected item. */
-    protected type DirectoryComboBoxAction = MetalFileChooserUI_DirectoryComboBoxAction
+    protected class DirectoryComboBoxAction extends AbstractAction {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
 
     /** Data model for a type-face selection combo-box. */
-    protected type DirectoryComboBoxModel = MetalFileChooserUI_DirectoryComboBoxModel
+    protected class DirectoryComboBoxModel extends AbstractListModel[Object] with ComboBoxModel[Object] {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /**  */
+        @stub
+        def getDepth(i: Int): Int = ???
+
+        /** Returns the value at the specified index. */
+        @stub
+        def getElementAt(index: Int): Any = ???
+
+        /** Returns the selected item */
+        @stub
+        def getSelectedItem(): Any = ???
+
+        /** Returns the length of the list. */
+        @stub
+        def getSize(): Int = ???
+
+        /** Set the selected item. */
+        @stub
+        def setSelectedItem(selectedDirectory: Any): Unit = ???
+    }
+
 
     /**  */
-    protected type FileRenderer = MetalFileChooserUI_FileRenderer
+    protected class FileRenderer extends DefaultListCellRenderer {
+
+        /**  */
+        @stub
+        protected def this() = ???
+    }
+
 
     /** Data model for a type-face selection combo-box. */
-    protected type FilterComboBoxModel = MetalFileChooserUI_FilterComboBoxModel
+    protected class FilterComboBoxModel extends AbstractListModel[Object] with ComboBoxModel[Object] with PropertyChangeListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /**  */
+        @stub
+        protected val filters: Array[FileFilter] = ???
+
+        /** Returns the value at the specified index. */
+        @stub
+        def getElementAt(index: Int): Any = ???
+
+        /** Returns the selected item */
+        @stub
+        def getSelectedItem(): Any = ???
+
+        /** Returns the length of the list. */
+        @stub
+        def getSize(): Int = ???
+
+        /** This method gets called when a bound property is changed. */
+        @stub
+        def propertyChange(e: PropertyChangeEvent): Unit = ???
+
+        /** Set the selected item. */
+        @stub
+        def setSelectedItem(filter: Any): Unit = ???
+    }
+
 
     /** Render different type sizes and styles. */
-    type FilterComboBoxRenderer = MetalFileChooserUI_FilterComboBoxRenderer
+    class FilterComboBoxRenderer extends DefaultListCellRenderer {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Return a component that has been configured to display the specified
+         *  value.
+         */
+        @stub
+        def getListCellRendererComponent(list: JList, value: Any, index: Int, isSelected: Boolean, cellHasFocus: Boolean): Component = ???
+    }
+
 
     /**  */
-    protected type SingleClickListener = MetalFileChooserUI_SingleClickListener
+    protected class SingleClickListener extends MouseAdapter {
+
+        /**  */
+        @stub
+        def this(list: JList) = ???
+    }
+
 
     /**  */
     @stub

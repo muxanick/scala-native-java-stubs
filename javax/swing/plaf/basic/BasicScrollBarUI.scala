@@ -1,9 +1,11 @@
 package javax.swing.plaf.basic
 
 import java.awt.{Color, Component, Container, Dimension, Graphics, LayoutManager, Rectangle}
-import java.beans.PropertyChangeListener
+import java.awt.event.{ActionEvent, ActionListener, MouseAdapter, MouseEvent, MouseMotionListener}
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.{Object, String}
 import javax.swing.{JButton, JComponent, JScrollBar, SwingConstants, Timer}
+import javax.swing.event.{ChangeEvent, ChangeListener}
 import javax.swing.plaf.{ComponentUI, ScrollBarUI}
 import scala.scalanative.annotation.stub
 
@@ -15,21 +17,124 @@ class BasicScrollBarUI extends ScrollBarUI with LayoutManager with SwingConstant
     def this() = ???
 
     /** Listener for cursor keys. */
-    protected type ArrowButtonListener = BasicScrollBarUI_ArrowButtonListener
+    protected class ArrowButtonListener extends MouseAdapter {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when a mouse button has been pressed on a component. */
+        @stub
+        def mousePressed(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button has been released on a component. */
+        @stub
+        def mouseReleased(e: MouseEvent): Unit = ???
+    }
+
 
     /** A listener to listen for model changes. */
-    protected type ModelListener = BasicScrollBarUI_ModelListener
+    protected class ModelListener extends Object with ChangeListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when the target of the listener has changed its state. */
+        @stub
+        def stateChanged(e: ChangeEvent): Unit = ???
+    }
+
 
     /**  */
-    type PropertyChangeHandler = BasicScrollBarUI_PropertyChangeHandler
+    class PropertyChangeHandler extends Object with PropertyChangeListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** This method gets called when a bound property is changed. */
+        @stub
+        def propertyChange(e: PropertyChangeEvent): Unit = ???
+    }
+
 
     /** Listener for scrolling events initiated in the
      *  ScrollPane.
      */
-    protected type ScrollListener = BasicScrollBarUI_ScrollListener
+    protected class ScrollListener extends Object with ActionListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /**  */
+        @stub
+        def this(dir: Int, block: Boolean) = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+
+        /**  */
+        @stub
+        def setDirection(direction: Int): Unit = ???
+
+        /**  */
+        @stub
+        def setScrollByBlock(block: Boolean): Unit = ???
+    }
+
 
     /** Track mouse drags. */
-    protected type TrackListener = BasicScrollBarUI_TrackListener
+    protected class TrackListener extends MouseAdapter with MouseMotionListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /**  */
+        @stub
+        protected val currentMouseX: Int = ???
+
+        /**  */
+        @stub
+        protected val currentMouseY: Int = ???
+
+        /**  */
+        @stub
+        protected val offset: Int = ???
+
+        /** Set the models value to the position of the thumb's top of Vertical
+         *  scrollbar, or the left/right of Horizontal scrollbar in
+         *  left-to-right/right-to-left scrollbar relative to the origin of the
+         *  track.
+         */
+        @stub
+        def mouseDragged(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse exits the scrollbar. */
+        @stub
+        def mouseExited(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse cursor has been moved onto a component
+         *  but no buttons have been pushed.
+         */
+        @stub
+        def mouseMoved(e: MouseEvent): Unit = ???
+
+        /** If the mouse is pressed above the "thumb" component
+         *  then reduce the scrollbars value by one page ("page up"),
+         *  otherwise increase it by one page.
+         */
+        @stub
+        def mousePressed(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button has been released on a component. */
+        @stub
+        def mouseReleased(e: MouseEvent): Unit = ???
+    }
+
 
     /**  */
     @stub

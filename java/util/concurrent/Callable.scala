@@ -15,7 +15,8 @@ import scala.scalanative.annotation.stub
  *  The Executors class contains utility methods to
  *  convert from other common forms to Callable classes.
  */
-@FunctionalInterface trait Callable[V] {
+@FunctionalInterface
+trait Callable[V] {
 
     /** Computes a result, or throws an exception if unable to do so. */
     @stub

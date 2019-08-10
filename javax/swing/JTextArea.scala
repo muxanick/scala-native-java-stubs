@@ -1,9 +1,9 @@
 package javax.swing
 
-import java.awt.{Component, Container, Dimension, Font, Rectangle}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, Dimension, Font, Rectangle}
 import java.lang.{Object, String}
-import javax.accessibility.AccessibleContext
-import javax.swing.text.{Document, JTextComponent}
+import javax.accessibility.{AccessibleContext, AccessibleStateSet}
+import javax.swing.text.{Document, JTextComponent, JTextComponent.AccessibleJTextComponent}
 import scala.scalanative.annotation.stub
 
 /** A JTextArea is a multi-line area that displays plain text.
@@ -117,9 +117,30 @@ class JTextArea extends JTextComponent {
     def this(text: String, rows: Int, columns: Int) = ???
 
     /** This class implements accessibility support for the
-     *  JTextArea class.
+     *  JTextArea class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to text area user-interface
+     *  elements.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type AccessibleJTextArea = JTextArea_AccessibleJTextArea
+    protected class AccessibleJTextArea extends JTextComponent.AccessibleJTextComponent {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Gets the state set of this object. */
+        @stub
+        def getAccessibleStateSet(): AccessibleStateSet = ???
+    }
+
 
     /** Appends the given text to the end of the document. */
     @stub

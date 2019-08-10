@@ -14,23 +14,155 @@ final class Spliterators extends Object {
 object Spliterators {
     /** An abstract Spliterator.OfDouble that implements
      *  trySplit to permit limited parallelism.
+     * 
+     *  To implement a spliterator an extending class need only
+     *  implement Spliterator.OfDouble.tryAdvance(java.util.function.DoubleConsumer)
+     *  tryAdvance}.  The extending class should override
+     *  Spliterator.OfDouble.forEachRemaining(java.util.function.DoubleConsumer) forEach} if
+     *  it can provide a more performant implementation.
      */
-    type AbstractDoubleSpliterator = Spliterators_AbstractDoubleSpliterator
+    abstract object AbstractDoubleSpliterator extends Object with Spliterator.OfDouble {
+
+        /** Creates a spliterator reporting the given estimated size and
+         *  characteristics.
+         */
+        @stub
+        protected def apply(est: Long, additionalCharacteristics: Int) = ???
+
+        /** Returns a set of characteristics of this Spliterator and its
+         *  elements.
+         */
+        @stub
+        def characteristics(): Int = ???
+
+        /** Returns an estimate of the number of elements that would be
+         *  encountered by a Spliterator.forEachRemaining(java.util.function.Consumer<? super T>) traversal, or returns Long.MAX_VALUE if infinite, unknown, or too expensive to compute.
+         */
+        @stub
+        def estimateSize(): Long = ???
+
+        /** If this spliterator can be partitioned, returns a Spliterator
+         *  covering elements, that will, upon return from this method, not
+         *  be covered by this Spliterator.
+         */
+        @stub
+        def trySplit(): Spliterator.OfDouble = ???
+    }
+
 
     /** An abstract Spliterator.OfInt that implements trySplit to
      *  permit limited parallelism.
+     * 
+     *  To implement a spliterator an extending class need only
+     *  implement Spliterator.OfInt.tryAdvance(java.util.function.IntConsumer)
+     *  tryAdvance}.  The extending class should override
+     *  Spliterator.OfInt.forEachRemaining(java.util.function.IntConsumer) forEach} if it
+     *  can provide a more performant implementation.
      */
-    type AbstractIntSpliterator = Spliterators_AbstractIntSpliterator
+    abstract object AbstractIntSpliterator extends Object with Spliterator.OfInt {
+
+        /** Creates a spliterator reporting the given estimated size and
+         *  characteristics.
+         */
+        @stub
+        protected def apply(est: Long, additionalCharacteristics: Int) = ???
+
+        /** Returns a set of characteristics of this Spliterator and its
+         *  elements.
+         */
+        @stub
+        def characteristics(): Int = ???
+
+        /** Returns an estimate of the number of elements that would be
+         *  encountered by a Spliterator.forEachRemaining(java.util.function.Consumer<? super T>) traversal, or returns Long.MAX_VALUE if infinite, unknown, or too expensive to compute.
+         */
+        @stub
+        def estimateSize(): Long = ???
+
+        /** If this spliterator can be partitioned, returns a Spliterator
+         *  covering elements, that will, upon return from this method, not
+         *  be covered by this Spliterator.
+         */
+        @stub
+        def trySplit(): Spliterator.OfInt = ???
+    }
+
 
     /** An abstract Spliterator.OfLong that implements trySplit
      *  to permit limited parallelism.
+     * 
+     *  To implement a spliterator an extending class need only
+     *  implement Spliterator.OfLong.tryAdvance(java.util.function.LongConsumer)
+     *  tryAdvance}.  The extending class should override
+     *  Spliterator.OfLong.forEachRemaining(java.util.function.LongConsumer) forEach} if it
+     *  can provide a more performant implementation.
      */
-    type AbstractLongSpliterator = Spliterators_AbstractLongSpliterator
+    abstract object AbstractLongSpliterator extends Object with Spliterator.OfLong {
+
+        /** Creates a spliterator reporting the given estimated size and
+         *  characteristics.
+         */
+        @stub
+        protected def apply(est: Long, additionalCharacteristics: Int) = ???
+
+        /** Returns a set of characteristics of this Spliterator and its
+         *  elements.
+         */
+        @stub
+        def characteristics(): Int = ???
+
+        /** Returns an estimate of the number of elements that would be
+         *  encountered by a Spliterator.forEachRemaining(java.util.function.Consumer<? super T>) traversal, or returns Long.MAX_VALUE if infinite, unknown, or too expensive to compute.
+         */
+        @stub
+        def estimateSize(): Long = ???
+
+        /** If this spliterator can be partitioned, returns a Spliterator
+         *  covering elements, that will, upon return from this method, not
+         *  be covered by this Spliterator.
+         */
+        @stub
+        def trySplit(): Spliterator.OfLong = ???
+    }
+
 
     /** An abstract Spliterator that implements trySplit to
      *  permit limited parallelism.
+     * 
+     *  An extending class need only
+     *  implement tryAdvance.
+     *  The extending class should override
+     *  forEach if it can
+     *  provide a more performant implementation.
      */
-    type AbstractSpliterator[T] = Spliterators_AbstractSpliterator[T]
+    abstract object AbstractSpliterator[T] extends Object with Spliterator[T] {
+
+        /** Creates a spliterator reporting the given estimated size and
+         *  additionalCharacteristics.
+         */
+        @stub
+        protected def apply(est: Long, additionalCharacteristics: Int) = ???
+
+        /** Returns a set of characteristics of this Spliterator and its
+         *  elements.
+         */
+        @stub
+        def characteristics(): Int = ???
+
+        /** Returns an estimate of the number of elements that would be
+         *  encountered by a Spliterator.forEachRemaining(java.util.function.Consumer<? super T>) traversal, or returns Long.MAX_VALUE if infinite, unknown, or too expensive to compute.
+         */
+        @stub
+        def estimateSize(): Long = ???
+
+        /** If this spliterator can be partitioned, returns a Spliterator
+         *  covering elements, that will, upon return from this method, not
+         *  be covered by this Spliterator.
+         */
+        @stub
+        def trySplit(): Spliterator[T] = ???
+    }
+
 
     /** Creates an empty Spliterator.OfDouble */
     @stub

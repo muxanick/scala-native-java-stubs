@@ -2,6 +2,7 @@ package java.awt.dnd
 
 import java.awt.{Component, Point}
 import java.awt.datatransfer.FlavorMap
+import java.awt.event.{ActionEvent, ActionListener}
 import java.io.Serializable
 import java.lang.Object
 import scala.scalanative.annotation.stub
@@ -200,5 +201,23 @@ class DropTarget extends Object with DropTargetListener with Serializable {
 
 object DropTarget {
     /** this protected nested class implements autoscrolling */
-    protected type DropTargetAutoScroller = DropTarget_DropTargetAutoScroller
+    protected object DropTargetAutoScroller extends Object with ActionListener {
+
+        /** construct a DropTargetAutoScroller */
+        @stub
+        protected def apply(c: Component, p: Point) = ???
+
+        /** cause autoscroll to occur */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+
+        /** cause autoscrolling to stop */
+        @stub
+        protected def stop(): Unit = ???
+
+        /** cause autoscroll to occur */
+        @stub
+        protected def updateLocation(newLocn: Point): Unit = ???
+    }
+
 }

@@ -17,9 +17,9 @@ import scala.scalanative.annotation.stub
  *   This annotation can be used with the following annotations:
  *  XmlJavaTypeAdapter, XmlElementWrapper.
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value ={ FIELD , METHOD } ) 
- final class XmlElementRefs extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value={FIELD,METHOD})
+final class XmlElementRefs extends StaticAnnotation {
 
     /**  */
     @stub

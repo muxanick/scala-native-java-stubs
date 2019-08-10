@@ -29,10 +29,10 @@ import scala.scalanative.annotation.stub
  *  recognize/support an error MUST be given.
  *  
  */
-@Target ( value = ANNOTATION_TYPE ) 
-@Retention ( value = RUNTIME ) 
-@Documented 
- final class WebServiceFeatureAnnotation extends StaticAnnotation {
+@Target(value=ANNOTATION_TYPE)
+@Retention(value=RUNTIME)
+@Documented
+final class WebServiceFeatureAnnotation extends StaticAnnotation {
 
     /** The WebServiceFeature bean that is associated
      *  with the WebServiceFeature annotation

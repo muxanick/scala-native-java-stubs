@@ -5,6 +5,7 @@ import java.io.Serializable
 import java.lang.{Object, String}
 import javax.swing.{JComponent, JLabel, JTable}
 import javax.swing.border.Border
+import javax.swing.plaf.UIResource
 import scala.scalanative.annotation.stub
 
 /** The standard class for rendering (displaying) individual cells
@@ -123,8 +124,27 @@ class DefaultTableCellRenderer extends JLabel with TableCellRenderer with Serial
 object DefaultTableCellRenderer {
     /** A subclass of DefaultTableCellRenderer that
      *  implements UIResource.
+     *  DefaultTableCellRenderer doesn't implement
+     *  UIResource
+     *  directly so that applications can safely override the
+     *  cellRenderer property with
+     *  DefaultTableCellRenderer subclasses.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    type UIResource = DefaultTableCellRenderer_UIResource
+    object UIResource extends DefaultTableCellRenderer with UIResource {
+
+        /**  */
+        @stub
+        def apply() = ???
+
 
     /**  */
     @stub

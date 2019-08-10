@@ -54,26 +54,26 @@ import scala.scalanative.annotation.stub
  *  
  */
 class NestingKind private (name: String, ordinal: Int) extends Enum[NestingKind](name, ordinal) {
-}
-
-object NestingKind {
-    /** A type without a name. */
-    final val ANONYMOUS = new NestingKind(ANONYMOUS, 0)
-
-    /** A named type declared within a construct other than a type. */
-    final val LOCAL = new NestingKind(LOCAL, 1)
-
-    /** A type that is a named member of another type. */
-    final val MEMBER = new NestingKind(MEMBER, 2)
-
-    /** A top-level type, not contained within another type. */
-    final val TOP_LEVEL = new NestingKind(TOP_LEVEL, 3)
 
     /** Does this constant correspond to a nested type element?
      *  A nested type element is any that is not top-level.
      */
     @stub
     def isNested(): Boolean = ???
+}
+
+object NestingKind {
+    /** A type without a name. */
+    final val ANONYMOUS: NestingKind = new NestingKind("ANONYMOUS", 0)
+
+    /** A named type declared within a construct other than a type. */
+    final val LOCAL: NestingKind = new NestingKind("LOCAL", 1)
+
+    /** A type that is a named member of another type. */
+    final val MEMBER: NestingKind = new NestingKind("MEMBER", 2)
+
+    /** A top-level type, not contained within another type. */
+    final val TOP_LEVEL: NestingKind = new NestingKind("TOP_LEVEL", 3)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

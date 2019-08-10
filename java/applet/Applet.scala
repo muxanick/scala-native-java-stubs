@@ -1,10 +1,10 @@
 package java.applet
 
-import java.awt.{Component, Container, Dimension, Image, Panel}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, Dimension, Image, Panel, Panel.AccessibleAWTPanel}
 import java.lang.{Object, String}
 import java.net.URL
 import java.util.Locale
-import javax.accessibility.AccessibleContext
+import javax.accessibility.{AccessibleContext, AccessibleRole, AccessibleStateSet}
 import scala.scalanative.annotation.stub
 
 /** An applet is a small program that is intended not to be run on
@@ -22,9 +22,24 @@ class Applet extends Panel {
     def this() = ???
 
     /** This class implements accessibility support for the
-     *  Applet class.
+     *  Applet class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to applet user-interface elements.
      */
-    protected type AccessibleApplet = Applet_AccessibleApplet
+    protected class AccessibleApplet extends Panel.AccessibleAWTPanel {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+
+        /** Get the state of this object. */
+        @stub
+        def getAccessibleStateSet(): AccessibleStateSet = ???
+    }
+
 
     /** Called by the browser or applet viewer to inform
      *  this applet that it is being reclaimed and that it should destroy

@@ -421,9 +421,11 @@ class CompletableFuture[T] extends Object with Future[T] with CompletionStage[T]
 
 object CompletableFuture {
     /** A marker interface identifying asynchronous tasks produced by
-     *  async methods.
+     *  async methods. This may be useful for monitoring,
+     *  debugging, and tracking asynchronous activities.
      */
-    type AsynchronousCompletionTask = CompletableFuture_AsynchronousCompletionTask
+    trait AsynchronousCompletionTask {
+
 
     /** Returns a new CompletableFuture that is completed when all of
      *  the given CompletableFutures complete.

@@ -1,8 +1,9 @@
 package javax.swing.plaf.basic
 
-import java.awt.{Component, Container, Dimension, Graphics, Insets}
+import java.awt.{Component, Container, Dimension, Graphics, Insets, LayoutManager}
+import java.awt.event.{MouseAdapter, MouseEvent, MouseMotionListener}
 import java.beans.{PropertyChangeEvent, PropertyChangeListener}
-import java.lang.Object
+import java.lang.{Object, String}
 import javax.swing.{JButton, JSplitPane}
 import javax.swing.border.Border
 import scala.scalanative.annotation.stub
@@ -29,24 +30,170 @@ class BasicSplitPaneDivider extends Container with PropertyChangeListener {
     @stub
     def this(ui: BasicSplitPaneUI) = ???
 
-    /** Used to layout a BasicSplitPaneDivider. */
-    protected type DividerLayout = BasicSplitPaneDivider_DividerLayout
+    /** Used to layout a BasicSplitPaneDivider.
+     *  Layout for the divider
+     *  involves appropriately moving the left/right buttons around.
+     */
+    protected class DividerLayout extends Object with LayoutManager {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** If the layout manager uses a per-component string,
+         *  adds the component comp to the layout,
+         *  associating it
+         *  with the string specified by name.
+         */
+        @stub
+        def addLayoutComponent(string: String, c: Component): Unit = ???
+
+        /** Lays out the specified container. */
+        @stub
+        def layoutContainer(c: Container): Unit = ???
+
+        /** Calculates the minimum size dimensions for the specified
+         *  container, given the components it contains.
+         */
+        @stub
+        def minimumLayoutSize(c: Container): Dimension = ???
+
+        /** Calculates the preferred size dimensions for the specified
+         *  container, given the components it contains.
+         */
+        @stub
+        def preferredLayoutSize(c: Container): Dimension = ???
+
+        /** Removes the specified component from the layout. */
+        @stub
+        def removeLayoutComponent(c: Component): Unit = ???
+    }
+
 
     /** Handles the events during a dragging session for a
-     *  HORIZONTAL_SPLIT oriented split pane.
+     *  HORIZONTAL_SPLIT oriented split pane. This continually
+     *  messages dragDividerTo and then when done messages
+     *  finishDraggingTo. When an instance is created it should be
+     *  messaged with isValid to insure that dragging can happen
+     *  (dragging won't be allowed if the two views can not be resized).
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type DragController = BasicSplitPaneDivider_DragController
+    protected class DragController extends Object {
+
+        /**  */
+        @stub
+        protected def this(e: MouseEvent) = ???
+
+        /**  */
+        @stub
+        protected def completeDrag(x: Int, y: Int): Unit = ???
+
+        /** Messages finishDraggingTo with the new location for the mouse
+         *  event.
+         */
+        @stub
+        protected def completeDrag(e: MouseEvent): Unit = ???
+
+        /**  */
+        @stub
+        protected def continueDrag(newX: Int, newY: Int): Unit = ???
+
+        /** Messages dragDividerTo with the new location for the mouse
+         *  event.
+         */
+        @stub
+        protected def continueDrag(e: MouseEvent): Unit = ???
+
+        /** Returns the x argument, since this is used for horizontal
+         *  splits.
+         */
+        @stub
+        protected def getNeededLocation(x: Int, y: Int): Int = ???
+
+        /** Returns true if the dragging session is valid. */
+        @stub
+        protected def isValid(): Boolean = ???
+
+        /** Returns the new position to put the divider at based on
+         *  the passed in MouseEvent.
+         */
+        @stub
+        protected def positionForMouseEvent(e: MouseEvent): Int = ???
+    }
+
 
     /** MouseHandler is responsible for converting mouse events
      *  (released, dragged...) into the appropriate DragController
      *  methods.
      */
-    protected type MouseHandler = BasicSplitPaneDivider_MouseHandler
+    protected class MouseHandler extends MouseAdapter with MouseMotionListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** If dragger is not null it is messaged with continueDrag. */
+        @stub
+        def mouseDragged(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse enters a component. */
+        @stub
+        def mouseEntered(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse exits a component. */
+        @stub
+        def mouseExited(e: MouseEvent): Unit = ???
+
+        /** Resets the cursor based on the orientation. */
+        @stub
+        def mouseMoved(e: MouseEvent): Unit = ???
+
+        /** Starts the dragging session by creating the appropriate instance
+         *  of DragController.
+         */
+        @stub
+        def mousePressed(e: MouseEvent): Unit = ???
+
+        /** If dragger is not null it is messaged with completeDrag. */
+        @stub
+        def mouseReleased(e: MouseEvent): Unit = ???
+    }
+
 
     /** Handles the events during a dragging session for a
-     *  VERTICAL_SPLIT oriented split pane.
+     *  VERTICAL_SPLIT oriented split pane. This continually
+     *  messages dragDividerTo and then when done messages
+     *  finishDraggingTo. When an instance is created it should be
+     *  messaged with isValid to insure that dragging can happen
+     *  (dragging won't be allowed if the two views can not be resized).
      */
-    protected type VerticalDragController = BasicSplitPaneDivider_VerticalDragController
+    protected class VerticalDragController extends BasicSplitPaneDivider.DragController {
+
+        /**  */
+        @stub
+        protected def this(e: MouseEvent) = ???
+
+        /** Returns the y argument, since this is used for vertical
+         *  splits.
+         */
+        @stub
+        protected def getNeededLocation(x: Int, y: Int): Int = ???
+
+        /** Returns the new position to put the divider at based on
+         *  the passed in MouseEvent.
+         */
+        @stub
+        protected def positionForMouseEvent(e: MouseEvent): Int = ???
+    }
+
 
     /** Size of the divider. */
     @stub

@@ -1,12 +1,12 @@
 package javax.swing
 
-import java.awt.{Component, Container, Dimension}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, Dimension, Point}
 import java.io.InputStream
 import java.lang.{ClassLoader, Object, String}
 import java.net.URL
-import javax.accessibility.AccessibleContext
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleHyperlink, AccessibleHypertext, AccessibleStateSet, AccessibleText}
 import javax.swing.event.{HyperlinkEvent, HyperlinkListener}
-import javax.swing.text.{EditorKit, JTextComponent}
+import javax.swing.text.{EditorKit, Element, JTextComponent, JTextComponent.AccessibleJTextComponent}
 import scala.scalanative.annotation.stub
 
 /** A text component to edit various kinds of content.
@@ -173,21 +173,167 @@ class JEditorPane extends JTextComponent {
     def this(initialPage: URL) = ???
 
     /** This class implements accessibility support for the
-     *  JEditorPane class.
+     *  JEditorPane class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to editor pane user-interface
+     *  elements.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type AccessibleJEditorPane = JEditorPane_AccessibleJEditorPane
+    protected class AccessibleJEditorPane extends JTextComponent.AccessibleJTextComponent {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Gets the accessibleDescription property of this object. */
+        @stub
+        def getAccessibleDescription(): String = ???
+
+        /** Gets the state set of this object. */
+        @stub
+        def getAccessibleStateSet(): AccessibleStateSet = ???
+    }
+
 
     /** This class provides support for AccessibleHypertext,
      *  and is used in instances where the EditorKit
      *  installed in this JEditorPane is an instance of
      *  HTMLEditorKit.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type AccessibleJEditorPaneHTML = JEditorPane_AccessibleJEditorPaneHTML
+    protected class AccessibleJEditorPaneHTML extends JEditorPane.AccessibleJEditorPane {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Returns the Accessible child, if one exists, contained at the local
+         *  coordinate Point.
+         */
+        @stub
+        def getAccessibleAt(p: Point): Accessible = ???
+
+        /** Returns the specified Accessible child of the object. */
+        @stub
+        def getAccessibleChild(i: Int): Accessible = ???
+
+        /** Returns the number of accessible children of the object. */
+        @stub
+        def getAccessibleChildrenCount(): Int = ???
+
+        /** Get the AccessibleText associated with this object. */
+        @stub
+        def getAccessibleText(): AccessibleText = ???
+    }
+
 
     /** What's returned by
      *  AccessibleJEditorPaneHTML.getAccessibleText.
+     * 
+     *  Provides support for AccessibleHypertext in case
+     *  there is an HTML document being displayed in this
+     *  JEditorPane.
      */
-    protected type JEditorPaneAccessibleHypertextSupport = JEditorPane_JEditorPaneAccessibleHypertextSupport
+    protected class JEditorPaneAccessibleHypertextSupport extends JEditorPane.AccessibleJEditorPane with AccessibleHypertext {
+
+        /** Make one of these puppies */
+        @stub
+        def this() = ???
+
+        /**  */
+        class HTMLLink extends AccessibleHyperlink {
+
+            /**  */
+            @stub
+            def this(e: Element) = ???
+
+            /** Perform the specified Action on the object */
+            @stub
+            def doAccessibleAction(i: Int): Boolean = ???
+
+            /** Return an object that represents the link anchor,
+             *  as appropriate for that link.
+             */
+            @stub
+            def getAccessibleActionAnchor(i: Int): Any = ???
+
+            /** Returns the number of accessible actions available in this Link
+             *  If there are more than one, the first one is NOT considered the
+             *  "default" action of this LINK object (e.g.
+             */
+            @stub
+            def getAccessibleActionCount(): Int = ???
+
+            /** Return a String description of this particular
+             *  link action.
+             */
+            @stub
+            def getAccessibleActionDescription(i: Int): String = ???
+
+            /** Returns a URL object that represents the link. */
+            @stub
+            def getAccessibleActionObject(i: Int): Any = ???
+
+            /** Get the index with the hypertext document at which this
+             *  link ends
+             */
+            @stub
+            def getEndIndex(): Int = ???
+
+            /** Get the index with the hypertext document at which this
+             *  link begins
+             */
+            @stub
+            def getStartIndex(): Int = ???
+
+            /** Since the document a link is associated with may have
+             *  changed, this method returns whether this Link is valid
+             *  anymore (with respect to the document it references).
+             */
+            @stub
+            def isValid(): Boolean = ???
+        }
+
+
+        /** Returns the index into an array of hyperlinks that
+         *  index.
+         */
+        @stub
+        def getLink(linkIndex: Int): AccessibleHyperlink = ???
+
+        /** Returns the number of links within this hypertext doc. */
+        @stub
+        def getLinkCount(): Int = ???
+
+        /** Returns the index into an array of hyperlinks that
+         *  is associated with this character index, or -1 if there
+         *  is no hyperlink associated with this index.
+         */
+        @stub
+        def getLinkIndex(charIndex: Int): Int = ???
+
+        /** Returns the contiguous text within the document that
+         *  is associated with this hyperlink.
+         */
+        @stub
+        def getLinkText(linkIndex: Int): String = ???
+    }
+
 
     /** Adds a hyperlink listener for notification of any changes, for example
      *  when a link is selected and entered.

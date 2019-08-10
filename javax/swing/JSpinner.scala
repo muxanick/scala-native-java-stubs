@@ -1,10 +1,13 @@
 package javax.swing
 
-import java.awt.{Component, Container}
-import java.lang.{Object, String}
-import javax.accessibility.{Accessible, AccessibleContext}
-import javax.swing.event.ChangeListener
+import java.awt.{Component, Component.AccessibleAWTComponent, Component.BaselineResizeBehavior, Container, Container.AccessibleAWTContainer, Dimension, LayoutManager, Point, Rectangle}
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
+import java.lang.{Number, Object, String}
+import java.text.{DecimalFormat, SimpleDateFormat}
+import javax.accessibility.{Accessible, AccessibleAction, AccessibleContext, AccessibleEditableText, AccessibleRole, AccessibleText, AccessibleValue}
+import javax.swing.event.{ChangeEvent, ChangeListener}
 import javax.swing.plaf.SpinnerUI
+import javax.swing.text.AttributeSet
 import scala.scalanative.annotation.stub
 
 /** A single line input field that lets the user select a
@@ -85,7 +88,164 @@ class JSpinner extends JComponent with Accessible {
     /** AccessibleJSpinner implements accessibility
      *  support for the JSpinner class.
      */
-    protected type AccessibleJSpinner = JSpinner_AccessibleJSpinner
+    protected class AccessibleJSpinner extends JComponent.AccessibleJComponent with AccessibleValue with AccessibleAction with AccessibleText with AccessibleEditableText with ChangeListener {
+
+        /** AccessibleJSpinner constructor */
+        @stub
+        protected def this() = ???
+
+        /** Cuts the text between two indices into the system clipboard. */
+        @stub
+        def cut(startIndex: Int, endIndex: Int): Unit = ???
+
+        /** Deletes the text between two indices */
+        @stub
+        def delete(startIndex: Int, endIndex: Int): Unit = ???
+
+        /** Performs the specified Action on the object */
+        @stub
+        def doAccessibleAction(i: Int): Boolean = ???
+
+        /** Gets the AccessibleAction associated with this object that supports
+         *  one or more actions.
+         */
+        @stub
+        def getAccessibleAction(): AccessibleAction = ???
+
+        /** Returns the number of accessible actions available in this object
+         *  If there are more than one, the first one is considered the "default"
+         *  action of the object.
+         */
+        @stub
+        def getAccessibleActionCount(): Int = ???
+
+        /** Returns a description of the specified action of the object. */
+        @stub
+        def getAccessibleActionDescription(i: Int): String = ???
+
+        /** Returns the specified Accessible child of the object. */
+        @stub
+        def getAccessibleChild(i: Int): Accessible = ???
+
+        /** Returns the number of accessible children of the object. */
+        @stub
+        def getAccessibleChildrenCount(): Int = ???
+
+        /** Gets the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+
+        /** Gets the AccessibleText associated with this object presenting
+         *  text on the display.
+         */
+        @stub
+        def getAccessibleText(): AccessibleText = ???
+
+        /** Gets the AccessibleValue associated with this object. */
+        @stub
+        def getAccessibleValue(): AccessibleValue = ???
+
+        /** Returns the String after a given index. */
+        @stub
+        def getAfterIndex(part: Int, index: Int): String = ???
+
+        /** Returns the String at a given index. */
+        @stub
+        def getAtIndex(part: Int, index: Int): String = ???
+
+        /** Returns the String before a given index. */
+        @stub
+        def getBeforeIndex(part: Int, index: Int): String = ???
+
+        /** Returns the zero-based offset of the caret. */
+        @stub
+        def getCaretPosition(): Int = ???
+
+        /** Returns the AttributeSet for a given character at a given index */
+        @stub
+        def getCharacterAttribute(i: Int): AttributeSet = ???
+
+        /** Determines the bounding box of the character at the given
+         *  index into the string.
+         */
+        @stub
+        def getCharacterBounds(i: Int): Rectangle = ???
+
+        /** Returns the number of characters (valid indicies) */
+        @stub
+        def getCharCount(): Int = ???
+
+        /** Get the value of this object as a Number. */
+        @stub
+        def getCurrentAccessibleValue(): Number = ???
+
+        /** Given a point in local coordinates, return the zero-based index
+         *  of the character under that Point.
+         */
+        @stub
+        def getIndexAtPoint(p: Point): Int = ???
+
+        /** Get the maximum value of this object as a Number. */
+        @stub
+        def getMaximumAccessibleValue(): Number = ???
+
+        /** Get the minimum value of this object as a Number. */
+        @stub
+        def getMinimumAccessibleValue(): Number = ???
+
+        /** Returns the portion of the text that is selected. */
+        @stub
+        def getSelectedText(): String = ???
+
+        /** Returns the end offset within the selected text. */
+        @stub
+        def getSelectionEnd(): Int = ???
+
+        /** Returns the start offset within the selected text. */
+        @stub
+        def getSelectionStart(): Int = ???
+
+        /** Returns the text string between two indices. */
+        @stub
+        def getTextRange(startIndex: Int, endIndex: Int): String = ???
+
+        /** Inserts the specified string at the given index/ */
+        @stub
+        def insertTextAtIndex(index: Int, s: String): Unit = ???
+
+        /** Pastes the text from the system clipboard into the text
+         *  starting at the specified index.
+         */
+        @stub
+        def paste(startIndex: Int): Unit = ???
+
+        /** Replaces the text between two indices with the specified
+         *  string.
+         */
+        @stub
+        def replaceText(startIndex: Int, endIndex: Int, s: String): Unit = ???
+
+        /** Selects the text between two indices. */
+        @stub
+        def selectText(startIndex: Int, endIndex: Int): Unit = ???
+
+        /** Sets attributes for the text between two indices. */
+        @stub
+        def setAttributes(startIndex: Int, endIndex: Int, as: AttributeSet): Unit = ???
+
+        /** Set the value of this object as a Number. */
+        @stub
+        def setCurrentAccessibleValue(n: Number): Boolean = ???
+
+        /** Sets the text contents to the specified string. */
+        @stub
+        def setTextContents(s: String): Unit = ???
+
+        /** Invoked when the target of the listener has changed its state. */
+        @stub
+        def stateChanged(e: ChangeEvent): Unit = ???
+    }
+
 
     /** Adds a listener to the list that is notified each time a change
      *  to the model occurs.
@@ -191,23 +351,197 @@ class JSpinner extends JComponent with Accessible {
 
 object JSpinner {
     /** An editor for a JSpinner whose model is a
-     *  SpinnerDateModel.
+     *  SpinnerDateModel.  The value of the editor is
+     *  displayed with a JFormattedTextField whose format
+     *  is defined by a DateFormatter instance whose
+     *  minimum and maximum properties
+     *  are mapped to the SpinnerDateModel.
      */
-    type DateEditor = JSpinner_DateEditor
+    object DateEditor extends JSpinner.DefaultEditor {
+
+        /** Construct a JSpinner editor that supports displaying
+         *  and editing the value of a SpinnerDateModel
+         *  with a JFormattedTextField.
+         */
+        @stub
+        def apply(spinner: JSpinner) = ???
+
+        /** Construct a JSpinner editor that supports displaying
+         *  and editing the value of a SpinnerDateModel
+         *  with a JFormattedTextField.
+         */
+        @stub
+        def apply(spinner: JSpinner, dateFormatPattern: String) = ???
+
+        /** Returns the java.text.SimpleDateFormat object the
+         *  JFormattedTextField uses to parse and format
+         *  numbers.
+         */
+        @stub
+        def getFormat(): SimpleDateFormat = ???
+
+        /** Return our spinner ancestor's SpinnerDateModel. */
+        @stub
+        def getModel(): SpinnerDateModel = ???
+    }
+
 
     /** A simple base class for more specialized editors
      *  that displays a read-only view of the model's current
-     *  value with a JFormattedTextField.
+     *  value with a JFormattedTextField.  Subclasses
+     *  can configure the JFormattedTextField to create
+     *  an editor that's appropriate for the type of model they
+     *  support and they may want to override
+     *  the stateChanged and propertyChanged
+     *  methods, which keep the model and the text field in sync.
+     *  
+     *  This class defines a dismiss method that removes the
+     *  editors ChangeListener from the JSpinner
+     *  that it's part of.   The setEditor method knows about
+     *  DefaultEditor.dismiss, so if the developer
+     *  replaces an editor that's derived from JSpinner.DefaultEditor
+     *  its ChangeListener connection back to the
+     *  JSpinner will be removed.  However after that,
+     *  it's up to the developer to manage their editor listeners.
+     *  Similarly, if a subclass overrides createEditor,
+     *  it's up to the subclasser to deal with their editor
+     *  subsequently being replaced (with setEditor).
+     *  We expect that in most cases, and in editor installed
+     *  with setEditor or created by a createEditor
+     *  override, will not be replaced anyway.
+     *  
+     *  This class is the LayoutManager for it's single
+     *  JFormattedTextField child.   By default the
+     *  child is just centered with the parents insets.
      */
-    type DefaultEditor = JSpinner_DefaultEditor
+    object DefaultEditor extends JPanel with ChangeListener with PropertyChangeListener with LayoutManager {
+
+        /** Constructs an editor component for the specified JSpinner. */
+        @stub
+        def apply(spinner: JSpinner) = ???
+
+        /** This LayoutManager method does nothing. */
+        @stub
+        def addLayoutComponent(name: String, child: Component): Unit = ???
+
+        /** Pushes the currently edited value to the SpinnerModel. */
+        @stub
+        def commitEdit(): Unit = ???
+
+        /** Disconnect this editor from the specified
+         *  JSpinner.
+         */
+        @stub
+        def dismiss(spinner: JSpinner): Unit = ???
+
+        /** Returns the baseline. */
+        @stub
+        def getBaseline(width: Int, height: Int): Int = ???
+
+        /** Returns an enum indicating how the baseline of the component
+         *  changes as the size changes.
+         */
+        @stub
+        def getBaselineResizeBehavior(): Component.BaselineResizeBehavior = ???
+
+        /** Returns the JSpinner ancestor of this editor or
+         *  null if none of the ancestors are a
+         *  JSpinner.
+         */
+        @stub
+        def getSpinner(): JSpinner = ???
+
+        /** Returns the JFormattedTextField child of this
+         *  editor.
+         */
+        @stub
+        def getTextField(): JFormattedTextField = ???
+
+        /** Resize the one (and only) child to completely fill the area
+         *  within the parents insets.
+         */
+        @stub
+        def layoutContainer(parent: Container): Unit = ???
+
+        /** Returns the minimum size of first (and only) child plus the
+         *  size of the parents insets.
+         */
+        @stub
+        def minimumLayoutSize(parent: Container): Dimension = ???
+
+        /** Returns the preferred size of first (and only) child plus the
+         *  size of the parents insets.
+         */
+        @stub
+        def preferredLayoutSize(parent: Container): Dimension = ???
+
+        /** Called by the JFormattedTextField
+         *  PropertyChangeListener.
+         */
+        @stub
+        def propertyChange(e: PropertyChangeEvent): Unit = ???
+
+        /** This LayoutManager method does nothing. */
+        @stub
+        def removeLayoutComponent(child: Component): Unit = ???
+
+        /** This method is called when the spinner's model's state changes. */
+        @stub
+        def stateChanged(e: ChangeEvent): Unit = ???
+    }
+
 
     /** An editor for a JSpinner whose model is a
      *  SpinnerListModel.
      */
-    type ListEditor = JSpinner_ListEditor
+    object ListEditor extends JSpinner.DefaultEditor {
+
+        /** Construct a JSpinner editor that supports displaying
+         *  and editing the value of a SpinnerListModel
+         *  with a JFormattedTextField.
+         */
+        @stub
+        def apply(spinner: JSpinner) = ???
+
+        /** Return our spinner ancestor's SpinnerNumberModel. */
+        @stub
+        def getModel(): SpinnerListModel = ???
+    }
+
 
     /** An editor for a JSpinner whose model is a
-     *  SpinnerNumberModel.
+     *  SpinnerNumberModel.  The value of the editor is
+     *  displayed with a JFormattedTextField whose format
+     *  is defined by a NumberFormatter instance whose
+     *  minimum and maximum properties
+     *  are mapped to the SpinnerNumberModel.
      */
-    type NumberEditor = JSpinner_NumberEditor
+    object NumberEditor extends JSpinner.DefaultEditor {
+
+        /** Construct a JSpinner editor that supports displaying
+         *  and editing the value of a SpinnerNumberModel
+         *  with a JFormattedTextField.
+         */
+        @stub
+        def apply(spinner: JSpinner) = ???
+
+        /** Construct a JSpinner editor that supports displaying
+         *  and editing the value of a SpinnerNumberModel
+         *  with a JFormattedTextField.
+         */
+        @stub
+        def apply(spinner: JSpinner, decimalFormatPattern: String) = ???
+
+        /** Returns the java.text.DecimalFormat object the
+         *  JFormattedTextField uses to parse and format
+         *  numbers.
+         */
+        @stub
+        def getFormat(): DecimalFormat = ???
+
+        /** Return our spinner ancestor's SpinnerNumberModel. */
+        @stub
+        def getModel(): SpinnerNumberModel = ???
+    }
+
 }

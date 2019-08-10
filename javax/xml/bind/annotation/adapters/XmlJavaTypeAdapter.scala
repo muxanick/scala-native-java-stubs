@@ -44,9 +44,9 @@ import scala.scalanative.annotation.stub
  * 
  *   Example:  See example in XmlAdapter
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value ={ PACKAGE , FIELD , METHOD , TYPE , PARAMETER } ) 
- final class XmlJavaTypeAdapter extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value={PACKAGE,FIELD,METHOD,TYPE,PARAMETER})
+final class XmlJavaTypeAdapter extends StaticAnnotation {
 
     /** Points to the class that converts a value type to a bound type or vice versa. */
     @stub

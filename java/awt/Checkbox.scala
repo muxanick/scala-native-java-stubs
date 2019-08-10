@@ -1,9 +1,9 @@
 package java.awt
 
 import java.awt.event.{ItemEvent, ItemListener}
-import java.lang.{Class, Object, String}
+import java.lang.{Class, Number, Object, String}
 import java.util.EventListener
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleAction, AccessibleContext, AccessibleRole, AccessibleStateSet, AccessibleValue}
 import scala.scalanative.annotation.stub
 
 /** A check box is a graphical component that can be in either an
@@ -68,9 +68,66 @@ class Checkbox extends Component with ItemSelectable with Accessible {
     def this(label: String, group: CheckboxGroup, state: Boolean) = ???
 
     /** This class implements accessibility support for the
-     *  Checkbox class.
+     *  Checkbox class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to checkbox user-interface elements.
      */
-    protected type AccessibleAWTCheckbox = Checkbox_AccessibleAWTCheckbox
+    protected class AccessibleAWTCheckbox extends Component.AccessibleAWTComponent with ItemListener with AccessibleAction with AccessibleValue {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Perform the specified Action on the object */
+        @stub
+        def doAccessibleAction(i: Int): Boolean = ???
+
+        /** Get the AccessibleAction associated with this object. */
+        @stub
+        def getAccessibleAction(): AccessibleAction = ???
+
+        /** Returns the number of Actions available in this object. */
+        @stub
+        def getAccessibleActionCount(): Int = ???
+
+        /** Return a description of the specified action of the object. */
+        @stub
+        def getAccessibleActionDescription(i: Int): String = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+
+        /** Get the state set of this object. */
+        @stub
+        def getAccessibleStateSet(): AccessibleStateSet = ???
+
+        /** Get the AccessibleValue associated with this object. */
+        @stub
+        def getAccessibleValue(): AccessibleValue = ???
+
+        /** Get the value of this object as a Number. */
+        @stub
+        def getCurrentAccessibleValue(): Number = ???
+
+        /** Get the maximum value of this object as a Number. */
+        @stub
+        def getMaximumAccessibleValue(): Number = ???
+
+        /** Get the minimum value of this object as a Number. */
+        @stub
+        def getMinimumAccessibleValue(): Number = ???
+
+        /** Fire accessible property change events when the state of the
+         *  toggle button changes.
+         */
+        @stub
+        def itemStateChanged(e: ItemEvent): Unit = ???
+
+        /** Set the value of this object as a Number. */
+        @stub
+        def setCurrentAccessibleValue(n: Number): Boolean = ???
+    }
+
 
     /** Adds the specified item listener to receive item events from
      *  this check box.

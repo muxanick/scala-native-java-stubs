@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is applyAsInt(Object, Object).
  */
-@FunctionalInterface trait ToIntBiFunction[T, U] {
+@FunctionalInterface
+trait ToIntBiFunction[T, U] {
 
     /** Applies this function to the given arguments. */
     @stub

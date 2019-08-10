@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  sensitive issue that should be handled by subclasses as appropriate
  *  to their intended use.
  */
-@Deprecated abstract class Signer extends Identity {
+@Deprecated
+abstract class Signer extends Identity {
 
     /** Deprecated.  */
     @stub

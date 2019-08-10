@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is applyAsDouble(double).
  */
-@FunctionalInterface trait DoubleUnaryOperator {
+@FunctionalInterface
+trait DoubleUnaryOperator {
 
     /** Returns a composed operator that first applies this operator to
      *  its input, and then applies the after operator to the result.

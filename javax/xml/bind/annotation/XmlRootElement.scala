@@ -127,9 +127,9 @@ import scala.scalanative.annotation.stub
  *      </xs:complexType>
  *  
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value = TYPE ) 
- final class XmlRootElement extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value=TYPE)
+final class XmlRootElement extends StaticAnnotation {
 
     /** local name of the XML element. */
     @stub

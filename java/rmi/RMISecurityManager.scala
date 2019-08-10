@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  loader will download classes from remote locations only if a security
  *  manager has been set.
  */
-@Deprecated class RMISecurityManager extends SecurityManager {
+@Deprecated
+class RMISecurityManager extends SecurityManager {
 
     /** Deprecated.  */
     @stub

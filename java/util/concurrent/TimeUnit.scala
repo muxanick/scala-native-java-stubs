@@ -32,29 +32,6 @@ import scala.scalanative.annotation.stub
  *  same granularity as the given TimeUnit.
  */
 class TimeUnit private (name: String, ordinal: Int) extends Enum[TimeUnit](name, ordinal) {
-}
-
-object TimeUnit {
-    /** Time unit representing twenty four hours */
-    final val DAYS = new TimeUnit(DAYS, 0)
-
-    /** Time unit representing sixty minutes */
-    final val HOURS = new TimeUnit(HOURS, 1)
-
-    /** Time unit representing one thousandth of a millisecond */
-    final val MICROSECONDS = new TimeUnit(MICROSECONDS, 2)
-
-    /** Time unit representing one thousandth of a second */
-    final val MILLISECONDS = new TimeUnit(MILLISECONDS, 3)
-
-    /** Time unit representing sixty seconds */
-    final val MINUTES = new TimeUnit(MINUTES, 4)
-
-    /** Time unit representing one thousandth of a microsecond */
-    final val NANOSECONDS = new TimeUnit(NANOSECONDS, 5)
-
-    /** Time unit representing one second */
-    final val SECONDS = new TimeUnit(SECONDS, 6)
 
     /** Converts the given time duration in the given unit to this unit. */
     @stub
@@ -119,6 +96,29 @@ object TimeUnit {
      */
     @stub
     def toSeconds(duration: Long): Long = ???
+}
+
+object TimeUnit {
+    /** Time unit representing twenty four hours */
+    final val DAYS: TimeUnit = new TimeUnit("DAYS", 0)
+
+    /** Time unit representing sixty minutes */
+    final val HOURS: TimeUnit = new TimeUnit("HOURS", 1)
+
+    /** Time unit representing one thousandth of a millisecond */
+    final val MICROSECONDS: TimeUnit = new TimeUnit("MICROSECONDS", 2)
+
+    /** Time unit representing one thousandth of a second */
+    final val MILLISECONDS: TimeUnit = new TimeUnit("MILLISECONDS", 3)
+
+    /** Time unit representing sixty seconds */
+    final val MINUTES: TimeUnit = new TimeUnit("MINUTES", 4)
+
+    /** Time unit representing one thousandth of a microsecond */
+    final val NANOSECONDS: TimeUnit = new TimeUnit("NANOSECONDS", 5)
+
+    /** Time unit representing one second */
+    final val SECONDS: TimeUnit = new TimeUnit("SECONDS", 6)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

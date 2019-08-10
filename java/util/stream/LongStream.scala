@@ -219,8 +219,30 @@ trait LongStream extends BaseStream[Long, LongStream] {
 }
 
 object LongStream {
-    /** A mutable builder for a LongStream. */
-    type Builder = LongStream_Builder
+    /** A mutable builder for a LongStream.
+     * 
+     *  A stream builder has a lifecycle, which starts in a building
+     *  phase, during which elements can be added, and then transitions to a built
+     *  phase, after which elements may not be added.  The built phase begins
+     *  begins when the build() method is called, which creates an
+     *  ordered stream whose elements are the elements that were added to the
+     *  stream builder, in the order they were added.
+     */
+    trait Builder extends LongConsumer {
+
+        /** Adds an element to the stream being built. */
+        @stub
+        def accept(t: Long): Unit = ???
+
+        /** Adds an element to the stream being built. */
+        @stub
+        def add(t: Long): Builder = ???
+
+        /** Builds the stream, transitioning this builder to the built state. */
+        @stub
+        def build(): LongStream = ???
+    }
+
 
     /** Returns a builder for a LongStream. */
     @stub

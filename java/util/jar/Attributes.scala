@@ -125,7 +125,138 @@ class Attributes extends Object with Map[Object, Object] with Cloneable {
 
 object Attributes {
     /** The Attributes.Name class represents an attribute name stored in
-     *  this Map.
+     *  this Map. Valid attribute names are case-insensitive, are restricted
+     *  to the ASCII characters in the set [0-9a-zA-Z_-], and cannot exceed
+     *  70 characters in length. Attribute values can contain any characters
+     *  and will be UTF8-encoded when written to the output stream.  See the
+     *  JAR File Specification
+     *  for more information about valid attribute names and values.
      */
-    type Name = Attributes_Name
+    object Name extends Object {
+
+        /** Constructs a new attribute name using the given string name. */
+        @stub
+        def apply(name: String) = ???
+
+        /** Name object for Class-Path
+         *  manifest attribute.
+         */
+        @stub
+        val CLASS_PATH: Name = ???
+
+        /** Name object for Content-Type
+         *  manifest attribute.
+         */
+        @stub
+        val CONTENT_TYPE: Name = ???
+
+        /** Deprecated. 
+         * Extension mechanism will be removed in a future release.
+         *              Use class path instead.
+         * 
+         */
+        @stub
+        val EXTENSION_INSTALLATION: Name = ???
+
+        /** Name object for Extension-List manifest attribute
+         *  used for declaring dependencies on installed extensions.
+         */
+        @stub
+        val EXTENSION_LIST: Name = ???
+
+        /** Name object for Extension-Name manifest attribute
+         *  used for declaring dependencies on installed extensions.
+         */
+        @stub
+        val EXTENSION_NAME: Name = ???
+
+        /** Name object for Implementation-Title
+         *  manifest attribute used for package versioning.
+         */
+        @stub
+        val IMPLEMENTATION_TITLE: Name = ???
+
+        /** Deprecated. 
+         * Extension mechanism will be removed in a future release.
+         *              Use class path instead.
+         * 
+         */
+        @stub
+        val IMPLEMENTATION_URL: Name = ???
+
+        /** Name object for Implementation-Vendor
+         *  manifest attribute used for package versioning.
+         */
+        @stub
+        val IMPLEMENTATION_VENDOR: Name = ???
+
+        /** Deprecated. 
+         * Extension mechanism will be removed in a future release.
+         *              Use class path instead.
+         * 
+         */
+        @stub
+        val IMPLEMENTATION_VENDOR_ID: Name = ???
+
+        /** Name object for Implementation-Version
+         *  manifest attribute used for package versioning.
+         */
+        @stub
+        val IMPLEMENTATION_VERSION: Name = ???
+
+        /** Name object for Main-Class manifest
+         *  attribute used for launching applications packaged in JAR files.
+         */
+        @stub
+        val MAIN_CLASS: Name = ???
+
+        /** Name object for Manifest-Version
+         *  manifest attribute.
+         */
+        @stub
+        val MANIFEST_VERSION: Name = ???
+
+        /** Name object for Sealed manifest attribute
+         *  used for sealing.
+         */
+        @stub
+        val SEALED: Name = ???
+
+        /** Name object for Signature-Version
+         *  manifest attribute used when signing JAR files.
+         */
+        @stub
+        val SIGNATURE_VERSION: Name = ???
+
+        /** Name object for Specification-Title
+         *  manifest attribute used for package versioning.
+         */
+        @stub
+        val SPECIFICATION_TITLE: Name = ???
+
+        /** Name object for Specification-Vendor
+         *  manifest attribute used for package versioning.
+         */
+        @stub
+        val SPECIFICATION_VENDOR: Name = ???
+
+        /** Name object for Specification-Version
+         *  manifest attribute used for package versioning.
+         */
+        @stub
+        val SPECIFICATION_VERSION: Name = ???
+
+        /** Compares this attribute name to another for equality. */
+        @stub
+        def equals(o: Any): Boolean = ???
+
+        /** Computes the hash value for this attribute name. */
+        @stub
+        def hashCode(): Int = ???
+
+        /** Returns the attribute name as a String. */
+        @stub
+        def toString(): String = ???
+    }
+
 }

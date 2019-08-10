@@ -15,56 +15,6 @@ import scala.scalanative.annotation.stub
  *  The documentation of each unit explains how it operates.
  */
 class ChronoUnit private (name: String, ordinal: Int) extends Enum[ChronoUnit](name, ordinal) with TemporalUnit {
-}
-
-object ChronoUnit {
-    /** Unit that represents the concept of a century. */
-    final val CENTURIES = new ChronoUnit(CENTURIES, 0)
-
-    /** Unit that represents the concept of a day. */
-    final val DAYS = new ChronoUnit(DAYS, 1)
-
-    /** Unit that represents the concept of a decade. */
-    final val DECADES = new ChronoUnit(DECADES, 2)
-
-    /** Unit that represents the concept of an era. */
-    final val ERAS = new ChronoUnit(ERAS, 3)
-
-    /** Artificial unit that represents the concept of forever. */
-    final val FOREVER = new ChronoUnit(FOREVER, 4)
-
-    /** Unit that represents the concept of half a day, as used in AM/PM. */
-    final val HALF_DAYS = new ChronoUnit(HALF_DAYS, 5)
-
-    /** Unit that represents the concept of an hour. */
-    final val HOURS = new ChronoUnit(HOURS, 6)
-
-    /** Unit that represents the concept of a microsecond. */
-    final val MICROS = new ChronoUnit(MICROS, 7)
-
-    /** Unit that represents the concept of a millennium. */
-    final val MILLENNIA = new ChronoUnit(MILLENNIA, 8)
-
-    /** Unit that represents the concept of a millisecond. */
-    final val MILLIS = new ChronoUnit(MILLIS, 9)
-
-    /** Unit that represents the concept of a minute. */
-    final val MINUTES = new ChronoUnit(MINUTES, 10)
-
-    /** Unit that represents the concept of a month. */
-    final val MONTHS = new ChronoUnit(MONTHS, 11)
-
-    /** Unit that represents the concept of a nanosecond, the smallest supported unit of time. */
-    final val NANOS = new ChronoUnit(NANOS, 12)
-
-    /** Unit that represents the concept of a second. */
-    final val SECONDS = new ChronoUnit(SECONDS, 13)
-
-    /** Unit that represents the concept of a week. */
-    final val WEEKS = new ChronoUnit(WEEKS, 14)
-
-    /** Unit that represents the concept of a year. */
-    final val YEARS = new ChronoUnit(YEARS, 15)
 
     /** Returns a copy of the specified temporal object with the specified period added. */
     @stub
@@ -99,6 +49,56 @@ object ChronoUnit {
      */
     @stub
     def toString(): String = ???
+}
+
+object ChronoUnit {
+    /** Unit that represents the concept of a century. */
+    final val CENTURIES: ChronoUnit = new ChronoUnit("CENTURIES", 0)
+
+    /** Unit that represents the concept of a day. */
+    final val DAYS: ChronoUnit = new ChronoUnit("DAYS", 1)
+
+    /** Unit that represents the concept of a decade. */
+    final val DECADES: ChronoUnit = new ChronoUnit("DECADES", 2)
+
+    /** Unit that represents the concept of an era. */
+    final val ERAS: ChronoUnit = new ChronoUnit("ERAS", 3)
+
+    /** Artificial unit that represents the concept of forever. */
+    final val FOREVER: ChronoUnit = new ChronoUnit("FOREVER", 4)
+
+    /** Unit that represents the concept of half a day, as used in AM/PM. */
+    final val HALF_DAYS: ChronoUnit = new ChronoUnit("HALF_DAYS", 5)
+
+    /** Unit that represents the concept of an hour. */
+    final val HOURS: ChronoUnit = new ChronoUnit("HOURS", 6)
+
+    /** Unit that represents the concept of a microsecond. */
+    final val MICROS: ChronoUnit = new ChronoUnit("MICROS", 7)
+
+    /** Unit that represents the concept of a millennium. */
+    final val MILLENNIA: ChronoUnit = new ChronoUnit("MILLENNIA", 8)
+
+    /** Unit that represents the concept of a millisecond. */
+    final val MILLIS: ChronoUnit = new ChronoUnit("MILLIS", 9)
+
+    /** Unit that represents the concept of a minute. */
+    final val MINUTES: ChronoUnit = new ChronoUnit("MINUTES", 10)
+
+    /** Unit that represents the concept of a month. */
+    final val MONTHS: ChronoUnit = new ChronoUnit("MONTHS", 11)
+
+    /** Unit that represents the concept of a nanosecond, the smallest supported unit of time. */
+    final val NANOS: ChronoUnit = new ChronoUnit("NANOS", 12)
+
+    /** Unit that represents the concept of a second. */
+    final val SECONDS: ChronoUnit = new ChronoUnit("SECONDS", 13)
+
+    /** Unit that represents the concept of a week. */
+    final val WEEKS: ChronoUnit = new ChronoUnit("WEEKS", 14)
+
+    /** Unit that represents the concept of a year. */
+    final val YEARS: ChronoUnit = new ChronoUnit("YEARS", 15)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

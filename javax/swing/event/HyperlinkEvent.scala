@@ -64,5 +64,23 @@ object HyperlinkEvent {
     /** Defines the ENTERED, EXITED, and ACTIVATED event types, along
      *  with their string representations, returned by toString().
      */
-    type EventType = HyperlinkEvent_EventType
+    final object EventType extends Object {
+
+        /** Activated type. */
+        @stub
+        val ACTIVATED: EventType = ???
+
+        /** Entered type. */
+        @stub
+        val ENTERED: EventType = ???
+
+        /** Exited type. */
+        @stub
+        val EXITED: EventType = ???
+
+        /** Converts the type to a string. */
+        @stub
+        def toString(): String = ???
+    }
+
 }

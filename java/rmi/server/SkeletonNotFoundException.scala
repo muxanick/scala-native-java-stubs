@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  exported is not found.  Skeletons are no longer required, so this
  *  exception is never thrown.
  */
-@Deprecated class SkeletonNotFoundException extends RemoteException {
+@Deprecated
+class SkeletonNotFoundException extends RemoteException {
 
     /** Deprecated.  */
     @stub

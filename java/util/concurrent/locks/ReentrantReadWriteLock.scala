@@ -3,6 +3,7 @@ package java.util.concurrent.locks
 import java.io.Serializable
 import java.lang.{Object, String, Thread}
 import java.util.Collection
+import java.util.concurrent.TimeUnit
 import scala.scalanative.annotation.stub
 
 /** An implementation of ReadWriteLock supporting similar
@@ -292,9 +293,107 @@ class ReentrantReadWriteLock extends Object with ReadWriteLock with Serializable
 }
 
 object ReentrantReadWriteLock {
-    /** The lock returned by method readLock(). */
-    type ReadLock = ReentrantReadWriteLock_ReadLock
+    /** The lock returned by method ReentrantReadWriteLock.readLock(). */
+    object ReadLock extends Object with Lock with Serializable {
 
-    /** The lock returned by method writeLock(). */
-    type WriteLock = ReentrantReadWriteLock_WriteLock
+        /** Constructor for use by subclasses */
+        @stub
+        protected def apply(lock: ReentrantReadWriteLock) = ???
+
+        /** Acquires the read lock. */
+        @stub
+        def lock(): Unit = ???
+
+        /** Acquires the read lock unless the current thread is
+         *  interrupted.
+         */
+        @stub
+        def lockInterruptibly(): Unit = ???
+
+        /** Throws UnsupportedOperationException because
+         *  ReadLocks do not support conditions.
+         */
+        @stub
+        def newCondition(): Condition = ???
+
+        /** Returns a string identifying this lock, as well as its lock state. */
+        @stub
+        def toString(): String = ???
+
+        /** Acquires the read lock only if the write lock is not held by
+         *  another thread at the time of invocation.
+         */
+        @stub
+        def tryLock(): Boolean = ???
+
+        /** Acquires the read lock if the write lock is not held by
+         *  another thread within the given waiting time and the
+         *  current thread has not been interrupted.
+         */
+        @stub
+        def tryLock(timeout: Long, unit: TimeUnit): Boolean = ???
+
+        /** Attempts to release this lock. */
+        @stub
+        def unlock(): Unit = ???
+    }
+
+
+    /** The lock returned by method ReentrantReadWriteLock.writeLock(). */
+    object WriteLock extends Object with Lock with Serializable {
+
+        /** Constructor for use by subclasses */
+        @stub
+        protected def apply(lock: ReentrantReadWriteLock) = ???
+
+        /** Queries the number of holds on this write lock by the current
+         *  thread.
+         */
+        @stub
+        def getHoldCount(): Int = ???
+
+        /** Queries if this write lock is held by the current thread. */
+        @stub
+        def isHeldByCurrentThread(): Boolean = ???
+
+        /** Acquires the write lock. */
+        @stub
+        def lock(): Unit = ???
+
+        /** Acquires the write lock unless the current thread is
+         *  interrupted.
+         */
+        @stub
+        def lockInterruptibly(): Unit = ???
+
+        /** Returns a Condition instance for use with this
+         *  Lock instance.
+         */
+        @stub
+        def newCondition(): Condition = ???
+
+        /** Returns a string identifying this lock, as well as its lock
+         *  state.
+         */
+        @stub
+        def toString(): String = ???
+
+        /** Acquires the write lock only if it is not held by another thread
+         *  at the time of invocation.
+         */
+        @stub
+        def tryLock(): Boolean = ???
+
+        /** Acquires the write lock if it is not held by another thread
+         *  within the given waiting time and the current thread has
+         *  not been interrupted.
+         */
+        @stub
+        def tryLock(timeout: Long, unit: TimeUnit): Boolean = ???
+
+        /** Attempts to release this lock. */
+        @stub
+        def unlock(): Unit = ???
+    }
+
 }

@@ -9,7 +9,8 @@ import scala.scalanative.annotation.stub
  *  stubs (stubs generated with rmic -v1.2); hence, this class
  *  is deprecated.
  */
-@Deprecated class Operation extends Object {
+@Deprecated
+class Operation extends Object {
 
     /** Deprecated. 
      * no replacement

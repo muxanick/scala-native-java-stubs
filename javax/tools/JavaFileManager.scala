@@ -139,6 +139,18 @@ trait JavaFileManager extends Closeable with Flushable with OptionChecker {
 }
 
 object JavaFileManager {
-    /** Interface for locations of file objects. */
-    type Location = JavaFileManager_Location
+    /** Interface for locations of file objects.  Used by file managers
+     *  to determine where to place or search for file objects.
+     */
+    trait Location {
+
+        /** Gets the name of this location. */
+        @stub
+        def getName(): String = ???
+
+        /** Determines if this is an output location. */
+        @stub
+        def isOutputLocation(): Boolean = ???
+    }
+
 }

@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  deprecated because it is only used by deprecated methods of
  *  java.rmi.server.RemoteRef.
  */
-@Deprecated trait RemoteCall {
+@Deprecated
+trait RemoteCall {
 
     /** Deprecated. 
      * no replacement

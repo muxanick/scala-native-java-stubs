@@ -118,10 +118,10 @@ import scala.scalanative.annotation.stub
  *    </definitions>
  *  
  */
-@Documented 
-@Retention ( value = RUNTIME ) 
-@Target ( value = METHOD ) 
- final class FaultAction extends StaticAnnotation {
+@Documented
+@Retention(value=RUNTIME)
+@Target(value=METHOD)
+final class FaultAction extends StaticAnnotation {
 
     /** Name of the exception class */
     @stub

@@ -1,9 +1,9 @@
 package java.awt
 
 import java.awt.event.{ItemEvent, ItemListener}
-import java.lang.{Class, Object, String}
+import java.lang.{Class, Number, Object, String}
 import java.util.EventListener
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleAction, AccessibleContext, AccessibleRole, AccessibleValue}
 import scala.scalanative.annotation.stub
 
 /** This class represents a check box that can be included in a menu.
@@ -40,9 +40,62 @@ class CheckboxMenuItem extends MenuItem with ItemSelectable with Accessible {
     def this(label: String, state: Boolean) = ???
 
     /** Inner class of CheckboxMenuItem used to provide default support for
-     *  accessibility.
+     *  accessibility.  This class is not meant to be used directly by
+     *  application developers, but is instead meant only to be
+     *  subclassed by menu component developers.
+     *  
+     *  This class implements accessibility support for the
+     *  CheckboxMenuItem class.  It provides an implementation
+     *  of the Java Accessibility API appropriate to checkbox menu item
+     *  user-interface elements.
      */
-    protected type AccessibleAWTCheckboxMenuItem = CheckboxMenuItem_AccessibleAWTCheckboxMenuItem
+    protected class AccessibleAWTCheckboxMenuItem extends MenuItem.AccessibleAWTMenuItem with AccessibleAction with AccessibleValue {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Perform the specified Action on the object */
+        @stub
+        def doAccessibleAction(i: Int): Boolean = ???
+
+        /** Get the AccessibleAction associated with this object. */
+        @stub
+        def getAccessibleAction(): AccessibleAction = ???
+
+        /** Returns the number of Actions available in this object. */
+        @stub
+        def getAccessibleActionCount(): Int = ???
+
+        /** Return a description of the specified action of the object. */
+        @stub
+        def getAccessibleActionDescription(i: Int): String = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+
+        /** Get the AccessibleValue associated with this object. */
+        @stub
+        def getAccessibleValue(): AccessibleValue = ???
+
+        /** Get the value of this object as a Number. */
+        @stub
+        def getCurrentAccessibleValue(): Number = ???
+
+        /** Get the maximum value of this object as a Number. */
+        @stub
+        def getMaximumAccessibleValue(): Number = ???
+
+        /** Get the minimum value of this object as a Number. */
+        @stub
+        def getMinimumAccessibleValue(): Number = ???
+
+        /** Set the value of this object as a Number. */
+        @stub
+        def setCurrentAccessibleValue(n: Number): Boolean = ???
+    }
+
 
     /** Adds the specified item listener to receive item events from
      *  this check box menu item.

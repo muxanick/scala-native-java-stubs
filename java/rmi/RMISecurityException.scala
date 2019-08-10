@@ -7,7 +7,8 @@ import scala.scalanative.annotation.stub
  *  has occurred during the execution of one of
  *  java.rmi.RMISecurityManager's methods.
  */
-@Deprecated class RMISecurityException extends SecurityException {
+@Deprecated
+class RMISecurityException extends SecurityException {
 
     /** Deprecated. 
      * no replacement

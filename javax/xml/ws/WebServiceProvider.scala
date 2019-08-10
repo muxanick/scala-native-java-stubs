@@ -6,10 +6,10 @@ import scala.annotation.StaticAnnotation
 import scala.scalanative.annotation.stub
 
 /** Used to annotate a Provider implementation class. */
-@Target ( value = TYPE ) 
-@Retention ( value = RUNTIME ) 
-@Documented 
- final class WebServiceProvider extends StaticAnnotation {
+@Target(value=TYPE)
+@Retention(value=RUNTIME)
+@Documented
+final class WebServiceProvider extends StaticAnnotation {
 
     /** Port name. */
     @stub

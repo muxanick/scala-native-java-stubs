@@ -4,9 +4,9 @@ import java.awt.event.{WindowEvent, WindowFocusListener, WindowListener, WindowS
 import java.awt.im.InputContext
 import java.awt.image.BufferStrategy
 import java.beans.PropertyChangeListener
-import java.lang.{Class, Object, String}
+import java.lang.{Class, Enum, Object, String}
 import java.util.{EventListener, List, Locale, ResourceBundle, Set}
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole, AccessibleStateSet}
 import scala.scalanative.annotation.stub
 
 /** A Window object is a top-level window with no borders and no
@@ -105,9 +105,24 @@ class Window extends Container with Accessible {
     def this(owner: Window, gc: GraphicsConfiguration) = ???
 
     /** This class implements accessibility support for the
-     *  Window class.
+     *  Window class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to window user-interface elements.
      */
-    protected type AccessibleAWTWindow = Window_AccessibleAWTWindow
+    protected class AccessibleAWTWindow extends Container.AccessibleAWTContainer {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+
+        /** Get the state of this object. */
+        @stub
+        def getAccessibleStateSet(): AccessibleStateSet = ???
+    }
+
 
     /** Makes this Window displayable by creating the connection to its
      *  native screen resource.
@@ -560,8 +575,40 @@ class Window extends Container with Accessible {
 }
 
 object Window {
-    /** Enumeration of available window types. */
-    type Type = Window_Type
+    /** Enumeration of available window types.
+     * 
+     *  A window type defines the generic visual appearance and behavior of a
+     *  top-level window. For example, the type may affect the kind of
+     *  decorations of a decorated Frame or Dialog instance.
+     *  
+     *  Some platforms may not fully support a certain window type. Depending on
+     *  the level of support, some properties of the window type may be
+     *  disobeyed.
+     */
+    class Type private (name: String, ordinal: Int) extends Enum[Type](name, ordinal) {
+    }
+
+    object Type {
+        /** Represents a normal window. */
+        final val NORMAL: Type = new Type("NORMAL", 0)
+
+        /** Represents a popup window. */
+        final val POPUP: Type = new Type("POPUP", 1)
+
+        /** Represents a utility window. */
+        final val UTILITY: Type = new Type("UTILITY", 2)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): Type = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[Type] = ???
+    }
+
 
     /** Returns an array of all Windows created by this application
      *  that have no owner.

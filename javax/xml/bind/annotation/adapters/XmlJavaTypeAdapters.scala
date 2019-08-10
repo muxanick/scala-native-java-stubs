@@ -22,9 +22,9 @@ import scala.scalanative.annotation.stub
  *  See "Package Specification" in javax.xml.bind.package javadoc for
  *  additional common information.
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value = PACKAGE ) 
- final class XmlJavaTypeAdapters extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value=PACKAGE)
+final class XmlJavaTypeAdapters extends StaticAnnotation {
 
     /** Collection of @XmlJavaTypeAdapter annotations */
     @stub

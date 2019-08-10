@@ -40,10 +40,10 @@ import scala.scalanative.annotation.stub
  *     }
  *  
  */
-@Documented 
-@Retention ( value = RUNTIME ) 
-@Target ( value = TYPE ) 
- final class WebServiceRefs extends StaticAnnotation {
+@Documented
+@Retention(value=RUNTIME)
+@Target(value=TYPE)
+final class WebServiceRefs extends StaticAnnotation {
 
     /** Array used for multiple web service reference declarations. */
     @stub

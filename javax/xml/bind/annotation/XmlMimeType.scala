@@ -16,9 +16,9 @@ import scala.scalanative.annotation.stub
  *  the xmime:contentType attribute, and if in the instance the property has a value,
  *  the value of the attribute takes precedence and that will control the marshalling.
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value ={ FIELD , METHOD , PARAMETER } ) 
- final class XmlMimeType extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value={FIELD,METHOD,PARAMETER})
+final class XmlMimeType extends StaticAnnotation {
 
     /** The textual representation of the MIME type,
      *  such as "image/jpeg" "image/*", "text/xml; charset=iso-8859-1" and so on.

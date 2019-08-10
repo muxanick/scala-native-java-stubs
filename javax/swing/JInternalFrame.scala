@@ -1,10 +1,10 @@
 package javax.swing
 
-import java.awt.{Component, Container, Cursor, Graphics, LayoutManager, Rectangle}
-import java.lang.{Integer, Object, String}
-import javax.accessibility.{Accessible, AccessibleContext}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, Cursor, Graphics, LayoutManager, Rectangle}
+import java.lang.{Integer, Number, Object, String}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole, AccessibleValue}
 import javax.swing.event.InternalFrameListener
-import javax.swing.plaf.InternalFrameUI
+import javax.swing.plaf.{DesktopIconUI, InternalFrameUI}
 import scala.scalanative.annotation.stub
 
 /** A lightweight object that provides many of the features of
@@ -97,9 +97,54 @@ class JInternalFrame extends JComponent with Accessible with WindowConstants wit
     def this(title: String, resizable: Boolean, closable: Boolean, maximizable: Boolean, iconifiable: Boolean) = ???
 
     /** This class implements accessibility support for the
-     *  JInternalFrame class.
+     *  JInternalFrame class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to internal frame user-interface
+     *  elements.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type AccessibleJInternalFrame = JInternalFrame_AccessibleJInternalFrame
+    protected class AccessibleJInternalFrame extends JComponent.AccessibleJComponent with AccessibleValue {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the accessible name of this object. */
+        @stub
+        def getAccessibleName(): String = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+
+        /** Gets the AccessibleValue associated with this object. */
+        @stub
+        def getAccessibleValue(): AccessibleValue = ???
+
+        /** Get the value of this object as a Number. */
+        @stub
+        def getCurrentAccessibleValue(): Number = ???
+
+        /** Get the maximum value of this object as a Number. */
+        @stub
+        def getMaximumAccessibleValue(): Number = ???
+
+        /** Get the minimum value of this object as a Number. */
+        @stub
+        def getMinimumAccessibleValue(): Number = ???
+
+        /** Set the value of this object as a Number. */
+        @stub
+        def setCurrentAccessibleValue(n: Number): Boolean = ???
+    }
+
 
     /** The frame can be closed. */
     @stub
@@ -591,8 +636,117 @@ class JInternalFrame extends JComponent with Accessible with WindowConstants wit
 object JInternalFrame {
     /** This component represents an iconified version of a
      *  JInternalFrame.
+     *  This API should NOT BE USED by Swing applications, as it will go
+     *  away in future versions of Swing as its functionality is moved into
+     *  JInternalFrame.  This class is public only so that
+     *  UI objects can display a desktop icon.  If an application
+     *  wants to display a desktop icon, it should create a
+     *  JInternalFrame instance and iconify it.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    type JDesktopIcon = JInternalFrame_JDesktopIcon
+    object JDesktopIcon extends JComponent with Accessible {
+
+        /** Creates an icon for an internal frame. */
+        @stub
+        def apply(f: JInternalFrame) = ???
+
+        /** This class implements accessibility support for the
+         *  JInternalFrame.JDesktopIcon class.  It provides an
+         *  implementation of the Java Accessibility API appropriate to
+         *  desktop icon user-interface elements.
+         *  
+         *  Warning:
+         *  Serialized objects of this class will not be compatible with
+         *  future Swing releases. The current serialization support is
+         *  appropriate for short term storage or RMI between applications running
+         *  the same version of Swing.  As of 1.4, support for long term storage
+         *  of all JavaBeans™
+         *  has been added to the java.beans package.
+         *  Please see XMLEncoder.
+         */
+        protected class AccessibleJDesktopIcon extends JComponent.AccessibleJComponent with AccessibleValue {
+
+            /**  */
+            @stub
+            protected def this() = ???
+
+            /** Gets the role of this object. */
+            @stub
+            def getAccessibleRole(): AccessibleRole = ???
+
+            /** Gets the AccessibleValue associated with this object. */
+            @stub
+            def getAccessibleValue(): AccessibleValue = ???
+
+            /** Gets the value of this object as a Number. */
+            @stub
+            def getCurrentAccessibleValue(): Number = ???
+
+            /** Gets the maximum value of this object as a Number. */
+            @stub
+            def getMaximumAccessibleValue(): Number = ???
+
+            /** Gets the minimum value of this object as a Number. */
+            @stub
+            def getMinimumAccessibleValue(): Number = ???
+
+            /** Sets the value of this object as a Number. */
+            @stub
+            def setCurrentAccessibleValue(n: Number): Boolean = ???
+        }
+
+
+        /** Gets the AccessibleContext associated with this JDesktopIcon. */
+        @stub
+        def getAccessibleContext(): AccessibleContext = ???
+
+        /** Convenience method to ask the icon for the Desktop
+         *  object it belongs to.
+         */
+        @stub
+        def getDesktopPane(): JDesktopPane = ???
+
+        /** Returns the JInternalFrame that this
+         *  DesktopIcon is associated with.
+         */
+        @stub
+        def getInternalFrame(): JInternalFrame = ???
+
+        /** Returns the look-and-feel object that renders this component. */
+        @stub
+        def getUI(): DesktopIconUI = ???
+
+        /** Returns the name of the look-and-feel
+         *  class that renders this component.
+         */
+        @stub
+        def getUIClassID(): String = ???
+
+        /** Sets the JInternalFrame with which this
+         *  DesktopIcon is associated.
+         */
+        @stub
+        def setInternalFrame(f: JInternalFrame): Unit = ???
+
+        /** Sets the look-and-feel object that renders this component. */
+        @stub
+        def setUI(ui: DesktopIconUI): Unit = ???
+
+        /** Notification from the UIManager that the look and feel
+         *  has changed.
+         */
+        @stub
+        def updateUI(): Unit = ???
+    }
+
 
     /** Bound property name. */
     @stub

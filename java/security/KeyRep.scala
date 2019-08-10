@@ -1,7 +1,7 @@
 package java.security
 
 import java.io.Serializable
-import java.lang.{Object, String}
+import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** Standardized representation for serialized Key objects.
@@ -27,5 +27,28 @@ class KeyRep extends Object with Serializable {
 
 object KeyRep {
     /** Key type. */
-    type Type = KeyRep_Type
+    class Type private (name: String, ordinal: Int) extends Enum[Type](name, ordinal) {
+    }
+
+    object Type {
+        /** Type for private keys. */
+        final val PRIVATE: Type = new Type("PRIVATE", 0)
+
+        /** Type for public keys. */
+        final val PUBLIC: Type = new Type("PUBLIC", 1)
+
+        /** Type for secret keys. */
+        final val SECRET: Type = new Type("SECRET", 2)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): Type = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[Type] = ???
+    }
+
 }

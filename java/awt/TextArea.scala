@@ -1,7 +1,7 @@
 package java.awt
 
 import java.lang.{Object, String}
-import javax.accessibility.AccessibleContext
+import javax.accessibility.{AccessibleContext, AccessibleStateSet}
 import scala.scalanative.annotation.stub
 
 /** A TextArea object is a multi-line region
@@ -49,9 +49,20 @@ class TextArea extends TextComponent {
     def this(text: String, rows: Int, columns: Int, scrollbars: Int) = ???
 
     /** This class implements accessibility support for the
-     *  TextArea class.
+     *  TextArea class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to text area user-interface elements.
      */
-    protected type AccessibleAWTTextArea = TextArea_AccessibleAWTTextArea
+    protected class AccessibleAWTTextArea extends TextComponent.AccessibleAWTTextComponent {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Gets the state set of this object. */
+        @stub
+        def getAccessibleStateSet(): AccessibleStateSet = ???
+    }
+
 
     /** Creates the TextArea's peer. */
     @stub

@@ -8,7 +8,8 @@ import scala.scalanative.annotation.stub
  *  package.  This is meant only for internal use by Java Accessibility and
  *  is not meant to be used by assistive technologies or applications.
  */
-@Deprecated class AccessibleResourceBundle extends ListResourceBundle {
+@Deprecated
+class AccessibleResourceBundle extends ListResourceBundle {
 
     /** Deprecated.  */
     @stub

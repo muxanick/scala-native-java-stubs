@@ -1,11 +1,12 @@
 package javax.swing.plaf.basic
 
 import java.awt.{Dimension, Graphics, Point, Rectangle}
+import java.awt.geom.{Rectangle2D, RectangularShape}
 import java.beans.PropertyChangeEvent
 import java.lang.{Object, String}
 import javax.swing.JComponent
-import javax.swing.plaf.{ComponentUI, TextUI}
-import javax.swing.text.{Caret, EditorKit, Element, Highlighter, JTextComponent, Keymap, Position.Bias, View, ViewFactory}
+import javax.swing.plaf.{ComponentUI, TextUI, UIResource}
+import javax.swing.text.{Caret, DefaultCaret, DefaultHighlighter, EditorKit, Element, Highlighter, JTextComponent, Keymap, LayeredHighlighter, Position.Bias, View, ViewFactory}
 import scala.scalanative.annotation.stub
 
 /** 
@@ -217,8 +218,18 @@ abstract class BasicTextUI extends TextUI with ViewFactory {
 
 object BasicTextUI {
     /**  */
-    type BasicCaret = BasicTextUI_BasicCaret
+    object BasicCaret extends DefaultCaret with UIResource {
+
+        /**  */
+        @stub
+        def apply() = ???
+
 
     /**  */
-    type BasicHighlighter = BasicTextUI_BasicHighlighter
+    object BasicHighlighter extends DefaultHighlighter with UIResource {
+
+        /**  */
+        @stub
+        def apply() = ???
+
 }

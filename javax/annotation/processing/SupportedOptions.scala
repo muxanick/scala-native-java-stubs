@@ -11,10 +11,10 @@ import scala.scalanative.annotation.stub
  *  AbstractProcessor.getSupportedOptions().  Only strings conforming to the
  *  grammar should be used as values.
  */
-@Documented 
-@Target ( value = TYPE ) 
-@Retention ( value = RUNTIME ) 
- final class SupportedOptions extends StaticAnnotation {
+@Documented
+@Target(value=TYPE)
+@Retention(value=RUNTIME)
+final class SupportedOptions extends StaticAnnotation {
 
     /** Returns the supported options. */
     @stub

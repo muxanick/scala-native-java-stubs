@@ -58,7 +58,7 @@ import scala.scalanative.annotation.stub
  *     </xs:complexType>
  *  
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value ={ FIELD , METHOD } ) 
- final class XmlID extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value={FIELD,METHOD})
+final class XmlID extends StaticAnnotation {
 }

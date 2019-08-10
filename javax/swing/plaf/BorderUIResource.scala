@@ -1,9 +1,10 @@
 package javax.swing.plaf
 
-import java.awt.{Component, Graphics, Insets}
+import java.awt.{Color, Component, Font, Graphics, Insets}
 import java.io.Serializable
-import java.lang.Object
-import javax.swing.border.Border
+import java.lang.{Object, String}
+import javax.swing.Icon
+import javax.swing.border.{AbstractBorder, BevelBorder, Border, CompoundBorder, EmptyBorder, EtchedBorder, LineBorder, MatteBorder, TitledBorder}
 import scala.scalanative.annotation.stub
 
 /**  */
@@ -32,25 +33,116 @@ class BorderUIResource extends Object with Border with UIResource with Serializa
 
 object BorderUIResource {
     /**  */
-    type BevelBorderUIResource = BorderUIResource_BevelBorderUIResource
+    object BevelBorderUIResource extends BevelBorder with UIResource {
+
+        /**  */
+        @stub
+        def apply(bevelType: Int) = ???
+
+        /**  */
+        @stub
+        def apply(bevelType: Int, highlight: Color, shadow: Color) = ???
+
+        /**  */
+        @stub
+        def apply(bevelType: Int, highlightOuter: Color, highlightInner: Color, shadowOuter: Color, shadowInner: Color) = ???
+
 
     /**  */
-    type CompoundBorderUIResource = BorderUIResource_CompoundBorderUIResource
+    object CompoundBorderUIResource extends CompoundBorder with UIResource {
+
+        /**  */
+        @stub
+        def apply(outsideBorder: Border, insideBorder: Border) = ???
+
 
     /**  */
-    type EmptyBorderUIResource = BorderUIResource_EmptyBorderUIResource
+    object EmptyBorderUIResource extends EmptyBorder with UIResource {
+
+        /**  */
+        @stub
+        def apply(insets: Insets) = ???
+
+        /**  */
+        @stub
+        def apply(top: Int, left: Int, bottom: Int, right: Int) = ???
+
 
     /**  */
-    type EtchedBorderUIResource = BorderUIResource_EtchedBorderUIResource
+    object EtchedBorderUIResource extends EtchedBorder with UIResource {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /**  */
+        @stub
+        def apply(highlight: Color, shadow: Color) = ???
+
+        /**  */
+        @stub
+        def apply(etchType: Int) = ???
+
+        /**  */
+        @stub
+        def apply(etchType: Int, highlight: Color, shadow: Color) = ???
+
 
     /**  */
-    type LineBorderUIResource = BorderUIResource_LineBorderUIResource
+    object LineBorderUIResource extends LineBorder with UIResource {
+
+        /**  */
+        @stub
+        def apply(color: Color) = ???
+
+        /**  */
+        @stub
+        def apply(color: Color, thickness: Int) = ???
+
 
     /**  */
-    type MatteBorderUIResource = BorderUIResource_MatteBorderUIResource
+    object MatteBorderUIResource extends MatteBorder with UIResource {
+
+        /**  */
+        @stub
+        def apply(tileIcon: Icon) = ???
+
+        /**  */
+        @stub
+        def apply(top: Int, left: Int, bottom: Int, right: Int, color: Color) = ???
+
+        /**  */
+        @stub
+        def apply(top: Int, left: Int, bottom: Int, right: Int, tileIcon: Icon) = ???
+
 
     /**  */
-    type TitledBorderUIResource = BorderUIResource_TitledBorderUIResource
+    object TitledBorderUIResource extends TitledBorder with UIResource {
+
+        /**  */
+        @stub
+        def apply(border: Border) = ???
+
+        /**  */
+        @stub
+        def apply(border: Border, title: String) = ???
+
+        /**  */
+        @stub
+        def apply(border: Border, title: String, titleJustification: Int, titlePosition: Int) = ???
+
+        /**  */
+        @stub
+        def apply(border: Border, title: String, titleJustification: Int, titlePosition: Int, titleFont: Font) = ???
+
+        /**  */
+        @stub
+        def apply(border: Border, title: String, titleJustification: Int, titlePosition: Int, titleFont: Font, titleColor: Color) = ???
+
+        /**  */
+        @stub
+        def apply(title: String) = ???
+
 
     /**  */
     @stub

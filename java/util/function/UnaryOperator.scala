@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is Function.apply(Object).
  */
-@FunctionalInterface trait UnaryOperator[T] extends Function[T, T] {
+@FunctionalInterface
+trait UnaryOperator[T] extends Function[T, T] {
 }
 
 object UnaryOperator {

@@ -164,5 +164,16 @@ object AbstractLayoutCache {
     /** Used by AbstractLayoutCache to determine the size
      *  and x origin of a particular node.
      */
-    type NodeDimensions = AbstractLayoutCache_NodeDimensions
+    abstract object NodeDimensions extends Object {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /** Returns, by reference in bounds, the size and x origin to
+         *  place value at.
+         */
+        def getNodeDimensions(value: Any, row: Int, depth: Int, expanded: Boolean, bounds: Rectangle): Rectangle
+    }
+
 }

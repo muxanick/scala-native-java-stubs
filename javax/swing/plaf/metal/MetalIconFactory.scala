@@ -1,8 +1,10 @@
 package javax.swing.plaf.metal
 
+import java.awt.{Component, Graphics}
 import java.io.Serializable
 import java.lang.Object
 import javax.swing.Icon
+import javax.swing.plaf.UIResource
 import scala.scalanative.annotation.stub
 
 /** Factory object that vends Icons for
@@ -37,36 +39,180 @@ object MetalIconFactory {
     /** 
      *  Warning:
      *  Serialized objects of this class will not be compatible with
-     *  future Swing releases.
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    type FileIcon16 = MetalIconFactory_FileIcon16
+    object FileIcon16 extends Object with Icon with Serializable {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /**  */
+        @stub
+        def getAdditionalHeight(): Int = ???
+
+        /** Returns the icon's height. */
+        @stub
+        def getIconHeight(): Int = ???
+
+        /** Returns the icon's width. */
+        @stub
+        def getIconWidth(): Int = ???
+
+        /**  */
+        @stub
+        def getShift(): Int = ???
+
+        /** Draw the icon at the specified location. */
+        @stub
+        def paintIcon(c: Component, g: Graphics, x: Int, y: Int): Unit = ???
+    }
+
 
     /** 
      *  Warning:
      *  Serialized objects of this class will not be compatible with
-     *  future Swing releases.
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    type FolderIcon16 = MetalIconFactory_FolderIcon16
+    object FolderIcon16 extends Object with Icon with Serializable {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /**  */
+        @stub
+        def getAdditionalHeight(): Int = ???
+
+        /** Returns the icon's height. */
+        @stub
+        def getIconHeight(): Int = ???
+
+        /** Returns the icon's width. */
+        @stub
+        def getIconWidth(): Int = ???
+
+        /**  */
+        @stub
+        def getShift(): Int = ???
+
+        /** Draw the icon at the specified location. */
+        @stub
+        def paintIcon(c: Component, g: Graphics, x: Int, y: Int): Unit = ???
+    }
+
 
     /** Defines an icon for Palette close */
-    type PaletteCloseIcon = MetalIconFactory_PaletteCloseIcon
+    object PaletteCloseIcon extends Object with Icon with UIResource with Serializable {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /** Returns the icon's height. */
+        @stub
+        def getIconHeight(): Int = ???
+
+        /** Returns the icon's width. */
+        @stub
+        def getIconWidth(): Int = ???
+
+        /** Draw the icon at the specified location. */
+        @stub
+        def paintIcon(c: Component, g: Graphics, x: Int, y: Int): Unit = ???
+    }
+
 
     /** 
      *  Warning:
      *  Serialized objects of this class will not be compatible with
-     *  future Swing releases.
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    type TreeControlIcon = MetalIconFactory_TreeControlIcon
+    object TreeControlIcon extends Object with Icon with Serializable {
+
+        /**  */
+        @stub
+        def apply(isCollapsed: Boolean) = ???
+
+        /**  */
+        @stub
+        protected val isLight: Boolean = ???
+
+        /** Returns the icon's height. */
+        @stub
+        def getIconHeight(): Int = ???
+
+        /** Returns the icon's width. */
+        @stub
+        def getIconWidth(): Int = ???
+
+        /** Draw the icon at the specified location. */
+        @stub
+        def paintIcon(c: Component, g: Graphics, x: Int, y: Int): Unit = ???
+
+        /**  */
+        @stub
+        def paintMe(c: Component, g: Graphics, x: Int, y: Int): Unit = ???
+    }
+
 
     /** 
      *  Warning:
      *  Serialized objects of this class will not be compatible with
-     *  future Swing releases.
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    type TreeFolderIcon = MetalIconFactory_TreeFolderIcon
+    object TreeFolderIcon extends MetalIconFactory.FolderIcon16 {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /**  */
+        @stub
+        def getAdditionalHeight(): Int = ???
+
+        /**  */
+        @stub
+        def getShift(): Int = ???
+    }
+
 
     /**  */
-    type TreeLeafIcon = MetalIconFactory_TreeLeafIcon
+    object TreeLeafIcon extends MetalIconFactory.FileIcon16 {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /**  */
+        @stub
+        def getAdditionalHeight(): Int = ???
+
+        /**  */
+        @stub
+        def getShift(): Int = ???
+    }
+
 
     /**  */
     @stub

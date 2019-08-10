@@ -9,28 +9,28 @@ class RowIdLifetime private (name: String, ordinal: Int) extends Enum[RowIdLifet
 
 object RowIdLifetime {
     /** Indicates that this data source does not support the ROWID type. */
-    final val ROWID_UNSUPPORTED = new RowIdLifetime(ROWID_UNSUPPORTED, 0)
+    final val ROWID_UNSUPPORTED: RowIdLifetime = new RowIdLifetime("ROWID_UNSUPPORTED", 0)
 
     /** Indicates that the lifetime of a RowId from this data source is, effectively,
      *  unlimited.
      */
-    final val ROWID_VALID_FOREVER = new RowIdLifetime(ROWID_VALID_FOREVER, 1)
+    final val ROWID_VALID_FOREVER: RowIdLifetime = new RowIdLifetime("ROWID_VALID_FOREVER", 1)
 
     /** Indicates that the lifetime of a RowId from this data source is indeterminate;
      *  but not one of ROWID_VALID_TRANSACTION, ROWID_VALID_SESSION, or,
      *  ROWID_VALID_FOREVER.
      */
-    final val ROWID_VALID_OTHER = new RowIdLifetime(ROWID_VALID_OTHER, 2)
+    final val ROWID_VALID_OTHER: RowIdLifetime = new RowIdLifetime("ROWID_VALID_OTHER", 2)
 
     /** Indicates that the lifetime of a RowId from this data source is at least the
      *  containing session.
      */
-    final val ROWID_VALID_SESSION = new RowIdLifetime(ROWID_VALID_SESSION, 3)
+    final val ROWID_VALID_SESSION: RowIdLifetime = new RowIdLifetime("ROWID_VALID_SESSION", 3)
 
     /** Indicates that the lifetime of a RowId from this data source is at least the
      *  containing transaction.
      */
-    final val ROWID_VALID_TRANSACTION = new RowIdLifetime(ROWID_VALID_TRANSACTION, 4)
+    final val ROWID_VALID_TRANSACTION: RowIdLifetime = new RowIdLifetime("ROWID_VALID_TRANSACTION", 4)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

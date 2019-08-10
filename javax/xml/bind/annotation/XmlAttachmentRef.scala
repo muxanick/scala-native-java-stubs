@@ -37,7 +37,7 @@ import scala.scalanative.annotation.stub
  *  
  *  The above binding supports WS-I AP 1.0 WS-I Attachments Profile Version 1.0.
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value ={ FIELD , METHOD , PARAMETER } ) 
- final class XmlAttachmentRef extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value={FIELD,METHOD,PARAMETER})
+final class XmlAttachmentRef extends StaticAnnotation {
 }

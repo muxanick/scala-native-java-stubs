@@ -11,18 +11,18 @@ object AclEntryType {
     /** Generate an alarm, in a system dependent way, the access specified in the
      *  permissions component of the ACL entry.
      */
-    final val ALARM = new AclEntryType(ALARM, 0)
+    final val ALARM: AclEntryType = new AclEntryType("ALARM", 0)
 
     /** Explicitly grants access to a file or directory. */
-    final val ALLOW = new AclEntryType(ALLOW, 1)
+    final val ALLOW: AclEntryType = new AclEntryType("ALLOW", 1)
 
     /** Log, in a system dependent way, the access specified in the
      *  permissions component of the ACL entry.
      */
-    final val AUDIT = new AclEntryType(AUDIT, 2)
+    final val AUDIT: AclEntryType = new AclEntryType("AUDIT", 2)
 
     /** Explicitly denies access to a file or directory. */
-    final val DENY = new AclEntryType(DENY, 3)
+    final val DENY: AclEntryType = new AclEntryType("DENY", 3)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

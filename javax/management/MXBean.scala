@@ -1046,10 +1046,10 @@ import scala.scalanative.annotation.stub
  *       the condition C will be true: "e is OpenDataException or InvalidObjectException (as
  *       appropriate), or C is true of e.getCause()".
  */
-@Documented 
-@Retention ( value = RUNTIME ) 
-@Target ( value = TYPE ) 
- final class MXBean extends StaticAnnotation {
+@Documented
+@Retention(value=RUNTIME)
+@Target(value=TYPE)
+final class MXBean extends StaticAnnotation {
 
     /** True if the annotated interface is an MXBean interface. */
     @stub

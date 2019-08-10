@@ -1,6 +1,6 @@
 package java.security.cert
 
-import java.lang.Object
+import java.lang.{Enum, Object, String}
 import java.net.URI
 import java.util.{List, Map, Set}
 import scala.scalanative.annotation.stub
@@ -107,5 +107,36 @@ object PKIXRevocationChecker {
     /** Various revocation options that can be specified for the revocation
      *  checking mechanism.
      */
-    type Option = PKIXRevocationChecker_Option
+    class Option private (name: String, ordinal: Int) extends Enum[Option](name, ordinal) {
+    }
+
+    object Option {
+        /** Disable the fallback mechanism. */
+        final val NO_FALLBACK: Option = new Option("NO_FALLBACK", 0)
+
+        /** Only check the revocation status of end-entity certificates. */
+        final val ONLY_END_ENTITY: Option = new Option("ONLY_END_ENTITY", 1)
+
+        /** Prefer CRLs to OSCP. */
+        final val PREFER_CRLS: Option = new Option("PREFER_CRLS", 2)
+
+        /** Allow revocation check to succeed if the revocation status cannot be
+         *  determined for one of the following reasons:
+         *  
+         *   The CRL or OCSP response cannot be obtained because of a
+         *       network error.
+         */
+        final val SOFT_FAIL: Option = new Option("SOFT_FAIL", 3)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): Option = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[Option] = ???
+    }
+
 }

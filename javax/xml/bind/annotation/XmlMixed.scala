@@ -92,7 +92,7 @@ import scala.scalanative.annotation.stub
  *  See "Package Specification" in javax.xml.bind.package javadoc for
  *  additional common information.
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value ={ FIELD , METHOD } ) 
- final class XmlMixed extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value={FIELD,METHOD})
+final class XmlMixed extends StaticAnnotation {
 }

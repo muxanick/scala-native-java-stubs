@@ -1,7 +1,7 @@
 package javax.swing.plaf.nimbus
 
-import java.awt.{Color, Graphics2D, LinearGradientPaint, RadialGradientPaint}
-import java.lang.{Object, String}
+import java.awt.{Color, Dimension, Graphics2D, Insets, LinearGradientPaint, RadialGradientPaint}
+import java.lang.{Enum, Object, String}
 import javax.swing.{JComponent, Painter}
 import scala.scalanative.annotation.stub
 
@@ -78,6 +78,48 @@ abstract class AbstractRegionPainter extends Object with Painter[JComponent] {
 }
 
 object AbstractRegionPainter {
-    /** A class encapsulating state useful when painting. */
-    protected type PaintContext = AbstractRegionPainter_PaintContext
+    /** A class encapsulating state useful when painting. Generally, instances of this
+     *  class are created once, and reused for each paint request without modification.
+     *  This class contains values useful when hinting the cache engine, and when decoding
+     *  control points and bezier curve anchors.
+     */
+    protected object PaintContext extends Object {
+
+        /** Creates a new PaintContext which does not attempt to cache or scale any cached
+         *  images.
+         */
+        @stub
+        def apply(insets: Insets, canvasSize: Dimension, inverted: Boolean) = ???
+
+        /** Creates a new PaintContext. */
+        @stub
+        def apply(insets: Insets, canvasSize: Dimension, inverted: Boolean, cacheMode: AbstractRegionPainter.PaintContext.CacheMode, maxH: Double, maxV: Double) = ???
+
+        /**  */
+        protected class CacheMode private (name: String, ordinal: Int) extends Enum[CacheMode](name, ordinal) {
+        }
+
+        protected object CacheMode {
+            /**  */
+            final val FIXED_SIZES: CacheMode = new CacheMode("FIXED_SIZES", 0)
+
+            /**  */
+            final val NINE_SQUARE_SCALE: CacheMode = new CacheMode("NINE_SQUARE_SCALE", 1)
+
+            /**  */
+            final val NO_CACHING: CacheMode = new CacheMode("NO_CACHING", 2)
+
+            /** Returns the enum constant of this type with the specified name. */
+            @stub
+            def valueOf(name: String): CacheMode = ???
+
+            /** Returns an array containing the constants of this enum type, in
+             * the order they are declared.
+             */
+            @stub
+            def values(): Array[CacheMode] = ???
+        }
+
+    }
+
 }

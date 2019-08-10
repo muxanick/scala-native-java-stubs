@@ -1,7 +1,7 @@
 package javax.swing.text.html
 
-import java.awt.{Color, Font}
-import java.io.Reader
+import java.awt.{Color, Font, Graphics}
+import java.io.{Reader, Serializable}
 import java.lang.{Object, String}
 import java.net.URL
 import java.util.Enumeration
@@ -262,14 +262,46 @@ class StyleSheet extends StyleContext {
 
 object StyleSheet {
     /** Class to carry out some of the duties of
-     *  CSS formatting.
+     *  CSS formatting.  Implementations of this
+     *  class enable views to present the CSS formatting
+     *  while not knowing anything about how the CSS values
+     *  are being cached.
+     *  
+     *  As a delegate of Views, this object is responsible for
+     *  the insets of a View and making sure the background
+     *  is maintained according to the CSS attributes.
      */
-    type BoxPainter = StyleSheet_BoxPainter
+    object BoxPainter extends Object with Serializable {
+
+        /** Fetches the inset needed on a given side to
+         *  account for the margin, border, and padding.
+         */
+        @stub
+        def getInset(side: Int, v: View): Float = ???
+
+        /** Paints the CSS box according to the attributes
+         *  given.
+         */
+        @stub
+        def paint(g: Graphics, x: Float, y: Float, w: Float, h: Float, v: View): Unit = ???
+    }
+
 
     /** Class to carry out some of the duties of CSS list
-     *  formatting.
+     *  formatting.  Implementations of this
+     *  class enable views to present the CSS formatting
+     *  while not knowing anything about how the CSS values
+     *  are being cached.
      */
-    type ListPainter = StyleSheet_ListPainter
+    object ListPainter extends Object with Serializable {
+
+        /** Paints the CSS list decoration according to the
+         *  attributes given.
+         */
+        @stub
+        def paint(g: Graphics, x: Float, y: Float, w: Float, h: Float, v: View, item: Int): Unit = ???
+    }
+
 
     /**  */
     @stub

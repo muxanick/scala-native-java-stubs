@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is applyAsDouble(double, double).
  */
-@FunctionalInterface trait DoubleBinaryOperator {
+@FunctionalInterface
+trait DoubleBinaryOperator {
 
     /** Applies this operator to the given operands. */
     @stub

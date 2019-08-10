@@ -11,7 +11,8 @@ import scala.scalanative.annotation.stub
  *  Only the low eight bits of each character in the string are used by
  *  this class.
  */
-@Deprecated class StringBufferInputStream extends InputStream {
+@Deprecated
+class StringBufferInputStream extends InputStream {
 
     /** Deprecated.  */
     @stub

@@ -17,9 +17,9 @@ import scala.scalanative.annotation.stub
  * 
  *  Example:See XmlSchema annotation type for an example.
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value ={} ) 
- final class XmlNs extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value={})
+final class XmlNs extends StaticAnnotation {
 
     /** Namespace URI */
     @stub

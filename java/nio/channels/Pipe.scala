@@ -1,6 +1,7 @@
 package java.nio.channels
 
 import java.lang.Object
+import java.nio.channels.spi.{AbstractInterruptibleChannel, AbstractSelectableChannel, SelectorProvider}
 import scala.scalanative.annotation.stub
 
 /** A pair of channels that implements a unidirectional pipe.
@@ -30,10 +31,34 @@ abstract class Pipe extends Object {
 
 object Pipe {
     /** A channel representing the writable end of a Pipe. */
-    type SinkChannel = Pipe_SinkChannel
+    abstract object SinkChannel extends AbstractSelectableChannel with WritableByteChannel with GatheringByteChannel {
+
+        /** Initializes a new instance of this class. */
+        @stub
+        protected def apply(provider: SelectorProvider) = ???
+
+        /** Returns an operation set identifying this channel's supported
+         *  operations.
+         */
+        @stub
+        def validOps(): Int = ???
+    }
+
 
     /** A channel representing the readable end of a Pipe. */
-    type SourceChannel = Pipe_SourceChannel
+    abstract object SourceChannel extends AbstractSelectableChannel with ReadableByteChannel with ScatteringByteChannel {
+
+        /** Constructs a new instance of this class. */
+        @stub
+        protected def apply(provider: SelectorProvider) = ???
+
+        /** Returns an operation set identifying this channel's supported
+         *  operations.
+         */
+        @stub
+        def validOps(): Int = ???
+    }
+
 
     /** Opens a pipe. */
     @stub

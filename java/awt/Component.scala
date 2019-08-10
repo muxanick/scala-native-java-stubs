@@ -3,12 +3,12 @@ package java.awt
 import java.awt.dnd.DropTarget
 import java.awt.event.{ComponentEvent, ComponentListener, FocusEvent, FocusListener, HierarchyBoundsListener, HierarchyEvent, HierarchyListener, InputMethodEvent, InputMethodListener, KeyEvent, KeyListener, MouseEvent, MouseListener, MouseMotionListener, MouseWheelEvent, MouseWheelListener}
 import java.awt.im.{InputContext, InputMethodRequests}
-import java.awt.image.{ColorModel, ImageObserver, ImageProducer, VolatileImage}
+import java.awt.image.{BufferStrategy, ColorModel, ImageObserver, ImageProducer, VolatileImage}
 import java.beans.PropertyChangeListener
 import java.io.{PrintStream, PrintWriter, Serializable}
-import java.lang.{Class, Object, String}
+import java.lang.{Class, Enum, Object, String}
 import java.util.{EventListener, Locale, Set}
-import javax.accessibility.AccessibleContext
+import javax.accessibility.{Accessible, AccessibleComponent, AccessibleContext, AccessibleRole, AccessibleStateSet}
 import scala.scalanative.annotation.stub
 
 /** A component is an object having a graphical representation
@@ -113,15 +113,373 @@ abstract class Component extends Object with ImageObserver with MenuContainer wi
     protected def this() = ???
 
     /** Inner class of Component used to provide default support for
-     *  accessibility.
+     *  accessibility.  This class is not meant to be used directly by
+     *  application developers, but is instead meant only to be
+     *  subclassed by component developers.
+     *  
+     *  The class used to obtain the accessible role for this object.
      */
-    protected type AccessibleAWTComponent = Component_AccessibleAWTComponent
+    protected abstract class AccessibleAWTComponent extends AccessibleContext with Serializable with AccessibleComponent {
+
+        /** Though the class is abstract, this should be called by
+         *  all sub-classes.
+         */
+        @stub
+        protected def this() = ???
+
+        /** Fire PropertyChange listener, if one is registered,
+         *  when shown/hidden..
+         */
+        protected class AccessibleAWTComponentHandler extends Object with ComponentListener {
+
+            /**  */
+            @stub
+            protected def this() = ???
+
+            /** Invoked when the component has been made invisible. */
+            @stub
+            def componentHidden(e: ComponentEvent): Unit = ???
+
+            /** Invoked when the component's position changes. */
+            @stub
+            def componentMoved(e: ComponentEvent): Unit = ???
+
+            /** Invoked when the component's size changes. */
+            @stub
+            def componentResized(e: ComponentEvent): Unit = ???
+
+            /** Invoked when the component has been made visible. */
+            @stub
+            def componentShown(e: ComponentEvent): Unit = ???
+        }
+
+
+        /** Fire PropertyChange listener, if one is registered,
+         *  when focus events happen
+         */
+        protected class AccessibleAWTFocusHandler extends Object with FocusListener {
+
+            /**  */
+            @stub
+            protected def this() = ???
+
+            /** Invoked when a component gains the keyboard focus. */
+            @stub
+            def focusGained(event: FocusEvent): Unit = ???
+
+            /** Invoked when a component loses the keyboard focus. */
+            @stub
+            def focusLost(event: FocusEvent): Unit = ???
+        }
+
+
+        /**  */
+        protected val accessibleAWTComponentHandler: ComponentListener
+
+        /**  */
+        protected val accessibleAWTFocusHandler: FocusListener
+
+        /** Adds the specified focus listener to receive focus events from this
+         *  component.
+         */
+        def addFocusListener(l: FocusListener): Unit
+
+        /** Adds a PropertyChangeListener to the listener list. */
+        def addPropertyChangeListener(listener: PropertyChangeListener): Unit
+
+        /** Checks whether the specified point is within this object's bounds,
+         *  where the point's x and y coordinates are defined to be relative to
+         *  the coordinate system of the object.
+         */
+        def contains(p: Point): Boolean
+
+        /** Returns the Accessible child,
+         *  if one exists, contained at the local
+         *  coordinate Point.
+         */
+        def getAccessibleAt(p: Point): Accessible
+
+        /** Returns the nth Accessible child of the object. */
+        def getAccessibleChild(i: Int): Accessible
+
+        /** Returns the number of accessible children in the object. */
+        def getAccessibleChildrenCount(): Int
+
+        /** Gets the AccessibleComponent associated
+         *  with this object if one exists.
+         */
+        def getAccessibleComponent(): AccessibleComponent
+
+        /** Gets the accessible description of this object. */
+        def getAccessibleDescription(): String
+
+        /** Gets the index of this object in its accessible parent. */
+        def getAccessibleIndexInParent(): Int
+
+        /** Gets the accessible name of this object. */
+        def getAccessibleName(): String
+
+        /** Gets the Accessible parent of this object. */
+        def getAccessibleParent(): Accessible
+
+        /** Gets the role of this object. */
+        def getAccessibleRole(): AccessibleRole
+
+        /** Gets the state of this object. */
+        def getAccessibleStateSet(): AccessibleStateSet
+
+        /** Gets the background color of this object. */
+        def getBackground(): Color
+
+        /** Gets the bounds of this object in the form of a Rectangle object. */
+        def getBounds(): Rectangle
+
+        /** Gets the Cursor of this object. */
+        def getCursor(): Cursor
+
+        /** Gets the Font of this object. */
+        def getFont(): Font
+
+        /** Gets the FontMetrics of this object. */
+        def getFontMetrics(f: Font): FontMetrics
+
+        /** Gets the foreground color of this object. */
+        def getForeground(): Color
+
+        /** Returns the locale of this object. */
+        def getLocale(): Locale
+
+        /** Gets the location of the object relative to the parent in the form
+         *  of a point specifying the object's top-left corner in the screen's
+         *  coordinate space.
+         */
+        def getLocation(): Point
+
+        /** Returns the location of the object on the screen. */
+        def getLocationOnScreen(): Point
+
+        /** Returns the size of this object in the form of a
+         *  Dimension object.
+         */
+        def getSize(): Dimension
+
+        /** Determines if the object is enabled. */
+        def isEnabled(): Boolean
+
+        /** Returns whether this object can accept focus or not. */
+        def isFocusTraversable(): Boolean
+
+        /** Determines if the object is showing. */
+        def isShowing(): Boolean
+
+        /** Determines if the object is visible. */
+        def isVisible(): Boolean
+
+        /** Removes the specified focus listener so it no longer receives focus
+         *  events from this component.
+         */
+        def removeFocusListener(l: FocusListener): Unit
+
+        /** Remove a PropertyChangeListener from the listener list. */
+        def removePropertyChangeListener(listener: PropertyChangeListener): Unit
+
+        /** Requests focus for this object. */
+        def requestFocus(): Unit
+
+        /** Sets the background color of this object. */
+        def setBackground(c: Color): Unit
+
+        /** Sets the bounds of this object in the form of a
+         *  Rectangle object.
+         */
+        def setBounds(r: Rectangle): Unit
+
+        /** Sets the Cursor of this object. */
+        def setCursor(cursor: Cursor): Unit
+
+        /** Sets the enabled state of the object. */
+        def setEnabled(b: Boolean): Unit
+
+        /** Sets the Font of this object. */
+        def setFont(f: Font): Unit
+
+        /** Sets the foreground color of this object. */
+        def setForeground(c: Color): Unit
+
+        /** Sets the location of the object relative to the parent. */
+        def setLocation(p: Point): Unit
+
+        /** Resizes this object so that it has width and height. */
+        def setSize(d: Dimension): Unit
+
+        /** Sets the visible state of the object. */
+        def setVisible(b: Boolean): Unit
+    }
+
 
     /** Inner class for blitting offscreen surfaces to a component. */
-    protected type BltBufferStrategy = Component_BltBufferStrategy
+    protected class BltBufferStrategy extends BufferStrategy {
 
-    /** Inner class for flipping buffers on a component. */
-    protected type FlipBufferStrategy = Component_FlipBufferStrategy
+        /** Creates a new blt buffer strategy around a component */
+        @stub
+        protected def this(numBuffers: Int, caps: BufferCapabilities) = ???
+
+        /** The back buffers */
+        @stub
+        protected val backBuffers: Array[VolatileImage] = ???
+
+        /** The buffering capabilities */
+        @stub
+        protected val caps: BufferCapabilities = ???
+
+        /**  */
+        @stub
+        protected val height: Int = ???
+
+        /** Whether or not the drawing buffer has been recently restored from
+         *  a lost state.
+         */
+        @stub
+        protected val validatedContents: Boolean = ???
+
+        /** Size of the back buffers */
+        @stub
+        protected val width: Int = ???
+
+        /** Returns whether the drawing buffer was lost since the last call to
+         *  getDrawGraphics.
+         */
+        @stub
+        def contentsLost(): Boolean = ???
+
+        /** Returns whether the drawing buffer was recently restored from a lost
+         *  state and reinitialized to the default background color (white).
+         */
+        @stub
+        def contentsRestored(): Boolean = ???
+
+        /** Creates the back buffers */
+        @stub
+        protected def createBackBuffers(numBuffers: Int): Unit = ???
+
+        /** Releases system resources currently consumed by this
+         *  BufferStrategy and
+         *  removes it from the associated Component.
+         */
+        @stub
+        def dispose(): Unit = ???
+
+        /** Returns the BufferCapabilities for this
+         *  BufferStrategy.
+         */
+        @stub
+        def getCapabilities(): BufferCapabilities = ???
+
+        /** Creates a graphics context for the drawing buffer. */
+        @stub
+        def getDrawGraphics(): Graphics = ???
+
+        /** Restore the drawing buffer if it has been lost */
+        @stub
+        protected def revalidate(): Unit = ???
+
+        /** Makes the next available buffer visible. */
+        @stub
+        def show(): Unit = ???
+    }
+
+
+    /** Inner class for flipping buffers on a component.  That component must
+     *  be a Canvas or Window.
+     */
+    protected class FlipBufferStrategy extends BufferStrategy {
+
+        /** Creates a new flipping buffer strategy for this component. */
+        @stub
+        protected def this(numBuffers: Int, caps: BufferCapabilities) = ???
+
+        /** The buffering capabilities */
+        @stub
+        protected val caps: BufferCapabilities = ???
+
+        /** The drawing buffer */
+        @stub
+        protected val drawBuffer: Image = ???
+
+        /** The drawing buffer as a volatile image */
+        @stub
+        protected val drawVBuffer: VolatileImage = ???
+
+        /** The number of buffers */
+        @stub
+        protected val numBuffers: Int = ???
+
+        /** Whether or not the drawing buffer has been recently restored from
+         *  a lost state.
+         */
+        @stub
+        protected val validatedContents: Boolean = ???
+
+        /** Returns whether the drawing buffer was lost since the last call to
+         *  getDrawGraphics.
+         */
+        @stub
+        def contentsLost(): Boolean = ???
+
+        /** Returns whether the drawing buffer was recently restored from a lost
+         *  state and reinitialized to the default background color (white).
+         */
+        @stub
+        def contentsRestored(): Boolean = ???
+
+        /** Creates one or more complex, flipping buffers with the given
+         *  capabilities.
+         */
+        @stub
+        protected def createBuffers(numBuffers: Int, caps: BufferCapabilities): Unit = ???
+
+        /** Destroys the buffers created through this object */
+        @stub
+        protected def destroyBuffers(): Unit = ???
+
+        /** Releases system resources currently consumed by this
+         *  BufferStrategy and
+         *  removes it from the associated Component.
+         */
+        @stub
+        def dispose(): Unit = ???
+
+        /** Flipping moves the contents of the back buffer to the front buffer,
+         *  either by copying or by moving the video pointer.
+         */
+        @stub
+        protected def flip(flipAction: BufferCapabilities.FlipContents): Unit = ???
+
+        /**  */
+        @stub
+        protected def getBackBuffer(): Image = ???
+
+        /** Returns the BufferCapabilities for this
+         *  BufferStrategy.
+         */
+        @stub
+        def getCapabilities(): BufferCapabilities = ???
+
+        /** Creates a graphics context for the drawing buffer. */
+        @stub
+        def getDrawGraphics(): Graphics = ???
+
+        /** Restore the drawing buffer if it has been lost */
+        @stub
+        protected def revalidate(): Unit = ???
+
+        /** Makes the next available buffer visible by either blitting or
+         *  flipping.
+         */
+        @stub
+        def show(): Unit = ???
+    }
+
 
     /** The AccessibleContext associated with this Component. */
     protected val accessibleContext: AccessibleContext
@@ -1176,9 +1534,53 @@ abstract class Component extends Object with ImageObserver with MenuContainer wi
 
 object Component {
     /** Enumeration of the common ways the baseline of a component can
-     *  change as the size changes.
+     *  change as the size changes.  The baseline resize behavior is
+     *  primarily for layout managers that need to know how the
+     *  position of the baseline changes as the component size changes.
+     *  In general the baseline resize behavior will be valid for sizes
+     *  greater than or equal to the minimum size (the actual minimum
+     *  size; not a developer specified minimum size).  For sizes
+     *  smaller than the minimum size the baseline may change in a way
+     *  other than the baseline resize behavior indicates.  Similarly,
+     *  as the size approaches Integer.MAX_VALUE and/or
+     *  Short.MAX_VALUE the baseline may change in a way
+     *  other than the baseline resize behavior indicates.
      */
-    type BaselineResizeBehavior = Component_BaselineResizeBehavior
+    class BaselineResizeBehavior private (name: String, ordinal: Int) extends Enum[BaselineResizeBehavior](name, ordinal) {
+    }
+
+    object BaselineResizeBehavior {
+        /** Indicates the baseline remains a fixed distance from
+         *  the center of the component.
+         */
+        final val CENTER_OFFSET: BaselineResizeBehavior = new BaselineResizeBehavior("CENTER_OFFSET", 0)
+
+        /** Indicates the baseline remains fixed relative to the
+         *  y-origin.
+         */
+        final val CONSTANT_ASCENT: BaselineResizeBehavior = new BaselineResizeBehavior("CONSTANT_ASCENT", 1)
+
+        /** Indicates the baseline remains fixed relative to the height
+         *  and does not change as the width is varied.
+         */
+        final val CONSTANT_DESCENT: BaselineResizeBehavior = new BaselineResizeBehavior("CONSTANT_DESCENT", 2)
+
+        /** Indicates the baseline resize behavior can not be expressed using
+         *  any of the other constants.
+         */
+        final val OTHER: BaselineResizeBehavior = new BaselineResizeBehavior("OTHER", 3)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): BaselineResizeBehavior = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[BaselineResizeBehavior] = ???
+    }
+
 
     /** Ease-of-use constant for getAlignmentY. */
     @stub

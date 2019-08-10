@@ -15,15 +15,15 @@ object RetentionPolicy {
     /** Annotations are to be recorded in the class file by the compiler
      *  but need not be retained by the VM at run time.
      */
-    final val CLASS = new RetentionPolicy(CLASS, 0)
+    final val CLASS: RetentionPolicy = new RetentionPolicy("CLASS", 0)
 
     /** Annotations are to be recorded in the class file by the compiler and
      *  retained by the VM at run time, so they may be read reflectively.
      */
-    final val RUNTIME = new RetentionPolicy(RUNTIME, 1)
+    final val RUNTIME: RetentionPolicy = new RetentionPolicy("RUNTIME", 1)
 
     /** Annotations are to be discarded by the compiler. */
-    final val SOURCE = new RetentionPolicy(SOURCE, 2)
+    final val SOURCE: RetentionPolicy = new RetentionPolicy("SOURCE", 2)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

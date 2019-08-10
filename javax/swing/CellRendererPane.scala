@@ -1,8 +1,8 @@
 package javax.swing
 
-import java.awt.{Component, Container, Graphics, Rectangle}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, Graphics, Rectangle}
 import java.lang.Object
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole}
 import scala.scalanative.annotation.stub
 
 /** This class is inserted in between cell renderers and the components that
@@ -41,7 +41,17 @@ class CellRendererPane extends Container with Accessible {
     /** This class implements accessibility support for the
      *  CellRendererPane class.
      */
-    protected type AccessibleCellRendererPane = CellRendererPane_AccessibleCellRendererPane
+    protected class AccessibleCellRendererPane extends Container.AccessibleAWTContainer {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+    }
+
 
     /**  */
     @stub

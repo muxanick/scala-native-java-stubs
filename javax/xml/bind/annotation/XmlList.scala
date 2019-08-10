@@ -74,7 +74,7 @@ import scala.scalanative.annotation.stub
  *          list just as XmlAttribute would. 
  *   
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value ={ FIELD , METHOD , PARAMETER } ) 
- final class XmlList extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value={FIELD,METHOD,PARAMETER})
+final class XmlList extends StaticAnnotation {
 }

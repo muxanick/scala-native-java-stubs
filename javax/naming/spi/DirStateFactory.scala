@@ -63,5 +63,19 @@ object DirStateFactory {
     /** An object/attributes pair for returning the result of
      *  DirStateFactory.getStateToBind().
      */
-    type Result = DirStateFactory_Result
+    object Result extends Object {
+
+        /** Constructs an instance of Result. */
+        @stub
+        def apply(obj: Any, outAttrs: Attributes) = ???
+
+        /** Retrieves the attributes to be bound. */
+        @stub
+        def getAttributes(): Attributes = ???
+
+        /** Retrieves the object to be bound. */
+        @stub
+        def getObject(): Any = ???
+    }
+
 }

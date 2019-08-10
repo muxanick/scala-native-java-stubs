@@ -2,8 +2,9 @@ package javax.swing.text.html
 
 import java.lang.{Object, String}
 import java.net.URL
+import java.util.Vector
 import javax.swing.event.{DocumentEvent, UndoableEditEvent}
-import javax.swing.text.{AbstractDocument, AbstractDocument.AbstractElement, AbstractDocument.Content, AbstractDocument.DefaultDocumentEvent, AttributeSet, DefaultStyledDocument, DefaultStyledDocument.ElementSpec, Element}
+import javax.swing.text.{AbstractDocument, AbstractDocument.AbstractElement, AbstractDocument.BranchElement, AbstractDocument.Content, AbstractDocument.DefaultDocumentEvent, AbstractDocument.LeafElement, AttributeSet, DefaultStyledDocument, DefaultStyledDocument.ElementSpec, Element, MutableAttributeSet}
 import scala.scalanative.annotation.stub
 
 /** A document that models HTML.  The purpose of this model is to
@@ -256,18 +257,535 @@ class HTMLDocument extends DefaultStyledDocument {
     /** An element that represents a structural block of
      *  HTML.
      */
-    type BlockElement = HTMLDocument_BlockElement
+    class BlockElement extends AbstractDocument.BranchElement {
+
+        /** Constructs a composite element that initially contains
+         *  no children.
+         */
+        @stub
+        def this(parent: Element, a: AttributeSet) = ???
+
+        /** Gets the name of the element. */
+        @stub
+        def getName(): String = ???
+
+        /** Gets the resolving parent. */
+        @stub
+        def getResolveParent(): AttributeSet = ???
+    }
+
 
     /** An HTML reader to load an HTML document with an HTML
-     *  element structure.
+     *  element structure.  This is a set of callbacks from
+     *  the parser, implemented to create a set of elements
+     *  tagged with attributes.  The parse builds up tokens
+     *  (ElementSpec) that describe the element subtree desired,
+     *  and burst it into the document under the protection of
+     *  a write lock using the insert method on the document
+     *  outer class.
+     *  
+     *  The reader can be configured by registering actions
+     *  (of type HTMLDocument.HTMLReader.TagAction)
+     *  that describe how to handle the action.  The idea behind
+     *  the actions provided is that the most natural text editing
+     *  operations can be provided if the element structure boils
+     *  down to paragraphs with runs of some kind of style
+     *  in them.  Some things are more naturally specified
+     *  structurally, so arbitrary structure should be allowed
+     *  above the paragraphs, but will need to be edited with structural
+     *  actions.  The implication of this is that some of the
+     *  HTML elements specified in the stream being parsed will
+     *  be collapsed into attributes, and in some cases paragraphs
+     *  will be synthesized.  When HTML elements have been
+     *  converted to attributes, the attribute key will be of
+     *  type HTML.Tag, and the value will be of type AttributeSet
+     *  so that no information is lost.  This enables many of the
+     *  existing actions to work so that the user can type input,
+     *  hit the return key, backspace, delete, etc and have a
+     *  reasonable result.  Selections can be created, and attributes
+     *  applied or removed, etc.  With this in mind, the work done
+     *  by the reader can be categorized into the following kinds
+     *  of tasks:
+     *  
+     *  Block
+     *  Build the structure like it's specified in the stream.
+     *  This produces elements that contain other elements.
+     *  Paragraph
+     *  Like block except that it's expected that the element
+     *  will be used with a paragraph view so a paragraph element
+     *  won't need to be synthesized.
+     *  Character
+     *  Contribute the element as an attribute that will start
+     *  and stop at arbitrary text locations.  This will ultimately
+     *  be mixed into a run of text, with all of the currently
+     *  flattened HTML character elements.
+     *  Special
+     *  Produce an embedded graphical element.
+     *  Form
+     *  Produce an element that is like the embedded graphical
+     *  element, except that it also has a component model associated
+     *  with it.
+     *  Hidden
+     *  Create an element that is hidden from view when the
+     *  document is being viewed read-only, and visible when the
+     *  document is being edited.  This is useful to keep the
+     *  model from losing information, and used to store things
+     *  like comments and unrecognized tags.
+     * 
+     *  
+     *  
+     *  Currently, <APPLET>, <PARAM>, <MAP>, <AREA>, <LINK>,
+     *  <SCRIPT> and <STYLE> are unsupported.
+     * 
+     *  
+     *  The assignment of the actions described is shown in the
+     *  following table for the tags defined in HTML.Tag.
+     *  
+     *  TagAction
+     *  HTML.Tag.A         CharacterAction
+     *  HTML.Tag.ADDRESS   CharacterAction
+     *  HTML.Tag.APPLET    HiddenAction
+     *  HTML.Tag.AREA      AreaAction
+     *  HTML.Tag.B         CharacterAction
+     *  HTML.Tag.BASE      BaseAction
+     *  HTML.Tag.BASEFONT  CharacterAction
+     *  HTML.Tag.BIG       CharacterAction
+     *  HTML.Tag.BLOCKQUOTEBlockAction
+     *  HTML.Tag.BODY      BlockAction
+     *  HTML.Tag.BR        SpecialAction
+     *  HTML.Tag.CAPTION   BlockAction
+     *  HTML.Tag.CENTER    BlockAction
+     *  HTML.Tag.CITE      CharacterAction
+     *  HTML.Tag.CODE      CharacterAction
+     *  HTML.Tag.DD        BlockAction
+     *  HTML.Tag.DFN       CharacterAction
+     *  HTML.Tag.DIR       BlockAction
+     *  HTML.Tag.DIV       BlockAction
+     *  HTML.Tag.DL        BlockAction
+     *  HTML.Tag.DT        ParagraphAction
+     *  HTML.Tag.EM        CharacterAction
+     *  HTML.Tag.FONT      CharacterAction
+     *  HTML.Tag.FORM      As of 1.4 a BlockAction
+     *  HTML.Tag.FRAME     SpecialAction
+     *  HTML.Tag.FRAMESET  BlockAction
+     *  HTML.Tag.H1        ParagraphAction
+     *  HTML.Tag.H2        ParagraphAction
+     *  HTML.Tag.H3        ParagraphAction
+     *  HTML.Tag.H4        ParagraphAction
+     *  HTML.Tag.H5        ParagraphAction
+     *  HTML.Tag.H6        ParagraphAction
+     *  HTML.Tag.HEAD      HeadAction
+     *  HTML.Tag.HR        SpecialAction
+     *  HTML.Tag.HTML      BlockAction
+     *  HTML.Tag.I         CharacterAction
+     *  HTML.Tag.IMG       SpecialAction
+     *  HTML.Tag.INPUT     FormAction
+     *  HTML.Tag.ISINDEX   IsndexAction
+     *  HTML.Tag.KBD       CharacterAction
+     *  HTML.Tag.LI        BlockAction
+     *  HTML.Tag.LINK      LinkAction
+     *  HTML.Tag.MAP       MapAction
+     *  HTML.Tag.MENU      BlockAction
+     *  HTML.Tag.META      MetaAction
+     *  HTML.Tag.NOFRAMES  BlockAction
+     *  HTML.Tag.OBJECT    SpecialAction
+     *  HTML.Tag.OL        BlockAction
+     *  HTML.Tag.OPTION    FormAction
+     *  HTML.Tag.P         ParagraphAction
+     *  HTML.Tag.PARAM     HiddenAction
+     *  HTML.Tag.PRE       PreAction
+     *  HTML.Tag.SAMP      CharacterAction
+     *  HTML.Tag.SCRIPT    HiddenAction
+     *  HTML.Tag.SELECT    FormAction
+     *  HTML.Tag.SMALL     CharacterAction
+     *  HTML.Tag.STRIKE    CharacterAction
+     *  HTML.Tag.S         CharacterAction
+     *  HTML.Tag.STRONG    CharacterAction
+     *  HTML.Tag.STYLE     StyleAction
+     *  HTML.Tag.SUB       CharacterAction
+     *  HTML.Tag.SUP       CharacterAction
+     *  HTML.Tag.TABLE     BlockAction
+     *  HTML.Tag.TD        BlockAction
+     *  HTML.Tag.TEXTAREA  FormAction
+     *  HTML.Tag.TH        BlockAction
+     *  HTML.Tag.TITLE     TitleAction
+     *  HTML.Tag.TR        BlockAction
+     *  HTML.Tag.TT        CharacterAction
+     *  HTML.Tag.U         CharacterAction
+     *  HTML.Tag.UL        BlockAction
+     *  HTML.Tag.VAR       CharacterAction
+     *  
+     *  
+     *  Once </html> is encountered, the Actions are no longer notified.
      */
-    type HTMLReader = HTMLDocument_HTMLReader
+    class HTMLReader extends HTMLEditorKit.ParserCallback {
+
+        /**  */
+        @stub
+        def this(offset: Int) = ???
+
+        /**  */
+        @stub
+        def this(offset: Int, popDepth: Int, pushDepth: Int, insertTag: HTML.Tag) = ???
+
+        /**  */
+        class BlockAction extends HTMLDocument.HTMLReader.TagAction {
+
+            /**  */
+            @stub
+            def this() = ???
+
+            /** Called when an end tag is seen for the
+             *  type of tag this action was registered
+             *  to.
+             */
+            @stub
+            def end(t: HTML.Tag): Unit = ???
+
+            /** Called when a start tag is seen for the
+             *  type of tag this action was registered
+             *  to.
+             */
+            @stub
+            def start(t: HTML.Tag, attr: MutableAttributeSet): Unit = ???
+        }
+
+
+        /**  */
+        class CharacterAction extends HTMLDocument.HTMLReader.TagAction {
+
+            /**  */
+            @stub
+            def this() = ???
+
+            /** Called when an end tag is seen for the
+             *  type of tag this action was registered
+             *  to.
+             */
+            @stub
+            def end(t: HTML.Tag): Unit = ???
+
+            /** Called when a start tag is seen for the
+             *  type of tag this action was registered
+             *  to.
+             */
+            @stub
+            def start(t: HTML.Tag, attr: MutableAttributeSet): Unit = ???
+        }
+
+
+        /** Action to support forms by building all of the elements
+         *  used to represent form controls.  This will process
+         *  the <INPUT>, <TEXTAREA>, <SELECT>,
+         *  and <OPTION> tags.  The element created by
+         *  this action is expected to have the attribute
+         *  StyleConstants.ModelAttribute set to
+         *  the model that holds the state for the form control.
+         *  This enables multiple views, and allows document to
+         *  be iterated over picking up the data of the form.
+         *  The following are the model assignments for the
+         *  various type of form elements.
+         *  
+         *  
+         *    Element Type
+         *    Model Type
+         *  
+         *    input, type button
+         *    DefaultButtonModel
+         *  
+         *    input, type checkbox
+         *    JToggleButton.ToggleButtonModel
+         *  
+         *    input, type image
+         *    DefaultButtonModel
+         *  
+         *    input, type password
+         *    PlainDocument
+         *  
+         *    input, type radio
+         *    JToggleButton.ToggleButtonModel
+         *  
+         *    input, type reset
+         *    DefaultButtonModel
+         *  
+         *    input, type submit
+         *    DefaultButtonModel
+         *  
+         *    input, type text or type is null.
+         *    PlainDocument
+         *  
+         *    select
+         *    DefaultComboBoxModel or an DefaultListModel, with an item type of Option
+         *  
+         *    textarea
+         *    PlainDocument
+         *  
+         */
+        class FormAction extends HTMLDocument.HTMLReader.SpecialAction {
+
+            /**  */
+            @stub
+            def this() = ???
+
+            /** Called when an end tag is seen for the
+             *  type of tag this action was registered
+             *  to.
+             */
+            @stub
+            def end(t: HTML.Tag): Unit = ???
+
+            /** Called when a start tag is seen for the
+             *  type of tag this action was registered
+             *  to.
+             */
+            @stub
+            def start(t: HTML.Tag, attr: MutableAttributeSet): Unit = ???
+        }
+
+
+        /**  */
+        class HiddenAction extends HTMLDocument.HTMLReader.TagAction {
+
+            /**  */
+            @stub
+            def this() = ???
+
+            /** Called when an end tag is seen for the
+             *  type of tag this action was registered
+             *  to.
+             */
+            @stub
+            def end(t: HTML.Tag): Unit = ???
+
+            /** Called when a start tag is seen for the
+             *  type of tag this action was registered
+             *  to.
+             */
+            @stub
+            def start(t: HTML.Tag, a: MutableAttributeSet): Unit = ???
+        }
+
+
+        /**  */
+        class IsindexAction extends HTMLDocument.HTMLReader.TagAction {
+
+            /**  */
+            @stub
+            def this() = ???
+
+            /** Called when a start tag is seen for the
+             *  type of tag this action was registered
+             *  to.
+             */
+            @stub
+            def start(t: HTML.Tag, a: MutableAttributeSet): Unit = ???
+        }
+
+
+        /**  */
+        class ParagraphAction extends HTMLDocument.HTMLReader.BlockAction {
+
+            /**  */
+            @stub
+            def this() = ???
+
+            /** Called when an end tag is seen for the
+             *  type of tag this action was registered
+             *  to.
+             */
+            @stub
+            def end(t: HTML.Tag): Unit = ???
+
+            /** Called when a start tag is seen for the
+             *  type of tag this action was registered
+             *  to.
+             */
+            @stub
+            def start(t: HTML.Tag, a: MutableAttributeSet): Unit = ???
+        }
+
+
+        /**  */
+        class PreAction extends HTMLDocument.HTMLReader.BlockAction {
+
+            /**  */
+            @stub
+            def this() = ???
+
+            /** Called when an end tag is seen for the
+             *  type of tag this action was registered
+             *  to.
+             */
+            @stub
+            def end(t: HTML.Tag): Unit = ???
+
+            /** Called when a start tag is seen for the
+             *  type of tag this action was registered
+             *  to.
+             */
+            @stub
+            def start(t: HTML.Tag, attr: MutableAttributeSet): Unit = ???
+        }
+
+
+        /**  */
+        class SpecialAction extends HTMLDocument.HTMLReader.TagAction {
+
+            /**  */
+            @stub
+            def this() = ???
+
+            /** Called when a start tag is seen for the
+             *  type of tag this action was registered
+             *  to.
+             */
+            @stub
+            def start(t: HTML.Tag, a: MutableAttributeSet): Unit = ???
+        }
+
+
+        /** An action to be performed in response
+         *  to parsing a tag.  This allows customization
+         *  of how each tag is handled and avoids a large
+         *  switch statement.
+         */
+        class TagAction extends Object {
+
+            /**  */
+            @stub
+            def this() = ???
+
+            /** Called when an end tag is seen for the
+             *  type of tag this action was registered
+             *  to.
+             */
+            @stub
+            def end(t: HTML.Tag): Unit = ???
+
+            /** Called when a start tag is seen for the
+             *  type of tag this action was registered
+             *  to.
+             */
+            @stub
+            def start(t: HTML.Tag, a: MutableAttributeSet): Unit = ???
+        }
+
+
+        /**  */
+        @stub
+        protected val charAttr: MutableAttributeSet = ???
+
+        /**  */
+        @stub
+        protected val parseBuffer: Vector[DefaultStyledDocument.ElementSpec] = ???
+
+        /** Adds some text with the current character attributes. */
+        @stub
+        protected def addContent(data: Array[Char], offs: Int, length: Int): Unit = ???
+
+        /** Adds some text with the current character attributes. */
+        @stub
+        protected def addContent(data: Array[Char], offs: Int, length: Int, generateImpliedPIfNecessary: Boolean): Unit = ???
+
+        /** Adds content that is basically specified entirely
+         *  in the attribute set.
+         */
+        @stub
+        protected def addSpecialElement(t: HTML.Tag, a: MutableAttributeSet): Unit = ???
+
+        /** Adds an instruction to the parse buffer to close out
+         *  a block element of the given type.
+         */
+        @stub
+        protected def blockClose(t: HTML.Tag): Unit = ???
+
+        /** Adds an instruction to the parse buffer to create a
+         *  block element with the given attributes.
+         */
+        @stub
+        protected def blockOpen(t: HTML.Tag, attr: MutableAttributeSet): Unit = ???
+
+        /** The last method called on the reader. */
+        @stub
+        def flush(): Unit = ???
+
+        /**  */
+        @stub
+        def handleComment(data: Array[Char], pos: Int): Unit = ???
+
+        /** This is invoked after the stream has been parsed, but before
+         *  flush.
+         */
+        @stub
+        def handleEndOfLineString(eol: String): Unit = ???
+
+        /** Callback from the parser. */
+        @stub
+        def handleEndTag(t: HTML.Tag, pos: Int): Unit = ???
+
+        /** Callback from the parser. */
+        @stub
+        def handleSimpleTag(t: HTML.Tag, a: MutableAttributeSet, pos: Int): Unit = ???
+
+        /** Callback from the parser. */
+        @stub
+        def handleStartTag(t: HTML.Tag, a: MutableAttributeSet, pos: Int): Unit = ???
+
+        /** Called by the parser to indicate a block of text was
+         *  encountered.
+         */
+        @stub
+        def handleText(data: Array[Char], pos: Int): Unit = ???
+
+        /** Pops a previously pushed character style off the stack
+         *  to return to a previous style.
+         */
+        @stub
+        protected def popCharacterStyle(): Unit = ???
+
+        /** Adds the given content that was encountered in a
+         *  PRE element.
+         */
+        @stub
+        protected def preContent(data: Array[Char]): Unit = ???
+
+        /** Pushes the current character style on a stack in preparation
+         *  for forming a new nested character style.
+         */
+        @stub
+        protected def pushCharacterStyle(): Unit = ???
+
+        /** Registers a handler for the given tag. */
+        @stub
+        protected def registerTag(t: HTML.Tag, a: HTMLDocument.HTMLReader.TagAction): Unit = ???
+
+        /** Adds the given content to the textarea document. */
+        @stub
+        protected def textAreaContent(data: Array[Char]): Unit = ???
+    }
+
 
     /** An element that represents a chunk of text that has
      *  a set of HTML character level attributes assigned to
      *  it.
      */
-    type RunElement = HTMLDocument_RunElement
+    class RunElement extends AbstractDocument.LeafElement {
+
+        /** Constructs an element that represents content within the
+         *  document (has no children).
+         */
+        @stub
+        def this(parent: Element, a: AttributeSet, offs0: Int, offs1: Int) = ???
+
+        /** Gets the name of the element. */
+        @stub
+        def getName(): String = ???
+
+        /** Gets the resolving parent. */
+        @stub
+        def getResolveParent(): AttributeSet = ???
+    }
+
 
     /** Replaces the contents of the document with the given
      *  element specifications.
@@ -436,9 +954,45 @@ class HTMLDocument extends DefaultStyledDocument {
 
 object HTMLDocument {
     /** An iterator to iterate over a particular type of
-     *  tag.
+     *  tag.  The iterator is not thread safe.  If reliable
+     *  access to the document is not already ensured by
+     *  the context under which the iterator is being used,
+     *  its use should be performed under the protection of
+     *  Document.render.
      */
-    type Iterator = HTMLDocument_Iterator
+    abstract object Iterator extends Object {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /** Return the attributes for this tag. */
+        def getAttributes(): AttributeSet
+
+        /** Returns the end of the range for which the current occurrence of
+         *  the tag is defined and has the same attributes.
+         */
+        def getEndOffset(): Int
+
+        /** Returns the start of the range for which the current occurrence of
+         *  the tag is defined and has the same attributes.
+         */
+        def getStartOffset(): Int
+
+        /** Type of tag this iterator represents. */
+        def getTag(): HTML.Tag
+
+        /** Indicates if the iterator is currently
+         *  representing an occurrence of a tag.
+         */
+        def isValid(): Boolean
+
+        /** Move the iterator forward to the next occurrence
+         *  of the tag it represents.
+         */
+        def next(): Unit
+    }
+
 
     /** Document property key value. */
     @stub

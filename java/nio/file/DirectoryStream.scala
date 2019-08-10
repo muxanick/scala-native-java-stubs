@@ -1,7 +1,7 @@
 package java.nio.file
 
 import java.io.Closeable
-import java.lang.Iterable
+import java.lang.{FunctionalInterface, Iterable}
 import java.util.Iterator
 import scala.scalanative.annotation.stub
 
@@ -93,7 +93,17 @@ trait DirectoryStream[T] extends Closeable with Iterable[T] {
 
 object DirectoryStream {
     /** An interface that is implemented by objects that decide if a directory
-     *  entry should be accepted or filtered.
+     *  entry should be accepted or filtered. A Filter is passed as the
+     *  parameter to the Files.newDirectoryStream(Path,DirectoryStream.Filter)
+     *  method when opening a directory to iterate over the entries in the
+     *  directory.
      */
-    type Filter[T] = DirectoryStream_Filter[T]
+@FunctionalInterface
+    trait Filter[T] {
+
+        /** Decides if the given directory entry should be accepted or filtered. */
+        @stub
+        def accept(entry: T): Boolean = ???
+    }
+
 }

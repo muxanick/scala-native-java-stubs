@@ -86,9 +86,9 @@ import scala.scalanative.annotation.stub
  * 
  *  
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value = PACKAGE ) 
- final class XmlSchema extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value=PACKAGE)
+final class XmlSchema extends StaticAnnotation {
 
     /** Namespace qualification for attributes. */
     @stub

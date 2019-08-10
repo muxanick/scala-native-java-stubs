@@ -31,9 +31,9 @@ import scala.scalanative.annotation.stub
  *  If no Transient annotation is present
  *  in any superclass the feature is not transient.
  */
-@Target ( value = METHOD ) 
-@Retention ( value = RUNTIME ) 
- final class Transient extends StaticAnnotation {
+@Target(value=METHOD)
+@Retention(value=RUNTIME)
+final class Transient extends StaticAnnotation {
 
     /** Returns whether or not the Introspector should
      *  construct artifacts for the annotated method.

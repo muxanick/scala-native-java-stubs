@@ -22,7 +22,13 @@ abstract class CompoundControl extends Control {
 
 object CompoundControl {
     /** An instance of the CompoundControl.Type inner class identifies one kind of
-     *  compound control.
+     *  compound control.  Static instances are provided for the
+     *  common types.
      */
-    type Type = CompoundControl_Type
+    object Type extends Control.Type {
+
+        /** Constructs a new compound control type. */
+        @stub
+        protected def apply(name: String) = ???
+
 }

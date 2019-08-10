@@ -1,12 +1,12 @@
 package javax.swing.plaf.basic
 
-import java.awt.{Component, Component.BaselineResizeBehavior, Dimension, Graphics, Insets, LayoutManager, Rectangle}
-import java.awt.event.{FocusListener, ItemListener, KeyListener, MouseListener, MouseMotionListener}
-import java.beans.PropertyChangeListener
-import java.lang.Object
+import java.awt.{Component, Component.BaselineResizeBehavior, Container, Dimension, Graphics, Insets, LayoutManager, Rectangle}
+import java.awt.event.{FocusEvent, FocusListener, ItemEvent, ItemListener, KeyAdapter, KeyEvent, KeyListener, MouseListener, MouseMotionListener}
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
+import java.lang.{Object, String}
 import javax.accessibility.Accessible
 import javax.swing.{CellRendererPane, ComboBoxEditor, JButton, JComboBox, JComponent, JList, ListCellRenderer}
-import javax.swing.event.ListDataListener
+import javax.swing.event.{ListDataEvent, ListDataListener}
 import javax.swing.plaf.{ComboBoxUI, ComponentUI}
 import scala.scalanative.annotation.stub
 
@@ -33,29 +33,168 @@ class BasicComboBoxUI extends ComboBoxUI {
     @stub
     def this() = ???
 
-    /** This layout manager handles the 'standard' layout of combo boxes. */
-    type ComboBoxLayoutManager = BasicComboBoxUI_ComboBoxLayoutManager
+    /** This layout manager handles the 'standard' layout of combo boxes.  It puts
+     *  the arrow button to the right and the editor to the left.  If there is no
+     *  editor it still keeps the arrow button to the right.
+     * 
+     *  This public inner class should be treated as protected.
+     *  Instantiate it only within subclasses of
+     *  BasicComboBoxUI.
+     */
+    class ComboBoxLayoutManager extends Object with LayoutManager {
 
-    /** This listener hides the popup when the focus is lost. */
-    type FocusHandler = BasicComboBoxUI_FocusHandler
+        /**  */
+        @stub
+        def this() = ???
+
+        /** If the layout manager uses a per-component string,
+         *  adds the component comp to the layout,
+         *  associating it
+         *  with the string specified by name.
+         */
+        @stub
+        def addLayoutComponent(name: String, comp: Component): Unit = ???
+
+        /** Lays out the specified container. */
+        @stub
+        def layoutContainer(parent: Container): Unit = ???
+
+        /** Calculates the minimum size dimensions for the specified
+         *  container, given the components it contains.
+         */
+        @stub
+        def minimumLayoutSize(parent: Container): Dimension = ???
+
+        /** Calculates the preferred size dimensions for the specified
+         *  container, given the components it contains.
+         */
+        @stub
+        def preferredLayoutSize(parent: Container): Dimension = ???
+
+        /** Removes the specified component from the layout. */
+        @stub
+        def removeLayoutComponent(comp: Component): Unit = ???
+    }
+
+
+    /** This listener hides the popup when the focus is lost.  It also repaints
+     *  when focus is gained or lost.
+     * 
+     *  This public inner class should be treated as protected.
+     *  Instantiate it only within subclasses of
+     *  BasicComboBoxUI.
+     */
+    class FocusHandler extends Object with FocusListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when a component gains the keyboard focus. */
+        @stub
+        def focusGained(e: FocusEvent): Unit = ???
+
+        /** Invoked when a component loses the keyboard focus. */
+        @stub
+        def focusLost(e: FocusEvent): Unit = ???
+    }
+
 
     /** This listener watches for changes to the selection in the
      *  combo box.
+     *  
+     *  This public inner class should be treated as protected.
+     *  Instantiate it only within subclasses of
+     *  BasicComboBoxUI.
      */
-    type ItemHandler = BasicComboBoxUI_ItemHandler
+    class ItemHandler extends Object with ItemListener {
 
-    /** This listener checks to see if the key event isn't a navigation key. */
-    type KeyHandler = BasicComboBoxUI_KeyHandler
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when an item has been selected or deselected by the user. */
+        @stub
+        def itemStateChanged(e: ItemEvent): Unit = ???
+    }
+
+
+    /** This listener checks to see if the key event isn't a navigation key.  If
+     *  it finds a key event that wasn't a navigation key it dispatches it to
+     *  JComboBox.selectWithKeyChar() so that it can do type-ahead.
+     * 
+     *  This public inner class should be treated as protected.
+     *  Instantiate it only within subclasses of
+     *  BasicComboBoxUI.
+     */
+    class KeyHandler extends KeyAdapter {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when a key has been pressed. */
+        @stub
+        def keyPressed(e: KeyEvent): Unit = ???
+    }
+
 
     /** This listener watches for changes in the
      *  ComboBoxModel.
+     *  
+     *  This public inner class should be treated as protected.
+     *  Instantiate it only within subclasses of
+     *  BasicComboBoxUI.
      */
-    type ListDataHandler = BasicComboBoxUI_ListDataHandler
+    class ListDataHandler extends Object with ListDataListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Sent when the contents of the list has changed in a way
+         *  that's too complex to characterize with the previous
+         *  methods.
+         */
+        @stub
+        def contentsChanged(e: ListDataEvent): Unit = ???
+
+        /** Sent after the indices in the index0,index1
+         *  interval have been inserted in the data model.
+         */
+        @stub
+        def intervalAdded(e: ListDataEvent): Unit = ???
+
+        /** Sent after the indices in the index0,index1 interval
+         *  have been removed from the data model.
+         */
+        @stub
+        def intervalRemoved(e: ListDataEvent): Unit = ???
+    }
+
 
     /** This listener watches for bound properties that have changed in the
      *  combo box.
+     *  
+     *  Subclasses which wish to listen to combo box property changes should
+     *  call the superclass methods to ensure that the combo box ui correctly
+     *  handles property changes.
+     *  
+     *  This public inner class should be treated as protected.
+     *  Instantiate it only within subclasses of
+     *  BasicComboBoxUI.
      */
-    type PropertyChangeHandler = BasicComboBoxUI_PropertyChangeHandler
+    class PropertyChangeHandler extends Object with PropertyChangeListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** This method gets called when a bound property is changed. */
+        @stub
+        def propertyChange(e: PropertyChangeEvent): Unit = ???
+    }
+
 
     /**  */
     @stub

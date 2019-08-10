@@ -21,7 +21,8 @@ import scala.scalanative.annotation.stub
  *  KeyboardFocusManager as a KeyEventDispatcher one or more times, this is
  *  usually unnecessary and not recommended.)
  */
-@FunctionalInterface trait KeyEventDispatcher {
+@FunctionalInterface
+trait KeyEventDispatcher {
 
     /** This method is called by the current KeyboardFocusManager requesting
      *  that this KeyEventDispatcher dispatch the specified event on its behalf.

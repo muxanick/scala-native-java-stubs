@@ -208,9 +208,9 @@ import scala.scalanative.annotation.stub
  *  assert foo.others[1] instanceof Foo;
  *  
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value ={ FIELD , METHOD } ) 
- final class XmlAnyElement extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value={FIELD,METHOD})
+final class XmlAnyElement extends StaticAnnotation {
 
     /** Controls the unmarshaller behavior when it sees elements
      *  known to the current JAXBContext.

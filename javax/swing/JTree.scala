@@ -1,14 +1,16 @@
 package javax.swing
 
-import java.awt.{Component, Container, Dimension, Rectangle}
-import java.awt.event.MouseEvent
+import java.awt.{Color, Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, Cursor, Dimension, Font, FontMetrics, Point, Rectangle}
+import java.awt.event.{FocusListener, MouseEvent}
+import java.beans.PropertyChangeListener
+import java.io.Serializable
 import java.lang.{Object, String}
-import java.util.{Enumeration, Hashtable, Vector}
-import javax.accessibility.{Accessible, AccessibleContext}
-import javax.swing.event.{TreeExpansionListener, TreeModelListener, TreeSelectionEvent, TreeSelectionListener, TreeWillExpandListener}
+import java.util.{Enumeration, Hashtable, Locale, Vector}
+import javax.accessibility.{Accessible, AccessibleAction, AccessibleComponent, AccessibleContext, AccessibleRole, AccessibleSelection, AccessibleStateSet, AccessibleText, AccessibleValue}
+import javax.swing.event.{TreeExpansionEvent, TreeExpansionListener, TreeModelEvent, TreeModelListener, TreeSelectionEvent, TreeSelectionListener, TreeWillExpandListener}
 import javax.swing.plaf.TreeUI
 import javax.swing.text.Position.Bias
-import javax.swing.tree.{TreeCellEditor, TreeCellRenderer, TreeModel, TreeNode, TreePath, TreeSelectionModel}
+import javax.swing.tree.{DefaultMutableTreeNode, DefaultTreeSelectionModel, RowMapper, TreeCellEditor, TreeCellRenderer, TreeModel, TreeNode, TreePath, TreeSelectionModel}
 import scala.scalanative.annotation.stub
 
 /** 
@@ -152,20 +154,452 @@ class JTree extends JComponent with Scrollable with Accessible {
     def this(value: Vector[_]) = ???
 
     /** This class implements accessibility support for the
-     *  JTree class.
+     *  JTree class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to tree user-interface elements.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type AccessibleJTree = JTree_AccessibleJTree
+    protected class AccessibleJTree extends JComponent.AccessibleJComponent with AccessibleSelection with TreeSelectionListener with TreeModelListener with TreeExpansionListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** This class implements accessibility support for the
+         *  JTree child.  It provides an implementation of the
+         *  Java Accessibility API appropriate to tree nodes.
+         */
+        protected class AccessibleJTreeNode extends AccessibleContext with Accessible with AccessibleComponent with AccessibleSelection with AccessibleAction {
+
+            /** Constructs an AccessibleJTreeNode */
+            @stub
+            def this(t: JTree, p: TreePath, ap: Accessible) = ???
+
+            /** Adds the specified selected item in the object to the object's
+             *  selection.
+             */
+            @stub
+            def addAccessibleSelection(i: Int): Unit = ???
+
+            /** Adds the specified focus listener to receive focus events from this
+             *  component.
+             */
+            @stub
+            def addFocusListener(l: FocusListener): Unit = ???
+
+            /** Add a PropertyChangeListener to the listener list. */
+            @stub
+            def addPropertyChangeListener(l: PropertyChangeListener): Unit = ???
+
+            /** Clears the selection in the object, so that nothing in the
+             *  object is selected.
+             */
+            @stub
+            def clearAccessibleSelection(): Unit = ???
+
+            /** Checks whether the specified point is within this object's bounds,
+             *  where the point's x and y coordinates are defined to be relative to the
+             *  coordinate system of the object.
+             */
+            @stub
+            def contains(p: Point): Boolean = ???
+
+            /** Perform the specified Action on the tree node. */
+            @stub
+            def doAccessibleAction(i: Int): Boolean = ???
+
+            /** Get the AccessibleAction associated with this object. */
+            @stub
+            def getAccessibleAction(): AccessibleAction = ???
+
+            /** Returns the number of accessible actions available in this
+             *  tree node.
+             */
+            @stub
+            def getAccessibleActionCount(): Int = ???
+
+            /** Return a description of the specified action of the tree node. */
+            @stub
+            def getAccessibleActionDescription(i: Int): String = ???
+
+            /** Returns the Accessible child, if one exists,
+             *  contained at the local coordinate Point.
+             */
+            @stub
+            def getAccessibleAt(p: Point): Accessible = ???
+
+            /** Return the specified Accessible child of the object. */
+            @stub
+            def getAccessibleChild(i: Int): Accessible = ???
+
+            /** Returns the number of accessible children in the object. */
+            @stub
+            def getAccessibleChildrenCount(): Int = ???
+
+            /** Get the AccessibleComponent associated with this object. */
+            @stub
+            def getAccessibleComponent(): AccessibleComponent = ???
+
+            /** Get the AccessibleContext associated with this tree node. */
+            @stub
+            def getAccessibleContext(): AccessibleContext = ???
+
+            /** Get the accessible description of this object. */
+            @stub
+            def getAccessibleDescription(): String = ???
+
+            /** Get the index of this object in its accessible parent. */
+            @stub
+            def getAccessibleIndexInParent(): Int = ???
+
+            /** Get the accessible name of this object. */
+            @stub
+            def getAccessibleName(): String = ???
+
+            /** Get the Accessible parent of this object. */
+            @stub
+            def getAccessibleParent(): Accessible = ???
+
+            /** Get the role of this object. */
+            @stub
+            def getAccessibleRole(): AccessibleRole = ???
+
+            /** Get the AccessibleSelection associated with this object if one
+             *  exists.
+             */
+            @stub
+            def getAccessibleSelection(): AccessibleSelection = ???
+
+            /** Returns an Accessible representing the specified selected item
+             *  in the object.
+             */
+            @stub
+            def getAccessibleSelection(i: Int): Accessible = ???
+
+            /** Returns the number of items currently selected. */
+            @stub
+            def getAccessibleSelectionCount(): Int = ???
+
+            /** Get the state set of this object. */
+            @stub
+            def getAccessibleStateSet(): AccessibleStateSet = ???
+
+            /** Get the AccessibleText associated with this object if one
+             *  exists.
+             */
+            @stub
+            def getAccessibleText(): AccessibleText = ???
+
+            /** Get the AccessibleValue associated with this object if one
+             *  exists.
+             */
+            @stub
+            def getAccessibleValue(): AccessibleValue = ???
+
+            /** Get the background color of this object. */
+            @stub
+            def getBackground(): Color = ???
+
+            /** Gets the bounds of this object in the form of a Rectangle object. */
+            @stub
+            def getBounds(): Rectangle = ???
+
+            /** Gets the Cursor of this object. */
+            @stub
+            def getCursor(): Cursor = ???
+
+            /** Gets the Font of this object. */
+            @stub
+            def getFont(): Font = ???
+
+            /** Gets the FontMetrics of this object. */
+            @stub
+            def getFontMetrics(f: Font): FontMetrics = ???
+
+            /** Get the foreground color of this object. */
+            @stub
+            def getForeground(): Color = ???
+
+            /** Gets the locale of the component. */
+            @stub
+            def getLocale(): Locale = ???
+
+            /** Gets the location of the object relative to the parent in the form
+             *  of a point specifying the object's top-left corner in the screen's
+             *  coordinate space.
+             */
+            @stub
+            def getLocation(): Point = ???
+
+            /**  */
+            @stub
+            protected def getLocationInJTree(): Point = ???
+
+            /** Returns the location of the object on the screen. */
+            @stub
+            def getLocationOnScreen(): Point = ???
+
+            /** Returns the size of this object in the form of a Dimension object. */
+            @stub
+            def getSize(): Dimension = ???
+
+            /** Returns true if the current child of this object is selected. */
+            @stub
+            def isAccessibleChildSelected(i: Int): Boolean = ???
+
+            /** Determines if the object is enabled. */
+            @stub
+            def isEnabled(): Boolean = ???
+
+            /** Returns whether this object can accept focus or not. */
+            @stub
+            def isFocusTraversable(): Boolean = ???
+
+            /** Determines if the object is showing. */
+            @stub
+            def isShowing(): Boolean = ???
+
+            /** Determines if the object is visible. */
+            @stub
+            def isVisible(): Boolean = ???
+
+            /** Removes the specified selected item in the object from the
+             *  object's
+             *  selection.
+             */
+            @stub
+            def removeAccessibleSelection(i: Int): Unit = ???
+
+            /** Removes the specified focus listener so it no longer receives focus
+             *  events from this component.
+             */
+            @stub
+            def removeFocusListener(l: FocusListener): Unit = ???
+
+            /** Remove a PropertyChangeListener from the listener list. */
+            @stub
+            def removePropertyChangeListener(l: PropertyChangeListener): Unit = ???
+
+            /** Requests focus for this object. */
+            @stub
+            def requestFocus(): Unit = ???
+
+            /** Causes every selected item in the object to be selected
+             *  if the object supports multiple selections.
+             */
+            @stub
+            def selectAllAccessibleSelection(): Unit = ???
+
+            /** Set the accessible description of this object. */
+            @stub
+            def setAccessibleDescription(s: String): Unit = ???
+
+            /** Set the localized accessible name of this object. */
+            @stub
+            def setAccessibleName(s: String): Unit = ???
+
+            /** Set the background color of this object. */
+            @stub
+            def setBackground(c: Color): Unit = ???
+
+            /** Sets the bounds of this object in the form of a Rectangle object. */
+            @stub
+            def setBounds(r: Rectangle): Unit = ???
+
+            /** Sets the Cursor of this object. */
+            @stub
+            def setCursor(c: Cursor): Unit = ???
+
+            /** Sets the enabled state of the object. */
+            @stub
+            def setEnabled(b: Boolean): Unit = ???
+
+            /** Sets the Font of this object. */
+            @stub
+            def setFont(f: Font): Unit = ???
+
+            /** Sets the foreground color of this object. */
+            @stub
+            def setForeground(c: Color): Unit = ???
+
+            /** Sets the location of the object relative to the parent. */
+            @stub
+            def setLocation(p: Point): Unit = ???
+
+            /** Resizes this object so that it has width and height. */
+            @stub
+            def setSize(d: Dimension): Unit = ???
+
+            /** Sets the visible state of the object. */
+            @stub
+            def setVisible(b: Boolean): Unit = ???
+        }
+
+
+        /** Adds the specified selected item in the object to the object's
+         *  selection.
+         */
+        @stub
+        def addAccessibleSelection(i: Int): Unit = ???
+
+        /** Clears the selection in the object, so that nothing in the
+         *  object is selected.
+         */
+        @stub
+        def clearAccessibleSelection(): Unit = ???
+
+        /** Fire a visible data property change notification. */
+        @stub
+        def fireVisibleDataPropertyChange(): Unit = ???
+
+        /** Returns the Accessible child, if one exists,
+         *  contained at the local coordinate Point.
+         */
+        @stub
+        def getAccessibleAt(p: Point): Accessible = ???
+
+        /** Return the nth Accessible child of the object. */
+        @stub
+        def getAccessibleChild(i: Int): Accessible = ???
+
+        /** Returns the number of top-level children nodes of this
+         *  JTree.
+         */
+        @stub
+        def getAccessibleChildrenCount(): Int = ???
+
+        /** Get the index of this object in its accessible parent. */
+        @stub
+        def getAccessibleIndexInParent(): Int = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+
+        /** Get the AccessibleSelection associated with this object. */
+        @stub
+        def getAccessibleSelection(): AccessibleSelection = ???
+
+        /** Returns an Accessible representing the specified selected item
+         *  in the object.
+         */
+        @stub
+        def getAccessibleSelection(i: Int): Accessible = ???
+
+        /** Returns the number of items currently selected. */
+        @stub
+        def getAccessibleSelectionCount(): Int = ???
+
+        /** Returns true if the current child of this object is selected. */
+        @stub
+        def isAccessibleChildSelected(i: Int): Boolean = ???
+
+        /** Removes the specified selected item in the object from the object's
+         *  selection.
+         */
+        @stub
+        def removeAccessibleSelection(i: Int): Unit = ???
+
+        /** Causes every selected item in the object to be selected
+         *  if the object supports multiple selections.
+         */
+        @stub
+        def selectAllAccessibleSelection(): Unit = ???
+
+        /** Tree Collapsed notification. */
+        @stub
+        def treeCollapsed(e: TreeExpansionEvent): Unit = ???
+
+        /** Tree Model Expansion notification. */
+        @stub
+        def treeExpanded(e: TreeExpansionEvent): Unit = ???
+
+        /** Tree Model Node change notification. */
+        @stub
+        def treeNodesChanged(e: TreeModelEvent): Unit = ???
+
+        /** Tree Model Node change notification. */
+        @stub
+        def treeNodesInserted(e: TreeModelEvent): Unit = ???
+
+        /** Tree Model Node change notification. */
+        @stub
+        def treeNodesRemoved(e: TreeModelEvent): Unit = ???
+
+        /** Tree Model structure change change notification. */
+        @stub
+        def treeStructureChanged(e: TreeModelEvent): Unit = ???
+
+        /** Tree Selection Listener value change method. */
+        @stub
+        def valueChanged(e: TreeSelectionEvent): Unit = ???
+    }
+
 
     /** Listens to the model and updates the expandedState
      *  accordingly when nodes are removed, or changed.
      */
-    protected type TreeModelHandler = JTree_TreeModelHandler
+    protected class TreeModelHandler extends Object with TreeModelListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked after a node (or a set of siblings) has changed in some
+         *  way.
+         */
+        @stub
+        def treeNodesChanged(e: TreeModelEvent): Unit = ???
+
+        /** Invoked after nodes have been inserted into the tree. */
+        @stub
+        def treeNodesInserted(e: TreeModelEvent): Unit = ???
+
+        /** Invoked after nodes have been removed from the tree. */
+        @stub
+        def treeNodesRemoved(e: TreeModelEvent): Unit = ???
+
+        /** Invoked after the tree has drastically changed structure from a
+         *  given node down.
+         */
+        @stub
+        def treeStructureChanged(e: TreeModelEvent): Unit = ???
+    }
+
 
     /** Handles creating a new TreeSelectionEvent with the
      *  JTree as the
      *  source and passing it off to all the listeners.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type TreeSelectionRedirector = JTree_TreeSelectionRedirector
+    protected class TreeSelectionRedirector extends Object with Serializable with TreeSelectionListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked by the TreeSelectionModel when the
+         *  selection changes.
+         */
+        @stub
+        def valueChanged(e: TreeSelectionEvent): Unit = ???
+    }
+
 
     /** Editor for the entries. */
     @stub
@@ -864,18 +1298,169 @@ object JTree {
     /** A subclass of TransferHandler.DropLocation representing
      *  a drop location for a JTree.
      */
-    type DropLocation = JTree_DropLocation
+    final object DropLocation extends TransferHandler.DropLocation {
+
+        /** Returns the index where the dropped data should be inserted
+         *  with respect to the path returned by getPath().
+         */
+        @stub
+        def getChildIndex(): Int = ???
+
+        /** Returns the path where dropped data should be placed in the
+         *  tree.
+         */
+        @stub
+        def getPath(): TreePath = ???
+
+        /** Returns a string representation of this drop location. */
+        @stub
+        def toString(): String = ???
+    }
+
 
     /** DynamicUtilTreeNode can wrap
      *  vectors/hashtables/arrays/strings and
-     *  create the appropriate children tree nodes as necessary.
+     *  create the appropriate children tree nodes as necessary. It is
+     *  dynamic in that it will only create the children as necessary.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    type DynamicUtilTreeNode = JTree_DynamicUtilTreeNode
+    object DynamicUtilTreeNode extends DefaultMutableTreeNode {
+
+        /** Creates a node with the specified object as its value and
+         *  with the specified children.
+         */
+        @stub
+        def apply(value: Any, children: Any) = ???
+
+        /** Value to create children with. */
+        @stub
+        protected val childValue: Any = ???
+
+        /** Does the this JTree have children?
+         *  This property is currently not implemented.
+         */
+        @stub
+        protected val hasChildren: Boolean = ???
+
+        /** Have the children been loaded yet? */
+        @stub
+        protected val loadedChildren: Boolean = ???
+
+        /** Subclassed to load the children, if necessary. */
+        @stub
+        def children(): Enumeration = ???
+
+        /** Adds to parent all the children in children. */
+        @stub
+        def createChildren(parent: DefaultMutableTreeNode, children: Any): Unit = ???
+
+        /** Subclassed to load the children, if necessary. */
+        @stub
+        def getChildAt(index: Int): TreeNode = ???
+
+        /** Returns the number of child nodes. */
+        @stub
+        def getChildCount(): Int = ???
+
+        /** Returns true if this node allows children. */
+        @stub
+        def isLeaf(): Boolean = ???
+
+        /** Loads the children based on childValue. */
+        @stub
+        protected def loadChildren(): Unit = ???
+    }
+
 
     /** EmptySelectionModel is a TreeSelectionModel
      *  that does not allow anything to be selected.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type EmptySelectionModel = JTree_EmptySelectionModel
+    protected object EmptySelectionModel extends DefaultTreeSelectionModel {
+
+        /**  */
+        @stub
+        protected def apply() = ???
+
+        /** The single instance of EmptySelectionModel. */
+        @stub
+        protected val sharedInstance: EmptySelectionModel = ???
+
+        /** This is overriden to do nothing; EmptySelectionModel
+         *  does not allow a selection.
+         */
+        @stub
+        def addPropertyChangeListener(listener: PropertyChangeListener): Unit = ???
+
+        /** This is overriden to do nothing; EmptySelectionModel
+         *  does not allow a selection.
+         */
+        @stub
+        def addSelectionPaths(paths: Array[TreePath]): Unit = ???
+
+        /** This is overriden to do nothing; EmptySelectionModel
+         *  does not allow a selection.
+         */
+        @stub
+        def addTreeSelectionListener(listener: TreeSelectionListener): Unit = ???
+
+        /** This is overriden to do nothing; EmptySelectionModel
+         *  does not allow a selection.
+         */
+        @stub
+        def removePropertyChangeListener(listener: PropertyChangeListener): Unit = ???
+
+        /** This is overriden to do nothing; EmptySelectionModel
+         *  does not allow a selection.
+         */
+        @stub
+        def removeSelectionPaths(paths: Array[TreePath]): Unit = ???
+
+        /** This is overriden to do nothing; EmptySelectionModel
+         *  does not allow a selection.
+         */
+        @stub
+        def removeTreeSelectionListener(listener: TreeSelectionListener): Unit = ???
+
+        /** This is overriden to do nothing; EmptySelectionModel
+         *  does not allow a selection.
+         */
+        @stub
+        def setRowMapper(mapper: RowMapper): Unit = ???
+
+        /** This is overriden to do nothing; EmptySelectionModel
+         *  does not allow a selection.
+         */
+        @stub
+        def setSelectionMode(mode: Int): Unit = ???
+
+        /** This is overriden to do nothing; EmptySelectionModel
+         *  does not allow a selection.
+         */
+        @stub
+        def setSelectionPaths(paths: Array[TreePath]): Unit = ???
+
+        /** Returns the single instance of EmptySelectionModel. */
+        @stub
+        def sharedInstance(): EmptySelectionModel = ???
+    }
+
 
     /** Bound property name for anchor selection path. */
     @stub

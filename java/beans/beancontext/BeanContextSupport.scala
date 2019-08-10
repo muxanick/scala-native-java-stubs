@@ -37,8 +37,14 @@ class BeanContextSupport extends BeanContextChildSupport with BeanContext with S
     @stub
     def this(peer: BeanContext, lcle: Locale, dTime: Boolean, visible: Boolean) = ???
 
-    /**  */
-    protected type BCSChild = BeanContextSupport_BCSChild
+    /** 
+     * See Also:
+     * Serialized Form
+     * 
+     */
+    protected class BCSChild extends Object with Serializable {
+    }
+
 
     /** all accesses to the  protected ArrayList bcmListeners  field
      *  shall be synchronized on that object.
@@ -353,7 +359,23 @@ object BeanContextSupport {
     /** protected final subclass that encapsulates an iterator but implements
      *  a noop remove() method.
      */
-    protected type BCSIterator = BeanContextSupport_BCSIterator
+    protected final object BCSIterator extends Object with Iterator {
+
+        /** Returns true if the iteration has more elements. */
+        @stub
+        def hasNext(): Boolean = ???
+
+        /** Returns the next element in the iteration. */
+        @stub
+        def next(): Any = ???
+
+        /** Removes from the underlying collection the last element returned
+         *  by this iterator (optional operation).
+         */
+        @stub
+        def remove(): Unit = ???
+    }
+
 
     /** Tests to see if two class objects,
      *  or their names are equal.

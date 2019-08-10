@@ -9,8 +9,8 @@ import scala.scalanative.annotation.stub
  *  or because a better alternative exists.  Compilers warn when a
  *  deprecated program element is used or overridden in non-deprecated code.
  */
-@Documented 
-@Retention ( value = RUNTIME ) 
-@Target ( value ={ CONSTRUCTOR , FIELD , LOCAL_VARIABLE , METHOD , PACKAGE , PARAMETER , TYPE } ) 
- final class Deprecated extends StaticAnnotation {
+@Documented
+@Retention(value=RUNTIME)
+@Target(value={CONSTRUCTOR,FIELD,LOCAL_VARIABLE,METHOD,PACKAGE,PARAMETER,TYPE})
+final class Deprecated extends StaticAnnotation {
 }

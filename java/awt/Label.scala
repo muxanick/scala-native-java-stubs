@@ -1,7 +1,7 @@
 package java.awt
 
 import java.lang.{Object, String}
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole}
 import scala.scalanative.annotation.stub
 
 /** A Label object is a component for placing text in a
@@ -40,9 +40,24 @@ class Label extends Component with Accessible {
     def this(text: String, alignment: Int) = ???
 
     /** This class implements accessibility support for the
-     *  Label class.
+     *  Label class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to label user-interface elements.
      */
-    protected type AccessibleAWTLabel = Label_AccessibleAWTLabel
+    protected class AccessibleAWTLabel extends Component.AccessibleAWTComponent {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Get the accessible name of this object. */
+        @stub
+        def getAccessibleName(): String = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+    }
+
 
     /** Creates the peer for this label. */
     @stub

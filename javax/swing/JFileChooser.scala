@@ -1,10 +1,10 @@
 package javax.swing
 
-import java.awt.{Component, Container}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer}
 import java.awt.event.ActionListener
 import java.io.File
 import java.lang.{Object, String}
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole}
 import javax.swing.filechooser.{FileFilter, FileSystemView, FileView}
 import javax.swing.plaf.FileChooserUI
 import scala.scalanative.annotation.stub
@@ -72,9 +72,21 @@ class JFileChooser extends JComponent with Accessible {
     def this(currentDirectoryPath: String, fsv: FileSystemView) = ???
 
     /** This class implements accessibility support for the
-     *  JFileChooser class.
+     *  JFileChooser class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to file chooser user-interface
+     *  elements.
      */
-    protected type AccessibleJFileChooser = JFileChooser_AccessibleJFileChooser
+    protected class AccessibleJFileChooser extends JComponent.AccessibleJComponent {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Gets the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+    }
+
 
     /**  */
     @stub

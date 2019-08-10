@@ -4,6 +4,7 @@ import java.awt.{Component, Container, Rectangle}
 import java.io.Serializable
 import java.lang.{Object, String}
 import javax.swing.border.Border
+import javax.swing.plaf.UIResource
 import scala.scalanative.annotation.stub
 
 /** Renders an item in a list.
@@ -115,8 +116,26 @@ class DefaultListCellRenderer extends JLabel with ListCellRenderer[Object] with 
 }
 
 object DefaultListCellRenderer {
-    /** A subclass of DefaultListCellRenderer that implements UIResource. */
-    type UIResource = DefaultListCellRenderer_UIResource
+    /** A subclass of DefaultListCellRenderer that implements UIResource.
+     *  DefaultListCellRenderer doesn't implement UIResource
+     *  directly so that applications can safely override the
+     *  cellRenderer property with DefaultListCellRenderer subclasses.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
+     */
+    object UIResource extends DefaultListCellRenderer with UIResource {
+
+        /**  */
+        @stub
+        def apply() = ???
+
 
     /**  */
     @stub

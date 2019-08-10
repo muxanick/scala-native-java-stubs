@@ -1,8 +1,8 @@
 package javax.swing
 
-import java.awt.{Component, Container}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer}
 import java.lang.{Object, String}
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole}
 import javax.swing.plaf.SeparatorUI
 import scala.scalanative.annotation.stub
 
@@ -47,9 +47,29 @@ class JSeparator extends JComponent with SwingConstants with Accessible {
     def this(orientation: Int) = ???
 
     /** This class implements accessibility support for the
-     *  JSeparator class.
+     *  JSeparator class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to separator user-interface elements.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type AccessibleJSeparator = JSeparator_AccessibleJSeparator
+    protected class AccessibleJSeparator extends JComponent.AccessibleJComponent {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+    }
+
 
     /** Gets the AccessibleContext associated with this JSeparator. */
     @stub

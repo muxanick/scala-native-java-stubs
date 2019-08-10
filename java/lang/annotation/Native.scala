@@ -10,8 +10,8 @@ import scala.scalanative.annotation.stub
  *  header files to determine whether a header file is required, and
  *  if so, what declarations it should contain.
  */
-@Documented 
-@Target ( value = FIELD ) 
-@Retention ( value = SOURCE ) 
- final class Native extends StaticAnnotation {
+@Documented
+@Target(value=FIELD)
+@Retention(value=SOURCE)
+final class Native extends StaticAnnotation {
 }

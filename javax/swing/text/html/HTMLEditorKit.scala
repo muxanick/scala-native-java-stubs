@@ -1,11 +1,12 @@
 package javax.swing.text.html
 
 import java.awt.Cursor
-import java.io.{Reader, Writer}
+import java.awt.event.{ActionEvent, MouseAdapter, MouseEvent, MouseMotionListener}
+import java.io.{Reader, Serializable, Writer}
 import java.lang.{Object, String}
 import javax.accessibility.{Accessible, AccessibleContext}
-import javax.swing.{Action, JEditorPane}
-import javax.swing.text.{DefaultEditorKit, Document, EditorKit, Element, MutableAttributeSet, StyledEditorKit, ViewFactory}
+import javax.swing.{AbstractAction, Action, JEditorPane}
+import javax.swing.text.{DefaultEditorKit, Document, EditorKit, Element, MutableAttributeSet, StyledEditorKit, StyledEditorKit.StyledTextAction, TextAction, View, ViewFactory}
 import scala.scalanative.annotation.stub
 
 /** The Swing JEditorPane text component supports different kinds
@@ -247,29 +248,314 @@ class HTMLEditorKit extends StyledEditorKit with Accessible {
 }
 
 object HTMLEditorKit {
-    /** A factory to build views for HTML. */
-    type HTMLFactory = HTMLEditorKit_HTMLFactory
+    /** A factory to build views for HTML.  The following
+     *  table describes what this factory will build by
+     *  default.
+     * 
+     *  
+     *  
+     *  TagView created
+     *  
+     *  HTML.Tag.CONTENTInlineView
+     *  
+     *  HTML.Tag.IMPLIEDjavax.swing.text.html.ParagraphView
+     *  
+     *  HTML.Tag.Pjavax.swing.text.html.ParagraphView
+     *  
+     *  HTML.Tag.H1javax.swing.text.html.ParagraphView
+     *  
+     *  HTML.Tag.H2javax.swing.text.html.ParagraphView
+     *  
+     *  HTML.Tag.H3javax.swing.text.html.ParagraphView
+     *  
+     *  HTML.Tag.H4javax.swing.text.html.ParagraphView
+     *  
+     *  HTML.Tag.H5javax.swing.text.html.ParagraphView
+     *  
+     *  HTML.Tag.H6javax.swing.text.html.ParagraphView
+     *  
+     *  HTML.Tag.DTjavax.swing.text.html.ParagraphView
+     *  
+     *  HTML.Tag.MENUListView
+     *  
+     *  HTML.Tag.DIRListView
+     *  
+     *  HTML.Tag.ULListView
+     *  
+     *  HTML.Tag.OLListView
+     *  
+     *  HTML.Tag.LIBlockView
+     *  
+     *  HTML.Tag.DLBlockView
+     *  
+     *  HTML.Tag.DDBlockView
+     *  
+     *  HTML.Tag.BODYBlockView
+     *  
+     *  HTML.Tag.HTMLBlockView
+     *  
+     *  HTML.Tag.CENTERBlockView
+     *  
+     *  HTML.Tag.DIVBlockView
+     *  
+     *  HTML.Tag.BLOCKQUOTEBlockView
+     *  
+     *  HTML.Tag.PREBlockView
+     *  
+     *  HTML.Tag.BLOCKQUOTEBlockView
+     *  
+     *  HTML.Tag.PREBlockView
+     *  
+     *  HTML.Tag.IMGImageView
+     *  
+     *  HTML.Tag.HRHRuleView
+     *  
+     *  HTML.Tag.BRBRView
+     *  
+     *  HTML.Tag.TABLEjavax.swing.text.html.TableView
+     *  
+     *  HTML.Tag.INPUTFormView
+     *  
+     *  HTML.Tag.SELECTFormView
+     *  
+     *  HTML.Tag.TEXTAREAFormView
+     *  
+     *  HTML.Tag.OBJECTObjectView
+     *  
+     *  HTML.Tag.FRAMESETFrameSetView
+     *  
+     *  HTML.Tag.FRAMEFrameView
+     *  
+     *  
+     */
+    object HTMLFactory extends Object with ViewFactory {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /** Creates a view from an element. */
+        @stub
+        def create(elem: Element): View = ???
+    }
+
 
     /** An abstract Action providing some convenience methods that may
      *  be useful in inserting HTML into an existing document.
+     *  NOTE: None of the convenience methods obtain a lock on the
+     *  document. If you have another thread modifying the text these
+     *  methods may have inconsistent behavior, or return the wrong thing.
      */
-    type HTMLTextAction = HTMLEditorKit_HTMLTextAction
+    abstract object HTMLTextAction extends StyledEditorKit.StyledTextAction {
+
+        /**  */
+        @stub
+        def apply(name: String) = ???
+
+        /** Returns number of elements, starting at the deepest leaf, needed
+         *  to get to an element representing tag.
+         */
+        @stub
+        protected def elementCountToTag(doc: HTMLDocument, offset: Int, tag: HTML.Tag): Int = ???
+
+        /** Returns the deepest element at offset matching
+         *  tag.
+         */
+        @stub
+        protected def findElementMatchingTag(doc: HTMLDocument, offset: Int, tag: HTML.Tag): Element = ???
+
+        /** Returns an array of the Elements that contain offset. */
+        @stub
+        protected def getElementsAt(doc: HTMLDocument, offset: Int): Array[Element] = ???
+
+        /**  */
+        @stub
+        protected def getHTMLDocument(e: JEditorPane): HTMLDocument = ???
+
+        /**  */
+        @stub
+        protected def getHTMLEditorKit(e: JEditorPane): HTMLEditorKit = ???
+    }
+
 
     /** InsertHTMLTextAction can be used to insert an arbitrary string of HTML
-     *  into an existing HTML document.
+     *  into an existing HTML document. At least two HTML.Tags need to be
+     *  supplied. The first Tag, parentTag, identifies the parent in
+     *  the document to add the elements to. The second tag, addTag,
+     *  identifies the first tag that should be added to the document as
+     *  seen in the HTML string. One important thing to remember, is that
+     *  the parser is going to generate all the appropriate tags, even if
+     *  they aren't in the HTML string passed in.
+     *  For example, lets say you wanted to create an action to insert
+     *  a table into the body. The parentTag would be HTML.Tag.BODY,
+     *  addTag would be HTML.Tag.TABLE, and the string could be something
+     *  like <table><tr><td></td></tr></table>.
+     *  There is also an option to supply an alternate parentTag and
+     *  addTag. These will be checked for if there is no parentTag at
+     *  offset.
      */
-    type InsertHTMLTextAction = HTMLEditorKit_InsertHTMLTextAction
+    object InsertHTMLTextAction extends HTMLEditorKit.HTMLTextAction {
+
+        /**  */
+        @stub
+        def apply(name: String, html: String, parentTag: HTML.Tag, addTag: HTML.Tag) = ???
+
+        /**  */
+        @stub
+        def apply(name: String, html: String, parentTag: HTML.Tag, addTag: HTML.Tag, alternateParentTag: HTML.Tag, alternateAddTag: HTML.Tag) = ???
+
+        /** Tag in HTML to start adding tags from. */
+        @stub
+        protected val addTag: HTML.Tag = ???
+
+        /** Alternate tag in HTML to start adding tags from if parentTag
+         *  is not found and alternateParentTag is found.
+         */
+        @stub
+        protected val alternateAddTag: HTML.Tag = ???
+
+        /** Alternate Tag to check for in the document if parentTag is
+         *  not found.
+         */
+        @stub
+        protected val alternateParentTag: HTML.Tag = ???
+
+        /** HTML to insert. */
+        @stub
+        protected val html: String = ???
+
+        /** Tag to check for in the document. */
+        @stub
+        protected val parentTag: HTML.Tag = ???
+
+        /** Inserts the HTML into the document. */
+        @stub
+        def actionPerformed(ae: ActionEvent): Unit = ???
+
+        /** This is invoked when inserting at a boundary. */
+        @stub
+        protected def insertAtBoundary(editor: JEditorPane, doc: HTMLDocument, offset: Int, insertElement: Element, html: String, parentTag: HTML.Tag, addTag: HTML.Tag): Unit = ???
+
+        /** Deprecated. 
+         * As of Java 2 platform v1.3, use insertAtBoundary
+         * 
+         */
+        @stub
+        protected def insertAtBoundry(editor: JEditorPane, doc: HTMLDocument, offset: Int, insertElement: Element, html: String, parentTag: HTML.Tag, addTag: HTML.Tag): Unit = ???
+
+        /** A cover for HTMLEditorKit.insertHTML. */
+        @stub
+        protected def insertHTML(editor: JEditorPane, doc: HTMLDocument, offset: Int, html: String, popDepth: Int, pushDepth: Int, addTag: HTML.Tag): Unit = ???
+    }
+
 
     /** Class to watch the associated component and fire
      *  hyperlink events on it when appropriate.
      */
-    type LinkController = HTMLEditorKit_LinkController
+    object LinkController extends MouseAdapter with MouseMotionListener with Serializable {
 
-    /** Interface to be supported by the parser. */
-    type Parser = HTMLEditorKit_Parser
+        /**  */
+        @stub
+        def apply() = ???
 
-    /** The result of parsing drives these callback methods. */
-    type ParserCallback = HTMLEditorKit_ParserCallback
+        /** Calls linkActivated on the associated JEditorPane
+         *  if the given position represents a link.
+         */
+        @stub
+        protected def activateLink(pos: Int, editor: JEditorPane): Unit = ???
+
+        /** Called for a mouse click event. */
+        @stub
+        def mouseClicked(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button is pressed on a component and then
+         *  dragged.
+         */
+        @stub
+        def mouseDragged(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse cursor has been moved onto a component
+         *  but no buttons have been pushed.
+         */
+        @stub
+        def mouseMoved(e: MouseEvent): Unit = ???
+    }
+
+
+    /** Interface to be supported by the parser.  This enables
+     *  providing a different parser while reusing some of the
+     *  implementation provided by this editor kit.
+     */
+    abstract object Parser extends Object {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /** Parse the given stream and drive the given callback
+         *  with the results of the parse.
+         */
+        def parse(r: Reader, cb: HTMLEditorKit.ParserCallback, ignoreCharSet: Boolean): Unit
+    }
+
+
+    /** The result of parsing drives these callback methods.
+     *  The open and close actions should be balanced.  The
+     *  flush method will be the last method
+     *  called, to give the receiver a chance to flush any
+     *  pending data into the document.
+     *  Refer to DocumentParser, the default parser used, for further
+     *  information on the contents of the AttributeSets, the positions, and
+     *  other info.
+     */
+    object ParserCallback extends Object {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /** This is passed as an attribute in the attributeset to indicate
+         *  the element is implied eg, the string '<>foo<\t>'
+         *  contains an implied html element and an implied body element.
+         */
+        @stub
+        val IMPLIED: Any = ???
+
+        /**  */
+        @stub
+        def flush(): Unit = ???
+
+        /**  */
+        @stub
+        def handleComment(data: Array[Char], pos: Int): Unit = ???
+
+        /** This is invoked after the stream has been parsed, but before
+         *  flush.
+         */
+        @stub
+        def handleEndOfLineString(eol: String): Unit = ???
+
+        /**  */
+        @stub
+        def handleEndTag(t: HTML.Tag, pos: Int): Unit = ???
+
+        /**  */
+        @stub
+        def handleError(errorMsg: String, pos: Int): Unit = ???
+
+        /**  */
+        @stub
+        def handleSimpleTag(t: HTML.Tag, a: MutableAttributeSet, pos: Int): Unit = ???
+
+        /**  */
+        @stub
+        def handleStartTag(t: HTML.Tag, a: MutableAttributeSet, pos: Int): Unit = ???
+
+        /**  */
+        @stub
+        def handleText(data: Array[Char], pos: Int): Unit = ???
+    }
+
 
     /** The bold action identifier */
     @stub

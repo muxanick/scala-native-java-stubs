@@ -12,7 +12,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is accept(Object, long).
  */
-@FunctionalInterface trait ObjLongConsumer[T] {
+@FunctionalInterface
+trait ObjLongConsumer[T] {
 
     /** Performs this operation on the given arguments. */
     @stub

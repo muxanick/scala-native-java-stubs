@@ -1,8 +1,8 @@
 package javax.swing.plaf.basic
 
-import java.awt.{Component, Dimension, Graphics, Insets}
-import java.awt.event.{ActionListener, FocusListener}
-import java.beans.PropertyChangeListener
+import java.awt.{Component, Container, Dimension, Graphics, Insets, LayoutManager2}
+import java.awt.event.{ActionEvent, ActionListener, FocusAdapter, FocusEvent, FocusListener}
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.{Object, String}
 import javax.swing.{JComponent, JSplitPane, KeyStroke}
 import javax.swing.plaf.{ComponentUI, SplitPaneUI}
@@ -18,45 +18,252 @@ class BasicSplitPaneUI extends SplitPaneUI {
     /** LayoutManager for JSplitPanes that have an orientation of
      *  HORIZONTAL_SPLIT.
      */
-    type BasicHorizontalLayoutManager = BasicSplitPaneUI_BasicHorizontalLayoutManager
+    class BasicHorizontalLayoutManager extends Object with LayoutManager2 {
+
+        /**  */
+        @stub
+        protected val components: Array[Component] = ???
+
+        /**  */
+        @stub
+        protected val sizes: Array[Int] = ???
+
+        /** Adds the specified component to the layout, using the specified
+         *  constraint object.
+         */
+        @stub
+        def addLayoutComponent(comp: Component, constraints: Any): Unit = ???
+
+        /** Adds the component at place. */
+        @stub
+        def addLayoutComponent(place: String, component: Component): Unit = ???
+
+        /** Returns the available width based on the container size and
+         *  Insets.
+         */
+        @stub
+        protected def getAvailableSize(containerSize: Dimension, insets: Insets): Int = ???
+
+        /** Returns the left inset, unless the Insets are null in which case
+         *  0 is returned.
+         */
+        @stub
+        protected def getInitialLocation(insets: Insets): Int = ???
+
+        /** Returns the alignment along the x axis. */
+        @stub
+        def getLayoutAlignmentX(target: Container): Float = ???
+
+        /** Returns the alignment along the y axis. */
+        @stub
+        def getLayoutAlignmentY(target: Container): Float = ???
+
+        /** Returns the width of the passed in Components preferred size. */
+        @stub
+        protected def getPreferredSizeOfComponent(c: Component): Int = ???
+
+        /** Returns the width of the passed in component. */
+        @stub
+        protected def getSizeOfComponent(c: Component): Int = ???
+
+        /** Returns the sizes of the components. */
+        @stub
+        protected def getSizes(): Array[Int] = ???
+
+        /** Does nothing. */
+        @stub
+        def invalidateLayout(c: Container): Unit = ???
+
+        /** Does the actual layout. */
+        @stub
+        def layoutContainer(container: Container): Unit = ???
+
+        /** Returns the maximum layout size, which is Integer.MAX_VALUE
+         *  in both directions.
+         */
+        @stub
+        def maximumLayoutSize(target: Container): Dimension = ???
+
+        /** Returns the minimum size needed to contain the children. */
+        @stub
+        def minimumLayoutSize(container: Container): Dimension = ???
+
+        /** Returns the preferred size needed to contain the children. */
+        @stub
+        def preferredLayoutSize(container: Container): Dimension = ???
+
+        /** Removes the specified component from our knowledge. */
+        @stub
+        def removeLayoutComponent(component: Component): Unit = ???
+
+        /** Resets the size of the Component at the passed in location. */
+        @stub
+        protected def resetSizeAt(index: Int): Unit = ???
+
+        /** Marks the receiver so that the next time this instance is
+         *  laid out it'll ask for the preferred sizes.
+         */
+        @stub
+        def resetToPreferredSizes(): Unit = ???
+
+        /** Sets the width of the component c to be size, placing its
+         *  x location at location, y to the insets.top and height
+         *  to the containersize.height less the top and bottom insets.
+         */
+        @stub
+        protected def setComponentToSize(c: Component, size: Int, location: Int, insets: Insets, containerSize: Dimension): Unit = ???
+
+        /** Sets the sizes to newSizes. */
+        @stub
+        protected def setSizes(newSizes: Array[Int]): Unit = ???
+
+        /** Determines the components. */
+        @stub
+        protected def updateComponents(): Unit = ???
+    }
+
 
     /** LayoutManager used for JSplitPanes with an orientation of
      *  VERTICAL_SPLIT.
      */
-    type BasicVerticalLayoutManager = BasicSplitPaneUI_BasicVerticalLayoutManager
+    class BasicVerticalLayoutManager extends BasicSplitPaneUI.BasicHorizontalLayoutManager {
 
-    /** Implementation of the FocusListener that the JSplitPane UI uses. */
-    type FocusHandler = BasicSplitPaneUI_FocusHandler
+        /**  */
+        @stub
+        def this() = ???
+    }
+
+
+    /** Implementation of the FocusListener that the JSplitPane UI uses.
+     *  
+     *  This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicSplitPaneUI.
+     */
+    class FocusHandler extends FocusAdapter {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when a component gains the keyboard focus. */
+        @stub
+        def focusGained(ev: FocusEvent): Unit = ???
+
+        /** Invoked when a component loses the keyboard focus. */
+        @stub
+        def focusLost(ev: FocusEvent): Unit = ???
+    }
+
 
     /** Implementation of an ActionListener that the JSplitPane UI uses for
      *  handling specific key presses.
+     *  
+     *  This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicSplitPaneUI.
      */
-    type KeyboardDownRightHandler = BasicSplitPaneUI_KeyboardDownRightHandler
+    class KeyboardDownRightHandler extends Object with ActionListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(ev: ActionEvent): Unit = ???
+    }
+
 
     /** Implementation of an ActionListener that the JSplitPane UI uses for
      *  handling specific key presses.
+     *  
+     *  This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicSplitPaneUI.
      */
-    type KeyboardEndHandler = BasicSplitPaneUI_KeyboardEndHandler
+    class KeyboardEndHandler extends Object with ActionListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(ev: ActionEvent): Unit = ???
+    }
+
 
     /** Implementation of an ActionListener that the JSplitPane UI uses for
      *  handling specific key presses.
+     *  
+     *  This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicSplitPaneUI.
      */
-    type KeyboardHomeHandler = BasicSplitPaneUI_KeyboardHomeHandler
+    class KeyboardHomeHandler extends Object with ActionListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(ev: ActionEvent): Unit = ???
+    }
+
 
     /** Implementation of an ActionListener that the JSplitPane UI uses for
      *  handling specific key presses.
+     *  
+     *  This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicSplitPaneUI.
      */
-    type KeyboardResizeToggleHandler = BasicSplitPaneUI_KeyboardResizeToggleHandler
+    class KeyboardResizeToggleHandler extends Object with ActionListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(ev: ActionEvent): Unit = ???
+    }
+
 
     /** Implementation of an ActionListener that the JSplitPane UI uses for
      *  handling specific key presses.
+     *  
+     *  This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicSplitPaneUI.
      */
-    type KeyboardUpLeftHandler = BasicSplitPaneUI_KeyboardUpLeftHandler
+    class KeyboardUpLeftHandler extends Object with ActionListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(ev: ActionEvent): Unit = ???
+    }
+
 
     /** Implementation of the PropertyChangeListener
      *  that the JSplitPane UI uses.
+     *  
+     *  This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicSplitPaneUI.
      */
-    type PropertyHandler = BasicSplitPaneUI_PropertyHandler
+    class PropertyHandler extends Object with PropertyChangeListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Messaged from the JSplitPane the receiver is
+         *  contained in.
+         */
+        @stub
+        def propertyChange(e: PropertyChangeEvent): Unit = ???
+    }
+
 
     /** Location of the divider when the dragging session began. */
     @stub

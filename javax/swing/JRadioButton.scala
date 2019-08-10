@@ -1,8 +1,8 @@
 package javax.swing
 
-import java.awt.{Component, Container}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer}
 import java.lang.{Object, String}
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole}
 import scala.scalanative.annotation.stub
 
 /** An implementation of a radio button -- an item that can be selected or
@@ -93,9 +93,30 @@ class JRadioButton extends JToggleButton with Accessible {
     def this(text: String, icon: Icon, selected: Boolean) = ???
 
     /** This class implements accessibility support for the
-     *  JRadioButton class.
+     *  JRadioButton class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to radio button
+     *  user-interface elements.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type AccessibleJRadioButton = JRadioButton_AccessibleJRadioButton
+    protected class AccessibleJRadioButton extends JToggleButton.AccessibleJToggleButton {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+    }
+
 
     /** Gets the AccessibleContext associated with this JRadioButton. */
     @stub

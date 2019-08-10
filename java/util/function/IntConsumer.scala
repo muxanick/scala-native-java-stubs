@@ -11,7 +11,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is accept(int).
  */
-@FunctionalInterface trait IntConsumer {
+@FunctionalInterface
+trait IntConsumer {
 
     /** Performs this operation on the given argument. */
     @stub

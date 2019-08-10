@@ -9,7 +9,8 @@ import scala.scalanative.annotation.stub
  *  File, and by the Abstract Window Toolkit's file
  *  dialog component.
  */
-@FunctionalInterface trait FilenameFilter {
+@FunctionalInterface
+trait FilenameFilter {
 
     /** Tests if a specified file should be included in a file list. */
     @stub

@@ -32,8 +32,8 @@ import scala.scalanative.annotation.stub
  *  regardless of whether or not a FunctionalInterface
  *  annotation is present on the interface declaration.
  */
-@Documented 
-@Retention ( value = RUNTIME ) 
-@Target ( value = TYPE ) 
- final class FunctionalInterface extends StaticAnnotation {
+@Documented
+@Retention(value=RUNTIME)
+@Target(value=TYPE)
+final class FunctionalInterface extends StaticAnnotation {
 }

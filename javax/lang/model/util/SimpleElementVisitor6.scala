@@ -46,7 +46,8 @@ import scala.scalanative.annotation.stub
  *  to run on Java SE 8 and later may take advantage of default methods
  *  in this situation.
  */
-@SupportedSourceVersion ( value = RELEASE_6 ) class SimpleElementVisitor6[R, P] extends AbstractElementVisitor6[R, P] {
+@SupportedSourceVersion(value=RELEASE_6)
+class SimpleElementVisitor6[R, P] extends AbstractElementVisitor6[R, P] {
 
     /** Constructor for concrete subclasses; uses null for the
      *  default value.

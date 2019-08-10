@@ -23,7 +23,8 @@ import scala.scalanative.annotation.stub
  *  unless the programmer intends on modifying or enhancing the fundamental
  *  behavior of the class.
  */
-@FunctionalInterface trait Runnable {
+@FunctionalInterface
+trait Runnable {
 
     /** When an object implementing interface Runnable is used
      *  to create a thread, starting the thread causes the object's

@@ -2,7 +2,7 @@ package java.awt
 
 import java.awt.event.MouseWheelEvent
 import java.lang.{Object, String}
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole}
 import scala.scalanative.annotation.stub
 
 /** A container class which implements automatic horizontal and/or
@@ -65,9 +65,21 @@ class ScrollPane extends Container with Accessible {
     def this(scrollbarDisplayPolicy: Int) = ???
 
     /** This class implements accessibility support for the
-     *  ScrollPane class.
+     *  ScrollPane class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to scroll pane user-interface
+     *  elements.
      */
-    protected type AccessibleAWTScrollPane = ScrollPane_AccessibleAWTScrollPane
+    protected class AccessibleAWTScrollPane extends Container.AccessibleAWTContainer {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+    }
+
 
     /** Adds the specified component to this scroll pane container. */
     @stub

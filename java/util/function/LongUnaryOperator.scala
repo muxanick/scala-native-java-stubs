@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is applyAsLong(long).
  */
-@FunctionalInterface trait LongUnaryOperator {
+@FunctionalInterface
+trait LongUnaryOperator {
 
     /** Returns a composed operator that first applies this operator to
      *  its input, and then applies the after operator to the result.

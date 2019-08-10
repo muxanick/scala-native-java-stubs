@@ -1,8 +1,8 @@
 package javax.swing
 
-import java.awt.{Component, Container, Graphics}
-import java.lang.{Object, String}
-import javax.accessibility.{Accessible, AccessibleContext}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, Graphics}
+import java.lang.{Number, Object, String}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole, AccessibleStateSet, AccessibleValue}
 import javax.swing.event.{ChangeEvent, ChangeListener}
 import javax.swing.plaf.ProgressBarUI
 import scala.scalanative.annotation.stub
@@ -118,9 +118,54 @@ class JProgressBar extends JComponent with SwingConstants with Accessible {
     def this(orient: Int, min: Int, max: Int) = ???
 
     /** This class implements accessibility support for the
-     *  JProgressBar class.
+     *  JProgressBar class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to progress bar user-interface
+     *  elements.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type AccessibleJProgressBar = JProgressBar_AccessibleJProgressBar
+    protected class AccessibleJProgressBar extends JComponent.AccessibleJComponent with AccessibleValue {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Gets the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+
+        /** Gets the state set of this object. */
+        @stub
+        def getAccessibleStateSet(): AccessibleStateSet = ???
+
+        /** Gets the AccessibleValue associated with this object. */
+        @stub
+        def getAccessibleValue(): AccessibleValue = ???
+
+        /** Gets the accessible value of this object. */
+        @stub
+        def getCurrentAccessibleValue(): Number = ???
+
+        /** Gets the maximum accessible value of this object. */
+        @stub
+        def getMaximumAccessibleValue(): Number = ???
+
+        /** Gets the minimum accessible value of this object. */
+        @stub
+        def getMinimumAccessibleValue(): Number = ???
+
+        /** Sets the value of this object as a Number. */
+        @stub
+        def setCurrentAccessibleValue(n: Number): Boolean = ???
+    }
+
 
     /** Only one ChangeEvent is needed per instance since the
      *  event's only interesting property is the immutable source, which

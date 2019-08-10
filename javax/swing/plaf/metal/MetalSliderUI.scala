@@ -1,11 +1,11 @@
 package javax.swing.plaf.metal
 
 import java.awt.{Color, Dimension, Graphics, Rectangle}
-import java.beans.PropertyChangeListener
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.{Object, String}
 import javax.swing.{Icon, JComponent, JSlider}
 import javax.swing.plaf.{ComponentUI, SliderUI}
-import javax.swing.plaf.basic.BasicSliderUI
+import javax.swing.plaf.basic.{BasicSliderUI, BasicSliderUI.PropertyChangeHandler}
 import scala.scalanative.annotation.stub
 
 /** A Java L&F implementation of SliderUI.
@@ -26,7 +26,17 @@ class MetalSliderUI extends BasicSliderUI {
     def this() = ???
 
     /**  */
-    protected type MetalPropertyListener = MetalSliderUI_MetalPropertyListener
+    protected class MetalPropertyListener extends BasicSliderUI.PropertyChangeHandler {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** This method gets called when a bound property is changed. */
+        @stub
+        def propertyChange(e: PropertyChangeEvent): Unit = ???
+    }
+
 
     /**  */
     @stub

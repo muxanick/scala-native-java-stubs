@@ -1,6 +1,6 @@
 package javax.swing
 
-import java.lang.{Iterable, Number, Object, String}
+import java.lang.{Enum, Iterable, Number, Object, String}
 import java.util.Date
 import scala.scalanative.annotation.stub
 
@@ -74,13 +74,71 @@ object RowFilter {
     /** Enumeration of the possible comparison values supported by
      *  some of the default RowFilters.
      */
-    type ComparisonType = RowFilter_ComparisonType
+    class ComparisonType private (name: String, ordinal: Int) extends Enum[ComparisonType](name, ordinal) {
+    }
+
+    object ComparisonType {
+        /** Indicates that entries with a value after the supplied
+         *  value should be included.
+         */
+        final val AFTER: ComparisonType = new ComparisonType("AFTER", 0)
+
+        /** Indicates that entries with a value before the supplied
+         *  value should be included.
+         */
+        final val BEFORE: ComparisonType = new ComparisonType("BEFORE", 1)
+
+        /** Indicates that entries with a value equal to the supplied
+         *  value should be included.
+         */
+        final val EQUAL: ComparisonType = new ComparisonType("EQUAL", 2)
+
+        /** Indicates that entries with a value not equal to the supplied
+         *  value should be included.
+         */
+        final val NOT_EQUAL: ComparisonType = new ComparisonType("NOT_EQUAL", 3)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): ComparisonType = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[ComparisonType] = ???
+    }
+
 
     /** An Entry object is passed to instances of
      *  RowFilter, allowing the filter to get the value of the
      *  entry's data, and thus to determine whether the entry should be shown.
+     *  An Entry object contains information about the model
+     *  as well as methods for getting the underlying values from the model.
      */
-    type Entry[M, I] = RowFilter_Entry[M, I]
+    abstract object Entry[M, I] extends Object {
+
+        /** Creates an Entry. */
+        @stub
+        def apply() = ???
+
+        /** Returns the identifer (in the model) of the entry. */
+        def getIdentifier(): I
+
+        /** Returns the underlying model. */
+        def getModel(): M
+
+        /** Returns the string value at the specified index. */
+        @stub
+        def getStringValue(index: Int): String = ???
+
+        /** Returns the value at the specified index. */
+        def getValue(index: Int): Any
+
+        /** Returns the number of values in the entry. */
+        def getValueCount(): Int
+    }
+
 
     /** Returns a RowFilter that includes entries if all
      *  of the supplied filters include the entry.

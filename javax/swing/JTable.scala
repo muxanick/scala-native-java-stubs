@@ -1,12 +1,13 @@
 package javax.swing
 
-import java.awt.{Color, Component, Container, Dimension, Point, Rectangle}
-import java.awt.event.{KeyEvent, MouseEvent}
+import java.awt.{Color, Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, Cursor, Dimension, Font, FontMetrics, Point, Rectangle}
+import java.awt.event.{FocusListener, KeyEvent, MouseEvent}
 import java.awt.print.Printable
-import java.lang.{Class, Object, String}
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
+import java.lang.{Class, Enum, Object, String}
 import java.text.MessageFormat
-import java.util.{EventObject, Hashtable, Vector}
-import javax.accessibility.{Accessible, AccessibleContext}
+import java.util.{EventObject, Hashtable, Locale, Vector}
+import javax.accessibility.{Accessible, AccessibleAction, AccessibleComponent, AccessibleContext, AccessibleExtendedTable, AccessibleRole, AccessibleSelection, AccessibleStateSet, AccessibleTable, AccessibleTableModelChange, AccessibleText, AccessibleValue}
 import javax.print.PrintService
 import javax.print.attribute.PrintRequestAttributeSet
 import javax.swing.event.{CellEditorListener, ChangeEvent, ListSelectionEvent, ListSelectionListener, RowSorterEvent, RowSorterListener, TableColumnModelEvent, TableColumnModelListener, TableModelEvent, TableModelListener}
@@ -208,9 +209,547 @@ class JTable extends JComponent with TableModelListener with Scrollable with Tab
     def this(rowData: Vector, columnNames: Vector) = ???
 
     /** This class implements accessibility support for the
-     *  JTable class.
+     *  JTable class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to table user-interface elements.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type AccessibleJTable = JTable_AccessibleJTable
+    protected class AccessibleJTable extends JComponent.AccessibleJComponent with AccessibleSelection with ListSelectionListener with TableModelListener with TableColumnModelListener with CellEditorListener with PropertyChangeListener with AccessibleExtendedTable {
+
+        /** AccessibleJTable constructor */
+        @stub
+        protected def this() = ???
+
+        /** The class provides an implementation of the Java Accessibility
+         *  API appropriate to table cells.
+         */
+        protected class AccessibleJTableCell extends AccessibleContext with Accessible with AccessibleComponent {
+
+            /** Constructs an AccessibleJTableHeaderEntry. */
+            @stub
+            def this(t: JTable, r: Int, c: Int, i: Int) = ???
+
+            /** Adds the specified focus listener to receive focus events from this
+             *  component.
+             */
+            @stub
+            def addFocusListener(l: FocusListener): Unit = ???
+
+            /** Adds a PropertyChangeListener to the listener list. */
+            @stub
+            def addPropertyChangeListener(l: PropertyChangeListener): Unit = ???
+
+            /** Checks whether the specified point is within this
+             *  object's bounds, where the point's x and y coordinates
+             *  are defined to be relative to the coordinate system of
+             *  the object.
+             */
+            @stub
+            def contains(p: Point): Boolean = ???
+
+            /** Gets the AccessibleAction associated with this
+             *  object if one exists.
+             */
+            @stub
+            def getAccessibleAction(): AccessibleAction = ???
+
+            /** Returns the Accessible child, if one exists, contained at the local
+             *  coordinate Point.
+             */
+            @stub
+            def getAccessibleAt(p: Point): Accessible = ???
+
+            /** Returns the specified Accessible child of the
+             *  object.
+             */
+            @stub
+            def getAccessibleChild(i: Int): Accessible = ???
+
+            /** Returns the number of accessible children in the object. */
+            @stub
+            def getAccessibleChildrenCount(): Int = ???
+
+            /** Gets the AccessibleComponent associated with
+             *  this object if one exists.
+             */
+            @stub
+            def getAccessibleComponent(): AccessibleComponent = ???
+
+            /** Gets the AccessibleContext associated with this
+             *  component.
+             */
+            @stub
+            def getAccessibleContext(): AccessibleContext = ???
+
+            /** Gets the accessible description of this object. */
+            @stub
+            def getAccessibleDescription(): String = ???
+
+            /** Gets the index of this object in its accessible parent. */
+            @stub
+            def getAccessibleIndexInParent(): Int = ???
+
+            /** Gets the accessible name of this object. */
+            @stub
+            def getAccessibleName(): String = ???
+
+            /** Gets the Accessible parent of this object. */
+            @stub
+            def getAccessibleParent(): Accessible = ???
+
+            /** Gets the role of this object. */
+            @stub
+            def getAccessibleRole(): AccessibleRole = ???
+
+            /** Gets the AccessibleSelection associated with
+             *  this object if one exists.
+             */
+            @stub
+            def getAccessibleSelection(): AccessibleSelection = ???
+
+            /** Gets the state set of this object. */
+            @stub
+            def getAccessibleStateSet(): AccessibleStateSet = ???
+
+            /** Gets the AccessibleText associated with this
+             *  object if one exists.
+             */
+            @stub
+            def getAccessibleText(): AccessibleText = ???
+
+            /** Gets the AccessibleValue associated with
+             *  this object if one exists.
+             */
+            @stub
+            def getAccessibleValue(): AccessibleValue = ???
+
+            /** Gets the background color of this object. */
+            @stub
+            def getBackground(): Color = ???
+
+            /** Gets the bounds of this object in the form of a Rectangle object. */
+            @stub
+            def getBounds(): Rectangle = ???
+
+            /** Gets the AccessibleContext for the table cell renderer. */
+            @stub
+            protected def getCurrentAccessibleContext(): AccessibleContext = ???
+
+            /** Gets the table cell renderer component. */
+            @stub
+            protected def getCurrentComponent(): Component = ???
+
+            /** Gets the Cursor of this object. */
+            @stub
+            def getCursor(): Cursor = ???
+
+            /** Gets the Font of this object. */
+            @stub
+            def getFont(): Font = ???
+
+            /** Gets the FontMetrics of this object. */
+            @stub
+            def getFontMetrics(f: Font): FontMetrics = ???
+
+            /** Gets the foreground color of this object. */
+            @stub
+            def getForeground(): Color = ???
+
+            /** Gets the locale of the component. */
+            @stub
+            def getLocale(): Locale = ???
+
+            /** Gets the location of the object relative to the parent
+             *  in the form of a point specifying the object's
+             *  top-left corner in the screen's coordinate space.
+             */
+            @stub
+            def getLocation(): Point = ???
+
+            /** Returns the location of the object on the screen. */
+            @stub
+            def getLocationOnScreen(): Point = ???
+
+            /** Returns the size of this object in the form of a Dimension object. */
+            @stub
+            def getSize(): Dimension = ???
+
+            /** Determines if the object is enabled. */
+            @stub
+            def isEnabled(): Boolean = ???
+
+            /** Returns whether this object can accept focus or not. */
+            @stub
+            def isFocusTraversable(): Boolean = ???
+
+            /** Determines if the object is showing. */
+            @stub
+            def isShowing(): Boolean = ???
+
+            /** Determines if this object is visible. */
+            @stub
+            def isVisible(): Boolean = ???
+
+            /** Removes the specified focus listener so it no longer receives focus
+             *  events from this component.
+             */
+            @stub
+            def removeFocusListener(l: FocusListener): Unit = ???
+
+            /** Removes a PropertyChangeListener from the
+             *  listener list.
+             */
+            @stub
+            def removePropertyChangeListener(l: PropertyChangeListener): Unit = ???
+
+            /** Requests focus for this object. */
+            @stub
+            def requestFocus(): Unit = ???
+
+            /** Sets the accessible description of this object. */
+            @stub
+            def setAccessibleDescription(s: String): Unit = ???
+
+            /** Sets the localized accessible name of this object. */
+            @stub
+            def setAccessibleName(s: String): Unit = ???
+
+            /** Sets the background color of this object. */
+            @stub
+            def setBackground(c: Color): Unit = ???
+
+            /** Sets the bounds of this object in the form of a Rectangle object. */
+            @stub
+            def setBounds(r: Rectangle): Unit = ???
+
+            /** Sets the Cursor of this object. */
+            @stub
+            def setCursor(c: Cursor): Unit = ???
+
+            /** Sets the enabled state of the object. */
+            @stub
+            def setEnabled(b: Boolean): Unit = ???
+
+            /** Sets the Font of this object. */
+            @stub
+            def setFont(f: Font): Unit = ???
+
+            /** Sets the foreground color of this object. */
+            @stub
+            def setForeground(c: Color): Unit = ???
+
+            /** Sets the location of the object relative to the parent. */
+            @stub
+            def setLocation(p: Point): Unit = ???
+
+            /** Resizes this object so that it has width and height. */
+            @stub
+            def setSize(d: Dimension): Unit = ???
+
+            /** Sets the visible state of the object. */
+            @stub
+            def setVisible(b: Boolean): Unit = ???
+        }
+
+
+        /**  */
+        protected class AccessibleJTableModelChange extends Object with AccessibleTableModelChange {
+
+            /**  */
+            @stub
+            protected def this(type: Int, firstRow: Int, lastRow: Int, firstColumn: Int, lastColumn: Int) = ???
+
+            /**  */
+            @stub
+            protected val firstColumn: Int = ???
+
+            /**  */
+            @stub
+            protected val firstRow: Int = ???
+
+            /**  */
+            @stub
+            protected val lastColumn: Int = ???
+
+            /**  */
+            @stub
+            protected val lastRow: Int = ???
+
+            /**  */
+            @stub
+            protected val type: Int = ???
+
+            /** Returns the first column that changed. */
+            @stub
+            def getFirstColumn(): Int = ???
+
+            /** Returns the first row that changed. */
+            @stub
+            def getFirstRow(): Int = ???
+
+            /** Returns the last column that changed. */
+            @stub
+            def getLastColumn(): Int = ???
+
+            /** Returns the last row that changed. */
+            @stub
+            def getLastRow(): Int = ???
+
+            /** Returns the type of event. */
+            @stub
+            def getType(): Int = ???
+        }
+
+
+        /** Adds the specified Accessible child of the
+         *  object to the object's selection.
+         */
+        @stub
+        def addAccessibleSelection(i: Int): Unit = ???
+
+        /** Clears the selection in the object, so that no children in the
+         *  object are selected.
+         */
+        @stub
+        def clearAccessibleSelection(): Unit = ???
+
+        /** Track changes to the table contents (column insertions) */
+        @stub
+        def columnAdded(e: TableColumnModelEvent): Unit = ???
+
+        /** Track changes of a column moving due to margin changes. */
+        @stub
+        def columnMarginChanged(e: ChangeEvent): Unit = ???
+
+        /** Track changes of a column repositioning. */
+        @stub
+        def columnMoved(e: TableColumnModelEvent): Unit = ???
+
+        /** Track changes to the table contents (column deletions) */
+        @stub
+        def columnRemoved(e: TableColumnModelEvent): Unit = ???
+
+        /** Track that the selection model of the TableColumnModel changed. */
+        @stub
+        def columnSelectionChanged(e: ListSelectionEvent): Unit = ???
+
+        /** Invoked when editing is canceled. */
+        @stub
+        def editingCanceled(e: ChangeEvent): Unit = ???
+
+        /** Track changes to a cell's contents. */
+        @stub
+        def editingStopped(e: ChangeEvent): Unit = ???
+
+        /** Returns the Accessible at a specified row and column
+         *  in the table.
+         */
+        @stub
+        def getAccessibleAt(r: Int, c: Int): Accessible = ???
+
+        /** Returns the Accessible child, if one exists,
+         *  contained at the local coordinate Point.
+         */
+        @stub
+        def getAccessibleAt(p: Point): Accessible = ???
+
+        /** Returns the caption for the table. */
+        @stub
+        def getAccessibleCaption(): Accessible = ???
+
+        /** Returns the nth Accessible child of the object. */
+        @stub
+        def getAccessibleChild(i: Int): Accessible = ???
+
+        /** Returns the number of accessible children in the object. */
+        @stub
+        def getAccessibleChildrenCount(): Int = ???
+
+        /** Returns the column number of an index in the table. */
+        @stub
+        def getAccessibleColumn(index: Int): Int = ???
+
+        /** Returns the column at a given index into the table. */
+        @stub
+        def getAccessibleColumnAtIndex(i: Int): Int = ???
+
+        /** Returns the number of columns in the table. */
+        @stub
+        def getAccessibleColumnCount(): Int = ???
+
+        /** Returns the description of the specified column in the table. */
+        @stub
+        def getAccessibleColumnDescription(c: Int): Accessible = ???
+
+        /** Returns the number of columns occupied by the
+         *  Accessible at a given (row, column).
+         */
+        @stub
+        def getAccessibleColumnExtentAt(r: Int, c: Int): Int = ???
+
+        /** Returns the column headers as an AccessibleTable. */
+        @stub
+        def getAccessibleColumnHeader(): AccessibleTable = ???
+
+        /** Returns the index at a row and column in the table. */
+        @stub
+        def getAccessibleIndex(r: Int, c: Int): Int = ???
+
+        /** Returns the index at a given (row, column) in the table. */
+        @stub
+        def getAccessibleIndexAt(r: Int, c: Int): Int = ???
+
+        /** Gets the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+
+        /** Returns the row number of an index in the table. */
+        @stub
+        def getAccessibleRow(index: Int): Int = ???
+
+        /** Returns the row at a given index into the table. */
+        @stub
+        def getAccessibleRowAtIndex(i: Int): Int = ???
+
+        /** Returns the number of rows in the table. */
+        @stub
+        def getAccessibleRowCount(): Int = ???
+
+        /** Returns the description of the specified row in the table. */
+        @stub
+        def getAccessibleRowDescription(r: Int): Accessible = ???
+
+        /** Returns the number of rows occupied by the Accessible
+         *  at a specified row and column in the table.
+         */
+        @stub
+        def getAccessibleRowExtentAt(r: Int, c: Int): Int = ???
+
+        /** Returns the row headers as an AccessibleTable. */
+        @stub
+        def getAccessibleRowHeader(): AccessibleTable = ???
+
+        /** Get the AccessibleSelection associated with this object. */
+        @stub
+        def getAccessibleSelection(): AccessibleSelection = ???
+
+        /** Returns an Accessible representing the
+         *  specified selected child in the object.
+         */
+        @stub
+        def getAccessibleSelection(i: Int): Accessible = ???
+
+        /** Returns the number of Accessible children
+         *  currently selected.
+         */
+        @stub
+        def getAccessibleSelectionCount(): Int = ???
+
+        /** Returns the summary description of the table. */
+        @stub
+        def getAccessibleSummary(): Accessible = ???
+
+        /** Gets the AccessibleTable associated with this
+         *  object.
+         */
+        @stub
+        def getAccessibleTable(): AccessibleTable = ???
+
+        /** Returns the selected columns in a table. */
+        @stub
+        def getSelectedAccessibleColumns(): Array[Int] = ???
+
+        /** Returns the selected rows in a table. */
+        @stub
+        def getSelectedAccessibleRows(): Array[Int] = ???
+
+        /** Determines if the current child of this object is selected. */
+        @stub
+        def isAccessibleChildSelected(i: Int): Boolean = ???
+
+        /** Returns a boolean value indicating whether the specified column
+         *  is selected.
+         */
+        @stub
+        def isAccessibleColumnSelected(c: Int): Boolean = ???
+
+        /** Returns a boolean value indicating whether the specified row
+         *  is selected.
+         */
+        @stub
+        def isAccessibleRowSelected(r: Int): Boolean = ???
+
+        /** Returns a boolean value indicating whether the accessible at a
+         *  given (row, column) is selected.
+         */
+        @stub
+        def isAccessibleSelected(r: Int, c: Int): Boolean = ???
+
+        /** Track changes to selection model, column model, etc. */
+        @stub
+        def propertyChange(e: PropertyChangeEvent): Unit = ???
+
+        /** Removes the specified child of the object from the object's
+         *  selection.
+         */
+        @stub
+        def removeAccessibleSelection(i: Int): Unit = ???
+
+        /** Causes every child of the object to be selected, but only
+         *  if the JTable supports multiple selections,
+         *  and if individual cell selection is enabled.
+         */
+        @stub
+        def selectAllAccessibleSelection(): Unit = ???
+
+        /** Sets the caption for the table. */
+        @stub
+        def setAccessibleCaption(a: Accessible): Unit = ???
+
+        /** Sets the description text of the specified column of the table. */
+        @stub
+        def setAccessibleColumnDescription(c: Int, a: Accessible): Unit = ???
+
+        /** Sets the column headers as an AccessibleTable. */
+        @stub
+        def setAccessibleColumnHeader(a: AccessibleTable): Unit = ???
+
+        /** Sets the description text of the specified row of the table. */
+        @stub
+        def setAccessibleRowDescription(r: Int, a: Accessible): Unit = ???
+
+        /** Sets the row headers as an AccessibleTable. */
+        @stub
+        def setAccessibleRowHeader(a: AccessibleTable): Unit = ???
+
+        /** Sets the summary description of the table. */
+        @stub
+        def setAccessibleSummary(a: Accessible): Unit = ???
+
+        /** Track changes to the table contents */
+        @stub
+        def tableChanged(e: TableModelEvent): Unit = ???
+
+        /** Track changes to the table contents (row deletions) */
+        @stub
+        def tableRowsDeleted(e: TableModelEvent): Unit = ???
+
+        /** Track changes to the table contents (row insertions) */
+        @stub
+        def tableRowsInserted(e: TableModelEvent): Unit = ???
+
+        /** Track changes to table cell selections */
+        @stub
+        def valueChanged(e: ListSelectionEvent): Unit = ???
+    }
+
 
     /** The table will query the TableModel to build the default
      *   set of columns if this is true.
@@ -1127,10 +1666,65 @@ object JTable {
     /** A subclass of TransferHandler.DropLocation representing
      *  a drop location for a JTable.
      */
-    type DropLocation = JTable_DropLocation
+    final object DropLocation extends TransferHandler.DropLocation {
+
+        /** Returns the column index where a dropped item should be placed in the
+         *  table.
+         */
+        @stub
+        def getColumn(): Int = ???
+
+        /** Returns the row index where a dropped item should be placed in the
+         *  table.
+         */
+        @stub
+        def getRow(): Int = ???
+
+        /** Returns whether or not this location represents an insert
+         *  of a column.
+         */
+        @stub
+        def isInsertColumn(): Boolean = ???
+
+        /** Returns whether or not this location represents an insert
+         *  of a row.
+         */
+        @stub
+        def isInsertRow(): Boolean = ???
+
+        /** Returns a string representation of this drop location. */
+        @stub
+        def toString(): String = ???
+    }
+
 
     /** Printing modes, used in printing JTables. */
-    type PrintMode = JTable_PrintMode
+    class PrintMode private (name: String, ordinal: Int) extends Enum[PrintMode](name, ordinal) {
+    }
+
+    object PrintMode {
+        /** Printing mode that scales the output smaller, if necessary,
+         *  to fit the table's entire width (and thereby all columns) on each page;
+         *  Rows are spread across multiple pages as necessary.
+         */
+        final val FIT_WIDTH: PrintMode = new PrintMode("FIT_WIDTH", 0)
+
+        /** Printing mode that prints the table at its current size,
+         *  spreading both columns and rows across multiple pages if necessary.
+         */
+        final val NORMAL: PrintMode = new PrintMode("NORMAL", 1)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): PrintMode = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[PrintMode] = ???
+    }
+
 
     /** During all resize operations, proportionately resize all columns. */
     @stub

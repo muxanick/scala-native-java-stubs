@@ -8,7 +8,8 @@ import scala.scalanative.annotation.stub
  *   Instances of this interface may be passed to the listFiles(FileFilter) method
  *  of the File class.
  */
-@FunctionalInterface trait FileFilter {
+@FunctionalInterface
+trait FileFilter {
 
     /** Tests whether or not the specified abstract pathname should be
      *  included in a pathname list.

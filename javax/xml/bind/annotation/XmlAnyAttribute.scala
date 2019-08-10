@@ -34,7 +34,7 @@ import scala.scalanative.annotation.stub
  *  Map<QName,Object>. The attribute QName is the
  *  map's key. The key's value is the String value of the attribute.
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value ={ FIELD , METHOD } ) 
- final class XmlAnyAttribute extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value={FIELD,METHOD})
+final class XmlAnyAttribute extends StaticAnnotation {
 }

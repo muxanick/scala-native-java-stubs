@@ -1,6 +1,6 @@
 package javax.swing
 
-import java.awt.{Image, Point}
+import java.awt.{Component, Image, Point}
 import java.awt.datatransfer.{Clipboard, DataFlavor, Transferable}
 import java.awt.event.InputEvent
 import java.io.Serializable
@@ -124,14 +124,118 @@ class TransferHandler extends Object with Serializable {
 }
 
 object TransferHandler {
-    /** Represents a location where dropped data should be inserted. */
-    type DropLocation = TransferHandler_DropLocation
+    /** Represents a location where dropped data should be inserted.
+     *  This is a base class that only encapsulates a point.
+     *  Components supporting drop may provide subclasses of this
+     *  containing more information.
+     *  
+     *  Developers typically shouldn't create instances of, or extend, this
+     *  class. Instead, these are something provided by the DnD
+     *  implementation by TransferSupport instances and by
+     *  components with a getDropLocation() method.
+     */
+    object DropLocation extends Object {
+
+        /** Constructs a drop location for the given point. */
+        @stub
+        protected def apply(dropPoint: Point) = ???
+
+        /** Returns the drop point, representing the mouse's
+         *  current location within the component.
+         */
+        @stub
+        def getDropPoint(): Point = ???
+
+        /** Returns a string representation of this drop location. */
+        @stub
+        def toString(): String = ???
+    }
+
 
     /** This class encapsulates all relevant details of a clipboard
      *  or drag and drop transfer, and also allows for customizing
      *  aspects of the drag and drop experience.
+     *  
+     *  The main purpose of this class is to provide the information
+     *  needed by a developer to determine the suitability of a
+     *  transfer or to import the data contained within. But it also
+     *  doubles as a controller for customizing properties during drag
+     *  and drop, such as whether or not to show the drop location,
+     *  and which drop action to use.
+     *  
+     *  Developers typically need not create instances of this
+     *  class. Instead, they are something provided by the DnD
+     *  implementation to certain methods in TransferHandler.
      */
-    type TransferSupport = TransferHandler_TransferSupport
+    final object TransferSupport extends Object {
+
+        /** Create a TransferSupport with isDrop()
+         *  false for the given component and
+         *  Transferable.
+         */
+        @stub
+        def apply(component: Component, transferable: Transferable) = ???
+
+        /** Returns the target component of this transfer. */
+        @stub
+        def getComponent(): Component = ???
+
+        /** Returns the data flavors for this transfer. */
+        @stub
+        def getDataFlavors(): Array[DataFlavor] = ???
+
+        /** Returns the action chosen for the drop, when this
+         *  TransferSupport represents a drop.
+         */
+        @stub
+        def getDropAction(): Int = ???
+
+        /** Returns the current (non-null) drop location for the component,
+         *  when this TransferSupport represents a drop.
+         */
+        @stub
+        def getDropLocation(): TransferHandler.DropLocation = ???
+
+        /** Returns the drag source's supported drop actions, when this
+         *  TransferSupport represents a drop.
+         */
+        @stub
+        def getSourceDropActions(): Int = ???
+
+        /** Returns the Transferable associated with this transfer. */
+        @stub
+        def getTransferable(): Transferable = ???
+
+        /** Returns the user drop action for the drop, when this
+         *  TransferSupport represents a drop.
+         */
+        @stub
+        def getUserDropAction(): Int = ???
+
+        /** Returns whether or not the given data flavor is supported. */
+        @stub
+        def isDataFlavorSupported(df: DataFlavor): Boolean = ???
+
+        /** Returns whether or not this TransferSupport
+         *  represents a drop operation.
+         */
+        @stub
+        def isDrop(): Boolean = ???
+
+        /** Sets the drop action for the transfer - which must represent a drop
+         *  - to the given action,
+         *  instead of the default user drop action.
+         */
+        @stub
+        def setDropAction(dropAction: Int): Unit = ???
+
+        /** Sets whether or not the drop location should be visually indicated
+         *  for the transfer - which must represent a drop.
+         */
+        @stub
+        def setShowDropLocation(showDropLocation: Boolean): Unit = ???
+    }
+
 
     /** An int representing a "copy" transfer action. */
     @stub

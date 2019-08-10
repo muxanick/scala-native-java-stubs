@@ -171,7 +171,8 @@ abstract class Configuration extends Object {
 
 object Configuration {
     /** This represents a marker interface for Configuration parameters. */
-    type Parameters = Configuration_Parameters
+    trait Parameters {
+
 
     /** Get the installed login Configuration. */
     @stub

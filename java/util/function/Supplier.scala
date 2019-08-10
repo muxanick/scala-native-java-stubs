@@ -11,7 +11,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is get().
  */
-@FunctionalInterface trait Supplier[T] {
+@FunctionalInterface
+trait Supplier[T] {
 
     /** Gets a result. */
     @stub

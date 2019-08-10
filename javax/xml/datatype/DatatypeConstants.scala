@@ -1,6 +1,6 @@
 package javax.xml.datatype
 
-import java.lang.Object
+import java.lang.{Object, String}
 import javax.xml.namespace.QName
 import scala.scalanative.annotation.stub
 
@@ -12,7 +12,17 @@ object DatatypeConstants {
     /** Type-safe enum class that represents six fields
      *  of the Duration class.
      */
-    type Field = DatatypeConstants_Field
+    final object Field extends Object {
+
+        /** Get id of this Field. */
+        @stub
+        def getId(): Int = ???
+
+        /** Returns a field name in English. */
+        @stub
+        def toString(): String = ???
+    }
+
 
     /** Value for fourth month of year. */
     @stub

@@ -40,5 +40,27 @@ object AppConfigurationEntry {
     /** This class represents whether or not a LoginModule
      *  is REQUIRED, REQUISITE, SUFFICIENT or OPTIONAL.
      */
-    type LoginModuleControlFlag = AppConfigurationEntry_LoginModuleControlFlag
+    object LoginModuleControlFlag extends Object {
+
+        /** Optional LoginModule. */
+        @stub
+        val OPTIONAL: LoginModuleControlFlag = ???
+
+        /** Required LoginModule. */
+        @stub
+        val REQUIRED: LoginModuleControlFlag = ???
+
+        /** Requisite LoginModule. */
+        @stub
+        val REQUISITE: LoginModuleControlFlag = ???
+
+        /** Sufficient LoginModule. */
+        @stub
+        val SUFFICIENT: LoginModuleControlFlag = ???
+
+        /** Return a String representation of this controlFlag. */
+        @stub
+        def toString(): String = ???
+    }
+
 }

@@ -13,22 +13,22 @@ object XmlAccessType {
     /** Every non static, non transient field in a JAXB-bound class will be automatically
      *  bound to XML, unless annotated by XmlTransient.
      */
-    final val FIELD = new XmlAccessType(FIELD, 0)
+    final val FIELD: XmlAccessType = new XmlAccessType("FIELD", 0)
 
     /** None of the fields or properties is bound to XML unless they
      *  are specifically  annotated with some of the JAXB annotations.
      */
-    final val NONE = new XmlAccessType(NONE, 1)
+    final val NONE: XmlAccessType = new XmlAccessType("NONE", 1)
 
     /** Every getter/setter pair in a JAXB-bound class will be automatically
      *  bound to XML, unless annotated by XmlTransient.
      */
-    final val PROPERTY = new XmlAccessType(PROPERTY, 2)
+    final val PROPERTY: XmlAccessType = new XmlAccessType("PROPERTY", 2)
 
     /** Every public getter/setter pair and every public field will be
      *  automatically bound to XML, unless annotated by XmlTransient.
      */
-    final val PUBLIC_MEMBER = new XmlAccessType(PUBLIC_MEMBER, 3)
+    final val PUBLIC_MEMBER: XmlAccessType = new XmlAccessType("PUBLIC_MEMBER", 3)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

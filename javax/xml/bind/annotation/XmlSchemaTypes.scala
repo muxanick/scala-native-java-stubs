@@ -21,9 +21,9 @@ import scala.scalanative.annotation.stub
  *  See "Package Specification" in javax.xml.bind.package javadoc for
  *  additional common information.
  */
-@Retention ( value = RUNTIME ) 
-@Target ( value = PACKAGE ) 
- final class XmlSchemaTypes extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value=PACKAGE)
+final class XmlSchemaTypes extends StaticAnnotation {
 
     /** Collection of @XmlSchemaType annotations */
     @stub

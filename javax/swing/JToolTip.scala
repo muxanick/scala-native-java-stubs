@@ -1,8 +1,8 @@
 package javax.swing
 
-import java.awt.{Component, Container}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer}
 import java.lang.{Object, String}
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole}
 import javax.swing.plaf.ToolTipUI
 import scala.scalanative.annotation.stub
 
@@ -39,9 +39,33 @@ class JToolTip extends JComponent with Accessible {
     def this() = ???
 
     /** This class implements accessibility support for the
-     *  JToolTip class.
+     *  JToolTip class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to tool tip user-interface elements.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    protected type AccessibleJToolTip = JToolTip_AccessibleJToolTip
+    protected class AccessibleJToolTip extends JComponent.AccessibleJComponent {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the accessible description of this object. */
+        @stub
+        def getAccessibleDescription(): String = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+    }
+
 
     /** Gets the AccessibleContext associated with this JToolTip. */
     @stub

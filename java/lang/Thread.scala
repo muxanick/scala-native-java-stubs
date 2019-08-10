@@ -351,13 +351,95 @@ class Thread extends Object with Runnable {
 }
 
 object Thread {
-    /** A thread state. */
-    type State = Thread_State
+    /** A thread state.  A thread can be in one of the following states:
+     *  
+     *  NEW
+     *      A thread that has not yet started is in this state.
+     *      
+     *  RUNNABLE
+     *      A thread executing in the Java virtual machine is in this state.
+     *      
+     *  BLOCKED
+     *      A thread that is blocked waiting for a monitor lock
+     *      is in this state.
+     *      
+     *  WAITING
+     *      A thread that is waiting indefinitely for another thread to
+     *      perform a particular action is in this state.
+     *      
+     *  TIMED_WAITING
+     *      A thread that is waiting for another thread to perform an action
+     *      for up to a specified waiting time is in this state.
+     *      
+     *  TERMINATED
+     *      A thread that has exited is in this state.
+     *      
+     *  
+     * 
+     *  
+     *  A thread can be in only one state at a given point in time.
+     *  These states are virtual machine states which do not reflect
+     *  any operating system thread states.
+     */
+    class State private (name: String, ordinal: Int) extends Enum[State](name, ordinal) {
+    }
+
+    object State {
+        /** Thread state for a thread blocked waiting for a monitor lock. */
+        final val BLOCKED: State = new State("BLOCKED", 0)
+
+        /** Thread state for a thread which has not yet started. */
+        final val NEW: State = new State("NEW", 1)
+
+        /** Thread state for a runnable thread. */
+        final val RUNNABLE: State = new State("RUNNABLE", 2)
+
+        /** Thread state for a terminated thread. */
+        final val TERMINATED: State = new State("TERMINATED", 3)
+
+        /** Thread state for a waiting thread with a specified waiting time. */
+        final val TIMED_WAITING: State = new State("TIMED_WAITING", 4)
+
+        /** Thread state for a waiting thread. */
+        final val WAITING: State = new State("WAITING", 5)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): State = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[State] = ???
+    }
+
 
     /** Interface for handlers invoked when a Thread abruptly
      *  terminates due to an uncaught exception.
+     *  When a thread is about to terminate due to an uncaught exception
+     *  the Java Virtual Machine will query the thread for its
+     *  UncaughtExceptionHandler using
+     *  Thread.getUncaughtExceptionHandler() and will invoke the handler's
+     *  uncaughtException method, passing the thread and the
+     *  exception as arguments.
+     *  If a thread has not had its UncaughtExceptionHandler
+     *  explicitly set, then its ThreadGroup object acts as its
+     *  UncaughtExceptionHandler. If the ThreadGroup object
+     *  has no
+     *  special requirements for dealing with the exception, it can forward
+     *  the invocation to the default uncaught exception handler.
      */
-    type UncaughtExceptionHandler = Thread_UncaughtExceptionHandler
+@FunctionalInterface
+    trait UncaughtExceptionHandler {
+
+        /** Method invoked when the given thread terminates due to the
+         *  given uncaught exception.
+         */
+        @stub
+        def uncaughtException(t: Thread, e: Throwable): Unit = ???
+    }
+
 
     /** The maximum priority that a thread can have. */
     @stub

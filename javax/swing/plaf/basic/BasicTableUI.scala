@@ -1,7 +1,7 @@
 package javax.swing.plaf.basic
 
 import java.awt.{Component.BaselineResizeBehavior, Dimension, Graphics}
-import java.awt.event.{FocusListener, KeyListener}
+import java.awt.event.{FocusEvent, FocusListener, KeyEvent, KeyListener, MouseEvent}
 import java.lang.Object
 import javax.swing.{CellRendererPane, JComponent, JTable}
 import javax.swing.event.MouseInputListener
@@ -15,14 +15,96 @@ class BasicTableUI extends TableUI {
     @stub
     def this() = ???
 
-    /** This class should be treated as a "protected" inner class. */
-    type FocusHandler = BasicTableUI_FocusHandler
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicTableUI.
+     */
+    class FocusHandler extends Object with FocusListener {
 
-    /** This class should be treated as a "protected" inner class. */
-    type KeyHandler = BasicTableUI_KeyHandler
+        /**  */
+        @stub
+        def this() = ???
 
-    /** This class should be treated as a "protected" inner class. */
-    type MouseInputHandler = BasicTableUI_MouseInputHandler
+        /** Invoked when a component gains the keyboard focus. */
+        @stub
+        def focusGained(e: FocusEvent): Unit = ???
+
+        /** Invoked when a component loses the keyboard focus. */
+        @stub
+        def focusLost(e: FocusEvent): Unit = ???
+    }
+
+
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicTableUI.
+     *  As of Java 2 platform v1.3 this class is no longer used.
+     *  Instead JTable
+     *  overrides processKeyBinding to dispatch the event to
+     *  the current TableCellEditor.
+     */
+    class KeyHandler extends Object with KeyListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when a key has been pressed. */
+        @stub
+        def keyPressed(e: KeyEvent): Unit = ???
+
+        /** Invoked when a key has been released. */
+        @stub
+        def keyReleased(e: KeyEvent): Unit = ???
+
+        /** Invoked when a key has been typed. */
+        @stub
+        def keyTyped(e: KeyEvent): Unit = ???
+    }
+
+
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicTableUI.
+     */
+    class MouseInputHandler extends Object with MouseInputListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when the mouse button has been clicked (pressed
+         *  and released) on a component.
+         */
+        @stub
+        def mouseClicked(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button is pressed on a component and then
+         *  dragged.
+         */
+        @stub
+        def mouseDragged(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse enters a component. */
+        @stub
+        def mouseEntered(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse exits a component. */
+        @stub
+        def mouseExited(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse cursor has been moved onto a component
+         *  but no buttons have been pushed.
+         */
+        @stub
+        def mouseMoved(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button has been pressed on a component. */
+        @stub
+        def mousePressed(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button has been released on a component. */
+        @stub
+        def mouseReleased(e: MouseEvent): Unit = ???
+    }
+
 
     /**  */
     @stub

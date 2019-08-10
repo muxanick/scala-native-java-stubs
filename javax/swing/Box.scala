@@ -1,8 +1,8 @@
 package javax.swing
 
-import java.awt.{Component, Container, Dimension, Graphics, LayoutManager}
+import java.awt.{Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer, Dimension, Graphics, LayoutManager}
 import java.lang.Object
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole}
 import scala.scalanative.annotation.stub
 
 /** A lightweight container
@@ -53,7 +53,17 @@ class Box extends JComponent with Accessible {
     /** This class implements accessibility support for the
      *  Box class.
      */
-    protected type AccessibleBox = Box_AccessibleBox
+    protected class AccessibleBox extends Container.AccessibleAWTContainer {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Gets the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+    }
+
 
     /** Gets the AccessibleContext associated with this Box. */
     @stub
@@ -71,8 +81,50 @@ class Box extends JComponent with Accessible {
 object Box {
     /** An implementation of a lightweight component that participates in
      *  layout but has no view.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    type Filler = Box_Filler
+    object Filler extends JComponent with Accessible {
+
+        /** Constructor to create shape with the given size ranges. */
+        @stub
+        def apply(min: Dimension, pref: Dimension, max: Dimension) = ???
+
+        /** This class implements accessibility support for the
+         *  Box.Filler class.
+         */
+        protected class AccessibleBoxFiller extends Component.AccessibleAWTComponent {
+
+            /**  */
+            @stub
+            protected def this() = ???
+
+            /** Gets the role of this object. */
+            @stub
+            def getAccessibleRole(): AccessibleRole = ???
+        }
+
+
+        /** Change the size requests for this shape. */
+        @stub
+        def changeShape(min: Dimension, pref: Dimension, max: Dimension): Unit = ???
+
+        /** Gets the AccessibleContext associated with this Box.Filler. */
+        @stub
+        def getAccessibleContext(): AccessibleContext = ???
+
+        /** Paints this Filler. */
+        @stub
+        protected def paintComponent(g: Graphics): Unit = ???
+    }
+
 
     /** Creates an invisible "glue" component
      *  that can be useful in a Box

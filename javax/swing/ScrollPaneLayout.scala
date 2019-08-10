@@ -3,6 +3,7 @@ package javax.swing
 import java.awt.{Component, Container, Dimension, LayoutManager, Rectangle}
 import java.io.Serializable
 import java.lang.{Object, String}
+import javax.swing.plaf.UIResource
 import scala.scalanative.annotation.stub
 
 /** The layout manager used by JScrollPane.
@@ -162,5 +163,10 @@ class ScrollPaneLayout extends Object with LayoutManager with ScrollPaneConstant
 
 object ScrollPaneLayout {
     /** The UI resource version of ScrollPaneLayout. */
-    type UIResource = ScrollPaneLayout_UIResource
+    object UIResource extends ScrollPaneLayout with UIResource {
+
+        /**  */
+        @stub
+        def apply() = ???
+
 }

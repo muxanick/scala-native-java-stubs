@@ -1,7 +1,7 @@
 package java.awt
 
 import java.lang.{Object, String}
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole}
 import scala.scalanative.annotation.stub
 
 /** A Menu object is a pull-down menu component
@@ -37,9 +37,25 @@ class Menu extends MenuItem with MenuContainer with Accessible {
     def this(label: String, tearOff: Boolean) = ???
 
     /** Inner class of Menu used to provide default support for
-     *  accessibility.
+     *  accessibility.  This class is not meant to be used directly by
+     *  application developers, but is instead meant only to be
+     *  subclassed by menu component developers.
+     *  
+     *  This class implements accessibility support for the
+     *  Menu class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to menu user-interface elements.
      */
-    protected type AccessibleAWTMenu = Menu_AccessibleAWTMenu
+    protected class AccessibleAWTMenu extends MenuItem.AccessibleAWTMenuItem {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+    }
+
 
     /** Adds the specified menu item to this menu. */
     @stub

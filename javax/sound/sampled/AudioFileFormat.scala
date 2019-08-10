@@ -112,7 +112,52 @@ class AudioFileFormat extends Object {
 
 object AudioFileFormat {
     /** An instance of the Type class represents one of the
-     *  standard types of audio file.
+     *  standard types of audio file.  Static instances are provided for the
+     *  common types.
      */
-    type Type = AudioFileFormat_Type
+    object Type extends Object {
+
+        /** Constructs a file type. */
+        @stub
+        def apply(name: String, extension: String) = ???
+
+        /** Specifies an AIFF-C file. */
+        @stub
+        val AIFC: Type = ???
+
+        /** Specifies an AIFF file. */
+        @stub
+        val AIFF: Type = ???
+
+        /** Specifies an AU file. */
+        @stub
+        val AU: Type = ???
+
+        /** Specifies a SND file. */
+        @stub
+        val SND: Type = ???
+
+        /** Specifies a WAVE file. */
+        @stub
+        val WAVE: Type = ???
+
+        /** Finalizes the equals method */
+        @stub
+        def equals(obj: Any): Boolean = ???
+
+        /** Obtains the common file name extension for this file type. */
+        @stub
+        def getExtension(): String = ???
+
+        /** Finalizes the hashCode method */
+        @stub
+        def hashCode(): Int = ???
+
+        /** Provides the file type's name as the String representation
+         *  of the file type.
+         */
+        @stub
+        def toString(): String = ???
+    }
+
 }

@@ -23,5 +23,14 @@ abstract class LayeredHighlighter extends Object with Highlighter {
 
 object LayeredHighlighter {
     /** Layered highlight renderer. */
-    type LayerPainter = LayeredHighlighter_LayerPainter
+    abstract object LayerPainter extends Object with Highlighter.HighlightPainter {
+
+        /**  */
+        @stub
+        def apply() = ???
+
+        /**  */
+        def paintLayer(g: Graphics, p0: Int, p1: Int, viewBounds: Shape, editor: JTextComponent, view: View): Shape
+    }
+
 }

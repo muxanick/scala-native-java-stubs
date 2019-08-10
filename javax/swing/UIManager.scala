@@ -124,7 +124,31 @@ object UIManager {
      *  LookAndFeel for the sake of configuring a menu or
      *  for initial application set up.
      */
-    type LookAndFeelInfo = UIManager_LookAndFeelInfo
+    object LookAndFeelInfo extends Object {
+
+        /** Constructs a UIManagers
+         *  LookAndFeelInfo object.
+         */
+        @stub
+        def apply(name: String, className: String) = ???
+
+        /** Returns the name of the class that implements this look and feel. */
+        @stub
+        def getClassName(): String = ???
+
+        /** Returns the name of the look and feel in a form suitable
+         *  for a menu or other presentation
+         */
+        @stub
+        def getName(): String = ???
+
+        /** Returns a string that displays and identifies this
+         *  object's properties.
+         */
+        @stub
+        def toString(): String = ???
+    }
+
 
     /** Adds a LookAndFeel to the list of auxiliary look and feels. */
     @stub

@@ -42,9 +42,9 @@ import scala.scalanative.annotation.stub
  *  By the help of this annotation, JAXB implementations will be able to
  *  correctly bind Dog and Cat.
  */
-@Target ( value = TYPE ) 
-@Retention ( value = RUNTIME ) 
- final class XmlSeeAlso extends StaticAnnotation {
+@Target(value=TYPE)
+@Retention(value=RUNTIME)
+final class XmlSeeAlso extends StaticAnnotation {
 
     /**  */
     @stub

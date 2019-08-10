@@ -8,7 +8,8 @@ import scala.scalanative.annotation.stub
  *  runtime in previous implementation versions.  It should never be accessed
  *  by application code.
  */
-@Deprecated trait LoaderHandler {
+@Deprecated
+trait LoaderHandler {
 
     /** Deprecated. 
      * no replacement

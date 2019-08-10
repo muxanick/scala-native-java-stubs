@@ -23,11 +23,11 @@ import scala.scalanative.annotation.stub
  *  This annotation's behaviour is defined by the corresponding feature
  *  MTOMFeature.
  */
-@Target ( value ={ TYPE , METHOD , FIELD } ) 
-@Retention ( value = RUNTIME ) 
-@Documented 
-@WebServiceFeatureAnnotation ( id ="http://www.w3.org/2004/08/soap/features/http-optimization" , bean = MTOMFeature.class ) 
- final class MTOM extends StaticAnnotation {
+@Target(value={TYPE,METHOD,FIELD})
+@Retention(value=RUNTIME)
+@Documented
+@WebServiceFeatureAnnotation(id="http://www.w3.org/2004/08/soap/features/http-optimization",bean=MTOMFeature.class)
+final class MTOM extends StaticAnnotation {
 
     /** Specifies if this feature is enabled or disabled. */
     @stub

@@ -1,6 +1,6 @@
 package javax.xml.ws.handler
 
-import java.lang.{Object, String}
+import java.lang.{Enum, Object, String}
 import java.util.Map
 import scala.scalanative.annotation.stub
 
@@ -25,8 +25,33 @@ trait MessageContext extends Map[String, Object] {
 }
 
 object MessageContext {
-    /** Property scope. */
-    type Scope = MessageContext_Scope
+    /** Property scope. Properties scoped as APPLICATION are
+     *  visible to handlers,
+     *  client applications and service endpoints; properties scoped as
+     *  HANDLER
+     *  are only normally visible to handlers.
+     */
+    class Scope private (name: String, ordinal: Int) extends Enum[Scope](name, ordinal) {
+    }
+
+    object Scope {
+        /**  */
+        final val APPLICATION: Scope = new Scope("APPLICATION", 0)
+
+        /**  */
+        final val HANDLER: Scope = new Scope("HANDLER", 1)
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): Scope = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[Scope] = ???
+    }
+
 
     /** Standard property: HTTP request headers. */
     @stub

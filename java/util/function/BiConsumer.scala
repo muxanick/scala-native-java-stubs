@@ -11,7 +11,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is accept(Object, Object).
  */
-@FunctionalInterface trait BiConsumer[T, U] {
+@FunctionalInterface
+trait BiConsumer[T, U] {
 
     /** Performs this operation on the given arguments. */
     @stub

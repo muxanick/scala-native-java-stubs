@@ -1,9 +1,9 @@
 package javax.swing
 
-import java.awt.{Color, Component, Container}
+import java.awt.{Color, Component, Component.AccessibleAWTComponent, Container, Container.AccessibleAWTContainer}
 import java.awt.event.ActionListener
 import java.lang.{Object, String}
-import javax.accessibility.{Accessible, AccessibleContext}
+import javax.accessibility.{Accessible, AccessibleContext, AccessibleRole}
 import javax.swing.colorchooser.{AbstractColorChooserPanel, ColorSelectionModel}
 import javax.swing.plaf.ColorChooserUI
 import scala.scalanative.annotation.stub
@@ -58,9 +58,21 @@ class JColorChooser extends JComponent with Accessible {
     def this(model: ColorSelectionModel) = ???
 
     /** This class implements accessibility support for the
-     *  JColorChooser class.
+     *  JColorChooser class.  It provides an implementation of the
+     *  Java Accessibility API appropriate to color chooser user-interface
+     *  elements.
      */
-    protected type AccessibleJColorChooser = JColorChooser_AccessibleJColorChooser
+    protected class AccessibleJColorChooser extends JComponent.AccessibleJComponent {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Get the role of this object. */
+        @stub
+        def getAccessibleRole(): AccessibleRole = ???
+    }
+
 
     /**  */
     @stub

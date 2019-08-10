@@ -1,11 +1,11 @@
 package javax.swing.plaf.basic
 
-import java.awt.{Color, Component, Component.BaselineResizeBehavior, Dimension, Font, FontMetrics, Graphics, Insets, LayoutManager, Rectangle}
-import java.awt.event.{FocusListener, MouseListener}
-import java.beans.PropertyChangeListener
+import java.awt.{Color, Component, Component.BaselineResizeBehavior, Container, Dimension, Font, FontMetrics, Graphics, Insets, LayoutManager, Rectangle}
+import java.awt.event.{FocusAdapter, FocusEvent, FocusListener, MouseAdapter, MouseEvent, MouseListener}
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.{Object, String}
 import javax.swing.{Icon, JButton, JComponent, JTabbedPane, KeyStroke, SwingConstants}
-import javax.swing.event.ChangeListener
+import javax.swing.event.{ChangeEvent, ChangeListener}
 import javax.swing.plaf.{ComponentUI, TabbedPaneUI}
 import javax.swing.text.View
 import scala.scalanative.annotation.stub
@@ -17,20 +17,144 @@ class BasicTabbedPaneUI extends TabbedPaneUI with SwingConstants {
     @stub
     def this() = ???
 
-    /** This class should be treated as a "protected" inner class. */
-    type FocusHandler = BasicTabbedPaneUI_FocusHandler
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicTabbedPaneUI.
+     */
+    class FocusHandler extends FocusAdapter {
 
-    /** This class should be treated as a "protected" inner class. */
-    type MouseHandler = BasicTabbedPaneUI_MouseHandler
+        /**  */
+        @stub
+        def this() = ???
 
-    /** This class should be treated as a "protected" inner class. */
-    type PropertyChangeHandler = BasicTabbedPaneUI_PropertyChangeHandler
+        /** Invoked when a component gains the keyboard focus. */
+        @stub
+        def focusGained(e: FocusEvent): Unit = ???
 
-    /** This class should be treated as a "protected" inner class. */
-    type TabbedPaneLayout = BasicTabbedPaneUI_TabbedPaneLayout
+        /** Invoked when a component loses the keyboard focus. */
+        @stub
+        def focusLost(e: FocusEvent): Unit = ???
+    }
 
-    /** This class should be treated as a "protected" inner class. */
-    type TabSelectionHandler = BasicTabbedPaneUI_TabSelectionHandler
+
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicTabbedPaneUI.
+     */
+    class MouseHandler extends MouseAdapter {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when a mouse button has been pressed on a component. */
+        @stub
+        def mousePressed(e: MouseEvent): Unit = ???
+    }
+
+
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicTabbedPaneUI.
+     */
+    class PropertyChangeHandler extends Object with PropertyChangeListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** This method gets called when a bound property is changed. */
+        @stub
+        def propertyChange(e: PropertyChangeEvent): Unit = ???
+    }
+
+
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicTabbedPaneUI.
+     */
+    class TabbedPaneLayout extends Object with LayoutManager {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** If the layout manager uses a per-component string,
+         *  adds the component comp to the layout,
+         *  associating it
+         *  with the string specified by name.
+         */
+        @stub
+        def addLayoutComponent(name: String, comp: Component): Unit = ???
+
+        /**  */
+        @stub
+        def calculateLayoutInfo(): Unit = ???
+
+        /**  */
+        @stub
+        protected def calculateSize(minimum: Boolean): Dimension = ???
+
+        /**  */
+        @stub
+        protected def calculateTabRects(tabPlacement: Int, tabCount: Int): Unit = ???
+
+        /** Lays out the specified container. */
+        @stub
+        def layoutContainer(parent: Container): Unit = ???
+
+        /** Calculates the minimum size dimensions for the specified
+         *  container, given the components it contains.
+         */
+        @stub
+        def minimumLayoutSize(parent: Container): Dimension = ???
+
+        /**  */
+        @stub
+        protected def normalizeTabRuns(tabPlacement: Int, tabCount: Int, start: Int, max: Int): Unit = ???
+
+        /**  */
+        @stub
+        protected def padSelectedTab(tabPlacement: Int, selectedIndex: Int): Unit = ???
+
+        /**  */
+        @stub
+        protected def padTabRun(tabPlacement: Int, start: Int, end: Int, max: Int): Unit = ???
+
+        /** Calculates the preferred size dimensions for the specified
+         *  container, given the components it contains.
+         */
+        @stub
+        def preferredLayoutSize(parent: Container): Dimension = ???
+
+        /**  */
+        @stub
+        protected def preferredTabAreaHeight(tabPlacement: Int, width: Int): Int = ???
+
+        /**  */
+        @stub
+        protected def preferredTabAreaWidth(tabPlacement: Int, height: Int): Int = ???
+
+        /** Removes the specified component from the layout. */
+        @stub
+        def removeLayoutComponent(comp: Component): Unit = ???
+
+        /**  */
+        @stub
+        protected def rotateTabRuns(tabPlacement: Int, selectedRun: Int): Unit = ???
+    }
+
+
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicTabbedPaneUI.
+     */
+    class TabSelectionHandler extends Object with ChangeListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when the target of the listener has changed its state. */
+        @stub
+        def stateChanged(e: ChangeEvent): Unit = ???
+    }
+
 
     /** A rectangle used for general layout calculations in order
      *  to avoid constructing many new Rectangles on the fly.

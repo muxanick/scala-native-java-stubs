@@ -10,7 +10,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is applyAsDouble(int).
  */
-@FunctionalInterface trait IntToDoubleFunction {
+@FunctionalInterface
+trait IntToDoubleFunction {
 
     /** Applies this function to the given argument. */
     @stub

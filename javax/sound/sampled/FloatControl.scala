@@ -78,7 +78,54 @@ abstract class FloatControl extends Control {
 
 object FloatControl {
     /** An instance of the FloatControl.Type inner class identifies one kind of
-     *  float control.
+     *  float control.  Static instances are provided for the
+     *  common types.
      */
-    type Type = FloatControl_Type
+    object Type extends Control.Type {
+
+        /** Constructs a new float control type. */
+        @stub
+        protected def apply(name: String) = ???
+
+        /** Represents a control for the auxiliary return gain on a line. */
+        @stub
+        val AUX_RETURN: Type = ???
+
+        /** Represents a control for the auxiliary send gain on a line. */
+        @stub
+        val AUX_SEND: Type = ???
+
+        /** Represents a control for the relative balance of a stereo signal
+         *  between two stereo speakers.
+         */
+        @stub
+        val BALANCE: Type = ???
+
+        /** Represents a control for the overall gain on a line. */
+        @stub
+        val MASTER_GAIN: Type = ???
+
+        /** Represents a control for the relative pan (left-right positioning)
+         *  of the signal.
+         */
+        @stub
+        val PAN: Type = ???
+
+        /** Represents a control for the post-reverb gain on a line. */
+        @stub
+        val REVERB_RETURN: Type = ???
+
+        /** Represents a control for the pre-reverb gain on a line. */
+        @stub
+        val REVERB_SEND: Type = ???
+
+        /** Represents a control that changes the sample rate of audio playback. */
+        @stub
+        val SAMPLE_RATE: Type = ???
+
+        /** Represents a control for the volume on a line. */
+        @stub
+        val VOLUME: Type = ???
+    }
+
 }

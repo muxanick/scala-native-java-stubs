@@ -68,6 +68,36 @@ final class ActivationGroupDesc extends Object with Serializable {
 }
 
 object ActivationGroupDesc {
-    /** Startup options for ActivationGroup implementations. */
-    type CommandEnvironment = ActivationGroupDesc_CommandEnvironment
+    /** Startup options for ActivationGroup implementations.
+     * 
+     *  This class allows overriding default system properties and
+     *  specifying implementation-defined options for ActivationGroups.
+     */
+    object CommandEnvironment extends Object with Serializable {
+
+        /** Create a CommandEnvironment with all the necessary
+         *  information.
+         */
+        @stub
+        def apply(cmdpath: String, argv: Array[String]) = ???
+
+        /** Compares two command environments for content equality. */
+        @stub
+        def equals(obj: Any): Boolean = ???
+
+        /** Fetch the configured java command options. */
+        @stub
+        def getCommandOptions(): Array[String] = ???
+
+        /** Fetch the configured path-qualified java command name. */
+        @stub
+        def getCommandPath(): String = ???
+
+        /** Return identical values for similar
+         *  CommandEnvironments.
+         */
+        @stub
+        def hashCode(): Int = ???
+    }
+
 }

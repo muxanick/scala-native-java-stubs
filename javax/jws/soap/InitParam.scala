@@ -5,8 +5,8 @@ import scala.annotation.StaticAnnotation
 import scala.scalanative.annotation.stub
 
 /**  */
-@Deprecated 
- final class InitParam extends StaticAnnotation {
+@Deprecated
+final class InitParam extends StaticAnnotation {
 
     /** Deprecated.  */
     @stub

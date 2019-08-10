@@ -1,10 +1,11 @@
 package javax.swing.plaf.basic
 
-import java.awt.Dimension
+import java.awt.{Component, Dimension}
+import java.awt.event.MouseEvent
 import java.beans.PropertyChangeListener
 import java.lang.{Object, String}
 import javax.swing.{JComponent, JMenu}
-import javax.swing.event.{ChangeListener, MenuDragMouseListener, MenuKeyListener, MenuListener, MouseInputListener}
+import javax.swing.event.{ChangeEvent, ChangeListener, MenuDragMouseListener, MenuKeyListener, MenuListener, MouseInputListener}
 import javax.swing.plaf.{ButtonUI, ComponentUI, MenuItemUI}
 import scala.scalanative.annotation.stub
 
@@ -18,14 +19,84 @@ class BasicMenuUI extends BasicMenuItemUI {
     def this() = ???
 
     /** As of Java 2 platform 1.4, this previously undocumented class
-     *  is now obsolete.
+     *  is now obsolete. KeyBindings are now managed by the popup menu.
      */
-    type ChangeHandler = BasicMenuUI_ChangeHandler
+    class ChangeHandler extends Object with ChangeListener {
+
+        /**  */
+        @stub
+        def this(m: JMenu, ui: BasicMenuUI) = ???
+
+        /**  */
+        @stub
+        val isSelected: Boolean = ???
+
+        /**  */
+        @stub
+        val menu: JMenu = ???
+
+        /**  */
+        @stub
+        val ui: BasicMenuUI = ???
+
+        /**  */
+        @stub
+        val wasFocused: Component = ???
+
+        /** Invoked when the target of the listener has changed its state. */
+        @stub
+        def stateChanged(e: ChangeEvent): Unit = ???
+    }
+
 
     /** Instantiated and used by a menu item to handle the current menu selection
-     *  from mouse events.
+     *  from mouse events. A MouseInputHandler processes and forwards all mouse events
+     *  to a shared instance of the MenuSelectionManager.
+     *  
+     *  This class is protected so that it can be subclassed by other look and
+     *  feels to implement their own mouse handling behavior. All overridden
+     *  methods should call the parent methods so that the menu selection
+     *  is correct.
      */
-    protected type MouseInputHandler = BasicMenuUI_MouseInputHandler
+    protected class MouseInputHandler extends Object with MouseInputListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when the mouse button has been clicked (pressed
+         *  and released) on a component.
+         */
+        @stub
+        def mouseClicked(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button is pressed on the menu and then dragged. */
+        @stub
+        def mouseDragged(e: MouseEvent): Unit = ???
+
+        /** Invoked when the cursor enters the menu. */
+        @stub
+        def mouseEntered(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse exits a component. */
+        @stub
+        def mouseExited(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse cursor has been moved onto a component
+         *  but no buttons have been pushed.
+         */
+        @stub
+        def mouseMoved(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse has been clicked on the menu. */
+        @stub
+        def mousePressed(e: MouseEvent): Unit = ???
+
+        /** Invoked when the mouse has been released on the menu. */
+        @stub
+        def mouseReleased(e: MouseEvent): Unit = ???
+    }
+
 
     /**  */
     @stub

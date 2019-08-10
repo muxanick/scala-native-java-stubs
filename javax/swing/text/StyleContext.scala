@@ -2,9 +2,9 @@ package javax.swing.text
 
 import java.awt.{Color, Font, FontMetrics}
 import java.io.{ObjectInputStream, ObjectOutputStream, Serializable}
-import java.lang.{Object, String}
-import java.util.Enumeration
-import javax.swing.event.ChangeListener
+import java.lang.{Class, Object, String}
+import java.util.{Enumeration, EventListener}
+import javax.swing.event.{ChangeEvent, ChangeListener, EventListenerList}
 import scala.scalanative.annotation.stub
 
 /** A pool of styles and their associated resources.  This class determines
@@ -36,12 +36,218 @@ class StyleContext extends Object with Serializable with AbstractDocument.Attrib
     def this() = ???
 
     /** A collection of attributes, typically used to represent
-     *  character and paragraph styles.
+     *  character and paragraph styles.  This is an implementation
+     *  of MutableAttributeSet that can be observed if desired.
+     *  These styles will take advantage of immutability while
+     *  the sets are small enough, and may be substantially more
+     *  efficient than something like SimpleAttributeSet.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    type NamedStyle = StyleContext_NamedStyle
+    class NamedStyle extends Object with Style with Serializable {
 
-    /** This class holds a small number of attributes in an array. */
-    type SmallAttributeSet = StyleContext_SmallAttributeSet
+        /** Creates a new named style, with a null name and parent. */
+        @stub
+        def this() = ???
+
+        /** Creates a new named style. */
+        @stub
+        def this(name: String, parent: Style) = ???
+
+        /** Creates a new named style. */
+        @stub
+        def this(parent: Style) = ???
+
+        /** Only one ChangeEvent is needed per model instance since the
+         *  event's only (read-only) state is the source property.
+         */
+        @stub
+        protected val changeEvent: ChangeEvent = ???
+
+        /** The change listeners for the model. */
+        @stub
+        protected val listenerList: EventListenerList = ???
+
+        /** Adds an attribute. */
+        @stub
+        def addAttribute(name: Any, value: Any): Unit = ???
+
+        /** Adds a set of attributes to the element. */
+        @stub
+        def addAttributes(attr: AttributeSet): Unit = ???
+
+        /** Adds a change listener. */
+        @stub
+        def addChangeListener(l: ChangeListener): Unit = ???
+
+        /** Checks whether a given attribute name/value is defined. */
+        @stub
+        def containsAttribute(name: Any, value: Any): Boolean = ???
+
+        /** Checks whether the element contains all the attributes. */
+        @stub
+        def containsAttributes(attrs: AttributeSet): Boolean = ???
+
+        /** Copies a set of attributes. */
+        @stub
+        def copyAttributes(): AttributeSet = ???
+
+        /** Notifies all listeners that have registered interest for
+         *  notification on this event type.
+         */
+        @stub
+        protected def fireStateChanged(): Unit = ???
+
+        /** Gets the value of an attribute. */
+        @stub
+        def getAttribute(attrName: Any): Any = ???
+
+        /** Gets the number of attributes that are defined. */
+        @stub
+        def getAttributeCount(): Int = ???
+
+        /** Gets the names of all attributes. */
+        @stub
+        def getAttributeNames(): Enumeration[_] = ???
+
+        /** Returns an array of all the ChangeListeners added
+         *  to this NamedStyle with addChangeListener().
+         */
+        @stub
+        def getChangeListeners(): Array[ChangeListener] = ???
+
+        /** Return an array of all the listeners of the given type that
+         *  were added to this model.
+         */
+        @stub
+        def getListeners[T <: EventListener](listenerType: Class[T]): Array[T] = ???
+
+        /** Fetches the name of the style. */
+        @stub
+        def getName(): String = ???
+
+        /** Gets attributes from the parent. */
+        @stub
+        def getResolveParent(): AttributeSet = ???
+
+        /** Checks whether a given attribute is defined. */
+        @stub
+        def isDefined(attrName: Any): Boolean = ???
+
+        /** Checks whether two attribute sets are equal. */
+        @stub
+        def isEqual(attr: AttributeSet): Boolean = ???
+
+        /** Removes an attribute from the set. */
+        @stub
+        def removeAttribute(name: Any): Unit = ???
+
+        /** Removes a set of attributes for the element. */
+        @stub
+        def removeAttributes(attrs: AttributeSet): Unit = ???
+
+        /** Removes a set of attributes for the element. */
+        @stub
+        def removeAttributes(names: Enumeration[_]): Unit = ???
+
+        /** Removes a change listener. */
+        @stub
+        def removeChangeListener(l: ChangeListener): Unit = ???
+
+        /** Changes the name of the style. */
+        @stub
+        def setName(name: String): Unit = ???
+
+        /** Sets the resolving parent. */
+        @stub
+        def setResolveParent(parent: AttributeSet): Unit = ???
+
+        /** Converts the style to a string. */
+        @stub
+        def toString(): String = ???
+    }
+
+
+    /** This class holds a small number of attributes in an array.
+     *  The storage format is key, value, key, value, etc.  The size
+     *  of the set is the length of the array divided by two.  By
+     *  default, this is the class that will be used to store attributes
+     *  when held in the compact sharable form.
+     */
+    class SmallAttributeSet extends Object with AttributeSet {
+
+        /**  */
+        @stub
+        def this(attrs: AttributeSet) = ???
+
+        /**  */
+        @stub
+        def this(attributes: Array[Object]) = ???
+
+        /** Clones a set of attributes. */
+        @stub
+        def clone(): Any = ???
+
+        /** Checks whether a given attribute name/value is defined. */
+        @stub
+        def containsAttribute(name: Any, value: Any): Boolean = ???
+
+        /** Checks whether the attribute set contains all of
+         *  the given attributes.
+         */
+        @stub
+        def containsAttributes(attrs: AttributeSet): Boolean = ???
+
+        /** Copies a set of attributes. */
+        @stub
+        def copyAttributes(): AttributeSet = ???
+
+        /** Compares this object to the specified object. */
+        @stub
+        def equals(obj: Any): Boolean = ???
+
+        /** Gets the value of an attribute. */
+        @stub
+        def getAttribute(key: Any): Any = ???
+
+        /** Gets the number of attributes that are defined. */
+        @stub
+        def getAttributeCount(): Int = ???
+
+        /** Gets the names of all attributes. */
+        @stub
+        def getAttributeNames(): Enumeration[_] = ???
+
+        /** If not overriden, the resolving parent defaults to
+         *  the parent element.
+         */
+        @stub
+        def getResolveParent(): AttributeSet = ???
+
+        /** Returns a hashcode for this set of attributes. */
+        @stub
+        def hashCode(): Int = ???
+
+        /** Checks whether a given attribute is defined. */
+        @stub
+        def isDefined(key: Any): Boolean = ???
+
+        /** Checks whether two attribute sets are equal. */
+        @stub
+        def isEqual(attr: AttributeSet): Boolean = ???
+
+        /** Returns a string showing the key/value pairs */
+        @stub
+        def toString(): String = ???
+    }
+
 
     /** Adds an attribute to the given set, and returns
      *  the new representative set.

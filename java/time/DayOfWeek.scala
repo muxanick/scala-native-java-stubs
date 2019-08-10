@@ -29,37 +29,10 @@ import scala.scalanative.annotation.stub
  *  concept defined exactly equivalent to the ISO calendar system.
  */
 class DayOfWeek private (name: String, ordinal: Int) extends Enum[DayOfWeek](name, ordinal) with TemporalAccessor with TemporalAdjuster {
-}
-
-object DayOfWeek {
-    /** The singleton instance for the day-of-week of Friday. */
-    final val FRIDAY = new DayOfWeek(FRIDAY, 0)
-
-    /** The singleton instance for the day-of-week of Monday. */
-    final val MONDAY = new DayOfWeek(MONDAY, 1)
-
-    /** The singleton instance for the day-of-week of Saturday. */
-    final val SATURDAY = new DayOfWeek(SATURDAY, 2)
-
-    /** The singleton instance for the day-of-week of Sunday. */
-    final val SUNDAY = new DayOfWeek(SUNDAY, 3)
-
-    /** The singleton instance for the day-of-week of Thursday. */
-    final val THURSDAY = new DayOfWeek(THURSDAY, 4)
-
-    /** The singleton instance for the day-of-week of Tuesday. */
-    final val TUESDAY = new DayOfWeek(TUESDAY, 5)
-
-    /** The singleton instance for the day-of-week of Wednesday. */
-    final val WEDNESDAY = new DayOfWeek(WEDNESDAY, 6)
 
     /** Adjusts the specified temporal object to have this day-of-week. */
     @stub
     def adjustInto(temporal: Temporal): Temporal = ???
-
-    /** Obtains an instance of DayOfWeek from a temporal object. */
-    @stub
-    def from(temporal: TemporalAccessor): DayOfWeek = ???
 
     /** Gets the value of the specified field from this day-of-week as an int. */
     @stub
@@ -85,10 +58,6 @@ object DayOfWeek {
     @stub
     def minus(days: Long): DayOfWeek = ???
 
-    /** Obtains an instance of DayOfWeek from an int value. */
-    @stub
-    def of(dayOfWeek: Int): DayOfWeek = ???
-
     /** Returns the day-of-week that is the specified number of days after this one. */
     @stub
     def plus(days: Long): DayOfWeek = ???
@@ -100,6 +69,37 @@ object DayOfWeek {
     /** Gets the range of valid values for the specified field. */
     @stub
     def range(field: TemporalField): ValueRange = ???
+}
+
+object DayOfWeek {
+    /** The singleton instance for the day-of-week of Friday. */
+    final val FRIDAY: DayOfWeek = new DayOfWeek("FRIDAY", 0)
+
+    /** The singleton instance for the day-of-week of Monday. */
+    final val MONDAY: DayOfWeek = new DayOfWeek("MONDAY", 1)
+
+    /** The singleton instance for the day-of-week of Saturday. */
+    final val SATURDAY: DayOfWeek = new DayOfWeek("SATURDAY", 2)
+
+    /** The singleton instance for the day-of-week of Sunday. */
+    final val SUNDAY: DayOfWeek = new DayOfWeek("SUNDAY", 3)
+
+    /** The singleton instance for the day-of-week of Thursday. */
+    final val THURSDAY: DayOfWeek = new DayOfWeek("THURSDAY", 4)
+
+    /** The singleton instance for the day-of-week of Tuesday. */
+    final val TUESDAY: DayOfWeek = new DayOfWeek("TUESDAY", 5)
+
+    /** The singleton instance for the day-of-week of Wednesday. */
+    final val WEDNESDAY: DayOfWeek = new DayOfWeek("WEDNESDAY", 6)
+
+    /** Obtains an instance of DayOfWeek from a temporal object. */
+    @stub
+    def from(temporal: TemporalAccessor): DayOfWeek = ???
+
+    /** Obtains an instance of DayOfWeek from an int value. */
+    @stub
+    def of(dayOfWeek: Int): DayOfWeek = ???
 
     /** Returns the enum constant of this type with the specified name. */
     @stub

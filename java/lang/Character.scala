@@ -132,20 +132,1351 @@ final class Character extends Object with Serializable with Comparable[Character
 
 object Character {
     /** Instances of this class represent particular subsets of the Unicode
-     *  character set.
+     *  character set.  The only family of subsets defined in the
+     *  Character class is Character.UnicodeBlock.
+     *  Other portions of the Java API may define other subsets for their
+     *  own purposes.
      */
-    type Subset = Character_Subset
+    object Subset extends Object {
+
+        /** Constructs a new Subset instance. */
+        @stub
+        protected def apply(name: String) = ???
+
+        /** Compares two Subset objects for equality. */
+        @stub
+        def equals(obj: Any): Boolean = ???
+
+        /** Returns the standard hash code as defined by the
+         *  Object.hashCode() method.
+         */
+        @stub
+        def hashCode(): Int = ???
+
+        /** Returns the name of this subset. */
+        @stub
+        def toString(): String = ???
+    }
+
 
     /** A family of character subsets representing the character blocks in the
-     *  Unicode specification.
+     *  Unicode specification. Character blocks generally define characters
+     *  used for a specific script or purpose. A character is contained by
+     *  at most one Unicode block.
      */
-    type UnicodeBlock = Character_UnicodeBlock
+    final object UnicodeBlock extends Character.Subset {
+
+        /** Constant for the "Aegean Numbers" Unicode character block. */
+        @stub
+        val AEGEAN_NUMBERS: UnicodeBlock = ???
+
+        /** Constant for the "Alchemical Symbols" Unicode character block. */
+        @stub
+        val ALCHEMICAL_SYMBOLS: UnicodeBlock = ???
+
+        /** Constant for the "Alphabetic Presentation Forms" Unicode character block. */
+        @stub
+        val ALPHABETIC_PRESENTATION_FORMS: UnicodeBlock = ???
+
+        /** Constant for the "Ancient Greek Musical Notation" Unicode character
+         *  block.
+         */
+        @stub
+        val ANCIENT_GREEK_MUSICAL_NOTATION: UnicodeBlock = ???
+
+        /** Constant for the "Ancient Greek Numbers" Unicode character block. */
+        @stub
+        val ANCIENT_GREEK_NUMBERS: UnicodeBlock = ???
+
+        /** Constant for the "Ancient Symbols" Unicode character block. */
+        @stub
+        val ANCIENT_SYMBOLS: UnicodeBlock = ???
+
+        /** Constant for the "Arabic" Unicode character block. */
+        @stub
+        val ARABIC: UnicodeBlock = ???
+
+        /** Constant for the "Arabic Extended-A" Unicode character block. */
+        @stub
+        val ARABIC_EXTENDED_A: UnicodeBlock = ???
+
+        /** Constant for the "Arabic Mathematical Alphabetic Symbols" Unicode
+         *  character block.
+         */
+        @stub
+        val ARABIC_MATHEMATICAL_ALPHABETIC_SYMBOLS: UnicodeBlock = ???
+
+        /** Constant for the "Arabic Presentation Forms-A" Unicode character
+         *  block.
+         */
+        @stub
+        val ARABIC_PRESENTATION_FORMS_A: UnicodeBlock = ???
+
+        /** Constant for the "Arabic Presentation Forms-B" Unicode character block. */
+        @stub
+        val ARABIC_PRESENTATION_FORMS_B: UnicodeBlock = ???
+
+        /** Constant for the "Arabic Supplement" Unicode character block. */
+        @stub
+        val ARABIC_SUPPLEMENT: UnicodeBlock = ???
+
+        /** Constant for the "Armenian" Unicode character block. */
+        @stub
+        val ARMENIAN: UnicodeBlock = ???
+
+        /** Constant for the "Arrows" Unicode character block. */
+        @stub
+        val ARROWS: UnicodeBlock = ???
+
+        /** Constant for the "Avestan" Unicode character block. */
+        @stub
+        val AVESTAN: UnicodeBlock = ???
+
+        /** Constant for the "Balinese" Unicode character block. */
+        @stub
+        val BALINESE: UnicodeBlock = ???
+
+        /** Constant for the "Bamum" Unicode character block. */
+        @stub
+        val BAMUM: UnicodeBlock = ???
+
+        /** Constant for the "Bamum Supplement" Unicode character block. */
+        @stub
+        val BAMUM_SUPPLEMENT: UnicodeBlock = ???
+
+        /** Constant for the "Basic Latin" Unicode character block. */
+        @stub
+        val BASIC_LATIN: UnicodeBlock = ???
+
+        /** Constant for the "Batak" Unicode character block. */
+        @stub
+        val BATAK: UnicodeBlock = ???
+
+        /** Constant for the "Bengali" Unicode character block. */
+        @stub
+        val BENGALI: UnicodeBlock = ???
+
+        /** Constant for the "Block Elements" Unicode character block. */
+        @stub
+        val BLOCK_ELEMENTS: UnicodeBlock = ???
+
+        /** Constant for the "Bopomofo" Unicode character block. */
+        @stub
+        val BOPOMOFO: UnicodeBlock = ???
+
+        /** Constant for the "Bopomofo Extended" Unicode character block. */
+        @stub
+        val BOPOMOFO_EXTENDED: UnicodeBlock = ???
+
+        /** Constant for the "Box Drawing" Unicode character block. */
+        @stub
+        val BOX_DRAWING: UnicodeBlock = ???
+
+        /** Constant for the "Brahmi" Unicode character block. */
+        @stub
+        val BRAHMI: UnicodeBlock = ???
+
+        /** Constant for the "Braille Patterns" Unicode character block. */
+        @stub
+        val BRAILLE_PATTERNS: UnicodeBlock = ???
+
+        /** Constant for the "Buginese" Unicode character block. */
+        @stub
+        val BUGINESE: UnicodeBlock = ???
+
+        /** Constant for the "Buhid" Unicode character block. */
+        @stub
+        val BUHID: UnicodeBlock = ???
+
+        /** Constant for the "Byzantine Musical Symbols" Unicode character block. */
+        @stub
+        val BYZANTINE_MUSICAL_SYMBOLS: UnicodeBlock = ???
+
+        /** Constant for the "Carian" Unicode character block. */
+        @stub
+        val CARIAN: UnicodeBlock = ???
+
+        /** Constant for the "Chakma" Unicode character block. */
+        @stub
+        val CHAKMA: UnicodeBlock = ???
+
+        /** Constant for the "Cham" Unicode character block. */
+        @stub
+        val CHAM: UnicodeBlock = ???
+
+        /** Constant for the "Cherokee" Unicode character block. */
+        @stub
+        val CHEROKEE: UnicodeBlock = ???
+
+        /** Constant for the "CJK Compatibility" Unicode character block. */
+        @stub
+        val CJK_COMPATIBILITY: UnicodeBlock = ???
+
+        /** Constant for the "CJK Compatibility Forms" Unicode character block. */
+        @stub
+        val CJK_COMPATIBILITY_FORMS: UnicodeBlock = ???
+
+        /** Constant for the "CJK Compatibility Ideographs" Unicode character
+         *  block.
+         */
+        @stub
+        val CJK_COMPATIBILITY_IDEOGRAPHS: UnicodeBlock = ???
+
+        /** Constant for the "CJK Compatibility Ideographs Supplement" Unicode character block. */
+        @stub
+        val CJK_COMPATIBILITY_IDEOGRAPHS_SUPPLEMENT: UnicodeBlock = ???
+
+        /** Constant for the "CJK Radicals Supplement" Unicode character block. */
+        @stub
+        val CJK_RADICALS_SUPPLEMENT: UnicodeBlock = ???
+
+        /** Constant for the "CJK Strokes" Unicode character block. */
+        @stub
+        val CJK_STROKES: UnicodeBlock = ???
+
+        /** Constant for the "CJK Symbols and Punctuation" Unicode character block. */
+        @stub
+        val CJK_SYMBOLS_AND_PUNCTUATION: UnicodeBlock = ???
+
+        /** Constant for the "CJK Unified Ideographs" Unicode character block. */
+        @stub
+        val CJK_UNIFIED_IDEOGRAPHS: UnicodeBlock = ???
+
+        /** Constant for the "CJK Unified Ideographs Extension A" Unicode character block. */
+        @stub
+        val CJK_UNIFIED_IDEOGRAPHS_EXTENSION_A: UnicodeBlock = ???
+
+        /** Constant for the "CJK Unified Ideographs Extension B" Unicode
+         *  character block.
+         */
+        @stub
+        val CJK_UNIFIED_IDEOGRAPHS_EXTENSION_B: UnicodeBlock = ???
+
+        /** Constant for the "CJK Unified Ideographs Extension C" Unicode
+         *  character block.
+         */
+        @stub
+        val CJK_UNIFIED_IDEOGRAPHS_EXTENSION_C: UnicodeBlock = ???
+
+        /** Constant for the "CJK Unified Ideographs Extension D" Unicode
+         *  character block.
+         */
+        @stub
+        val CJK_UNIFIED_IDEOGRAPHS_EXTENSION_D: UnicodeBlock = ???
+
+        /** Constant for the "Combining Diacritical Marks" Unicode character block. */
+        @stub
+        val COMBINING_DIACRITICAL_MARKS: UnicodeBlock = ???
+
+        /** Constant for the "Combining Diacritical Marks Supplement" Unicode
+         *  character block.
+         */
+        @stub
+        val COMBINING_DIACRITICAL_MARKS_SUPPLEMENT: UnicodeBlock = ???
+
+        /** Constant for the "Combining Half Marks" Unicode character block. */
+        @stub
+        val COMBINING_HALF_MARKS: UnicodeBlock = ???
+
+        /** Constant for the "Combining Diacritical Marks for Symbols" Unicode
+         *  character block.
+         */
+        @stub
+        val COMBINING_MARKS_FOR_SYMBOLS: UnicodeBlock = ???
+
+        /** Constant for the "Common Indic Number Forms" Unicode character block. */
+        @stub
+        val COMMON_INDIC_NUMBER_FORMS: UnicodeBlock = ???
+
+        /** Constant for the "Control Pictures" Unicode character block. */
+        @stub
+        val CONTROL_PICTURES: UnicodeBlock = ???
+
+        /** Constant for the "Coptic" Unicode character block. */
+        @stub
+        val COPTIC: UnicodeBlock = ???
+
+        /** Constant for the "Counting Rod Numerals" Unicode character block. */
+        @stub
+        val COUNTING_ROD_NUMERALS: UnicodeBlock = ???
+
+        /** Constant for the "Cuneiform" Unicode character block. */
+        @stub
+        val CUNEIFORM: UnicodeBlock = ???
+
+        /** Constant for the "Cuneiform Numbers and Punctuation" Unicode
+         *  character block.
+         */
+        @stub
+        val CUNEIFORM_NUMBERS_AND_PUNCTUATION: UnicodeBlock = ???
+
+        /** Constant for the "Currency Symbols" Unicode character block. */
+        @stub
+        val CURRENCY_SYMBOLS: UnicodeBlock = ???
+
+        /** Constant for the "Cypriot Syllabary" Unicode character block. */
+        @stub
+        val CYPRIOT_SYLLABARY: UnicodeBlock = ???
+
+        /** Constant for the "Cyrillic" Unicode character block. */
+        @stub
+        val CYRILLIC: UnicodeBlock = ???
+
+        /** Constant for the "Cyrillic Extended-A" Unicode character block. */
+        @stub
+        val CYRILLIC_EXTENDED_A: UnicodeBlock = ???
+
+        /** Constant for the "Cyrillic Extended-B" Unicode character block. */
+        @stub
+        val CYRILLIC_EXTENDED_B: UnicodeBlock = ???
+
+        /** Constant for the "Cyrillic Supplementary" Unicode character block. */
+        @stub
+        val CYRILLIC_SUPPLEMENTARY: UnicodeBlock = ???
+
+        /** Constant for the "Deseret" Unicode character block. */
+        @stub
+        val DESERET: UnicodeBlock = ???
+
+        /** Constant for the "Devanagari" Unicode character block. */
+        @stub
+        val DEVANAGARI: UnicodeBlock = ???
+
+        /** Constant for the "Devanagari Extended" Unicode character block. */
+        @stub
+        val DEVANAGARI_EXTENDED: UnicodeBlock = ???
+
+        /** Constant for the "Dingbats" Unicode character block. */
+        @stub
+        val DINGBATS: UnicodeBlock = ???
+
+        /** Constant for the "Domino Tiles" Unicode character block. */
+        @stub
+        val DOMINO_TILES: UnicodeBlock = ???
+
+        /** Constant for the "Egyptian Hieroglyphs" Unicode character block. */
+        @stub
+        val EGYPTIAN_HIEROGLYPHS: UnicodeBlock = ???
+
+        /** Constant for the "Emoticons" Unicode character block. */
+        @stub
+        val EMOTICONS: UnicodeBlock = ???
+
+        /** Constant for the "Enclosed Alphanumeric Supplement" Unicode character
+         *  block.
+         */
+        @stub
+        val ENCLOSED_ALPHANUMERIC_SUPPLEMENT: UnicodeBlock = ???
+
+        /** Constant for the "Enclosed Alphanumerics" Unicode character block. */
+        @stub
+        val ENCLOSED_ALPHANUMERICS: UnicodeBlock = ???
+
+        /** Constant for the "Enclosed CJK Letters and Months" Unicode character block. */
+        @stub
+        val ENCLOSED_CJK_LETTERS_AND_MONTHS: UnicodeBlock = ???
+
+        /** Constant for the "Enclosed Ideographic Supplement" Unicode character
+         *  block.
+         */
+        @stub
+        val ENCLOSED_IDEOGRAPHIC_SUPPLEMENT: UnicodeBlock = ???
+
+        /** Constant for the "Ethiopic" Unicode character block. */
+        @stub
+        val ETHIOPIC: UnicodeBlock = ???
+
+        /** Constant for the "Ethiopic Extended" Unicode character block. */
+        @stub
+        val ETHIOPIC_EXTENDED: UnicodeBlock = ???
+
+        /** Constant for the "Ethiopic Extended-A" Unicode character block. */
+        @stub
+        val ETHIOPIC_EXTENDED_A: UnicodeBlock = ???
+
+        /** Constant for the "Ethiopic Supplement" Unicode character block. */
+        @stub
+        val ETHIOPIC_SUPPLEMENT: UnicodeBlock = ???
+
+        /** Constant for the "General Punctuation" Unicode character block. */
+        @stub
+        val GENERAL_PUNCTUATION: UnicodeBlock = ???
+
+        /** Constant for the "Geometric Shapes" Unicode character block. */
+        @stub
+        val GEOMETRIC_SHAPES: UnicodeBlock = ???
+
+        /** Constant for the "Georgian" Unicode character block. */
+        @stub
+        val GEORGIAN: UnicodeBlock = ???
+
+        /** Constant for the "Georgian Supplement" Unicode character block. */
+        @stub
+        val GEORGIAN_SUPPLEMENT: UnicodeBlock = ???
+
+        /** Constant for the "Glagolitic" Unicode character block. */
+        @stub
+        val GLAGOLITIC: UnicodeBlock = ???
+
+        /** Constant for the "Gothic" Unicode character block. */
+        @stub
+        val GOTHIC: UnicodeBlock = ???
+
+        /** Constant for the "Greek and Coptic" Unicode character block. */
+        @stub
+        val GREEK: UnicodeBlock = ???
+
+        /** Constant for the "Greek Extended" Unicode character block. */
+        @stub
+        val GREEK_EXTENDED: UnicodeBlock = ???
+
+        /** Constant for the "Gujarati" Unicode character block. */
+        @stub
+        val GUJARATI: UnicodeBlock = ???
+
+        /** Constant for the "Gurmukhi" Unicode character block. */
+        @stub
+        val GURMUKHI: UnicodeBlock = ???
+
+        /** Constant for the "Halfwidth and Fullwidth Forms" Unicode character
+         *  block.
+         */
+        @stub
+        val HALFWIDTH_AND_FULLWIDTH_FORMS: UnicodeBlock = ???
+
+        /** Constant for the "Hangul Compatibility Jamo" Unicode character block. */
+        @stub
+        val HANGUL_COMPATIBILITY_JAMO: UnicodeBlock = ???
+
+        /** Constant for the "Hangul Jamo" Unicode character block. */
+        @stub
+        val HANGUL_JAMO: UnicodeBlock = ???
+
+        /** Constant for the "Hangul Jamo Extended-A" Unicode character block. */
+        @stub
+        val HANGUL_JAMO_EXTENDED_A: UnicodeBlock = ???
+
+        /** Constant for the "Hangul Jamo Extended-B" Unicode character block. */
+        @stub
+        val HANGUL_JAMO_EXTENDED_B: UnicodeBlock = ???
+
+        /** Constant for the "Hangul Syllables" Unicode character block. */
+        @stub
+        val HANGUL_SYLLABLES: UnicodeBlock = ???
+
+        /** Constant for the "Hanunoo" Unicode character block. */
+        @stub
+        val HANUNOO: UnicodeBlock = ???
+
+        /** Constant for the "Hebrew" Unicode character block. */
+        @stub
+        val HEBREW: UnicodeBlock = ???
+
+        /** Constant for the "High Private Use Surrogates" Unicode character
+         *  block.
+         */
+        @stub
+        val HIGH_PRIVATE_USE_SURROGATES: UnicodeBlock = ???
+
+        /** Constant for the "High Surrogates" Unicode character block. */
+        @stub
+        val HIGH_SURROGATES: UnicodeBlock = ???
+
+        /** Constant for the "Hiragana" Unicode character block. */
+        @stub
+        val HIRAGANA: UnicodeBlock = ???
+
+        /** Constant for the "Ideographic Description Characters" Unicode character block. */
+        @stub
+        val IDEOGRAPHIC_DESCRIPTION_CHARACTERS: UnicodeBlock = ???
+
+        /** Constant for the "Imperial Aramaic" Unicode character block. */
+        @stub
+        val IMPERIAL_ARAMAIC: UnicodeBlock = ???
+
+        /** Constant for the "Inscriptional Pahlavi" Unicode character block. */
+        @stub
+        val INSCRIPTIONAL_PAHLAVI: UnicodeBlock = ???
+
+        /** Constant for the "Inscriptional Parthian" Unicode character block. */
+        @stub
+        val INSCRIPTIONAL_PARTHIAN: UnicodeBlock = ???
+
+        /** Constant for the "IPA Extensions" Unicode character block. */
+        @stub
+        val IPA_EXTENSIONS: UnicodeBlock = ???
+
+        /** Constant for the "Javanese" Unicode character block. */
+        @stub
+        val JAVANESE: UnicodeBlock = ???
+
+        /** Constant for the "Kaithi" Unicode character block. */
+        @stub
+        val KAITHI: UnicodeBlock = ???
+
+        /** Constant for the "Kana Supplement" Unicode character block. */
+        @stub
+        val KANA_SUPPLEMENT: UnicodeBlock = ???
+
+        /** Constant for the "Kanbun" Unicode character block. */
+        @stub
+        val KANBUN: UnicodeBlock = ???
+
+        /** Constant for the "Kangxi Radicals" Unicode character block. */
+        @stub
+        val KANGXI_RADICALS: UnicodeBlock = ???
+
+        /** Constant for the "Kannada" Unicode character block. */
+        @stub
+        val KANNADA: UnicodeBlock = ???
+
+        /** Constant for the "Katakana" Unicode character block. */
+        @stub
+        val KATAKANA: UnicodeBlock = ???
+
+        /** Constant for the "Katakana Phonetic Extensions" Unicode character
+         *  block.
+         */
+        @stub
+        val KATAKANA_PHONETIC_EXTENSIONS: UnicodeBlock = ???
+
+        /** Constant for the "Kayah Li" Unicode character block. */
+        @stub
+        val KAYAH_LI: UnicodeBlock = ???
+
+        /** Constant for the "Kharoshthi" Unicode character block. */
+        @stub
+        val KHAROSHTHI: UnicodeBlock = ???
+
+        /** Constant for the "Khmer" Unicode character block. */
+        @stub
+        val KHMER: UnicodeBlock = ???
+
+        /** Constant for the "Khmer Symbols" Unicode character block. */
+        @stub
+        val KHMER_SYMBOLS: UnicodeBlock = ???
+
+        /** Constant for the "Lao" Unicode character block. */
+        @stub
+        val LAO: UnicodeBlock = ???
+
+        /** Constant for the "Latin-1 Supplement" Unicode character block. */
+        @stub
+        val LATIN_1_SUPPLEMENT: UnicodeBlock = ???
+
+        /** Constant for the "Latin Extended-A" Unicode character block. */
+        @stub
+        val LATIN_EXTENDED_A: UnicodeBlock = ???
+
+        /** Constant for the "Latin Extended Additional" Unicode character block. */
+        @stub
+        val LATIN_EXTENDED_ADDITIONAL: UnicodeBlock = ???
+
+        /** Constant for the "Latin Extended-B" Unicode character block. */
+        @stub
+        val LATIN_EXTENDED_B: UnicodeBlock = ???
+
+        /** Constant for the "Latin Extended-C" Unicode character block. */
+        @stub
+        val LATIN_EXTENDED_C: UnicodeBlock = ???
+
+        /** Constant for the "Latin Extended-D" Unicode character block. */
+        @stub
+        val LATIN_EXTENDED_D: UnicodeBlock = ???
+
+        /** Constant for the "Lepcha" Unicode character block. */
+        @stub
+        val LEPCHA: UnicodeBlock = ???
+
+        /** Constant for the "Letterlike Symbols" Unicode character block. */
+        @stub
+        val LETTERLIKE_SYMBOLS: UnicodeBlock = ???
+
+        /** Constant for the "Limbu" Unicode character block. */
+        @stub
+        val LIMBU: UnicodeBlock = ???
+
+        /** Constant for the "Linear B Ideograms" Unicode character block. */
+        @stub
+        val LINEAR_B_IDEOGRAMS: UnicodeBlock = ???
+
+        /** Constant for the "Linear B Syllabary" Unicode character block. */
+        @stub
+        val LINEAR_B_SYLLABARY: UnicodeBlock = ???
+
+        /** Constant for the "Lisu" Unicode character block. */
+        @stub
+        val LISU: UnicodeBlock = ???
+
+        /** Constant for the "Low Surrogates" Unicode character block. */
+        @stub
+        val LOW_SURROGATES: UnicodeBlock = ???
+
+        /** Constant for the "Lycian" Unicode character block. */
+        @stub
+        val LYCIAN: UnicodeBlock = ???
+
+        /** Constant for the "Lydian" Unicode character block. */
+        @stub
+        val LYDIAN: UnicodeBlock = ???
+
+        /** Constant for the "Mahjong Tiles" Unicode character block. */
+        @stub
+        val MAHJONG_TILES: UnicodeBlock = ???
+
+        /** Constant for the "Malayalam" Unicode character block. */
+        @stub
+        val MALAYALAM: UnicodeBlock = ???
+
+        /** Constant for the "Mandaic" Unicode character block. */
+        @stub
+        val MANDAIC: UnicodeBlock = ???
+
+        /** Constant for the "Mathematical Alphanumeric Symbols" Unicode
+         *  character block.
+         */
+        @stub
+        val MATHEMATICAL_ALPHANUMERIC_SYMBOLS: UnicodeBlock = ???
+
+        /** Constant for the "Mathematical Operators" Unicode character block. */
+        @stub
+        val MATHEMATICAL_OPERATORS: UnicodeBlock = ???
+
+        /** Constant for the "Meetei Mayek" Unicode character block. */
+        @stub
+        val MEETEI_MAYEK: UnicodeBlock = ???
+
+        /** Constant for the "Meetei Mayek Extensions" Unicode character block. */
+        @stub
+        val MEETEI_MAYEK_EXTENSIONS: UnicodeBlock = ???
+
+        /** Constant for the "Meroitic Cursive" Unicode character block. */
+        @stub
+        val MEROITIC_CURSIVE: UnicodeBlock = ???
+
+        /** Constant for the "Meroitic Hieroglyphs" Unicode character block. */
+        @stub
+        val MEROITIC_HIEROGLYPHS: UnicodeBlock = ???
+
+        /** Constant for the "Miao" Unicode character block. */
+        @stub
+        val MIAO: UnicodeBlock = ???
+
+        /** Constant for the "Miscellaneous Mathematical Symbols-A" Unicode character block. */
+        @stub
+        val MISCELLANEOUS_MATHEMATICAL_SYMBOLS_A: UnicodeBlock = ???
+
+        /** Constant for the "Miscellaneous Mathematical Symbols-B" Unicode
+         *  character block.
+         */
+        @stub
+        val MISCELLANEOUS_MATHEMATICAL_SYMBOLS_B: UnicodeBlock = ???
+
+        /** Constant for the "Miscellaneous Symbols" Unicode character block. */
+        @stub
+        val MISCELLANEOUS_SYMBOLS: UnicodeBlock = ???
+
+        /** Constant for the "Miscellaneous Symbols and Arrows" Unicode character
+         *  block.
+         */
+        @stub
+        val MISCELLANEOUS_SYMBOLS_AND_ARROWS: UnicodeBlock = ???
+
+        /** Constant for the "Miscellaneous Symbols And Pictographs" Unicode
+         *  character block.
+         */
+        @stub
+        val MISCELLANEOUS_SYMBOLS_AND_PICTOGRAPHS: UnicodeBlock = ???
+
+        /** Constant for the "Miscellaneous Technical" Unicode character block. */
+        @stub
+        val MISCELLANEOUS_TECHNICAL: UnicodeBlock = ???
+
+        /** Constant for the "Modifier Tone Letters" Unicode character block. */
+        @stub
+        val MODIFIER_TONE_LETTERS: UnicodeBlock = ???
+
+        /** Constant for the "Mongolian" Unicode character block. */
+        @stub
+        val MONGOLIAN: UnicodeBlock = ???
+
+        /** Constant for the "Musical Symbols" Unicode character block. */
+        @stub
+        val MUSICAL_SYMBOLS: UnicodeBlock = ???
+
+        /** Constant for the "Myanmar" Unicode character block. */
+        @stub
+        val MYANMAR: UnicodeBlock = ???
+
+        /** Constant for the "Myanmar Extended-A" Unicode character block. */
+        @stub
+        val MYANMAR_EXTENDED_A: UnicodeBlock = ???
+
+        /** Constant for the "New Tai Lue" Unicode character block. */
+        @stub
+        val NEW_TAI_LUE: UnicodeBlock = ???
+
+        /** Constant for the "NKo" Unicode character block. */
+        @stub
+        val NKO: UnicodeBlock = ???
+
+        /** Constant for the "Number Forms" Unicode character block. */
+        @stub
+        val NUMBER_FORMS: UnicodeBlock = ???
+
+        /** Constant for the "Ogham" Unicode character block. */
+        @stub
+        val OGHAM: UnicodeBlock = ???
+
+        /** Constant for the "Ol Chiki" Unicode character block. */
+        @stub
+        val OL_CHIKI: UnicodeBlock = ???
+
+        /** Constant for the "Old Italic" Unicode character block. */
+        @stub
+        val OLD_ITALIC: UnicodeBlock = ???
+
+        /** Constant for the "Old Persian" Unicode character block. */
+        @stub
+        val OLD_PERSIAN: UnicodeBlock = ???
+
+        /** Constant for the "Old South Arabian" Unicode character block. */
+        @stub
+        val OLD_SOUTH_ARABIAN: UnicodeBlock = ???
+
+        /** Constant for the "Old Turkic" Unicode character block. */
+        @stub
+        val OLD_TURKIC: UnicodeBlock = ???
+
+        /** Constant for the "Optical Character Recognition" Unicode character block. */
+        @stub
+        val OPTICAL_CHARACTER_RECOGNITION: UnicodeBlock = ???
+
+        /** Constant for the "Oriya" Unicode character block. */
+        @stub
+        val ORIYA: UnicodeBlock = ???
+
+        /** Constant for the "Osmanya" Unicode character block. */
+        @stub
+        val OSMANYA: UnicodeBlock = ???
+
+        /** Constant for the "Phags-pa" Unicode character block. */
+        @stub
+        val PHAGS_PA: UnicodeBlock = ???
+
+        /** Constant for the "Phaistos Disc" Unicode character block. */
+        @stub
+        val PHAISTOS_DISC: UnicodeBlock = ???
+
+        /** Constant for the "Phoenician" Unicode character block. */
+        @stub
+        val PHOENICIAN: UnicodeBlock = ???
+
+        /** Constant for the "Phonetic Extensions" Unicode character block. */
+        @stub
+        val PHONETIC_EXTENSIONS: UnicodeBlock = ???
+
+        /** Constant for the "Phonetic Extensions Supplement" Unicode character
+         *  block.
+         */
+        @stub
+        val PHONETIC_EXTENSIONS_SUPPLEMENT: UnicodeBlock = ???
+
+        /** Constant for the "Playing Cards" Unicode character block. */
+        @stub
+        val PLAYING_CARDS: UnicodeBlock = ???
+
+        /** Constant for the "Private Use Area" Unicode character block. */
+        @stub
+        val PRIVATE_USE_AREA: UnicodeBlock = ???
+
+        /** Constant for the "Rejang" Unicode character block. */
+        @stub
+        val REJANG: UnicodeBlock = ???
+
+        /** Constant for the "Rumi Numeral Symbols" Unicode character block. */
+        @stub
+        val RUMI_NUMERAL_SYMBOLS: UnicodeBlock = ???
+
+        /** Constant for the "Runic" Unicode character block. */
+        @stub
+        val RUNIC: UnicodeBlock = ???
+
+        /** Constant for the "Samaritan" Unicode character block. */
+        @stub
+        val SAMARITAN: UnicodeBlock = ???
+
+        /** Constant for the "Saurashtra" Unicode character block. */
+        @stub
+        val SAURASHTRA: UnicodeBlock = ???
+
+        /** Constant for the "Sharada" Unicode character block. */
+        @stub
+        val SHARADA: UnicodeBlock = ???
+
+        /** Constant for the "Shavian" Unicode character block. */
+        @stub
+        val SHAVIAN: UnicodeBlock = ???
+
+        /** Constant for the "Sinhala" Unicode character block. */
+        @stub
+        val SINHALA: UnicodeBlock = ???
+
+        /** Constant for the "Small Form Variants" Unicode character block. */
+        @stub
+        val SMALL_FORM_VARIANTS: UnicodeBlock = ???
+
+        /** Constant for the "Sora Sompeng" Unicode character block. */
+        @stub
+        val SORA_SOMPENG: UnicodeBlock = ???
+
+        /** Constant for the "Spacing Modifier Letters" Unicode character block. */
+        @stub
+        val SPACING_MODIFIER_LETTERS: UnicodeBlock = ???
+
+        /** Constant for the "Specials" Unicode character block. */
+        @stub
+        val SPECIALS: UnicodeBlock = ???
+
+        /** Constant for the "Sundanese" Unicode character block. */
+        @stub
+        val SUNDANESE: UnicodeBlock = ???
+
+        /** Constant for the "Sundanese Supplement" Unicode character block. */
+        @stub
+        val SUNDANESE_SUPPLEMENT: UnicodeBlock = ???
+
+        /** Constant for the "Superscripts and Subscripts" Unicode character
+         *  block.
+         */
+        @stub
+        val SUPERSCRIPTS_AND_SUBSCRIPTS: UnicodeBlock = ???
+
+        /** Constant for the "Supplemental Arrows-A" Unicode character block. */
+        @stub
+        val SUPPLEMENTAL_ARROWS_A: UnicodeBlock = ???
+
+        /** Constant for the "Supplemental Arrows-B" Unicode character block. */
+        @stub
+        val SUPPLEMENTAL_ARROWS_B: UnicodeBlock = ???
+
+        /** Constant for the "Supplemental Mathematical Operators" Unicode
+         *  character block.
+         */
+        @stub
+        val SUPPLEMENTAL_MATHEMATICAL_OPERATORS: UnicodeBlock = ???
+
+        /** Constant for the "Supplemental Punctuation" Unicode character block. */
+        @stub
+        val SUPPLEMENTAL_PUNCTUATION: UnicodeBlock = ???
+
+        /** Constant for the "Supplementary Private Use Area-A" Unicode character
+         *  block.
+         */
+        @stub
+        val SUPPLEMENTARY_PRIVATE_USE_AREA_A: UnicodeBlock = ???
+
+        /** Constant for the "Supplementary Private Use Area-B" Unicode character
+         *  block.
+         */
+        @stub
+        val SUPPLEMENTARY_PRIVATE_USE_AREA_B: UnicodeBlock = ???
+
+        /** Deprecated. 
+         * As of J2SE 5, use HIGH_SURROGATES,
+         *              HIGH_PRIVATE_USE_SURROGATES, and
+         *              LOW_SURROGATES. These new constants match
+         *              the block definitions of the Unicode Standard.
+         *              The of(char) and of(int) methods
+         *              return the new constants, not SURROGATES_AREA.
+         * 
+         */
+        @stub
+        val SURROGATES_AREA: UnicodeBlock = ???
+
+        /** Constant for the "Syloti Nagri" Unicode character block. */
+        @stub
+        val SYLOTI_NAGRI: UnicodeBlock = ???
+
+        /** Constant for the "Syriac" Unicode character block. */
+        @stub
+        val SYRIAC: UnicodeBlock = ???
+
+        /** Constant for the "Tagalog" Unicode character block. */
+        @stub
+        val TAGALOG: UnicodeBlock = ???
+
+        /** Constant for the "Tagbanwa" Unicode character block. */
+        @stub
+        val TAGBANWA: UnicodeBlock = ???
+
+        /** Constant for the "Tags" Unicode character block. */
+        @stub
+        val TAGS: UnicodeBlock = ???
+
+        /** Constant for the "Tai Le" Unicode character block. */
+        @stub
+        val TAI_LE: UnicodeBlock = ???
+
+        /** Constant for the "Tai Tham" Unicode character block. */
+        @stub
+        val TAI_THAM: UnicodeBlock = ???
+
+        /** Constant for the "Tai Viet" Unicode character block. */
+        @stub
+        val TAI_VIET: UnicodeBlock = ???
+
+        /** Constant for the "Tai Xuan Jing Symbols" Unicode character block. */
+        @stub
+        val TAI_XUAN_JING_SYMBOLS: UnicodeBlock = ???
+
+        /** Constant for the "Takri" Unicode character block. */
+        @stub
+        val TAKRI: UnicodeBlock = ???
+
+        /** Constant for the "Tamil" Unicode character block. */
+        @stub
+        val TAMIL: UnicodeBlock = ???
+
+        /** Constant for the "Telugu" Unicode character block. */
+        @stub
+        val TELUGU: UnicodeBlock = ???
+
+        /** Constant for the "Thaana" Unicode character block. */
+        @stub
+        val THAANA: UnicodeBlock = ???
+
+        /** Constant for the "Thai" Unicode character block. */
+        @stub
+        val THAI: UnicodeBlock = ???
+
+        /** Constant for the "Tibetan" Unicode character block. */
+        @stub
+        val TIBETAN: UnicodeBlock = ???
+
+        /** Constant for the "Tifinagh" Unicode character block. */
+        @stub
+        val TIFINAGH: UnicodeBlock = ???
+
+        /** Constant for the "Transport And Map Symbols" Unicode character block. */
+        @stub
+        val TRANSPORT_AND_MAP_SYMBOLS: UnicodeBlock = ???
+
+        /** Constant for the "Ugaritic" Unicode character block. */
+        @stub
+        val UGARITIC: UnicodeBlock = ???
+
+        /** Constant for the "Unified Canadian Aboriginal Syllabics" Unicode character block. */
+        @stub
+        val UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS: UnicodeBlock = ???
+
+        /** Constant for the "Unified Canadian Aboriginal Syllabics Extended"
+         *  Unicode character block.
+         */
+        @stub
+        val UNIFIED_CANADIAN_ABORIGINAL_SYLLABICS_EXTENDED: UnicodeBlock = ???
+
+        /** Constant for the "Vai" Unicode character block. */
+        @stub
+        val VAI: UnicodeBlock = ???
+
+        /** Constant for the "Variation Selectors" Unicode character block. */
+        @stub
+        val VARIATION_SELECTORS: UnicodeBlock = ???
+
+        /** Constant for the "Variation Selectors Supplement" Unicode character
+         *  block.
+         */
+        @stub
+        val VARIATION_SELECTORS_SUPPLEMENT: UnicodeBlock = ???
+
+        /** Constant for the "Vedic Extensions" Unicode character block. */
+        @stub
+        val VEDIC_EXTENSIONS: UnicodeBlock = ???
+
+        /** Constant for the "Vertical Forms" Unicode character block. */
+        @stub
+        val VERTICAL_FORMS: UnicodeBlock = ???
+
+        /** Constant for the "Yi Radicals" Unicode character block. */
+        @stub
+        val YI_RADICALS: UnicodeBlock = ???
+
+        /** Constant for the "Yi Syllables" Unicode character block. */
+        @stub
+        val YI_SYLLABLES: UnicodeBlock = ???
+
+        /** Constant for the "Yijing Hexagram Symbols" Unicode character block. */
+        @stub
+        val YIJING_HEXAGRAM_SYMBOLS: UnicodeBlock = ???
+
+        /** Returns the UnicodeBlock with the given name. */
+        @stub
+        def forName(blockName: String): UnicodeBlock = ???
+
+        /** Returns the object representing the Unicode block containing the
+         *  given character, or null if the character is not a
+         *  member of a defined block.
+         */
+        @stub
+        def of(c: Char): UnicodeBlock = ???
+
+        /** Returns the object representing the Unicode block
+         *  containing the given character (Unicode code point), or
+         *  null if the character is not a member of a
+         *  defined block.
+         */
+        @stub
+        def of(codePoint: Int): UnicodeBlock = ???
+    }
+
 
     /** A family of character subsets representing the character scripts
      *  defined in the 
-     *  Unicode Standard Annex #24: Script Names.
+     *  Unicode Standard Annex #24: Script Names. Every Unicode
+     *  character is assigned to a single Unicode script, either a specific
+     *  script, such as Latin, or
+     *  one of the following three special values,
+     *  Inherited,
+     *  Common or
+     *  Unknown.
      */
-    type UnicodeScript = Character_UnicodeScript
+    class UnicodeScript private (name: String, ordinal: Int) extends Enum[UnicodeScript](name, ordinal) {
+    }
+
+    object UnicodeScript {
+        /** Unicode script "Arabic". */
+        final val ARABIC: UnicodeScript = new UnicodeScript("ARABIC", 0)
+
+        /** Unicode script "Armenian". */
+        final val ARMENIAN: UnicodeScript = new UnicodeScript("ARMENIAN", 1)
+
+        /** Unicode script "Avestan". */
+        final val AVESTAN: UnicodeScript = new UnicodeScript("AVESTAN", 2)
+
+        /** Unicode script "Balinese". */
+        final val BALINESE: UnicodeScript = new UnicodeScript("BALINESE", 3)
+
+        /** Unicode script "Bamum". */
+        final val BAMUM: UnicodeScript = new UnicodeScript("BAMUM", 4)
+
+        /** Unicode script "Batak". */
+        final val BATAK: UnicodeScript = new UnicodeScript("BATAK", 5)
+
+        /** Unicode script "Bengali". */
+        final val BENGALI: UnicodeScript = new UnicodeScript("BENGALI", 6)
+
+        /** Unicode script "Bopomofo". */
+        final val BOPOMOFO: UnicodeScript = new UnicodeScript("BOPOMOFO", 7)
+
+        /** Unicode script "Brahmi". */
+        final val BRAHMI: UnicodeScript = new UnicodeScript("BRAHMI", 8)
+
+        /** Unicode script "Braille". */
+        final val BRAILLE: UnicodeScript = new UnicodeScript("BRAILLE", 9)
+
+        /** Unicode script "Buginese". */
+        final val BUGINESE: UnicodeScript = new UnicodeScript("BUGINESE", 10)
+
+        /** Unicode script "Buhid". */
+        final val BUHID: UnicodeScript = new UnicodeScript("BUHID", 11)
+
+        /** Unicode script "Canadian_Aboriginal". */
+        final val CANADIAN_ABORIGINAL: UnicodeScript = new UnicodeScript("CANADIAN_ABORIGINAL", 12)
+
+        /** Unicode script "Carian". */
+        final val CARIAN: UnicodeScript = new UnicodeScript("CARIAN", 13)
+
+        /** Unicode script "Chakma". */
+        final val CHAKMA: UnicodeScript = new UnicodeScript("CHAKMA", 14)
+
+        /** Unicode script "Cham". */
+        final val CHAM: UnicodeScript = new UnicodeScript("CHAM", 15)
+
+        /** Unicode script "Cherokee". */
+        final val CHEROKEE: UnicodeScript = new UnicodeScript("CHEROKEE", 16)
+
+        /** Unicode script "Common". */
+        final val COMMON: UnicodeScript = new UnicodeScript("COMMON", 17)
+
+        /** Unicode script "Coptic". */
+        final val COPTIC: UnicodeScript = new UnicodeScript("COPTIC", 18)
+
+        /** Unicode script "Cuneiform". */
+        final val CUNEIFORM: UnicodeScript = new UnicodeScript("CUNEIFORM", 19)
+
+        /** Unicode script "Cypriot". */
+        final val CYPRIOT: UnicodeScript = new UnicodeScript("CYPRIOT", 20)
+
+        /** Unicode script "Cyrillic". */
+        final val CYRILLIC: UnicodeScript = new UnicodeScript("CYRILLIC", 21)
+
+        /** Unicode script "Deseret". */
+        final val DESERET: UnicodeScript = new UnicodeScript("DESERET", 22)
+
+        /** Unicode script "Devanagari". */
+        final val DEVANAGARI: UnicodeScript = new UnicodeScript("DEVANAGARI", 23)
+
+        /** Unicode script "Egyptian_Hieroglyphs". */
+        final val EGYPTIAN_HIEROGLYPHS: UnicodeScript = new UnicodeScript("EGYPTIAN_HIEROGLYPHS", 24)
+
+        /** Unicode script "Ethiopic". */
+        final val ETHIOPIC: UnicodeScript = new UnicodeScript("ETHIOPIC", 25)
+
+        /** Unicode script "Georgian". */
+        final val GEORGIAN: UnicodeScript = new UnicodeScript("GEORGIAN", 26)
+
+        /** Unicode script "Glagolitic". */
+        final val GLAGOLITIC: UnicodeScript = new UnicodeScript("GLAGOLITIC", 27)
+
+        /** Unicode script "Gothic". */
+        final val GOTHIC: UnicodeScript = new UnicodeScript("GOTHIC", 28)
+
+        /** Unicode script "Greek". */
+        final val GREEK: UnicodeScript = new UnicodeScript("GREEK", 29)
+
+        /** Unicode script "Gujarati". */
+        final val GUJARATI: UnicodeScript = new UnicodeScript("GUJARATI", 30)
+
+        /** Unicode script "Gurmukhi". */
+        final val GURMUKHI: UnicodeScript = new UnicodeScript("GURMUKHI", 31)
+
+        /** Unicode script "Han". */
+        final val HAN: UnicodeScript = new UnicodeScript("HAN", 32)
+
+        /** Unicode script "Hangul". */
+        final val HANGUL: UnicodeScript = new UnicodeScript("HANGUL", 33)
+
+        /** Unicode script "Hanunoo". */
+        final val HANUNOO: UnicodeScript = new UnicodeScript("HANUNOO", 34)
+
+        /** Unicode script "Hebrew". */
+        final val HEBREW: UnicodeScript = new UnicodeScript("HEBREW", 35)
+
+        /** Unicode script "Hiragana". */
+        final val HIRAGANA: UnicodeScript = new UnicodeScript("HIRAGANA", 36)
+
+        /** Unicode script "Imperial_Aramaic". */
+        final val IMPERIAL_ARAMAIC: UnicodeScript = new UnicodeScript("IMPERIAL_ARAMAIC", 37)
+
+        /** Unicode script "Inherited". */
+        final val INHERITED: UnicodeScript = new UnicodeScript("INHERITED", 38)
+
+        /** Unicode script "Inscriptional_Pahlavi". */
+        final val INSCRIPTIONAL_PAHLAVI: UnicodeScript = new UnicodeScript("INSCRIPTIONAL_PAHLAVI", 39)
+
+        /** Unicode script "Inscriptional_Parthian". */
+        final val INSCRIPTIONAL_PARTHIAN: UnicodeScript = new UnicodeScript("INSCRIPTIONAL_PARTHIAN", 40)
+
+        /** Unicode script "Javanese". */
+        final val JAVANESE: UnicodeScript = new UnicodeScript("JAVANESE", 41)
+
+        /** Unicode script "Kaithi". */
+        final val KAITHI: UnicodeScript = new UnicodeScript("KAITHI", 42)
+
+        /** Unicode script "Kannada". */
+        final val KANNADA: UnicodeScript = new UnicodeScript("KANNADA", 43)
+
+        /** Unicode script "Katakana". */
+        final val KATAKANA: UnicodeScript = new UnicodeScript("KATAKANA", 44)
+
+        /** Unicode script "Kayah_Li". */
+        final val KAYAH_LI: UnicodeScript = new UnicodeScript("KAYAH_LI", 45)
+
+        /** Unicode script "Kharoshthi". */
+        final val KHAROSHTHI: UnicodeScript = new UnicodeScript("KHAROSHTHI", 46)
+
+        /** Unicode script "Khmer". */
+        final val KHMER: UnicodeScript = new UnicodeScript("KHMER", 47)
+
+        /** Unicode script "Lao". */
+        final val LAO: UnicodeScript = new UnicodeScript("LAO", 48)
+
+        /** Unicode script "Latin". */
+        final val LATIN: UnicodeScript = new UnicodeScript("LATIN", 49)
+
+        /** Unicode script "Lepcha". */
+        final val LEPCHA: UnicodeScript = new UnicodeScript("LEPCHA", 50)
+
+        /** Unicode script "Limbu". */
+        final val LIMBU: UnicodeScript = new UnicodeScript("LIMBU", 51)
+
+        /** Unicode script "Linear_B". */
+        final val LINEAR_B: UnicodeScript = new UnicodeScript("LINEAR_B", 52)
+
+        /** Unicode script "Lisu". */
+        final val LISU: UnicodeScript = new UnicodeScript("LISU", 53)
+
+        /** Unicode script "Lycian". */
+        final val LYCIAN: UnicodeScript = new UnicodeScript("LYCIAN", 54)
+
+        /** Unicode script "Lydian". */
+        final val LYDIAN: UnicodeScript = new UnicodeScript("LYDIAN", 55)
+
+        /** Unicode script "Malayalam". */
+        final val MALAYALAM: UnicodeScript = new UnicodeScript("MALAYALAM", 56)
+
+        /** Unicode script "Mandaic". */
+        final val MANDAIC: UnicodeScript = new UnicodeScript("MANDAIC", 57)
+
+        /** Unicode script "Meetei_Mayek". */
+        final val MEETEI_MAYEK: UnicodeScript = new UnicodeScript("MEETEI_MAYEK", 58)
+
+        /** Unicode script "Meroitic Cursive". */
+        final val MEROITIC_CURSIVE: UnicodeScript = new UnicodeScript("MEROITIC_CURSIVE", 59)
+
+        /** Unicode script "Meroitic Hieroglyphs". */
+        final val MEROITIC_HIEROGLYPHS: UnicodeScript = new UnicodeScript("MEROITIC_HIEROGLYPHS", 60)
+
+        /** Unicode script "Miao". */
+        final val MIAO: UnicodeScript = new UnicodeScript("MIAO", 61)
+
+        /** Unicode script "Mongolian". */
+        final val MONGOLIAN: UnicodeScript = new UnicodeScript("MONGOLIAN", 62)
+
+        /** Unicode script "Myanmar". */
+        final val MYANMAR: UnicodeScript = new UnicodeScript("MYANMAR", 63)
+
+        /** Unicode script "New_Tai_Lue". */
+        final val NEW_TAI_LUE: UnicodeScript = new UnicodeScript("NEW_TAI_LUE", 64)
+
+        /** Unicode script "Nko". */
+        final val NKO: UnicodeScript = new UnicodeScript("NKO", 65)
+
+        /** Unicode script "Ogham". */
+        final val OGHAM: UnicodeScript = new UnicodeScript("OGHAM", 66)
+
+        /** Unicode script "Ol_Chiki". */
+        final val OL_CHIKI: UnicodeScript = new UnicodeScript("OL_CHIKI", 67)
+
+        /** Unicode script "Old_Italic". */
+        final val OLD_ITALIC: UnicodeScript = new UnicodeScript("OLD_ITALIC", 68)
+
+        /** Unicode script "Old_Persian". */
+        final val OLD_PERSIAN: UnicodeScript = new UnicodeScript("OLD_PERSIAN", 69)
+
+        /** Unicode script "Old_South_Arabian". */
+        final val OLD_SOUTH_ARABIAN: UnicodeScript = new UnicodeScript("OLD_SOUTH_ARABIAN", 70)
+
+        /** Unicode script "Old_Turkic". */
+        final val OLD_TURKIC: UnicodeScript = new UnicodeScript("OLD_TURKIC", 71)
+
+        /** Unicode script "Oriya". */
+        final val ORIYA: UnicodeScript = new UnicodeScript("ORIYA", 72)
+
+        /** Unicode script "Osmanya". */
+        final val OSMANYA: UnicodeScript = new UnicodeScript("OSMANYA", 73)
+
+        /** Unicode script "Phags_Pa". */
+        final val PHAGS_PA: UnicodeScript = new UnicodeScript("PHAGS_PA", 74)
+
+        /** Unicode script "Phoenician". */
+        final val PHOENICIAN: UnicodeScript = new UnicodeScript("PHOENICIAN", 75)
+
+        /** Unicode script "Rejang". */
+        final val REJANG: UnicodeScript = new UnicodeScript("REJANG", 76)
+
+        /** Unicode script "Runic". */
+        final val RUNIC: UnicodeScript = new UnicodeScript("RUNIC", 77)
+
+        /** Unicode script "Samaritan". */
+        final val SAMARITAN: UnicodeScript = new UnicodeScript("SAMARITAN", 78)
+
+        /** Unicode script "Saurashtra". */
+        final val SAURASHTRA: UnicodeScript = new UnicodeScript("SAURASHTRA", 79)
+
+        /** Unicode script "Sharada". */
+        final val SHARADA: UnicodeScript = new UnicodeScript("SHARADA", 80)
+
+        /** Unicode script "Shavian". */
+        final val SHAVIAN: UnicodeScript = new UnicodeScript("SHAVIAN", 81)
+
+        /** Unicode script "Sinhala". */
+        final val SINHALA: UnicodeScript = new UnicodeScript("SINHALA", 82)
+
+        /** Unicode script "Sora Sompeng". */
+        final val SORA_SOMPENG: UnicodeScript = new UnicodeScript("SORA_SOMPENG", 83)
+
+        /** Unicode script "Sundanese". */
+        final val SUNDANESE: UnicodeScript = new UnicodeScript("SUNDANESE", 84)
+
+        /** Unicode script "Syloti_Nagri". */
+        final val SYLOTI_NAGRI: UnicodeScript = new UnicodeScript("SYLOTI_NAGRI", 85)
+
+        /** Unicode script "Syriac". */
+        final val SYRIAC: UnicodeScript = new UnicodeScript("SYRIAC", 86)
+
+        /** Unicode script "Tagalog". */
+        final val TAGALOG: UnicodeScript = new UnicodeScript("TAGALOG", 87)
+
+        /** Unicode script "Tagbanwa". */
+        final val TAGBANWA: UnicodeScript = new UnicodeScript("TAGBANWA", 88)
+
+        /** Unicode script "Tai_Le". */
+        final val TAI_LE: UnicodeScript = new UnicodeScript("TAI_LE", 89)
+
+        /** Unicode script "Tai_Tham". */
+        final val TAI_THAM: UnicodeScript = new UnicodeScript("TAI_THAM", 90)
+
+        /** Unicode script "Tai_Viet". */
+        final val TAI_VIET: UnicodeScript = new UnicodeScript("TAI_VIET", 91)
+
+        /** Unicode script "Takri". */
+        final val TAKRI: UnicodeScript = new UnicodeScript("TAKRI", 92)
+
+        /** Unicode script "Tamil". */
+        final val TAMIL: UnicodeScript = new UnicodeScript("TAMIL", 93)
+
+        /** Unicode script "Telugu". */
+        final val TELUGU: UnicodeScript = new UnicodeScript("TELUGU", 94)
+
+        /** Unicode script "Thaana". */
+        final val THAANA: UnicodeScript = new UnicodeScript("THAANA", 95)
+
+        /** Unicode script "Thai". */
+        final val THAI: UnicodeScript = new UnicodeScript("THAI", 96)
+
+        /** Unicode script "Tibetan". */
+        final val TIBETAN: UnicodeScript = new UnicodeScript("TIBETAN", 97)
+
+        /** Unicode script "Tifinagh". */
+        final val TIFINAGH: UnicodeScript = new UnicodeScript("TIFINAGH", 98)
+
+        /** Unicode script "Ugaritic". */
+        final val UGARITIC: UnicodeScript = new UnicodeScript("UGARITIC", 99)
+
+        /** Unicode script "Unknown". */
+        final val UNKNOWN: UnicodeScript = new UnicodeScript("UNKNOWN", 100)
+
+        /** Unicode script "Vai". */
+        final val VAI: UnicodeScript = new UnicodeScript("VAI", 101)
+
+        /** Unicode script "Yi". */
+        final val YI: UnicodeScript = new UnicodeScript("YI", 102)
+
+        /** Returns the UnicodeScript constant with the given Unicode script
+         *  name or the script name alias.
+         */
+        @stub
+        def forName(scriptName: String): UnicodeScript = ???
+
+        /** Returns the enum constant representing the Unicode script of which
+         *  the given character (Unicode code point) is assigned to.
+         */
+        @stub
+        def of(codePoint: Int): UnicodeScript = ???
+
+        /** Returns the enum constant of this type with the specified name. */
+        @stub
+        def valueOf(name: String): UnicodeScript = ???
+
+        /** Returns an array containing the constants of this enum type, in
+         * the order they are declared.
+         */
+        @stub
+        def values(): Array[UnicodeScript] = ???
+    }
+
 
     /** The number of bytes used to represent a char value in unsigned
      *  binary form.

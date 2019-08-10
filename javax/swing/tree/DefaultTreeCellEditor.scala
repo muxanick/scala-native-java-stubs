@@ -1,11 +1,13 @@
 package javax.swing.tree
 
-import java.awt.{Color, Component, Container, Font}
+import java.awt.{Color, Component, Container, Dimension, Font, Graphics}
 import java.awt.event.{ActionEvent, ActionListener}
 import java.lang.Object
 import java.util.EventObject
-import javax.swing.{Icon, JTree, Timer}
+import javax.swing.{Icon, JComponent, JTextField, JTree, Timer}
+import javax.swing.border.Border
 import javax.swing.event.{CellEditorListener, TreeSelectionEvent, TreeSelectionListener}
+import javax.swing.text.JTextComponent
 import scala.scalanative.annotation.stub
 
 /** A TreeCellEditor. You need to supply an
@@ -43,11 +45,73 @@ class DefaultTreeCellEditor extends Object with ActionListener with TreeCellEdit
     @stub
     def this(tree: JTree, renderer: DefaultTreeCellRenderer, editor: TreeCellEditor) = ???
 
-    /** TextField used when no editor is supplied. */
-    type DefaultTextField = DefaultTreeCellEditor_DefaultTextField
+    /** TextField used when no editor is supplied.
+     *  This textfield locks into the border it is constructed with.
+     *  It also prefers its parents font over its font. And if the
+     *  renderer is not null and no font
+     *  has been specified the preferred height is that of the renderer.
+     */
+    class DefaultTextField extends JTextField {
+
+        /** Constructs a
+         *  DefaultTreeCellEditor.DefaultTextField object.
+         */
+        @stub
+        def this(border: Border) = ???
+
+        /** Border to use. */
+        @stub
+        protected val border: Border = ???
+
+        /** Overrides JComponent.getBorder to
+         *  returns the current border.
+         */
+        @stub
+        def getBorder(): Border = ???
+
+        /** Gets the font of this component. */
+        @stub
+        def getFont(): Font = ???
+
+        /** Overrides JTextField.getPreferredSize to
+         *  return the preferred size based on current font, if set,
+         *  or else use renderer's font.
+         */
+        @stub
+        def getPreferredSize(): Dimension = ???
+
+        /** Sets the border of this component. */
+        @stub
+        def setBorder(border: Border): Unit = ???
+    }
+
 
     /** Container responsible for placing the editingComponent. */
-    type EditorContainer = DefaultTreeCellEditor_EditorContainer
+    class EditorContainer extends Container {
+
+        /** Constructs an EditorContainer object. */
+        @stub
+        def this() = ???
+
+        /** Lays out this Container. */
+        @stub
+        def doLayout(): Unit = ???
+
+        /**  */
+        @stub
+        def this(): Unit = ???
+
+        /** Returns the preferred size for the Container. */
+        @stub
+        def getPreferredSize(): Dimension = ???
+
+        /** Overrides Container.paint to paint the node's
+         *  icon and use the selection color for the background.
+         */
+        @stub
+        def paint(g: Graphics): Unit = ???
+    }
+
 
     /** True if the border selection color should be drawn. */
     @stub

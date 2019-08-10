@@ -1,8 +1,8 @@
 package javax.swing.plaf.basic
 
 import java.awt.{Component, Container, Dimension, GridBagConstraints, LayoutManager}
-import java.awt.event.ActionListener
-import java.beans.PropertyChangeListener
+import java.awt.event.{ActionEvent, ActionListener}
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.{Object, String}
 import javax.swing.{Icon, JComponent, JOptionPane}
 import javax.swing.plaf.{ComponentUI, OptionPaneUI}
@@ -42,11 +42,43 @@ class BasicOptionPaneUI extends OptionPaneUI {
     @stub
     def this() = ???
 
-    /** This class should be treated as a "protected" inner class. */
-    type ButtonActionListener = BasicOptionPaneUI_ButtonActionListener
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicOptionPaneUI.
+     */
+    class ButtonActionListener extends Object with ActionListener {
 
-    /** This class should be treated as a "protected" inner class. */
-    type PropertyChangeHandler = BasicOptionPaneUI_PropertyChangeHandler
+        /**  */
+        @stub
+        def this(buttonIndex: Int) = ???
+
+        /**  */
+        @stub
+        protected val buttonIndex: Int = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
+
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicOptionPaneUI.
+     */
+    class PropertyChangeHandler extends Object with PropertyChangeListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** If the source of the PropertyChangeEvent e equals the
+         *  optionPane and is one of the ICON_PROPERTY, MESSAGE_PROPERTY,
+         *  OPTIONS_PROPERTY or INITIAL_VALUE_PROPERTY,
+         *  validateComponent is invoked.
+         */
+        @stub
+        def propertyChange(e: PropertyChangeEvent): Unit = ???
+    }
+
 
     /** This is set to true in validateComponent if a Component is contained
      *  in either the message or the buttons.
@@ -241,9 +273,84 @@ class BasicOptionPaneUI extends OptionPaneUI {
 
 object BasicOptionPaneUI {
     /** ButtonAreaLayout behaves in a similar manner to
-     *  FlowLayout.
+     *  FlowLayout. It lays out all components from left to
+     *  right. If syncAllWidths is true, the widths of each
+     *  component will be set to the largest preferred size width.
+     * 
+     *  This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of BasicOptionPaneUI.
      */
-    type ButtonAreaLayout = BasicOptionPaneUI_ButtonAreaLayout
+    object ButtonAreaLayout extends Object with LayoutManager {
+
+        /**  */
+        @stub
+        def apply(syncAllWidths: Boolean, padding: Int) = ???
+
+        /** If true, children are lumped together in parent. */
+        @stub
+        protected val centersChildren: Boolean = ???
+
+        /**  */
+        @stub
+        protected val padding: Int = ???
+
+        /**  */
+        @stub
+        protected val syncAllWidths: Boolean = ???
+
+        /** If the layout manager uses a per-component string,
+         *  adds the component comp to the layout,
+         *  associating it
+         *  with the string specified by name.
+         */
+        @stub
+        def addLayoutComponent(string: String, comp: Component): Unit = ???
+
+        /**  */
+        @stub
+        def getCentersChildren(): Boolean = ???
+
+        /**  */
+        @stub
+        def getPadding(): Int = ???
+
+        /**  */
+        @stub
+        def getSyncAllWidths(): Boolean = ???
+
+        /** Lays out the specified container. */
+        @stub
+        def layoutContainer(container: Container): Unit = ???
+
+        /** Calculates the minimum size dimensions for the specified
+         *  container, given the components it contains.
+         */
+        @stub
+        def minimumLayoutSize(c: Container): Dimension = ???
+
+        /** Calculates the preferred size dimensions for the specified
+         *  container, given the components it contains.
+         */
+        @stub
+        def preferredLayoutSize(c: Container): Dimension = ???
+
+        /** Removes the specified component from the layout. */
+        @stub
+        def removeLayoutComponent(c: Component): Unit = ???
+
+        /**  */
+        @stub
+        def setCentersChildren(newValue: Boolean): Unit = ???
+
+        /**  */
+        @stub
+        def setPadding(newPadding: Int): Unit = ???
+
+        /**  */
+        @stub
+        def setSyncAllWidths(newValue: Boolean): Unit = ???
+    }
+
 
     /**  */
     @stub

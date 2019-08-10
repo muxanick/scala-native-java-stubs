@@ -35,7 +35,8 @@ import scala.scalanative.annotation.stub
  *  to run on Java SE 8 and later may take advantage of default methods
  *  in this situation.
  */
-@SupportedSourceVersion ( value = RELEASE_6 ) abstract class AbstractAnnotationValueVisitor6[R, P] extends Object with AnnotationValueVisitor[R, P] {
+@SupportedSourceVersion(value=RELEASE_6)
+abstract class AbstractAnnotationValueVisitor6[R, P] extends Object with AnnotationValueVisitor[R, P] {
 
     /** Constructor for concrete subclasses to call. */
     @stub

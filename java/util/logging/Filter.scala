@@ -11,7 +11,8 @@ import scala.scalanative.annotation.stub
  *  if a given LogRecord should be published.  If isLoggable returns
  *  false, the LogRecord will be discarded.
  */
-@FunctionalInterface trait Filter {
+@FunctionalInterface
+trait Filter {
 
     /** Check if a given log record should be published. */
     @stub

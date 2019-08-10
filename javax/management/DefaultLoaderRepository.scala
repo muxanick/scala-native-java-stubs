@@ -16,7 +16,8 @@ import scala.scalanative.annotation.stub
  *  that code referencing DefaultLoaderRepository be
  *  rewritten.
  */
-@Deprecated class DefaultLoaderRepository extends Object {
+@Deprecated
+class DefaultLoaderRepository extends Object {
 
     /** Deprecated.  */
     @stub

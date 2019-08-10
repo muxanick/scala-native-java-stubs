@@ -1,8 +1,9 @@
 package javax.swing.text
 
+import java.awt.event.ActionEvent
 import java.io.{InputStream, OutputStream, Reader, Writer}
 import java.lang.{Object, String}
-import javax.swing.Action
+import javax.swing.{AbstractAction, Action}
 import scala.scalanative.annotation.stub
 
 /** This is the set of things needed by a text component
@@ -102,39 +103,213 @@ class DefaultEditorKit extends EditorKit {
 }
 
 object DefaultEditorKit {
-    /** Creates a beep. */
-    type BeepAction = DefaultEditorKit_BeepAction
+    /** Creates a beep.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
+     */
+    object BeepAction extends TextAction {
+
+        /** Create this object with the appropriate identifier. */
+        @stub
+        def apply() = ???
+
+        /** The operation to perform when this action is triggered. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
 
     /** Copies the selected region and place its contents
      *  into the system clipboard.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    type CopyAction = DefaultEditorKit_CopyAction
+    object CopyAction extends TextAction {
+
+        /** Create this object with the appropriate identifier. */
+        @stub
+        def apply() = ???
+
+        /** The operation to perform when this action is triggered. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
 
     /** Cuts the selected region and place its contents
      *  into the system clipboard.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    type CutAction = DefaultEditorKit_CutAction
+    object CutAction extends TextAction {
+
+        /** Create this object with the appropriate identifier. */
+        @stub
+        def apply() = ???
+
+        /** The operation to perform when this action is triggered. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
 
     /** The action that is executed by default if
      *  a key typed event is received and there
-     *  is no keymap entry.
+     *  is no keymap entry.  There is a variation across
+     *  different VM's in what gets sent as a key typed
+     *  event, and this action tries to filter out the undesired
+     *  events.  This filters the control characters and those
+     *  with the ALT modifier.  It allows Control-Alt sequences
+     *  through as these form legitimate unicode characters on
+     *  some PC keyboards.
+     *  
+     *  If the event doesn't get filtered, it will try to insert
+     *  content into the text editor.  The content is fetched
+     *  from the command string of the ActionEvent.  The text
+     *  entry is done through the replaceSelection
+     *  method on the target text component.  This is the
+     *  action that will be fired for most text entry tasks.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    type DefaultKeyTypedAction = DefaultEditorKit_DefaultKeyTypedAction
+    object DefaultKeyTypedAction extends TextAction {
 
-    /** Places a line/paragraph break into the document. */
-    type InsertBreakAction = DefaultEditorKit_InsertBreakAction
+        /** Creates this object with the appropriate identifier. */
+        @stub
+        def apply() = ???
 
-    /** Places content into the associated document. */
-    type InsertContentAction = DefaultEditorKit_InsertContentAction
+        /** The operation to perform when this action is triggered. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
 
-    /** Places a tab character into the document. */
-    type InsertTabAction = DefaultEditorKit_InsertTabAction
+
+    /** Places a line/paragraph break into the document.
+     *  If there is a selection, it is removed before
+     *  the break is added.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
+     */
+    object InsertBreakAction extends TextAction {
+
+        /** Creates this object with the appropriate identifier. */
+        @stub
+        def apply() = ???
+
+        /** The operation to perform when this action is triggered. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
+
+    /** Places content into the associated document.
+     *  If there is a selection, it is removed before
+     *  the new content is added.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
+     */
+    object InsertContentAction extends TextAction {
+
+        /** Creates this object with the appropriate identifier. */
+        @stub
+        def apply() = ???
+
+        /** The operation to perform when this action is triggered. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
+
+    /** Places a tab character into the document. If there
+     *  is a selection, it is removed before the tab is added.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
+     */
+    object InsertTabAction extends TextAction {
+
+        /** Creates this object with the appropriate identifier. */
+        @stub
+        def apply() = ???
+
+        /** The operation to perform when this action is triggered. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
 
     /** Pastes the contents of the system clipboard into the
      *  selected region, or before the caret if nothing is
      *  selected.
+     *  
+     *  Warning:
+     *  Serialized objects of this class will not be compatible with
+     *  future Swing releases. The current serialization support is
+     *  appropriate for short term storage or RMI between applications running
+     *  the same version of Swing.  As of 1.4, support for long term storage
+     *  of all JavaBeans™
+     *  has been added to the java.beans package.
+     *  Please see XMLEncoder.
      */
-    type PasteAction = DefaultEditorKit_PasteAction
+    object PasteAction extends TextAction {
+
+        /** Create this object with the appropriate identifier. */
+        @stub
+        def apply() = ???
+
+        /** The operation to perform when this action is triggered. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
 
     /** Name of the Action for moving the caret
      *  logically backward one position.

@@ -6,9 +6,9 @@ import scala.annotation.StaticAnnotation
 import scala.scalanative.annotation.stub
 
 /**  */
-@Retention ( value = RUNTIME ) 
-@Target ( value ={ TYPE , METHOD , FIELD } ) 
- final class HandlerChain extends StaticAnnotation {
+@Retention(value=RUNTIME)
+@Target(value={TYPE,METHOD,FIELD})
+final class HandlerChain extends StaticAnnotation {
 
     /**  */
     @stub

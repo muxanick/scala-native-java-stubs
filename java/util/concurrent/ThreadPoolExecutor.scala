@@ -476,23 +476,69 @@ object ThreadPoolExecutor {
     /** A handler for rejected tasks that throws a
      *  RejectedExecutionException.
      */
-    type AbortPolicy = ThreadPoolExecutor_AbortPolicy
+    object AbortPolicy extends Object with RejectedExecutionHandler {
+
+        /** Creates an AbortPolicy. */
+        @stub
+        def apply() = ???
+
+        /** Always throws RejectedExecutionException. */
+        @stub
+        def rejectedExecution(r: Runnable, e: ThreadPoolExecutor): Unit = ???
+    }
+
 
     /** A handler for rejected tasks that runs the rejected task
      *  directly in the calling thread of the execute method,
      *  unless the executor has been shut down, in which case the task
      *  is discarded.
      */
-    type CallerRunsPolicy = ThreadPoolExecutor_CallerRunsPolicy
+    object CallerRunsPolicy extends Object with RejectedExecutionHandler {
+
+        /** Creates a CallerRunsPolicy. */
+        @stub
+        def apply() = ???
+
+        /** Executes task r in the caller's thread, unless the executor
+         *  has been shut down, in which case the task is discarded.
+         */
+        @stub
+        def rejectedExecution(r: Runnable, e: ThreadPoolExecutor): Unit = ???
+    }
+
 
     /** A handler for rejected tasks that discards the oldest unhandled
      *  request and then retries execute, unless the executor
      *  is shut down, in which case the task is discarded.
      */
-    type DiscardOldestPolicy = ThreadPoolExecutor_DiscardOldestPolicy
+    object DiscardOldestPolicy extends Object with RejectedExecutionHandler {
+
+        /** Creates a DiscardOldestPolicy for the given executor. */
+        @stub
+        def apply() = ???
+
+        /** Obtains and ignores the next task that the executor
+         *  would otherwise execute, if one is immediately available,
+         *  and then retries execution of task r, unless the executor
+         *  is shut down, in which case task r is instead discarded.
+         */
+        @stub
+        def rejectedExecution(r: Runnable, e: ThreadPoolExecutor): Unit = ???
+    }
+
 
     /** A handler for rejected tasks that silently discards the
      *  rejected task.
      */
-    type DiscardPolicy = ThreadPoolExecutor_DiscardPolicy
+    object DiscardPolicy extends Object with RejectedExecutionHandler {
+
+        /** Creates a DiscardPolicy. */
+        @stub
+        def apply() = ???
+
+        /** Does nothing, which has the effect of discarding task r. */
+        @stub
+        def rejectedExecution(r: Runnable, e: ThreadPoolExecutor): Unit = ???
+    }
+
 }

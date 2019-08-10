@@ -1,12 +1,12 @@
 package javax.swing.plaf.basic
 
 import java.awt.{Component, Container, Rectangle}
-import java.awt.event.{ItemListener, KeyListener, MouseEvent, MouseListener, MouseMotionListener}
-import java.beans.PropertyChangeListener
+import java.awt.event.{ItemEvent, ItemListener, KeyAdapter, KeyEvent, KeyListener, MouseAdapter, MouseEvent, MouseListener, MouseMotionAdapter, MouseMotionListener}
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.Object
 import javax.accessibility.AccessibleContext
 import javax.swing.{ComboBoxModel, JComboBox, JComponent, JList, JPopupMenu, JScrollPane, Timer}
-import javax.swing.event.{ListDataListener, ListSelectionListener}
+import javax.swing.event.{ListDataEvent, ListDataListener, ListSelectionEvent, ListSelectionListener}
 import scala.scalanative.annotation.stub
 
 /** This is a basic implementation of the ComboPopup interface.
@@ -35,47 +35,192 @@ class BasicComboPopup extends JPopupMenu with ComboPopup {
     def this(combo: JComboBox) = ???
 
     /** As of Java 2 platform v 1.4, this class is now obsolete and is only included for
-     *  backwards API compatibility.
+     *  backwards API compatibility. Do not instantiate or subclass.
+     *  
+     *  All the functionality of this class has been included in
+     *  BasicComboBoxUI ActionMap/InputMap methods.
      */
-    type InvocationKeyHandler = BasicComboPopup_InvocationKeyHandler
+    class InvocationKeyHandler extends KeyAdapter {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when a key has been released. */
+        @stub
+        def keyReleased(e: KeyEvent): Unit = ???
+    }
+
 
     /** A listener to be registered upon the combo box
      *  (not its popup menu)
      *  to handle mouse events
      *  that affect the state of the popup menu.
+     *  The main purpose of this listener is to make the popup menu
+     *  appear and disappear.
+     *  This listener also helps
+     *  with click-and-drag scenarios by setting the selection if the mouse was
+     *  released over the list during a drag.
+     * 
+     *  
+     *  Warning:
+     *  We recommend that you not
+     *  create subclasses of this class.
+     *  If you absolutely must create a subclass,
+     *  be sure to invoke the superclass
+     *  version of each method.
      */
-    protected type InvocationMouseHandler = BasicComboPopup_InvocationMouseHandler
+    protected class InvocationMouseHandler extends MouseAdapter {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Responds to mouse-pressed events on the combo box. */
+        @stub
+        def mousePressed(e: MouseEvent): Unit = ???
+
+        /** Responds to the user terminating
+         *  a click or drag that began on the combo box.
+         */
+        @stub
+        def mouseReleased(e: MouseEvent): Unit = ???
+    }
+
 
     /** This listener watches for dragging and updates the current selection in the
      *  list if it is dragging over the list.
      */
-    protected type InvocationMouseMotionHandler = BasicComboPopup_InvocationMouseMotionHandler
+    protected class InvocationMouseMotionHandler extends MouseMotionAdapter {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when a mouse button is pressed on a component and then
+         *  dragged.
+         */
+        @stub
+        def mouseDragged(e: MouseEvent): Unit = ???
+    }
+
 
     /** This listener watches for changes to the selection in the
      *  combo box.
      */
-    protected type ItemHandler = BasicComboPopup_ItemHandler
+    protected class ItemHandler extends Object with ItemListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when an item has been selected or deselected by the user. */
+        @stub
+        def itemStateChanged(e: ItemEvent): Unit = ???
+    }
+
 
     /** As of 1.4, this class is now obsolete, doesn't do anything, and
-     *  is only included for backwards API compatibility.
+     *  is only included for backwards API compatibility. Do not call or
+     *  override.
+     *  
+     *  The functionality has been migrated into ItemHandler.
      */
-    type ListDataHandler = BasicComboPopup_ListDataHandler
+    class ListDataHandler extends Object with ListDataListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Sent when the contents of the list has changed in a way
+         *  that's too complex to characterize with the previous
+         *  methods.
+         */
+        @stub
+        def contentsChanged(e: ListDataEvent): Unit = ???
+
+        /** Sent after the indices in the index0,index1
+         *  interval have been inserted in the data model.
+         */
+        @stub
+        def intervalAdded(e: ListDataEvent): Unit = ???
+
+        /** Sent after the indices in the index0,index1 interval
+         *  have been removed from the data model.
+         */
+        @stub
+        def intervalRemoved(e: ListDataEvent): Unit = ???
+    }
+
 
     /** This listener hides the popup when the mouse is released in the list. */
-    protected type ListMouseHandler = BasicComboPopup_ListMouseHandler
+    protected class ListMouseHandler extends MouseAdapter {
 
-    /** This listener changes the selected item as you move the mouse over the list. */
-    protected type ListMouseMotionHandler = BasicComboPopup_ListMouseMotionHandler
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when a mouse button has been pressed on a component. */
+        @stub
+        def mousePressed(e: MouseEvent): Unit = ???
+
+        /** Invoked when a mouse button has been released on a component. */
+        @stub
+        def mouseReleased(anEvent: MouseEvent): Unit = ???
+    }
+
+
+    /** This listener changes the selected item as you move the mouse over the list.
+     *  The selection change is not committed to the model, this is for user feedback only.
+     */
+    protected class ListMouseMotionHandler extends MouseMotionAdapter {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Invoked when the mouse button has been moved on a component
+         *  (with no buttons no down).
+         */
+        @stub
+        def mouseMoved(anEvent: MouseEvent): Unit = ???
+    }
+
 
     /** As of Java 2 platform v 1.4, this class is now obsolete, doesn't do anything, and
-     *  is only included for backwards API compatibility.
+     *  is only included for backwards API compatibility. Do not call or
+     *  override.
      */
-    protected type ListSelectionHandler = BasicComboPopup_ListSelectionHandler
+    protected class ListSelectionHandler extends Object with ListSelectionListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** Called whenever the value of the selection changes. */
+        @stub
+        def valueChanged(e: ListSelectionEvent): Unit = ???
+    }
+
 
     /** This listener watches for bound properties that have changed in the
      *  combo box.
+     *  
+     *  Subclasses which wish to listen to combo box property changes should
+     *  call the superclass methods to ensure that the combo popup correctly
+     *  handles property changes.
      */
-    protected type PropertyChangeHandler = BasicComboPopup_PropertyChangeHandler
+    protected class PropertyChangeHandler extends Object with PropertyChangeListener {
+
+        /**  */
+        @stub
+        protected def this() = ???
+
+        /** This method gets called when a bound property is changed. */
+        @stub
+        def propertyChange(e: PropertyChangeEvent): Unit = ???
+    }
+
 
     /** This protected field is implementation specific. */
     @stub

@@ -11,48 +11,48 @@ class AclEntryPermission private (name: String, ordinal: Int) extends Enum[AclEn
 
 object AclEntryPermission {
     /** Permission to append data to a file. */
-    final val APPEND_DATA = new AclEntryPermission(APPEND_DATA, 0)
+    final val APPEND_DATA: AclEntryPermission = new AclEntryPermission("APPEND_DATA", 0)
 
     /** Permission to delete the file. */
-    final val DELETE = new AclEntryPermission(DELETE, 1)
+    final val DELETE: AclEntryPermission = new AclEntryPermission("DELETE", 1)
 
     /** Permission to delete a file or directory within a directory. */
-    final val DELETE_CHILD = new AclEntryPermission(DELETE_CHILD, 2)
+    final val DELETE_CHILD: AclEntryPermission = new AclEntryPermission("DELETE_CHILD", 2)
 
     /** Permission to execute a file. */
-    final val EXECUTE = new AclEntryPermission(EXECUTE, 3)
+    final val EXECUTE: AclEntryPermission = new AclEntryPermission("EXECUTE", 3)
 
     /** Permission to read the ACL attribute. */
-    final val READ_ACL = new AclEntryPermission(READ_ACL, 4)
+    final val READ_ACL: AclEntryPermission = new AclEntryPermission("READ_ACL", 4)
 
     /** The ability to read (non-acl) file attributes. */
-    final val READ_ATTRIBUTES = new AclEntryPermission(READ_ATTRIBUTES, 5)
+    final val READ_ATTRIBUTES: AclEntryPermission = new AclEntryPermission("READ_ATTRIBUTES", 5)
 
     /** Permission to read the data of the file. */
-    final val READ_DATA = new AclEntryPermission(READ_DATA, 6)
+    final val READ_DATA: AclEntryPermission = new AclEntryPermission("READ_DATA", 6)
 
     /** Permission to read the named attributes of a file. */
-    final val READ_NAMED_ATTRS = new AclEntryPermission(READ_NAMED_ATTRS, 7)
+    final val READ_NAMED_ATTRS: AclEntryPermission = new AclEntryPermission("READ_NAMED_ATTRS", 7)
 
     /** Permission to access file locally at the server with synchronous reads
      *  and writes.
      */
-    final val SYNCHRONIZE = new AclEntryPermission(SYNCHRONIZE, 8)
+    final val SYNCHRONIZE: AclEntryPermission = new AclEntryPermission("SYNCHRONIZE", 8)
 
     /** Permission to write the ACL attribute. */
-    final val WRITE_ACL = new AclEntryPermission(WRITE_ACL, 9)
+    final val WRITE_ACL: AclEntryPermission = new AclEntryPermission("WRITE_ACL", 9)
 
     /** The ability to write (non-acl) file attributes. */
-    final val WRITE_ATTRIBUTES = new AclEntryPermission(WRITE_ATTRIBUTES, 10)
+    final val WRITE_ATTRIBUTES: AclEntryPermission = new AclEntryPermission("WRITE_ATTRIBUTES", 10)
 
     /** Permission to modify the file's data. */
-    final val WRITE_DATA = new AclEntryPermission(WRITE_DATA, 11)
+    final val WRITE_DATA: AclEntryPermission = new AclEntryPermission("WRITE_DATA", 11)
 
     /** Permission to write the named attributes of a file. */
-    final val WRITE_NAMED_ATTRS = new AclEntryPermission(WRITE_NAMED_ATTRS, 12)
+    final val WRITE_NAMED_ATTRS: AclEntryPermission = new AclEntryPermission("WRITE_NAMED_ATTRS", 12)
 
     /** Permission to change the owner. */
-    final val WRITE_OWNER = new AclEntryPermission(WRITE_OWNER, 13)
+    final val WRITE_OWNER: AclEntryPermission = new AclEntryPermission("WRITE_OWNER", 13)
 
     /** Permission to add a new file to a directory (equal to WRITE_DATA) */
     @stub

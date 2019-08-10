@@ -138,10 +138,10 @@ import scala.scalanative.annotation.stub
  *      The same value
  *  
  */
-@Documented 
-@Retention ( value = RUNTIME ) 
-@Target ( value = METHOD ) 
- final class DescriptorKey extends StaticAnnotation {
+@Documented
+@Retention(value=RUNTIME)
+@Target(value=METHOD)
+final class DescriptorKey extends StaticAnnotation {
 
     /**  */
     @stub

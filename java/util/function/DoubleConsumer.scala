@@ -11,7 +11,8 @@ import scala.scalanative.annotation.stub
  *  This is a functional interface
  *  whose functional method is accept(double).
  */
-@FunctionalInterface trait DoubleConsumer {
+@FunctionalInterface
+trait DoubleConsumer {
 
     /** Performs this operation on the given argument. */
     @stub

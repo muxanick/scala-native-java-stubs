@@ -1,9 +1,10 @@
 package javax.swing.plaf.basic
 
-import java.awt.{Color, Component, Container, FontMetrics, Graphics, LayoutManager}
-import java.beans.PropertyChangeListener
+import java.awt.{Color, Component, Container, Dimension, FontMetrics, Graphics, LayoutManager}
+import java.awt.event.ActionEvent
+import java.beans.{PropertyChangeEvent, PropertyChangeListener}
 import java.lang.{Object, String}
-import javax.swing.{Action, Icon, JButton, JComponent, JInternalFrame, JMenu, JMenuBar}
+import javax.swing.{AbstractAction, Action, Icon, JButton, JComponent, JInternalFrame, JMenu, JMenuBar}
 import scala.scalanative.annotation.stub
 
 /** The class that manages a basic title bar
@@ -23,32 +24,178 @@ class BasicInternalFrameTitlePane extends JComponent {
     @stub
     def this(f: JInternalFrame) = ???
 
-    /** This class should be treated as a "protected" inner class. */
-    type CloseAction = BasicInternalFrameTitlePane_CloseAction
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of Foo.
+     */
+    class CloseAction extends AbstractAction {
 
-    /** This class should be treated as a "protected" inner class. */
-    type IconifyAction = BasicInternalFrameTitlePane_IconifyAction
+        /**  */
+        @stub
+        def this() = ???
 
-    /** This class should be treated as a "protected" inner class. */
-    type MaximizeAction = BasicInternalFrameTitlePane_MaximizeAction
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
 
-    /** This class should be treated as a "protected" inner class. */
-    type MoveAction = BasicInternalFrameTitlePane_MoveAction
 
-    /** This class should be treated as a "protected" inner class. */
-    type PropertyChangeHandler = BasicInternalFrameTitlePane_PropertyChangeHandler
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of Foo.
+     */
+    class IconifyAction extends AbstractAction {
 
-    /** This class should be treated as a "protected" inner class. */
-    type RestoreAction = BasicInternalFrameTitlePane_RestoreAction
+        /**  */
+        @stub
+        def this() = ???
 
-    /** This class should be treated as a "protected" inner class. */
-    type SizeAction = BasicInternalFrameTitlePane_SizeAction
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
 
-    /** This class should be treated as a "protected" inner class. */
-    type SystemMenuBar = BasicInternalFrameTitlePane_SystemMenuBar
 
-    /** This class should be treated as a "protected" inner class. */
-    type TitlePaneLayout = BasicInternalFrameTitlePane_TitlePaneLayout
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of Foo.
+     */
+    class MaximizeAction extends AbstractAction {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(evt: ActionEvent): Unit = ???
+    }
+
+
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of Foo.
+     */
+    class MoveAction extends AbstractAction {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
+
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of Foo.
+     */
+    class PropertyChangeHandler extends Object with PropertyChangeListener {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** This method gets called when a bound property is changed. */
+        @stub
+        def propertyChange(evt: PropertyChangeEvent): Unit = ???
+    }
+
+
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of Foo.
+     */
+    class RestoreAction extends AbstractAction {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(evt: ActionEvent): Unit = ???
+    }
+
+
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of Foo.
+     */
+    class SizeAction extends AbstractAction {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Invoked when an action occurs. */
+        @stub
+        def actionPerformed(e: ActionEvent): Unit = ???
+    }
+
+
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of Foo.
+     */
+    class SystemMenuBar extends JMenuBar {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** Returns whether this Component can become the focus
+         *  owner.
+         */
+        @stub
+        def isFocusTraversable(): Boolean = ???
+
+        /** Returns true if this component is completely opaque. */
+        @stub
+        def isOpaque(): Boolean = ???
+
+        /** Invoked by Swing to draw components. */
+        @stub
+        def paint(g: Graphics): Unit = ???
+
+        /** Requests that this Component gets the input focus. */
+        @stub
+        def requestFocus(): Unit = ???
+    }
+
+
+    /** This class should be treated as a "protected" inner class.
+     *  Instantiate it only within subclasses of Foo.
+     */
+    class TitlePaneLayout extends Object with LayoutManager {
+
+        /**  */
+        @stub
+        def this() = ???
+
+        /** If the layout manager uses a per-component string,
+         *  adds the component comp to the layout,
+         *  associating it
+         *  with the string specified by name.
+         */
+        @stub
+        def addLayoutComponent(name: String, c: Component): Unit = ???
+
+        /** Lays out the specified container. */
+        @stub
+        def layoutContainer(c: Container): Unit = ???
+
+        /** Calculates the minimum size dimensions for the specified
+         *  container, given the components it contains.
+         */
+        @stub
+        def minimumLayoutSize(c: Container): Dimension = ???
+
+        /** Calculates the preferred size dimensions for the specified
+         *  container, given the components it contains.
+         */
+        @stub
+        def preferredLayoutSize(c: Container): Dimension = ???
+
+        /** Removes the specified component from the layout. */
+        @stub
+        def removeLayoutComponent(c: Component): Unit = ???
+    }
+
 
     /**  */
     @stub

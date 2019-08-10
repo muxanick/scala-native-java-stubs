@@ -9,13 +9,13 @@ class AccessMode private (name: String, ordinal: Int) extends Enum[AccessMode](n
 
 object AccessMode {
     /** Test execute access. */
-    final val EXECUTE = new AccessMode(EXECUTE, 0)
+    final val EXECUTE: AccessMode = new AccessMode("EXECUTE", 0)
 
     /** Test read access. */
-    final val READ = new AccessMode(READ, 1)
+    final val READ: AccessMode = new AccessMode("READ", 1)
 
     /** Test write access. */
-    final val WRITE = new AccessMode(WRITE, 2)
+    final val WRITE: AccessMode = new AccessMode("WRITE", 2)
 
     /** Returns the enum constant of this type with the specified name. */
     @stub
