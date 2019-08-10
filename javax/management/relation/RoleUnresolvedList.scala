@@ -31,7 +31,7 @@ class RoleUnresolvedList extends ArrayList[Object] {
      *  list.
      */
     @stub
-    def add(index: Int, element: Object): Unit = ???
+    def add(index: Int, element: Any): Unit = ???
 
     /** Inserts the unresolved role specified as an element at the position
      *  specified.
@@ -41,7 +41,7 @@ class RoleUnresolvedList extends ArrayList[Object] {
 
     /** Appends the specified element to the end of this list. */
     @stub
-    def add(o: Object): Boolean = ???
+    def add(o: Any): Boolean = ???
 
     /** Adds the RoleUnresolved specified as the last element of the list. */
     @stub
@@ -82,7 +82,7 @@ class RoleUnresolvedList extends ArrayList[Object] {
      *  the specified element.
      */
     @stub
-    def set(index: Int, element: Object): Object = ???
+    def set(index: Int, element: Any): Any = ???
 
     /** Sets the element at the position specified to be the unresolved role
      *  specified.

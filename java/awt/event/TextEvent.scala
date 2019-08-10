@@ -24,7 +24,7 @@ class TextEvent extends AWTEvent {
 
     /** Constructs a TextEvent object. */
     @stub
-    def this(source: Object, id: Int) = ???
+    def this(source: Any, id: Int) = ???
 
     /** Returns a parameter string identifying this text event. */
     @stub

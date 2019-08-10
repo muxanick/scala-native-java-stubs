@@ -26,10 +26,8 @@ trait DocumentationTool extends Tool with OptionChecker {
 
 object DocumentationTool {
     /** Interface representing a future for a documentation task. */
-    @stub
-    trait DocumentationTask extends DocumentationTool.DocumentationTask
+    type DocumentationTask = DocumentationTool_DocumentationTask
 
     /** Locations specific to DocumentationTool. */
-    @stub
-    class Location extends DocumentationTool.Location
+    type Location = DocumentationTool_Location
 }

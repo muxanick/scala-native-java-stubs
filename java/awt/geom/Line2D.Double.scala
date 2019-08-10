@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /** A line segment specified with double coordinates. */
-object Line2D.Double extends Line2D with Serializable {
+object Line2D_Double extends Line2D with Serializable {
 
     /** Constructs and initializes a Line with coordinates (0, 0) → (0, 0). */
     @stub

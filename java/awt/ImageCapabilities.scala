@@ -12,7 +12,7 @@ class ImageCapabilities extends Object with Cloneable {
 
     /** Creates and returns a copy of this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns true if the object whose capabilities are
      *  encapsulated in this ImageCapabilities can be or is

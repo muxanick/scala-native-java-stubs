@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
 /** This class implements accessibility support for the
  *  Box class.
  */
-protected class Box.AccessibleBox extends Container.AccessibleAWTContainer {
+protected class Box_AccessibleBox extends Container.AccessibleAWTContainer {
 
     /**  */
     @stub

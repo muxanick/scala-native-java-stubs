@@ -189,7 +189,7 @@ trait BlockingDeque[E] extends BlockingQueue[E] with Deque[E] {
 
     /** Returns true if this deque contains the specified element. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Retrieves, but does not remove, the head of the queue represented by
      *  this deque (in other words, the first element of this deque).
@@ -317,15 +317,15 @@ trait BlockingDeque[E] extends BlockingQueue[E] with Deque[E] {
 
     /** Removes the first occurrence of the specified element from this deque. */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Removes the first occurrence of the specified element from this deque. */
     @stub
-    def removeFirstOccurrence(o: Object): Boolean = ???
+    def removeFirstOccurrence(o: Any): Boolean = ???
 
     /** Removes the last occurrence of the specified element from this deque. */
     @stub
-    def removeLastOccurrence(o: Object): Boolean = ???
+    def removeLastOccurrence(o: Any): Boolean = ???
 
     /** Returns the number of elements in this deque. */
     @stub

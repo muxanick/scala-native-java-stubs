@@ -15,7 +15,7 @@ final class NetworkInterface extends Object {
 
     /** Compares this object against the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Get the display name of this network interface. */
     @stub

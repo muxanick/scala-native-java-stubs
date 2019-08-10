@@ -127,7 +127,7 @@ class RelationService extends NotificationBroadcasterSupport with RelationServic
 
     /** Invoked when a JMX notification occurs. */
     @stub
-    def handleNotification(notif: Notification, handback: Object): Unit = ???
+    def handleNotification(notif: Notification, handback: Any): Unit = ???
 
     /** Checks if there is a relation identified in Relation Service with given
      *  relation id.

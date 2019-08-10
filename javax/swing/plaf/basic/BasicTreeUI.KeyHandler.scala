@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
 /** This is used to get multiple key down events to appropriately generate
  *  events.
  */
-class BasicTreeUI.KeyHandler extends KeyAdapter {
+class BasicTreeUI_KeyHandler extends KeyAdapter {
 
     /**  */
     @stub

@@ -30,27 +30,23 @@ class BasicSplitPaneDivider extends Container with PropertyChangeListener {
     def this(ui: BasicSplitPaneUI) = ???
 
     /** Used to layout a BasicSplitPaneDivider. */
-    @stub
-    protected object DividerLayout extends BasicSplitPaneDivider.DividerLayout
+    protected type DividerLayout = BasicSplitPaneDivider_DividerLayout
 
     /** Handles the events during a dragging session for a
      *  HORIZONTAL_SPLIT oriented split pane.
      */
-    @stub
-    protected object DragController extends BasicSplitPaneDivider.DragController
+    protected type DragController = BasicSplitPaneDivider_DragController
 
     /** MouseHandler is responsible for converting mouse events
      *  (released, dragged...) into the appropriate DragController
      *  methods.
      */
-    @stub
-    protected object MouseHandler extends BasicSplitPaneDivider.MouseHandler
+    protected type MouseHandler = BasicSplitPaneDivider_MouseHandler
 
     /** Handles the events during a dragging session for a
      *  VERTICAL_SPLIT oriented split pane.
      */
-    @stub
-    protected object VerticalDragController extends BasicSplitPaneDivider.VerticalDragController
+    protected type VerticalDragController = BasicSplitPaneDivider_VerticalDragController
 
     /** Size of the divider. */
     @stub

@@ -48,7 +48,7 @@ abstract class SoundbankResource extends Object {
     protected def this(soundBank: Soundbank, name: String, dataClass: Class[_]) = ???
 
     /** Obtains the sampled audio that is stored in this SoundbankResource. */
-    def getData(): Object
+    def getData(): Any
 
     /** Obtains the class used by this sample to represent its data. */
     def getDataClass(): Class[_]

@@ -74,7 +74,7 @@ class MBeanServerNotification extends Notification {
      *  type.
      */
     @stub
-    def this(type: String, source: Object, sequenceNumber: Long, objectName: ObjectName) = ???
+    def this(type: String, source: Any, sequenceNumber: Long, objectName: ObjectName) = ???
 
     /** Returns the  object name of the MBean that caused the notification. */
     @stub

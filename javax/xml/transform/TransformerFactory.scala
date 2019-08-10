@@ -29,7 +29,7 @@ abstract class TransformerFactory extends Object {
     /** Allows the user to retrieve specific attributes on the underlying
      *  implementation.
      */
-    def getAttribute(name: String): Object
+    def getAttribute(name: String): Any
 
     /** Get the error event handler for the TransformerFactory. */
     def getErrorListener(): ErrorListener
@@ -60,7 +60,7 @@ abstract class TransformerFactory extends Object {
     /** Allows the user to set specific attributes on the underlying
      *  implementation.
      */
-    def setAttribute(name: String, value: Object): Unit
+    def setAttribute(name: String, value: Any): Unit
 
     /** Set the error event listener for the TransformerFactory, which
      *  is used for the processing of transformation instructions,

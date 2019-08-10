@@ -93,7 +93,7 @@ final class WeekFields extends Object with Serializable {
 
     /** Checks if this WeekFields is equal to the specified object. */
     @stub
-    def equals(object: Object): Boolean = ???
+    def equals(object: Any): Boolean = ???
 
     /** Gets the first day-of-week. */
     @stub

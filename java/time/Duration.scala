@@ -57,7 +57,7 @@ final class Duration extends Object with TemporalAmount with Comparable[Duration
 
     /** Checks if this duration is equal to the specified Duration. */
     @stub
-    def equals(otherDuration: Object): Boolean = ???
+    def equals(otherDuration: Any): Boolean = ???
 
     /** Gets the value of the requested unit. */
     @stub

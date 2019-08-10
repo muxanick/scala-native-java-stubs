@@ -37,7 +37,7 @@ object PortableRemoteObject {
      *  can be cast to a desired type.
      */
     @stub
-    def narrow(narrowFrom: Object, narrowTo: Class): Object = ???
+    def narrow(narrowFrom: Any, narrowTo: Class): Any = ???
 
     /** Returns a stub for the given server object. */
     @stub

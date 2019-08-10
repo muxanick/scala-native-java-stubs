@@ -20,7 +20,7 @@ class UndoableEditEvent extends EventObject {
 
     /** Constructs an UndoableEditEvent object. */
     @stub
-    def this(source: Object, edit: UndoableEdit) = ???
+    def this(source: Any, edit: UndoableEdit) = ???
 
     /** Returns the edit value. */
     @stub

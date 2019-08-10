@@ -22,16 +22,13 @@ class MetalToolBarUI extends BasicToolBarUI {
     def this() = ???
 
     /**  */
-    @stub
-    protected object MetalContainerListener extends MetalToolBarUI.MetalContainerListener
+    protected type MetalContainerListener = MetalToolBarUI_MetalContainerListener
 
     /**  */
-    @stub
-    protected object MetalDockingListener extends MetalToolBarUI.MetalDockingListener
+    protected type MetalDockingListener = MetalToolBarUI_MetalDockingListener
 
     /**  */
-    @stub
-    protected object MetalRolloverListener extends MetalToolBarUI.MetalRolloverListener
+    protected type MetalRolloverListener = MetalToolBarUI_MetalRolloverListener
 
     /** This protected field is implementation specific. */
     @stub

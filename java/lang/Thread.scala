@@ -141,7 +141,7 @@ class Thread extends Object with Runnable {
      *  cloned.
      */
     @stub
-    protected def clone(): Object = ???
+    protected def clone(): Any = ???
 
     /** Deprecated. 
      * The definition of this call depends on suspend(),
@@ -352,14 +352,12 @@ class Thread extends Object with Runnable {
 
 object Thread {
     /** A thread state. */
-    @stub
-    class State extends Thread.State
+    type State = Thread_State
 
     /** Interface for handlers invoked when a Thread abruptly
      *  terminates due to an uncaught exception.
      */
-    @stub
-    trait UncaughtExceptionHandler extends Thread.UncaughtExceptionHandler
+    type UncaughtExceptionHandler = Thread_UncaughtExceptionHandler
 
     /** The maximum priority that a thread can have. */
     @stub
@@ -408,7 +406,7 @@ object Thread {
      *  monitor lock on the specified object.
      */
     @stub
-    def holdsLock(obj: Object): Boolean = ???
+    def holdsLock(obj: Any): Boolean = ???
 
     /** Tests whether the current thread has been interrupted. */
     @stub

@@ -10,7 +10,7 @@ import scala.scalanative.annotation.stub
  *  Java Accessibility API appropriate to dialog user-interface
  *  elements.
  */
-protected class JDialog.AccessibleJDialog extends Dialog.AccessibleAWTDialog {
+protected class JDialog_AccessibleJDialog extends Dialog.AccessibleAWTDialog {
 
     /**  */
     @stub

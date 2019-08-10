@@ -23,7 +23,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object DefaultTableCellRenderer.UIResource extends DefaultTableCellRenderer with UIResource {
+object DefaultTableCellRenderer_UIResource extends DefaultTableCellRenderer with UIResource {
 
     /**  */
     @stub

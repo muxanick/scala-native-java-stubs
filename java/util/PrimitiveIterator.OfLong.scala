@@ -5,7 +5,7 @@ import java.util.function.{Consumer, LongConsumer}
 import scala.scalanative.annotation.stub
 
 /** An Iterator specialized for long values. */
-object trait PrimitiveIterator.OfLong extends PrimitiveIterator[Long, LongConsumer] {
+trait PrimitiveIterator_OfLong extends PrimitiveIterator[Long, LongConsumer] {
 
     /** Performs the given action for each remaining element until all elements
      *  have been processed or the action throws an exception.

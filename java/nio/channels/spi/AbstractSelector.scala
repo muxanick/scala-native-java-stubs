@@ -61,5 +61,5 @@ abstract class AbstractSelector extends Selector {
     def provider(): SelectorProvider
 
     /** Registers the given channel with this selector. */
-    protected def register(ch: AbstractSelectableChannel, ops: Int, att: Object): SelectionKey
+    protected def register(ch: AbstractSelectableChannel, ops: Int, att: Any): SelectionKey
 }

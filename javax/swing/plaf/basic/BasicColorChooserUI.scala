@@ -18,8 +18,7 @@ class BasicColorChooserUI extends ColorChooserUI {
     def this() = ???
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object PropertyHandler extends BasicColorChooserUI.PropertyHandler
+    type PropertyHandler = BasicColorChooserUI_PropertyHandler
 
     /** JColorChooser this BasicColorChooserUI is installed on. */
     @stub

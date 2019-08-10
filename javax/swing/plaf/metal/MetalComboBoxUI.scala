@@ -26,19 +26,16 @@ class MetalComboBoxUI extends BasicComboBoxUI {
     def this() = ???
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object MetalComboBoxLayoutManager extends MetalComboBoxUI.MetalComboBoxLayoutManager
+    type MetalComboBoxLayoutManager = MetalComboBoxUI_MetalComboBoxLayoutManager
 
     /** Deprecated. 
      * As of Java 2 platform v1.4.
      * 
      */
-    @stub
-    object MetalComboPopup extends MetalComboBoxUI.MetalComboPopup
+    type MetalComboPopup = MetalComboBoxUI_MetalComboPopup
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object MetalPropertyChangeListener extends MetalComboBoxUI.MetalPropertyChangeListener
+    type MetalPropertyChangeListener = MetalComboBoxUI_MetalPropertyChangeListener
 
     /** This protected method is implementation specific and should be private. */
     @stub

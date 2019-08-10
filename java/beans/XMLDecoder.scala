@@ -41,19 +41,19 @@ class XMLDecoder extends Object with AutoCloseable {
      *  created by the XMLEncoder class.
      */
     @stub
-    def this(in: InputStream, owner: Object) = ???
+    def this(in: InputStream, owner: Any) = ???
 
     /** Creates a new input stream for reading archives
      *  created by the XMLEncoder class.
      */
     @stub
-    def this(in: InputStream, owner: Object, exceptionListener: ExceptionListener) = ???
+    def this(in: InputStream, owner: Any, exceptionListener: ExceptionListener) = ???
 
     /** Creates a new input stream for reading archives
      *  created by the XMLEncoder class.
      */
     @stub
-    def this(in: InputStream, owner: Object, exceptionListener: ExceptionListener, cl: ClassLoader) = ???
+    def this(in: InputStream, owner: Any, exceptionListener: ExceptionListener, cl: ClassLoader) = ???
 
     /** This method closes the input stream associated
      *  with this stream.
@@ -67,11 +67,11 @@ class XMLDecoder extends Object with AutoCloseable {
 
     /** Gets the owner of this decoder. */
     @stub
-    def getOwner(): Object = ???
+    def getOwner(): Any = ???
 
     /** Reads the next object from the underlying input stream. */
     @stub
-    def readObject(): Object = ???
+    def readObject(): Any = ???
 
     /** Sets the exception handler for this stream to exceptionListener. */
     @stub
@@ -79,7 +79,7 @@ class XMLDecoder extends Object with AutoCloseable {
 
     /** Sets the owner of this decoder to owner. */
     @stub
-    def setOwner(owner: Object): Unit = ???
+    def setOwner(owner: Any): Unit = ???
 }
 
 object XMLDecoder {
@@ -88,5 +88,5 @@ object XMLDecoder {
      *  created by the XMLEncoder class.
      */
     @stub
-    def createHandler(owner: Object, el: ExceptionListener, cl: ClassLoader): DefaultHandler = ???
+    def createHandler(owner: Any, el: ExceptionListener, cl: ClassLoader): DefaultHandler = ???
 }

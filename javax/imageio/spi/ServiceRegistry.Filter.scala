@@ -10,12 +10,12 @@ import scala.scalanative.annotation.stub
  *  of the getServiceProviders method of
  *  ServiceRegistry that takes a Filter.
  */
-object trait ServiceRegistry.Filter {
+trait ServiceRegistry_Filter {
 
     /** Returns true if the given
      *  provider object matches the criterion defined
      *  by this Filter.
      */
     @stub
-    def filter(provider: Object): Boolean = ???
+    def filter(provider: Any): Boolean = ???
 }

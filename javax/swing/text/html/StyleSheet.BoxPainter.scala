@@ -16,7 +16,7 @@ import scala.scalanative.annotation.stub
  *  the insets of a View and making sure the background
  *  is maintained according to the CSS attributes.
  */
-object StyleSheet.BoxPainter extends Object with Serializable {
+object StyleSheet_BoxPainter extends Object with Serializable {
 
     /** Fetches the inset needed on a given side to
      *  account for the margin, border, and padding.

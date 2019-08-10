@@ -14,60 +14,46 @@ class MetalBorders extends Object {
 
 object MetalBorders {
     /**  */
-    @stub
-    object ButtonBorder extends MetalBorders.ButtonBorder
+    type ButtonBorder = MetalBorders_ButtonBorder
 
     /**  */
-    @stub
-    object Flush3DBorder extends MetalBorders.Flush3DBorder
+    type Flush3DBorder = MetalBorders_Flush3DBorder
 
     /**  */
-    @stub
-    object InternalFrameBorder extends MetalBorders.InternalFrameBorder
+    type InternalFrameBorder = MetalBorders_InternalFrameBorder
 
     /**  */
-    @stub
-    object MenuBarBorder extends MetalBorders.MenuBarBorder
+    type MenuBarBorder = MetalBorders_MenuBarBorder
 
     /**  */
-    @stub
-    object MenuItemBorder extends MetalBorders.MenuItemBorder
+    type MenuItemBorder = MetalBorders_MenuItemBorder
 
     /**  */
-    @stub
-    object OptionDialogBorder extends MetalBorders.OptionDialogBorder
+    type OptionDialogBorder = MetalBorders_OptionDialogBorder
 
     /** Border for a Palette. */
-    @stub
-    object PaletteBorder extends MetalBorders.PaletteBorder
+    type PaletteBorder = MetalBorders_PaletteBorder
 
     /**  */
-    @stub
-    object PopupMenuBorder extends MetalBorders.PopupMenuBorder
+    type PopupMenuBorder = MetalBorders_PopupMenuBorder
 
     /**  */
-    @stub
-    object RolloverButtonBorder extends MetalBorders.RolloverButtonBorder
+    type RolloverButtonBorder = MetalBorders_RolloverButtonBorder
 
     /**  */
-    @stub
-    object ScrollPaneBorder extends MetalBorders.ScrollPaneBorder
+    type ScrollPaneBorder = MetalBorders_ScrollPaneBorder
 
     /** Border for a Table Header */
-    @stub
-    object TableHeaderBorder extends MetalBorders.TableHeaderBorder
+    type TableHeaderBorder = MetalBorders_TableHeaderBorder
 
     /**  */
-    @stub
-    object TextFieldBorder extends MetalBorders.TextFieldBorder
+    type TextFieldBorder = MetalBorders_TextFieldBorder
 
     /**  */
-    @stub
-    object ToggleButtonBorder extends MetalBorders.ToggleButtonBorder
+    type ToggleButtonBorder = MetalBorders_ToggleButtonBorder
 
     /**  */
-    @stub
-    object ToolBarBorder extends MetalBorders.ToolBarBorder
+    type ToolBarBorder = MetalBorders_ToolBarBorder
 
     /** Returns a border instance for a JButton */
     @stub

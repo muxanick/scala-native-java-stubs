@@ -29,5 +29,5 @@ abstract class Invoker extends Object {
     /** JAX-WS runtime calls this method to do the actual web service
      *  invocation on endpoint instance.
      */
-    def invoke(m: Method, args: Object*): Object
+    def invoke(m: Method, args: Object*): Any
 }

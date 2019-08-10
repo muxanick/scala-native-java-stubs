@@ -5,7 +5,7 @@ import javax.swing.{AbstractListModel, ComboBoxModel}
 import scala.scalanative.annotation.stub
 
 /** Data model for a type-face selection combo-box. */
-protected class MetalFileChooserUI.DirectoryComboBoxModel extends AbstractListModel[Object] with ComboBoxModel[Object] {
+protected class MetalFileChooserUI_DirectoryComboBoxModel extends AbstractListModel[Object] with ComboBoxModel[Object] {
 
     /**  */
     @stub
@@ -17,11 +17,11 @@ protected class MetalFileChooserUI.DirectoryComboBoxModel extends AbstractListMo
 
     /** Returns the value at the specified index. */
     @stub
-    def getElementAt(index: Int): Object = ???
+    def getElementAt(index: Int): Any = ???
 
     /** Returns the selected item */
     @stub
-    def getSelectedItem(): Object = ???
+    def getSelectedItem(): Any = ???
 
     /** Returns the length of the list. */
     @stub
@@ -29,5 +29,5 @@ protected class MetalFileChooserUI.DirectoryComboBoxModel extends AbstractListMo
 
     /** Set the selected item. */
     @stub
-    def setSelectedItem(selectedDirectory: Object): Unit = ???
+    def setSelectedItem(selectedDirectory: Any): Unit = ???
 }

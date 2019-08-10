@@ -50,7 +50,7 @@ final class LocalTime extends Object with Temporal with TemporalAdjuster with Co
 
     /** Checks if this time is equal to another time. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Formats this time using the specified formatter. */
     @stub

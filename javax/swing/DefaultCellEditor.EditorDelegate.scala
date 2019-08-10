@@ -7,7 +7,7 @@ import java.util.EventObject
 import scala.scalanative.annotation.stub
 
 /** The protected EditorDelegate class. */
-protected class DefaultCellEditor.EditorDelegate extends Object with ActionListener with ItemListener with Serializable {
+protected class DefaultCellEditor_EditorDelegate extends Object with ActionListener with ItemListener with Serializable {
 
     /**  */
     @stub
@@ -15,7 +15,7 @@ protected class DefaultCellEditor.EditorDelegate extends Object with ActionListe
 
     /** The value of this cell. */
     @stub
-    protected val value: Object = ???
+    protected val value: Any = ???
 
     /** When an action is performed, editing is ended. */
     @stub
@@ -27,7 +27,7 @@ protected class DefaultCellEditor.EditorDelegate extends Object with ActionListe
 
     /** Returns the value of this cell. */
     @stub
-    def getCellEditorValue(): Object = ???
+    def getCellEditorValue(): Any = ???
 
     /** Returns true if anEvent is not a
      *  MouseEvent.
@@ -41,7 +41,7 @@ protected class DefaultCellEditor.EditorDelegate extends Object with ActionListe
 
     /** Sets the value of this cell. */
     @stub
-    def setValue(value: Object): Unit = ???
+    def setValue(value: Any): Unit = ???
 
     /** Returns true to indicate that the editing cell may
      *  be selected.

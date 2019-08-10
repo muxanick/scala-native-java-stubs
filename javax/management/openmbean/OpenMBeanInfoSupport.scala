@@ -28,7 +28,7 @@ class OpenMBeanInfoSupport extends MBeanInfo with OpenMBeanInfo {
      *  OpenMBeanInfoSupport instance for equality.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the hash code value for this OpenMBeanInfoSupport instance. */
     @stub

@@ -49,7 +49,7 @@ class DefaultListSelectionModel extends Object with ListSelectionModel with Clon
 
     /** Returns a clone of this selection model with the same selection. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Notifies listeners that we have ended a series of adjustments. */
     @stub

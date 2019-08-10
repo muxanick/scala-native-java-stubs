@@ -23,7 +23,7 @@ object Compiler {
      *  operation.
      */
     @stub
-    def command(any: Object): Object = ???
+    def command(any: Any): Any = ???
 
     /** Compiles the specified class. */
     @stub

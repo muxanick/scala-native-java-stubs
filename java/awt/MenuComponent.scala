@@ -22,7 +22,7 @@ abstract class MenuComponent extends Object with Serializable {
     /** Inner class of MenuComponent used to provide
      *  default support for accessibility.
      */
-    protected object AccessibleAWTMenuComponent extends MenuComponent.AccessibleAWTMenuComponent
+    protected type AccessibleAWTMenuComponent = MenuComponent_AccessibleAWTMenuComponent
 
     /** Delivers an event to this component or one of its sub components. */
     def dispatchEvent(e: AWTEvent): Unit
@@ -52,7 +52,7 @@ abstract class MenuComponent extends Object with Serializable {
      *  synchronization monitor) for AWT component-tree and layout
      *  operations.
      */
-    protected def getTreeLock(): Object
+    protected def getTreeLock(): Any
 
     /** Returns a string representing the state of this
      *  MenuComponent.

@@ -103,7 +103,7 @@ class StyleSheet extends StyleContext {
      *  the new representative set.
      */
     @stub
-    def addAttribute(old: AttributeSet, key: Object, value: Object): AttributeSet = ???
+    def addAttribute(old: AttributeSet, key: Any, value: Any): AttributeSet = ???
 
     /** Adds a set of attributes to the element. */
     @stub
@@ -219,7 +219,7 @@ class StyleSheet extends StyleContext {
 
     /** Removes an attribute from the set. */
     @stub
-    def removeAttribute(old: AttributeSet, key: Object): AttributeSet = ???
+    def removeAttribute(old: AttributeSet, key: Any): AttributeSet = ???
 
     /** Removes a set of attributes. */
     @stub
@@ -264,14 +264,12 @@ object StyleSheet {
     /** Class to carry out some of the duties of
      *  CSS formatting.
      */
-    @stub
-    object BoxPainter extends StyleSheet.BoxPainter
+    type BoxPainter = StyleSheet_BoxPainter
 
     /** Class to carry out some of the duties of CSS list
      *  formatting.
      */
-    @stub
-    object ListPainter extends StyleSheet.ListPainter
+    type ListPainter = StyleSheet_ListPainter
 
     /**  */
     @stub

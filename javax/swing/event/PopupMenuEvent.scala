@@ -20,5 +20,5 @@ class PopupMenuEvent extends EventObject {
 
     /** Constructs a PopupMenuEvent object. */
     @stub
-    def this(source: Object) = ???
+    def this(source: Any) = ???
 }

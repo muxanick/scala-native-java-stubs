@@ -25,7 +25,7 @@ trait Annotation {
      *  that is logically equivalent to this one.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the hash code of this annotation, as defined below: */
     @stub

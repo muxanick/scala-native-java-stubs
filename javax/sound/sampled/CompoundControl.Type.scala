@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
  *  compound control.  Static instances are provided for the
  *  common types.
  */
-object CompoundControl.Type extends Control.Type {
+object CompoundControl_Type extends Control.Type {
 
     /** Constructs a new compound control type. */
     @stub

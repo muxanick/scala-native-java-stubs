@@ -10,7 +10,7 @@ import scala.scalanative.annotation.stub
  *  Java Accessibility API appropriate to frame user-interface
  *  elements.
  */
-protected class JFrame.AccessibleJFrame extends Frame.AccessibleAWTFrame {
+protected class JFrame_AccessibleJFrame extends Frame.AccessibleAWTFrame {
 
     /**  */
     @stub

@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** PropertyChangeListener for the tree. Updates the appropriate
  *  variable, or TreeState, based on what changes.
  */
-class BasicTreeUI.PropertyChangeHandler extends Object with PropertyChangeListener {
+class BasicTreeUI_PropertyChangeHandler extends Object with PropertyChangeListener {
 
     /**  */
     @stub

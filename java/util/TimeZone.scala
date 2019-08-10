@@ -87,7 +87,7 @@ abstract class TimeZone extends Object with Serializable with Cloneable {
     def this() = ???
 
     /** Creates a copy of this TimeZone. */
-    def clone(): Object
+    def clone(): Any
 
     /** Returns a long standard time name of this TimeZone suitable for
      *  presentation to the user in the default locale.

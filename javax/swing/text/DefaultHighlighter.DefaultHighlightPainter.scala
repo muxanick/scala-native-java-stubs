@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** Simple highlight painter that fills a highlighted area with
  *  a solid color.
  */
-object DefaultHighlighter.DefaultHighlightPainter extends LayeredHighlighter.LayerPainter {
+object DefaultHighlighter_DefaultHighlightPainter extends LayeredHighlighter.LayerPainter {
 
     /** Constructs a new highlight painter. */
     @stub

@@ -89,11 +89,11 @@ class HashSet[E] extends AbstractSet[E] with Set[E] with Cloneable with Serializ
      *  themselves are not cloned.
      */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns true if this set contains the specified element. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Returns true if this set contains no elements. */
     @stub
@@ -105,7 +105,7 @@ class HashSet[E] extends AbstractSet[E] with Set[E] with Cloneable with Serializ
 
     /** Removes the specified element from this set if it is present. */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Returns the number of elements in this set (its cardinality). */
     @stub

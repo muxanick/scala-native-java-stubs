@@ -51,7 +51,7 @@ trait AttributedCharacterIterator extends CharacterIterator {
 
     /** Returns the value of the named attribute for the current character. */
     @stub
-    def getAttribute(attribute: AttributedCharacterIterator.Attribute): Object = ???
+    def getAttribute(attribute: AttributedCharacterIterator.Attribute): Any = ???
 
     /** Returns a map with the attributes defined on the current
      *  character.
@@ -98,6 +98,5 @@ trait AttributedCharacterIterator extends CharacterIterator {
 
 object AttributedCharacterIterator {
     /** Defines attribute keys that are used to identify text attributes. */
-    @stub
-    object Attribute extends AttributedCharacterIterator.Attribute
+    type Attribute = AttributedCharacterIterator_Attribute
 }

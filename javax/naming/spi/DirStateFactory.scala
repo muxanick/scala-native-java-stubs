@@ -56,13 +56,12 @@ trait DirStateFactory extends StateFactory {
      *  to be transformed.
      */
     @stub
-    def getStateToBind(obj: Object, name: Name, nameCtx: Context, environment: Hashtable[_, _], inAttrs: Attributes): DirStateFactory.Result = ???
+    def getStateToBind(obj: Any, name: Name, nameCtx: Context, environment: Hashtable[_, _], inAttrs: Attributes): DirStateFactory.Result = ???
 }
 
 object DirStateFactory {
     /** An object/attributes pair for returning the result of
      *  DirStateFactory.getStateToBind().
      */
-    @stub
-    object Result extends DirStateFactory.Result
+    type Result = DirStateFactory_Result
 }

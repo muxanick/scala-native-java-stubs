@@ -10,7 +10,7 @@ import scala.scalanative.annotation.stub
  *  default, this is the class that will be used to store attributes
  *  when held in the compact sharable form.
  */
-class StyleContext.SmallAttributeSet extends Object with AttributeSet {
+class StyleContext_SmallAttributeSet extends Object with AttributeSet {
 
     /**  */
     @stub
@@ -22,11 +22,11 @@ class StyleContext.SmallAttributeSet extends Object with AttributeSet {
 
     /** Clones a set of attributes. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Checks whether a given attribute name/value is defined. */
     @stub
-    def containsAttribute(name: Object, value: Object): Boolean = ???
+    def containsAttribute(name: Any, value: Any): Boolean = ???
 
     /** Checks whether the attribute set contains all of
      *  the given attributes.
@@ -40,11 +40,11 @@ class StyleContext.SmallAttributeSet extends Object with AttributeSet {
 
     /** Compares this object to the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Gets the value of an attribute. */
     @stub
-    def getAttribute(key: Object): Object = ???
+    def getAttribute(key: Any): Any = ???
 
     /** Gets the number of attributes that are defined. */
     @stub
@@ -66,7 +66,7 @@ class StyleContext.SmallAttributeSet extends Object with AttributeSet {
 
     /** Checks whether a given attribute is defined. */
     @stub
-    def isDefined(key: Object): Boolean = ???
+    def isDefined(key: Any): Boolean = ???
 
     /** Checks whether two attribute sets are equal. */
     @stub

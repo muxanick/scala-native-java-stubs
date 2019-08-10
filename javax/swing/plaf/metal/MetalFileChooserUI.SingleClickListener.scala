@@ -6,7 +6,7 @@ import javax.swing.JList
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class MetalFileChooserUI.SingleClickListener extends MouseAdapter {
+protected class MetalFileChooserUI_SingleClickListener extends MouseAdapter {
 
     /**  */
     @stub

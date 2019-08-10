@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
  *  It is used to control how the sheets of multiple copies of a single
  *  document are collated.
  */
-final object JobAttributes.MultipleDocumentHandlingType extends Object {
+final object JobAttributes_MultipleDocumentHandlingType extends Object {
 
     /** The MultipleDocumentHandlingType instance to use for specifying
      *  that the job should be divided into separate, collated copies.

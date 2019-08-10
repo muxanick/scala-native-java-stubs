@@ -6,7 +6,7 @@ import javax.swing.AbstractAction
 import scala.scalanative.annotation.stub
 
 /** ActionListener that invokes cancelEditing when action performed. */
-class BasicTreeUI.TreeCancelEditingAction extends AbstractAction {
+class BasicTreeUI_TreeCancelEditingAction extends AbstractAction {
 
     /**  */
     @stub

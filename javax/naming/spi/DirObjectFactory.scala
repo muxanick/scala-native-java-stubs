@@ -34,5 +34,5 @@ trait DirObjectFactory extends ObjectFactory {
      *  specified.
      */
     @stub
-    def getObjectInstance(obj: Object, name: Name, nameCtx: Context, environment: Hashtable[_, _], attrs: Attributes): Object = ???
+    def getObjectInstance(obj: Any, name: Name, nameCtx: Context, environment: Hashtable[_, _], attrs: Attributes): Any = ???
 }

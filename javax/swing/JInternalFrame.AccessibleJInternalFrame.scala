@@ -19,7 +19,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JInternalFrame.AccessibleJInternalFrame extends JComponent.AccessibleJComponent with AccessibleValue {
+protected class JInternalFrame_AccessibleJInternalFrame extends JComponent.AccessibleJComponent with AccessibleValue {
 
     /**  */
     @stub

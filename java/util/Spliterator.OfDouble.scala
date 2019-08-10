@@ -5,7 +5,7 @@ import java.util.function.{Consumer, DoubleConsumer}
 import scala.scalanative.annotation.stub
 
 /** A Spliterator specialized for double values. */
-object trait Spliterator.OfDouble extends Spliterator.OfPrimitive[Double, DoubleConsumer, Spliterator.OfDouble] {
+trait Spliterator_OfDouble extends Spliterator.OfPrimitive[Double, DoubleConsumer, Spliterator.OfDouble] {
 
     /** Performs the given action for each remaining element, sequentially in
      *  the current thread, until all elements have been processed or the action

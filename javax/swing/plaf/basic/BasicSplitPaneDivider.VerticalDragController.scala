@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
  *  messaged with isValid to insure that dragging can happen
  *  (dragging won't be allowed if the two views can not be resized).
  */
-protected class BasicSplitPaneDivider.VerticalDragController extends BasicSplitPaneDivider.DragController {
+protected class BasicSplitPaneDivider_VerticalDragController extends BasicSplitPaneDivider.DragController {
 
     /**  */
     @stub

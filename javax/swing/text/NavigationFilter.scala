@@ -43,6 +43,5 @@ object NavigationFilter {
     /** Used as a way to circumvent calling back into the caret to
      *  position the cursor.
      */
-    @stub
-    object FilterBypass extends NavigationFilter.FilterBypass
+    type FilterBypass = NavigationFilter_FilterBypass
 }

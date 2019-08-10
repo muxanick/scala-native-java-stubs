@@ -67,7 +67,7 @@ abstract class ImageReaderSpi extends ImageReaderWriterSpi {
     /** Returns true if the supplied source object appears
      *  to be of the format supported by this reader.
      */
-    def canDecodeInput(source: Object): Boolean
+    def canDecodeInput(source: Any): Boolean
 
     /** Returns an instance of the ImageReader
      *  implementation associated with this service provider.
@@ -77,7 +77,7 @@ abstract class ImageReaderSpi extends ImageReaderWriterSpi {
     /** Returns an instance of the ImageReader
      *  implementation associated with this service provider.
      */
-    def createReaderInstance(extension: Object): ImageReader
+    def createReaderInstance(extension: Any): ImageReader
 
     /** Returns an array of Strings containing the fully
      *  qualified names of all the ImageWriterSpi classes

@@ -14,20 +14,18 @@ import scala.scalanative.annotation.stub
  *  object creation and e.g. delay a password prompt until it is
  *  needed.
  */
-object abstract KeyStore.Builder extends Object {
+object abstract KeyStore_Builder extends Object {
 
     /** Construct a new Builder. */
     @stub
     protected def Builder() = ???
 
     /** Returns the KeyStore described by this object. */
-    @stub
     def getKeyStore(): KeyStore
 
     /** Returns the ProtectionParameters that should be used to obtain
      *  the Entry with the given alias.
      */
-    @stub
     def getProtectionParameter(alias: String): KeyStore.ProtectionParameter
 
     /** Returns a new Builder that encapsulates the given KeyStore. */

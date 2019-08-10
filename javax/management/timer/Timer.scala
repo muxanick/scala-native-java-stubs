@@ -45,28 +45,28 @@ class Timer extends NotificationBroadcasterSupport with TimerMBean with MBeanReg
      *  and a null period and number of occurrences.
      */
     @stub
-    def addNotification(type: String, message: String, userData: Object, date: Date): Integer = ???
+    def addNotification(type: String, message: String, userData: Any, date: Date): Integer = ???
 
     /** Creates a new timer notification with the specified type, message
      *  and userData and inserts it into the list of notifications with a given date
      *  and period and a null number of occurrences.
      */
     @stub
-    def addNotification(type: String, message: String, userData: Object, date: Date, period: Long): Integer = ???
+    def addNotification(type: String, message: String, userData: Any, date: Date, period: Long): Integer = ???
 
     /** Creates a new timer notification with the specified type, message
      *  and userData and inserts it into the list of notifications with a given date,
      *  period and number of occurrences.
      */
     @stub
-    def addNotification(type: String, message: String, userData: Object, date: Date, period: Long, nbOccurences: Long): Integer = ???
+    def addNotification(type: String, message: String, userData: Any, date: Date, period: Long, nbOccurences: Long): Integer = ???
 
     /** Creates a new timer notification with the specified type, message
      *  and userData and inserts it into the list of notifications with a given date,
      *  period and number of occurrences.
      */
     @stub
-    def addNotification(type: String, message: String, userData: Object, date: Date, period: Long, nbOccurences: Long, fixedRate: Boolean): Integer = ???
+    def addNotification(type: String, message: String, userData: Any, date: Date, period: Long, nbOccurences: Long, fixedRate: Boolean): Integer = ???
 
     /** Gets all timer notification identifiers registered into the list of notifications. */
     @stub
@@ -111,7 +111,7 @@ class Timer extends NotificationBroadcasterSupport with TimerMBean with MBeanReg
 
     /** Gets the timer notification user data object corresponding to the specified identifier. */
     @stub
-    def getNotificationUserData(id: Integer): Object = ???
+    def getNotificationUserData(id: Integer): Any = ???
 
     /** Gets a copy of the period (in milliseconds) associated to a timer notification. */
     @stub

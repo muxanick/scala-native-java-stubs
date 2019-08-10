@@ -40,11 +40,11 @@ class BinaryRefAddr extends RefAddr {
 
     /** Determines whether obj is equal to this address. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Retrieves the contents of this address as an Object. */
     @stub
-    def getContent(): Object = ???
+    def getContent(): Any = ???
 
     /** Computes the hash code of this address using its address type and contents. */
     @stub

@@ -32,8 +32,7 @@ object LayoutStyle {
      *  possible ways two components can be placed relative to each
      *  other.
      */
-    @stub
-    object ComponentPlacement extends LayoutStyle.ComponentPlacement
+    type ComponentPlacement = LayoutStyle_ComponentPlacement
 
     /** Returns the shared instance of LayoutStyle. */
     @stub

@@ -15,7 +15,7 @@ import scala.scalanative.annotation.stub
  *  as well as implementing many of the methods in the
  *  AccessibleContainer interface.
  */
-protected class Container.AccessibleAWTContainer extends Component.AccessibleAWTComponent {
+protected class Container_AccessibleAWTContainer extends Component.AccessibleAWTComponent {
 
     /**  */
     @stub
@@ -24,8 +24,7 @@ protected class Container.AccessibleAWTContainer extends Component.AccessibleAWT
     /** Fire PropertyChange listener, if one is registered,
      *  when children are added or removed.
      */
-    @stub
-    protected object AccessibleContainerHandler extends Container.AccessibleAWTContainer.AccessibleContainerHandler
+    protected type AccessibleContainerHandler = Container_AccessibleAWTContainer_AccessibleContainerHandler
 
     /**  */
     @stub

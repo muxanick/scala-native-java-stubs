@@ -40,7 +40,7 @@ final class ActivationGroupDesc extends Object with Serializable {
 
     /** Compares two activation group descriptors for content equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the group's class name (possibly null). */
     @stub
@@ -69,6 +69,5 @@ final class ActivationGroupDesc extends Object with Serializable {
 
 object ActivationGroupDesc {
     /** Startup options for ActivationGroup implementations. */
-    @stub
-    object CommandEnvironment extends ActivationGroupDesc.CommandEnvironment
+    type CommandEnvironment = ActivationGroupDesc_CommandEnvironment
 }

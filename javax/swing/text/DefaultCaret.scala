@@ -112,7 +112,7 @@ class DefaultCaret extends Rectangle with Caret with FocusListener with MouseLis
 
     /** Compares this object to the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Notifies all listeners that have registered interest for
      *  notification on this event type.

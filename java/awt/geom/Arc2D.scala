@@ -58,7 +58,7 @@ abstract class Arc2D extends RectangularShape {
     /** Determines whether or not the specified Object is
      *  equal to this Arc2D.
      */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** Returns the angular extent of the arc. */
     def getAngleExtent(): Double
@@ -165,12 +165,10 @@ abstract class Arc2D extends RectangularShape {
 
 object Arc2D {
     /** This class defines an arc specified in double precision. */
-    @stub
-    object Double extends Arc2D.Double
+    type Double = Arc2D_Double
 
     /** This class defines an arc specified in float precision. */
-    @stub
-    object Float extends Arc2D.Float
+    type Float = Arc2D_Float
 
     /** The closure type for an arc closed by drawing a straight
      *  line segment from the start of the arc segment to the end of the

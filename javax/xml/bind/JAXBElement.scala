@@ -106,6 +106,5 @@ class JAXBElement[T] extends Object with Serializable {
 
 object JAXBElement {
     /** Designates global scope for an xml element. */
-    @stub
-    object GlobalScope extends JAXBElement.GlobalScope
+    type GlobalScope = JAXBElement_GlobalScope
 }

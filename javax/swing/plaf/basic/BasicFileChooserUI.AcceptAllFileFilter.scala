@@ -6,7 +6,7 @@ import javax.swing.filechooser.FileFilter
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class BasicFileChooserUI.AcceptAllFileFilter extends FileFilter {
+protected class BasicFileChooserUI_AcceptAllFileFilter extends FileFilter {
 
     /**  */
     @stub

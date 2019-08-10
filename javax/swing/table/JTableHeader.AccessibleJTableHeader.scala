@@ -20,7 +20,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JTableHeader.AccessibleJTableHeader extends JComponent.AccessibleJComponent {
+protected class JTableHeader_AccessibleJTableHeader extends JComponent.AccessibleJComponent {
 
     /**  */
     @stub
@@ -29,8 +29,7 @@ protected class JTableHeader.AccessibleJTableHeader extends JComponent.Accessibl
     /** This class provides an implementation of the Java Accessibility
      *  API appropriate for JTableHeader entries.
      */
-    @stub
-    protected object AccessibleJTableHeaderEntry extends JTableHeader.AccessibleJTableHeader.AccessibleJTableHeaderEntry
+    protected type AccessibleJTableHeaderEntry = JTableHeader_AccessibleJTableHeader_AccessibleJTableHeaderEntry
 
     /** Returns the Accessible child, if one exists, contained at the local
      *  coordinate Point.

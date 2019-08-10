@@ -5,7 +5,7 @@ import javax.swing.text.MutableAttributeSet
 import scala.scalanative.annotation.stub
 
 /**  */
-class HTMLDocument.HTMLReader.CharacterAction extends HTMLDocument.HTMLReader.TagAction {
+class HTMLDocument_HTMLReader_CharacterAction extends HTMLDocument.HTMLReader.TagAction {
 
     /**  */
     @stub

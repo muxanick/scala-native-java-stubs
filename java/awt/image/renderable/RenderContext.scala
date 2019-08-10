@@ -43,7 +43,7 @@ class RenderContext extends Object with Cloneable {
 
     /** Makes a copy of a RenderContext. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Modifies the current user-to-device transform by appending another
      *  transform.

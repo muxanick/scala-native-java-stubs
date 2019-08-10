@@ -42,7 +42,7 @@ import scala.scalanative.annotation.stub
     def certificates(): Array[Certificate]
 
     /** Deprecated.  */
-    def equals(identity: Object): Boolean
+    def equals(identity: Any): Boolean
 
     /** Deprecated.  */
     def getInfo(): String

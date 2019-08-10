@@ -72,12 +72,10 @@ class JViewport extends JComponent with Accessible {
     /** This class implements accessibility support for the
      *  JViewport class.
      */
-    @stub
-    protected object AccessibleJViewport extends JViewport.AccessibleJViewport
+    protected type AccessibleJViewport = JViewport_AccessibleJViewport
 
     /** A listener for the view. */
-    @stub
-    protected object ViewListener extends JViewport.ViewListener
+    protected type ViewListener = JViewport_ViewListener
 
     /** Deprecated. 
      * As of Java 2 platform v1.3
@@ -117,7 +115,7 @@ class JViewport extends JComponent with Accessible {
      *  which can be null.
      */
     @stub
-    protected def addImpl(child: Component, constraints: Object, index: Int): Unit = ???
+    protected def addImpl(child: Component, constraints: Any, index: Int): Unit = ???
 
     /** Computes the parameters for a blit where the backing store image
      *  currently contains oldLoc in the upper left hand corner
@@ -138,7 +136,7 @@ class JViewport extends JComponent with Accessible {
 
     /** Notifies listeners of a property change. */
     @stub
-    protected def firePropertyChange(propertyName: String, oldValue: Object, newValue: Object): Unit = ???
+    protected def firePropertyChange(propertyName: String, oldValue: Any, newValue: Any): Unit = ???
 
     /** Notifies all ChangeListeners when the views
      *  size, position, or the viewports extent size has changed.

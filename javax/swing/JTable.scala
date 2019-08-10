@@ -210,8 +210,7 @@ class JTable extends JComponent with TableModelListener with Scrollable with Tab
     /** This class implements accessibility support for the
      *  JTable class.
      */
-    @stub
-    protected object AccessibleJTable extends JTable.AccessibleJTable
+    protected type AccessibleJTable = JTable_AccessibleJTable
 
     /** The table will query the TableModel to build the default
      *   set of columns if this is true.
@@ -527,7 +526,7 @@ class JTable extends JComponent with TableModelListener with Scrollable with Tab
      *  equals.
      */
     @stub
-    def getColumn(identifier: Object): TableColumn = ???
+    def getColumn(identifier: Any): TableColumn = ???
 
     /** Returns the type of the column appearing in the view at
      *  column position column.
@@ -766,7 +765,7 @@ class JTable extends JComponent with TableModelListener with Scrollable with Tab
 
     /** Returns the cell value at row and column. */
     @stub
-    def getValueAt(row: Int, column: Int): Object = ???
+    def getValueAt(row: Int, column: Int): Any = ???
 
     /** Initializes table properties to their default values. */
     @stub
@@ -1080,7 +1079,7 @@ class JTable extends JComponent with TableModelListener with Scrollable with Tab
      *  and column.
      */
     @stub
-    def setValueAt(aValue: Object, row: Int, column: Int): Unit = ???
+    def setValueAt(aValue: Any, row: Int, column: Int): Unit = ???
 
     /** Deprecated. 
      * As of Swing version 1.0.3,
@@ -1128,12 +1127,10 @@ object JTable {
     /** A subclass of TransferHandler.DropLocation representing
      *  a drop location for a JTable.
      */
-    @stub
-    object DropLocation extends JTable.DropLocation
+    type DropLocation = JTable_DropLocation
 
     /** Printing modes, used in printing JTables. */
-    @stub
-    object PrintMode extends JTable.PrintMode
+    type PrintMode = JTable_PrintMode
 
     /** During all resize operations, proportionately resize all columns. */
     @stub

@@ -5,7 +5,7 @@ import javax.swing.event.{ChangeEvent, ChangeListener}
 import scala.scalanative.annotation.stub
 
 /** Vertical scrollbar listener. */
-class BasicScrollPaneUI.VSBChangeListener extends Object with ChangeListener {
+class BasicScrollPaneUI_VSBChangeListener extends Object with ChangeListener {
 
     /**  */
     @stub

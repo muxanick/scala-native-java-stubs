@@ -359,7 +359,7 @@ import scala.scalanative.annotation.stub
  *  Nearly all other methods in the JSR 292 API rely on lookup
  *  objects to check access requests.
  */
-final object MethodHandles.Lookup extends Object {
+final object MethodHandles_Lookup extends Object {
 
     /** A single-bit mask representing package access (default access),
      *   which may contribute to the result of lookupModes.
@@ -387,7 +387,7 @@ final object MethodHandles.Lookup extends Object {
 
     /** Produces an early-bound method handle for a non-static method. */
     @stub
-    def bind(receiver: Object, name: String, type: MethodType): MethodHandle = ???
+    def bind(receiver: Any, name: String, type: MethodType): MethodHandle = ???
 
     /** Produces a method handle which creates an object and initializes it, using
      *  the constructor of the specified type.

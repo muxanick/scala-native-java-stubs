@@ -94,7 +94,7 @@ class DataFlavor extends Object with Externalizable with Cloneable {
 
     /** Returns a clone of this DataFlavor. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** This method has the same behavior as equals(Object). */
     @stub
@@ -102,7 +102,7 @@ class DataFlavor extends Object with Externalizable with Cloneable {
 
     /** Indicates whether some other object is "equal to" this one. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Deprecated. 
      * As inconsistent with hashCode() contract,

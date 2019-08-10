@@ -216,7 +216,7 @@ class SecurityManager extends Object {
      *  connection to the specified host and port number.
      */
     @stub
-    def checkConnect(host: String, port: Int, context: Object): Unit = ???
+    def checkConnect(host: String, port: Int, context: Any): Unit = ???
 
     /** Throws a SecurityException if the
      *  calling thread is not allowed to create a new class loader.
@@ -308,7 +308,7 @@ class SecurityManager extends Object {
      *  specified by the given permission.
      */
     @stub
-    def checkPermission(perm: Permission, context: Object): Unit = ???
+    def checkPermission(perm: Permission, context: Any): Unit = ???
 
     /** Throws a SecurityException if the
      *  calling thread is not allowed to initiate a print job request.
@@ -349,7 +349,7 @@ class SecurityManager extends Object {
      *  specified by the string argument.
      */
     @stub
-    def checkRead(file: String, context: Object): Unit = ???
+    def checkRead(file: String, context: Any): Unit = ???
 
     /** Determines whether the permission with the specified permission target
      *  name should be granted or denied.
@@ -387,7 +387,7 @@ class SecurityManager extends Object {
      * 
      */
     @stub
-    def checkTopLevelWindow(window: Object): Boolean = ???
+    def checkTopLevelWindow(window: Any): Boolean = ???
 
     /** Throws a SecurityException if the
      *  calling thread is not allowed to write to the specified file
@@ -456,7 +456,7 @@ class SecurityManager extends Object {
      *  environment.
      */
     @stub
-    def getSecurityContext(): Object = ???
+    def getSecurityContext(): Any = ???
 
     /** Returns the thread group into which to instantiate any new
      *  thread being created at the time this is being called.

@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  * 
  *   This release does not define any standard modifiers.
  */
-object trait WatchEvent.Modifier {
+trait WatchEvent_Modifier {
 
     /** Returns the name of the modifier. */
     @stub

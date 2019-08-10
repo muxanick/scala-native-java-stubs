@@ -125,15 +125,13 @@ class TransferHandler extends Object with Serializable {
 
 object TransferHandler {
     /** Represents a location where dropped data should be inserted. */
-    @stub
-    object DropLocation extends TransferHandler.DropLocation
+    type DropLocation = TransferHandler_DropLocation
 
     /** This class encapsulates all relevant details of a clipboard
      *  or drag and drop transfer, and also allows for customizing
      *  aspects of the drag and drop experience.
      */
-    @stub
-    object TransferSupport extends TransferHandler.TransferSupport
+    type TransferSupport = TransferHandler_TransferSupport
 
     /** An int representing a "copy" transfer action. */
     @stub

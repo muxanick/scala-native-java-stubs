@@ -18,15 +18,15 @@ trait Invocable {
      *  a scripting object compiled in the interpreter.
      */
     @stub
-    def getInterface[T](thiz: Object, clasz: Class[T]): T = ???
+    def getInterface[T](thiz: Any, clasz: Class[T]): T = ???
 
     /** Used to call top-level procedures and functions defined in scripts. */
     @stub
-    def invokeFunction(name: String, args: Object*): Object = ???
+    def invokeFunction(name: String, args: Object*): Any = ???
 
     /** Calls a method on a script object compiled during a previous script execution,
      *  which is retained in the state of the ScriptEngine.
      */
     @stub
-    def invokeMethod(thiz: Object, name: String, args: Object*): Object = ???
+    def invokeMethod(thiz: Any, name: String, args: Object*): Any = ???
 }

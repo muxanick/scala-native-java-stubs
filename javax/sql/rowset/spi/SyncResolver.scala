@@ -214,14 +214,14 @@ trait SyncResolver extends RowSet {
      *  that caused a conflict.
      */
     @stub
-    def getConflictValue(index: Int): Object = ???
+    def getConflictValue(index: Int): Any = ???
 
     /** Retrieves the value in the designated column in the current row of this
      *  SyncResolver object, which is the value in the data source
      *  that caused a conflict.
      */
     @stub
-    def getConflictValue(columnName: String): Object = ???
+    def getConflictValue(columnName: String): Any = ???
 
     /** Retrieves the conflict status of the current row of this SyncResolver,
      *  which indicates the operation
@@ -246,13 +246,13 @@ trait SyncResolver extends RowSet {
      *  RowSet object that is being synchronized.
      */
     @stub
-    def setResolvedValue(index: Int, obj: Object): Unit = ???
+    def setResolvedValue(index: Int, obj: Any): Unit = ???
 
     /** Sets obj as the value in column columnName in the current row of the
      *  RowSet object that is being synchronized.
      */
     @stub
-    def setResolvedValue(columnName: String, obj: Object): Unit = ???
+    def setResolvedValue(columnName: String, obj: Any): Unit = ???
 }
 
 object SyncResolver {

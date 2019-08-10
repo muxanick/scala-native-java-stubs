@@ -27,15 +27,15 @@ class SerialJavaObject extends Object with Serializable with Cloneable {
 
     /** Constructor for SerialJavaObject helper class. */
     @stub
-    def this(obj: Object) = ???
+    def this(obj: Any) = ???
 
     /** Returns a clone of this SerialJavaObject. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compares this SerialJavaObject to the specified object. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns an array of Field objects that contains each
      *  field of the object that this helper class is serializing.
@@ -47,7 +47,7 @@ class SerialJavaObject extends Object with Serializable with Cloneable {
      *  object.
      */
     @stub
-    def getObject(): Object = ???
+    def getObject(): Any = ???
 
     /** Returns a hash code for this SerialJavaObject. */
     @stub

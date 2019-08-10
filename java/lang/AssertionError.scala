@@ -74,7 +74,7 @@ class AssertionError extends Error {
      *  The Java™ Language Specification.
      */
     @stub
-    def this(detailMessage: Object) = ???
+    def this(detailMessage: Any) = ???
 
     /** Constructs a new AssertionError with the specified
      *  detail message and cause.

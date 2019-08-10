@@ -68,7 +68,7 @@ class X509CertSelector extends Object with CertSelector {
 
     /** Returns a copy of this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns the authorityKeyIdentifier criterion. */
     @stub

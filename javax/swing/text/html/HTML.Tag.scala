@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
  *  to their custom parser and still communicate to the
  *  reader.
  */
-object HTML.Tag extends Object {
+object HTML_Tag extends Object {
 
     /**  */
     @stub

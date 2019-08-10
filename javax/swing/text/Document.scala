@@ -184,7 +184,7 @@ trait Document {
 
     /** Gets the properties associated with the document. */
     @stub
-    def getProperty(key: Object): Object = ???
+    def getProperty(key: Any): Any = ???
 
     /** Returns all of the root elements that are defined. */
     @stub
@@ -212,7 +212,7 @@ trait Document {
 
     /** Associates a property with the document. */
     @stub
-    def putProperty(key: Object, value: Object): Unit = ???
+    def putProperty(key: Any, value: Any): Unit = ???
 
     /** Removes a portion of the content of the document. */
     @stub

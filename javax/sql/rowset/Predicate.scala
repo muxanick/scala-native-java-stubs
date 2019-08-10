@@ -78,14 +78,14 @@ trait Predicate {
      *  if multiple constraints exist) set using the setFilter() method.
      */
     @stub
-    def evaluate(value: Object, column: Int): Boolean = ???
+    def evaluate(value: Any, column: Int): Boolean = ???
 
     /** This method is called by the FilteredRowSet object
      *  to check whether the value lies between the filtering criteria set
      *  using the setFilter method.
      */
     @stub
-    def evaluate(value: Object, columnName: String): Boolean = ???
+    def evaluate(value: Any, columnName: String): Boolean = ???
 
     /** This method is typically called a FilteredRowSet object
      *  internal methods (not public) that control the RowSet object's

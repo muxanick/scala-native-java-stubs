@@ -79,13 +79,13 @@ abstract class Signature extends SignatureSpi {
     protected val state: Int
 
     /** Returns a clone if the implementation is cloneable. */
-    def clone(): Object
+    def clone(): Any
 
     /** Returns the name of the algorithm for this signature object. */
     def getAlgorithm(): String
 
     /** Deprecated.   */
-    def getParameter(param: String): Object
+    def getParameter(param: String): Any
 
     /** Returns the parameters used with this signature object. */
     def getParameters(): AlgorithmParameters
@@ -115,7 +115,7 @@ abstract class Signature extends SignatureSpi {
      *  setParameter.
      * 
      */
-    def setParameter(param: String, value: Object): Unit
+    def setParameter(param: String, value: Any): Unit
 
     /** Returns the signature bytes of all the data updated. */
     def sign(): Array[Byte]

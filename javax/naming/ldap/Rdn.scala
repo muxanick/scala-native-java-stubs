@@ -78,15 +78,15 @@ class Rdn extends Object with Serializable with Comparable[Object] {
      *  value.
      */
     @stub
-    def this(type: String, value: Object) = ???
+    def this(type: String, value: Any) = ???
 
     /** Compares this Rdn with the specified Object for order. */
     @stub
-    def compareTo(obj: Object): Int = ???
+    def compareTo(obj: Any): Int = ???
 
     /** Compares the specified Object with this Rdn for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Retrieves one of this Rdn's type. */
     @stub
@@ -94,7 +94,7 @@ class Rdn extends Object with Serializable with Comparable[Object] {
 
     /** Retrieves one of this Rdn's value. */
     @stub
-    def getValue(): Object = ???
+    def getValue(): Any = ???
 
     /** Returns the hash code of this RDN. */
     @stub
@@ -124,7 +124,7 @@ object Rdn {
      *  RFC 2253.
      */
     @stub
-    def escapeValue(val: Object): String = ???
+    def escapeValue(val: Any): String = ???
 
     /** Given an attribute value string formated according to the rules
      *  specified in
@@ -132,5 +132,5 @@ object Rdn {
      *  returns the unformated value.
      */
     @stub
-    def unescapeValue(val: String): Object = ???
+    def unescapeValue(val: String): Any = ???
 }

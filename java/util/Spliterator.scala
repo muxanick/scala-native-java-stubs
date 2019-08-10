@@ -148,20 +148,16 @@ trait Spliterator[T] {
 
 object Spliterator {
     /** A Spliterator specialized for double values. */
-    @stub
-    trait OfDouble extends Spliterator.OfDouble
+    type OfDouble = Spliterator_OfDouble
 
     /** A Spliterator specialized for int values. */
-    @stub
-    trait OfInt extends Spliterator.OfInt
+    type OfInt = Spliterator_OfInt
 
     /** A Spliterator specialized for long values. */
-    @stub
-    trait OfLong extends Spliterator.OfLong
+    type OfLong = Spliterator_OfLong
 
     /** A Spliterator specialized for primitive values. */
-    @stub
-    trait OfPrimitive[T, T_CONS, T_SPLITR]] extends Spliterator.OfPrimitive[T, T_CONS, T_SPLITR <: Spliterator.OfPrimitive[T, T_CONS, T_SPLITR]]
+    type OfPrimitive[T, T_CONS, T_SPLITR]] = Spliterator_OfPrimitive[T, T_CONS, T_SPLITR <: Spliterator_OfPrimitive[T, T_CONS, T_SPLITR]]
 
     /** Characteristic value signifying that the element source may be safely
      *  concurrently modified (allowing additions, replacements, and/or removals)

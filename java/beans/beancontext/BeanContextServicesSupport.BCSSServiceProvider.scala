@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** subclasses may subclass this nested class to add behaviors for
  *  each BeanContextServicesProvider.
  */
-object protected BeanContextServicesSupport.BCSSServiceProvider extends Object with Serializable {
+object protected BeanContextServicesSupport_BCSSServiceProvider extends Object with Serializable {
 
     /** The service provider. */
     @stub

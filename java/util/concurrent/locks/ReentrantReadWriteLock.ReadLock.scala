@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit
 import scala.scalanative.annotation.stub
 
 /** The lock returned by method ReentrantReadWriteLock.readLock(). */
-object ReentrantReadWriteLock.ReadLock extends Object with Lock with Serializable {
+object ReentrantReadWriteLock_ReadLock extends Object with Lock with Serializable {
 
     /** Constructor for use by subclasses */
     @stub

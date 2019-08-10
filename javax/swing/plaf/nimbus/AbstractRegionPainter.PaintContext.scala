@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
  *  This class contains values useful when hinting the cache engine, and when decoding
  *  control points and bezier curve anchors.
  */
-object protected AbstractRegionPainter.PaintContext extends Object {
+object protected AbstractRegionPainter_PaintContext extends Object {
 
     /** Creates a new PaintContext which does not attempt to cache or scale any cached
      *  images.
@@ -22,6 +22,5 @@ object protected AbstractRegionPainter.PaintContext extends Object {
     def PaintContext(insets: Insets, canvasSize: Dimension, inverted: Boolean, cacheMode: AbstractRegionPainter.PaintContext.CacheMode, maxH: Double, maxV: Double) = ???
 
     /**  */
-    @stub
-    protected object CacheMode extends AbstractRegionPainter.PaintContext.CacheMode
+    protected type CacheMode = AbstractRegionPainter_PaintContext_CacheMode
 }

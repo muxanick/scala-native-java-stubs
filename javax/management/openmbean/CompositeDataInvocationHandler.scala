@@ -86,5 +86,5 @@ class CompositeDataInvocationHandler extends Object with InvocationHandler {
      *  the result.
      */
     @stub
-    def invoke(proxy: Object, method: Method, args: Array[Object]): Object = ???
+    def invoke(proxy: Any, method: Method, args: Array[Object]): Any = ???
 }

@@ -14,7 +14,7 @@ class UndoableEditSupport extends Object {
 
     /** Constructs an UndoableEditSupport object. */
     @stub
-    def this(r: Object) = ???
+    def this(r: Any) = ???
 
     /**  */
     @stub
@@ -26,7 +26,7 @@ class UndoableEditSupport extends Object {
 
     /**  */
     @stub
-    protected val realSource: Object = ???
+    protected val realSource: Any = ???
 
     /**  */
     @stub

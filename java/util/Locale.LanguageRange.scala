@@ -29,7 +29,7 @@ import scala.scalanative.annotation.stub
  *  "zh-Hant-*" (Traditional Chinese, any regions) are extended
  *  language ranges.
  */
-final object Locale.LanguageRange extends Object {
+final object Locale_LanguageRange extends Object {
 
     /** Constructs a LanguageRange using the given range. */
     @stub
@@ -55,7 +55,7 @@ final object Locale.LanguageRange extends Object {
 
     /** Compares this object to the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the language range of this LanguageRange. */
     @stub

@@ -32,6 +32,5 @@ object Position {
     /** A typesafe enumeration to indicate bias to a position
      *  in the model.
      */
-    @stub
-    object Bias extends Position.Bias
+    type Bias = Position_Bias
 }

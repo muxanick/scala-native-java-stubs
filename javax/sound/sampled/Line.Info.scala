@@ -17,7 +17,7 @@ import scala.scalanative.annotation.stub
  *  an argument, to learn whether lines matching the specified configuration
  *  are available and to obtain them.
  */
-object Line.Info extends Object {
+object Line_Info extends Object {
 
     /** Constructs an info object that describes a line of the specified class. */
     @stub

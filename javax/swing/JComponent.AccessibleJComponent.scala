@@ -22,7 +22,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-abstract class JComponent.AccessibleJComponent extends Container.AccessibleAWTContainer with AccessibleExtendedComponent {
+abstract class JComponent_AccessibleJComponent extends Container.AccessibleAWTContainer with AccessibleExtendedComponent {
 
     /** Though the class is abstract, this should be called by
      *  all sub-classes.
@@ -33,12 +33,12 @@ abstract class JComponent.AccessibleJComponent extends Container.AccessibleAWTCo
     /** Fire PropertyChange listener, if one is registered,
      *  when children added/removed.
      */
-    protected object AccessibleContainerHandler extends JComponent.AccessibleJComponent.AccessibleContainerHandler
+    protected type AccessibleContainerHandler = JComponent_AccessibleJComponent_AccessibleContainerHandler
 
     /** Fire PropertyChange listener, if one is registered,
      *  when focus events happen
      */
-    protected object AccessibleFocusHandler extends JComponent.AccessibleJComponent.AccessibleFocusHandler
+    protected type AccessibleFocusHandler = JComponent_AccessibleJComponent_AccessibleFocusHandler
 
     /** Deprecated.  */
     protected val accessibleFocusHandler: FocusListener

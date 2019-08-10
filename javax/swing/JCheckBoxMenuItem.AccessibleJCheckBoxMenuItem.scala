@@ -19,7 +19,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JCheckBoxMenuItem.AccessibleJCheckBoxMenuItem extends JMenuItem.AccessibleJMenuItem {
+protected class JCheckBoxMenuItem_AccessibleJCheckBoxMenuItem extends JMenuItem.AccessibleJMenuItem {
 
     /**  */
     @stub

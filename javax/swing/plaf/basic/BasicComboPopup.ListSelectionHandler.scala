@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  is only included for backwards API compatibility. Do not call or
  *  override.
  */
-protected class BasicComboPopup.ListSelectionHandler extends Object with ListSelectionListener {
+protected class BasicComboPopup_ListSelectionHandler extends Object with ListSelectionListener {
 
     /**  */
     @stub

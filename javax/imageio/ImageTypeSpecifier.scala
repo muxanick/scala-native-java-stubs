@@ -43,7 +43,7 @@ class ImageTypeSpecifier extends Object {
      *  equal to those of this object.
      */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Return the number of bits used to represent samples of the given band. */
     @stub

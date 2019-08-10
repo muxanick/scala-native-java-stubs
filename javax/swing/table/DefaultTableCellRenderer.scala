@@ -61,11 +61,11 @@ class DefaultTableCellRenderer extends JLabel with TableCellRenderer with Serial
 
     /** Overridden for performance reasons. */
     @stub
-    protected def firePropertyChange(propertyName: String, oldValue: Object, newValue: Object): Unit = ???
+    protected def firePropertyChange(propertyName: String, oldValue: Any, newValue: Any): Unit = ???
 
     /** Returns the default table cell renderer. */
     @stub
-    def getTableCellRendererComponent(table: JTable, value: Object, isSelected: Boolean, hasFocus: Boolean, row: Int, column: Int): Component = ???
+    def getTableCellRendererComponent(table: JTable, value: Any, isSelected: Boolean, hasFocus: Boolean, row: Int, column: Int): Component = ???
 
     /** Overridden for performance reasons. */
     @stub
@@ -107,7 +107,7 @@ class DefaultTableCellRenderer extends JLabel with TableCellRenderer with Serial
      *  value.
      */
     @stub
-    protected def setValue(value: Object): Unit = ???
+    protected def setValue(value: Any): Unit = ???
 
     /** Notification from the UIManager that the look and feel
      *  [L&F] has changed.
@@ -124,8 +124,7 @@ object DefaultTableCellRenderer {
     /** A subclass of DefaultTableCellRenderer that
      *  implements UIResource.
      */
-    @stub
-    object UIResource extends DefaultTableCellRenderer.UIResource
+    type UIResource = DefaultTableCellRenderer_UIResource
 
     /**  */
     @stub

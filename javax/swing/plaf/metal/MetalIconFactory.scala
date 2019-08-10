@@ -39,40 +39,34 @@ object MetalIconFactory {
      *  Serialized objects of this class will not be compatible with
      *  future Swing releases.
      */
-    @stub
-    object FileIcon16 extends MetalIconFactory.FileIcon16
+    type FileIcon16 = MetalIconFactory_FileIcon16
 
     /** 
      *  Warning:
      *  Serialized objects of this class will not be compatible with
      *  future Swing releases.
      */
-    @stub
-    object FolderIcon16 extends MetalIconFactory.FolderIcon16
+    type FolderIcon16 = MetalIconFactory_FolderIcon16
 
     /** Defines an icon for Palette close */
-    @stub
-    object PaletteCloseIcon extends MetalIconFactory.PaletteCloseIcon
+    type PaletteCloseIcon = MetalIconFactory_PaletteCloseIcon
 
     /** 
      *  Warning:
      *  Serialized objects of this class will not be compatible with
      *  future Swing releases.
      */
-    @stub
-    object TreeControlIcon extends MetalIconFactory.TreeControlIcon
+    type TreeControlIcon = MetalIconFactory_TreeControlIcon
 
     /** 
      *  Warning:
      *  Serialized objects of this class will not be compatible with
      *  future Swing releases.
      */
-    @stub
-    object TreeFolderIcon extends MetalIconFactory.TreeFolderIcon
+    type TreeFolderIcon = MetalIconFactory_TreeFolderIcon
 
     /**  */
-    @stub
-    object TreeLeafIcon extends MetalIconFactory.TreeLeafIcon
+    type TreeLeafIcon = MetalIconFactory_TreeLeafIcon
 
     /**  */
     @stub

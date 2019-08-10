@@ -73,7 +73,7 @@ class DefaultListCellRenderer extends JLabel with ListCellRenderer[Object] with 
 
     /** Overridden for performance reasons. */
     @stub
-    protected def firePropertyChange(propertyName: String, oldValue: Object, newValue: Object): Unit = ???
+    protected def firePropertyChange(propertyName: String, oldValue: Any, newValue: Any): Unit = ???
 
     /** Overridden for performance reasons. */
     @stub
@@ -83,7 +83,7 @@ class DefaultListCellRenderer extends JLabel with ListCellRenderer[Object] with 
      *  value.
      */
     @stub
-    def getListCellRendererComponent(list: JList[_], value: Object, index: Int, isSelected: Boolean, cellHasFocus: Boolean): Component = ???
+    def getListCellRendererComponent(list: JList[_], value: Any, index: Int, isSelected: Boolean, cellHasFocus: Boolean): Component = ???
 
     /** Overridden for performance reasons. */
     @stub
@@ -116,8 +116,7 @@ class DefaultListCellRenderer extends JLabel with ListCellRenderer[Object] with 
 
 object DefaultListCellRenderer {
     /** A subclass of DefaultListCellRenderer that implements UIResource. */
-    @stub
-    object UIResource extends DefaultListCellRenderer.UIResource
+    type UIResource = DefaultListCellRenderer_UIResource
 
     /**  */
     @stub

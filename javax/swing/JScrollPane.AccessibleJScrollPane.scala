@@ -21,7 +21,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JScrollPane.AccessibleJScrollPane extends JComponent.AccessibleJComponent with ChangeListener with PropertyChangeListener {
+protected class JScrollPane_AccessibleJScrollPane extends JComponent.AccessibleJComponent with ChangeListener with PropertyChangeListener {
 
     /** AccessibleJScrollPane constructor */
     @stub

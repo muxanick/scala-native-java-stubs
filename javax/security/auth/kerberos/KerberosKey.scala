@@ -45,7 +45,7 @@ class KerberosKey extends Object with SecretKey with Destroyable {
 
     /** Compares the specified Object with this KerberosKey for equality. */
     @stub
-    def equals(other: Object): Boolean = ???
+    def equals(other: Any): Boolean = ???
 
     /** Returns the standard algorithm name for this key. */
     @stub

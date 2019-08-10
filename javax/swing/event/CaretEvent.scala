@@ -20,7 +20,7 @@ abstract class CaretEvent extends EventObject {
 
     /** Creates a new CaretEvent object. */
     @stub
-    def this(source: Object) = ???
+    def this(source: Any) = ???
 
     /** Fetches the location of the caret. */
     def getDot(): Int

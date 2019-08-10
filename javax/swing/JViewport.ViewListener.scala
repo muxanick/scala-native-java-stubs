@@ -16,7 +16,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JViewport.ViewListener extends ComponentAdapter with Serializable {
+protected class JViewport_ViewListener extends ComponentAdapter with Serializable {
 
     /**  */
     @stub

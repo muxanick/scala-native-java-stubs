@@ -6,7 +6,7 @@ import javax.swing.border.AbstractBorder
 import scala.scalanative.annotation.stub
 
 /** Special thin border for rollover toolbar buttons. */
-object BasicBorders.RolloverButtonBorder extends BasicBorders.ButtonBorder {
+object BasicBorders_RolloverButtonBorder extends BasicBorders.ButtonBorder {
 
     /**  */
     @stub

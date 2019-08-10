@@ -53,7 +53,7 @@ class MetalTreeUI extends BasicTreeUI {
      *  and the internal representation (currently and int)
      */
     @stub
-    protected def decodeLineStyle(lineStyleFlag: Object): Unit = ???
+    protected def decodeLineStyle(lineStyleFlag: Any): Unit = ???
 
     /** The horizontal element of legs between nodes starts at the
      *  right of the left-hand side of the child node by default.

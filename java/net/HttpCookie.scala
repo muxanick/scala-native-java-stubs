@@ -27,11 +27,11 @@ final class HttpCookie extends Object with Cloneable {
 
     /** Create and return a copy of this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Test the equality of two HTTP cookies. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the comment describing the purpose of this cookie, or
      *  null if the cookie has no comment.

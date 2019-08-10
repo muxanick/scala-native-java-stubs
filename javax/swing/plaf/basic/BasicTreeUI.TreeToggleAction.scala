@@ -6,7 +6,7 @@ import javax.swing.AbstractAction
 import scala.scalanative.annotation.stub
 
 /** For the first selected row expandedness will be toggled. */
-class BasicTreeUI.TreeToggleAction extends AbstractAction {
+class BasicTreeUI_TreeToggleAction extends AbstractAction {
 
     /**  */
     @stub

@@ -18,7 +18,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JToolTip.AccessibleJToolTip extends JComponent.AccessibleJComponent {
+protected class JToolTip_AccessibleJToolTip extends JComponent.AccessibleJComponent {
 
     /**  */
     @stub

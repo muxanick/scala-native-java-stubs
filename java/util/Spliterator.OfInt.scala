@@ -5,7 +5,7 @@ import java.util.function.{Consumer, IntConsumer}
 import scala.scalanative.annotation.stub
 
 /** A Spliterator specialized for int values. */
-object trait Spliterator.OfInt extends Spliterator.OfPrimitive[Integer, IntConsumer, Spliterator.OfInt] {
+trait Spliterator_OfInt extends Spliterator.OfPrimitive[Integer, IntConsumer, Spliterator.OfInt] {
 
     /** Performs the given action for each remaining element, sequentially in
      *  the current thread, until all elements have been processed or the action

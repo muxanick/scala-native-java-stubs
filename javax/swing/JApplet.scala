@@ -61,8 +61,7 @@ class JApplet extends Applet with Accessible with RootPaneContainer {
     /** This class implements accessibility support for the
      *  JApplet class.
      */
-    @stub
-    protected object AccessibleJApplet extends JApplet.AccessibleJApplet
+    protected type AccessibleJApplet = JApplet_AccessibleJApplet
 
     /**  */
     @stub
@@ -80,7 +79,7 @@ class JApplet extends Applet with Accessible with RootPaneContainer {
 
     /** Adds the specified child Component. */
     @stub
-    protected def addImpl(comp: Component, constraints: Object, index: Int): Unit = ???
+    protected def addImpl(comp: Component, constraints: Any, index: Int): Unit = ???
 
     /** Called by the constructor methods to create the default rootPane. */
     @stub

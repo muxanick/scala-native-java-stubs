@@ -13,7 +13,7 @@ import scala.scalanative.annotation.stub
  *  JFormattedTextField has focus vs when it
  *  doesn't have focus.
  */
-object abstract JFormattedTextField.AbstractFormatterFactory extends Object {
+object abstract JFormattedTextField_AbstractFormatterFactory extends Object {
 
     /**  */
     @stub
@@ -22,6 +22,5 @@ object abstract JFormattedTextField.AbstractFormatterFactory extends Object {
     /** Returns an AbstractFormatter that can handle formatting
      *  of the passed in JFormattedTextField.
      */
-    @stub
     def getFormatter(tf: JFormattedTextField): JFormattedTextField.AbstractFormatter
 }

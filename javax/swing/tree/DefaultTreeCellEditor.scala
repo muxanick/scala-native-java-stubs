@@ -44,12 +44,10 @@ class DefaultTreeCellEditor extends Object with ActionListener with TreeCellEdit
     def this(tree: JTree, renderer: DefaultTreeCellRenderer, editor: TreeCellEditor) = ???
 
     /** TextField used when no editor is supplied. */
-    @stub
-    object DefaultTextField extends DefaultTreeCellEditor.DefaultTextField
+    type DefaultTextField = DefaultTreeCellEditor_DefaultTextField
 
     /** Container responsible for placing the editingComponent. */
-    @stub
-    object EditorContainer extends DefaultTreeCellEditor.EditorContainer
+    type EditorContainer = DefaultTreeCellEditor_EditorContainer
 
     /** True if the border selection color should be drawn. */
     @stub
@@ -146,7 +144,7 @@ class DefaultTreeCellEditor extends Object with ActionListener with TreeCellEdit
 
     /**  */
     @stub
-    protected def determineOffset(tree: JTree, value: Object, isSelected: Boolean, expanded: Boolean, leaf: Boolean, row: Int): Unit = ???
+    protected def determineOffset(tree: JTree, value: Any, isSelected: Boolean, expanded: Boolean, leaf: Boolean, row: Int): Unit = ???
 
     /** Returns the color the border is drawn. */
     @stub
@@ -160,7 +158,7 @@ class DefaultTreeCellEditor extends Object with ActionListener with TreeCellEdit
 
     /** Returns the value currently being edited. */
     @stub
-    def getCellEditorValue(): Object = ???
+    def getCellEditorValue(): Any = ???
 
     /** Gets the font used for editing. */
     @stub
@@ -168,7 +166,7 @@ class DefaultTreeCellEditor extends Object with ActionListener with TreeCellEdit
 
     /** Configures the editor. */
     @stub
-    def getTreeCellEditorComponent(tree: JTree, value: Object, isSelected: Boolean, expanded: Boolean, leaf: Boolean, row: Int): Component = ???
+    def getTreeCellEditorComponent(tree: JTree, value: Any, isSelected: Boolean, expanded: Boolean, leaf: Boolean, row: Int): Component = ???
 
     /** Returns true if the passed in location is a valid mouse location
      *  to start editing from.

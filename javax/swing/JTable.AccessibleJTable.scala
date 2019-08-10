@@ -20,7 +20,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JTable.AccessibleJTable extends JComponent.AccessibleJComponent with AccessibleSelection with ListSelectionListener with TableModelListener with TableColumnModelListener with CellEditorListener with PropertyChangeListener with AccessibleExtendedTable {
+protected class JTable_AccessibleJTable extends JComponent.AccessibleJComponent with AccessibleSelection with ListSelectionListener with TableModelListener with TableColumnModelListener with CellEditorListener with PropertyChangeListener with AccessibleExtendedTable {
 
     /** AccessibleJTable constructor */
     @stub
@@ -29,12 +29,10 @@ protected class JTable.AccessibleJTable extends JComponent.AccessibleJComponent 
     /** The class provides an implementation of the Java Accessibility
      *  API appropriate to table cells.
      */
-    @stub
-    protected object AccessibleJTableCell extends JTable.AccessibleJTable.AccessibleJTableCell
+    protected type AccessibleJTableCell = JTable_AccessibleJTable_AccessibleJTableCell
 
     /**  */
-    @stub
-    protected object AccessibleJTableModelChange extends JTable.AccessibleJTable.AccessibleJTableModelChange
+    protected type AccessibleJTableModelChange = JTable_AccessibleJTable_AccessibleJTableModelChange
 
     /** Adds the specified Accessible child of the
      *  object to the object's selection.

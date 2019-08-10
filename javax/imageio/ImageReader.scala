@@ -50,7 +50,7 @@ abstract class ImageReader extends Object {
      *  Object by setInput and retrieved
      *  by getInput.
      */
-    protected val input: Object
+    protected val input: Any
 
     /** The current Locale to be used for localization, or
      *  null if none has been set.
@@ -182,7 +182,7 @@ abstract class ImageReader extends Object {
     /** Returns the ImageInputStream or other
      *  Object previously set as the input source.
      */
-    def getInput(): Object
+    def getInput(): Any
 
     /** Returns the currently set Locale, or
      *  null if none has been set.
@@ -489,17 +489,17 @@ abstract class ImageReader extends Object {
     /** Sets the input source to use to the given
      *  ImageInputStream or other Object.
      */
-    def setInput(input: Object): Unit
+    def setInput(input: Any): Unit
 
     /** Sets the input source to use to the given
      *  ImageInputStream or other Object.
      */
-    def setInput(input: Object, seekForwardOnly: Boolean): Unit
+    def setInput(input: Any, seekForwardOnly: Boolean): Unit
 
     /** Sets the input source to use to the given
      *  ImageInputStream or other Object.
      */
-    def setInput(input: Object, seekForwardOnly: Boolean, ignoreMetadata: Boolean): Unit
+    def setInput(input: Any, seekForwardOnly: Boolean, ignoreMetadata: Boolean): Unit
 
     /** Sets the current Locale of this
      *  ImageReader to the given value.

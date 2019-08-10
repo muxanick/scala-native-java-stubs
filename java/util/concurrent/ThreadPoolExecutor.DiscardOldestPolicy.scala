@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
  *  request and then retries execute, unless the executor
  *  is shut down, in which case the task is discarded.
  */
-object ThreadPoolExecutor.DiscardOldestPolicy extends Object with RejectedExecutionHandler {
+object ThreadPoolExecutor_DiscardOldestPolicy extends Object with RejectedExecutionHandler {
 
     /** Creates a DiscardOldestPolicy for the given executor. */
     @stub

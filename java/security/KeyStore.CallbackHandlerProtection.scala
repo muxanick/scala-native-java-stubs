@@ -5,7 +5,7 @@ import javax.security.auth.callback.CallbackHandler
 import scala.scalanative.annotation.stub
 
 /** A ProtectionParameter encapsulating a CallbackHandler. */
-object KeyStore.CallbackHandlerProtection extends Object with KeyStore.ProtectionParameter {
+object KeyStore_CallbackHandlerProtection extends Object with KeyStore.ProtectionParameter {
 
     /** Constructs a new CallbackHandlerProtection from a
      *  CallbackHandler.

@@ -34,7 +34,7 @@ class DefaultFormatter extends JFormattedTextField.AbstractFormatter with Clonea
 
     /** Creates a copy of the DefaultFormatter. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns whether or not the value being edited is allowed to be invalid
      *  for a length of time.
@@ -100,11 +100,11 @@ class DefaultFormatter extends JFormattedTextField.AbstractFormatter with Clonea
      *  takes a String argument.
      */
     @stub
-    def stringToValue(string: String): Object = ???
+    def stringToValue(string: String): Any = ???
 
     /** Converts the passed in Object into a String by way of the
      *  toString method.
      */
     @stub
-    def valueToString(value: Object): String = ???
+    def valueToString(value: Any): String = ???
 }

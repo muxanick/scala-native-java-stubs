@@ -155,7 +155,7 @@ class LinkedHashMap[K, V] extends HashMap[K, V] with Map[K, V] {
      *  specified value.
      */
     @stub
-    def containsValue(value: Object): Boolean = ???
+    def containsValue(value: Any): Boolean = ???
 
     /** Returns a Set view of the mappings contained in this map. */
     @stub
@@ -171,13 +171,13 @@ class LinkedHashMap[K, V] extends HashMap[K, V] with Map[K, V] {
      *  or null if this map contains no mapping for the key.
      */
     @stub
-    def get(key: Object): V = ???
+    def get(key: Any): V = ???
 
     /** Returns the value to which the specified key is mapped, or
      *  defaultValue if this map contains no mapping for the key.
      */
     @stub
-    def getOrDefault(key: Object, defaultValue: V): V = ???
+    def getOrDefault(key: Any, defaultValue: V): V = ???
 
     /** Returns a Set view of the keys contained in this map. */
     @stub

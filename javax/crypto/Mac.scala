@@ -43,7 +43,7 @@ class Mac extends Object with Cloneable {
 
     /** Returns a clone if the provider implementation is cloneable. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Finishes the MAC operation. */
     @stub

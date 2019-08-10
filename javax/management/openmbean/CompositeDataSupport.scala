@@ -36,17 +36,17 @@ class CompositeDataSupport extends Object with CompositeData with Serializable {
      *  whose value is value.
      */
     @stub
-    def containsValue(value: Object): Boolean = ???
+    def containsValue(value: Any): Boolean = ???
 
     /** Compares the specified obj parameter with this
      *  CompositeDataSupport instance for equality.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the value of the item whose name is key. */
     @stub
-    def get(key: String): Object = ???
+    def get(key: String): Any = ???
 
     /** Returns an array of the values of the items whose names are specified by
      *  keys, in the same order as keys.

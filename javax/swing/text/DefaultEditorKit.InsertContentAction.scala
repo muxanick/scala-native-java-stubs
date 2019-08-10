@@ -18,7 +18,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object DefaultEditorKit.InsertContentAction extends TextAction {
+object DefaultEditorKit_InsertContentAction extends TextAction {
 
     /** Creates this object with the appropriate identifier. */
     @stub

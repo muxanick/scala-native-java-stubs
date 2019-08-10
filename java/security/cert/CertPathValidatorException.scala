@@ -86,10 +86,8 @@ object CertPathValidatorException {
     /** The BasicReason enumerates the potential reasons that a certification
      *  path of any type may be invalid.
      */
-    @stub
-    class BasicReason extends CertPathValidatorException.BasicReason
+    type BasicReason = CertPathValidatorException_BasicReason
 
     /** The reason the validation algorithm failed. */
-    @stub
-    trait Reason extends CertPathValidatorException.Reason
+    type Reason = CertPathValidatorException_Reason
 }

@@ -74,15 +74,13 @@ object RowFilter {
     /** Enumeration of the possible comparison values supported by
      *  some of the default RowFilters.
      */
-    @stub
-    object ComparisonType extends RowFilter.ComparisonType
+    type ComparisonType = RowFilter_ComparisonType
 
     /** An Entry object is passed to instances of
      *  RowFilter, allowing the filter to get the value of the
      *  entry's data, and thus to determine whether the entry should be shown.
      */
-    @stub
-    object Entry[M, I] extends RowFilter.Entry[M, I]
+    type Entry[M, I] = RowFilter_Entry[M, I]
 
     /** Returns a RowFilter that includes entries if all
      *  of the supplied filters include the entry.

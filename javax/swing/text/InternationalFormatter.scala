@@ -76,7 +76,7 @@ class InternationalFormatter extends DefaultFormatter {
 
     /** Creates a copy of the DefaultFormatter. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** If getSupportsIncrement returns true, this returns
      *  two Actions suitable for incrementing/decrementing the value.
@@ -128,9 +128,9 @@ class InternationalFormatter extends DefaultFormatter {
      *  String text.
      */
     @stub
-    def stringToValue(text: String): Object = ???
+    def stringToValue(text: String): Any = ???
 
     /** Returns a String representation of the Object value. */
     @stub
-    def valueToString(value: Object): String = ???
+    def valueToString(value: Any): String = ???
 }

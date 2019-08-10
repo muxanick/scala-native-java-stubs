@@ -55,7 +55,7 @@ class SynchronousQueue[E] extends AbstractQueue[E] with BlockingQueue[E] with Se
 
     /** Always returns false. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Returns false unless the given collection is empty. */
     @stub
@@ -124,7 +124,7 @@ class SynchronousQueue[E] extends AbstractQueue[E] with BlockingQueue[E] with Se
 
     /** Always returns false. */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Always returns false. */
     @stub

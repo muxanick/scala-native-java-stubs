@@ -37,7 +37,7 @@ trait BeanContextServiceProvider {
      *  service from this BeanContextServiceProvider.
      */
     @stub
-    def getService(bcs: BeanContextServices, requestor: Object, serviceClass: Class, serviceSelector: Object): Object = ???
+    def getService(bcs: BeanContextServices, requestor: Any, serviceClass: Class, serviceSelector: Any): Any = ???
 
     /** Invoked by BeanContextServices,
      *  this method releases a nested BeanContextChild's
@@ -45,5 +45,5 @@ trait BeanContextServiceProvider {
      *  BeanContextChild) reference to the specified service.
      */
     @stub
-    def releaseService(bcs: BeanContextServices, requestor: Object, service: Object): Unit = ???
+    def releaseService(bcs: BeanContextServices, requestor: Any, service: Any): Unit = ???
 }

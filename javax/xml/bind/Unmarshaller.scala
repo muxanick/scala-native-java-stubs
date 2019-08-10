@@ -402,7 +402,7 @@ trait Unmarshaller {
      *  Unmarshaller.
      */
     @stub
-    def getProperty(name: String): Object = ???
+    def getProperty(name: String): Any = ???
 
     /** Get the JAXP 1.3 Schema object
      *  being used to perform unmarshal-time validation.
@@ -451,7 +451,7 @@ trait Unmarshaller {
      *  Unmarshaller.
      */
     @stub
-    def setProperty(name: String, value: Object): Unit = ???
+    def setProperty(name: String, value: Any): Unit = ???
 
     /** Specify the JAXP 1.3 Schema
      *  object that should be used to validate subsequent unmarshal operations
@@ -471,25 +471,25 @@ trait Unmarshaller {
      *  content tree.
      */
     @stub
-    def unmarshal(f: File): Object = ???
+    def unmarshal(f: File): Any = ???
 
     /** Unmarshal XML data from the specified SAX InputSource and return the
      *  resulting content tree.
      */
     @stub
-    def unmarshal(source: InputSource): Object = ???
+    def unmarshal(source: InputSource): Any = ???
 
     /** Unmarshal XML data from the specified InputStream and return the
      *  resulting content tree.
      */
     @stub
-    def unmarshal(is: InputStream): Object = ???
+    def unmarshal(is: InputStream): Any = ???
 
     /** Unmarshal global XML data from the specified DOM tree and return the resulting
      *  content tree.
      */
     @stub
-    def unmarshal(node: Node): Object = ???
+    def unmarshal(node: Node): Any = ???
 
     /** Unmarshal XML data by JAXB mapped declaredType
      *  and return the resulting content tree.
@@ -501,13 +501,13 @@ trait Unmarshaller {
      *  resulting content tree.
      */
     @stub
-    def unmarshal(reader: Reader): Object = ???
+    def unmarshal(reader: Reader): Any = ???
 
     /** Unmarshal XML data from the specified XML Source and return the
      *  resulting content tree.
      */
     @stub
-    def unmarshal(source: Source): Object = ???
+    def unmarshal(source: Source): Any = ???
 
     /** Unmarshal XML data from the specified XML Source by declaredType and return the
      *  resulting content tree.
@@ -519,13 +519,13 @@ trait Unmarshaller {
      *  content tree.
      */
     @stub
-    def unmarshal(url: URL): Object = ???
+    def unmarshal(url: URL): Any = ???
 
     /** Unmarshal XML data from the specified pull parser and return the
      *  resulting content tree.
      */
     @stub
-    def unmarshal(reader: XMLEventReader): Object = ???
+    def unmarshal(reader: XMLEventReader): Any = ???
 
     /** Unmarshal root element to JAXB mapped declaredType
      *  and return the resulting content tree.
@@ -537,7 +537,7 @@ trait Unmarshaller {
      *  resulting content tree.
      */
     @stub
-    def unmarshal(reader: XMLStreamReader): Object = ???
+    def unmarshal(reader: XMLStreamReader): Any = ???
 
     /** Unmarshal root element to JAXB mapped declaredType
      *  and return the resulting content tree.
@@ -551,6 +551,5 @@ object Unmarshaller {
      *  Register an instance of an implementation of this class with Unmarshaller to externally listen
      *  for unmarshal events.
      */
-    @stub
-    object Listener extends Unmarshaller.Listener
+    type Listener = Unmarshaller_Listener
 }

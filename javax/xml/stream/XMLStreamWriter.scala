@@ -180,7 +180,7 @@ trait XMLStreamWriter {
 
     /** Get the value of a feature/property from the underlying implementation */
     @stub
-    def getProperty(name: String): Object = ???
+    def getProperty(name: String): Any = ???
 
     /** Binds a URI to the default namespace
      *  This URI is bound

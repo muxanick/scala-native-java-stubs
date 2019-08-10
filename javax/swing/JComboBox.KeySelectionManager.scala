@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  that identifies the list index given a character and the
  *  combo box data model.
  */
-object trait JComboBox.KeySelectionManager {
+trait JComboBox_KeySelectionManager {
 
     /** Given aKey and the model, returns the row
      *   that should become selected.

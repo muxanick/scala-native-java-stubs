@@ -52,7 +52,7 @@ abstract class AbstractUnmarshallerImpl extends Object with Unmarshaller {
      *  throws PropertyException since there are no required
      *  properties.
      */
-    def getProperty(name: String): Object
+    def getProperty(name: String): Any
 
     /** Get the JAXP 1.3 Schema object
      *  being used to perform unmarshal-time validation.
@@ -90,7 +90,7 @@ abstract class AbstractUnmarshallerImpl extends Object with Unmarshaller {
      *  throws PropertyException since there are no required
      *  properties.
      */
-    def setProperty(name: String, value: Object): Unit
+    def setProperty(name: String, value: Any): Unit
 
     /** Specify the JAXP 1.3 Schema
      *  object that should be used to validate subsequent unmarshal operations
@@ -106,17 +106,17 @@ abstract class AbstractUnmarshallerImpl extends Object with Unmarshaller {
     /** Unmarshal XML data from the specified file and return the resulting
      *  content tree.
      */
-    def unmarshal(f: File): Object
+    def unmarshal(f: File): Any
 
     /** Unmarshal XML data from the specified SAX InputSource and return the
      *  resulting content tree.
      */
-    def unmarshal(source: InputSource): Object
+    def unmarshal(source: InputSource): Any
 
     /** Unmarshal XML data from the specified InputStream and return the
      *  resulting content tree.
      */
-    def unmarshal(is: InputStream): Object
+    def unmarshal(is: InputStream): Any
 
     /** Unmarshal XML data by JAXB mapped declaredType
      *  and return the resulting content tree.
@@ -126,12 +126,12 @@ abstract class AbstractUnmarshallerImpl extends Object with Unmarshaller {
     /** Unmarshal XML data from the specified Reader and return the
      *  resulting content tree.
      */
-    def unmarshal(reader: Reader): Object
+    def unmarshal(reader: Reader): Any
 
     /** Unmarshal XML data from the specified XML Source and return the
      *  resulting content tree.
      */
-    def unmarshal(source: Source): Object
+    def unmarshal(source: Source): Any
 
     /** Unmarshal XML data from the specified XML Source by declaredType and return the
      *  resulting content tree.
@@ -141,12 +141,12 @@ abstract class AbstractUnmarshallerImpl extends Object with Unmarshaller {
     /** Unmarshal XML data from the specified URL and return the resulting
      *  content tree.
      */
-    def unmarshal(url: URL): Object
+    def unmarshal(url: URL): Any
 
     /** Unmarshal XML data from the specified pull parser and return the
      *  resulting content tree.
      */
-    def unmarshal(reader: XMLEventReader): Object
+    def unmarshal(reader: XMLEventReader): Any
 
     /** Unmarshal root element to JAXB mapped declaredType
      *  and return the resulting content tree.
@@ -154,12 +154,12 @@ abstract class AbstractUnmarshallerImpl extends Object with Unmarshaller {
     def unmarshal[T](reader: XMLEventReader, expectedType: Class[T]): JAXBElement[T]
 
     /** Unmarshals an object by using the specified XMLReader and the InputSource. */
-    protected def unmarshal(reader: XMLReader, source: InputSource): Object
+    protected def unmarshal(reader: XMLReader, source: InputSource): Any
 
     /** Unmarshal XML data from the specified pull parser and return the
      *  resulting content tree.
      */
-    def unmarshal(reader: XMLStreamReader): Object
+    def unmarshal(reader: XMLStreamReader): Any
 
     /** Unmarshal root element to JAXB mapped declaredType
      *  and return the resulting content tree.

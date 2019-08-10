@@ -68,7 +68,7 @@ trait Instrumentation {
      *  the specified object.
      */
     @stub
-    def getObjectSize(objectToSize: Object): Long = ???
+    def getObjectSize(objectToSize: Any): Long = ???
 
     /** Determines whether a class is modifiable by
      *  retransformation

@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** LayoutManager for JSplitPanes that have an orientation of
  *  HORIZONTAL_SPLIT.
  */
-class BasicSplitPaneUI.BasicHorizontalLayoutManager extends Object with LayoutManager2 {
+class BasicSplitPaneUI_BasicHorizontalLayoutManager extends Object with LayoutManager2 {
 
     /**  */
     @stub
@@ -21,7 +21,7 @@ class BasicSplitPaneUI.BasicHorizontalLayoutManager extends Object with LayoutMa
      *  constraint object.
      */
     @stub
-    def addLayoutComponent(comp: Component, constraints: Object): Unit = ???
+    def addLayoutComponent(comp: Component, constraints: Any): Unit = ???
 
     /** Adds the component at place. */
     @stub

@@ -10,7 +10,7 @@ import scala.scalanative.annotation.stub
  *  Java Accessibility API appropriate to file chooser user-interface
  *  elements.
  */
-protected class JFileChooser.AccessibleJFileChooser extends JComponent.AccessibleJComponent {
+protected class JFileChooser_AccessibleJFileChooser extends JComponent.AccessibleJComponent {
 
     /**  */
     @stub

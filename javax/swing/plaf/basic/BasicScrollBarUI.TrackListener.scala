@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /** Track mouse drags. */
-protected class BasicScrollBarUI.TrackListener extends MouseAdapter with MouseMotionListener {
+protected class BasicScrollBarUI_TrackListener extends MouseAdapter with MouseMotionListener {
 
     /**  */
     @stub

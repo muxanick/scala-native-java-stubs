@@ -141,6 +141,5 @@ object MidiDevice {
      *  data about a MidiDevice, including its
      *  name, the company who created it, and descriptive text.
      */
-    @stub
-    object Info extends MidiDevice.Info
+    type Info = MidiDevice_Info
 }

@@ -107,8 +107,7 @@ class Window extends Container with Accessible {
     /** This class implements accessibility support for the
      *  Window class.
      */
-    @stub
-    protected object AccessibleAWTWindow extends Window.AccessibleAWTWindow
+    protected type AccessibleAWTWindow = Window_AccessibleAWTWindow
 
     /** Makes this Window displayable by creating the connection to its
      *  native screen resource.
@@ -562,8 +561,7 @@ class Window extends Container with Accessible {
 
 object Window {
     /** Enumeration of available window types. */
-    @stub
-    object Type extends Window.Type
+    type Type = Window_Type
 
     /** Returns an array of all Windows created by this application
      *  that have no owner.

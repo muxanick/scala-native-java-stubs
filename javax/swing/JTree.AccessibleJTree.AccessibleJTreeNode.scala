@@ -13,7 +13,7 @@ import scala.scalanative.annotation.stub
  *  JTree child.  It provides an implementation of the
  *  Java Accessibility API appropriate to tree nodes.
  */
-protected class JTree.AccessibleJTree.AccessibleJTreeNode extends AccessibleContext with Accessible with AccessibleComponent with AccessibleSelection with AccessibleAction {
+protected class JTree_AccessibleJTree_AccessibleJTreeNode extends AccessibleContext with Accessible with AccessibleComponent with AccessibleSelection with AccessibleAction {
 
     /** Constructs an AccessibleJTreeNode */
     @stub

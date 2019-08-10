@@ -58,7 +58,7 @@ class TreePath extends Object with Serializable {
 
     /** Creates a TreePath containing a single element. */
     @stub
-    def this(lastPathComponent: Object) = ???
+    def this(lastPathComponent: Any) = ???
 
     /** Creates a TreePath from an array. */
     @stub
@@ -70,15 +70,15 @@ class TreePath extends Object with Serializable {
 
     /** Creates a TreePath with the specified parent and element. */
     @stub
-    protected def this(parent: TreePath, lastPathComponent: Object) = ???
+    protected def this(parent: TreePath, lastPathComponent: Any) = ???
 
     /** Compares this TreePath to the specified object. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the last element of this path. */
     @stub
-    def getLastPathComponent(): Object = ???
+    def getLastPathComponent(): Any = ???
 
     /** Returns the TreePath of the parent. */
     @stub
@@ -90,7 +90,7 @@ class TreePath extends Object with Serializable {
 
     /** Returns the path element at the specified index. */
     @stub
-    def getPathComponent(index: Int): Object = ???
+    def getPathComponent(index: Int): Any = ???
 
     /** Returns the number of elements in the path. */
     @stub
@@ -111,7 +111,7 @@ class TreePath extends Object with Serializable {
      *  plus child.
      */
     @stub
-    def pathByAddingChild(child: Object): TreePath = ???
+    def pathByAddingChild(child: Any): TreePath = ???
 
     /** Returns a string that displays and identifies this
      *  object's properties.

@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
  *  Instantiate it only within subclasses of
  *  BasicComboBoxUI.
  */
-class BasicComboBoxUI.FocusHandler extends Object with FocusListener {
+class BasicComboBoxUI_FocusHandler extends Object with FocusListener {
 
     /**  */
     @stub

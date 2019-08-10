@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /**  */
-class BasicInternalFrameUI.InternalFramePropertyChangeListener extends Object with PropertyChangeListener {
+class BasicInternalFrameUI_InternalFramePropertyChangeListener extends Object with PropertyChangeListener {
 
     /**  */
     @stub

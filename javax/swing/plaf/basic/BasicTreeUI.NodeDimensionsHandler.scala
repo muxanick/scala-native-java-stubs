@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
  *  to BasicTreeUI method. X location does not include insets, that is
  *  handled in getPathBounds.
  */
-class BasicTreeUI.NodeDimensionsHandler extends AbstractLayoutCache.NodeDimensions {
+class BasicTreeUI_NodeDimensionsHandler extends AbstractLayoutCache.NodeDimensions {
 
     /**  */
     @stub
@@ -17,7 +17,7 @@ class BasicTreeUI.NodeDimensionsHandler extends AbstractLayoutCache.NodeDimensio
 
     /** Responsible for getting the size of a particular node. */
     @stub
-    def getNodeDimensions(value: Object, row: Int, depth: Int, expanded: Boolean, size: Rectangle): Rectangle = ???
+    def getNodeDimensions(value: Any, row: Int, depth: Int, expanded: Boolean, size: Rectangle): Rectangle = ???
 
     /**  */
     @stub

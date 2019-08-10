@@ -95,7 +95,7 @@ abstract class XMLInputFactory extends Object {
     def getEventAllocator(): XMLEventAllocator
 
     /** Get the value of a feature/property from the underlying implementation */
-    def getProperty(name: String): Object
+    def getProperty(name: String): Any
 
     /** The reporter that will be set on any XMLStreamReader or XMLEventReader created
      *  by this factory instance.
@@ -116,7 +116,7 @@ abstract class XMLInputFactory extends Object {
     /** Allows the user to set specific feature/property on the underlying
      *  implementation.
      */
-    def setProperty(name: String, value: Object): Unit
+    def setProperty(name: String, value: Any): Unit
 
     /** The reporter that will be set on any XMLStreamReader or XMLEventReader created
      *  by this factory instance.

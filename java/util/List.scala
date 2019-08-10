@@ -100,7 +100,7 @@ trait List[E] extends Collection[E] {
 
     /** Returns true if this list contains the specified element. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Returns true if this list contains all of the elements of the
      *  specified collection.
@@ -110,7 +110,7 @@ trait List[E] extends Collection[E] {
 
     /** Compares the specified object with this list for equality. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the element at the specified position in this list. */
     @stub
@@ -124,7 +124,7 @@ trait List[E] extends Collection[E] {
      *  in this list, or -1 if this list does not contain the element.
      */
     @stub
-    def indexOf(o: Object): Int = ???
+    def indexOf(o: Any): Int = ???
 
     /** Returns true if this list contains no elements. */
     @stub
@@ -138,7 +138,7 @@ trait List[E] extends Collection[E] {
      *  in this list, or -1 if this list does not contain the element.
      */
     @stub
-    def lastIndexOf(o: Object): Int = ???
+    def lastIndexOf(o: Any): Int = ???
 
     /** Returns a list iterator over the elements in this list (in proper
      *  sequence).
@@ -162,7 +162,7 @@ trait List[E] extends Collection[E] {
      *  if it is present (optional operation).
      */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Removes from this list all of its elements that are contained in the
      *  specified collection (optional operation).

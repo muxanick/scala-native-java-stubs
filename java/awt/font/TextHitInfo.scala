@@ -49,7 +49,7 @@ final class TextHitInfo extends Object {
      *  TextHitInfo and equals this TextHitInfo.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns true if the specified TextHitInfo
      *  has the same charIndex and isLeadingEdge

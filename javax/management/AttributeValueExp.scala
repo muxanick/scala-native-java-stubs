@@ -31,7 +31,7 @@ class AttributeValueExp extends Object with ValueExp {
 
     /** Return the value of the given attribute in the named MBean. */
     @stub
-    protected def getAttribute(name: ObjectName): Object = ???
+    protected def getAttribute(name: ObjectName): Any = ???
 
     /** Returns a string representation of the name of the attribute. */
     @stub

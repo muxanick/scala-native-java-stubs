@@ -11,41 +11,35 @@ import scala.scalanative.annotation.stub
  *  its use should be performed under the protection of
  *  Document.render.
  */
-object abstract HTMLDocument.Iterator extends Object {
+object abstract HTMLDocument_Iterator extends Object {
 
     /**  */
     @stub
     def Iterator() = ???
 
     /** Return the attributes for this tag. */
-    @stub
     def getAttributes(): AttributeSet
 
     /** Returns the end of the range for which the current occurrence of
      *  the tag is defined and has the same attributes.
      */
-    @stub
     def getEndOffset(): Int
 
     /** Returns the start of the range for which the current occurrence of
      *  the tag is defined and has the same attributes.
      */
-    @stub
     def getStartOffset(): Int
 
     /** Type of tag this iterator represents. */
-    @stub
     def getTag(): HTML.Tag
 
     /** Indicates if the iterator is currently
      *  representing an occurrence of a tag.
      */
-    @stub
     def isValid(): Boolean
 
     /** Move the iterator forward to the next occurrence
      *  of the tag it represents.
      */
-    @stub
     def next(): Unit
 }

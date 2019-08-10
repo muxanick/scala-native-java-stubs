@@ -50,7 +50,7 @@ class GlyphView extends View with TabableView with Cloneable {
 
     /** Creates a shallow copy. */
     @stub
-    protected def clone(): Object = ???
+    protected def clone(): Any = ???
 
     /** Creates a view that represents a portion of the element. */
     @stub
@@ -189,6 +189,5 @@ class GlyphView extends View with TabableView with Cloneable {
 
 object GlyphView {
     /** A class to perform rendering of the glyphs. */
-    @stub
-    object GlyphPainter extends GlyphView.GlyphPainter
+    type GlyphPainter = GlyphView_GlyphPainter
 }

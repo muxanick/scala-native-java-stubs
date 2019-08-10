@@ -47,13 +47,13 @@ class BasicAttribute extends Object with Attribute {
 
     /** Constructs a new instance of an unordered attribute with a single value. */
     @stub
-    def this(id: String, value: Object) = ???
+    def this(id: String, value: Any) = ???
 
     /** Constructs a new instance of a possibly ordered attribute with a
      *  single value.
      */
     @stub
-    def this(id: String, value: Object, ordered: Boolean) = ???
+    def this(id: String, value: Any, ordered: Boolean) = ???
 
     /** Holds the attribute's id. */
     @stub
@@ -69,11 +69,11 @@ class BasicAttribute extends Object with Attribute {
 
     /** Adds an attribute value to the ordered list of attribute values. */
     @stub
-    def add(ix: Int, attrVal: Object): Unit = ???
+    def add(ix: Int, attrVal: Any): Unit = ???
 
     /** Adds a new value to this attribute. */
     @stub
-    def add(attrVal: Object): Boolean = ???
+    def add(attrVal: Any): Boolean = ???
 
     /** Removes all values from this attribute. */
     @stub
@@ -81,23 +81,23 @@ class BasicAttribute extends Object with Attribute {
 
     /** Creates and returns a copy of this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Determines whether a value is in this attribute. */
     @stub
-    def contains(attrVal: Object): Boolean = ???
+    def contains(attrVal: Any): Boolean = ???
 
     /** Determines whether obj is equal to this attribute. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Retrieves one of this attribute's values. */
     @stub
-    def get(): Object = ???
+    def get(): Any = ???
 
     /** Retrieves the attribute value from the ordered list of attribute values. */
     @stub
-    def get(ix: Int): Object = ???
+    def get(ix: Int): Any = ???
 
     /** Retrieves an enumeration of this attribute's values. */
     @stub
@@ -125,15 +125,15 @@ class BasicAttribute extends Object with Attribute {
 
     /** Removes an attribute value from the ordered list of attribute values. */
     @stub
-    def remove(ix: Int): Object = ???
+    def remove(ix: Int): Any = ???
 
     /** Removes a specified value from this attribute. */
     @stub
-    def remove(attrval: Object): Boolean = ???
+    def remove(attrval: Any): Boolean = ???
 
     /** Sets an attribute value in the ordered list of attribute values. */
     @stub
-    def set(ix: Int, attrVal: Object): Object = ???
+    def set(ix: Int, attrVal: Any): Any = ???
 
     /** Retrieves the number of values in this attribute. */
     @stub

@@ -129,7 +129,7 @@ final class Instant extends Object with Temporal with TemporalAdjuster with Comp
 
     /** Checks if this instant is equal to the specified instant. */
     @stub
-    def equals(otherInstant: Object): Boolean = ???
+    def equals(otherInstant: Any): Boolean = ???
 
     /** Gets the value of the specified field from this instant as an int. */
     @stub

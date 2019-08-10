@@ -22,5 +22,5 @@ trait CertStoreParameters extends Cloneable {
 
     /** Makes a copy of this CertStoreParameters. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 }

@@ -160,7 +160,7 @@ class StreamReaderDelegate extends Object with XMLStreamReader {
 
     /** Get the value of a feature/property from the underlying implementation */
     @stub
-    def getProperty(name: String): Object = ???
+    def getProperty(name: String): Any = ???
 
     /** Returns the current value of the parse event as a string,
      *  this returns the string value of a CHARACTERS event,

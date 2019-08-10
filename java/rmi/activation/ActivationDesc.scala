@@ -57,7 +57,7 @@ final class ActivationDesc extends Object with Serializable {
 
     /** Compares two activation descriptors for content equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the class name for the object specified by this
      *  descriptor.

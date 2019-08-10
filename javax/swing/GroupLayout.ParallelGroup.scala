@@ -77,7 +77,7 @@ import scala.scalanative.annotation.stub
  *  to add an element specifying a baseline alignment, an
  *  IllegalArgumentException is thrown.
  */
-class GroupLayout.ParallelGroup extends GroupLayout.Group {
+class GroupLayout_ParallelGroup extends GroupLayout.Group {
 
     /** Adds a Component to this Group. */
     @stub

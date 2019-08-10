@@ -121,7 +121,7 @@ class DirectColorModel extends PackedColorModel {
      *  from 0 to 255.
      */
     @stub
-    def getAlpha(inData: Object): Int = ???
+    def getAlpha(inData: Any): Int = ???
 
     /** Returns the mask indicating which bits in an int pixel
      *  representation contain the alpha component.
@@ -139,7 +139,7 @@ class DirectColorModel extends PackedColorModel {
      *  from 0 to 255 in the default RGB ColorSpace, sRGB.
      */
     @stub
-    def getBlue(inData: Object): Int = ???
+    def getBlue(inData: Any): Int = ???
 
     /** Returns the mask indicating which bits in an int pixel
      *  representation contain the blue color component.
@@ -157,7 +157,7 @@ class DirectColorModel extends PackedColorModel {
      *  in this ColorModel.
      */
     @stub
-    def getComponents(pixel: Object, components: Array[Int], offset: Int): Array[Int] = ???
+    def getComponents(pixel: Any, components: Array[Int], offset: Int): Array[Int] = ???
 
     /** Returns a pixel value represented as an int in this
      *  ColorModel, given an array of unnormalized color/alpha
@@ -171,14 +171,14 @@ class DirectColorModel extends PackedColorModel {
      *  components.
      */
     @stub
-    def getDataElements(components: Array[Int], offset: Int, obj: Object): Object = ???
+    def getDataElements(components: Array[Int], offset: Int, obj: Any): Any = ???
 
     /** Returns a data element array representation of a pixel in this
      *  ColorModel, given an integer pixel representation in the
      *  default RGB color model.
      */
     @stub
-    def getDataElements(rgb: Int, pixel: Object): Object = ???
+    def getDataElements(rgb: Int, pixel: Any): Any = ???
 
     /** Returns the green color component for the specified pixel, scaled
      *  from 0 to 255 in the default RGB ColorSpace, sRGB.
@@ -190,7 +190,7 @@ class DirectColorModel extends PackedColorModel {
      *  from 0 to 255 in the default RGB ColorSpace, sRGB.
      */
     @stub
-    def getGreen(inData: Object): Int = ???
+    def getGreen(inData: Any): Int = ???
 
     /** Returns the mask indicating which bits in an int pixel
      *  representation contain the green color component.
@@ -208,7 +208,7 @@ class DirectColorModel extends PackedColorModel {
      *  from 0 to 255 in the default RGB ColorSpace, sRGB.
      */
     @stub
-    def getRed(inData: Object): Int = ???
+    def getRed(inData: Any): Int = ???
 
     /** Returns the mask indicating which bits in an int pixel
      *  representation contain the red color component.
@@ -226,7 +226,7 @@ class DirectColorModel extends PackedColorModel {
      *  default RGB color model format.
      */
     @stub
-    def getRGB(inData: Object): Int = ???
+    def getRGB(inData: Any): Int = ???
 
     /** Returns true if raster is compatible
      *  with this ColorModel and false if it is

@@ -15,11 +15,11 @@ class UnknownAnnotationValueException extends UnknownEntityException {
 
     /** Creates a new UnknownAnnotationValueException. */
     @stub
-    def this(av: AnnotationValue, p: Object) = ???
+    def this(av: AnnotationValue, p: Any) = ???
 
     /** Returns the additional argument. */
     @stub
-    def getArgument(): Object = ???
+    def getArgument(): Any = ???
 
     /** Returns the unknown annotation value. */
     @stub

@@ -19,7 +19,7 @@ class ListDataEvent extends EventObject {
 
     /** Constructs a ListDataEvent object. */
     @stub
-    def this(source: Object, type: Int, index0: Int, index1: Int) = ???
+    def this(source: Any, type: Int, index0: Int, index1: Int) = ???
 
     /** Returns the lower index of the range. */
     @stub

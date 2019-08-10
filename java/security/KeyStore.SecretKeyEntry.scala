@@ -6,7 +6,7 @@ import javax.crypto.SecretKey
 import scala.scalanative.annotation.stub
 
 /** A KeyStore entry that holds a SecretKey. */
-final object KeyStore.SecretKeyEntry extends Object with KeyStore.Entry {
+final object KeyStore_SecretKeyEntry extends Object with KeyStore.Entry {
 
     /** Constructs a SecretKeyEntry with a
      *  SecretKey.

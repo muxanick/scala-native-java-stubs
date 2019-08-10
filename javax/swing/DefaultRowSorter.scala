@@ -206,6 +206,5 @@ object DefaultRowSorter {
     /** DefaultRowSorter.ModelWrapper is responsible for providing
      *  the data that gets sorted by DefaultRowSorter.
      */
-    @stub
-    protected object ModelWrapper[M, I] extends DefaultRowSorter.ModelWrapper[M, I]
+    protected type ModelWrapper[M, I] = DefaultRowSorter_ModelWrapper[M, I]
 }

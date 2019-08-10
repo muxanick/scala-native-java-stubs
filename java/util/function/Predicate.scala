@@ -38,5 +38,5 @@ object Predicate {
      *  to Objects.equals(Object, Object).
      */
     @stub
-    def isEqual[T](targetRef: Object): Predicate[T] = ???
+    def isEqual[T](targetRef: Any): Predicate[T] = ???
 }

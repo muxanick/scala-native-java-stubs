@@ -52,7 +52,7 @@ final class Float extends Number with Comparable[Float] {
 
     /** Compares this object against the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the float value of this Float object. */
     @stub

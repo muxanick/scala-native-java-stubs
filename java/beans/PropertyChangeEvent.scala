@@ -24,19 +24,19 @@ class PropertyChangeEvent extends EventObject {
 
     /** Constructs a new PropertyChangeEvent. */
     @stub
-    def this(source: Object, propertyName: String, oldValue: Object, newValue: Object) = ???
+    def this(source: Any, propertyName: String, oldValue: Any, newValue: Any) = ???
 
     /** Gets the new value for the property, expressed as an Object. */
     @stub
-    def getNewValue(): Object = ???
+    def getNewValue(): Any = ???
 
     /** Gets the old value for the property, expressed as an Object. */
     @stub
-    def getOldValue(): Object = ???
+    def getOldValue(): Any = ???
 
     /** The "propagationId" field is reserved for future use. */
     @stub
-    def getPropagationId(): Object = ???
+    def getPropagationId(): Any = ???
 
     /** Gets the programmatic name of the property that was changed. */
     @stub
@@ -44,7 +44,7 @@ class PropertyChangeEvent extends EventObject {
 
     /** Sets the propagationId object for the event. */
     @stub
-    def setPropagationId(propagationId: Object): Unit = ???
+    def setPropagationId(propagationId: Any): Unit = ???
 
     /** Returns a string representation of the object. */
     @stub

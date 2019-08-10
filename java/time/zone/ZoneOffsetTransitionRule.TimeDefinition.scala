@@ -14,10 +14,10 @@ import scala.scalanative.annotation.stub
  *  Relative to the wall offset (what you would see on a clock on the wall)
  *  
  */
-class ZoneOffsetTransitionRule.TimeDefinition private (name: String, ordinal: Int) extends Enum[ZoneOffsetTransitionRule.TimeDefinition](name, ordinal) {
+class ZoneOffsetTransitionRule_TimeDefinition private (name: String, ordinal: Int) extends Enum[ZoneOffsetTransitionRule.TimeDefinition](name, ordinal) {
 }
 
-object ZoneOffsetTransitionRule.TimeDefinition {
+object ZoneOffsetTransitionRule_TimeDefinition {
     /** The local date-time is expressed in terms of the standard offset. */
     final val STANDARD = new ZoneOffsetTransitionRule.TimeDefinition(STANDARD, 0)
 

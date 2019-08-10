@@ -225,7 +225,7 @@ object SwingUtilities {
      *  action is enabled (and non-null).
      */
     @stub
-    def notifyAction(action: Action, ks: KeyStroke, event: KeyEvent, sender: Object, modifiers: Int): Boolean = ???
+    def notifyAction(action: Action, ks: KeyStroke, event: KeyEvent, sender: Any, modifiers: Int): Boolean = ???
 
     /** Paints a component to the specified Graphics. */
     @stub

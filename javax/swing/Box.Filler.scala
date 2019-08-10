@@ -17,7 +17,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object Box.Filler extends JComponent with Accessible {
+object Box_Filler extends JComponent with Accessible {
 
     /** Constructor to create shape with the given size ranges. */
     @stub
@@ -26,8 +26,7 @@ object Box.Filler extends JComponent with Accessible {
     /** This class implements accessibility support for the
      *  Box.Filler class.
      */
-    @stub
-    protected object AccessibleBoxFiller extends Box.Filler.AccessibleBoxFiller
+    protected type AccessibleBoxFiller = Box_Filler_AccessibleBoxFiller
 
     /** Change the size requests for this shape. */
     @stub

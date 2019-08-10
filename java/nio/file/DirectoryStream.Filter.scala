@@ -9,8 +9,7 @@ import scala.scalanative.annotation.stub
  *  method when opening a directory to iterate over the entries in the
  *  directory.
  */
-object 
-@FunctionalInterface trait DirectoryStream.Filter[T] {
+@FunctionalInterface trait DirectoryStream_Filter[T] {
 
     /** Decides if the given directory entry should be accepted or filtered. */
     @stub

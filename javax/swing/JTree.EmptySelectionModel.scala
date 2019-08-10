@@ -18,7 +18,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object protected JTree.EmptySelectionModel extends DefaultTreeSelectionModel {
+object protected JTree_EmptySelectionModel extends DefaultTreeSelectionModel {
 
     /**  */
     @stub

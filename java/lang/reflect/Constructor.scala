@@ -16,7 +16,7 @@ final class Constructor[T] extends Executable {
 
     /** Compares this Constructor against the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns an AnnotatedType object that represents the use of a
      *  type to specify the receiver type of the method/constructor represented

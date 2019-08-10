@@ -80,8 +80,7 @@ abstract class Policy extends Object {
 
 object Policy {
     /** This represents a marker interface for Policy parameters. */
-    @stub
-    trait Parameters extends Policy.Parameters
+    type Parameters = Policy_Parameters
 
     /** A read-only empty PermissionCollection instance. */
     @stub

@@ -18,24 +18,19 @@ class BasicTabbedPaneUI extends TabbedPaneUI with SwingConstants {
     def this() = ???
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object FocusHandler extends BasicTabbedPaneUI.FocusHandler
+    type FocusHandler = BasicTabbedPaneUI_FocusHandler
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object MouseHandler extends BasicTabbedPaneUI.MouseHandler
+    type MouseHandler = BasicTabbedPaneUI_MouseHandler
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object PropertyChangeHandler extends BasicTabbedPaneUI.PropertyChangeHandler
+    type PropertyChangeHandler = BasicTabbedPaneUI_PropertyChangeHandler
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object TabbedPaneLayout extends BasicTabbedPaneUI.TabbedPaneLayout
+    type TabbedPaneLayout = BasicTabbedPaneUI_TabbedPaneLayout
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object TabSelectionHandler extends BasicTabbedPaneUI.TabSelectionHandler
+    type TabSelectionHandler = BasicTabbedPaneUI_TabSelectionHandler
 
     /** A rectangle used for general layout calculations in order
      *  to avoid constructing many new Rectangles on the fly.

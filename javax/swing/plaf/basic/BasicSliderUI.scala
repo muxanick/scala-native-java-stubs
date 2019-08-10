@@ -17,32 +17,25 @@ class BasicSliderUI extends SliderUI {
     def this(b: JSlider) = ???
 
     /** As of Java 2 platform v1.3 this undocumented class is no longer used. */
-    @stub
-    object ActionScroller extends BasicSliderUI.ActionScroller
+    type ActionScroller = BasicSliderUI_ActionScroller
 
     /** Data model listener. */
-    @stub
-    object ChangeHandler extends BasicSliderUI.ChangeHandler
+    type ChangeHandler = BasicSliderUI_ChangeHandler
 
     /** Listener for resizing events. */
-    @stub
-    object ComponentHandler extends BasicSliderUI.ComponentHandler
+    type ComponentHandler = BasicSliderUI_ComponentHandler
 
     /** Focus-change listener. */
-    @stub
-    object FocusHandler extends BasicSliderUI.FocusHandler
+    type FocusHandler = BasicSliderUI_FocusHandler
 
     /**  */
-    @stub
-    object PropertyChangeHandler extends BasicSliderUI.PropertyChangeHandler
+    type PropertyChangeHandler = BasicSliderUI_PropertyChangeHandler
 
     /** Scroll-event listener. */
-    @stub
-    object ScrollListener extends BasicSliderUI.ScrollListener
+    type ScrollListener = BasicSliderUI_ScrollListener
 
     /** Track mouse movements. */
-    @stub
-    object TrackListener extends BasicSliderUI.TrackListener
+    type TrackListener = BasicSliderUI_TrackListener
 
     /**  */
     @stub

@@ -28,7 +28,7 @@ import scala.scalanative.annotation.stub
  *  This allows matches to be made by checking that two format's encodings
  *  are equal.
  */
-object AudioFormat.Encoding extends Object {
+object AudioFormat_Encoding extends Object {
 
     /** Constructs a new encoding. */
     @stub
@@ -56,7 +56,7 @@ object AudioFormat.Encoding extends Object {
 
     /** Finalizes the equals method */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Finalizes the hashCode method */
     @stub

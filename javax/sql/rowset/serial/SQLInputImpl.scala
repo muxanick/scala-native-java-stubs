@@ -152,7 +152,7 @@ class SQLInputImpl extends Object with SQLInput {
      *  object as an Object in the Java programming language.
      */
     @stub
-    def readObject(): Object = ???
+    def readObject(): Any = ???
 
     /** Retrieves the value at the head of this SQLInputImpl object
      *  as a Ref object in the Java programming language.

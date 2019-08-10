@@ -18,7 +18,7 @@ import scala.scalanative.annotation.stub
  *  instance of DataLine.Info as the argument to a method such as
  *  Mixer.getLine(Line.Info).
  */
-object DataLine.Info extends Line.Info {
+object DataLine_Info extends Line.Info {
 
     /** Constructs a data line's info object from the specified information,
      *  which includes a single audio format.

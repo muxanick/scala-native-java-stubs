@@ -12,7 +12,7 @@ import scala.scalanative.annotation.stub
 /** AccessibleProgressMonitor implements accessibility
  *  support for the ProgressMonitor class.
  */
-protected class ProgressMonitor.AccessibleProgressMonitor extends AccessibleContext with AccessibleText with ChangeListener with PropertyChangeListener {
+protected class ProgressMonitor_AccessibleProgressMonitor extends AccessibleContext with AccessibleText with ChangeListener with PropertyChangeListener {
 
     /** AccessibleProgressMonitor constructor */
     @stub

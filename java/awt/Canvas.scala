@@ -27,8 +27,7 @@ class Canvas extends Component with Accessible {
     /** This class implements accessibility support for the
      *  Canvas class.
      */
-    @stub
-    protected object AccessibleAWTCanvas extends Canvas.AccessibleAWTCanvas
+    protected type AccessibleAWTCanvas = Canvas_AccessibleAWTCanvas
 
     /** Creates the peer of the canvas. */
     @stub

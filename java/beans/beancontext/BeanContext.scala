@@ -41,7 +41,7 @@ trait BeanContext extends BeanContextChild with Collection with DesignMode with 
      *  child of this BeanContext.
      */
     @stub
-    def instantiateChild(beanName: String): Object = ???
+    def instantiateChild(beanName: String): Any = ???
 
     /** Removes the specified BeanContextMembershipListener
      *  so that it no longer receives BeanContextMembershipEvents
@@ -58,5 +58,5 @@ object BeanContext {
      *  hierarchy and any service requests etc.
      */
     @stub
-    val globalHierarchyLock: Object = ???
+    val globalHierarchyLock: Any = ???
 }

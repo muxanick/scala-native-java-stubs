@@ -28,7 +28,7 @@ class ValidationEventLocatorImpl extends Object with ValidationEventLocator {
 
     /** Constructs an object that points to a JAXB content object. */
     @stub
-    def this(_object: Object) = ???
+    def this(_object: Any) = ???
 
     /** Constructs an object from the location information of a SAXParseException. */
     @stub
@@ -48,7 +48,7 @@ class ValidationEventLocatorImpl extends Object with ValidationEventLocator {
 
     /** Return a reference to the object in the Java content tree if available */
     @stub
-    def getObject(): Object = ???
+    def getObject(): Any = ???
 
     /** Return the byte offset if available */
     @stub
@@ -72,7 +72,7 @@ class ValidationEventLocatorImpl extends Object with ValidationEventLocator {
 
     /** Set the Object field on this event locator. */
     @stub
-    def setObject(_object: Object): Unit = ???
+    def setObject(_object: Any): Unit = ???
 
     /** Set the offset field on this event locator. */
     @stub

@@ -5,7 +5,7 @@ import javax.swing.plaf.basic.BasicToolBarUI.PropertyListener
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class MetalToolBarUI.MetalRolloverListener extends BasicToolBarUI.PropertyListener {
+protected class MetalToolBarUI_MetalRolloverListener extends BasicToolBarUI.PropertyListener {
 
     /**  */
     @stub

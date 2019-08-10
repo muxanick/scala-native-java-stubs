@@ -82,8 +82,7 @@ class FormView extends ComponentView with ActionListener {
     /** MouseEventListener class to handle form submissions when
      *  an input with type equal to image is clicked on.
      */
-    @stub
-    protected object MouseEventListener extends FormView.MouseEventListener
+    protected type MouseEventListener = FormView_MouseEventListener
 
     /** Responsible for processing the ActionEvent. */
     @stub

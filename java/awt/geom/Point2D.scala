@@ -20,7 +20,7 @@ abstract class Point2D extends Object with Cloneable {
     /** Creates a new object of the same class and with the
      *  same contents as this object.
      */
-    def clone(): Object
+    def clone(): Any
 
     /** Returns the distance from this Point2D to
      *  a specified point.
@@ -43,7 +43,7 @@ abstract class Point2D extends Object with Cloneable {
     def distanceSq(pt: Point2D): Double
 
     /** Determines whether or not two points are equal. */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** Returns the X coordinate of this Point2D in
      *  double precision.
@@ -73,14 +73,12 @@ object Point2D {
     /** The Double class defines a point specified in
      *  double precision.
      */
-    @stub
-    object Double extends Point2D.Double
+    type Double = Point2D_Double
 
     /** The Float class defines a point specified in float
      *  precision.
      */
-    @stub
-    object Float extends Point2D.Float
+    type Float = Point2D_Float
 
     /** Returns the distance between two points. */
     @stub

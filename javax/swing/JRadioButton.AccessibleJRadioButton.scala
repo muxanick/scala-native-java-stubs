@@ -19,7 +19,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JRadioButton.AccessibleJRadioButton extends JToggleButton.AccessibleJToggleButton {
+protected class JRadioButton_AccessibleJRadioButton extends JToggleButton.AccessibleJToggleButton {
 
     /**  */
     @stub

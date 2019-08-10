@@ -55,11 +55,11 @@ class AttributeList extends ArrayList[Object] {
      *  list.
      */
     @stub
-    def add(index: Int, element: Object): Unit = ???
+    def add(index: Int, element: Any): Unit = ???
 
     /** Appends the specified element to the end of this list. */
     @stub
-    def add(element: Object): Boolean = ???
+    def add(element: Any): Boolean = ???
 
     /** Appends all the elements in the AttributeList specified to
      *  the end of the list, in the order in which they are returned by the
@@ -100,5 +100,5 @@ class AttributeList extends ArrayList[Object] {
      *  the specified element.
      */
     @stub
-    def set(index: Int, element: Object): Object = ???
+    def set(index: Int, element: Any): Any = ???
 }

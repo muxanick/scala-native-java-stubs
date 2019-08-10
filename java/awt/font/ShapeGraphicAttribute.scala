@@ -26,7 +26,7 @@ final class ShapeGraphicAttribute extends GraphicAttribute {
      *  Object.
      */
     @stub
-    def equals(rhs: Object): Boolean = ???
+    def equals(rhs: Any): Boolean = ???
 
     /** Compares this ShapeGraphicAttribute to the specified
      *  ShapeGraphicAttribute.

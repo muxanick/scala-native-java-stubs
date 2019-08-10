@@ -14,36 +14,28 @@ class BasicBorders extends Object {
 
 object BasicBorders {
     /**  */
-    @stub
-    object ButtonBorder extends BasicBorders.ButtonBorder
+    type ButtonBorder = BasicBorders_ButtonBorder
 
     /**  */
-    @stub
-    object FieldBorder extends BasicBorders.FieldBorder
+    type FieldBorder = BasicBorders_FieldBorder
 
     /**  */
-    @stub
-    object MarginBorder extends BasicBorders.MarginBorder
+    type MarginBorder = BasicBorders_MarginBorder
 
     /**  */
-    @stub
-    object MenuBarBorder extends BasicBorders.MenuBarBorder
+    type MenuBarBorder = BasicBorders_MenuBarBorder
 
     /**  */
-    @stub
-    object RadioButtonBorder extends BasicBorders.RadioButtonBorder
+    type RadioButtonBorder = BasicBorders_RadioButtonBorder
 
     /** Special thin border for rollover toolbar buttons. */
-    @stub
-    object RolloverButtonBorder extends BasicBorders.RolloverButtonBorder
+    type RolloverButtonBorder = BasicBorders_RolloverButtonBorder
 
     /** Draws the border around the splitpane. */
-    @stub
-    object SplitPaneBorder extends BasicBorders.SplitPaneBorder
+    type SplitPaneBorder = BasicBorders_SplitPaneBorder
 
     /**  */
-    @stub
-    object ToggleButtonBorder extends BasicBorders.ToggleButtonBorder
+    type ToggleButtonBorder = BasicBorders_ToggleButtonBorder
 
     /**  */
     @stub

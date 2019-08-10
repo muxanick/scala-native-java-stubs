@@ -241,6 +241,8 @@ def requestParseAndSave(classname, args, all_classes):
                 new_tokens[idx:] = ['with ' + ' with '.join(new_tokens[idx+1:])]
             elif new_tokens[idx] == '@interface':
                 new_tokens[idx:] = ['\n', 'final', 'class', new_tokens[idx+1], 'extends', 'StaticAnnotation']
+            elif new_tokens[idx].startswith(classshortname) and '.' in classshortname:
+                new_tokens[idx] = new_tokens[idx].replace('.', '_')
             elif new_tokens[idx] == 'extends':
                 j = idx + 1
                 while j < len(new_tokens):
@@ -304,7 +306,7 @@ def requestParseAndSave(classname, args, all_classes):
                 if len(param) == 0:
                     continue
                 param_type, param_name = param
-                params.append(param_name + ': ' + param_type)
+                params.append(param_name + ': ' + (param_type if param_type != 'Object' else 'Any'))
         line = (access + ' ') if access else ''
         enum_value_line = False
         if class_enum and params == None and lineType == None:
@@ -312,7 +314,7 @@ def requestParseAndSave(classname, args, all_classes):
             enum_value_line = True
             enum_value[0] += 1
         elif lineType == 'class' or lineType == 'trait':
-            line += lineType + ' ' + name.split('.')[-1] + ' extends ' + name
+            line += 'type ' + name.split('.')[-1] + ' = ' + name.replace('.', '_')
             lineType = None
             abstract = True
         else:
@@ -320,10 +322,10 @@ def requestParseAndSave(classname, args, all_classes):
         if params != None:
             line += '(' + ', '.join(params) + ')'
         if lineType != None:
-            line += ': ' + lineType
+            line += ': ' + (lineType if lineType != 'Object' else 'Any')
         result = ''
         result += makeComment(indent, method['desc'])
-        if not class_abstract and not enum_value_line:
+        if not abstract and not class_abstract and not enum_value_line:
             result += (' ' * indent) + '@stub\n'
         result += (' ' * indent) + line + (' = ???\n' if not abstract and not class_abstract and not enum_value_line else '\n')
         return result
@@ -379,6 +381,8 @@ def requestParseAndSave(classname, args, all_classes):
                 class_enum = True
                 definition['tokens'].remove('enum')
                 definition['tokens'] = ['class'] + definition['tokens']
+            elif 'interface' in definition['tokens']:
+                class_static = False
             else:
                 if 'final' in definition['tokens']:
                     definition['tokens'].remove('final')
@@ -403,7 +407,7 @@ def requestParseAndSave(classname, args, all_classes):
             code += '}\n'
         if len(static_methods) > 0:
             if not class_static or class_enum:
-                code += '\nobject ' + classshortname + ' {'
+                code += '\nobject ' + classshortname.replace('.', '_') + ' {'
             for met in static_methods:
                 code += '\n' + makeMethod(indent, met, class_abstract=False, class_enum = class_enum)
             code += '}\n'

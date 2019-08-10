@@ -20,7 +20,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JTextField.AccessibleJTextField extends JTextComponent.AccessibleJTextComponent {
+protected class JTextField_AccessibleJTextField extends JTextComponent.AccessibleJTextComponent {
 
     /**  */
     @stub

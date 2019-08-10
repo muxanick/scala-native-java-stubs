@@ -15,7 +15,7 @@ class TabularType extends OpenType[TabularData] {
 
     /** Compares the specified obj parameter with this TabularType instance for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns, in the same order as was given to this instance's
      *  constructor, an unmodifiable List of the names of the items the
@@ -40,7 +40,7 @@ class TabularType extends OpenType[TabularData] {
      *  described by this TabularType instance.
      */
     @stub
-    def isValue(obj: Object): Boolean = ???
+    def isValue(obj: Any): Boolean = ???
 
     /** Returns a string representation of this TabularType instance. */
     @stub

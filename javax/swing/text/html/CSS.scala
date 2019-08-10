@@ -91,8 +91,7 @@ object CSS {
     /** Definitions to be used as a key on AttributeSet's
      *  that might hold CSS attributes.
      */
-    @stub
-    object Attribute extends CSS.Attribute
+    type Attribute = CSS_Attribute
 
     /** Return the set of all possible CSS attribute keys. */
     @stub

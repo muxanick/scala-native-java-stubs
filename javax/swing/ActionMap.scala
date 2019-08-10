@@ -42,7 +42,7 @@ class ActionMap extends Object with Serializable {
      *  parent ActionMap if the binding is not locally defined.
      */
     @stub
-    def get(key: Object): Action = ???
+    def get(key: Any): Action = ???
 
     /** Returns this ActionMap's parent. */
     @stub
@@ -54,11 +54,11 @@ class ActionMap extends Object with Serializable {
 
     /** Adds a binding for key to action. */
     @stub
-    def put(key: Object, action: Action): Unit = ???
+    def put(key: Any, action: Action): Unit = ???
 
     /** Removes the binding for key from this ActionMap. */
     @stub
-    def remove(key: Object): Unit = ???
+    def remove(key: Any): Unit = ???
 
     /** Sets this ActionMap's parent. */
     @stub

@@ -47,11 +47,11 @@ class SerialStruct extends Object with Struct with Serializable with Cloneable {
 
     /** Returns a clone of this SerialStruct. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compares this SerialStruct to the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Retrieves an array of Object values containing the
      *  attributes of the SQL structured type that this

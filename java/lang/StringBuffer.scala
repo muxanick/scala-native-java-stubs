@@ -152,7 +152,7 @@ final class StringBuffer extends Object with Serializable with CharSequence {
 
     /** Appends the string representation of the Object argument. */
     @stub
-    def append(obj: Object): StringBuffer = ???
+    def append(obj: Any): StringBuffer = ???
 
     /** Appends the specified string to this character sequence. */
     @stub
@@ -288,7 +288,7 @@ final class StringBuffer extends Object with Serializable with CharSequence {
      *  argument into this character sequence.
      */
     @stub
-    def insert(offset: Int, obj: Object): StringBuffer = ???
+    def insert(offset: Int, obj: Any): StringBuffer = ???
 
     /** Inserts the string into this character sequence. */
     @stub

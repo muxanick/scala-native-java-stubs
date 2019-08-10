@@ -26,7 +26,7 @@ trait ChronoPeriod extends TemporalAmount {
 
     /** Checks if this period is equal to another period, including the chronology. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Gets the value of the requested unit. */
     @stub

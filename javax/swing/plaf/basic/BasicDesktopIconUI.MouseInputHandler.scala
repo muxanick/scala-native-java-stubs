@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
  *  This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of BasicDesktopIconUI.
  */
-class BasicDesktopIconUI.MouseInputHandler extends MouseInputAdapter {
+class BasicDesktopIconUI_MouseInputHandler extends MouseInputAdapter {
 
     /**  */
     @stub

@@ -37,7 +37,7 @@ class EventReaderDelegate extends Object with XMLEventReader {
 
     /** Get the value of a feature/property from the underlying implementation */
     @stub
-    def getProperty(name: String): Object = ???
+    def getProperty(name: String): Any = ???
 
     /** Check if there are more events. */
     @stub
@@ -45,7 +45,7 @@ class EventReaderDelegate extends Object with XMLEventReader {
 
     /** Returns the next element in the iteration. */
     @stub
-    def next(): Object = ???
+    def next(): Any = ???
 
     /** Get the next XMLEvent */
     @stub

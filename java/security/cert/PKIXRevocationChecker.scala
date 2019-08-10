@@ -107,6 +107,5 @@ object PKIXRevocationChecker {
     /** Various revocation options that can be specified for the revocation
      *  checking mechanism.
      */
-    @stub
-    object Option extends PKIXRevocationChecker.Option
+    type Option = PKIXRevocationChecker_Option
 }

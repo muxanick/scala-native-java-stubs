@@ -38,15 +38,15 @@ class BasicAttributes extends Object with Attributes {
 
     /** Constructs a new instance of Attributes with one attribute. */
     @stub
-    def this(attrID: String, val: Object) = ???
+    def this(attrID: String, val: Any) = ???
 
     /** Constructs a new instance of Attributes with one attribute. */
     @stub
-    def this(attrID: String, val: Object, ignoreCase: Boolean) = ???
+    def this(attrID: String, val: Any, ignoreCase: Boolean) = ???
 
     /** Creates and returns a copy of this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Determines whether this BasicAttributes is equal to another
      *  Attributes
@@ -56,7 +56,7 @@ class BasicAttributes extends Object with Attributes {
      *  same attributes.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Retrieves the attribute with the given attribute id from the
      *  attribute set.
@@ -90,7 +90,7 @@ class BasicAttributes extends Object with Attributes {
 
     /** Adds a new attribute to the attribute set. */
     @stub
-    def put(attrID: String, val: Object): Attribute = ???
+    def put(attrID: String, val: Any): Attribute = ???
 
     /** Removes the attribute with the attribute id 'attrID' from
      *  the attribute set.

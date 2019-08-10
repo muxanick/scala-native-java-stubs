@@ -6,7 +6,7 @@ import scala.scalanative.annotation.stub
 /** Defines the ENTERED, EXITED, and ACTIVATED event types, along
  *  with their string representations, returned by toString().
  */
-final object HyperlinkEvent.EventType extends Object {
+final object HyperlinkEvent_EventType extends Object {
 
     /** Activated type. */
     @stub

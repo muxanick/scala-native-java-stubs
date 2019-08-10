@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** Listener for scrolling events initiated in the
  *  ScrollPane.
  */
-protected class BasicScrollBarUI.ScrollListener extends Object with ActionListener {
+protected class BasicScrollBarUI_ScrollListener extends Object with ActionListener {
 
     /**  */
     @stub

@@ -11,4 +11,5 @@ import scala.scalanative.annotation.stub
  *  confidentiality of sensitive keystore data
  *  (such as a PrivateKey).
  */
-object trait KeyStore.ProtectionParameter {
+trait KeyStore_ProtectionParameter {
+}

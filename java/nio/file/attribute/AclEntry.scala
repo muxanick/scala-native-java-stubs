@@ -37,7 +37,7 @@ final class AclEntry extends Object {
 
     /** Compares the specified object with this ACL entry for equality. */
     @stub
-    def equals(ob: Object): Boolean = ???
+    def equals(ob: Any): Boolean = ???
 
     /** Returns a copy of the flags component. */
     @stub
@@ -66,8 +66,7 @@ final class AclEntry extends Object {
 
 object AclEntry {
     /** A builder of AclEntry objects. */
-    @stub
-    object Builder extends AclEntry.Builder
+    type Builder = AclEntry_Builder
 
     /** Constructs a new builder. */
     @stub

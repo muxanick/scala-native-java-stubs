@@ -115,11 +115,11 @@ class ArrayList[E] extends AbstractList[E] with List[E] with RandomAccess with C
 
     /** Returns a shallow copy of this ArrayList instance. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns true if this list contains the specified element. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Increases the capacity of this ArrayList instance, if
      *  necessary, to ensure that it can hold at least the number of elements
@@ -143,7 +143,7 @@ class ArrayList[E] extends AbstractList[E] with List[E] with RandomAccess with C
      *  in this list, or -1 if this list does not contain the element.
      */
     @stub
-    def indexOf(o: Object): Int = ???
+    def indexOf(o: Any): Int = ???
 
     /** Returns true if this list contains no elements. */
     @stub
@@ -157,7 +157,7 @@ class ArrayList[E] extends AbstractList[E] with List[E] with RandomAccess with C
      *  in this list, or -1 if this list does not contain the element.
      */
     @stub
-    def lastIndexOf(o: Object): Int = ???
+    def lastIndexOf(o: Any): Int = ???
 
     /** Returns a list iterator over the elements in this list (in proper
      *  sequence).
@@ -179,7 +179,7 @@ class ArrayList[E] extends AbstractList[E] with List[E] with RandomAccess with C
      *  if it is present.
      */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Removes from this list all of its elements that are contained in the
      *  specified collection.

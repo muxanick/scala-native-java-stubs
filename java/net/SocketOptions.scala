@@ -19,11 +19,11 @@ trait SocketOptions {
 
     /** Fetch the value of an option. */
     @stub
-    def getOption(optID: Int): Object = ???
+    def getOption(optID: Int): Any = ???
 
     /** Enable/disable the option specified by optID. */
     @stub
-    def setOption(optID: Int, value: Object): Unit = ???
+    def setOption(optID: Int, value: Any): Unit = ???
 }
 
 object SocketOptions {

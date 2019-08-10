@@ -6,7 +6,7 @@ import javax.swing.border.{AbstractBorder, BevelBorder}
 import scala.scalanative.annotation.stub
 
 /**  */
-object BorderUIResource.BevelBorderUIResource extends BevelBorder with UIResource {
+object BorderUIResource_BevelBorderUIResource extends BevelBorder with UIResource {
 
     /**  */
     @stub

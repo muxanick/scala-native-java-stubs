@@ -42,7 +42,7 @@ class MetaMessage extends MidiMessage {
      *  as this object.
      */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Obtains a copy of the data for the meta message. */
     @stub

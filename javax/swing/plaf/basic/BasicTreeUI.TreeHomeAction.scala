@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
  *  Scrolls either the first or last cell to be visible based on
  *  direction.
  */
-class BasicTreeUI.TreeHomeAction extends AbstractAction {
+class BasicTreeUI_TreeHomeAction extends AbstractAction {
 
     /**  */
     @stub

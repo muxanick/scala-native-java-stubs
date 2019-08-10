@@ -21,7 +21,7 @@ class Proxy extends Object {
 
     /** Compares this object against the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns a hashcode for this Proxy. */
     @stub
@@ -38,8 +38,7 @@ class Proxy extends Object {
 
 object Proxy {
     /** Represents the proxy type. */
-    @stub
-    object Type extends Proxy.Type
+    type Type = Proxy_Type
 
     /** A proxy setting that represents a DIRECT connection,
      *  basically telling the protocol handler not to use any proxying.

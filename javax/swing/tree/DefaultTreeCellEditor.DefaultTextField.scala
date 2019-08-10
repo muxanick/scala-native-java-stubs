@@ -13,7 +13,7 @@ import scala.scalanative.annotation.stub
  *  renderer is not null and no font
  *  has been specified the preferred height is that of the renderer.
  */
-class DefaultTreeCellEditor.DefaultTextField extends JTextField {
+class DefaultTreeCellEditor_DefaultTextField extends JTextField {
 
     /** Constructs a
      *  DefaultTreeCellEditor.DefaultTextField object.

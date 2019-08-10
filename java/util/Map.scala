@@ -115,13 +115,13 @@ trait Map[K, V] {
      *  key.
      */
     @stub
-    def containsKey(key: Object): Boolean = ???
+    def containsKey(key: Any): Boolean = ???
 
     /** Returns true if this map maps one or more keys to the
      *  specified value.
      */
     @stub
-    def containsValue(value: Object): Boolean = ???
+    def containsValue(value: Any): Boolean = ???
 
     /** Returns a Set view of the mappings contained in this map. */
     @stub
@@ -129,7 +129,7 @@ trait Map[K, V] {
 
     /** Compares the specified object with this map for equality. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Performs the given action for each entry in this map until all entries
      *  have been processed or the action throws an exception.
@@ -141,13 +141,13 @@ trait Map[K, V] {
      *  or null if this map contains no mapping for the key.
      */
     @stub
-    def get(key: Object): V = ???
+    def get(key: Any): V = ???
 
     /** Returns the value to which the specified key is mapped, or
      *  defaultValue if this map contains no mapping for the key.
      */
     @stub
-    def getOrDefault(key: Object, defaultValue: V): V = ???
+    def getOrDefault(key: Any, defaultValue: V): V = ???
 
     /** Returns the hash code value for this map. */
     @stub
@@ -190,13 +190,13 @@ trait Map[K, V] {
      *  (optional operation).
      */
     @stub
-    def remove(key: Object): V = ???
+    def remove(key: Any): V = ???
 
     /** Removes the entry for the specified key only if it is currently
      *  mapped to the specified value.
      */
     @stub
-    def remove(key: Object, value: Object): Boolean = ???
+    def remove(key: Any, value: Any): Boolean = ???
 
     /** Replaces the entry for the specified key only if it is
      *  currently mapped to some value.
@@ -228,6 +228,5 @@ trait Map[K, V] {
 
 object Map {
     /** A map entry (key-value pair). */
-    @stub
-    trait Entry[K, V] extends Map.Entry[K, V]
+    type Entry[K, V] = Map_Entry[K, V]
 }

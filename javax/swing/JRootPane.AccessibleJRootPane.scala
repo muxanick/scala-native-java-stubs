@@ -18,7 +18,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JRootPane.AccessibleJRootPane extends JComponent.AccessibleJComponent {
+protected class JRootPane_AccessibleJRootPane extends JComponent.AccessibleJComponent {
 
     /**  */
     @stub

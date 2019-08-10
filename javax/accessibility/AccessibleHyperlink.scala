@@ -18,7 +18,7 @@ abstract class AccessibleHyperlink extends Object with AccessibleAction {
     /** Returns an object that represents the link anchor,
      *  as appropriate for that link.
      */
-    def getAccessibleActionAnchor(i: Int): Object
+    def getAccessibleActionAnchor(i: Int): Any
 
     /** Returns the number of accessible actions available in this Link
      *  If there are more than one, the first one is NOT considered the
@@ -34,7 +34,7 @@ abstract class AccessibleHyperlink extends Object with AccessibleAction {
     /** Returns an object that represents the link action,
      *  as appropriate for that link.
      */
-    def getAccessibleActionObject(i: Int): Object
+    def getAccessibleActionObject(i: Int): Any
 
     /** Gets the index with the hypertext document at which this
      *  link ends

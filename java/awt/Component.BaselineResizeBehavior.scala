@@ -16,10 +16,10 @@ import scala.scalanative.annotation.stub
  *  Short.MAX_VALUE the baseline may change in a way
  *  other than the baseline resize behavior indicates.
  */
-class Component.BaselineResizeBehavior private (name: String, ordinal: Int) extends Enum[Component.BaselineResizeBehavior](name, ordinal) {
+class Component_BaselineResizeBehavior private (name: String, ordinal: Int) extends Enum[Component.BaselineResizeBehavior](name, ordinal) {
 }
 
-object Component.BaselineResizeBehavior {
+object Component_BaselineResizeBehavior {
     /** Indicates the baseline remains a fixed distance from
      *  the center of the component.
      */

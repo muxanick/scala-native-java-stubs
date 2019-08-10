@@ -6,7 +6,7 @@ import scala.scalanative.annotation.stub
 /** Class MediaSize.Other includes MediaSize values for
  *  miscellaneous media.
  */
-final object MediaSize.Other extends Object {
+final object MediaSize_Other extends Object {
 
     /** Specifies the executive size, 7.25 inches by 10.5 inches. */
     @stub

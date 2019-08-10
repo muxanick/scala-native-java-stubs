@@ -70,7 +70,7 @@ abstract class Size2DSyntax extends Object with Serializable with Cloneable {
     /** Returns whether this two-dimensional size attribute is equivalent to the
      *  passed in object.
      */
-    def equals(object: Object): Boolean
+    def equals(object: Any): Boolean
 
     /** Get this two-dimensional size attribute's dimensions in the given units
      *  as floating-point values.

@@ -422,7 +422,7 @@ class DocFlavor extends Object with Serializable with Cloneable {
 
     /** Determines if this doc flavor object is equal to the given object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns this doc flavor object's media subtype (from the MIME type). */
     @stub
@@ -462,48 +462,41 @@ object DocFlavor {
      *  DocFlavor objects for example doc flavors using a byte array
      *  (byte[]) as the print data representation class.
      */
-    @stub
-    object BYTE_ARRAY extends DocFlavor.BYTE_ARRAY
+    type BYTE_ARRAY = DocFlavor_BYTE_ARRAY
 
     /** Class DocFlavor.CHAR_ARRAY provides predefined static constant
      *  DocFlavor objects for example doc flavors using a character array
      *  (char[]) as the print data representation class.
      */
-    @stub
-    object CHAR_ARRAY extends DocFlavor.CHAR_ARRAY
+    type CHAR_ARRAY = DocFlavor_CHAR_ARRAY
 
     /** Class DocFlavor.INPUT_STREAM provides predefined static constant
      *  DocFlavor objects for example doc flavors using a byte stream (java.io.InputStream) as the print
      *  data representation class.
      */
-    @stub
-    object INPUT_STREAM extends DocFlavor.INPUT_STREAM
+    type INPUT_STREAM = DocFlavor_INPUT_STREAM
 
     /** Class DocFlavor.READER provides predefined static constant DocFlavor
      *  objects for example doc flavors using a character stream (java.io.Reader) as the print data
      *  representation class.
      */
-    @stub
-    object READER extends DocFlavor.READER
+    type READER = DocFlavor_READER
 
     /** Class DocFlavor.SERVICE_FORMATTED provides predefined static constant
      *  DocFlavor objects for example doc flavors for service formatted print
      *  data.
      */
-    @stub
-    object SERVICE_FORMATTED extends DocFlavor.SERVICE_FORMATTED
+    type SERVICE_FORMATTED = DocFlavor_SERVICE_FORMATTED
 
     /** Class DocFlavor.STRING provides predefined static constant DocFlavor
      *  objects for example doc flavors using a string (java.lang.String) as the print data representation class.
      */
-    @stub
-    object STRING extends DocFlavor.STRING
+    type STRING = DocFlavor_STRING
 
     /** Class DocFlavor.URL provides predefined static constant DocFlavor
      *  objects.
      */
-    @stub
-    object URL extends DocFlavor.URL
+    type URL = DocFlavor_URL
 
     /** A String representing the host operating system encoding. */
     @stub

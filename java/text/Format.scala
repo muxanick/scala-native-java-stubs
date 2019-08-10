@@ -93,24 +93,24 @@ abstract class Format extends Object with Serializable with Cloneable {
     protected def this() = ???
 
     /** Creates and returns a copy of this object. */
-    def clone(): Object
+    def clone(): Any
 
     /** Formats an object to produce a string. */
-    def format(obj: Object): String
+    def format(obj: Any): String
 
     /** Formats an object and appends the resulting text to a given string
      *  buffer.
      */
-    def format(obj: Object, toAppendTo: StringBuffer, pos: FieldPosition): StringBuffer
+    def format(obj: Any, toAppendTo: StringBuffer, pos: FieldPosition): StringBuffer
 
     /** Formats an Object producing an AttributedCharacterIterator. */
-    def formatToCharacterIterator(obj: Object): AttributedCharacterIterator
+    def formatToCharacterIterator(obj: Any): AttributedCharacterIterator
 
     /** Parses text from the beginning of the given string to produce an object. */
-    def parseObject(source: String): Object
+    def parseObject(source: String): Any
 
     /** Parses text from a string to produce an object. */
-    def parseObject(source: String, pos: ParsePosition): Object
+    def parseObject(source: String, pos: ParsePosition): Any
 }
 
 object Format {
@@ -119,6 +119,5 @@ object Format {
      *  from Format.formatToCharacterIterator and as
      *  field identifiers in FieldPosition.
      */
-    @stub
-    object Field extends Format.Field
+    type Field = Format_Field
 }

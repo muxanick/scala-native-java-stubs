@@ -100,13 +100,13 @@ class Reference extends Object with Cloneable with Serializable {
      *  list of addresses, class factory name and class factory location.
      */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Determines whether obj is a reference with the same addresses
      *  (in same order) as this reference.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Retrieves the address at index posn. */
     @stub
@@ -142,7 +142,7 @@ class Reference extends Object with Cloneable with Serializable {
 
     /** Deletes the address at index posn from the list of addresses. */
     @stub
-    def remove(posn: Int): Object = ???
+    def remove(posn: Int): Any = ???
 
     /** Retrieves the number of addresses in this reference. */
     @stub

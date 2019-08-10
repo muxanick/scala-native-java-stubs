@@ -37,8 +37,7 @@ class JTableHeader extends JComponent with TableColumnModelListener with Accessi
     /** This class implements accessibility support for the
      *  JTableHeader class.
      */
-    @stub
-    protected object AccessibleJTableHeader extends JTableHeader.AccessibleJTableHeader
+    protected type AccessibleJTableHeader = JTableHeader_AccessibleJTableHeader
 
     /** The TableColumnModel of the table header. */
     @stub

@@ -6,7 +6,7 @@ import javax.swing.AbstractAction
 import scala.scalanative.annotation.stub
 
 /** Creates a new folder. */
-protected class BasicFileChooserUI.NewFolderAction extends AbstractAction {
+protected class BasicFileChooserUI_NewFolderAction extends AbstractAction {
 
     /**  */
     @stub

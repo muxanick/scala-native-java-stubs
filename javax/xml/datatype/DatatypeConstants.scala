@@ -12,8 +12,7 @@ object DatatypeConstants {
     /** Type-safe enum class that represents six fields
      *  of the Duration class.
      */
-    @stub
-    object Field extends DatatypeConstants.Field
+    type Field = DatatypeConstants_Field
 
     /** Value for fourth month of year. */
     @stub

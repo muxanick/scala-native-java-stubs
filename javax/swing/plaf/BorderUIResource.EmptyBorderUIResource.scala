@@ -6,7 +6,7 @@ import javax.swing.border.{AbstractBorder, EmptyBorder}
 import scala.scalanative.annotation.stub
 
 /**  */
-object BorderUIResource.EmptyBorderUIResource extends EmptyBorder with UIResource {
+object BorderUIResource_EmptyBorderUIResource extends EmptyBorder with UIResource {
 
     /**  */
     @stub

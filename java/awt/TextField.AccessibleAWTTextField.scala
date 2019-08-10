@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  TextField class.  It provides an implementation of the
  *  Java Accessibility API appropriate to text field user-interface elements.
  */
-protected class TextField.AccessibleAWTTextField extends TextComponent.AccessibleAWTTextComponent {
+protected class TextField_AccessibleAWTTextField extends TextComponent.AccessibleAWTTextComponent {
 
     /**  */
     @stub

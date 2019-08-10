@@ -26,5 +26,5 @@ class RemoteObjectInvocationHandler extends RemoteObject with InvocationHandler 
      *  proxy instance, proxy, and returns the result.
      */
     @stub
-    def invoke(proxy: Object, method: Method, args: Array[Object]): Object = ???
+    def invoke(proxy: Any, method: Method, args: Array[Object]): Any = ???
 }

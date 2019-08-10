@@ -24,8 +24,7 @@ class Applet extends Panel {
     /** This class implements accessibility support for the
      *  Applet class.
      */
-    @stub
-    protected object AccessibleApplet extends Applet.AccessibleApplet
+    protected type AccessibleApplet = Applet_AccessibleApplet
 
     /** Called by the browser or applet viewer to inform
      *  this applet that it is being reclaimed and that it should destroy

@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
  *  getMixerInfo
  *  method of the Mixer interface.
  */
-object Mixer.Info extends Object {
+object Mixer_Info extends Object {
 
     /** Constructs a mixer's info object, passing it the given
      *  textual information.
@@ -21,7 +21,7 @@ object Mixer.Info extends Object {
      *  they are identical.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Obtains the description of the mixer. */
     @stub

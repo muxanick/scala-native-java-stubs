@@ -13,5 +13,5 @@ trait CertPathParameters extends Cloneable {
 
     /** Makes a copy of this CertPathParameters. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 }

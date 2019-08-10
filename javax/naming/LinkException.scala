@@ -49,7 +49,7 @@ class LinkException extends NamingException {
 
     /** Contains the object to which resolution of the part of the link was successful. */
     @stub
-    protected val linkResolvedObj: Object = ???
+    protected val linkResolvedObj: Any = ???
 
     /** Retrieves the explanation associated with the problem encounter
      *  when resolving a link.
@@ -69,7 +69,7 @@ class LinkException extends NamingException {
 
     /** Retrieves the object to which resolution was successful. */
     @stub
-    def getLinkResolvedObj(): Object = ???
+    def getLinkResolvedObj(): Any = ???
 
     /** Sets the explanation associated with the problem encounter
      *  when resolving a link.
@@ -87,7 +87,7 @@ class LinkException extends NamingException {
 
     /** Sets the link resolved object field of this exception. */
     @stub
-    def setLinkResolvedObj(obj: Object): Unit = ???
+    def setLinkResolvedObj(obj: Any): Unit = ???
 
     /** Generates the string representation of this exception. */
     @stub

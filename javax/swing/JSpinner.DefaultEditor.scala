@@ -34,7 +34,7 @@ import scala.scalanative.annotation.stub
  *  JFormattedTextField child.   By default the
  *  child is just centered with the parents insets.
  */
-object JSpinner.DefaultEditor extends JPanel with ChangeListener with PropertyChangeListener with LayoutManager {
+object JSpinner_DefaultEditor extends JPanel with ChangeListener with PropertyChangeListener with LayoutManager {
 
     /** Constructs an editor component for the specified JSpinner. */
     @stub

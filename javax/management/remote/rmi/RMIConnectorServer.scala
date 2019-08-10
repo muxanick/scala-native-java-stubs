@@ -34,15 +34,15 @@ class RMIConnectorServer extends JMXConnectorServer {
      *  normally.
      */
     @stub
-    protected def connectionClosed(connectionId: String, message: String, userData: Object): Unit = ???
+    protected def connectionClosed(connectionId: String, message: String, userData: Any): Unit = ???
 
     /** Called by a subclass when a client connection fails. */
     @stub
-    protected def connectionFailed(connectionId: String, message: String, userData: Object): Unit = ???
+    protected def connectionFailed(connectionId: String, message: String, userData: Any): Unit = ???
 
     /** Called by a subclass when a new client connection is opened. */
     @stub
-    protected def connectionOpened(connectionId: String, message: String, userData: Object): Unit = ???
+    protected def connectionOpened(connectionId: String, message: String, userData: Any): Unit = ???
 
     /** The address of this connector server. */
     @stub

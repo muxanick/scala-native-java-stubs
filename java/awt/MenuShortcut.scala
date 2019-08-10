@@ -52,7 +52,7 @@ class MenuShortcut extends Object with Serializable {
      *  and both either use or don't use the SHIFT key.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the raw keycode of this MenuShortcut. */
     @stub

@@ -25,8 +25,7 @@ class MetalComboBoxEditor extends BasicComboBoxEditor {
 
 object MetalComboBoxEditor {
     /** A subclass of BasicComboBoxEditor that implements UIResource. */
-    @stub
-    object UIResource extends MetalComboBoxEditor.UIResource
+    type UIResource = MetalComboBoxEditor_UIResource
 
     /** The default editor border Insets. */
     @stub

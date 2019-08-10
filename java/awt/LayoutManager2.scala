@@ -21,7 +21,7 @@ trait LayoutManager2 extends LayoutManager {
      *  constraint object.
      */
     @stub
-    def addLayoutComponent(comp: Component, constraints: Object): Unit = ???
+    def addLayoutComponent(comp: Component, constraints: Any): Unit = ???
 
     /** Returns the alignment along the x axis. */
     @stub

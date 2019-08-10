@@ -98,7 +98,7 @@ final class SignedObject extends Object with Serializable {
 
     /** Retrieves the encapsulated object. */
     @stub
-    def getObject(): Object = ???
+    def getObject(): Any = ???
 
     /** Retrieves the signature on the signed object, in the form of a
      *  byte array.

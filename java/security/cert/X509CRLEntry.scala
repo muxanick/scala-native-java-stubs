@@ -41,7 +41,7 @@ abstract class X509CRLEntry extends Object with X509Extension {
     /** Compares this CRL entry for equality with the given
      *  object.
      */
-    def equals(other: Object): Boolean
+    def equals(other: Any): Boolean
 
     /** Get the issuer of the X509Certificate described by this entry. */
     def getCertificateIssuer(): X500Principal

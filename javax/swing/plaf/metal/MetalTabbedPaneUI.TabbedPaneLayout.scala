@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of MetalTabbedPaneUI.
  */
-class MetalTabbedPaneUI.TabbedPaneLayout extends BasicTabbedPaneUI.TabbedPaneLayout {
+class MetalTabbedPaneUI_TabbedPaneLayout extends BasicTabbedPaneUI.TabbedPaneLayout {
 
     /**  */
     @stub

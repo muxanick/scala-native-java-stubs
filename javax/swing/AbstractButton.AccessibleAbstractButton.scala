@@ -20,7 +20,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected abstract class AbstractButton.AccessibleAbstractButton extends JComponent.AccessibleJComponent with AccessibleAction with AccessibleValue with AccessibleText with AccessibleExtendedComponent {
+protected abstract class AbstractButton_AccessibleAbstractButton extends JComponent.AccessibleJComponent with AccessibleAction with AccessibleValue with AccessibleText with AccessibleExtendedComponent {
 
     /**  */
     @stub

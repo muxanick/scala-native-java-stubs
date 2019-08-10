@@ -9,7 +9,7 @@ class PrintEvent extends EventObject {
 
     /** Constructs a PrintEvent object. */
     @stub
-    def this(source: Object) = ???
+    def this(source: Any) = ???
 
     /** Returns a String representation of this EventObject. */
     @stub

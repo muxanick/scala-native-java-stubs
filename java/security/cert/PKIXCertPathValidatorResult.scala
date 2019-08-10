@@ -35,7 +35,7 @@ class PKIXCertPathValidatorResult extends Object with CertPathValidatorResult {
 
     /** Returns a copy of this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns the root node of the valid policy tree resulting from the
      *  PKIX certification path validation algorithm.

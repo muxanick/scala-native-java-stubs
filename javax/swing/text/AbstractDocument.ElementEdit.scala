@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
 /** An implementation of ElementChange that can be added to the document
  *  event.
  */
-object AbstractDocument.ElementEdit extends AbstractUndoableEdit with DocumentEvent.ElementChange {
+object AbstractDocument_ElementEdit extends AbstractUndoableEdit with DocumentEvent.ElementChange {
 
     /** Constructs an edit record. */
     @stub

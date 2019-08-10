@@ -37,54 +37,45 @@ class BasicComboPopup extends JPopupMenu with ComboPopup {
     /** As of Java 2 platform v 1.4, this class is now obsolete and is only included for
      *  backwards API compatibility.
      */
-    @stub
-    object InvocationKeyHandler extends BasicComboPopup.InvocationKeyHandler
+    type InvocationKeyHandler = BasicComboPopup_InvocationKeyHandler
 
     /** A listener to be registered upon the combo box
      *  (not its popup menu)
      *  to handle mouse events
      *  that affect the state of the popup menu.
      */
-    @stub
-    protected object InvocationMouseHandler extends BasicComboPopup.InvocationMouseHandler
+    protected type InvocationMouseHandler = BasicComboPopup_InvocationMouseHandler
 
     /** This listener watches for dragging and updates the current selection in the
      *  list if it is dragging over the list.
      */
-    @stub
-    protected object InvocationMouseMotionHandler extends BasicComboPopup.InvocationMouseMotionHandler
+    protected type InvocationMouseMotionHandler = BasicComboPopup_InvocationMouseMotionHandler
 
     /** This listener watches for changes to the selection in the
      *  combo box.
      */
-    @stub
-    protected object ItemHandler extends BasicComboPopup.ItemHandler
+    protected type ItemHandler = BasicComboPopup_ItemHandler
 
     /** As of 1.4, this class is now obsolete, doesn't do anything, and
      *  is only included for backwards API compatibility.
      */
-    @stub
-    object ListDataHandler extends BasicComboPopup.ListDataHandler
+    type ListDataHandler = BasicComboPopup_ListDataHandler
 
     /** This listener hides the popup when the mouse is released in the list. */
-    @stub
-    protected object ListMouseHandler extends BasicComboPopup.ListMouseHandler
+    protected type ListMouseHandler = BasicComboPopup_ListMouseHandler
 
     /** This listener changes the selected item as you move the mouse over the list. */
-    @stub
-    protected object ListMouseMotionHandler extends BasicComboPopup.ListMouseMotionHandler
+    protected type ListMouseMotionHandler = BasicComboPopup_ListMouseMotionHandler
 
     /** As of Java 2 platform v 1.4, this class is now obsolete, doesn't do anything, and
      *  is only included for backwards API compatibility.
      */
-    @stub
-    protected object ListSelectionHandler extends BasicComboPopup.ListSelectionHandler
+    protected type ListSelectionHandler = BasicComboPopup_ListSelectionHandler
 
     /** This listener watches for bound properties that have changed in the
      *  combo box.
      */
-    @stub
-    protected object PropertyChangeHandler extends BasicComboPopup.PropertyChangeHandler
+    protected type PropertyChangeHandler = BasicComboPopup_PropertyChangeHandler
 
     /** This protected field is implementation specific. */
     @stub

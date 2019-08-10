@@ -87,7 +87,7 @@ class Timestamp extends Date {
      *  equal to the given object.
      */
     @stub
-    def equals(ts: Object): Boolean = ???
+    def equals(ts: Any): Boolean = ???
 
     /** Tests to see if this Timestamp object is
      *  equal to the given Timestamp object.

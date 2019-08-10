@@ -172,7 +172,7 @@ class File extends Object with Serializable with Comparable[File] {
 
     /** Tests this abstract pathname for equality with the given object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Tests whether the file or directory denoted by this abstract pathname
      *  exists.

@@ -119,7 +119,7 @@ class Hashtable[K, V] extends Dictionary[K, V] with Map[K, V] with Cloneable wit
 
     /** Creates a shallow copy of this hashtable. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Attempts to compute a mapping for the specified key and its current
      *  mapped value (or null if there is no current mapping).
@@ -142,15 +142,15 @@ class Hashtable[K, V] extends Dictionary[K, V] with Map[K, V] with Cloneable wit
 
     /** Tests if some key maps into the specified value in this hashtable. */
     @stub
-    def contains(value: Object): Boolean = ???
+    def contains(value: Any): Boolean = ???
 
     /** Tests if the specified object is a key in this hashtable. */
     @stub
-    def containsKey(key: Object): Boolean = ???
+    def containsKey(key: Any): Boolean = ???
 
     /** Returns true if this hashtable maps one or more keys to this value. */
     @stub
-    def containsValue(value: Object): Boolean = ???
+    def containsValue(value: Any): Boolean = ???
 
     /** Returns an enumeration of the values in this hashtable. */
     @stub
@@ -164,7 +164,7 @@ class Hashtable[K, V] extends Dictionary[K, V] with Map[K, V] with Cloneable wit
      *  as per the definition in the Map interface.
      */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Performs the given action for each entry in this map until all entries
      *  have been processed or the action throws an exception.
@@ -176,13 +176,13 @@ class Hashtable[K, V] extends Dictionary[K, V] with Map[K, V] with Cloneable wit
      *  or null if this map contains no mapping for the key.
      */
     @stub
-    def get(key: Object): V = ???
+    def get(key: Any): V = ???
 
     /** Returns the value to which the specified key is mapped, or
      *  defaultValue if this map contains no mapping for the key.
      */
     @stub
-    def getOrDefault(key: Object, defaultValue: V): V = ???
+    def getOrDefault(key: Any, defaultValue: V): V = ???
 
     /** Returns the hash code value for this Map as per the definition in the
      *  Map interface.
@@ -236,13 +236,13 @@ class Hashtable[K, V] extends Dictionary[K, V] with Map[K, V] with Cloneable wit
      *  hashtable.
      */
     @stub
-    def remove(key: Object): V = ???
+    def remove(key: Any): V = ???
 
     /** Removes the entry for the specified key only if it is currently
      *  mapped to the specified value.
      */
     @stub
-    def remove(key: Object, value: Object): Boolean = ???
+    def remove(key: Any, value: Any): Boolean = ???
 
     /** Replaces the entry for the specified key only if it is
      *  currently mapped to some value.

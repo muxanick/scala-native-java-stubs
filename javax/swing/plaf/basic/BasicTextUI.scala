@@ -217,10 +217,8 @@ abstract class BasicTextUI extends TextUI with ViewFactory {
 
 object BasicTextUI {
     /**  */
-    @stub
-    object BasicCaret extends BasicTextUI.BasicCaret
+    type BasicCaret = BasicTextUI_BasicCaret
 
     /**  */
-    @stub
-    object BasicHighlighter extends BasicTextUI.BasicHighlighter
+    type BasicHighlighter = BasicTextUI_BasicHighlighter
 }

@@ -58,5 +58,5 @@ class JAXBResult extends SAXResult {
 
     /** Gets the unmarshalled object created by the transformation. */
     @stub
-    def getResult(): Object = ???
+    def getResult(): Any = ???
 }

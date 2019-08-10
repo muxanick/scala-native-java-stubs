@@ -6,7 +6,7 @@ import scala.scalanative.annotation.stub
 /** Class MediaSize.Engineering includes MediaSize values
  *  for engineering media.
  */
-final object MediaSize.Engineering extends Object {
+final object MediaSize_Engineering extends Object {
 
     /** Specifies the engineering A size, 8.5 inch by 11 inch. */
     @stub

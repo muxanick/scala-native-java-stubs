@@ -24,7 +24,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object JInternalFrame.JDesktopIcon extends JComponent with Accessible {
+object JInternalFrame_JDesktopIcon extends JComponent with Accessible {
 
     /** Creates an icon for an internal frame. */
     @stub
@@ -33,8 +33,7 @@ object JInternalFrame.JDesktopIcon extends JComponent with Accessible {
     /** This class implements accessibility support for the
      *  JInternalFrame.JDesktopIcon class.
      */
-    @stub
-    protected object AccessibleJDesktopIcon extends JInternalFrame.JDesktopIcon.AccessibleJDesktopIcon
+    protected type AccessibleJDesktopIcon = JInternalFrame_JDesktopIcon_AccessibleJDesktopIcon
 
     /** Gets the AccessibleContext associated with this JDesktopIcon. */
     @stub

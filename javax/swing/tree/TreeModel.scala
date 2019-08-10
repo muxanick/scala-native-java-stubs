@@ -42,23 +42,23 @@ trait TreeModel {
      *  child array.
      */
     @stub
-    def getChild(parent: Object, index: Int): Object = ???
+    def getChild(parent: Any, index: Int): Any = ???
 
     /** Returns the number of children of parent. */
     @stub
-    def getChildCount(parent: Object): Int = ???
+    def getChildCount(parent: Any): Int = ???
 
     /** Returns the index of child in parent. */
     @stub
-    def getIndexOfChild(parent: Object, child: Object): Int = ???
+    def getIndexOfChild(parent: Any, child: Any): Int = ???
 
     /** Returns the root of the tree. */
     @stub
-    def getRoot(): Object = ???
+    def getRoot(): Any = ???
 
     /** Returns true if node is a leaf. */
     @stub
-    def isLeaf(node: Object): Boolean = ???
+    def isLeaf(node: Any): Boolean = ???
 
     /** Removes a listener previously added with
      *  addTreeModelListener.
@@ -70,5 +70,5 @@ trait TreeModel {
      *  by path to newValue.
      */
     @stub
-    def valueForPathChanged(path: TreePath, newValue: Object): Unit = ???
+    def valueForPathChanged(path: TreePath, newValue: Any): Unit = ???
 }

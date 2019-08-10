@@ -17,5 +17,5 @@ trait Renderer {
      *  value should be portrayed as "currently selected".
      */
     @stub
-    def setValue(aValue: Object, isSelected: Boolean): Unit = ???
+    def setValue(aValue: Any, isSelected: Boolean): Unit = ???
 }

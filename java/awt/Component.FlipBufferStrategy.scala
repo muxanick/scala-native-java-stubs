@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** Inner class for flipping buffers on a component.  That component must
  *  be a Canvas or Window.
  */
-protected class Component.FlipBufferStrategy extends BufferStrategy {
+protected class Component_FlipBufferStrategy extends BufferStrategy {
 
     /** Creates a new flipping buffer strategy for this component. */
     @stub

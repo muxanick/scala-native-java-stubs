@@ -63,7 +63,7 @@ trait RenderedImage {
 
     /** Gets a property from the property set of this image. */
     @stub
-    def getProperty(name: String): Object = ???
+    def getProperty(name: String): Any = ???
 
     /** Returns an array of names recognized by
      *  getProperty(String)

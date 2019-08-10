@@ -346,11 +346,11 @@ class DecimalFormat extends NumberFormat {
 
     /** Standard override; no change in semantics. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Overrides equals */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Formats a double to produce a string. */
     @stub
@@ -364,11 +364,11 @@ class DecimalFormat extends NumberFormat {
      *  buffer.
      */
     @stub
-    def format(number: Object, toAppendTo: StringBuffer, pos: FieldPosition): StringBuffer = ???
+    def format(number: Any, toAppendTo: StringBuffer, pos: FieldPosition): StringBuffer = ???
 
     /** Formats an Object producing an AttributedCharacterIterator. */
     @stub
-    def formatToCharacterIterator(obj: Object): AttributedCharacterIterator = ???
+    def formatToCharacterIterator(obj: Any): AttributedCharacterIterator = ???
 
     /** Gets the currency used by this decimal format when formatting
      *  currency values.

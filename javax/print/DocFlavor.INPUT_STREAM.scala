@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  data representation class.
  *  
  */
-object DocFlavor.INPUT_STREAM extends DocFlavor {
+object DocFlavor_INPUT_STREAM extends DocFlavor {
 
     /** Constructs a new doc flavor with the given MIME type and a print
      *  data representation class name of

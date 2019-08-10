@@ -6,7 +6,7 @@ import javax.swing.border.AbstractBorder
 import scala.scalanative.annotation.stub
 
 /**  */
-object BasicBorders.RadioButtonBorder extends BasicBorders.ButtonBorder {
+object BasicBorders_RadioButtonBorder extends BasicBorders.ButtonBorder {
 
     /**  */
     @stub

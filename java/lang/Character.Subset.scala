@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  Other portions of the Java API may define other subsets for their
  *  own purposes.
  */
-object Character.Subset extends Object {
+object Character_Subset extends Object {
 
     /** Constructs a new Subset instance. */
     @stub
@@ -16,7 +16,7 @@ object Character.Subset extends Object {
 
     /** Compares two Subset objects for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the standard hash code as defined by the
      *  Object.hashCode() method.

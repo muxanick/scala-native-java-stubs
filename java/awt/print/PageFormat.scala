@@ -18,7 +18,7 @@ class PageFormat extends Object with Cloneable {
      *  contents as this PageFormat.
      */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns the height, in 1/72nds of an inch, of the page. */
     @stub

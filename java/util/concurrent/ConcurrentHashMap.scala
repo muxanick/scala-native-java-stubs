@@ -249,17 +249,17 @@ class ConcurrentHashMap[K, V] extends AbstractMap[K, V] with ConcurrentMap[K, V]
      *  in this table.
      */
     @stub
-    def contains(value: Object): Boolean = ???
+    def contains(value: Any): Boolean = ???
 
     /** Tests if the specified object is a key in this table. */
     @stub
-    def containsKey(key: Object): Boolean = ???
+    def containsKey(key: Any): Boolean = ???
 
     /** Returns true if this map maps one or more keys to the
      *  specified value.
      */
     @stub
-    def containsValue(value: Object): Boolean = ???
+    def containsValue(value: Any): Boolean = ???
 
     /** Returns an enumeration of the values in this table. */
     @stub
@@ -271,7 +271,7 @@ class ConcurrentHashMap[K, V] extends AbstractMap[K, V] with ConcurrentMap[K, V]
 
     /** Compares the specified object with this map for equality. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Performs the given action for each entry in this map until all entries
      *  have been processed or the action throws an exception.
@@ -323,14 +323,14 @@ class ConcurrentHashMap[K, V] extends AbstractMap[K, V] with ConcurrentMap[K, V]
      *  or null if this map contains no mapping for the key.
      */
     @stub
-    def get(key: Object): V = ???
+    def get(key: Any): V = ???
 
     /** Returns the value to which the specified key is mapped, or the
      *  given default value if this map contains no mapping for the
      *  key.
      */
     @stub
-    def getOrDefault(key: Object, defaultValue: V): V = ???
+    def getOrDefault(key: Any, defaultValue: V): V = ???
 
     /** Returns the hash code value for this Map, i.e.,
      *  the sum of, for each key-value pair in the map,
@@ -513,11 +513,11 @@ class ConcurrentHashMap[K, V] extends AbstractMap[K, V] with ConcurrentMap[K, V]
 
     /** Removes the key (and its corresponding value) from this map. */
     @stub
-    def remove(key: Object): V = ???
+    def remove(key: Any): V = ???
 
     /** Removes the entry for a key only if currently mapped to a given value. */
     @stub
-    def remove(key: Object, value: Object): Boolean = ???
+    def remove(key: Any, value: Any): Boolean = ???
 
     /** Replaces the entry for a key only if currently mapped to some value. */
     @stub
@@ -576,8 +576,7 @@ object ConcurrentHashMap {
      *  which additions may optionally be enabled by mapping to a
      *  common value.
      */
-    @stub
-    object KeySetView[K, V] extends ConcurrentHashMap.KeySetView[K, V]
+    type KeySetView[K, V] = ConcurrentHashMap_KeySetView[K, V]
 
     /** Creates a new Set backed by a ConcurrentHashMap
      *  from the given type to Boolean.TRUE.

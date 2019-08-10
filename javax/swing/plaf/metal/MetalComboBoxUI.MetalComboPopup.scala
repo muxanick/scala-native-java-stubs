@@ -14,7 +14,7 @@ import scala.scalanative.annotation.stub
  *  is only included for backwards API compatibility. Do not call or
  *  override.
  */
-@Deprecated class MetalComboBoxUI.MetalComboPopup extends BasicComboPopup {
+@Deprecated class MetalComboBoxUI_MetalComboPopup extends BasicComboPopup {
 
     /** Deprecated.  */
     @stub

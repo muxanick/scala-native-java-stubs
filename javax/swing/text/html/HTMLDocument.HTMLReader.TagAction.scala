@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
  *  of how each tag is handled and avoids a large
  *  switch statement.
  */
-class HTMLDocument.HTMLReader.TagAction extends Object {
+class HTMLDocument_HTMLReader_TagAction extends Object {
 
     /**  */
     @stub

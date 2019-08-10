@@ -42,7 +42,7 @@ trait InputMethod {
 
     /** Returns a control object from this input method, or null. */
     @stub
-    def getControlObject(): Object = ???
+    def getControlObject(): Any = ???
 
     /** Returns the current input locale. */
     @stub

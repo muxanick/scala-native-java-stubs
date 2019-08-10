@@ -19,7 +19,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JScrollBar.AccessibleJScrollBar extends JComponent.AccessibleJComponent with AccessibleValue {
+protected class JScrollBar_AccessibleJScrollBar extends JComponent.AccessibleJComponent with AccessibleValue {
 
     /**  */
     @stub

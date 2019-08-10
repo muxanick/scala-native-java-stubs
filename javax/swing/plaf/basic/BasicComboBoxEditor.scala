@@ -41,7 +41,7 @@ class BasicComboBoxEditor extends Object with ComboBoxEditor with FocusListener 
 
     /** Return the edited item */
     @stub
-    def getItem(): Object = ???
+    def getItem(): Any = ???
 
     /** Remove an ActionListener */
     @stub
@@ -53,11 +53,10 @@ class BasicComboBoxEditor extends Object with ComboBoxEditor with FocusListener 
 
     /** Sets the item that should be edited. */
     @stub
-    def setItem(anObject: Object): Unit = ???
+    def setItem(anObject: Any): Unit = ???
 }
 
 object BasicComboBoxEditor {
     /** A subclass of BasicComboBoxEditor that implements UIResource. */
-    @stub
-    object UIResource extends BasicComboBoxEditor.UIResource
+    type UIResource = BasicComboBoxEditor_UIResource
 }

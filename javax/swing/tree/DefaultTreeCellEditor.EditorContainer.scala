@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /** Container responsible for placing the editingComponent. */
-class DefaultTreeCellEditor.EditorContainer extends Container {
+class DefaultTreeCellEditor_EditorContainer extends Container {
 
     /** Constructs an EditorContainer object. */
     @stub

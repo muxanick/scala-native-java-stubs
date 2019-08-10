@@ -41,12 +41,10 @@ class BeanContextServicesSupport extends BeanContextSupport with BeanContextServ
     def this(peer: BeanContextServices, lcle: Locale, dTime: Boolean, visible: Boolean) = ???
 
     /**  */
-    @stub
-    protected object BCSSChild extends BeanContextServicesSupport.BCSSChild
+    protected type BCSSChild = BeanContextServicesSupport_BCSSChild
 
     /**  */
-    @stub
-    protected object BCSSProxyServiceProvider extends BeanContextServicesSupport.BCSSProxyServiceProvider
+    protected type BCSSProxyServiceProvider = BeanContextServicesSupport_BCSSProxyServiceProvider
 
     /** List of BeanContextServicesListener objects. */
     @stub
@@ -94,7 +92,7 @@ class BeanContextServicesSupport extends BeanContextSupport with BeanContextServ
      *  has been successfully removed.
      */
     @stub
-    protected def childJustRemovedHook(child: Object, bcsc: BeanContextSupport.BCSChild): Unit = ???
+    protected def childJustRemovedHook(child: Any, bcsc: BeanContextSupport.BCSChild): Unit = ???
 
     /** 
      *  Subclasses can override this method to insert their own subclass
@@ -102,7 +100,7 @@ class BeanContextServicesSupport extends BeanContextSupport with BeanContextServ
      *  methods that add children to the set.
      */
     @stub
-    protected def createBCSChild(targetChild: Object, peer: Object): BeanContextSupport.BCSChild = ???
+    protected def createBCSChild(targetChild: Any, peer: Any): BeanContextSupport.BCSChild = ???
 
     /** subclasses can override this method to create new subclasses of
      *  BCSSServiceProvider without having to override addService() in
@@ -152,7 +150,7 @@ class BeanContextServicesSupport extends BeanContextSupport with BeanContextServ
 
     /** obtain a service which may be delegated */
     @stub
-    def getService(child: BeanContextChild, requestor: Object, serviceClass: Class, serviceSelector: Object, bcsrl: BeanContextServiceRevokedListener): Object = ???
+    def getService(child: BeanContextChild, requestor: Any, serviceClass: Class, serviceSelector: Any, bcsrl: BeanContextServiceRevokedListener): Any = ???
 
     /** has a service, which may be delegated */
     @stub
@@ -178,7 +176,7 @@ class BeanContextServicesSupport extends BeanContextSupport with BeanContextServ
 
     /** release a service */
     @stub
-    def releaseService(child: BeanContextChild, requestor: Object, service: Object): Unit = ???
+    def releaseService(child: BeanContextChild, requestor: Any, service: Any): Unit = ???
 
     /** remove a BeanContextServicesListener */
     @stub
@@ -209,12 +207,11 @@ object BeanContextServicesSupport {
     /** subclasses may subclass this nested class to add behaviors for
      *  each BeanContextServicesProvider.
      */
-    @stub
-    protected object BCSSServiceProvider extends BeanContextServicesSupport.BCSSServiceProvider
+    protected type BCSSServiceProvider = BeanContextServicesSupport_BCSSServiceProvider
 
     /** Gets the BeanContextServicesListener (if any) of the specified
      *  child.
      */
     @stub
-    protected def getChildBeanContextServicesListener(child: Object): BeanContextServicesListener = ???
+    protected def getChildBeanContextServicesListener(child: Any): BeanContextServicesListener = ???
 }

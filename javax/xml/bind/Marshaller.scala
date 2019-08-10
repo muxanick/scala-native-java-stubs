@@ -306,13 +306,13 @@ trait Marshaller {
 
     /** Get a DOM tree view of the content tree(Optional). */
     @stub
-    def getNode(contentTree: Object): Node = ???
+    def getNode(contentTree: Any): Node = ???
 
     /** Get the particular property in the underlying implementation of
      *  Marshaller.
      */
     @stub
-    def getProperty(name: String): Object = ???
+    def getProperty(name: String): Any = ???
 
     /** Get the JAXP 1.3 Schema object
      *  being used to perform marshal-time validation.
@@ -322,41 +322,41 @@ trait Marshaller {
 
     /** Marshal the content tree rooted at jaxbElement into SAX2 events. */
     @stub
-    def marshal(jaxbElement: Object, handler: ContentHandler): Unit = ???
+    def marshal(jaxbElement: Any, handler: ContentHandler): Unit = ???
 
     /** Marshal the content tree rooted at jaxbElement into a file. */
     @stub
-    def marshal(jaxbElement: Object, output: File): Unit = ???
+    def marshal(jaxbElement: Any, output: File): Unit = ???
 
     /** Marshal the content tree rooted at jaxbElement into a DOM tree. */
     @stub
-    def marshal(jaxbElement: Object, node: Node): Unit = ???
+    def marshal(jaxbElement: Any, node: Node): Unit = ???
 
     /** Marshal the content tree rooted at jaxbElement into an output stream. */
     @stub
-    def marshal(jaxbElement: Object, os: OutputStream): Unit = ???
+    def marshal(jaxbElement: Any, os: OutputStream): Unit = ???
 
     /** Marshal the content tree rooted at jaxbElement into the specified
      *  javax.xml.transform.Result.
      */
     @stub
-    def marshal(jaxbElement: Object, result: Result): Unit = ???
+    def marshal(jaxbElement: Any, result: Result): Unit = ???
 
     /** Marshal the content tree rooted at jaxbElement into a Writer. */
     @stub
-    def marshal(jaxbElement: Object, writer: Writer): Unit = ???
+    def marshal(jaxbElement: Any, writer: Writer): Unit = ???
 
     /** Marshal the content tree rooted at jaxbElement into a
      *  XMLEventWriter.
      */
     @stub
-    def marshal(jaxbElement: Object, writer: XMLEventWriter): Unit = ???
+    def marshal(jaxbElement: Any, writer: XMLEventWriter): Unit = ???
 
     /** Marshal the content tree rooted at jaxbElement into a
      *  XMLStreamWriter.
      */
     @stub
-    def marshal(jaxbElement: Object, writer: XMLStreamWriter): Unit = ???
+    def marshal(jaxbElement: Any, writer: XMLStreamWriter): Unit = ???
 
     /** Associates a configured instance of XmlAdapter with this marshaller. */
     @stub
@@ -386,7 +386,7 @@ trait Marshaller {
      *  Marshaller.
      */
     @stub
-    def setProperty(name: String, value: Object): Unit = ???
+    def setProperty(name: String, value: Any): Unit = ???
 
     /** Specify the JAXP 1.3 Schema
      *  object that should be used to validate subsequent marshal operations
@@ -401,8 +401,7 @@ object Marshaller {
      *  Register an instance of an implementation of this class with a Marshaller to externally listen
      *  for marshal events.
      */
-    @stub
-    object Listener extends Marshaller.Listener
+    type Listener = Marshaller_Listener
 
     /** The name of the property used to specify the output encoding in
      *  the marshalled XML data.

@@ -45,7 +45,7 @@ class MonitorNotification extends Notification {
 
     /** Gets the derived gauge of this monitor notification. */
     @stub
-    def getDerivedGauge(): Object = ???
+    def getDerivedGauge(): Any = ???
 
     /** Gets the observed attribute of this monitor notification. */
     @stub
@@ -57,7 +57,7 @@ class MonitorNotification extends Notification {
 
     /** Gets the threshold/string (depending on the monitor type) that triggered off this monitor notification. */
     @stub
-    def getTrigger(): Object = ???
+    def getTrigger(): Any = ???
 }
 
 object MonitorNotification {

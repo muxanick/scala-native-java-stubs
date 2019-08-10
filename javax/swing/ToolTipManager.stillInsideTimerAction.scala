@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class ToolTipManager.stillInsideTimerAction extends Object with ActionListener {
+protected class ToolTipManager_stillInsideTimerAction extends Object with ActionListener {
 
     /**  */
     @stub

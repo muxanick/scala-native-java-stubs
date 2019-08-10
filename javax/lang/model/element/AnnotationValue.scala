@@ -22,7 +22,7 @@ trait AnnotationValue {
 
     /** Returns the value. */
     @stub
-    def getValue(): Object = ???
+    def getValue(): Any = ???
 
     /** Returns a string representation of this value. */
     @stub

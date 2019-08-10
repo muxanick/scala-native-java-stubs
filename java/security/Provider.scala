@@ -69,19 +69,19 @@ abstract class Provider extends Properties {
      *  current mapped value (or null if there is no current
      *  mapping).
      */
-    def compute(key: Object, remappingFunction: BiFunction[_ >: Object, _ >: Object, _ <: Object]): Object
+    def compute(key: Any, remappingFunction: BiFunction[_ >: Object, _ >: Object, _ <: Object]): Any
 
     /** If the specified key is not already associated with a value (or
      *  is mapped to null), attempts to compute its value using
      *  the given mapping function and enters it into this map unless
      *  null.
      */
-    def computeIfAbsent(key: Object, mappingFunction: Function[_ >: Object, _ <: Object]): Object
+    def computeIfAbsent(key: Any, mappingFunction: Function[_ >: Object, _ <: Object]): Any
 
     /** If the value for the specified key is present and non-null, attempts to
      *  compute a new mapping given the key and its current mapped value.
      */
-    def computeIfPresent(key: Object, remappingFunction: BiFunction[_ >: Object, _ >: Object, _ <: Object]): Object
+    def computeIfPresent(key: Any, remappingFunction: BiFunction[_ >: Object, _ >: Object, _ <: Object]): Any
 
     /** Returns an enumeration of the values in this hashtable. */
     def elements(): Enumeration[Object]
@@ -99,7 +99,7 @@ abstract class Provider extends Properties {
     /** Returns the value to which the specified key is mapped,
      *  or null if this map contains no mapping for the key.
      */
-    def get(key: Object): Object
+    def get(key: Any): Any
 
     /** Returns a human-readable description of the provider and its
      *  services.
@@ -112,7 +112,7 @@ abstract class Provider extends Properties {
     /** Returns the value to which the specified key is mapped, or
      *  defaultValue if this map contains no mapping for the key.
      */
-    def getOrDefault(key: Object, defaultValue: Object): Object
+    def getOrDefault(key: Any, defaultValue: Any): Any
 
     /** Searches for the property with the specified key in this property list. */
     def getProperty(key: String): String
@@ -144,12 +144,12 @@ abstract class Provider extends Properties {
     /** If the specified key is not already associated with a value or is
      *  associated with null, associates it with the given value.
      */
-    def merge(key: Object, value: Object, remappingFunction: BiFunction[_ >: Object, _ >: Object, _ <: Object]): Object
+    def merge(key: Any, value: Any, remappingFunction: BiFunction[_ >: Object, _ >: Object, _ <: Object]): Any
 
     /** Sets the key property to have the specified
      *  value.
      */
-    def put(key: Object, value: Object): Object
+    def put(key: Any, value: Any): Any
 
     /** Copies all of the mappings from the specified Map to this provider. */
     def putAll(t: Map[_, _]): Unit
@@ -158,7 +158,7 @@ abstract class Provider extends Properties {
      *  to null) associates it with the given value and returns
      *  null, else returns the current value.
      */
-    def putIfAbsent(key: Object, value: Object): Object
+    def putIfAbsent(key: Any, value: Any): Any
 
     /** Add a service. */
     protected def putService(s: Provider.Service): Unit
@@ -166,12 +166,12 @@ abstract class Provider extends Properties {
     /** Removes the key property (and its corresponding
      *  value).
      */
-    def remove(key: Object): Object
+    def remove(key: Any): Any
 
     /** Removes the entry for the specified key only if it is currently
      *  mapped to the specified value.
      */
-    def remove(key: Object, value: Object): Boolean
+    def remove(key: Any, value: Any): Boolean
 
     /** Remove a service previously added using
      *  putService().
@@ -181,12 +181,12 @@ abstract class Provider extends Properties {
     /** Replaces the entry for the specified key only if it is
      *  currently mapped to some value.
      */
-    def replace(key: Object, value: Object): Object
+    def replace(key: Any, value: Any): Any
 
     /** Replaces the entry for the specified key only if currently
      *  mapped to the specified value.
      */
-    def replace(key: Object, oldValue: Object, newValue: Object): Boolean
+    def replace(key: Any, oldValue: Any, newValue: Any): Boolean
 
     /** Replaces each entry's value with the result of invoking the given
      *  function on that entry, in the order entries are returned by an entry
@@ -208,6 +208,5 @@ abstract class Provider extends Properties {
 
 object Provider {
     /** The description of a security service. */
-    @stub
-    object Service extends Provider.Service
+    type Service = Provider_Service
 }

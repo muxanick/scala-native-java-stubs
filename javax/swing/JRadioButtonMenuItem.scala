@@ -86,8 +86,7 @@ class JRadioButtonMenuItem extends JMenuItem with Accessible {
     /** This class implements accessibility support for the
      *  JRadioButtonMenuItem class.
      */
-    @stub
-    protected object AccessibleJRadioButtonMenuItem extends JRadioButtonMenuItem.AccessibleJRadioButtonMenuItem
+    protected type AccessibleJRadioButtonMenuItem = JRadioButtonMenuItem_AccessibleJRadioButtonMenuItem
 
     /** Gets the AccessibleContext associated with this JRadioButtonMenuItem. */
     @stub

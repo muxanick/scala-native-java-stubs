@@ -17,7 +17,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JLabel.AccessibleJLabel extends JComponent.AccessibleJComponent with AccessibleText with AccessibleExtendedComponent {
+protected class JLabel_AccessibleJLabel extends JComponent.AccessibleJComponent with AccessibleText with AccessibleExtendedComponent {
 
     /**  */
     @stub

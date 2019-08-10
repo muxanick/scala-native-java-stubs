@@ -9,10 +9,10 @@ import scala.scalanative.annotation.stub
  *  POST corresponds to the POST from method
  *  
  */
-class FormSubmitEvent.MethodType private (name: String, ordinal: Int) extends Enum[FormSubmitEvent.MethodType](name, ordinal) {
+class FormSubmitEvent_MethodType private (name: String, ordinal: Int) extends Enum[FormSubmitEvent.MethodType](name, ordinal) {
 }
 
-object FormSubmitEvent.MethodType {
+object FormSubmitEvent_MethodType {
     /**  */
     final val GET = new FormSubmitEvent.MethodType(GET, 0)
 

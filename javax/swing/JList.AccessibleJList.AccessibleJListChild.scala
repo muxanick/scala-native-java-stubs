@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
 /** This class implements accessibility support appropriate
  *  for list children.
  */
-protected class JList.AccessibleJList.AccessibleJListChild extends AccessibleContext with Accessible with AccessibleComponent {
+protected class JList_AccessibleJList_AccessibleJListChild extends AccessibleContext with Accessible with AccessibleComponent {
 
     /**  */
     @stub

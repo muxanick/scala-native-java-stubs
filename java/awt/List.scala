@@ -90,8 +90,7 @@ class List extends Component with ItemSelectable with Accessible {
     /** This class implements accessibility support for the
      *  List class.
      */
-    @stub
-    protected object AccessibleAWTList extends List.AccessibleAWTList
+    protected type AccessibleAWTList = List_AccessibleAWTList
 
     /** Adds the specified item to the end of scrolling list. */
     @stub

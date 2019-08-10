@@ -10,7 +10,7 @@ import scala.scalanative.annotation.stub
  * 1.3
  * 
  */
-object MetalBorders.ToggleButtonBorder extends MetalBorders.ButtonBorder {
+object MetalBorders_ToggleButtonBorder extends MetalBorders.ButtonBorder {
 
     /**  */
     @stub

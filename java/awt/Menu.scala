@@ -39,8 +39,7 @@ class Menu extends MenuItem with MenuContainer with Accessible {
     /** Inner class of Menu used to provide default support for
      *  accessibility.
      */
-    @stub
-    protected object AccessibleAWTMenu extends Menu.AccessibleAWTMenu
+    protected type AccessibleAWTMenu = Menu_AccessibleAWTMenu
 
     /** Adds the specified menu item to this menu. */
     @stub

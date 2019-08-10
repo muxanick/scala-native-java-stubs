@@ -35,7 +35,7 @@ trait Element extends AnnotatedConstruct {
      *  element as this, or false otherwise.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns this construct's annotation of the specified type if
      *  such an annotation is present, else null.

@@ -259,44 +259,43 @@ class JOptionPane extends JComponent with Accessible {
      *  the UI.
      */
     @stub
-    def this(message: Object) = ???
+    def this(message: Any) = ???
 
     /** Creates an instance of JOptionPane to display a message
      *  with the specified message type and the default options,
      */
     @stub
-    def this(message: Object, messageType: Int) = ???
+    def this(message: Any, messageType: Int) = ???
 
     /** Creates an instance of JOptionPane to display a message
      *  with the specified message type and options.
      */
     @stub
-    def this(message: Object, messageType: Int, optionType: Int) = ???
+    def this(message: Any, messageType: Int, optionType: Int) = ???
 
     /** Creates an instance of JOptionPane to display a message
      *  with the specified message type, options, and icon.
      */
     @stub
-    def this(message: Object, messageType: Int, optionType: Int, icon: Icon) = ???
+    def this(message: Any, messageType: Int, optionType: Int, icon: Icon) = ???
 
     /** Creates an instance of JOptionPane to display a message
      *  with the specified message type, icon, and options.
      */
     @stub
-    def this(message: Object, messageType: Int, optionType: Int, icon: Icon, options: Array[Object]) = ???
+    def this(message: Any, messageType: Int, optionType: Int, icon: Icon, options: Array[Object]) = ???
 
     /** Creates an instance of JOptionPane to display a message
      *  with the specified message type, icon, and options, with the
      *  initially-selected option specified.
      */
     @stub
-    def this(message: Object, messageType: Int, optionType: Int, icon: Icon, options: Array[Object], initialValue: Object) = ???
+    def this(message: Any, messageType: Int, optionType: Int, icon: Icon, options: Array[Object], initialValue: Any) = ???
 
     /** This class implements accessibility support for the
      *  JOptionPane class.
      */
-    @stub
-    protected object AccessibleJOptionPane extends JOptionPane.AccessibleJOptionPane
+    protected type AccessibleJOptionPane = JOptionPane_AccessibleJOptionPane
 
     /** Icon used in pane. */
     @stub
@@ -304,19 +303,19 @@ class JOptionPane extends JComponent with Accessible {
 
     /** Initial value to select in selectionValues. */
     @stub
-    protected val initialSelectionValue: Object = ???
+    protected val initialSelectionValue: Any = ???
 
     /** Value that should be initially selected in options. */
     @stub
-    protected val initialValue: Object = ???
+    protected val initialValue: Any = ???
 
     /** Value the user has input. */
     @stub
-    protected val inputValue: Object = ???
+    protected val inputValue: Any = ???
 
     /** Message to display. */
     @stub
-    protected val message: Object = ???
+    protected val message: Any = ???
 
     /** Message type. */
     @stub
@@ -342,7 +341,7 @@ class JOptionPane extends JComponent with Accessible {
      *  UNINITIALIZED_VALUE or null.
      */
     @stub
-    protected val value: Object = ???
+    protected val value: Any = ???
 
     /** If true, a UI widget will be provided to the user to get input. */
     @stub
@@ -375,17 +374,17 @@ class JOptionPane extends JComponent with Accessible {
 
     /** Returns the input value that is displayed as initially selected to the user. */
     @stub
-    def getInitialSelectionValue(): Object = ???
+    def getInitialSelectionValue(): Any = ???
 
     /** Returns the initial value. */
     @stub
-    def getInitialValue(): Object = ???
+    def getInitialValue(): Any = ???
 
     /** Returns the value the user has input, if wantsInput
      *  is true.
      */
     @stub
-    def getInputValue(): Object = ???
+    def getInputValue(): Any = ???
 
     /** Returns the maximum number of characters to place on a line in a
      *  message.
@@ -395,7 +394,7 @@ class JOptionPane extends JComponent with Accessible {
 
     /** Returns the message-object this pane displays. */
     @stub
-    def getMessage(): Object = ???
+    def getMessage(): Any = ???
 
     /** Returns the message type. */
     @stub
@@ -425,7 +424,7 @@ class JOptionPane extends JComponent with Accessible {
 
     /** Returns the value the user has selected. */
     @stub
-    def getValue(): Object = ???
+    def getValue(): Any = ???
 
     /** Returns the value of the wantsInput property. */
     @stub
@@ -447,22 +446,22 @@ class JOptionPane extends JComponent with Accessible {
 
     /** Sets the input value that is initially displayed as selected to the user. */
     @stub
-    def setInitialSelectionValue(newValue: Object): Unit = ???
+    def setInitialSelectionValue(newValue: Any): Unit = ???
 
     /** Sets the initial value that is to be enabled -- the
      *  Component
      *  that has the focus when the pane is initially displayed.
      */
     @stub
-    def setInitialValue(newInitialValue: Object): Unit = ???
+    def setInitialValue(newInitialValue: Any): Unit = ???
 
     /** Sets the input value that was selected or input by the user. */
     @stub
-    def setInputValue(newValue: Object): Unit = ???
+    def setInputValue(newValue: Any): Unit = ???
 
     /** Sets the option pane's message-object. */
     @stub
-    def setMessage(newMessage: Object): Unit = ???
+    def setMessage(newMessage: Any): Unit = ???
 
     /** Sets the option pane's message type. */
     @stub
@@ -488,7 +487,7 @@ class JOptionPane extends JComponent with Accessible {
 
     /** Sets the value the user has chosen. */
     @stub
-    def setValue(newValue: Object): Unit = ???
+    def setValue(newValue: Any): Unit = ???
 
     /** Sets the wantsInput property. */
     @stub
@@ -583,7 +582,7 @@ object JOptionPane {
 
     /** Indicates that the user has not yet selected a value. */
     @stub
-    val UNINITIALIZED_VALUE: Object = ???
+    val UNINITIALIZED_VALUE: Any = ???
 
     /** Bound property name for value. */
     @stub
@@ -634,13 +633,13 @@ object JOptionPane {
      *  title, Select an Option.
      */
     @stub
-    def showConfirmDialog(parentComponent: Component, message: Object): Int = ???
+    def showConfirmDialog(parentComponent: Component, message: Any): Int = ???
 
     /** Brings up a dialog where the number of choices is determined
      *  by the optionType parameter.
      */
     @stub
-    def showConfirmDialog(parentComponent: Component, message: Object, title: String, optionType: Int): Int = ???
+    def showConfirmDialog(parentComponent: Component, message: Any, title: String, optionType: Int): Int = ???
 
     /** Brings up a dialog where the number of choices is determined
      *  by the optionType parameter, where the
@@ -648,112 +647,112 @@ object JOptionPane {
      *  parameter determines the icon to display.
      */
     @stub
-    def showConfirmDialog(parentComponent: Component, message: Object, title: String, optionType: Int, messageType: Int): Int = ???
+    def showConfirmDialog(parentComponent: Component, message: Any, title: String, optionType: Int, messageType: Int): Int = ???
 
     /** Brings up a dialog with a specified icon, where the number of
      *  choices is determined by the optionType parameter.
      */
     @stub
-    def showConfirmDialog(parentComponent: Component, message: Object, title: String, optionType: Int, messageType: Int, icon: Icon): Int = ???
+    def showConfirmDialog(parentComponent: Component, message: Any, title: String, optionType: Int, messageType: Int, icon: Icon): Int = ???
 
     /** Shows a question-message dialog requesting input from the user
      *  parented to parentComponent.
      */
     @stub
-    def showInputDialog(parentComponent: Component, message: Object): String = ???
+    def showInputDialog(parentComponent: Component, message: Any): String = ???
 
     /** Shows a question-message dialog requesting input from the user and
      *  parented to parentComponent.
      */
     @stub
-    def showInputDialog(parentComponent: Component, message: Object, initialSelectionValue: Object): String = ???
+    def showInputDialog(parentComponent: Component, message: Any, initialSelectionValue: Any): String = ???
 
     /** Shows a dialog requesting input from the user parented to
      *  parentComponent with the dialog having the title
      *  title and message type messageType.
      */
     @stub
-    def showInputDialog(parentComponent: Component, message: Object, title: String, messageType: Int): String = ???
+    def showInputDialog(parentComponent: Component, message: Any, title: String, messageType: Int): String = ???
 
     /** Prompts the user for input in a blocking dialog where the
      *  initial selection, possible selections, and all other options can
      *  be specified.
      */
     @stub
-    def showInputDialog(parentComponent: Component, message: Object, title: String, messageType: Int, icon: Icon, selectionValues: Array[Object], initialSelectionValue: Object): Object = ???
+    def showInputDialog(parentComponent: Component, message: Any, title: String, messageType: Int, icon: Icon, selectionValues: Array[Object], initialSelectionValue: Any): Any = ???
 
     /** Shows a question-message dialog requesting input from the user. */
     @stub
-    def showInputDialog(message: Object): String = ???
+    def showInputDialog(message: Any): String = ???
 
     /** Shows a question-message dialog requesting input from the user, with
      *  the input value initialized to initialSelectionValue.
      */
     @stub
-    def showInputDialog(message: Object, initialSelectionValue: Object): String = ???
+    def showInputDialog(message: Any, initialSelectionValue: Any): String = ???
 
     /** Brings up an internal dialog panel with the options Yes, No
      *  and Cancel; with the title, Select an Option.
      */
     @stub
-    def showInternalConfirmDialog(parentComponent: Component, message: Object): Int = ???
+    def showInternalConfirmDialog(parentComponent: Component, message: Any): Int = ???
 
     /** Brings up a internal dialog panel where the number of choices
      *  is determined by the optionType parameter.
      */
     @stub
-    def showInternalConfirmDialog(parentComponent: Component, message: Object, title: String, optionType: Int): Int = ???
+    def showInternalConfirmDialog(parentComponent: Component, message: Any, title: String, optionType: Int): Int = ???
 
     /** Brings up an internal dialog panel where the number of choices
      *  is determined by the optionType parameter, where
      *  the messageType parameter determines the icon to display.
      */
     @stub
-    def showInternalConfirmDialog(parentComponent: Component, message: Object, title: String, optionType: Int, messageType: Int): Int = ???
+    def showInternalConfirmDialog(parentComponent: Component, message: Any, title: String, optionType: Int, messageType: Int): Int = ???
 
     /** Brings up an internal dialog panel with a specified icon, where
      *  the number of choices is determined by the optionType
      *  parameter.
      */
     @stub
-    def showInternalConfirmDialog(parentComponent: Component, message: Object, title: String, optionType: Int, messageType: Int, icon: Icon): Int = ???
+    def showInternalConfirmDialog(parentComponent: Component, message: Any, title: String, optionType: Int, messageType: Int, icon: Icon): Int = ???
 
     /** Shows an internal question-message dialog requesting input from
      *  the user parented to parentComponent.
      */
     @stub
-    def showInternalInputDialog(parentComponent: Component, message: Object): String = ???
+    def showInternalInputDialog(parentComponent: Component, message: Any): String = ???
 
     /** Shows an internal dialog requesting input from the user parented
      *  to parentComponent with the dialog having the title
      *  title and message type messageType.
      */
     @stub
-    def showInternalInputDialog(parentComponent: Component, message: Object, title: String, messageType: Int): String = ???
+    def showInternalInputDialog(parentComponent: Component, message: Any, title: String, messageType: Int): String = ???
 
     /** Prompts the user for input in a blocking internal dialog where
      *  the initial selection, possible selections, and all other
      *  options can be specified.
      */
     @stub
-    def showInternalInputDialog(parentComponent: Component, message: Object, title: String, messageType: Int, icon: Icon, selectionValues: Array[Object], initialSelectionValue: Object): Object = ???
+    def showInternalInputDialog(parentComponent: Component, message: Any, title: String, messageType: Int, icon: Icon, selectionValues: Array[Object], initialSelectionValue: Any): Any = ???
 
     /** Brings up an internal confirmation dialog panel. */
     @stub
-    def showInternalMessageDialog(parentComponent: Component, message: Object): Unit = ???
+    def showInternalMessageDialog(parentComponent: Component, message: Any): Unit = ???
 
     /** Brings up an internal dialog panel that displays a message
      *  using a default icon determined by the messageType
      *  parameter.
      */
     @stub
-    def showInternalMessageDialog(parentComponent: Component, message: Object, title: String, messageType: Int): Unit = ???
+    def showInternalMessageDialog(parentComponent: Component, message: Any, title: String, messageType: Int): Unit = ???
 
     /** Brings up an internal dialog panel displaying a message,
      *  specifying all parameters.
      */
     @stub
-    def showInternalMessageDialog(parentComponent: Component, message: Object, title: String, messageType: Int, icon: Icon): Unit = ???
+    def showInternalMessageDialog(parentComponent: Component, message: Any, title: String, messageType: Int, icon: Icon): Unit = ???
 
     /** Brings up an internal dialog panel with a specified icon, where
      *  the initial choice is determined by the initialValue
@@ -761,21 +760,21 @@ object JOptionPane {
      *  optionType parameter.
      */
     @stub
-    def showInternalOptionDialog(parentComponent: Component, message: Object, title: String, optionType: Int, messageType: Int, icon: Icon, options: Array[Object], initialValue: Object): Int = ???
+    def showInternalOptionDialog(parentComponent: Component, message: Any, title: String, optionType: Int, messageType: Int, icon: Icon, options: Array[Object], initialValue: Any): Int = ???
 
     /** Brings up an information-message dialog titled "Message". */
     @stub
-    def showMessageDialog(parentComponent: Component, message: Object): Unit = ???
+    def showMessageDialog(parentComponent: Component, message: Any): Unit = ???
 
     /** Brings up a dialog that displays a message using a default
      *  icon determined by the messageType parameter.
      */
     @stub
-    def showMessageDialog(parentComponent: Component, message: Object, title: String, messageType: Int): Unit = ???
+    def showMessageDialog(parentComponent: Component, message: Any, title: String, messageType: Int): Unit = ???
 
     /** Brings up a dialog displaying a message, specifying all parameters. */
     @stub
-    def showMessageDialog(parentComponent: Component, message: Object, title: String, messageType: Int, icon: Icon): Unit = ???
+    def showMessageDialog(parentComponent: Component, message: Any, title: String, messageType: Int, icon: Icon): Unit = ???
 
     /** Brings up a dialog with a specified icon, where the initial
      *  choice is determined by the initialValue parameter and
@@ -783,5 +782,5 @@ object JOptionPane {
      *  parameter.
      */
     @stub
-    def showOptionDialog(parentComponent: Component, message: Object, title: String, optionType: Int, messageType: Int, icon: Icon, options: Array[Object], initialValue: Object): Int = ???
+    def showOptionDialog(parentComponent: Component, message: Any, title: String, optionType: Int, messageType: Int, icon: Icon, options: Array[Object], initialValue: Any): Int = ???
 }

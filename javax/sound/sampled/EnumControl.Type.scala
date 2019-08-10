@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
  *  enumerated control.  Static instances are provided for the
  *  common types.
  */
-object EnumControl.Type extends Control.Type {
+object EnumControl_Type extends Control.Type {
 
     /** Constructs a new enumerated control type. */
     @stub

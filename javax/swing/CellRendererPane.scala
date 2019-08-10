@@ -41,8 +41,7 @@ class CellRendererPane extends Container with Accessible {
     /** This class implements accessibility support for the
      *  CellRendererPane class.
      */
-    @stub
-    protected object AccessibleCellRendererPane extends CellRendererPane.AccessibleCellRendererPane
+    protected type AccessibleCellRendererPane = CellRendererPane_AccessibleCellRendererPane
 
     /**  */
     @stub
@@ -53,7 +52,7 @@ class CellRendererPane extends Container with Accessible {
      *  renderer components (CellRendererPane doesn't paint anyway).
      */
     @stub
-    protected def addImpl(x: Component, constraints: Object, index: Int): Unit = ???
+    protected def addImpl(x: Component, constraints: Any, index: Int): Unit = ???
 
     /** Gets the AccessibleContext associated with this CellRendererPane. */
     @stub

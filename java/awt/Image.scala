@@ -36,7 +36,7 @@ abstract class Image extends Object {
     def getHeight(observer: ImageObserver): Int
 
     /** Gets a property of this image by name. */
-    def getProperty(name: String, observer: ImageObserver): Object
+    def getProperty(name: String, observer: ImageObserver): Any
 
     /** Creates a scaled version of this image. */
     def getScaledInstance(width: Int, height: Int, hints: Int): Image
@@ -82,5 +82,5 @@ object Image {
      *  property which was not defined for a particular image is fetched.
      */
     @stub
-    val UndefinedProperty: Object = ???
+    val UndefinedProperty: Any = ???
 }

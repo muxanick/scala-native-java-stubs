@@ -10,7 +10,7 @@ import scala.scalanative.annotation.stub
  *  All the functionality of this class has been included in
  *  BasicComboBoxUI ActionMap/InputMap methods.
  */
-class BasicComboPopup.InvocationKeyHandler extends KeyAdapter {
+class BasicComboPopup_InvocationKeyHandler extends KeyAdapter {
 
     /**  */
     @stub

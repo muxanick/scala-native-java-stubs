@@ -58,8 +58,7 @@ class JToolBar extends JComponent with SwingConstants with Accessible {
     /** This class implements accessibility support for the
      *  JToolBar class.
      */
-    @stub
-    protected object AccessibleJToolBar extends JToolBar.AccessibleJToolBar
+    protected type AccessibleJToolBar = JToolBar_AccessibleJToolBar
 
     /** Adds a new JButton which dispatches the action. */
     @stub
@@ -69,7 +68,7 @@ class JToolBar extends JComponent with SwingConstants with Accessible {
      *  set to be disabled.
      */
     @stub
-    protected def addImpl(comp: Component, constraints: Object, index: Int): Unit = ???
+    protected def addImpl(comp: Component, constraints: Any, index: Int): Unit = ???
 
     /** Appends a separator of default size to the end of the tool bar. */
     @stub
@@ -188,6 +187,5 @@ class JToolBar extends JComponent with SwingConstants with Accessible {
 
 object JToolBar {
     /** A toolbar-specific separator. */
-    @stub
-    object Separator extends JToolBar.Separator
+    type Separator = JToolBar_Separator
 }

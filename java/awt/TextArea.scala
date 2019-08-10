@@ -51,8 +51,7 @@ class TextArea extends TextComponent {
     /** This class implements accessibility support for the
      *  TextArea class.
      */
-    @stub
-    protected object AccessibleAWTTextArea extends TextArea.AccessibleAWTTextArea
+    protected type AccessibleAWTTextArea = TextArea_AccessibleAWTTextArea
 
     /** Creates the TextArea's peer. */
     @stub

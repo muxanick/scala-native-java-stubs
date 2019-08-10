@@ -39,7 +39,7 @@ final class ImageGraphicAttribute extends GraphicAttribute {
      *  Object.
      */
     @stub
-    def equals(rhs: Object): Boolean = ???
+    def equals(rhs: Any): Boolean = ???
 
     /** Returns the advance of this ImageGraphicAttribute. */
     @stub

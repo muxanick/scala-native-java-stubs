@@ -49,7 +49,7 @@ final class YearMonth extends Object with Temporal with TemporalAdjuster with Co
 
     /** Checks if this year-month is equal to another year-month. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Formats this year-month using the specified formatter. */
     @stub

@@ -17,23 +17,23 @@ object Beans {
      *  type view of that source object.
      */
     @stub
-    def getInstanceOf(bean: Object, targetType: Class[_]): Object = ???
+    def getInstanceOf(bean: Any, targetType: Class[_]): Any = ???
 
     /** 
      *  Instantiate a JavaBean.
      */
     @stub
-    def instantiate(cls: ClassLoader, beanName: String): Object = ???
+    def instantiate(cls: ClassLoader, beanName: String): Any = ???
 
     /** 
      *  Instantiate a JavaBean.
      */
     @stub
-    def instantiate(cls: ClassLoader, beanName: String, beanContext: BeanContext): Object = ???
+    def instantiate(cls: ClassLoader, beanName: String, beanContext: BeanContext): Any = ???
 
     /** Instantiate a bean. */
     @stub
-    def instantiate(cls: ClassLoader, beanName: String, beanContext: BeanContext, initializer: AppletInitializer): Object = ???
+    def instantiate(cls: ClassLoader, beanName: String, beanContext: BeanContext, initializer: AppletInitializer): Any = ???
 
     /** Test if we are in design-mode. */
     @stub
@@ -45,7 +45,7 @@ object Beans {
 
     /** Check if a bean can be viewed as a given target type. */
     @stub
-    def isInstanceOf(bean: Object, targetType: Class[_]): Boolean = ???
+    def isInstanceOf(bean: Any, targetType: Class[_]): Boolean = ???
 
     /** Used to indicate whether of not we are running in an application
      *  builder environment.

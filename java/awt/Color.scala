@@ -96,7 +96,7 @@ class Color extends Object with Paint with Serializable {
      *  Color.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the alpha component in the range 0-255. */
     @stub

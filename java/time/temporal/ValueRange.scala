@@ -30,7 +30,7 @@ final class ValueRange extends Object with Serializable {
 
     /** Checks if this range is equal to another range. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Gets the largest possible minimum value that the field can take. */
     @stub

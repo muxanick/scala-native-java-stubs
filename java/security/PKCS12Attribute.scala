@@ -21,7 +21,7 @@ final class PKCS12Attribute extends Object with KeyStore.Entry.Attribute {
      *  equality.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the attribute's ASN.1 DER encoding. */
     @stub

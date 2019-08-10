@@ -20,7 +20,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class ImageIcon.AccessibleImageIcon extends AccessibleContext with AccessibleIcon with Serializable {
+protected class ImageIcon_AccessibleImageIcon extends AccessibleContext with AccessibleIcon with Serializable {
 
     /**  */
     @stub

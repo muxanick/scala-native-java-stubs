@@ -15,7 +15,7 @@ trait AccessibleKeyBinding {
 
     /** Returns a key binding for this object. */
     @stub
-    def getAccessibleKeyBinding(i: Int): Object = ???
+    def getAccessibleKeyBinding(i: Int): Any = ???
 
     /** Returns the number of key bindings for this object */
     @stub

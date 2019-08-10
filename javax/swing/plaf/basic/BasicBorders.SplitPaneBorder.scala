@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
 /** Draws the border around the splitpane. To work correctly you should
  *  also install a border on the divider (property SplitPaneDivider.border).
  */
-object BasicBorders.SplitPaneBorder extends Object with Border with UIResource {
+object BasicBorders_SplitPaneBorder extends Object with Border with UIResource {
 
     /**  */
     @stub

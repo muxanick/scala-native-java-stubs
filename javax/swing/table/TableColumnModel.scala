@@ -36,7 +36,7 @@ trait TableColumnModel {
      *  when compared using equals.
      */
     @stub
-    def getColumnIndex(columnIdentifier: Object): Int = ???
+    def getColumnIndex(columnIdentifier: Any): Int = ???
 
     /** Returns the index of the column that lies on the
      *  horizontal point, xPosition;

@@ -78,8 +78,7 @@ class JSlider extends JComponent with SwingConstants with Accessible {
     /** This class implements accessibility support for the
      *  JSlider class.
      */
-    @stub
-    protected object AccessibleJSlider extends JSlider.AccessibleJSlider
+    protected type AccessibleJSlider = JSlider_AccessibleJSlider
 
     /** Only one ChangeEvent is needed per slider instance since the
      *  event's only (read-only) state is the source property.

@@ -149,7 +149,7 @@ class AudioFormat extends Object {
 
     /** Obtain the property value specified by the key. */
     @stub
-    def getProperty(key: String): Object = ???
+    def getProperty(key: String): Any = ???
 
     /** Obtains the sample rate. */
     @stub
@@ -184,6 +184,5 @@ object AudioFormat {
     /** The Encoding class  names the  specific type of data representation
      *  used for an audio stream.
      */
-    @stub
-    object Encoding extends AudioFormat.Encoding
+    type Encoding = AudioFormat_Encoding
 }

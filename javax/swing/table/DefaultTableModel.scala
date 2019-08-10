@@ -86,15 +86,15 @@ class DefaultTableModel extends AbstractTableModel with Serializable {
 
     /** Adds a column to the model. */
     @stub
-    def addColumn(columnName: Object): Unit = ???
+    def addColumn(columnName: Any): Unit = ???
 
     /** Adds a column to the model. */
     @stub
-    def addColumn(columnName: Object, columnData: Array[Object]): Unit = ???
+    def addColumn(columnName: Any, columnData: Array[Object]): Unit = ???
 
     /** Adds a column to the model. */
     @stub
-    def addColumn(columnName: Object, columnData: Vector): Unit = ???
+    def addColumn(columnName: Any, columnData: Vector): Unit = ???
 
     /** Adds a row to the end of the model. */
     @stub
@@ -127,7 +127,7 @@ class DefaultTableModel extends AbstractTableModel with Serializable {
      *  and column.
      */
     @stub
-    def getValueAt(row: Int, column: Int): Object = ???
+    def getValueAt(row: Int, column: Int): Any = ???
 
     /** Inserts a row at row in the model. */
     @stub
@@ -199,7 +199,7 @@ class DefaultTableModel extends AbstractTableModel with Serializable {
      *  row.
      */
     @stub
-    def setValueAt(aValue: Object, row: Int, column: Int): Unit = ???
+    def setValueAt(aValue: Any, row: Int, column: Int): Unit = ???
 }
 
 object DefaultTableModel {

@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** The Float class defines an ellipse specified
  *  in float precision.
  */
-object Ellipse2D.Float extends Ellipse2D with Serializable {
+object Ellipse2D_Float extends Ellipse2D with Serializable {
 
     /** Constructs a new Ellipse2D, initialized to
      *  location (0, 0) and size (0, 0).

@@ -58,8 +58,7 @@ class MenuItem extends MenuComponent with Accessible {
     /** Inner class of MenuItem used to provide default support for
      *  accessibility.
      */
-    @stub
-    protected object AccessibleAWTMenuItem extends MenuItem.AccessibleAWTMenuItem
+    protected type AccessibleAWTMenuItem = MenuItem_AccessibleAWTMenuItem
 
     /** Adds the specified action listener to receive action events
      *  from this menu item.

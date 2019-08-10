@@ -79,8 +79,7 @@ class JCheckBoxMenuItem extends JMenuItem with SwingConstants with Accessible {
     /** This class implements accessibility support for the
      *  JCheckBoxMenuItem class.
      */
-    @stub
-    protected object AccessibleJCheckBoxMenuItem extends JCheckBoxMenuItem.AccessibleJCheckBoxMenuItem
+    protected type AccessibleJCheckBoxMenuItem = JCheckBoxMenuItem_AccessibleJCheckBoxMenuItem
 
     /** Gets the AccessibleContext associated with this JCheckBoxMenuItem. */
     @stub

@@ -180,7 +180,7 @@ trait Deque[E] extends Queue[E] {
 
     /** Returns true if this deque contains the specified element. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Returns an iterator over the elements in this deque in reverse
      *  sequential order.
@@ -285,7 +285,7 @@ trait Deque[E] extends Queue[E] {
 
     /** Removes the first occurrence of the specified element from this deque. */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Retrieves and removes the first element of this deque. */
     @stub
@@ -293,7 +293,7 @@ trait Deque[E] extends Queue[E] {
 
     /** Removes the first occurrence of the specified element from this deque. */
     @stub
-    def removeFirstOccurrence(o: Object): Boolean = ???
+    def removeFirstOccurrence(o: Any): Boolean = ???
 
     /** Retrieves and removes the last element of this deque. */
     @stub
@@ -301,7 +301,7 @@ trait Deque[E] extends Queue[E] {
 
     /** Removes the last occurrence of the specified element from this deque. */
     @stub
-    def removeLastOccurrence(o: Object): Boolean = ???
+    def removeLastOccurrence(o: Any): Boolean = ???
 
     /** Returns the number of elements in this deque. */
     @stub

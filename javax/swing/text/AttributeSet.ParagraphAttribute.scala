@@ -6,4 +6,5 @@ import scala.scalanative.annotation.stub
  *  to be present on any attribute key that contributes to
  *  the paragraph level presentation.
  */
-object trait AttributeSet.ParagraphAttribute {
+trait AttributeSet_ParagraphAttribute {
+}

@@ -11,10 +11,10 @@ import scala.scalanative.annotation.stub
  *  in progress.  The SSLEngineResult's HandshakeStatus
  *  should be consulted for that information.
  */
-class SSLEngineResult.Status private (name: String, ordinal: Int) extends Enum[SSLEngineResult.Status](name, ordinal) {
+class SSLEngineResult_Status private (name: String, ordinal: Int) extends Enum[SSLEngineResult.Status](name, ordinal) {
 }
 
-object SSLEngineResult.Status {
+object SSLEngineResult_Status {
     /** The SSLEngine was not able to process the
      *  operation because there are not enough bytes available in the
      *  destination buffer to hold the result.

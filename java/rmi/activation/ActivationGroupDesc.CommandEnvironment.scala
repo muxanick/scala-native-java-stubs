@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
  *  This class allows overriding default system properties and
  *  specifying implementation-defined options for ActivationGroups.
  */
-object ActivationGroupDesc.CommandEnvironment extends Object with Serializable {
+object ActivationGroupDesc_CommandEnvironment extends Object with Serializable {
 
     /** Create a CommandEnvironment with all the necessary
      *  information.
@@ -19,7 +19,7 @@ object ActivationGroupDesc.CommandEnvironment extends Object with Serializable {
 
     /** Compares two command environments for content equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Fetch the configured java command options. */
     @stub

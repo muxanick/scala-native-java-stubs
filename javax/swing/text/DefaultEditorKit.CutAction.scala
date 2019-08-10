@@ -17,7 +17,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object DefaultEditorKit.CutAction extends TextAction {
+object DefaultEditorKit_CutAction extends TextAction {
 
     /** Create this object with the appropriate identifier. */
     @stub

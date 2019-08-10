@@ -3,10 +3,10 @@ package java.lang
 import scala.scalanative.annotation.stub
 
 /** The type of a ProcessBuilder.Redirect. */
-class ProcessBuilder.Redirect.Type private (name: String, ordinal: Int) extends Enum[ProcessBuilder.Redirect.Type](name, ordinal) {
+class ProcessBuilder_Redirect_Type private (name: String, ordinal: Int) extends Enum[ProcessBuilder.Redirect.Type](name, ordinal) {
 }
 
-object ProcessBuilder.Redirect.Type {
+object ProcessBuilder_Redirect_Type {
     /** The type of redirects returned from
      *  Redirect.appendTo(File).
      */

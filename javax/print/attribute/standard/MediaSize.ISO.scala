@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
  *  media.
  *  
  */
-final object MediaSize.ISO extends Object {
+final object MediaSize_ISO extends Object {
 
     /** Specifies the ISO A0 size, 841 mm by 1189 mm. */
     @stub

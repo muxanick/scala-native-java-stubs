@@ -35,7 +35,7 @@ final class SerializedLambda extends Object with Serializable {
 
     /** Get a dynamic argument to the lambda capture site. */
     @stub
-    def getCapturedArg(i: Int): Object = ???
+    def getCapturedArg(i: Int): Any = ???
 
     /** Get the count of dynamic arguments to the lambda capture site. */
     @stub

@@ -56,7 +56,7 @@ import scala.scalanative.annotation.stub
  *    }
  *  }
  */
-object trait ForkJoinPool.ManagedBlocker {
+trait ForkJoinPool_ManagedBlocker {
 
     /** Possibly blocks the current thread, for example waiting for
      *  a lock or condition.

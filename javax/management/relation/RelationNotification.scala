@@ -20,11 +20,11 @@ class RelationNotification extends Notification {
      *  relation) or for a relation removal from the Relation Service.
      */
     @stub
-    def this(notifType: String, sourceObj: Object, sequence: Long, timeStamp: Long, message: String, id: String, typeName: String, objectName: ObjectName, unregMBeanList: List[ObjectName]) = ???
+    def this(notifType: String, sourceObj: Any, sequence: Long, timeStamp: Long, message: String, id: String, typeName: String, objectName: ObjectName, unregMBeanList: List[ObjectName]) = ???
 
     /** Creates a notification for a role update in a relation. */
     @stub
-    def this(notifType: String, sourceObj: Object, sequence: Long, timeStamp: Long, message: String, id: String, typeName: String, objectName: ObjectName, name: String, newValue: List[ObjectName], oldValue: List[ObjectName]) = ???
+    def this(notifType: String, sourceObj: Any, sequence: Long, timeStamp: Long, message: String, id: String, typeName: String, objectName: ObjectName, name: String, newValue: List[ObjectName], oldValue: List[ObjectName]) = ???
 
     /** Returns the list of ObjectNames of MBeans expected to be unregistered
      *  due to a relation removal (only for relation removal).

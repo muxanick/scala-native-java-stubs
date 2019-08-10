@@ -4,10 +4,10 @@ import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** Enum for BigDecimal formatting. */
-class Formatter.BigDecimalLayoutForm private (name: String, ordinal: Int) extends Enum[Formatter.BigDecimalLayoutForm](name, ordinal) {
+class Formatter_BigDecimalLayoutForm private (name: String, ordinal: Int) extends Enum[Formatter.BigDecimalLayoutForm](name, ordinal) {
 }
 
-object Formatter.BigDecimalLayoutForm {
+object Formatter_BigDecimalLayoutForm {
     /** Format the BigDecimal as a decimal number. */
     final val DECIMAL_FLOAT = new Formatter.BigDecimalLayoutForm(DECIMAL_FLOAT, 0)
 

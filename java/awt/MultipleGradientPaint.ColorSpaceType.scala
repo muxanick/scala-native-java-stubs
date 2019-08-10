@@ -4,10 +4,10 @@ import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** The color space in which to perform the gradient interpolation. */
-class MultipleGradientPaint.ColorSpaceType private (name: String, ordinal: Int) extends Enum[MultipleGradientPaint.ColorSpaceType](name, ordinal) {
+class MultipleGradientPaint_ColorSpaceType private (name: String, ordinal: Int) extends Enum[MultipleGradientPaint.ColorSpaceType](name, ordinal) {
 }
 
-object MultipleGradientPaint.ColorSpaceType {
+object MultipleGradientPaint_ColorSpaceType {
     /** Indicates that the color interpolation should occur in linearized
      *  RGB space.
      */

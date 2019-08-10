@@ -15,7 +15,7 @@ import scala.scalanative.annotation.stub
      * 
      */
     @stub
-    def getSecurityContext(loader: ClassLoader): Object = ???
+    def getSecurityContext(loader: ClassLoader): Any = ???
 
     /** Deprecated. 
      * no replacement

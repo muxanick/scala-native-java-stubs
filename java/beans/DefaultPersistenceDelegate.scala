@@ -40,7 +40,7 @@ class DefaultPersistenceDelegate extends PersistenceDelegate {
      *  they are returned by the Introspector.
      */
     @stub
-    protected def initialize(type: Class[_], oldInstance: Object, newInstance: Object, out: Encoder): Unit = ???
+    protected def initialize(type: Class[_], oldInstance: Any, newInstance: Any, out: Encoder): Unit = ???
 
     /** This default implementation of the instantiate method returns
      *  an expression containing the predefined method name "new" which denotes a
@@ -48,12 +48,12 @@ class DefaultPersistenceDelegate extends PersistenceDelegate {
      *  the DefaultPersistenceDelegate's constructor.
      */
     @stub
-    protected def instantiate(oldInstance: Object, out: Encoder): Expression = ???
+    protected def instantiate(oldInstance: Any, out: Encoder): Expression = ???
 
     /** If the number of arguments in the specified constructor is non-zero and
      *  the class of oldInstance explicitly declares an "equals" method
      *  this method returns the value of oldInstance.equals(newInstance).
      */
     @stub
-    protected def mutatesTo(oldInstance: Object, newInstance: Object): Boolean = ???
+    protected def mutatesTo(oldInstance: Any, newInstance: Any): Boolean = ???
 }

@@ -18,7 +18,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object DefaultEditorKit.InsertBreakAction extends TextAction {
+object DefaultEditorKit_InsertBreakAction extends TextAction {
 
     /** Creates this object with the appropriate identifier. */
     @stub

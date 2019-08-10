@@ -9,18 +9,16 @@ import scala.scalanative.annotation.stub
  *  An Entry object contains information about the model
  *  as well as methods for getting the underlying values from the model.
  */
-object abstract RowFilter.Entry[M, I] extends Object {
+object abstract RowFilter_Entry[M, I] extends Object {
 
     /** Creates an Entry. */
     @stub
     def Entry() = ???
 
     /** Returns the identifer (in the model) of the entry. */
-    @stub
     def getIdentifier(): I
 
     /** Returns the underlying model. */
-    @stub
     def getModel(): M
 
     /** Returns the string value at the specified index. */
@@ -28,10 +26,8 @@ object abstract RowFilter.Entry[M, I] extends Object {
     def getStringValue(index: Int): String = ???
 
     /** Returns the value at the specified index. */
-    @stub
-    def getValue(index: Int): Object
+    def getValue(index: Int): Any
 
     /** Returns the number of values in the entry. */
-    @stub
     def getValueCount(): Int
 }

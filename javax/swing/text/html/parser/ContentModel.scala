@@ -27,11 +27,11 @@ final class ContentModel extends Object with Serializable {
 
     /** Create a content model of a particular type. */
     @stub
-    def this(type: Int, content: Object, next: ContentModel) = ???
+    def this(type: Int, content: Any, next: ContentModel) = ???
 
     /** The content. */
     @stub
-    val content: Object = ???
+    val content: Any = ???
 
     /** The next content model (in a ',', '|' or '&' expression). */
     @stub
@@ -55,7 +55,7 @@ final class ContentModel extends Object with Serializable {
      *  first token in the input stream.
      */
     @stub
-    def first(token: Object): Boolean = ???
+    def first(token: Any): Boolean = ???
 
     /** Update elemVec with the list of elements that are
      *  part of the this contentModel.

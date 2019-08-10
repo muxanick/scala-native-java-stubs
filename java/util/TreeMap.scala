@@ -112,7 +112,7 @@ class TreeMap[K, V] extends AbstractMap[K, V] with NavigableMap[K, V] with Clone
 
     /** Returns a shallow copy of this TreeMap instance. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns the comparator used to order the keys in this map, or
      *  null if this map uses the natural ordering of its keys.
@@ -124,13 +124,13 @@ class TreeMap[K, V] extends AbstractMap[K, V] with NavigableMap[K, V] with Clone
      *  key.
      */
     @stub
-    def containsKey(key: Object): Boolean = ???
+    def containsKey(key: Any): Boolean = ???
 
     /** Returns true if this map maps one or more keys to the
      *  specified value.
      */
     @stub
-    def containsValue(value: Object): Boolean = ???
+    def containsValue(value: Any): Boolean = ???
 
     /** Returns a reverse order NavigableSet view of the keys contained in this map. */
     @stub
@@ -177,7 +177,7 @@ class TreeMap[K, V] extends AbstractMap[K, V] with NavigableMap[K, V] with Clone
      *  or null if this map contains no mapping for the key.
      */
     @stub
-    def get(key: Object): V = ???
+    def get(key: Any): V = ???
 
     /** Returns a view of the portion of this map whose keys are
      *  strictly less than toKey.
@@ -257,7 +257,7 @@ class TreeMap[K, V] extends AbstractMap[K, V] with NavigableMap[K, V] with Clone
 
     /** Removes the mapping for this key from this TreeMap if present. */
     @stub
-    def remove(key: Object): V = ???
+    def remove(key: Any): V = ???
 
     /** Replaces the entry for the specified key only if it is
      *  currently mapped to some value.

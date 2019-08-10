@@ -59,8 +59,7 @@ class JButton extends AbstractButton with Accessible {
     /** This class implements accessibility support for the
      *  JButton class.
      */
-    @stub
-    protected object AccessibleJButton extends JButton.AccessibleJButton
+    protected type AccessibleJButton = JButton_AccessibleJButton
 
     /** Gets the AccessibleContext associated with this
      *  JButton.

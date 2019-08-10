@@ -26,8 +26,7 @@ class MetalSliderUI extends BasicSliderUI {
     def this() = ???
 
     /**  */
-    @stub
-    protected object MetalPropertyListener extends MetalSliderUI.MetalPropertyListener
+    protected type MetalPropertyListener = MetalSliderUI_MetalPropertyListener
 
     /**  */
     @stub

@@ -16,7 +16,7 @@ class PropertyEditorSupport extends Object with PropertyEditor {
 
     /** Constructs a PropertyEditorSupport object. */
     @stub
-    def this(source: Object) = ???
+    def this(source: Any) = ???
 
     /** Adds a listener for the value change. */
     @stub
@@ -48,7 +48,7 @@ class PropertyEditorSupport extends Object with PropertyEditor {
      *  source of events.
      */
     @stub
-    def getSource(): Object = ???
+    def getSource(): Any = ???
 
     /** If the property value must be one of a set of known tagged values,
      *  then this method should return an array of the tag values.
@@ -58,7 +58,7 @@ class PropertyEditorSupport extends Object with PropertyEditor {
 
     /** Gets the value of the property. */
     @stub
-    def getValue(): Object = ???
+    def getValue(): Any = ???
 
     /** Determines whether the class will honor the paintValue method. */
     @stub
@@ -80,11 +80,11 @@ class PropertyEditorSupport extends Object with PropertyEditor {
 
     /** Sets the source bean. */
     @stub
-    def setSource(source: Object): Unit = ???
+    def setSource(source: Any): Unit = ???
 
     /** Set (or change) the object that is to be edited. */
     @stub
-    def setValue(value: Object): Unit = ???
+    def setValue(value: Any): Unit = ???
 
     /** Determines whether the propertyEditor can provide a custom editor. */
     @stub

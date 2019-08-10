@@ -6,7 +6,7 @@ import javax.swing.AbstractAction
 import scala.scalanative.annotation.stub
 
 /** Handles minimizing an internal frame. */
-protected class BasicDesktopPaneUI.MinimizeAction extends AbstractAction {
+protected class BasicDesktopPaneUI_MinimizeAction extends AbstractAction {
 
     /**  */
     @stub

@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** Listens to the model and updates the expandedState
  *  accordingly when nodes are removed, or changed.
  */
-protected class JTree.TreeModelHandler extends Object with TreeModelListener {
+protected class JTree_TreeModelHandler extends Object with TreeModelListener {
 
     /**  */
     @stub

@@ -174,7 +174,7 @@ trait IIOMetadataFormat {
      *  the named element.
      */
     @stub
-    def getObjectDefaultValue(elementName: String): Object = ???
+    def getObjectDefaultValue(elementName: String): Any = ???
 
     /** Returns an array of Objects containing the legal
      *  enumerated values for the Object reference within

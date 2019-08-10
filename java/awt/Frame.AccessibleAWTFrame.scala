@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  Frame class.  It provides an implementation of the
  *  Java Accessibility API appropriate to frame user-interface elements.
  */
-protected class Frame.AccessibleAWTFrame extends Window.AccessibleAWTWindow {
+protected class Frame_AccessibleAWTFrame extends Window.AccessibleAWTWindow {
 
     /**  */
     @stub

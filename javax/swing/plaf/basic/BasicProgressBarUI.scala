@@ -15,8 +15,7 @@ class BasicProgressBarUI extends ProgressBarUI {
     def this() = ???
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object ChangeHandler extends BasicProgressBarUI.ChangeHandler
+    type ChangeHandler = BasicProgressBarUI_ChangeHandler
 
     /** Used to hold the location and size of the bouncing box (returned
      *  by getBox) to be painted.

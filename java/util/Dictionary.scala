@@ -26,7 +26,7 @@ abstract class Dictionary[K, V] extends Object {
     def elements(): Enumeration[V]
 
     /** Returns the value to which the key is mapped in this dictionary. */
-    def get(key: Object): V
+    def get(key: Any): V
 
     /** Tests if this dictionary maps no keys to value. */
     def isEmpty(): Boolean
@@ -42,7 +42,7 @@ abstract class Dictionary[K, V] extends Object {
     /** Removes the key (and its corresponding
      *  value) from this dictionary.
      */
-    def remove(key: Object): V
+    def remove(key: Any): V
 
     /** Returns the number of entries (distinct keys) in this dictionary. */
     def size(): Int

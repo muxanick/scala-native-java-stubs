@@ -171,7 +171,7 @@ class ObjectOutputStream extends OutputStream with ObjectOutput with ObjectStrea
      *  substitute one object for another during serialization.
      */
     @stub
-    protected def replaceObject(obj: Object): Object = ???
+    protected def replaceObject(obj: Any): Any = ???
 
     /** Reset will disregard the state of any objects already written to the
      *  stream.
@@ -241,11 +241,11 @@ class ObjectOutputStream extends OutputStream with ObjectOutput with ObjectStrea
 
     /** Write the specified object to the ObjectOutputStream. */
     @stub
-    def writeObject(obj: Object): Unit = ???
+    def writeObject(obj: Any): Unit = ???
 
     /** Method used by subclasses to override the default writeObject method. */
     @stub
-    protected def writeObjectOverride(obj: Object): Unit = ???
+    protected def writeObjectOverride(obj: Any): Unit = ???
 
     /** Writes a 16 bit short. */
     @stub
@@ -259,7 +259,7 @@ class ObjectOutputStream extends OutputStream with ObjectOutput with ObjectStrea
 
     /** Writes an "unshared" object to the ObjectOutputStream. */
     @stub
-    def writeUnshared(obj: Object): Unit = ???
+    def writeUnshared(obj: Any): Unit = ???
 
     /** Primitive data write of this String in
      *  modified UTF-8
@@ -273,6 +273,5 @@ object ObjectOutputStream {
     /** Provide programmatic access to the persistent fields to be written
      *  to ObjectOutput.
      */
-    @stub
-    object PutField extends ObjectOutputStream.PutField
+    type PutField = ObjectOutputStream_PutField
 }

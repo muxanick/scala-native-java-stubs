@@ -28,7 +28,7 @@ trait Name extends CharSequence {
      *  name as this, and false otherwise.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Obeys the general contract of Object.hashCode. */
     @stub

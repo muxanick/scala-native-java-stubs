@@ -29,7 +29,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object abstract StyledEditorKit.StyledTextAction extends TextAction {
+object abstract StyledEditorKit_StyledTextAction extends TextAction {
 
     /** Creates a new StyledTextAction from a string action name. */
     @stub

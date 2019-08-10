@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
 /** A KeyStore entry that holds a trusted
  *  Certificate.
  */
-final object KeyStore.TrustedCertificateEntry extends Object with KeyStore.Entry {
+final object KeyStore_TrustedCertificateEntry extends Object with KeyStore.Entry {
 
     /** Constructs a TrustedCertificateEntry with a
      *  trusted Certificate.

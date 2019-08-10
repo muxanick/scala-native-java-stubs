@@ -6,7 +6,7 @@ import javax.swing.AbstractAction
 import scala.scalanative.annotation.stub
 
 /** Responds to an Open or Save request */
-protected class BasicFileChooserUI.ApproveSelectionAction extends AbstractAction {
+protected class BasicFileChooserUI_ApproveSelectionAction extends AbstractAction {
 
     /**  */
     @stub

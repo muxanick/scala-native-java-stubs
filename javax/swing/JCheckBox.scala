@@ -80,8 +80,7 @@ class JCheckBox extends JToggleButton with Accessible {
     /** This class implements accessibility support for the
      *  JCheckBox class.
      */
-    @stub
-    protected object AccessibleJCheckBox extends JCheckBox.AccessibleJCheckBox
+    protected type AccessibleJCheckBox = JCheckBox_AccessibleJCheckBox
 
     /** Gets the AccessibleContext associated with this JCheckBox. */
     @stub

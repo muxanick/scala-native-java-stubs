@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
  *  Java Accessibility API appropriate to popup menu user-interface
  *  elements.
  */
-protected class JPopupMenu.AccessibleJPopupMenu extends JComponent.AccessibleJComponent with PropertyChangeListener {
+protected class JPopupMenu_AccessibleJPopupMenu extends JComponent.AccessibleJComponent with PropertyChangeListener {
 
     /** AccessibleJPopupMenu constructor */
     @stub

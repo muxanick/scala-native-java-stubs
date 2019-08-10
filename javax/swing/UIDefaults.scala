@@ -50,51 +50,51 @@ class UIDefaults extends Hashtable[Object, Object] {
 
     /** Support for reporting bound property changes. */
     @stub
-    protected def firePropertyChange(propertyName: String, oldValue: Object, newValue: Object): Unit = ???
+    protected def firePropertyChange(propertyName: String, oldValue: Any, newValue: Any): Unit = ???
 
     /** Returns the value for key. */
     @stub
-    def get(key: Object): Object = ???
+    def get(key: Any): Any = ???
 
     /** Returns the value for key associated with the given locale. */
     @stub
-    def get(key: Object, l: Locale): Object = ???
+    def get(key: Any, l: Locale): Any = ???
 
     /** If the value of key is boolean, return the
      *  boolean value, otherwise return false.
      */
     @stub
-    def getBoolean(key: Object): Boolean = ???
+    def getBoolean(key: Any): Boolean = ???
 
     /** If the value of key for the given Locale
      *  is boolean, return the boolean value, otherwise return false.
      */
     @stub
-    def getBoolean(key: Object, l: Locale): Boolean = ???
+    def getBoolean(key: Any, l: Locale): Boolean = ???
 
     /** If the value of key is a Border return it,
      *  otherwise return null.
      */
     @stub
-    def getBorder(key: Object): Border = ???
+    def getBorder(key: Any): Border = ???
 
     /** If the value of key for the given Locale
      *  is a Border return it, otherwise return null.
      */
     @stub
-    def getBorder(key: Object, l: Locale): Border = ???
+    def getBorder(key: Any, l: Locale): Border = ???
 
     /** If the value of key is a Color return it,
      *  otherwise return null.
      */
     @stub
-    def getColor(key: Object): Color = ???
+    def getColor(key: Any): Color = ???
 
     /** If the value of key for the given Locale
      *  is a Color return it, otherwise return null.
      */
     @stub
-    def getColor(key: Object, l: Locale): Color = ???
+    def getColor(key: Any, l: Locale): Color = ???
 
     /** Returns the default locale. */
     @stub
@@ -104,61 +104,61 @@ class UIDefaults extends Hashtable[Object, Object] {
      *  otherwise return null.
      */
     @stub
-    def getDimension(key: Object): Dimension = ???
+    def getDimension(key: Any): Dimension = ???
 
     /** If the value of key for the given Locale
      *  is a Dimension return it, otherwise return null.
      */
     @stub
-    def getDimension(key: Object, l: Locale): Dimension = ???
+    def getDimension(key: Any, l: Locale): Dimension = ???
 
     /** If the value of key is a Font return it,
      *  otherwise return null.
      */
     @stub
-    def getFont(key: Object): Font = ???
+    def getFont(key: Any): Font = ???
 
     /** If the value of key for the given Locale
      *  is a Font return it, otherwise return null.
      */
     @stub
-    def getFont(key: Object, l: Locale): Font = ???
+    def getFont(key: Any, l: Locale): Font = ???
 
     /** If the value of key is an Icon return it,
      *  otherwise return null.
      */
     @stub
-    def getIcon(key: Object): Icon = ???
+    def getIcon(key: Any): Icon = ???
 
     /** If the value of key for the given Locale
      *  is an Icon return it, otherwise return null.
      */
     @stub
-    def getIcon(key: Object, l: Locale): Icon = ???
+    def getIcon(key: Any, l: Locale): Icon = ???
 
     /** If the value of key is an Insets return it,
      *  otherwise return null.
      */
     @stub
-    def getInsets(key: Object): Insets = ???
+    def getInsets(key: Any): Insets = ???
 
     /** If the value of key for the given Locale
      *  is an Insets return it, otherwise return null.
      */
     @stub
-    def getInsets(key: Object, l: Locale): Insets = ???
+    def getInsets(key: Any, l: Locale): Insets = ???
 
     /** If the value of key is an Integer return its
      *  integer value, otherwise return 0.
      */
     @stub
-    def getInt(key: Object): Int = ???
+    def getInt(key: Any): Int = ???
 
     /** If the value of key for the given Locale
      *  is an Integer return its integer value, otherwise return 0.
      */
     @stub
-    def getInt(key: Object, l: Locale): Int = ???
+    def getInt(key: Any, l: Locale): Int = ???
 
     /** Returns an array of all the PropertyChangeListeners added
      *  to this UIDefaults with addPropertyChangeListener().
@@ -170,13 +170,13 @@ class UIDefaults extends Hashtable[Object, Object] {
      *  otherwise return null.
      */
     @stub
-    def getString(key: Object): String = ???
+    def getString(key: Any): String = ???
 
     /** If the value of key for the given Locale
      *  is a String return it, otherwise return null.
      */
     @stub
-    def getString(key: Object, l: Locale): String = ???
+    def getString(key: Any, l: Locale): String = ???
 
     /** Creates an ComponentUI implementation for the
      *  specified component.
@@ -204,7 +204,7 @@ class UIDefaults extends Hashtable[Object, Object] {
 
     /** Sets the value of key to value for all locales. */
     @stub
-    def put(key: Object, value: Object): Object = ???
+    def put(key: Any, value: Any): Any = ???
 
     /** Puts all of the key/value pairs in the database and
      *  unconditionally generates one PropertyChangeEvent.
@@ -232,27 +232,23 @@ object UIDefaults {
      *  table that's constructed each time it's looked up with one of
      *  the getXXX(key) methods.
      */
-    @stub
-    trait ActiveValue extends UIDefaults.ActiveValue
+    type ActiveValue = UIDefaults_ActiveValue
 
     /** LazyInputMap will create a InputMap
      *  in its createValue
      *  method.
      */
-    @stub
-    class LazyInputMap extends UIDefaults.LazyInputMap
+    type LazyInputMap = UIDefaults_LazyInputMap
 
     /** This class enables one to store an entry in the defaults
      *  table that isn't constructed until the first time it's
      *  looked up with one of the getXXX(key) methods.
      */
-    @stub
-    trait LazyValue extends UIDefaults.LazyValue
+    type LazyValue = UIDefaults_LazyValue
 
     /** This class provides an implementation of LazyValue
      *  which can be
      *  used to delay loading of the Class for the instance to be created.
      */
-    @stub
-    class ProxyLazyValue extends UIDefaults.ProxyLazyValue
+    type ProxyLazyValue = UIDefaults_ProxyLazyValue
 }

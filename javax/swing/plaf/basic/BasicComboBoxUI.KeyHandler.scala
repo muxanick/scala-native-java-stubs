@@ -12,7 +12,7 @@ import scala.scalanative.annotation.stub
  *  Instantiate it only within subclasses of
  *  BasicComboBoxUI.
  */
-class BasicComboBoxUI.KeyHandler extends KeyAdapter {
+class BasicComboBoxUI_KeyHandler extends KeyAdapter {
 
     /**  */
     @stub

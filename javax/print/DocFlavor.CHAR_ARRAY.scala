@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
  *  the character set is Unicode.
  *  
  */
-object DocFlavor.CHAR_ARRAY extends DocFlavor {
+object DocFlavor_CHAR_ARRAY extends DocFlavor {
 
     /** Constructs a new doc flavor with the given MIME type and a print
      *  data representation class name of

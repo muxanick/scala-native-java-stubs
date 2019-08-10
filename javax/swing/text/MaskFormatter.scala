@@ -200,11 +200,11 @@ class MaskFormatter extends DefaultFormatter {
      *  the String value.
      */
     @stub
-    def stringToValue(value: String): Object = ???
+    def stringToValue(value: String): Any = ???
 
     /** Returns a String representation of the Object value
      *  based on the mask.
      */
     @stub
-    def valueToString(value: Object): String = ???
+    def valueToString(value: Any): String = ???
 }

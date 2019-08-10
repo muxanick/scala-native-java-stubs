@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
 /** The class provides an implementation of the Java Accessibility
  *  API appropriate to table cells.
  */
-protected class JTable.AccessibleJTable.AccessibleJTableCell extends AccessibleContext with Accessible with AccessibleComponent {
+protected class JTable_AccessibleJTable_AccessibleJTableCell extends AccessibleContext with Accessible with AccessibleComponent {
 
     /** Constructs an AccessibleJTableHeaderEntry. */
     @stub

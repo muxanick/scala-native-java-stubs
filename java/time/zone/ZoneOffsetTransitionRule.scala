@@ -25,7 +25,7 @@ final class ZoneOffsetTransitionRule extends Object with Serializable {
 
     /** Checks if this object equals another. */
     @stub
-    def equals(otherRule: Object): Boolean = ???
+    def equals(otherRule: Any): Boolean = ???
 
     /** Gets the indicator of the day-of-month of the transition. */
     @stub
@@ -78,8 +78,7 @@ object ZoneOffsetTransitionRule {
     /** A definition of the way a local time can be converted to the actual
      *  transition date-time.
      */
-    @stub
-    object TimeDefinition extends ZoneOffsetTransitionRule.TimeDefinition
+    type TimeDefinition = ZoneOffsetTransitionRule_TimeDefinition
 
     /** Obtains an instance defining the yearly rule to create transitions between two offsets. */
     @stub

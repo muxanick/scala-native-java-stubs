@@ -25,7 +25,7 @@ class Paper extends Object with Cloneable {
      *  as this Paper.
      */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns the height of the page in 1/72nds of an inch. */
     @stub

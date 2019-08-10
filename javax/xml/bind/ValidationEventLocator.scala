@@ -31,7 +31,7 @@ trait ValidationEventLocator {
 
     /** Return a reference to the object in the Java content tree if available */
     @stub
-    def getObject(): Object = ???
+    def getObject(): Any = ???
 
     /** Return the byte offset if available */
     @stub

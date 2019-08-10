@@ -7,7 +7,7 @@ import javax.swing.plaf.UIResource
 import scala.scalanative.annotation.stub
 
 /**  */
-object MetalBorders.ScrollPaneBorder extends AbstractBorder with UIResource {
+object MetalBorders_ScrollPaneBorder extends AbstractBorder with UIResource {
 
     /**  */
     @stub

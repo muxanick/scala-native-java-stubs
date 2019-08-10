@@ -42,8 +42,7 @@ class Label extends Component with Accessible {
     /** This class implements accessibility support for the
      *  Label class.
      */
-    @stub
-    protected object AccessibleAWTLabel extends Label.AccessibleAWTLabel
+    protected type AccessibleAWTLabel = Label_AccessibleAWTLabel
 
     /** Creates the peer for this label. */
     @stub

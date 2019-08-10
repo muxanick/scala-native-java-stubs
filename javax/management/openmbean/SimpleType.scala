@@ -22,7 +22,7 @@ final class SimpleType[T] extends OpenType[T] {
 
     /** Compares the specified obj parameter with this SimpleType instance for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the hash code value for this SimpleType instance. */
     @stub
@@ -32,13 +32,13 @@ final class SimpleType[T] extends OpenType[T] {
      *  SimpleType instance.
      */
     @stub
-    def isValue(obj: Object): Boolean = ???
+    def isValue(obj: Any): Boolean = ???
 
     /** Replace an object read from an ObjectInputStream with the unique instance for that
      *  value.
      */
     @stub
-    def readResolve(): Object = ???
+    def readResolve(): Any = ???
 
     /** Returns a string representation of this SimpleType instance. */
     @stub

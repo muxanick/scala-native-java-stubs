@@ -6,7 +6,7 @@ import scala.scalanative.annotation.stub
 /** An attribute associated with a keystore entry.
  *  It comprises a name and one or more values.
  */
-object trait KeyStore.Entry.Attribute {
+trait KeyStore_Entry_Attribute {
 
     /** Returns the attribute's name. */
     @stub

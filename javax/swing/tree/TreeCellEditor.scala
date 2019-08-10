@@ -12,5 +12,5 @@ trait TreeCellEditor extends CellEditor {
 
     /** Sets an initial value for the editor. */
     @stub
-    def getTreeCellEditorComponent(tree: JTree, value: Object, isSelected: Boolean, expanded: Boolean, leaf: Boolean, row: Int): Component = ???
+    def getTreeCellEditorComponent(tree: JTree, value: Any, isSelected: Boolean, expanded: Boolean, leaf: Boolean, row: Int): Component = ???
 }

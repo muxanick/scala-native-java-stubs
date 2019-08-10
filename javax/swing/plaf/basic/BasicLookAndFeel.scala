@@ -30,7 +30,7 @@ abstract class BasicLookAndFeel extends LookAndFeel with Serializable {
     def this() = ???
 
     /** Creates and returns an Action used to play a sound. */
-    protected def createAudioAction(key: Object): Action
+    protected def createAudioAction(key: Any): Action
 
     /** Returns an ActionMap containing the audio actions
      *  for this look and feel.

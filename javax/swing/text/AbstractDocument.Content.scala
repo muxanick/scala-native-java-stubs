@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
  *  history mechanism which will be reflected by whether or not
  *  mutations return an UndoableEdit implementation.
  */
-object trait AbstractDocument.Content {
+trait AbstractDocument_Content {
 
     /** Creates a position within the content that will
      *  track change as the content is mutated.

@@ -9,32 +9,28 @@ import scala.scalanative.annotation.stub
  *  not callback into the DocumentFilter when the following methods
  *  are invoked from the DocumentFilter.
  */
-object abstract DocumentFilter.FilterBypass extends Object {
+object abstract DocumentFilter_FilterBypass extends Object {
 
     /**  */
     @stub
     def FilterBypass() = ???
 
     /** Returns the Document the mutation is occurring on. */
-    @stub
     def getDocument(): Document
 
     /** Inserts the specified text, bypassing the
      *  DocumentFilter.
      */
-    @stub
     def insertString(offset: Int, string: String, attr: AttributeSet): Unit
 
     /** Removes the specified region of text, bypassing the
      *  DocumentFilter.
      */
-    @stub
     def remove(offset: Int, length: Int): Unit
 
     /** Deletes the region of text from offset to
      *  offset + length, and replaces it with
      *   text.
      */
-    @stub
     def replace(offset: Int, length: Int, string: String, attrs: AttributeSet): Unit
 }

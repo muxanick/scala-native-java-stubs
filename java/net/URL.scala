@@ -139,7 +139,7 @@ final class URL extends Object with Serializable {
 
     /** Compares this URL for equality with another object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Gets the authority part of this URL. */
     @stub
@@ -147,11 +147,11 @@ final class URL extends Object with Serializable {
 
     /** Gets the contents of this URL. */
     @stub
-    def getContent(): Object = ???
+    def getContent(): Any = ???
 
     /** Gets the contents of this URL. */
     @stub
-    def getContent(classes: Array[Class]): Object = ???
+    def getContent(classes: Array[Class]): Any = ???
 
     /** Gets the default port number of the protocol associated
      *  with this URL.

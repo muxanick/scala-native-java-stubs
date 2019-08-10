@@ -24,7 +24,7 @@ import scala.scalanative.annotation.stub
  *  NO_SYNC, is used to indicate that the sequencer should
  *  not control its receiver's timing.
  */
-object Sequencer.SyncMode extends Object {
+object Sequencer_SyncMode extends Object {
 
     /** Constructs a synchronization mode. */
     @stub
@@ -57,7 +57,7 @@ object Sequencer.SyncMode extends Object {
 
     /** Determines whether two objects are equal. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Finalizes the hashcode method. */
     @stub

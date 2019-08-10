@@ -32,10 +32,10 @@ import scala.scalanative.annotation.stub
  *  These states are virtual machine states which do not reflect
  *  any operating system thread states.
  */
-class Thread.State private (name: String, ordinal: Int) extends Enum[Thread.State](name, ordinal) {
+class Thread_State private (name: String, ordinal: Int) extends Enum[Thread.State](name, ordinal) {
 }
 
-object Thread.State {
+object Thread_State {
     /** Thread state for a thread blocked waiting for a monitor lock. */
     final val BLOCKED = new Thread.State(BLOCKED, 0)
 

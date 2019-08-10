@@ -19,7 +19,7 @@ class ZipEntry extends Object with Cloneable {
 
     /** Returns a copy of this entry. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns the comment string for the entry. */
     @stub

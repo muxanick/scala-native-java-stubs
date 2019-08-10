@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  from Format.formatToCharacterIterator and as
  *  field identifiers in FieldPosition.
  */
-object Format.Field extends AttributedCharacterIterator.Attribute {
+object Format_Field extends AttributedCharacterIterator.Attribute {
 
     /** Creates a Field with the specified name. */
     @stub

@@ -27,7 +27,7 @@ class EllipticCurve extends Object {
      *  specified object.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the first coefficient a of the
      *  elliptic curve.

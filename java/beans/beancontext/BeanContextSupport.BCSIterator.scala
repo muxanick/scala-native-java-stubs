@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** protected final subclass that encapsulates an iterator but implements
  *  a noop remove() method.
  */
-final object protected BeanContextSupport.BCSIterator extends Object with Iterator {
+final object protected BeanContextSupport_BCSIterator extends Object with Iterator {
 
     /** Returns true if the iteration has more elements. */
     @stub
@@ -15,7 +15,7 @@ final object protected BeanContextSupport.BCSIterator extends Object with Iterat
 
     /** Returns the next element in the iteration. */
     @stub
-    def next(): Object = ???
+    def next(): Any = ???
 
     /** Removes from the underlying collection the last element returned
      *  by this iterator (optional operation).

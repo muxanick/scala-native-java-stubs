@@ -77,11 +77,11 @@ class BitSet extends Object with Cloneable with Serializable {
      *  that is equal to it.
      */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compares this object against the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Sets the bit at the specified index to the complement of its
      *  current value.

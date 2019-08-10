@@ -284,13 +284,13 @@ abstract class Calendar extends Object with Serializable with Cloneable with Com
      *  after the time represented by the specified
      *  Object.
      */
-    def after(when: Object): Boolean
+    def after(when: Any): Boolean
 
     /** Returns whether this Calendar represents a time
      *  before the time represented by the specified
      *  Object.
      */
-    def before(when: Object): Boolean
+    def before(when: Any): Boolean
 
     /** Sets all the calendar field values and the time value
      *  (millisecond offset from the Epoch) of
@@ -305,7 +305,7 @@ abstract class Calendar extends Object with Serializable with Cloneable with Com
     def clear(field: Int): Unit
 
     /** Creates and returns a copy of this object. */
-    def clone(): Object
+    def clone(): Any
 
     /** Compares the time values (millisecond offsets from the Epoch) represented by two
      *  Calendar objects.
@@ -329,7 +329,7 @@ abstract class Calendar extends Object with Serializable with Cloneable with Com
     /** Compares this Calendar to the specified
      *  Object.
      */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** Returns the value of the given calendar field. */
     def get(field: Int): Int
@@ -497,8 +497,7 @@ object Calendar {
     /** Calendar.Builder is used for creating a Calendar from
      *  various date-time parameters.
      */
-    @stub
-    object Builder extends Calendar.Builder
+    type Builder = Calendar_Builder
 
     /** A style specifier for getDisplayNames indicating names in all styles, such as
      *  "January" and "Jan".

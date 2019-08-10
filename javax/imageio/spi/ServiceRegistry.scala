@@ -73,7 +73,7 @@ class ServiceRegistry extends Object {
      *  registered.
      */
     @stub
-    def contains(provider: Object): Boolean = ???
+    def contains(provider: Any): Boolean = ???
 
     /** Deregisters all currently registered service providers from all
      *  categories.
@@ -91,7 +91,7 @@ class ServiceRegistry extends Object {
      *  contain it.
      */
     @stub
-    def deregisterServiceProvider(provider: Object): Unit = ???
+    def deregisterServiceProvider(provider: Any): Unit = ???
 
     /** Removes a service provider object from the given category. */
     @stub
@@ -129,7 +129,7 @@ class ServiceRegistry extends Object {
 
     /** Adds a service provider object to the registry. */
     @stub
-    def registerServiceProvider(provider: Object): Unit = ???
+    def registerServiceProvider(provider: Any): Unit = ???
 
     /** Adds a service provider object to the registry. */
     @stub
@@ -159,8 +159,7 @@ object ServiceRegistry {
      *  ServiceRegistry.getServiceProviders to select
      *  providers matching an arbitrary criterion.
      */
-    @stub
-    trait Filter extends ServiceRegistry.Filter
+    type Filter = ServiceRegistry_Filter
 
     /** Locates and incrementally instantiates the available providers
      *  of a given service using the context class loader.

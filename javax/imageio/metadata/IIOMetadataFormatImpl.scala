@@ -224,7 +224,7 @@ abstract class IIOMetadataFormatImpl extends Object with IIOMetadataFormat {
      *  value for the Object reference within
      *  the named element.
      */
-    def getObjectDefaultValue(elementName: String): Object
+    def getObjectDefaultValue(elementName: String): Any
 
     /** Returns an array of Objects containing the legal
      *  enumerated values for the Object reference within

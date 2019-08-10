@@ -23,89 +23,71 @@ class BasicTreeUI extends TreeUI {
     /** Listener responsible for getting cell editing events and updating
      *  the tree accordingly.
      */
-    @stub
-    object CellEditorHandler extends BasicTreeUI.CellEditorHandler
+    type CellEditorHandler = BasicTreeUI_CellEditorHandler
 
     /** Updates the preferred size when scrolling (if necessary). */
-    @stub
-    object ComponentHandler extends BasicTreeUI.ComponentHandler
+    type ComponentHandler = BasicTreeUI_ComponentHandler
 
     /** Repaints the lead selection row when focus is lost/gained. */
-    @stub
-    object FocusHandler extends BasicTreeUI.FocusHandler
+    type FocusHandler = BasicTreeUI_FocusHandler
 
     /** This is used to get multiple key down events to appropriately generate
      *  events.
      */
-    @stub
-    object KeyHandler extends BasicTreeUI.KeyHandler
+    type KeyHandler = BasicTreeUI_KeyHandler
 
     /** TreeMouseListener is responsible for updating the selection
      *  based on mouse events.
      */
-    @stub
-    object MouseHandler extends BasicTreeUI.MouseHandler
+    type MouseHandler = BasicTreeUI_MouseHandler
 
     /** MouseInputHandler handles passing all mouse events,
      *  including mouse motion events, until the mouse is released to
      *  the destination it is constructed with.
      */
-    @stub
-    object MouseInputHandler extends BasicTreeUI.MouseInputHandler
+    type MouseInputHandler = BasicTreeUI_MouseInputHandler
 
     /** Class responsible for getting size of node, method is forwarded
      *  to BasicTreeUI method.
      */
-    @stub
-    object NodeDimensionsHandler extends BasicTreeUI.NodeDimensionsHandler
+    type NodeDimensionsHandler = BasicTreeUI_NodeDimensionsHandler
 
     /** PropertyChangeListener for the tree. */
-    @stub
-    object PropertyChangeHandler extends BasicTreeUI.PropertyChangeHandler
+    type PropertyChangeHandler = BasicTreeUI_PropertyChangeHandler
 
     /** Listener on the TreeSelectionModel, resets the row selection if
      *  any of the properties of the model change.
      */
-    @stub
-    object SelectionModelPropertyChangeHandler extends BasicTreeUI.SelectionModelPropertyChangeHandler
+    type SelectionModelPropertyChangeHandler = BasicTreeUI_SelectionModelPropertyChangeHandler
 
     /** ActionListener that invokes cancelEditing when action performed. */
-    @stub
-    object TreeCancelEditingAction extends BasicTreeUI.TreeCancelEditingAction
+    type TreeCancelEditingAction = BasicTreeUI_TreeCancelEditingAction
 
     /** Updates the TreeState in response to nodes expanding/collapsing. */
-    @stub
-    object TreeExpansionHandler extends BasicTreeUI.TreeExpansionHandler
+    type TreeExpansionHandler = BasicTreeUI_TreeExpansionHandler
 
     /** TreeHomeAction is used to handle end/home actions. */
-    @stub
-    object TreeHomeAction extends BasicTreeUI.TreeHomeAction
+    type TreeHomeAction = BasicTreeUI_TreeHomeAction
 
     /** TreeIncrementAction is used to handle up/down actions. */
-    @stub
-    object TreeIncrementAction extends BasicTreeUI.TreeIncrementAction
+    type TreeIncrementAction = BasicTreeUI_TreeIncrementAction
 
     /** Forwards all TreeModel events to the TreeState. */
-    @stub
-    object TreeModelHandler extends BasicTreeUI.TreeModelHandler
+    type TreeModelHandler = BasicTreeUI_TreeModelHandler
 
     /** TreePageAction handles page up and page down events. */
-    @stub
-    object TreePageAction extends BasicTreeUI.TreePageAction
+    type TreePageAction = BasicTreeUI_TreePageAction
 
     /** Listens for changes in the selection model and updates the display
      *  accordingly.
      */
-    @stub
-    object TreeSelectionHandler extends BasicTreeUI.TreeSelectionHandler
+    type TreeSelectionHandler = BasicTreeUI_TreeSelectionHandler
 
     /** For the first selected row expandedness will be toggled. */
-    @stub
-    object TreeToggleAction extends BasicTreeUI.TreeToggleAction
+    type TreeToggleAction = BasicTreeUI_TreeToggleAction
 
     /** TreeTraverseAction is the action used for left/right keys. */
-    @stub
-    object TreeTraverseAction extends BasicTreeUI.TreeTraverseAction
+    type TreeTraverseAction = BasicTreeUI_TreeTraverseAction
 
     /** Editor for the tree. */
     @stub

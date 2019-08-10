@@ -8,5 +8,5 @@ import scala.scalanative.annotation.stub
  * Serialized Form
  * 
  */
-protected class BeanContextServicesSupport.BCSSChild extends BeanContextSupport.BCSChild {
+protected class BeanContextServicesSupport_BCSSChild extends BeanContextSupport.BCSChild {
 }

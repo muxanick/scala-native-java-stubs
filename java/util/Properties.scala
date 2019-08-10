@@ -144,7 +144,7 @@ class Properties extends Hashtable[Object, Object] {
 
     /** Calls the Hashtable method put. */
     @stub
-    def setProperty(key: String, value: String): Object = ???
+    def setProperty(key: String, value: String): Any = ???
 
     /** Writes this property list (key and element pairs) in this
      *  Properties table to the output stream in a format suitable

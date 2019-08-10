@@ -19,7 +19,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JMenuBar.AccessibleJMenuBar extends JComponent.AccessibleJComponent with AccessibleSelection {
+protected class JMenuBar_AccessibleJMenuBar extends JComponent.AccessibleJComponent with AccessibleSelection {
 
     /**  */
     @stub

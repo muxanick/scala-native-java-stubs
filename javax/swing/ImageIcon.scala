@@ -75,8 +75,7 @@ class ImageIcon extends Object with Icon with Serializable with Accessible {
     /** This class implements accessibility support for the
      *  ImageIcon class.
      */
-    @stub
-    protected object AccessibleImageIcon extends ImageIcon.AccessibleImageIcon
+    protected type AccessibleImageIcon = ImageIcon_AccessibleImageIcon
 
     /** Gets the AccessibleContext associated with this ImageIcon. */
     @stub

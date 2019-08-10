@@ -21,11 +21,11 @@ class GuardedObject extends Object with Serializable {
 
     /** Constructs a GuardedObject using the specified object and guard. */
     @stub
-    def this(object: Object, guard: Guard) = ???
+    def this(object: Any, guard: Guard) = ???
 
     /** Retrieves the guarded object, or throws an exception if access
      *  to the guarded object is denied by the guard.
      */
     @stub
-    def getObject(): Object = ???
+    def getObject(): Any = ???
 }

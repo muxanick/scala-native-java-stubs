@@ -41,7 +41,7 @@ abstract class ServiceUIFactory extends Object {
     /** Get a UI object which may be cast to the requested UI type
      *  by the application and used in its user interface.
      */
-    def getUI(role: Int, ui: String): Object
+    def getUI(role: Int, ui: String): Any
 
     /** Given a UI role obtained from this factory obtain the UI
      *  types available from this factory which implement this role.

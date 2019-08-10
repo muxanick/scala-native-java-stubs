@@ -26,7 +26,7 @@ abstract class EditorKit extends Object with Cloneable with Serializable {
     def this() = ???
 
     /** Creates a copy of the editor kit. */
-    def clone(): Object
+    def clone(): Any
 
     /** Fetches a caret that can navigate through views
      *  produced by the associated ViewFactory.

@@ -27,7 +27,7 @@ final class ZoneOffsetTransition extends Object with Comparable[ZoneOffsetTransi
 
     /** Checks if this object equals another. */
     @stub
-    def equals(other: Object): Boolean = ???
+    def equals(other: Any): Boolean = ???
 
     /** Gets the local transition date-time, as would be expressed with the 'after' offset. */
     @stub

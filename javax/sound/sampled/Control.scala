@@ -29,6 +29,5 @@ object Control {
     /** An instance of the Type class represents the type of
      *  the control.
      */
-    @stub
-    object Type extends Control.Type
+    type Type = Control_Type
 }

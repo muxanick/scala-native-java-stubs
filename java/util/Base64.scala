@@ -46,14 +46,12 @@ object Base64 {
     /** This class implements a decoder for decoding byte data using the
      *  Base64 encoding scheme as specified in RFC 4648 and RFC 2045.
      */
-    @stub
-    object Decoder extends Base64.Decoder
+    type Decoder = Base64_Decoder
 
     /** This class implements an encoder for encoding byte data using
      *  the Base64 encoding scheme as specified in RFC 4648 and RFC 2045.
      */
-    @stub
-    object Encoder extends Base64.Encoder
+    type Encoder = Base64_Encoder
 
     /** Returns a Base64.Decoder that decodes using the
      *  Basic type base64 encoding scheme.

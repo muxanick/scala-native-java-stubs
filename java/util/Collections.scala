@@ -170,7 +170,7 @@ object Collections {
      *  specified object.
      */
     @stub
-    def frequency(c: Collection[_], o: Object): Int = ???
+    def frequency(c: Collection[_], o: Any): Int = ???
 
     /** Returns the starting position of the first occurrence of the specified
      *  target list within the specified source list, or -1 if there is no

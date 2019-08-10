@@ -151,7 +151,7 @@ abstract class ColorModel extends Object with Transparency {
      *  ColorModel and if it equals this
      *  ColorModel.
      */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** Disposes of system resources associated with this
      *  ColorModel once this ColorModel is no
@@ -167,7 +167,7 @@ abstract class ColorModel extends Object with Transparency {
     /** Returns the alpha component for the specified pixel, scaled
      *  from 0 to 255.
      */
-    def getAlpha(inData: Object): Int
+    def getAlpha(inData: Any): Int
 
     /** Returns a Raster representing the alpha channel of an
      *  image, extracted from the input Raster, provided that
@@ -184,7 +184,7 @@ abstract class ColorModel extends Object with Transparency {
     /** Returns the blue color component for the specified pixel, scaled
      *  from 0 to 255 in the default RGB ColorSpace, sRGB.
      */
-    def getBlue(inData: Object): Int
+    def getBlue(inData: Any): Int
 
     /** Returns the ColorSpace associated with this
      *  ColorModel.
@@ -199,7 +199,7 @@ abstract class ColorModel extends Object with Transparency {
     /** Returns an array of unnormalized color/alpha components given a pixel
      *  in this ColorModel.
      */
-    def getComponents(pixel: Object, components: Array[Int], offset: Int): Array[Int]
+    def getComponents(pixel: Any, components: Array[Int], offset: Int): Array[Int]
 
     /** Returns an array of the number of bits per color/alpha component. */
     def getComponentSize(): Array[Int]
@@ -223,19 +223,19 @@ abstract class ColorModel extends Object with Transparency {
      *  ColorModel, given an array of normalized color/alpha
      *  components.
      */
-    def getDataElements(normComponents: Array[Float], normOffset: Int, obj: Object): Object
+    def getDataElements(normComponents: Array[Float], normOffset: Int, obj: Any): Any
 
     /** Returns a data element array representation of a pixel in this
      *  ColorModel, given an array of unnormalized color/alpha
      *  components.
      */
-    def getDataElements(components: Array[Int], offset: Int, obj: Object): Object
+    def getDataElements(components: Array[Int], offset: Int, obj: Any): Any
 
     /** Returns a data element array representation of a pixel in this
      *  ColorModel, given an integer pixel representation in
      *  the default RGB color model.
      */
-    def getDataElements(rgb: Int, pixel: Object): Object
+    def getDataElements(rgb: Int, pixel: Any): Any
 
     /** Returns the green color component for the specified pixel, scaled
      *  from 0 to 255 in the default RGB ColorSpace, sRGB.
@@ -245,7 +245,7 @@ abstract class ColorModel extends Object with Transparency {
     /** Returns the green color component for the specified pixel, scaled
      *  from 0 to 255 in the default RGB ColorSpace, sRGB.
      */
-    def getGreen(inData: Object): Int
+    def getGreen(inData: Any): Int
 
     /** Returns an array of all of the color/alpha components in normalized
      *  form, given an unnormalized component array.
@@ -255,7 +255,7 @@ abstract class ColorModel extends Object with Transparency {
     /** Returns an array of all of the color/alpha components in normalized
      *  form, given a pixel in this ColorModel.
      */
-    def getNormalizedComponents(pixel: Object, normComponents: Array[Float], normOffset: Int): Array[Float]
+    def getNormalizedComponents(pixel: Any, normComponents: Array[Float], normOffset: Int): Array[Float]
 
     /** Returns the number of color components in this
      *  ColorModel.
@@ -280,7 +280,7 @@ abstract class ColorModel extends Object with Transparency {
     /** Returns the red color component for the specified pixel, scaled
      *  from 0 to 255 in the default RGB ColorSpace, sRGB.
      */
-    def getRed(inData: Object): Int
+    def getRed(inData: Any): Int
 
     /** Returns the color/alpha components of the pixel in the default
      *  RGB color model format.
@@ -290,7 +290,7 @@ abstract class ColorModel extends Object with Transparency {
     /** Returns the color/alpha components for the specified pixel in the
      *  default RGB color model format.
      */
-    def getRGB(inData: Object): Int
+    def getRGB(inData: Any): Int
 
     /** Returns the transfer type of this ColorModel. */
     def getTransferType(): Int

@@ -18,7 +18,7 @@ final class VMID extends Object with Serializable {
      *  same identifier.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Compute hash code for this VMID. */
     @stub

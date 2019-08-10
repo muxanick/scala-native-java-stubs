@@ -6,7 +6,7 @@ import scala.scalanative.annotation.stub
 /** A type-safe enumeration of possible paper sizes. These sizes are in
  *  compliance with IPP 1.1.
  */
-final object PageAttributes.MediaType extends Object {
+final object PageAttributes_MediaType extends Object {
 
     /** The MediaType instance for Engineering A, 8 1/2 x 11 in. */
     @stub

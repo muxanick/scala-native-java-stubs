@@ -11,4 +11,5 @@ import scala.scalanative.annotation.stub
  *  correspond to logical settings that are specific to
  *  some type of content.
  */
-object trait AttributeSet.FontAttribute {
+trait AttributeSet_FontAttribute {
+}

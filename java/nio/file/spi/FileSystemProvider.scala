@@ -139,7 +139,7 @@ abstract class FileSystemProvider extends Object {
     def readSymbolicLink(link: Path): Path
 
     /** Sets the value of a file attribute. */
-    def setAttribute(path: Path, attribute: String, value: Object, options: LinkOption*): Unit
+    def setAttribute(path: Path, attribute: String, value: Any, options: LinkOption*): Unit
 }
 
 object FileSystemProvider {

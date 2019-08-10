@@ -42,8 +42,7 @@ class CheckboxMenuItem extends MenuItem with ItemSelectable with Accessible {
     /** Inner class of CheckboxMenuItem used to provide default support for
      *  accessibility.
      */
-    @stub
-    protected object AccessibleAWTCheckboxMenuItem extends CheckboxMenuItem.AccessibleAWTCheckboxMenuItem
+    protected type AccessibleAWTCheckboxMenuItem = CheckboxMenuItem_AccessibleAWTCheckboxMenuItem
 
     /** Adds the specified item listener to receive item events from
      *  this check box menu item.

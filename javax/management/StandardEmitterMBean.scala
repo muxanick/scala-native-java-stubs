@@ -65,7 +65,7 @@ class StandardEmitterMBean extends StandardMBean with NotificationEmitter {
 
     /** Adds a listener to this MBean. */
     @stub
-    def addNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
+    def addNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Any): Unit = ???
 
     /** Returns an array indicating, for each notification this
      *  MBean may send, the name of the Java class of the notification
@@ -80,7 +80,7 @@ class StandardEmitterMBean extends StandardMBean with NotificationEmitter {
 
     /** Removes a listener from this MBean. */
     @stub
-    def removeNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
+    def removeNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Any): Unit = ???
 
     /** Sends a notification. */
     @stub

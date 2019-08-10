@@ -293,10 +293,8 @@ class ReentrantReadWriteLock extends Object with ReadWriteLock with Serializable
 
 object ReentrantReadWriteLock {
     /** The lock returned by method readLock(). */
-    @stub
-    object ReadLock extends ReentrantReadWriteLock.ReadLock
+    type ReadLock = ReentrantReadWriteLock_ReadLock
 
     /** The lock returned by method writeLock(). */
-    @stub
-    object WriteLock extends ReentrantReadWriteLock.WriteLock
+    type WriteLock = ReentrantReadWriteLock_WriteLock
 }

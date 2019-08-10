@@ -15,7 +15,7 @@ class MBeanServerDelegate extends Object with MBeanServerDelegateMBean with Noti
 
     /** Adds a listener to this MBean. */
     @stub
-    def addNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
+    def addNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Any): Unit = ???
 
     /** Returns the JMX implementation name (the name of this product). */
     @stub
@@ -64,7 +64,7 @@ class MBeanServerDelegate extends Object with MBeanServerDelegateMBean with Noti
 
     /** Removes a listener from this MBean. */
     @stub
-    def removeNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
+    def removeNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Any): Unit = ???
 
     /** Enables the MBean server to send a notification. */
     @stub

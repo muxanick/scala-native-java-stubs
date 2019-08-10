@@ -9,5 +9,5 @@ trait NotificationListener extends EventListener {
 
     /** Invoked when a JMX notification occurs. */
     @stub
-    def handleNotification(notification: Notification, handback: Object): Unit = ???
+    def handleNotification(notification: Notification, handback: Any): Unit = ???
 }

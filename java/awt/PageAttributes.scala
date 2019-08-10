@@ -52,11 +52,11 @@ final class PageAttributes extends Object with Cloneable {
 
     /** Creates and returns a copy of this PageAttributes. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Determines whether two PageAttributes are equal to each other. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns whether pages using these attributes will be rendered in
      *  color or monochrome.
@@ -169,22 +169,17 @@ final class PageAttributes extends Object with Cloneable {
 
 object PageAttributes {
     /** A type-safe enumeration of possible color states. */
-    @stub
-    object ColorType extends PageAttributes.ColorType
+    type ColorType = PageAttributes_ColorType
 
     /** A type-safe enumeration of possible paper sizes. */
-    @stub
-    object MediaType extends PageAttributes.MediaType
+    type MediaType = PageAttributes_MediaType
 
     /** A type-safe enumeration of possible orientations. */
-    @stub
-    object OrientationRequestedType extends PageAttributes.OrientationRequestedType
+    type OrientationRequestedType = PageAttributes_OrientationRequestedType
 
     /** A type-safe enumeration of possible origins. */
-    @stub
-    object OriginType extends PageAttributes.OriginType
+    type OriginType = PageAttributes_OriginType
 
     /** A type-safe enumeration of possible print qualities. */
-    @stub
-    object PrintQualityType extends PageAttributes.PrintQualityType
+    type PrintQualityType = PageAttributes_PrintQualityType
 }

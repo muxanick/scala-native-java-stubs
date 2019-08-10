@@ -162,6 +162,5 @@ class ScrollPaneLayout extends Object with LayoutManager with ScrollPaneConstant
 
 object ScrollPaneLayout {
     /** The UI resource version of ScrollPaneLayout. */
-    @stub
-    object UIResource extends ScrollPaneLayout.UIResource
+    type UIResource = ScrollPaneLayout_UIResource
 }

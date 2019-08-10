@@ -125,19 +125,19 @@ class IdentityHashMap[K, V] extends AbstractMap[K, V] with Map[K, V] with Serial
      *  themselves are not cloned.
      */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Tests whether the specified object reference is a key in this identity
      *  hash map.
      */
     @stub
-    def containsKey(key: Object): Boolean = ???
+    def containsKey(key: Any): Boolean = ???
 
     /** Tests whether the specified object reference is a value in this identity
      *  hash map.
      */
     @stub
-    def containsValue(value: Object): Boolean = ???
+    def containsValue(value: Any): Boolean = ???
 
     /** Returns a Set view of the mappings contained in this map. */
     @stub
@@ -145,7 +145,7 @@ class IdentityHashMap[K, V] extends AbstractMap[K, V] with Map[K, V] with Serial
 
     /** Compares the specified object with this map for equality. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Performs the given action for each entry in this map until all entries
      *  have been processed or the action throws an exception.
@@ -157,7 +157,7 @@ class IdentityHashMap[K, V] extends AbstractMap[K, V] with Map[K, V] with Serial
      *  or null if this map contains no mapping for the key.
      */
     @stub
-    def get(key: Object): V = ???
+    def get(key: Any): V = ???
 
     /** Returns the hash code value for this map. */
     @stub
@@ -185,7 +185,7 @@ class IdentityHashMap[K, V] extends AbstractMap[K, V] with Map[K, V] with Serial
 
     /** Removes the mapping for this key from this map if present. */
     @stub
-    def remove(key: Object): V = ???
+    def remove(key: Any): V = ???
 
     /** Replaces each entry's value with the result of invoking the given
      *  function on that entry until all entries have been processed or the

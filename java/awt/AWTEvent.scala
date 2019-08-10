@@ -29,7 +29,7 @@ abstract class AWTEvent extends EventObject {
 
     /** Constructs an AWTEvent object with the specified source object and type. */
     @stub
-    def this(source: Object, id: Int) = ???
+    def this(source: Any, id: Int) = ???
 
     /** Controls whether or not the event is sent back down to the peer once the
      *  source has processed it - false means it's sent to the peer; true means
@@ -53,7 +53,7 @@ abstract class AWTEvent extends EventObject {
     def paramString(): String
 
     /** Retargets an event to a new source. */
-    def setSource(newSource: Object): Unit
+    def setSource(newSource: Any): Unit
 
     /** Returns a String representation of this object. */
     def toString(): String

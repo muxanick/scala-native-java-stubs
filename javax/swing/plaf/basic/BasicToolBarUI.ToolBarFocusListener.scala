@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class BasicToolBarUI.ToolBarFocusListener extends Object with FocusListener {
+protected class BasicToolBarUI_ToolBarFocusListener extends Object with FocusListener {
 
     /**  */
     @stub

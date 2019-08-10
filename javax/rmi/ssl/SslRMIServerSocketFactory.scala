@@ -57,7 +57,7 @@ class SslRMIServerSocketFactory extends Object with RMIServerSocketFactory {
 
     /** Indicates whether some other object is "equal to" this one. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the names of the cipher suites enabled on SSL
      *  connections accepted by server sockets created by this factory,

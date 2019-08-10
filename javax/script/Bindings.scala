@@ -13,15 +13,15 @@ trait Bindings extends Map[String, Object] {
      *  key.
      */
     @stub
-    def containsKey(key: Object): Boolean = ???
+    def containsKey(key: Any): Boolean = ???
 
     /** Returns the value to which this map maps the specified key. */
     @stub
-    def get(key: Object): Object = ???
+    def get(key: Any): Any = ???
 
     /** Set a named value. */
     @stub
-    def put(name: String, value: Object): Object = ???
+    def put(name: String, value: Any): Any = ???
 
     /** Adds all the mappings in a given Map to this Bindings. */
     @stub
@@ -31,5 +31,5 @@ trait Bindings extends Map[String, Object] {
      *  (optional operation).
      */
     @stub
-    def remove(key: Object): Object = ???
+    def remove(key: Any): Any = ???
 }

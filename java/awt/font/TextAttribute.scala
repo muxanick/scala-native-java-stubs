@@ -212,7 +212,7 @@ final class TextAttribute extends AttributedCharacterIterator.Attribute {
 
     /** Resolves instances being deserialized to the predefined constants. */
     @stub
-    protected def readResolve(): Object = ???
+    protected def readResolve(): Any = ???
 }
 
 object TextAttribute {

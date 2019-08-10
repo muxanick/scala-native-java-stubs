@@ -12,7 +12,7 @@ import scala.scalanative.annotation.stub
  *  while not knowing anything about how the CSS values
  *  are being cached.
  */
-object StyleSheet.ListPainter extends Object with Serializable {
+object StyleSheet_ListPainter extends Object with Serializable {
 
     /** Paints the CSS list decoration according to the
      *  attributes given.

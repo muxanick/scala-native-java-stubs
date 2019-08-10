@@ -97,7 +97,7 @@ abstract class SOAPMessage extends Object {
     /** Creates an AttachmentPart object and populates it with
      *  the specified data of the specified content type.
      */
-    def createAttachmentPart(content: Object, contentType: String): AttachmentPart
+    def createAttachmentPart(content: Any, contentType: String): AttachmentPart
 
     /** Returns an AttachmentPart object that is associated with an
      *  attachment that is referenced by this SOAPElement or
@@ -126,7 +126,7 @@ abstract class SOAPMessage extends Object {
     def getMimeHeaders(): MimeHeaders
 
     /** Retrieves value of the specified property. */
-    def getProperty(property: String): Object
+    def getProperty(property: String): Any
 
     /** Gets the SOAP Body contained in this SOAPMessage object. */
     def getSOAPBody(): SOAPBody
@@ -165,7 +165,7 @@ abstract class SOAPMessage extends Object {
     def setContentDescription(description: String): Unit
 
     /** Associates the specified value with the specified property. */
-    def setProperty(property: String, value: Object): Unit
+    def setProperty(property: String, value: Any): Unit
 
     /** Writes this SOAPMessage object to the given output
      *  stream.

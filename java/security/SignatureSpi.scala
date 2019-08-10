@@ -24,10 +24,10 @@ abstract class SignatureSpi extends Object {
     protected val appRandom: SecureRandom
 
     /** Returns a clone if the implementation is cloneable. */
-    def clone(): Object
+    def clone(): Any
 
     /** Deprecated.   */
-    protected def engineGetParameter(param: String): Object
+    protected def engineGetParameter(param: String): Any
 
     /** This method is overridden by providers to return the
      *  parameters used with this signature engine, or null
@@ -59,7 +59,7 @@ abstract class SignatureSpi extends Object {
      * Replaced by engineSetParameter.
      * 
      */
-    protected def engineSetParameter(param: String, value: Object): Unit
+    protected def engineSetParameter(param: String, value: Any): Unit
 
     /** Returns the signature bytes of all the data
      *  updated so far.

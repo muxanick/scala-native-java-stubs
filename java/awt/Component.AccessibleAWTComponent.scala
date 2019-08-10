@@ -15,7 +15,7 @@ import scala.scalanative.annotation.stub
  *  
  *  The class used to obtain the accessible role for this object.
  */
-protected abstract class Component.AccessibleAWTComponent extends AccessibleContext with Serializable with AccessibleComponent {
+protected abstract class Component_AccessibleAWTComponent extends AccessibleContext with Serializable with AccessibleComponent {
 
     /** Though the class is abstract, this should be called by
      *  all sub-classes.
@@ -26,12 +26,12 @@ protected abstract class Component.AccessibleAWTComponent extends AccessibleCont
     /** Fire PropertyChange listener, if one is registered,
      *  when shown/hidden..
      */
-    protected object AccessibleAWTComponentHandler extends Component.AccessibleAWTComponent.AccessibleAWTComponentHandler
+    protected type AccessibleAWTComponentHandler = Component_AccessibleAWTComponent_AccessibleAWTComponentHandler
 
     /** Fire PropertyChange listener, if one is registered,
      *  when focus events happen
      */
-    protected object AccessibleAWTFocusHandler extends Component.AccessibleAWTComponent.AccessibleAWTFocusHandler
+    protected type AccessibleAWTFocusHandler = Component_AccessibleAWTComponent_AccessibleAWTFocusHandler
 
     /**  */
     protected val accessibleAWTComponentHandler: ComponentListener

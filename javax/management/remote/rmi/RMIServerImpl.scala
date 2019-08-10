@@ -64,7 +64,7 @@ abstract class RMIServerImpl extends Object with Closeable with RMIServer {
     protected def makeClient(connectionId: String, subject: Subject): RMIConnection
 
     /** Creates a new client connection. */
-    def newClient(credentials: Object): RMIConnection
+    def newClient(credentials: Any): RMIConnection
 
     /** Sets the default ClassLoader for this connector
      *  server.

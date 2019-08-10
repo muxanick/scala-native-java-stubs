@@ -63,7 +63,7 @@ trait CharacterIterator extends Cloneable {
 
     /** Create a copy of this iterator */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Gets the character at the current position (as returned by getIndex()). */
     @stub

@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** An element that represents a structural block of
  *  HTML.
  */
-class HTMLDocument.BlockElement extends AbstractDocument.BranchElement {
+class HTMLDocument_BlockElement extends AbstractDocument.BranchElement {
 
     /** Constructs a composite element that initially contains
      *  no children.

@@ -54,7 +54,7 @@ import scala.scalanative.annotation.stub
  *  that take a Group throw an NullPointerException if
  *  passed null.
  */
-abstract class GroupLayout.Group extends Object {
+abstract class GroupLayout_Group extends Object {
 
     /** Adds a Component to this Group. */
     def addComponent(component: Component): GroupLayout.Group

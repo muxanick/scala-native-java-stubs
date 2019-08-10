@@ -15,7 +15,7 @@ class TimerNotification extends Notification {
 
     /** Creates a timer notification object. */
     @stub
-    def this(type: String, source: Object, sequenceNumber: Long, timeStamp: Long, msg: String, id: Integer) = ???
+    def this(type: String, source: Any, sequenceNumber: Long, timeStamp: Long, msg: String, id: Integer) = ???
 
     /** Gets the identifier of this timer notification. */
     @stub

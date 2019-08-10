@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
  *  needs to remain fairly stable until the layout thread
  *  decides to publish an update to the parent.
  */
-class AsyncBoxView.ChildLocator extends Object {
+class AsyncBoxView_ChildLocator extends Object {
 
     /** construct a child locator. */
     @stub

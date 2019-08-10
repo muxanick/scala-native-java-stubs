@@ -6,10 +6,10 @@ import scala.scalanative.annotation.stub
 /** Enumeration of the possible comparison values supported by
  *  some of the default RowFilters.
  */
-class RowFilter.ComparisonType private (name: String, ordinal: Int) extends Enum[RowFilter.ComparisonType](name, ordinal) {
+class RowFilter_ComparisonType private (name: String, ordinal: Int) extends Enum[RowFilter.ComparisonType](name, ordinal) {
 }
 
-object RowFilter.ComparisonType {
+object RowFilter_ComparisonType {
     /** Indicates that entries with a value after the supplied
      *  value should be included.
      */

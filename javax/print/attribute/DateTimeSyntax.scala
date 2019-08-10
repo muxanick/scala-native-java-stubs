@@ -40,7 +40,7 @@ abstract class DateTimeSyntax extends Object with Serializable with Cloneable {
     /** Returns whether this date-time attribute is equivalent to the passed in
      *  object.
      */
-    def equals(object: Object): Boolean
+    def equals(object: Any): Boolean
 
     /** Returns this date-time attribute's java.util.Date
      *  value.

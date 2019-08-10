@@ -51,7 +51,7 @@ abstract class Path2D extends Object with Shape with Cloneable {
     def append(s: Shape, connect: Boolean): Unit
 
     /** Creates a new object of the same class as this object. */
-    def clone(): Object
+    def clone(): Any
 
     /** Closes the current subpath by drawing a straight line back to
      *  the coordinates of the last moveTo.
@@ -159,14 +159,12 @@ object Path2D {
     /** The Double class defines a geometric path with
      *  coordinates stored in double precision floating point.
      */
-    @stub
-    object Double extends Path2D.Double
+    type Double = Path2D_Double
 
     /** The Float class defines a geometric path with
      *  coordinates stored in single precision floating point.
      */
-    @stub
-    object Float extends Path2D.Float
+    type Float = Path2D_Float
 
     /** An even-odd winding rule for determining the interior of
      *  a path.

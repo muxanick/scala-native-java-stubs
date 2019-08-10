@@ -16,7 +16,7 @@ abstract class DocumentBuilderFactory extends Object {
     /** Allows the user to retrieve specific attributes on the underlying
      *  implementation.
      */
-    def getAttribute(name: String): Object
+    def getAttribute(name: String): Any
 
     /** Get the state of the named feature. */
     def getFeature(name: String): Boolean
@@ -68,7 +68,7 @@ abstract class DocumentBuilderFactory extends Object {
     /** Allows the user to set specific attributes on the underlying
      *  implementation.
      */
-    def setAttribute(name: String, value: Object): Unit
+    def setAttribute(name: String, value: Any): Unit
 
     /** Specifies that the parser produced by this code will
      *  convert CDATA nodes to Text nodes and append it to the

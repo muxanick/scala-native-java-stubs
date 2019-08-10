@@ -44,7 +44,7 @@ class DefaultListModel[E] extends AbstractListModel[E] {
 
     /** Tests whether the specified object is a component in this list. */
     @stub
-    def contains(elem: Object): Boolean = ???
+    def contains(elem: Any): Boolean = ???
 
     /** Copies the components of this list into the specified array. */
     @stub
@@ -83,13 +83,13 @@ class DefaultListModel[E] extends AbstractListModel[E] {
 
     /** Searches for the first occurrence of elem. */
     @stub
-    def indexOf(elem: Object): Int = ???
+    def indexOf(elem: Any): Int = ???
 
     /** Searches for the first occurrence of elem, beginning
      *  the search at index.
      */
     @stub
-    def indexOf(elem: Object, index: Int): Int = ???
+    def indexOf(elem: Any, index: Int): Int = ???
 
     /** Inserts the specified element as a component in this list at the
      *  specified index.
@@ -107,13 +107,13 @@ class DefaultListModel[E] extends AbstractListModel[E] {
 
     /** Returns the index of the last occurrence of elem. */
     @stub
-    def lastIndexOf(elem: Object): Int = ???
+    def lastIndexOf(elem: Any): Int = ???
 
     /** Searches backwards for elem, starting from the
      *  specified index, and returns an index to it.
      */
     @stub
-    def lastIndexOf(elem: Object, index: Int): Int = ???
+    def lastIndexOf(elem: Any, index: Int): Int = ???
 
     /** Removes the element at the specified position in this list. */
     @stub
@@ -127,7 +127,7 @@ class DefaultListModel[E] extends AbstractListModel[E] {
      *  from this list.
      */
     @stub
-    def removeElement(obj: Object): Boolean = ???
+    def removeElement(obj: Any): Boolean = ???
 
     /** Deletes the component at the specified index. */
     @stub

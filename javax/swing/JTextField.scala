@@ -152,8 +152,7 @@ class JTextField extends JTextComponent with SwingConstants {
     /** This class implements accessibility support for the
      *  JTextField class.
      */
-    @stub
-    protected object AccessibleJTextField extends JTextField.AccessibleJTextField
+    protected type AccessibleJTextField = JTextField_AccessibleJTextField
 
     /** Updates the textfield's state in response to property changes in
      *  associated action.

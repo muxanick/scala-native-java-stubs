@@ -6,7 +6,7 @@ import javax.swing.AbstractAction
 import scala.scalanative.annotation.stub
 
 /** Acts when DirectoryComboBox has changed the selected item. */
-protected class MetalFileChooserUI.DirectoryComboBoxAction extends AbstractAction {
+protected class MetalFileChooserUI_DirectoryComboBoxAction extends AbstractAction {
 
     /**  */
     @stub

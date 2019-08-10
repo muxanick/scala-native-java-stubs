@@ -7,4 +7,4 @@ import scala.scalanative.annotation.stub
  *  attributes that contribute to a color.  These are aliased
  *  by the outer class for general presentation.
  */
-object StyleConstants.ColorConstants extends StyleConstants with AttributeSet.ColorAttribute with AttributeSet.CharacterAttribute {
+object StyleConstants_ColorConstants extends StyleConstants with AttributeSet.ColorAttribute with AttributeSet.CharacterAttribute {

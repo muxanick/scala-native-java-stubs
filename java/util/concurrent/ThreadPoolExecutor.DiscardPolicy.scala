@@ -6,7 +6,7 @@ import scala.scalanative.annotation.stub
 /** A handler for rejected tasks that silently discards the
  *  rejected task.
  */
-object ThreadPoolExecutor.DiscardPolicy extends Object with RejectedExecutionHandler {
+object ThreadPoolExecutor_DiscardPolicy extends Object with RejectedExecutionHandler {
 
     /** Creates a DiscardPolicy. */
     @stub

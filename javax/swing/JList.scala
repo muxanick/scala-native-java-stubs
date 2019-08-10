@@ -244,8 +244,7 @@ class JList[E] extends JComponent with Scrollable with Accessible {
     /** This class implements accessibility support for the
      *  JList class.
      */
-    @stub
-    protected object AccessibleJList extends JList.AccessibleJList
+    protected type AccessibleJList = JList_AccessibleJList
 
     /** Adds a listener to the list, to be notified each time a change to the
      *  selection occurs; the preferred way of listening for selection state
@@ -588,7 +587,7 @@ class JList[E] extends JComponent with Scrollable with Accessible {
 
     /** Selects the specified object from the list. */
     @stub
-    def setSelectedValue(anObject: Object, shouldScroll: Boolean): Unit = ???
+    def setSelectedValue(anObject: Any, shouldScroll: Boolean): Unit = ???
 
     /** Sets the color used to draw the background of selected items, which
      *  cell renderers can use fill selected cells.
@@ -647,8 +646,7 @@ object JList {
     /** A subclass of TransferHandler.DropLocation representing
      *  a drop location for a JList.
      */
-    @stub
-    object DropLocation extends JList.DropLocation
+    type DropLocation = JList_DropLocation
 
     /** Indicates a "newspaper style" layout with cells flowing horizontally
      *  then vertically.

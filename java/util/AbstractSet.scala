@@ -29,7 +29,7 @@ abstract class AbstractSet[E] extends AbstractCollection[E] with Set[E] {
     protected def this() = ???
 
     /** Compares the specified object with this set for equality. */
-    def equals(o: Object): Boolean
+    def equals(o: Any): Boolean
 
     /** Returns the hash code value for this set. */
     def hashCode(): Int

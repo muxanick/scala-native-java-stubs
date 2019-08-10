@@ -47,10 +47,10 @@ abstract class TableView extends BoxView {
      * A table cell can now be any View implementation.
      * 
      */
-    object TableCell extends TableView.TableCell
+    type TableCell = TableView_TableCell
 
     /** View of a row in a row-centric table. */
-    object TableRow extends TableView.TableRow
+    type TableRow = TableView_TableRow
 
     /** Calculate the requirements for the minor axis. */
     protected def calculateMinorAxisRequirements(axis: Int, r: SizeRequirements): SizeRequirements

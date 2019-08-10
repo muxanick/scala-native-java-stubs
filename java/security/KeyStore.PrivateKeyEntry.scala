@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
 /** A KeyStore entry that holds a PrivateKey
  *  and corresponding certificate chain.
  */
-final object KeyStore.PrivateKeyEntry extends Object with KeyStore.Entry {
+final object KeyStore_PrivateKeyEntry extends Object with KeyStore.Entry {
 
     /** Constructs a PrivateKeyEntry with a
      *  PrivateKey and corresponding certificate chain.

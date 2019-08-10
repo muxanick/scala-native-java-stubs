@@ -34,14 +34,11 @@ trait PrimitiveIterator[T, T_CONS] extends Iterator[T] {
 
 object PrimitiveIterator {
     /** An Iterator specialized for double values. */
-    @stub
-    trait OfDouble extends PrimitiveIterator.OfDouble
+    type OfDouble = PrimitiveIterator_OfDouble
 
     /** An Iterator specialized for int values. */
-    @stub
-    trait OfInt extends PrimitiveIterator.OfInt
+    type OfInt = PrimitiveIterator_OfInt
 
     /** An Iterator specialized for long values. */
-    @stub
-    trait OfLong extends PrimitiveIterator.OfLong
+    type OfLong = PrimitiveIterator_OfLong
 }

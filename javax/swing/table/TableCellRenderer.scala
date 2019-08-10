@@ -12,5 +12,5 @@ trait TableCellRenderer {
 
     /** Returns the component used for drawing the cell. */
     @stub
-    def getTableCellRendererComponent(table: JTable, value: Object, isSelected: Boolean, hasFocus: Boolean, row: Int, column: Int): Component = ???
+    def getTableCellRendererComponent(table: JTable, value: Any, isSelected: Boolean, hasFocus: Boolean, row: Int, column: Int): Component = ???
 }

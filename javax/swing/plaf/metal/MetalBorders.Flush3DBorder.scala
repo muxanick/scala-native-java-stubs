@@ -7,7 +7,7 @@ import javax.swing.plaf.UIResource
 import scala.scalanative.annotation.stub
 
 /**  */
-object MetalBorders.Flush3DBorder extends AbstractBorder with UIResource {
+object MetalBorders_Flush3DBorder extends AbstractBorder with UIResource {
 
     /**  */
     @stub

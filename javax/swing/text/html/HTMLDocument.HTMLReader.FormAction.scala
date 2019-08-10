@@ -51,7 +51,7 @@ import scala.scalanative.annotation.stub
  *    PlainDocument
  *  
  */
-class HTMLDocument.HTMLReader.FormAction extends HTMLDocument.HTMLReader.SpecialAction {
+class HTMLDocument_HTMLReader_FormAction extends HTMLDocument.HTMLReader.SpecialAction {
 
     /**  */
     @stub

@@ -42,12 +42,10 @@ class DefaultStyledDocument extends AbstractDocument with StyledDocument {
     /** Class to manage changes to the element
      *  hierarchy.
      */
-    @stub
-    object ElementBuffer extends DefaultStyledDocument.ElementBuffer
+    type ElementBuffer = DefaultStyledDocument_ElementBuffer
 
     /** Default root element for a document... */
-    @stub
-    protected object SectionElement extends DefaultStyledDocument.SectionElement
+    protected type SectionElement = DefaultStyledDocument_SectionElement
 
     /**  */
     @stub
@@ -158,12 +156,10 @@ object DefaultStyledDocument {
     /** An UndoableEdit used to remember AttributeSet changes to an
      *  Element.
      */
-    @stub
-    object AttributeUndoableEdit extends DefaultStyledDocument.AttributeUndoableEdit
+    type AttributeUndoableEdit = DefaultStyledDocument_AttributeUndoableEdit
 
     /** Specification for building elements. */
-    @stub
-    object ElementSpec extends DefaultStyledDocument.ElementSpec
+    type ElementSpec = DefaultStyledDocument_ElementSpec
 
     /** The default size of the initial content buffer. */
     @stub

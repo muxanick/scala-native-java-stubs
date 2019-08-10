@@ -19,7 +19,7 @@ final class TransformAttribute extends Object with Serializable {
      *  transform.
      */
     @stub
-    def equals(rhs: Object): Boolean = ???
+    def equals(rhs: Any): Boolean = ???
 
     /** Returns a copy of the wrapped transform. */
     @stub

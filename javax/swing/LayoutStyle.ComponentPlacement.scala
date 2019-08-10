@@ -9,10 +9,10 @@ import scala.scalanative.annotation.stub
  *  LayoutStyle method getPreferredGap.  Refer to
  *  LayoutStyle for more information.
  */
-class LayoutStyle.ComponentPlacement private (name: String, ordinal: Int) extends Enum[LayoutStyle.ComponentPlacement](name, ordinal) {
+class LayoutStyle_ComponentPlacement private (name: String, ordinal: Int) extends Enum[LayoutStyle.ComponentPlacement](name, ordinal) {
 }
 
-object LayoutStyle.ComponentPlacement {
+object LayoutStyle_ComponentPlacement {
     /** Enumeration value indicating the distance to indent a component
      *  is being requested.
      */

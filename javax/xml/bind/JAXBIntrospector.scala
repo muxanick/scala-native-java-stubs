@@ -24,14 +24,14 @@ abstract class JAXBIntrospector extends Object {
     def this() = ???
 
     /** Get xml element qname for jaxbElement. */
-    def getElementName(jaxbElement: Object): QName
+    def getElementName(jaxbElement: Any): QName
 
     /** Return true if object represents a JAXB element. */
-    def isElement(object: Object): Boolean
+    def isElement(object: Any): Boolean
 }
 
 object JAXBIntrospector {
     /** Get the element value of a JAXB element. */
     @stub
-    def getValue(jaxbElement: Object): Object = ???
+    def getValue(jaxbElement: Any): Any = ???
 }

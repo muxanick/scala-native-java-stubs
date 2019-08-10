@@ -4,7 +4,7 @@ import java.awt.{Graphics, Shape}
 import scala.scalanative.annotation.stub
 
 /** Highlight renderer. */
-object trait Highlighter.HighlightPainter {
+trait Highlighter_HighlightPainter {
 
     /** Renders the highlight. */
     @stub

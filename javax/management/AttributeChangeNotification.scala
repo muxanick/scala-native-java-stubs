@@ -27,7 +27,7 @@ class AttributeChangeNotification extends Notification {
 
     /** Constructs an attribute change notification object. */
     @stub
-    def this(source: Object, sequenceNumber: Long, timeStamp: Long, msg: String, attributeName: String, attributeType: String, oldValue: Object, newValue: Object) = ???
+    def this(source: Any, sequenceNumber: Long, timeStamp: Long, msg: String, attributeName: String, attributeType: String, oldValue: Any, newValue: Any) = ???
 
     /** Gets the name of the attribute which has changed. */
     @stub
@@ -39,11 +39,11 @@ class AttributeChangeNotification extends Notification {
 
     /** Gets the new value of the attribute which has changed. */
     @stub
-    def getNewValue(): Object = ???
+    def getNewValue(): Any = ???
 
     /** Gets the old value of the attribute which has changed. */
     @stub
-    def getOldValue(): Object = ???
+    def getOldValue(): Any = ???
 }
 
 object AttributeChangeNotification {

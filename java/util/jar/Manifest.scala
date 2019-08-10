@@ -32,13 +32,13 @@ class Manifest extends Object with Cloneable {
 
     /** Returns a shallow copy of this Manifest. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns true if the specified Object is also a Manifest and has
      *  the same main Attributes and entries.
      */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the Attributes for the specified entry name. */
     @stub

@@ -51,7 +51,7 @@ abstract class ImageWriter extends Object with ImageTranscoder {
      *  set by setOutput and retrieved by
      *  getOutput.
      */
-    protected val output: Object
+    protected val output: Any
 
     /** A List of currently registered
      *  IIOWriteProgressListeners, initialized by default
@@ -227,7 +227,7 @@ abstract class ImageWriter extends Object with ImageTranscoder {
      *  Object set by the most recent call to the
      *  setOutput method.
      */
-    def getOutput(): Object
+    def getOutput(): Any
 
     /** Returns an array of Dimensions indicating the
      *  legal size ranges for thumbnail images as they will be encoded
@@ -364,7 +364,7 @@ abstract class ImageWriter extends Object with ImageTranscoder {
     /** Sets the destination to the given
      *  ImageOutputStream or other Object.
      */
-    def setOutput(output: Object): Unit
+    def setOutput(output: Any): Unit
 
     /** Appends a complete image stream containing a single image with
      *  default metadata and thumbnails to the output.

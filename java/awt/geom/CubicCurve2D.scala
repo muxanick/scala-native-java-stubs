@@ -19,7 +19,7 @@ abstract class CubicCurve2D extends Object with Shape with Cloneable {
     protected def this() = ???
 
     /** Creates a new object of the same class as this object. */
-    def clone(): Object
+    def clone(): Any
 
     /** Tests if the specified coordinates are inside the boundary of the
      *  Shape, as described by the
@@ -153,14 +153,12 @@ object CubicCurve2D {
     /** A cubic parametric curve segment specified with
      *  double coordinates.
      */
-    @stub
-    object Double extends CubicCurve2D.Double
+    type Double = CubicCurve2D_Double
 
     /** A cubic parametric curve segment specified with
      *  float coordinates.
      */
-    @stub
-    object Float extends CubicCurve2D.Float
+    type Float = CubicCurve2D_Float
 
     /** Returns the flatness of the cubic curve specified
      *  by the control points stored in the indicated array at the

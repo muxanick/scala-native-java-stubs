@@ -43,12 +43,10 @@ class BasicOptionPaneUI extends OptionPaneUI {
     def this() = ???
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object ButtonActionListener extends BasicOptionPaneUI.ButtonActionListener
+    type ButtonActionListener = BasicOptionPaneUI_ButtonActionListener
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object PropertyChangeHandler extends BasicOptionPaneUI.PropertyChangeHandler
+    type PropertyChangeHandler = BasicOptionPaneUI_PropertyChangeHandler
 
     /** This is set to true in validateComponent if a Component is contained
      *  in either the message or the buttons.
@@ -96,7 +94,7 @@ class BasicOptionPaneUI extends OptionPaneUI {
      *  places it into container.
      */
     @stub
-    protected def addMessageComponents(container: Container, cons: GridBagConstraints, msg: Object, maxll: Int, internallyCreated: Boolean): Unit = ???
+    protected def addMessageComponents(container: Container, cons: GridBagConstraints, msg: Any, maxll: Int, internallyCreated: Boolean): Unit = ???
 
     /** Recursively creates new JLabel instances to represent d. */
     @stub
@@ -163,7 +161,7 @@ class BasicOptionPaneUI extends OptionPaneUI {
      *  providing the look and feel for.
      */
     @stub
-    protected def getMessage(): Object = ???
+    protected def getMessage(): Any = ???
 
     /** Returns the minimum size the option pane should be. */
     @stub
@@ -245,8 +243,7 @@ object BasicOptionPaneUI {
     /** ButtonAreaLayout behaves in a similar manner to
      *  FlowLayout.
      */
-    @stub
-    object ButtonAreaLayout extends BasicOptionPaneUI.ButtonAreaLayout
+    type ButtonAreaLayout = BasicOptionPaneUI_ButtonAreaLayout
 
     /**  */
     @stub

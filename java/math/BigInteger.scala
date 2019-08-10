@@ -170,7 +170,7 @@ class BigInteger extends Number with Comparable[BigInteger] {
 
     /** Compares this BigInteger with the specified Object for equality. */
     @stub
-    def equals(x: Object): Boolean = ???
+    def equals(x: Any): Boolean = ???
 
     /** Returns a BigInteger whose value is equivalent to this BigInteger
      *  with the designated bit flipped.

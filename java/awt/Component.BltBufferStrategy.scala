@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /** Inner class for blitting offscreen surfaces to a component. */
-protected class Component.BltBufferStrategy extends BufferStrategy {
+protected class Component_BltBufferStrategy extends BufferStrategy {
 
     /** Creates a new blt buffer strategy around a component */
     @stub

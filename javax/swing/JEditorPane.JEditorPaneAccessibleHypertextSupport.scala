@@ -13,15 +13,14 @@ import scala.scalanative.annotation.stub
  *  there is an HTML document being displayed in this
  *  JEditorPane.
  */
-protected class JEditorPane.JEditorPaneAccessibleHypertextSupport extends JEditorPane.AccessibleJEditorPane with AccessibleHypertext {
+protected class JEditorPane_JEditorPaneAccessibleHypertextSupport extends JEditorPane.AccessibleJEditorPane with AccessibleHypertext {
 
     /** Make one of these puppies */
     @stub
     def JEditorPaneAccessibleHypertextSupport() = ???
 
     /**  */
-    @stub
-    object HTMLLink extends JEditorPane.JEditorPaneAccessibleHypertextSupport.HTMLLink
+    type HTMLLink = JEditorPane_JEditorPaneAccessibleHypertextSupport_HTMLLink
 
     /** Returns the index into an array of hyperlinks that
      *  index.

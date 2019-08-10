@@ -27,28 +27,28 @@ class TreeModelEvent extends EventObject {
      *  Objects.
      */
     @stub
-    def this(source: Object, path: Array[Object]) = ???
+    def this(source: Any, path: Array[Object]) = ???
 
     /** Used to create an event when nodes have been changed, inserted, or
      *  removed, identifying the path to the parent of the modified items as
      *  an array of Objects.
      */
     @stub
-    def this(source: Object, path: Array[Object], childIndices: Array[Int], children: Array[Object]) = ???
+    def this(source: Any, path: Array[Object], childIndices: Array[Int], children: Array[Object]) = ???
 
     /** Used to create an event when the node structure has changed in some way,
      *  identifying the path to the root of the modified subtree as a TreePath
      *  object.
      */
     @stub
-    def this(source: Object, path: TreePath) = ???
+    def this(source: Any, path: TreePath) = ???
 
     /** Used to create an event when nodes have been changed, inserted, or
      *  removed, identifying the path to the parent of the modified items as
      *  a TreePath object.
      */
     @stub
-    def this(source: Object, path: TreePath, childIndices: Array[Int], children: Array[Object]) = ???
+    def this(source: Any, path: TreePath, childIndices: Array[Int], children: Array[Object]) = ???
 
     /** Indices identifying the position of where the children were. */
     @stub

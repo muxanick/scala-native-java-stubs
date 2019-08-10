@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
  *  Java Accessibility API appropriate to text component user-interface
  *  elements.
  */
-protected class TextComponent.AccessibleAWTTextComponent extends Component.AccessibleAWTComponent with AccessibleText with TextListener {
+protected class TextComponent_AccessibleAWTTextComponent extends Component.AccessibleAWTComponent with AccessibleText with TextListener {
 
     /** Constructs an AccessibleAWTTextComponent. */
     @stub

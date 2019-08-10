@@ -21,7 +21,7 @@ class RoleUnresolved extends Object with Serializable {
 
     /** Clone this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Retrieves problem type. */
     @stub

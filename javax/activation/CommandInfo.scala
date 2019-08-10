@@ -31,5 +31,5 @@ class CommandInfo extends Object {
 
     /** Return the instantiated JavaBean component. */
     @stub
-    def getCommandObject(dh: DataHandler, loader: ClassLoader): Object = ???
+    def getCommandObject(dh: DataHandler, loader: ClassLoader): Any = ???
 }

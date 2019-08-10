@@ -8,4 +8,5 @@ import scala.scalanative.annotation.stub
  *  that applies to a so-called run of
  *  style.
  */
-object trait AttributeSet.CharacterAttribute {
+trait AttributeSet_CharacterAttribute {
+}

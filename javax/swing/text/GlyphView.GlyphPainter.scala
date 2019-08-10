@@ -14,28 +14,24 @@ import scala.scalanative.annotation.stub
  *  of JVM and selection of capabilities (i.e.
  *  shaping for i18n, etc).
  */
-object abstract GlyphView.GlyphPainter extends Object {
+object abstract GlyphView_GlyphPainter extends Object {
 
     /**  */
     @stub
     def GlyphPainter() = ???
 
     /**  */
-    @stub
     def getAscent(v: GlyphView): Float
 
     /** Determines the model location that represents the
      *  maximum advance that fits within the given span.
      */
-    @stub
     def getBoundedPosition(v: GlyphView, p0: Int, x: Float, len: Float): Int
 
     /**  */
-    @stub
     def getDescent(v: GlyphView): Float
 
     /**  */
-    @stub
     def getHeight(v: GlyphView): Float
 
     /** Provides a way to determine the next visually represented model
@@ -51,22 +47,18 @@ object abstract GlyphView.GlyphPainter extends Object {
     /** Determine the span the glyphs given a start location
      *  (for tab expansion).
      */
-    @stub
     def getSpan(v: GlyphView, p0: Int, p1: Int, e: TabExpander, x: Float): Float
 
     /** Provides a mapping from the document model coordinate space
      *  to the coordinate space of the view mapped to it.
      */
-    @stub
     def modelToView(v: GlyphView, pos: Int, bias: Position.Bias, a: Shape): Shape
 
     /** Paint the glyphs representing the given range. */
-    @stub
     def paint(v: GlyphView, g: Graphics, a: Shape, p0: Int, p1: Int): Unit
 
     /** Provides a mapping from the view coordinate space to the logical
      *  coordinate space of the model.
      */
-    @stub
     def viewToModel(v: GlyphView, x: Float, y: Float, a: Shape, biasReturn: Array[Position.Bias]): Int
 }

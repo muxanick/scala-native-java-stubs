@@ -12,7 +12,7 @@ import scala.scalanative.annotation.stub
  *  ordered stream whose elements are the elements that were added to the
  *  stream builder, in the order they were added.
  */
-object trait DoubleStream.Builder extends DoubleConsumer {
+trait DoubleStream_Builder extends DoubleConsumer {
 
     /** Adds an element to the stream being built. */
     @stub

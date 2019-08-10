@@ -13,7 +13,7 @@ import scala.scalanative.annotation.stub
  *  Menu class.  It provides an implementation of the
  *  Java Accessibility API appropriate to menu user-interface elements.
  */
-protected class Menu.AccessibleAWTMenu extends MenuItem.AccessibleAWTMenuItem {
+protected class Menu_AccessibleAWTMenu extends MenuItem.AccessibleAWTMenuItem {
 
     /**  */
     @stub

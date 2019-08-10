@@ -67,12 +67,11 @@ class ScrollPane extends Container with Accessible {
     /** This class implements accessibility support for the
      *  ScrollPane class.
      */
-    @stub
-    protected object AccessibleAWTScrollPane extends ScrollPane.AccessibleAWTScrollPane
+    protected type AccessibleAWTScrollPane = ScrollPane_AccessibleAWTScrollPane
 
     /** Adds the specified component to this scroll pane container. */
     @stub
-    protected def addImpl(comp: Component, constraints: Object, index: Int): Unit = ???
+    protected def addImpl(comp: Component, constraints: Any, index: Int): Unit = ???
 
     /** Creates the scroll pane's peer. */
     @stub

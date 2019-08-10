@@ -18,7 +18,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object DefaultEditorKit.PasteAction extends TextAction {
+object DefaultEditorKit_PasteAction extends TextAction {
 
     /** Create this object with the appropriate identifier. */
     @stub

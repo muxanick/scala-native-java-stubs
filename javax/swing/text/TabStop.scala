@@ -34,7 +34,7 @@ class TabStop extends Object with Serializable {
 
     /** Returns true if the tabs are equal. */
     @stub
-    def equals(other: Object): Boolean = ???
+    def equals(other: Any): Boolean = ???
 
     /** Returns the alignment, as an integer, of the tab. */
     @stub

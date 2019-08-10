@@ -49,11 +49,11 @@ class AttributedString extends Object {
 
     /** Adds an attribute to the entire string. */
     @stub
-    def addAttribute(attribute: AttributedCharacterIterator.Attribute, value: Object): Unit = ???
+    def addAttribute(attribute: AttributedCharacterIterator.Attribute, value: Any): Unit = ???
 
     /** Adds an attribute to a subrange of the string. */
     @stub
-    def addAttribute(attribute: AttributedCharacterIterator.Attribute, value: Object, beginIndex: Int, endIndex: Int): Unit = ???
+    def addAttribute(attribute: AttributedCharacterIterator.Attribute, value: Any, beginIndex: Int, endIndex: Int): Unit = ???
 
     /** Adds a set of attributes to a subrange of the string. */
     @stub

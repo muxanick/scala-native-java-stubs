@@ -416,29 +416,29 @@ abstract class MethodHandle extends Object {
     def asVarargsCollector(arrayType: Class[_]): MethodHandle
 
     /** Binds a value x to the first argument of a method handle, without invoking it. */
-    def bindTo(x: Object): MethodHandle
+    def bindTo(x: Any): MethodHandle
 
     /** Invokes the method handle, allowing any caller type descriptor,
      *  and optionally performing conversions on arguments and return values.
      */
-    def invoke(args: Object*): Object
+    def invoke(args: Object*): Any
 
     /** Invokes the method handle, allowing any caller type descriptor, but requiring an exact type match. */
-    def invokeExact(args: Object*): Object
+    def invokeExact(args: Object*): Any
 
     /** Performs a variable arity invocation, passing the arguments in the given array
      *  to the method handle, as if via an inexact invoke from a call site
      *  which mentions only the type Object, and whose arity is the length
      *  of the argument array.
      */
-    def invokeWithArguments(arguments: List[_]): Object
+    def invokeWithArguments(arguments: List[_]): Any
 
     /** Performs a variable arity invocation, passing the arguments in the given list
      *  to the method handle, as if via an inexact invoke from a call site
      *  which mentions only the type Object, and whose arity is the length
      *  of the argument list.
      */
-    def invokeWithArguments(arguments: Object*): Object
+    def invokeWithArguments(arguments: Object*): Any
 
     /** Determines if this method handle
      *  supports variable arity calls.

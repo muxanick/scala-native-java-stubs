@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  store
  *  parameters.
  */
-object trait KeyStore.LoadStoreParameter {
+trait KeyStore_LoadStoreParameter {
 
     /** Gets the parameter used to protect keystore data. */
     @stub

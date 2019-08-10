@@ -23,7 +23,7 @@ final class OptionalDouble extends Object {
 
     /** Indicates whether some other object is "equal to" this OptionalDouble. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** If a value is present in this OptionalDouble, returns the value,
      *  otherwise throws NoSuchElementException.

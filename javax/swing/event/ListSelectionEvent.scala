@@ -26,7 +26,7 @@ class ListSelectionEvent extends EventObject {
      *  lastIndex, inclusive.
      */
     @stub
-    def this(source: Object, firstIndex: Int, lastIndex: Int, isAdjusting: Boolean) = ???
+    def this(source: Any, firstIndex: Int, lastIndex: Int, isAdjusting: Boolean) = ???
 
     /** Returns the index of the first row whose selection may have changed. */
     @stub

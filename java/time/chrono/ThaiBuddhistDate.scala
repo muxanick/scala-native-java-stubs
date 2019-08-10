@@ -27,7 +27,7 @@ final class ThaiBuddhistDate extends Object with ChronoLocalDate with Serializab
 
     /** Compares this date to another date, including the chronology. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Gets the chronology of this date, which is the Thai Buddhist calendar system. */
     @stub

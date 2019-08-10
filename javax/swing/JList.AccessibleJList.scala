@@ -21,7 +21,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JList.AccessibleJList extends JComponent.AccessibleJComponent with AccessibleSelection with PropertyChangeListener with ListSelectionListener with ListDataListener {
+protected class JList_AccessibleJList extends JComponent.AccessibleJComponent with AccessibleSelection with PropertyChangeListener with ListSelectionListener with ListDataListener {
 
     /**  */
     @stub
@@ -30,8 +30,7 @@ protected class JList.AccessibleJList extends JComponent.AccessibleJComponent wi
     /** This class implements accessibility support appropriate
      *  for list children.
      */
-    @stub
-    protected object AccessibleJListChild extends JList.AccessibleJList.AccessibleJListChild
+    protected type AccessibleJListChild = JList_AccessibleJList_AccessibleJListChild
 
     /** Adds the specified selected item in the object to the object's
      *  selection.

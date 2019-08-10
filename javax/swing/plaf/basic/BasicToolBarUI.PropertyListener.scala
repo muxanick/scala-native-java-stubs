@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class BasicToolBarUI.PropertyListener extends Object with PropertyChangeListener {
+protected class BasicToolBarUI_PropertyListener extends Object with PropertyChangeListener {
 
     /**  */
     @stub

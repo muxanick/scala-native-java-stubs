@@ -6,10 +6,10 @@ import scala.scalanative.annotation.stub
 /** Enumeration of the possible ways ParallelGroup can align
  *  its children.
  */
-class GroupLayout.Alignment private (name: String, ordinal: Int) extends Enum[GroupLayout.Alignment](name, ordinal) {
+class GroupLayout_Alignment private (name: String, ordinal: Int) extends Enum[GroupLayout.Alignment](name, ordinal) {
 }
 
-object GroupLayout.Alignment {
+object GroupLayout_Alignment {
     /** Indicates the elements should be aligned along
      *  their baseline.
      */

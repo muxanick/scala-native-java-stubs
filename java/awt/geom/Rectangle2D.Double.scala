@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** The Double class defines a rectangle specified in
  *  double coordinates.
  */
-object Rectangle2D.Double extends Rectangle2D with Serializable {
+object Rectangle2D_Double extends Rectangle2D with Serializable {
 
     /** Constructs a new Rectangle2D, initialized to
      *  location (0, 0) and size (0, 0).

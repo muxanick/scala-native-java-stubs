@@ -26,11 +26,11 @@ class DecimalFormatSymbols extends Object with Cloneable with Serializable {
 
     /** Standard override. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Override equals. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Gets the currency of these DecimalFormatSymbols. */
     @stub

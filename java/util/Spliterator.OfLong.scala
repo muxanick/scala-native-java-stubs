@@ -5,7 +5,7 @@ import java.util.function.{Consumer, LongConsumer}
 import scala.scalanative.annotation.stub
 
 /** A Spliterator specialized for long values. */
-object trait Spliterator.OfLong extends Spliterator.OfPrimitive[Long, LongConsumer, Spliterator.OfLong] {
+trait Spliterator_OfLong extends Spliterator.OfPrimitive[Long, LongConsumer, Spliterator.OfLong] {
 
     /** Performs the given action for each remaining element, sequentially in
      *  the current thread, until all elements have been processed or the action

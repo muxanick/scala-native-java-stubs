@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
  *  Checkbox class.  It provides an implementation of the
  *  Java Accessibility API appropriate to checkbox user-interface elements.
  */
-protected class Checkbox.AccessibleAWTCheckbox extends Component.AccessibleAWTComponent with ItemListener with AccessibleAction with AccessibleValue {
+protected class Checkbox_AccessibleAWTCheckbox extends Component.AccessibleAWTComponent with ItemListener with AccessibleAction with AccessibleValue {
 
     /**  */
     @stub

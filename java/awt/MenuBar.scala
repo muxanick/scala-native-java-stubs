@@ -36,8 +36,7 @@ class MenuBar extends MenuComponent with MenuContainer with Accessible {
     /** Inner class of MenuBar used to provide default support for
      *  accessibility.
      */
-    @stub
-    protected object AccessibleAWTMenuBar extends MenuBar.AccessibleAWTMenuBar
+    protected type AccessibleAWTMenuBar = MenuBar_AccessibleAWTMenuBar
 
     /** Adds the specified menu to the menu bar. */
     @stub

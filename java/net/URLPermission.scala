@@ -122,7 +122,7 @@ final class URLPermission extends Permission {
      *  and p's url equals this's url.
      */
     @stub
-    def equals(p: Object): Boolean = ???
+    def equals(p: Any): Boolean = ???
 
     /** Returns the normalized method list and request
      *  header list, in the form:

@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
  *  JAR File Specification
  *  for more information about valid attribute names and values.
  */
-object Attributes.Name extends Object {
+object Attributes_Name extends Object {
 
     /** Constructs a new attribute name using the given string name. */
     @stub
@@ -127,7 +127,7 @@ object Attributes.Name extends Object {
 
     /** Compares this attribute name to another for equality. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Computes the hash value for this attribute name. */
     @stub

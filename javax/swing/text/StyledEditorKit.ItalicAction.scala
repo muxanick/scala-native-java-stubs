@@ -16,7 +16,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object StyledEditorKit.ItalicAction extends StyledEditorKit.StyledTextAction {
+object StyledEditorKit_ItalicAction extends StyledEditorKit.StyledTextAction {
 
     /** Constructs a new ItalicAction. */
     @stub

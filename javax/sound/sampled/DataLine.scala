@@ -106,6 +106,5 @@ object DataLine {
     /** Besides the class information inherited from its superclass,
      *  DataLine.Info provides additional information specific to data lines.
      */
-    @stub
-    object Info extends DataLine.Info
+    type Info = DataLine_Info
 }

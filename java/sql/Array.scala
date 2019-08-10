@@ -56,7 +56,7 @@ trait Array {
      *  programming language.
      */
     @stub
-    def getArray(): Object = ???
+    def getArray(): Any = ???
 
     /** Retrieves a slice of the SQL ARRAY
      *  value designated by this Array object, beginning with the
@@ -64,7 +64,7 @@ trait Array {
      *  successive elements of the SQL array.
      */
     @stub
-    def getArray(index: Long, count: Int): Object = ???
+    def getArray(index: Long, count: Int): Any = ???
 
     /** Retreives a slice of the SQL ARRAY value
      *  designated by this Array object, beginning with the specified
@@ -72,13 +72,13 @@ trait Array {
      *  successive elements of the SQL array.
      */
     @stub
-    def getArray(index: Long, count: Int, map: Map[String, Class[_]]): Object = ???
+    def getArray(index: Long, count: Int, map: Map[String, Class[_]]): Any = ???
 
     /** Retrieves the contents of the SQL ARRAY value designated by this
      *  Array object.
      */
     @stub
-    def getArray(map: Map[String, Class[_]]): Object = ???
+    def getArray(map: Map[String, Class[_]]): Any = ???
 
     /** Retrieves the JDBC type of the elements in the array designated
      *  by this Array object.

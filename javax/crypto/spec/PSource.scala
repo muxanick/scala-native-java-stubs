@@ -32,6 +32,5 @@ object PSource {
     /** This class is used to explicitly specify the value for
      *  encoding input P in OAEP Padding.
      */
-    @stub
-    object PSpecified extends PSource.PSpecified
+    type PSpecified = PSource_PSpecified
 }

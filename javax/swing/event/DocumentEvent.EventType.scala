@@ -4,7 +4,7 @@ import java.lang.{Object, String}
 import scala.scalanative.annotation.stub
 
 /** Enumeration for document event types */
-final object DocumentEvent.EventType extends Object {
+final object DocumentEvent_EventType extends Object {
 
     /** Change type. */
     @stub

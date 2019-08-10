@@ -50,7 +50,7 @@ class NamingException extends Exception {
      *  successful.
      */
     @stub
-    protected val resolvedObj: Object = ???
+    protected val resolvedObj: Any = ???
 
     /** Contains the original exception that caused this NamingException to
      *  be thrown.
@@ -88,7 +88,7 @@ class NamingException extends Exception {
 
     /** Retrieves the object to which resolution was successful. */
     @stub
-    def getResolvedObj(): Object = ???
+    def getResolvedObj(): Any = ???
 
     /** Retrieves the root cause of this NamingException, if any. */
     @stub
@@ -108,7 +108,7 @@ class NamingException extends Exception {
 
     /** Sets the resolved object field of this exception. */
     @stub
-    def setResolvedObj(obj: Object): Unit = ???
+    def setResolvedObj(obj: Any): Unit = ???
 
     /** Records the root cause of this NamingException. */
     @stub

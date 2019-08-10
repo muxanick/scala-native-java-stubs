@@ -41,7 +41,7 @@ class ActivationID extends Object with Serializable {
 
     /** Compares two activation ids for content equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns a hashcode for the activation id. */
     @stub

@@ -44,11 +44,11 @@ class NamingEvent extends EventObject {
 
     /** Constructs an instance of NamingEvent. */
     @stub
-    def this(source: EventContext, type: Int, newBd: Binding, oldBd: Binding, changeInfo: Object) = ???
+    def this(source: EventContext, type: Int, newBd: Binding, oldBd: Binding, changeInfo: Any) = ???
 
     /** Contains information about the change that generated this event. */
     @stub
-    protected val changeInfo: Object = ???
+    protected val changeInfo: Any = ???
 
     /** Contains information about the object after the change. */
     @stub
@@ -68,7 +68,7 @@ class NamingEvent extends EventObject {
 
     /** Retrieves the change information for this event. */
     @stub
-    def getChangeInfo(): Object = ???
+    def getChangeInfo(): Any = ???
 
     /** Retrieves the event source that fired this event. */
     @stub

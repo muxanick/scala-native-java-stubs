@@ -41,7 +41,7 @@ class GapContent extends Object with AbstractDocument.Content with Serializable 
      *  appropriate (which is determined by the subclass).
      */
     @stub
-    protected def allocateArray(len: Int): Object = ???
+    protected def allocateArray(len: Int): Any = ???
 
     /** Creates a position within the content that will
      *  track change as the content is mutated.
@@ -51,7 +51,7 @@ class GapContent extends Object with AbstractDocument.Content with Serializable 
 
     /** Access to the array. */
     @stub
-    protected def getArray(): Object = ???
+    protected def getArray(): Any = ???
 
     /** Get the length of the allocated array. */
     @stub
@@ -96,7 +96,7 @@ class GapContent extends Object with AbstractDocument.Content with Serializable 
      *  the given new items.
      */
     @stub
-    protected def replace(position: Int, rmSize: Int, addItems: Object, addSize: Int): Unit = ???
+    protected def replace(position: Int, rmSize: Int, addItems: Any, addSize: Int): Unit = ???
 
     /** Resets all the marks that have an offset of 0 to have an index of
      *  zero as well.

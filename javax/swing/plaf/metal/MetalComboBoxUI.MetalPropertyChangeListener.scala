@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
 /** This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of MetalComboBoxUI.
  */
-class MetalComboBoxUI.MetalPropertyChangeListener extends BasicComboBoxUI.PropertyChangeHandler {
+class MetalComboBoxUI_MetalPropertyChangeListener extends BasicComboBoxUI.PropertyChangeHandler {
 
     /**  */
     @stub

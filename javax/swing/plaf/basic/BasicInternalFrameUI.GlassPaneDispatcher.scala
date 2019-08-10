@@ -6,7 +6,7 @@ import javax.swing.event.MouseInputListener
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class BasicInternalFrameUI.GlassPaneDispatcher extends Object with MouseInputListener {
+protected class BasicInternalFrameUI_GlassPaneDispatcher extends Object with MouseInputListener {
 
     /**  */
     @stub

@@ -39,11 +39,11 @@ class MBeanNotificationInfo extends MBeanFeatureInfo with Cloneable {
 
     /** Returns a shallow clone of this instance. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compare this MBeanNotificationInfo to another. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the array of strings (in dot notation) containing the
      *  notification types that the MBean may emit.

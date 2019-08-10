@@ -8,7 +8,7 @@ import javax.swing.plaf.UIResource
 import scala.scalanative.annotation.stub
 
 /** Defines an icon for Palette close */
-object MetalIconFactory.PaletteCloseIcon extends Object with Icon with UIResource with Serializable {
+object MetalIconFactory_PaletteCloseIcon extends Object with Icon with UIResource with Serializable {
 
     /**  */
     @stub

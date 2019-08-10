@@ -379,11 +379,11 @@ trait Descriptor extends Serializable with Cloneable {
 
     /** Returns a descriptor which is equal to this descriptor. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compares this descriptor to the given object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns all the field names in the descriptor. */
     @stub
@@ -397,7 +397,7 @@ trait Descriptor extends Serializable with Cloneable {
      *  is present for that name.
      */
     @stub
-    def getFieldValue(fieldName: String): Object = ???
+    def getFieldValue(fieldName: String): Any = ???
 
     /** Returns all the field values in the descriptor as an array of Objects. */
     @stub
@@ -419,7 +419,7 @@ trait Descriptor extends Serializable with Cloneable {
 
     /** Sets the value for a specific field name. */
     @stub
-    def setField(fieldName: String, fieldValue: Object): Unit = ???
+    def setField(fieldName: String, fieldValue: Any): Unit = ???
 
     /** Sets all fields in the field names array to the new value with
      *  the same index in the field values array.

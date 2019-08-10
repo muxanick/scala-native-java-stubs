@@ -42,7 +42,7 @@ final class MathContext extends Object with Serializable {
      *  Object for equality.
      */
     @stub
-    def equals(x: Object): Boolean = ???
+    def equals(x: Any): Boolean = ???
 
     /** Returns the precision setting. */
     @stub

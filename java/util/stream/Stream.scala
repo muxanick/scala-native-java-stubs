@@ -300,8 +300,7 @@ trait Stream[T] extends BaseStream[T, Stream[T]] {
 
 object Stream {
     /** A mutable builder for a Stream. */
-    @stub
-    trait Builder[T] extends Stream.Builder[T]
+    type Builder[T] = Stream_Builder[T]
 
     /** Returns a builder for a Stream. */
     @stub

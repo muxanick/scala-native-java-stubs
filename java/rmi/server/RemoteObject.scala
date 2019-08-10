@@ -26,7 +26,7 @@ abstract class RemoteObject extends Object with Remote with Serializable {
     protected val ref: RemoteRef
 
     /** Compares two remote objects for equality. */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** Returns the remote reference for the remote object. */
     def getRef(): RemoteRef

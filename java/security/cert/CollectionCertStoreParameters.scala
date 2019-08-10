@@ -39,7 +39,7 @@ class CollectionCertStoreParameters extends Object with CertStoreParameters {
 
     /** Returns a copy of this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns the Collection from which Certificates
      *  and CRLs are retrieved.

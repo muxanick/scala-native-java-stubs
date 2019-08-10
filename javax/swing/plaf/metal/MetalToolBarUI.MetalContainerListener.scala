@@ -5,7 +5,7 @@ import javax.swing.plaf.basic.BasicToolBarUI.ToolBarContListener
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class MetalToolBarUI.MetalContainerListener extends BasicToolBarUI.ToolBarContListener {
+protected class MetalToolBarUI_MetalContainerListener extends BasicToolBarUI.ToolBarContListener {
 
     /**  */
     @stub

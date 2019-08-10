@@ -123,7 +123,7 @@ class HashMap[K, V] extends AbstractMap[K, V] with Map[K, V] with Cloneable with
      *  values themselves are not cloned.
      */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Attempts to compute a mapping for the specified key and its current
      *  mapped value (or null if there is no current mapping).
@@ -148,13 +148,13 @@ class HashMap[K, V] extends AbstractMap[K, V] with Map[K, V] with Cloneable with
      *  specified key.
      */
     @stub
-    def containsKey(key: Object): Boolean = ???
+    def containsKey(key: Any): Boolean = ???
 
     /** Returns true if this map maps one or more keys to the
      *  specified value.
      */
     @stub
-    def containsValue(value: Object): Boolean = ???
+    def containsValue(value: Any): Boolean = ???
 
     /** Returns a Set view of the mappings contained in this map. */
     @stub
@@ -170,13 +170,13 @@ class HashMap[K, V] extends AbstractMap[K, V] with Map[K, V] with Cloneable with
      *  or null if this map contains no mapping for the key.
      */
     @stub
-    def get(key: Object): V = ???
+    def get(key: Any): V = ???
 
     /** Returns the value to which the specified key is mapped, or
      *  defaultValue if this map contains no mapping for the key.
      */
     @stub
-    def getOrDefault(key: Object, defaultValue: V): V = ???
+    def getOrDefault(key: Any, defaultValue: V): V = ???
 
     /** Returns true if this map contains no key-value mappings. */
     @stub
@@ -209,13 +209,13 @@ class HashMap[K, V] extends AbstractMap[K, V] with Map[K, V] with Cloneable with
 
     /** Removes the mapping for the specified key from this map if present. */
     @stub
-    def remove(key: Object): V = ???
+    def remove(key: Any): V = ???
 
     /** Removes the entry for the specified key only if it is currently
      *  mapped to the specified value.
      */
     @stub
-    def remove(key: Object, value: Object): Boolean = ???
+    def remove(key: Any, value: Any): Boolean = ???
 
     /** Replaces the entry for the specified key only if it is
      *  currently mapped to some value.

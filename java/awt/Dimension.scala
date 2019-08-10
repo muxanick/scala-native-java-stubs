@@ -51,7 +51,7 @@ class Dimension extends Dimension2D with Serializable {
 
     /** Checks whether two dimension objects have equal values. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the height of this Dimension in double
      *  precision.

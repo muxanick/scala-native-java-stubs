@@ -14,7 +14,7 @@ import scala.scalanative.annotation.stub
  *  newKeySet(),
  *  newKeySet(int).
  */
-object ConcurrentHashMap.KeySetView[K, V] extends Object with Set[K] with Serializable {
+object ConcurrentHashMap_KeySetView[K, V] extends Object with Set[K] with Serializable {
 
     /** Adds the specified key to this set view by mapping the key to
      *  the default mapped value in the backing map, if defined.
@@ -36,7 +36,7 @@ object ConcurrentHashMap.KeySetView[K, V] extends Object with Set[K] with Serial
 
     /** Returns true if this collection contains the specified element. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Returns true if this collection contains all of the elements
      *  in the specified collection.
@@ -46,7 +46,7 @@ object ConcurrentHashMap.KeySetView[K, V] extends Object with Set[K] with Serial
 
     /** Indicates whether some other object is "equal to" this one. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Performs the given action for each element of the Iterable
      *  until all elements have been processed or the action throws an
@@ -81,7 +81,7 @@ object ConcurrentHashMap.KeySetView[K, V] extends Object with Set[K] with Serial
      *  corresponding value) from the backing map.
      */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Removes all of this collection's elements that are also contained in the
      *  specified collection (optional operation).

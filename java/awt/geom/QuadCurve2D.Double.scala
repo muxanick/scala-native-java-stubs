@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** A quadratic parametric curve segment specified with
  *  double coordinates.
  */
-object QuadCurve2D.Double extends QuadCurve2D with Serializable {
+object QuadCurve2D_Double extends QuadCurve2D with Serializable {
 
     /** Constructs and initializes a QuadCurve2D with
      *  coordinates (0, 0, 0, 0, 0, 0).

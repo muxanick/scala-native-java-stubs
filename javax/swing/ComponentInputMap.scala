@@ -28,7 +28,7 @@ class ComponentInputMap extends InputMap {
 
     /** Adds a binding for keyStroke to actionMapKey. */
     @stub
-    def put(keyStroke: KeyStroke, actionMapKey: Object): Unit = ???
+    def put(keyStroke: KeyStroke, actionMapKey: Any): Unit = ???
 
     /** Removes the binding for key from this object. */
     @stub

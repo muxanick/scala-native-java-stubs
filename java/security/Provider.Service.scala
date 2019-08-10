@@ -27,7 +27,7 @@ import scala.scalanative.annotation.stub
  * 
  *  Instances of this class are immutable.
  */
-object Provider.Service extends Object {
+object Provider_Service extends Object {
 
     /** Construct a new service. */
     @stub
@@ -59,11 +59,11 @@ object Provider.Service extends Object {
      *  service.
      */
     @stub
-    def newInstance(constructorParameter: Object): Object = ???
+    def newInstance(constructorParameter: Any): Any = ???
 
     /** Test whether this Service can use the specified parameter. */
     @stub
-    def supportsParameter(parameter: Object): Boolean = ???
+    def supportsParameter(parameter: Any): Boolean = ???
 
     /** Return a String representation of this service. */
     @stub

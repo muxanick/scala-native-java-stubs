@@ -6,7 +6,7 @@ import javax.swing.border.{AbstractBorder, Border, TitledBorder}
 import scala.scalanative.annotation.stub
 
 /**  */
-object BorderUIResource.TitledBorderUIResource extends TitledBorder with UIResource {
+object BorderUIResource_TitledBorderUIResource extends TitledBorder with UIResource {
 
     /**  */
     @stub

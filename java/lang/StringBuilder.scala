@@ -130,7 +130,7 @@ final class StringBuilder extends Object with Serializable with CharSequence {
 
     /** Appends the string representation of the Object argument. */
     @stub
-    def append(obj: Object): StringBuilder = ???
+    def append(obj: Any): StringBuilder = ???
 
     /** Appends the specified string to this character sequence. */
     @stub
@@ -266,7 +266,7 @@ final class StringBuilder extends Object with Serializable with CharSequence {
      *  argument into this character sequence.
      */
     @stub
-    def insert(offset: Int, obj: Object): StringBuilder = ???
+    def insert(offset: Int, obj: Any): StringBuilder = ???
 
     /** Inserts the string into this character sequence. */
     @stub

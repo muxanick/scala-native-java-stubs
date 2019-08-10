@@ -61,8 +61,7 @@ class JComboBox[E] extends JComponent with ItemSelectable with ListDataListener 
     /** This class implements accessibility support for the
      *  JComboBox class.
      */
-    @stub
-    protected class AccessibleJComboBox extends JComboBox.AccessibleJComboBox
+    protected type AccessibleJComboBox = JComboBox_AccessibleJComboBox
 
     /** This protected field is implementation specific. */
     @stub
@@ -98,7 +97,7 @@ class JComboBox[E] extends JComponent with ItemSelectable with ListDataListener 
 
     /** This protected field is implementation specific. */
     @stub
-    protected val selectedItemReminder: Object = ???
+    protected val selectedItemReminder: Any = ???
 
     /** This method is public as an implementation side effect. */
     @stub
@@ -130,7 +129,7 @@ class JComboBox[E] extends JComponent with ItemSelectable with ListDataListener 
 
     /** Initializes the editor with the specified item. */
     @stub
-    def configureEditor(anEditor: ComboBoxEditor, anItem: Object): Unit = ???
+    def configureEditor(anEditor: ComboBoxEditor, anItem: Any): Unit = ???
 
     /** Sets the properties on this combobox to match those in the specified
      *  Action.
@@ -264,7 +263,7 @@ class JComboBox[E] extends JComponent with ItemSelectable with ListDataListener 
 
     /** Returns the current selected item. */
     @stub
-    def getSelectedItem(): Object = ???
+    def getSelectedItem(): Any = ???
 
     /** Returns an array containing the selected item. */
     @stub
@@ -336,7 +335,7 @@ class JComboBox[E] extends JComponent with ItemSelectable with ListDataListener 
 
     /** Removes an item from the item list. */
     @stub
-    def removeItem(anObject: Object): Unit = ???
+    def removeItem(anObject: Any): Unit = ???
 
     /** Removes the item at anIndex
      *  This method works only if the JComboBox uses a
@@ -438,7 +437,7 @@ class JComboBox[E] extends JComponent with ItemSelectable with ListDataListener 
      *  the argument.
      */
     @stub
-    def setSelectedItem(anObject: Object): Unit = ???
+    def setSelectedItem(anObject: Any): Unit = ???
 
     /** Sets the L&F object that renders this component. */
     @stub
@@ -455,6 +454,5 @@ class JComboBox[E] extends JComponent with ItemSelectable with ListDataListener 
 
 object JComboBox {
     /** The interface that defines a KeySelectionManager. */
-    @stub
-    trait KeySelectionManager extends JComboBox.KeySelectionManager
+    type KeySelectionManager = JComboBox_KeySelectionManager
 }

@@ -69,8 +69,7 @@ abstract class Authenticator extends Object {
 
 object Authenticator {
     /** The type of the entity requesting authentication. */
-    @stub
-    object RequestorType extends Authenticator.RequestorType
+    type RequestorType = Authenticator_RequestorType
 
     /** Ask the authenticator that has been registered with the system
      *  for a password.

@@ -71,8 +71,45 @@ import scala.scalanative.annotation.stub
  *  to be thrown.
  *  
  */
-object trait Pack200.Packer {
+trait Pack200_Packer {
 
+    /** Deprecated. 
+     * The dependency on PropertyChangeListener creates
+     *              a significant impediment to future modularization of the
+     *              Java platform. This method will be removed in a future
+     *              release.
+     *              Applications that need to monitor progress of the packer
+     *              can poll the value of the PROGRESS
+     *              property instead.
+     * 
+     */
+    @stub
+    def addPropertyChangeListener(listener: PropertyChangeListener): Unit = ???
+
+    /** Takes a JarFile and converts it into a Pack200 archive. */
+    @stub
+    def pack(in: JarFile, out: OutputStream): Unit = ???
+
+    /** Takes a JarInputStream and converts it into a Pack200 archive. */
+    @stub
+    def pack(in: JarInputStream, out: OutputStream): Unit = ???
+
+    /** Get the set of this engine's properties. */
+    @stub
+    def properties(): SortedMap[String, String] = ???
+
+    /** Deprecated. 
+     * The dependency on PropertyChangeListener creates
+     *              a significant impediment to future modularization of the
+     *              Java platform. This method will be removed in a future
+     *              release.
+     * 
+     */
+    @stub
+    def removePropertyChangeListener(listener: PropertyChangeListener): Unit = ???
+}
+
+object Pack200_Packer {
     /** When concatenated with a class attribute name,
      *  indicates the format of that attribute,
      *  using the layout language specified in the JSR 200 specification.
@@ -176,39 +213,4 @@ object trait Pack200.Packer {
      */
     @stub
     val UNKNOWN_ATTRIBUTE: String = ???
-
-    /** Deprecated. 
-     * The dependency on PropertyChangeListener creates
-     *              a significant impediment to future modularization of the
-     *              Java platform. This method will be removed in a future
-     *              release.
-     *              Applications that need to monitor progress of the packer
-     *              can poll the value of the PROGRESS
-     *              property instead.
-     * 
-     */
-    @stub
-    def addPropertyChangeListener(listener: PropertyChangeListener): Unit = ???
-
-    /** Takes a JarFile and converts it into a Pack200 archive. */
-    @stub
-    def pack(in: JarFile, out: OutputStream): Unit = ???
-
-    /** Takes a JarInputStream and converts it into a Pack200 archive. */
-    @stub
-    def pack(in: JarInputStream, out: OutputStream): Unit = ???
-
-    /** Get the set of this engine's properties. */
-    @stub
-    def properties(): SortedMap[String, String] = ???
-
-    /** Deprecated. 
-     * The dependency on PropertyChangeListener creates
-     *              a significant impediment to future modularization of the
-     *              Java platform. This method will be removed in a future
-     *              release.
-     * 
-     */
-    @stub
-    def removePropertyChangeListener(listener: PropertyChangeListener): Unit = ???
 }

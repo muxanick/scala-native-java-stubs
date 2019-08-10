@@ -87,14 +87,12 @@ class JTabbedPane extends JComponent with Serializable with Accessible with Swin
     /** This class implements accessibility support for the
      *  JTabbedPane class.
      */
-    @stub
-    protected object AccessibleJTabbedPane extends JTabbedPane.AccessibleJTabbedPane
+    protected type AccessibleJTabbedPane = JTabbedPane_AccessibleJTabbedPane
 
     /** We pass ModelChanged events along to the listeners with
      *  the tabbedpane (instead of the model itself) as the event source.
      */
-    @stub
-    protected object ModelListener extends JTabbedPane.ModelListener
+    protected type ModelListener = JTabbedPane_ModelListener
 
     /** Only one ChangeEvent is needed per TabPane
      *  instance since the
@@ -132,11 +130,11 @@ class JTabbedPane extends JComponent with Serializable with Accessible with Swin
 
     /** Adds a component to the tabbed pane. */
     @stub
-    def add(component: Component, constraints: Object): Unit = ???
+    def add(component: Component, constraints: Any): Unit = ???
 
     /** Adds a component at the specified tab index. */
     @stub
-    def add(component: Component, constraints: Object, index: Int): Unit = ???
+    def add(component: Component, constraints: Any, index: Int): Unit = ???
 
     /** Adds a component with the specified tab title. */
     @stub

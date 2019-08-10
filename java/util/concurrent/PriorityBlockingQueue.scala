@@ -98,7 +98,7 @@ class PriorityBlockingQueue[E] extends AbstractQueue[E] with BlockingQueue[E] wi
 
     /** Returns true if this queue contains the specified element. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Removes all available elements from this queue and adds them
      *  to the given collection.
@@ -156,7 +156,7 @@ class PriorityBlockingQueue[E] extends AbstractQueue[E] with BlockingQueue[E] wi
      *  if it is present.
      */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Returns the number of elements in this collection. */
     @stub

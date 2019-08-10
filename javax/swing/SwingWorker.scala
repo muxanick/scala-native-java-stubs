@@ -203,7 +203,7 @@ abstract class SwingWorker[T, V] extends Object with RunnableFuture[T] {
     def execute(): Unit
 
     /** Reports a bound property update to any registered listeners. */
-    def firePropertyChange(propertyName: String, oldValue: Object, newValue: Object): Unit
+    def firePropertyChange(propertyName: String, oldValue: Any, newValue: Any): Unit
 
     /** Waits if necessary for the computation to complete, and then
      *  retrieves its result.
@@ -254,6 +254,5 @@ abstract class SwingWorker[T, V] extends Object with RunnableFuture[T] {
 
 object SwingWorker {
     /** Values for the state bound property. */
-    @stub
-    object StateValue extends SwingWorker.StateValue
+    type StateValue = SwingWorker_StateValue
 }

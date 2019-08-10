@@ -75,7 +75,7 @@ class ICC_Profile extends Object with Serializable {
      *  with CMM.
      */
     @stub
-    protected def readResolve(): Object = ???
+    protected def readResolve(): Any = ???
 
     /** Sets a particular tagged data element in the profile from
      *  a byte array.

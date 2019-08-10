@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** A cubic parametric curve segment specified with
  *  float coordinates.
  */
-object CubicCurve2D.Float extends CubicCurve2D with Serializable {
+object CubicCurve2D_Float extends CubicCurve2D with Serializable {
 
     /** Constructs and initializes a CubicCurve with coordinates
      *  (0, 0, 0, 0, 0, 0, 0, 0).

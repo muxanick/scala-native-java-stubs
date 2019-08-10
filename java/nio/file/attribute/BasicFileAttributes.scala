@@ -23,7 +23,7 @@ trait BasicFileAttributes {
 
     /** Returns an object that uniquely identifies the given file, or null if a file key is not available. */
     @stub
-    def fileKey(): Object = ???
+    def fileKey(): Any = ???
 
     /** Tells whether the file is a directory. */
     @stub

@@ -5,7 +5,7 @@ import javax.swing.event.{InternalFrameEvent, InternalFrameListener}
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class BasicInternalFrameUI.BasicInternalFrameListener extends Object with InternalFrameListener {
+protected class BasicInternalFrameUI_BasicInternalFrameListener extends Object with InternalFrameListener {
 
     /**  */
     @stub

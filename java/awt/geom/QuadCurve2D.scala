@@ -21,7 +21,7 @@ abstract class QuadCurve2D extends Object with Shape with Cloneable {
     /** Creates a new object of the same class and with the same contents
      *  as this object.
      */
-    def clone(): Object
+    def clone(): Any
 
     /** Tests if the specified coordinates are inside the boundary of the
      *  Shape, as described by the
@@ -164,14 +164,12 @@ object QuadCurve2D {
     /** A quadratic parametric curve segment specified with
      *  double coordinates.
      */
-    @stub
-    object Double extends QuadCurve2D.Double
+    type Double = QuadCurve2D_Double
 
     /** A quadratic parametric curve segment specified with
      *  float coordinates.
      */
-    @stub
-    object Float extends QuadCurve2D.Float
+    type Float = QuadCurve2D_Float
 
     /** Returns the flatness, or maximum distance of a
      *  control point from the line connecting the end points, of the

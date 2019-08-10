@@ -39,7 +39,7 @@ final class HijrahDate extends Object with ChronoLocalDate with Serializable {
 
     /** Compares this date to another date, including the chronology. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Gets the chronology of this date, which is the Hijrah calendar system. */
     @stub

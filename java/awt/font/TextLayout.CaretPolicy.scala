@@ -19,7 +19,7 @@ import scala.scalanative.annotation.stub
  *  
  *  Most clients do not need to use this class.
  */
-object TextLayout.CaretPolicy extends Object {
+object TextLayout_CaretPolicy extends Object {
 
     /** Constructs a CaretPolicy. */
     @stub

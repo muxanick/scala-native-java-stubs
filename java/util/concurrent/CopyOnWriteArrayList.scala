@@ -96,11 +96,11 @@ class CopyOnWriteArrayList[E] extends Object with List[E] with RandomAccess with
 
     /** Returns a shallow copy of this list. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns true if this list contains the specified element. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Returns true if this list contains all of the elements of the
      *  specified collection.
@@ -110,7 +110,7 @@ class CopyOnWriteArrayList[E] extends Object with List[E] with RandomAccess with
 
     /** Compares the specified object with this list for equality. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Performs the given action for each element of the Iterable
      *  until all elements have been processed or the action throws an
@@ -138,7 +138,7 @@ class CopyOnWriteArrayList[E] extends Object with List[E] with RandomAccess with
      *  in this list, or -1 if this list does not contain the element.
      */
     @stub
-    def indexOf(o: Object): Int = ???
+    def indexOf(o: Any): Int = ???
 
     /** Returns true if this list contains no elements. */
     @stub
@@ -159,7 +159,7 @@ class CopyOnWriteArrayList[E] extends Object with List[E] with RandomAccess with
      *  in this list, or -1 if this list does not contain the element.
      */
     @stub
-    def lastIndexOf(o: Object): Int = ???
+    def lastIndexOf(o: Any): Int = ???
 
     /** Returns a list iterator over the elements in this list (in proper
      *  sequence).
@@ -181,7 +181,7 @@ class CopyOnWriteArrayList[E] extends Object with List[E] with RandomAccess with
      *  if it is present.
      */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Removes from this list all of its elements that are contained in
      *  the specified collection.

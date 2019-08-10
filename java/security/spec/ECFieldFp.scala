@@ -19,7 +19,7 @@ class ECFieldFp extends Object with ECField {
      *  specified object.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the field size in bits which is size of prime p
      *  for this prime finite field.

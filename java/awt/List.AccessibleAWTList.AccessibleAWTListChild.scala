@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
  *  Java Accessibility API appropriate to list children
  *  user-interface elements.
  */
-protected class List.AccessibleAWTList.AccessibleAWTListChild extends Component.AccessibleAWTComponent with Accessible {
+protected class List_AccessibleAWTList_AccessibleAWTListChild extends Component.AccessibleAWTComponent with Accessible {
 
     /**  */
     @stub

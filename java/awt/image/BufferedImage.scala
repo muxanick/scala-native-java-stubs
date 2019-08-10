@@ -131,11 +131,11 @@ class BufferedImage extends Image with WritableRenderedImage with Transparency {
 
     /** Returns a property of the image by name. */
     @stub
-    def getProperty(name: String): Object = ???
+    def getProperty(name: String): Any = ???
 
     /** Returns a property of the image by name. */
     @stub
-    def getProperty(name: String, observer: ImageObserver): Object = ???
+    def getProperty(name: String, observer: ImageObserver): Any = ???
 
     /** Returns an array of names recognized by
      *  getProperty(String)

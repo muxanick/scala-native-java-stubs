@@ -20,7 +20,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JToggleButton.AccessibleJToggleButton extends AbstractButton.AccessibleAbstractButton with ItemListener {
+protected class JToggleButton_AccessibleJToggleButton extends AbstractButton.AccessibleAbstractButton with ItemListener {
 
     /**  */
     @stub

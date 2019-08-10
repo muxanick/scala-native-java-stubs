@@ -46,8 +46,7 @@ class JMenuBar extends JComponent with Accessible with MenuElement {
     /** This class implements accessibility support for the
      *  JMenuBar class.
      */
-    @stub
-    protected object AccessibleJMenuBar extends JMenuBar.AccessibleJMenuBar
+    protected type AccessibleJMenuBar = JMenuBar_AccessibleJMenuBar
 
     /** Appends the specified menu to the end of the menu bar. */
     @stub

@@ -34,5 +34,5 @@ trait UnmarshallerHandler extends ContentHandler {
 
     /** Obtains the unmarshalled result. */
     @stub
-    def getResult(): Object = ???
+    def getResult(): Any = ???
 }

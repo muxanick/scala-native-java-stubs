@@ -110,7 +110,7 @@ final class NumericShaper extends Object with Serializable {
      *  enum.
      */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns an int that ORs together the values for
      *  all the ranges that will be shaped.
@@ -159,8 +159,7 @@ object NumericShaper {
     /** A NumericShaper.Range represents a Unicode range of a
      *  script having its own decimal digits.
      */
-    @stub
-    object Range extends NumericShaper.Range
+    type Range = NumericShaper_Range
 
     /** Identifies all ranges, for full contextual shaping. */
     @stub

@@ -38,7 +38,7 @@ class ScriptEngineManager extends Object {
 
     /** Gets the value for the specified key in the Global Scope */
     @stub
-    def get(key: String): Object = ???
+    def get(key: String): Any = ???
 
     /** getBindings returns the value of the globalScope field. */
     @stub
@@ -64,7 +64,7 @@ class ScriptEngineManager extends Object {
 
     /** Sets the specified key/value pair in the Global Scope. */
     @stub
-    def put(key: String, value: Object): Unit = ???
+    def put(key: String, value: Any): Unit = ???
 
     /** Registers a ScriptEngineFactory to handle an extension. */
     @stub

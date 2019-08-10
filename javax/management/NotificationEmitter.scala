@@ -46,5 +46,5 @@ trait NotificationEmitter extends NotificationBroadcaster {
 
     /** Removes a listener from this MBean. */
     @stub
-    def removeNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
+    def removeNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Any): Unit = ???
 }

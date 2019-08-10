@@ -6,10 +6,10 @@ import scala.scalanative.annotation.stub
 /** The BasicReason enumerates the potential reasons that a certification
  *  path of any type may be invalid.
  */
-class CertPathValidatorException.BasicReason private (name: String, ordinal: Int) extends Enum[CertPathValidatorException.BasicReason](name, ordinal) with CertPathValidatorException.Reason {
+class CertPathValidatorException_BasicReason private (name: String, ordinal: Int) extends Enum[CertPathValidatorException.BasicReason](name, ordinal) with CertPathValidatorException.Reason {
 }
 
-object CertPathValidatorException.BasicReason {
+object CertPathValidatorException_BasicReason {
     /** The public key or the signature algorithm has been constrained. */
     final val ALGORITHM_CONSTRAINED = new CertPathValidatorException.BasicReason(ALGORITHM_CONSTRAINED, 0)
 

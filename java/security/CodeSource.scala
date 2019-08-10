@@ -28,7 +28,7 @@ class CodeSource extends Object with Serializable {
      *  object.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the certificates associated with this CodeSource. */
     @stub

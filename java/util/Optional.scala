@@ -23,7 +23,7 @@ final class Optional[T] extends Object {
 
     /** Indicates whether some other object is "equal to" this Optional. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** If a value is present, and the value matches the given predicate,
      *  return an Optional describing the value, otherwise return an

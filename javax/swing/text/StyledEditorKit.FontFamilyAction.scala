@@ -19,7 +19,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object StyledEditorKit.FontFamilyAction extends StyledEditorKit.StyledTextAction {
+object StyledEditorKit_FontFamilyAction extends StyledEditorKit.StyledTextAction {
 
     /** Creates a new FontFamilyAction. */
     @stub

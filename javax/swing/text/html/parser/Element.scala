@@ -22,7 +22,7 @@ final class Element extends Object with DTDConstants with Serializable {
 
     /** A field to store user data. */
     @stub
-    val data: Object = ???
+    val data: Any = ???
 
     /**  */
     @stub

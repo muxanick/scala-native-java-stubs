@@ -6,7 +6,7 @@ import javax.swing.text.Element
 import scala.scalanative.annotation.stub
 
 /**  */
-class JEditorPane.JEditorPaneAccessibleHypertextSupport.HTMLLink extends AccessibleHyperlink {
+class JEditorPane_JEditorPaneAccessibleHypertextSupport_HTMLLink extends AccessibleHyperlink {
 
     /**  */
     @stub
@@ -20,7 +20,7 @@ class JEditorPane.JEditorPaneAccessibleHypertextSupport.HTMLLink extends Accessi
      *  as appropriate for that link.
      */
     @stub
-    def getAccessibleActionAnchor(i: Int): Object = ???
+    def getAccessibleActionAnchor(i: Int): Any = ???
 
     /** Returns the number of accessible actions available in this Link
      *  If there are more than one, the first one is NOT considered the
@@ -37,7 +37,7 @@ class JEditorPane.JEditorPaneAccessibleHypertextSupport.HTMLLink extends Accessi
 
     /** Returns a URL object that represents the link. */
     @stub
-    def getAccessibleActionObject(i: Int): Object = ???
+    def getAccessibleActionObject(i: Int): Any = ???
 
     /** Get the index with the hypertext document at which this
      *  link ends

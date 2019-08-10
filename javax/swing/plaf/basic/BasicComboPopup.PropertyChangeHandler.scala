@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
  *  call the superclass methods to ensure that the combo popup correctly
  *  handles property changes.
  */
-protected class BasicComboPopup.PropertyChangeHandler extends Object with PropertyChangeListener {
+protected class BasicComboPopup_PropertyChangeHandler extends Object with PropertyChangeListener {
 
     /**  */
     @stub

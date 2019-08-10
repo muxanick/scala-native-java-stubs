@@ -50,9 +50,9 @@ class JAXBSource extends SAXSource {
 
     /** Creates a new Source for the given content object. */
     @stub
-    def this(context: JAXBContext, contentObject: Object) = ???
+    def this(context: JAXBContext, contentObject: Any) = ???
 
     /** Creates a new Source for the given content object. */
     @stub
-    def this(marshaller: Marshaller, contentObject: Object) = ???
+    def this(marshaller: Marshaller, contentObject: Any) = ???
 }

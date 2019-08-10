@@ -6,7 +6,7 @@ import scala.scalanative.annotation.stub
 /** Interface for locations of file objects.  Used by file managers
  *  to determine where to place or search for file objects.
  */
-object trait JavaFileManager.Location {
+trait JavaFileManager_Location {
 
     /** Gets the name of this location. */
     @stub

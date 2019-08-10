@@ -17,7 +17,7 @@ import scala.scalanative.annotation.stub
  *  External listener is one of two different mechanisms for defining marshal event callbacks.
  *  See Marshal Event Callbacks for an overview.
  */
-object abstract Marshaller.Listener extends Object {
+object abstract Marshaller_Listener extends Object {
 
     /**  */
     @stub
@@ -27,11 +27,11 @@ object abstract Marshaller.Listener extends Object {
      *  Callback method invoked after marshalling source to XML.
      */
     @stub
-    def afterMarshal(source: Object): Unit = ???
+    def afterMarshal(source: Any): Unit = ???
 
     /** 
      *  Callback method invoked before marshalling from source to XML.
      */
     @stub
-    def beforeMarshal(source: Object): Unit = ???
+    def beforeMarshal(source: Any): Unit = ???
 }

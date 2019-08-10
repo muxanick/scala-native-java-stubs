@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** An UndoableEdit used to remember AttributeSet changes to an
  *  Element.
  */
-object DefaultStyledDocument.AttributeUndoableEdit extends AbstractUndoableEdit {
+object DefaultStyledDocument_AttributeUndoableEdit extends AbstractUndoableEdit {
 
     /**  */
     @stub

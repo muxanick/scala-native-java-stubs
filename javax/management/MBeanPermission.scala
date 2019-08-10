@@ -141,7 +141,7 @@ class MBeanPermission extends Permission {
 
     /** Checks two MBeanPermission objects for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the "canonical string representation" of the actions. */
     @stub

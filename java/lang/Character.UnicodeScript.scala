@@ -12,10 +12,10 @@ import scala.scalanative.annotation.stub
  *  Common or
  *  Unknown.
  */
-class Character.UnicodeScript private (name: String, ordinal: Int) extends Enum[Character.UnicodeScript](name, ordinal) {
+class Character_UnicodeScript private (name: String, ordinal: Int) extends Enum[Character.UnicodeScript](name, ordinal) {
 }
 
-object Character.UnicodeScript {
+object Character_UnicodeScript {
     /** Unicode script "Arabic". */
     final val ARABIC = new Character.UnicodeScript(ARABIC, 0)
 

@@ -91,7 +91,7 @@ object LockSupport {
      *  if not blocked.
      */
     @stub
-    def getBlocker(t: Thread): Object = ???
+    def getBlocker(t: Thread): Any = ???
 
     /** Disables the current thread for thread scheduling purposes unless the
      *  permit is available.
@@ -103,7 +103,7 @@ object LockSupport {
      *  permit is available.
      */
     @stub
-    def park(blocker: Object): Unit = ???
+    def park(blocker: Any): Unit = ???
 
     /** Disables the current thread for thread scheduling purposes, for up to
      *  the specified waiting time, unless the permit is available.
@@ -115,7 +115,7 @@ object LockSupport {
      *  the specified waiting time, unless the permit is available.
      */
     @stub
-    def parkNanos(blocker: Object, nanos: Long): Unit = ???
+    def parkNanos(blocker: Any, nanos: Long): Unit = ???
 
     /** Disables the current thread for thread scheduling purposes, until
      *  the specified deadline, unless the permit is available.
@@ -127,7 +127,7 @@ object LockSupport {
      *  the specified deadline, unless the permit is available.
      */
     @stub
-    def parkUntil(blocker: Object, deadline: Long): Unit = ???
+    def parkUntil(blocker: Any, deadline: Long): Unit = ???
 
     /** Makes available the permit for the given thread, if it
      *  was not already available.

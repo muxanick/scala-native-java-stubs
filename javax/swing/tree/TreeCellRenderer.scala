@@ -15,5 +15,5 @@ trait TreeCellRenderer {
 
     /** Sets the value of the current tree cell to value. */
     @stub
-    def getTreeCellRendererComponent(tree: JTree, value: Object, selected: Boolean, expanded: Boolean, leaf: Boolean, row: Int, hasFocus: Boolean): Component = ???
+    def getTreeCellRendererComponent(tree: JTree, value: Any, selected: Boolean, expanded: Boolean, leaf: Boolean, row: Int, hasFocus: Boolean): Component = ???
 }

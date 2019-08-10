@@ -49,5 +49,5 @@ trait StateFactory {
 
     /** Retrieves the state of an object for binding. */
     @stub
-    def getStateToBind(obj: Object, name: Name, nameCtx: Context, environment: Hashtable[_, _]): Object = ???
+    def getStateToBind(obj: Any, name: Name, nameCtx: Context, environment: Hashtable[_, _]): Any = ???
 }

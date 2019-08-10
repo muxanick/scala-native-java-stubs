@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of BasicTableUI.
  */
-class BasicTableUI.FocusHandler extends Object with FocusListener {
+class BasicTableUI_FocusHandler extends Object with FocusListener {
 
     /**  */
     @stub

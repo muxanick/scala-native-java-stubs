@@ -162,7 +162,7 @@ object LookAndFeel {
      *  invoking Toolkit.getDefaultToolkit().getDesktopProperty().
      */
     @stub
-    def getDesktopPropertyValue(systemPropertyName: String, fallbackValue: Object): Object = ???
+    def getDesktopPropertyValue(systemPropertyName: String, fallbackValue: Any): Any = ???
 
     /** Convenience method for setting a component's border property with
      *  a value from the defaults.
@@ -189,7 +189,7 @@ object LookAndFeel {
      *  by the developer.
      */
     @stub
-    def installProperty(c: JComponent, propertyName: String, propertyValue: Object): Unit = ???
+    def installProperty(c: JComponent, propertyName: String, propertyValue: Any): Unit = ???
 
     /** Populates an InputMap with the specified bindings. */
     @stub
@@ -205,7 +205,7 @@ object LookAndFeel {
      *  image.
      */
     @stub
-    def makeIcon(baseClass: Class[_], gifFile: String): Object = ???
+    def makeIcon(baseClass: Class[_], gifFile: String): Any = ???
 
     /** Creates a InputMapUIResource from keys. */
     @stub

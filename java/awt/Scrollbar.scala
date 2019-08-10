@@ -146,8 +146,7 @@ class Scrollbar extends Component with Adjustable with Accessible {
     /** This class implements accessibility support for the
      *  Scrollbar class.
      */
-    @stub
-    protected object AccessibleAWTScrollBar extends Scrollbar.AccessibleAWTScrollBar
+    protected type AccessibleAWTScrollBar = Scrollbar_AccessibleAWTScrollBar
 
     /** Adds the specified adjustment listener to receive instances of
      *  AdjustmentEvent from this scroll bar.

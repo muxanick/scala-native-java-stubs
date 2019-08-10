@@ -16,7 +16,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-class AbstractDocument.LeafElement extends AbstractDocument.AbstractElement {
+class AbstractDocument_LeafElement extends AbstractDocument.AbstractElement {
 
     /** Constructs an element that represents content within the
      *  document (has no children).

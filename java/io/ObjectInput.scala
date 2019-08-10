@@ -33,7 +33,7 @@ trait ObjectInput extends DataInput with AutoCloseable {
 
     /** Read and return an object. */
     @stub
-    def readObject(): Object = ???
+    def readObject(): Any = ???
 
     /** Skips n bytes of input. */
     @stub

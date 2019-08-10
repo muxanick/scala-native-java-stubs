@@ -16,7 +16,7 @@ class PropertyException extends JAXBException {
      *  name of the property and value.toString().
      */
     @stub
-    def this(name: String, value: Object) = ???
+    def this(name: String, value: Any) = ???
 
     /** Construct a PropertyException with the specified detail message and
      *  vendor specific errorCode.

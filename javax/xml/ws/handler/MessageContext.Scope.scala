@@ -9,10 +9,10 @@ import scala.scalanative.annotation.stub
  *  HANDLER
  *  are only normally visible to handlers.
  */
-class MessageContext.Scope private (name: String, ordinal: Int) extends Enum[MessageContext.Scope](name, ordinal) {
+class MessageContext_Scope private (name: String, ordinal: Int) extends Enum[MessageContext.Scope](name, ordinal) {
 }
 
-object MessageContext.Scope {
+object MessageContext_Scope {
     /**  */
     final val APPLICATION = new MessageContext.Scope(APPLICATION, 0)
 

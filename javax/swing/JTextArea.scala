@@ -119,8 +119,7 @@ class JTextArea extends JTextComponent {
     /** This class implements accessibility support for the
      *  JTextArea class.
      */
-    @stub
-    protected object AccessibleJTextArea extends JTextArea.AccessibleJTextArea
+    protected type AccessibleJTextArea = JTextArea_AccessibleJTextArea
 
     /** Appends the given text to the end of the document. */
     @stub

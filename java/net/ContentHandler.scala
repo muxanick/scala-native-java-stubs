@@ -44,11 +44,11 @@ abstract class ContentHandler extends Object {
      *  representation of an object, this method reads that stream and
      *  creates an object from it.
      */
-    def getContent(urlc: URLConnection): Object
+    def getContent(urlc: URLConnection): Any
 
     /** Given a URL connect stream positioned at the beginning of the
      *  representation of an object, this method reads that stream and
      *  creates an object that matches one of the types specified.
      */
-    def getContent(urlc: URLConnection, classes: Array[Class]): Object
+    def getContent(urlc: URLConnection, classes: Array[Class]): Any
 }

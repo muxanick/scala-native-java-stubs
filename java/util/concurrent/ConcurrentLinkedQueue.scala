@@ -81,7 +81,7 @@ class ConcurrentLinkedQueue[E] extends AbstractQueue[E] with Queue[E] with Seria
 
     /** Returns true if this queue contains the specified element. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Returns true if this queue contains no elements. */
     @stub
@@ -111,7 +111,7 @@ class ConcurrentLinkedQueue[E] extends AbstractQueue[E] with Queue[E] with Seria
      *  if it is present.
      */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Returns the number of elements in this queue. */
     @stub

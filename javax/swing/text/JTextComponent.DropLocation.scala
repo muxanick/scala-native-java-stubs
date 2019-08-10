@@ -5,7 +5,7 @@ import javax.swing.TransferHandler.DropLocation
 import scala.scalanative.annotation.stub
 
 /** Represents a drop location for JTextComponents. */
-final object JTextComponent.DropLocation extends TransferHandler.DropLocation {
+final object JTextComponent_DropLocation extends TransferHandler.DropLocation {
 
     /** Returns the bias for the drop index. */
     @stub

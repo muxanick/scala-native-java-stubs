@@ -4,7 +4,7 @@ import java.lang.{Object, String}
 import scala.scalanative.annotation.stub
 
 /** A type-safe enumeration of possible default selection states. */
-final object JobAttributes.DefaultSelectionType extends Object {
+final object JobAttributes_DefaultSelectionType extends Object {
 
     /** The DefaultSelectionType instance to use for
      *  specifying that all pages of the job should be printed.

@@ -232,7 +232,7 @@ abstract class ResourceBundle extends Object {
     def getLocale(): Locale
 
     /** Gets an object for the given key from this resource bundle or one of its parents. */
-    def getObject(key: String): Object
+    def getObject(key: String): Any
 
     /** Gets a string for the given key from this resource bundle or one of its parents. */
     def getString(key: String): String
@@ -241,7 +241,7 @@ abstract class ResourceBundle extends Object {
     def getStringArray(key: String): Array[String]
 
     /** Gets an object for the given key from this resource bundle. */
-    protected def handleGetObject(key: String): Object
+    protected def handleGetObject(key: String): Any
 
     /** Returns a Set of the keys contained only
      *  in this ResourceBundle.
@@ -262,8 +262,7 @@ object ResourceBundle {
      *  that are invoked by the ResourceBundle.getBundle factory
      *  methods during the bundle loading process.
      */
-    @stub
-    object Control extends ResourceBundle.Control
+    type Control = ResourceBundle_Control
 
     /** Removes all resource bundles from the cache that have been loaded
      *  using the caller's class loader.

@@ -24,6 +24,5 @@ object CompoundControl {
     /** An instance of the CompoundControl.Type inner class identifies one kind of
      *  compound control.
      */
-    @stub
-    object Type extends CompoundControl.Type
+    type Type = CompoundControl_Type
 }

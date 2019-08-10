@@ -5,7 +5,7 @@ import java.lang.{Object, String}
 import scala.scalanative.annotation.stub
 
 /** Alternate Certificate class for serialization. */
-object protected Certificate.CertificateRep extends Object with Serializable {
+object protected Certificate_CertificateRep extends Object with Serializable {
 
     /** Construct the alternate Certificate class with the Certificate
      *  type and Certificate encoding bytes.
@@ -15,5 +15,5 @@ object protected Certificate.CertificateRep extends Object with Serializable {
 
     /** Resolve the Certificate Object. */
     @stub
-    protected def readResolve(): Object = ???
+    protected def readResolve(): Any = ???
 }

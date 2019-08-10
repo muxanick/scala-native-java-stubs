@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  TextArea class.  It provides an implementation of the
  *  Java Accessibility API appropriate to text area user-interface elements.
  */
-protected class TextArea.AccessibleAWTTextArea extends TextComponent.AccessibleAWTTextComponent {
+protected class TextArea_AccessibleAWTTextArea extends TextComponent.AccessibleAWTTextComponent {
 
     /**  */
     @stub

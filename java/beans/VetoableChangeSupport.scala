@@ -51,7 +51,7 @@ class VetoableChangeSupport extends Object with Serializable {
 
     /** Constructs a VetoableChangeSupport object. */
     @stub
-    def this(sourceBean: Object) = ???
+    def this(sourceBean: Any) = ???
 
     /** Add a VetoableChangeListener for a specific property. */
     @stub
@@ -87,7 +87,7 @@ class VetoableChangeSupport extends Object with Serializable {
      *  all properties or a property with the specified name.
      */
     @stub
-    def fireVetoableChange(propertyName: String, oldValue: Object, newValue: Object): Unit = ???
+    def fireVetoableChange(propertyName: String, oldValue: Any, newValue: Any): Unit = ???
 
     /** Returns an array of all the listeners that were added to the
      *  VetoableChangeSupport object with addVetoableChangeListener().

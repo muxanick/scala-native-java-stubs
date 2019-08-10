@@ -10,7 +10,7 @@ import scala.scalanative.annotation.stub
  *  in boundary conditions where a simple offset is
  *  ambiguous.
  */
-final object Position.Bias extends Object {
+final object Position_Bias extends Object {
 
     /** Indicates a bias toward the previous character
      *  in the model.

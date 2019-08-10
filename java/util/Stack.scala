@@ -47,5 +47,5 @@ class Stack[E] extends Vector[E] {
 
     /** Returns the 1-based position where an object is on this stack. */
     @stub
-    def search(o: Object): Int = ???
+    def search(o: Any): Int = ???
 }

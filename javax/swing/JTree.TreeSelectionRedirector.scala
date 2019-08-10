@@ -18,7 +18,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JTree.TreeSelectionRedirector extends Object with Serializable with TreeSelectionListener {
+protected class JTree_TreeSelectionRedirector extends Object with Serializable with TreeSelectionListener {
 
     /**  */
     @stub

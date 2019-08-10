@@ -7,7 +7,7 @@ import javax.swing.event.MouseInputAdapter
 import scala.scalanative.annotation.stub
 
 /** Listens for border adjustments. */
-protected class BasicInternalFrameUI.BorderListener extends MouseInputAdapter with SwingConstants {
+protected class BasicInternalFrameUI_BorderListener extends MouseInputAdapter with SwingConstants {
 
     /**  */
     @stub

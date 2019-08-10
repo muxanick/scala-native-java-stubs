@@ -129,11 +129,11 @@ class Vector[E] extends AbstractList[E] with List[E] with RandomAccess with Clon
 
     /** Returns a clone of this vector. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns true if this vector contains the specified element. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Returns true if this Vector contains all of the elements in the
      *  specified Collection.
@@ -162,7 +162,7 @@ class Vector[E] extends AbstractList[E] with List[E] with RandomAccess with Clon
 
     /** Compares the specified Object with this Vector for equality. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the first component (the item at index 0) of
      *  this vector.
@@ -189,14 +189,14 @@ class Vector[E] extends AbstractList[E] with List[E] with RandomAccess with Clon
      *  in this vector, or -1 if this vector does not contain the element.
      */
     @stub
-    def indexOf(o: Object): Int = ???
+    def indexOf(o: Any): Int = ???
 
     /** Returns the index of the first occurrence of the specified element in
      *  this vector, searching forwards from index, or returns -1 if
      *  the element is not found.
      */
     @stub
-    def indexOf(o: Object, index: Int): Int = ???
+    def indexOf(o: Any, index: Int): Int = ???
 
     /** Inserts the specified object as a component in this vector at the
      *  specified index.
@@ -220,14 +220,14 @@ class Vector[E] extends AbstractList[E] with List[E] with RandomAccess with Clon
      *  in this vector, or -1 if this vector does not contain the element.
      */
     @stub
-    def lastIndexOf(o: Object): Int = ???
+    def lastIndexOf(o: Any): Int = ???
 
     /** Returns the index of the last occurrence of the specified element in
      *  this vector, searching backwards from index, or returns -1 if
      *  the element is not found.
      */
     @stub
-    def lastIndexOf(o: Object, index: Int): Int = ???
+    def lastIndexOf(o: Any, index: Int): Int = ???
 
     /** Returns a list iterator over the elements in this list (in proper
      *  sequence).
@@ -249,7 +249,7 @@ class Vector[E] extends AbstractList[E] with List[E] with RandomAccess with Clon
      *  If the Vector does not contain the element, it is unchanged.
      */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Removes from this Vector all of its elements that are contained in the
      *  specified Collection.
@@ -265,7 +265,7 @@ class Vector[E] extends AbstractList[E] with List[E] with RandomAccess with Clon
      *  from this vector.
      */
     @stub
-    def removeElement(obj: Object): Boolean = ???
+    def removeElement(obj: Any): Boolean = ???
 
     /** Deletes the component at the specified index. */
     @stub

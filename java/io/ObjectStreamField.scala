@@ -20,7 +20,7 @@ class ObjectStreamField extends Object with Comparable[Object] {
 
     /** Compare this field with another ObjectStreamField. */
     @stub
-    def compareTo(obj: Object): Int = ???
+    def compareTo(obj: Any): Int = ???
 
     /** Get the name of this field. */
     @stub

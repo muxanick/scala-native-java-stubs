@@ -241,7 +241,7 @@ class EventHandler extends Object with InvocationHandler {
      *  instead of invoking this constructor directly.
      */
     @stub
-    def this(target: Object, action: String, eventPropertyName: String, listenerMethodName: String) = ???
+    def this(target: Any, action: String, eventPropertyName: String, listenerMethodName: String) = ???
 
     /** Returns the name of the target's writable property
      *  that this event handler will set,
@@ -263,14 +263,14 @@ class EventHandler extends Object with InvocationHandler {
 
     /** Returns the object to which this event handler will send a message. */
     @stub
-    def getTarget(): Object = ???
+    def getTarget(): Any = ???
 
     /** Extract the appropriate property value from the event and
      *  pass it to the action associated with
      *  this EventHandler.
      */
     @stub
-    def invoke(proxy: Object, method: Method, arguments: Array[Object]): Object = ???
+    def invoke(proxy: Any, method: Method, arguments: Array[Object]): Any = ???
 }
 
 object EventHandler {
@@ -279,7 +279,7 @@ object EventHandler {
      *  the handler's action to the target.
      */
     @stub
-    def create[T](listenerInterface: Class[T], target: Object, action: String): T = ???
+    def create[T](listenerInterface: Class[T], target: Any, action: String): T = ???
 
     /** /**
      *  Creates an implementation of listenerInterface in which
@@ -288,7 +288,7 @@ object EventHandler {
      *  statement, action, which is applied to the target.
      */
     @stub
-    def create[T](listenerInterface: Class[T], target: Object, action: String, eventPropertyName: String): T = ???
+    def create[T](listenerInterface: Class[T], target: Any, action: String, eventPropertyName: String): T = ???
 
     /** Creates an implementation of listenerInterface in which
      *  the method named listenerMethodName
@@ -297,5 +297,5 @@ object EventHandler {
      *  is applied to the target.
      */
     @stub
-    def create[T](listenerInterface: Class[T], target: Object, action: String, eventPropertyName: String, listenerMethodName: String): T = ???
+    def create[T](listenerInterface: Class[T], target: Any, action: String, eventPropertyName: String, listenerMethodName: String): T = ???
 }

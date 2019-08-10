@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** Fire PropertyChange listener, if one is registered,
  *  when shown/hidden..
  */
-protected class Component.AccessibleAWTComponent.AccessibleAWTComponentHandler extends Object with ComponentListener {
+protected class Component_AccessibleAWTComponent_AccessibleAWTComponentHandler extends Object with ComponentListener {
 
     /**  */
     @stub

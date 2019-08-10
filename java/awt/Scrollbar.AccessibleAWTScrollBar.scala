@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
  *  the Java Accessibility API appropriate to scrollbar
  *  user-interface elements.
  */
-protected class Scrollbar.AccessibleAWTScrollBar extends Component.AccessibleAWTComponent with AccessibleValue {
+protected class Scrollbar_AccessibleAWTScrollBar extends Component.AccessibleAWTComponent with AccessibleValue {
 
     /**  */
     @stub

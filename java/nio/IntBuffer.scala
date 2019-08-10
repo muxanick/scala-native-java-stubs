@@ -210,7 +210,7 @@ abstract class IntBuffer extends Buffer with Comparable[IntBuffer] {
     def duplicate(): IntBuffer
 
     /** Tells whether or not this buffer is equal to another object. */
-    def equals(ob: Object): Boolean
+    def equals(ob: Any): Boolean
 
     /** Relative get method. */
     def get(): Int

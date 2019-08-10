@@ -24,8 +24,7 @@ class Panel extends Container with Accessible {
     /** This class implements accessibility support for the
      *  Panel class.
      */
-    @stub
-    protected object AccessibleAWTPanel extends Panel.AccessibleAWTPanel
+    protected type AccessibleAWTPanel = Panel_AccessibleAWTPanel
 
     /** Creates the Panel's peer. */
     @stub

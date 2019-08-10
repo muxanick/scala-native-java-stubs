@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
 /** We pass ModelChanged events along to the listeners with
  *  the tabbedpane (instead of the model itself) as the event source.
  */
-protected class JTabbedPane.ModelListener extends Object with ChangeListener with Serializable {
+protected class JTabbedPane_ModelListener extends Object with ChangeListener with Serializable {
 
     /**  */
     @stub

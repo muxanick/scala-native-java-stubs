@@ -106,13 +106,13 @@ abstract class XMLOutputFactory extends Object {
     def createXMLStreamWriter(stream: Writer): XMLStreamWriter
 
     /** Get a feature/property on the underlying implementation */
-    def getProperty(name: String): Object
+    def getProperty(name: String): Any
 
     /** Query the set of properties that this factory supports. */
     def isPropertySupported(name: String): Boolean
 
     /** Allows the user to set specific features/properties on the underlying implementation. */
-    def setProperty(name: String, value: Object): Unit
+    def setProperty(name: String, value: Any): Unit
 }
 
 object XMLOutputFactory {

@@ -100,7 +100,7 @@ trait SQLOutput {
 
     /** Writes to the stream the data contained in the given object. */
     @stub
-    def writeObject(x: Object, targetSqlType: SQLType): Unit = ???
+    def writeObject(x: Any, targetSqlType: SQLType): Unit = ???
 
     /** Writes to the stream the data contained in the given
      *  SQLData object.

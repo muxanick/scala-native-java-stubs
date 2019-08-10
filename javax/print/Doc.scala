@@ -94,7 +94,7 @@ trait Doc {
      *  supported doc flavor.
      */
     @stub
-    def getPrintData(): Object = ???
+    def getPrintData(): Any = ???
 
     /** Obtains a reader for extracting character print data from this doc. */
     @stub

@@ -21,31 +21,26 @@ class BasicListUI extends ListUI {
     def this() = ???
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object FocusHandler extends BasicListUI.FocusHandler
+    type FocusHandler = BasicListUI_FocusHandler
 
     /** The ListDataListener that's added to the JLists model at
      *  installUI time, and whenever the JList.model property changes.
      */
-    @stub
-    object ListDataHandler extends BasicListUI.ListDataHandler
+    type ListDataHandler = BasicListUI_ListDataHandler
 
     /** The ListSelectionListener that's added to the JLists selection
      *  model at installUI time, and whenever the JList.selectionModel property
      *  changes.
      */
-    @stub
-    object ListSelectionHandler extends BasicListUI.ListSelectionHandler
+    type ListSelectionHandler = BasicListUI_ListSelectionHandler
 
     /** Mouse input, and focus handling for JList. */
-    @stub
-    object MouseInputHandler extends BasicListUI.MouseInputHandler
+    type MouseInputHandler = BasicListUI_MouseInputHandler
 
     /** The PropertyChangeListener that's added to the JList at
      *  installUI time.
      */
-    @stub
-    object PropertyChangeHandler extends BasicListUI.PropertyChangeHandler
+    type PropertyChangeHandler = BasicListUI_PropertyChangeHandler
 
     /**  */
     @stub

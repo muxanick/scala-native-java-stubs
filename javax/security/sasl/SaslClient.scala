@@ -83,7 +83,7 @@ trait SaslClient {
 
     /** Retrieves the negotiated property. */
     @stub
-    def getNegotiatedProperty(propName: String): Object = ???
+    def getNegotiatedProperty(propName: String): Any = ???
 
     /** Determines whether this mechanism has an optional initial response. */
     @stub

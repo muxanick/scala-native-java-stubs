@@ -13,7 +13,7 @@ import scala.scalanative.annotation.stub
  *  Access to a child view hierarchy is serialized via
  *  synchronization on the ChildState instance.
  */
-class AsyncBoxView.ChildState extends Object with Runnable {
+class AsyncBoxView_ChildState extends Object with Runnable {
 
     /** Construct a child status. */
     @stub

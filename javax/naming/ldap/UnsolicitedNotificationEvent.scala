@@ -11,7 +11,7 @@ class UnsolicitedNotificationEvent extends EventObject {
 
     /** Constructs a new instance of UnsolicitedNotificationEvent. */
     @stub
-    def this(src: Object, notice: UnsolicitedNotification) = ???
+    def this(src: Any, notice: UnsolicitedNotification) = ???
 
     /** Invokes the notificationReceived() method on
      *  a listener using this event.

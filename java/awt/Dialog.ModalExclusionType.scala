@@ -7,10 +7,10 @@ import scala.scalanative.annotation.stub
  *  dialogs. This is called "modal exclusion". This enum specifies
  *  the possible modal exclusion types.
  */
-class Dialog.ModalExclusionType private (name: String, ordinal: Int) extends Enum[Dialog.ModalExclusionType](name, ordinal) {
+class Dialog_ModalExclusionType private (name: String, ordinal: Int) extends Enum[Dialog.ModalExclusionType](name, ordinal) {
 }
 
-object Dialog.ModalExclusionType {
+object Dialog_ModalExclusionType {
     /** APPLICATION_EXCLUDE indicates that a top-level window
      *  won't be blocked by any application-modal dialogs.
      */

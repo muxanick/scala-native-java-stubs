@@ -193,7 +193,7 @@ trait Action extends ActionListener {
      *  using the associated key.
      */
     @stub
-    def getValue(key: String): Object = ???
+    def getValue(key: String): Any = ???
 
     /** Returns the enabled state of the Action. */
     @stub
@@ -203,7 +203,7 @@ trait Action extends ActionListener {
      *  using the associated key.
      */
     @stub
-    def putValue(key: String, value: Object): Unit = ???
+    def putValue(key: String, value: Any): Unit = ???
 
     /** Removes a PropertyChange listener. */
     @stub

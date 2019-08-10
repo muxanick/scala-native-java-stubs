@@ -162,11 +162,11 @@ class CompoundName extends Object with Name {
 
     /** Creates a copy of this compound name. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compares this CompoundName with the specified Object for order. */
     @stub
-    def compareTo(obj: Object): Int = ???
+    def compareTo(obj: Any): Int = ???
 
     /** Determines whether a compound name is a suffix of this compound name. */
     @stub
@@ -174,7 +174,7 @@ class CompoundName extends Object with Name {
 
     /** Determines whether obj is syntactically equal to this compound name. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Retrieves a component of this compound name. */
     @stub
@@ -208,7 +208,7 @@ class CompoundName extends Object with Name {
 
     /** Deletes a component from this compound name. */
     @stub
-    def remove(posn: Int): Object = ???
+    def remove(posn: Int): Any = ???
 
     /** Retrieves the number of components in this compound name. */
     @stub

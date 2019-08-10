@@ -24,8 +24,7 @@ class DropTargetContext extends Object with Serializable {
      *  Transferable object which represents data transfer for
      *  a particular drag-n-drop operation.
      */
-    @stub
-    protected object TransferableProxy extends DropTargetContext.TransferableProxy
+    protected type TransferableProxy = DropTargetContext_TransferableProxy
 
     /** accept the Drag. */
     @stub

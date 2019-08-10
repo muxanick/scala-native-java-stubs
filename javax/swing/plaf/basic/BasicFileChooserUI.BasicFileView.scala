@@ -8,7 +8,7 @@ import javax.swing.filechooser.FileView
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class BasicFileChooserUI.BasicFileView extends FileView {
+protected class BasicFileChooserUI_BasicFileView extends FileView {
 
     /**  */
     @stub

@@ -20,7 +20,7 @@ trait ComboBoxEditor {
 
     /** Return the edited item */
     @stub
-    def getItem(): Object = ???
+    def getItem(): Any = ???
 
     /** Remove an ActionListener */
     @stub
@@ -32,5 +32,5 @@ trait ComboBoxEditor {
 
     /** Set the item that should be edited. */
     @stub
-    def setItem(anObject: Object): Unit = ???
+    def setItem(anObject: Any): Unit = ???
 }

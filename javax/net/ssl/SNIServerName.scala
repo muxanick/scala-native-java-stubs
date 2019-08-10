@@ -22,7 +22,7 @@ abstract class SNIServerName extends Object {
     protected def this(type: Int, encoded: Array[Byte]) = ???
 
     /** Indicates whether some other object is "equal to" this server name. */
-    def equals(other: Object): Boolean
+    def equals(other: Any): Boolean
 
     /** Returns a copy of the encoded server name value of this server name. */
     def getEncoded(): Array[Byte]

@@ -47,19 +47,19 @@ class RequiredModelMBean extends Object with ModelMBean with MBeanRegistration w
 
     /** Registers an object which implements the NotificationListener interface as a listener. */
     @stub
-    def addAttributeChangeNotificationListener(inlistener: NotificationListener, inAttributeName: String, inhandback: Object): Unit = ???
+    def addAttributeChangeNotificationListener(inlistener: NotificationListener, inAttributeName: String, inhandback: Any): Unit = ???
 
     /** Registers an object which implements the NotificationListener
      *  interface as a listener.
      */
     @stub
-    def addNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
+    def addNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Any): Unit = ???
 
     /** Returns the value of a specific attribute defined for this
      *  ModelMBean.
      */
     @stub
-    def getAttribute(attrName: String): Object = ???
+    def getAttribute(attrName: String): Any = ???
 
     /** Returns the values of several attributes in the ModelMBean. */
     @stub
@@ -85,7 +85,7 @@ class RequiredModelMBean extends Object with ModelMBean with MBeanRegistration w
      *  the result of the method execution.
      */
     @stub
-    def invoke(opName: String, opArgs: Array[Object], sig: Array[String]): Object = ???
+    def invoke(opName: String, opArgs: Array[Object], sig: Array[String]): Any = ???
 
     /** Instantiates this MBean instance with the data found for
      *  the MBean in the persistent store.
@@ -127,7 +127,7 @@ class RequiredModelMBean extends Object with ModelMBean with MBeanRegistration w
 
     /** Removes a listener from this MBean. */
     @stub
-    def removeNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
+    def removeNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Any): Unit = ???
 
     /** Sends an attributeChangeNotification which contains the old value and new value for the
      *  attribute to the registered AttributeChangeNotification listeners on the ModelMBean.
@@ -168,7 +168,7 @@ class RequiredModelMBean extends Object with ModelMBean with MBeanRegistration w
      *  (MBeanInfo and Descriptors).
      */
     @stub
-    def setManagedResource(mr: Object, mr_type: String): Unit = ???
+    def setManagedResource(mr: Any, mr_type: String): Unit = ???
 
     /** Initializes a ModelMBean object using ModelMBeanInfo passed in. */
     @stub

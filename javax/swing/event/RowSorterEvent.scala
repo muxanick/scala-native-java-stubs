@@ -48,6 +48,5 @@ class RowSorterEvent extends EventObject {
 
 object RowSorterEvent {
     /** Enumeration of the types of RowSorterEvents. */
-    @stub
-    object Type extends RowSorterEvent.Type
+    type Type = RowSorterEvent_Type
 }

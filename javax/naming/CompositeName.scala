@@ -211,11 +211,11 @@ class CompositeName extends Object with Name {
 
     /** Generates a copy of this composite name. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compares this CompositeName with the specified Object for order. */
     @stub
-    def compareTo(obj: Object): Int = ???
+    def compareTo(obj: Any): Int = ???
 
     /** Determines whether a composite name is a suffix of this composite name. */
     @stub
@@ -223,7 +223,7 @@ class CompositeName extends Object with Name {
 
     /** Determines whether two composite names are equal. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Retrieves a component of this composite name. */
     @stub
@@ -257,7 +257,7 @@ class CompositeName extends Object with Name {
 
     /** Deletes a component from this composite name. */
     @stub
-    def remove(posn: Int): Object = ???
+    def remove(posn: Int): Any = ???
 
     /** Retrieves the number of components in this composite name. */
     @stub

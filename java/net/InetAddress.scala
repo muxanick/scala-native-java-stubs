@@ -132,7 +132,7 @@ class InetAddress extends Object with Serializable {
 
     /** Compares this object against the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the raw IP address of this InetAddress
      *  object.

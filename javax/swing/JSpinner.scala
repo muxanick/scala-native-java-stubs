@@ -85,8 +85,7 @@ class JSpinner extends JComponent with Accessible {
     /** AccessibleJSpinner implements accessibility
      *  support for the JSpinner class.
      */
-    @stub
-    protected object AccessibleJSpinner extends JSpinner.AccessibleJSpinner
+    protected type AccessibleJSpinner = JSpinner_AccessibleJSpinner
 
     /** Adds a listener to the list that is notified each time a change
      *  to the model occurs.
@@ -137,13 +136,13 @@ class JSpinner extends JComponent with Accessible {
      *  by getValue().
      */
     @stub
-    def getNextValue(): Object = ???
+    def getNextValue(): Any = ???
 
     /** Returns the object in the sequence that comes
      *  before the object returned by getValue().
      */
     @stub
-    def getPreviousValue(): Object = ???
+    def getPreviousValue(): Any = ???
 
     /** Returns the look and feel (L&F) object that renders this component. */
     @stub
@@ -159,7 +158,7 @@ class JSpinner extends JComponent with Accessible {
      *  this value is displayed by the editor.
      */
     @stub
-    def getValue(): Object = ???
+    def getValue(): Any = ???
 
     /** Removes a ChangeListener from this spinner. */
     @stub
@@ -183,7 +182,7 @@ class JSpinner extends JComponent with Accessible {
      *  this value is displayed by the editor.
      */
     @stub
-    def setValue(value: Object): Unit = ???
+    def setValue(value: Any): Unit = ???
 
     /** Resets the UI property with the value from the current look and feel. */
     @stub
@@ -194,25 +193,21 @@ object JSpinner {
     /** An editor for a JSpinner whose model is a
      *  SpinnerDateModel.
      */
-    @stub
-    object DateEditor extends JSpinner.DateEditor
+    type DateEditor = JSpinner_DateEditor
 
     /** A simple base class for more specialized editors
      *  that displays a read-only view of the model's current
      *  value with a JFormattedTextField.
      */
-    @stub
-    object DefaultEditor extends JSpinner.DefaultEditor
+    type DefaultEditor = JSpinner_DefaultEditor
 
     /** An editor for a JSpinner whose model is a
      *  SpinnerListModel.
      */
-    @stub
-    object ListEditor extends JSpinner.ListEditor
+    type ListEditor = JSpinner_ListEditor
 
     /** An editor for a JSpinner whose model is a
      *  SpinnerNumberModel.
      */
-    @stub
-    object NumberEditor extends JSpinner.NumberEditor
+    type NumberEditor = JSpinner_NumberEditor
 }

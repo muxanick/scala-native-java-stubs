@@ -5,7 +5,7 @@ import java.lang.{Object, String}
 import scala.scalanative.annotation.stub
 
 /** Alternate CertPath class for serialization. */
-object protected CertPath.CertPathRep extends Object with Serializable {
+object protected CertPath_CertPathRep extends Object with Serializable {
 
     /** Creates a CertPathRep with the specified
      *  type and encoded form of a certification path.
@@ -15,5 +15,5 @@ object protected CertPath.CertPathRep extends Object with Serializable {
 
     /** Returns a CertPath constructed from the type and data. */
     @stub
-    protected def readResolve(): Object = ???
+    protected def readResolve(): Any = ???
 }

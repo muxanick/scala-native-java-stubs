@@ -116,12 +116,12 @@ abstract class KeyboardFocusManager extends Object with KeyEventDispatcher with 
     protected def enqueueKeyEvents(after: Long, untilFocused: Component): Unit
 
     /** Fires a PropertyChangeEvent in response to a change in a bound property. */
-    protected def firePropertyChange(propertyName: String, oldValue: Object, newValue: Object): Unit
+    protected def firePropertyChange(propertyName: String, oldValue: Any, newValue: Any): Unit
 
     /** Fires a PropertyChangeEvent in response to a change in a vetoable
      *  property.
      */
-    protected def fireVetoableChange(propertyName: String, oldValue: Object, newValue: Object): Unit
+    protected def fireVetoableChange(propertyName: String, oldValue: Any, newValue: Any): Unit
 
     /** Focuses the Component after the current focus owner. */
     def focusNextComponent(): Unit

@@ -20,32 +20,7 @@ import scala.scalanative.annotation.stub
  *  
  *  This version of the unpacker is compatible with all previous versions.
  */
-object trait Pack200.Unpacker {
-
-    /** Property indicating that the unpacker should
-     *  ignore all transmitted values for DEFLATE_HINT,
-     *  replacing them by the given value, TRUE or FALSE.
-     */
-    @stub
-    val DEFLATE_HINT: String = ???
-
-    /** The string "false", a possible value for certain properties. */
-    @stub
-    val FALSE: String = ???
-
-    /** The string "keep", a possible value for certain properties. */
-    @stub
-    val KEEP: String = ???
-
-    /** The unpacker's progress as a percentage, as periodically
-     *  updated by the unpacker.
-     */
-    @stub
-    val PROGRESS: String = ???
-
-    /** The string "true", a possible value for certain properties. */
-    @stub
-    val TRUE: String = ???
+trait Pack200_Unpacker {
 
     /** Deprecated. 
      * The dependency on PropertyChangeListener creates
@@ -84,4 +59,31 @@ object trait Pack200.Unpacker {
      */
     @stub
     def unpack(in: InputStream, out: JarOutputStream): Unit = ???
+}
+
+object Pack200_Unpacker {
+    /** Property indicating that the unpacker should
+     *  ignore all transmitted values for DEFLATE_HINT,
+     *  replacing them by the given value, TRUE or FALSE.
+     */
+    @stub
+    val DEFLATE_HINT: String = ???
+
+    /** The string "false", a possible value for certain properties. */
+    @stub
+    val FALSE: String = ???
+
+    /** The string "keep", a possible value for certain properties. */
+    @stub
+    val KEEP: String = ???
+
+    /** The unpacker's progress as a percentage, as periodically
+     *  updated by the unpacker.
+     */
+    @stub
+    val PROGRESS: String = ???
+
+    /** The string "true", a possible value for certain properties. */
+    @stub
+    val TRUE: String = ???
 }

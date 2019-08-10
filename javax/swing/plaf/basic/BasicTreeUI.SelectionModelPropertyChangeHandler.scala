@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** Listener on the TreeSelectionModel, resets the row selection if
  *  any of the properties of the model change.
  */
-class BasicTreeUI.SelectionModelPropertyChangeHandler extends Object with PropertyChangeListener {
+class BasicTreeUI_SelectionModelPropertyChangeHandler extends Object with PropertyChangeListener {
 
     /**  */
     @stub

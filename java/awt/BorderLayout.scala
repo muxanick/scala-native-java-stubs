@@ -107,7 +107,7 @@ class BorderLayout extends Object with LayoutManager2 with Serializable {
      *  constraint object.
      */
     @stub
-    def addLayoutComponent(comp: Component, constraints: Object): Unit = ???
+    def addLayoutComponent(comp: Component, constraints: Any): Unit = ???
 
     /** Deprecated. 
      * replaced by addLayoutComponent(Component, Object).
@@ -118,7 +118,7 @@ class BorderLayout extends Object with LayoutManager2 with Serializable {
 
     /** Gets the constraints for the specified component */
     @stub
-    def getConstraints(comp: Component): Object = ???
+    def getConstraints(comp: Component): Any = ???
 
     /** Returns the horizontal gap between components. */
     @stub
@@ -136,11 +136,11 @@ class BorderLayout extends Object with LayoutManager2 with Serializable {
      *  based on the target Container's component orientation.
      */
     @stub
-    def getLayoutComponent(target: Container, constraints: Object): Component = ???
+    def getLayoutComponent(target: Container, constraints: Any): Component = ???
 
     /** Gets the component that was added using the given constraint */
     @stub
-    def getLayoutComponent(constraints: Object): Component = ???
+    def getLayoutComponent(constraints: Any): Component = ???
 
     /** Returns the vertical gap between components. */
     @stub

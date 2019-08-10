@@ -22,5 +22,5 @@ trait RMIServer extends Remote {
 
     /** Makes a new connection through this RMI connector. */
     @stub
-    def newClient(credentials: Object): RMIConnection = ???
+    def newClient(credentials: Any): RMIConnection = ???
 }

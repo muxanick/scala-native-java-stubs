@@ -5,7 +5,7 @@ import javax.swing.event.{ChangeEvent, ChangeListener}
 import scala.scalanative.annotation.stub
 
 /** Listener for viewport events. */
-class BasicScrollPaneUI.ViewportChangeHandler extends Object with ChangeListener {
+class BasicScrollPaneUI_ViewportChangeHandler extends Object with ChangeListener {
 
     /**  */
     @stub

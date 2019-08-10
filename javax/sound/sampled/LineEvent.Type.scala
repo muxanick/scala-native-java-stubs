@@ -6,7 +6,7 @@ import scala.scalanative.annotation.stub
 /** The LineEvent.Type inner class identifies what kind of event occurred on a line.
  *  Static instances are provided for the common types (OPEN, CLOSE, START, and STOP).
  */
-object LineEvent.Type extends Object {
+object LineEvent_Type extends Object {
 
     /** Constructs a new event type. */
     @stub
@@ -42,7 +42,7 @@ object LineEvent.Type extends Object {
      *  returning true if the objects are identical.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Finalizes the hashcode method. */
     @stub

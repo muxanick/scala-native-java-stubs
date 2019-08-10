@@ -50,7 +50,7 @@ final class Integer extends Number with Comparable[Integer] {
 
     /** Compares this object to the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the value of this Integer as a float
      *  after a widening primitive conversion.

@@ -492,7 +492,7 @@ trait ResultSet extends Wrapper with AutoCloseable {
      *  an Object in the Java programming language.
      */
     @stub
-    def getObject(columnIndex: Int): Object = ???
+    def getObject(columnIndex: Int): Any = ???
 
     /** Retrieves the value of the designated column in the current row
      *  of this ResultSet object and will convert from the
@@ -507,14 +507,14 @@ trait ResultSet extends Wrapper with AutoCloseable {
      *  in the Java programming language.
      */
     @stub
-    def getObject(columnIndex: Int, map: Map[String, Class[_]]): Object = ???
+    def getObject(columnIndex: Int, map: Map[String, Class[_]]): Any = ???
 
     /** Gets the value of the designated column in the current row
      *  of this ResultSet object as
      *  an Object in the Java programming language.
      */
     @stub
-    def getObject(columnLabel: String): Object = ???
+    def getObject(columnLabel: String): Any = ???
 
     /** Retrieves the value of the designated column in the current row
      *  of this ResultSet object and will convert from the
@@ -529,7 +529,7 @@ trait ResultSet extends Wrapper with AutoCloseable {
      *  in the Java programming language.
      */
     @stub
-    def getObject(columnLabel: String, map: Map[String, Class[_]]): Object = ???
+    def getObject(columnLabel: String, map: Map[String, Class[_]]): Any = ???
 
     /** Retrieves the value of the designated column in the current row
      *  of this ResultSet object as a Ref object
@@ -1113,35 +1113,35 @@ trait ResultSet extends Wrapper with AutoCloseable {
 
     /** Updates the designated column with an Object value. */
     @stub
-    def updateObject(columnIndex: Int, x: Object): Unit = ???
+    def updateObject(columnIndex: Int, x: Any): Unit = ???
 
     /** Updates the designated column with an Object value. */
     @stub
-    def updateObject(columnIndex: Int, x: Object, scaleOrLength: Int): Unit = ???
+    def updateObject(columnIndex: Int, x: Any, scaleOrLength: Int): Unit = ???
 
     /** Updates the designated column with an Object value. */
     @stub
-    def updateObject(columnIndex: Int, x: Object, targetSqlType: SQLType): Unit = ???
+    def updateObject(columnIndex: Int, x: Any, targetSqlType: SQLType): Unit = ???
 
     /** Updates the designated column with an Object value. */
     @stub
-    def updateObject(columnIndex: Int, x: Object, targetSqlType: SQLType, scaleOrLength: Int): Unit = ???
+    def updateObject(columnIndex: Int, x: Any, targetSqlType: SQLType, scaleOrLength: Int): Unit = ???
 
     /** Updates the designated column with an Object value. */
     @stub
-    def updateObject(columnLabel: String, x: Object): Unit = ???
+    def updateObject(columnLabel: String, x: Any): Unit = ???
 
     /** Updates the designated column with an Object value. */
     @stub
-    def updateObject(columnLabel: String, x: Object, scaleOrLength: Int): Unit = ???
+    def updateObject(columnLabel: String, x: Any, scaleOrLength: Int): Unit = ???
 
     /** Updates the designated column with an Object value. */
     @stub
-    def updateObject(columnLabel: String, x: Object, targetSqlType: SQLType): Unit = ???
+    def updateObject(columnLabel: String, x: Any, targetSqlType: SQLType): Unit = ???
 
     /** Updates the designated column with an Object value. */
     @stub
-    def updateObject(columnLabel: String, x: Object, targetSqlType: SQLType, scaleOrLength: Int): Unit = ???
+    def updateObject(columnLabel: String, x: Any, targetSqlType: SQLType, scaleOrLength: Int): Unit = ???
 
     /** Updates the designated column with a java.sql.Ref value. */
     @stub

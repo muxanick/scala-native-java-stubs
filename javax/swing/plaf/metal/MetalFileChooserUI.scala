@@ -18,28 +18,22 @@ class MetalFileChooserUI extends BasicFileChooserUI {
     def this(filechooser: JFileChooser) = ???
 
     /** Acts when DirectoryComboBox has changed the selected item. */
-    @stub
-    protected object DirectoryComboBoxAction extends MetalFileChooserUI.DirectoryComboBoxAction
+    protected type DirectoryComboBoxAction = MetalFileChooserUI_DirectoryComboBoxAction
 
     /** Data model for a type-face selection combo-box. */
-    @stub
-    protected object DirectoryComboBoxModel extends MetalFileChooserUI.DirectoryComboBoxModel
+    protected type DirectoryComboBoxModel = MetalFileChooserUI_DirectoryComboBoxModel
 
     /**  */
-    @stub
-    protected object FileRenderer extends MetalFileChooserUI.FileRenderer
+    protected type FileRenderer = MetalFileChooserUI_FileRenderer
 
     /** Data model for a type-face selection combo-box. */
-    @stub
-    protected object FilterComboBoxModel extends MetalFileChooserUI.FilterComboBoxModel
+    protected type FilterComboBoxModel = MetalFileChooserUI_FilterComboBoxModel
 
     /** Render different type sizes and styles. */
-    @stub
-    object FilterComboBoxRenderer extends MetalFileChooserUI.FilterComboBoxRenderer
+    type FilterComboBoxRenderer = MetalFileChooserUI_FilterComboBoxRenderer
 
     /**  */
-    @stub
-    protected object SingleClickListener extends MetalFileChooserUI.SingleClickListener
+    protected type SingleClickListener = MetalFileChooserUI_SingleClickListener
 
     /**  */
     @stub

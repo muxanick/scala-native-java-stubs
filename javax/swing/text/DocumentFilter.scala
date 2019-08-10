@@ -60,6 +60,5 @@ object DocumentFilter {
     /** Used as a way to circumvent calling back into the Document to
      *  change it.
      */
-    @stub
-    object FilterBypass extends DocumentFilter.FilterBypass
+    type FilterBypass = DocumentFilter_FilterBypass
 }

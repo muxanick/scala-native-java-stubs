@@ -12,7 +12,7 @@ import scala.scalanative.annotation.stub
  *  forEach if it can
  *  provide a more performant implementation.
  */
-object abstract Spliterators.AbstractSpliterator[T] extends Object with Spliterator[T] {
+object abstract Spliterators_AbstractSpliterator[T] extends Object with Spliterator[T] {
 
     /** Creates a spliterator reporting the given estimated size and
      *  additionalCharacteristics.

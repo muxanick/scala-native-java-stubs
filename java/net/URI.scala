@@ -421,7 +421,7 @@ final class URI extends Object with Comparable[URI] with Serializable {
 
     /** Tests this URI for equality with another object. */
     @stub
-    def equals(ob: Object): Boolean = ???
+    def equals(ob: Any): Boolean = ???
 
     /** Returns the decoded authority component of this URI. */
     @stub

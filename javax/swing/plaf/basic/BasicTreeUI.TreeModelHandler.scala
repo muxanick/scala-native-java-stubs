@@ -5,7 +5,7 @@ import javax.swing.event.{TreeModelEvent, TreeModelListener}
 import scala.scalanative.annotation.stub
 
 /** Forwards all TreeModel events to the TreeState. */
-class BasicTreeUI.TreeModelHandler extends Object with TreeModelListener {
+class BasicTreeUI_TreeModelHandler extends Object with TreeModelListener {
 
     /**  */
     @stub

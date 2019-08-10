@@ -31,7 +31,7 @@ final class SNIHostName extends SNIServerName {
 
     /** Compares this server name to the specified object. */
     @stub
-    def equals(other: Object): Boolean = ???
+    def equals(other: Any): Boolean = ???
 
     /** Returns the StandardCharsets.US_ASCII-compliant hostname of
      *  this SNIHostName object.

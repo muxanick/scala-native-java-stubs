@@ -15,26 +15,21 @@ class BasicScrollBarUI extends ScrollBarUI with LayoutManager with SwingConstant
     def this() = ???
 
     /** Listener for cursor keys. */
-    @stub
-    protected object ArrowButtonListener extends BasicScrollBarUI.ArrowButtonListener
+    protected type ArrowButtonListener = BasicScrollBarUI_ArrowButtonListener
 
     /** A listener to listen for model changes. */
-    @stub
-    protected object ModelListener extends BasicScrollBarUI.ModelListener
+    protected type ModelListener = BasicScrollBarUI_ModelListener
 
     /**  */
-    @stub
-    object PropertyChangeHandler extends BasicScrollBarUI.PropertyChangeHandler
+    type PropertyChangeHandler = BasicScrollBarUI_PropertyChangeHandler
 
     /** Listener for scrolling events initiated in the
      *  ScrollPane.
      */
-    @stub
-    protected object ScrollListener extends BasicScrollBarUI.ScrollListener
+    protected type ScrollListener = BasicScrollBarUI_ScrollListener
 
     /** Track mouse drags. */
-    @stub
-    protected object TrackListener extends BasicScrollBarUI.TrackListener
+    protected type TrackListener = BasicScrollBarUI_TrackListener
 
     /**  */
     @stub

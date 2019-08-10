@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
  *  Java Accessibility API appropriate to scroll pane user-interface
  *  elements.
  */
-protected class ScrollPane.AccessibleAWTScrollPane extends Container.AccessibleAWTContainer {
+protected class ScrollPane_AccessibleAWTScrollPane extends Container.AccessibleAWTContainer {
 
     /**  */
     @stub

@@ -28,39 +28,39 @@ trait ScriptEngine {
      *  provided as a Reader
      */
     @stub
-    def eval(reader: Reader): Object = ???
+    def eval(reader: Reader): Any = ???
 
     /** Same as eval(String, Bindings) except that the source of the script
      *  is provided as a Reader.
      */
     @stub
-    def eval(reader: Reader, n: Bindings): Object = ???
+    def eval(reader: Reader, n: Bindings): Any = ???
 
     /** Same as eval(String, ScriptContext) where the source of the script
      *  is read from a Reader.
      */
     @stub
-    def eval(reader: Reader, context: ScriptContext): Object = ???
+    def eval(reader: Reader, context: ScriptContext): Any = ???
 
     /** Executes the specified script. */
     @stub
-    def eval(script: String): Object = ???
+    def eval(script: String): Any = ???
 
     /** Executes the script using the Bindings argument as the ENGINE_SCOPE
      *  Bindings of the ScriptEngine during the script execution.
      */
     @stub
-    def eval(script: String, n: Bindings): Object = ???
+    def eval(script: String, n: Bindings): Any = ???
 
     /** Causes the immediate execution of the script whose source is the String
      *  passed as the first argument.
      */
     @stub
-    def eval(script: String, context: ScriptContext): Object = ???
+    def eval(script: String, context: ScriptContext): Any = ???
 
     /** Retrieves a value set in the state of this engine. */
     @stub
-    def get(key: String): Object = ???
+    def get(key: String): Any = ???
 
     /** Returns a scope of named values. */
     @stub
@@ -81,7 +81,7 @@ trait ScriptEngine {
      *  other way, depending on whether the key is reserved.
      */
     @stub
-    def put(key: String, value: Object): Unit = ???
+    def put(key: String, value: Any): Unit = ???
 
     /** Sets a scope of named values to be used by scripts. */
     @stub

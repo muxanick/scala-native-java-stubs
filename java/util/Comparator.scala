@@ -75,7 +75,7 @@ import scala.scalanative.annotation.stub
      *  comparator.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns a comparator that imposes the reverse ordering of this
      *  comparator.

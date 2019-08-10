@@ -102,7 +102,7 @@ class IIOMetadataNode extends Object with Element with NodeList {
      *  and will throw a DOMException.
      */
     @stub
-    def getFeature(feature: String, version: String): Object = ???
+    def getFeature(feature: String, version: String): Any = ???
 
     /** Returns the first child of this node, or null if
      *  the node has no children.
@@ -188,11 +188,11 @@ class IIOMetadataNode extends Object with Element with NodeList {
      *  and will throw a DOMException.
      */
     @stub
-    def getUserData(key: String): Object = ???
+    def getUserData(key: String): Any = ???
 
     /** Returns the Object value associated with this node. */
     @stub
-    def getUserObject(): Object = ???
+    def getUserObject(): Any = ???
 
     /** Returns true when an attribute with a given name is
      *  specified on this element or has a default value, false
@@ -342,9 +342,9 @@ class IIOMetadataNode extends Object with Element with NodeList {
      *  and will throw a DOMException.
      */
     @stub
-    def setUserData(key: String, data: Object, handler: UserDataHandler): Object = ???
+    def setUserData(key: String, data: Any, handler: UserDataHandler): Any = ???
 
     /** Sets the value associated with this node. */
     @stub
-    def setUserObject(userObject: Object): Unit = ???
+    def setUserObject(userObject: Any): Unit = ???
 }

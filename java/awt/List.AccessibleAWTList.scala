@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
  *  List class.  It provides an implementation of the
  *  Java Accessibility API appropriate to list user-interface elements.
  */
-protected class List.AccessibleAWTList extends Component.AccessibleAWTComponent with AccessibleSelection with ItemListener with ActionListener {
+protected class List_AccessibleAWTList extends Component.AccessibleAWTComponent with AccessibleSelection with ItemListener with ActionListener {
 
     /**  */
     @stub
@@ -18,8 +18,7 @@ protected class List.AccessibleAWTList extends Component.AccessibleAWTComponent 
     /** This class implements accessibility support for
      *  List children.
      */
-    @stub
-    protected object AccessibleAWTListChild extends List.AccessibleAWTList.AccessibleAWTListChild
+    protected type AccessibleAWTListChild = List_AccessibleAWTList_AccessibleAWTListChild
 
     /** Invoked when an action occurs. */
     @stub

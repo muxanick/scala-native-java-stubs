@@ -33,7 +33,7 @@ trait ModelMBean extends DynamicMBean with PersistentMBean with ModelMBeanNotifi
      *  (MBeanInfo and Descriptors).
      */
     @stub
-    def setManagedResource(mr: Object, mr_type: String): Unit = ???
+    def setManagedResource(mr: Any, mr_type: String): Unit = ???
 
     /** Initializes a ModelMBean object using ModelMBeanInfo passed in. */
     @stub

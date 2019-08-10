@@ -59,7 +59,7 @@ class ModelMBeanConstructorInfo extends MBeanConstructorInfo with DescriptorAcce
 
     /** Creates and returns a new ModelMBeanConstructorInfo which is a duplicate of this ModelMBeanConstructorInfo. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns a copy of the associated Descriptor. */
     @stub

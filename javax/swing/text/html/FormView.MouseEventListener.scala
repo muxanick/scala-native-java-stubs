@@ -10,7 +10,7 @@ import scala.scalanative.annotation.stub
  *  data the coordinates associated with the mouse click
  *  need to be submitted.
  */
-protected class FormView.MouseEventListener extends MouseAdapter {
+protected class FormView_MouseEventListener extends MouseAdapter {
 
     /**  */
     @stub

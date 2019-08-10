@@ -32,7 +32,7 @@ import scala.scalanative.annotation.stub
  *  a temporarily invalid state should invoke setEditValid
  *  at the appropriate times.
  */
-object abstract JFormattedTextField.AbstractFormatter extends Object with Serializable {
+object abstract JFormattedTextField_AbstractFormatter extends Object with Serializable {
 
     /**  */
     @stub
@@ -40,7 +40,7 @@ object abstract JFormattedTextField.AbstractFormatter extends Object with Serial
 
     /** Clones the AbstractFormatter. */
     @stub
-    protected def clone(): Object = ???
+    protected def clone(): Any = ???
 
     /** Subclass and override if you wish to provide a custom set of
      *  Actions.
@@ -83,8 +83,7 @@ object abstract JFormattedTextField.AbstractFormatter extends Object with Serial
     protected def setEditValid(valid: Boolean): Unit = ???
 
     /** Parses text returning an arbitrary Object. */
-    @stub
-    def stringToValue(text: String): Object
+    def stringToValue(text: String): Any
 
     /** Uninstalls any state the AbstractFormatter may have
      *  installed on the JFormattedTextField.
@@ -93,6 +92,5 @@ object abstract JFormattedTextField.AbstractFormatter extends Object with Serial
     def uninstall(): Unit = ???
 
     /** Returns the string value to display for value. */
-    @stub
-    def valueToString(value: Object): String
+    def valueToString(value: Any): String
 }

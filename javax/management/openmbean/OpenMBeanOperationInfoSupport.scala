@@ -28,7 +28,7 @@ class OpenMBeanOperationInfoSupport extends MBeanOperationInfo with OpenMBeanOpe
      *  equality.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the open type of the values returned by the
      *  operation described by this OpenMBeanOperationInfo

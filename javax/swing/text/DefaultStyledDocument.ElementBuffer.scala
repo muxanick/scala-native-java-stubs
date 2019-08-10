@@ -16,7 +16,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-class DefaultStyledDocument.ElementBuffer extends Object with Serializable {
+class DefaultStyledDocument_ElementBuffer extends Object with Serializable {
 
     /** Creates a new ElementBuffer. */
     @stub

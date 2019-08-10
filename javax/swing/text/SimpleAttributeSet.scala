@@ -29,7 +29,7 @@ class SimpleAttributeSet extends Object with MutableAttributeSet with Serializab
 
     /** Adds an attribute to the list. */
     @stub
-    def addAttribute(name: Object, value: Object): Unit = ???
+    def addAttribute(name: Any, value: Any): Unit = ???
 
     /** Adds a set of attributes to the list. */
     @stub
@@ -37,13 +37,13 @@ class SimpleAttributeSet extends Object with MutableAttributeSet with Serializab
 
     /** Clones a set of attributes. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Checks whether the attribute list contains a
      *  specified attribute name/value pair.
      */
     @stub
-    def containsAttribute(name: Object, value: Object): Boolean = ???
+    def containsAttribute(name: Any, value: Any): Boolean = ???
 
     /** Checks whether the attribute list contains all the
      *  specified name/value pairs.
@@ -57,11 +57,11 @@ class SimpleAttributeSet extends Object with MutableAttributeSet with Serializab
 
     /** Compares this object to the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Gets the value of an attribute. */
     @stub
-    def getAttribute(name: Object): Object = ???
+    def getAttribute(name: Any): Any = ???
 
     /** Gets a count of the number of attributes. */
     @stub
@@ -81,7 +81,7 @@ class SimpleAttributeSet extends Object with MutableAttributeSet with Serializab
 
     /** Tells whether a given attribute is defined. */
     @stub
-    def isDefined(attrName: Object): Boolean = ???
+    def isDefined(attrName: Any): Boolean = ???
 
     /** Checks whether the set of attributes is empty. */
     @stub
@@ -93,7 +93,7 @@ class SimpleAttributeSet extends Object with MutableAttributeSet with Serializab
 
     /** Removes an attribute from the list. */
     @stub
-    def removeAttribute(name: Object): Unit = ???
+    def removeAttribute(name: Any): Unit = ???
 
     /** Removes a set of attributes from the list. */
     @stub

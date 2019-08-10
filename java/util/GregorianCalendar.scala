@@ -312,7 +312,7 @@ class GregorianCalendar extends Calendar {
 
     /** Creates and returns a copy of this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Converts the time value (millisecond offset from the Epoch) to calendar field values. */
     @stub
@@ -328,7 +328,7 @@ class GregorianCalendar extends Calendar {
      *  Object.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the maximum value that this calendar field could have,
      *  taking into consideration the given time value and the current

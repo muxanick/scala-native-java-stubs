@@ -19,11 +19,9 @@ PermissionCollection getPermissions ( java.security.ProtectionDomain pd ) {
     protected def this() = ???
 
     /** Deprecated.  */
-    @stub
     def getPermissions(subject: Subject, cs: CodeSource): PermissionCollection
 
     /** Deprecated.  */
-    @stub
     def refresh(): Unit
 }
 

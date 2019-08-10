@@ -207,7 +207,7 @@ class RuleBasedCollator extends Collator {
 
     /** Standard override; no change in semantics. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compares the character data stored in two different strings based on the
      *  collation rules.
@@ -217,7 +217,7 @@ class RuleBasedCollator extends Collator {
 
     /** Compares the equality of two collation objects. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns a CollationElementIterator for the given CharacterIterator. */
     @stub

@@ -114,11 +114,11 @@ class LdapName extends Object with Name {
 
     /** Generates a new copy of this name. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compares this LdapName with the specified Object for order. */
     @stub
-    def compareTo(obj: Object): Int = ???
+    def compareTo(obj: Any): Int = ???
 
     /** Determines whether the specified RDN sequence forms a suffix of this
      *  LDAP name.
@@ -134,7 +134,7 @@ class LdapName extends Object with Name {
 
     /** Determines whether two LDAP names are equal. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Retrieves a component of this LDAP name as a string. */
     @stub
@@ -176,7 +176,7 @@ class LdapName extends Object with Name {
 
     /** Removes a component from this LDAP name. */
     @stub
-    def remove(posn: Int): Object = ???
+    def remove(posn: Int): Any = ???
 
     /** Retrieves the number of components in this LDAP name. */
     @stub

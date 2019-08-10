@@ -6,4 +6,5 @@ import scala.scalanative.annotation.stub
  *  async methods. This may be useful for monitoring,
  *  debugging, and tracking asynchronous activities.
  */
-object trait CompletableFuture.AsynchronousCompletionTask {
+trait CompletableFuture_AsynchronousCompletionTask {
+}

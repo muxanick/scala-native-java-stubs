@@ -95,6 +95,5 @@ object DirectoryStream {
     /** An interface that is implemented by objects that decide if a directory
      *  entry should be accepted or filtered.
      */
-    @stub
-    trait Filter[T] extends DirectoryStream.Filter[T]
+    type Filter[T] = DirectoryStream_Filter[T]
 }

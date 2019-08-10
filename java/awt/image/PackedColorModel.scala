@@ -80,7 +80,7 @@ abstract class PackedColorModel extends ColorModel {
      *  of PackedColorModel and equals this
      *  PackedColorModel.
      */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** Returns a WritableRaster representing the alpha channel of
      *  an image, extracted from the input WritableRaster.

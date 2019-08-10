@@ -14,11 +14,11 @@ class Object {
 
     /** Creates and returns a copy of this object. */
     @stub
-    protected def clone(): Object = ???
+    protected def clone(): Any = ???
 
     /** Indicates whether some other object is "equal to" this one. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Called by the garbage collector on an object when garbage collection
      *  determines that there are no more references to the object.

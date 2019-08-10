@@ -5,7 +5,7 @@ import javax.swing.event.{TreeExpansionEvent, TreeExpansionListener}
 import scala.scalanative.annotation.stub
 
 /** Updates the TreeState in response to nodes expanding/collapsing. */
-class BasicTreeUI.TreeExpansionHandler extends Object with TreeExpansionListener {
+class BasicTreeUI_TreeExpansionHandler extends Object with TreeExpansionListener {
 
     /**  */
     @stub

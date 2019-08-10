@@ -50,13 +50,13 @@ class WritableRaster extends Raster {
      *  primitive array of type TransferType.
      */
     @stub
-    def setDataElements(x: Int, y: Int, w: Int, h: Int, inData: Object): Unit = ???
+    def setDataElements(x: Int, y: Int, w: Int, h: Int, inData: Any): Unit = ???
 
     /** Sets the data for a single pixel from a
      *  primitive array of type TransferType.
      */
     @stub
-    def setDataElements(x: Int, y: Int, inData: Object): Unit = ???
+    def setDataElements(x: Int, y: Int, inData: Any): Unit = ???
 
     /** Sets the data for a rectangle of pixels from an input Raster. */
     @stub

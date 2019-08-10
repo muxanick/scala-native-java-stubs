@@ -25,8 +25,7 @@ abstract class KeySelector extends Object {
 
 object KeySelector {
     /** The purpose of the key that is to be selected. */
-    @stub
-    object Purpose extends KeySelector.Purpose
+    type Purpose = KeySelector_Purpose
 
     /** Returns a KeySelector that always selects the specified
      *  key, regardless of the KeyInfo passed to it.

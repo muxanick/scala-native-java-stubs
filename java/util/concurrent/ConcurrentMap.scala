@@ -50,7 +50,7 @@ trait ConcurrentMap[K, V] extends Map[K, V] {
      *  defaultValue if this map contains no mapping for the key.
      */
     @stub
-    def getOrDefault(key: Object, defaultValue: V): V = ???
+    def getOrDefault(key: Any, defaultValue: V): V = ???
 
     /** If the specified key is not already associated with a value or is
      *  associated with null, associates it with the given non-null value.
@@ -66,7 +66,7 @@ trait ConcurrentMap[K, V] extends Map[K, V] {
 
     /** Removes the entry for a key only if currently mapped to a given value. */
     @stub
-    def remove(key: Object, value: Object): Boolean = ???
+    def remove(key: Any, value: Any): Boolean = ???
 
     /** Replaces the entry for a key only if currently mapped to some value. */
     @stub

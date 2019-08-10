@@ -190,13 +190,13 @@ class Raster extends Object {
      *  primitive array of type TransferType.
      */
     @stub
-    def getDataElements(x: Int, y: Int, w: Int, h: Int, outData: Object): Object = ???
+    def getDataElements(x: Int, y: Int, w: Int, h: Int, outData: Any): Any = ???
 
     /** Returns data for a single pixel in a primitive array of type
      *  TransferType.
      */
     @stub
-    def getDataElements(x: Int, y: Int, outData: Object): Object = ???
+    def getDataElements(x: Int, y: Int, outData: Any): Any = ???
 
     /** Returns the height in pixels of the Raster. */
     @stub

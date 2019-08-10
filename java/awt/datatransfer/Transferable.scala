@@ -15,7 +15,7 @@ trait Transferable {
 
     /** Returns an object which represents the data to be transferred. */
     @stub
-    def getTransferData(flavor: DataFlavor): Object = ???
+    def getTransferData(flavor: DataFlavor): Any = ???
 
     /** Returns an array of DataFlavor objects indicating the flavors the data
      *  can be provided in.

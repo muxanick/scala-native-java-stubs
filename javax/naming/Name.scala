@@ -48,11 +48,11 @@ trait Name extends Cloneable with Serializable with Comparable[Object] {
 
     /** Generates a new copy of this name. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compares this name with another name for order. */
     @stub
-    def compareTo(obj: Object): Int = ???
+    def compareTo(obj: Any): Int = ???
 
     /** Determines whether this name ends with a specified suffix. */
     @stub
@@ -86,7 +86,7 @@ trait Name extends Cloneable with Serializable with Comparable[Object] {
 
     /** Removes a component from this name. */
     @stub
-    def remove(posn: Int): Object = ???
+    def remove(posn: Int): Any = ???
 
     /** Returns the number of components in this name. */
     @stub

@@ -20,7 +20,7 @@ class IndexedPropertyChangeEvent extends PropertyChangeEvent {
 
     /** Constructs a new IndexedPropertyChangeEvent object. */
     @stub
-    def this(source: Object, propertyName: String, oldValue: Object, newValue: Object, index: Int) = ???
+    def this(source: Any, propertyName: String, oldValue: Any, newValue: Any, index: Int) = ???
 
     /** Gets the index of the property that was changed. */
     @stub

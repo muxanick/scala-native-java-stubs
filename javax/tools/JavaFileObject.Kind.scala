@@ -4,10 +4,10 @@ import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** Kinds of JavaFileObjects. */
-class JavaFileObject.Kind private (name: String, ordinal: Int) extends Enum[JavaFileObject.Kind](name, ordinal) {
+class JavaFileObject_Kind private (name: String, ordinal: Int) extends Enum[JavaFileObject.Kind](name, ordinal) {
 }
 
-object JavaFileObject.Kind {
+object JavaFileObject_Kind {
     /** Class files for the Java Virtual Machine. */
     final val CLASS = new JavaFileObject.Kind(CLASS, 0)
 

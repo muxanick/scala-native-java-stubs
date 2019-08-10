@@ -4,7 +4,7 @@ import java.lang.{Object, String}
 import scala.scalanative.annotation.stub
 
 /** A typesafe enumeration for file-mapping modes. */
-object FileChannel.MapMode extends Object {
+object FileChannel_MapMode extends Object {
 
     /** Mode for a private (copy-on-write) mapping. */
     @stub

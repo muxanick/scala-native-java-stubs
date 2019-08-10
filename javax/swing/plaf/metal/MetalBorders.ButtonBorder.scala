@@ -7,7 +7,7 @@ import javax.swing.plaf.UIResource
 import scala.scalanative.annotation.stub
 
 /**  */
-object MetalBorders.ButtonBorder extends AbstractBorder with UIResource {
+object MetalBorders_ButtonBorder extends AbstractBorder with UIResource {
 
     /**  */
     @stub

@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
  *  Instantiate it only within subclasses of
  *  BasicComboBoxUI.
  */
-class BasicComboBoxUI.ItemHandler extends Object with ItemListener {
+class BasicComboBoxUI_ItemHandler extends Object with ItemListener {
 
     /**  */
     @stub

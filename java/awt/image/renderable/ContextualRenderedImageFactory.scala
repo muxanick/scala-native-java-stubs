@@ -38,7 +38,7 @@ trait ContextualRenderedImageFactory extends RenderedImageFactory {
      *  parameter.
      */
     @stub
-    def getProperty(paramBlock: ParameterBlock, name: String): Object = ???
+    def getProperty(paramBlock: ParameterBlock, name: String): Any = ???
 
     /** Returns a list of names recognized by getProperty. */
     @stub

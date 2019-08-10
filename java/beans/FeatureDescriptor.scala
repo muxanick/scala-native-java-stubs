@@ -39,7 +39,7 @@ class FeatureDescriptor extends Object {
 
     /** Retrieve a named attribute with this feature. */
     @stub
-    def getValue(attributeName: String): Object = ???
+    def getValue(attributeName: String): Any = ???
 
     /** The "expert" flag is used to distinguish between those features that are
      *  intended for expert users from those that are intended for normal users.
@@ -91,7 +91,7 @@ class FeatureDescriptor extends Object {
 
     /** Associate a named attribute with this feature. */
     @stub
-    def setValue(attributeName: String, value: Object): Unit = ???
+    def setValue(attributeName: String, value: Any): Unit = ???
 
     /** Returns a string representation of the object. */
     @stub

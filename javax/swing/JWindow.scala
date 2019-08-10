@@ -80,8 +80,7 @@ class JWindow extends Window with Accessible with RootPaneContainer {
     /** This class implements accessibility support for the
      *  JWindow class.
      */
-    @stub
-    protected object AccessibleJWindow extends JWindow.AccessibleJWindow
+    protected type AccessibleJWindow = JWindow_AccessibleJWindow
 
     /** The accessible context property. */
     @stub
@@ -103,7 +102,7 @@ class JWindow extends Window with Accessible with RootPaneContainer {
 
     /** Adds the specified child Component. */
     @stub
-    protected def addImpl(comp: Component, constraints: Object, index: Int): Unit = ???
+    protected def addImpl(comp: Component, constraints: Any, index: Int): Unit = ???
 
     /** Called by the constructor methods to create the default
      *  rootPane.

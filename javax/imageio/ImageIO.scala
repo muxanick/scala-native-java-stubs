@@ -20,13 +20,13 @@ object ImageIO {
      *  input from the given Object.
      */
     @stub
-    def createImageInputStream(input: Object): ImageInputStream = ???
+    def createImageInputStream(input: Any): ImageInputStream = ???
 
     /** Returns an ImageOutputStream that will send its
      *  output to the given Object.
      */
     @stub
-    def createImageOutputStream(output: Object): ImageOutputStream = ???
+    def createImageOutputStream(output: Any): ImageOutputStream = ???
 
     /** Returns the current value set by
      *  setCacheDirectory, or null if no
@@ -50,7 +50,7 @@ object ImageIO {
      *  ImageInputStream.
      */
     @stub
-    def getImageReaders(input: Object): Iterator[ImageReader] = ???
+    def getImageReaders(input: Any): Iterator[ImageReader] = ???
 
     /** Returns an Iterator containing all currently
      *  registered ImageReaders that claim to be able to

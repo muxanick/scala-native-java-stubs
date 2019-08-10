@@ -115,13 +115,13 @@ object Arrays {
      *  search algorithm.
      */
     @stub
-    def binarySearch(a: Array[Object], fromIndex: Int, toIndex: Int, key: Object): Int = ???
+    def binarySearch(a: Array[Object], fromIndex: Int, toIndex: Int, key: Any): Int = ???
 
     /** Searches the specified array for the specified object using the binary
      *  search algorithm.
      */
     @stub
-    def binarySearch(a: Array[Object], key: Object): Int = ???
+    def binarySearch(a: Array[Object], key: Any): Int = ???
 
     /** Searches a range of
      *  the specified array of shorts for the specified value using
@@ -409,13 +409,13 @@ object Arrays {
      *  range of the specified array of Objects.
      */
     @stub
-    def fill(a: Array[Object], fromIndex: Int, toIndex: Int, val: Object): Unit = ???
+    def fill(a: Array[Object], fromIndex: Int, toIndex: Int, val: Any): Unit = ???
 
     /** Assigns the specified Object reference to each element of the specified
      *  array of Objects.
      */
     @stub
-    def fill(a: Array[Object], val: Object): Unit = ???
+    def fill(a: Array[Object], val: Any): Unit = ???
 
     /** Assigns the specified short value to each element of the specified
      *  range of the specified array of shorts.

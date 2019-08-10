@@ -14,7 +14,7 @@ import scala.scalanative.annotation.stub
  *  task can be configured, for example, by calling the
  *  setProcessors method.
  */
-object trait JavaCompiler.CompilationTask extends Callable[Boolean] {
+trait JavaCompiler_CompilationTask extends Callable[Boolean] {
 
     /** Performs this compilation task. */
     @stub

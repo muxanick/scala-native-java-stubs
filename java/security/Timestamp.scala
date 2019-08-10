@@ -21,7 +21,7 @@ final class Timestamp extends Object with Serializable {
      *  timestamp.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the certificate path for the Timestamping Authority. */
     @stub

@@ -145,6 +145,5 @@ abstract class RowSorter[M] extends Object {
 
 object RowSorter {
     /** SortKey describes the sort order for a particular column. */
-    @stub
-    object SortKey extends RowSorter.SortKey
+    type SortKey = RowSorter_SortKey
 }

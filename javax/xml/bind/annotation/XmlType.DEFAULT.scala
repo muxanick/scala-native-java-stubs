@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
  *  signal that either factory mehod is not used or
  *  that it's in the class with this XmlType itself.
  */
-final object XmlType.DEFAULT extends Object {
+final object XmlType_DEFAULT extends Object {
 
     /**  */
     @stub

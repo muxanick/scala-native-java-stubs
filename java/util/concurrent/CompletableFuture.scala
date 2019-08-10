@@ -423,8 +423,7 @@ object CompletableFuture {
     /** A marker interface identifying asynchronous tasks produced by
      *  async methods.
      */
-    @stub
-    trait AsynchronousCompletionTask extends CompletableFuture.AsynchronousCompletionTask
+    type AsynchronousCompletionTask = CompletableFuture_AsynchronousCompletionTask
 
     /** Returns a new CompletableFuture that is completed when all of
      *  the given CompletableFutures complete.

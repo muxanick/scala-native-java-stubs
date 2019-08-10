@@ -12,7 +12,7 @@ class InterfaceAddress extends Object {
 
     /** Compares this object against the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns an InetAddress for this address. */
     @stub

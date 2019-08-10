@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
 /** As of Java 2 platform 1.4, this previously undocumented class
  *  is now obsolete. KeyBindings are now managed by the popup menu.
  */
-class BasicMenuUI.ChangeHandler extends Object with ChangeListener {
+class BasicMenuUI_ChangeHandler extends Object with ChangeListener {
 
     /**  */
     @stub

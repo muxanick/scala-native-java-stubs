@@ -41,11 +41,11 @@ trait Attribute extends Cloneable with Serializable {
 
     /** Adds an attribute value to the ordered list of attribute values. */
     @stub
-    def add(ix: Int, attrVal: Object): Unit = ???
+    def add(ix: Int, attrVal: Any): Unit = ???
 
     /** Adds a new value to the attribute. */
     @stub
-    def add(attrVal: Object): Boolean = ???
+    def add(attrVal: Any): Boolean = ???
 
     /** Removes all values from this attribute. */
     @stub
@@ -53,19 +53,19 @@ trait Attribute extends Cloneable with Serializable {
 
     /** Makes a copy of the attribute. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Determines whether a value is in the attribute. */
     @stub
-    def contains(attrVal: Object): Boolean = ???
+    def contains(attrVal: Any): Boolean = ???
 
     /** Retrieves one of this attribute's values. */
     @stub
-    def get(): Object = ???
+    def get(): Any = ???
 
     /** Retrieves the attribute value from the ordered list of attribute values. */
     @stub
-    def get(ix: Int): Object = ???
+    def get(ix: Int): Any = ???
 
     /** Retrieves an enumeration of the attribute's values. */
     @stub
@@ -89,15 +89,15 @@ trait Attribute extends Cloneable with Serializable {
 
     /** Removes an attribute value from the ordered list of attribute values. */
     @stub
-    def remove(ix: Int): Object = ???
+    def remove(ix: Int): Any = ???
 
     /** Removes a specified value from the attribute. */
     @stub
-    def remove(attrval: Object): Boolean = ???
+    def remove(attrval: Any): Boolean = ???
 
     /** Sets an attribute value in the ordered list of attribute values. */
     @stub
-    def set(ix: Int, attrVal: Object): Object = ???
+    def set(ix: Int, attrVal: Any): Any = ???
 
     /** Retrieves the number of values in this attribute. */
     @stub

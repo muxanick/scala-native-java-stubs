@@ -41,8 +41,7 @@ class JToolTip extends JComponent with Accessible {
     /** This class implements accessibility support for the
      *  JToolTip class.
      */
-    @stub
-    protected object AccessibleJToolTip extends JToolTip.AccessibleJToolTip
+    protected type AccessibleJToolTip = JToolTip_AccessibleJToolTip
 
     /** Gets the AccessibleContext associated with this JToolTip. */
     @stub

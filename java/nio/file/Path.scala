@@ -78,7 +78,7 @@ trait Path extends Comparable[Path] with Iterable[Path] with Watchable {
 
     /** Tests this path for equality with the given object. */
     @stub
-    def equals(other: Object): Boolean = ???
+    def equals(other: Any): Boolean = ???
 
     /** Returns the name of the file or directory denoted by this path as a
      *  Path object.

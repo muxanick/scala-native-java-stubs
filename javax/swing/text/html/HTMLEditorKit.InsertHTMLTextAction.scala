@@ -22,7 +22,7 @@ import scala.scalanative.annotation.stub
  *  addTag. These will be checked for if there is no parentTag at
  *  offset.
  */
-object HTMLEditorKit.InsertHTMLTextAction extends HTMLEditorKit.HTMLTextAction {
+object HTMLEditorKit_InsertHTMLTextAction extends HTMLEditorKit.HTMLTextAction {
 
     /**  */
     @stub

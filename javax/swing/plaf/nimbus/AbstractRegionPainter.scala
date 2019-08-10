@@ -79,6 +79,5 @@ abstract class AbstractRegionPainter extends Object with Painter[JComponent] {
 
 object AbstractRegionPainter {
     /** A class encapsulating state useful when painting. */
-    @stub
-    protected object PaintContext extends AbstractRegionPainter.PaintContext
+    protected type PaintContext = AbstractRegionPainter_PaintContext
 }

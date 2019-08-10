@@ -70,8 +70,7 @@ class Checkbox extends Component with ItemSelectable with Accessible {
     /** This class implements accessibility support for the
      *  Checkbox class.
      */
-    @stub
-    protected object AccessibleAWTCheckbox extends Checkbox.AccessibleAWTCheckbox
+    protected type AccessibleAWTCheckbox = Checkbox_AccessibleAWTCheckbox
 
     /** Adds the specified item listener to receive item events from
      *  this check box.

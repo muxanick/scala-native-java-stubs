@@ -6,7 +6,7 @@ import scala.scalanative.annotation.stub
 /** LayoutManager used for JSplitPanes with an orientation of
  *  VERTICAL_SPLIT.
  */
-class BasicSplitPaneUI.BasicVerticalLayoutManager extends BasicSplitPaneUI.BasicHorizontalLayoutManager {
+class BasicSplitPaneUI_BasicVerticalLayoutManager extends BasicSplitPaneUI.BasicHorizontalLayoutManager {
 
     /**  */
     @stub

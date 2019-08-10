@@ -91,8 +91,7 @@ class JSplitPane extends JComponent with Accessible {
     /** This class implements accessibility support for the
      *  JSplitPane class.
      */
-    @stub
-    protected object AccessibleJSplitPane extends JSplitPane.AccessibleJSplitPane
+    protected type AccessibleJSplitPane = JSplitPane_AccessibleJSplitPane
 
     /** Whether or not the views are continuously redisplayed while
      *  resizing.
@@ -128,7 +127,7 @@ class JSplitPane extends JComponent with Accessible {
 
     /** Adds the specified component to this split pane. */
     @stub
-    protected def addImpl(comp: Component, constraints: Object, index: Int): Unit = ???
+    protected def addImpl(comp: Component, constraints: Any, index: Int): Unit = ???
 
     /** Gets the AccessibleContext associated with this JSplitPane. */
     @stub

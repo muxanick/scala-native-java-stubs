@@ -7,4 +7,4 @@ import scala.scalanative.annotation.stub
  *  attributes that contribute to a character style.  These are
  *  aliased by the outer class for general presentation.
  */
-object StyleConstants.CharacterConstants extends StyleConstants with AttributeSet.CharacterAttribute {
+object StyleConstants_CharacterConstants extends StyleConstants with AttributeSet.CharacterAttribute {

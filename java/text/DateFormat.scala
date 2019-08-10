@@ -108,10 +108,10 @@ abstract class DateFormat extends Format {
     protected val numberFormat: NumberFormat
 
     /** Overrides Cloneable */
-    def clone(): Object
+    def clone(): Any
 
     /** Overrides equals */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** Formats a Date into a date/time string. */
     def format(date: Date): String
@@ -120,7 +120,7 @@ abstract class DateFormat extends Format {
     def format(date: Date, toAppendTo: StringBuffer, fieldPosition: FieldPosition): StringBuffer
 
     /** Overrides Format. */
-    def format(obj: Object, toAppendTo: StringBuffer, fieldPosition: FieldPosition): StringBuffer
+    def format(obj: Any, toAppendTo: StringBuffer, fieldPosition: FieldPosition): StringBuffer
 
     /** Gets the calendar associated with this date/time formatter. */
     def getCalendar(): Calendar
@@ -146,7 +146,7 @@ abstract class DateFormat extends Format {
     def parse(source: String, pos: ParsePosition): Date
 
     /** Parses text from a string to produce a Date. */
-    def parseObject(source: String, pos: ParsePosition): Object
+    def parseObject(source: String, pos: ParsePosition): Any
 
     /** Set the calendar to be used by this date format. */
     def setCalendar(newCalendar: Calendar): Unit
@@ -167,8 +167,7 @@ object DateFormat {
      *  from DateFormat.formatToCharacterIterator and as
      *  field identifiers in FieldPosition.
      */
-    @stub
-    object Field extends DateFormat.Field
+    type Field = DateFormat_Field
 
     /** Useful constant for AM_PM field alignment. */
     @stub

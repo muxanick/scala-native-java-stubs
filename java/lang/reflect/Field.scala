@@ -16,13 +16,13 @@ final class Field extends AccessibleObject with Member {
 
     /** Compares this Field against the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the value of the field represented by this Field, on
      *  the specified object.
      */
     @stub
-    def get(obj: Object): Object = ???
+    def get(obj: Any): Any = ???
 
     /** Returns an AnnotatedType object that represents the use of a type to specify
      *  the declared type of the field represented by this Field.
@@ -42,18 +42,18 @@ final class Field extends AccessibleObject with Member {
 
     /** Gets the value of a static or instance boolean field. */
     @stub
-    def getBoolean(obj: Object): Boolean = ???
+    def getBoolean(obj: Any): Boolean = ???
 
     /** Gets the value of a static or instance byte field. */
     @stub
-    def getByte(obj: Object): Byte = ???
+    def getByte(obj: Any): Byte = ???
 
     /** Gets the value of a static or instance field of type
      *  char or of another primitive type convertible to
      *  type char via a widening conversion.
      */
     @stub
-    def getChar(obj: Object): Char = ???
+    def getChar(obj: Any): Char = ???
 
     /** Returns annotations that are directly present on this element. */
     @stub
@@ -70,14 +70,14 @@ final class Field extends AccessibleObject with Member {
      *  type double via a widening conversion.
      */
     @stub
-    def getDouble(obj: Object): Double = ???
+    def getDouble(obj: Any): Double = ???
 
     /** Gets the value of a static or instance field of type
      *  float or of another primitive type convertible to
      *  type float via a widening conversion.
      */
     @stub
-    def getFloat(obj: Object): Float = ???
+    def getFloat(obj: Any): Float = ???
 
     /** Returns a Type object that represents the declared type for
      *  the field represented by this Field object.
@@ -90,14 +90,14 @@ final class Field extends AccessibleObject with Member {
      *  type int via a widening conversion.
      */
     @stub
-    def getInt(obj: Object): Int = ???
+    def getInt(obj: Any): Int = ???
 
     /** Gets the value of a static or instance field of type
      *  long or of another primitive type convertible to
      *  type long via a widening conversion.
      */
     @stub
-    def getLong(obj: Object): Long = ???
+    def getLong(obj: Any): Long = ???
 
     /** Returns the Java language modifiers for the field represented
      *  by this Field object, as an integer.
@@ -114,7 +114,7 @@ final class Field extends AccessibleObject with Member {
      *  type short via a widening conversion.
      */
     @stub
-    def getShort(obj: Object): Short = ???
+    def getShort(obj: Any): Short = ???
 
     /** Returns a Class object that identifies the
      *  declared type for the field represented by this
@@ -143,39 +143,39 @@ final class Field extends AccessibleObject with Member {
      *  specified object argument to the specified new value.
      */
     @stub
-    def set(obj: Object, value: Object): Unit = ???
+    def set(obj: Any, value: Any): Unit = ???
 
     /** Sets the value of a field as a boolean on the specified object. */
     @stub
-    def setBoolean(obj: Object, z: Boolean): Unit = ???
+    def setBoolean(obj: Any, z: Boolean): Unit = ???
 
     /** Sets the value of a field as a byte on the specified object. */
     @stub
-    def setByte(obj: Object, b: Byte): Unit = ???
+    def setByte(obj: Any, b: Byte): Unit = ???
 
     /** Sets the value of a field as a char on the specified object. */
     @stub
-    def setChar(obj: Object, c: Char): Unit = ???
+    def setChar(obj: Any, c: Char): Unit = ???
 
     /** Sets the value of a field as a double on the specified object. */
     @stub
-    def setDouble(obj: Object, d: Double): Unit = ???
+    def setDouble(obj: Any, d: Double): Unit = ???
 
     /** Sets the value of a field as a float on the specified object. */
     @stub
-    def setFloat(obj: Object, f: Float): Unit = ???
+    def setFloat(obj: Any, f: Float): Unit = ???
 
     /** Sets the value of a field as an int on the specified object. */
     @stub
-    def setInt(obj: Object, i: Int): Unit = ???
+    def setInt(obj: Any, i: Int): Unit = ???
 
     /** Sets the value of a field as a long on the specified object. */
     @stub
-    def setLong(obj: Object, l: Long): Unit = ???
+    def setLong(obj: Any, l: Long): Unit = ???
 
     /** Sets the value of a field as a short on the specified object. */
     @stub
-    def setShort(obj: Object, s: Short): Unit = ???
+    def setShort(obj: Any, s: Short): Unit = ???
 
     /** Returns a string describing this Field, including
      *  its generic type.

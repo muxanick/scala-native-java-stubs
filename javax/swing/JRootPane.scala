@@ -158,14 +158,12 @@ class JRootPane extends JComponent with Accessible {
     /** This class implements accessibility support for the
      *  JRootPane class.
      */
-    @stub
-    protected object AccessibleJRootPane extends JRootPane.AccessibleJRootPane
+    protected type AccessibleJRootPane = JRootPane_AccessibleJRootPane
 
     /** A custom layout manager that is responsible for the layout of
      *  layeredPane, glassPane, and menuBar.
      */
-    @stub
-    protected object RootLayout extends JRootPane.RootLayout
+    protected type RootLayout = JRootPane_RootLayout
 
     /** The content pane. */
     @stub
@@ -209,7 +207,7 @@ class JRootPane extends JComponent with Accessible {
      *  the zero child.
      */
     @stub
-    protected def addImpl(comp: Component, constraints: Object, index: Int): Unit = ???
+    protected def addImpl(comp: Component, constraints: Any, index: Int): Unit = ???
 
     /** Notifies this component that it now has a parent component. */
     @stub

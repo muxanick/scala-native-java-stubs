@@ -39,7 +39,7 @@ class LDAPCertStoreParameters extends Object with CertStoreParameters {
 
     /** Returns a copy of this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns the port number of the LDAP server. */
     @stub

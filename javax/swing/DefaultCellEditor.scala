@@ -35,8 +35,7 @@ class DefaultCellEditor extends AbstractCellEditor with TableCellEditor with Tre
     def this(textField: JTextField) = ???
 
     /** The protected EditorDelegate class. */
-    @stub
-    protected object EditorDelegate extends DefaultCellEditor.EditorDelegate
+    protected type EditorDelegate = DefaultCellEditor_EditorDelegate
 
     /** An integer specifying the number of clicks needed to start editing. */
     @stub
@@ -62,7 +61,7 @@ class DefaultCellEditor extends AbstractCellEditor with TableCellEditor with Tre
      *  the delegate.
      */
     @stub
-    def getCellEditorValue(): Object = ???
+    def getCellEditorValue(): Any = ???
 
     /** Returns the number of clicks needed to start editing. */
     @stub
@@ -74,11 +73,11 @@ class DefaultCellEditor extends AbstractCellEditor with TableCellEditor with Tre
 
     /** Implements the TableCellEditor interface. */
     @stub
-    def getTableCellEditorComponent(table: JTable, value: Object, isSelected: Boolean, row: Int, column: Int): Component = ???
+    def getTableCellEditorComponent(table: JTable, value: Any, isSelected: Boolean, row: Int, column: Int): Component = ???
 
     /** Implements the TreeCellEditor interface. */
     @stub
-    def getTreeCellEditorComponent(tree: JTree, value: Object, isSelected: Boolean, expanded: Boolean, leaf: Boolean, row: Int): Component = ???
+    def getTreeCellEditorComponent(tree: JTree, value: Any, isSelected: Boolean, expanded: Boolean, leaf: Boolean, row: Int): Component = ???
 
     /** Forwards the message from the CellEditor to
      *  the delegate.

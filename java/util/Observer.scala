@@ -10,5 +10,5 @@ trait Observer {
 
     /** This method is called whenever the observed object is changed. */
     @stub
-    def update(o: Observable, arg: Object): Unit = ???
+    def update(o: Observable, arg: Any): Unit = ???
 }

@@ -705,26 +705,26 @@ abstract class BaseRowSet extends Object with Serializable with Cloneable {
     /** Sets the designated parameter to an Object in the Java
      *  programming language.
      */
-    def setObject(parameterIndex: Int, x: Object): Unit
+    def setObject(parameterIndex: Int, x: Any): Unit
 
     /** Sets the value of the designated parameter with the given
      *  Object value.
      */
-    def setObject(parameterIndex: Int, x: Object, targetSqlType: Int): Unit
+    def setObject(parameterIndex: Int, x: Any, targetSqlType: Int): Unit
 
     /** Sets the designated parameter to an Object in the Java
      *  programming language.
      */
-    def setObject(parameterIndex: Int, x: Object, targetSqlType: Int, scale: Int): Unit
+    def setObject(parameterIndex: Int, x: Any, targetSqlType: Int, scale: Int): Unit
 
     /** Sets the value of the designated parameter with the given object. */
-    def setObject(parameterName: String, x: Object): Unit
+    def setObject(parameterName: String, x: Any): Unit
 
     /** Sets the value of the designated parameter with the given object. */
-    def setObject(parameterName: String, x: Object, targetSqlType: Int): Unit
+    def setObject(parameterName: String, x: Any, targetSqlType: Int): Unit
 
     /** Sets the value of the designated parameter with the given object. */
-    def setObject(parameterName: String, x: Object, targetSqlType: Int, scale: Int): Unit
+    def setObject(parameterName: String, x: Any, targetSqlType: Int, scale: Int): Unit
 
     /** Sets the password used to create a database connection for this
      *  RowSet object to the given String

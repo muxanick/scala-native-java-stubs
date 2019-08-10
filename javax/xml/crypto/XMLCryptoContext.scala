@@ -19,7 +19,7 @@ trait XMLCryptoContext {
 
     /** Returns the value to which this context maps the specified key. */
     @stub
-    def get(key: Object): Object = ???
+    def get(key: Any): Any = ???
 
     /** Returns the base URI. */
     @stub
@@ -41,7 +41,7 @@ trait XMLCryptoContext {
 
     /** Returns the value of the specified property. */
     @stub
-    def getProperty(name: String): Object = ???
+    def getProperty(name: String): Any = ???
 
     /** Returns a URIDereferencer that is used to dereference
      *  URIReferences.
@@ -51,7 +51,7 @@ trait XMLCryptoContext {
 
     /** Associates the specified value with the specified key in this context. */
     @stub
-    def put(key: Object, value: Object): Object = ???
+    def put(key: Any, value: Any): Any = ???
 
     /** Maps the specified namespace URI to the specified prefix. */
     @stub
@@ -71,7 +71,7 @@ trait XMLCryptoContext {
 
     /** Sets the specified property. */
     @stub
-    def setProperty(name: String, value: Object): Object = ???
+    def setProperty(name: String, value: Any): Any = ???
 
     /** Sets a URIDereferencer that is used to dereference
      *  URIReferences.

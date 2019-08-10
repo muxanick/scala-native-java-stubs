@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** A toolbar-specific separator. An object with dimension but
  *  no contents used to divide buttons on a tool bar into groups.
  */
-object JToolBar.Separator extends JSeparator {
+object JToolBar_Separator extends JSeparator {
 
     /** Creates a new toolbar separator with the default size
      *  as defined by the current look and feel.

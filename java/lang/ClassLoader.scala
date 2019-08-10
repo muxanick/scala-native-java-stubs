@@ -180,7 +180,7 @@ abstract class ClassLoader extends Object {
     protected def findSystemClass(name: String): Class[_]
 
     /** Returns the lock object for class loading operations. */
-    protected def getClassLoadingLock(className: String): Object
+    protected def getClassLoadingLock(className: String): Any
 
     /** Returns a Package that has been defined by this class loader
      *  or any of its ancestors.

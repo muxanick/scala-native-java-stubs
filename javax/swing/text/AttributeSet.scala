@@ -24,7 +24,7 @@ trait AttributeSet {
      *  name and an equal value.
      */
     @stub
-    def containsAttribute(name: Object, value: Object): Boolean = ???
+    def containsAttribute(name: Any, value: Any): Boolean = ???
 
     /** Returns true if this set defines all the attributes from the
      *  given set with equal values.
@@ -40,7 +40,7 @@ trait AttributeSet {
 
     /** Fetches the value of the given attribute. */
     @stub
-    def getAttribute(key: Object): Object = ???
+    def getAttribute(key: Any): Any = ???
 
     /** Returns the number of attributes that are defined locally in this set. */
     @stub
@@ -61,7 +61,7 @@ trait AttributeSet {
      *  set.
      */
     @stub
-    def isDefined(attrName: Object): Boolean = ???
+    def isDefined(attrName: Any): Boolean = ???
 
     /** Determines if the two attribute sets are equivalent. */
     @stub
@@ -73,40 +73,36 @@ object AttributeSet {
      *  to be present on any attribute key that contributes to
      *  character level presentation.
      */
-    @stub
-    trait CharacterAttribute extends AttributeSet.CharacterAttribute
+    type CharacterAttribute = AttributeSet_CharacterAttribute
 
     /** This interface is the type signature that is expected
      *  to be present on any attribute key that contributes to
      *  presentation of color.
      */
-    @stub
-    trait ColorAttribute extends AttributeSet.ColorAttribute
+    type ColorAttribute = AttributeSet_ColorAttribute
 
     /** This interface is the type signature that is expected
      *  to be present on any attribute key that contributes to
      *  the determination of what font to use to render some
      *  text.
      */
-    @stub
-    trait FontAttribute extends AttributeSet.FontAttribute
+    type FontAttribute = AttributeSet_FontAttribute
 
     /** This interface is the type signature that is expected
      *  to be present on any attribute key that contributes to
      *  the paragraph level presentation.
      */
-    @stub
-    trait ParagraphAttribute extends AttributeSet.ParagraphAttribute
+    type ParagraphAttribute = AttributeSet_ParagraphAttribute
 
     /** Attribute name used to name the collection of
      *  attributes.
      */
     @stub
-    val NameAttribute: Object = ???
+    val NameAttribute: Any = ???
 
     /** Attribute name used to identify the resolving parent
      *  set of attributes, if one is defined.
      */
     @stub
-    val ResolveAttribute: Object = ???
+    val ResolveAttribute: Any = ???
 }

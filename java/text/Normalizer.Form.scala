@@ -9,10 +9,10 @@ import scala.scalanative.annotation.stub
  *  Unicode Standard Annex #15 — Unicode Normalization Forms
  *  and two methods to access them.
  */
-class Normalizer.Form private (name: String, ordinal: Int) extends Enum[Normalizer.Form](name, ordinal) {
+class Normalizer_Form private (name: String, ordinal: Int) extends Enum[Normalizer.Form](name, ordinal) {
 }
 
-object Normalizer.Form {
+object Normalizer_Form {
     /** Canonical decomposition, followed by canonical composition. */
     final val NFC = new Normalizer.Form(NFC, 0)
 

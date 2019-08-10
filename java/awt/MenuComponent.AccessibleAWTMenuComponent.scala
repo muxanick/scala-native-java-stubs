@@ -14,7 +14,7 @@ import scala.scalanative.annotation.stub
  *  
  *  The class used to obtain the accessible role for this object.
  */
-protected abstract class MenuComponent.AccessibleAWTMenuComponent extends AccessibleContext with Serializable with AccessibleComponent with AccessibleSelection {
+protected abstract class MenuComponent_AccessibleAWTMenuComponent extends AccessibleContext with Serializable with AccessibleComponent with AccessibleSelection {
 
     /** Although the class is abstract, this should be called by
      *  all sub-classes.

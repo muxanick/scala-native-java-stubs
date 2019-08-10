@@ -50,14 +50,14 @@ class OpenMBeanAttributeInfoSupport extends MBeanAttributeInfo with OpenMBeanAtt
 
     /** Compares the specified obj parameter with this OpenMBeanAttributeInfoSupport instance for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the default value for the attribute described by this
      *  OpenMBeanAttributeInfoSupport instance, if specified,
      *  or null otherwise.
      */
     @stub
-    def getDefaultValue(): Object = ???
+    def getDefaultValue(): Any = ???
 
     /** Returns an unmodifiable Set of legal values for the attribute
      *  described by this OpenMBeanAttributeInfoSupport
@@ -123,7 +123,7 @@ class OpenMBeanAttributeInfoSupport extends MBeanAttributeInfo with OpenMBeanAtt
      *  instance.
      */
     @stub
-    def isValue(obj: Object): Boolean = ???
+    def isValue(obj: Any): Boolean = ???
 
     /** Returns a string representation of this
      *  OpenMBeanAttributeInfoSupport instance.

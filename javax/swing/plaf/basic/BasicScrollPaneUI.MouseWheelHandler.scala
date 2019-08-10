@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
  *  isWheelScrollingEnabled
  *  method returns false, no scrolling occurs.
  */
-protected class BasicScrollPaneUI.MouseWheelHandler extends Object with MouseWheelListener {
+protected class BasicScrollPaneUI_MouseWheelHandler extends Object with MouseWheelListener {
 
     /**  */
     @stub

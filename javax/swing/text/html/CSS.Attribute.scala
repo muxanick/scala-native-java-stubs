@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  closed set (i.e. defined exactly by the specification),
  *  it is final and cannot be extended.
  */
-final object CSS.Attribute extends Object {
+final object CSS_Attribute extends Object {
 
     /**  */
     @stub

@@ -18,54 +18,45 @@ class BasicSplitPaneUI extends SplitPaneUI {
     /** LayoutManager for JSplitPanes that have an orientation of
      *  HORIZONTAL_SPLIT.
      */
-    @stub
-    object BasicHorizontalLayoutManager extends BasicSplitPaneUI.BasicHorizontalLayoutManager
+    type BasicHorizontalLayoutManager = BasicSplitPaneUI_BasicHorizontalLayoutManager
 
     /** LayoutManager used for JSplitPanes with an orientation of
      *  VERTICAL_SPLIT.
      */
-    @stub
-    object BasicVerticalLayoutManager extends BasicSplitPaneUI.BasicVerticalLayoutManager
+    type BasicVerticalLayoutManager = BasicSplitPaneUI_BasicVerticalLayoutManager
 
     /** Implementation of the FocusListener that the JSplitPane UI uses. */
-    @stub
-    object FocusHandler extends BasicSplitPaneUI.FocusHandler
+    type FocusHandler = BasicSplitPaneUI_FocusHandler
 
     /** Implementation of an ActionListener that the JSplitPane UI uses for
      *  handling specific key presses.
      */
-    @stub
-    object KeyboardDownRightHandler extends BasicSplitPaneUI.KeyboardDownRightHandler
+    type KeyboardDownRightHandler = BasicSplitPaneUI_KeyboardDownRightHandler
 
     /** Implementation of an ActionListener that the JSplitPane UI uses for
      *  handling specific key presses.
      */
-    @stub
-    object KeyboardEndHandler extends BasicSplitPaneUI.KeyboardEndHandler
+    type KeyboardEndHandler = BasicSplitPaneUI_KeyboardEndHandler
 
     /** Implementation of an ActionListener that the JSplitPane UI uses for
      *  handling specific key presses.
      */
-    @stub
-    object KeyboardHomeHandler extends BasicSplitPaneUI.KeyboardHomeHandler
+    type KeyboardHomeHandler = BasicSplitPaneUI_KeyboardHomeHandler
 
     /** Implementation of an ActionListener that the JSplitPane UI uses for
      *  handling specific key presses.
      */
-    @stub
-    object KeyboardResizeToggleHandler extends BasicSplitPaneUI.KeyboardResizeToggleHandler
+    type KeyboardResizeToggleHandler = BasicSplitPaneUI_KeyboardResizeToggleHandler
 
     /** Implementation of an ActionListener that the JSplitPane UI uses for
      *  handling specific key presses.
      */
-    @stub
-    object KeyboardUpLeftHandler extends BasicSplitPaneUI.KeyboardUpLeftHandler
+    type KeyboardUpLeftHandler = BasicSplitPaneUI_KeyboardUpLeftHandler
 
     /** Implementation of the PropertyChangeListener
      *  that the JSplitPane UI uses.
      */
-    @stub
-    object PropertyHandler extends BasicSplitPaneUI.PropertyHandler
+    type PropertyHandler = BasicSplitPaneUI_PropertyHandler
 
     /** Location of the divider when the dragging session began. */
     @stub

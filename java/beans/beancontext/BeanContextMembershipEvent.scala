@@ -35,7 +35,7 @@ class BeanContextMembershipEvent extends BeanContextEvent {
 
     /** Is the child specified affected by the event? */
     @stub
-    def contains(child: Object): Boolean = ???
+    def contains(child: Any): Boolean = ???
 
     /** Gets the array of children affected by this event. */
     @stub

@@ -30,5 +30,5 @@ class StringRefAddr extends RefAddr {
 
     /** Retrieves the contents of this address. */
     @stub
-    def getContent(): Object = ???
+    def getContent(): Any = ???
 }

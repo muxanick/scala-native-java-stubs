@@ -19,7 +19,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-class BasicListUI.MouseInputHandler extends Object with MouseInputListener {
+class BasicListUI_MouseInputHandler extends Object with MouseInputListener {
 
     /**  */
     @stub

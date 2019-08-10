@@ -4,10 +4,10 @@ import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** The type of the entity requesting authentication. */
-class Authenticator.RequestorType private (name: String, ordinal: Int) extends Enum[Authenticator.RequestorType](name, ordinal) {
+class Authenticator_RequestorType private (name: String, ordinal: Int) extends Enum[Authenticator.RequestorType](name, ordinal) {
 }
 
-object Authenticator.RequestorType {
+object Authenticator_RequestorType {
     /** Entity requesting authentication is a HTTP proxy server. */
     final val PROXY = new Authenticator.RequestorType(PROXY, 0)
 

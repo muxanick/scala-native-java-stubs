@@ -74,8 +74,7 @@ class JPasswordField extends JTextField {
     /** This class implements accessibility support for the
      *  JPasswordField class.
      */
-    @stub
-    protected object AccessibleJPasswordField extends JPasswordField.AccessibleJPasswordField
+    protected type AccessibleJPasswordField = JPasswordField_AccessibleJPasswordField
 
     /** Invokes provideErrorFeedback on the current
      *  look and feel, which typically initiates an error beep.

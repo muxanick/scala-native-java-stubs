@@ -16,7 +16,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class AbstractButton.ButtonChangeListener extends Object with ChangeListener with Serializable {
+protected class AbstractButton_ButtonChangeListener extends Object with ChangeListener with Serializable {
 
     /** Invoked when the target of the listener has changed its state. */
     @stub

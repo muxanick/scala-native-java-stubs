@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /** Repaints the lead selection row when focus is lost/gained. */
-class BasicTreeUI.FocusHandler extends Object with FocusListener {
+class BasicTreeUI_FocusHandler extends Object with FocusListener {
 
     /**  */
     @stub

@@ -4,10 +4,10 @@ import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** Printing modes, used in printing JTables. */
-class JTable.PrintMode private (name: String, ordinal: Int) extends Enum[JTable.PrintMode](name, ordinal) {
+class JTable_PrintMode private (name: String, ordinal: Int) extends Enum[JTable.PrintMode](name, ordinal) {
 }
 
-object JTable.PrintMode {
+object JTable_PrintMode {
     /** Printing mode that scales the output smaller, if necessary,
      *  to fit the table's entire width (and thereby all columns) on each page;
      *  Rows are spread across multiple pages as necessary.

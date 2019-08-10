@@ -21,7 +21,7 @@ trait XMLEventReader extends Iterator {
 
     /** Get the value of a feature/property from the underlying implementation */
     @stub
-    def getProperty(name: String): Object = ???
+    def getProperty(name: String): Any = ???
 
     /** Check if there are more events. */
     @stub

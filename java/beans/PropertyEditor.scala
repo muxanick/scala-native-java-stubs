@@ -60,7 +60,7 @@ trait PropertyEditor {
 
     /** Gets the property value. */
     @stub
-    def getValue(): Object = ???
+    def getValue(): Any = ???
 
     /** Determines whether this property editor is paintable. */
     @stub
@@ -82,7 +82,7 @@ trait PropertyEditor {
 
     /** Set (or change) the object that is to be edited. */
     @stub
-    def setValue(value: Object): Unit = ???
+    def setValue(value: Any): Unit = ???
 
     /** Determines whether this property editor supports a custom editor. */
     @stub

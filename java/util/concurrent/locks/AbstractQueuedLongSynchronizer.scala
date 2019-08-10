@@ -27,7 +27,7 @@ abstract class AbstractQueuedLongSynchronizer extends AbstractOwnableSynchronize
     protected def this() = ???
 
     /** Condition implementation for a AbstractQueuedLongSynchronizer serving as the basis of a Lock implementation. */
-    object ConditionObject extends AbstractQueuedLongSynchronizer.ConditionObject
+    type ConditionObject = AbstractQueuedLongSynchronizer_ConditionObject
 
     /** Acquires in exclusive mode, ignoring interrupts. */
     def acquire(arg: Long): Unit

@@ -20,16 +20,16 @@ abstract class CompiledScript extends Object {
     def this() = ???
 
     /** Executes the program stored in the CompiledScript object. */
-    def eval(): Object
+    def eval(): Any
 
     /** Executes the program stored in the CompiledScript object using
      *  the supplied Bindings of attributes as the ENGINE_SCOPE of the
      *  associated ScriptEngine during script execution.
      */
-    def eval(bindings: Bindings): Object
+    def eval(bindings: Bindings): Any
 
     /** Executes the program stored in this CompiledScript object. */
-    def eval(context: ScriptContext): Object
+    def eval(context: ScriptContext): Any
 
     /** Returns the ScriptEngine whose compile method created this CompiledScript. */
     def getEngine(): ScriptEngine

@@ -20,7 +20,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JMenuItem.AccessibleJMenuItem extends AbstractButton.AccessibleAbstractButton with ChangeListener {
+protected class JMenuItem_AccessibleJMenuItem extends AbstractButton.AccessibleAbstractButton with ChangeListener {
 
     /** Get the role of this object. */
     @stub

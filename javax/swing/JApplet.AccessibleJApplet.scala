@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
 /** This class implements accessibility support for the
  *  JApplet class.
  */
-protected class JApplet.AccessibleJApplet extends Applet.AccessibleApplet {
+protected class JApplet_AccessibleJApplet extends Applet.AccessibleApplet {
 
     /**  */
     @stub

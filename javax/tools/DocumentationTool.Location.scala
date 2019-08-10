@@ -4,10 +4,10 @@ import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** Locations specific to DocumentationTool. */
-class DocumentationTool.Location private (name: String, ordinal: Int) extends Enum[DocumentationTool.Location](name, ordinal) with JavaFileManager.Location {
+class DocumentationTool_Location private (name: String, ordinal: Int) extends Enum[DocumentationTool.Location](name, ordinal) with JavaFileManager.Location {
 }
 
-object DocumentationTool.Location {
+object DocumentationTool_Location {
     /** Location to search for doclets. */
     final val DOCLET_PATH = new DocumentationTool.Location(DOCLET_PATH, 0)
 

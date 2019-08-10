@@ -84,8 +84,7 @@ object XMLSignature {
      *  defined in the 
      *  W3C Recommendation for XML-Signature Syntax and Processing.
      */
-    @stub
-    trait SignatureValue extends XMLSignature.SignatureValue
+    type SignatureValue = XMLSignature_SignatureValue
 
     /** The XML Namespace URI of the W3C Recommendation for XML-Signature
      *  Syntax and Processing.

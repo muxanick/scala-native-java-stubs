@@ -60,8 +60,7 @@ class JColorChooser extends JComponent with Accessible {
     /** This class implements accessibility support for the
      *  JColorChooser class.
      */
-    @stub
-    protected object AccessibleJColorChooser extends JColorChooser.AccessibleJColorChooser
+    protected type AccessibleJColorChooser = JColorChooser_AccessibleJColorChooser
 
     /**  */
     @stub

@@ -55,7 +55,7 @@ abstract class AbstractLayoutCache extends Object with RowMapper {
     /** Returns, by reference in placeIn,
      *  the size needed to represent value.
      */
-    protected def getNodeDimensions(value: Object, row: Int, depth: Int, expanded: Boolean, placeIn: Rectangle): Rectangle
+    protected def getNodeDimensions(value: Any, row: Int, depth: Int, expanded: Boolean, placeIn: Rectangle): Rectangle
 
     /** Returns the path to the node that is closest to x,y. */
     def getPathClosestTo(x: Int, y: Int): TreePath
@@ -164,6 +164,5 @@ object AbstractLayoutCache {
     /** Used by AbstractLayoutCache to determine the size
      *  and x origin of a particular node.
      */
-    @stub
-    object NodeDimensions extends AbstractLayoutCache.NodeDimensions
+    type NodeDimensions = AbstractLayoutCache_NodeDimensions
 }

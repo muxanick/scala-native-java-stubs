@@ -38,7 +38,7 @@ class Point extends Point2D with Serializable {
 
     /** Determines whether or not two points are equal. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the location of this point. */
     @stub

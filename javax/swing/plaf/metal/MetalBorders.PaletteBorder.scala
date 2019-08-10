@@ -7,7 +7,7 @@ import javax.swing.plaf.UIResource
 import scala.scalanative.annotation.stub
 
 /** Border for a Palette. */
-object MetalBorders.PaletteBorder extends AbstractBorder with UIResource {
+object MetalBorders_PaletteBorder extends AbstractBorder with UIResource {
 
     /**  */
     @stub

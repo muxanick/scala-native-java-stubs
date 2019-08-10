@@ -14,5 +14,5 @@ trait CertPathValidatorResult extends Cloneable {
 
     /** Makes a copy of this CertPathValidatorResult. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 }

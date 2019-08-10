@@ -51,7 +51,7 @@ final class Period extends Object with ChronoPeriod with Serializable {
 
     /** Checks if this period is equal to another period. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Gets the value of the requested unit. */
     @stub

@@ -165,7 +165,7 @@ trait ChronoLocalDate extends Temporal with TemporalAdjuster with Comparable[Chr
 
     /** Checks if this date is equal to another date, including the chronology. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Formats this date using the specified formatter. */
     @stub

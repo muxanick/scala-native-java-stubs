@@ -92,8 +92,7 @@ class JLabel extends JComponent with SwingConstants with Accessible {
     def this(text: String, horizontalAlignment: Int) = ???
 
     /** The class used to obtain the accessible role for this object. */
-    @stub
-    protected object AccessibleJLabel extends JLabel.AccessibleJLabel
+    protected type AccessibleJLabel = JLabel_AccessibleJLabel
 
     /**  */
     @stub

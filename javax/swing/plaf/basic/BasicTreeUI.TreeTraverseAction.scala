@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
  *  Will toggle the expandedness of a node, as well as potentially
  *  incrementing the selection.
  */
-class BasicTreeUI.TreeTraverseAction extends AbstractAction {
+class BasicTreeUI_TreeTraverseAction extends AbstractAction {
 
     /**  */
     @stub

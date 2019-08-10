@@ -11,5 +11,5 @@ trait XMLResolver {
 
     /** Retrieves a resource. */
     @stub
-    def resolveEntity(publicID: String, systemID: String, baseURI: String, namespace: String): Object = ???
+    def resolveEntity(publicID: String, systemID: String, baseURI: String, namespace: String): Any = ???
 }

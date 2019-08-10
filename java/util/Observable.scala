@@ -78,7 +78,7 @@ class Observable extends Object {
      *  that this object has no longer changed.
      */
     @stub
-    def notifyObservers(arg: Object): Unit = ???
+    def notifyObservers(arg: Any): Unit = ???
 
     /** Marks this Observable object as having been changed; the
      *  hasChanged method will now return true.

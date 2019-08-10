@@ -98,7 +98,7 @@ object Files {
 
     /** Reads the value of a file attribute. */
     @stub
-    def getAttribute(path: Path, attribute: String, options: LinkOption*): Object = ???
+    def getAttribute(path: Path, attribute: String, options: LinkOption*): Any = ???
 
     /** Returns a file attribute view of a given type. */
     @stub
@@ -270,7 +270,7 @@ object Files {
 
     /** Sets the value of a file attribute. */
     @stub
-    def setAttribute(path: Path, attribute: String, value: Object, options: LinkOption*): Path = ???
+    def setAttribute(path: Path, attribute: String, value: Any, options: LinkOption*): Path = ???
 
     /** Updates a file's last modified time attribute. */
     @stub

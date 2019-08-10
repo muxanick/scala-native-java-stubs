@@ -20,7 +20,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-class JTextComponent.AccessibleJTextComponent extends JComponent.AccessibleJComponent with AccessibleText with CaretListener with DocumentListener with AccessibleAction with AccessibleEditableText with AccessibleExtendedText {
+class JTextComponent_AccessibleJTextComponent extends JComponent.AccessibleJComponent with AccessibleText with CaretListener with DocumentListener with AccessibleAction with AccessibleEditableText with AccessibleExtendedText {
 
     /** Constructs an AccessibleJTextComponent. */
     @stub

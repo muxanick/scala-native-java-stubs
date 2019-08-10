@@ -33,7 +33,7 @@ class ECFieldF2m extends Object with ECField {
      *  specified object.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the field size in bits which is m
      *  for this characteristic 2 finite field.

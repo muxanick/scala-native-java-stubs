@@ -26,8 +26,7 @@ class PopupMenu extends Menu {
     /** Inner class of PopupMenu used to provide default support for
      *  accessibility.
      */
-    @stub
-    protected object AccessibleAWTPopupMenu extends PopupMenu.AccessibleAWTPopupMenu
+    protected type AccessibleAWTPopupMenu = PopupMenu_AccessibleAWTPopupMenu
 
     /** Creates the popup menu's peer. */
     @stub

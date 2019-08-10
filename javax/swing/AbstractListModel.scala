@@ -36,18 +36,18 @@ abstract class AbstractListModel[E] extends Object with ListModel[E] with Serial
      *  after
      *  one or more elements of the list change.
      */
-    protected def fireContentsChanged(source: Object, index0: Int, index1: Int): Unit
+    protected def fireContentsChanged(source: Any, index0: Int, index1: Int): Unit
 
     /** AbstractListModel subclasses must call this method
      *  after
      *  one or more elements are added to the model.
      */
-    protected def fireIntervalAdded(source: Object, index0: Int, index1: Int): Unit
+    protected def fireIntervalAdded(source: Any, index0: Int, index1: Int): Unit
 
     /** AbstractListModel subclasses must call this method
      *  after one or more elements are removed from the model.
      */
-    protected def fireIntervalRemoved(source: Object, index0: Int, index1: Int): Unit
+    protected def fireIntervalRemoved(source: Any, index0: Int, index1: Int): Unit
 
     /** Returns an array of all the list data listeners
      *  registered on this AbstractListModel.

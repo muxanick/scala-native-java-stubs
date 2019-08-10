@@ -95,8 +95,7 @@ class JRadioButton extends JToggleButton with Accessible {
     /** This class implements accessibility support for the
      *  JRadioButton class.
      */
-    @stub
-    protected object AccessibleJRadioButton extends JRadioButton.AccessibleJRadioButton
+    protected type AccessibleJRadioButton = JRadioButton_AccessibleJRadioButton
 
     /** Gets the AccessibleContext associated with this JRadioButton. */
     @stub

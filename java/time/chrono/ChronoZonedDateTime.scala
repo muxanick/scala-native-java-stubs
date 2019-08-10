@@ -36,7 +36,7 @@ trait ChronoZonedDateTime[D <: ChronoLocalDate] extends Temporal with Comparable
 
     /** Checks if this date-time is equal to another date-time. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Formats this date-time using the specified formatter. */
     @stub

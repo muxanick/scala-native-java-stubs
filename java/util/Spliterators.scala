@@ -15,26 +15,22 @@ object Spliterators {
     /** An abstract Spliterator.OfDouble that implements
      *  trySplit to permit limited parallelism.
      */
-    @stub
-    object AbstractDoubleSpliterator extends Spliterators.AbstractDoubleSpliterator
+    type AbstractDoubleSpliterator = Spliterators_AbstractDoubleSpliterator
 
     /** An abstract Spliterator.OfInt that implements trySplit to
      *  permit limited parallelism.
      */
-    @stub
-    object AbstractIntSpliterator extends Spliterators.AbstractIntSpliterator
+    type AbstractIntSpliterator = Spliterators_AbstractIntSpliterator
 
     /** An abstract Spliterator.OfLong that implements trySplit
      *  to permit limited parallelism.
      */
-    @stub
-    object AbstractLongSpliterator extends Spliterators.AbstractLongSpliterator
+    type AbstractLongSpliterator = Spliterators_AbstractLongSpliterator
 
     /** An abstract Spliterator that implements trySplit to
      *  permit limited parallelism.
      */
-    @stub
-    object AbstractSpliterator[T] extends Spliterators.AbstractSpliterator[T]
+    type AbstractSpliterator[T] = Spliterators_AbstractSpliterator[T]
 
     /** Creates an empty Spliterator.OfDouble */
     @stub

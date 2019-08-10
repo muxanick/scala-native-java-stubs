@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** Defines attribute keys that are used to identify text attributes. These
  *  keys are used in AttributedCharacterIterator and AttributedString.
  */
-object AttributedCharacterIterator.Attribute extends Object with Serializable {
+object AttributedCharacterIterator_Attribute extends Object with Serializable {
 
     /** Constructs an Attribute with the given name. */
     @stub
@@ -27,7 +27,7 @@ object AttributedCharacterIterator.Attribute extends Object with Serializable {
 
     /** Compares two objects for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the name of the attribute. */
     @stub
@@ -39,7 +39,7 @@ object AttributedCharacterIterator.Attribute extends Object with Serializable {
 
     /** Resolves instances being deserialized to the predefined constants. */
     @stub
-    protected def readResolve(): Object = ???
+    protected def readResolve(): Any = ???
 
     /** Returns a string representation of the object. */
     @stub

@@ -14,5 +14,5 @@ trait TableCellEditor extends CellEditor {
 
     /** Sets an initial value for the editor. */
     @stub
-    def getTableCellEditorComponent(table: JTable, value: Object, isSelected: Boolean, row: Int, column: Int): Component = ???
+    def getTableCellEditorComponent(table: JTable, value: Any, isSelected: Boolean, row: Int, column: Int): Component = ???
 }

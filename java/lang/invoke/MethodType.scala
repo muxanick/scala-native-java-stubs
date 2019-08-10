@@ -75,7 +75,7 @@ final class MethodType extends Object with Serializable {
 
     /** Compares the specified object with this type for equality. */
     @stub
-    def equals(x: Object): Boolean = ???
+    def equals(x: Any): Boolean = ???
 
     /** Erases all reference types to Object. */
     @stub

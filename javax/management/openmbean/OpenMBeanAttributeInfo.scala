@@ -13,7 +13,7 @@ trait OpenMBeanAttributeInfo extends OpenMBeanParameterInfo {
 
     /** Compares the specified obj parameter with this OpenMBeanAttributeInfo instance for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the hash code value for this OpenMBeanAttributeInfo instance. */
     @stub

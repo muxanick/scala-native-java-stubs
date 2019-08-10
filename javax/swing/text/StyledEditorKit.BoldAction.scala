@@ -16,7 +16,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object StyledEditorKit.BoldAction extends StyledEditorKit.StyledTextAction {
+object StyledEditorKit_BoldAction extends StyledEditorKit.StyledTextAction {
 
     /** Constructs a new BoldAction. */
     @stub

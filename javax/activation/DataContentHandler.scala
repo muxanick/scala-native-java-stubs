@@ -22,11 +22,11 @@ trait DataContentHandler {
 
     /** Return an object representing the data in its most preferred form. */
     @stub
-    def getContent(ds: DataSource): Object = ???
+    def getContent(ds: DataSource): Any = ???
 
     /** Returns an object which represents the data to be transferred. */
     @stub
-    def getTransferData(df: DataFlavor, ds: DataSource): Object = ???
+    def getTransferData(df: DataFlavor, ds: DataSource): Any = ???
 
     /** Returns an array of DataFlavor objects indicating the flavors the
      *  data can be provided in.
@@ -38,5 +38,5 @@ trait DataContentHandler {
      *  and write it to the output stream.
      */
     @stub
-    def writeTo(obj: Object, mimeType: String, os: OutputStream): Unit = ???
+    def writeTo(obj: Any, mimeType: String, os: OutputStream): Unit = ???
 }

@@ -128,10 +128,10 @@ abstract class NumberFormat extends Format {
     protected def this() = ???
 
     /** Overrides Cloneable. */
-    def clone(): Object
+    def clone(): Any
 
     /** Overrides equals. */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** Specialization of format. */
     def format(number: Double): String
@@ -148,7 +148,7 @@ abstract class NumberFormat extends Format {
     /** Formats a number and appends the resulting text to the given string
      *  buffer.
      */
-    def format(number: Object, toAppendTo: StringBuffer, pos: FieldPosition): StringBuffer
+    def format(number: Any, toAppendTo: StringBuffer, pos: FieldPosition): StringBuffer
 
     /** Gets the currency used by this number format when formatting
      *  currency values.
@@ -196,7 +196,7 @@ abstract class NumberFormat extends Format {
     def parse(source: String, parsePosition: ParsePosition): Number
 
     /** Parses text from a string to produce a Number. */
-    def parseObject(source: String, pos: ParsePosition): Object
+    def parseObject(source: String, pos: ParsePosition): Any
 
     /** Sets the currency used by this number format when formatting
      *  currency values.
@@ -239,8 +239,7 @@ object NumberFormat {
      *  from NumberFormat.formatToCharacterIterator and as
      *  field identifiers in FieldPosition.
      */
-    @stub
-    object Field extends NumberFormat.Field
+    type Field = NumberFormat_Field
 
     /** Field constant used to construct a FieldPosition object. */
     @stub

@@ -32,8 +32,7 @@ class Container extends Component {
     /** Inner class of Container used to provide default support for
      *  accessibility.
      */
-    @stub
-    protected object AccessibleAWTContainer extends Container.AccessibleAWTContainer
+    protected type AccessibleAWTContainer = Container_AccessibleAWTContainer
 
     /** Appends the specified component to the end of this container. */
     @stub
@@ -47,13 +46,13 @@ class Container extends Component {
 
     /** Adds the specified component to the end of this container. */
     @stub
-    def add(comp: Component, constraints: Object): Unit = ???
+    def add(comp: Component, constraints: Any): Unit = ???
 
     /** Adds the specified component to this container with the specified
      *  constraints at the specified index.
      */
     @stub
-    def add(comp: Component, constraints: Object, index: Int): Unit = ???
+    def add(comp: Component, constraints: Any, index: Int): Unit = ???
 
     /** Adds the specified component to this container. */
     @stub
@@ -69,7 +68,7 @@ class Container extends Component {
      *  index.
      */
     @stub
-    protected def addImpl(comp: Component, constraints: Object, index: Int): Unit = ???
+    protected def addImpl(comp: Component, constraints: Any, index: Int): Unit = ???
 
     /** Makes this Container displayable by connecting it to
      *  a native screen resource.

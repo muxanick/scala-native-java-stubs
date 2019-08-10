@@ -19,7 +19,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JCheckBox.AccessibleJCheckBox extends JToggleButton.AccessibleJToggleButton {
+protected class JCheckBox_AccessibleJCheckBox extends JToggleButton.AccessibleJToggleButton {
 
     /**  */
     @stub

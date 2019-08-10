@@ -5,7 +5,7 @@ import javax.swing.event.{ChangeEvent, ChangeListener}
 import scala.scalanative.annotation.stub
 
 /** A listener to listen for model changes. */
-protected class BasicScrollBarUI.ModelListener extends Object with ChangeListener {
+protected class BasicScrollBarUI_ModelListener extends Object with ChangeListener {
 
     /**  */
     @stub

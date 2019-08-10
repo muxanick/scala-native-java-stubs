@@ -5,7 +5,7 @@ import javax.swing.event.{ListSelectionEvent, ListSelectionListener}
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class BasicFileChooserUI.SelectionListener extends Object with ListSelectionListener {
+protected class BasicFileChooserUI_SelectionListener extends Object with ListSelectionListener {
 
     /**  */
     @stub

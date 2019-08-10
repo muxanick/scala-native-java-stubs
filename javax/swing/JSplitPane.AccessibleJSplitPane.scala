@@ -18,7 +18,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JSplitPane.AccessibleJSplitPane extends JComponent.AccessibleJComponent with AccessibleValue {
+protected class JSplitPane_AccessibleJSplitPane extends JComponent.AccessibleJComponent with AccessibleValue {
 
     /**  */
     @stub

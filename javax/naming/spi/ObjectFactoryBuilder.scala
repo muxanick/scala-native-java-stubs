@@ -25,5 +25,5 @@ trait ObjectFactoryBuilder {
 
     /** Creates a new object factory using the environment supplied. */
     @stub
-    def createObjectFactory(obj: Object, environment: Hashtable[_, _]): ObjectFactory = ???
+    def createObjectFactory(obj: Any, environment: Hashtable[_, _]): ObjectFactory = ???
 }

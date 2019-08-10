@@ -126,15 +126,15 @@ class InitialContext extends Object with Context {
      *  context.
      */
     @stub
-    def addToEnvironment(propName: String, propVal: Object): Object = ???
+    def addToEnvironment(propName: String, propVal: Any): Any = ???
 
     /** Binds a name to an object. */
     @stub
-    def bind(name: Name, obj: Object): Unit = ???
+    def bind(name: Name, obj: Any): Unit = ???
 
     /** Binds a name to an object. */
     @stub
-    def bind(name: String, obj: Object): Unit = ???
+    def bind(name: String, obj: Any): Unit = ???
 
     /** Closes this context. */
     @stub
@@ -229,37 +229,37 @@ class InitialContext extends Object with Context {
 
     /** Retrieves the named object. */
     @stub
-    def lookup(name: Name): Object = ???
+    def lookup(name: Name): Any = ???
 
     /** Retrieves the named object. */
     @stub
-    def lookup(name: String): Object = ???
+    def lookup(name: String): Any = ???
 
     /** Retrieves the named object, following links except
      *  for the terminal atomic component of the name.
      */
     @stub
-    def lookupLink(name: Name): Object = ???
+    def lookupLink(name: Name): Any = ???
 
     /** Retrieves the named object, following links except
      *  for the terminal atomic component of the name.
      */
     @stub
-    def lookupLink(name: String): Object = ???
+    def lookupLink(name: String): Any = ???
 
     /** Binds a name to an object, overwriting any existing binding. */
     @stub
-    def rebind(name: Name, obj: Object): Unit = ???
+    def rebind(name: Name, obj: Any): Unit = ???
 
     /** Binds a name to an object, overwriting any existing binding. */
     @stub
-    def rebind(name: String, obj: Object): Unit = ???
+    def rebind(name: String, obj: Any): Unit = ???
 
     /** Removes an environment property from the environment of this
      *  context.
      */
     @stub
-    def removeFromEnvironment(propName: String): Object = ???
+    def removeFromEnvironment(propName: String): Any = ???
 
     /** Binds a new name to the object bound to an old name, and unbinds
      *  the old name.

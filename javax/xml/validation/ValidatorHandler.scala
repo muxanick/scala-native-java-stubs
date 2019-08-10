@@ -96,7 +96,7 @@ abstract class ValidatorHandler extends Object with ContentHandler {
     def getFeature(name: String): Boolean
 
     /** Look up the value of a property. */
-    def getProperty(name: String): Object
+    def getProperty(name: String): Any
 
     /** Gets the current LSResourceResolver set to this ValidatorHandler. */
     def getResourceResolver(): LSResourceResolver
@@ -120,7 +120,7 @@ abstract class ValidatorHandler extends Object with ContentHandler {
     def setFeature(name: String, value: Boolean): Unit
 
     /** Set the value of a property. */
-    def setProperty(name: String, object: Object): Unit
+    def setProperty(name: String, object: Any): Unit
 
     /** Sets the LSResourceResolver to customize
      *  resource resolution while in a validation episode.

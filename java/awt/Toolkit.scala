@@ -255,7 +255,7 @@ abstract class Toolkit extends Object {
     def getColorModel(): ColorModel
 
     /** Obtains a value for the specified desktop property. */
-    def getDesktopProperty(propertyName: String): Object
+    def getDesktopProperty(propertyName: String): Any
 
     /** Deprecated. 
      * see GraphicsEnvironment.getAvailableFontFamilyNames()
@@ -384,7 +384,7 @@ abstract class Toolkit extends Object {
     def isModalityTypeSupported(modalityType: Dialog.ModalityType): Boolean
 
     /** an opportunity to lazily evaluate desktop property values. */
-    protected def lazilyLoadDesktopProperty(name: String): Object
+    protected def lazilyLoadDesktopProperty(name: String): Any
 
     /** Fills in the integer array that is supplied as an argument
      *  with the current system color values.
@@ -410,7 +410,7 @@ abstract class Toolkit extends Object {
     /** Sets the named desktop property to the specified value and fires a
      *  property change event to notify any listeners that the value has changed.
      */
-    protected def setDesktopProperty(name: String, newValue: Object): Unit
+    protected def setDesktopProperty(name: String, newValue: Any): Unit
 
     /** Controls whether the layout of Containers is validated dynamically
      *  during resizing, or statically, after resizing is complete.

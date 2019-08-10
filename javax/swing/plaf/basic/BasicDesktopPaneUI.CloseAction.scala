@@ -6,7 +6,7 @@ import javax.swing.AbstractAction
 import scala.scalanative.annotation.stub
 
 /** Handles closing an internal frame. */
-protected class BasicDesktopPaneUI.CloseAction extends AbstractAction {
+protected class BasicDesktopPaneUI_CloseAction extends AbstractAction {
 
     /**  */
     @stub

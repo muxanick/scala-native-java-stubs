@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
  *  column index is in terms of the underlying model, which may differ
  *  from that of the view.
  */
-object RowSorter.SortKey extends Object {
+object RowSorter_SortKey extends Object {
 
     /** Creates a SortKey for the specified column with
      *  the specified sort order.
@@ -17,7 +17,7 @@ object RowSorter.SortKey extends Object {
 
     /** Returns true if this object equals the specified object. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the index of the column. */
     @stub

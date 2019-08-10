@@ -120,8 +120,7 @@ class JProgressBar extends JComponent with SwingConstants with Accessible {
     /** This class implements accessibility support for the
      *  JProgressBar class.
      */
-    @stub
-    protected object AccessibleJProgressBar extends JProgressBar.AccessibleJProgressBar
+    protected type AccessibleJProgressBar = JProgressBar_AccessibleJProgressBar
 
     /** Only one ChangeEvent is needed per instance since the
      *  event's only interesting property is the immutable source, which

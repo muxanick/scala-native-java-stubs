@@ -13,7 +13,7 @@ import scala.scalanative.annotation.stub
  *  reduction the first time createValue is called
  *  (since Reflection APIs are used).
  */
-object UIDefaults.ProxyLazyValue extends Object with UIDefaults.LazyValue {
+object UIDefaults_ProxyLazyValue extends Object with UIDefaults.LazyValue {
 
     /** Creates a LazyValue which will construct an instance
      *  when asked.
@@ -41,5 +41,5 @@ object UIDefaults.ProxyLazyValue extends Object with UIDefaults.LazyValue {
 
     /** Creates the value retrieved from the UIDefaults table. */
     @stub
-    def createValue(table: UIDefaults): Object = ???
+    def createValue(table: UIDefaults): Any = ???
 }

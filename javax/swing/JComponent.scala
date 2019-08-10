@@ -114,7 +114,7 @@ abstract class JComponent extends Container with Serializable {
     /** Inner class of JComponent used to provide default support for
      *  accessibility.
      */
-    object AccessibleJComponent extends JComponent.AccessibleJComponent
+    type AccessibleJComponent = JComponent_AccessibleJComponent
 
     /** A list of event listeners for this component. */
     protected val listenerList: EventListenerList
@@ -174,7 +174,7 @@ abstract class JComponent extends Container with Serializable {
     def firePropertyChange(propertyName: String, oldValue: Int, newValue: Int): Unit
 
     /** Supports reporting constrained property changes. */
-    protected def fireVetoableChange(propertyName: String, oldValue: Object, newValue: Object): Unit
+    protected def fireVetoableChange(propertyName: String, oldValue: Any, newValue: Any): Unit
 
     /** Returns the object that will perform the action registered for a
      *  given keystroke.
@@ -224,7 +224,7 @@ abstract class JComponent extends Container with Serializable {
     def getBounds(rv: Rectangle): Rectangle
 
     /** Returns the value of the property with the specified key. */
-    def getClientProperty(key: Object): Object
+    def getClientProperty(key: Any): Any
 
     /** Returns the graphics object used to paint this component. */
     protected def getComponentGraphics(g: Graphics): Graphics
@@ -500,7 +500,7 @@ abstract class JComponent extends Container with Serializable {
     protected def processMouseMotionEvent(e: MouseEvent): Unit
 
     /** Adds an arbitrary key/value "client property" to this component. */
-    def putClientProperty(key: Object, value: Object): Unit
+    def putClientProperty(key: Any, value: Any): Unit
 
     /** This method is now obsolete, please use a combination of
      *  getActionMap() and getInputMap() for

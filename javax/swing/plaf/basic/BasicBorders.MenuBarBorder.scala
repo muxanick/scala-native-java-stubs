@@ -7,7 +7,7 @@ import javax.swing.plaf.UIResource
 import scala.scalanative.annotation.stub
 
 /**  */
-object BasicBorders.MenuBarBorder extends AbstractBorder with UIResource {
+object BasicBorders_MenuBarBorder extends AbstractBorder with UIResource {
 
     /**  */
     @stub

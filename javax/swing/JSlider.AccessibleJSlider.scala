@@ -18,7 +18,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JSlider.AccessibleJSlider extends JComponent.AccessibleJComponent with AccessibleValue {
+protected class JSlider_AccessibleJSlider extends JComponent.AccessibleJComponent with AccessibleValue {
 
     /**  */
     @stub

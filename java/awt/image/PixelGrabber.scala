@@ -75,7 +75,7 @@ class PixelGrabber extends Object with ImageConsumer {
 
     /** Get the pixel buffer. */
     @stub
-    def getPixels(): Object = ???
+    def getPixels(): Any = ???
 
     /** Return the status of the pixels. */
     @stub

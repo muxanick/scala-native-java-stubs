@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  a set of HTML character level attributes assigned to
  *  it.
  */
-class HTMLDocument.RunElement extends AbstractDocument.LeafElement {
+class HTMLDocument_RunElement extends AbstractDocument.LeafElement {
 
     /** Constructs an element that represents content within the
      *  document (has no children).

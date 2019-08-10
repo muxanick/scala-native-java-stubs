@@ -25,5 +25,5 @@ trait DTD extends XMLEvent {
 
     /** Returns an implementation defined representation of the DTD. */
     @stub
-    def getProcessedDTD(): Object = ???
+    def getProcessedDTD(): Any = ???
 }

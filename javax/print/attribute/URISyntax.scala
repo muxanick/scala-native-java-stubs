@@ -19,7 +19,7 @@ abstract class URISyntax extends Object with Serializable with Cloneable {
     /** Returns whether this URI attribute is equivalent to the passed in
      *  object.
      */
-    def equals(object: Object): Boolean
+    def equals(object: Any): Boolean
 
     /** Returns this URI attribute's URI value. */
     def getURI(): URI

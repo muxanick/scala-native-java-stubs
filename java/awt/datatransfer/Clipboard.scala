@@ -41,13 +41,13 @@ class Clipboard extends Object {
      *  of the clipboard.
      */
     @stub
-    def getContents(requestor: Object): Transferable = ???
+    def getContents(requestor: Any): Transferable = ???
 
     /** Returns an object representing the current contents of this clipboard
      *  in the specified DataFlavor.
      */
     @stub
-    def getData(flavor: DataFlavor): Object = ???
+    def getData(flavor: DataFlavor): Any = ???
 
     /** Returns an array of all the FlavorListeners currently
      *  registered on this Clipboard.

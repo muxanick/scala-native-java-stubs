@@ -21,7 +21,7 @@ abstract class FileStore extends Object {
     protected def this() = ???
 
     /** Reads the value of a file store attribute. */
-    def getAttribute(attribute: String): Object
+    def getAttribute(attribute: String): Any
 
     /** Returns a FileStoreAttributeView of the given type. */
     val V: abstract[V <: FileStoreAttributeView]

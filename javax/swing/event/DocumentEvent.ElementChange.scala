@@ -4,7 +4,7 @@ import javax.swing.text.Element
 import scala.scalanative.annotation.stub
 
 /** Describes changes made to a specific element. */
-object trait DocumentEvent.ElementChange {
+trait DocumentEvent_ElementChange {
 
     /** Gets the child elements that were added to the given
      *  parent element.

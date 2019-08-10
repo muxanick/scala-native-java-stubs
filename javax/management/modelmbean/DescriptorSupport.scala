@@ -52,11 +52,11 @@ class DescriptorSupport extends Object with Descriptor {
 
     /** Returns a new Descriptor which is a duplicate of the Descriptor. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compares this descriptor to the given object. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns all the field names in the descriptor. */
     @stub
@@ -70,7 +70,7 @@ class DescriptorSupport extends Object with Descriptor {
      *  is present for that name.
      */
     @stub
-    def getFieldValue(fieldName: String): Object = ???
+    def getFieldValue(fieldName: String): Any = ???
 
     /** Returns all the field values in the descriptor as an array of Objects. */
     @stub
@@ -92,7 +92,7 @@ class DescriptorSupport extends Object with Descriptor {
 
     /** Sets the value for a specific field name. */
     @stub
-    def setField(fieldName: String, fieldValue: Object): Unit = ???
+    def setField(fieldName: String, fieldValue: Any): Unit = ???
 
     /** Sets all fields in the field names array to the new value with
      *  the same index in the field values array.

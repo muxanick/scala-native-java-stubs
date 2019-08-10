@@ -15,11 +15,11 @@ class DefaultHighlighter extends LayeredHighlighter {
 
     /** Adds a highlight to the view. */
     @stub
-    def addHighlight(p0: Int, p1: Int, p: Highlighter.HighlightPainter): Object = ???
+    def addHighlight(p0: Int, p1: Int, p: Highlighter.HighlightPainter): Any = ???
 
     /** Changes a highlight. */
     @stub
-    def changeHighlight(tag: Object, p0: Int, p1: Int): Unit = ???
+    def changeHighlight(tag: Any, p0: Int, p1: Int): Unit = ???
 
     /** Called when the UI is being removed from the interface of
      *  a JTextComponent.
@@ -57,7 +57,7 @@ class DefaultHighlighter extends LayeredHighlighter {
 
     /** Removes a highlight from the view. */
     @stub
-    def removeHighlight(tag: Object): Unit = ???
+    def removeHighlight(tag: Any): Unit = ???
 
     /** If true, highlights are drawn as the Views draw the text. */
     @stub
@@ -68,8 +68,7 @@ object DefaultHighlighter {
     /** Simple highlight painter that fills a highlighted area with
      *  a solid color.
      */
-    @stub
-    object DefaultHighlightPainter extends DefaultHighlighter.DefaultHighlightPainter
+    type DefaultHighlightPainter = DefaultHighlighter_DefaultHighlightPainter
 
     /** Default implementation of LayeredHighlighter.LayerPainter that can
      *  be used for painting highlights.

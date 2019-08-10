@@ -26,7 +26,7 @@ final class StringCharacterIterator extends Object with CharacterIterator {
 
     /** Creates a copy of this iterator. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Implements CharacterIterator.current() for String. */
     @stub
@@ -34,7 +34,7 @@ final class StringCharacterIterator extends Object with CharacterIterator {
 
     /** Compares the equality of two StringCharacterIterator objects. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Implements CharacterIterator.first() for String. */
     @stub

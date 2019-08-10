@@ -7,10 +7,10 @@ import scala.scalanative.annotation.stub
  *  caption of the message, and a possible system sound a message
  *  may generate upon showing.
  */
-class TrayIcon.MessageType private (name: String, ordinal: Int) extends Enum[TrayIcon.MessageType](name, ordinal) {
+class TrayIcon_MessageType private (name: String, ordinal: Int) extends Enum[TrayIcon.MessageType](name, ordinal) {
 }
 
-object TrayIcon.MessageType {
+object TrayIcon_MessageType {
     /** An error message */
     final val ERROR = new TrayIcon.MessageType(ERROR, 0)
 

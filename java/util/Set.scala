@@ -64,7 +64,7 @@ trait Set[E] extends Collection[E] {
 
     /** Returns true if this set contains the specified element. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Returns true if this set contains all of the elements of the
      *  specified collection.
@@ -74,7 +74,7 @@ trait Set[E] extends Collection[E] {
 
     /** Compares the specified object with this set for equality. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the hash code value for this set. */
     @stub
@@ -92,7 +92,7 @@ trait Set[E] extends Collection[E] {
      *  (optional operation).
      */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Removes from this set all of its elements that are contained in the
      *  specified collection (optional operation).

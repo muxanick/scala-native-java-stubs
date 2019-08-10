@@ -151,8 +151,7 @@ object Collector {
     /** Characteristics indicating properties of a Collector, which can
      *  be used to optimize reduction implementations.
      */
-    @stub
-    object Characteristics extends Collector.Characteristics
+    type Characteristics = Collector_Characteristics
 
     /** Returns a new Collector described by the given supplier,
      *  accumulator, combiner, and finisher functions.

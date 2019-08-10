@@ -6,7 +6,7 @@ import javax.swing.AbstractAction
 import scala.scalanative.annotation.stub
 
 /** Rescans the files in the current directory */
-protected class BasicFileChooserUI.UpdateAction extends AbstractAction {
+protected class BasicFileChooserUI_UpdateAction extends AbstractAction {
 
     /**  */
     @stub

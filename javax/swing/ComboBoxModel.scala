@@ -15,9 +15,9 @@ trait ComboBoxModel[E] extends ListModel[E] {
 
     /** Returns the selected item */
     @stub
-    def getSelectedItem(): Object = ???
+    def getSelectedItem(): Any = ???
 
     /** Set the selected item. */
     @stub
-    def setSelectedItem(anItem: Object): Unit = ???
+    def setSelectedItem(anItem: Any): Unit = ???
 }

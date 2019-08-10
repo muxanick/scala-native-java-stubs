@@ -50,12 +50,12 @@ abstract class ImageInputStreamSpi extends IIOServiceProvider {
     /** Returns an instance of the ImageInputStream
      *  implementation associated with this service provider.
      */
-    def createInputStreamInstance(input: Object): ImageInputStream
+    def createInputStreamInstance(input: Any): ImageInputStream
 
     /** Returns an instance of the ImageInputStream
      *  implementation associated with this service provider.
      */
-    def createInputStreamInstance(input: Object, useCache: Boolean, cacheDir: File): ImageInputStream
+    def createInputStreamInstance(input: Any, useCache: Boolean, cacheDir: File): ImageInputStream
 
     /** Returns a Class object representing the class or
      *  interface type that must be implemented by an input source in

@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** Fire PropertyChange listener, if one is registered,
  *  when children are added or removed.
  */
-protected class Container.AccessibleAWTContainer.AccessibleContainerHandler extends Object with ContainerListener {
+protected class Container_AccessibleAWTContainer_AccessibleContainerHandler extends Object with ContainerListener {
 
     /**  */
     @stub

@@ -23,5 +23,5 @@ trait Customizer {
 
     /** Set the object to be customized. */
     @stub
-    def setObject(bean: Object): Unit = ???
+    def setObject(bean: Any): Unit = ???
 }

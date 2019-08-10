@@ -31,7 +31,7 @@ abstract class HttpExchange extends Object {
     /** Returns an attribute that is associated with this
      *  HttpExchange.
      */
-    def getAttribute(name: String): Object
+    def getAttribute(name: String): Any
 
     /** Gives all the attribute names that are associated with
      *  this HttpExchange.

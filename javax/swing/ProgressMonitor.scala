@@ -32,13 +32,12 @@ class ProgressMonitor extends Object with Accessible {
      *  in a rectangular bar as the process nears completion.
      */
     @stub
-    def this(parentComponent: Component, message: Object, note: String, min: Int, max: Int) = ???
+    def this(parentComponent: Component, message: Any, note: String, min: Int, max: Int) = ???
 
     /** AccessibleProgressMonitor implements accessibility
      *  support for the ProgressMonitor class.
      */
-    @stub
-    protected object AccessibleProgressMonitor extends ProgressMonitor.AccessibleProgressMonitor
+    protected type AccessibleProgressMonitor = ProgressMonitor_AccessibleProgressMonitor
 
     /** The AccessibleContext for the ProgressMonitor */
     @stub

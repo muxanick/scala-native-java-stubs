@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  Button class.  It provides an implementation of the
  *  Java Accessibility API appropriate to button user-interface elements.
  */
-protected class Button.AccessibleAWTButton extends Component.AccessibleAWTComponent with AccessibleAction with AccessibleValue {
+protected class Button_AccessibleAWTButton extends Component.AccessibleAWTComponent with AccessibleAction with AccessibleValue {
 
     /**  */
     @stub

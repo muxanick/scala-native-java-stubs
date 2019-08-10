@@ -5,7 +5,7 @@ import java.util.function.{Consumer, IntConsumer}
 import scala.scalanative.annotation.stub
 
 /** An Iterator specialized for int values. */
-object trait PrimitiveIterator.OfInt extends PrimitiveIterator[Integer, IntConsumer] {
+trait PrimitiveIterator_OfInt extends PrimitiveIterator[Integer, IntConsumer] {
 
     /** Performs the given action for each remaining element until all elements
      *  have been processed or the action throws an exception.

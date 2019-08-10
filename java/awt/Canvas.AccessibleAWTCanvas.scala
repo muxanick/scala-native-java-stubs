@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  Canvas class.  It provides an implementation of the
  *  Java Accessibility API appropriate to canvas user-interface elements.
  */
-protected class Canvas.AccessibleAWTCanvas extends Component.AccessibleAWTComponent {
+protected class Canvas_AccessibleAWTCanvas extends Component.AccessibleAWTComponent {
 
     /**  */
     @stub

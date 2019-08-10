@@ -6,7 +6,7 @@ import javax.swing.AbstractAction
 import scala.scalanative.annotation.stub
 
 /** Acts on the "home" key event or equivalent event. */
-protected class BasicFileChooserUI.GoHomeAction extends AbstractAction {
+protected class BasicFileChooserUI_GoHomeAction extends AbstractAction {
 
     /**  */
     @stub

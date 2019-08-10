@@ -15,7 +15,7 @@ import scala.scalanative.annotation.stub
  *  Stream whose elements are the elements that were added to the stream
  *  builder, in the order they were added.
  */
-object trait Stream.Builder[T] extends Consumer[T] {
+trait Stream_Builder[T] extends Consumer[T] {
 
     /** Adds an element to the stream being built. */
     @stub

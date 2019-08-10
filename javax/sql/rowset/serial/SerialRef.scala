@@ -29,11 +29,11 @@ class SerialRef extends Object with Ref with Serializable with Cloneable {
 
     /** Returns a clone of this SerialRef. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compares this SerialRef to the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns a string describing the base type name of the Ref. */
     @stub
@@ -43,13 +43,13 @@ class SerialRef extends Object with Ref with Serializable with Cloneable {
      *  to which this SerialRef object refers.
      */
     @stub
-    def getObject(): Object = ???
+    def getObject(): Any = ???
 
     /** Returns an Object representing the SQL structured type
      *  to which this SerialRef object refers.
      */
     @stub
-    def getObject(map: Map[String, Class[_]]): Object = ???
+    def getObject(map: Map[String, Class[_]]): Any = ???
 
     /** Returns a hash code for this SerialRef. */
     @stub
@@ -59,5 +59,5 @@ class SerialRef extends Object with Ref with Serializable with Cloneable {
      *  references to the given Object object.
      */
     @stub
-    def setObject(obj: Object): Unit = ???
+    def setObject(obj: Any): Unit = ???
 }

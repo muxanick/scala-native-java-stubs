@@ -38,8 +38,7 @@ class BeanContextSupport extends BeanContextChildSupport with BeanContext with S
     def this(peer: BeanContext, lcle: Locale, dTime: Boolean, visible: Boolean) = ???
 
     /**  */
-    @stub
-    protected object BCSChild extends BeanContextSupport.BCSChild
+    protected type BCSChild = BeanContextSupport_BCSChild
 
     /** all accesses to the  protected ArrayList bcmListeners  field
      *  shall be synchronized on that object.
@@ -71,7 +70,7 @@ class BeanContextSupport extends BeanContextChildSupport with BeanContext with S
 
     /** Adds/nests a child within this BeanContext. */
     @stub
-    def add(targetChild: Object): Boolean = ???
+    def add(targetChild: Any): Boolean = ???
 
     /** add Collection to set of Children (Unsupported)
      *  implementations must synchronized on the hierarchy lock and "children" protected field
@@ -109,21 +108,21 @@ class BeanContextSupport extends BeanContextChildSupport with BeanContext with S
 
     /** Called by readObject with the newly deserialized child and BCSChild. */
     @stub
-    protected def childDeserializedHook(child: Object, bcsc: BeanContextSupport.BCSChild): Unit = ???
+    protected def childDeserializedHook(child: Any, bcsc: BeanContextSupport.BCSChild): Unit = ???
 
     /** subclasses may override this method to simply extend add() semantics
      *  after the child has been added and before the event notification has
      *  occurred.
      */
     @stub
-    protected def childJustAddedHook(child: Object, bcsc: BeanContextSupport.BCSChild): Unit = ???
+    protected def childJustAddedHook(child: Any, bcsc: BeanContextSupport.BCSChild): Unit = ???
 
     /** subclasses may override this method to simply extend remove() semantics
      *  after the child has been removed and before the event notification has
      *  occurred.
      */
     @stub
-    protected def childJustRemovedHook(child: Object, bcsc: BeanContextSupport.BCSChild): Unit = ???
+    protected def childJustRemovedHook(child: Any, bcsc: BeanContextSupport.BCSChild): Unit = ???
 
     /** clear the children (Unsupported)
      *  implementations must synchronized on the hierarchy lock and "children" protected field
@@ -135,7 +134,7 @@ class BeanContextSupport extends BeanContextChildSupport with BeanContext with S
      *  is currently a child of this BeanContext.
      */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Tests to see if all objects in the
      *  specified Collection are children of
@@ -148,7 +147,7 @@ class BeanContextSupport extends BeanContextChildSupport with BeanContext with S
      *  is currently a child of this BeanContext.
      */
     @stub
-    def containsKey(o: Object): Boolean = ???
+    def containsKey(o: Any): Boolean = ???
 
     /** Gets a copy of the this BeanContext's children. */
     @stub
@@ -160,7 +159,7 @@ class BeanContextSupport extends BeanContextChildSupport with BeanContext with S
      *  methods that add children to the set.
      */
     @stub
-    protected def createBCSChild(targetChild: Object, peer: Object): BeanContextSupport.BCSChild = ???
+    protected def createBCSChild(targetChild: Any, peer: Any): BeanContextSupport.BCSChild = ???
 
     /** used by readObject to deserialize a collection. */
     @stub
@@ -217,7 +216,7 @@ class BeanContextSupport extends BeanContextChildSupport with BeanContext with S
      *  into a BeanContext.
      */
     @stub
-    def instantiateChild(beanName: String): Object = ???
+    def instantiateChild(beanName: String): Any = ???
 
     /** Reports whether or not this object is in
      *  currently in design time mode.
@@ -267,14 +266,14 @@ class BeanContextSupport extends BeanContextChildSupport with BeanContext with S
 
     /** Removes a child from this BeanContext. */
     @stub
-    def remove(targetChild: Object): Boolean = ???
+    def remove(targetChild: Any): Boolean = ???
 
     /** internal remove used when removal caused by
      *  unexpected setBeanContext or
      *  by remove() invocation.
      */
     @stub
-    protected def remove(targetChild: Object, callChildSetBC: Boolean): Boolean = ???
+    protected def remove(targetChild: Any, callChildSetBC: Boolean): Boolean = ???
 
     /** remove all specified children (Unsupported)
      *  implementations must synchronized on the hierarchy lock and "children" protected field
@@ -329,7 +328,7 @@ class BeanContextSupport extends BeanContextChildSupport with BeanContext with S
      *  immediately prior to their being added to the BeanContext.
      */
     @stub
-    protected def validatePendingAdd(targetChild: Object): Boolean = ???
+    protected def validatePendingAdd(targetChild: Any): Boolean = ???
 
     /** 
      *  Subclasses of this class may override, or envelope, this method to
@@ -337,7 +336,7 @@ class BeanContextSupport extends BeanContextChildSupport with BeanContext with S
      *  immediately prior to their being removed from the BeanContext.
      */
     @stub
-    protected def validatePendingRemove(targetChild: Object): Boolean = ???
+    protected def validatePendingRemove(targetChild: Any): Boolean = ???
 
     /** subclasses may envelope to monitor veto child property changes. */
     @stub
@@ -354,8 +353,7 @@ object BeanContextSupport {
     /** protected final subclass that encapsulates an iterator but implements
      *  a noop remove() method.
      */
-    @stub
-    protected object BCSIterator extends BeanContextSupport.BCSIterator
+    protected type BCSIterator = BeanContextSupport_BCSIterator
 
     /** Tests to see if two class objects,
      *  or their names are equal.
@@ -365,31 +363,31 @@ object BeanContextSupport {
 
     /** Gets the BeanContextChild (if any) of the specified child */
     @stub
-    protected def getChildBeanContextChild(child: Object): BeanContextChild = ???
+    protected def getChildBeanContextChild(child: Any): BeanContextChild = ???
 
     /** Gets the BeanContextMembershipListener
      *  (if any) of the specified child
      */
     @stub
-    protected def getChildBeanContextMembershipListener(child: Object): BeanContextMembershipListener = ???
+    protected def getChildBeanContextMembershipListener(child: Any): BeanContextMembershipListener = ???
 
     /** Gets the PropertyChangeListener
      *  (if any) of the specified child
      */
     @stub
-    protected def getChildPropertyChangeListener(child: Object): PropertyChangeListener = ???
+    protected def getChildPropertyChangeListener(child: Any): PropertyChangeListener = ???
 
     /** Gets the Serializable (if any) associated with the specified Child */
     @stub
-    protected def getChildSerializable(child: Object): Serializable = ???
+    protected def getChildSerializable(child: Any): Serializable = ???
 
     /** Gets the VetoableChangeListener
      *  (if any) of the specified child
      */
     @stub
-    protected def getChildVetoableChangeListener(child: Object): VetoableChangeListener = ???
+    protected def getChildVetoableChangeListener(child: Any): VetoableChangeListener = ???
 
     /** Gets the Component (if any) associated with the specified child. */
     @stub
-    protected def getChildVisibility(child: Object): Visibility = ???
+    protected def getChildVisibility(child: Any): Visibility = ???
 }

@@ -6,7 +6,7 @@ import javax.swing.{DefaultListCellRenderer, JComponent, JLabel, JList}
 import scala.scalanative.annotation.stub
 
 /** Render different type sizes and styles. */
-class MetalFileChooserUI.FilterComboBoxRenderer extends DefaultListCellRenderer {
+class MetalFileChooserUI_FilterComboBoxRenderer extends DefaultListCellRenderer {
 
     /**  */
     @stub
@@ -16,5 +16,5 @@ class MetalFileChooserUI.FilterComboBoxRenderer extends DefaultListCellRenderer 
      *  value.
      */
     @stub
-    def getListCellRendererComponent(list: JList, value: Object, index: Int, isSelected: Boolean, cellHasFocus: Boolean): Component = ???
+    def getListCellRendererComponent(list: JList, value: Any, index: Int, isSelected: Boolean, cellHasFocus: Boolean): Component = ???
 }

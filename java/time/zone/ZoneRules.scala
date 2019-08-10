@@ -29,7 +29,7 @@ final class ZoneRules extends Object with Serializable {
 
     /** Checks if this set of rules equals another. */
     @stub
-    def equals(otherRules: Object): Boolean = ???
+    def equals(otherRules: Any): Boolean = ???
 
     /** Gets the amount of daylight savings in use for the specified instant in this zone. */
     @stub

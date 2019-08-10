@@ -19,7 +19,7 @@ trait OpenMBeanOperationInfo {
 
     /** Compares the specified obj parameter with this OpenMBeanOperationInfo instance for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns a human readable description of the operation
      *  described by this OpenMBeanOperationInfo instance.

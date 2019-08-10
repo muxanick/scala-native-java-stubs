@@ -145,7 +145,7 @@ abstract class Buffer extends Object {
     /** Returns the array that backs this
      *  buffer  (optional operation).
      */
-    def array(): Object
+    def array(): Any
 
     /** Returns the offset within this buffer's backing array of the first
      *  element of the buffer  (optional operation).

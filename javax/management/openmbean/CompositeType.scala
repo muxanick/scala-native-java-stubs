@@ -21,7 +21,7 @@ class CompositeType extends OpenType[CompositeData] {
 
     /** Compares the specified obj parameter with this CompositeType instance for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the description of the item whose name is itemName,
      *  or null if this CompositeType instance does not define any item
@@ -45,7 +45,7 @@ class CompositeType extends OpenType[CompositeData] {
      *  described by this CompositeType instance.
      */
     @stub
-    def isValue(obj: Object): Boolean = ???
+    def isValue(obj: Any): Boolean = ???
 
     /** Returns an unmodifiable Set view of all the item names defined by this CompositeType instance. */
     @stub

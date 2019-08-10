@@ -30,7 +30,7 @@ class RMIConnector extends Object with JMXConnector with Serializable with JMXAd
      *  status.
      */
     @stub
-    def addConnectionNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
+    def addConnectionNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Any): Unit = ???
 
     /** Closes the client connection to its server. */
     @stub
@@ -75,7 +75,7 @@ class RMIConnector extends Object with JMXConnector with Serializable with JMXAd
      *  in status.
      */
     @stub
-    def removeConnectionNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
+    def removeConnectionNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Any): Unit = ???
 
     /** Returns a string representation of this object. */
     @stub

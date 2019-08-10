@@ -12,11 +12,11 @@ trait MBeanServerConnection {
 
     /** Adds a listener to a registered MBean. */
     @stub
-    def addNotificationListener(name: ObjectName, listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
+    def addNotificationListener(name: ObjectName, listener: NotificationListener, filter: NotificationFilter, handback: Any): Unit = ???
 
     /** Adds a listener to a registered MBean. */
     @stub
-    def addNotificationListener(name: ObjectName, listener: ObjectName, filter: NotificationFilter, handback: Object): Unit = ???
+    def addNotificationListener(name: ObjectName, listener: ObjectName, filter: NotificationFilter, handback: Any): Unit = ???
 
     /** Instantiates and registers an MBean in the MBean server. */
     @stub
@@ -36,7 +36,7 @@ trait MBeanServerConnection {
 
     /** Gets the value of a specific attribute of a named MBean. */
     @stub
-    def getAttribute(name: ObjectName, attribute: String): Object = ???
+    def getAttribute(name: ObjectName, attribute: String): Any = ???
 
     /** Retrieves the values of several attributes of a named MBean. */
     @stub
@@ -70,7 +70,7 @@ trait MBeanServerConnection {
 
     /** Invokes an operation on an MBean. */
     @stub
-    def invoke(name: ObjectName, operationName: String, params: Array[Object], signature: Array[String]): Object = ???
+    def invoke(name: ObjectName, operationName: String, params: Array[Object], signature: Array[String]): Any = ???
 
     /** Returns true if the MBean specified is an instance of the
      *  specified class, false otherwise.
@@ -98,7 +98,7 @@ trait MBeanServerConnection {
 
     /** Removes a listener from a registered MBean. */
     @stub
-    def removeNotificationListener(name: ObjectName, listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
+    def removeNotificationListener(name: ObjectName, listener: NotificationListener, filter: NotificationFilter, handback: Any): Unit = ???
 
     /** Removes a listener from a registered MBean. */
     @stub
@@ -106,7 +106,7 @@ trait MBeanServerConnection {
 
     /** Removes a listener from a registered MBean. */
     @stub
-    def removeNotificationListener(name: ObjectName, listener: ObjectName, filter: NotificationFilter, handback: Object): Unit = ???
+    def removeNotificationListener(name: ObjectName, listener: ObjectName, filter: NotificationFilter, handback: Any): Unit = ???
 
     /** Sets the value of a specific attribute of a named MBean. */
     @stub

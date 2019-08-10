@@ -6,7 +6,7 @@ import javax.swing.plaf.basic.BasicSliderUI.PropertyChangeHandler
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class MetalSliderUI.MetalPropertyListener extends BasicSliderUI.PropertyChangeHandler {
+protected class MetalSliderUI_MetalPropertyListener extends BasicSliderUI.PropertyChangeHandler {
 
     /**  */
     @stub

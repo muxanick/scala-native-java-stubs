@@ -31,7 +31,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object DefaultEditorKit.DefaultKeyTypedAction extends TextAction {
+object DefaultEditorKit_DefaultKeyTypedAction extends TextAction {
 
     /** Creates this object with the appropriate identifier. */
     @stub

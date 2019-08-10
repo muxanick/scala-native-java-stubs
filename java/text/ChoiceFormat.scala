@@ -134,11 +134,11 @@ class ChoiceFormat extends NumberFormat {
 
     /** Overrides Cloneable */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Equality comparision between two */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns pattern with formatted double. */
     @stub

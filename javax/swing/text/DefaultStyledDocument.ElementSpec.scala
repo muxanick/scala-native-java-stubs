@@ -14,7 +14,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object DefaultStyledDocument.ElementSpec extends Object {
+object DefaultStyledDocument_ElementSpec extends Object {
 
     /** Constructor useful for markup when the markup will not
      *  be stored in the document.

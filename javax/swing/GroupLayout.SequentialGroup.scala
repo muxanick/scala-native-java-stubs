@@ -18,7 +18,7 @@ import scala.scalanative.annotation.stub
  *  true for useAsBaseline is used to calculate the
  *  baseline.
  */
-class GroupLayout.SequentialGroup extends GroupLayout.Group {
+class GroupLayout_SequentialGroup extends GroupLayout.Group {
 
     /** Adds a Component to this Group. */
     @stub

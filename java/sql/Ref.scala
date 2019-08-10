@@ -38,17 +38,17 @@ trait Ref {
      *  this Ref object.
      */
     @stub
-    def getObject(): Object = ???
+    def getObject(): Any = ???
 
     /** Retrieves the referenced object and maps it to a Java type
      *  using the given type map.
      */
     @stub
-    def getObject(map: Map[String, Class[_]]): Object = ???
+    def getObject(map: Map[String, Class[_]]): Any = ???
 
     /** Sets the structured type value that this Ref
      *  object references to the given instance of Object.
      */
     @stub
-    def setObject(value: Object): Unit = ???
+    def setObject(value: Any): Unit = ???
 }

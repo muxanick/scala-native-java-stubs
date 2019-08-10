@@ -21,6 +21,5 @@ class FormSubmitEvent extends HTMLFrameHyperlinkEvent {
 
 object FormSubmitEvent {
     /** Represents an HTML form method type. */
-    @stub
-    object MethodType extends FormSubmitEvent.MethodType
+    type MethodType = FormSubmitEvent_MethodType
 }

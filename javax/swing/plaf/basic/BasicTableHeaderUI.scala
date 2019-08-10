@@ -16,8 +16,7 @@ class BasicTableHeaderUI extends TableHeaderUI {
     def this() = ???
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object MouseInputHandler extends BasicTableHeaderUI.MouseInputHandler
+    type MouseInputHandler = BasicTableHeaderUI_MouseInputHandler
 
     /** The JTableHeader that is delegating the painting to this UI. */
     @stub

@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
  *  the control.  Static instances are provided for the
  *  common types.
  */
-object Control.Type extends Object {
+object Control_Type extends Object {
 
     /** Constructs a new control type with the name specified. */
     @stub
@@ -15,7 +15,7 @@ object Control.Type extends Object {
 
     /** Finalizes the equals method */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Finalizes the hashCode method */
     @stub

@@ -197,7 +197,7 @@ class Proxy extends Object with Serializable {
 object Proxy {
     /** Returns the invocation handler for the specified proxy instance. */
     @stub
-    def getInvocationHandler(proxy: Object): InvocationHandler = ???
+    def getInvocationHandler(proxy: Any): InvocationHandler = ???
 
     /** Returns the java.lang.Class object for a proxy class
      *  given a class loader and an array of interfaces.
@@ -217,5 +217,5 @@ object Proxy {
      *  handler.
      */
     @stub
-    def newProxyInstance(loader: ClassLoader, interfaces: Array[Class[_]], h: InvocationHandler): Object = ???
+    def newProxyInstance(loader: ClassLoader, interfaces: Array[Class[_]], h: InvocationHandler): Any = ???
 }

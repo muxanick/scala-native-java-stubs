@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** Listens for changes in the selection model and updates the display
  *  accordingly.
  */
-class BasicTreeUI.TreeSelectionHandler extends Object with TreeSelectionListener {
+class BasicTreeUI_TreeSelectionHandler extends Object with TreeSelectionListener {
 
     /**  */
     @stub

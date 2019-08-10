@@ -49,7 +49,7 @@ abstract class AbstractCollection[E] extends Object with Collection[E] {
     def clear(): Unit
 
     /** Returns true if this collection contains the specified element. */
-    def contains(o: Object): Boolean
+    def contains(o: Any): Boolean
 
     /** Returns true if this collection contains all of the elements
      *  in the specified collection.
@@ -65,7 +65,7 @@ abstract class AbstractCollection[E] extends Object with Collection[E] {
     /** Removes a single instance of the specified element from this
      *  collection, if it is present (optional operation).
      */
-    def remove(o: Object): Boolean
+    def remove(o: Any): Boolean
 
     /** Removes all of this collection's elements that are also contained in the
      *  specified collection (optional operation).

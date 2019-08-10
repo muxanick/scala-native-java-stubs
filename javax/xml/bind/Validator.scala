@@ -138,7 +138,7 @@ trait Validator {
      * 
      */
     @stub
-    def getProperty(name: String): Object = ???
+    def getProperty(name: String): Any = ???
 
     /** Deprecated. 
      * since JAXB2.0
@@ -152,19 +152,19 @@ trait Validator {
      * 
      */
     @stub
-    def setProperty(name: String, value: Object): Unit = ???
+    def setProperty(name: String, value: Any): Unit = ???
 
     /** Deprecated. 
      * since JAXB2.0
      * 
      */
     @stub
-    def validate(subrootObj: Object): Boolean = ???
+    def validate(subrootObj: Any): Boolean = ???
 
     /** Deprecated. 
      * since JAXB2.0
      * 
      */
     @stub
-    def validateRoot(rootObj: Object): Boolean = ???
+    def validateRoot(rootObj: Any): Boolean = ???
 }

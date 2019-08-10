@@ -21,8 +21,7 @@ object MethodHandles {
     /** A lookup object is a factory for creating method handles,
      *  when the creation requires access checking.
      */
-    @stub
-    object Lookup extends MethodHandles.Lookup
+    type Lookup = MethodHandles_Lookup
 
     /** Produces a method handle giving read access to elements of an array. */
     @stub
@@ -48,7 +47,7 @@ object MethodHandles {
      *  constant value every time it is invoked.
      */
     @stub
-    def constant(type: Class[_], value: Object): MethodHandle = ???
+    def constant(type: Class[_], value: Any): MethodHandle = ???
 
     /** Produces a method handle which will discard some dummy arguments
      *  before calling some other specified target method handle.

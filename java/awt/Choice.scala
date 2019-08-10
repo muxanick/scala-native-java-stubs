@@ -45,8 +45,7 @@ class Choice extends Component with ItemSelectable with Accessible {
     /** This class implements accessibility support for the
      *  Choice class.
      */
-    @stub
-    protected object AccessibleAWTChoice extends Choice.AccessibleAWTChoice
+    protected type AccessibleAWTChoice = Choice_AccessibleAWTChoice
 
     /** Adds an item to this Choice menu. */
     @stub

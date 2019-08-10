@@ -17,8 +17,7 @@ import scala.scalanative.annotation.stub
  *  special requirements for dealing with the exception, it can forward
  *  the invocation to the default uncaught exception handler.
  */
-object 
-@FunctionalInterface trait Thread.UncaughtExceptionHandler {
+@FunctionalInterface trait Thread_UncaughtExceptionHandler {
 
     /** Method invoked when the given thread terminates due to the
      *  given uncaught exception.

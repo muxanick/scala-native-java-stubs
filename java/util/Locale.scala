@@ -427,11 +427,11 @@ final class Locale extends Object with Cloneable with Serializable {
 
     /** Overrides Cloneable. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns true if this Locale is equal to another object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the country/region code for this locale, which should
      *  either be the empty string, an uppercase ISO 3166 2-letter code,
@@ -594,25 +594,21 @@ object Locale {
     /** Builder is used to build instances of Locale
      *  from values configured by the setters.
      */
-    @stub
-    object Builder extends Locale.Builder
+    type Builder = Locale_Builder
 
     /** Enum for locale categories. */
-    @stub
-    object Category extends Locale.Category
+    type Category = Locale_Category
 
     /** This enum provides constants to select a filtering mode for locale
      *  matching.
      */
-    @stub
-    object FilteringMode extends Locale.FilteringMode
+    type FilteringMode = Locale_FilteringMode
 
     /** This class expresses a Language Range defined in
      *  RFC 4647 Matching of
      *  Language Tags.
      */
-    @stub
-    object LanguageRange extends Locale.LanguageRange
+    type LanguageRange = Locale_LanguageRange
 
     /** Useful constant for country. */
     @stub

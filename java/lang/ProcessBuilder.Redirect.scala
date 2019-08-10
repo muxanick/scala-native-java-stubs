@@ -22,11 +22,10 @@ import scala.scalanative.annotation.stub
  *  Each of the above categories has an associated unique
  *  Type.
  */
-object abstract ProcessBuilder.Redirect extends Object {
+object abstract ProcessBuilder_Redirect extends Object {
 
     /** The type of a ProcessBuilder.Redirect. */
-    @stub
-    object Type extends ProcessBuilder.Redirect.Type
+    type Type = ProcessBuilder_Redirect_Type
 
     /** Indicates that subprocess I/O source or destination will be the
      *  same as those of the current process.
@@ -48,7 +47,7 @@ object abstract ProcessBuilder.Redirect extends Object {
      *  equality.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the File source or destination associated
      *  with this redirect, or null if there is no such file.
@@ -69,6 +68,5 @@ object abstract ProcessBuilder.Redirect extends Object {
     def to(file: File): ProcessBuilder.Redirect = ???
 
     /** Returns the type of this Redirect. */
-    @stub
     def type(): ProcessBuilder.Redirect.Type
 }

@@ -54,8 +54,7 @@ class JScrollBar extends JComponent with Adjustable with Accessible {
     /** This class implements accessibility support for the
      *  JScrollBar class.
      */
-    @stub
-    protected object AccessibleJScrollBar extends JScrollBar.AccessibleJScrollBar
+    protected type AccessibleJScrollBar = JScrollBar_AccessibleJScrollBar
 
     /**  */
     @stub

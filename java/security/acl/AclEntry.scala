@@ -37,7 +37,7 @@ trait AclEntry extends Cloneable {
 
     /** Clones this ACL entry. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns the principal for which permissions are granted or denied by
      *  this ACL entry.

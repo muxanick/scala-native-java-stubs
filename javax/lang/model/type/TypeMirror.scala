@@ -28,7 +28,7 @@ trait TypeMirror extends AnnotatedConstruct {
 
     /** Obeys the general contract of Object.equals. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the kind of this type. */
     @stub

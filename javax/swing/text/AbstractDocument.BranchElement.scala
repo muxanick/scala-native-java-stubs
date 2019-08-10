@@ -15,7 +15,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-class AbstractDocument.BranchElement extends AbstractDocument.AbstractElement {
+class AbstractDocument_BranchElement extends AbstractDocument.AbstractElement {
 
     /** Constructs a composite element that initially contains
      *  no children.

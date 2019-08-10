@@ -37,7 +37,7 @@ class ReplicateScaleFilter extends ImageFilter {
      *  data to the ImageConsumer.
      */
     @stub
-    protected val outpixbuf: Object = ???
+    protected val outpixbuf: Any = ???
 
     /** An int array containing information about a
      *  column of pixels.

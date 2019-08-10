@@ -21,28 +21,22 @@ class BasicToolBarUI extends ToolBarUI with SwingConstants {
     def this() = ???
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object DockingListener extends BasicToolBarUI.DockingListener
+    type DockingListener = BasicToolBarUI_DockingListener
 
     /**  */
-    @stub
-    protected object DragWindow extends BasicToolBarUI.DragWindow
+    protected type DragWindow = BasicToolBarUI_DragWindow
 
     /**  */
-    @stub
-    protected object FrameListener extends BasicToolBarUI.FrameListener
+    protected type FrameListener = BasicToolBarUI_FrameListener
 
     /**  */
-    @stub
-    protected object PropertyListener extends BasicToolBarUI.PropertyListener
+    protected type PropertyListener = BasicToolBarUI_PropertyListener
 
     /**  */
-    @stub
-    protected object ToolBarContListener extends BasicToolBarUI.ToolBarContListener
+    protected type ToolBarContListener = BasicToolBarUI_ToolBarContListener
 
     /**  */
-    @stub
-    protected object ToolBarFocusListener extends BasicToolBarUI.ToolBarFocusListener
+    protected type ToolBarFocusListener = BasicToolBarUI_ToolBarFocusListener
 
     /**  */
     @stub

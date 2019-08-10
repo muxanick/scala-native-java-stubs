@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
  *  JToolBar class.  It provides an implementation of the
  *  Java Accessibility API appropriate to toolbar user-interface elements.
  */
-protected class JToolBar.AccessibleJToolBar extends JComponent.AccessibleJComponent {
+protected class JToolBar_AccessibleJToolBar extends JComponent.AccessibleJComponent {
 
     /**  */
     @stub

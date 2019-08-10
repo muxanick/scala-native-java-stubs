@@ -84,7 +84,7 @@ abstract class ImageWriterSpi extends ImageReaderWriterSpi {
     /** Returns an instance of the ImageWriter
      *  implementation associated with this service provider.
      */
-    def createWriterInstance(extension: Object): ImageWriter
+    def createWriterInstance(extension: Any): ImageWriter
 
     /** Returns an array of Strings containing all the
      *  fully qualified names of all the ImageReaderSpi

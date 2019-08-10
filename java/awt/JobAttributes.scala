@@ -53,11 +53,11 @@ final class JobAttributes extends Object with Cloneable {
 
     /** Creates and returns a copy of this JobAttributes. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Determines whether two JobAttributes are equal to each other. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the number of copies the application should render for jobs
      *  using these attributes.
@@ -250,22 +250,17 @@ final class JobAttributes extends Object with Cloneable {
 
 object JobAttributes {
     /** A type-safe enumeration of possible default selection states. */
-    @stub
-    object DefaultSelectionType extends JobAttributes.DefaultSelectionType
+    type DefaultSelectionType = JobAttributes_DefaultSelectionType
 
     /** A type-safe enumeration of possible job destinations. */
-    @stub
-    object DestinationType extends JobAttributes.DestinationType
+    type DestinationType = JobAttributes_DestinationType
 
     /** A type-safe enumeration of possible dialogs to display to the user. */
-    @stub
-    object DialogType extends JobAttributes.DialogType
+    type DialogType = JobAttributes_DialogType
 
     /** A type-safe enumeration of possible multiple copy handling states. */
-    @stub
-    object MultipleDocumentHandlingType extends JobAttributes.MultipleDocumentHandlingType
+    type MultipleDocumentHandlingType = JobAttributes_MultipleDocumentHandlingType
 
     /** A type-safe enumeration of possible multi-page impositions. */
-    @stub
-    object SidesType extends JobAttributes.SidesType
+    type SidesType = JobAttributes_SidesType
 }

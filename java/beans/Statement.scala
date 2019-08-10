@@ -21,7 +21,7 @@ class Statement extends Object {
      *  specified by the name and by the array of arguments.
      */
     @stub
-    def this(target: Object, methodName: String, arguments: Array[Object]) = ???
+    def this(target: Any, methodName: String, arguments: Array[Object]) = ???
 
     /** The execute method finds a method whose name is the same
      *  as the methodName property, and invokes the method on
@@ -40,7 +40,7 @@ class Statement extends Object {
 
     /** Returns the target object of this statement. */
     @stub
-    def getTarget(): Object = ???
+    def getTarget(): Any = ???
 
     /** Prints the value of this statement using a Java-style syntax. */
     @stub

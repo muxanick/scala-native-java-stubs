@@ -22,7 +22,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-class StyleContext.NamedStyle extends Object with Style with Serializable {
+class StyleContext_NamedStyle extends Object with Style with Serializable {
 
     /** Creates a new named style, with a null name and parent. */
     @stub
@@ -48,7 +48,7 @@ class StyleContext.NamedStyle extends Object with Style with Serializable {
 
     /** Adds an attribute. */
     @stub
-    def addAttribute(name: Object, value: Object): Unit = ???
+    def addAttribute(name: Any, value: Any): Unit = ???
 
     /** Adds a set of attributes to the element. */
     @stub
@@ -60,7 +60,7 @@ class StyleContext.NamedStyle extends Object with Style with Serializable {
 
     /** Checks whether a given attribute name/value is defined. */
     @stub
-    def containsAttribute(name: Object, value: Object): Boolean = ???
+    def containsAttribute(name: Any, value: Any): Boolean = ???
 
     /** Checks whether the element contains all the attributes. */
     @stub
@@ -78,7 +78,7 @@ class StyleContext.NamedStyle extends Object with Style with Serializable {
 
     /** Gets the value of an attribute. */
     @stub
-    def getAttribute(attrName: Object): Object = ???
+    def getAttribute(attrName: Any): Any = ???
 
     /** Gets the number of attributes that are defined. */
     @stub
@@ -110,7 +110,7 @@ class StyleContext.NamedStyle extends Object with Style with Serializable {
 
     /** Checks whether a given attribute is defined. */
     @stub
-    def isDefined(attrName: Object): Boolean = ???
+    def isDefined(attrName: Any): Boolean = ???
 
     /** Checks whether two attribute sets are equal. */
     @stub
@@ -118,7 +118,7 @@ class StyleContext.NamedStyle extends Object with Style with Serializable {
 
     /** Removes an attribute from the set. */
     @stub
-    def removeAttribute(name: Object): Unit = ???
+    def removeAttribute(name: Any): Unit = ???
 
     /** Removes a set of attributes for the element. */
     @stub

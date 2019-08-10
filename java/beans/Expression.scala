@@ -21,14 +21,14 @@ class Expression extends Statement {
      *  specified by the name and by the array of arguments.
      */
     @stub
-    def this(value: Object, target: Object, methodName: String, arguments: Array[Object]) = ???
+    def this(value: Any, target: Any, methodName: String, arguments: Array[Object]) = ???
 
     /** Creates a new Expression object
      *  for the specified target object to invoke the method
      *  specified by the name and by the array of arguments.
      */
     @stub
-    def this(target: Object, methodName: String, arguments: Array[Object]) = ???
+    def this(target: Any, methodName: String, arguments: Array[Object]) = ???
 
     /** The execute method finds a method whose name is the same
      *  as the methodName property, and invokes the method on
@@ -42,11 +42,11 @@ class Expression extends Statement {
      *  methodName on this target with these arguments and calls it.
      */
     @stub
-    def getValue(): Object = ???
+    def getValue(): Any = ???
 
     /** Sets the value of this expression to value. */
     @stub
-    def setValue(value: Object): Unit = ???
+    def setValue(value: Any): Unit = ???
 
     /** Prints the value of this expression using a Java-style syntax. */
     @stub

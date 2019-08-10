@@ -38,7 +38,7 @@ class RC2ParameterSpec extends Object with AlgorithmParameterSpec {
      *  object.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the effective key size in bits. */
     @stub

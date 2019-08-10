@@ -7,4 +7,4 @@ import scala.scalanative.annotation.stub
  *  attributes that contribute to a paragraph style.  These are
  *  aliased by the outer class for general presentation.
  */
-object StyleConstants.ParagraphConstants extends StyleConstants with AttributeSet.ParagraphAttribute {
+object StyleConstants_ParagraphConstants extends StyleConstants with AttributeSet.ParagraphAttribute {

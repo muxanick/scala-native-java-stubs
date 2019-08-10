@@ -38,23 +38,23 @@ class Event extends Object with Serializable {
      *  available only for backwards compatibility.
      */
     @stub
-    def this(target: Object, id: Int, arg: Object) = ???
+    def this(target: Any, id: Int, arg: Any) = ???
 
     /** NOTE: The Event class is obsolete and is
      *  available only for backwards compatibility.
      */
     @stub
-    def this(target: Object, when: Long, id: Int, x: Int, y: Int, key: Int, modifiers: Int) = ???
+    def this(target: Any, when: Long, id: Int, x: Int, y: Int, key: Int, modifiers: Int) = ???
 
     /** NOTE: The Event class is obsolete and is
      *  available only for backwards compatibility.
      */
     @stub
-    def this(target: Object, when: Long, id: Int, x: Int, y: Int, key: Int, modifiers: Int, arg: Object) = ???
+    def this(target: Any, when: Long, id: Int, x: Int, y: Int, key: Int, modifiers: Int, arg: Any) = ???
 
     /** An arbitrary argument of the event. */
     @stub
-    val arg: Object = ???
+    val arg: Any = ???
 
     /** For MOUSE_DOWN events, this field indicates the
      *  number of consecutive clicks.
@@ -82,7 +82,7 @@ class Event extends Object with Serializable {
 
     /** The target component. */
     @stub
-    val target: Object = ???
+    val target: Any = ???
 
     /** The time stamp. */
     @stub

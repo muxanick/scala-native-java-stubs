@@ -23,7 +23,7 @@ final class OptionalInt extends Object {
 
     /** Indicates whether some other object is "equal to" this OptionalInt. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** If a value is present in this OptionalInt, returns the value,
      *  otherwise throws NoSuchElementException.

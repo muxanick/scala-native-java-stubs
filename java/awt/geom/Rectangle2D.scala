@@ -61,7 +61,7 @@ abstract class Rectangle2D extends RectangularShape {
     /** Determines whether or not the specified Object is
      *  equal to this Rectangle2D.
      */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** Returns a high precision and more accurate bounding box of
      *  the Shape than the getBounds method.
@@ -126,14 +126,12 @@ object Rectangle2D {
     /** The Double class defines a rectangle specified in
      *  double coordinates.
      */
-    @stub
-    object Double extends Rectangle2D.Double
+    type Double = Rectangle2D_Double
 
     /** The Float class defines a rectangle specified in float
      *  coordinates.
      */
-    @stub
-    object Float extends Rectangle2D.Float
+    type Float = Rectangle2D_Float
 
     /** The bitmask that indicates that a point lies below
      *  this Rectangle2D.

@@ -158,7 +158,7 @@ abstract class XMLGregorianCalendar extends Object with Cloneable {
     def clear(): Unit
 
     /** Creates and returns a copy of this object. */
-    def clone(): Object
+    def clone(): Any
 
     /** Compare two instances of W3C XML Schema 1.0 date/time datatypes
      *  according to partial order relation defined in
@@ -168,7 +168,7 @@ abstract class XMLGregorianCalendar extends Object with Cloneable {
     def compare(xmlGregorianCalendar: XMLGregorianCalendar): Int
 
     /** Compares this calendar to the specified object. */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** Return day in month or DatatypeConstants.FIELD_UNDEFINED. */
     def getDay(): Int

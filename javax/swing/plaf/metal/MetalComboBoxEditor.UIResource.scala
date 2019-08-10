@@ -19,7 +19,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object MetalComboBoxEditor.UIResource extends MetalComboBoxEditor with UIResource {
+object MetalComboBoxEditor_UIResource extends MetalComboBoxEditor with UIResource {
 
     /**  */
     @stub

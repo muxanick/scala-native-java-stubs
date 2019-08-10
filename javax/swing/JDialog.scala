@@ -158,8 +158,7 @@ class JDialog extends Dialog with WindowConstants with Accessible with RootPaneC
     /** This class implements accessibility support for the
      *  JDialog class.
      */
-    @stub
-    protected object AccessibleJDialog extends JDialog.AccessibleJDialog
+    protected type AccessibleJDialog = JDialog_AccessibleJDialog
 
     /**  */
     @stub
@@ -177,7 +176,7 @@ class JDialog extends Dialog with WindowConstants with Accessible with RootPaneC
 
     /** Adds the specified child Component. */
     @stub
-    protected def addImpl(comp: Component, constraints: Object, index: Int): Unit = ???
+    protected def addImpl(comp: Component, constraints: Any, index: Int): Unit = ???
 
     /** Called by the constructor methods to create the default
      *  rootPane.

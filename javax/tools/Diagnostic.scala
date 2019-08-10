@@ -71,8 +71,7 @@ trait Diagnostic[S] {
 
 object Diagnostic {
     /** Kinds of diagnostics, for example, error or warning. */
-    @stub
-    object Kind extends Diagnostic.Kind
+    type Kind = Diagnostic_Kind
 
     /** Used to signal that no position is available. */
     @stub

@@ -94,8 +94,7 @@ class JFrame extends Frame with WindowConstants with Accessible with RootPaneCon
     /** This class implements accessibility support for the
      *  JFrame class.
      */
-    @stub
-    protected object AccessibleJFrame extends JFrame.AccessibleJFrame
+    protected type AccessibleJFrame = JFrame_AccessibleJFrame
 
     /** The accessible context property. */
     @stub
@@ -117,7 +116,7 @@ class JFrame extends Frame with WindowConstants with Accessible with RootPaneCon
 
     /** Adds the specified child Component. */
     @stub
-    protected def addImpl(comp: Component, constraints: Object, index: Int): Unit = ???
+    protected def addImpl(comp: Component, constraints: Any, index: Int): Unit = ???
 
     /** Called by the constructor methods to create the default
      *  rootPane.

@@ -115,13 +115,13 @@ abstract class Component extends Object with ImageObserver with MenuContainer wi
     /** Inner class of Component used to provide default support for
      *  accessibility.
      */
-    protected object AccessibleAWTComponent extends Component.AccessibleAWTComponent
+    protected type AccessibleAWTComponent = Component_AccessibleAWTComponent
 
     /** Inner class for blitting offscreen surfaces to a component. */
-    protected object BltBufferStrategy extends Component.BltBufferStrategy
+    protected type BltBufferStrategy = Component_BltBufferStrategy
 
     /** Inner class for flipping buffers on a component. */
-    protected object FlipBufferStrategy extends Component.FlipBufferStrategy
+    protected type FlipBufferStrategy = Component_FlipBufferStrategy
 
     /** The AccessibleContext associated with this Component. */
     protected val accessibleContext: AccessibleContext
@@ -132,7 +132,7 @@ abstract class Component extends Object with ImageObserver with MenuContainer wi
      *  which fires action events.
      * 
      */
-    def action(evt: Event, what: Object): Boolean
+    def action(evt: Event, what: Any): Boolean
 
     /** Adds the specified popup menu to the component. */
     def add(popup: PopupMenu): Unit
@@ -326,7 +326,7 @@ abstract class Component extends Object with ImageObserver with MenuContainer wi
     def firePropertyChange(propertyName: String, oldValue: Long, newValue: Long): Unit
 
     /** Support for reporting bound property changes for Object properties. */
-    protected def firePropertyChange(propertyName: String, oldValue: Object, newValue: Object): Unit
+    protected def firePropertyChange(propertyName: String, oldValue: Any, newValue: Any): Unit
 
     /** Reports a bound property change. */
     def firePropertyChange(propertyName: String, oldValue: Short, newValue: Short): Unit
@@ -565,7 +565,7 @@ abstract class Component extends Object with ImageObserver with MenuContainer wi
      *  synchronization monitor) for AWT component-tree and layout
      *  operations.
      */
-    def getTreeLock(): Object
+    def getTreeLock(): Any
 
     /** Returns the current width of this component. */
     def getWidth(): Int
@@ -581,7 +581,7 @@ abstract class Component extends Object with ImageObserver with MenuContainer wi
      *  replaced by processFocusEvent(FocusEvent).
      * 
      */
-    def gotFocus(evt: Event, what: Object): Boolean
+    def gotFocus(evt: Event, what: Any): Boolean
 
     /** Deprecated. 
      * As of JDK version 1.1
@@ -758,7 +758,7 @@ abstract class Component extends Object with ImageObserver with MenuContainer wi
      *  replaced by processFocusEvent(FocusEvent).
      * 
      */
-    def lostFocus(evt: Event, what: Object): Boolean
+    def lostFocus(evt: Event, what: Any): Boolean
 
     /** Deprecated. 
      * As of JDK version 1.1,
@@ -1178,8 +1178,7 @@ object Component {
     /** Enumeration of the common ways the baseline of a component can
      *  change as the size changes.
      */
-    @stub
-    object BaselineResizeBehavior extends Component.BaselineResizeBehavior
+    type BaselineResizeBehavior = Component_BaselineResizeBehavior
 
     /** Ease-of-use constant for getAlignmentY. */
     @stub

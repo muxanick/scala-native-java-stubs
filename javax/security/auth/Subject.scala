@@ -77,7 +77,7 @@ final class Subject extends Object with Serializable {
      *  for equality.
      */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Return the Set of Principals associated with this
      *  Subject.

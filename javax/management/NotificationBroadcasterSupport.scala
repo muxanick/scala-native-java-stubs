@@ -54,7 +54,7 @@ class NotificationBroadcasterSupport extends Object with NotificationEmitter {
 
     /** Adds a listener. */
     @stub
-    def addNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
+    def addNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Any): Unit = ???
 
     /** Returns an array indicating, for each notification this
      *  MBean may send, the name of the Java class of the notification
@@ -67,7 +67,7 @@ class NotificationBroadcasterSupport extends Object with NotificationEmitter {
      *  notification to that listener.
      */
     @stub
-    protected def handleNotification(listener: NotificationListener, notif: Notification, handback: Object): Unit = ???
+    protected def handleNotification(listener: NotificationListener, notif: Notification, handback: Any): Unit = ???
 
     /** Removes a listener from this MBean. */
     @stub
@@ -75,7 +75,7 @@ class NotificationBroadcasterSupport extends Object with NotificationEmitter {
 
     /** Removes a listener from this MBean. */
     @stub
-    def removeNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
+    def removeNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Any): Unit = ???
 
     /** Sends a notification. */
     @stub

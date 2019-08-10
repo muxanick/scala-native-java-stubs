@@ -13,7 +13,7 @@ final class DecimalStyle extends Object {
 
     /** Checks if this DecimalStyle is equal to another DecimalStyle. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Gets the character that represents the decimal point. */
     @stub

@@ -14,7 +14,7 @@ import scala.scalanative.annotation.stub
  *  methods should call the parent methods so that the menu selection
  *  is correct.
  */
-protected class BasicMenuUI.MouseInputHandler extends Object with MouseInputListener {
+protected class BasicMenuUI_MouseInputHandler extends Object with MouseInputListener {
 
     /**  */
     @stub

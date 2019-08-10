@@ -21,11 +21,11 @@ trait LogicalMessage {
 
     /** Gets the message payload as a JAXB object. */
     @stub
-    def getPayload(context: JAXBContext): Object = ???
+    def getPayload(context: JAXBContext): Any = ???
 
     /** Sets the message payload */
     @stub
-    def setPayload(payload: Object, context: JAXBContext): Unit = ???
+    def setPayload(payload: Any, context: JAXBContext): Unit = ???
 
     /** Sets the message payload */
     @stub

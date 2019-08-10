@@ -18,44 +18,34 @@ class BasicFileChooserUI extends FileChooserUI {
     def this(b: JFileChooser) = ???
 
     /**  */
-    @stub
-    protected object AcceptAllFileFilter extends BasicFileChooserUI.AcceptAllFileFilter
+    protected type AcceptAllFileFilter = BasicFileChooserUI_AcceptAllFileFilter
 
     /** Responds to an Open or Save request */
-    @stub
-    protected object ApproveSelectionAction extends BasicFileChooserUI.ApproveSelectionAction
+    protected type ApproveSelectionAction = BasicFileChooserUI_ApproveSelectionAction
 
     /**  */
-    @stub
-    protected object BasicFileView extends BasicFileChooserUI.BasicFileView
+    protected type BasicFileView = BasicFileChooserUI_BasicFileView
 
     /** Responds to a cancel request. */
-    @stub
-    protected object CancelSelectionAction extends BasicFileChooserUI.CancelSelectionAction
+    protected type CancelSelectionAction = BasicFileChooserUI_CancelSelectionAction
 
     /**  */
-    @stub
-    protected object ChangeToParentDirectoryAction extends BasicFileChooserUI.ChangeToParentDirectoryAction
+    protected type ChangeToParentDirectoryAction = BasicFileChooserUI_ChangeToParentDirectoryAction
 
     /**  */
-    @stub
-    protected object DoubleClickListener extends BasicFileChooserUI.DoubleClickListener
+    protected type DoubleClickListener = BasicFileChooserUI_DoubleClickListener
 
     /** Acts on the "home" key event or equivalent event. */
-    @stub
-    protected object GoHomeAction extends BasicFileChooserUI.GoHomeAction
+    protected type GoHomeAction = BasicFileChooserUI_GoHomeAction
 
     /** Creates a new folder. */
-    @stub
-    protected object NewFolderAction extends BasicFileChooserUI.NewFolderAction
+    protected type NewFolderAction = BasicFileChooserUI_NewFolderAction
 
     /**  */
-    @stub
-    protected object SelectionListener extends BasicFileChooserUI.SelectionListener
+    protected type SelectionListener = BasicFileChooserUI_SelectionListener
 
     /** Rescans the files in the current directory */
-    @stub
-    protected object UpdateAction extends BasicFileChooserUI.UpdateAction
+    protected type UpdateAction = BasicFileChooserUI_UpdateAction
 
     /**  */
     @stub

@@ -25,7 +25,7 @@ final class DisplayMode extends Object {
 
     /** Indicates whether some other object is "equal to" this one. */
     @stub
-    def equals(dm: Object): Boolean = ???
+    def equals(dm: Any): Boolean = ???
 
     /** Returns the bit depth of the display, in bits per pixel. */
     @stub

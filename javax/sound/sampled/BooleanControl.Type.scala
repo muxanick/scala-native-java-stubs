@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
  *  boolean control.  Static instances are provided for the
  *  common types.
  */
-object BooleanControl.Type extends Control.Type {
+object BooleanControl_Type extends Control.Type {
 
     /** Constructs a new boolean control type. */
     @stub

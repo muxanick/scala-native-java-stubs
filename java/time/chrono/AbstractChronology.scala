@@ -23,7 +23,7 @@ abstract class AbstractChronology extends Object with Chronology {
     def compareTo(other: Chronology): Int
 
     /** Checks if this chronology is equal to another chronology. */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** A hash code for this chronology. */
     def hashCode(): Int

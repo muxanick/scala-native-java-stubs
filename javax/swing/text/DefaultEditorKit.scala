@@ -103,46 +103,38 @@ class DefaultEditorKit extends EditorKit {
 
 object DefaultEditorKit {
     /** Creates a beep. */
-    @stub
-    object BeepAction extends DefaultEditorKit.BeepAction
+    type BeepAction = DefaultEditorKit_BeepAction
 
     /** Copies the selected region and place its contents
      *  into the system clipboard.
      */
-    @stub
-    object CopyAction extends DefaultEditorKit.CopyAction
+    type CopyAction = DefaultEditorKit_CopyAction
 
     /** Cuts the selected region and place its contents
      *  into the system clipboard.
      */
-    @stub
-    object CutAction extends DefaultEditorKit.CutAction
+    type CutAction = DefaultEditorKit_CutAction
 
     /** The action that is executed by default if
      *  a key typed event is received and there
      *  is no keymap entry.
      */
-    @stub
-    object DefaultKeyTypedAction extends DefaultEditorKit.DefaultKeyTypedAction
+    type DefaultKeyTypedAction = DefaultEditorKit_DefaultKeyTypedAction
 
     /** Places a line/paragraph break into the document. */
-    @stub
-    object InsertBreakAction extends DefaultEditorKit.InsertBreakAction
+    type InsertBreakAction = DefaultEditorKit_InsertBreakAction
 
     /** Places content into the associated document. */
-    @stub
-    object InsertContentAction extends DefaultEditorKit.InsertContentAction
+    type InsertContentAction = DefaultEditorKit_InsertContentAction
 
     /** Places a tab character into the document. */
-    @stub
-    object InsertTabAction extends DefaultEditorKit.InsertTabAction
+    type InsertTabAction = DefaultEditorKit_InsertTabAction
 
     /** Pastes the contents of the system clipboard into the
      *  selected region, or before the caret if nothing is
      *  selected.
      */
-    @stub
-    object PasteAction extends DefaultEditorKit.PasteAction
+    type PasteAction = DefaultEditorKit_PasteAction
 
     /** Name of the Action for moving the caret
      *  logically backward one position.

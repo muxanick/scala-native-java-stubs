@@ -110,7 +110,7 @@ trait Collection[E] extends Iterable[E] {
 
     /** Returns true if this collection contains the specified element. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Returns true if this collection contains all of the elements
      *  in the specified collection.
@@ -120,7 +120,7 @@ trait Collection[E] extends Iterable[E] {
 
     /** Compares the specified object with this collection for equality. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the hash code value for this collection. */
     @stub
@@ -144,7 +144,7 @@ trait Collection[E] extends Iterable[E] {
      *  collection, if it is present (optional operation).
      */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Removes all of this collection's elements that are also contained in the
      *  specified collection (optional operation).

@@ -24,11 +24,11 @@ class TreeSelectionEvent extends EventObject {
 
     /** Represents a change in the selection of a TreeSelectionModel. */
     @stub
-    def this(source: Object, paths: Array[TreePath], areNew: Array[Boolean], oldLeadSelectionPath: TreePath, newLeadSelectionPath: TreePath) = ???
+    def this(source: Any, paths: Array[TreePath], areNew: Array[Boolean], oldLeadSelectionPath: TreePath, newLeadSelectionPath: TreePath) = ???
 
     /** Represents a change in the selection of a TreeSelectionModel. */
     @stub
-    def this(source: Object, path: TreePath, isNew: Boolean, oldLeadSelectionPath: TreePath, newLeadSelectionPath: TreePath) = ???
+    def this(source: Any, path: TreePath, isNew: Boolean, oldLeadSelectionPath: TreePath, newLeadSelectionPath: TreePath) = ???
 
     /** For each path identifies if that path is in fact new. */
     @stub
@@ -48,7 +48,7 @@ class TreeSelectionEvent extends EventObject {
 
     /** Returns a copy of the receiver, but with the source being newSource. */
     @stub
-    def cloneWithSource(newSource: Object): Object = ???
+    def cloneWithSource(newSource: Any): Any = ???
 
     /** Returns the current lead path. */
     @stub

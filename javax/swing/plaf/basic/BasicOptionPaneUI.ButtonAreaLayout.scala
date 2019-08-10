@@ -12,7 +12,7 @@ import scala.scalanative.annotation.stub
  *  This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of BasicOptionPaneUI.
  */
-object BasicOptionPaneUI.ButtonAreaLayout extends Object with LayoutManager {
+object BasicOptionPaneUI_ButtonAreaLayout extends Object with LayoutManager {
 
     /**  */
     @stub

@@ -72,12 +72,10 @@ class JMenu extends JMenuItem with Accessible with MenuElement {
     /** This class implements accessibility support for the
      *  JMenu class.
      */
-    @stub
-    protected object AccessibleJMenu extends JMenu.AccessibleJMenu
+    protected type AccessibleJMenu = JMenu_AccessibleJMenu
 
     /** A listener class that watches for a popup window closing. */
-    @stub
-    protected object WinListener extends JMenu.WinListener
+    protected type WinListener = JMenu_WinListener
 
     /** The window-closing listener for the popup. */
     @stub

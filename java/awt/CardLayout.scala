@@ -35,7 +35,7 @@ class CardLayout extends Object with LayoutManager2 with Serializable {
      *  table of names.
      */
     @stub
-    def addLayoutComponent(comp: Component, constraints: Object): Unit = ???
+    def addLayoutComponent(comp: Component, constraints: Any): Unit = ???
 
     /** Deprecated. 
      * replaced by

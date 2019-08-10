@@ -20,7 +20,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JEditorPane.AccessibleJEditorPaneHTML extends JEditorPane.AccessibleJEditorPane {
+protected class JEditorPane_AccessibleJEditorPaneHTML extends JEditorPane.AccessibleJEditorPane {
 
     /**  */
     @stub

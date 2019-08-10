@@ -36,7 +36,7 @@ class IndexedPropertyDescriptor extends PropertyDescriptor {
 
     /** Compares this PropertyDescriptor against the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the Java type info for the indexed property. */
     @stub

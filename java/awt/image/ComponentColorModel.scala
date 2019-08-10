@@ -177,7 +177,7 @@ class ComponentColorModel extends ColorModel {
 
     /** Compares this color model with another for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the alpha component for the specified pixel, scaled
      *  from 0 to 255.
@@ -189,7 +189,7 @@ class ComponentColorModel extends ColorModel {
      *  0 to 255.
      */
     @stub
-    def getAlpha(inData: Object): Int = ???
+    def getAlpha(inData: Any): Int = ???
 
     /** Returns a Raster representing the alpha channel of an image,
      *  extracted from the input Raster.
@@ -207,7 +207,7 @@ class ComponentColorModel extends ColorModel {
      *  from 0 to 255 in the default RGB ColorSpace, sRGB.
      */
     @stub
-    def getBlue(inData: Object): Int = ???
+    def getBlue(inData: Any): Int = ???
 
     /** Returns an array of unnormalized color/alpha components given a pixel
      *  in this ColorModel.
@@ -219,7 +219,7 @@ class ComponentColorModel extends ColorModel {
      *  in this ColorModel.
      */
     @stub
-    def getComponents(pixel: Object, components: Array[Int], offset: Int): Array[Int] = ???
+    def getComponents(pixel: Any, components: Array[Int], offset: Int): Array[Int] = ???
 
     /** Returns a pixel value represented as an int in this
      *  ColorModel, given an array of normalized color/alpha
@@ -239,21 +239,21 @@ class ComponentColorModel extends ColorModel {
      *  components.
      */
     @stub
-    def getDataElements(normComponents: Array[Float], normOffset: Int, obj: Object): Object = ???
+    def getDataElements(normComponents: Array[Float], normOffset: Int, obj: Any): Any = ???
 
     /** Returns a data element array representation of a pixel in this
      *  ColorModel, given an array of unnormalized color/alpha
      *  components.
      */
     @stub
-    def getDataElements(components: Array[Int], offset: Int, obj: Object): Object = ???
+    def getDataElements(components: Array[Int], offset: Int, obj: Any): Any = ???
 
     /** Returns a data element array representation of a pixel in this
      *  ColorModel, given an integer pixel representation
      *  in the default RGB color model.
      */
     @stub
-    def getDataElements(rgb: Int, pixel: Object): Object = ???
+    def getDataElements(rgb: Int, pixel: Any): Any = ???
 
     /** Returns the green color component for the specified pixel, scaled
      *  from 0 to 255 in the default RGB ColorSpace, sRGB.
@@ -265,7 +265,7 @@ class ComponentColorModel extends ColorModel {
      *  from 0 to 255 in the default RGB ColorSpace, sRGB.
      */
     @stub
-    def getGreen(inData: Object): Int = ???
+    def getGreen(inData: Any): Int = ???
 
     /** Returns an array of all of the color/alpha components in normalized
      *  form, given an unnormalized component array.
@@ -277,7 +277,7 @@ class ComponentColorModel extends ColorModel {
      *  form, given a pixel in this ColorModel.
      */
     @stub
-    def getNormalizedComponents(pixel: Object, normComponents: Array[Float], normOffset: Int): Array[Float] = ???
+    def getNormalizedComponents(pixel: Any, normComponents: Array[Float], normOffset: Int): Array[Float] = ???
 
     /** Returns the red color component for the specified pixel, scaled
      *  from 0 to 255 in the default RGB ColorSpace, sRGB.
@@ -289,7 +289,7 @@ class ComponentColorModel extends ColorModel {
      *  from 0 to 255 in the default RGB ColorSpace, sRGB.
      */
     @stub
-    def getRed(inData: Object): Int = ???
+    def getRed(inData: Any): Int = ???
 
     /** Returns the color/alpha components of the pixel in the default
      *  RGB color model format.
@@ -301,7 +301,7 @@ class ComponentColorModel extends ColorModel {
      *  default RGB color model format.
      */
     @stub
-    def getRGB(inData: Object): Int = ???
+    def getRGB(inData: Any): Int = ???
 
     /** Returns an array of all of the color/alpha components in unnormalized
      *  form, given a normalized component array.

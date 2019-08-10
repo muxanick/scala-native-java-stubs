@@ -6,7 +6,7 @@ import javax.swing.AbstractAction
 import scala.scalanative.annotation.stub
 
 /** Handles restoring a minimized or maximized internal frame. */
-protected class BasicDesktopPaneUI.OpenAction extends AbstractAction {
+protected class BasicDesktopPaneUI_OpenAction extends AbstractAction {
 
     /**  */
     @stub

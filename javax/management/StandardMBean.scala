@@ -112,7 +112,7 @@ class StandardMBean extends Object with DynamicMBean with MBeanRegistration {
 
     /** Obtain the value of a specific attribute of the Dynamic MBean. */
     @stub
-    def getAttribute(attribute: String): Object = ???
+    def getAttribute(attribute: String): Any = ???
 
     /** Get the values of several attributes of the Dynamic MBean. */
     @stub
@@ -136,7 +136,7 @@ class StandardMBean extends Object with DynamicMBean with MBeanRegistration {
      *  returned by this MBean.
      */
     @stub
-    protected def getConstructors(ctors: Array[MBeanConstructorInfo], impl: Object): Array[MBeanConstructorInfo] = ???
+    protected def getConstructors(ctors: Array[MBeanConstructorInfo], impl: Any): Array[MBeanConstructorInfo] = ???
 
     /** Customization hook:
      *  Get the description that will be used in the MBeanAttributeInfo
@@ -196,7 +196,7 @@ class StandardMBean extends Object with DynamicMBean with MBeanRegistration {
 
     /** Get the implementation of this Standard MBean (or MXBean). */
     @stub
-    def getImplementation(): Object = ???
+    def getImplementation(): Any = ???
 
     /** Get the class of the implementation of this Standard MBean (or MXBean). */
     @stub
@@ -226,7 +226,7 @@ class StandardMBean extends Object with DynamicMBean with MBeanRegistration {
 
     /** Allows an action to be invoked on the Dynamic MBean. */
     @stub
-    def invoke(actionName: String, params: Array[Object], signature: Array[String]): Object = ???
+    def invoke(actionName: String, params: Array[Object], signature: Array[String]): Any = ???
 
     /** Allows the MBean to perform any operations needed after having been
      *  unregistered in the MBean server.
@@ -262,5 +262,5 @@ class StandardMBean extends Object with DynamicMBean with MBeanRegistration {
 
     /** Replace the implementation object wrapped in this object. */
     @stub
-    def setImplementation(implementation: Object): Unit = ???
+    def setImplementation(implementation: Any): Unit = ???
 }

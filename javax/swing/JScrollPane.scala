@@ -142,15 +142,13 @@ class JScrollPane extends JComponent with ScrollPaneConstants with Accessible {
     /** This class implements accessibility support for the
      *  JScrollPane class.
      */
-    @stub
-    protected object AccessibleJScrollPane extends JScrollPane.AccessibleJScrollPane
+    protected type AccessibleJScrollPane = JScrollPane_AccessibleJScrollPane
 
     /** By default JScrollPane creates scrollbars
      *  that are instances
      *  of this class.
      */
-    @stub
-    protected object ScrollBar extends JScrollPane.ScrollBar
+    protected type ScrollBar = JScrollPane_ScrollBar
 
     /** The column header child. */
     @stub

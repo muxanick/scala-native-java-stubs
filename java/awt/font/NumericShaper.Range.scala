@@ -24,10 +24,10 @@ import scala.scalanative.annotation.stub
  *                                    NumericShaper.Range.EUROPEAN);
  *  
  */
-class NumericShaper.Range private (name: String, ordinal: Int) extends Enum[NumericShaper.Range](name, ordinal) {
+class NumericShaper_Range private (name: String, ordinal: Int) extends Enum[NumericShaper.Range](name, ordinal) {
 }
 
-object NumericShaper.Range {
+object NumericShaper_Range {
     /** The Arabic range with the Arabic-Indic digits. */
     final val ARABIC = new NumericShaper.Range(ARABIC, 0)
 

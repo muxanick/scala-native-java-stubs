@@ -4,7 +4,7 @@ import java.lang.{Object, String}
 import scala.scalanative.annotation.stub
 
 /** A type-safe enumeration of possible origins. */
-final object PageAttributes.OriginType extends Object {
+final object PageAttributes_OriginType extends Object {
 
     /** The OriginType instance to use for specifying a physical origin. */
     @stub

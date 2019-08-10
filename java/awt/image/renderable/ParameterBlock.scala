@@ -121,7 +121,7 @@ class ParameterBlock extends Object with Cloneable with Serializable {
 
     /** Adds an object to the list of parameters. */
     @stub
-    def add(obj: Object): ParameterBlock = ???
+    def add(obj: Any): ParameterBlock = ???
 
     /** Adds a Short to the list of parameters. */
     @stub
@@ -129,11 +129,11 @@ class ParameterBlock extends Object with Cloneable with Serializable {
 
     /** Adds an image to end of the list of sources. */
     @stub
-    def addSource(source: Object): ParameterBlock = ???
+    def addSource(source: Any): ParameterBlock = ???
 
     /** Creates a copy of a ParameterBlock. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** A convenience method to return a parameter as a byte. */
     @stub
@@ -169,7 +169,7 @@ class ParameterBlock extends Object with Cloneable with Serializable {
 
     /** Gets a parameter as an object. */
     @stub
-    def getObjectParameter(index: Int): Object = ???
+    def getObjectParameter(index: Int): Any = ???
 
     /** Returns an array of Class objects describing the types
      *  of the parameters.
@@ -195,7 +195,7 @@ class ParameterBlock extends Object with Cloneable with Serializable {
 
     /** Returns a source as a general Object. */
     @stub
-    def getSource(index: Int): Object = ???
+    def getSource(index: Int): Any = ???
 
     /** Returns the entire Vector of sources. */
     @stub
@@ -235,7 +235,7 @@ class ParameterBlock extends Object with Cloneable with Serializable {
 
     /** Replaces an Object in the list of parameters. */
     @stub
-    def set(obj: Object, index: Int): ParameterBlock = ???
+    def set(obj: Any, index: Int): ParameterBlock = ???
 
     /** Replaces an Object in the list of parameters with a Short. */
     @stub
@@ -247,7 +247,7 @@ class ParameterBlock extends Object with Cloneable with Serializable {
 
     /** Replaces an entry in the list of source with a new source. */
     @stub
-    def setSource(source: Object, index: Int): ParameterBlock = ???
+    def setSource(source: Any, index: Int): ParameterBlock = ???
 
     /** Sets the entire Vector of sources to a given Vector. */
     @stub
@@ -255,5 +255,5 @@ class ParameterBlock extends Object with Cloneable with Serializable {
 
     /** Creates a shallow copy of a ParameterBlock. */
     @stub
-    def shallowClone(): Object = ???
+    def shallowClone(): Any = ???
 }

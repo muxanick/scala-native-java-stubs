@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
 
     /** Deprecated.  */
     @stub
-    def exportObject(obj: Remote, data: Object): RemoteStub = ???
+    def exportObject(obj: Remote, data: Any): RemoteStub = ???
 
     /** Deprecated.  */
     @stub

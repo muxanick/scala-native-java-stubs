@@ -34,7 +34,7 @@ abstract class RoundRectangle2D extends RectangularShape {
     /** Determines whether or not the specified Object is
      *  equal to this RoundRectangle2D.
      */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** Gets the height of the arc that rounds off the corners. */
     def getArcHeight(): Double
@@ -76,12 +76,10 @@ object RoundRectangle2D {
     /** The Double class defines a rectangle with rounded
      *  corners all specified in double coordinates.
      */
-    @stub
-    object Double extends RoundRectangle2D.Double
+    type Double = RoundRectangle2D_Double
 
     /** The Float class defines a rectangle with rounded
      *  corners all specified in float coordinates.
      */
-    @stub
-    object Float extends RoundRectangle2D.Float
+    type Float = RoundRectangle2D_Float
 }

@@ -12,7 +12,7 @@ import scala.scalanative.annotation.stub
  *  Spliterator.OfDouble.forEachRemaining(java.util.function.DoubleConsumer) forEach} if
  *  it can provide a more performant implementation.
  */
-object abstract Spliterators.AbstractDoubleSpliterator extends Object with Spliterator.OfDouble {
+object abstract Spliterators_AbstractDoubleSpliterator extends Object with Spliterator.OfDouble {
 
     /** Creates a spliterator reporting the given estimated size and
      *  characteristics.

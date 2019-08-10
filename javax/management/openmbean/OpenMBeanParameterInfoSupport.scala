@@ -53,14 +53,14 @@ class OpenMBeanParameterInfoSupport extends MBeanParameterInfo with OpenMBeanPar
 
     /** Compares the specified obj parameter with this OpenMBeanParameterInfoSupport instance for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the default value for the parameter described by this
      *  OpenMBeanParameterInfoSupport instance, if specified,
      *  or null otherwise.
      */
     @stub
-    def getDefaultValue(): Object = ???
+    def getDefaultValue(): Any = ???
 
     /** Returns an unmodifiable Set of legal values for the parameter
      *  described by this OpenMBeanParameterInfoSupport
@@ -125,7 +125,7 @@ class OpenMBeanParameterInfoSupport extends MBeanParameterInfo with OpenMBeanPar
      *  described by this OpenMBeanParameterInfo instance.
      */
     @stub
-    def isValue(obj: Object): Boolean = ???
+    def isValue(obj: Any): Boolean = ???
 
     /** Returns a string representation of this
      *  OpenMBeanParameterInfoSupport instance.

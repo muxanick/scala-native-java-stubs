@@ -130,7 +130,7 @@ class AffineTransform extends Object with Cloneable with Serializable {
 
     /** Returns a copy of this AffineTransform object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Concatenates an AffineTransform Tx to
      *  this AffineTransform Cx in the most commonly useful
@@ -170,7 +170,7 @@ class AffineTransform extends Object with Cloneable with Serializable {
      *  argument.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the determinant of the matrix representation of the transform. */
     @stub

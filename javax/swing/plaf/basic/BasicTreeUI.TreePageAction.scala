@@ -6,7 +6,7 @@ import javax.swing.AbstractAction
 import scala.scalanative.annotation.stub
 
 /** TreePageAction handles page up and page down events. */
-class BasicTreeUI.TreePageAction extends AbstractAction {
+class BasicTreeUI_TreePageAction extends AbstractAction {
 
     /**  */
     @stub

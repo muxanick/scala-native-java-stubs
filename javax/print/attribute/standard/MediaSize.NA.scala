@@ -6,7 +6,7 @@ import scala.scalanative.annotation.stub
 /** Class MediaSize.NA includes MediaSize values for North
  *  American media.
  */
-final object MediaSize.NA extends Object {
+final object MediaSize_NA extends Object {
 
     /** Specifies the North American legal size, 8.5 inches by 14 inches. */
     @stub

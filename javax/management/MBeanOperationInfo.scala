@@ -24,11 +24,11 @@ class MBeanOperationInfo extends MBeanFeatureInfo with Cloneable {
 
     /** Returns a shallow clone of this instance. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compare this MBeanOperationInfo to another. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the impact of the method, one of
      *  INFO, ACTION, ACTION_INFO, UNKNOWN.

@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /** This class defines an arc specified in double precision. */
-object Arc2D.Double extends Arc2D with Serializable {
+object Arc2D_Double extends Arc2D with Serializable {
 
     /** Constructs a new OPEN arc, initialized to location (0, 0),
      *  size (0, 0), angular extents (start = 0, extent = 0).

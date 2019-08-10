@@ -32,7 +32,7 @@ abstract class Ellipse2D extends RectangularShape {
     /** Determines whether or not the specified Object is
      *  equal to this Ellipse2D.
      */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** Returns an iteration object that defines the boundary of this
      *  Ellipse2D.
@@ -52,12 +52,10 @@ object Ellipse2D {
     /** The Double class defines an ellipse specified
      *  in double precision.
      */
-    @stub
-    object Double extends Ellipse2D.Double
+    type Double = Ellipse2D_Double
 
     /** The Float class defines an ellipse specified
      *  in float precision.
      */
-    @stub
-    object Float extends Ellipse2D.Float
+    type Float = Ellipse2D_Float
 }

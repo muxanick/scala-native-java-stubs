@@ -49,7 +49,7 @@ class Segment extends Object with Cloneable with CharacterIterator with CharSequ
 
     /** Creates a shallow copy. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Gets the character at the current position (as returned by getIndex()). */
     @stub

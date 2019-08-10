@@ -31,7 +31,7 @@ class ProgressMonitorInputStream extends FilterInputStream {
 
     /** Constructs an object to monitor the progress of an input stream. */
     @stub
-    def this(parentComponent: Component, message: Object, in: InputStream) = ???
+    def this(parentComponent: Component, message: Any, in: InputStream) = ???
 
     /** Overrides FilterInputStream.close
      *  to close the progress monitor as well as the stream.

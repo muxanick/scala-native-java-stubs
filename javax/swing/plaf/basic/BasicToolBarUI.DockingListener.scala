@@ -10,7 +10,7 @@ import scala.scalanative.annotation.stub
 /** This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of BasicToolBarUI.
  */
-class BasicToolBarUI.DockingListener extends Object with MouseInputListener {
+class BasicToolBarUI_DockingListener extends Object with MouseInputListener {
 
     /**  */
     @stub

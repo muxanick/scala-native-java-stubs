@@ -393,7 +393,7 @@ class BigDecimal extends Number with Comparable[BigDecimal] {
      *  Object for equality.
      */
     @stub
-    def equals(x: Object): Boolean = ???
+    def equals(x: Any): Boolean = ???
 
     /** Converts this BigDecimal to a float. */
     @stub

@@ -8,7 +8,7 @@ import javax.swing.plaf.UIResource
 import scala.scalanative.annotation.stub
 
 /**  */
-object MetalBorders.ToolBarBorder extends AbstractBorder with UIResource with SwingConstants {
+object MetalBorders_ToolBarBorder extends AbstractBorder with UIResource with SwingConstants {
 
     /**  */
     @stub

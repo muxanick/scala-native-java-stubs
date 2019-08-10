@@ -46,7 +46,7 @@ final class DelegationPermission extends BasicPermission with Serializable {
 
     /** Checks two DelegationPermission objects for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the hash code value for this object. */
     @stub

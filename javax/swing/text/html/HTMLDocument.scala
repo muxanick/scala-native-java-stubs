@@ -256,21 +256,18 @@ class HTMLDocument extends DefaultStyledDocument {
     /** An element that represents a structural block of
      *  HTML.
      */
-    @stub
-    object BlockElement extends HTMLDocument.BlockElement
+    type BlockElement = HTMLDocument_BlockElement
 
     /** An HTML reader to load an HTML document with an HTML
      *  element structure.
      */
-    @stub
-    object HTMLReader extends HTMLDocument.HTMLReader
+    type HTMLReader = HTMLDocument_HTMLReader
 
     /** An element that represents a chunk of text that has
      *  a set of HTML character level attributes assigned to
      *  it.
      */
-    @stub
-    object RunElement extends HTMLDocument.RunElement
+    type RunElement = HTMLDocument_RunElement
 
     /** Replaces the contents of the document with the given
      *  element specifications.
@@ -315,7 +312,7 @@ class HTMLDocument extends DefaultStyledDocument {
      *  null if one isn't found.
      */
     @stub
-    def getElement(e: Element, attribute: Object, value: Object): Element = ???
+    def getElement(e: Element, attribute: Any, value: Any): Element = ???
 
     /** Returns the element that has the given id Attribute. */
     @stub
@@ -441,8 +438,7 @@ object HTMLDocument {
     /** An iterator to iterate over a particular type of
      *  tag.
      */
-    @stub
-    object Iterator extends HTMLDocument.Iterator
+    type Iterator = HTMLDocument_Iterator
 
     /** Document property key value. */
     @stub

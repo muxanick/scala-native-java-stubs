@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /** This listener hides the popup when the mouse is released in the list. */
-protected class BasicComboPopup.ListMouseHandler extends MouseAdapter {
+protected class BasicComboPopup_ListMouseHandler extends MouseAdapter {
 
     /**  */
     @stub

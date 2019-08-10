@@ -46,7 +46,7 @@ class QName extends Object with Serializable {
      *  Object.
      */
     @stub
-    def equals(objectToTest: Object): Boolean = ???
+    def equals(objectToTest: Any): Boolean = ???
 
     /** Get the local part of this QName. */
     @stub

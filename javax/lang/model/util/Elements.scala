@@ -33,7 +33,7 @@ trait Elements {
      *  primitive value or a string.
      */
     @stub
-    def getConstantExpression(value: Object): String = ???
+    def getConstantExpression(value: Any): String = ???
 
     /** Returns the text of the documentation ("Javadoc")
      *  comment of an element.

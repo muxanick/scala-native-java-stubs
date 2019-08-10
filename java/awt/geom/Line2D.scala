@@ -24,7 +24,7 @@ abstract class Line2D extends Object with Shape with Cloneable {
     protected def this() = ???
 
     /** Creates a new object of the same class as this object. */
-    def clone(): Object
+    def clone(): Any
 
     /** Tests if a specified coordinate is inside the boundary of this
      *  Line2D.
@@ -155,12 +155,10 @@ abstract class Line2D extends Object with Shape with Cloneable {
 
 object Line2D {
     /** A line segment specified with double coordinates. */
-    @stub
-    object Double extends Line2D.Double
+    type Double = Line2D_Double
 
     /** A line segment specified with float coordinates. */
-    @stub
-    object Float extends Line2D.Float
+    type Float = Line2D_Float
 
     /** Tests if the line segment from (x1,y1) to
      *  (x2,y2) intersects the line segment from (x3,y3)

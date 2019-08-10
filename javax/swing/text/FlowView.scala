@@ -98,6 +98,5 @@ object FlowView {
     /** Strategy for maintaining the physical form
      *  of the flow.
      */
-    @stub
-    object FlowStrategy extends FlowView.FlowStrategy
+    type FlowStrategy = FlowView_FlowStrategy
 }

@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  Dialog class.  It provides an implementation of the
  *  Java Accessibility API appropriate to dialog user-interface elements.
  */
-protected class Dialog.AccessibleAWTDialog extends Window.AccessibleAWTWindow {
+protected class Dialog_AccessibleAWTDialog extends Window.AccessibleAWTWindow {
 
     /**  */
     @stub

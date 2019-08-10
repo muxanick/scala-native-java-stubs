@@ -22,7 +22,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JScrollPane.ScrollBar extends JScrollBar with UIResource {
+protected class JScrollPane_ScrollBar extends JScrollBar with UIResource {
 
     /** Creates a scrollbar with the specified orientation. */
     @stub

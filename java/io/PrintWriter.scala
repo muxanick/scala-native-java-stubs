@@ -140,7 +140,7 @@ class PrintWriter extends Writer {
 
     /** Prints an object. */
     @stub
-    def print(obj: Object): Unit = ???
+    def print(obj: Any): Unit = ???
 
     /** Prints a string. */
     @stub
@@ -194,7 +194,7 @@ class PrintWriter extends Writer {
 
     /** Prints an Object and then terminates the line. */
     @stub
-    def println(x: Object): Unit = ???
+    def println(x: Any): Unit = ???
 
     /** Prints a String and then terminates the line. */
     @stub

@@ -4,7 +4,7 @@ import java.lang.{Object, String}
 import scala.scalanative.annotation.stub
 
 /** Represents the filter set operation. */
-object XPathType.Filter extends Object {
+object XPathType_Filter extends Object {
 
     /** The intersect filter operation. */
     @stub

@@ -16,7 +16,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object MetalIconFactory.TreeControlIcon extends Object with Icon with Serializable {
+object MetalIconFactory_TreeControlIcon extends Object with Icon with Serializable {
 
     /**  */
     @stub

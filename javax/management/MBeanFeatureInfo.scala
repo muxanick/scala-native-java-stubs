@@ -30,7 +30,7 @@ class MBeanFeatureInfo extends Object with Serializable with DescriptorRead {
 
     /** Compare this MBeanFeatureInfo to another. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the human-readable description of the feature. */
     @stub

@@ -80,6 +80,5 @@ object FloatControl {
     /** An instance of the FloatControl.Type inner class identifies one kind of
      *  float control.
      */
-    @stub
-    object Type extends FloatControl.Type
+    type Type = FloatControl_Type
 }

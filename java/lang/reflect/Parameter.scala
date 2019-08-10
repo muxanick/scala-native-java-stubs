@@ -14,7 +14,7 @@ final class Parameter extends Object with AnnotatedElement {
 
     /** Compares based on the executable and the index. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns an AnnotatedType object that represents the use of a type to
      *  specify the type of the formal parameter represented by this Parameter.

@@ -37,7 +37,7 @@ abstract class BasicPermission extends Permission with Serializable {
     def this(name: String, actions: String) = ???
 
     /** Checks two BasicPermission objects for equality. */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** Returns the canonical string representation of the actions,
      *  which currently is the empty string "", since there are no actions for

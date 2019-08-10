@@ -18,11 +18,11 @@ class SynthGraphicsUtils extends Object {
 
     /** Draws a line between the two end points. */
     @stub
-    def drawLine(context: SynthContext, paintKey: Object, g: Graphics, x1: Int, y1: Int, x2: Int, y2: Int): Unit = ???
+    def drawLine(context: SynthContext, paintKey: Any, g: Graphics, x1: Int, y1: Int, x2: Int, y2: Int): Unit = ???
 
     /** Draws a line between the two end points. */
     @stub
-    def drawLine(context: SynthContext, paintKey: Object, g: Graphics, x1: Int, y1: Int, x2: Int, y2: Int, styleKey: Object): Unit = ???
+    def drawLine(context: SynthContext, paintKey: Any, g: Graphics, x1: Int, y1: Int, x2: Int, y2: Int, styleKey: Any): Unit = ???
 
     /** Returns the maximum height of the the Font from the passed in
      *  SynthContext.

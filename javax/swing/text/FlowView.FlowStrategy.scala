@@ -14,7 +14,7 @@ import scala.scalanative.annotation.stub
  *  perform incremental repair to the layout
  *  or alternative breaking behavior.
  */
-object FlowView.FlowStrategy extends Object {
+object FlowView_FlowStrategy extends Object {
 
     /**  */
     @stub

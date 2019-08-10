@@ -17,7 +17,7 @@ import scala.scalanative.annotation.stub
  *  This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of Foo.
  */
-class BasicSliderUI.ActionScroller extends AbstractAction {
+class BasicSliderUI_ActionScroller extends AbstractAction {
 
     /**  */
     @stub

@@ -20,7 +20,7 @@ class DOMCryptoContext extends Object with XMLCryptoContext {
      *  that the specified key maps to.
      */
     @stub
-    def get(key: Object): Object = ???
+    def get(key: Any): Any = ???
 
     /** Returns the base URI. */
     @stub
@@ -48,7 +48,7 @@ class DOMCryptoContext extends Object with XMLCryptoContext {
      *  that the specified name maps to.
      */
     @stub
-    def getProperty(name: String): Object = ???
+    def getProperty(name: String): Any = ???
 
     /** Returns a URIDereferencer that is used to dereference
      *  URIReferences.
@@ -66,7 +66,7 @@ class DOMCryptoContext extends Object with XMLCryptoContext {
      *  to the specified object.
      */
     @stub
-    def put(key: Object, value: Object): Object = ???
+    def put(key: Any, value: Any): Any = ???
 
     /** This implementation uses an internal HashMap to map the URI
      *  to the specified prefix.
@@ -96,7 +96,7 @@ class DOMCryptoContext extends Object with XMLCryptoContext {
      *  to the specified object.
      */
     @stub
-    def setProperty(name: String, value: Object): Object = ???
+    def setProperty(name: String, value: Any): Any = ???
 
     /** Sets a URIDereferencer that is used to dereference
      *  URIReferences.

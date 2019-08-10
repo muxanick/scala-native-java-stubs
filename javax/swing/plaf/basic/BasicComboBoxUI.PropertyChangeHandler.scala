@@ -15,7 +15,7 @@ import scala.scalanative.annotation.stub
  *  Instantiate it only within subclasses of
  *  BasicComboBoxUI.
  */
-class BasicComboBoxUI.PropertyChangeHandler extends Object with PropertyChangeListener {
+class BasicComboBoxUI_PropertyChangeHandler extends Object with PropertyChangeListener {
 
     /**  */
     @stub

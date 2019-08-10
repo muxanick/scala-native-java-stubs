@@ -23,7 +23,7 @@ abstract class HttpContext extends Object {
     /** Returns an attribute value for container's configuration
      *  and other data that can be used by jax-ws runtime.
      */
-    def getAttribute(name: String): Object
+    def getAttribute(name: String): Any
 
     /** Returns all attribute names for container's configuration
      *  and other data that can be used by jax-ws runtime.

@@ -21,10 +21,10 @@ abstract class Reader extends Object with Readable with Closeable {
      *  synchronize on the given object.
      */
     @stub
-    protected def this(lock: Object) = ???
+    protected def this(lock: Any) = ???
 
     /** The object used to synchronize operations on this stream. */
-    protected val lock: Object
+    protected val lock: Any
 
     /** Closes the stream and releases any system resources associated with
      *  it.

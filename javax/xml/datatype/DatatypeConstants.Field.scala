@@ -6,7 +6,7 @@ import scala.scalanative.annotation.stub
 /** Type-safe enum class that represents six fields
  *  of the Duration class.
  */
-final object DatatypeConstants.Field extends Object {
+final object DatatypeConstants_Field extends Object {
 
     /** Get id of this Field. */
     @stub

@@ -47,7 +47,7 @@ class MediaSize extends Size2DSyntax with Attribute {
      *  in object.
      */
     @stub
-    def equals(object: Object): Boolean = ???
+    def equals(object: Any): Boolean = ???
 
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.
@@ -70,32 +70,27 @@ object MediaSize {
     /** Class MediaSize.Engineering includes MediaSize values
      *  for engineering media.
      */
-    @stub
-    object Engineering extends MediaSize.Engineering
+    type Engineering = MediaSize_Engineering
 
     /** Class MediaSize.ISO includes MediaSize values for ISO
      *  media.
      */
-    @stub
-    object ISO extends MediaSize.ISO
+    type ISO = MediaSize_ISO
 
     /** Class MediaSize.JIS includes MediaSize values for JIS
      *  (Japanese) media.
      */
-    @stub
-    object JIS extends MediaSize.JIS
+    type JIS = MediaSize_JIS
 
     /** Class MediaSize.NA includes MediaSize values for North
      *  American media.
      */
-    @stub
-    object NA extends MediaSize.NA
+    type NA = MediaSize_NA
 
     /** Class MediaSize.Other includes MediaSize values for
      *  miscellaneous media.
      */
-    @stub
-    object Other extends MediaSize.Other
+    type Other = MediaSize_Other
 
     /** The specified dimensions are used to locate a matching MediaSize
      *  instance from amongst all the standard MediaSize instances.

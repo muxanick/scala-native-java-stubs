@@ -36,7 +36,7 @@ trait RowId {
 
     /** Compares this RowId to the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns an array of bytes representing the value of the SQL ROWID
      *  designated by this java.sql.RowId object.

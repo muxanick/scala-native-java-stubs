@@ -184,7 +184,7 @@ abstract class BreakIterator extends Object with Cloneable {
     protected def this() = ???
 
     /** Create a copy of this iterator */
-    def clone(): Object
+    def clone(): Any
 
     /** Returns character index of the text boundary that was most
      *  recently returned by next(), next(int), previous(), first(), last(),

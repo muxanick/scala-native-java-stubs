@@ -28,26 +28,22 @@ object StyleConstants {
     /** This is a typesafe enumeration of the well-known
      *  attributes that contribute to a character style.
      */
-    @stub
-    object CharacterConstants extends StyleConstants.CharacterConstants
+    type CharacterConstants = StyleConstants_CharacterConstants
 
     /** This is a typesafe enumeration of the well-known
      *  attributes that contribute to a color.
      */
-    @stub
-    object ColorConstants extends StyleConstants.ColorConstants
+    type ColorConstants = StyleConstants_ColorConstants
 
     /** This is a typesafe enumeration of the well-known
      *  attributes that contribute to a font.
      */
-    @stub
-    object FontConstants extends StyleConstants.FontConstants
+    type FontConstants = StyleConstants_FontConstants
 
     /** This is a typesafe enumeration of the well-known
      *  attributes that contribute to a paragraph style.
      */
-    @stub
-    object ParagraphConstants extends StyleConstants.ParagraphConstants
+    type ParagraphConstants = StyleConstants_ParagraphConstants
 
     /** A possible value for paragraph alignment. */
     @stub
@@ -67,25 +63,25 @@ object StyleConstants {
 
     /** Alignment for the paragraph. */
     @stub
-    val Alignment: Object = ???
+    val Alignment: Any = ???
 
     /** Name of the background color attribute. */
     @stub
-    val Background: Object = ???
+    val Background: Any = ???
 
     /** Bidirectional level of a character as assigned by the Unicode bidi
      *  algorithm.
      */
     @stub
-    val BidiLevel: Object = ???
+    val BidiLevel: Any = ???
 
     /** Name of the bold attribute. */
     @stub
-    val Bold: Object = ???
+    val Bold: Any = ???
 
     /** Name of the component attribute. */
     @stub
-    val ComponentAttribute: Object = ???
+    val ComponentAttribute: Any = ???
 
     /** Name of elements used to represent components. */
     @stub
@@ -93,33 +89,33 @@ object StyleConstants {
 
     /** Name of the input method composed text attribute. */
     @stub
-    val ComposedTextAttribute: Object = ???
+    val ComposedTextAttribute: Any = ???
 
     /** Name of the font family. */
     @stub
-    val Family: Object = ???
+    val Family: Any = ???
 
     /** The amount of space to indent the first
      *  line of the paragraph.
      */
     @stub
-    val FirstLineIndent: Object = ???
+    val FirstLineIndent: Any = ???
 
     /** Name of the font family. */
     @stub
-    val FontFamily: Object = ???
+    val FontFamily: Any = ???
 
     /** Name of the font size. */
     @stub
-    val FontSize: Object = ???
+    val FontSize: Any = ???
 
     /** Name of the foreground color attribute. */
     @stub
-    val Foreground: Object = ???
+    val Foreground: Any = ???
 
     /** Name of the icon attribute. */
     @stub
-    val IconAttribute: Object = ???
+    val IconAttribute: Any = ???
 
     /** Name of elements used to represent icons. */
     @stub
@@ -127,81 +123,81 @@ object StyleConstants {
 
     /** Name of the italic attribute. */
     @stub
-    val Italic: Object = ???
+    val Italic: Any = ???
 
     /** The amount to indent the left side
      *  of the paragraph.
      */
     @stub
-    val LeftIndent: Object = ???
+    val LeftIndent: Any = ???
 
     /** The amount of space between lines
      *  of the paragraph.
      */
     @stub
-    val LineSpacing: Object = ???
+    val LineSpacing: Any = ???
 
     /** Attribute used to identify the model for embedded
      *  objects that have a model view separation.
      */
     @stub
-    val ModelAttribute: Object = ???
+    val ModelAttribute: Any = ???
 
     /** Attribute name used to name the collection of
      *  attributes.
      */
     @stub
-    val NameAttribute: Object = ???
+    val NameAttribute: Any = ???
 
     /** Orientation for a paragraph. */
     @stub
-    val Orientation: Object = ???
+    val Orientation: Any = ???
 
     /** Attribute name used to identify the resolving parent
      *  set of attributes, if one is defined.
      */
     @stub
-    val ResolveAttribute: Object = ???
+    val ResolveAttribute: Any = ???
 
     /** The amount to indent the right side
      *  of the paragraph.
      */
     @stub
-    val RightIndent: Object = ???
+    val RightIndent: Any = ???
 
     /** Name of the font size. */
     @stub
-    val Size: Object = ???
+    val Size: Any = ???
 
     /** The amount of space above the paragraph. */
     @stub
-    val SpaceAbove: Object = ???
+    val SpaceAbove: Any = ???
 
     /** The amount of space below the paragraph. */
     @stub
-    val SpaceBelow: Object = ???
+    val SpaceBelow: Any = ???
 
     /** Name of the Strikethrough attribute. */
     @stub
-    val StrikeThrough: Object = ???
+    val StrikeThrough: Any = ???
 
     /** Name of the Subscript attribute. */
     @stub
-    val Subscript: Object = ???
+    val Subscript: Any = ???
 
     /** Name of the Superscript attribute. */
     @stub
-    val Superscript: Object = ???
+    val Superscript: Any = ???
 
     /** TabSet for the paragraph, type is a TabSet containing
      *  TabStops.
      */
     @stub
-    val TabSet: Object = ???
+    val TabSet: Any = ???
 
     /** Name of the underline attribute. */
     @stub
-    val Underline: Object = ???
+    val Underline: Any = ???
 
     /** Gets the alignment setting. */
     @stub

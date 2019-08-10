@@ -8,10 +8,10 @@ import scala.scalanative.annotation.stub
  *  method to determine if the given action is supported by the
  *  current platform.
  */
-class Desktop.Action private (name: String, ordinal: Int) extends Enum[Desktop.Action](name, ordinal) {
+class Desktop_Action private (name: String, ordinal: Int) extends Enum[Desktop.Action](name, ordinal) {
 }
 
-object Desktop.Action {
+object Desktop_Action {
     /** Represents a "browse" action. */
     final val BROWSE = new Desktop.Action(BROWSE, 0)
 

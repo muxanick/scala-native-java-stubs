@@ -93,7 +93,7 @@ class ModelMBeanAttributeInfo extends MBeanAttributeInfo with DescriptorAccess {
 
     /** Creates and returns a new ModelMBeanAttributeInfo which is a duplicate of this ModelMBeanAttributeInfo. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Gets a copy of the associated Descriptor for the
      *  ModelMBeanAttributeInfo.

@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** This listener watches for changes to the selection in the
  *  combo box.
  */
-protected class BasicComboPopup.ItemHandler extends Object with ItemListener {
+protected class BasicComboPopup_ItemHandler extends Object with ItemListener {
 
     /**  */
     @stub

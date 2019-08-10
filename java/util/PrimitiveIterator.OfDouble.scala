@@ -5,7 +5,7 @@ import java.util.function.{Consumer, DoubleConsumer}
 import scala.scalanative.annotation.stub
 
 /** An Iterator specialized for double values. */
-object trait PrimitiveIterator.OfDouble extends PrimitiveIterator[Double, DoubleConsumer] {
+trait PrimitiveIterator_OfDouble extends PrimitiveIterator[Double, DoubleConsumer] {
 
     /** Performs the given action for each remaining element until all elements
      *  have been processed or the action throws an exception.

@@ -124,8 +124,7 @@ object UIManager {
      *  LookAndFeel for the sake of configuring a menu or
      *  for initial application set up.
      */
-    @stub
-    object LookAndFeelInfo extends UIManager.LookAndFeelInfo
+    type LookAndFeelInfo = UIManager_LookAndFeelInfo
 
     /** Adds a LookAndFeel to the list of auxiliary look and feels. */
     @stub
@@ -137,13 +136,13 @@ object UIManager {
 
     /** Returns an object from the defaults. */
     @stub
-    def get(key: Object): Object = ???
+    def get(key: Any): Any = ???
 
     /** Returns an object from the defaults that is appropriate for
      *  the given locale.
      */
     @stub
-    def get(key: Object, l: Locale): Object = ???
+    def get(key: Any, l: Locale): Any = ???
 
     /** Returns the list of auxiliary look and feels (can be null). */
     @stub
@@ -153,33 +152,33 @@ object UIManager {
      *  the key value.
      */
     @stub
-    def getBoolean(key: Object): Boolean = ???
+    def getBoolean(key: Any): Boolean = ???
 
     /** Returns a boolean from the defaults which is associated with
      *  the key value and the given Locale.
      */
     @stub
-    def getBoolean(key: Object, l: Locale): Boolean = ???
+    def getBoolean(key: Any, l: Locale): Boolean = ???
 
     /** Returns a border from the defaults. */
     @stub
-    def getBorder(key: Object): Border = ???
+    def getBorder(key: Any): Border = ???
 
     /** Returns a border from the defaults that is appropriate
      *  for the given locale.
      */
     @stub
-    def getBorder(key: Object, l: Locale): Border = ???
+    def getBorder(key: Any, l: Locale): Border = ???
 
     /** Returns a color from the defaults. */
     @stub
-    def getColor(key: Object): Color = ???
+    def getColor(key: Any): Color = ???
 
     /** Returns a color from the defaults that is appropriate
      *  for the given locale.
      */
     @stub
-    def getColor(key: Object, l: Locale): Color = ???
+    def getColor(key: Any, l: Locale): Color = ???
 
     /** Returns the name of the LookAndFeel class that implements
      *  the default cross platform look and feel -- the Java
@@ -194,43 +193,43 @@ object UIManager {
 
     /** Returns a dimension from the defaults. */
     @stub
-    def getDimension(key: Object): Dimension = ???
+    def getDimension(key: Any): Dimension = ???
 
     /** Returns a dimension from the defaults that is appropriate
      *  for the given locale.
      */
     @stub
-    def getDimension(key: Object, l: Locale): Dimension = ???
+    def getDimension(key: Any, l: Locale): Dimension = ???
 
     /** Returns a font from the defaults. */
     @stub
-    def getFont(key: Object): Font = ???
+    def getFont(key: Any): Font = ???
 
     /** Returns a font from the defaults that is appropriate
      *  for the given locale.
      */
     @stub
-    def getFont(key: Object, l: Locale): Font = ???
+    def getFont(key: Any, l: Locale): Font = ???
 
     /** Returns an Icon from the defaults. */
     @stub
-    def getIcon(key: Object): Icon = ???
+    def getIcon(key: Any): Icon = ???
 
     /** Returns an Icon from the defaults that is appropriate
      *  for the given locale.
      */
     @stub
-    def getIcon(key: Object, l: Locale): Icon = ???
+    def getIcon(key: Any, l: Locale): Icon = ???
 
     /** Returns an Insets object from the defaults. */
     @stub
-    def getInsets(key: Object): Insets = ???
+    def getInsets(key: Any): Insets = ???
 
     /** Returns an Insets object from the defaults that is
      *  appropriate for the given locale.
      */
     @stub
-    def getInsets(key: Object, l: Locale): Insets = ???
+    def getInsets(key: Any, l: Locale): Insets = ???
 
     /** Returns an array of LookAndFeelInfos representing the
      *  LookAndFeel implementations currently available.
@@ -240,13 +239,13 @@ object UIManager {
 
     /** Returns an integer from the defaults. */
     @stub
-    def getInt(key: Object): Int = ???
+    def getInt(key: Any): Int = ???
 
     /** Returns an integer from the defaults that is appropriate
      *  for the given locale.
      */
     @stub
-    def getInt(key: Object, l: Locale): Int = ???
+    def getInt(key: Any, l: Locale): Int = ???
 
     /** Returns the current look and feel or null. */
     @stub
@@ -266,13 +265,13 @@ object UIManager {
 
     /** Returns a string from the defaults. */
     @stub
-    def getString(key: Object): String = ???
+    def getString(key: Any): String = ???
 
     /** Returns a string from the defaults that is appropriate for the
      *  given locale.
      */
     @stub
-    def getString(key: Object, l: Locale): String = ???
+    def getString(key: Any, l: Locale): String = ???
 
     /** Returns the name of the LookAndFeel class that implements
      *  the native system look and feel if there is one, otherwise
@@ -302,7 +301,7 @@ object UIManager {
 
     /** Stores an object in the developer defaults. */
     @stub
-    def put(key: Object, value: Object): Object = ???
+    def put(key: Any, value: Any): Any = ???
 
     /** Removes a LookAndFeel from the list of auxiliary look and feels. */
     @stub

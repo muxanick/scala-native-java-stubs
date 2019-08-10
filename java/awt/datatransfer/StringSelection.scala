@@ -25,7 +25,7 @@ class StringSelection extends Object with Transferable with ClipboardOwner {
      *  DataFlavor if possible.
      */
     @stub
-    def getTransferData(flavor: DataFlavor): Object = ???
+    def getTransferData(flavor: DataFlavor): Any = ???
 
     /** Returns an array of flavors in which this Transferable
      *  can provide the data.

@@ -112,7 +112,7 @@ class DefaultTableColumnModel extends Object with TableColumnModel with Property
      *  when compared using equals.
      */
     @stub
-    def getColumnIndex(identifier: Object): Int = ???
+    def getColumnIndex(identifier: Any): Int = ???
 
     /** Returns the index of the column that lies at position x,
      *  or -1 if no column covers this point.

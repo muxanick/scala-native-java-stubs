@@ -110,5 +110,5 @@ abstract class AbstractTableModel extends Object with TableModel with Serializab
     /** This empty implementation is provided so users don't have to implement
      *   this method if their data model is not editable.
      */
-    def setValueAt(aValue: Object, rowIndex: Int, columnIndex: Int): Unit
+    def setValueAt(aValue: Any, rowIndex: Int, columnIndex: Int): Unit
 }

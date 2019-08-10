@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /** View of a row in a row-centric table. */
-class TableView.TableRow extends BoxView {
+class TableView_TableRow extends BoxView {
 
     /** Constructs a TableView for the given element. */
     @stub

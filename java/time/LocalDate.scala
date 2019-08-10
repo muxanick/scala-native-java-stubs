@@ -78,7 +78,7 @@ final class LocalDate extends Object with Temporal with TemporalAdjuster with Ch
 
     /** Checks if this date is equal to another date. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Formats this date using the specified formatter. */
     @stub

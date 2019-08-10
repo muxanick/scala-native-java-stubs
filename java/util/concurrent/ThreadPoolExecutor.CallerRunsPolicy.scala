@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  unless the executor has been shut down, in which case the task
  *  is discarded.
  */
-object ThreadPoolExecutor.CallerRunsPolicy extends Object with RejectedExecutionHandler {
+object ThreadPoolExecutor_CallerRunsPolicy extends Object with RejectedExecutionHandler {
 
     /** Creates a CallerRunsPolicy. */
     @stub

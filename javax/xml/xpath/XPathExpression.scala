@@ -76,13 +76,13 @@ trait XPathExpression {
      *  specified type.
      */
     @stub
-    def evaluate(source: InputSource, returnType: QName): Object = ???
+    def evaluate(source: InputSource, returnType: QName): Any = ???
 
     /** Evaluate the compiled XPath expression in the specified context and return the result as a String. */
     @stub
-    def evaluate(item: Object): String = ???
+    def evaluate(item: Any): String = ???
 
     /** Evaluate the compiled XPath expression in the specified context and return the result as the specified type. */
     @stub
-    def evaluate(item: Object, returnType: QName): Object = ???
+    def evaluate(item: Any, returnType: QName): Any = ???
 }

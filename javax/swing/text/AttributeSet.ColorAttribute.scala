@@ -6,4 +6,5 @@ import scala.scalanative.annotation.stub
  *  to be present on any attribute key that contributes to
  *  presentation of color.
  */
-object trait AttributeSet.ColorAttribute {
+trait AttributeSet_ColorAttribute {
+}

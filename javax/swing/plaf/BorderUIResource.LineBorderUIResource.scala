@@ -6,7 +6,7 @@ import javax.swing.border.{AbstractBorder, LineBorder}
 import scala.scalanative.annotation.stub
 
 /**  */
-object BorderUIResource.LineBorderUIResource extends LineBorder with UIResource {
+object BorderUIResource_LineBorderUIResource extends LineBorder with UIResource {
 
     /**  */
     @stub

@@ -36,7 +36,7 @@ abstract class Media extends EnumSyntax with DocAttribute with PrintRequestAttri
     /** Returns whether this media attribute is equivalent to the passed in
      *  object.
      */
-    def equals(object: Object): Boolean
+    def equals(object: Any): Boolean
 
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.

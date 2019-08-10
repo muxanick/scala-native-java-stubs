@@ -13,7 +13,7 @@ import scala.scalanative.annotation.stub
  *  and automatically performs additional conversion on the data
  *  returned by the encapsulated transferable in case of local transfer.
  */
-protected class DropTargetContext.TransferableProxy extends Object with Transferable {
+protected class DropTargetContext_TransferableProxy extends Object with Transferable {
 
     /** A boolean indicating if the encapsulated
      *  Transferable object represents the result
@@ -30,7 +30,7 @@ protected class DropTargetContext.TransferableProxy extends Object with Transfer
      *  the encapsulated transferable for the requested data flavor.
      */
     @stub
-    def getTransferData(df: DataFlavor): Object = ???
+    def getTransferData(df: DataFlavor): Any = ???
 
     /** Returns an array of DataFlavor objects indicating the flavors
      *  the data can be provided in by the encapsulated transferable.

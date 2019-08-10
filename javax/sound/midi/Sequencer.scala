@@ -248,8 +248,7 @@ object Sequencer {
      *  a MIDI sequencer's notion of time can be synchronized with a master
      *  or slave device.
      */
-    @stub
-    object SyncMode extends Sequencer.SyncMode
+    type SyncMode = Sequencer_SyncMode
 
     /** A value indicating that looping should continue
      *  indefinitely rather than complete after a specific

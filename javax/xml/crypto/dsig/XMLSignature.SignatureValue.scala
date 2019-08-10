@@ -20,7 +20,7 @@ import scala.scalanative.annotation.stub
  *      </complexType>
  *  
  */
-object trait XMLSignature.SignatureValue extends XMLStructure {
+trait XMLSignature_SignatureValue extends XMLStructure {
 
     /** Returns the optional Id attribute of this
      *  SignatureValue, which permits this element to be

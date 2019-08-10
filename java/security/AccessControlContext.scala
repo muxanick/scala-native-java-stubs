@@ -62,7 +62,7 @@ final class AccessControlContext extends Object {
 
     /** Checks two AccessControlContext objects for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Get the DomainCombiner associated with this
      *  AccessControlContext.

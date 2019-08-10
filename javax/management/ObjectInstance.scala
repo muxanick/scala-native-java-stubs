@@ -24,7 +24,7 @@ class ObjectInstance extends Object with Serializable {
 
     /** Compares the current object instance with another object instance. */
     @stub
-    def equals(object: Object): Boolean = ???
+    def equals(object: Any): Boolean = ???
 
     /** Returns the class part. */
     @stub

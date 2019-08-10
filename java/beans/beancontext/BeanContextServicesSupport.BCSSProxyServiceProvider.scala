@@ -5,7 +5,7 @@ import java.util.Iterator
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class BeanContextServicesSupport.BCSSProxyServiceProvider extends Object with BeanContextServiceProvider with BeanContextServiceRevokedListener {
+protected class BeanContextServicesSupport_BCSSProxyServiceProvider extends Object with BeanContextServiceProvider with BeanContextServiceRevokedListener {
 
     /** Invoked by BeanContextServices, this method
      *  gets the current service selectors for the specified service.
@@ -18,7 +18,7 @@ protected class BeanContextServicesSupport.BCSSProxyServiceProvider extends Obje
      *  service from this BeanContextServiceProvider.
      */
     @stub
-    def getService(bcs: BeanContextServices, requestor: Object, serviceClass: Class, serviceSelector: Object): Object = ???
+    def getService(bcs: BeanContextServices, requestor: Any, serviceClass: Class, serviceSelector: Any): Any = ???
 
     /** Invoked by BeanContextServices,
      *  this method releases a nested BeanContextChild's
@@ -26,7 +26,7 @@ protected class BeanContextServicesSupport.BCSSProxyServiceProvider extends Obje
      *  BeanContextChild) reference to the specified service.
      */
     @stub
-    def releaseService(bcs: BeanContextServices, requestor: Object, service: Object): Unit = ???
+    def releaseService(bcs: BeanContextServices, requestor: Any, service: Any): Unit = ???
 
     /** The service named has been revoked. */
     @stub

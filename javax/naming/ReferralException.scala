@@ -57,7 +57,7 @@ abstract class ReferralException extends NamingException {
     def getReferralContext(env: Hashtable[_, _]): Context
 
     /** Retrieves information (such as URLs) related to this referral. */
-    def getReferralInfo(): Object
+    def getReferralInfo(): Any
 
     /** Retries the referral currently being processed. */
     def retryReferral(): Unit

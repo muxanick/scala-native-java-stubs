@@ -54,7 +54,7 @@ final class MonthDay extends Object with TemporalAccessor with TemporalAdjuster 
 
     /** Checks if this month-day is equal to another month-day. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Formats this month-day using the specified formatter. */
     @stub

@@ -84,7 +84,7 @@ import scala.scalanative.annotation.stub
  *  
  *  
  */
-object HTMLEditorKit.HTMLFactory extends Object with ViewFactory {
+object HTMLEditorKit_HTMLFactory extends Object with ViewFactory {
 
     /**  */
     @stub

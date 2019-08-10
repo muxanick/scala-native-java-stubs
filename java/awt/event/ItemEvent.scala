@@ -34,11 +34,11 @@ class ItemEvent extends AWTEvent {
 
     /** Constructs an ItemEvent object. */
     @stub
-    def this(source: ItemSelectable, id: Int, item: Object, stateChange: Int) = ???
+    def this(source: ItemSelectable, id: Int, item: Any, stateChange: Int) = ???
 
     /** Returns the item affected by the event. */
     @stub
-    def getItem(): Object = ???
+    def getItem(): Any = ???
 
     /** Returns the originator of the event. */
     @stub

@@ -174,24 +174,21 @@ class GroupLayout extends Object with LayoutManager2 {
      *  components one after another (SequentialGroup)
      *  or aligned (ParallelGroup).
      */
-    @stub
-    object Group extends GroupLayout.Group
+    type Group = GroupLayout_Group
 
     /** A Group that aligns and sizes it's children. */
-    @stub
-    object ParallelGroup extends GroupLayout.ParallelGroup
+    type ParallelGroup = GroupLayout_ParallelGroup
 
     /** A Group that positions and sizes its elements
      *  sequentially, one after another.
      */
-    @stub
-    object SequentialGroup extends GroupLayout.SequentialGroup
+    type SequentialGroup = GroupLayout_SequentialGroup
 
     /** Notification that a Component has been added to
      *  the parent container.
      */
     @stub
-    def addLayoutComponent(component: Component, constraints: Object): Unit = ???
+    def addLayoutComponent(component: Component, constraints: Any): Unit = ???
 
     /** Notification that a Component has been added to
      *  the parent container.
@@ -356,8 +353,7 @@ object GroupLayout {
     /** Enumeration of the possible ways ParallelGroup can align
      *  its children.
      */
-    @stub
-    object Alignment extends GroupLayout.Alignment
+    type Alignment = GroupLayout_Alignment
 
     /** Indicates the size from the component or gap should be used for a
      *  particular range value.

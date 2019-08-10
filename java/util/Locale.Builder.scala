@@ -32,7 +32,7 @@ import scala.scalanative.annotation.stub
  *  Builders can be reused; clear() resets all
  *  fields to their default values.
  */
-final object Locale.Builder extends Object {
+final object Locale_Builder extends Object {
 
     /** Constructs an empty Builder. */
     @stub

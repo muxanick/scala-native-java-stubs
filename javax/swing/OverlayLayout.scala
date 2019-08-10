@@ -36,7 +36,7 @@ class OverlayLayout extends Object with LayoutManager2 with Serializable {
      *  constraint object.
      */
     @stub
-    def addLayoutComponent(comp: Component, constraints: Object): Unit = ???
+    def addLayoutComponent(comp: Component, constraints: Any): Unit = ???
 
     /** Adds the specified component to the layout. */
     @stub

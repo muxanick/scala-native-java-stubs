@@ -83,15 +83,15 @@ trait XPath {
      *  and return the result as the specified type.
      */
     @stub
-    def evaluate(expression: String, source: InputSource, returnType: QName): Object = ???
+    def evaluate(expression: String, source: InputSource, returnType: QName): Any = ???
 
     /** Evaluate an XPath expression in the specified context and return the result as a String. */
     @stub
-    def evaluate(expression: String, item: Object): String = ???
+    def evaluate(expression: String, item: Any): String = ???
 
     /** Evaluate an XPath expression in the specified context and return the result as the specified type. */
     @stub
-    def evaluate(expression: String, item: Object, returnType: QName): Object = ???
+    def evaluate(expression: String, item: Any, returnType: QName): Any = ???
 
     /** Return the current namespace context. */
     @stub

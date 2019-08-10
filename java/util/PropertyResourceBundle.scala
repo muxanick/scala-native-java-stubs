@@ -91,7 +91,7 @@ class PropertyResourceBundle extends ResourceBundle {
 
     /** Gets an object for the given key from this resource bundle. */
     @stub
-    def handleGetObject(key: String): Object = ???
+    def handleGetObject(key: String): Any = ???
 
     /** Returns a Set of the keys contained
      *  only in this ResourceBundle.

@@ -476,27 +476,23 @@ object ThreadPoolExecutor {
     /** A handler for rejected tasks that throws a
      *  RejectedExecutionException.
      */
-    @stub
-    object AbortPolicy extends ThreadPoolExecutor.AbortPolicy
+    type AbortPolicy = ThreadPoolExecutor_AbortPolicy
 
     /** A handler for rejected tasks that runs the rejected task
      *  directly in the calling thread of the execute method,
      *  unless the executor has been shut down, in which case the task
      *  is discarded.
      */
-    @stub
-    object CallerRunsPolicy extends ThreadPoolExecutor.CallerRunsPolicy
+    type CallerRunsPolicy = ThreadPoolExecutor_CallerRunsPolicy
 
     /** A handler for rejected tasks that discards the oldest unhandled
      *  request and then retries execute, unless the executor
      *  is shut down, in which case the task is discarded.
      */
-    @stub
-    object DiscardOldestPolicy extends ThreadPoolExecutor.DiscardOldestPolicy
+    type DiscardOldestPolicy = ThreadPoolExecutor_DiscardOldestPolicy
 
     /** A handler for rejected tasks that silently discards the
      *  rejected task.
      */
-    @stub
-    object DiscardPolicy extends ThreadPoolExecutor.DiscardPolicy
+    type DiscardPolicy = ThreadPoolExecutor_DiscardPolicy
 }

@@ -46,7 +46,7 @@ trait RemoteRef extends Externalizable {
 
     /** Invoke a method. */
     @stub
-    def invoke(obj: Remote, method: Method, params: Array[Object], opnum: Long): Object = ???
+    def invoke(obj: Remote, method: Method, params: Array[Object], opnum: Long): Any = ???
 
     /** Deprecated. 
      * 1.2 style stubs no longer use this method. Instead of

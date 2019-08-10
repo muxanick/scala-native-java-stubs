@@ -36,10 +36,8 @@ abstract class MultipleGradientPaint extends Object with Paint {
 
 object MultipleGradientPaint {
     /** The color space in which to perform the gradient interpolation. */
-    @stub
-    object ColorSpaceType extends MultipleGradientPaint.ColorSpaceType
+    type ColorSpaceType = MultipleGradientPaint_ColorSpaceType
 
     /** The method to use when painting outside the gradient bounds. */
-    @stub
-    object CycleMethod extends MultipleGradientPaint.CycleMethod
+    type CycleMethod = MultipleGradientPaint_CycleMethod
 }

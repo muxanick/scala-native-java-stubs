@@ -51,8 +51,7 @@ class JPanel extends JComponent with Accessible {
     /** This class implements accessibility support for the
      *  JPanel class.
      */
-    @stub
-    protected object AccessibleJPanel extends JPanel.AccessibleJPanel
+    protected type AccessibleJPanel = JPanel_AccessibleJPanel
 
     /** Gets the AccessibleContext associated with this JPanel. */
     @stub

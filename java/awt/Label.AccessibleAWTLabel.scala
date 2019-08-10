@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  Label class.  It provides an implementation of the
  *  Java Accessibility API appropriate to label user-interface elements.
  */
-protected class Label.AccessibleAWTLabel extends Component.AccessibleAWTComponent {
+protected class Label_AccessibleAWTLabel extends Component.AccessibleAWTComponent {
 
     /**  */
     @stub

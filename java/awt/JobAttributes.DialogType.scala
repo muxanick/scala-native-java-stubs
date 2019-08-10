@@ -4,7 +4,7 @@ import java.lang.{Object, String}
 import scala.scalanative.annotation.stub
 
 /** A type-safe enumeration of possible dialogs to display to the user. */
-final object JobAttributes.DialogType extends Object {
+final object JobAttributes_DialogType extends Object {
 
     /** The DialogType instance to use for
      *  specifying the cross-platform, pure Java print dialog.

@@ -12,7 +12,7 @@ trait Principal {
 
     /** Compares this principal to the specified object. */
     @stub
-    def equals(another: Object): Boolean = ???
+    def equals(another: Any): Boolean = ???
 
     /** Returns the name of this principal. */
     @stub

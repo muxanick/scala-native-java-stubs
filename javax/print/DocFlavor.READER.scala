@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  representation class. As such, the character set is Unicode.
  *  
  */
-object DocFlavor.READER extends DocFlavor {
+object DocFlavor_READER extends DocFlavor {
 
     /** Constructs a new doc flavor with the given MIME type and a print
      *  data representation class name of\

@@ -111,7 +111,7 @@ class PriorityQueue[E] extends AbstractQueue[E] with Serializable {
 
     /** Returns true if this queue contains the specified element. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Returns an iterator over the elements in this queue. */
     @stub
@@ -137,7 +137,7 @@ class PriorityQueue[E] extends AbstractQueue[E] with Serializable {
      *  if it is present.
      */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Returns the number of elements in this collection. */
     @stub

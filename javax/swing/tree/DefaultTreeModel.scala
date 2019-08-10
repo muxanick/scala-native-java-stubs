@@ -58,39 +58,39 @@ class DefaultTreeModel extends Object with Serializable with TreeModel {
      *  notification on this event type.
      */
     @stub
-    protected def fireTreeNodesChanged(source: Object, path: Array[Object], childIndices: Array[Int], children: Array[Object]): Unit = ???
+    protected def fireTreeNodesChanged(source: Any, path: Array[Object], childIndices: Array[Int], children: Array[Object]): Unit = ???
 
     /** Notifies all listeners that have registered interest for
      *  notification on this event type.
      */
     @stub
-    protected def fireTreeNodesInserted(source: Object, path: Array[Object], childIndices: Array[Int], children: Array[Object]): Unit = ???
+    protected def fireTreeNodesInserted(source: Any, path: Array[Object], childIndices: Array[Int], children: Array[Object]): Unit = ???
 
     /** Notifies all listeners that have registered interest for
      *  notification on this event type.
      */
     @stub
-    protected def fireTreeNodesRemoved(source: Object, path: Array[Object], childIndices: Array[Int], children: Array[Object]): Unit = ???
+    protected def fireTreeNodesRemoved(source: Any, path: Array[Object], childIndices: Array[Int], children: Array[Object]): Unit = ???
 
     /** Notifies all listeners that have registered interest for
      *  notification on this event type.
      */
     @stub
-    protected def fireTreeStructureChanged(source: Object, path: Array[Object], childIndices: Array[Int], children: Array[Object]): Unit = ???
+    protected def fireTreeStructureChanged(source: Any, path: Array[Object], childIndices: Array[Int], children: Array[Object]): Unit = ???
 
     /** Returns the child of parent at index index in the parent's
      *  child array.
      */
     @stub
-    def getChild(parent: Object, index: Int): Object = ???
+    def getChild(parent: Any, index: Int): Any = ???
 
     /** Returns the number of children of parent. */
     @stub
-    def getChildCount(parent: Object): Int = ???
+    def getChildCount(parent: Any): Int = ???
 
     /** Returns the index of child in parent. */
     @stub
-    def getIndexOfChild(parent: Object, child: Object): Int = ???
+    def getIndexOfChild(parent: Any, child: Any): Int = ???
 
     /** Returns an array of all the objects currently registered
      *  as FooListeners
@@ -113,7 +113,7 @@ class DefaultTreeModel extends Object with Serializable with TreeModel {
 
     /** Returns the root of the tree. */
     @stub
-    def getRoot(): Object = ???
+    def getRoot(): Any = ???
 
     /** Returns an array of all the tree model listeners
      *  registered on this model.
@@ -127,7 +127,7 @@ class DefaultTreeModel extends Object with Serializable with TreeModel {
 
     /** Returns whether the specified node is a leaf node. */
     @stub
-    def isLeaf(node: Object): Boolean = ???
+    def isLeaf(node: Any): Boolean = ???
 
     /** Invoke this method after you've changed how node is to be
      *  represented in the tree.
@@ -193,5 +193,5 @@ class DefaultTreeModel extends Object with Serializable with TreeModel {
      *  and posts a node changed.
      */
     @stub
-    def valueForPathChanged(path: TreePath, newValue: Object): Unit = ???
+    def valueForPathChanged(path: TreePath, newValue: Any): Unit = ???
 }

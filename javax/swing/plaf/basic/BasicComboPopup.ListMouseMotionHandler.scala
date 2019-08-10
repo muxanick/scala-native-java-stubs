@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** This listener changes the selected item as you move the mouse over the list.
  *  The selection change is not committed to the model, this is for user feedback only.
  */
-protected class BasicComboPopup.ListMouseMotionHandler extends MouseMotionAdapter {
+protected class BasicComboPopup_ListMouseMotionHandler extends MouseMotionAdapter {
 
     /**  */
     @stub

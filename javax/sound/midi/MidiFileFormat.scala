@@ -98,7 +98,7 @@ class MidiFileFormat extends Object {
 
     /** Obtain the property value specified by the key. */
     @stub
-    def getProperty(key: String): Object = ???
+    def getProperty(key: String): Any = ???
 
     /** Obtains the timing resolution for the MIDI file. */
     @stub

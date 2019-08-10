@@ -93,7 +93,7 @@ import scala.scalanative.annotation.stub
 abstract class ZoneId extends Object with Serializable {
 
     /** Checks if this time-zone ID is equal to another time-zone ID. */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** Gets the textual representation of the zone, such as 'British Time' or
      *  '+02:00'.

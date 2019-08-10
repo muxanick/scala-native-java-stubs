@@ -57,7 +57,7 @@ abstract class Endpoint extends Object {
     def getExecutor(): Executor
 
     /** Returns the implementation object for this endpoint. */
-    def getImplementor(): Object
+    def getImplementor(): Any
 
     /** Returns a list of metadata documents for the service. */
     def getMetadata(): List[Source]
@@ -72,7 +72,7 @@ abstract class Endpoint extends Object {
     def publish(serverContext: HttpContext): Unit
 
     /** Publishes this endpoint at the provided server context. */
-    def publish(serverContext: Object): Unit
+    def publish(serverContext: Any): Unit
 
     /** Publishes this endpoint at the given address. */
     def publish(address: String): Unit
@@ -106,35 +106,35 @@ object Endpoint {
 
     /** Creates an endpoint with the specified implementor object. */
     @stub
-    def create(implementor: Object): Endpoint = ???
+    def create(implementor: Any): Endpoint = ???
 
     /** Creates an endpoint with the specified implementor object and web
      *  service features.
      */
     @stub
-    def create(implementor: Object, features: WebServiceFeature*): Endpoint = ???
+    def create(implementor: Any, features: WebServiceFeature*): Endpoint = ???
 
     /** Creates an endpoint with the specified binding type and
      *  implementor object.
      */
     @stub
-    def create(bindingId: String, implementor: Object): Endpoint = ???
+    def create(bindingId: String, implementor: Any): Endpoint = ???
 
     /** Creates an endpoint with the specified binding type,
      *  implementor object, and web service features.
      */
     @stub
-    def create(bindingId: String, implementor: Object, features: WebServiceFeature*): Endpoint = ???
+    def create(bindingId: String, implementor: Any, features: WebServiceFeature*): Endpoint = ???
 
     /** Creates and publishes an endpoint for the specified implementor
      *  object at the given address.
      */
     @stub
-    def publish(address: String, implementor: Object): Endpoint = ???
+    def publish(address: String, implementor: Any): Endpoint = ???
 
     /** Creates and publishes an endpoint for the specified implementor
      *  object at the given address.
      */
     @stub
-    def publish(address: String, implementor: Object, features: WebServiceFeature*): Endpoint = ???
+    def publish(address: String, implementor: Any, features: WebServiceFeature*): Endpoint = ???
 }

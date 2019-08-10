@@ -91,7 +91,7 @@ abstract class CertPath extends Object with Serializable {
     /** Compares this certification path for equality with the specified
      *  object.
      */
-    def equals(other: Object): Boolean
+    def equals(other: Any): Boolean
 
     /** Returns the list of certificates in this certification path. */
     def getCertificates(): List[_ <: Certificate]
@@ -125,11 +125,10 @@ abstract class CertPath extends Object with Serializable {
     /** Replaces the CertPath to be serialized with a
      *  CertPathRep object.
      */
-    protected def writeReplace(): Object
+    protected def writeReplace(): Any
 }
 
 object CertPath {
     /** Alternate CertPath class for serialization. */
-    @stub
-    protected object CertPathRep extends CertPath.CertPathRep
+    protected type CertPathRep = CertPath_CertPathRep
 }

@@ -15,7 +15,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class DefaultStyledDocument.SectionElement extends AbstractDocument.BranchElement {
+protected class DefaultStyledDocument_SectionElement extends AbstractDocument.BranchElement {
 
     /** Creates a new SectionElement. */
     @stub

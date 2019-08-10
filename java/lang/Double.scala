@@ -44,7 +44,7 @@ final class Double extends Number with Comparable[Double] {
 
     /** Compares this object against the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the value of this Double as a float
      *  after a narrowing primitive conversion.

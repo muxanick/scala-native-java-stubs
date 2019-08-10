@@ -18,7 +18,7 @@ import scala.scalanative.annotation.stub
  *  This class is Serializable, but all fields are transient,
  *  so deserialized conditions have no waiters.
  */
-class AbstractQueuedLongSynchronizer.ConditionObject extends Object with Condition with Serializable {
+class AbstractQueuedLongSynchronizer_ConditionObject extends Object with Condition with Serializable {
 
     /** Creates a new ConditionObject instance. */
     @stub

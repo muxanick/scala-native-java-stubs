@@ -249,13 +249,13 @@ class ObjectInputStream extends InputStream with ObjectInput with ObjectStreamCo
 
     /** Read an object from the ObjectInputStream. */
     @stub
-    def readObject(): Object = ???
+    def readObject(): Any = ???
 
     /** This method is called by trusted subclasses of ObjectOutputStream that
      *  constructed ObjectOutputStream using the protected no-arg constructor.
      */
     @stub
-    protected def readObjectOverride(): Object = ???
+    protected def readObjectOverride(): Any = ???
 
     /** Reads a 16 bit short. */
     @stub
@@ -269,7 +269,7 @@ class ObjectInputStream extends InputStream with ObjectInput with ObjectStreamCo
 
     /** Reads an "unshared" object from the ObjectInputStream. */
     @stub
-    def readUnshared(): Object = ???
+    def readUnshared(): Any = ???
 
     /** Reads an unsigned 8 bit byte. */
     @stub
@@ -300,7 +300,7 @@ class ObjectInputStream extends InputStream with ObjectInput with ObjectStreamCo
      *  substitute one object for another during deserialization.
      */
     @stub
-    protected def resolveObject(obj: Object): Object = ???
+    protected def resolveObject(obj: Any): Any = ???
 
     /** Returns a proxy class that implements the interfaces named in a proxy
      *  class descriptor; subclasses may implement this method to read custom
@@ -318,6 +318,5 @@ class ObjectInputStream extends InputStream with ObjectInput with ObjectStreamCo
 
 object ObjectInputStream {
     /** Provide access to the persistent fields read from the input stream. */
-    @stub
-    object GetField extends ObjectInputStream.GetField
+    type GetField = ObjectInputStream_GetField
 }

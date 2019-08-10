@@ -28,7 +28,7 @@ class BasicComboBoxRenderer extends JLabel with ListCellRenderer with Serializab
      *  value.
      */
     @stub
-    def getListCellRendererComponent(list: JList, value: Object, index: Int, isSelected: Boolean, cellHasFocus: Boolean): Component = ???
+    def getListCellRendererComponent(list: JList, value: Any, index: Int, isSelected: Boolean, cellHasFocus: Boolean): Component = ???
 
     /** If the preferredSize has been set to a
      *  non-null value just returns it.
@@ -39,8 +39,7 @@ class BasicComboBoxRenderer extends JLabel with ListCellRenderer with Serializab
 
 object BasicComboBoxRenderer {
     /** A subclass of BasicComboBoxRenderer that implements UIResource. */
-    @stub
-    object UIResource extends BasicComboBoxRenderer.UIResource
+    type UIResource = BasicComboBoxRenderer_UIResource
 
     /** An empty Border. */
     @stub

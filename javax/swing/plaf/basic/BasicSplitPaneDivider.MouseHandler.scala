@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  (released, dragged...) into the appropriate DragController
  *  methods.
  */
-protected class BasicSplitPaneDivider.MouseHandler extends MouseAdapter with MouseMotionListener {
+protected class BasicSplitPaneDivider_MouseHandler extends MouseAdapter with MouseMotionListener {
 
     /**  */
     @stub

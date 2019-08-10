@@ -6,7 +6,7 @@ import javax.swing.{DefaultListCellRenderer, JComponent, JLabel}
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class MetalFileChooserUI.FileRenderer extends DefaultListCellRenderer {
+protected class MetalFileChooserUI_FileRenderer extends DefaultListCellRenderer {
 
     /**  */
     @stub

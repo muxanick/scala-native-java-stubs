@@ -379,7 +379,7 @@ class GridBagLayout extends Object with LayoutManager2 with Serializable {
      *  constraints object.
      */
     @stub
-    def addLayoutComponent(comp: Component, constraints: Object): Unit = ???
+    def addLayoutComponent(comp: Component, constraints: Any): Unit = ???
 
     /** Has no effect, since this layout manager does not use a per-component string. */
     @stub

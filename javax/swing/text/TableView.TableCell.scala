@@ -4,7 +4,7 @@ import java.lang.{Deprecated, Object}
 import scala.scalanative.annotation.stub
 
 /**  */
-@Deprecated class TableView.TableCell extends BoxView {
+@Deprecated class TableView_TableCell extends BoxView {
 
     /** Deprecated.  */
     @stub

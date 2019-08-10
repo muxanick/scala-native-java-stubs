@@ -200,7 +200,7 @@ class IndexColorModel extends ColorModel {
      *  a specified pixel in this ColorModel.
      */
     @stub
-    def getComponents(pixel: Object, components: Array[Int], offset: Int): Array[Int] = ???
+    def getComponents(pixel: Any, components: Array[Int], offset: Int): Array[Int] = ???
 
     /** Returns an array of the number of bits for each color/alpha component. */
     @stub
@@ -218,14 +218,14 @@ class IndexColorModel extends ColorModel {
      *  components.
      */
     @stub
-    def getDataElements(components: Array[Int], offset: Int, pixel: Object): Object = ???
+    def getDataElements(components: Array[Int], offset: Int, pixel: Any): Any = ???
 
     /** Returns a data element array representation of a pixel in this
      *  ColorModel, given an integer pixel representation in the
      *  default RGB color model.
      */
     @stub
-    def getDataElements(rgb: Int, pixel: Object): Object = ???
+    def getDataElements(rgb: Int, pixel: Any): Any = ???
 
     /** Returns the green color component for the specified pixel, scaled
      *  from 0 to 255 in the default RGB ColorSpace, sRGB.

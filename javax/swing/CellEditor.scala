@@ -46,7 +46,7 @@ trait CellEditor {
 
     /** Returns the value contained in the editor. */
     @stub
-    def getCellEditorValue(): Object = ???
+    def getCellEditorValue(): Any = ???
 
     /** Asks the editor if it can start editing using anEvent. */
     @stub

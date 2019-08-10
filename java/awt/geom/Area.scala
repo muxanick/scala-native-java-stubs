@@ -83,7 +83,7 @@ class Area extends Object with Shape with Cloneable {
 
     /** Returns an exact copy of this Area object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Tests if the specified coordinates are inside the boundary of the
      *  Shape, as described by the

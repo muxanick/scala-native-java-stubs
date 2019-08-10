@@ -106,7 +106,7 @@ class StringTokenizer extends Object with Enumeration[Object] {
      *  String.
      */
     @stub
-    def nextElement(): Object = ???
+    def nextElement(): Any = ???
 
     /** Returns the next token from this string tokenizer. */
     @stub

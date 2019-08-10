@@ -15,15 +15,15 @@ class EventObject extends Object with Serializable {
 
     /** Constructs a prototypical Event. */
     @stub
-    def this(source: Object) = ???
+    def this(source: Any) = ???
 
     /** The object on which the Event initially occurred. */
     @stub
-    protected val source: Object = ???
+    protected val source: Any = ???
 
     /** The object on which the Event initially occurred. */
     @stub
-    def getSource(): Object = ???
+    def getSource(): Any = ???
 
     /** Returns a String representation of this EventObject. */
     @stub

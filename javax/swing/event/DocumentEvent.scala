@@ -37,10 +37,8 @@ trait DocumentEvent {
 
 object DocumentEvent {
     /** Describes changes made to a specific element. */
-    @stub
-    trait ElementChange extends DocumentEvent.ElementChange
+    type ElementChange = DocumentEvent_ElementChange
 
     /** Enumeration for document event types */
-    @stub
-    class EventType extends DocumentEvent.EventType
+    type EventType = DocumentEvent_EventType
 }

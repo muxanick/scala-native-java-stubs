@@ -200,6 +200,5 @@ class DropTarget extends Object with DropTargetListener with Serializable {
 
 object DropTarget {
     /** this protected nested class implements autoscrolling */
-    @stub
-    protected object DropTargetAutoScroller extends DropTarget.DropTargetAutoScroller
+    protected type DropTargetAutoScroller = DropTarget_DropTargetAutoScroller
 }

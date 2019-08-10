@@ -6,7 +6,7 @@ import javax.swing.border.AbstractBorder
 import scala.scalanative.annotation.stub
 
 /** Border for a Table Header */
-object MetalBorders.TableHeaderBorder extends AbstractBorder {
+object MetalBorders_TableHeaderBorder extends AbstractBorder {
 
     /**  */
     @stub

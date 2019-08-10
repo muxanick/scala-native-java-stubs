@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of BasicTabbedPaneUI.
  */
-class BasicTabbedPaneUI.TabSelectionHandler extends Object with ChangeListener {
+class BasicTabbedPaneUI_TabSelectionHandler extends Object with ChangeListener {
 
     /**  */
     @stub

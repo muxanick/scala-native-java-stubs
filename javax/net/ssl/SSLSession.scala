@@ -124,7 +124,7 @@ trait SSLSession {
      *  application layer data.
      */
     @stub
-    def getValue(name: String): Object = ???
+    def getValue(name: String): Any = ???
 
     /** Returns an array of the names of all the application layer
      *  data objects bound into the Session.
@@ -147,7 +147,7 @@ trait SSLSession {
      *  with the given name.
      */
     @stub
-    def putValue(name: String, value: Object): Unit = ???
+    def putValue(name: String, value: Any): Unit = ???
 
     /** Removes the object bound to the given name in the session's
      *  application layer data.

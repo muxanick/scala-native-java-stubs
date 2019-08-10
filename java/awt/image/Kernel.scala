@@ -18,7 +18,7 @@ class Kernel extends Object with Cloneable {
 
     /** Clones this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns the height of this Kernel. */
     @stub

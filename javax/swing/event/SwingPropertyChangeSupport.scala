@@ -13,11 +13,11 @@ final class SwingPropertyChangeSupport extends PropertyChangeSupport {
 
     /** Constructs a SwingPropertyChangeSupport object. */
     @stub
-    def this(sourceBean: Object) = ???
+    def this(sourceBean: Any) = ???
 
     /** Constructs a SwingPropertyChangeSupport object. */
     @stub
-    def this(sourceBean: Object, notifyOnEDT: Boolean) = ???
+    def this(sourceBean: Any, notifyOnEDT: Boolean) = ???
 
     /** Fires a property change event to listeners
      *  that have been registered to track updates of

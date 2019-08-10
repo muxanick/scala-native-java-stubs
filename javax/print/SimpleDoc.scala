@@ -35,7 +35,7 @@ final class SimpleDoc extends Object with Doc {
      *  print data, doc flavor and doc attribute set.
      */
     @stub
-    def this(printData: Object, flavor: DocFlavor, attributes: DocAttributeSet) = ???
+    def this(printData: Any, flavor: DocFlavor, attributes: DocAttributeSet) = ???
 
     /** Obtains the set of printing attributes for this doc object. */
     @stub
@@ -52,7 +52,7 @@ final class SimpleDoc extends Object with Doc {
      *  supported doc flavor.
      */
     @stub
-    def getPrintData(): Object = ???
+    def getPrintData(): Any = ???
 
     /** Obtains a reader for extracting character print data from this doc. */
     @stub

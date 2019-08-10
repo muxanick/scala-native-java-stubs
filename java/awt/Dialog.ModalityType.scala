@@ -9,10 +9,10 @@ import scala.scalanative.annotation.stub
  *  ModalityType enum specifies modal types and their
  *  associated scopes.
  */
-class Dialog.ModalityType private (name: String, ordinal: Int) extends Enum[Dialog.ModalityType](name, ordinal) {
+class Dialog_ModalityType private (name: String, ordinal: Int) extends Enum[Dialog.ModalityType](name, ordinal) {
 }
 
-object Dialog.ModalityType {
+object Dialog_ModalityType {
     /** An APPLICATION_MODAL dialog blocks all top-level windows
      *  from the same Java application except those from its own child hierarchy.
      */

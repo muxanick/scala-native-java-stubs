@@ -27,7 +27,7 @@ import scala.scalanative.annotation.stub
  *  NullPointerException to
  *  be thrown.
  */
-object Base64.Decoder extends Object {
+object Base64_Decoder extends Object {
 
     /** Decodes all bytes from the input byte array using the Base64
      *  encoding scheme, writing the results into a newly-allocated output

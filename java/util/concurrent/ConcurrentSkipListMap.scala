@@ -134,13 +134,13 @@ class ConcurrentSkipListMap[K, V] extends AbstractMap[K, V] with ConcurrentNavig
      *  key.
      */
     @stub
-    def containsKey(key: Object): Boolean = ???
+    def containsKey(key: Any): Boolean = ???
 
     /** Returns true if this map maps one or more keys to the
      *  specified value.
      */
     @stub
-    def containsValue(value: Object): Boolean = ???
+    def containsValue(value: Any): Boolean = ???
 
     /** Returns a reverse order NavigableSet view of the keys contained in this map. */
     @stub
@@ -156,7 +156,7 @@ class ConcurrentSkipListMap[K, V] extends AbstractMap[K, V] with ConcurrentNavig
 
     /** Compares the specified object with this map for equality. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns a key-value mapping associated with the least
      *  key in this map, or null if the map is empty.
@@ -191,13 +191,13 @@ class ConcurrentSkipListMap[K, V] extends AbstractMap[K, V] with ConcurrentNavig
      *  or null if this map contains no mapping for the key.
      */
     @stub
-    def get(key: Object): V = ???
+    def get(key: Any): V = ???
 
     /** Returns the value to which the specified key is mapped,
      *  or the given defaultValue if this map contains no mapping for the key.
      */
     @stub
-    def getOrDefault(key: Object, defaultValue: V): V = ???
+    def getOrDefault(key: Any, defaultValue: V): V = ???
 
     /** Returns a view of the portion of this map whose keys are
      *  strictly less than toKey.
@@ -289,11 +289,11 @@ class ConcurrentSkipListMap[K, V] extends AbstractMap[K, V] with ConcurrentNavig
 
     /** Removes the mapping for the specified key from this map if present. */
     @stub
-    def remove(key: Object): V = ???
+    def remove(key: Any): V = ???
 
     /** Removes the entry for a key only if currently mapped to a given value. */
     @stub
-    def remove(key: Object, value: Object): Boolean = ???
+    def remove(key: Any, value: Any): Boolean = ???
 
     /** Replaces the entry for a key only if currently mapped to some value. */
     @stub

@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
  *  signal that the type be inferred from the signature
  *  of the property.
  */
-final object XmlElement.DEFAULT extends Object {
+final object XmlElement_DEFAULT extends Object {
 
     /**  */
     @stub

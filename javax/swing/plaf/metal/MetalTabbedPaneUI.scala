@@ -25,8 +25,7 @@ class MetalTabbedPaneUI extends BasicTabbedPaneUI {
     def this() = ???
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object TabbedPaneLayout extends MetalTabbedPaneUI.TabbedPaneLayout
+    type TabbedPaneLayout = MetalTabbedPaneUI_TabbedPaneLayout
 
     /**  */
     @stub

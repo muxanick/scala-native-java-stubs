@@ -40,17 +40,17 @@ class Attributes extends Object with Map[Object, Object] with Cloneable {
 
     /** Returns a copy of the Attributes, implemented as follows: */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns true if this Map contains the specified attribute name (key). */
     @stub
-    def containsKey(name: Object): Boolean = ???
+    def containsKey(name: Any): Boolean = ???
 
     /** Returns true if this Map maps one or more attribute names (keys)
      *  to the specified value.
      */
     @stub
-    def containsValue(value: Object): Boolean = ???
+    def containsValue(value: Any): Boolean = ???
 
     /** Returns a Collection view of the attribute name-value mappings
      *  contained in this Map.
@@ -60,13 +60,13 @@ class Attributes extends Object with Map[Object, Object] with Cloneable {
 
     /** Compares the specified Attributes object with this Map for equality. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the value of the specified attribute name, or null if the
      *  attribute name was not found.
      */
     @stub
-    def get(name: Object): Object = ???
+    def get(name: Any): Any = ???
 
     /** Returns the value of the specified Attributes.Name, or null if the
      *  attribute was not found.
@@ -96,7 +96,7 @@ class Attributes extends Object with Map[Object, Object] with Cloneable {
      *  (key) in this Map.
      */
     @stub
-    def put(name: Object, value: Object): Object = ???
+    def put(name: Any, value: Any): Any = ???
 
     /** Copies all of the attribute name-value mappings from the specified
      *  Attributes to this Map.
@@ -112,7 +112,7 @@ class Attributes extends Object with Map[Object, Object] with Cloneable {
 
     /** Removes the attribute with the specified name (key) from this Map. */
     @stub
-    def remove(name: Object): Object = ???
+    def remove(name: Any): Any = ???
 
     /** Returns the number of attributes in this Map. */
     @stub
@@ -127,6 +127,5 @@ object Attributes {
     /** The Attributes.Name class represents an attribute name stored in
      *  this Map.
      */
-    @stub
-    object Name extends Attributes.Name
+    type Name = Attributes_Name
 }

@@ -61,8 +61,7 @@ class Button extends Component with Accessible {
     /** This class implements accessibility support for the
      *  Button class.
      */
-    @stub
-    protected object AccessibleAWTButton extends Button.AccessibleAWTButton
+    protected type AccessibleAWTButton = Button_AccessibleAWTButton
 
     /** Adds the specified action listener to receive action events from
      *  this button.

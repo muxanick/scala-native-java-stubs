@@ -32,11 +32,11 @@ class PropertyDescriptor extends FeatureDescriptor {
      *  property editor class.
      */
     @stub
-    def createPropertyEditor(bean: Object): PropertyEditor = ???
+    def createPropertyEditor(bean: Any): PropertyEditor = ???
 
     /** Compares this PropertyDescriptor against the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Gets any explicit PropertyEditor Class that has been registered
      *  for this property.

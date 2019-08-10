@@ -23,19 +23,19 @@ class HyperlinkEvent extends EventObject {
 
     /** Creates a new object representing a hypertext link event. */
     @stub
-    def this(source: Object, type: HyperlinkEvent.EventType, u: URL) = ???
+    def this(source: Any, type: HyperlinkEvent.EventType, u: URL) = ???
 
     /** Creates a new object representing a hypertext link event. */
     @stub
-    def this(source: Object, type: HyperlinkEvent.EventType, u: URL, desc: String) = ???
+    def this(source: Any, type: HyperlinkEvent.EventType, u: URL, desc: String) = ???
 
     /** Creates a new object representing a hypertext link event. */
     @stub
-    def this(source: Object, type: HyperlinkEvent.EventType, u: URL, desc: String, sourceElement: Element) = ???
+    def this(source: Any, type: HyperlinkEvent.EventType, u: URL, desc: String, sourceElement: Element) = ???
 
     /** Creates a new object representing a hypertext link event. */
     @stub
-    def this(source: Object, type: HyperlinkEvent.EventType, u: URL, desc: String, sourceElement: Element, inputEvent: InputEvent) = ???
+    def this(source: Any, type: HyperlinkEvent.EventType, u: URL, desc: String, sourceElement: Element, inputEvent: InputEvent) = ???
 
     /** Get the description of the link as a string. */
     @stub
@@ -64,6 +64,5 @@ object HyperlinkEvent {
     /** Defines the ENTERED, EXITED, and ACTIVATED event types, along
      *  with their string representations, returned by toString().
      */
-    @stub
-    object EventType extends HyperlinkEvent.EventType
+    type EventType = HyperlinkEvent_EventType
 }

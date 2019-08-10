@@ -20,7 +20,7 @@ import scala.scalanative.annotation.stub
  *  class. Instead, they are something provided by the DnD
  *  implementation to certain methods in TransferHandler.
  */
-final object TransferHandler.TransferSupport extends Object {
+final object TransferHandler_TransferSupport extends Object {
 
     /** Create a TransferSupport with isDrop()
      *  false for the given component and

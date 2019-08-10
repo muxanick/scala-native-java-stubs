@@ -99,8 +99,7 @@ class JInternalFrame extends JComponent with Accessible with WindowConstants wit
     /** This class implements accessibility support for the
      *  JInternalFrame class.
      */
-    @stub
-    protected object AccessibleJInternalFrame extends JInternalFrame.AccessibleJInternalFrame
+    protected type AccessibleJInternalFrame = JInternalFrame_AccessibleJInternalFrame
 
     /** The frame can be closed. */
     @stub
@@ -164,7 +163,7 @@ class JInternalFrame extends JComponent with Accessible with WindowConstants wit
 
     /** Adds the specified child Component. */
     @stub
-    protected def addImpl(comp: Component, constraints: Object, index: Int): Unit = ???
+    protected def addImpl(comp: Component, constraints: Any, index: Int): Unit = ???
 
     /** Adds the specified listener to receive internal
      *  frame events from this internal frame.
@@ -593,8 +592,7 @@ object JInternalFrame {
     /** This component represents an iconified version of a
      *  JInternalFrame.
      */
-    @stub
-    object JDesktopIcon extends JInternalFrame.JDesktopIcon
+    type JDesktopIcon = JInternalFrame_JDesktopIcon
 
     /** Bound property name. */
     @stub

@@ -139,8 +139,7 @@ class Service extends Object {
 
 object Service {
     /** The orientation of a dynamic client or service. */
-    @stub
-    object Mode extends Service.Mode
+    type Mode = Service_Mode
 
     /** Creates a Service instance. */
     @stub

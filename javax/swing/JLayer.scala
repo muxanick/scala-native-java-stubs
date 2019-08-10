@@ -126,7 +126,7 @@ final class JLayer[V <: Component] extends JComponent with Scrollable with Prope
      *  and always throws UnsupportedOperationException
      */
     @stub
-    protected def addImpl(comp: Component, constraints: Object, index: Int): Unit = ???
+    protected def addImpl(comp: Component, constraints: Any, index: Int): Unit = ???
 
     /** Notifies this component that it now has a parent component. */
     @stub

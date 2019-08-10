@@ -20,7 +20,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class BasicSplitPaneDivider.DragController extends Object {
+protected class BasicSplitPaneDivider_DragController extends Object {
 
     /**  */
     @stub

@@ -175,22 +175,19 @@ class JEditorPane extends JTextComponent {
     /** This class implements accessibility support for the
      *  JEditorPane class.
      */
-    @stub
-    protected object AccessibleJEditorPane extends JEditorPane.AccessibleJEditorPane
+    protected type AccessibleJEditorPane = JEditorPane_AccessibleJEditorPane
 
     /** This class provides support for AccessibleHypertext,
      *  and is used in instances where the EditorKit
      *  installed in this JEditorPane is an instance of
      *  HTMLEditorKit.
      */
-    @stub
-    protected object AccessibleJEditorPaneHTML extends JEditorPane.AccessibleJEditorPaneHTML
+    protected type AccessibleJEditorPaneHTML = JEditorPane_AccessibleJEditorPaneHTML
 
     /** What's returned by
      *  AccessibleJEditorPaneHTML.getAccessibleText.
      */
-    @stub
-    protected object JEditorPaneAccessibleHypertextSupport extends JEditorPane.JEditorPaneAccessibleHypertextSupport
+    protected type JEditorPaneAccessibleHypertextSupport = JEditorPane_JEditorPaneAccessibleHypertextSupport
 
     /** Adds a hyperlink listener for notification of any changes, for example
      *  when a link is selected and entered.
@@ -279,7 +276,7 @@ class JEditorPane extends JTextComponent {
 
     /** This method initializes from a stream. */
     @stub
-    def read(in: InputStream, desc: Object): Unit = ???
+    def read(in: InputStream, desc: Any): Unit = ???
 
     /** Removes a hyperlink listener. */
     @stub

@@ -67,11 +67,11 @@ class BeanContextChildSupport extends Object with BeanContextChild with BeanCont
 
     /** Report a bound property update to any registered listeners. */
     @stub
-    def firePropertyChange(name: String, oldValue: Object, newValue: Object): Unit = ???
+    def firePropertyChange(name: String, oldValue: Any, newValue: Any): Unit = ???
 
     /** Report a vetoable property update to any registered listeners. */
     @stub
-    def fireVetoableChange(name: String, oldValue: Object, newValue: Object): Unit = ???
+    def fireVetoableChange(name: String, oldValue: Any, newValue: Any): Unit = ???
 
     /** Gets the nesting BeanContext
      *  for this BeanContextChildSupport.

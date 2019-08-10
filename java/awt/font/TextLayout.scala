@@ -188,7 +188,7 @@ final class TextLayout extends Object with Cloneable {
 
     /** Creates a copy of this TextLayout. */
     @stub
-    protected def clone(): Object = ???
+    protected def clone(): Any = ???
 
     /** Renders this TextLayout at the specified location in
      *  the specified Graphics2D context.
@@ -201,7 +201,7 @@ final class TextLayout extends Object with Cloneable {
      *  equals this TextLayout.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns true if the two layouts are equal. */
     @stub
@@ -425,8 +425,7 @@ final class TextLayout extends Object with Cloneable {
 
 object TextLayout {
     /** Defines a policy for determining the strong caret location. */
-    @stub
-    object CaretPolicy extends TextLayout.CaretPolicy
+    type CaretPolicy = TextLayout_CaretPolicy
 
     /** This CaretPolicy is used when a policy is not specified
      *  by the client.

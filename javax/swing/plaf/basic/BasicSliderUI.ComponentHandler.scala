@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
  *  This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of Foo.
  */
-class BasicSliderUI.ComponentHandler extends ComponentAdapter {
+class BasicSliderUI_ComponentHandler extends ComponentAdapter {
 
     /**  */
     @stub

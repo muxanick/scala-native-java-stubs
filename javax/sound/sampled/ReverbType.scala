@@ -124,7 +124,7 @@ class ReverbType extends Object {
      *  returning true if the objects are identical.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Obtains the decay time, which is the amount of time over which the
      *  late reflections attenuate to effective zero.

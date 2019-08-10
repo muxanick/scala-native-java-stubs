@@ -71,8 +71,7 @@ class JMenuItem extends AbstractButton with Accessible with MenuElement {
     /** This class implements accessibility support for the
      *  JMenuItem class.
      */
-    @stub
-    protected object AccessibleJMenuItem extends JMenuItem.AccessibleJMenuItem
+    protected type AccessibleJMenuItem = JMenuItem_AccessibleJMenuItem
 
     /** Updates the button's state in response to property changes in the
      *  associated action.

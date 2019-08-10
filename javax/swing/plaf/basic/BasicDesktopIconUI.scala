@@ -15,8 +15,7 @@ class BasicDesktopIconUI extends DesktopIconUI {
     def this() = ???
 
     /** Listens for mouse movements and acts on them. */
-    @stub
-    object MouseInputHandler extends BasicDesktopIconUI.MouseInputHandler
+    type MouseInputHandler = BasicDesktopIconUI_MouseInputHandler
 
     /**  */
     @stub

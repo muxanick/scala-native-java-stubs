@@ -31,7 +31,7 @@ trait Attributes extends Cloneable with Serializable {
 
     /** Makes a copy of the attribute set. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Retrieves the attribute with the given attribute id from the
      *  attribute set.
@@ -61,7 +61,7 @@ trait Attributes extends Cloneable with Serializable {
 
     /** Adds a new attribute to the attribute set. */
     @stub
-    def put(attrID: String, val: Object): Attribute = ???
+    def put(attrID: String, val: Any): Attribute = ???
 
     /** Removes the attribute with the attribute id 'attrID' from
      *  the attribute set.

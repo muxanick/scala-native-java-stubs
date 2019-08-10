@@ -44,7 +44,7 @@ final class Boolean extends Object with Serializable with Comparable[Boolean] {
      *  represents the same boolean value as this object.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns a hash code for this Boolean object. */
     @stub

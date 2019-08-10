@@ -52,7 +52,7 @@ class JMXConnectionNotification extends Notification {
 
     /** Constructs a new connection notification. */
     @stub
-    def this(type: String, source: Object, connectionId: String, sequenceNumber: Long, message: String, userData: Object) = ???
+    def this(type: String, source: Any, connectionId: String, sequenceNumber: Long, message: String, userData: Any) = ???
 
     /** The connection ID to which this notification pertains. */
     @stub

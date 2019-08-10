@@ -77,20 +77,20 @@ abstract class AbstractDocument extends Object with Document with Serializable {
     protected def this(data: AbstractDocument.Content, context: AbstractDocument.AttributeContext) = ???
 
     /** Implements the abstract part of an element. */
-    class AbstractElement extends AbstractDocument.AbstractElement
+    type AbstractElement = AbstractDocument_AbstractElement
 
     /** Implements a composite element that contains other elements. */
-    class BranchElement extends AbstractDocument.BranchElement
+    type BranchElement = AbstractDocument_BranchElement
 
     /** Stores document changes as the document is being
      *  modified.
      */
-    class DefaultDocumentEvent extends AbstractDocument.DefaultDocumentEvent
+    type DefaultDocumentEvent = AbstractDocument_DefaultDocumentEvent
 
     /** Implements an element that directly represents content of
      *  some kind.
      */
-    class LeafElement extends AbstractDocument.LeafElement
+    type LeafElement = AbstractDocument_LeafElement
 
     /** The event listener list for the document. */
     protected val listenerList: EventListenerList
@@ -187,7 +187,7 @@ abstract class AbstractDocument extends Object with Document with Serializable {
     def getParagraphElement(pos: Int): Element
 
     /** A convenience method for looking up a property value. */
-    def getProperty(key: Object): Object
+    def getProperty(key: Any): Any
 
     /** Gets all root elements defined. */
     def getRootElements(): Array[Element]
@@ -218,7 +218,7 @@ abstract class AbstractDocument extends Object with Document with Serializable {
     protected def postRemoveUpdate(chng: AbstractDocument.DefaultDocumentEvent): Unit
 
     /** A convenience method for storing up a property value. */
-    def putProperty(key: Object, value: Object): Unit
+    def putProperty(key: Any, value: Any): Unit
 
     /** Acquires a lock to begin reading some state from the
      *  document.
@@ -273,20 +273,17 @@ object AbstractDocument {
      *  implementations to use pluggable attribute compression
      *  techniques.
      */
-    @stub
-    trait AttributeContext extends AbstractDocument.AttributeContext
+    type AttributeContext = AbstractDocument_AttributeContext
 
     /** Interface to describe a sequence of character content that
      *  can be edited.
      */
-    @stub
-    trait Content extends AbstractDocument.Content
+    type Content = AbstractDocument_Content
 
     /** An implementation of ElementChange that can be added to the document
      *  event.
      */
-    @stub
-    class ElementEdit extends AbstractDocument.ElementEdit
+    type ElementEdit = AbstractDocument_ElementEdit
 
     /** Error message to indicate a bad location. */
     @stub

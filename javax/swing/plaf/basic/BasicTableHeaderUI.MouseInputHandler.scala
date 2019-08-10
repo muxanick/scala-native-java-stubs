@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
 /** This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of BasicTableHeaderUI.
  */
-class BasicTableHeaderUI.MouseInputHandler extends Object with MouseInputListener {
+class BasicTableHeaderUI_MouseInputHandler extends Object with MouseInputListener {
 
     /**  */
     @stub

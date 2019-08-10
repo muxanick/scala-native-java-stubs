@@ -223,7 +223,7 @@ abstract class JTextComponent extends JComponent with Scrollable with Accessible
     /** This class implements accessibility support for the
      *  JTextComponent class.
      */
-    object AccessibleJTextComponent extends JTextComponent.AccessibleJTextComponent
+    type AccessibleJTextComponent = JTextComponent_AccessibleJTextComponent
 
     /** Adds a caret listener for notification of any changes
      *  to the caret.
@@ -437,7 +437,7 @@ abstract class JTextComponent extends JComponent with Scrollable with Accessible
     protected def processInputMethodEvent(e: InputMethodEvent): Unit
 
     /** Initializes from a stream. */
-    def read(in: Reader, desc: Object): Unit
+    def read(in: Reader, desc: Any): Unit
 
     /** Removes a caret listener. */
     def removeCaretListener(listener: CaretListener): Unit
@@ -554,12 +554,10 @@ abstract class JTextComponent extends JComponent with Scrollable with Accessible
 
 object JTextComponent {
     /** Represents a drop location for JTextComponents. */
-    @stub
-    object DropLocation extends JTextComponent.DropLocation
+    type DropLocation = JTextComponent_DropLocation
 
     /** Binding record for creating key bindings. */
-    @stub
-    object KeyBinding extends JTextComponent.KeyBinding
+    type KeyBinding = JTextComponent_KeyBinding
 
     /** The default keymap that will be shared by all
      *  JTextComponent instances unless they

@@ -42,7 +42,7 @@ final class KeyTab extends Object {
 
     /** Compares the specified Object with this KeyTab for equality. */
     @stub
-    def equals(other: Object): Boolean = ???
+    def equals(other: Any): Boolean = ???
 
     /** Checks if the keytab file exists. */
     @stub

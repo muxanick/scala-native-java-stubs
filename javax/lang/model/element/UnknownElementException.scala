@@ -14,11 +14,11 @@ class UnknownElementException extends UnknownEntityException {
 
     /** Creates a new UnknownElementException. */
     @stub
-    def this(e: Element, p: Object) = ???
+    def this(e: Element, p: Any) = ???
 
     /** Returns the additional argument. */
     @stub
-    def getArgument(): Object = ???
+    def getArgument(): Any = ???
 
     /** Returns the unknown element. */
     @stub

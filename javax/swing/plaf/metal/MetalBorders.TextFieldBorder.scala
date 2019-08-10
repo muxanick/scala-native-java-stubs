@@ -6,7 +6,7 @@ import javax.swing.border.AbstractBorder
 import scala.scalanative.annotation.stub
 
 /**  */
-object MetalBorders.TextFieldBorder extends MetalBorders.Flush3DBorder {
+object MetalBorders_TextFieldBorder extends MetalBorders.Flush3DBorder {
 
     /**  */
     @stub

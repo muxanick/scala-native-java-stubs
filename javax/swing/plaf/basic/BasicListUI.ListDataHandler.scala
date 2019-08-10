@@ -16,7 +16,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-class BasicListUI.ListDataHandler extends Object with ListDataListener {
+class BasicListUI_ListDataHandler extends Object with ListDataListener {
 
     /**  */
     @stub

@@ -214,7 +214,7 @@ class Rectangle extends Rectangle2D with Shape with Serializable {
 
     /** Checks whether two rectangles are equal. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Gets the bounding Rectangle of this Rectangle. */
     @stub

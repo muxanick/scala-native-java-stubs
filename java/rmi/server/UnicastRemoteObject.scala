@@ -126,7 +126,7 @@ class UnicastRemoteObject extends RemoteServer {
      *  the original.
      */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 }
 
 object UnicastRemoteObject {

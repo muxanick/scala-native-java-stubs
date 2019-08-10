@@ -68,7 +68,7 @@ trait ScriptEngineFactory {
 
     /** Returns the value of an attribute whose meaning may be implementation-specific. */
     @stub
-    def getParameter(key: String): Object = ???
+    def getParameter(key: String): Any = ???
 
     /** Returns a valid scripting language executable program with given statements. */
     @stub

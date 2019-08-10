@@ -10,7 +10,7 @@ trait DynamicMBean {
 
     /** Obtain the value of a specific attribute of the Dynamic MBean. */
     @stub
-    def getAttribute(attribute: String): Object = ???
+    def getAttribute(attribute: String): Any = ???
 
     /** Get the values of several attributes of the Dynamic MBean. */
     @stub
@@ -22,7 +22,7 @@ trait DynamicMBean {
 
     /** Allows an action to be invoked on the Dynamic MBean. */
     @stub
-    def invoke(actionName: String, params: Array[Object], signature: Array[String]): Object = ???
+    def invoke(actionName: String, params: Array[Object], signature: Array[String]): Any = ???
 
     /** Set the value of a specific attribute of the Dynamic MBean. */
     @stub

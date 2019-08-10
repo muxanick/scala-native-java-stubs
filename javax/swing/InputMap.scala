@@ -41,7 +41,7 @@ class InputMap extends Object with Serializable {
      *  parent InputMap if the binding is not locally defined.
      */
     @stub
-    def get(keyStroke: KeyStroke): Object = ???
+    def get(keyStroke: KeyStroke): Any = ???
 
     /** Gets this InputMap's parent. */
     @stub
@@ -53,7 +53,7 @@ class InputMap extends Object with Serializable {
 
     /** Adds a binding for keyStroke to actionMapKey. */
     @stub
-    def put(keyStroke: KeyStroke, actionMapKey: Object): Unit = ???
+    def put(keyStroke: KeyStroke, actionMapKey: Any): Unit = ???
 
     /** Removes the binding for key from this
      *  InputMap.

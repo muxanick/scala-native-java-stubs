@@ -10,7 +10,7 @@ import scala.scalanative.annotation.stub
  *  Java Accessibility API appropriate to color chooser user-interface
  *  elements.
  */
-protected class JColorChooser.AccessibleJColorChooser extends JComponent.AccessibleJComponent {
+protected class JColorChooser_AccessibleJColorChooser extends JComponent.AccessibleJComponent {
 
     /**  */
     @stub

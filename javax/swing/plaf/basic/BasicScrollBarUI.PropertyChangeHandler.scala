@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /**  */
-class BasicScrollBarUI.PropertyChangeHandler extends Object with PropertyChangeListener {
+class BasicScrollBarUI_PropertyChangeHandler extends Object with PropertyChangeListener {
 
     /**  */
     @stub

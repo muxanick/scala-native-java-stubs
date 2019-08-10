@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
  *  AttributedCharacterIterator returned
  *  from MessageFormat.formatToCharacterIterator.
  */
-object MessageFormat.Field extends Format.Field {
+object MessageFormat_Field extends Format.Field {
 
     /** Creates a Field with the specified name. */
     @stub
@@ -21,5 +21,5 @@ object MessageFormat.Field extends Format.Field {
 
     /** Resolves instances being deserialized to the predefined constants. */
     @stub
-    protected def readResolve(): Object = ???
+    protected def readResolve(): Any = ???
 }

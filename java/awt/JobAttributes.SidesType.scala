@@ -6,7 +6,7 @@ import scala.scalanative.annotation.stub
 /** A type-safe enumeration of possible multi-page impositions. These
  *  impositions are in compliance with IPP 1.1.
  */
-final object JobAttributes.SidesType extends Object {
+final object JobAttributes_SidesType extends Object {
 
     /** The SidesType instance to use for specifying that
      *  consecutive job pages should be printed upon the same side of

@@ -44,7 +44,7 @@ abstract class Clock extends Object {
     protected def this() = ???
 
     /** Checks if this clock is equal to another clock. */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** Gets the time-zone being used to create dates and times. */
     def getZone(): ZoneId

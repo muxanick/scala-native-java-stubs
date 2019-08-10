@@ -34,11 +34,11 @@ object DirectoryManager {
      *  attributes, and environment.
      */
     @stub
-    def getObjectInstance(refInfo: Object, name: Name, nameCtx: Context, environment: Hashtable[_, _], attrs: Attributes): Object = ???
+    def getObjectInstance(refInfo: Any, name: Name, nameCtx: Context, environment: Hashtable[_, _], attrs: Attributes): Any = ???
 
     /** Retrieves the state of an object for binding when given the original
      *  object and its attributes.
      */
     @stub
-    def getStateToBind(obj: Object, name: Name, nameCtx: Context, environment: Hashtable[_, _], attrs: Attributes): DirStateFactory.Result = ???
+    def getStateToBind(obj: Any, name: Name, nameCtx: Context, environment: Hashtable[_, _], attrs: Attributes): DirStateFactory.Result = ???
 }

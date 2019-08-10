@@ -77,7 +77,7 @@ final class NimbusStyle extends SynthStyle {
 
     /** Getter for a region specific style property. */
     @stub
-    def get(ctx: SynthContext, key: Object): Object = ???
+    def get(ctx: SynthContext, key: Any): Any = ???
 
     /** Gets the appropriate background Painter, if there is one, for the state
      *  specified in the given SynthContext.

@@ -5,7 +5,7 @@ import javax.accessibility.AccessibleTableModelChange
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class JTable.AccessibleJTable.AccessibleJTableModelChange extends Object with AccessibleTableModelChange {
+protected class JTable_AccessibleJTable_AccessibleJTableModelChange extends Object with AccessibleTableModelChange {
 
     /**  */
     @stub

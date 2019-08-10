@@ -20,7 +20,7 @@ abstract class AbstractSelectableChannel extends SelectableChannel {
     protected def this(provider: SelectorProvider) = ???
 
     /** Retrieves the object upon which the configureBlocking and register methods synchronize. */
-    def blockingLock(): Object
+    def blockingLock(): Any
 
     /** Adjusts this channel's blocking mode. */
     def configureBlocking(block: Boolean): SelectableChannel
@@ -53,5 +53,5 @@ abstract class AbstractSelectableChannel extends SelectableChannel {
     def provider(): SelectorProvider
 
     /** Registers this channel with the given selector, returning a selection key. */
-    def register(sel: Selector, ops: Int, att: Object): SelectionKey
+    def register(sel: Selector, ops: Int, att: Any): SelectionKey
 }

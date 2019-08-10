@@ -69,7 +69,7 @@ final class ZonedDateTime extends Object with Temporal with ChronoZonedDateTime[
 
     /** Checks if this date-time is equal to another date-time. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Formats this date-time using the specified formatter. */
     @stub

@@ -46,7 +46,7 @@ class Level extends Object with Serializable {
 
     /** Compare two objects for value equality. */
     @stub
-    def equals(ox: Object): Boolean = ???
+    def equals(ox: Any): Boolean = ???
 
     /** Return the localized string name of the Level, for
      *  the current default locale.

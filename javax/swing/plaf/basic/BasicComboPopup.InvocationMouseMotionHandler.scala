@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** This listener watches for dragging and updates the current selection in the
  *  list if it is dragging over the list.
  */
-protected class BasicComboPopup.InvocationMouseMotionHandler extends MouseMotionAdapter {
+protected class BasicComboPopup_InvocationMouseMotionHandler extends MouseMotionAdapter {
 
     /**  */
     @stub

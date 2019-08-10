@@ -4,7 +4,7 @@ import java.lang.{Object, String}
 import scala.scalanative.annotation.stub
 
 /** A type-safe enumeration of possible job destinations. */
-final object JobAttributes.DestinationType extends Object {
+final object JobAttributes_DestinationType extends Object {
 
     /** The DestinationType instance to use for
      *  specifying print to file.

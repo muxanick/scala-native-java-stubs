@@ -24,7 +24,7 @@ trait CertPathBuilderResult extends Cloneable {
 
     /** Makes a copy of this CertPathBuilderResult. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns the built certification path. */
     @stub

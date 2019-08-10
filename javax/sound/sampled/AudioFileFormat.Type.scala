@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
  *  standard types of audio file.  Static instances are provided for the
  *  common types.
  */
-object AudioFileFormat.Type extends Object {
+object AudioFileFormat_Type extends Object {
 
     /** Constructs a file type. */
     @stub
@@ -35,7 +35,7 @@ object AudioFileFormat.Type extends Object {
 
     /** Finalizes the equals method */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Obtains the common file name extension for this file type. */
     @stub

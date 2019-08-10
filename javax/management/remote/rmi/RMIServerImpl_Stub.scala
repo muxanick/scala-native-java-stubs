@@ -23,5 +23,5 @@ final class RMIServerImpl_Stub extends RemoteStub with RMIServer {
 
     /** Makes a new connection through this RMI connector. */
     @stub
-    def newClient($param_Object_1: Object): RMIConnection = ???
+    def newClient($param_Object_1: Any): RMIConnection = ???
 }

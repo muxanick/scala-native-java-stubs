@@ -50,7 +50,7 @@ class ElementIterator extends Object with Cloneable {
 
     /** Clones the ElementIterator. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Fetches the current Element. */
     @stub

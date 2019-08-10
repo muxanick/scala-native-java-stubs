@@ -222,7 +222,7 @@ final class String extends Object with Serializable with Comparable[String] with
 
     /** Compares this string to the specified object. */
     @stub
-    def equals(anObject: Object): Boolean = ???
+    def equals(anObject: Any): Boolean = ???
 
     /** Compares this String to another String, ignoring case
      *  considerations.
@@ -524,5 +524,5 @@ object String {
 
     /** Returns the string representation of the Object argument. */
     @stub
-    def valueOf(obj: Object): String = ???
+    def valueOf(obj: Any): String = ???
 }

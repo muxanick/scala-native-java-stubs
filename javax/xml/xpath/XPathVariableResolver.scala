@@ -17,5 +17,5 @@ trait XPathVariableResolver {
 
     /** Find a variable in the set of available variables. */
     @stub
-    def resolveVariable(variableName: QName): Object = ???
+    def resolveVariable(variableName: QName): Any = ???
 }

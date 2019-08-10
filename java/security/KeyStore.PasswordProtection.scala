@@ -6,7 +6,7 @@ import javax.security.auth.Destroyable
 import scala.scalanative.annotation.stub
 
 /** A password-based implementation of ProtectionParameter. */
-object KeyStore.PasswordProtection extends Object with KeyStore.ProtectionParameter with Destroyable {
+object KeyStore_PasswordProtection extends Object with KeyStore.ProtectionParameter with Destroyable {
 
     /** Creates a password parameter. */
     @stub

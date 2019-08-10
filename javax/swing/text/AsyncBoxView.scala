@@ -29,14 +29,12 @@ class AsyncBoxView extends View {
      *  child views in a localized area while changes are
      *  being made around the localized area.
      */
-    @stub
-    object ChildLocator extends AsyncBoxView.ChildLocator
+    type ChildLocator = AsyncBoxView_ChildLocator
 
     /** A record representing the layout state of a
      *  child view.
      */
-    @stub
-    object ChildState extends AsyncBoxView.ChildState
+    type ChildState = AsyncBoxView_ChildState
 
     /** Object that manages the offsets of the
      *  children.

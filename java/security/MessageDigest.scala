@@ -69,7 +69,7 @@ abstract class MessageDigest extends MessageDigestSpi {
     protected def this(algorithm: String) = ???
 
     /** Returns a clone if the implementation is cloneable. */
-    def clone(): Object
+    def clone(): Any
 
     /** Completes the hash computation by performing final operations
      *  such as padding.

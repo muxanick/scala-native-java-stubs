@@ -17,7 +17,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JMenu.WinListener extends WindowAdapter with Serializable {
+protected class JMenu_WinListener extends WindowAdapter with Serializable {
 
     /** Create the window listener for the specified popup. */
     @stub

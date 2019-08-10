@@ -10,7 +10,7 @@ import scala.scalanative.annotation.stub
  *  This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of BasicSplitPaneUI.
  */
-class BasicSplitPaneUI.KeyboardUpLeftHandler extends Object with ActionListener {
+class BasicSplitPaneUI_KeyboardUpLeftHandler extends Object with ActionListener {
 
     /**  */
     @stub

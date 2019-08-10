@@ -27,8 +27,7 @@ class TextComponent extends Component with Accessible {
     /** This class implements accessibility support for the
      *  TextComponent class.
      */
-    @stub
-    protected object AccessibleAWTTextComponent extends TextComponent.AccessibleAWTTextComponent
+    protected type AccessibleAWTTextComponent = TextComponent_AccessibleAWTTextComponent
 
     /**  */
     @stub

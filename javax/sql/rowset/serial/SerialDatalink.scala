@@ -33,11 +33,11 @@ class SerialDatalink extends Object with Serializable with Cloneable {
 
     /** Returns a clone of this SerialDatalink. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compares this SerialDatalink to the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns a new URL that is a copy of this SerialDatalink
      *  object.

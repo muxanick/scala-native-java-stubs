@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
  *  signal that the type be inferred from the signature
  *  of the field, property, parameter or the class.
  */
-final object XmlJavaTypeAdapter.DEFAULT extends Object {
+final object XmlJavaTypeAdapter_DEFAULT extends Object {
 
     /**  */
     @stub

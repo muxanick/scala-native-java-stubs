@@ -140,8 +140,7 @@ class Dialog extends Window {
     /** This class implements accessibility support for the
      *  Dialog class.
      */
-    @stub
-    protected object AccessibleAWTDialog extends Dialog.AccessibleAWTDialog
+    protected type AccessibleAWTDialog = Dialog_AccessibleAWTDialog
 
     /** Makes this Dialog displayable by connecting it to
      *  a native screen resource.
@@ -242,12 +241,10 @@ object Dialog {
     /** Any top-level window can be marked not to be blocked by modal
      *  dialogs.
      */
-    @stub
-    object ModalExclusionType extends Dialog.ModalExclusionType
+    type ModalExclusionType = Dialog_ModalExclusionType
 
     /** Modal dialogs block all input to some top-level windows. */
-    @stub
-    object ModalityType extends Dialog.ModalityType
+    type ModalityType = Dialog_ModalityType
 
     /** Default modality type for modal dialogs. */
     @stub

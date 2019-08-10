@@ -210,7 +210,7 @@ abstract class FloatBuffer extends Buffer with Comparable[FloatBuffer] {
     def duplicate(): FloatBuffer
 
     /** Tells whether or not this buffer is equal to another object. */
-    def equals(ob: Object): Boolean
+    def equals(ob: Any): Boolean
 
     /** Relative get method. */
     def get(): Float

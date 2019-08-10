@@ -6,7 +6,7 @@ import javax.swing.{JScrollBar, JScrollPane, Timer}
 import scala.scalanative.annotation.stub
 
 /** Updates the preferred size when scrolling (if necessary). */
-class BasicTreeUI.ComponentHandler extends ComponentAdapter with ActionListener {
+class BasicTreeUI_ComponentHandler extends ComponentAdapter with ActionListener {
 
     /**  */
     @stub

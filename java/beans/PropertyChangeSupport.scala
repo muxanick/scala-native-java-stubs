@@ -51,7 +51,7 @@ class PropertyChangeSupport extends Object with Serializable {
 
     /** Constructs a PropertyChangeSupport object. */
     @stub
-    def this(sourceBean: Object) = ???
+    def this(sourceBean: Any) = ???
 
     /** Add a PropertyChangeListener to the listener list. */
     @stub
@@ -80,7 +80,7 @@ class PropertyChangeSupport extends Object with Serializable {
      *  all properties or a property with the specified name.
      */
     @stub
-    def fireIndexedPropertyChange(propertyName: String, index: Int, oldValue: Object, newValue: Object): Unit = ???
+    def fireIndexedPropertyChange(propertyName: String, index: Int, oldValue: Any, newValue: Any): Unit = ???
 
     /** Fires a property change event to listeners
      *  that have been registered to track updates of
@@ -108,7 +108,7 @@ class PropertyChangeSupport extends Object with Serializable {
      *  all properties or a property with the specified name.
      */
     @stub
-    def firePropertyChange(propertyName: String, oldValue: Object, newValue: Object): Unit = ???
+    def firePropertyChange(propertyName: String, oldValue: Any, newValue: Any): Unit = ???
 
     /** Returns an array of all the listeners that were added to the
      *  PropertyChangeSupport object with addPropertyChangeListener().

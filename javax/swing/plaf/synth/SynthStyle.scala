@@ -20,12 +20,12 @@ abstract class SynthStyle extends Object {
     def this() = ???
 
     /** Getter for a region specific style property. */
-    def get(context: SynthContext, key: Object): Object
+    def get(context: SynthContext, key: Any): Any
 
     /** Convenience method to get a specific style property whose value is
      *  an Boolean.
      */
-    def getBoolean(context: SynthContext, key: Object, defaultValue: Boolean): Boolean
+    def getBoolean(context: SynthContext, key: Any, defaultValue: Boolean): Boolean
 
     /** Returns the color for the specified state. */
     def getColor(context: SynthContext, type: ColorType): Color
@@ -45,7 +45,7 @@ abstract class SynthStyle extends Object {
     /** Convenience method to get a specific style property whose value is
      *  an Icon.
      */
-    def getIcon(context: SynthContext, key: Object): Icon
+    def getIcon(context: SynthContext, key: Any): Icon
 
     /** Returns the Insets that are used to calculate sizing information. */
     def getInsets(context: SynthContext, insets: Insets): Insets
@@ -53,7 +53,7 @@ abstract class SynthStyle extends Object {
     /** Convenience method to get a specific style property whose value is
      *  a Number.
      */
-    def getInt(context: SynthContext, key: Object, defaultValue: Int): Int
+    def getInt(context: SynthContext, key: Any, defaultValue: Int): Int
 
     /** Returns the SynthPainter that will be used for painting. */
     def getPainter(context: SynthContext): SynthPainter
@@ -61,7 +61,7 @@ abstract class SynthStyle extends Object {
     /** Convenience method to get a specific style property whose value is
      *  a String.
      */
-    def getString(context: SynthContext, key: Object, defaultValue: String): String
+    def getString(context: SynthContext, key: Any, defaultValue: String): String
 
     /** Installs the necessary state from this Style on the
      *  JComponent from context.

@@ -5,7 +5,7 @@ import javax.swing.border.{AbstractBorder, Border, CompoundBorder}
 import scala.scalanative.annotation.stub
 
 /**  */
-object BorderUIResource.CompoundBorderUIResource extends CompoundBorder with UIResource {
+object BorderUIResource_CompoundBorderUIResource extends CompoundBorder with UIResource {
 
     /**  */
     @stub

@@ -20,7 +20,7 @@ trait CertSelector extends Cloneable {
 
     /** Makes a copy of this CertSelector. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Decides whether a Certificate should be selected. */
     @stub

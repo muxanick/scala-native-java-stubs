@@ -74,8 +74,7 @@ class JFileChooser extends JComponent with Accessible {
     /** This class implements accessibility support for the
      *  JFileChooser class.
      */
-    @stub
-    protected object AccessibleJFileChooser extends JFileChooser.AccessibleJFileChooser
+    protected type AccessibleJFileChooser = JFileChooser_AccessibleJFileChooser
 
     /**  */
     @stub

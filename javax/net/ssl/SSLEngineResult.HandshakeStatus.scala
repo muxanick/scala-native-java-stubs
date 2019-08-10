@@ -6,10 +6,10 @@ import scala.scalanative.annotation.stub
 /** An SSLEngineResult enum describing the current
  *  handshaking state of this SSLEngine.
  */
-class SSLEngineResult.HandshakeStatus private (name: String, ordinal: Int) extends Enum[SSLEngineResult.HandshakeStatus](name, ordinal) {
+class SSLEngineResult_HandshakeStatus private (name: String, ordinal: Int) extends Enum[SSLEngineResult.HandshakeStatus](name, ordinal) {
 }
 
-object SSLEngineResult.HandshakeStatus {
+object SSLEngineResult_HandshakeStatus {
     /** The SSLEngine has just finished handshaking. */
     final val FINISHED = new SSLEngineResult.HandshakeStatus(FINISHED, 0)
 

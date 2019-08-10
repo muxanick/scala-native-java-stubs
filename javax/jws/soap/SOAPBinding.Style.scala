@@ -4,10 +4,10 @@ import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /**  */
-class SOAPBinding.Style private (name: String, ordinal: Int) extends Enum[SOAPBinding.Style](name, ordinal) {
+class SOAPBinding_Style private (name: String, ordinal: Int) extends Enum[SOAPBinding.Style](name, ordinal) {
 }
 
-object SOAPBinding.Style {
+object SOAPBinding_Style {
     /**  */
     final val DOCUMENT = new SOAPBinding.Style(DOCUMENT, 0)
 

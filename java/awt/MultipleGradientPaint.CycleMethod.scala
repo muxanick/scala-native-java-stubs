@@ -4,10 +4,10 @@ import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** The method to use when painting outside the gradient bounds. */
-class MultipleGradientPaint.CycleMethod private (name: String, ordinal: Int) extends Enum[MultipleGradientPaint.CycleMethod](name, ordinal) {
+class MultipleGradientPaint_CycleMethod private (name: String, ordinal: Int) extends Enum[MultipleGradientPaint.CycleMethod](name, ordinal) {
 }
 
-object MultipleGradientPaint.CycleMethod {
+object MultipleGradientPaint_CycleMethod {
     /** Use the terminal colors to fill the remaining area. */
     final val NO_CYCLE = new MultipleGradientPaint.CycleMethod(NO_CYCLE, 0)
 

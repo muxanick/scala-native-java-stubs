@@ -62,6 +62,5 @@ class XPathType extends Object {
 
 object XPathType {
     /** Represents the filter set operation. */
-    @stub
-    object Filter extends XPathType.Filter
+    type Filter = XPathType_Filter
 }

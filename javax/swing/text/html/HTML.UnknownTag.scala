@@ -5,7 +5,7 @@ import java.lang.{Object, String}
 import scala.scalanative.annotation.stub
 
 /**  */
-object HTML.UnknownTag extends HTML.Tag with Serializable {
+object HTML_UnknownTag extends HTML.Tag with Serializable {
 
     /** Creates a new UnknownTag with the specified
      *  id.
@@ -15,7 +15,7 @@ object HTML.UnknownTag extends HTML.Tag with Serializable {
 
     /** Compares this object to the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the hash code which corresponds to the string
      *  for this tag.

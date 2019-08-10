@@ -63,7 +63,7 @@ abstract class ResolutionSyntax extends Object with Serializable with Cloneable 
     /** Returns whether this resolution attribute is equivalent to the passed in
      *  object.
      */
-    def equals(object: Object): Boolean
+    def equals(object: Any): Boolean
 
     /** Returns this resolution attribute's cross feed direction resolution in
      *  the given units.

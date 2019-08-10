@@ -39,7 +39,7 @@ abstract class Transformer extends Object {
     def getOutputProperty(name: String): String
 
     /** Get a parameter that was explicitly set with setParameter. */
-    def getParameter(name: String): Object
+    def getParameter(name: String): Any
 
     /** Get an object that will be used to resolve URIs used in
      *  document().
@@ -61,7 +61,7 @@ abstract class Transformer extends Object {
     def setOutputProperty(name: String, value: String): Unit
 
     /** Add a parameter for the transformation. */
-    def setParameter(name: String, value: Object): Unit
+    def setParameter(name: String, value: Any): Unit
 
     /** Set an object that will be used to resolve URIs used in
      *  document().

@@ -30,7 +30,7 @@ abstract class Certificate extends Object with Serializable {
     /** Compares this certificate for equality with the specified
      *  object.
      */
-    def equals(other: Object): Boolean
+    def equals(other: Any): Boolean
 
     /** Returns the encoded form of this certificate. */
     def getEncoded(): Array[Byte]
@@ -65,11 +65,10 @@ abstract class Certificate extends Object with Serializable {
     def verify(key: PublicKey, sigProvider: String): Unit
 
     /** Replace the Certificate to be serialized. */
-    protected def writeReplace(): Object
+    protected def writeReplace(): Any
 }
 
 object Certificate {
     /** Alternate Certificate class for serialization. */
-    @stub
-    protected object CertificateRep extends Certificate.CertificateRep
+    protected type CertificateRep = Certificate_CertificateRep
 }

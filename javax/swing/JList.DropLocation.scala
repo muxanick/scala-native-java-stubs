@@ -6,7 +6,7 @@ import scala.scalanative.annotation.stub
 /** A subclass of TransferHandler.DropLocation representing
  *  a drop location for a JList.
  */
-final object JList.DropLocation extends TransferHandler.DropLocation {
+final object JList_DropLocation extends TransferHandler.DropLocation {
 
     /** Returns the index where dropped data should be placed in the
      *  list.

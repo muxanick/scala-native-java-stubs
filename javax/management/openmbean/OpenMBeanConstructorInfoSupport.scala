@@ -28,7 +28,7 @@ class OpenMBeanConstructorInfoSupport extends MBeanConstructorInfo with OpenMBea
      *  equality.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the hash code value for this OpenMBeanConstructorInfoSupport instance. */
     @stub

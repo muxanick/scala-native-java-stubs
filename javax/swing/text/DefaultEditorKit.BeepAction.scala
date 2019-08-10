@@ -16,7 +16,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object DefaultEditorKit.BeepAction extends TextAction {
+object DefaultEditorKit_BeepAction extends TextAction {
 
     /** Create this object with the appropriate identifier. */
     @stub

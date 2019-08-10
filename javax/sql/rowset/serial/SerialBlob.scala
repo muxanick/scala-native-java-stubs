@@ -46,11 +46,11 @@ class SerialBlob extends Object with Blob with Serializable with Cloneable {
 
     /** Returns a clone of this SerialBlob. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compares this SerialBlob to the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** This method frees the SeriableBlob object and releases the
      *  resources that it holds.

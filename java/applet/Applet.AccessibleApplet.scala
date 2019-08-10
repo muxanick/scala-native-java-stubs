@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
  *  Applet class.  It provides an implementation of the
  *  Java Accessibility API appropriate to applet user-interface elements.
  */
-protected class Applet.AccessibleApplet extends Panel.AccessibleAWTPanel {
+protected class Applet_AccessibleApplet extends Panel.AccessibleAWTPanel {
 
     /**  */
     @stub

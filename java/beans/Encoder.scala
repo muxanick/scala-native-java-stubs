@@ -22,7 +22,7 @@ class Encoder extends Object {
      *  the environment created by this stream.
      */
     @stub
-    def get(oldInstance: Object): Object = ???
+    def get(oldInstance: Any): Any = ???
 
     /** Gets the exception handler for this stream. */
     @stub
@@ -34,7 +34,7 @@ class Encoder extends Object {
 
     /** Removes the entry for this instance, returning the old entry. */
     @stub
-    def remove(oldInstance: Object): Object = ???
+    def remove(oldInstance: Any): Any = ???
 
     /** Sets the exception handler for this stream to exceptionListener. */
     @stub
@@ -52,7 +52,7 @@ class Encoder extends Object {
 
     /** Write the specified object to the output stream. */
     @stub
-    protected def writeObject(o: Object): Unit = ???
+    protected def writeObject(o: Any): Unit = ???
 
     /** Writes statement oldStm to the stream. */
     @stub

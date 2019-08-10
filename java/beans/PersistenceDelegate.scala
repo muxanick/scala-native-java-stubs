@@ -66,19 +66,19 @@ abstract class PersistenceDelegate extends Object {
     /** Produce a series of statements with side effects on newInstance
      *  so that the new instance becomes equivalent to oldInstance.
      */
-    protected def initialize(type: Class[_], oldInstance: Object, newInstance: Object, out: Encoder): Unit
+    protected def initialize(type: Class[_], oldInstance: Any, newInstance: Any, out: Encoder): Unit
 
     /** Returns an expression whose value is oldInstance. */
-    protected def instantiate(oldInstance: Object, out: Encoder): Expression
+    protected def instantiate(oldInstance: Any, out: Encoder): Expression
 
     /** Returns true if an equivalent copy of oldInstance may be
      *  created by applying a series of statements to newInstance.
      */
-    protected def mutatesTo(oldInstance: Object, newInstance: Object): Boolean
+    protected def mutatesTo(oldInstance: Any, newInstance: Any): Boolean
 
     /** The writeObject is a single entry point to the persistence
      *  and is used by a Encoder in the traditional
      *  mode of delegation.
      */
-    def writeObject(oldInstance: Object, out: Encoder): Unit
+    def writeObject(oldInstance: Any, out: Encoder): Unit
 }

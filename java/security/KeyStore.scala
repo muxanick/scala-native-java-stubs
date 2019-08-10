@@ -259,16 +259,13 @@ class KeyStore extends Object {
 
 object KeyStore {
     /** A description of a to-be-instantiated KeyStore object. */
-    @stub
-    class Builder extends KeyStore.Builder
+    type Builder = KeyStore_Builder
 
     /** A ProtectionParameter encapsulating a CallbackHandler. */
-    @stub
-    class CallbackHandlerProtection extends KeyStore.CallbackHandlerProtection
+    type CallbackHandlerProtection = KeyStore_CallbackHandlerProtection
 
     /** A marker interface for KeyStore entry types. */
-    @stub
-    trait Entry extends KeyStore.Entry
+    type Entry = KeyStore_Entry
 
     /** A marker interface for KeyStore
      *  load
@@ -276,32 +273,26 @@ object KeyStore {
      *  store
      *  parameters.
      */
-    @stub
-    trait LoadStoreParameter extends KeyStore.LoadStoreParameter
+    type LoadStoreParameter = KeyStore_LoadStoreParameter
 
     /** A password-based implementation of ProtectionParameter. */
-    @stub
-    class PasswordProtection extends KeyStore.PasswordProtection
+    type PasswordProtection = KeyStore_PasswordProtection
 
     /** A KeyStore entry that holds a PrivateKey
      *  and corresponding certificate chain.
      */
-    @stub
-    class PrivateKeyEntry extends KeyStore.PrivateKeyEntry
+    type PrivateKeyEntry = KeyStore_PrivateKeyEntry
 
     /** A marker interface for keystore protection parameters. */
-    @stub
-    trait ProtectionParameter extends KeyStore.ProtectionParameter
+    type ProtectionParameter = KeyStore_ProtectionParameter
 
     /** A KeyStore entry that holds a SecretKey. */
-    @stub
-    class SecretKeyEntry extends KeyStore.SecretKeyEntry
+    type SecretKeyEntry = KeyStore_SecretKeyEntry
 
     /** A KeyStore entry that holds a trusted
      *  Certificate.
      */
-    @stub
-    class TrustedCertificateEntry extends KeyStore.TrustedCertificateEntry
+    type TrustedCertificateEntry = KeyStore_TrustedCertificateEntry
 
     /** Returns the default keystore type as specified by the
      *  keystore.type security property, or the string

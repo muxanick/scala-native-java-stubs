@@ -4,10 +4,10 @@ import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** The two possible authentication types for a resource. */
-class Resource.AuthenticationType private (name: String, ordinal: Int) extends Enum[Resource.AuthenticationType](name, ordinal) {
+class Resource_AuthenticationType private (name: String, ordinal: Int) extends Enum[Resource.AuthenticationType](name, ordinal) {
 }
 
-object Resource.AuthenticationType {
+object Resource_AuthenticationType {
     /**  */
     final val APPLICATION = new Resource.AuthenticationType(APPLICATION, 0)
 

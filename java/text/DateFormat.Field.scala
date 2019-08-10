@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
  *  The class also provides two methods to map
  *  between its constants and the corresponding Calendar constants.
  */
-object DateFormat.Field extends Format.Field {
+object DateFormat_Field extends Format.Field {
 
     /** Creates a Field. */
     @stub
@@ -113,5 +113,5 @@ object DateFormat.Field extends Format.Field {
 
     /** Resolves instances being deserialized to the predefined constants. */
     @stub
-    protected def readResolve(): Object = ???
+    protected def readResolve(): Any = ???
 }

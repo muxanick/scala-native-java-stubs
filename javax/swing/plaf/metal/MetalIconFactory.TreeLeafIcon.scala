@@ -4,7 +4,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /**  */
-object MetalIconFactory.TreeLeafIcon extends MetalIconFactory.FileIcon16 {
+object MetalIconFactory_TreeLeafIcon extends MetalIconFactory.FileIcon16 {
 
     /**  */
     @stub

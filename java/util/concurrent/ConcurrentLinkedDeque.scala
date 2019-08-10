@@ -82,7 +82,7 @@ class ConcurrentLinkedDeque[E] extends AbstractCollection[E] with Deque[E] with 
      *  element e such that o.equals(e).
      */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Returns an iterator over the elements in this deque in reverse
      *  sequential order.
@@ -184,7 +184,7 @@ class ConcurrentLinkedDeque[E] extends AbstractCollection[E] with Deque[E] with 
      *  o.equals(e), if such an element exists in this deque.
      */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Retrieves and removes the first element of this deque. */
     @stub
@@ -194,7 +194,7 @@ class ConcurrentLinkedDeque[E] extends AbstractCollection[E] with Deque[E] with 
      *  o.equals(e), if such an element exists in this deque.
      */
     @stub
-    def removeFirstOccurrence(o: Object): Boolean = ???
+    def removeFirstOccurrence(o: Any): Boolean = ???
 
     /** Retrieves and removes the last element of this deque. */
     @stub
@@ -204,7 +204,7 @@ class ConcurrentLinkedDeque[E] extends AbstractCollection[E] with Deque[E] with 
      *  o.equals(e), if such an element exists in this deque.
      */
     @stub
-    def removeLastOccurrence(o: Object): Boolean = ???
+    def removeLastOccurrence(o: Any): Boolean = ???
 
     /** Returns the number of elements in this deque. */
     @stub

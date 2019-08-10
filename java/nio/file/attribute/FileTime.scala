@@ -21,7 +21,7 @@ final class FileTime extends Object with Comparable[FileTime] {
 
     /** Tests this FileTime for equality with the given object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Computes a hash code for this file time. */
     @stub

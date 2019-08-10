@@ -5,7 +5,7 @@ import javax.swing.plaf.UIResource
 import scala.scalanative.annotation.stub
 
 /** The UI resource version of ScrollPaneLayout. */
-object ScrollPaneLayout.UIResource extends ScrollPaneLayout with UIResource {
+object ScrollPaneLayout_UIResource extends ScrollPaneLayout with UIResource {
 
     /**  */
     @stub

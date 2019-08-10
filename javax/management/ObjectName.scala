@@ -207,7 +207,7 @@ class ObjectName extends Object with Comparable[ObjectName] with QueryExp {
 
     /** Compares the current object name with another object name. */
     @stub
-    def equals(object: Object): Boolean = ???
+    def equals(object: Any): Boolean = ???
 
     /** Returns a string representation of the list of key properties,
      *  in which the key properties are sorted in lexical order.

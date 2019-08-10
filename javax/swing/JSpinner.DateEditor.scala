@@ -12,7 +12,7 @@ import scala.scalanative.annotation.stub
  *  minimum and maximum properties
  *  are mapped to the SpinnerDateModel.
  */
-object JSpinner.DateEditor extends JSpinner.DefaultEditor {
+object JSpinner_DateEditor extends JSpinner.DefaultEditor {
 
     /** Construct a JSpinner editor that supports displaying
      *  and editing the value of a SpinnerDateModel

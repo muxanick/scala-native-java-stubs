@@ -94,6 +94,5 @@ trait Line extends AutoCloseable {
 
 object Line {
     /** A Line.Info object contains information about a line. */
-    @stub
-    object Info extends Line.Info
+    type Info = Line_Info
 }

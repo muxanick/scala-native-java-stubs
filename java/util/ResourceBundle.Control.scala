@@ -137,7 +137,7 @@ import scala.scalanative.annotation.stub
  *  }
  *  
  */
-object ResourceBundle.Control extends Object {
+object ResourceBundle_Control extends Object {
 
     /** Sole constructor. */
     @stub

@@ -220,8 +220,7 @@ trait LongStream extends BaseStream[Long, LongStream] {
 
 object LongStream {
     /** A mutable builder for a LongStream. */
-    @stub
-    trait Builder extends LongStream.Builder
+    type Builder = LongStream_Builder
 
     /** Returns a builder for a LongStream. */
     @stub

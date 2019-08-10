@@ -17,26 +17,21 @@ class BasicScrollPaneUI extends ScrollPaneUI with ScrollPaneConstants {
     def this() = ???
 
     /** Horizontal scrollbar listener. */
-    @stub
-    object HSBChangeListener extends BasicScrollPaneUI.HSBChangeListener
+    type HSBChangeListener = BasicScrollPaneUI_HSBChangeListener
 
     /** MouseWheelHandler is an inner class which implements the
      *  MouseWheelListener interface.
      */
-    @stub
-    protected object MouseWheelHandler extends BasicScrollPaneUI.MouseWheelHandler
+    protected type MouseWheelHandler = BasicScrollPaneUI_MouseWheelHandler
 
     /**  */
-    @stub
-    object PropertyChangeHandler extends BasicScrollPaneUI.PropertyChangeHandler
+    type PropertyChangeHandler = BasicScrollPaneUI_PropertyChangeHandler
 
     /** Listener for viewport events. */
-    @stub
-    object ViewportChangeHandler extends BasicScrollPaneUI.ViewportChangeHandler
+    type ViewportChangeHandler = BasicScrollPaneUI_ViewportChangeHandler
 
     /** Vertical scrollbar listener. */
-    @stub
-    object VSBChangeListener extends BasicScrollPaneUI.VSBChangeListener
+    type VSBChangeListener = BasicScrollPaneUI_VSBChangeListener
 
     /**  */
     @stub

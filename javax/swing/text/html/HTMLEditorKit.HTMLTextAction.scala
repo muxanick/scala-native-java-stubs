@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
  *  document. If you have another thread modifying the text these
  *  methods may have inconsistent behavior, or return the wrong thing.
  */
-object abstract HTMLEditorKit.HTMLTextAction extends StyledEditorKit.StyledTextAction {
+object abstract HTMLEditorKit_HTMLTextAction extends StyledEditorKit.StyledTextAction {
 
     /**  */
     @stub

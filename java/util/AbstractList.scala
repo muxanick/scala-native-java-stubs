@@ -68,7 +68,7 @@ abstract class AbstractList[E] extends AbstractCollection[E] with List[E] {
     def clear(): Unit
 
     /** Compares the specified object with this list for equality. */
-    def equals(o: Object): Boolean
+    def equals(o: Any): Boolean
 
     /** Returns the element at the specified position in this list. */
     def get(index: Int): E
@@ -79,7 +79,7 @@ abstract class AbstractList[E] extends AbstractCollection[E] with List[E] {
     /** Returns the index of the first occurrence of the specified element
      *  in this list, or -1 if this list does not contain the element.
      */
-    def indexOf(o: Object): Int
+    def indexOf(o: Any): Int
 
     /** Returns an iterator over the elements in this list in proper sequence. */
     def iterator(): Iterator[E]
@@ -87,7 +87,7 @@ abstract class AbstractList[E] extends AbstractCollection[E] with List[E] {
     /** Returns the index of the last occurrence of the specified element
      *  in this list, or -1 if this list does not contain the element.
      */
-    def lastIndexOf(o: Object): Int
+    def lastIndexOf(o: Any): Int
 
     /** Returns a list iterator over the elements in this list (in proper
      *  sequence).

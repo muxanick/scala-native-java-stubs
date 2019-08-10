@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
 /** The Double class defines a geometric path with
  *  coordinates stored in double precision floating point.
  */
-object Path2D.Double extends Path2D with Serializable {
+object Path2D_Double extends Path2D with Serializable {
 
     /** Constructs a new empty double precision Path2D object
      *  with a default winding rule of Path2D.WIND_NON_ZERO.
@@ -53,7 +53,7 @@ object Path2D.Double extends Path2D with Serializable {
 
     /** Creates a new object of the same class as this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Adds a curved segment, defined by three new points, to the path by
      *  drawing a Bézier curve that intersects both the current

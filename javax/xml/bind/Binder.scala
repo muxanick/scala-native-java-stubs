@@ -58,12 +58,12 @@ abstract class Binder[XmlNode] extends Object {
     def getEventHandler(): ValidationEventHandler
 
     /** Gets the JAXB object associated with the given XML element. */
-    def getJAXBNode(xmlNode: XmlNode): Object
+    def getJAXBNode(xmlNode: XmlNode): Any
 
     /** Get the particular property in the underlying implementation of
      *  Binder.
      */
-    def getProperty(name: String): Object
+    def getProperty(name: String): Any
 
     /** Gets the last Schema object (including null) set by the
      *  setSchema(Schema) method.
@@ -71,10 +71,10 @@ abstract class Binder[XmlNode] extends Object {
     def getSchema(): Schema
 
     /** Gets the XML element associated with the given JAXB object. */
-    def getXMLNode(jaxbObject: Object): XmlNode
+    def getXMLNode(jaxbObject: Any): XmlNode
 
     /** Marshal a JAXB object tree to a new XML document. */
-    def marshal(jaxbObject: Object, xmlNode: XmlNode): Unit
+    def marshal(jaxbObject: Any, xmlNode: XmlNode): Unit
 
     /** Allow an application to register a ValidationEventHandler. */
     def setEventHandler(handler: ValidationEventHandler): Unit
@@ -82,7 +82,7 @@ abstract class Binder[XmlNode] extends Object {
     /** Set the particular property in the underlying implementation of
      *  Binder.
      */
-    def setProperty(name: String, value: Object): Unit
+    def setProperty(name: String, value: Any): Unit
 
     /** Specifies whether marshal, unmarshal and update methods
      *  performs validation on their XML content.
@@ -90,7 +90,7 @@ abstract class Binder[XmlNode] extends Object {
     def setSchema(schema: Schema): Unit
 
     /** Unmarshal XML infoset view to a JAXB object tree. */
-    def unmarshal(xmlNode: XmlNode): Object
+    def unmarshal(xmlNode: XmlNode): Any
 
     /** Unmarshal XML root element by provided declaredType
      *  to a JAXB object tree.
@@ -98,13 +98,13 @@ abstract class Binder[XmlNode] extends Object {
     val JAXBElement[T]: abstract[T]
 
     /** Takes an XML node and updates its associated JAXB object and its descendants. */
-    def updateJAXB(xmlNode: XmlNode): Object
+    def updateJAXB(xmlNode: XmlNode): Any
 
     /** Takes an JAXB object and updates
      *  its associated XML node and its descendants.
      */
-    def updateXML(jaxbObject: Object): XmlNode
+    def updateXML(jaxbObject: Any): XmlNode
 
     /** Changes in JAXB object tree are updated in its associated XML parse tree. */
-    def updateXML(jaxbObject: Object, xmlNode: XmlNode): XmlNode
+    def updateXML(jaxbObject: Any, xmlNode: XmlNode): XmlNode
 }

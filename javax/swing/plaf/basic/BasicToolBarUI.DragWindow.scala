@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class BasicToolBarUI.DragWindow extends Window {
+protected class BasicToolBarUI_DragWindow extends Window {
 
     /**  */
     @stub

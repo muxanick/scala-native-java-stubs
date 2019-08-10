@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
  *  This is used by the AbstractDocument class and its extensions
  *  for broadcasting change information to the document listeners.
  */
-class AbstractDocument.DefaultDocumentEvent extends CompoundEdit with DocumentEvent {
+class AbstractDocument_DefaultDocumentEvent extends CompoundEdit with DocumentEvent {
 
     /** Constructs a change record. */
     @stub

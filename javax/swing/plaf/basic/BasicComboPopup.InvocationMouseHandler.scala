@@ -22,7 +22,7 @@ import scala.scalanative.annotation.stub
  *  be sure to invoke the superclass
  *  version of each method.
  */
-protected class BasicComboPopup.InvocationMouseHandler extends MouseAdapter {
+protected class BasicComboPopup_InvocationMouseHandler extends MouseAdapter {
 
     /**  */
     @stub

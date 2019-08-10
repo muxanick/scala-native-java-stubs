@@ -12,7 +12,7 @@ class BufferCapabilities extends Object with Cloneable {
 
     /** Creates and returns a copy of this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /**  */
     @stub
@@ -43,6 +43,5 @@ object BufferCapabilities {
     /** A type-safe enumeration of the possible back buffer contents after
      *  page-flipping
      */
-    @stub
-    object FlipContents extends BufferCapabilities.FlipContents
+    type FlipContents = BufferCapabilities_FlipContents
 }

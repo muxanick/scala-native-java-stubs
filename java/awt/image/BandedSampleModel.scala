@@ -62,7 +62,7 @@ final class BandedSampleModel extends ComponentSampleModel {
      *  TransferType.
      */
     @stub
-    def getDataElements(x: Int, y: Int, obj: Object, data: DataBuffer): Object = ???
+    def getDataElements(x: Int, y: Int, obj: Any, data: DataBuffer): Any = ???
 
     /** Returns all samples for the specified pixel in an int array. */
     @stub
@@ -106,7 +106,7 @@ final class BandedSampleModel extends ComponentSampleModel {
      *  primitive array of type TransferType.
      */
     @stub
-    def setDataElements(x: Int, y: Int, obj: Object, data: DataBuffer): Unit = ???
+    def setDataElements(x: Int, y: Int, obj: Any, data: DataBuffer): Unit = ???
 
     /** Sets a pixel in the DataBuffer using an int array of samples for input. */
     @stub

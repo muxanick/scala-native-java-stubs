@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
  *  used for a specific script or purpose. A character is contained by
  *  at most one Unicode block.
  */
-final object Character.UnicodeBlock extends Character.Subset {
+final object Character_UnicodeBlock extends Character.Subset {
 
     /** Constant for the "Aegean Numbers" Unicode character block. */
     @stub

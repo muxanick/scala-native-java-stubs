@@ -8,21 +8,18 @@ import scala.scalanative.annotation.stub
  *  a NavigationFilter must provide an implementation that will
  *  not callback into the NavigationFilter.
  */
-object abstract NavigationFilter.FilterBypass extends Object {
+object abstract NavigationFilter_FilterBypass extends Object {
 
     /**  */
     @stub
     def FilterBypass() = ???
 
     /** Returns the Caret that is changing. */
-    @stub
     def getCaret(): Caret
 
     /** Moves the caret location, bypassing the NavigationFilter. */
-    @stub
     def moveDot(dot: Int, bias: Position.Bias): Unit
 
     /** Sets the caret location, bypassing the NavigationFilter. */
-    @stub
     def setDot(dot: Int, bias: Position.Bias): Unit
 }

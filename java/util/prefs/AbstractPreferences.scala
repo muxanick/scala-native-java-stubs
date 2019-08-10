@@ -88,7 +88,7 @@ abstract class AbstractPreferences extends Preferences {
     protected def this(parent: AbstractPreferences, name: String) = ???
 
     /** An object whose monitor is used to lock this node. */
-    protected val lock: Object
+    protected val lock: Any
 
     /** This field should be true if this node did not exist in the
      *  backing store prior to the creation of this object.

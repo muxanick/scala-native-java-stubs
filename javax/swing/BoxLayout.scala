@@ -108,7 +108,7 @@ class BoxLayout extends Object with LayoutManager2 with Serializable {
 
     /** Not used by this class. */
     @stub
-    def addLayoutComponent(comp: Component, constraints: Object): Unit = ???
+    def addLayoutComponent(comp: Component, constraints: Any): Unit = ???
 
     /** Not used by this class. */
     @stub

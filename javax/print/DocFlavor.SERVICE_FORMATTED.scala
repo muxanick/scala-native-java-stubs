@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  data.
  *  
  */
-object DocFlavor.SERVICE_FORMATTED extends DocFlavor {
+object DocFlavor_SERVICE_FORMATTED extends DocFlavor {
 
     /** Constructs a new doc flavor with a MIME type of
      *  "application/x-java-jvm-local-objectref" indicating

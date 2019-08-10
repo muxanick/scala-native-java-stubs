@@ -7,4 +7,4 @@ import scala.scalanative.annotation.stub
  *  attributes that contribute to a font.  These are aliased
  *  by the outer class for general presentation.
  */
-object StyleConstants.FontConstants extends StyleConstants with AttributeSet.FontAttribute with AttributeSet.CharacterAttribute {
+object StyleConstants_FontConstants extends StyleConstants with AttributeSet.FontAttribute with AttributeSet.CharacterAttribute {

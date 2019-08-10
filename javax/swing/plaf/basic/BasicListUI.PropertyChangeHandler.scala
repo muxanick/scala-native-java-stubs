@@ -19,7 +19,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-class BasicListUI.PropertyChangeHandler extends Object with PropertyChangeListener {
+class BasicListUI_PropertyChangeHandler extends Object with PropertyChangeListener {
 
     /**  */
     @stub

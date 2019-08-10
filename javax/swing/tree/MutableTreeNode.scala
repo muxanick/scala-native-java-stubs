@@ -31,5 +31,5 @@ trait MutableTreeNode extends TreeNode {
 
     /** Resets the user object of the receiver to object. */
     @stub
-    def setUserObject(object: Object): Unit = ???
+    def setUserObject(object: Any): Unit = ???
 }

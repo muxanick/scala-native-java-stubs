@@ -20,7 +20,7 @@ final class KerberosPrincipal extends Object with Principal with Serializable {
 
     /** Compares the specified Object with this Principal for equality. */
     @stub
-    def equals(other: Object): Boolean = ???
+    def equals(other: Any): Boolean = ???
 
     /** The returned string corresponds to the single-string
      *  representation of a Kerberos Principal name as specified in

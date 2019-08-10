@@ -5,7 +5,7 @@ import javax.swing.text.MutableAttributeSet
 import scala.scalanative.annotation.stub
 
 /**  */
-class HTMLDocument.HTMLReader.ParagraphAction extends HTMLDocument.HTMLReader.BlockAction {
+class HTMLDocument_HTMLReader_ParagraphAction extends HTMLDocument.HTMLReader.BlockAction {
 
     /**  */
     @stub

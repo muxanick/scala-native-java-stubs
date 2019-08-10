@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
 /** TreeIncrementAction is used to handle up/down actions.  Selection
  *  is moved up or down based on direction.
  */
-class BasicTreeUI.TreeIncrementAction extends AbstractAction {
+class BasicTreeUI_TreeIncrementAction extends AbstractAction {
 
     /**  */
     @stub

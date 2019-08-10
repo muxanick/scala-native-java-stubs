@@ -47,10 +47,10 @@ abstract class AbstractAction extends Object with Action with Cloneable with Ser
     def addPropertyChangeListener(listener: PropertyChangeListener): Unit
 
     /** Clones the abstract action. */
-    protected def clone(): Object
+    protected def clone(): Any
 
     /** Supports reporting bound property changes. */
-    protected def firePropertyChange(propertyName: String, oldValue: Object, newValue: Object): Unit
+    protected def firePropertyChange(propertyName: String, oldValue: Any, newValue: Any): Unit
 
     /** Returns an array of Objects which are keys for
      *  which values have been set for this AbstractAction,
@@ -64,13 +64,13 @@ abstract class AbstractAction extends Object with Action with Cloneable with Ser
     def getPropertyChangeListeners(): Array[PropertyChangeListener]
 
     /** Gets the Object associated with the specified key. */
-    def getValue(key: String): Object
+    def getValue(key: String): Any
 
     /** Returns true if the action is enabled. */
     def isEnabled(): Boolean
 
     /** Sets the Value associated with the specified key. */
-    def putValue(key: String, newValue: Object): Unit
+    def putValue(key: String, newValue: Any): Unit
 
     /** Removes a PropertyChangeListener from the listener list. */
     def removePropertyChangeListener(listener: PropertyChangeListener): Unit

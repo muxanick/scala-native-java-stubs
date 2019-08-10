@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class BasicToolBarUI.FrameListener extends WindowAdapter {
+protected class BasicToolBarUI_FrameListener extends WindowAdapter {
 
     /**  */
     @stub

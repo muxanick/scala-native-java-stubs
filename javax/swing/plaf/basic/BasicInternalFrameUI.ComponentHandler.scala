@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class BasicInternalFrameUI.ComponentHandler extends Object with ComponentListener {
+protected class BasicInternalFrameUI_ComponentHandler extends Object with ComponentListener {
 
     /**  */
     @stub

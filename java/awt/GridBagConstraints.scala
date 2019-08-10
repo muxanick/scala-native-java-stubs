@@ -87,7 +87,7 @@ class GridBagConstraints extends Object with Cloneable with Serializable {
 
     /** Creates a copy of this grid bag constraint. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 }
 
 object GridBagConstraints {

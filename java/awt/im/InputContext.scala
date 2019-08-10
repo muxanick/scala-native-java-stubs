@@ -61,7 +61,7 @@ class InputContext extends Object {
 
     /** Returns a control object from the current input method, or null. */
     @stub
-    def getInputMethodControlObject(): Object = ???
+    def getInputMethodControlObject(): Any = ???
 
     /** Returns the current locale of the current input method or keyboard
      *  layout.

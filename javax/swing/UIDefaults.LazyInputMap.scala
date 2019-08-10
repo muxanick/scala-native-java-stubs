@@ -12,7 +12,7 @@ import scala.scalanative.annotation.stub
  *  the odd number entries being the value to use in the
  *  InputMap (and the key in the ActionMap).
  */
-object UIDefaults.LazyInputMap extends Object with UIDefaults.LazyValue {
+object UIDefaults_LazyInputMap extends Object with UIDefaults.LazyValue {
 
     /**  */
     @stub
@@ -22,5 +22,5 @@ object UIDefaults.LazyInputMap extends Object with UIDefaults.LazyValue {
      *  passed in.
      */
     @stub
-    def createValue(table: UIDefaults): Object = ???
+    def createValue(table: UIDefaults): Any = ???
 }

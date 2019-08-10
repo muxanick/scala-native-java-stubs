@@ -7,7 +7,7 @@ import javax.swing.plaf.basic.BasicToolBarUI.DockingListener
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class MetalToolBarUI.MetalDockingListener extends BasicToolBarUI.DockingListener {
+protected class MetalToolBarUI_MetalDockingListener extends BasicToolBarUI.DockingListener {
 
     /**  */
     @stub

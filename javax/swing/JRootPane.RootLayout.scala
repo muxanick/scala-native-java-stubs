@@ -17,7 +17,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JRootPane.RootLayout extends Object with LayoutManager2 with Serializable {
+protected class JRootPane_RootLayout extends Object with LayoutManager2 with Serializable {
 
     /**  */
     @stub
@@ -27,7 +27,7 @@ protected class JRootPane.RootLayout extends Object with LayoutManager2 with Ser
      *  constraint object.
      */
     @stub
-    def addLayoutComponent(comp: Component, constraints: Object): Unit = ???
+    def addLayoutComponent(comp: Component, constraints: Any): Unit = ???
 
     /** If the layout manager uses a per-component string,
      *  adds the component comp to the layout,

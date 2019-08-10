@@ -18,7 +18,7 @@ class StyledEditorKit extends DefaultEditorKit {
 
     /** Creates a copy of the editor kit. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Creates an uninitialized text storage model
      *  that is appropriate for this type of editor.
@@ -68,40 +68,32 @@ class StyledEditorKit extends DefaultEditorKit {
 
 object StyledEditorKit {
     /** An action to set paragraph alignment. */
-    @stub
-    object AlignmentAction extends StyledEditorKit.AlignmentAction
+    type AlignmentAction = StyledEditorKit_AlignmentAction
 
     /** An action to toggle the bold attribute. */
-    @stub
-    object BoldAction extends StyledEditorKit.BoldAction
+    type BoldAction = StyledEditorKit_BoldAction
 
     /** An action to set the font family in the associated
      *  JEditorPane.
      */
-    @stub
-    object FontFamilyAction extends StyledEditorKit.FontFamilyAction
+    type FontFamilyAction = StyledEditorKit_FontFamilyAction
 
     /** An action to set the font size in the associated
      *  JEditorPane.
      */
-    @stub
-    object FontSizeAction extends StyledEditorKit.FontSizeAction
+    type FontSizeAction = StyledEditorKit_FontSizeAction
 
     /** An action to set foreground color. */
-    @stub
-    object ForegroundAction extends StyledEditorKit.ForegroundAction
+    type ForegroundAction = StyledEditorKit_ForegroundAction
 
     /** An action to toggle the italic attribute. */
-    @stub
-    object ItalicAction extends StyledEditorKit.ItalicAction
+    type ItalicAction = StyledEditorKit_ItalicAction
 
     /** An action that assumes it's being fired on a JEditorPane
      *  with a StyledEditorKit (or subclass) installed.
      */
-    @stub
-    object StyledTextAction extends StyledEditorKit.StyledTextAction
+    type StyledTextAction = StyledEditorKit_StyledTextAction
 
     /** An action to toggle the underline attribute. */
-    @stub
-    object UnderlineAction extends StyledEditorKit.UnderlineAction
+    type UnderlineAction = StyledEditorKit_UnderlineAction
 }

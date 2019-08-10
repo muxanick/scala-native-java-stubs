@@ -50,14 +50,13 @@ class JDesktopPane extends JLayeredPane with Accessible {
     /** This class implements accessibility support for the
      *  JDesktopPane class.
      */
-    @stub
-    protected object AccessibleJDesktopPane extends JDesktopPane.AccessibleJDesktopPane
+    protected type AccessibleJDesktopPane = JDesktopPane_AccessibleJDesktopPane
 
     /** Adds the specified component to this container at the specified
      *  index.
      */
     @stub
-    protected def addImpl(comp: Component, constraints: Object, index: Int): Unit = ???
+    protected def addImpl(comp: Component, constraints: Any, index: Int): Unit = ???
 
     /** Gets the AccessibleContext associated with this
      *  JDesktopPane.

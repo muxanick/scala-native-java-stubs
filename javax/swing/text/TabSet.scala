@@ -25,7 +25,7 @@ class TabSet extends Object with Serializable {
 
     /** Indicates whether this TabSet is equal to another one. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the TabStop at index index. */
     @stub

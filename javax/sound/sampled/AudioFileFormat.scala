@@ -95,7 +95,7 @@ class AudioFileFormat extends Object {
 
     /** Obtain the property value specified by the key. */
     @stub
-    def getProperty(key: String): Object = ???
+    def getProperty(key: String): Any = ???
 
     /** Obtains the audio file type, such as WAVE or AU. */
     @stub
@@ -114,6 +114,5 @@ object AudioFileFormat {
     /** An instance of the Type class represents one of the
      *  standard types of audio file.
      */
-    @stub
-    object Type extends AudioFileFormat.Type
+    type Type = AudioFileFormat_Type
 }

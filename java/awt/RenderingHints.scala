@@ -58,7 +58,7 @@ class RenderingHints extends Object with Map[Object, Object] with Cloneable {
 
     /** Constructs a new object with the specified key/value pair. */
     @stub
-    def this(key: RenderingHints.Key, value: Object) = ???
+    def this(key: RenderingHints.Key, value: Any) = ???
 
     /** Adds all of the keys and corresponding values from the specified
      *  RenderingHints object to this
@@ -78,19 +78,19 @@ class RenderingHints extends Object with Map[Object, Object] with Cloneable {
      *  object.
      */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns true if this RenderingHints
      *   contains a mapping for the specified key.
      */
     @stub
-    def containsKey(key: Object): Boolean = ???
+    def containsKey(key: Any): Boolean = ???
 
     /** Returns true if this RenderingHints maps one or more keys to the
      *  specified value.
      */
     @stub
-    def containsValue(value: Object): Boolean = ???
+    def containsValue(value: Any): Boolean = ???
 
     /** Returns a Set view of the mappings contained
      *  in this RenderingHints.
@@ -102,11 +102,11 @@ class RenderingHints extends Object with Map[Object, Object] with Cloneable {
      *  RenderingHints for equality.
      */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the value to which the specified key is mapped. */
     @stub
-    def get(key: Object): Object = ???
+    def get(key: Any): Any = ???
 
     /** Returns the hash code value for this RenderingHints. */
     @stub
@@ -128,7 +128,7 @@ class RenderingHints extends Object with Map[Object, Object] with Cloneable {
      *  value in this RenderingHints object.
      */
     @stub
-    def put(key: Object, value: Object): Object = ???
+    def put(key: Any, value: Any): Any = ???
 
     /** Copies all of the mappings from the specified Map
      *  to this RenderingHints.
@@ -140,7 +140,7 @@ class RenderingHints extends Object with Map[Object, Object] with Cloneable {
      *  RenderingHints object.
      */
     @stub
-    def remove(key: Object): Object = ???
+    def remove(key: Any): Any = ???
 
     /** Returns the number of key-value mappings in this
      *  RenderingHints.
@@ -167,8 +167,7 @@ object RenderingHints {
      *  RenderingHints class to control various
      *  algorithm choices in the rendering and imaging pipelines.
      */
-    @stub
-    object Key extends RenderingHints.Key
+    type Key = RenderingHints_Key
 
     /** Alpha interpolation hint key. */
     @stub
@@ -215,33 +214,33 @@ object RenderingHints {
      *  performance vs.
      */
     @stub
-    val VALUE_ALPHA_INTERPOLATION_DEFAULT: Object = ???
+    val VALUE_ALPHA_INTERPOLATION_DEFAULT: Any = ???
 
     /** Alpha interpolation hint value -- alpha blending algorithms
      *  are chosen with a preference for precision and visual quality.
      */
     @stub
-    val VALUE_ALPHA_INTERPOLATION_QUALITY: Object = ???
+    val VALUE_ALPHA_INTERPOLATION_QUALITY: Any = ???
 
     /** Alpha interpolation hint value -- alpha blending algorithms
      *  are chosen with a preference for calculation speed.
      */
     @stub
-    val VALUE_ALPHA_INTERPOLATION_SPEED: Object = ???
+    val VALUE_ALPHA_INTERPOLATION_SPEED: Any = ???
 
     /** Antialiasing hint value -- rendering is done with a default
      *  antialiasing mode chosen by the implementation.
      */
     @stub
-    val VALUE_ANTIALIAS_DEFAULT: Object = ???
+    val VALUE_ANTIALIAS_DEFAULT: Any = ???
 
     /** Antialiasing hint value -- rendering is done without antialiasing. */
     @stub
-    val VALUE_ANTIALIAS_OFF: Object = ???
+    val VALUE_ANTIALIAS_OFF: Any = ???
 
     /** Antialiasing hint value -- rendering is done with antialiasing. */
     @stub
-    val VALUE_ANTIALIAS_ON: Object = ???
+    val VALUE_ANTIALIAS_ON: Any = ???
 
     /** Color rendering hint value -- perform color conversion
      *  calculations as chosen by the implementation to represent
@@ -249,51 +248,51 @@ object RenderingHints {
      *  accuracy.
      */
     @stub
-    val VALUE_COLOR_RENDER_DEFAULT: Object = ???
+    val VALUE_COLOR_RENDER_DEFAULT: Any = ???
 
     /** Color rendering hint value -- perform the color conversion
      *  calculations with the highest accuracy and visual quality.
      */
     @stub
-    val VALUE_COLOR_RENDER_QUALITY: Object = ???
+    val VALUE_COLOR_RENDER_QUALITY: Any = ???
 
     /** Color rendering hint value -- perform the fastest color
      *  conversion to the format of the output device.
      */
     @stub
-    val VALUE_COLOR_RENDER_SPEED: Object = ???
+    val VALUE_COLOR_RENDER_SPEED: Any = ???
 
     /** Dithering hint value -- use a default for dithering chosen by
      *  the implementation.
      */
     @stub
-    val VALUE_DITHER_DEFAULT: Object = ???
+    val VALUE_DITHER_DEFAULT: Any = ???
 
     /** Dithering hint value -- do not dither when rendering geometry. */
     @stub
-    val VALUE_DITHER_DISABLE: Object = ???
+    val VALUE_DITHER_DISABLE: Any = ???
 
     /** Dithering hint value -- dither when rendering geometry, if needed. */
     @stub
-    val VALUE_DITHER_ENABLE: Object = ???
+    val VALUE_DITHER_ENABLE: Any = ???
 
     /** Font fractional metrics hint value -- character glyphs are
      *  positioned with accuracy chosen by the implementation.
      */
     @stub
-    val VALUE_FRACTIONALMETRICS_DEFAULT: Object = ???
+    val VALUE_FRACTIONALMETRICS_DEFAULT: Any = ???
 
     /** Font fractional metrics hint value -- character glyphs are
      *  positioned with advance widths rounded to pixel boundaries.
      */
     @stub
-    val VALUE_FRACTIONALMETRICS_OFF: Object = ???
+    val VALUE_FRACTIONALMETRICS_OFF: Any = ???
 
     /** Font fractional metrics hint value -- character glyphs are
      *  positioned with sub-pixel accuracy.
      */
     @stub
-    val VALUE_FRACTIONALMETRICS_ON: Object = ???
+    val VALUE_FRACTIONALMETRICS_ON: Any = ???
 
     /** Interpolation hint value -- the color samples of 9 nearby
      *  integer coordinate samples in the image are interpolated using
@@ -301,66 +300,66 @@ object RenderingHints {
      *  a color sample.
      */
     @stub
-    val VALUE_INTERPOLATION_BICUBIC: Object = ???
+    val VALUE_INTERPOLATION_BICUBIC: Any = ???
 
     /** Interpolation hint value -- the color samples of the 4 nearest
      *  neighboring integer coordinate samples in the image are
      *  interpolated linearly to produce a color sample.
      */
     @stub
-    val VALUE_INTERPOLATION_BILINEAR: Object = ???
+    val VALUE_INTERPOLATION_BILINEAR: Any = ???
 
     /** Interpolation hint value -- the color sample of the nearest
      *  neighboring integer coordinate sample in the image is used.
      */
     @stub
-    val VALUE_INTERPOLATION_NEAREST_NEIGHBOR: Object = ???
+    val VALUE_INTERPOLATION_NEAREST_NEIGHBOR: Any = ???
 
     /** Rendering hint value -- rendering algorithms are chosen
      *  by the implementation for a good tradeoff of performance
      *  vs.
      */
     @stub
-    val VALUE_RENDER_DEFAULT: Object = ???
+    val VALUE_RENDER_DEFAULT: Any = ???
 
     /** Rendering hint value -- rendering algorithms are chosen
      *  with a preference for output quality.
      */
     @stub
-    val VALUE_RENDER_QUALITY: Object = ???
+    val VALUE_RENDER_QUALITY: Any = ???
 
     /** Rendering hint value -- rendering algorithms are chosen
      *  with a preference for output speed.
      */
     @stub
-    val VALUE_RENDER_SPEED: Object = ???
+    val VALUE_RENDER_SPEED: Any = ???
 
     /** Stroke normalization control hint value -- geometry may be
      *  modified or left pure depending on the tradeoffs in a given
      *  implementation.
      */
     @stub
-    val VALUE_STROKE_DEFAULT: Object = ???
+    val VALUE_STROKE_DEFAULT: Any = ???
 
     /** Stroke normalization control hint value -- geometry should
      *  be normalized to improve uniformity or spacing of lines and
      *  overall aesthetics.
      */
     @stub
-    val VALUE_STROKE_NORMALIZE: Object = ???
+    val VALUE_STROKE_NORMALIZE: Any = ???
 
     /** Stroke normalization control hint value -- geometry should
      *  be left unmodified and rendered with sub-pixel accuracy.
      */
     @stub
-    val VALUE_STROKE_PURE: Object = ???
+    val VALUE_STROKE_PURE: Any = ???
 
     /** Text antialiasing hint value -- text rendering is done according
      *  to the KEY_ANTIALIASING hint or a default chosen by the
      *  implementation.
      */
     @stub
-    val VALUE_TEXT_ANTIALIAS_DEFAULT: Object = ???
+    val VALUE_TEXT_ANTIALIAS_DEFAULT: Any = ???
 
     /** Text antialiasing hint value -- text rendering is requested to
      *  use information in the font resource which specifies for each point
@@ -368,7 +367,7 @@ object RenderingHints {
      *  VALUE_TEXT_ANTIALIAS_OFF.
      */
     @stub
-    val VALUE_TEXT_ANTIALIAS_GASP: Object = ???
+    val VALUE_TEXT_ANTIALIAS_GASP: Any = ???
 
     /** Text antialiasing hint value -- request that text be displayed
      *  optimised for an LCD display with subpixels in order from display
@@ -376,7 +375,7 @@ object RenderingHints {
      *  is three times that of the full pixel horizontal resolution (HBGR).
      */
     @stub
-    val VALUE_TEXT_ANTIALIAS_LCD_HBGR: Object = ???
+    val VALUE_TEXT_ANTIALIAS_LCD_HBGR: Any = ???
 
     /** Text antialiasing hint value -- request that text be displayed
      *  optimised for an LCD display with subpixels in order from display
@@ -384,7 +383,7 @@ object RenderingHints {
      *  is three times that of the full pixel horizontal resolution (HRGB).
      */
     @stub
-    val VALUE_TEXT_ANTIALIAS_LCD_HRGB: Object = ???
+    val VALUE_TEXT_ANTIALIAS_LCD_HRGB: Any = ???
 
     /** Text antialiasing hint value -- request that text be displayed
      *  optimised for an LCD display with subpixel organisation from display
@@ -392,7 +391,7 @@ object RenderingHints {
      *  three times that of the full pixel vertical resolution (VBGR).
      */
     @stub
-    val VALUE_TEXT_ANTIALIAS_LCD_VBGR: Object = ???
+    val VALUE_TEXT_ANTIALIAS_LCD_VBGR: Any = ???
 
     /** Text antialiasing hint value -- request that text be displayed
      *  optimised for an LCD display with subpixel organisation from display
@@ -400,17 +399,17 @@ object RenderingHints {
      *  three times that of the full pixel vertical resolution (VRGB).
      */
     @stub
-    val VALUE_TEXT_ANTIALIAS_LCD_VRGB: Object = ???
+    val VALUE_TEXT_ANTIALIAS_LCD_VRGB: Any = ???
 
     /** Text antialiasing hint value -- text rendering is done without
      *  any form of antialiasing.
      */
     @stub
-    val VALUE_TEXT_ANTIALIAS_OFF: Object = ???
+    val VALUE_TEXT_ANTIALIAS_OFF: Any = ???
 
     /** Text antialiasing hint value -- text rendering is done with
      *  some form of antialiasing.
      */
     @stub
-    val VALUE_TEXT_ANTIALIAS_ON: Object = ???
+    val VALUE_TEXT_ANTIALIAS_ON: Any = ???
 }

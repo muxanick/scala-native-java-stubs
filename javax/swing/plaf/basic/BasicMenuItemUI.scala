@@ -16,8 +16,7 @@ class BasicMenuItemUI extends MenuItemUI {
     def this() = ???
 
     /**  */
-    @stub
-    protected object MouseInputHandler extends BasicMenuItemUI.MouseInputHandler
+    protected type MouseInputHandler = BasicMenuItemUI_MouseInputHandler
 
     /** Accelerator delimiter string, such as '+' in 'Ctrl+C'. */
     @stub

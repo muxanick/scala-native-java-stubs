@@ -18,7 +18,7 @@ abstract class Dimension2D extends Object with Cloneable {
     protected def this() = ???
 
     /** Creates a new object of the same class as this object. */
-    def clone(): Object
+    def clone(): Any
 
     /** Returns the height of this Dimension in double
      *  precision.

@@ -41,7 +41,7 @@ final class TextMeasurer extends Object with Cloneable {
 
     /** Creates and returns a copy of this object. */
     @stub
-    protected def clone(): Object = ???
+    protected def clone(): Any = ???
 
     /** Updates the TextMeasurer after a single character has
      *  been deleted

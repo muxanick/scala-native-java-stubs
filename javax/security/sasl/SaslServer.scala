@@ -78,7 +78,7 @@ trait SaslServer {
 
     /** Retrieves the negotiated property. */
     @stub
-    def getNegotiatedProperty(propName: String): Object = ???
+    def getNegotiatedProperty(propName: String): Any = ???
 
     /** Determines whether the authentication exchange has completed. */
     @stub

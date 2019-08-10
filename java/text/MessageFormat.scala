@@ -303,11 +303,11 @@ class MessageFormat extends Format {
 
     /** Creates and returns a copy of this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Equality comparison between two message format objects */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Formats an array of objects and appends the MessageFormat's
      *  pattern, with format elements replaced by the formatted objects, to the
@@ -321,14 +321,14 @@ class MessageFormat extends Format {
      *  provided StringBuffer.
      */
     @stub
-    def format(arguments: Object, result: StringBuffer, pos: FieldPosition): StringBuffer = ???
+    def format(arguments: Any, result: StringBuffer, pos: FieldPosition): StringBuffer = ???
 
     /** Formats an array of objects and inserts them into the
      *  MessageFormat's pattern, producing an
      *  AttributedCharacterIterator.
      */
     @stub
-    def formatToCharacterIterator(arguments: Object): AttributedCharacterIterator = ???
+    def formatToCharacterIterator(arguments: Any): AttributedCharacterIterator = ???
 
     /** Gets the formats used for the format elements in the
      *  previously set pattern string.
@@ -363,7 +363,7 @@ class MessageFormat extends Format {
 
     /** Parses text from a string to produce an object array. */
     @stub
-    def parseObject(source: String, pos: ParsePosition): Object = ???
+    def parseObject(source: String, pos: ParsePosition): Any = ???
 
     /** Sets the format to use for the format element with the given
      *  format element index within the previously set pattern string.
@@ -405,8 +405,7 @@ object MessageFormat {
      *  AttributedCharacterIterator returned
      *  from MessageFormat.formatToCharacterIterator.
      */
-    @stub
-    object Field extends MessageFormat.Field
+    type Field = MessageFormat_Field
 
     /** Creates a MessageFormat with the given pattern and uses it
      *  to format the given arguments.

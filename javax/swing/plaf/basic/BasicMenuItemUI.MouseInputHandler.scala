@@ -6,7 +6,7 @@ import javax.swing.event.MouseInputListener
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class BasicMenuItemUI.MouseInputHandler extends Object with MouseInputListener {
+protected class BasicMenuItemUI_MouseInputHandler extends Object with MouseInputListener {
 
     /**  */
     @stub

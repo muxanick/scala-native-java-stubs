@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
 /** This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of Foo.
  */
-class BasicInternalFrameTitlePane.RestoreAction extends AbstractAction {
+class BasicInternalFrameTitlePane_RestoreAction extends AbstractAction {
 
     /**  */
     @stub

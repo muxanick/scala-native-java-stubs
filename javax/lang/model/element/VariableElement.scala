@@ -13,7 +13,7 @@ trait VariableElement extends Element {
      *  field initialized to a compile-time constant.
      */
     @stub
-    def getConstantValue(): Object = ???
+    def getConstantValue(): Any = ???
 
     /** Returns the enclosing element of this variable. */
     @stub

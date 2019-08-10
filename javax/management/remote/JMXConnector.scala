@@ -19,7 +19,7 @@ trait JMXConnector extends Closeable {
      *  status.
      */
     @stub
-    def addConnectionNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Object): Unit = ???
+    def addConnectionNotificationListener(listener: NotificationListener, filter: NotificationFilter, handback: Any): Unit = ???
 
     /** Closes the client connection to its server. */
     @stub
@@ -60,7 +60,7 @@ trait JMXConnector extends Closeable {
      *  in status.
      */
     @stub
-    def removeConnectionNotificationListener(l: NotificationListener, f: NotificationFilter, handback: Object): Unit = ???
+    def removeConnectionNotificationListener(l: NotificationListener, f: NotificationFilter, handback: Any): Unit = ???
 }
 
 object JMXConnector {

@@ -6,7 +6,7 @@ import javax.swing.AbstractAction
 import scala.scalanative.annotation.stub
 
 /** Responds to a cancel request. */
-protected class BasicFileChooserUI.CancelSelectionAction extends AbstractAction {
+protected class BasicFileChooserUI_CancelSelectionAction extends AbstractAction {
 
     /**  */
     @stub

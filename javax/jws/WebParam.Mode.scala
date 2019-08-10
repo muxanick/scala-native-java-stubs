@@ -4,10 +4,10 @@ import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /**  */
-class WebParam.Mode private (name: String, ordinal: Int) extends Enum[WebParam.Mode](name, ordinal) {
+class WebParam_Mode private (name: String, ordinal: Int) extends Enum[WebParam.Mode](name, ordinal) {
 }
 
-object WebParam.Mode {
+object WebParam_Mode {
     /**  */
     final val IN = new WebParam.Mode(IN, 0)
 

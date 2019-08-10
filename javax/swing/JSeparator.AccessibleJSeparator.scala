@@ -18,7 +18,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JSeparator.AccessibleJSeparator extends JComponent.AccessibleJComponent {
+protected class JSeparator_AccessibleJSeparator extends JComponent.AccessibleJComponent {
 
     /**  */
     @stub

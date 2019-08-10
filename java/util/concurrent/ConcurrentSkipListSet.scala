@@ -100,7 +100,7 @@ class ConcurrentSkipListSet[E] extends AbstractSet[E] with NavigableSet[E] with 
 
     /** Returns true if this set contains the specified element. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Returns an iterator over the elements in this set in descending order. */
     @stub
@@ -112,7 +112,7 @@ class ConcurrentSkipListSet[E] extends AbstractSet[E] with NavigableSet[E] with 
 
     /** Compares the specified object with this set for equality. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the first (lowest) element currently in this set. */
     @stub
@@ -174,7 +174,7 @@ class ConcurrentSkipListSet[E] extends AbstractSet[E] with NavigableSet[E] with 
 
     /** Removes the specified element from this set if it is present. */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Removes from this set all of its elements that are contained in
      *  the specified collection.

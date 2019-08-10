@@ -26,8 +26,7 @@ trait MessageContext extends Map[String, Object] {
 
 object MessageContext {
     /** Property scope. */
-    @stub
-    object Scope extends MessageContext.Scope
+    type Scope = MessageContext_Scope
 
     /** Standard property: HTTP request headers. */
     @stub

@@ -21,5 +21,5 @@ class MenuEvent extends EventObject {
 
     /** Constructs a MenuEvent object. */
     @stub
-    def this(source: Object) = ???
+    def this(source: Any) = ???
 }

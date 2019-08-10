@@ -210,7 +210,7 @@ abstract class LongBuffer extends Buffer with Comparable[LongBuffer] {
     def duplicate(): LongBuffer
 
     /** Tells whether or not this buffer is equal to another object. */
-    def equals(ob: Object): Boolean
+    def equals(ob: Any): Boolean
 
     /** Relative get method. */
     def get(): Long

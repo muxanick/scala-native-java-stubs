@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  Choice class.  It provides an implementation of the
  *  Java Accessibility API appropriate to choice user-interface elements.
  */
-protected class Choice.AccessibleAWTChoice extends Component.AccessibleAWTComponent with AccessibleAction {
+protected class Choice_AccessibleAWTChoice extends Component.AccessibleAWTComponent with AccessibleAction {
 
     /**  */
     @stub

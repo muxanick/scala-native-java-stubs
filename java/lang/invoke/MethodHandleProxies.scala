@@ -18,15 +18,15 @@ object MethodHandleProxies {
 
     /** Determines if the given object was produced by a call to asInterfaceInstance. */
     @stub
-    def isWrapperInstance(x: Object): Boolean = ???
+    def isWrapperInstance(x: Any): Boolean = ???
 
     /** Produces or recovers a target method handle which is behaviorally
      *  equivalent to the unique method of this wrapper instance.
      */
     @stub
-    def wrapperInstanceTarget(x: Object): MethodHandle = ???
+    def wrapperInstanceTarget(x: Any): MethodHandle = ???
 
     /** Recovers the unique single-method interface type for which this wrapper instance was created. */
     @stub
-    def wrapperInstanceType(x: Object): Class[_] = ???
+    def wrapperInstanceType(x: Any): Class[_] = ???
 }

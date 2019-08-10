@@ -20,13 +20,13 @@ object Objects {
      *  and false otherwise.
      */
     @stub
-    def deepEquals(a: Object, b: Object): Boolean = ???
+    def deepEquals(a: Any, b: Any): Boolean = ???
 
     /** Returns true if the arguments are equal to each other
      *  and false otherwise.
      */
     @stub
-    def equals(a: Object, b: Object): Boolean = ???
+    def equals(a: Any, b: Any): Boolean = ???
 
     /** Generates a hash code for a sequence of input values. */
     @stub
@@ -36,19 +36,19 @@ object Objects {
      *  a null argument.
      */
     @stub
-    def hashCode(o: Object): Int = ???
+    def hashCode(o: Any): Int = ???
 
     /** Returns true if the provided reference is null otherwise
      *  returns false.
      */
     @stub
-    def isNull(obj: Object): Boolean = ???
+    def isNull(obj: Any): Boolean = ???
 
     /** Returns true if the provided reference is non-null
      *  otherwise returns false.
      */
     @stub
-    def nonNull(obj: Object): Boolean = ???
+    def nonNull(obj: Any): Boolean = ???
 
     /** Checks that the specified object reference is not null. */
     @stub
@@ -68,12 +68,12 @@ object Objects {
 
     /** Returns the result of calling toString for a non-null argument and "null" for a null argument. */
     @stub
-    def toString(o: Object): String = ???
+    def toString(o: Any): String = ???
 
     /** Returns the result of calling toString on the first
      *  argument if the first argument is not null and returns
      *  the second argument otherwise.
      */
     @stub
-    def toString(o: Object, nullDefault: String): String = ???
+    def toString(o: Any, nullDefault: String): String = ???
 }

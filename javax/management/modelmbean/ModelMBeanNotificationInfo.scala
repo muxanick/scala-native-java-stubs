@@ -69,7 +69,7 @@ class ModelMBeanNotificationInfo extends MBeanNotificationInfo with DescriptorAc
      *  duplicate of this ModelMBeanNotificationInfo.
      */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns a copy of the associated Descriptor for the
      *  ModelMBeanNotificationInfo.

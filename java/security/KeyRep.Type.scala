@@ -4,10 +4,10 @@ import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** Key type. */
-class KeyRep.Type private (name: String, ordinal: Int) extends Enum[KeyRep.Type](name, ordinal) {
+class KeyRep_Type private (name: String, ordinal: Int) extends Enum[KeyRep.Type](name, ordinal) {
 }
 
-object KeyRep.Type {
+object KeyRep_Type {
     /** Type for private keys. */
     final val PRIVATE = new KeyRep.Type(PRIVATE, 0)
 

@@ -6,10 +6,10 @@ import scala.scalanative.annotation.stub
 /** Various revocation options that can be specified for the revocation
  *  checking mechanism.
  */
-class PKIXRevocationChecker.Option private (name: String, ordinal: Int) extends Enum[PKIXRevocationChecker.Option](name, ordinal) {
+class PKIXRevocationChecker_Option private (name: String, ordinal: Int) extends Enum[PKIXRevocationChecker.Option](name, ordinal) {
 }
 
-object PKIXRevocationChecker.Option {
+object PKIXRevocationChecker_Option {
     /** Disable the fallback mechanism. */
     final val NO_FALLBACK = new PKIXRevocationChecker.Option(NO_FALLBACK, 0)
 

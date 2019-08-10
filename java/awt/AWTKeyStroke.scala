@@ -37,7 +37,7 @@ class AWTKeyStroke extends Object with Serializable {
 
     /** Returns true if this object is identical to the specified object. */
     @stub
-    def equals(anObject: Object): Boolean = ???
+    def equals(anObject: Any): Boolean = ???
 
     /** Returns the character for this AWTKeyStroke. */
     @stub
@@ -71,7 +71,7 @@ class AWTKeyStroke extends Object with Serializable {
      *  AWTKeyStroke) which is equal to this instance.
      */
     @stub
-    protected def readResolve(): Object = ???
+    protected def readResolve(): Any = ???
 
     /** Returns a string that displays and identifies this object's properties. */
     @stub

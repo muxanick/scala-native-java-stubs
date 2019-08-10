@@ -10,7 +10,7 @@ import scala.scalanative.annotation.stub
  *  This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of Foo.
  */
-class BasicSliderUI.TrackListener extends MouseInputAdapter {
+class BasicSliderUI_TrackListener extends MouseInputAdapter {
 
     /**  */
     @stub

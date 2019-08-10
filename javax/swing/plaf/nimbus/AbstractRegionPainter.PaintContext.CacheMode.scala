@@ -4,10 +4,10 @@ import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /**  */
-class protected AbstractRegionPainter.PaintContext.CacheMode private (name: String, ordinal: Int) extends Enum[AbstractRegionPainter.PaintContext.CacheMode](name, ordinal) {
+class protected AbstractRegionPainter_PaintContext_CacheMode private (name: String, ordinal: Int) extends Enum[AbstractRegionPainter.PaintContext.CacheMode](name, ordinal) {
 }
 
-object AbstractRegionPainter.PaintContext.CacheMode {
+object AbstractRegionPainter_PaintContext_CacheMode {
     /**  */
     final val FIXED_SIZES = new AbstractRegionPainter.PaintContext.CacheMode(FIXED_SIZES, 0)
 

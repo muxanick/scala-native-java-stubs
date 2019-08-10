@@ -6,10 +6,10 @@ import scala.scalanative.annotation.stub
 /** Characteristics indicating properties of a Collector, which can
  *  be used to optimize reduction implementations.
  */
-class Collector.Characteristics private (name: String, ordinal: Int) extends Enum[Collector.Characteristics](name, ordinal) {
+class Collector_Characteristics private (name: String, ordinal: Int) extends Enum[Collector.Characteristics](name, ordinal) {
 }
 
-object Collector.Characteristics {
+object Collector_Characteristics {
     /** Indicates that this collector is concurrent, meaning that
      *  the result container can support the accumulator function being
      *  called concurrently with the same result container from multiple

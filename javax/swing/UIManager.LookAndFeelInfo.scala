@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
  *  LookAndFeel for the sake of configuring a menu or
  *  for initial application set up.
  */
-object UIManager.LookAndFeelInfo extends Object {
+object UIManager_LookAndFeelInfo extends Object {
 
     /** Constructs a UIManagers
      *  LookAndFeelInfo object.

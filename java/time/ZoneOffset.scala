@@ -53,7 +53,7 @@ final class ZoneOffset extends ZoneId with TemporalAccessor with TemporalAdjuste
 
     /** Checks if this offset is equal to another offset. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Gets the value of the specified field from this offset as an int. */
     @stub

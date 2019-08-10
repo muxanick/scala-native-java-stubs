@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** The Float class defines a rectangle with rounded
  *  corners all specified in float coordinates.
  */
-object RoundRectangle2D.Float extends RoundRectangle2D with Serializable {
+object RoundRectangle2D_Float extends RoundRectangle2D with Serializable {
 
     /** Constructs a new RoundRectangle2D, initialized to
      *  location (0.0, 0.0), size (0.0, 0.0), and corner arcs

@@ -4,10 +4,10 @@ import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** Values for the state bound property. */
-class SwingWorker.StateValue private (name: String, ordinal: Int) extends Enum[SwingWorker.StateValue](name, ordinal) {
+class SwingWorker_StateValue private (name: String, ordinal: Int) extends Enum[SwingWorker.StateValue](name, ordinal) {
 }
 
-object SwingWorker.StateValue {
+object SwingWorker_StateValue {
     /** SwingWorker is DONE
      *  after doInBackground method
      *  is finished.

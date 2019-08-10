@@ -76,8 +76,7 @@ object Normalizer {
      *  Unicode Standard Annex #15 — Unicode Normalization Forms
      *  and two methods to access them.
      */
-    @stub
-    object Form extends Normalizer.Form
+    type Form = Normalizer_Form
 
     /** Determines if the given sequence of char values is normalized. */
     @stub

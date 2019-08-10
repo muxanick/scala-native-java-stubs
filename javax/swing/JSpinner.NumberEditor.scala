@@ -12,7 +12,7 @@ import scala.scalanative.annotation.stub
  *  minimum and maximum properties
  *  are mapped to the SpinnerNumberModel.
  */
-object JSpinner.NumberEditor extends JSpinner.DefaultEditor {
+object JSpinner_NumberEditor extends JSpinner.DefaultEditor {
 
     /** Construct a JSpinner editor that supports displaying
      *  and editing the value of a SpinnerNumberModel

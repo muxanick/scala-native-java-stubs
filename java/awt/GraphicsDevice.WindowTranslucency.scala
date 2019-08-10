@@ -4,10 +4,10 @@ import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** Kinds of translucency supported by the underlying system. */
-class GraphicsDevice.WindowTranslucency private (name: String, ordinal: Int) extends Enum[GraphicsDevice.WindowTranslucency](name, ordinal) {
+class GraphicsDevice_WindowTranslucency private (name: String, ordinal: Int) extends Enum[GraphicsDevice.WindowTranslucency](name, ordinal) {
 }
 
-object GraphicsDevice.WindowTranslucency {
+object GraphicsDevice_WindowTranslucency {
     /** Represents support in the underlying system for windows that
      *  contain or might contain pixels with arbitrary alpha values
      *  between and including 0.0 and 1.0.

@@ -129,14 +129,13 @@ class JLayeredPane extends JComponent with Accessible {
     /** This class implements accessibility support for the
      *  JLayeredPane class.
      */
-    @stub
-    protected object AccessibleJLayeredPane extends JLayeredPane.AccessibleJLayeredPane
+    protected type AccessibleJLayeredPane = JLayeredPane_AccessibleJLayeredPane
 
     /** Adds the specified component to this container at the specified
      *  index.
      */
     @stub
-    protected def addImpl(comp: Component, constraints: Object, index: Int): Unit = ???
+    protected def addImpl(comp: Component, constraints: Any, index: Int): Unit = ???
 
     /** Gets the AccessibleContext associated with this JLayeredPane. */
     @stub

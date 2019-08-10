@@ -50,7 +50,7 @@ class KerberosTicket extends Object with Destroyable with Refreshable with Seria
 
     /** Compares the specified Object with this KerberosTicket for equality. */
     @stub
-    def equals(other: Object): Boolean = ???
+    def equals(other: Any): Boolean = ???
 
     /** Returns the time that the client was authenticated. */
     @stub

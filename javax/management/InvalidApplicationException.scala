@@ -13,5 +13,5 @@ class InvalidApplicationException extends Exception {
 
     /** Constructs an InvalidApplicationException with the specified Object. */
     @stub
-    def this(val: Object) = ???
+    def this(val: Any) = ???
 }

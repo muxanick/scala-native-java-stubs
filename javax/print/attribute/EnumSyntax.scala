@@ -84,7 +84,7 @@ abstract class EnumSyntax extends Object with Serializable with Cloneable {
      *  semantics of enumeration values is the same object as this enumeration
      *  value.
      */
-    def clone(): Object
+    def clone(): Any
 
     /** Returns the enumeration value table for this enumeration value's
      *  enumeration class.
@@ -108,7 +108,7 @@ abstract class EnumSyntax extends Object with Serializable with Cloneable {
     /** During object input, convert this deserialized enumeration instance to
      *  the proper enumeration value defined in the enumeration attribute class.
      */
-    protected def readResolve(): Object
+    protected def readResolve(): Any
 
     /** Returns a string value corresponding to this enumeration value. */
     def toString(): String

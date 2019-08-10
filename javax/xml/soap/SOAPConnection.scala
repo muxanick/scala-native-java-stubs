@@ -31,11 +31,11 @@ abstract class SOAPConnection extends Object {
     /** Sends the given message to the specified endpoint and blocks until
      *  it has returned the response.
      */
-    def call(request: SOAPMessage, to: Object): SOAPMessage
+    def call(request: SOAPMessage, to: Any): SOAPMessage
 
     /** Closes this SOAPConnection object. */
     def close(): Unit
 
     /** Gets a message from a specific endpoint and blocks until it receives, */
-    def get(to: Object): SOAPMessage
+    def get(to: Any): SOAPMessage
 }

@@ -85,7 +85,7 @@ trait RMIConnection extends Closeable with Remote {
      *  String).
      */
     @stub
-    def getAttribute(name: ObjectName, attribute: String, delegationSubject: Subject): Object = ???
+    def getAttribute(name: ObjectName, attribute: String, delegationSubject: Subject): Any = ???
 
     /** Handles the method MBeanServerConnection.getAttributes(ObjectName,
      *  String[]).
@@ -131,7 +131,7 @@ trait RMIConnection extends Closeable with Remote {
      *  String, Object[], String[]).
      */
     @stub
-    def invoke(name: ObjectName, operationName: String, params: MarshalledObject, signature: Array[String], delegationSubject: Subject): Object = ???
+    def invoke(name: ObjectName, operationName: String, params: MarshalledObject, signature: Array[String], delegationSubject: Subject): Any = ???
 
     /** Handles the method MBeanServerConnection.isInstanceOf(ObjectName,
      *  String).

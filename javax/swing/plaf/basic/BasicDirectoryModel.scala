@@ -21,7 +21,7 @@ class BasicDirectoryModel extends AbstractListModel[Object] with PropertyChangeL
 
     /**  */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /**  */
     @stub
@@ -29,7 +29,7 @@ class BasicDirectoryModel extends AbstractListModel[Object] with PropertyChangeL
 
     /** Support for reporting bound property changes for boolean properties. */
     @stub
-    protected def firePropertyChange(propertyName: String, oldValue: Object, newValue: Object): Unit = ???
+    protected def firePropertyChange(propertyName: String, oldValue: Any, newValue: Any): Unit = ???
 
     /**  */
     @stub
@@ -37,7 +37,7 @@ class BasicDirectoryModel extends AbstractListModel[Object] with PropertyChangeL
 
     /** Returns the value at the specified index. */
     @stub
-    def getElementAt(index: Int): Object = ???
+    def getElementAt(index: Int): Any = ???
 
     /**  */
     @stub
@@ -55,7 +55,7 @@ class BasicDirectoryModel extends AbstractListModel[Object] with PropertyChangeL
 
     /**  */
     @stub
-    def indexOf(o: Object): Int = ???
+    def indexOf(o: Any): Int = ???
 
     /** Obsolete - not used. */
     @stub

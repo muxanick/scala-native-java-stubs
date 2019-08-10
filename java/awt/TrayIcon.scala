@@ -163,6 +163,5 @@ object TrayIcon {
      *  caption of the message, and a possible system sound a message
      *  may generate upon showing.
      */
-    @stub
-    object MessageType extends TrayIcon.MessageType
+    type MessageType = TrayIcon_MessageType
 }

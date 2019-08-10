@@ -87,7 +87,7 @@ class ModelMBeanOperationInfo extends MBeanOperationInfo with DescriptorAccess {
      *  duplicate of this ModelMBeanOperationInfo.
      */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns a copy of the associated Descriptor of the
      *  ModelMBeanOperationInfo.

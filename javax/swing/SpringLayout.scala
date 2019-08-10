@@ -157,7 +157,7 @@ class SpringLayout extends Object with LayoutManager2 {
      *  associates the constraints with the specified component.
      */
     @stub
-    def addLayoutComponent(component: Component, constraints: Object): Unit = ???
+    def addLayoutComponent(component: Component, constraints: Any): Unit = ???
 
     /** Has no effect,
      *  since this layout manager does not
@@ -236,8 +236,7 @@ object SpringLayout {
      *  constraints that govern the way a component's size and position
      *  change in a container controlled by a SpringLayout.
      */
-    @stub
-    object Constraints extends SpringLayout.Constraints
+    type Constraints = SpringLayout_Constraints
 
     /** Specifies the baseline of a component. */
     @stub

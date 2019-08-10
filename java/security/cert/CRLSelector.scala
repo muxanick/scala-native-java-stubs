@@ -19,7 +19,7 @@ trait CRLSelector extends Cloneable {
 
     /** Makes a copy of this CRLSelector. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Decides whether a CRL should be selected. */
     @stub

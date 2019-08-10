@@ -1812,6 +1812,5 @@ final class Formatter extends Object with Closeable with Flushable {
 
 object Formatter {
     /** Enum for BigDecimal formatting. */
-    @stub
-    object BigDecimalLayoutForm extends Formatter.BigDecimalLayoutForm
+    type BigDecimalLayoutForm = Formatter_BigDecimalLayoutForm
 }

@@ -54,7 +54,7 @@ final class Class[T] extends Object with Serializable with GenericDeclaration wi
      *  by this Class object.
      */
     @stub
-    def cast(obj: Object): T = ???
+    def cast(obj: Any): T = ???
 
     /** Returns the assertion status that would be assigned to this
      *  class if it were to be initialized at the time this method is invoked.
@@ -371,7 +371,7 @@ final class Class[T] extends Object with Serializable with GenericDeclaration wi
      *  with the object represented by this Class.
      */
     @stub
-    def isInstance(obj: Object): Boolean = ???
+    def isInstance(obj: Any): Boolean = ???
 
     /** Determines if the specified Class object represents an
      *  interface type.

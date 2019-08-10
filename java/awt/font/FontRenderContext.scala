@@ -50,7 +50,7 @@ class FontRenderContext extends Object {
      *  anti-aliasing or fractional metrics.
      */
     @stub
-    def this(tx: AffineTransform, aaHint: Object, fmHint: Object) = ???
+    def this(tx: AffineTransform, aaHint: Any, fmHint: Any) = ???
 
     /** Return true if rhs has the same transform, antialiasing,
      *  and fractional metrics values as this.
@@ -62,19 +62,19 @@ class FontRenderContext extends Object {
      *  transform, antialiasing, and fractional metrics values as this.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Return the text anti-aliasing rendering mode hint used in this
      *  FontRenderContext.
      */
     @stub
-    def getAntiAliasingHint(): Object = ???
+    def getAntiAliasingHint(): Any = ???
 
     /** Return the text fractional metrics rendering mode hint used in this
      *  FontRenderContext.
      */
     @stub
-    def getFractionalMetricsHint(): Object = ???
+    def getFractionalMetricsHint(): Any = ???
 
     /** Gets the transform that is used to scale typographical points
      *    to pixels in this FontRenderContext.

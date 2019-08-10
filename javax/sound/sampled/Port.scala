@@ -16,6 +16,5 @@ object Port {
      *  with additional information specific to ports, including the port's name
      *  and whether it is a source or a target for its mixer.
      */
-    @stub
-    object Info extends Port.Info
+    type Info = Port_Info
 }

@@ -6,7 +6,7 @@ import scala.scalanative.annotation.stub
 /** This class is used to explicitly specify the value for
  *  encoding input P in OAEP Padding.
  */
-final object PSource.PSpecified extends PSource {
+final object PSource_PSpecified extends PSource {
 
     /** Constructs the source explicitly with the specified
      *  value p as the encoding input P.

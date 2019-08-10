@@ -12,7 +12,7 @@ import scala.scalanative.annotation.stub
  *   Builder objects are mutable and are not safe for use by multiple
  *  concurrent threads without appropriate synchronization.
  */
-final object AclEntry.Builder extends Object {
+final object AclEntry_Builder extends Object {
 
     /** Constructs an AclEntry from the components of this builder. */
     @stub

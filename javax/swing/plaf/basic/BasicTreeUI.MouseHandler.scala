@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** TreeMouseListener is responsible for updating the selection
  *  based on mouse events.
  */
-class BasicTreeUI.MouseHandler extends MouseAdapter with MouseMotionListener {
+class BasicTreeUI_MouseHandler extends MouseAdapter with MouseMotionListener {
 
     /**  */
     @stub

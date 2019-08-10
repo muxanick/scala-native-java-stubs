@@ -41,17 +41,17 @@ trait SpinnerModel {
      *  by getValue().
      */
     @stub
-    def getNextValue(): Object = ???
+    def getNextValue(): Any = ???
 
     /** Return the object in the sequence that comes before the object returned
      *  by getValue().
      */
     @stub
-    def getPreviousValue(): Object = ???
+    def getPreviousValue(): Any = ???
 
     /** The current element of the sequence. */
     @stub
-    def getValue(): Object = ???
+    def getValue(): Any = ???
 
     /** Removes a ChangeListener from the model's listener list. */
     @stub
@@ -61,5 +61,5 @@ trait SpinnerModel {
      *  by the editor part of a  JSpinner.
      */
     @stub
-    def setValue(value: Object): Unit = ???
+    def setValue(value: Any): Unit = ???
 }

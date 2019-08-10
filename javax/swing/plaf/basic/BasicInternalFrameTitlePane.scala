@@ -24,40 +24,31 @@ class BasicInternalFrameTitlePane extends JComponent {
     def this(f: JInternalFrame) = ???
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object CloseAction extends BasicInternalFrameTitlePane.CloseAction
+    type CloseAction = BasicInternalFrameTitlePane_CloseAction
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object IconifyAction extends BasicInternalFrameTitlePane.IconifyAction
+    type IconifyAction = BasicInternalFrameTitlePane_IconifyAction
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object MaximizeAction extends BasicInternalFrameTitlePane.MaximizeAction
+    type MaximizeAction = BasicInternalFrameTitlePane_MaximizeAction
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object MoveAction extends BasicInternalFrameTitlePane.MoveAction
+    type MoveAction = BasicInternalFrameTitlePane_MoveAction
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object PropertyChangeHandler extends BasicInternalFrameTitlePane.PropertyChangeHandler
+    type PropertyChangeHandler = BasicInternalFrameTitlePane_PropertyChangeHandler
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object RestoreAction extends BasicInternalFrameTitlePane.RestoreAction
+    type RestoreAction = BasicInternalFrameTitlePane_RestoreAction
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object SizeAction extends BasicInternalFrameTitlePane.SizeAction
+    type SizeAction = BasicInternalFrameTitlePane_SizeAction
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object SystemMenuBar extends BasicInternalFrameTitlePane.SystemMenuBar
+    type SystemMenuBar = BasicInternalFrameTitlePane_SystemMenuBar
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object TitlePaneLayout extends BasicInternalFrameTitlePane.TitlePaneLayout
+    type TitlePaneLayout = BasicInternalFrameTitlePane_TitlePaneLayout
 
     /**  */
     @stub

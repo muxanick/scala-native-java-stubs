@@ -23,16 +23,13 @@ import scala.scalanative.annotation.stub
 class ToolTipManager extends MouseAdapter with MouseMotionListener {
 
     /**  */
-    @stub
-    protected object insideTimerAction extends ToolTipManager.insideTimerAction
+    protected type insideTimerAction = ToolTipManager_insideTimerAction
 
     /**  */
-    @stub
-    protected object outsideTimerAction extends ToolTipManager.outsideTimerAction
+    protected type outsideTimerAction = ToolTipManager_outsideTimerAction
 
     /**  */
-    @stub
-    protected object stillInsideTimerAction extends ToolTipManager.stillInsideTimerAction
+    protected type stillInsideTimerAction = ToolTipManager_stillInsideTimerAction
 
     /**  */
     @stub

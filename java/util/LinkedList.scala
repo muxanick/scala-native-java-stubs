@@ -96,11 +96,11 @@ class LinkedList[E] extends AbstractSequentialList[E] with List[E] with Deque[E]
 
     /** Returns a shallow copy of this LinkedList. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns true if this list contains the specified element. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Returns an iterator over the elements in this deque in reverse
      *  sequential order.
@@ -128,13 +128,13 @@ class LinkedList[E] extends AbstractSequentialList[E] with List[E] with Deque[E]
      *  in this list, or -1 if this list does not contain the element.
      */
     @stub
-    def indexOf(o: Object): Int = ???
+    def indexOf(o: Any): Int = ???
 
     /** Returns the index of the last occurrence of the specified element
      *  in this list, or -1 if this list does not contain the element.
      */
     @stub
-    def lastIndexOf(o: Object): Int = ???
+    def lastIndexOf(o: Any): Int = ???
 
     /** Returns a list-iterator of the elements in this list (in proper
      *  sequence), starting at the specified position in the list.
@@ -206,7 +206,7 @@ class LinkedList[E] extends AbstractSequentialList[E] with List[E] with Deque[E]
      *  if it is present.
      */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Removes and returns the first element from this list. */
     @stub
@@ -216,7 +216,7 @@ class LinkedList[E] extends AbstractSequentialList[E] with List[E] with Deque[E]
      *  list (when traversing the list from head to tail).
      */
     @stub
-    def removeFirstOccurrence(o: Object): Boolean = ???
+    def removeFirstOccurrence(o: Any): Boolean = ???
 
     /** Removes and returns the last element from this list. */
     @stub
@@ -226,7 +226,7 @@ class LinkedList[E] extends AbstractSequentialList[E] with List[E] with Deque[E]
      *  list (when traversing the list from head to tail).
      */
     @stub
-    def removeLastOccurrence(o: Object): Boolean = ???
+    def removeLastOccurrence(o: Any): Boolean = ???
 
     /** Replaces the element at the specified position in this list with the
      *  specified element.

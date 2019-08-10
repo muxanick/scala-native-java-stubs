@@ -24,10 +24,10 @@ import scala.scalanative.annotation.stub
  *  
  *  3.1.3 NonAnonymousResponses Assertion in the generated WSDL.
  */
-class AddressingFeature.Responses private (name: String, ordinal: Int) extends Enum[AddressingFeature.Responses](name, ordinal) {
+class AddressingFeature_Responses private (name: String, ordinal: Int) extends Enum[AddressingFeature.Responses](name, ordinal) {
 }
 
-object AddressingFeature.Responses {
+object AddressingFeature_Responses {
     /** Supports all response types and this is the default */
     final val ALL = new AddressingFeature.Responses(ALL, 0)
 

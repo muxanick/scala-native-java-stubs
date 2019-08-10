@@ -74,7 +74,7 @@ abstract class PKIXCertPathChecker extends Object with CertPathChecker with Clon
     def check(cert: Certificate, unresolvedCritExts: Collection[String]): Unit
 
     /** Returns a clone of this object. */
-    def clone(): Object
+    def clone(): Any
 
     /** Returns an immutable Set of X.509 certificate extensions
      *  that this PKIXCertPathChecker supports (i.e.

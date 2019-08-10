@@ -27,7 +27,7 @@ class ImageFilter extends Object with ImageConsumer with Cloneable {
 
     /** Clones this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns a unique instance of an ImageFilter object which will
      *  actually perform the filtering for the specified ImageConsumer.

@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
  *  float control.  Static instances are provided for the
  *  common types.
  */
-object FloatControl.Type extends Control.Type {
+object FloatControl_Type extends Control.Type {
 
     /** Constructs a new float control type. */
     @stub

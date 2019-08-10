@@ -18,28 +18,24 @@ import scala.scalanative.annotation.stub
  *  converter to be used instead of invoking toString on the
  *  object.
  */
-object protected abstract DefaultRowSorter.ModelWrapper[M, I] extends Object {
+object protected abstract DefaultRowSorter_ModelWrapper[M, I] extends Object {
 
     /** Creates a new ModelWrapper. */
     @stub
     protected def ModelWrapper() = ???
 
     /** Returns the number of columns in the model. */
-    @stub
     def getColumnCount(): Int
 
     /** Returns the identifier for the specified row. */
-    @stub
     def getIdentifier(row: Int): I
 
     /** Returns the underlying model that this Model is
      *  wrapping.
      */
-    @stub
     def getModel(): M
 
     /** Returns the number of rows in the model. */
-    @stub
     def getRowCount(): Int
 
     /** Returns the value as a String at the specified
@@ -49,6 +45,5 @@ object protected abstract DefaultRowSorter.ModelWrapper[M, I] extends Object {
     def getStringValueAt(row: Int, column: Int): String = ???
 
     /** Returns the value at the specified index. */
-    @stub
-    def getValueAt(row: Int, column: Int): Object
+    def getValueAt(row: Int, column: Int): Any
 }

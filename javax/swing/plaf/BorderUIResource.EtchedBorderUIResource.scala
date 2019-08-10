@@ -6,7 +6,7 @@ import javax.swing.border.{AbstractBorder, EtchedBorder}
 import scala.scalanative.annotation.stub
 
 /**  */
-object BorderUIResource.EtchedBorderUIResource extends EtchedBorder with UIResource {
+object BorderUIResource_EtchedBorderUIResource extends EtchedBorder with UIResource {
 
     /**  */
     @stub

@@ -20,5 +20,5 @@ class ChangeEvent extends EventObject {
 
     /** Constructs a ChangeEvent object. */
     @stub
-    def this(source: Object) = ???
+    def this(source: Any) = ???
 }

@@ -4,7 +4,7 @@ import java.lang.{Class, String}
 import scala.scalanative.annotation.stub
 
 /** An event kind, for the purposes of identification. */
-object trait WatchEvent.Kind[T] {
+trait WatchEvent_Kind[T] {
 
     /** Returns the name of the event kind. */
     @stub

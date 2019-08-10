@@ -13,7 +13,7 @@ import scala.scalanative.annotation.stub
  *  information on the contents of the AttributeSets, the positions, and
  *  other info.
  */
-object HTMLEditorKit.ParserCallback extends Object {
+object HTMLEditorKit_ParserCallback extends Object {
 
     /**  */
     @stub
@@ -24,7 +24,7 @@ object HTMLEditorKit.ParserCallback extends Object {
      *  contains an implied html element and an implied body element.
      */
     @stub
-    val IMPLIED: Object = ???
+    val IMPLIED: Any = ???
 
     /**  */
     @stub

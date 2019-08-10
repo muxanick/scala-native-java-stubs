@@ -10,5 +10,5 @@ trait XMLReporter {
 
     /** Report the desired message in an application specific format. */
     @stub
-    def report(message: String, errorType: String, relatedInformation: Object, location: Location): Unit = ???
+    def report(message: String, errorType: String, relatedInformation: Any, location: Location): Unit = ???
 }

@@ -40,6 +40,5 @@ class LineEvent extends EventObject {
 
 object LineEvent {
     /** The LineEvent.Type inner class identifies what kind of event occurred on a line. */
-    @stub
-    object Type extends LineEvent.Type
+    type Type = LineEvent_Type
 }

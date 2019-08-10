@@ -72,7 +72,7 @@ class PKIXParameters extends Object with CertPathParameters {
 
     /** Makes a copy of this PKIXParameters object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns the List of certification path checkers. */
     @stub

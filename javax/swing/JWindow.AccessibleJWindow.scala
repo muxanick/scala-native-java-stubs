@@ -10,7 +10,7 @@ import scala.scalanative.annotation.stub
  *  Java Accessibility API appropriate to window user-interface
  *  elements.
  */
-protected class JWindow.AccessibleJWindow extends Window.AccessibleAWTWindow {
+protected class JWindow_AccessibleJWindow extends Window.AccessibleAWTWindow {
 
     /**  */
     @stub

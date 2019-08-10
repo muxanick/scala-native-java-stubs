@@ -5,7 +5,7 @@ import java.lang.{Object, String}
 import scala.scalanative.annotation.stub
 
 /**  */
-class BasicInternalFrameUI.InternalFrameLayout extends Object with LayoutManager {
+class BasicInternalFrameUI_InternalFrameLayout extends Object with LayoutManager {
 
     /**  */
     @stub

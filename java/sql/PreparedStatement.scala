@@ -242,23 +242,23 @@ trait PreparedStatement extends Statement {
 
     /** Sets the value of the designated parameter using the given object. */
     @stub
-    def setObject(parameterIndex: Int, x: Object): Unit = ???
+    def setObject(parameterIndex: Int, x: Any): Unit = ???
 
     /** Sets the value of the designated parameter with the given object. */
     @stub
-    def setObject(parameterIndex: Int, x: Object, targetSqlType: Int): Unit = ???
+    def setObject(parameterIndex: Int, x: Any, targetSqlType: Int): Unit = ???
 
     /** Sets the value of the designated parameter with the given object. */
     @stub
-    def setObject(parameterIndex: Int, x: Object, targetSqlType: Int, scaleOrLength: Int): Unit = ???
+    def setObject(parameterIndex: Int, x: Any, targetSqlType: Int, scaleOrLength: Int): Unit = ???
 
     /** Sets the value of the designated parameter with the given object. */
     @stub
-    def setObject(parameterIndex: Int, x: Object, targetSqlType: SQLType): Unit = ???
+    def setObject(parameterIndex: Int, x: Any, targetSqlType: SQLType): Unit = ???
 
     /** Sets the value of the designated parameter with the given object. */
     @stub
-    def setObject(parameterIndex: Int, x: Object, targetSqlType: SQLType, scaleOrLength: Int): Unit = ???
+    def setObject(parameterIndex: Int, x: Any, targetSqlType: SQLType, scaleOrLength: Int): Unit = ???
 
     /** Sets the designated parameter to the given
      *   REF(<structured-type>) value.

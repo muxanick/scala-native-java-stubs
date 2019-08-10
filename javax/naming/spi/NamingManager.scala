@@ -50,11 +50,11 @@ object NamingManager {
      *  and environment.
      */
     @stub
-    def getObjectInstance(refInfo: Object, name: Name, nameCtx: Context, environment: Hashtable[_, _]): Object = ???
+    def getObjectInstance(refInfo: Any, name: Name, nameCtx: Context, environment: Hashtable[_, _]): Any = ???
 
     /** Retrieves the state of an object for binding. */
     @stub
-    def getStateToBind(obj: Object, name: Name, nameCtx: Context, environment: Hashtable[_, _]): Object = ???
+    def getStateToBind(obj: Any, name: Name, nameCtx: Context, environment: Hashtable[_, _]): Any = ???
 
     /** Creates a context for the given URL scheme id. */
     @stub

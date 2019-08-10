@@ -136,11 +136,11 @@ trait DirContext extends Context {
 
     /** Binds a name to an object, along with associated attributes. */
     @stub
-    def bind(name: Name, obj: Object, attrs: Attributes): Unit = ???
+    def bind(name: Name, obj: Any, attrs: Attributes): Unit = ???
 
     /** Binds a name to an object, along with associated attributes. */
     @stub
-    def bind(name: String, obj: Object, attrs: Attributes): Unit = ???
+    def bind(name: String, obj: Any, attrs: Attributes): Unit = ???
 
     /** Creates and binds a new context, along with associated attributes. */
     @stub
@@ -210,13 +210,13 @@ trait DirContext extends Context {
      *  overwriting any existing binding.
      */
     @stub
-    def rebind(name: Name, obj: Object, attrs: Attributes): Unit = ???
+    def rebind(name: Name, obj: Any, attrs: Attributes): Unit = ???
 
     /** Binds a name to an object, along with associated attributes,
      *  overwriting any existing binding.
      */
     @stub
-    def rebind(name: String, obj: Object, attrs: Attributes): Unit = ???
+    def rebind(name: String, obj: Any, attrs: Attributes): Unit = ???
 
     /** Searches in a single context for objects that contain a
      *  specified set of attributes.

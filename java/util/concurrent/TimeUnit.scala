@@ -76,7 +76,7 @@ object TimeUnit {
      *  using this time unit.
      */
     @stub
-    def timedWait(obj: Object, timeout: Long): Unit = ???
+    def timedWait(obj: Any, timeout: Long): Unit = ???
 
     /** Equivalent to
      *  DAYS.convert(duration, this).

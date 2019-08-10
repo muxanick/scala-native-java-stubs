@@ -21,7 +21,7 @@ class ParsePosition extends Object {
 
     /** Overrides equals */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Retrieve the index at which an error occurred, or -1 if the
      *  error index has not been set.

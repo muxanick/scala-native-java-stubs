@@ -75,12 +75,12 @@ abstract class SampleModel extends Object {
     /** Returns the pixel data for the specified rectangle of pixels in a
      *  primitive array of type TransferType.
      */
-    def getDataElements(x: Int, y: Int, w: Int, h: Int, obj: Object, data: DataBuffer): Object
+    def getDataElements(x: Int, y: Int, w: Int, h: Int, obj: Any, data: DataBuffer): Any
 
     /** Returns data for a single pixel in a primitive array of type
      *  TransferType.
      */
-    def getDataElements(x: Int, y: Int, obj: Object, data: DataBuffer): Object
+    def getDataElements(x: Int, y: Int, obj: Any, data: DataBuffer): Any
 
     /** Returns the data type of the DataBuffer storing the pixel data. */
     def getDataType(): Int
@@ -169,12 +169,12 @@ abstract class SampleModel extends Object {
     /** Sets the data for a rectangle of pixels in the specified DataBuffer
      *  from a primitive array of type TransferType.
      */
-    def setDataElements(x: Int, y: Int, w: Int, h: Int, obj: Object, data: DataBuffer): Unit
+    def setDataElements(x: Int, y: Int, w: Int, h: Int, obj: Any, data: DataBuffer): Unit
 
     /** Sets the data for a single pixel in the specified DataBuffer from a
      *  primitive array of type TransferType.
      */
-    def setDataElements(x: Int, y: Int, obj: Object, data: DataBuffer): Unit
+    def setDataElements(x: Int, y: Int, obj: Any, data: DataBuffer): Unit
 
     /** Sets a pixel in the DataBuffer using a double array of samples
      *  for input.

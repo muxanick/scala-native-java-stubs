@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of Foo.
  */
-class BasicInternalFrameTitlePane.PropertyChangeHandler extends Object with PropertyChangeListener {
+class BasicInternalFrameTitlePane_PropertyChangeHandler extends Object with PropertyChangeListener {
 
     /**  */
     @stub

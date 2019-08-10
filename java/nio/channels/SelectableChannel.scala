@@ -57,7 +57,7 @@ abstract class SelectableChannel extends AbstractInterruptibleChannel with Chann
     protected def this() = ???
 
     /** Retrieves the object upon which the configureBlocking and register methods synchronize. */
-    def blockingLock(): Object
+    def blockingLock(): Any
 
     /** Adjusts this channel's blocking mode. */
     def configureBlocking(block: Boolean): SelectableChannel
@@ -88,7 +88,7 @@ abstract class SelectableChannel extends AbstractInterruptibleChannel with Chann
     /** Registers this channel with the given selector, returning a selection
      *  key.
      */
-    def register(sel: Selector, ops: Int, att: Object): SelectionKey
+    def register(sel: Selector, ops: Int, att: Any): SelectionKey
 
     /** Returns an operation set
      *  identifying this channel's supported operations.

@@ -36,11 +36,11 @@ class SimpleScriptContext extends Object with ScriptContext {
      *  the scope occurring earliest in the search order.
      */
     @stub
-    def getAttribute(name: String): Object = ???
+    def getAttribute(name: String): Any = ???
 
     /** Gets the value of an attribute in a given scope. */
     @stub
-    def getAttribute(name: String, scope: Int): Object = ???
+    def getAttribute(name: String, scope: Int): Any = ???
 
     /** Get the lowest scope in which an attribute is defined. */
     @stub
@@ -74,11 +74,11 @@ class SimpleScriptContext extends Object with ScriptContext {
 
     /** Remove an attribute in a given scope. */
     @stub
-    def removeAttribute(name: String, scope: Int): Object = ???
+    def removeAttribute(name: String, scope: Int): Any = ???
 
     /** Sets the value of an attribute in a given scope. */
     @stub
-    def setAttribute(name: String, value: Object, scope: Int): Unit = ???
+    def setAttribute(name: String, value: Any, scope: Int): Unit = ???
 
     /** Sets a Bindings of attributes for the given scope. */
     @stub

@@ -12,7 +12,7 @@ import scala.scalanative.annotation.stub
  *  Instantiate it only within subclasses of
  *  BasicComboBoxUI.
  */
-class BasicComboBoxUI.ComboBoxLayoutManager extends Object with LayoutManager {
+class BasicComboBoxUI_ComboBoxLayoutManager extends Object with LayoutManager {
 
     /**  */
     @stub

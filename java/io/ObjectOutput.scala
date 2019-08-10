@@ -31,5 +31,5 @@ trait ObjectOutput extends DataOutput with AutoCloseable {
 
     /** Write an object to the underlying storage or stream. */
     @stub
-    def writeObject(obj: Object): Unit = ???
+    def writeObject(obj: Any): Unit = ???
 }

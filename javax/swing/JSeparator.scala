@@ -49,8 +49,7 @@ class JSeparator extends JComponent with SwingConstants with Accessible {
     /** This class implements accessibility support for the
      *  JSeparator class.
      */
-    @stub
-    protected object AccessibleJSeparator extends JSeparator.AccessibleJSeparator
+    protected type AccessibleJSeparator = JSeparator_AccessibleJSeparator
 
     /** Gets the AccessibleContext associated with this JSeparator. */
     @stub

@@ -21,7 +21,7 @@ class ECPoint extends Object {
      *  the specified object.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the affine x-coordinate x. */
     @stub

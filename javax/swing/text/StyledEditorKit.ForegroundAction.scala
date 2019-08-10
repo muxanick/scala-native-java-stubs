@@ -30,7 +30,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object StyledEditorKit.ForegroundAction extends StyledEditorKit.StyledTextAction {
+object StyledEditorKit_ForegroundAction extends StyledEditorKit.StyledTextAction {
 
     /** Creates a new ForegroundAction. */
     @stub

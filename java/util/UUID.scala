@@ -55,7 +55,7 @@ final class UUID extends Object with Serializable with Comparable[UUID] {
 
     /** Compares this object to the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the least significant 64 bits of this UUID's 128 bit value. */
     @stub

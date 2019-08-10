@@ -45,7 +45,7 @@ class SslRMIClientSocketFactory extends Object with RMIClientSocketFactory with 
 
     /** Indicates whether some other object is "equal to" this one. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns a hash code value for this
      *  SslRMIClientSocketFactory.

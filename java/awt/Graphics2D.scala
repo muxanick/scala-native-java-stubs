@@ -477,7 +477,7 @@ abstract class Graphics2D extends Graphics {
     def getPaint(): Paint
 
     /** Returns the value of a single preference for the rendering algorithms. */
-    def getRenderingHint(hintKey: RenderingHints.Key): Object
+    def getRenderingHint(hintKey: RenderingHints.Key): Any
 
     /** Gets the preferences for the rendering algorithms. */
     def getRenderingHints(): RenderingHints
@@ -528,7 +528,7 @@ abstract class Graphics2D extends Graphics {
     def setPaint(paint: Paint): Unit
 
     /** Sets the value of a single preference for the rendering algorithms. */
-    def setRenderingHint(hintKey: RenderingHints.Key, hintValue: Object): Unit
+    def setRenderingHint(hintKey: RenderingHints.Key, hintValue: Any): Unit
 
     /** Replaces the values of all preferences for the rendering
      *  algorithms with the specified hints.

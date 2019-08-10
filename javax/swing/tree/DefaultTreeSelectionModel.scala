@@ -115,7 +115,7 @@ class DefaultTreeSelectionModel extends Object with Cloneable with Serializable 
 
     /** Returns a clone of this object with the same selection. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Notifies all listeners that are registered for
      *  tree selection events on this object.

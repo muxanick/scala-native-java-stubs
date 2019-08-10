@@ -3,7 +3,7 @@ package java.util
 import scala.scalanative.annotation.stub
 
 /** A Spliterator specialized for primitive values. */
-object trait Spliterator.OfPrimitive[T, T_CONS, T_SPLITR <: Spliterator.OfPrimitive[T, T_CONS, T_SPLITR]] extends Spliterator[T] {
+trait Spliterator_OfPrimitive[T, T_CONS, T_SPLITR <: Spliterator_OfPrimitive[T, T_CONS, T_SPLITR]] extends Spliterator[T] {
 
     /** Performs the given action for each remaining element, sequentially in
      *  the current thread, until all elements have been processed or the

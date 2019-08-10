@@ -85,7 +85,7 @@ class SpinnerNumberModel extends AbstractSpinnerModel with Serializable {
 
     /** Returns the next number in the sequence. */
     @stub
-    def getNextValue(): Object = ???
+    def getNextValue(): Any = ???
 
     /** Returns the value of the current element of the sequence. */
     @stub
@@ -93,7 +93,7 @@ class SpinnerNumberModel extends AbstractSpinnerModel with Serializable {
 
     /** Returns the previous number in the sequence. */
     @stub
-    def getPreviousValue(): Object = ???
+    def getPreviousValue(): Any = ???
 
     /** Returns the size of the value change computed by the
      *  getNextValue
@@ -104,7 +104,7 @@ class SpinnerNumberModel extends AbstractSpinnerModel with Serializable {
 
     /** Returns the value of the current element of the sequence. */
     @stub
-    def getValue(): Object = ???
+    def getValue(): Any = ???
 
     /** Changes the upper bound for numbers in this sequence. */
     @stub
@@ -123,5 +123,5 @@ class SpinnerNumberModel extends AbstractSpinnerModel with Serializable {
 
     /** Sets the current value for this sequence. */
     @stub
-    def setValue(value: Object): Unit = ???
+    def setValue(value: Any): Unit = ???
 }

@@ -63,7 +63,7 @@ final class X500Principal extends Object with Principal with Serializable {
      *  X500Principal for equality.
      */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the distinguished name in ASN.1 DER encoded form. */
     @stub

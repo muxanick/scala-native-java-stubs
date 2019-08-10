@@ -6,7 +6,7 @@ import scala.scalanative.annotation.stub
 /** A type-safe enumeration of the possible back buffer contents after
  *  page-flipping
  */
-final object BufferCapabilities.FlipContents extends Object {
+final object BufferCapabilities_FlipContents extends Object {
 
     /** When flip contents are BACKGROUND, the
      *  contents of the back buffer are cleared with the background color after

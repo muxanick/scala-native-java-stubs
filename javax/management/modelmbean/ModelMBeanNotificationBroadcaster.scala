@@ -30,7 +30,7 @@ trait ModelMBeanNotificationBroadcaster extends NotificationBroadcaster {
 
     /** Registers an object which implements the NotificationListener interface as a listener. */
     @stub
-    def addAttributeChangeNotificationListener(listener: NotificationListener, attributeName: String, handback: Object): Unit = ???
+    def addAttributeChangeNotificationListener(listener: NotificationListener, attributeName: String, handback: Any): Unit = ???
 
     /** Removes a listener for attributeChangeNotifications from the RequiredModelMBean. */
     @stub

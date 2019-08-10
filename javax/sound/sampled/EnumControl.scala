@@ -27,16 +27,16 @@ abstract class EnumControl extends Control {
 
     /** Constructs a new enumerated control object with the given parameters. */
     @stub
-    protected def this(type: EnumControl.Type, values: Array[Object], value: Object) = ???
+    protected def this(type: EnumControl.Type, values: Array[Object], value: Any) = ???
 
     /** Obtains this control's current value. */
-    def getValue(): Object
+    def getValue(): Any
 
     /** Returns the set of possible values for this control. */
     def getValues(): Array[Object]
 
     /** Sets the current value for the control. */
-    def setValue(value: Object): Unit
+    def setValue(value: Any): Unit
 
     /** Provides a string representation of the control. */
     def toString(): String
@@ -46,6 +46,5 @@ object EnumControl {
     /** An instance of the EnumControl.Type inner class identifies one kind of
      *  enumerated control.
      */
-    @stub
-    object Type extends EnumControl.Type
+    type Type = EnumControl_Type
 }

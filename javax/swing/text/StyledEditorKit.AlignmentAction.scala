@@ -28,7 +28,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object StyledEditorKit.AlignmentAction extends StyledEditorKit.StyledTextAction {
+object StyledEditorKit_AlignmentAction extends StyledEditorKit.StyledTextAction {
 
     /** Creates a new AlignmentAction. */
     @stub

@@ -19,7 +19,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JTree.AccessibleJTree extends JComponent.AccessibleJComponent with AccessibleSelection with TreeSelectionListener with TreeModelListener with TreeExpansionListener {
+protected class JTree_AccessibleJTree extends JComponent.AccessibleJComponent with AccessibleSelection with TreeSelectionListener with TreeModelListener with TreeExpansionListener {
 
     /**  */
     @stub
@@ -28,8 +28,7 @@ protected class JTree.AccessibleJTree extends JComponent.AccessibleJComponent wi
     /** This class implements accessibility support for the
      *  JTree child.
      */
-    @stub
-    protected object AccessibleJTreeNode extends JTree.AccessibleJTree.AccessibleJTreeNode
+    protected type AccessibleJTreeNode = JTree_AccessibleJTree_AccessibleJTreeNode
 
     /** Adds the specified selected item in the object to the object's
      *  selection.

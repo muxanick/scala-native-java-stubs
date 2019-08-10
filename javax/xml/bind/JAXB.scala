@@ -57,31 +57,31 @@ final class JAXB extends Object {
 object JAXB {
     /** Writes a Java object tree to XML and store it to the specified location. */
     @stub
-    def marshal(jaxbObject: Object, xml: File): Unit = ???
+    def marshal(jaxbObject: Any, xml: File): Unit = ???
 
     /** Writes a Java object tree to XML and store it to the specified location. */
     @stub
-    def marshal(jaxbObject: Object, xml: OutputStream): Unit = ???
+    def marshal(jaxbObject: Any, xml: OutputStream): Unit = ???
 
     /** Writes a Java object tree to XML and store it to the specified location. */
     @stub
-    def marshal(jaxbObject: Object, xml: Result): Unit = ???
+    def marshal(jaxbObject: Any, xml: Result): Unit = ???
 
     /** Writes a Java object tree to XML and store it to the specified location. */
     @stub
-    def marshal(jaxbObject: Object, xml: String): Unit = ???
+    def marshal(jaxbObject: Any, xml: String): Unit = ???
 
     /** Writes a Java object tree to XML and store it to the specified location. */
     @stub
-    def marshal(jaxbObject: Object, xml: URI): Unit = ???
+    def marshal(jaxbObject: Any, xml: URI): Unit = ???
 
     /** Writes a Java object tree to XML and store it to the specified location. */
     @stub
-    def marshal(jaxbObject: Object, xml: URL): Unit = ???
+    def marshal(jaxbObject: Any, xml: URL): Unit = ???
 
     /** Writes a Java object tree to XML and store it to the specified location. */
     @stub
-    def marshal(jaxbObject: Object, xml: Writer): Unit = ???
+    def marshal(jaxbObject: Any, xml: Writer): Unit = ???
 
     /** Reads in a Java object tree from the given XML input. */
     @stub

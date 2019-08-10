@@ -126,13 +126,13 @@ class WeakHashMap[K, V] extends AbstractMap[K, V] with Map[K, V] {
      *  specified key.
      */
     @stub
-    def containsKey(key: Object): Boolean = ???
+    def containsKey(key: Any): Boolean = ???
 
     /** Returns true if this map maps one or more keys to the
      *  specified value.
      */
     @stub
-    def containsValue(value: Object): Boolean = ???
+    def containsValue(value: Any): Boolean = ???
 
     /** Returns a Set view of the mappings contained in this map. */
     @stub
@@ -148,7 +148,7 @@ class WeakHashMap[K, V] extends AbstractMap[K, V] with Map[K, V] {
      *  or null if this map contains no mapping for the key.
      */
     @stub
-    def get(key: Object): V = ???
+    def get(key: Any): V = ???
 
     /** Returns true if this map contains no key-value mappings. */
     @stub
@@ -168,7 +168,7 @@ class WeakHashMap[K, V] extends AbstractMap[K, V] with Map[K, V] {
 
     /** Removes the mapping for a key from this weak hash map if it is present. */
     @stub
-    def remove(key: Object): V = ???
+    def remove(key: Any): V = ???
 
     /** Replaces each entry's value with the result of invoking the given
      *  function on that entry until all entries have been processed or the

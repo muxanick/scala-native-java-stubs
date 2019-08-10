@@ -10,7 +10,7 @@ import scala.scalanative.annotation.stub
 /** AccessibleJSpinner implements accessibility
  *  support for the JSpinner class.
  */
-protected class JSpinner.AccessibleJSpinner extends JComponent.AccessibleJComponent with AccessibleValue with AccessibleAction with AccessibleText with AccessibleEditableText with ChangeListener {
+protected class JSpinner_AccessibleJSpinner extends JComponent.AccessibleJComponent with AccessibleValue with AccessibleAction with AccessibleText with AccessibleEditableText with ChangeListener {
 
     /** AccessibleJSpinner constructor */
     @stub

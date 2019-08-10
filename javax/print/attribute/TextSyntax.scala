@@ -21,7 +21,7 @@ abstract class TextSyntax extends Object with Serializable with Cloneable {
     /** Returns whether this text attribute is equivalent to the passed in
      *  object.
      */
-    def equals(object: Object): Boolean
+    def equals(object: Any): Boolean
 
     /** Returns this text attribute's text string's natural language (locale). */
     def getLocale(): Locale

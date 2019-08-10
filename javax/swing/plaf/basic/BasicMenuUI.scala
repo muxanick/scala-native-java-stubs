@@ -20,14 +20,12 @@ class BasicMenuUI extends BasicMenuItemUI {
     /** As of Java 2 platform 1.4, this previously undocumented class
      *  is now obsolete.
      */
-    @stub
-    object ChangeHandler extends BasicMenuUI.ChangeHandler
+    type ChangeHandler = BasicMenuUI_ChangeHandler
 
     /** Instantiated and used by a menu item to handle the current menu selection
      *  from mouse events.
      */
-    @stub
-    protected object MouseInputHandler extends BasicMenuUI.MouseInputHandler
+    protected type MouseInputHandler = BasicMenuUI_MouseInputHandler
 
     /**  */
     @stub

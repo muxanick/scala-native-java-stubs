@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
  *  
  *  The class used to obtain the accessible role for this object.
  */
-protected class PopupMenu.AccessibleAWTPopupMenu extends Menu.AccessibleAWTMenu {
+protected class PopupMenu_AccessibleAWTPopupMenu extends Menu.AccessibleAWTMenu {
 
     /**  */
     @stub

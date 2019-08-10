@@ -40,10 +40,10 @@ abstract class AbstractButton extends JComponent with ItemSelectable with SwingC
     /** This class implements accessibility support for the
      *  AbstractButton class.
      */
-    protected object AccessibleAbstractButton extends AbstractButton.AccessibleAbstractButton
+    protected type AccessibleAbstractButton = AbstractButton_AccessibleAbstractButton
 
     /** Extends ChangeListener to be serializable. */
-    protected object ButtonChangeListener extends AbstractButton.ButtonChangeListener
+    protected type ButtonChangeListener = AbstractButton_ButtonChangeListener
 
     /** The button model's ActionListener. */
     protected val actionListener: ActionListener
@@ -79,7 +79,7 @@ abstract class AbstractButton extends JComponent with ItemSelectable with SwingC
      *  Container.addImpl(Component, Object, int)
      *  for a complete description of this method.
      */
-    protected def addImpl(comp: Component, constraints: Object, index: Int): Unit
+    protected def addImpl(comp: Component, constraints: Any, index: Int): Unit
 
     /** Adds an ItemListener to the checkbox. */
     def addItemListener(l: ItemListener): Unit

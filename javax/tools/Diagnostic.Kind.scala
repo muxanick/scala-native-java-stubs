@@ -14,10 +14,10 @@ import scala.scalanative.annotation.stub
  *  of the diagnostic: for example, a tool might provide an
  *  option to report all warnings as errors.
  */
-class Diagnostic.Kind private (name: String, ordinal: Int) extends Enum[Diagnostic.Kind](name, ordinal) {
+class Diagnostic_Kind private (name: String, ordinal: Int) extends Enum[Diagnostic.Kind](name, ordinal) {
 }
 
-object Diagnostic.Kind {
+object Diagnostic_Kind {
     /** Problem which prevents the tool's normal completion. */
     final val ERROR = new Diagnostic.Kind(ERROR, 0)
 

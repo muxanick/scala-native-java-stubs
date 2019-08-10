@@ -40,6 +40,5 @@ trait JavaFileObject extends FileObject {
 
 object JavaFileObject {
     /** Kinds of JavaFileObjects. */
-    @stub
-    object Kind extends JavaFileObject.Kind
+    type Kind = JavaFileObject_Kind
 }

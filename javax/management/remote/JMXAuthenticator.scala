@@ -28,5 +28,5 @@ trait JMXAuthenticator {
      *  with the given client credentials.
      */
     @stub
-    def authenticate(credentials: Object): Subject = ???
+    def authenticate(credentials: Any): Subject = ???
 }

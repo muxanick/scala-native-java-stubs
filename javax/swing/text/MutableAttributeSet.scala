@@ -16,7 +16,7 @@ trait MutableAttributeSet extends AttributeSet {
      *  an attribute with the given name and value.
      */
     @stub
-    def addAttribute(name: Object, value: Object): Unit = ???
+    def addAttribute(name: Any, value: Any): Unit = ???
 
     /** Creates a new attribute set similar to this one except that it contains
      *  the given attributes and values.
@@ -26,7 +26,7 @@ trait MutableAttributeSet extends AttributeSet {
 
     /** Removes an attribute with the given name. */
     @stub
-    def removeAttribute(name: Object): Unit = ???
+    def removeAttribute(name: Any): Unit = ???
 
     /** Removes a set of attributes with the given name. */
     @stub

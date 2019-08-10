@@ -19,17 +19,17 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object JTree.DynamicUtilTreeNode extends DefaultMutableTreeNode {
+object JTree_DynamicUtilTreeNode extends DefaultMutableTreeNode {
 
     /** Creates a node with the specified object as its value and
      *  with the specified children.
      */
     @stub
-    def DynamicUtilTreeNode(value: Object, children: Object) = ???
+    def DynamicUtilTreeNode(value: Any, children: Any) = ???
 
     /** Value to create children with. */
     @stub
-    protected val childValue: Object = ???
+    protected val childValue: Any = ???
 
     /** Does the this JTree have children?
      *  This property is currently not implemented.
@@ -47,7 +47,7 @@ object JTree.DynamicUtilTreeNode extends DefaultMutableTreeNode {
 
     /** Adds to parent all the children in children. */
     @stub
-    def createChildren(parent: DefaultMutableTreeNode, children: Object): Unit = ???
+    def createChildren(parent: DefaultMutableTreeNode, children: Any): Unit = ???
 
     /** Subclassed to load the children, if necessary. */
     @stub

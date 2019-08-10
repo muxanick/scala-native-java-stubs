@@ -26,11 +26,11 @@ class MBeanAttributeInfo extends MBeanFeatureInfo with Cloneable {
 
     /** Returns a shallow clone of this instance. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compare this MBeanAttributeInfo to another. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the class name of the attribute. */
     @stub

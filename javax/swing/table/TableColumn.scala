@@ -83,7 +83,7 @@ class TableColumn extends Object with Serializable {
 
     /** The header value of the column. */
     @stub
-    protected val headerValue: Object = ???
+    protected val headerValue: Any = ???
 
     /** This object is not used internally by the drawing machinery of
      *   the JTable; identifiers may be set in the
@@ -91,7 +91,7 @@ class TableColumn extends Object with Serializable {
      *   optional way to tag and locate table columns.
      */
     @stub
-    protected val identifier: Object = ???
+    protected val identifier: Any = ???
 
     /** If true, the user is allowed to resize the column; the default is true. */
     @stub
@@ -169,11 +169,11 @@ class TableColumn extends Object with Serializable {
      *  renderer.
      */
     @stub
-    def getHeaderValue(): Object = ???
+    def getHeaderValue(): Any = ???
 
     /** Returns the identifier object for this column. */
     @stub
-    def getIdentifier(): Object = ???
+    def getIdentifier(): Any = ???
 
     /** Returns the maximum width for the TableColumn. */
     @stub
@@ -232,13 +232,13 @@ class TableColumn extends Object with Serializable {
      *  used as the value for the headerRenderer.
      */
     @stub
-    def setHeaderValue(headerValue: Object): Unit = ???
+    def setHeaderValue(headerValue: Any): Unit = ???
 
     /** Sets the TableColumn's identifier to
      *  anIdentifier.
      */
     @stub
-    def setIdentifier(identifier: Object): Unit = ???
+    def setIdentifier(identifier: Any): Unit = ???
 
     /** Sets the TableColumn's maximum width to
      *  maxWidth or,

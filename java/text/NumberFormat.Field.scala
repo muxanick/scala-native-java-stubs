@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  from NumberFormat.formatToCharacterIterator and as
  *  field identifiers in FieldPosition.
  */
-object NumberFormat.Field extends Format.Field {
+object NumberFormat_Field extends Format.Field {
 
     /** Creates a Field instance with the specified
      *  name.
@@ -62,5 +62,5 @@ object NumberFormat.Field extends Format.Field {
 
     /** Resolves instances being deserialized to the predefined constants. */
     @stub
-    protected def readResolve(): Object = ???
+    protected def readResolve(): Any = ???
 }

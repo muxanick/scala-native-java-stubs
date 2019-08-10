@@ -3,7 +3,7 @@ package javax.swing.text
 import scala.scalanative.annotation.stub
 
 /**  */
-object trait Highlighter.Highlight {
+trait Highlighter_Highlight {
 
     /** Gets the ending model offset for the highlight. */
     @stub

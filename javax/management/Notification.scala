@@ -23,26 +23,26 @@ class Notification extends EventObject {
 
     /** Creates a Notification object. */
     @stub
-    def this(type: String, source: Object, sequenceNumber: Long) = ???
+    def this(type: String, source: Any, sequenceNumber: Long) = ???
 
     /** Creates a Notification object. */
     @stub
-    def this(type: String, source: Object, sequenceNumber: Long, timeStamp: Long) = ???
+    def this(type: String, source: Any, sequenceNumber: Long, timeStamp: Long) = ???
 
     /** Creates a Notification object. */
     @stub
-    def this(type: String, source: Object, sequenceNumber: Long, timeStamp: Long, message: String) = ???
+    def this(type: String, source: Any, sequenceNumber: Long, timeStamp: Long, message: String) = ???
 
     /** Creates a Notification object. */
     @stub
-    def this(type: String, source: Object, sequenceNumber: Long, message: String) = ???
+    def this(type: String, source: Any, sequenceNumber: Long, message: String) = ???
 
     /** This field hides the EventObject.source field in the
      *  parent class to make it non-transient and therefore part of the
      *  serialized form.
      */
     @stub
-    protected val source: Object = ???
+    protected val source: Any = ???
 
     /** Get the notification message. */
     @stub
@@ -62,7 +62,7 @@ class Notification extends EventObject {
 
     /** Get the user data. */
     @stub
-    def getUserData(): Object = ???
+    def getUserData(): Any = ???
 
     /** Set the notification sequence number. */
     @stub
@@ -70,7 +70,7 @@ class Notification extends EventObject {
 
     /** Sets the source. */
     @stub
-    def setSource(source: Object): Unit = ???
+    def setSource(source: Any): Unit = ???
 
     /** Set the notification timestamp. */
     @stub
@@ -78,7 +78,7 @@ class Notification extends EventObject {
 
     /** Set the user data. */
     @stub
-    def setUserData(userData: Object): Unit = ???
+    def setUserData(userData: Any): Unit = ???
 
     /** Returns a String representation of this notification. */
     @stub

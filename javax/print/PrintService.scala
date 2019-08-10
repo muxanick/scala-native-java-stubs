@@ -44,7 +44,7 @@ trait PrintService {
      *  service.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Gets the value of the single specified service attribute. */
     @stub
@@ -60,7 +60,7 @@ trait PrintService {
      *  the given category.
      */
     @stub
-    def getDefaultAttributeValue(category: Class[_ <: Attribute]): Object = ???
+    def getDefaultAttributeValue(category: Class[_ <: Attribute]): Any = ???
 
     /** Returns a String name for this print service which may be used
      *  by applications to request a particular print service.
@@ -84,7 +84,7 @@ trait PrintService {
      *  the given category when setting up a job for this print service.
      */
     @stub
-    def getSupportedAttributeValues(category: Class[_ <: Attribute], flavor: DocFlavor, attributes: AttributeSet): Object = ???
+    def getSupportedAttributeValues(category: Class[_ <: Attribute], flavor: DocFlavor, attributes: AttributeSet): Any = ???
 
     /** Determines the print data formats a client can specify when setting
      *  up a job for this PrintService.

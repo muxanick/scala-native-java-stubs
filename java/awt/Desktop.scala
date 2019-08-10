@@ -77,8 +77,7 @@ class Desktop extends Object {
 
 object Desktop {
     /** Represents an action type. */
-    @stub
-    object Action extends Desktop.Action
+    type Action = Desktop_Action
 
     /** Returns the Desktop instance of the current
      *  browser context.

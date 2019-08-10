@@ -89,10 +89,10 @@ import scala.scalanative.annotation.stub
  *  
  *  
  */
-class Locale.FilteringMode private (name: String, ordinal: Int) extends Enum[Locale.FilteringMode](name, ordinal) {
+class Locale_FilteringMode private (name: String, ordinal: Int) extends Enum[Locale.FilteringMode](name, ordinal) {
 }
 
-object Locale.FilteringMode {
+object Locale_FilteringMode {
     /** Specifies automatic filtering mode based on the given Language
      *  Priority List consisting of language ranges.
      */

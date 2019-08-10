@@ -186,8 +186,7 @@ abstract class FileChannel extends AbstractInterruptibleChannel with SeekableByt
 
 object FileChannel {
     /** A typesafe enumeration for file-mapping modes. */
-    @stub
-    object MapMode extends FileChannel.MapMode
+    type MapMode = FileChannel_MapMode
 
     /** Opens or creates a file, returning a file channel to access the file. */
     @stub

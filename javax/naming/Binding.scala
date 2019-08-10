@@ -21,23 +21,23 @@ class Binding extends NameClassPair {
 
     /** Constructs an instance of a Binding given its name and object. */
     @stub
-    def this(name: String, obj: Object) = ???
+    def this(name: String, obj: Any) = ???
 
     /** Constructs an instance of a Binding given its name, object, and whether
      *  the name is relative.
      */
     @stub
-    def this(name: String, obj: Object, isRelative: Boolean) = ???
+    def this(name: String, obj: Any, isRelative: Boolean) = ???
 
     /** Constructs an instance of a Binding given its name, class name, and object. */
     @stub
-    def this(name: String, className: String, obj: Object) = ???
+    def this(name: String, className: String, obj: Any) = ???
 
     /** Constructs an instance of a Binding given its
      *  name, class name, object, and whether the name is relative.
      */
     @stub
-    def this(name: String, className: String, obj: Object, isRelative: Boolean) = ???
+    def this(name: String, className: String, obj: Any, isRelative: Boolean) = ???
 
     /** Retrieves the class name of the object bound to the name of this binding. */
     @stub
@@ -45,11 +45,11 @@ class Binding extends NameClassPair {
 
     /** Retrieves the object bound to the name of this binding. */
     @stub
-    def getObject(): Object = ???
+    def getObject(): Any = ???
 
     /** Sets the object associated with this binding. */
     @stub
-    def setObject(obj: Object): Unit = ???
+    def setObject(obj: Any): Unit = ???
 
     /** Generates the string representation of this binding. */
     @stub

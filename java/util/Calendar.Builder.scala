@@ -44,7 +44,7 @@ import scala.scalanative.annotation.stub
  *    Calendar cal = new Calendar.Builder().setCalendarType("japanese")
  *                         .setFields(YEAR, 1, DAY_OF_YEAR, 1).build();
  */
-object Calendar.Builder extends Object {
+object Calendar_Builder extends Object {
 
     /** Constructs a Calendar.Builder. */
     @stub

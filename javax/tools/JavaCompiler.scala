@@ -192,6 +192,5 @@ trait JavaCompiler extends Tool with OptionChecker {
 
 object JavaCompiler {
     /** Interface representing a future for a compilation task. */
-    @stub
-    trait CompilationTask extends JavaCompiler.CompilationTask
+    type CompilationTask = JavaCompiler_CompilationTask
 }

@@ -6,7 +6,7 @@ import javax.swing.border.AbstractBorder
 import scala.scalanative.annotation.stub
 
 /**  */
-object MetalBorders.RolloverButtonBorder extends MetalBorders.ButtonBorder {
+object MetalBorders_RolloverButtonBorder extends MetalBorders.ButtonBorder {
 
     /**  */
     @stub

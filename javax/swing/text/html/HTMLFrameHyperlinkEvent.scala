@@ -15,25 +15,25 @@ class HTMLFrameHyperlinkEvent extends HyperlinkEvent {
 
     /** Creates a new object representing a hypertext link event. */
     @stub
-    def this(source: Object, type: HyperlinkEvent.EventType, targetURL: URL, sourceElement: Element, targetFrame: String) = ???
+    def this(source: Any, type: HyperlinkEvent.EventType, targetURL: URL, sourceElement: Element, targetFrame: String) = ???
 
     /** Creates a new object representing a html frame
      *  hypertext link event.
      */
     @stub
-    def this(source: Object, type: HyperlinkEvent.EventType, targetURL: URL, targetFrame: String) = ???
+    def this(source: Any, type: HyperlinkEvent.EventType, targetURL: URL, targetFrame: String) = ???
 
     /** Creates a new object representing a hypertext link event. */
     @stub
-    def this(source: Object, type: HyperlinkEvent.EventType, targetURL: URL, desc: String, sourceElement: Element, inputEvent: InputEvent, targetFrame: String) = ???
+    def this(source: Any, type: HyperlinkEvent.EventType, targetURL: URL, desc: String, sourceElement: Element, inputEvent: InputEvent, targetFrame: String) = ???
 
     /** Creates a new object representing a hypertext link event. */
     @stub
-    def this(source: Object, type: HyperlinkEvent.EventType, targetURL: URL, desc: String, sourceElement: Element, targetFrame: String) = ???
+    def this(source: Any, type: HyperlinkEvent.EventType, targetURL: URL, desc: String, sourceElement: Element, targetFrame: String) = ???
 
     /** Creates a new object representing a hypertext link event. */
     @stub
-    def this(source: Object, type: HyperlinkEvent.EventType, targetURL: URL, desc: String, targetFrame: String) = ???
+    def this(source: Any, type: HyperlinkEvent.EventType, targetURL: URL, desc: String, targetFrame: String) = ???
 
     /** returns the target for the link. */
     @stub

@@ -102,6 +102,5 @@ object Mixer {
      *  including the product's name, version, and vendor, along with a textual
      *  description.
      */
-    @stub
-    object Info extends Mixer.Info
+    type Info = Mixer_Info
 }

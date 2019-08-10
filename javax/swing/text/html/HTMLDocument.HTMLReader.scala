@@ -148,7 +148,7 @@ import scala.scalanative.annotation.stub
  *  
  *  Once </html> is encountered, the Actions are no longer notified.
  */
-class HTMLDocument.HTMLReader extends HTMLEditorKit.ParserCallback {
+class HTMLDocument_HTMLReader extends HTMLEditorKit.ParserCallback {
 
     /**  */
     @stub
@@ -159,44 +159,35 @@ class HTMLDocument.HTMLReader extends HTMLEditorKit.ParserCallback {
     def HTMLReader(offset: Int, popDepth: Int, pushDepth: Int, insertTag: HTML.Tag) = ???
 
     /**  */
-    @stub
-    object BlockAction extends HTMLDocument.HTMLReader.BlockAction
+    type BlockAction = HTMLDocument_HTMLReader_BlockAction
 
     /**  */
-    @stub
-    object CharacterAction extends HTMLDocument.HTMLReader.CharacterAction
+    type CharacterAction = HTMLDocument_HTMLReader_CharacterAction
 
     /** Action to support forms by building all of the elements
      *  used to represent form controls.
      */
-    @stub
-    object FormAction extends HTMLDocument.HTMLReader.FormAction
+    type FormAction = HTMLDocument_HTMLReader_FormAction
 
     /**  */
-    @stub
-    object HiddenAction extends HTMLDocument.HTMLReader.HiddenAction
+    type HiddenAction = HTMLDocument_HTMLReader_HiddenAction
 
     /**  */
-    @stub
-    object IsindexAction extends HTMLDocument.HTMLReader.IsindexAction
+    type IsindexAction = HTMLDocument_HTMLReader_IsindexAction
 
     /**  */
-    @stub
-    object ParagraphAction extends HTMLDocument.HTMLReader.ParagraphAction
+    type ParagraphAction = HTMLDocument_HTMLReader_ParagraphAction
 
     /**  */
-    @stub
-    object PreAction extends HTMLDocument.HTMLReader.PreAction
+    type PreAction = HTMLDocument_HTMLReader_PreAction
 
     /**  */
-    @stub
-    object SpecialAction extends HTMLDocument.HTMLReader.SpecialAction
+    type SpecialAction = HTMLDocument_HTMLReader_SpecialAction
 
     /** An action to be performed in response
      *  to parsing a tag.
      */
-    @stub
-    object TagAction extends HTMLDocument.HTMLReader.TagAction
+    type TagAction = HTMLDocument_HTMLReader_TagAction
 
     /**  */
     @stub

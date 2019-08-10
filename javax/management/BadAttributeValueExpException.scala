@@ -14,7 +14,7 @@ class BadAttributeValueExpException extends Exception {
      *  create the toString() value.
      */
     @stub
-    def this(val: Object) = ???
+    def this(val: Any) = ???
 
     /** Returns the string representing the object. */
     @stub

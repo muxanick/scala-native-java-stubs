@@ -387,13 +387,13 @@ class SimpleDateFormat extends DateFormat {
 
     /** Creates a copy of this SimpleDateFormat. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compares the given object with this SimpleDateFormat for
      *  equality.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Formats the given Date into a date/time string and appends
      *  the result to the given StringBuffer.
@@ -403,7 +403,7 @@ class SimpleDateFormat extends DateFormat {
 
     /** Formats an Object producing an AttributedCharacterIterator. */
     @stub
-    def formatToCharacterIterator(obj: Object): AttributedCharacterIterator = ???
+    def formatToCharacterIterator(obj: Any): AttributedCharacterIterator = ???
 
     /** Returns the beginning date of the 100-year period 2-digit years are interpreted
      *  as being within.

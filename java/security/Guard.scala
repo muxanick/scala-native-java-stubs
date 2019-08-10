@@ -17,5 +17,5 @@ trait Guard {
      *  object.
      */
     @stub
-    def checkGuard(object: Object): Unit = ???
+    def checkGuard(object: Any): Unit = ???
 }

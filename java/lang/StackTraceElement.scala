@@ -23,7 +23,7 @@ final class StackTraceElement extends Object with Serializable {
      *  point as this instance.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the fully qualified name of the class containing the
      *  execution point represented by this stack trace element.

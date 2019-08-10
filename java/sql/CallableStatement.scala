@@ -265,7 +265,7 @@ trait CallableStatement extends PreparedStatement {
      *  in the Java programming language.
      */
     @stub
-    def getObject(parameterIndex: Int): Object = ???
+    def getObject(parameterIndex: Int): Any = ???
 
     /** Returns an object representing the value of OUT parameter
      *  parameterIndex and will convert from the
@@ -280,13 +280,13 @@ trait CallableStatement extends PreparedStatement {
      *  mapping of the parameter value.
      */
     @stub
-    def getObject(parameterIndex: Int, map: Map[String, Class[_]]): Object = ???
+    def getObject(parameterIndex: Int, map: Map[String, Class[_]]): Any = ???
 
     /** Retrieves the value of a parameter as an Object in the Java
      *  programming language.
      */
     @stub
-    def getObject(parameterName: String): Object = ???
+    def getObject(parameterName: String): Any = ???
 
     /** Returns an object representing the value of OUT parameter
      *  parameterName and will convert from the
@@ -301,7 +301,7 @@ trait CallableStatement extends PreparedStatement {
      *  mapping of the parameter value.
      */
     @stub
-    def getObject(parameterName: String, map: Map[String, Class[_]]): Object = ???
+    def getObject(parameterName: String, map: Map[String, Class[_]]): Any = ???
 
     /** Retrieves the value of the designated JDBC REF(<structured-type>)
      *  parameter as a Ref object in the Java programming language.
@@ -660,23 +660,23 @@ trait CallableStatement extends PreparedStatement {
 
     /** Sets the value of the designated parameter with the given object. */
     @stub
-    def setObject(parameterName: String, x: Object): Unit = ???
+    def setObject(parameterName: String, x: Any): Unit = ???
 
     /** Sets the value of the designated parameter with the given object. */
     @stub
-    def setObject(parameterName: String, x: Object, targetSqlType: Int): Unit = ???
+    def setObject(parameterName: String, x: Any, targetSqlType: Int): Unit = ???
 
     /** Sets the value of the designated parameter with the given object. */
     @stub
-    def setObject(parameterName: String, x: Object, targetSqlType: Int, scale: Int): Unit = ???
+    def setObject(parameterName: String, x: Any, targetSqlType: Int, scale: Int): Unit = ???
 
     /** Sets the value of the designated parameter with the given object. */
     @stub
-    def setObject(parameterName: String, x: Object, targetSqlType: SQLType): Unit = ???
+    def setObject(parameterName: String, x: Any, targetSqlType: SQLType): Unit = ???
 
     /** Sets the value of the designated parameter with the given object. */
     @stub
-    def setObject(parameterName: String, x: Object, targetSqlType: SQLType, scaleOrLength: Int): Unit = ???
+    def setObject(parameterName: String, x: Any, targetSqlType: SQLType, scaleOrLength: Int): Unit = ???
 
     /** Sets the designated parameter to the given java.sql.RowId object. */
     @stub

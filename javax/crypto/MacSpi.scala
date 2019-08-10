@@ -21,7 +21,7 @@ abstract class MacSpi extends Object {
     def this() = ???
 
     /** Returns a clone if the implementation is cloneable. */
-    def clone(): Object
+    def clone(): Any
 
     /** Completes the MAC computation and resets the MAC for further use,
      *  maintaining the secret key that the MAC was initialized with.

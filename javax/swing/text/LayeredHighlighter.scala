@@ -23,6 +23,5 @@ abstract class LayeredHighlighter extends Object with Highlighter {
 
 object LayeredHighlighter {
     /** Layered highlight renderer. */
-    @stub
-    object LayerPainter extends LayeredHighlighter.LayerPainter
+    type LayerPainter = LayeredHighlighter_LayerPainter
 }

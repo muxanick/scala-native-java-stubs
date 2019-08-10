@@ -38,7 +38,7 @@ trait BeanContextServices extends BeanContext with BeanContextServicesListener {
      *  via invocation of this method.
      */
     @stub
-    def getService(child: BeanContextChild, requestor: Object, serviceClass: Class, serviceSelector: Object, bcsrl: BeanContextServiceRevokedListener): Object = ???
+    def getService(child: BeanContextChild, requestor: Any, serviceClass: Class, serviceSelector: Any, bcsrl: BeanContextServiceRevokedListener): Any = ???
 
     /** Reports whether or not a given service is
      *  currently available from this context.
@@ -52,7 +52,7 @@ trait BeanContextServices extends BeanContext with BeanContextServicesListener {
      *  on the underlying BeanContextServiceProvider.
      */
     @stub
-    def releaseService(child: BeanContextChild, requestor: Object, service: Object): Unit = ???
+    def releaseService(child: BeanContextChild, requestor: Any, service: Any): Unit = ???
 
     /** Removes a BeanContextServicesListener
      *  from this BeanContext

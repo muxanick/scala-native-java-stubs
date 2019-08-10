@@ -33,7 +33,7 @@ class InetSocketAddress extends SocketAddress {
 
     /** Compares this object against the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Gets the InetAddress. */
     @stub

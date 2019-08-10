@@ -88,7 +88,7 @@ abstract class ListResourceBundle extends ResourceBundle {
     def getKeys(): Enumeration[String]
 
     /** Gets an object for the given key from this resource bundle. */
-    def handleGetObject(key: String): Object
+    def handleGetObject(key: String): Any
 
     /** Returns a Set of the keys contained
      *  only in this ResourceBundle.

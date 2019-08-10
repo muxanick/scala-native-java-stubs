@@ -30,12 +30,10 @@ trait WatchEvent[T] {
 
 object WatchEvent {
     /** An event kind, for the purposes of identification. */
-    @stub
-    trait Kind[T] extends WatchEvent.Kind[T]
+    type Kind[T] = WatchEvent_Kind[T]
 
     /** An event modifier that qualifies how a Watchable is registered
      *  with a WatchService.
      */
-    @stub
-    trait Modifier extends WatchEvent.Modifier
+    type Modifier = WatchEvent_Modifier
 }

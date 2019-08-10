@@ -38,18 +38,16 @@ class StyleContext extends Object with Serializable with AbstractDocument.Attrib
     /** A collection of attributes, typically used to represent
      *  character and paragraph styles.
      */
-    @stub
-    object NamedStyle extends StyleContext.NamedStyle
+    type NamedStyle = StyleContext_NamedStyle
 
     /** This class holds a small number of attributes in an array. */
-    @stub
-    object SmallAttributeSet extends StyleContext.SmallAttributeSet
+    type SmallAttributeSet = StyleContext_SmallAttributeSet
 
     /** Adds an attribute to the given set, and returns
      *  the new representative set.
      */
     @stub
-    def addAttribute(old: AttributeSet, name: Object, value: Object): AttributeSet = ???
+    def addAttribute(old: AttributeSet, name: Any, value: Any): AttributeSet = ???
 
     /** Adds a set of attributes to the element. */
     @stub
@@ -133,7 +131,7 @@ class StyleContext extends Object with Serializable with AbstractDocument.Attrib
 
     /** Removes an attribute from the set. */
     @stub
-    def removeAttribute(old: AttributeSet, name: Object): AttributeSet = ???
+    def removeAttribute(old: AttributeSet, name: Any): AttributeSet = ???
 
     /** Removes a set of attributes for the element. */
     @stub
@@ -179,11 +177,11 @@ object StyleContext {
      *  registerStaticAttributeKey.
      */
     @stub
-    def getStaticAttribute(key: Object): Object = ???
+    def getStaticAttribute(key: Any): Any = ???
 
     /** Returns the String that key will be registered with */
     @stub
-    def getStaticAttributeKey(key: Object): Object = ???
+    def getStaticAttributeKey(key: Any): Any = ???
 
     /** Reads a set of attributes from the given object input
      *  stream that have been previously written out with
@@ -196,7 +194,7 @@ object StyleContext {
      *  used as a key in attribute sets.
      */
     @stub
-    def registerStaticAttributeKey(key: Object): Unit = ???
+    def registerStaticAttributeKey(key: Any): Unit = ???
 
     /** Writes a set of attributes to the given object stream
      *  for the purpose of serialization.

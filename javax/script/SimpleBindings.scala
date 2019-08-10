@@ -25,13 +25,13 @@ class SimpleBindings extends Object with Bindings {
      *  key.
      */
     @stub
-    def containsKey(key: Object): Boolean = ???
+    def containsKey(key: Any): Boolean = ???
 
     /** Returns true if this map maps one or more keys to the
      *  specified value.
      */
     @stub
-    def containsValue(value: Object): Boolean = ???
+    def containsValue(value: Any): Boolean = ???
 
     /** Returns a Set view of the mappings contained in this map. */
     @stub
@@ -39,7 +39,7 @@ class SimpleBindings extends Object with Bindings {
 
     /** Returns the value to which this map maps the specified key. */
     @stub
-    def get(key: Object): Object = ???
+    def get(key: Any): Any = ???
 
     /** Returns true if this map contains no key-value mappings. */
     @stub
@@ -51,7 +51,7 @@ class SimpleBindings extends Object with Bindings {
 
     /** Sets the specified key/value in the underlying map field. */
     @stub
-    def put(name: String, value: Object): Object = ???
+    def put(name: String, value: Any): Any = ???
 
     /** putAll is implemented using Map.putAll. */
     @stub
@@ -61,7 +61,7 @@ class SimpleBindings extends Object with Bindings {
      *  (optional operation).
      */
     @stub
-    def remove(key: Object): Object = ???
+    def remove(key: Any): Any = ???
 
     /** Returns the number of key-value mappings in this map. */
     @stub

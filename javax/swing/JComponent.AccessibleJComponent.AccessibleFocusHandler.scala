@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** Fire PropertyChange listener, if one is registered,
  *  when focus events happen
  */
-protected class JComponent.AccessibleJComponent.AccessibleFocusHandler extends Object with FocusListener {
+protected class JComponent_AccessibleJComponent_AccessibleFocusHandler extends Object with FocusListener {
 
     /**  */
     @stub

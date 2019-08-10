@@ -5,7 +5,7 @@ import java.nio.channels.spi.{AbstractInterruptibleChannel, AbstractSelectableCh
 import scala.scalanative.annotation.stub
 
 /** A channel representing the writable end of a Pipe. */
-object abstract Pipe.SinkChannel extends AbstractSelectableChannel with WritableByteChannel with GatheringByteChannel {
+object abstract Pipe_SinkChannel extends AbstractSelectableChannel with WritableByteChannel with GatheringByteChannel {
 
     /** Initializes a new instance of this class. */
     @stub

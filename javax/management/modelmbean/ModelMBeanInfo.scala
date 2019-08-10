@@ -29,7 +29,7 @@ trait ModelMBeanInfo {
 
     /** Creates and returns a copy of this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns a ModelMBeanAttributeInfo requested by name. */
     @stub

@@ -84,8 +84,7 @@ class JToggleButton extends AbstractButton with Accessible {
     /** This class implements accessibility support for the
      *  JToggleButton class.
      */
-    @stub
-    protected object AccessibleJToggleButton extends JToggleButton.AccessibleJToggleButton
+    protected type AccessibleJToggleButton = JToggleButton_AccessibleJToggleButton
 
     /** Gets the AccessibleContext associated with this JToggleButton. */
     @stub
@@ -108,6 +107,5 @@ class JToggleButton extends AbstractButton with Accessible {
 
 object JToggleButton {
     /** The ToggleButton model */
-    @stub
-    object ToggleButtonModel extends JToggleButton.ToggleButtonModel
+    type ToggleButtonModel = JToggleButton_ToggleButtonModel
 }

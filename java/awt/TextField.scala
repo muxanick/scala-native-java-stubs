@@ -80,8 +80,7 @@ class TextField extends TextComponent {
     /** This class implements accessibility support for the
      *  TextField class.
      */
-    @stub
-    protected object AccessibleAWTTextField extends TextField.AccessibleAWTTextField
+    protected type AccessibleAWTTextField = TextField_AccessibleAWTTextField
 
     /** Adds the specified action listener to receive
      *  action events from this text field.

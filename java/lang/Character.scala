@@ -115,7 +115,7 @@ final class Character extends Object with Serializable with Comparable[Character
 
     /** Compares this object against the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns a hash code for this Character; equal to the result
      *  of invoking charValue().
@@ -134,21 +134,18 @@ object Character {
     /** Instances of this class represent particular subsets of the Unicode
      *  character set.
      */
-    @stub
-    object Subset extends Character.Subset
+    type Subset = Character_Subset
 
     /** A family of character subsets representing the character blocks in the
      *  Unicode specification.
      */
-    @stub
-    object UnicodeBlock extends Character.UnicodeBlock
+    type UnicodeBlock = Character_UnicodeBlock
 
     /** A family of character subsets representing the character scripts
      *  defined in the 
      *  Unicode Standard Annex #24: Script Names.
      */
-    @stub
-    object UnicodeScript extends Character.UnicodeScript
+    type UnicodeScript = Character_UnicodeScript
 
     /** The number of bytes used to represent a char value in unsigned
      *  binary form.

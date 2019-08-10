@@ -17,28 +17,22 @@ class BasicInternalFrameUI extends InternalFrameUI {
     def this(b: JInternalFrame) = ???
 
     /**  */
-    @stub
-    protected object BasicInternalFrameListener extends BasicInternalFrameUI.BasicInternalFrameListener
+    protected type BasicInternalFrameListener = BasicInternalFrameUI_BasicInternalFrameListener
 
     /** Listens for border adjustments. */
-    @stub
-    protected object BorderListener extends BasicInternalFrameUI.BorderListener
+    protected type BorderListener = BasicInternalFrameUI_BorderListener
 
     /**  */
-    @stub
-    protected object ComponentHandler extends BasicInternalFrameUI.ComponentHandler
+    protected type ComponentHandler = BasicInternalFrameUI_ComponentHandler
 
     /**  */
-    @stub
-    protected object GlassPaneDispatcher extends BasicInternalFrameUI.GlassPaneDispatcher
+    protected type GlassPaneDispatcher = BasicInternalFrameUI_GlassPaneDispatcher
 
     /**  */
-    @stub
-    object InternalFrameLayout extends BasicInternalFrameUI.InternalFrameLayout
+    type InternalFrameLayout = BasicInternalFrameUI_InternalFrameLayout
 
     /**  */
-    @stub
-    object InternalFramePropertyChangeListener extends BasicInternalFrameUI.InternalFramePropertyChangeListener
+    type InternalFramePropertyChangeListener = BasicInternalFrameUI_InternalFramePropertyChangeListener
 
     /**  */
     @stub

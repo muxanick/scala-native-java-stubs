@@ -14,7 +14,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object JToggleButton.ToggleButtonModel extends DefaultButtonModel {
+object JToggleButton_ToggleButtonModel extends DefaultButtonModel {
 
     /** Creates a new ToggleButton Model */
     @stub

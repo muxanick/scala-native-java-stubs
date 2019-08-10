@@ -59,7 +59,7 @@ final class Inet4Address extends InetAddress {
 
     /** Compares this object against the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the raw IP address of this InetAddress
      *  object.

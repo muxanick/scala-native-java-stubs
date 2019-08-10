@@ -4,10 +4,10 @@ import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /**  */
-class SOAPBinding.ParameterStyle private (name: String, ordinal: Int) extends Enum[SOAPBinding.ParameterStyle](name, ordinal) {
+class SOAPBinding_ParameterStyle private (name: String, ordinal: Int) extends Enum[SOAPBinding.ParameterStyle](name, ordinal) {
 }
 
-object SOAPBinding.ParameterStyle {
+object SOAPBinding_ParameterStyle {
     /**  */
     final val BARE = new SOAPBinding.ParameterStyle(BARE, 0)
 

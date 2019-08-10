@@ -32,32 +32,25 @@ class BorderUIResource extends Object with Border with UIResource with Serializa
 
 object BorderUIResource {
     /**  */
-    @stub
-    object BevelBorderUIResource extends BorderUIResource.BevelBorderUIResource
+    type BevelBorderUIResource = BorderUIResource_BevelBorderUIResource
 
     /**  */
-    @stub
-    object CompoundBorderUIResource extends BorderUIResource.CompoundBorderUIResource
+    type CompoundBorderUIResource = BorderUIResource_CompoundBorderUIResource
 
     /**  */
-    @stub
-    object EmptyBorderUIResource extends BorderUIResource.EmptyBorderUIResource
+    type EmptyBorderUIResource = BorderUIResource_EmptyBorderUIResource
 
     /**  */
-    @stub
-    object EtchedBorderUIResource extends BorderUIResource.EtchedBorderUIResource
+    type EtchedBorderUIResource = BorderUIResource_EtchedBorderUIResource
 
     /**  */
-    @stub
-    object LineBorderUIResource extends BorderUIResource.LineBorderUIResource
+    type LineBorderUIResource = BorderUIResource_LineBorderUIResource
 
     /**  */
-    @stub
-    object MatteBorderUIResource extends BorderUIResource.MatteBorderUIResource
+    type MatteBorderUIResource = BorderUIResource_MatteBorderUIResource
 
     /**  */
-    @stub
-    object TitledBorderUIResource extends BorderUIResource.TitledBorderUIResource
+    type TitledBorderUIResource = BorderUIResource_TitledBorderUIResource
 
     /**  */
     @stub

@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** The Double class defines an ellipse specified
  *  in double precision.
  */
-object Ellipse2D.Double extends Ellipse2D with Serializable {
+object Ellipse2D_Double extends Ellipse2D with Serializable {
 
     /** Constructs a new Ellipse2D, initialized to
      *  location (0, 0) and size (0, 0).

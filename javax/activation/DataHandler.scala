@@ -47,7 +47,7 @@ class DataHandler extends Object with Transferable {
      *  of this MIME type.
      */
     @stub
-    def this(obj: Object, mimeType: String) = ???
+    def this(obj: Any, mimeType: String) = ???
 
     /** Create a DataHandler instance referencing a URL. */
     @stub
@@ -62,7 +62,7 @@ class DataHandler extends Object with Transferable {
      *  a JavaBean component.
      */
     @stub
-    def getBean(cmdinfo: CommandInfo): Object = ???
+    def getBean(cmdinfo: CommandInfo): Any = ???
 
     /** Get the command cmdName. */
     @stub
@@ -70,7 +70,7 @@ class DataHandler extends Object with Transferable {
 
     /** Return the data in its preferred Object form. */
     @stub
-    def getContent(): Object = ???
+    def getContent(): Any = ???
 
     /** Return the MIME type of this object as retrieved from
      *  the source object.
@@ -106,7 +106,7 @@ class DataHandler extends Object with Transferable {
      *  transferred.
      */
     @stub
-    def getTransferData(flavor: DataFlavor): Object = ???
+    def getTransferData(flavor: DataFlavor): Any = ???
 
     /** Return the DataFlavors in which this data is available. */
     @stub

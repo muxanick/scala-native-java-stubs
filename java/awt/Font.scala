@@ -300,7 +300,7 @@ class Font extends Object with Serializable {
      *  Object.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns a map of font attributes available in this
      *  Font.

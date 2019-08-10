@@ -76,13 +76,13 @@ class SealedObject extends Object with Serializable {
 
     /** Retrieves the original (encapsulated) object. */
     @stub
-    def getObject(c: Cipher): Object = ???
+    def getObject(c: Cipher): Any = ???
 
     /** Retrieves the original (encapsulated) object. */
     @stub
-    def getObject(key: Key): Object = ???
+    def getObject(key: Key): Any = ???
 
     /** Retrieves the original (encapsulated) object. */
     @stub
-    def getObject(key: Key, provider: String): Object = ???
+    def getObject(key: Key, provider: String): Any = ???
 }

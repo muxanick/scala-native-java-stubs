@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  Panel class.  It provides an implementation of the
  *  Java Accessibility API appropriate to panel user-interface elements.
  */
-protected class Panel.AccessibleAWTPanel extends Container.AccessibleAWTContainer {
+protected class Panel_AccessibleAWTPanel extends Container.AccessibleAWTContainer {
 
     /**  */
     @stub

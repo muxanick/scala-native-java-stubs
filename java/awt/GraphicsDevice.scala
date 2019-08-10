@@ -115,8 +115,7 @@ abstract class GraphicsDevice extends Object {
 
 object GraphicsDevice {
     /** Kinds of translucency supported by the underlying system. */
-    @stub
-    object WindowTranslucency extends GraphicsDevice.WindowTranslucency
+    type WindowTranslucency = GraphicsDevice_WindowTranslucency
 
     /** Device is an image buffer. */
     @stub

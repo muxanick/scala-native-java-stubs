@@ -17,7 +17,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object DefaultEditorKit.InsertTabAction extends TextAction {
+object DefaultEditorKit_InsertTabAction extends TextAction {
 
     /** Creates this object with the appropriate identifier. */
     @stub

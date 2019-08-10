@@ -45,7 +45,7 @@ final class ObjID extends Object with Serializable {
      *  equality.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the hash code value for this object identifier, the
      *  object number.

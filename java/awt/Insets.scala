@@ -35,11 +35,11 @@ class Insets extends Object with Cloneable with Serializable {
 
     /** Create a copy of this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Checks whether two insets objects are equal. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the hash code for this Insets. */
     @stub

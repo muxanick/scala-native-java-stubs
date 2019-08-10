@@ -199,7 +199,7 @@ class Logger extends Object {
 
     /** Log a method entry, with one parameter. */
     @stub
-    def entering(sourceClass: String, sourceMethod: String, param1: Object): Unit = ???
+    def entering(sourceClass: String, sourceMethod: String, param1: Any): Unit = ???
 
     /** Log a method entry, with an array of parameters. */
     @stub
@@ -211,7 +211,7 @@ class Logger extends Object {
 
     /** Log a method return, with result object. */
     @stub
-    def exiting(sourceClass: String, sourceMethod: String, result: Object): Unit = ???
+    def exiting(sourceClass: String, sourceMethod: String, result: Any): Unit = ???
 
     /** Log a FINE message. */
     @stub
@@ -303,7 +303,7 @@ class Logger extends Object {
 
     /** Log a message, with one object parameter. */
     @stub
-    def log(level: Level, msg: String, param1: Object): Unit = ???
+    def log(level: Level, msg: String, param1: Any): Unit = ???
 
     /** Log a message, with an array of object arguments. */
     @stub
@@ -337,7 +337,7 @@ class Logger extends Object {
      *  with a single object parameter to the log message.
      */
     @stub
-    def logp(level: Level, sourceClass: String, sourceMethod: String, msg: String, param1: Object): Unit = ???
+    def logp(level: Level, sourceClass: String, sourceMethod: String, msg: String, param1: Any): Unit = ???
 
     /** Log a message, specifying source class and method,
      *  with an array of object arguments.
@@ -391,7 +391,7 @@ class Logger extends Object {
      * 
      */
     @stub
-    def logrb(level: Level, sourceClass: String, sourceMethod: String, bundleName: String, msg: String, param1: Object): Unit = ???
+    def logrb(level: Level, sourceClass: String, sourceMethod: String, bundleName: String, msg: String, param1: Any): Unit = ???
 
     /** Deprecated. 
      * Use logrb(java.util.logging.Level, java.lang.String,

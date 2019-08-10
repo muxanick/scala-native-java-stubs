@@ -58,7 +58,7 @@ abstract class AccessibleContext extends Object {
     def addPropertyChangeListener(listener: PropertyChangeListener): Unit
 
     /** Support for reporting bound property changes. */
-    def firePropertyChange(propertyName: String, oldValue: Object, newValue: Object): Unit
+    def firePropertyChange(propertyName: String, oldValue: Any, newValue: Any): Unit
 
     /** Gets the AccessibleAction associated with this object that supports
      *  one or more actions.

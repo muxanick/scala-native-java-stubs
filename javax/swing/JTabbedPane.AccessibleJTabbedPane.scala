@@ -20,7 +20,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JTabbedPane.AccessibleJTabbedPane extends JComponent.AccessibleJComponent with AccessibleSelection with ChangeListener {
+protected class JTabbedPane_AccessibleJTabbedPane extends JComponent.AccessibleJComponent with AccessibleSelection with ChangeListener {
 
     /** Constructs an AccessibleJTabbedPane */
     @stub

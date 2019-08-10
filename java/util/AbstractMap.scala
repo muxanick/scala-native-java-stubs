@@ -43,28 +43,28 @@ abstract class AbstractMap[K, V] extends Object with Map[K, V] {
     /** Returns a shallow copy of this AbstractMap instance: the keys
      *  and values themselves are not cloned.
      */
-    protected def clone(): Object
+    protected def clone(): Any
 
     /** Returns true if this map contains a mapping for the specified
      *  key.
      */
-    def containsKey(key: Object): Boolean
+    def containsKey(key: Any): Boolean
 
     /** Returns true if this map maps one or more keys to the
      *  specified value.
      */
-    def containsValue(value: Object): Boolean
+    def containsValue(value: Any): Boolean
 
     /** Returns a Set view of the mappings contained in this map. */
     def entrySet(): Set[Map.Entry[K, V]]
 
     /** Compares the specified object with this map for equality. */
-    def equals(o: Object): Boolean
+    def equals(o: Any): Boolean
 
     /** Returns the value to which the specified key is mapped,
      *  or null if this map contains no mapping for the key.
      */
-    def get(key: Object): V
+    def get(key: Any): V
 
     /** Returns the hash code value for this map. */
     def hashCode(): Int
@@ -88,7 +88,7 @@ abstract class AbstractMap[K, V] extends Object with Map[K, V] {
     /** Removes the mapping for a key from this map if it is present
      *  (optional operation).
      */
-    def remove(key: Object): V
+    def remove(key: Any): V
 
     /** Returns the number of key-value mappings in this map. */
     def size(): Int
@@ -102,10 +102,8 @@ abstract class AbstractMap[K, V] extends Object with Map[K, V] {
 
 object AbstractMap {
     /** An Entry maintaining a key and a value. */
-    @stub
-    object SimpleEntry[K, V] extends AbstractMap.SimpleEntry[K, V]
+    type SimpleEntry[K, V] = AbstractMap_SimpleEntry[K, V]
 
     /** An Entry maintaining an immutable key and value. */
-    @stub
-    object SimpleImmutableEntry[K, V] extends AbstractMap.SimpleImmutableEntry[K, V]
+    type SimpleImmutableEntry[K, V] = AbstractMap_SimpleImmutableEntry[K, V]
 }

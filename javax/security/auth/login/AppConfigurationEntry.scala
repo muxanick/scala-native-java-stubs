@@ -40,6 +40,5 @@ object AppConfigurationEntry {
     /** This class represents whether or not a LoginModule
      *  is REQUIRED, REQUISITE, SUFFICIENT or OPTIONAL.
      */
-    @stub
-    object LoginModuleControlFlag extends AppConfigurationEntry.LoginModuleControlFlag
+    type LoginModuleControlFlag = AppConfigurationEntry_LoginModuleControlFlag
 }

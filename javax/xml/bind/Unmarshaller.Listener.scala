@@ -21,7 +21,7 @@ import scala.scalanative.annotation.stub
  *  (@link #setListener(Listener)}
  *  (@link #getListener()}
  */
-object abstract Unmarshaller.Listener extends Object {
+object abstract Unmarshaller_Listener extends Object {
 
     /**  */
     @stub
@@ -31,11 +31,11 @@ object abstract Unmarshaller.Listener extends Object {
      *  Callback method invoked after unmarshalling XML data into target.
      */
     @stub
-    def afterUnmarshal(target: Object, parent: Object): Unit = ???
+    def afterUnmarshal(target: Any, parent: Any): Unit = ???
 
     /** 
      *  Callback method invoked before unmarshalling into target.
      */
     @stub
-    def beforeUnmarshal(target: Object, parent: Object): Unit = ???
+    def beforeUnmarshal(target: Any, parent: Any): Unit = ???
 }

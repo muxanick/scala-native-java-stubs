@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class BasicToolBarUI.ToolBarContListener extends Object with ContainerListener {
+protected class BasicToolBarUI_ToolBarContListener extends Object with ContainerListener {
 
     /**  */
     @stub

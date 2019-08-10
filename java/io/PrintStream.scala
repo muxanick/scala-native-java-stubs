@@ -130,7 +130,7 @@ class PrintStream extends FilterOutputStream with Appendable with Closeable {
 
     /** Prints an object. */
     @stub
-    def print(obj: Object): Unit = ???
+    def print(obj: Any): Unit = ???
 
     /** Prints a string. */
     @stub
@@ -182,7 +182,7 @@ class PrintStream extends FilterOutputStream with Appendable with Closeable {
 
     /** Prints an Object and then terminate the line. */
     @stub
-    def println(x: Object): Unit = ???
+    def println(x: Any): Unit = ???
 
     /** Prints a String and then terminate the line. */
     @stub

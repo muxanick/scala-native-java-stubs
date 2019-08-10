@@ -12,7 +12,7 @@ trait Permission {
      *  in this interface.
      */
     @stub
-    def equals(another: Object): Boolean = ???
+    def equals(another: Any): Boolean = ???
 
     /** Prints a string representation of this permission. */
     @stub

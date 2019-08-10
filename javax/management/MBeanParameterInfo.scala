@@ -19,11 +19,11 @@ class MBeanParameterInfo extends MBeanFeatureInfo with Cloneable {
 
     /** Returns a shallow clone of this instance. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compare this MBeanParameterInfo to another. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the type or class name of the data. */
     @stub

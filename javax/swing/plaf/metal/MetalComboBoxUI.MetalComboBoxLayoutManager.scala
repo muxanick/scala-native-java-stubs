@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
 /** This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of MetalComboBoxUI.
  */
-class MetalComboBoxUI.MetalComboBoxLayoutManager extends BasicComboBoxUI.ComboBoxLayoutManager {
+class MetalComboBoxUI_MetalComboBoxLayoutManager extends BasicComboBoxUI.ComboBoxLayoutManager {
 
     /**  */
     @stub

@@ -26,7 +26,7 @@ class TreeExpansionEvent extends EventObject {
 
     /** Constructs a TreeExpansionEvent object. */
     @stub
-    def this(source: Object, path: TreePath) = ???
+    def this(source: Any, path: TreePath) = ???
 
     /** Path to the value this event represents. */
     @stub

@@ -34,34 +34,28 @@ class BasicComboBoxUI extends ComboBoxUI {
     def this() = ???
 
     /** This layout manager handles the 'standard' layout of combo boxes. */
-    @stub
-    object ComboBoxLayoutManager extends BasicComboBoxUI.ComboBoxLayoutManager
+    type ComboBoxLayoutManager = BasicComboBoxUI_ComboBoxLayoutManager
 
     /** This listener hides the popup when the focus is lost. */
-    @stub
-    object FocusHandler extends BasicComboBoxUI.FocusHandler
+    type FocusHandler = BasicComboBoxUI_FocusHandler
 
     /** This listener watches for changes to the selection in the
      *  combo box.
      */
-    @stub
-    object ItemHandler extends BasicComboBoxUI.ItemHandler
+    type ItemHandler = BasicComboBoxUI_ItemHandler
 
     /** This listener checks to see if the key event isn't a navigation key. */
-    @stub
-    object KeyHandler extends BasicComboBoxUI.KeyHandler
+    type KeyHandler = BasicComboBoxUI_KeyHandler
 
     /** This listener watches for changes in the
      *  ComboBoxModel.
      */
-    @stub
-    object ListDataHandler extends BasicComboBoxUI.ListDataHandler
+    type ListDataHandler = BasicComboBoxUI_ListDataHandler
 
     /** This listener watches for bound properties that have changed in the
      *  combo box.
      */
-    @stub
-    object PropertyChangeHandler extends BasicComboBoxUI.PropertyChangeHandler
+    type PropertyChangeHandler = BasicComboBoxUI_PropertyChangeHandler
 
     /**  */
     @stub

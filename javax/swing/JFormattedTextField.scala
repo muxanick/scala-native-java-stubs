@@ -173,11 +173,11 @@ class JFormattedTextField extends JTextField {
      *  AbstractFormatterFactory and initial value.
      */
     @stub
-    def this(factory: JFormattedTextField.AbstractFormatterFactory, currentValue: Object) = ???
+    def this(factory: JFormattedTextField.AbstractFormatterFactory, currentValue: Any) = ???
 
     /** Creates a JFormattedTextField with the specified value. */
     @stub
-    def this(value: Object) = ???
+    def this(value: Any) = ???
 
     /** Forces the current value to be taken from the
      *  AbstractFormatter and set as the current value.
@@ -209,7 +209,7 @@ class JFormattedTextField extends JTextField {
 
     /** Returns the last valid value. */
     @stub
-    def getValue(): Object = ???
+    def getValue(): Any = ???
 
     /** Invoked when the user inputs an invalid value. */
     @stub
@@ -254,7 +254,7 @@ class JFormattedTextField extends JTextField {
      *  AbstractFormatterFactory.
      */
     @stub
-    def setValue(value: Object): Unit = ???
+    def setValue(value: Any): Unit = ???
 }
 
 object JFormattedTextField {
@@ -262,15 +262,13 @@ object JFormattedTextField {
      *  JFormattedTextField to handle the conversion both
      *  from an Object to a String, and back from a String to an Object.
      */
-    @stub
-    object AbstractFormatter extends JFormattedTextField.AbstractFormatter
+    type AbstractFormatter = JFormattedTextField_AbstractFormatter
 
     /** Instances of AbstractFormatterFactory are used by
      *  JFormattedTextField to obtain instances of
      *  AbstractFormatter which in turn are used to format values.
      */
-    @stub
-    object AbstractFormatterFactory extends JFormattedTextField.AbstractFormatterFactory
+    type AbstractFormatterFactory = JFormattedTextField_AbstractFormatterFactory
 
     /** Constant identifying that when focus is lost,
      *  commitEdit should be invoked.

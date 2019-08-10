@@ -123,7 +123,7 @@ trait Chronology extends Comparable[Chronology] {
 
     /** Checks if this chronology is equal to another chronology. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Creates the chronology era object from the numeric value. */
     @stub

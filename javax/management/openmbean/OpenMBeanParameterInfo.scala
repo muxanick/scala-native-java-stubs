@@ -15,13 +15,13 @@ trait OpenMBeanParameterInfo {
 
     /** Compares the specified obj parameter with this OpenMBeanParameterInfo instance for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the default value for this parameter, if it has one, or
      *  null otherwise.
      */
     @stub
-    def getDefaultValue(): Object = ???
+    def getDefaultValue(): Any = ???
 
     /** Returns a human readable description of the parameter
      *  described by this OpenMBeanParameterInfo instance.
@@ -91,7 +91,7 @@ trait OpenMBeanParameterInfo {
      *  described by this OpenMBeanParameterInfo instance.
      */
     @stub
-    def isValue(obj: Object): Boolean = ???
+    def isValue(obj: Any): Boolean = ???
 
     /** Returns a string representation of this OpenMBeanParameterInfo instance. */
     @stub

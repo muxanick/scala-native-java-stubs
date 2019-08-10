@@ -12,7 +12,7 @@ import scala.scalanative.annotation.stub
  *  Spliterator.OfLong.forEachRemaining(java.util.function.LongConsumer) forEach} if it
  *  can provide a more performant implementation.
  */
-object abstract Spliterators.AbstractLongSpliterator extends Object with Spliterator.OfLong {
+object abstract Spliterators_AbstractLongSpliterator extends Object with Spliterator.OfLong {
 
     /** Creates a spliterator reporting the given estimated size and
      *  characteristics.

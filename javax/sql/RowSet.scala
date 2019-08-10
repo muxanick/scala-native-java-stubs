@@ -492,31 +492,31 @@ trait RowSet extends ResultSet {
      *  with a Java Object.
      */
     @stub
-    def setObject(parameterIndex: Int, x: Object): Unit = ???
+    def setObject(parameterIndex: Int, x: Any): Unit = ???
 
     /** Sets the designated parameter in this RowSet object's command
      *  with a Java Object.
      */
     @stub
-    def setObject(parameterIndex: Int, x: Object, targetSqlType: Int): Unit = ???
+    def setObject(parameterIndex: Int, x: Any, targetSqlType: Int): Unit = ???
 
     /** Sets the designated parameter in this RowSet object's command
      *  with the given Java Object.
      */
     @stub
-    def setObject(parameterIndex: Int, x: Object, targetSqlType: Int, scaleOrLength: Int): Unit = ???
+    def setObject(parameterIndex: Int, x: Any, targetSqlType: Int, scaleOrLength: Int): Unit = ???
 
     /** Sets the value of the designated parameter with the given object. */
     @stub
-    def setObject(parameterName: String, x: Object): Unit = ???
+    def setObject(parameterName: String, x: Any): Unit = ???
 
     /** Sets the value of the designated parameter with the given object. */
     @stub
-    def setObject(parameterName: String, x: Object, targetSqlType: Int): Unit = ???
+    def setObject(parameterName: String, x: Any, targetSqlType: Int): Unit = ???
 
     /** Sets the value of the designated parameter with the given object. */
     @stub
-    def setObject(parameterName: String, x: Object, targetSqlType: Int, scale: Int): Unit = ???
+    def setObject(parameterName: String, x: Any, targetSqlType: Int, scale: Int): Unit = ???
 
     /** Sets the database password for this RowSet object to
      *  the given String.

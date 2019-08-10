@@ -16,16 +16,13 @@ class BasicTableUI extends TableUI {
     def this() = ???
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object FocusHandler extends BasicTableUI.FocusHandler
+    type FocusHandler = BasicTableUI_FocusHandler
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object KeyHandler extends BasicTableUI.KeyHandler
+    type KeyHandler = BasicTableUI_KeyHandler
 
     /** This class should be treated as a "protected" inner class. */
-    @stub
-    object MouseInputHandler extends BasicTableUI.MouseInputHandler
+    type MouseInputHandler = BasicTableUI_MouseInputHandler
 
     /**  */
     @stub

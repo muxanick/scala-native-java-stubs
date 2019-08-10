@@ -78,7 +78,7 @@ class CopyOnWriteArraySet[E] extends AbstractSet[E] with Serializable {
 
     /** Returns true if this set contains the specified element. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Returns true if this set contains all of the elements of the
      *  specified collection.
@@ -88,7 +88,7 @@ class CopyOnWriteArraySet[E] extends AbstractSet[E] with Serializable {
 
     /** Compares the specified object with this set for equality. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Performs the given action for each element of the Iterable
      *  until all elements have been processed or the action throws an
@@ -109,7 +109,7 @@ class CopyOnWriteArraySet[E] extends AbstractSet[E] with Serializable {
 
     /** Removes the specified element from this set if it is present. */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Removes from this set all of its elements that are contained in the
      *  specified collection.

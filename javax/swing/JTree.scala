@@ -154,21 +154,18 @@ class JTree extends JComponent with Scrollable with Accessible {
     /** This class implements accessibility support for the
      *  JTree class.
      */
-    @stub
-    protected object AccessibleJTree extends JTree.AccessibleJTree
+    protected type AccessibleJTree = JTree_AccessibleJTree
 
     /** Listens to the model and updates the expandedState
      *  accordingly when nodes are removed, or changed.
      */
-    @stub
-    protected object TreeModelHandler extends JTree.TreeModelHandler
+    protected type TreeModelHandler = JTree_TreeModelHandler
 
     /** Handles creating a new TreeSelectionEvent with the
      *  JTree as the
      *  source and passing it off to all the listeners.
      */
-    @stub
-    protected object TreeSelectionRedirector extends JTree.TreeSelectionRedirector
+    protected type TreeSelectionRedirector = JTree_TreeSelectionRedirector
 
     /** Editor for the entries. */
     @stub
@@ -299,7 +296,7 @@ class JTree extends JComponent with Scrollable with Accessible {
      *  text.
      */
     @stub
-    def convertValueToText(value: Object, selected: Boolean, expanded: Boolean, leaf: Boolean, row: Int, hasFocus: Boolean): String = ???
+    def convertValueToText(value: Any, selected: Boolean, expanded: Boolean, leaf: Boolean, row: Int, hasFocus: Boolean): String = ???
 
     /** Creates and returns an instance of TreeModelHandler. */
     @stub
@@ -418,7 +415,7 @@ class JTree extends JComponent with Scrollable with Accessible {
 
     /** Returns the last path component of the selected path. */
     @stub
-    def getLastSelectedPathComponent(): Object = ???
+    def getLastSelectedPathComponent(): Any = ???
 
     /** Returns the path identified as the lead. */
     @stub
@@ -867,21 +864,18 @@ object JTree {
     /** A subclass of TransferHandler.DropLocation representing
      *  a drop location for a JTree.
      */
-    @stub
-    object DropLocation extends JTree.DropLocation
+    type DropLocation = JTree_DropLocation
 
     /** DynamicUtilTreeNode can wrap
      *  vectors/hashtables/arrays/strings and
      *  create the appropriate children tree nodes as necessary.
      */
-    @stub
-    object DynamicUtilTreeNode extends JTree.DynamicUtilTreeNode
+    type DynamicUtilTreeNode = JTree_DynamicUtilTreeNode
 
     /** EmptySelectionModel is a TreeSelectionModel
      *  that does not allow anything to be selected.
      */
-    @stub
-    protected object EmptySelectionModel extends JTree.EmptySelectionModel
+    protected type EmptySelectionModel = JTree_EmptySelectionModel
 
     /** Bound property name for anchor selection path. */
     @stub
@@ -949,7 +943,7 @@ object JTree {
 
     /** Returns a TreeModel wrapping the specified object. */
     @stub
-    protected def createTreeModel(value: Object): TreeModel = ???
+    protected def createTreeModel(value: Any): TreeModel = ???
 
     /** Creates and returns a sample TreeModel. */
     @stub

@@ -86,7 +86,7 @@ abstract class SetOfIntegerSyntax extends Object with Serializable with Cloneabl
     /** Returns whether this set-of-integer attribute is equivalent to the passed
      *  in object.
      */
-    def equals(object: Object): Boolean
+    def equals(object: Any): Boolean
 
     /** Obtain this set-of-integer attribute's members in canonical array form. */
     def getMembers(): Array[Array[Int]]

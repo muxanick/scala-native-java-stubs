@@ -56,7 +56,7 @@ class RenderableImageOp extends Object with RenderableImage {
 
     /** Gets a property from the property set of this image. */
     @stub
-    def getProperty(name: String): Object = ???
+    def getProperty(name: String): Any = ???
 
     /** Return a list of names recognized by getProperty. */
     @stub

@@ -7,7 +7,7 @@ import javax.swing.border.{AbstractBorder, EmptyBorder, MatteBorder}
 import scala.scalanative.annotation.stub
 
 /**  */
-object BorderUIResource.MatteBorderUIResource extends MatteBorder with UIResource {
+object BorderUIResource_MatteBorderUIResource extends MatteBorder with UIResource {
 
     /**  */
     @stub

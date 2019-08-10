@@ -59,7 +59,7 @@ class SinglePixelPackedSampleModel extends SampleModel {
 
     /** Indicates whether some other object is "equal to" this one. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the bit masks for all bands. */
     @stub
@@ -75,7 +75,7 @@ class SinglePixelPackedSampleModel extends SampleModel {
      *  TransferType.
      */
     @stub
-    def getDataElements(x: Int, y: Int, obj: Object, data: DataBuffer): Object = ???
+    def getDataElements(x: Int, y: Int, obj: Any, data: DataBuffer): Any = ???
 
     /** Returns the number of data elements needed to transfer one pixel
      *  via the getDataElements and setDataElements methods.
@@ -129,7 +129,7 @@ class SinglePixelPackedSampleModel extends SampleModel {
      *  primitive array of type TransferType.
      */
     @stub
-    def setDataElements(x: Int, y: Int, obj: Object, data: DataBuffer): Unit = ???
+    def setDataElements(x: Int, y: Int, obj: Any, data: DataBuffer): Unit = ???
 
     /** Sets a pixel in the DataBuffer using an int array of samples for input. */
     @stub

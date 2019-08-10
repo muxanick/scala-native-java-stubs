@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  (byte[]) as the print data representation class.
  *  
  */
-object DocFlavor.BYTE_ARRAY extends DocFlavor {
+object DocFlavor_BYTE_ARRAY extends DocFlavor {
 
     /** Constructs a new doc flavor with the given MIME type and a print
      *  data representation class name of "[B" (byte array).

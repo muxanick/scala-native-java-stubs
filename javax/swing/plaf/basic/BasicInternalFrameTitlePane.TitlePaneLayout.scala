@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of Foo.
  */
-class BasicInternalFrameTitlePane.TitlePaneLayout extends Object with LayoutManager {
+class BasicInternalFrameTitlePane_TitlePaneLayout extends Object with LayoutManager {
 
     /**  */
     @stub

@@ -25,13 +25,13 @@ class ResolveResult extends Object with Serializable {
      *  the resolved Object and the remaining name.
      */
     @stub
-    def this(robj: Object, rname: Name) = ???
+    def this(robj: Any, rname: Name) = ???
 
     /** Constructs a new instance of ResolveResult consisting of
      *  the resolved object and the remaining unresolved component.
      */
     @stub
-    def this(robj: Object, rcomp: String) = ???
+    def this(robj: Any, rcomp: String) = ???
 
     /** Field containing the remaining name yet to be resolved. */
     @stub
@@ -39,7 +39,7 @@ class ResolveResult extends Object with Serializable {
 
     /** Field containing the Object that was resolved to successfully. */
     @stub
-    protected val resolvedObj: Object = ???
+    protected val resolvedObj: Any = ???
 
     /** Adds a single component to the end of remaining name. */
     @stub
@@ -55,7 +55,7 @@ class ResolveResult extends Object with Serializable {
 
     /** Retrieves the Object to which resolution was successful. */
     @stub
-    def getResolvedObj(): Object = ???
+    def getResolvedObj(): Any = ???
 
     /** Sets the remaining name field of this result to name. */
     @stub
@@ -63,5 +63,5 @@ class ResolveResult extends Object with Serializable {
 
     /** Sets the resolved Object field of this result to obj. */
     @stub
-    def setResolvedObj(obj: Object): Unit = ???
+    def setResolvedObj(obj: Any): Unit = ???
 }

@@ -96,7 +96,7 @@ trait AttributeSet {
 
     /** Compares the specified object with this attribute set for equality. */
     @stub
-    def equals(object: Object): Boolean = ???
+    def equals(object: Any): Boolean = ???
 
     /** Returns the attribute value which this attribute set contains in the
      *  given attribute category.

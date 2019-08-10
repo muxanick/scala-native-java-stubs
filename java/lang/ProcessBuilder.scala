@@ -242,6 +242,5 @@ object ProcessBuilder {
     /** Represents a source of subprocess input or a destination of
      *  subprocess output.
      */
-    @stub
-    object Redirect extends ProcessBuilder.Redirect
+    type Redirect = ProcessBuilder_Redirect
 }

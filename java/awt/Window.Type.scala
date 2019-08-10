@@ -13,10 +13,10 @@ import scala.scalanative.annotation.stub
  *  the level of support, some properties of the window type may be
  *  disobeyed.
  */
-class Window.Type private (name: String, ordinal: Int) extends Enum[Window.Type](name, ordinal) {
+class Window_Type private (name: String, ordinal: Int) extends Enum[Window.Type](name, ordinal) {
 }
 
-object Window.Type {
+object Window_Type {
     /** Represents a normal window. */
     final val NORMAL = new Window.Type(NORMAL, 0)
 

@@ -51,7 +51,7 @@ abstract class SAXParser extends Object {
     /** Returns the particular property requested for in the underlying
      *  implementation of XMLReader.
      */
-    def getProperty(name: String): Object
+    def getProperty(name: String): Any
 
     /** Get a reference to the the Schema being used by
      *  the XML processor.
@@ -138,5 +138,5 @@ abstract class SAXParser extends Object {
     /** Sets the particular property in the underlying implementation of
      *  XMLReader.
      */
-    def setProperty(name: String, value: Object): Unit
+    def setProperty(name: String, value: Any): Unit
 }

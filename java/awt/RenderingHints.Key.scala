@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
  *  == operator instead of the more expensive
  *  equals() method.
  */
-object abstract RenderingHints.Key extends Object {
+object abstract RenderingHints_Key extends Object {
 
     /** Construct a key using the indicated private key. */
     @stub
@@ -21,7 +21,7 @@ object abstract RenderingHints.Key extends Object {
      *  result as the equality operator '=='.
      */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** The hash code for all Key objects will be the same as the
      *  system identity code of the object as defined by the
@@ -39,6 +39,5 @@ object abstract RenderingHints.Key extends Object {
     /** Returns true if the specified object is a valid value
      *  for this Key.
      */
-    @stub
-    def isCompatibleValue(val: Object): Boolean
+    def isCompatibleValue(val: Any): Boolean
 }

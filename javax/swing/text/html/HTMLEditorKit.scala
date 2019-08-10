@@ -134,7 +134,7 @@ class HTMLEditorKit extends StyledEditorKit with Accessible {
 
     /** Creates a copy of the editor kit. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Create an uninitialized text storage model
      *  that is appropriate for this type of editor.
@@ -248,34 +248,28 @@ class HTMLEditorKit extends StyledEditorKit with Accessible {
 
 object HTMLEditorKit {
     /** A factory to build views for HTML. */
-    @stub
-    object HTMLFactory extends HTMLEditorKit.HTMLFactory
+    type HTMLFactory = HTMLEditorKit_HTMLFactory
 
     /** An abstract Action providing some convenience methods that may
      *  be useful in inserting HTML into an existing document.
      */
-    @stub
-    object HTMLTextAction extends HTMLEditorKit.HTMLTextAction
+    type HTMLTextAction = HTMLEditorKit_HTMLTextAction
 
     /** InsertHTMLTextAction can be used to insert an arbitrary string of HTML
      *  into an existing HTML document.
      */
-    @stub
-    object InsertHTMLTextAction extends HTMLEditorKit.InsertHTMLTextAction
+    type InsertHTMLTextAction = HTMLEditorKit_InsertHTMLTextAction
 
     /** Class to watch the associated component and fire
      *  hyperlink events on it when appropriate.
      */
-    @stub
-    object LinkController extends HTMLEditorKit.LinkController
+    type LinkController = HTMLEditorKit_LinkController
 
     /** Interface to be supported by the parser. */
-    @stub
-    object Parser extends HTMLEditorKit.Parser
+    type Parser = HTMLEditorKit_Parser
 
     /** The result of parsing drives these callback methods. */
-    @stub
-    object ParserCallback extends HTMLEditorKit.ParserCallback
+    type ParserCallback = HTMLEditorKit_ParserCallback
 
     /** The bold action identifier */
     @stub

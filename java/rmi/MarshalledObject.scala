@@ -37,7 +37,7 @@ final class MarshalledObject[T] extends Object with Serializable {
 
     /** Compares this MarshalledObject to another object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns a new copy of the contained marshalledobject. */
     @stub

@@ -40,29 +40,29 @@ abstract class AbstractScriptEngine extends Object with ScriptEngine {
      *  eval(Reader, ScriptContext) passing the value of the context
      *  field.
      */
-    def eval(reader: Reader): Object
+    def eval(reader: Reader): Any
 
     /** eval(Reader, Bindings) calls the abstract
      *  eval(Reader, ScriptContext) method, passing it a ScriptContext
      *  whose Reader, Writers and Bindings for scopes other that ENGINE_SCOPE
      *  are identical to those members of the protected context field.
      */
-    def eval(reader: Reader, bindings: Bindings): Object
+    def eval(reader: Reader, bindings: Bindings): Any
 
     /** Same as eval(Reader) except that the abstract
      *  eval(String, ScriptContext) is used.
      */
-    def eval(script: String): Object
+    def eval(script: String): Any
 
     /** Same as eval(Reader, Bindings) except that the abstract
      *  eval(String, ScriptContext) is used.
      */
-    def eval(script: String, bindings: Bindings): Object
+    def eval(script: String, bindings: Bindings): Any
 
     /** Gets the value for the specified key in the ENGINE_SCOPE of the
      *  protected context field.
      */
-    def get(key: String): Object
+    def get(key: String): Any
 
     /** Returns the Bindings with the specified scope value in
      *  the protected context field.
@@ -78,7 +78,7 @@ abstract class AbstractScriptEngine extends Object with ScriptEngine {
     /** Sets the specified value with the specified key in the ENGINE_SCOPE
      *  Bindings of the protected context field.
      */
-    def put(key: String, value: Object): Unit
+    def put(key: String, value: Any): Unit
 
     /** Sets the Bindings with the corresponding scope value in the
      *  context field.

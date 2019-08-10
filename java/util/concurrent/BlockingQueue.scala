@@ -150,7 +150,7 @@ trait BlockingQueue[E] extends Queue[E] {
 
     /** Returns true if this queue contains the specified element. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Removes all available elements from this queue and adds them
      *  to the given collection.
@@ -202,7 +202,7 @@ trait BlockingQueue[E] extends Queue[E] {
      *  if it is present.
      */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Retrieves and removes the head of this queue, waiting if necessary
      *  until an element becomes available.

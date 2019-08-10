@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
 /** Class to watch the associated component and fire
  *  hyperlink events on it when appropriate.
  */
-object HTMLEditorKit.LinkController extends MouseAdapter with MouseMotionListener with Serializable {
+object HTMLEditorKit_LinkController extends MouseAdapter with MouseMotionListener with Serializable {
 
     /**  */
     @stub

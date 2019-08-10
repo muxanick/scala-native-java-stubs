@@ -11,13 +11,13 @@ trait Highlighter {
 
     /** Adds a highlight to the view. */
     @stub
-    def addHighlight(p0: Int, p1: Int, p: Highlighter.HighlightPainter): Object = ???
+    def addHighlight(p0: Int, p1: Int, p: Highlighter.HighlightPainter): Any = ???
 
     /** Changes the given highlight to span a different portion of
      *  the document.
      */
     @stub
-    def changeHighlight(tag: Object, p0: Int, p1: Int): Unit = ???
+    def changeHighlight(tag: Any, p0: Int, p1: Int): Unit = ???
 
     /** Called when the UI is being removed from the
      *  interface of a JTextComponent.
@@ -45,15 +45,13 @@ trait Highlighter {
 
     /** Removes a highlight from the view. */
     @stub
-    def removeHighlight(tag: Object): Unit = ???
+    def removeHighlight(tag: Any): Unit = ???
 }
 
 object Highlighter {
     /**  */
-    @stub
-    trait Highlight extends Highlighter.Highlight
+    type Highlight = Highlighter_Highlight
 
     /** Highlight renderer. */
-    @stub
-    trait HighlightPainter extends Highlighter.HighlightPainter
+    type HighlightPainter = Highlighter_HighlightPainter
 }

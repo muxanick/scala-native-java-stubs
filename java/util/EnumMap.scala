@@ -75,13 +75,13 @@ class EnumMap[K <: Enum[K], V] extends AbstractMap[K, V] with Serializable with 
      *  key.
      */
     @stub
-    def containsKey(key: Object): Boolean = ???
+    def containsKey(key: Any): Boolean = ???
 
     /** Returns true if this map maps one or more keys to the
      *  specified value.
      */
     @stub
-    def containsValue(value: Object): Boolean = ???
+    def containsValue(value: Any): Boolean = ???
 
     /** Returns a Set view of the mappings contained in this map. */
     @stub
@@ -89,13 +89,13 @@ class EnumMap[K <: Enum[K], V] extends AbstractMap[K, V] with Serializable with 
 
     /** Compares the specified object with this map for equality. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the value to which the specified key is mapped,
      *  or null if this map contains no mapping for the key.
      */
     @stub
-    def get(key: Object): V = ???
+    def get(key: Any): V = ???
 
     /** Returns the hash code value for this map. */
     @stub
@@ -115,7 +115,7 @@ class EnumMap[K <: Enum[K], V] extends AbstractMap[K, V] with Serializable with 
 
     /** Removes the mapping for this key from this map if present. */
     @stub
-    def remove(key: Object): V = ???
+    def remove(key: Any): V = ???
 
     /** Returns the number of key-value mappings in this map. */
     @stub

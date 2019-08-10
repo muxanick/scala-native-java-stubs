@@ -21,7 +21,7 @@ abstract class Enum[E <: Enum[E]] extends Object with Comparable[E] with Seriali
     protected def this(name: String, ordinal: Int) = ???
 
     /** Throws CloneNotSupportedException. */
-    protected def clone(): Object
+    protected def clone(): Any
 
     /** Compares this enum with the specified object for order. */
     def compareTo(o: E): Int
@@ -29,7 +29,7 @@ abstract class Enum[E <: Enum[E]] extends Object with Comparable[E] with Seriali
     /** Returns true if the specified object is equal to this
      *  enum constant.
      */
-    def equals(other: Object): Boolean
+    def equals(other: Any): Boolean
 
     /** enum classes cannot have finalize methods. */
     protected def finalize(): Unit

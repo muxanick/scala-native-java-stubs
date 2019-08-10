@@ -58,7 +58,7 @@ class LayerUI[V <: Component] extends ComponentUI with Serializable {
 
     /** Support for reporting bound property changes for Object properties. */
     @stub
-    protected def firePropertyChange(propertyName: String, oldValue: Object, newValue: Object): Unit = ???
+    protected def firePropertyChange(propertyName: String, oldValue: Any, newValue: Any): Unit = ???
 
     /** If the JLayer's view component is not null,
      *  this calls the view's getBaseline() method.

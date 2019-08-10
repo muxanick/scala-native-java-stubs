@@ -40,7 +40,7 @@ class RC5ParameterSpec extends Object with AlgorithmParameterSpec {
      *  object.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the IV or null if this parameter set does not contain an IV. */
     @stub

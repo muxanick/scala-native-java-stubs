@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of BasicTabbedPaneUI.
  */
-class BasicTabbedPaneUI.MouseHandler extends MouseAdapter {
+class BasicTabbedPaneUI_MouseHandler extends MouseAdapter {
 
     /**  */
     @stub

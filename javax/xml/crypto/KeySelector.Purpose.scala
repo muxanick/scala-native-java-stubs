@@ -4,7 +4,7 @@ import java.lang.{Object, String}
 import scala.scalanative.annotation.stub
 
 /** The purpose of the key that is to be selected. */
-object KeySelector.Purpose extends Object {
+object KeySelector_Purpose extends Object {
 
     /** A key for decrypting. */
     @stub

@@ -32,7 +32,7 @@ class SecretKeySpec extends Object with KeySpec with SecretKey {
      *  object.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the name of the algorithm associated with this secret key. */
     @stub

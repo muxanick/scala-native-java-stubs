@@ -92,7 +92,7 @@ class JMXServiceURL extends Object with Serializable {
 
     /** Indicates whether some other object is equal to this one. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** The host part of the Service URL. */
     @stub

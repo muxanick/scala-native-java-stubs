@@ -20,7 +20,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-object BasicComboBoxRenderer.UIResource extends BasicComboBoxRenderer with UIResource {
+object BasicComboBoxRenderer_UIResource extends BasicComboBoxRenderer with UIResource {
 
     /**  */
     @stub

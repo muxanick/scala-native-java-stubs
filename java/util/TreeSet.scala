@@ -102,7 +102,7 @@ class TreeSet[E] extends AbstractSet[E] with NavigableSet[E] with Cloneable with
 
     /** Returns a shallow copy of this TreeSet instance. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns the comparator used to order the elements in this set,
      *  or null if this set uses the natural ordering of its elements.
@@ -112,7 +112,7 @@ class TreeSet[E] extends AbstractSet[E] with NavigableSet[E] with Cloneable with
 
     /** Returns true if this set contains the specified element. */
     @stub
-    def contains(o: Object): Boolean = ???
+    def contains(o: Any): Boolean = ???
 
     /** Returns an iterator over the elements in this set in descending order. */
     @stub
@@ -182,7 +182,7 @@ class TreeSet[E] extends AbstractSet[E] with NavigableSet[E] with Cloneable with
 
     /** Removes the specified element from this set if it is present. */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Returns the number of elements in this set (its cardinality). */
     @stub

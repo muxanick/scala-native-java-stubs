@@ -239,7 +239,7 @@ abstract class ByteBuffer extends Buffer with Comparable[ByteBuffer] {
     def duplicate(): ByteBuffer
 
     /** Tells whether or not this buffer is equal to another object. */
-    def equals(ob: Object): Boolean
+    def equals(ob: Any): Boolean
 
     /** Relative get method. */
     def get(): Byte

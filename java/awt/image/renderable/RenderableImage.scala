@@ -60,7 +60,7 @@ trait RenderableImage {
 
     /** Gets a property from the property set of this image. */
     @stub
-    def getProperty(name: String): Object = ???
+    def getProperty(name: String): Any = ???
 
     /** Returns a list of names recognized by getProperty. */
     @stub

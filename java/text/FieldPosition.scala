@@ -47,7 +47,7 @@ class FieldPosition extends Object {
 
     /** Overrides equals */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Retrieves the index of the first character in the requested field. */
     @stub

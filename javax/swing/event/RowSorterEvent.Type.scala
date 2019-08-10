@@ -4,10 +4,10 @@ import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** Enumeration of the types of RowSorterEvents. */
-class RowSorterEvent.Type private (name: String, ordinal: Int) extends Enum[RowSorterEvent.Type](name, ordinal) {
+class RowSorterEvent_Type private (name: String, ordinal: Int) extends Enum[RowSorterEvent.Type](name, ordinal) {
 }
 
-object RowSorterEvent.Type {
+object RowSorterEvent_Type {
     /** Indicates the sort order has changed. */
     final val SORT_ORDER_CHANGED = new RowSorterEvent.Type(SORT_ORDER_CHANGED, 0)
 

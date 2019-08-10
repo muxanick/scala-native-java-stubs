@@ -25,7 +25,7 @@ class JMXPrincipal extends Object with Principal with Serializable {
      *  for equality.
      */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the name of this principal. */
     @stub

@@ -34,7 +34,7 @@ object System {
      *  specified position, to the specified position of the destination array.
      */
     @stub
-    def arraycopy(src: Object, srcPos: Int, dest: Object, destPos: Int, length: Int): Unit = ???
+    def arraycopy(src: Any, srcPos: Int, dest: Any, destPos: Int, length: Int): Unit = ???
 
     /** Removes the system property indicated by the specified key. */
     @stub
@@ -88,7 +88,7 @@ object System {
      *  hashCode().
      */
     @stub
-    def identityHashCode(x: Object): Int = ???
+    def identityHashCode(x: Any): Int = ???
 
     /** Returns the channel inherited from the entity that created this
      *  Java virtual machine.

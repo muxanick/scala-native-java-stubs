@@ -30,12 +30,10 @@ abstract class Pipe extends Object {
 
 object Pipe {
     /** A channel representing the writable end of a Pipe. */
-    @stub
-    object SinkChannel extends Pipe.SinkChannel
+    type SinkChannel = Pipe_SinkChannel
 
     /** A channel representing the readable end of a Pipe. */
-    @stub
-    object SourceChannel extends Pipe.SourceChannel
+    type SourceChannel = Pipe_SourceChannel
 
     /** Opens a pipe. */
     @stub

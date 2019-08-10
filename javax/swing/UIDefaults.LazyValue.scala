@@ -25,11 +25,11 @@ import scala.scalanative.annotation.stub
  *   uiDefaultsTable.put("MyBorder", borderLazyValue);
  *  
  */
-object trait UIDefaults.LazyValue {
+trait UIDefaults_LazyValue {
 
     /** Creates the actual value retrieved from the UIDefaults
      *  table.
      */
     @stub
-    def createValue(table: UIDefaults): Object = ???
+    def createValue(table: UIDefaults): Any = ???
 }

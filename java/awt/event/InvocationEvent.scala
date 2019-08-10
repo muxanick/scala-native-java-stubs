@@ -27,28 +27,28 @@ class InvocationEvent extends AWTEvent with ActiveEvent {
      *  method when dispatched.
      */
     @stub
-    protected def this(source: Object, id: Int, runnable: Runnable, notifier: Object, catchThrowables: Boolean) = ???
+    protected def this(source: Any, id: Int, runnable: Runnable, notifier: Any, catchThrowables: Boolean) = ???
 
     /** Constructs an InvocationEvent with the specified
      *  source which will execute the runnable's run
      *  method when dispatched.
      */
     @stub
-    def this(source: Object, runnable: Runnable) = ???
+    def this(source: Any, runnable: Runnable) = ???
 
     /** Constructs an InvocationEvent with the specified
      *  source which will execute the runnable's run
      *  method when dispatched.
      */
     @stub
-    def this(source: Object, runnable: Runnable, notifier: Object, catchThrowables: Boolean) = ???
+    def this(source: Any, runnable: Runnable, notifier: Any, catchThrowables: Boolean) = ???
 
     /** Constructs an InvocationEvent with the specified
      *  source which will execute the runnable's run
      *  method when dispatched.
      */
     @stub
-    def this(source: Object, runnable: Runnable, listener: Runnable, catchThrowables: Boolean) = ???
+    def this(source: Any, runnable: Runnable, listener: Runnable, catchThrowables: Boolean) = ???
 
     /** Set to true if dispatch() catches Throwable and stores it in the
      *  exception instance variable.
@@ -61,7 +61,7 @@ class InvocationEvent extends AWTEvent with ActiveEvent {
      *  or after the event was disposed.
      */
     @stub
-    protected val notifier: Object = ???
+    protected val notifier: Any = ???
 
     /** The Runnable whose run() method will be called. */
     @stub

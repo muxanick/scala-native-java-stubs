@@ -30,17 +30,17 @@ class ActionEvent extends AWTEvent {
 
     /** Constructs an ActionEvent object. */
     @stub
-    def this(source: Object, id: Int, command: String) = ???
+    def this(source: Any, id: Int, command: String) = ???
 
     /** Constructs an ActionEvent object with modifier keys. */
     @stub
-    def this(source: Object, id: Int, command: String, modifiers: Int) = ???
+    def this(source: Any, id: Int, command: String, modifiers: Int) = ???
 
     /** Constructs an ActionEvent object with the specified
      *  modifier keys and timestamp.
      */
     @stub
-    def this(source: Object, id: Int, command: String, when: Long, modifiers: Int) = ???
+    def this(source: Any, id: Int, command: String, when: Long, modifiers: Int) = ???
 
     /** Returns the command string associated with this action. */
     @stub

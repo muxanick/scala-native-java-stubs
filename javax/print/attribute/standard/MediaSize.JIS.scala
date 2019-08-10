@@ -6,7 +6,7 @@ import scala.scalanative.annotation.stub
 /** Class MediaSize.JIS includes MediaSize values for JIS
  *  (Japanese) media.      *
  */
-final object MediaSize.JIS extends Object {
+final object MediaSize_JIS extends Object {
 
     /** Specifies the JIS B0 size, 1030 mm by 1456 mm. */
     @stub

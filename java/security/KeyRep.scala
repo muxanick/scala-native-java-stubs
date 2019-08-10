@@ -22,11 +22,10 @@ class KeyRep extends Object with Serializable {
 
     /** Resolve the Key object. */
     @stub
-    protected def readResolve(): Object = ???
+    protected def readResolve(): Any = ???
 }
 
 object KeyRep {
     /** Key type. */
-    @stub
-    object Type extends KeyRep.Type
+    type Type = KeyRep_Type
 }

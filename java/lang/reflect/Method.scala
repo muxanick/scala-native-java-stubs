@@ -17,7 +17,7 @@ final class Method extends Executable {
 
     /** Compares this Method against the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns an AnnotatedType object that represents the use of a type to
      *  specify the return type of the method/constructor represented by this
@@ -46,7 +46,7 @@ final class Method extends Executable {
      *  this Method instance.
      */
     @stub
-    def getDefaultValue(): Object = ???
+    def getDefaultValue(): Any = ???
 
     /** Returns an array of Class objects that represent the
      *  types of exceptions declared to be thrown by the underlying
@@ -129,7 +129,7 @@ final class Method extends Executable {
      *  object, on the specified object with the specified parameters.
      */
     @stub
-    def invoke(obj: Object, args: Object*): Object = ???
+    def invoke(obj: Any, args: Object*): Any = ???
 
     /** Returns true if this method is a bridge
      *  method; returns false otherwise.

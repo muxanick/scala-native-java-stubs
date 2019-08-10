@@ -28,7 +28,7 @@ abstract class OpenType[T] extends Object with Serializable {
     /** Compares the specified obj parameter with this
      *  open type instance for equality.
      */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** Returns the fully qualified Java class name of the open data values
      *  this open type describes.
@@ -50,7 +50,7 @@ abstract class OpenType[T] extends Object with Serializable {
     def isArray(): Boolean
 
     /** Tests whether obj is a value for this open type. */
-    def isValue(obj: Object): Boolean
+    def isValue(obj: Any): Boolean
 
     /** Returns a string representation of this open type instance. */
     def toString(): String

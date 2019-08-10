@@ -12,5 +12,5 @@ trait XPathFunction {
 
     /** Evaluate the function with the specified arguments. */
     @stub
-    def evaluate(args: List): Object = ???
+    def evaluate(args: List): Any = ???
 }

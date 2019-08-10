@@ -118,7 +118,7 @@ abstract class AttachmentPart extends Object {
     /** Gets the content of this AttachmentPart object as a Java
      *  object.
      */
-    def getContent(): Object
+    def getContent(): Any
 
     /** Gets the value of the MIME header whose name is "Content-ID". */
     def getContentId(): String
@@ -186,7 +186,7 @@ abstract class AttachmentPart extends Object {
      *  Object and sets the value of the Content-Type
      *  header to the given type.
      */
-    def setContent(object: Object, contentType: String): Unit
+    def setContent(object: Any, contentType: String): Unit
 
     /** Sets the MIME header whose name is "Content-ID" with the given value. */
     def setContentId(contentId: String): Unit

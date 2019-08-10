@@ -66,7 +66,7 @@ import scala.scalanative.annotation.stub
  *  object throws away the least recently set
  *  constraint so as to make the formulas hold.
  */
-object SpringLayout.Constraints extends Object {
+object SpringLayout_Constraints extends Object {
 
     /** Creates an empty Constraints object. */
     @stub

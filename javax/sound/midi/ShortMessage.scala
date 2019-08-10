@@ -53,7 +53,7 @@ class ShortMessage extends MidiMessage {
      *  as this object.
      */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Obtains the MIDI channel associated with this event. */
     @stub

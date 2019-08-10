@@ -9,7 +9,7 @@ import scala.scalanative.annotation.stub
  *  convenient in methods that return thread-safe snapshots of
  *  key-value mappings.
  */
-object AbstractMap.SimpleImmutableEntry[K, V] extends Object with Map.Entry[K, V] with Serializable {
+object AbstractMap_SimpleImmutableEntry[K, V] extends Object with Map.Entry[K, V] with Serializable {
 
     /** Creates an entry representing a mapping from the specified
      *  key to the specified value.
@@ -25,7 +25,7 @@ object AbstractMap.SimpleImmutableEntry[K, V] extends Object with Map.Entry[K, V
 
     /** Compares the specified object with this entry for equality. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the key corresponding to this entry. */
     @stub

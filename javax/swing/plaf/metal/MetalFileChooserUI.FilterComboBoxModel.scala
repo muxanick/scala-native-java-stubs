@@ -7,7 +7,7 @@ import javax.swing.filechooser.FileFilter
 import scala.scalanative.annotation.stub
 
 /** Data model for a type-face selection combo-box. */
-protected class MetalFileChooserUI.FilterComboBoxModel extends AbstractListModel[Object] with ComboBoxModel[Object] with PropertyChangeListener {
+protected class MetalFileChooserUI_FilterComboBoxModel extends AbstractListModel[Object] with ComboBoxModel[Object] with PropertyChangeListener {
 
     /**  */
     @stub
@@ -19,11 +19,11 @@ protected class MetalFileChooserUI.FilterComboBoxModel extends AbstractListModel
 
     /** Returns the value at the specified index. */
     @stub
-    def getElementAt(index: Int): Object = ???
+    def getElementAt(index: Int): Any = ???
 
     /** Returns the selected item */
     @stub
-    def getSelectedItem(): Object = ???
+    def getSelectedItem(): Any = ???
 
     /** Returns the length of the list. */
     @stub
@@ -35,5 +35,5 @@ protected class MetalFileChooserUI.FilterComboBoxModel extends AbstractListModel
 
     /** Set the selected item. */
     @stub
-    def setSelectedItem(filter: Object): Unit = ???
+    def setSelectedItem(filter: Any): Unit = ???
 }

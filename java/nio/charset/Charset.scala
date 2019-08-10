@@ -245,7 +245,7 @@ abstract class Charset extends Object with Comparable[Charset] {
     def encode(str: String): ByteBuffer
 
     /** Tells whether or not this object is equal to another. */
-    def equals(ob: Object): Boolean
+    def equals(ob: Any): Boolean
 
     /** Computes a hashcode for this charset. */
     def hashCode(): Int

@@ -24,7 +24,7 @@ class AccessibleRelation extends AccessibleBundle {
 
     /** Creates a new AccessibleRelation using the given locale independent key. */
     @stub
-    def this(key: String, target: Object) = ???
+    def this(key: String, target: Any) = ???
 
     /** Creates a new AccessibleRelation using the given locale independent key. */
     @stub
@@ -40,7 +40,7 @@ class AccessibleRelation extends AccessibleBundle {
 
     /** Sets the target object for this relation */
     @stub
-    def setTarget(target: Object): Unit = ???
+    def setTarget(target: Any): Unit = ???
 
     /** Sets the target objects for this relation */
     @stub

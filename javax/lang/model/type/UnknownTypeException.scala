@@ -17,11 +17,11 @@ class UnknownTypeException extends UnknownEntityException {
      *  encountered; for example, the visit methods of TypeVisitor may pass in their additional parameter.
      */
     @stub
-    def this(t: TypeMirror, p: Object) = ???
+    def this(t: TypeMirror, p: Any) = ???
 
     /** Returns the additional argument. */
     @stub
-    def getArgument(): Object = ???
+    def getArgument(): Any = ???
 
     /** Returns the unknown type. */
     @stub

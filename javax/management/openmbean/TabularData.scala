@@ -33,7 +33,7 @@ trait TabularData {
 
     /** Compares the specified obj parameter with this TabularData instance for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the CompositeData value whose index is
      *  key, or null if there is no value mapping

@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** The Float class defines a rectangle specified in float
  *  coordinates.
  */
-object Rectangle2D.Float extends Rectangle2D with Serializable {
+object Rectangle2D_Float extends Rectangle2D with Serializable {
 
     /** Constructs a new Rectangle2D, initialized to
      *  location (0.0, 0.0) and size (0.0, 0.0).

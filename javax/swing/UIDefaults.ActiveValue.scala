@@ -18,9 +18,9 @@ import scala.scalanative.annotation.stub
  *   uiDefaultsTable.put("MyRenderer", cellRendererActiveValue);
  *  
  */
-object trait UIDefaults.ActiveValue {
+trait UIDefaults_ActiveValue {
 
     /** Creates the value retrieved from the UIDefaults table. */
     @stub
-    def createValue(table: UIDefaults): Object = ???
+    def createValue(table: UIDefaults): Any = ???
 }

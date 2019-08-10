@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
  *  for ForkJoinWorkerThread subclasses that extend base
  *  functionality or initialize threads with different contexts.
  */
-object trait ForkJoinPool.ForkJoinWorkerThreadFactory {
+trait ForkJoinPool_ForkJoinWorkerThreadFactory {
 
     /** Returns a new worker thread operating in the given pool. */
     @stub

@@ -18,16 +18,13 @@ object HTML {
     /** Typesafe enumeration representing an HTML
      *  attribute.
      */
-    @stub
-    object Attribute extends HTML.Attribute
+    type Attribute = HTML_Attribute
 
     /** Typesafe enumeration for an HTML tag. */
-    @stub
-    object Tag extends HTML.Tag
+    type Tag = HTML_Tag
 
     /**  */
-    @stub
-    object UnknownTag extends HTML.UnknownTag
+    type UnknownTag = HTML_UnknownTag
 
     /**  */
     @stub

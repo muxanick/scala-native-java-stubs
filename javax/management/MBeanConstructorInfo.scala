@@ -24,11 +24,11 @@ class MBeanConstructorInfo extends MBeanFeatureInfo with Cloneable {
 
     /** Returns a shallow clone of this instance. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compare this MBeanConstructorInfo to another. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the list of parameters for this constructor. */
     @stub

@@ -65,14 +65,14 @@ class DefaultMutableTreeNode extends Object with Cloneable with MutableTreeNode 
      *  children, and initializes it with the specified user object.
      */
     @stub
-    def this(userObject: Object) = ???
+    def this(userObject: Any) = ???
 
     /** Creates a tree node with no parent, no children, initialized with
      *  the specified user object, and that allows children only if
      *  specified.
      */
     @stub
-    def this(userObject: Object, allowsChildren: Boolean) = ???
+    def this(userObject: Any, allowsChildren: Boolean) = ???
 
     /** true if the node is able to have children */
     @stub
@@ -88,7 +88,7 @@ class DefaultMutableTreeNode extends Object with Cloneable with MutableTreeNode 
 
     /** optional user object */
     @stub
-    protected val userObject: Object = ???
+    protected val userObject: Any = ???
 
     /** Removes newChild from its parent and makes it a child of
      *  this node by adding it to the end of this node's child array.
@@ -110,7 +110,7 @@ class DefaultMutableTreeNode extends Object with Cloneable with MutableTreeNode 
 
     /** Overridden to make clone public. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Creates and returns an enumeration that traverses the subtree rooted at
      *  this node in depth-first order.
@@ -244,7 +244,7 @@ class DefaultMutableTreeNode extends Object with Cloneable with MutableTreeNode 
 
     /** Returns this node's user object. */
     @stub
-    def getUserObject(): Object = ???
+    def getUserObject(): Any = ???
 
     /** Returns the user object path, from the root, to get to this node. */
     @stub
@@ -347,7 +347,7 @@ class DefaultMutableTreeNode extends Object with Cloneable with MutableTreeNode 
 
     /** Sets the user object for this node to userObject. */
     @stub
-    def setUserObject(userObject: Object): Unit = ???
+    def setUserObject(userObject: Any): Unit = ???
 
     /** Returns the result of sending toString() to this node's
      *  user object, or the empty string if the node has no user object.

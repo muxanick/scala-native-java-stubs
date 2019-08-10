@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of BasicProgressBarUI.
  */
-class BasicProgressBarUI.ChangeHandler extends Object with ChangeListener {
+class BasicProgressBarUI_ChangeHandler extends Object with ChangeListener {
 
     /**  */
     @stub

@@ -58,7 +58,7 @@ abstract class MidiMessage extends Object with Cloneable {
     /** Creates a new object of the same class and with the same contents
      *  as this object.
      */
-    def clone(): Object
+    def clone(): Any
 
     /** Obtains the total length of the MIDI message in bytes. */
     def getLength(): Int

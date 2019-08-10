@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
  *  Layout for the divider
  *  involves appropriately moving the left/right buttons around.
  */
-protected class BasicSplitPaneDivider.DividerLayout extends Object with LayoutManager {
+protected class BasicSplitPaneDivider_DividerLayout extends Object with LayoutManager {
 
     /**  */
     @stub

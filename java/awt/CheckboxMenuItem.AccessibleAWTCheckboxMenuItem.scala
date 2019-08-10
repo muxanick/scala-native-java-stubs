@@ -14,7 +14,7 @@ import scala.scalanative.annotation.stub
  *  of the Java Accessibility API appropriate to checkbox menu item
  *  user-interface elements.
  */
-protected class CheckboxMenuItem.AccessibleAWTCheckboxMenuItem extends MenuItem.AccessibleAWTMenuItem with AccessibleAction with AccessibleValue {
+protected class CheckboxMenuItem_AccessibleAWTCheckboxMenuItem extends MenuItem.AccessibleAWTMenuItem with AccessibleAction with AccessibleValue {
 
     /**  */
     @stub

@@ -133,7 +133,7 @@ trait SQLInput {
      *  Object in the Java programming language.
      */
     @stub
-    def readObject(): Object = ???
+    def readObject(): Any = ???
 
     /** Reads the next attribute in the stream and returns it as an
      *  Object in the Java programming language.

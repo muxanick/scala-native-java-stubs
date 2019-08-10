@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
  *  overrides processKeyBinding to dispatch the event to
  *  the current TableCellEditor.
  */
-class BasicTableUI.KeyHandler extends Object with KeyListener {
+class BasicTableUI_KeyHandler extends Object with KeyListener {
 
     /**  */
     @stub

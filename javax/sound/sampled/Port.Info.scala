@@ -16,7 +16,7 @@ import scala.scalanative.annotation.stub
  *  Port.Info class may also be constructed and used to obtain
  *  lines matching the parameters specified in the Port.Info object.
  */
-object Port.Info extends Line.Info {
+object Port_Info extends Line.Info {
 
     /** Constructs a port's info object from the information given. */
     @stub
@@ -48,7 +48,7 @@ object Port.Info extends Line.Info {
 
     /** Finalizes the equals method */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Obtains the name of the port. */
     @stub

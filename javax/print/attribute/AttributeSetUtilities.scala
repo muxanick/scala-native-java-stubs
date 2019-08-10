@@ -85,14 +85,14 @@ object AttributeSetUtilities {
      *  implements the given interface, which is assumed to be interface Attribute or a subinterface thereof.
      */
     @stub
-    def verifyAttributeCategory(object: Object, interfaceName: Class[_]): Class[_] = ???
+    def verifyAttributeCategory(object: Any, interfaceName: Class[_]): Class[_] = ???
 
     /** Verify that the given object is an instance of the given interface, which
      *  is assumed to be interface Attribute or a subinterface
      *  thereof.
      */
     @stub
-    def verifyAttributeValue(object: Object, interfaceName: Class[_]): Attribute = ???
+    def verifyAttributeValue(object: Any, interfaceName: Class[_]): Attribute = ???
 
     /** Verify that the given attribute category object is equal to the
      *  category of the given attribute value object.

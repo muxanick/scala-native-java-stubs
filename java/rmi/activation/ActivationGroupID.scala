@@ -24,7 +24,7 @@ class ActivationGroupID extends Object with Serializable {
 
     /** Compares two group identifiers for content equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the group's activation system. */
     @stub

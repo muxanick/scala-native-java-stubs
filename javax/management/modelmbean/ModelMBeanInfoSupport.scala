@@ -55,7 +55,7 @@ class ModelMBeanInfoSupport extends MBeanInfo with ModelMBeanInfo {
 
     /** Returns a shallow clone of this instance. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns a ModelMBeanAttributeInfo requested by name. */
     @stub

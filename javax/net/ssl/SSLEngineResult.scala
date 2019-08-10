@@ -48,12 +48,10 @@ object SSLEngineResult {
     /** An SSLEngineResult enum describing the current
      *  handshaking state of this SSLEngine.
      */
-    @stub
-    object HandshakeStatus extends SSLEngineResult.HandshakeStatus
+    type HandshakeStatus = SSLEngineResult_HandshakeStatus
 
     /** An SSLEngineResult enum describing the overall result
      *  of the SSLEngine operation.
      */
-    @stub
-    object Status extends SSLEngineResult.Status
+    type Status = SSLEngineResult_Status
 }

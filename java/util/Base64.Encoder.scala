@@ -16,7 +16,7 @@ import scala.scalanative.annotation.stub
  *  NullPointerException to
  *  be thrown.
  */
-object Base64.Encoder extends Object {
+object Base64_Encoder extends Object {
 
     /** Encodes all bytes from the specified byte array into a newly-allocated
      *  byte array using the Base64 encoding scheme.

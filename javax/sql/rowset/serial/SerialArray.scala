@@ -46,11 +46,11 @@ class SerialArray extends Object with Array with Serializable with Cloneable {
 
     /** Returns a clone of this SerialArray. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compares this SerialArray to the specified object. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** This method frees the SeriableArray object and releases the
      *  resources that it holds.
@@ -62,7 +62,7 @@ class SerialArray extends Object with Array with Serializable with Cloneable {
      *  object.
      */
     @stub
-    def getArray(): Object = ???
+    def getArray(): Any = ???
 
     /** Returns a new array that is a copy of a slice
      *  of this SerialArray object, starting with the
@@ -70,7 +70,7 @@ class SerialArray extends Object with Array with Serializable with Cloneable {
      *  of consecutive elements.
      */
     @stub
-    def getArray(index: Long, count: Int): Object = ???
+    def getArray(index: Long, count: Int): Any = ???
 
     /** Returns a new array that is a copy of a slice
      *  of this SerialArray object, starting with the
@@ -78,14 +78,14 @@ class SerialArray extends Object with Array with Serializable with Cloneable {
      *  of consecutive elements.
      */
     @stub
-    def getArray(index: Long, count: Int, map: Map[String, Class[_]]): Object = ???
+    def getArray(index: Long, count: Int, map: Map[String, Class[_]]): Any = ???
 
     /** Returns a new array that is a copy of this SerialArray
      *  object, using the given type map for the custom
      *  mapping of each element when the elements are SQL UDTs.
      */
     @stub
-    def getArray(map: Map[String, Class[_]]): Object = ???
+    def getArray(map: Map[String, Class[_]]): Any = ???
 
     /** Retrieves the SQL type of the elements in this SerialArray
      *  object.

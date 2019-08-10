@@ -13,7 +13,7 @@ import scala.scalanative.annotation.stub
  *  task can be configured, for example, by calling the
  *  setLocale method.
  */
-object trait DocumentationTool.DocumentationTask extends Callable[Boolean] {
+trait DocumentationTool_DocumentationTask extends Callable[Boolean] {
 
     /** Performs this documentation task. */
     @stub

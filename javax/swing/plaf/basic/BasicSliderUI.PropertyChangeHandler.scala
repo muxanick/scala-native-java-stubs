@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /**  */
-class BasicSliderUI.PropertyChangeHandler extends Object with PropertyChangeListener {
+class BasicSliderUI_PropertyChangeHandler extends Object with PropertyChangeListener {
 
     /**  */
     @stub

@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** The Double class defines a point specified in
  *  double precision.
  */
-object Point2D.Double extends Point2D with Serializable {
+object Point2D_Double extends Point2D with Serializable {
 
     /** Constructs and initializes a Point2D with
      *  coordinates (0, 0).

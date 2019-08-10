@@ -75,7 +75,7 @@ abstract class X509CRL extends CRL with X509Extension {
     /** Compares this CRL for equality with the given
      *  object.
      */
-    def equals(other: Object): Boolean
+    def equals(other: Any): Boolean
 
     /** Returns the ASN.1 DER-encoded form of this CRL. */
     def getEncoded(): Array[Byte]

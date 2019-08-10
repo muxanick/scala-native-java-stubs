@@ -6,7 +6,7 @@ import javax.swing.AbstractAction
 import scala.scalanative.annotation.stub
 
 /**  */
-protected class BasicFileChooserUI.ChangeToParentDirectoryAction extends AbstractAction {
+protected class BasicFileChooserUI_ChangeToParentDirectoryAction extends AbstractAction {
 
     /**  */
     @stub

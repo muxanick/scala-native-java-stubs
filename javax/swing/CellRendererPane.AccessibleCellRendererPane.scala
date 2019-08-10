@@ -8,7 +8,7 @@ import scala.scalanative.annotation.stub
 /** This class implements accessibility support for the
  *  CellRendererPane class.
  */
-protected class CellRendererPane.AccessibleCellRendererPane extends Container.AccessibleAWTContainer {
+protected class CellRendererPane_AccessibleCellRendererPane extends Container.AccessibleAWTContainer {
 
     /**  */
     @stub

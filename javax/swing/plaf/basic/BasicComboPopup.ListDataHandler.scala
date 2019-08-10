@@ -10,7 +10,7 @@ import scala.scalanative.annotation.stub
  *  
  *  The functionality has been migrated into ItemHandler.
  */
-class BasicComboPopup.ListDataHandler extends Object with ListDataListener {
+class BasicComboPopup_ListDataHandler extends Object with ListDataListener {
 
     /**  */
     @stub

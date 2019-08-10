@@ -7,10 +7,10 @@ import scala.scalanative.annotation.stub
  *  access to entire protocol message, PAYLOAD to protocol message
  *  payload only.
  */
-class Service.Mode private (name: String, ordinal: Int) extends Enum[Service.Mode](name, ordinal) {
+class Service_Mode private (name: String, ordinal: Int) extends Enum[Service.Mode](name, ordinal) {
 }
 
-object Service.Mode {
+object Service_Mode {
     /**  */
     final val MESSAGE = new Service.Mode(MESSAGE, 0)
 

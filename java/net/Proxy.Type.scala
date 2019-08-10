@@ -4,10 +4,10 @@ import java.lang.{Enum, Object, String}
 import scala.scalanative.annotation.stub
 
 /** Represents the proxy type. */
-class Proxy.Type private (name: String, ordinal: Int) extends Enum[Proxy.Type](name, ordinal) {
+class Proxy_Type private (name: String, ordinal: Int) extends Enum[Proxy.Type](name, ordinal) {
 }
 
-object Proxy.Type {
+object Proxy_Type {
     /** Represents a direct connection, or the absence of a proxy. */
     final val DIRECT = new Proxy.Type(DIRECT, 0)
 

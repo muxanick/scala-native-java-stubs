@@ -18,7 +18,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JComboBox.AccessibleJComboBox extends JComponent.AccessibleJComponent with AccessibleAction with AccessibleSelection {
+protected class JComboBox_AccessibleJComboBox extends JComponent.AccessibleJComponent with AccessibleAction with AccessibleSelection {
 
     /** Returns an AccessibleJComboBox instance */
     @stub

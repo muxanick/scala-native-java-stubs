@@ -11,7 +11,7 @@ import scala.scalanative.annotation.stub
  *  the destination it is constructed with. It is assumed all the
  *  events are currently target at source.
  */
-class BasicTreeUI.MouseInputHandler extends Object with MouseInputListener {
+class BasicTreeUI_MouseInputHandler extends Object with MouseInputListener {
 
     /**  */
     @stub

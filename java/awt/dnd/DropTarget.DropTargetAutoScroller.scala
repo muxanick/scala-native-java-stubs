@@ -6,7 +6,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /** this protected nested class implements autoscrolling */
-object protected DropTarget.DropTargetAutoScroller extends Object with ActionListener {
+object protected DropTarget_DropTargetAutoScroller extends Object with ActionListener {
 
     /** construct a DropTargetAutoScroller */
     @stub

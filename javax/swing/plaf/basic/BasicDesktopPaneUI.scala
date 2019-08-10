@@ -15,24 +15,19 @@ class BasicDesktopPaneUI extends DesktopPaneUI {
     def this() = ???
 
     /** Handles closing an internal frame. */
-    @stub
-    protected object CloseAction extends BasicDesktopPaneUI.CloseAction
+    protected type CloseAction = BasicDesktopPaneUI_CloseAction
 
     /** Handles maximizing an internal frame. */
-    @stub
-    protected object MaximizeAction extends BasicDesktopPaneUI.MaximizeAction
+    protected type MaximizeAction = BasicDesktopPaneUI_MaximizeAction
 
     /** Handles minimizing an internal frame. */
-    @stub
-    protected object MinimizeAction extends BasicDesktopPaneUI.MinimizeAction
+    protected type MinimizeAction = BasicDesktopPaneUI_MinimizeAction
 
     /** Handles navigating to the next internal frame. */
-    @stub
-    protected object NavigateAction extends BasicDesktopPaneUI.NavigateAction
+    protected type NavigateAction = BasicDesktopPaneUI_NavigateAction
 
     /** Handles restoring a minimized or maximized internal frame. */
-    @stub
-    protected object OpenAction extends BasicDesktopPaneUI.OpenAction
+    protected type OpenAction = BasicDesktopPaneUI_OpenAction
 
     /** Deprecated. 
      * As of 1.3.

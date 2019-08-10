@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of BasicTabbedPaneUI.
  */
-class BasicTabbedPaneUI.FocusHandler extends FocusAdapter {
+class BasicTabbedPaneUI_FocusHandler extends FocusAdapter {
 
     /**  */
     @stub

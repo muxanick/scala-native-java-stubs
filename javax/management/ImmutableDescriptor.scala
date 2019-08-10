@@ -27,7 +27,7 @@ class ImmutableDescriptor extends Object with Descriptor {
 
     /** Compares this descriptor to the given object. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns all the field names in the descriptor. */
     @stub
@@ -41,7 +41,7 @@ class ImmutableDescriptor extends Object with Descriptor {
      *  is present for that name.
      */
     @stub
-    def getFieldValue(fieldName: String): Object = ???
+    def getFieldValue(fieldName: String): Any = ???
 
     /** Returns all the field values in the descriptor as an array of Objects. */
     @stub
@@ -63,7 +63,7 @@ class ImmutableDescriptor extends Object with Descriptor {
 
     /** This operation is unsupported since this class is immutable. */
     @stub
-    def setField(fieldName: String, fieldValue: Object): Unit = ???
+    def setField(fieldName: String, fieldValue: Any): Unit = ???
 
     /** This operation is unsupported since this class is immutable. */
     @stub

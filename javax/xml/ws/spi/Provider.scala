@@ -22,12 +22,12 @@ abstract class Provider extends Object {
     /** Creates and publishes an endpoint object with the specified
      *  address and implementation object.
      */
-    def createAndPublishEndpoint(address: String, implementor: Object): Endpoint
+    def createAndPublishEndpoint(address: String, implementor: Any): Endpoint
 
     /** Creates and publishes an endpoint object with the specified
      *  address, implementation object and web service features.
      */
-    def createAndPublishEndpoint(address: String, implementor: Object, features: WebServiceFeature*): Endpoint
+    def createAndPublishEndpoint(address: String, implementor: Any, features: WebServiceFeature*): Endpoint
 
     /** Creates an endpoint object with the provided binding, implementation
      *  class, invoker and web service features.
@@ -37,12 +37,12 @@ abstract class Provider extends Object {
     /** Creates an endpoint object with the provided binding and implementation
      *  object.
      */
-    def createEndpoint(bindingId: String, implementor: Object): Endpoint
+    def createEndpoint(bindingId: String, implementor: Any): Endpoint
 
     /** Creates an endpoint object with the provided binding, implementation
      *  object and web service features.
      */
-    def createEndpoint(bindingId: String, implementor: Object, features: WebServiceFeature*): Endpoint
+    def createEndpoint(bindingId: String, implementor: Any, features: WebServiceFeature*): Endpoint
 
     /** Creates a service delegate object. */
     def createServiceDelegate(wsdlDocumentLocation: URL, serviceName: QName, serviceClass: Class[_ <: Service]): ServiceDelegate

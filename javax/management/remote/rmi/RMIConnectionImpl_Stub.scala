@@ -68,7 +68,7 @@ final class RMIConnectionImpl_Stub extends RemoteStub with RMIConnection {
      *  String).
      */
     @stub
-    def getAttribute($param_ObjectName_1: ObjectName, $param_String_2: String, $param_Subject_3: Subject): Object = ???
+    def getAttribute($param_ObjectName_1: ObjectName, $param_String_2: String, $param_Subject_3: Subject): Any = ???
 
     /** Handles the method MBeanServerConnection.getAttributes(ObjectName,
      *  String[]).
@@ -114,7 +114,7 @@ final class RMIConnectionImpl_Stub extends RemoteStub with RMIConnection {
      *  String, Object[], String[]).
      */
     @stub
-    def invoke($param_ObjectName_1: ObjectName, $param_String_2: String, $param_MarshalledObject_3: MarshalledObject, $param_arrayOf_String_4: Array[String], $param_Subject_5: Subject): Object = ???
+    def invoke($param_ObjectName_1: ObjectName, $param_String_2: String, $param_MarshalledObject_3: MarshalledObject, $param_arrayOf_String_4: Array[String], $param_Subject_5: Subject): Any = ???
 
     /** Handles the method MBeanServerConnection.isInstanceOf(ObjectName,
      *  String).

@@ -134,7 +134,7 @@ class DefaultTreeCellRenderer extends JLabel with TreeCellRenderer {
 
     /** Overridden for performance reasons. */
     @stub
-    protected def firePropertyChange(propertyName: String, oldValue: Object, newValue: Object): Unit = ???
+    protected def firePropertyChange(propertyName: String, oldValue: Any, newValue: Any): Unit = ???
 
     /** Overridden for performance reasons. */
     @stub
@@ -204,7 +204,7 @@ class DefaultTreeCellRenderer extends JLabel with TreeCellRenderer {
 
     /** Configures the renderer based on the passed in components. */
     @stub
-    def getTreeCellRendererComponent(tree: JTree, value: Object, sel: Boolean, expanded: Boolean, leaf: Boolean, row: Int, hasFocus: Boolean): Component = ???
+    def getTreeCellRendererComponent(tree: JTree, value: Any, sel: Boolean, expanded: Boolean, leaf: Boolean, row: Int, hasFocus: Boolean): Component = ???
 
     /** Overridden for performance reasons. */
     @stub

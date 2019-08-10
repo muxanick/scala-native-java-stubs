@@ -35,7 +35,7 @@ abstract class Certificate extends Object {
     /** Compares this certificate for equality with the specified
      *  object.
      */
-    def equals(other: Object): Boolean
+    def equals(other: Any): Boolean
 
     /** Returns the encoded form of this certificate. */
     def getEncoded(): Array[Byte]

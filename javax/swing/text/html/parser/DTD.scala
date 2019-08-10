@@ -82,7 +82,7 @@ class DTD extends Object with DTDConstants {
 
     /** Creates and returns a new content model. */
     @stub
-    protected def defContentModel(type: Int, obj: Object, next: ContentModel): ContentModel = ???
+    protected def defContentModel(type: Int, obj: Any, next: ContentModel): ContentModel = ???
 
     /** Creates and returns an Element. */
     @stub

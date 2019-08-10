@@ -43,6 +43,5 @@ object BooleanControl {
     /** An instance of the BooleanControl.Type class identifies one kind of
      *  boolean control.
      */
-    @stub
-    object Type extends BooleanControl.Type
+    type Type = BooleanControl_Type
 }

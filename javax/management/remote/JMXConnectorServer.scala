@@ -43,13 +43,13 @@ abstract class JMXConnectorServer extends NotificationBroadcasterSupport with JM
     /** Called by a subclass when a client connection is closed
      *  normally.
      */
-    protected def connectionClosed(connectionId: String, message: String, userData: Object): Unit
+    protected def connectionClosed(connectionId: String, message: String, userData: Any): Unit
 
     /** Called by a subclass when a client connection fails. */
-    protected def connectionFailed(connectionId: String, message: String, userData: Object): Unit
+    protected def connectionFailed(connectionId: String, message: String, userData: Any): Unit
 
     /** Called by a subclass when a new client connection is opened. */
-    protected def connectionOpened(connectionId: String, message: String, userData: Object): Unit
+    protected def connectionOpened(connectionId: String, message: String, userData: Any): Unit
 
     /** The list of IDs for currently-open connections to this
      *  connector server.

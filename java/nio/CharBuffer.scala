@@ -266,7 +266,7 @@ abstract class CharBuffer extends Buffer with Comparable[CharBuffer] with Append
     def duplicate(): CharBuffer
 
     /** Tells whether or not this buffer is equal to another object. */
-    def equals(ob: Object): Boolean
+    def equals(ob: Any): Boolean
 
     /** Relative get method. */
     def get(): Char

@@ -56,7 +56,7 @@ class X509CRLSelector extends Object with CRLSelector {
 
     /** Returns a copy of this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns the certificate being checked. */
     @stub

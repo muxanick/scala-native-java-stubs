@@ -65,7 +65,7 @@ import scala.scalanative.annotation.stub
 
     /** The default action for visit methods. */
     @stub
-    protected def defaultAction(o: Object, p: P): R = ???
+    protected def defaultAction(o: Any, p: P): R = ???
 
     /** Visits an annotation value in an annotation. */
     @stub

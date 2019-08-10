@@ -22,7 +22,7 @@ abstract class RectangularShape extends Object with Shape with Cloneable {
     /** Creates a new object of the same class and with the same
      *  contents as this object.
      */
-    def clone(): Object
+    def clone(): Any
 
     /** Tests if a specified Point2D is inside the boundary
      *  of the Shape, as described by the

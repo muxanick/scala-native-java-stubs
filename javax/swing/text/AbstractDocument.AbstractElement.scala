@@ -22,14 +22,14 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-abstract class AbstractDocument.AbstractElement extends Object with Element with MutableAttributeSet with Serializable with TreeNode {
+abstract class AbstractDocument_AbstractElement extends Object with Element with MutableAttributeSet with Serializable with TreeNode {
 
     /** Creates a new AbstractElement. */
     @stub
     def AbstractElement(parent: Element, a: AttributeSet) = ???
 
     /** Adds an attribute to the element. */
-    def addAttribute(name: Object, value: Object): Unit
+    def addAttribute(name: Any, value: Any): Unit
 
     /** Adds a set of attributes to the element. */
     def addAttributes(attr: AttributeSet): Unit
@@ -40,7 +40,7 @@ abstract class AbstractDocument.AbstractElement extends Object with Element with
     def children(): Enumeration
 
     /** Checks whether a given attribute name/value is defined. */
-    def containsAttribute(name: Object, value: Object): Boolean
+    def containsAttribute(name: Any, value: Any): Boolean
 
     /** Checks whether the element contains all the attributes. */
     def containsAttributes(attrs: AttributeSet): Boolean
@@ -55,7 +55,7 @@ abstract class AbstractDocument.AbstractElement extends Object with Element with
     def getAllowsChildren(): Boolean
 
     /** Gets the value of an attribute. */
-    def getAttribute(attrName: Object): Object
+    def getAttribute(attrName: Any): Any
 
     /** Gets the number of attributes that are defined. */
     def getAttributeCount(): Int
@@ -110,7 +110,7 @@ abstract class AbstractDocument.AbstractElement extends Object with Element with
     def getStartOffset(): Int
 
     /** Checks whether a given attribute is defined. */
-    def isDefined(attrName: Object): Boolean
+    def isDefined(attrName: Any): Boolean
 
     /** Checks whether two attribute sets are equal. */
     def isEqual(attr: AttributeSet): Boolean
@@ -119,7 +119,7 @@ abstract class AbstractDocument.AbstractElement extends Object with Element with
     def isLeaf(): Boolean
 
     /** Removes an attribute from the set. */
-    def removeAttribute(name: Object): Unit
+    def removeAttribute(name: Any): Unit
 
     /** Removes a set of attributes for the element. */
     def removeAttributes(attrs: AttributeSet): Unit

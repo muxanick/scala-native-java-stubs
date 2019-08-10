@@ -48,7 +48,7 @@ trait TableModel {
      *  rowIndex.
      */
     @stub
-    def getValueAt(rowIndex: Int, columnIndex: Int): Object = ???
+    def getValueAt(rowIndex: Int, columnIndex: Int): Any = ???
 
     /** Returns true if the cell at rowIndex and
      *  columnIndex
@@ -67,5 +67,5 @@ trait TableModel {
      *  rowIndex to aValue.
      */
     @stub
-    def setValueAt(aValue: Object, rowIndex: Int, columnIndex: Int): Unit = ???
+    def setValueAt(aValue: Any, rowIndex: Int, columnIndex: Int): Unit = ???
 }

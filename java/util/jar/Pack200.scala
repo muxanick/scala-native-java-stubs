@@ -78,12 +78,10 @@ object Pack200 {
      *  making the pack stream highly compressible by a compressor such as
      *  gzip or zip.
      */
-    @stub
-    trait Packer extends Pack200.Packer
+    type Packer = Pack200_Packer
 
     /** The unpacker engine converts the packed stream to a JAR file. */
-    @stub
-    trait Unpacker extends Pack200.Unpacker
+    type Unpacker = Pack200_Unpacker
 
     /** Obtain new instance of a class that implements Packer. */
     @stub

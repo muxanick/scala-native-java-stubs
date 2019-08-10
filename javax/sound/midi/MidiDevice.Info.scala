@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
  *  data about a MidiDevice, including its
  *  name, the company who created it, and descriptive text.
  */
-object MidiDevice.Info extends Object {
+object MidiDevice_Info extends Object {
 
     /** Constructs a device info object. */
     @stub
@@ -15,7 +15,7 @@ object MidiDevice.Info extends Object {
 
     /** Reports whether two objects are equal. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Obtains the description of the device. */
     @stub

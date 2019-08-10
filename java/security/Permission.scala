@@ -39,10 +39,10 @@ abstract class Permission extends Object with Guard with Serializable {
     def this(name: String) = ???
 
     /** Implements the guard interface for a permission. */
-    def checkGuard(object: Object): Unit
+    def checkGuard(object: Any): Unit
 
     /** Checks two Permission objects for equality. */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** Returns the actions as a String. */
     def getActions(): String

@@ -28,10 +28,10 @@ abstract class RefAddr extends Object with Serializable {
     protected val addrType: String
 
     /** Determines whether obj is equal to this RefAddr. */
-    def equals(obj: Object): Boolean
+    def equals(obj: Any): Boolean
 
     /** Retrieves the contents of this address. */
-    def getContent(): Object
+    def getContent(): Any
 
     /** Retrieves the address type of this address. */
     def getType(): String

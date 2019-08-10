@@ -84,7 +84,7 @@ class ArrayType[T] extends OpenType[T] {
      *  ArrayType instance for equality.
      */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the dimension of arrays described by this ArrayType instance. */
     @stub
@@ -108,7 +108,7 @@ class ArrayType[T] extends OpenType[T] {
      *  instance.
      */
     @stub
-    def isValue(obj: Object): Boolean = ???
+    def isValue(obj: Any): Boolean = ???
 
     /** Returns a string representation of this ArrayType instance. */
     @stub

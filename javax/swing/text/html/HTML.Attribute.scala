@@ -6,7 +6,7 @@ import scala.scalanative.annotation.stub
 /** Typesafe enumeration representing an HTML
  *  attribute.
  */
-final object HTML.Attribute extends Object {
+final object HTML_Attribute extends Object {
 
     /**  */
     @stub

@@ -33,11 +33,11 @@ class Annotation extends Object {
      *  may be null.
      */
     @stub
-    def this(value: Object) = ???
+    def this(value: Any) = ???
 
     /** Returns the value of the attribute, which may be null. */
     @stub
-    def getValue(): Object = ???
+    def getValue(): Any = ???
 
     /** Returns the String representation of this Annotation. */
     @stub

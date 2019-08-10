@@ -53,8 +53,7 @@ class Box extends JComponent with Accessible {
     /** This class implements accessibility support for the
      *  Box class.
      */
-    @stub
-    protected object AccessibleBox extends Box.AccessibleBox
+    protected type AccessibleBox = Box_AccessibleBox
 
     /** Gets the AccessibleContext associated with this Box. */
     @stub
@@ -73,8 +72,7 @@ object Box {
     /** An implementation of a lightweight component that participates in
      *  layout but has no view.
      */
-    @stub
-    object Filler extends Box.Filler
+    type Filler = Box_Filler
 
     /** Creates an invisible "glue" component
      *  that can be useful in a Box

@@ -99,7 +99,7 @@ object RMIClassLoader {
      * 
      */
     @stub
-    def getSecurityContext(loader: ClassLoader): Object = ???
+    def getSecurityContext(loader: ClassLoader): Any = ???
 
     /** Deprecated. 
      * replaced by loadClass(String,String) method

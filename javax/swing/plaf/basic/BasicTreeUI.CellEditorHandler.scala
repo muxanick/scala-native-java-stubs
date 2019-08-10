@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** Listener responsible for getting cell editing events and updating
  *  the tree accordingly.
  */
-class BasicTreeUI.CellEditorHandler extends Object with CellEditorListener {
+class BasicTreeUI_CellEditorHandler extends Object with CellEditorListener {
 
     /**  */
     @stub

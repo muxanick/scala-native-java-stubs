@@ -72,7 +72,7 @@ final class UnresolvedPermission extends Permission with Serializable {
 
     /** Checks two UnresolvedPermission objects for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Returns the canonical string representation of the actions,
      *  which currently is the empty string "", since there are no actions for

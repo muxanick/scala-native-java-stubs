@@ -85,13 +85,13 @@ class SpinnerDateModel extends AbstractSpinnerModel with Serializable {
      *  the next date is after end.
      */
     @stub
-    def getNextValue(): Object = ???
+    def getNextValue(): Any = ???
 
     /** Returns the previous Date in the sequence, or null
      *  if the previous date is before start.
      */
     @stub
-    def getPreviousValue(): Object = ???
+    def getPreviousValue(): Any = ???
 
     /** Returns the first Date in the sequence. */
     @stub
@@ -99,7 +99,7 @@ class SpinnerDateModel extends AbstractSpinnerModel with Serializable {
 
     /** Returns the current element in this sequence of Dates. */
     @stub
-    def getValue(): Object = ???
+    def getValue(): Any = ???
 
     /** Changes the size of the date value change computed
      *  by the nextValue and previousValue methods.
@@ -117,5 +117,5 @@ class SpinnerDateModel extends AbstractSpinnerModel with Serializable {
 
     /** Sets the current Date for this sequence. */
     @stub
-    def setValue(value: Object): Unit = ???
+    def setValue(value: Any): Unit = ???
 }

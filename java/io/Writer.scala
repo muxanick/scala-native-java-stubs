@@ -20,10 +20,10 @@ abstract class Writer extends Object with Appendable with Closeable with Flushab
      *  synchronize on the given object.
      */
     @stub
-    protected def this(lock: Object) = ???
+    protected def this(lock: Any) = ???
 
     /** The object used to synchronize operations on this stream. */
-    protected val lock: Object
+    protected val lock: Any
 
     /** Appends the specified character to this writer. */
     def append(c: Char): Writer

@@ -20,7 +20,7 @@ class Role extends Object with Serializable {
 
     /** Clone the role object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Retrieves role name. */
     @stub

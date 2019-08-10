@@ -30,7 +30,7 @@ final class PrinterInfo extends TextSyntax with PrintServiceAttribute {
      *  in object.
      */
     @stub
-    def equals(object: Object): Boolean = ???
+    def equals(object: Any): Boolean = ???
 
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.

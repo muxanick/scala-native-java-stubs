@@ -12,7 +12,7 @@ import scala.scalanative.annotation.stub
 /** This class provides an implementation of the Java Accessibility
  *  API appropriate for JTableHeader entries.
  */
-protected class JTableHeader.AccessibleJTableHeader.AccessibleJTableHeaderEntry extends AccessibleContext with Accessible with AccessibleComponent {
+protected class JTableHeader_AccessibleJTableHeader_AccessibleJTableHeaderEntry extends AccessibleContext with Accessible with AccessibleComponent {
 
     /** Constructs an AccessiblJTableHeaaderEntry */
     @stub

@@ -7,10 +7,10 @@ import scala.scalanative.annotation.stub
  *  the default locale for the specific functionality represented by the
  *  category.
  */
-class Locale.Category private (name: String, ordinal: Int) extends Enum[Locale.Category](name, ordinal) {
+class Locale_Category private (name: String, ordinal: Int) extends Enum[Locale.Category](name, ordinal) {
 }
 
-object Locale.Category {
+object Locale_Category {
     /** Category used to represent the default locale for
      *  displaying user interfaces.
      */

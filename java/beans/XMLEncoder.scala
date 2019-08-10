@@ -201,11 +201,11 @@ class XMLEncoder extends Encoder with AutoCloseable {
 
     /** Gets the owner of this encoder. */
     @stub
-    def getOwner(): Object = ???
+    def getOwner(): Any = ???
 
     /** Sets the owner of this encoder to owner. */
     @stub
-    def setOwner(owner: Object): Unit = ???
+    def setOwner(owner: Any): Unit = ???
 
     /** Records the Expression so that the Encoder will
      *  produce the actual output when the stream is flushed.
@@ -215,7 +215,7 @@ class XMLEncoder extends Encoder with AutoCloseable {
 
     /** Write an XML representation of the specified object to the output. */
     @stub
-    def writeObject(o: Object): Unit = ???
+    def writeObject(o: Any): Unit = ???
 
     /** Records the Statement so that the Encoder will
      *  produce the actual output when the stream is flushed.

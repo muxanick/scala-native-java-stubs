@@ -14,7 +14,7 @@ import scala.scalanative.annotation.stub
  *  implementation by TransferSupport instances and by
  *  components with a getDropLocation() method.
  */
-object TransferHandler.DropLocation extends Object {
+object TransferHandler_DropLocation extends Object {
 
     /** Constructs a drop location for the given point. */
     @stub

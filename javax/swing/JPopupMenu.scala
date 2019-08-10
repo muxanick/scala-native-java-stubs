@@ -47,8 +47,7 @@ class JPopupMenu extends JComponent with Accessible with MenuElement {
     /** This class implements accessibility support for the
      *  JPopupMenu class.
      */
-    @stub
-    protected object AccessibleJPopupMenu extends JPopupMenu.AccessibleJPopupMenu
+    protected type AccessibleJPopupMenu = JPopupMenu_AccessibleJPopupMenu
 
     /** Appends a new menu item to the end of the menu which
      *  dispatches the specified Action object.
@@ -330,8 +329,7 @@ class JPopupMenu extends JComponent with Accessible with MenuElement {
 
 object JPopupMenu {
     /** A popup menu-specific separator. */
-    @stub
-    object Separator extends JPopupMenu.Separator
+    type Separator = JPopupMenu_Separator
 
     /** Gets the defaultLightWeightPopupEnabled property,
      *   which by default is true.

@@ -210,7 +210,7 @@ abstract class ShortBuffer extends Buffer with Comparable[ShortBuffer] {
     def duplicate(): ShortBuffer
 
     /** Tells whether or not this buffer is equal to another object. */
-    def equals(ob: Object): Boolean
+    def equals(ob: Any): Boolean
 
     /** Relative get method. */
     def get(): Short

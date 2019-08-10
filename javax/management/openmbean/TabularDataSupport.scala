@@ -36,13 +36,13 @@ class TabularDataSupport extends Object with TabularData with Map[Object, Object
      *  the clone is obtained by calling super.clone(), and then cloning the underlying map.
      */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Returns true if and only if this TabularData instance contains a CompositeData value
      *  (ie a row) whose index is the specified key.
      */
     @stub
-    def containsKey(key: Object): Boolean = ???
+    def containsKey(key: Any): Boolean = ???
 
     /** Returns true if and only if this TabularData instance contains a CompositeData value
      *  (ie a row) whose index is the specified key.
@@ -60,7 +60,7 @@ class TabularDataSupport extends Object with TabularData with Map[Object, Object
      *  value.
      */
     @stub
-    def containsValue(value: Object): Boolean = ???
+    def containsValue(value: Any): Boolean = ???
 
     /** Returns a collection view of the index to row mappings
      *  contained in this TabularDataSupport instance.
@@ -70,11 +70,11 @@ class TabularDataSupport extends Object with TabularData with Map[Object, Object
 
     /** Compares the specified obj parameter with this TabularDataSupport instance for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** This method simply calls get((Object[]) key). */
     @stub
-    def get(key: Object): Object = ???
+    def get(key: Any): Any = ???
 
     /** Returns the CompositeData value whose index is
      *  key, or null if there is no value mapping
@@ -109,7 +109,7 @@ class TabularDataSupport extends Object with TabularData with Map[Object, Object
      *  therefore ignores its key parameter which can be null.
      */
     @stub
-    def put(key: Object, value: Object): Object = ???
+    def put(key: Any, value: Any): Any = ???
 
     /** Add all the elements in values to this
      *  TabularData instance.
@@ -125,7 +125,7 @@ class TabularDataSupport extends Object with TabularData with Map[Object, Object
 
     /** This method simply calls remove((Object[]) key). */
     @stub
-    def remove(key: Object): Object = ???
+    def remove(key: Any): Any = ???
 
     /** Removes the CompositeData value whose index is key from this TabularData instance,
      *  and returns the removed value, or returns null if there is no value whose index is key.

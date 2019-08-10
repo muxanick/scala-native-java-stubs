@@ -104,7 +104,7 @@ class DelayQueue[E <: Delayed] extends AbstractQueue[E] with BlockingQueue[E] {
      *  queue, if it is present, whether or not it has expired.
      */
     @stub
-    def remove(o: Object): Boolean = ???
+    def remove(o: Any): Boolean = ???
 
     /** Returns the number of elements in this collection. */
     @stub

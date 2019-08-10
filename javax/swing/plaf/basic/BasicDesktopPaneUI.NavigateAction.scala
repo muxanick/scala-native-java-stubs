@@ -6,7 +6,7 @@ import javax.swing.AbstractAction
 import scala.scalanative.annotation.stub
 
 /** Handles navigating to the next internal frame. */
-protected class BasicDesktopPaneUI.NavigateAction extends AbstractAction {
+protected class BasicDesktopPaneUI_NavigateAction extends AbstractAction {
 
     /**  */
     @stub

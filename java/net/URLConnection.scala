@@ -157,10 +157,10 @@ abstract class URLConnection extends Object {
     def getConnectTimeout(): Int
 
     /** Retrieves the contents of this URL connection. */
-    def getContent(): Object
+    def getContent(): Any
 
     /** Retrieves the contents of this URL connection. */
-    def getContent(classes: Array[Class]): Object
+    def getContent(classes: Array[Class]): Any
 
     /** Returns the value of the content-encoding header field. */
     def getContentEncoding(): String

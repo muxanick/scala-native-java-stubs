@@ -34,11 +34,11 @@ class DefaultComboBoxModel[E] extends AbstractListModel[E] with MutableComboBoxM
 
     /** Returns the index-position of the specified object in the list. */
     @stub
-    def getIndexOf(anObject: Object): Int = ???
+    def getIndexOf(anObject: Any): Int = ???
 
     /** Returns the selected item */
     @stub
-    def getSelectedItem(): Object = ???
+    def getSelectedItem(): Any = ???
 
     /** Returns the length of the list. */
     @stub
@@ -54,7 +54,7 @@ class DefaultComboBoxModel[E] extends AbstractListModel[E] with MutableComboBoxM
 
     /** Removes an item from the model. */
     @stub
-    def removeElement(anObject: Object): Unit = ???
+    def removeElement(anObject: Any): Unit = ???
 
     /** Removes an item at a specific index. */
     @stub
@@ -62,5 +62,5 @@ class DefaultComboBoxModel[E] extends AbstractListModel[E] with MutableComboBoxM
 
     /** Set the value of the selected item. */
     @stub
-    def setSelectedItem(anObject: Object): Unit = ???
+    def setSelectedItem(anObject: Any): Unit = ???
 }

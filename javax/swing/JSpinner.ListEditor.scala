@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** An editor for a JSpinner whose model is a
  *  SpinnerListModel.
  */
-object JSpinner.ListEditor extends JSpinner.DefaultEditor {
+object JSpinner_ListEditor extends JSpinner.DefaultEditor {
 
     /** Construct a JSpinner editor that supports displaying
      *  and editing the value of a SpinnerListModel

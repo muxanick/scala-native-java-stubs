@@ -20,13 +20,13 @@ import scala.scalanative.annotation.stub
  *  return the object responsible for implementing the desired
  *  compression technique.
  */
-object trait AbstractDocument.AttributeContext {
+trait AbstractDocument_AttributeContext {
 
     /** Adds an attribute to the given set, and returns
      *  the new representative set.
      */
     @stub
-    def addAttribute(old: AttributeSet, name: Object, value: Object): AttributeSet = ???
+    def addAttribute(old: AttributeSet, name: Any, value: Any): AttributeSet = ???
 
     /** Adds a set of attributes to the element. */
     @stub
@@ -42,7 +42,7 @@ object trait AbstractDocument.AttributeContext {
 
     /** Removes an attribute from the set. */
     @stub
-    def removeAttribute(old: AttributeSet, name: Object): AttributeSet = ???
+    def removeAttribute(old: AttributeSet, name: Any): AttributeSet = ???
 
     /** Removes a set of attributes for the element. */
     @stub

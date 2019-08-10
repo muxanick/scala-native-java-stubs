@@ -5,7 +5,7 @@ import java.lang.Object
 import scala.scalanative.annotation.stub
 
 /** Listener for cursor keys. */
-protected class BasicScrollBarUI.ArrowButtonListener extends MouseAdapter {
+protected class BasicScrollBarUI_ArrowButtonListener extends MouseAdapter {
 
     /**  */
     @stub

@@ -139,8 +139,7 @@ object AddressingFeature {
     /** If addressing is enabled, this property determines if endpoint requires
      *  the use of only anonymous responses, or only non-anonymous responses, or all.
      */
-    @stub
-    object Responses extends AddressingFeature.Responses
+    type Responses = AddressingFeature_Responses
 
     /** Constant value identifying the AddressingFeature */
     @stub

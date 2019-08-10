@@ -23,7 +23,7 @@ final class OptionalLong extends Object {
 
     /** Indicates whether some other object is "equal to" this OptionalLong. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** If a value is present in this OptionalLong, returns the value,
      *  otherwise throws NoSuchElementException.

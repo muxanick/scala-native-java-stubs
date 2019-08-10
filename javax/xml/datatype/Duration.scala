@@ -82,7 +82,7 @@ abstract class Duration extends Object {
     /** Checks if this duration object has the same duration
      *  as another Duration object.
      */
-    def equals(duration: Object): Boolean
+    def equals(duration: Any): Boolean
 
     /** Obtains the value of the DAYS field as an integer value,
      *  or 0 if not present.

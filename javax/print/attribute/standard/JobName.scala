@@ -33,7 +33,7 @@ final class JobName extends TextSyntax with PrintRequestAttribute with PrintJobA
      *  object.
      */
     @stub
-    def equals(object: Object): Boolean = ???
+    def equals(object: Any): Boolean = ???
 
     /** Get the printing attribute class which is to be used as the "category"
      *  for this printing attribute value.

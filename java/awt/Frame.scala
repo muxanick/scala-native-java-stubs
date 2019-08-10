@@ -117,8 +117,7 @@ class Frame extends Window with MenuContainer {
     /** This class implements accessibility support for the
      *  Frame class.
      */
-    @stub
-    protected object AccessibleAWTFrame extends Frame.AccessibleAWTFrame
+    protected type AccessibleAWTFrame = Frame_AccessibleAWTFrame
 
     /** Makes this Frame displayable by connecting it to
      *  a native screen resource.

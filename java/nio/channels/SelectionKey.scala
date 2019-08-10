@@ -75,10 +75,10 @@ abstract class SelectionKey extends Object {
     protected def this() = ???
 
     /** Attaches the given object to this key. */
-    def attach(ob: Object): Object
+    def attach(ob: Any): Any
 
     /** Retrieves the current attachment. */
-    def attachment(): Object
+    def attachment(): Any
 
     /** Requests that the registration of this key's channel with its selector
      *  be cancelled.

@@ -71,11 +71,11 @@ class MBeanInfo extends Object with Cloneable with Serializable with DescriptorR
 
     /** Returns a shallow clone of this instance. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compare this MBeanInfo to another. */
     @stub
-    def equals(o: Object): Boolean = ???
+    def equals(o: Any): Boolean = ???
 
     /** Returns the list of attributes exposed for management. */
     @stub

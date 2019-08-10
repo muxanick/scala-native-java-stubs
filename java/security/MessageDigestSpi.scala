@@ -23,7 +23,7 @@ abstract class MessageDigestSpi extends Object {
     def this() = ???
 
     /** Returns a clone if the implementation is cloneable. */
-    def clone(): Object
+    def clone(): Any
 
     /** Completes the hash computation by performing final
      *  operations such as padding.

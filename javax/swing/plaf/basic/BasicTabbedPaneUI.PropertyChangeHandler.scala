@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** This class should be treated as a "protected" inner class.
  *  Instantiate it only within subclasses of BasicTabbedPaneUI.
  */
-class BasicTabbedPaneUI.PropertyChangeHandler extends Object with PropertyChangeListener {
+class BasicTabbedPaneUI_PropertyChangeHandler extends Object with PropertyChangeListener {
 
     /**  */
     @stub

@@ -50,7 +50,7 @@ abstract class AbstractMarshallerImpl extends Object with Marshaller {
     /** By default, the getNode method is unsupported and throw
      *  an UnsupportedOperationException.
      */
-    def getNode(obj: Object): Node
+    def getNode(obj: Any): Node
 
     /** Convenience method for getting the current noNamespaceSchemaLocation. */
     protected def getNoNSSchemaLocation(): String
@@ -58,7 +58,7 @@ abstract class AbstractMarshallerImpl extends Object with Marshaller {
     /** Default implementation of the getProperty method handles
      *  the four defined properties in Marshaller.
      */
-    def getProperty(name: String): Object
+    def getProperty(name: String): Any
 
     /** Get the JAXP 1.3 Schema object
      *  being used to perform marshal-time validation.
@@ -75,29 +75,29 @@ abstract class AbstractMarshallerImpl extends Object with Marshaller {
     protected def isFragment(): Boolean
 
     /** Marshal the content tree rooted at jaxbElement into SAX2 events. */
-    def marshal(obj: Object, handler: ContentHandler): Unit
+    def marshal(obj: Any, handler: ContentHandler): Unit
 
     /** Marshal the content tree rooted at jaxbElement into a file. */
-    def marshal(jaxbElement: Object, output: File): Unit
+    def marshal(jaxbElement: Any, output: File): Unit
 
     /** Marshal the content tree rooted at jaxbElement into a DOM tree. */
-    def marshal(obj: Object, node: Node): Unit
+    def marshal(obj: Any, node: Node): Unit
 
     /** Marshal the content tree rooted at jaxbElement into an output stream. */
-    def marshal(obj: Object, os: OutputStream): Unit
+    def marshal(obj: Any, os: OutputStream): Unit
 
     /** Marshal the content tree rooted at jaxbElement into a Writer. */
-    def marshal(obj: Object, w: Writer): Unit
+    def marshal(obj: Any, w: Writer): Unit
 
     /** Marshal the content tree rooted at jaxbElement into a
      *  XMLEventWriter.
      */
-    def marshal(obj: Object, writer: XMLEventWriter): Unit
+    def marshal(obj: Any, writer: XMLEventWriter): Unit
 
     /** Marshal the content tree rooted at jaxbElement into a
      *  XMLStreamWriter.
      */
-    def marshal(obj: Object, writer: XMLStreamWriter): Unit
+    def marshal(obj: Any, writer: XMLStreamWriter): Unit
 
     /** Associates a configured instance of XmlAdapter with this marshaller. */
     def setAdapter[A <: XmlAdapter](type: Class[A], adapter: A): Unit
@@ -133,7 +133,7 @@ abstract class AbstractMarshallerImpl extends Object with Marshaller {
     /** Default implementation of the setProperty method handles
      *  the four defined properties in Marshaller.
      */
-    def setProperty(name: String, value: Object): Unit
+    def setProperty(name: String, value: Any): Unit
 
     /** Specify the JAXP 1.3 Schema
      *  object that should be used to validate subsequent marshal operations

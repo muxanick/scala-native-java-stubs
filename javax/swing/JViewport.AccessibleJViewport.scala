@@ -18,7 +18,7 @@ import scala.scalanative.annotation.stub
  *  has been added to the java.beans package.
  *  Please see XMLEncoder.
  */
-protected class JViewport.AccessibleJViewport extends JComponent.AccessibleJComponent {
+protected class JViewport_AccessibleJViewport extends JComponent.AccessibleJComponent {
 
     /**  */
     @stub

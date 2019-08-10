@@ -7,7 +7,7 @@ import scala.scalanative.annotation.stub
 /** The Float class defines a point specified in float
  *  precision.
  */
-object Point2D.Float extends Point2D with Serializable {
+object Point2D_Float extends Point2D with Serializable {
 
     /** Constructs and initializes a Point2D with
      *  coordinates (0, 0).

@@ -48,17 +48,17 @@ class SpinnerListModel extends AbstractSpinnerModel with Serializable {
      *  null if value is already the last element.
      */
     @stub
-    def getNextValue(): Object = ???
+    def getNextValue(): Any = ???
 
     /** Returns the previous element of the underlying sequence or
      *  null if value is already the first element.
      */
     @stub
-    def getPreviousValue(): Object = ???
+    def getPreviousValue(): Any = ???
 
     /** Returns the current element of the sequence. */
     @stub
-    def getValue(): Object = ???
+    def getValue(): Any = ???
 
     /** Changes the list that defines this sequence and resets the index
      *  of the models value to zero.
@@ -70,5 +70,5 @@ class SpinnerListModel extends AbstractSpinnerModel with Serializable {
      *  ChangeListeners.
      */
     @stub
-    def setValue(elt: Object): Unit = ???
+    def setValue(elt: Any): Unit = ???
 }

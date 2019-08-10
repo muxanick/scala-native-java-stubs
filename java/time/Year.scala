@@ -64,7 +64,7 @@ final class Year extends Object with Temporal with TemporalAdjuster with Compara
 
     /** Checks if this year is equal to another year. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Formats this year using the specified formatter. */
     @stub

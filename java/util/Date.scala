@@ -148,7 +148,7 @@ class Date extends Object with Serializable with Cloneable with Comparable[Date]
 
     /** Return a copy of this object. */
     @stub
-    def clone(): Object = ???
+    def clone(): Any = ???
 
     /** Compares two Dates for ordering. */
     @stub
@@ -156,7 +156,7 @@ class Date extends Object with Serializable with Cloneable with Comparable[Date]
 
     /** Compares two dates for equality. */
     @stub
-    def equals(obj: Object): Boolean = ???
+    def equals(obj: Any): Boolean = ???
 
     /** Deprecated. 
      * As of JDK version 1.1,
